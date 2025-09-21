@@ -5,7 +5,6 @@ import { Button } from "../components/ui/button";
 
 export default function Status() {
   const [status, setStatus] = useState('operational');
-
   return (
     <div className="min-h-screen bg-zion-blue">
       <div className="container mx-auto px-4 py-12">

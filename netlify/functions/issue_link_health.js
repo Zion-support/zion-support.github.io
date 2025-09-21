@@ -4,8 +4,7 @@ exports.handler = async function(event, context) {,
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping issue creation' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping issue creation' }) }}
 ,
     // Fetch link-health report from repo,
     const res = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent('data/link-health.json')}?ref=${branch}`, {,
@@ -32,8 +31,7 @@ exports.handler = async function(event, context) {,
       }),
       const jc = await resComment.json(),
       if (!resComment.ok) return { statusCode: resComment.status, body: JSON.stringify({ error: jc }) },
-      return { statusCode: 200, body: JSON.stringify({ ok: true, updated: existing.number }) },
-    } else {,
+      return { statusCode: 200, body: JSON.stringify({ ok: true, updated: existing.number }) }} else {,
       // Create a new issue,
       const resIssue = await fetch(`https: //api.github.com/repos/${repo}/issues`, {,
         method: 'POST',
@@ -42,9 +40,7 @@ exports.handler = async function(event, context) {,
       }),
       const ji = await resIssue.json(),
       if (!resIssue.ok) return { statusCode: resIssue.status, body: JSON.stringify({ error: ji }) },
-      return { statusCode: 200, body: JSON.stringify({ ok: true, created: ji.number }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, created: ji.number }) }}
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

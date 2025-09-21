@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+// Simple performance metrics hook
+export function usePerformanceMetrics() {
+  return {
+    metrics: {},
+    isSupported: false
+  }}
+=======
 import { useEffect, useState } from 'react';
 
 export interface PerformanceMetrics {
@@ -49,3 +57,4 @@ export function usePerformanceMetrics() {
 
   return { metrics, isSupported };
 }
+>>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16

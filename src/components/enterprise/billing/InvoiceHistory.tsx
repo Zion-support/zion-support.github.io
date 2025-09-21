@@ -20,19 +20,17 @@ export function InvoiceHistory() {
       description: "Pro Plan - Monthly"
     },
     {
-      id: "INV-002", 
+      id: "INV-002",
       date: "2024-02-15",
       amount: 299.00,
       status: "paid",
       description: "Pro Plan - Monthly"
     }
-  ];
-
+  ],
   const handleDownload = (invoiceId: string) => {
     toast({
       title: "Download Started",
-      description: `Downloading invoice ${invoiceId}`,
-    });
+      description: `Downloading invoice ${invoiceId}`});
   };
 
   return (

@@ -13,8 +13,7 @@ describe('authController.loginUser', () => {
   const res = { status: vi.fn().mockReturnThis(), json: vi.fn() },
 
   beforeEach(() => {
-    vi.clearAllMocks(),
-  }),
+    vi.clearAllMocks()}),
 
   it('returns token when credentials are valid', async () => {
     User.findOne.mockResolvedValue({
@@ -32,8 +31,7 @@ describe('authController.loginUser', () => {
     expect(res.json).toHaveBeenCalledWith({
       accessToken: 'signed-jwt',
       user: { id: '1', email: 'test@example.com', name: 'Test' }
-    }),
-  }),
+    })}),
 
   it('returns 401 when credentials are invalid', async () => {
     User.findOne.mockResolvedValue({
@@ -47,8 +45,7 @@ describe('authController.loginUser', () => {
     await loginUser(req, res),
 
     expect(res.status).toHaveBeenCalledWith(401),
-    expect(res.json).toHaveBeenCalledWith({ code: 'WRONG_PASSWORD', message: 'Incorrect password' }),
-  }),
+    expect(res.json).toHaveBeenCalledWith({ code: 'WRONG_PASSWORD', message: 'Incorrect password' })}),
 
   it('returns 403 when account inactive', async () => {
     User.findOne.mockResolvedValue({
@@ -63,17 +60,14 @@ describe('authController.loginUser', () => {
     await loginUser(req, res),
 
     expect(res.status).toHaveBeenCalledWith(403),
-    expect(res.json).toHaveBeenCalledWith({ code: 'ACCOUNT_INACTIVE', message: 'Account inactive' }),
-  }),
-}),
+    expect(res.json).toHaveBeenCalledWith({ code: 'ACCOUNT_INACTIVE', message: 'Account inactive' })})}),
 
 describe('authController.registerUser', () => {
   const req = { body: { name: 'Test', email: 'test@example.com', password: 'Password123' } },
   const res = { status: vi.fn().mockReturnThis(), json: vi.fn() },
 
   beforeEach(() => {
-    vi.clearAllMocks(),
-  }),
+    vi.clearAllMocks()}),
 
   it('creates a new user and returns access token', async () => {
     User.create.mockResolvedValue({ _id: '1', email: 'test@example.com', name: 'Test' }),
@@ -86,6 +80,4 @@ describe('authController.registerUser', () => {
     expect(res.json).toHaveBeenCalledWith({
       accessToken: 'signed-jwt',
       user: { id: '1', email: 'test@example.com', name: 'Test' }
-    }),
-  }),
-}),
+    })})}),

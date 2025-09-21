@@ -3,16 +3,15 @@ import { Button } from '@/components/ui/button';
 import { Archive, Trash2, Download, Mail } from 'lucide-react';
 
 interface QuotesBulkActionsProps {
-  selectedCount: number;
-  onArchiveSelected: () => void;
-  onDeleteSelected: () => void;
-  onExportSelected: () => void;
-  onEmailSelected: () => void;
-}
+  selectedCount: number,
+  onArchiveSelected: () => void,
+  onDeleteSelected: () => void,
+  onExportSelected: () => void,
+  onEmailSelected: () => void}
 
 export const QuotesBulkActions: React.FC<QuotesBulkActionsProps> = ({
   selectedCount,
-  onArchiveSelected,
+  onArchiveSelected;
   onDeleteSelected,
   onExportSelected,
   onEmailSelected

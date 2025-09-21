@@ -1,10 +1,9 @@
 export class ArrayUtils {
   public static unique<T>(array: T[]): T[] {
-    return [...new Set(array)];
-  }
+    return [...new Set(array)]}
 
   public static uniqueBy<T>(array: T[], key: keyof T): T[] {
-    const seen = new Set();
+    const seen = new Set(),
     return array.filter(item => {
       const value = item[key];
       if (seen.has(value)) {
@@ -38,7 +37,7 @@ export class ArrayUtils {
   }
 
   public static chunk<T>(array: T[], size: number): T[][] {
-    const chunks: T[][] = [];
+    const chunks: T[][] = [],
     for (let i = 0; i < array.length; i += size) {
       chunks.push(array.slice(i, i + size));
     }
@@ -56,7 +55,7 @@ export class ArrayUtils {
   }
 
   public static shuffle<T>(array: T[]): T[] {
-    const shuffled = [...array];
+    const shuffled = [...array],
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
@@ -65,17 +64,15 @@ export class ArrayUtils {
   }
 
   public static sample<T>(array: T[], count: number = 1): T[] {
-    const shuffled = this.shuffle(array);
+    const shuffled = this.shuffle(array),
     return shuffled.slice(0, count);
   }
 
   public static intersection<T>(array1: T[], array2: T[]): T[] {
-    return array1.filter(item => array2.includes(item));
-  }
+    return array1.filter(item => array2.includes(item))}
 
   public static difference<T>(array1: T[], array2: T[]): T[] {
-    return array1.filter(item => !array2.includes(item));
-  }
+    return array1.filter(item => !array2.includes(item))}
 
   public static union<T>(array1: T[], array2: T[]): T[] {
     return this.unique([...array1, ...array2]);
@@ -91,8 +88,8 @@ export class ArrayUtils {
   }
 
   public static unzip<T, U>(zipped: [T, U][]): [T[], U[]] {
-    const array1: T[] = [];
-    const array2: U[] = [];
+    const array1: T[] = [],
+    const array2: U[] = [],
     for (const [item1, item2] of zipped) {
       array1.push(item1);
       array2.push(item2);
@@ -101,8 +98,8 @@ export class ArrayUtils {
   }
 
   public static partition<T>(array: T[], predicate: (item: T) => boolean): [T[], T[]] {
-    const truthy: T[] = [];
-    const falsy: T[] = [];
+    const truthy: T[] = [],
+    const falsy: T[] = [],
     for (const item of array) {
       if (predicate(item)) {
         truthy.push(item);
@@ -114,8 +111,7 @@ export class ArrayUtils {
   }
 
   public static compact<T>(array: T[]): T[] {
-    return array.filter(item => item != null);
-  }
+    return array.filter(item => item != null)}
 
   public static countBy<T>(array: T[], key: keyof T): Record<string, number> {
     return array.reduce((counts, item) => {
@@ -130,16 +126,13 @@ export class ArrayUtils {
   }
 
   public static average(array: number[]): number {
-    return array.length > 0 ? this.sum(array) / array.length : 0;
-  }
+    return array.length > 0 ? this.sum(array) / array.length : 0}
 
   public static min(array: number[]): number {
-    return Math.min(...array);
-  }
+    return Math.min(...array)}
 
   public static max(array: number[]): number {
-    return Math.max(...array);
-  }
+    return Math.max(...array)}
 
   public static median(array: number[]): number {
     const sorted = [...array].sort((a, b) => a - b);
@@ -163,7 +156,7 @@ export class ArrayUtils {
   }
 
   public static range(start: number, end: number, step: number = 1): number[] {
-    const result: number[] = [];
+    const result: number[] = [],
     for (let i = start; i < end; i += step) {
       result.push(i);
     }
@@ -171,21 +164,20 @@ export class ArrayUtils {
   }
 
   public static remove<T>(array: T[], item: T): T[] {
-    return array.filter(arrayItem => arrayItem !== item);
-  }
+    return array.filter(arrayItem => arrayItem !== item)}
 
   public static removeAt<T>(array: T[], index: number): T[] {
     return array.filter((_, i) => i !== index);
   }
 
   public static insert<T>(array: T[], index: number, item: T): T[] {
-    const result = [...array];
+    const result = [...array],
     result.splice(index, 0, item);
     return result;
   }
 
   public static move<T>(array: T[], from: number, to: number): T[] {
-    const result = [...array];
+    const result = [...array],
     const item = result.splice(from, 1)[0];
     result.splice(to, 0, item);
     return result;

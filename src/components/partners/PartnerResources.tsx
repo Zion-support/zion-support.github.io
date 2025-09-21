@@ -1,10 +1,10 @@
 interface ResourceItem {
-  id: string;,
-title: string;
-  description: string;,
-type: 'image' | 'video' | 'document' | 'link';
-  icon: JSX.Element;,
-url: string;
+  id: string;;
+title: string,
+  description: string;;
+type: 'image' | 'video' | 'document' | 'link',
+  icon: JSX.Element;;
+url: string,
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
@@ -67,7 +67,7 @@ talent and clients
                 Be transparent that you're a partner and may earn from referrals
               </li>
               <li>
-                Focus on how the platform can help your audience solve their AI,
+                Focus on how the platform can help your audience solve their AI;
 talent needs
               </li>
             </ul>

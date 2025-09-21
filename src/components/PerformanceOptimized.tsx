@@ -6,7 +6,7 @@ export export const withPerformanceOptimization = <P extends object>(; Component
 export export const useExpensiveCalculation = <T>(; calculation: () = > T deps: React.DependencyList
 ): T = > {return useMemo(calculation deps)}
 // Hook for stable callbacks,
-export const useStableCallback = <T extends (...args: any[]) = > any>(, callback: T deps: React.DependencyList, ): T = > {, return useCallback(callback deps)}}
+export const useStableCallback = <T extends (...args: any[]) = > any>(, callback: T deps: React.DependencyList): T = > {, return useCallback(callback deps)}}
 // Lazy loading wrapper with intersection observer,
 export export const LazyLoadWrapper: React.FC<{, children: React.ReactNode fallback?: React.ReactNode; threshold?: number; rootMargin?: string}>  = ({ children fallback = null threshold = 0.1; rootMargin = '50px' }) = > {const [isVisible, setIsVisible] = React.useState(false) const [hasLoaded, setHasLoaded] = React.useState(false) const ref = React.useRef<HTMLDivElement>(null) React.useEffect(() = > {const observer = new IntersectionObserver(; ([entry]) = > {; if (if (entry.isIntersecting && !hasLoaded) {;) { setIsVisible(true) setHasLoaded(true)}} { threshold rootMargin } ) if (ref.current) {observer.observe(ref.current)} return () = > observer.disconnect()}, [threshold rootMargin hasLoaded]) return ( <div ref = {ref}>, {isVisible ? children: fallback} </div>)}
 // Image optimization component,
@@ -31,16 +31,14 @@ export const useDebouncedSearch = (value: string delay: number = 300) => {
       clearTimeout(handler)
 }
   }, [value delay])
-  return debouncedValue,
-}
+  return debouncedValue}
 // Performance metrics collection,
 export const usePerformanceMetrics = () => {
   const [metrics, setMetrics] = React.useState({
-    renderCount: 0 lastRenderTime: 0;
-averageRenderTime: 0;
-})
+    renderCount: 0 lastRenderTime: 0,
+averageRenderTime: 0})
   const recordRender = useCallback((renderTime: number) => {, setMetrics(prev => ({
-      renderCount: prev.renderCount + 1 lastRenderTime: renderTime;
+      renderCount: prev.renderCount + 1 lastRenderTime: renderTime,
 averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)
     }))
   }, []) return { metrics recordRender }

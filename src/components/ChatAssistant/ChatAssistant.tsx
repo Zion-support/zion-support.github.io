@@ -1,8 +1,8 @@
 import React from "react,,
 ,
-import { SEO,  } from "@/components/SEO",
+import { SEO} from "@/components/SEO";
 export default function ChatAssistant(props: any) {return (,
-<div className="min-h-screen bg-white">,
+<div className="min-h-screen bg-white">
 <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />,
 <div className="container mx-auto px-4 py-20">,
 <h1 className="text-4xl font-bold text-white mb-8">ChatAssistant</h1>,
@@ -17,7 +17,7 @@ Professional ChatAssistant services to help your business grow.,
 const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return,
 import React {
-read?: boolean,
+read?: boolean;
 }
 export interface ChatAssistantProps {
   /** Optional canned questions shown when the chat is empty */
@@ -54,7 +54,7 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
 variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick = {onClose,}
+            onClick = {onClose}
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -76,12 +76,12 @@ className="flex-1 overflow-y-auto p-4 space-y-4"
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
-                  {starterQuestions.map((q idx,) => (
+                  {starterQuestions.map((q idx) => (
                     <Button
-key = {idx,}
+key = {idx}
                       variant="outline"
                       className="text-xs"
-                      onClick = {(,) => handleSendMessage(q),}
+                      onClick = {() => handleSendMessage(q)}
                     >
                       {q}
                     </Button>
@@ -90,7 +90,7 @@ key = {idx,}
               )}
             </div>
           ) : (
-            currentMessages.map((msg,) => (
+            currentMessages.map((msg) => (
               <ChatMessage key={msg.id} role={msg.role} message={msg.message} />
             ))
           )}
@@ -121,13 +121,13 @@ id="confirm-message-title"
             <div className="flex justify-end space-x-3">
               <Button
 variant="outline"
-                onClick = {handleModalCancel,}
+                onClick = {handleModalCancel}
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
-onClick = {handleModalSendConfirm,}
+onClick = {handleModalSendConfirm}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send

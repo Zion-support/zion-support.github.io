@@ -1,16 +1,16 @@
 export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  category: string;
-  publishedAt: string;
+  id: string,
+  title: string,
+  excerpt: string,
+  content: string,
+  category: string,
+  publishedAt: string,
   featuredImage?: string;
   featuredImageAlt?: string;
   isFeatured?: boolean;
   tags?: string[];
   author?: {
-    name: string;
+    name: string,
     avatar?: string;
     bio?: string;
   };

@@ -1,13 +1,12 @@
 
-import React from "react",
-import { Button,,  } from "@/components/ui/button",
 import React from "react";
-import { ArrowRight,,  } from 'lucide-react'
+import { Button,} from "@/components/ui/button";
+import React from "react";
+import { ArrowRight,} from 'lucide-react'
 onApply: () => void,
 export function GeneratedContentDisplay({
-  content,
-onApply,
-}: GeneratedContentDisplayProps) {
+  content;
+onApply}: GeneratedContentDisplayProps) {
   return (
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>
       <CardHeader>
@@ -62,7 +61,7 @@ key={index}
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point index) => (
-            {content.keyPoints.map((point index,) => (
+            {content.keyPoints.map((point index) => (
               <li key={index}>{point}</li>
             ))}
           </ul>

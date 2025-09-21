@@ -1,13 +1,12 @@
 
-import React from "react",
 import React from "react";
-import { Search,,, Sliders,,  } from 'lucide-react'
+import React from "react";
+import { Search,,, Sliders,} from 'lucide-react'
 import React from "react";
 interface MobileFilterBarProps {
-  searchTerm: string;,
-setSearchTerm: (value: string) => void;,
-setIsMobileFilterOpen: (isOpen: boolean) => void,
-}: MobileFilterBarProps) {
+  searchTerm: string;;
+setSearchTerm: (value: string) => void;;
+setIsMobileFilterOpen: (isOpen: boolean) => void}: MobileFilterBarProps) {
   return (
     <div className='lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4'>
       <Button

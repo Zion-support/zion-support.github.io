@@ -32,5 +32,6 @@ export function GradientHeading({
           {subtitle}
         </p>
       )}
-    </div>  );
+    </div>
+  );
 }

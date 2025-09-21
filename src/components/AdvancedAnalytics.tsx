@@ -2,14 +2,13 @@ import import React, { useState, useEffect } from 'react';
 import import { motion } from 'framer-motion';
 
 interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number }>;
-  trafficSources: Array<{ source: string; percentage: number }>;
-}
+  pageViews: number,
+  uniqueVisitors: number,
+  bounceRate: number,
+  avgSessionDuration: number,
+  conversionRate: number,
+  topPages: Array<{ page: string; views: number }>,
+  trafficSources: Array<{ source: string; percentage: number }>}
 
 export const AdvancedAnalytics: React.FC = () => {
   const [data, setData] = useState<AnalyticsData>({
@@ -31,8 +30,7 @@ export const AdvancedAnalytics: React.FC = () => {
       { source: 'Referral', percentage: 10 },
       { source: 'Email', percentage: 5 }
     ]
-  });
-
+  }),
   const [timeRange, setTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -43,11 +41,9 @@ export const AdvancedAnalytics: React.FC = () => {
   }, [timeRange]);
 
   const formatNumber = (num: number) => {
-    return new Intl.NumberFormat().format(num);
-  };
-
+    return new Intl.NumberFormat().format(num)};
   const formatDuration = (seconds: number) => {
-    const minutes = Math.floor(seconds / 60);
+    const minutes = Math.floor(seconds / 60),
     const remainingSeconds = seconds % 60;
     return `${minutes}m ${remainingSeconds}s`;
   };
@@ -181,7 +177,5 @@ export const AdvancedAnalytics: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );
-};
-
+  )};
 export default AdvancedAnalytics;

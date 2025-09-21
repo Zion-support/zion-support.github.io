@@ -19,8 +19,7 @@ export default function AITalentMatchingPage() {
       description: 'Track and measure placement success rates',
       icon: <TrendingUp className="h-6 w-6" />
     }
-  ];
-
+  ],
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -28,8 +27,7 @@ export default function AITalentMatchingPage() {
       text: 'The AI matching system has revolutionized our hiring process.',
       avatar: '/images/avatars/sarah.jpg'
     }
-  ];
-
+  ],
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"

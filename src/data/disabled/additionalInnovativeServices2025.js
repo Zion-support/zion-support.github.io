@@ -6,7 +6,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and risk management using advanced AI algorithms.",
         category: "
         subcategory: "
-        price: 2500;
+        price: 2500,
         currency: "
         pricingModel: "
         features: [
@@ -47,15 +47,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
         integrations: ["TD Ameritrade", "Charles Schwab", "Fidelity", "TurboTax", "Mint"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
@@ -67,7 +66,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Advanced AI-powered healthcare diagnostic platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
         category: "
         subcategory: "
-        price: 4500;
+        price: 4500,
         currency: "
         pricingModel: "
         features: [
@@ -108,15 +107,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
         compliance: ["HIPAA", "FDA", "SOC 2", "GDPR"],
         integrations: ["Epic", "Cerner", "Athenahealth", "Zoom", "Doximity"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["HIPAA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
@@ -128,7 +126,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Intelligent legal research platform that uses AI to analyze case law, statutes, and legal documents to provide comprehensive legal research and document analysis.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -169,15 +167,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Elasticsearch"],
         compliance: ["GDPR", "SOC 2", "Legal Ethics"],
         integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
@@ -189,7 +186,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Adaptive learning platform that uses AI to create personalized educational experiences, track student progress, and optimize learning outcomes for each individual.",
         category: "
         subcategory: "
-        price: 1200;
+        price: 1200,
         currency: "
         pricingModel: "
         features: [
@@ -230,15 +227,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
         integrations: ["Canvas", "Blackboard", "Google Classroom", "Microsoft Teams", "Zoom"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["FERPA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
@@ -250,7 +246,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Intelligent supply chain management platform that uses AI to optimize inventory, predict demand, and streamline logistics operations for maximum efficiency.",
         category: "
         subcategory: "
-        price: 3200;
+        price: 3200,
         currency: "
         pricingModel: "
         features: [
@@ -291,15 +287,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
         integrations: ["SAP", "Oracle", "Salesforce", "FedEx", "UPS", "DHL"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
@@ -311,7 +306,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Advanced real estate analytics platform that uses AI to analyze market trends, property values, and investment opportunities with predictive insights.",
         category: "
         subcategory: "
-        price: 1500;
+        price: 1500,
         currency: "
         pricingModel: "
         features: [
@@ -352,15 +347,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["GDPR", "SOC 2", "Real Estate Regulations"],
         integrations: ["Zillow", "Redfin", "Realtor.com", "MLS", "QuickBooks"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
@@ -372,7 +366,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Intelligent human resources platform that uses AI to streamline recruitment, employee management, performance evaluation, and workforce planning.",
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -413,15 +407,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["EEOC", "ADA", "GDPR", "SOC 2"],
         integrations: ["Workday", "BambooHR", "Greenhouse", "LinkedIn", "Indeed"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
@@ -433,7 +426,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Comprehensive marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -474,15 +467,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["GDPR", "CAN-SPAM", "SOC 2", "CCPA"],
         integrations: ["HubSpot", "Salesforce", "Mailchimp", "Google Ads", "Facebook Ads"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
@@ -494,7 +486,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Intelligent customer experience platform that uses AI to analyze customer behavior, predict needs, and deliver personalized experiences across all touchpoints.",
         category: "
         subcategory: "
-        price: 1900;
+        price: 1900,
         currency: "
         pricingModel: "
         features: [
@@ -535,15 +527,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["GDPR", "SOC 2", "CCPA"],
         integrations: ["Zendesk", "Intercom", "HubSpot", "Salesforce", "Shopify"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
@@ -555,7 +546,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         description: "Intelligent product development platform that uses AI to optimize product design, predict market demand, and streamline the development process from concept to launch.",
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -596,15 +587,14 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["ISO 9001", "GDPR", "SOC 2"],
         integrations: ["Jira", "Confluence", "Figma", "SolidWorks", "PLM systems"],
-        apiAccess: true;
-        mobileApp: true;
-        whiteLabel: true;
-        customBranding: true;
+        apiAccess: true,
+        mobileApp: true,
+        whiteLabel: true,
+        customBranding: true,
         dataRetention: "
         uptime: "
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]

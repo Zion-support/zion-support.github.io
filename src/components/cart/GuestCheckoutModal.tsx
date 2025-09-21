@@ -8,10 +8,9 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
 interface GuestCheckoutModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  total: number;
-}
+  open: boolean,
+  onOpenChange: (open: boolean) => void,
+  total: number}
 
 export default function GuestCheckoutModal({ open, onOpenChange, total }: GuestCheckoutModalProps) {
   const [email, setEmail] = useState('');
@@ -19,7 +18,7 @@ export default function GuestCheckoutModal({ open, onOpenChange, total }: GuestC
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     setIsSubmitting(true);
 
     try {
@@ -71,7 +70,7 @@ export default function GuestCheckoutModal({ open, onOpenChange, total }: GuestC
               onChange={e => setEmail(e.target.value)}
               placeholder='your.email@example.com'
               required 
-              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light'
+              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder: text-zion-slate-light'
             />
           </div>
 
@@ -126,5 +125,4 @@ export default function GuestCheckoutModal({ open, onOpenChange, total }: GuestC
         </form>
       </DialogContent>
     </Dialog>
-  );
-}
+  )}

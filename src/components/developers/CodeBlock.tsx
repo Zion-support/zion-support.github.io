@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Button } from '@/components/ui/button';
 
 interface CodeBlockProps {
-  code: string;
+  code: string,
   language?: string;
   className?: string;
 }
@@ -30,7 +30,7 @@ export function CodeBlock({ code, language = 'bash', className }: CodeBlockProps
           
           size="sm"
           onClick={handleCopy}
-          className="h-8 w-8 p-0 text-gray-400 hover:text-white"
+          className="h-8 w-8 p-0 text-gray-400 hover: text-white"
         >
           {copied ? (
             <Check className="h-4 w-4" />
@@ -43,5 +43,4 @@ export function CodeBlock({ code, language = 'bash', className }: CodeBlockProps
         <code className={`language-${language}`}>{code}</code>
       </pre>
     </div>
-  );
-}
+  )}

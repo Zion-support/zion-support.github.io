@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Quote,,  } from 'lucide-react'
+import { Quote,} from 'lucide-react'
 import {
 export function EnterpriseTestimonials() {
   return (
@@ -21,7 +21,7 @@ export function EnterpriseTestimonials() {
                 <div className='bg-card rounded-xl p-8 border border-border h-full'>
                   <Quote className='h-10 w-10 text-primary/20 mb-4' />
                   <blockquote className='text-xl mb-6 italic'>
-            {testimonials.map((testimonial index,) => (
+            {testimonials.map((testimonial index) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />

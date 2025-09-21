@@ -1,21 +1,19 @@
 export interface MatchResultItem {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  price: number;
-  rating: number;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  price: number,
+  rating: number,
   imageUrl?: string;
-  tags: string[];
-  matchScore: number;
+  tags: string[],
+  matchScore: number,
   provider: {
-    name: string;
+    name: string,
     avatar?: string;
-    verified: boolean;
-  };
-  createdAt: string;
-  updatedAt: string;
-}
+    verified: boolean};
+  createdAt: string,
+  updatedAt: string}
 
 export interface MatchmakingFilters {
   category?: string;
@@ -27,9 +25,9 @@ export interface MatchmakingFilters {
 }
 
 export interface MatchmakingResult {
-  items: MatchResultItem[];
-  totalCount: number;
-  hasMore: boolean;
+  items: MatchResultItem[],
+  totalCount: number,
+  hasMore: boolean,
   nextCursor?: string;
 }
 
@@ -88,8 +86,7 @@ export const mockMatchResults: MatchResultItem[] = [
     createdAt: '2024-01-12T11:00:00Z',
     updatedAt: '2024-01-19T13:20:00Z'
   }
-];
-
+],
 export async function findMatches(filters: MatchmakingFilters): Promise<MatchmakingResult> {
   // Simulate API call
   await new Promise(resolve => setTimeout(resolve, 1000));
@@ -130,5 +127,4 @@ export async function findMatches(filters: MatchmakingFilters): Promise<Matchmak
     totalCount: filteredResults.length,
     hasMore: false,
     nextCursor: undefined
-  };
-}
+  }}

@@ -155,8 +155,7 @@ class BundleOptimizer {
     const files = [];
     
     const findInDir = (dirPath) => {
-      const items = fs.readdirSync(dirPath, { withFileTypes: true });
-      
+      const items = fs.readdirSync(dirPath, { withFileTypes: true }),
       for (const item of items) {
         const fullPath = path.join(dirPath, item.name);
         
@@ -176,8 +175,7 @@ class BundleOptimizer {
     const files = [];
     
     const findInDir = (dirPath) => {
-      const items = fs.readdirSync(dirPath, { withFileTypes: true });
-      
+      const items = fs.readdirSync(dirPath, { withFileTypes: true }),
       for (const item of items) {
         const fullPath = path.join(dirPath, item.name);
         
@@ -203,8 +201,7 @@ class BundleOptimizer {
         consoleWarnRemovals: this.optimizations.filter(opt => opt.includes('console.warn')).length,
         consoleErrorRemovals: this.optimizations.filter(opt => opt.includes('console.error')).length,
         whitespaceOptimizations: this.optimizations.filter(opt => opt.includes('whitespace')).length,
-        commentRemovals: this.optimizations.filter(opt => opt.includes('comments')).length,
-      }
+        commentRemovals: this.optimizations.filter(opt => opt.includes('comments')).length}
     };
 
     // Save report
@@ -212,19 +209,18 @@ class BundleOptimizer {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     // Log summary
-    console.log('\n📊 Bundle Optimization Report:');
-    console.log(`🗑️  Console.log removals: ${report.summary.consoleLogRemovals}`);
-    console.log(`⚠️  Console.warn removals: ${report.summary.consoleWarnRemovals}`);
-    console.log(`❌ Console.error removals: ${report.summary.consoleErrorRemovals}`);
-    console.log(`📝 Whitespace optimizations: ${report.summary.whitespaceOptimizations}`);
-    console.log(`💬 Comment removals: ${report.summary.commentRemovals}`);
-    console.log(`✅ Total optimizations: ${report.summary.totalOptimizations}`);
-  }
+    console.log('\n📊 Bundle Optimization Report: '),
+    console.log(`🗑️  Console.log removals: ${report.summary.consoleLogRemovals}`),
+    console.log(`⚠️  Console.warn removals: ${report.summary.consoleWarnRemovals}`),
+    console.log(`❌ Console.error removals: ${report.summary.consoleErrorRemovals}`),
+    console.log(`📝 Whitespace optimizations: ${report.summary.whitespaceOptimizations}`),
+    console.log(`💬 Comment removals: ${report.summary.commentRemovals}`),
+    console.log(`✅ Total optimizations: ${report.summary.totalOptimizations}`)}
 }
 
 // Run if called directly
-if (import.meta.url === `file://${__filename}`) {
-  const optimizer = new BundleOptimizer();
+if (import.meta.url === `file: //${__filename}`) {
+  const optimizer = new BundleOptimizer(),
   optimizer.optimizeBundle().catch(console.error);
 }
 

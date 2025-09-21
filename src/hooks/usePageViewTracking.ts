@@ -3,8 +3,7 @@ import { useRouter } from "next/router";
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-  }
+    gtag?: (...args: any[]) => void}
 }
 
 export function usePageViewTracking() {
@@ -15,8 +14,7 @@ export function usePageViewTracking() {
       // Track page view
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("config", process.env.NEXT_PUBLIC_GA_ID, {
-          page_path: url,
-        });
+          page_path: url});
       }
     };
 

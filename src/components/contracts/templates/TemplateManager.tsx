@@ -6,9 +6,9 @@ import { Label } from "@/components/ui/label";
 import { ContractFormValues } from "../components/ContractForm";
 
 interface TemplateManagerProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onSelectTemplate: (template: ContractFormValues) => void;
+  isOpen: boolean,
+  onClose: () => void,
+  onSelectTemplate: (template: ContractFormValues) => void,
   currentValues?: ContractFormValues;
 }
 
@@ -21,8 +21,7 @@ const defaultTemplates: ContractFormValues[] = [
     budget: 5000,
     paymentTerms: "50% upfront, 50% on completion",
     startDate: "",
-    endDate: "",
-  },
+    endDate: ""};
   {
     projectTitle: "Mobile App Development",
     description: "Cross-platform mobile application",
@@ -31,8 +30,7 @@ const defaultTemplates: ContractFormValues[] = [
     budget: 8000,
     paymentTerms: "30% upfront, 40% at milestone, 30% on completion",
     startDate: "",
-    endDate: "",
-  },
+    endDate: ""};
   {
     projectTitle: "AI/ML Consulting",
     description: "Machine learning model development and implementation",
@@ -41,22 +39,20 @@ const defaultTemplates: ContractFormValues[] = [
     budget: 3000,
     paymentTerms: "100% on completion",
     startDate: "",
-    endDate: "",
-  },
-];
+    endDate: ""}
+  ];
 
 export function TemplateManager({
   isOpen,
   onClose,
   onSelectTemplate,
-  currentValues,
-}: TemplateManagerProps) {
+  currentValues}: TemplateManagerProps) {
   const [templates, setTemplates] = useState<ContractFormValues[]>(defaultTemplates);
   const [newTemplateName, setNewTemplateName] = useState("");
 
   const handleSaveCurrentAsTemplate = () => {
     if (currentValues && newTemplateName) {
-      const newTemplate = { ...currentValues, projectTitle: newTemplateName };
+      const newTemplate = { ...currentValues, projectTitle: newTemplateName },
       setTemplates([...templates, newTemplate]);
       setNewTemplateName("");
     }

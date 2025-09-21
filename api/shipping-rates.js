@@ -3,8 +3,7 @@ export default async function handler(req, res) {
     res.statusCode = 405,
     res.setHeader('AllowPOST'),
     res.end('Method Not Allowed'),
-    return,
-  }
+    return}
 
   try {
     const { fromAddress, toAddress, parcel } = req.body || {},
@@ -21,13 +20,10 @@ export default async function handler(req, res) {
     if (!response.ok) {
       res.statusCode = 500,
       res.json({ error: data.error || 'Failed to fetch rates' }),
-      return,
-    }
+      return}
     res.statusCode = 200,
-    res.json({ rates: data.rates }),
-  } catch (err) {
+    res.json({ rates: data.rates })} catch (err) {
     console.error('EasyPost error:', err),
     res.statusCode = 500,
-    res.json({ error: err.message }),
-  }
+    res.json({ error: err.message })}
 }

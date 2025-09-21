@@ -6,7 +6,7 @@ const fs = require('fs');
 console.log('🚀 Starting merge process for all open PRs...');
 try {
     // Check if we're in a git repository,
-execSync('git rev-parse --git-dir', { stdio: 'pipe' });
+execSync('git rev-parse --git-dir', { stdio: 'pipe' }),
     console.log('✅ Git repository detected');
 } catch (error) {
     console.error('❌ Not in a git repository');
@@ -14,7 +14,7 @@ execSync('git rev-parse --git-dir', { stdio: 'pipe' });
 }
 try {
     // Ensure clean working directory,
-const status = execSync('git status --porcelain', { encoding: 'utf8' });
+const status = execSync('git status --porcelain', { encoding: 'utf8' }),
     if (status.trim()) {
         console.log('⚠️  Working directory has changes. Stashing...');
         execSync('git stash push -m "Auto-stash before merge process"');
@@ -32,14 +32,14 @@ console.log('📥 Pulling latest changes from main...');
     } catch (error) {
         console.log('⚠️  Merge conflicts detected. Resolving...');
         // Find files with merge conflicts,
-const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),
         if (conflictFiles.trim()) {
             console.log('Found merge conflicts in:', conflictFiles.trim());
             // Resolve conflicts by accepting our version,
 const files = conflictFiles.trim().split('\n');
             for (const file of files) {
                 if (file.trim()) {
-                    console.log(`Resolving conflicts in: ${file}`);
+                    console.log(`Resolving conflicts in: ${file}`),
                     try {
                         execSync(`git checkout --ours "${file}"`);
                     } catch (e) {
@@ -49,12 +49,11 @@ const files = conflictFiles.trim().split('\n');
                 }
             }
             // Commit the merge,
-execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
-        }
+execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')}
     }
     // Get all branches,
 console.log('🌿 Getting all branches...');
-    const branches = execSync('git branch -r', { encoding: 'utf8' });
+    const branches = execSync('git branch -r', { encoding: 'utf8' }),
     const branchList = branches.split('\n')
         .map(branch => branch.trim())
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
@@ -64,17 +63,16 @@ console.log('🌿 Getting all branches...');
 for (const branch of branchList) {
         try {
             const branchName = branch.replace('origin/', '');
-            console.log(`\n🔄 Merging branch: ${branchName}`);
+            console.log(`\n🔄 Merging branch: ${branchName}`),
             // Checkout the branch,
 execSync(`git checkout ${branchName}`);
             // Merge into main,
 execSync('git checkout main');
-            execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`);
+            execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`),
             console.log(`✅ Successfully merged ${branchName}`);
         } catch (error) {
             console.log(`⚠️  Error merging ${branch}: ${error.message}`);
-            // Continue with other branches,
-}
+            // Continue with other branches}
     }
     // Push all changes,
 console.log('📤 Pushing all changes to main...');

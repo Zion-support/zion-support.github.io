@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Enable static export for Netlify
+  // Configure for static export with Next.js 11
   output: 'export',
+  distDir: '.next',
   trailingSlash: true,
   
   // Disable ESLint and TypeScript checking during build to avoid parsing issues
@@ -70,6 +71,18 @@ const nextConfig = {
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
+  
+  // Export path map for static generation
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/': { page: '/' },
+      '/contact': { page: '/contact' },
+      '/services': { page: '/services' },
+    }
+  },
   
   // Experimental features for performance
   experimental: {

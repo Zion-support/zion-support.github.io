@@ -42,9 +42,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ anchor-links-auto-fixer completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ anchor-links-auto-fixer failed:', error),
     return {
       statusCode: 500,
@@ -54,6 +52,5 @@ exports.handler = async function(event, context) {
         function: 'anchor-links-auto-fixer',
         status: 'error'
       })
-    },
-  }
+    }}
 },

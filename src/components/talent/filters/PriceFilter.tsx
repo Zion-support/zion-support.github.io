@@ -1,4 +1,4 @@
-import { ChevronDown,,, ChevronUp,,  } from 'lucide-react'
+import { ChevronDown,,, ChevronUp,} from 'lucide-react'
 return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

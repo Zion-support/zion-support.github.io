@@ -10,9 +10,9 @@ return (
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
-control = {form.control,}
+control = {form.control}
             name="displayName"
-            render={({ field }: { field: any },) => (
+            render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                 <FormControl>
@@ -30,9 +30,9 @@ placeholder="Your full name"
             )}
           />
           <FormField
-control = {form.control,}
+control = {form.control}
             name="headline"
-            render={({ field }: { field: any },) => (
+            render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
@@ -54,9 +54,9 @@ placeholder={`e.g., ${
             )}
           />
           <FormField
-control = {form.control,}
+control = {form.control}
             name="bio"
-            render={({ field }: { field: any },) => (
+            render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>

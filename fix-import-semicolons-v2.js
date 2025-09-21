@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { glob } from "glob";
 // Find all TypeScript and JavaScript files,
-const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
+const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() }),
 let totalFixed = 0;
 files.forEach((file) => {
   try {
@@ -56,7 +56,7 @@ content = content.replace(
     );
     if (modified) {
       fs.writeFileSync(filePath, content, "utf8");
-      console.log(`Fixed: ${file}`);
+      console.log(`Fixed: ${file}`),
       totalFixed++;
     }
   } catch (error) {

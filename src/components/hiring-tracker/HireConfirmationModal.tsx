@@ -7,15 +7,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { JobApplication } from '@/types/jobs';
 
 interface HireConfirmationModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  application: JobApplication;
-  onConfirm: () => void;
-}
+  isOpen: boolean,
+  onClose: () => void,
+  application: JobApplication,
+  onConfirm: () => void}
 
 export function HireConfirmationModal({ 
-  isOpen, 
-  onClose, 
+  isOpen;
+  onClose;
   application, 
   onConfirm 
 }: HireConfirmationModalProps) {
