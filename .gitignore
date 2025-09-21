@@ -902,3 +902,6 @@ pnpm-lock.yaml
 # IDE files
 *.sublime-project
 *.sublime-workspace
+
+# Large build artifacts
+core

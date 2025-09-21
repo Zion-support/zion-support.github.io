@@ -1,6 +1,6 @@
 [build]
-  # Use npm for dependency installation and build with legacy peer deps to resolve TypeScript conflicts
-  command = "npm ci --legacy-peer-deps && npm run build"
+  # Use custom build script to handle TypeScript configuration issues
+  command = "bash scripts/netlify-build.sh"
   publish = "out"
   # Explicitly specify this is a Next.js static site
   base = "."
@@ -20,4 +20,4 @@
 # Note: Redirects are now handled by the generated _redirects file in the out directory
 # This ensures compatibility with Next.js static export and avoids conflicts
 
- # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v3)
+ # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v2)
