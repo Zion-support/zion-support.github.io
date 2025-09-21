@@ -1,28 +1,31 @@
 {
-  "timestamp": "2025-09-06T00:32:21.706Z",
-  "vulnerabilities": 11,
-  "recommendations": [
+  "timestamp": "2025-09-21T13:30:37.930Z",
+  "securityIssues": [
     {
-      "type": "file_permissions",
-      "message": "package.json is world-readable",
-      "severity": "medium"
+      "type": "configuration",
+      "severity": "medium",
+      "issue": "TypeScript build errors are ignored",
+      "recommendation": "Enable TypeScript error checking in production"
     },
     {
-      "type": "file_permissions",
-      "message": "package-lock.json is world-readable",
-      "severity": "medium"
+      "type": "configuration",
+      "severity": "medium",
+      "issue": "ESLint errors are ignored during builds",
+      "recommendation": "Enable ESLint error checking in production"
+    }
+  ],
+  "recommendations": [],
+  "checks": [
+    {
+      "type": "dependencies",
+      "status": "checked",
+      "recommendation": "Run npm audit regularly and update dependencies"
     }
   ],
   "summary": {
-    "totalVulnerabilities": 0,
-    "totalRecommendations": 2,
-    "securityScore": 90,
-    "status": "good"
+    "totalIssues": 2,
+    "criticalIssues": 0,
+    "highIssues": 0,
+    "status": "excellent"
   }
-}
-    "Review and remove any hardcoded secrets",
-    "Update outdated dependencies",
-    "Implement proper environment variable management",
-    "Add security headers to Next.js configuration"
-  ]
 }
