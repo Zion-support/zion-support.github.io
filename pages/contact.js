@@ -54,17 +54,6 @@ export default function Contact() {
                 </span>
               </Link>
               <div className="hidden md:flex space-x-8">
-<<<<<<<< HEAD:pages/contact.js
-                <Link href="/"><a className="text-gray-300 hover:text-white transition-colors">Home</a></Link>
-                <Link href="/about"><a className="text-gray-300 hover:text-white transition-colors">About</a></Link>
-                <Link href="/services"><a className="text-gray-300 hover:text-white transition-colors">Services</a></Link>
-                <Link href="/contact"><a className="text-white font-semibold">Contact</a></Link>
-========
-                <Link href="/"><span className="text-gray-300 hover:text-white transition-colors">Home</span></Link>
-                <Link href="/about"><span className="text-gray-300 hover:text-white transition-colors">About</span></Link>
-                <Link href="/services"><span className="text-gray-300 hover:text-white transition-colors">Services</span></Link>
-                <Link href="/contact"><span className="text-white font-semibold">Contact</span></Link>
->>>>>>>> 8c3523662b30e8937eabdd7a7ce8f5bc1ebedcec:pages/contact.jsx
               </div>
               <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Call Now
