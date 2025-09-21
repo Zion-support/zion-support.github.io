@@ -15,6 +15,11 @@ import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import EnhancedAnalytics from '../components/EnhancedAnalytics';
 import EnhancedServiceCard from '../components/EnhancedServiceCard';
+import ModernHero from '../components/ModernHero';
+import ModernLoadingSpinner from '../components/ModernLoadingSpinner';
+import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';
+import AnimatedCounter from '../components/AnimatedCounter';
+import InteractiveCard from '../components/InteractiveCard';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -61,7 +66,7 @@ export default function Home() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <div className="text-center">
-          <LoadingSpinner size="xl" color="gradient" text="Loading Zion Tech Group..." />
+          <ModernLoadingSpinner size="large" text="Loading Zion Tech Group..." />
           <div className="mt-8 space-y-2">
             <div className="text-white text-lg font-semibold">Preparing your experience...</div>
             <div className="text-gray-300 text-sm">Loading cutting-edge technology solutions</div>
@@ -72,7 +77,7 @@ export default function Home() {
   }
 
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary>
       <div>
         <SEO 
           title="Zion Tech Group - AI, IT & Micro SaaS Services"
@@ -164,15 +169,25 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <EnhancedServiceCard
+                <InteractiveCard
                   key={index}
-                  service={service}
-                  index={index}
-                  isVisible={isVisible}
-                  onHover={(hoveredIndex) => {
-                    // Optional: Add hover effects for other cards
-                  }}
-                />
+                  className="p-8 bg-white/10 backdrop-blur-sm border border-white/20"
+                  hoverScale={1.05}
+                  onClick={() => window.location.href = '/services'}
+                >
+                  <div className="text-center">
+                    <div className="text-6xl mb-6">{service.icon}</div>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-300 mb-6">
+                      {service.description}
+                    </p>
+                    <div className="text-blue-400 font-semibold hover:text-blue-300 transition-colors">
+                      Learn More →
+                    </div>
+                  </div>
+                </InteractiveCard>
               ))}
             </div>
           </div>
@@ -221,22 +236,30 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">1000%</div>
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  <AnimatedCounter end={1000} suffix="%" duration={2} delay={0.2} />
+                </div>
                 <div className="text-lg text-gray-300 mb-2">Average ROI</div>
                 <div className="text-sm text-gray-400">Measured across all projects</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">24/7</div>
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+                  <AnimatedCounter end={24} suffix="/7" duration={2} delay={0.4} />
+                </div>
                 <div className="text-lg text-gray-300 mb-2">Support</div>
                 <div className="text-sm text-gray-400">Always available when you need us</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  <AnimatedCounter end={99.9} suffix="%" duration={2} delay={0.6} />
+                </div>
                 <div className="text-lg text-gray-300 mb-2">Uptime</div>
                 <div className="text-sm text-gray-400">Enterprise-grade reliability</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">500+</div>
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+                  <AnimatedCounter end={500} suffix="+" duration={2} delay={0.8} />
+                </div>
                 <div className="text-lg text-gray-300 mb-2">Projects</div>
                 <div className="text-sm text-gray-400">Successfully delivered worldwide</div>
               </div>
@@ -353,6 +376,6 @@ export default function Home() {
         {/* Enhanced Analytics */}
         <EnhancedAnalytics />
       </div>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 }
