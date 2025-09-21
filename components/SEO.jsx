@@ -1,17 +1,5 @@
 import Head from 'next/head';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noIndex?: boolean;
-  structuredData?: object;
-}
-
 export default function SEO({
   title = "Zion Tech Group - AI, IT & Micro SaaS Services",
   description = "Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support.",
@@ -22,7 +10,7 @@ export default function SEO({
   twitterCard = "summary_large_image",
   noIndex = false,
   structuredData
-}: SEOProps) {
+}) {
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
   
   return (

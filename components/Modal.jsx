@@ -1,16 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  title?: string;
-  children: React.ReactNode;
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
-  showCloseButton?: boolean;
-  closeOnOverlayClick?: boolean;
-  closeOnEscape?: boolean;
-}
-
 export default function Modal({
   isOpen,
   onClose,
@@ -20,8 +9,8 @@ export default function Modal({
   showCloseButton = true,
   closeOnOverlayClick = true,
   closeOnEscape = true
-}: ModalProps) {
-  const modalRef = useRef<HTMLDivElement>(null);
+}) {
+  const modalRef = useRef(null);
 
   const sizeClasses = {
     sm: 'max-w-md',
@@ -32,7 +21,7 @@ export default function Modal({
   };
 
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
+    const handleEscape = (e) => {
       if (closeOnEscape && e.key === 'Escape') {
         onClose();
       }
@@ -57,7 +46,7 @@ export default function Modal({
 
   if (!isOpen) return null;
 
-  const handleOverlayClick = (e: React.MouseEvent) => {
+  const handleOverlayClick = (e) => {
     if (closeOnOverlayClick && e.target === e.currentTarget) {
       onClose();
     }

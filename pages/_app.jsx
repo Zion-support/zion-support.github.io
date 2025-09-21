@@ -1,7 +1,6 @@
 import React from 'react';
-import type { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }) {
   return (
     <div className="min-h-screen bg-white">
       <header className="bg-slate-900 text-white p-4">
