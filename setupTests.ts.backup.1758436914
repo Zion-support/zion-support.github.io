@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-// Export empty object to make this a module
-=======
-// Test setup file
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4
-export {};
