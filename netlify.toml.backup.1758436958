@@ -1,5 +1,9 @@
 [build]
+<<<<<<< HEAD
+  command = "npm ci --legacy-peer-deps --ignore-scripts && npm run build"
+=======
   command = "npm install --legacy-peer-deps && npm run build"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-753c
   publish = ".next"
 
 [build.processing]
