@@ -22,6 +22,8 @@ const nextConfig = {
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    formats: ['image/webp', 'image/avif'],
   },
   
   // Exclude certain directories from compilation
@@ -89,6 +91,30 @@ const nextConfig = {
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
+  generateEtags: false,
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ]
+  },
   
   // Experimental features for performance
   experimental: {

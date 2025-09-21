@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Simple performance metrics hook
 export function usePerformanceMetrics() {
   return {
@@ -58,3 +59,7 @@ export function usePerformanceMetrics() {
   return { metrics, isSupported };
 }
 >>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
+=======
+// usePerformanceMetrics hook module
+export {};
+>>>>>>> pr-22753

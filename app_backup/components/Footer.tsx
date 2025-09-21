@@ -40,16 +40,24 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/services">
+<<<<<<< HEAD:app_backup/components/Footer.tsx
                   <span className="text-gray-300 hover:text-white transition-colors">
                     Services
                   </span>
+=======
+                  <a className="text-gray-300 hover:text-white transition-colors">Services</a>
+>>>>>>> pr-22753:app/components/Footer.tsx
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
+<<<<<<< HEAD:app_backup/components/Footer.tsx
                   <span className="text-gray-300 hover:text-white transition-colors">
                     Contact
                   </span>
+=======
+                  <a className="text-gray-300 hover:text-white transition-colors">Contact</a>
+>>>>>>> pr-22753:app/components/Footer.tsx
                 </Link>
               </li>
               <li>
