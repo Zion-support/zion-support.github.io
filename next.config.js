@@ -41,7 +41,7 @@ const nextConfig = {
   
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibility
+    // Fix for CSS processing issues with Node.js compatibilityorigin/main
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -66,75 +66,7 @@ const nextConfig = {
       test: /\.ts$/,
       include: require('path').resolve(__dirname, 'contracts'),
       use: 'ignore-loader'
-    });
-
-    // Bundle analyzer for production builds
-    if (process.env.ANALYZE === 'true') {
-      const { BundleAnalyzerPlugin } = require('@next/bundle-analyzer');
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'server',
-          analyzerPort: isServer ? 8888 : 8889,
-          openAnalyzer: true,
-        })
-      );
-    }
-
-    // Optimize chunks
-    if (!dev) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          default: {
-            minChunks: 2,
-            priority: -20,
-            reuseExistingChunk: true,
-          },
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            priority: -10,
-            chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            priority: -5,
-            reuseExistingChunk: true,
-          },
-        },
-      };
-    }
-
-    return config;
-  },
-  
-  // Headers for better security and performance
-  headers: async () => {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-    ];
-  },
+    });origin/main
 };
 
 module.exports = nextConfig;
