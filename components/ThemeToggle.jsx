@@ -2,7 +2,19 @@ import React from 'react';
 import { useTheme } from './ThemeProvider';
 
 export const ThemeToggle = () => {
-  const { theme, toggleTheme } = useTheme();
+  // Handle case when ThemeProvider is not available (during static generation)
+  let theme = 'dark';
+  let toggleTheme = () => {};
+
+  try {
+    const themeContext = useTheme();
+    theme = themeContext.theme;
+    toggleTheme = themeContext.toggleTheme;
+  } catch (error) {
+    // During static generation, useTheme will throw an error
+    // Use default values
+    console.warn('ThemeToggle: useTheme not available, using defaults');
+  }
 
   return (
     <button
