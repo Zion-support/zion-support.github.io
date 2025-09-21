@@ -1,219 +1,144 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState({});
-  const [isVisible, setIsVisible] = useState(false);
-
+const PerformanceMonitor = () => {
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-
-    const measurePerformance = () => {
-      // Get navigation timing
-      const navigation = performance.getEntriesByType('navigation')[0];
-      if (navigation) {
-        const timing = {
-          dns: navigation.domainLookupEnd - navigation.domainLookupStart,
-          tcp: navigation.connectEnd - navigation.connectStart,
-          request: navigation.responseEnd - navigation.requestStart,
-          response: navigation.responseEnd - navigation.responseStart,
-          dom: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          load: navigation.loadEventEnd - navigation.loadEventStart,
-          total: navigation.loadEventEnd - navigation.navigationStart
-        };
-
-        setMetrics(prev => ({
-          ...prev,
-          timing
-        }));
-
-        // Track performance metrics
-        if (typeof window !== 'undefined' && window.gtag) {
-          Object.entries(timing).forEach(([key, value]) => {
-            window.gtag('event', 'performance_metric', {
-              event_category: 'Performance',
-              event_label: key,
-              value: Math.round(value)
-            });
+    // Web Vitals monitoring
+    const reportWebVitals = (metric) => {
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Web Vital:', metric);
+      }
+      
+      // Send to analytics in production
+      if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
+        // Send to Google Analytics or other analytics service
+        if (window.gtag) {
+          window.gtag('event', metric.name, {
+            event_category: 'Web Vitals',
+            event_label: metric.id,
+            value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+            non_interaction: true,
           });
         }
       }
+    };
 
-      // Get resource timing
-      const resources = performance.getEntriesByType('resource');
-      const resourceMetrics = {
-        totalResources: resources.length,
-        totalSize: resources.reduce((acc, resource) => acc + (resource.transferSize || 0), 0),
-        slowResources: resources.filter(resource => resource.duration > 1000).length
-      };
-
-      setMetrics(prev => ({
-        ...prev,
-        resources: resourceMetrics
-      }));
-
-      // Get memory usage (if available)
-      if (performance.memory) {
-        const memoryMetrics = {
-          used: Math.round(performance.memory.usedJSHeapSize / 1024 / 1024), // MB
-          total: Math.round(performance.memory.totalJSHeapSize / 1024 / 1024), // MB
-          limit: Math.round(performance.memory.jsHeapSizeLimit / 1024 / 1024) // MB
-        };
-
-        setMetrics(prev => ({
-          ...prev,
-          memory: memoryMetrics
-        }));
+    // Monitor Core Web Vitals
+    const measureWebVitals = () => {
+      // First Contentful Paint (FCP)
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.name === 'first-contentful-paint') {
+              reportWebVitals({
+                name: 'FCP',
+                value: entry.startTime,
+                id: 'fcp'
+              });
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['paint'] });
       }
 
-      // Track Core Web Vitals
+      // Largest Contentful Paint (LCP)
       if ('PerformanceObserver' in window) {
-        // LCP
-        const lcpObserver = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({
-            ...prev,
-            lcp: Math.round(lastEntry.startTime)
-          }));
+          reportWebVitals({
+            name: 'LCP',
+            value: lastEntry.startTime,
+            id: 'lcp'
+          });
+        });
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
 
-          if (window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              event_category: 'Web Vitals',
-              event_label: 'LCP',
-              value: Math.round(lastEntry.startTime)
+      // First Input Delay (FID)
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            reportWebVitals({
+              name: 'FID',
+              value: entry.processingStart - entry.startTime,
+              id: 'fid'
             });
           }
         });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        observer.observe({ entryTypes: ['first-input'] });
+      }
 
-        // FID
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            setMetrics(prev => ({
-              ...prev,
-              fid: Math.round(entry.processingStart - entry.startTime)
-            }));
-
-            if (window.gtag) {
-              window.gtag('event', 'web_vitals', {
-                event_category: 'Web Vitals',
-                event_label: 'FID',
-                value: Math.round(entry.processingStart - entry.startTime)
-              });
-            }
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        // CLS
+      // Cumulative Layout Shift (CLS)
+      if ('PerformanceObserver' in window) {
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }
           }
-          setMetrics(prev => ({
-            ...prev,
-            cls: Math.round(clsValue * 1000) / 1000
-          }));
+          reportWebVitals({
+            name: 'CLS',
+            value: clsValue,
+            id: 'cls'
+          });
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
+      }
+    };
 
-          if (window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              event_category: 'Web Vitals',
-              event_label: 'CLS',
-              value: Math.round(clsValue * 1000)
-            });
+    // Monitor resource loading performance
+    const monitorResourcePerformance = () => {
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'resource') {
+              const loadTime = entry.responseEnd - entry.startTime;
+              if (loadTime > 1000) { // Log resources taking more than 1 second
+                console.warn('Slow resource detected:', {
+                  name: entry.name,
+                  duration: loadTime,
+                  size: entry.transferSize
+                });
+              }
+            }
           }
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        observer.observe({ entryTypes: ['resource'] });
       }
     };
 
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+    // Monitor memory usage
+    const monitorMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = performance.memory;
+        const memoryUsage = {
+          used: Math.round(memory.usedJSHeapSize / 1048576), // MB
+          total: Math.round(memory.totalJSHeapSize / 1048576), // MB
+          limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
+        };
+        
+        if (memoryUsage.used > memoryUsage.limit * 0.8) {
+          console.warn('High memory usage detected:', memoryUsage);
+        }
+      }
+    };
 
+    // Initialize monitoring
+    measureWebVitals();
+    monitorResourcePerformance();
+    
+    // Monitor memory usage every 30 seconds
+    const memoryInterval = setInterval(monitorMemoryUsage, 30000);
+    
     // Cleanup
     return () => {
-      window.removeEventListener('load', measurePerformance);
+      clearInterval(memoryInterval);
     };
   }, []);
 
-  // Toggle visibility (for debugging)
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(prev => !prev);
-      }
-    };
+  return null; // This component doesn't render anything
+};
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, []);
-
-  if (!isVisible || process.env.NODE_ENV !== 'production') return null;
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg shadow-lg max-w-sm text-xs font-mono z-50">
-      <div className="flex justify-between items-center mb-2">
-        <h3 className="font-bold">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      
-      {metrics.timing && (
-        <div className="mb-2">
-          <div className="font-semibold text-cyan-400">Timing (ms)</div>
-          <div>DNS: {metrics.timing.dns?.toFixed(2)}</div>
-          <div>TCP: {metrics.timing.tcp?.toFixed(2)}</div>
-          <div>Request: {metrics.timing.request?.toFixed(2)}</div>
-          <div>Response: {metrics.timing.response?.toFixed(2)}</div>
-          <div>DOM: {metrics.timing.dom?.toFixed(2)}</div>
-          <div>Load: {metrics.timing.load?.toFixed(2)}</div>
-          <div className="font-semibold">Total: {metrics.timing.total?.toFixed(2)}</div>
-        </div>
-      )}
-
-      {metrics.resources && (
-        <div className="mb-2">
-          <div className="font-semibold text-purple-400">Resources</div>
-          <div>Count: {metrics.resources.totalResources}</div>
-          <div>Size: {(metrics.resources.totalSize / 1024).toFixed(2)} KB</div>
-          <div>Slow: {metrics.resources.slowResources}</div>
-        </div>
-      )}
-
-      {metrics.memory && (
-        <div className="mb-2">
-          <div className="font-semibold text-green-400">Memory (MB)</div>
-          <div>Used: {metrics.memory.used}</div>
-          <div>Total: {metrics.memory.total}</div>
-          <div>Limit: {metrics.memory.limit}</div>
-        </div>
-      )}
-
-      {(metrics.lcp || metrics.fid || metrics.cls) && (
-        <div>
-          <div className="font-semibold text-yellow-400">Web Vitals</div>
-          {metrics.lcp && <div>LCP: {metrics.lcp}ms</div>}
-          {metrics.fid && <div>FID: {metrics.fid}ms</div>}
-          {metrics.cls && <div>CLS: {metrics.cls}</div>}
-        </div>
-      )}
-
-      <div className="mt-2 text-gray-400 text-xs">
-        Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
-  );
-}
+export default PerformanceMonitor;

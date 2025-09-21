@@ -54,7 +54,7 @@ const nextConfig = {
   },
   
   // Webpack configuration
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, dev }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -72,6 +72,20 @@ const nextConfig = {
       
       // Add compression support (disabled due to dependency conflicts)
       // Compression will be handled by Netlify's built-in compression
+    }
+    
+    // Performance optimizations
+    if (!dev) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
     }
     
     return config;
