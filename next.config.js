@@ -1,9 +1,14 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   trailingSlash: true,
   distDir: 'out',
+  
+  // Static export configuration
+  output: 'export',
   
   // Image optimization
   images: {
@@ -56,4 +61,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
