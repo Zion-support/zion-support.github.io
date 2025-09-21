@@ -1,10 +1,15 @@
-import React from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import React, { Component } from 'react';
+import Link from 'next/link';
 
-class ErrorBoundary extends React.Component {
+class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null };
+    this.state = { 
+      hasError: false, 
+      error: null, 
+      errorInfo: null,
+      retryCount: 0
+    };
   }
 
   static getDerivedStateFromError(error) {
@@ -22,67 +27,92 @@ class ErrorBoundary extends React.Component {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    // Log error to monitoring service
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    // You can also log the error to an error reporting service here
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.toString(),
+        fatal: false
+      });
+    }
   }
 
-  handleRefresh = () => {
-    window.location.reload();
+  handleRetry = () => {
+    this.setState(prevState => ({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: prevState.retryCount + 1
+    }));
   };
 
-  handleGoHome = () => {
-    window.location.href = '/';
+  handleReload = () => {
+    if (typeof window !== 'undefined') {
+      window.location.reload();
+    }
   };
 
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
-            </p>
-            
-            <div className="space-y-3">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4">
+          <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 text-center">
+            <div className="mb-6">
+              <div className="mx-auto w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-600 dark:text-gray-400">
+                We're sorry, but something unexpected happened. Please try again.
+              </p>
+            </div>
+
+            <div className="space-y-4">
               <button
-                onClick={this.handleRefresh}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                onClick={this.handleRetry}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
               >
-                <RefreshCw className="w-4 h-4" />
-                <span>Try Again</span>
+                Try Again
               </button>
               
               <button
-                onClick={this.handleGoHome}
-                className="w-full border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
+                onClick={this.handleReload}
+                className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
               >
-                <Home className="w-4 h-4" />
-                <span>Go Home</span>
+                Reload Page
               </button>
+              
+              <Link
+                href="/"
+                className="block w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+              >
+                Go Home
+              </Link>
             </div>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white transition-colors">
-                  Error Details (Development)
+                <summary className="cursor-pointer text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
+                  Error Details (Development Only)
                 </summary>
-                <div className="mt-2 p-3 bg-black/50 rounded text-xs text-red-400 font-mono overflow-auto max-h-32">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.toString()}
-                  </div>
-                  <div>
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap mt-1">
-                      {this.state.errorInfo.componentStack}
-                    </pre>
-                  </div>
+                <div className="mt-2 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                  <pre className="text-xs text-red-600 dark:text-red-400 whitespace-pre-wrap">
+                    {this.state.error && this.state.error.toString()}
+                    {this.state.errorInfo.componentStack}
+                  </pre>
                 </div>
               </details>
             )}
+
+            <div className="mt-6 text-xs text-gray-500 dark:text-gray-400">
+              Retry count: {this.state.retryCount}
+            </div>
           </div>
         </div>
       );
