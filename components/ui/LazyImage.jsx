@@ -33,9 +33,7 @@ export const LazyImage = ({
     }
     return () => {
       if (observer && observer.unobserve) {
-        if (observer && observer.unobserve) {
         observer.unobserve(imageRef);
-      }
       }
     };
   }, [imageRef, imageSrc, placeholder, src]);
