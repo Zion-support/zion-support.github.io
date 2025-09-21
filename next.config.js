@@ -13,10 +13,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  swcMinify: false,
-  experimental: {
-    esmExternals: false,
-  },
+  // Removed deprecated swcMinify option (defaults to true in Next.js 15+)
+  // Removed experimental.esmExternals (not recommended)
   
   // Webpack configuration
   webpack: (config, { isServer }) => {
