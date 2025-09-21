@@ -8,15 +8,11 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  
+  // Disable ESLint and TypeScript checking during build to avoid parsing issues
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
+  },origin/main
   experimental: {
     esmExternals: false,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
