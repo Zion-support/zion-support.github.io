@@ -3,8 +3,13 @@
   publish = "out"
 
 [build.environment]
+<<<<<<< HEAD
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--legacy-peer-deps"
+=======
   NODE_VERSION = "18"
   NPM_FLAGS = "--legacy-peer-deps --ignore-scripts"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-e0f3
 
 # Note: Headers are now handled by the generated _headers file in the out directory
 # This ensures compatibility with Next.js static export and avoids conflicts
