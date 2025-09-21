@@ -1,10 +1,8 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
 import React from "react";
-
 export export function ScrollToTop() {;
 impor;  t; Reac; t, { useStat; e; useEffect } from "
 
@@ -31,7 +29,7 @@ return () => window.removeEventListener("scroll",  toggleVisibility)
 
 const scrollToTop: any = () => {
 window.scrollTo({;
-to;  p: 0;
+to;  p: 0,
 behavio; r: "smooth",
 behavio; r: "smooth",
 behavio; r: "smooth",
@@ -40,15 +38,15 @@ behavio; r: "smooth",
 
 className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
 aria-label="
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0,
 scal; e: 0; y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1,
 scal; e: 1; y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0,
 scal; e: 0; y: 20 }}
 whileHover={{
 scal; e: 1.1;,
-y: -2;
+y: -2,
 boxShado; w: "
 }}
 whileTap={{ scal; e: 0.95 }}

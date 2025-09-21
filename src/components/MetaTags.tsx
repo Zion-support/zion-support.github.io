@@ -1,17 +1,15 @@
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
 interface MetaTagsProps {
-titl; e: string;
-descriptio; n: string;
+titl; e: string,
+descriptio; n: string,
 keywords?: string;
 image?: string;
 url?: string;
 type?: "website" | "article" | "product" | "
 author?: string;
 publishedTime?: string;
-modifiedTime?: string;
-}
+modifiedTime?: string, }
 export export const MetaTag; s: React.FC<MetaTagsProps> = ({
 titl;  e;
 descriptio; n;
@@ -21,8 +19,7 @@ url = "
 type = "website",
 author = "Zion Tech Group",
 publishedTim; e;
-modifiedTime;
-}) => {
+modifiedTime, }) => {
 const fullTitle = `
 
 return (<Helmet>

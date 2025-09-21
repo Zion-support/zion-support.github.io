@@ -1,11 +1,9 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
 export const Logo: React.FC = () => {
 return (
 <Link to="/" className="flex items-center group">
@@ -24,7 +22,7 @@ return (
 {isWhitelabel ? brandName : "ZION"}
 </div>
 <div className="text-xs text-zion-cyan font-medium leading-tight">
-TECH GROUP,
+TECH GROUP;
 </div>
 </div>
 </div>
@@ -33,13 +31,13 @@ TECH GROUP,
 )
 }<//Link><///Link>
 import React from 'react',
-import import Link from 'next/link';
-import import { useWhitelabel,,  } from '@/context/WhitelabelContext';
+import import Link from 'next/link',
+import import { useWhitelabel,,  } from '@/context/WhitelabelContext',
 interface LogoProps {
   customLogo?: string,
 export function Logo({ customLogo }: LogoProps) {
   const { isWhitelabel logoUrl brandName } = useWhitelabel()
-  // Use the white-label logo if available and no specific customLogo is provided,
+  // Use the white-label logo if available and no specific customLogo is provided;
 if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">

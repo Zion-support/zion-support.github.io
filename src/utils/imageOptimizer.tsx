@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-
+import React, { useState, useEffect, useRef, useCallback } from 'react',
 interface ImageOptimizerProps {
-  src: string;
+  src: string,
   alt: string;
   width?: number;
   height?: number;
@@ -10,19 +9,17 @@ interface ImageOptimizerProps {
   className?: string;
   lazy?: boolean;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void, }
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
   quality?: number;
   className?: string;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void, }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -31,7 +28,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   quality = 80,
   className,
-  onLoad,
+  onLoad;
   onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -39,26 +36,22 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
-    onLoad?.();
-  }, [onLoad]);
+    onLoad?.();, [onLoad]);
 
   const handleError = useCallback(() => {
     setHasError(true);
-    onError?.();
-  }, [onError]);
+    onError?.();, [onError]);
 
   const optimizedSrc = React.useMemo(() => {
     if (!src) return src;
     
     // If it's already an optimized URL, return as is
     if (src.includes('w_') || src.includes('h_') || src.includes('q_')) {
-      return src;
-    }
+      return src, }
 
     // For external images, we can't optimize them
     if (src.startsWith('http') && !src.includes('your-cdn-domain.com')) {
-      return src;
-    }
+      return src, }
 
     // For local images or CDN images, add optimization parameters
     const url = new URL(src, window.location.origin);
@@ -68,8 +61,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     url.searchParams.set('f', 'auto'); // Auto format
     url.searchParams.set('fit', 'crop'); // Crop to fit
 
-    return url.toString();
-  }, [src, width, height, quality]);
+    return url.toString();, [src, width, height, quality]);
 
   if (hasError) {
     return (
@@ -88,7 +80,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         </div>
       </div>
     );
-  }
 
   return (
     <img
@@ -104,8 +95,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         transition: 'opacity 0.3s ease-in-out'
       }}
     />
-  );
-};
+  );;
 
 export const LazyImage: React.FC<ImageOptimizerProps> = ({
   src,
@@ -116,7 +106,7 @@ export const LazyImage: React.FC<ImageOptimizerProps> = ({
   placeholder,
   className,
   lazy = true,
-  onLoad,
+  onLoad;
   onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -126,15 +116,13 @@ export const LazyImage: React.FC<ImageOptimizerProps> = ({
   useEffect(() => {
     if (!lazy) {
       setIsInView(true);
-      return;
-    }
+      return, }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
-        }
       },
       {
         threshold: 0.1,
@@ -144,19 +132,15 @@ export const LazyImage: React.FC<ImageOptimizerProps> = ({
 
     if (imgRef.current) {
       observer.observe(imgRef.current);
-    }
 
-    return () => observer.disconnect();
-  }, [lazy]);
+    return () => observer.disconnect();, [lazy]);
 
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
-    onLoad?.();
-  }, [onLoad]);
+    onLoad?.();, [onLoad]);
 
   const handleError = useCallback(() => {
-    onError?.();
-  }, [onError]);
+    onError?.();, [onError]);
 
   return (
     <div className={`lazy-image-container ${className || ''}`}>
@@ -177,23 +161,19 @@ export const LazyImage: React.FC<ImageOptimizerProps> = ({
         />
       )}
     </div>
-  );
-};
+  );;
 
 export const ImageGallery: React.FC<{
-  images: string[];
-  alt: string;
-  className?: string;
-}> = ({ images, alt, className }) => {
+  images: string[],
+  alt: string,
+  className?: string, }> = ({ images, alt, className }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  }, [images.length]);
+    setCurrentIndex((prev) => (prev + 1) % images.length);, [images.length]);
 
   const prevImage = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  }, [images.length]);
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);, [images.length]);
 
   if (images.length === 0) return null;
 
@@ -244,7 +224,6 @@ export const ImageGallery: React.FC<{
         </div>
       )}
     </div>
-  );
-};
+  );;
 
 export default OptimizedImage;

@@ -1,25 +1,23 @@
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { TalentProfile } from "@/types/talent";
-
+import { useState } from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { TalentProfile } from "@/types/talent",
 interface SmartContractBuilderProps {
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string;
-  onContractGenerated: (contract: string) => void;
-}
+  isOpen: boolean,
+  onClose: () => void,
+  talent: TalentProfile,
+  clientName: string,
+  onContractGenerated: (contract: string) => void, }
 
 export function SmartContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
-  onContractGenerated,
+  onContractGenerated;
 }: SmartContractBuilderProps) {
   const [contractCode, setContractCode] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
@@ -46,8 +44,7 @@ contract TalentContract {
     struct Milestone {
         string description;
         uint256 value;
-        bool isCompleted;
-    }
+        bool isCompleted, }
     
     mapping(uint256 => Milestone) public milestones;
     
@@ -65,8 +62,7 @@ contract TalentContract {
         projectValue = _projectValue;
         milestoneCount = _milestoneCount;
         currentMilestone = 0;
-        isCompleted = false;
-    }
+        isCompleted = false, }
     
     function addMilestone(uint256 _milestoneId, string memory _description, uint256 _value) public {
         require(msg.sender == talent, "Only talent can add milestones");
@@ -77,7 +73,6 @@ contract TalentContract {
             value: _value,
             isCompleted: false
         });
-    }
     
     function completeMilestone(uint256 _milestoneId) public {
         require(msg.sender == client, "Only client can complete milestones");
@@ -92,7 +87,6 @@ contract TalentContract {
         if (currentMilestone == milestoneCount) {
             isCompleted = true;
             emit ProjectCompleted(projectValue);
-        }
     }
     
     function withdrawPayment() public {
@@ -100,17 +94,13 @@ contract TalentContract {
         require(isCompleted, "Project not completed");
         
         payable(talent).transfer(address(this).balance);
-    }
 }
       `;
       
       setContractCode(smartContract);
-      onContractGenerated(smartContract);
-    } catch (error) {
-      console.error("Smart contract generation failed:", error);
-    } finally {
+      onContractGenerated(smartContract); catch (error) {
+      console.error("Smart contract generation failed:", error); finally {
       setIsGenerating(false);
-    }
   };
 
   return (
@@ -155,4 +145,3 @@ contract TalentContract {
       </DialogContent>
     </Dialog>
   );
-}

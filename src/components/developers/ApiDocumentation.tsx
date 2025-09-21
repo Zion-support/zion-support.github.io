@@ -1,30 +1,25 @@
-import { useState } from 'react';
-import { BookOpen, Terminal } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-
+import { useState } from 'react',
+import { BookOpen, Terminal } from 'lucide-react',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 interface ApiEndpoint {
-  method: string;
-  endpoint: string;
+  method: string,
+  endpoint: string,
   description: string;
   note?: string;
   params: Array<{
-    name: string;
-    type: string;
-    description: string;
-    required: boolean;
-  }>;
+    name: string,
+    type: string,
+    description: string,
+    required: boolean, }>;
   codeExamples?: Record<string, string>;
   responseExamples?: {
-    success: string;
-    error?: string;
-  };
-}
+    success: string,
+    error?: string, }, }
 
 interface ApiDocumentationProps {
-  endpoints: ApiEndpoint[];
-}
+  endpoints: ApiEndpoint[], }
 
 export function ApiDocumentation({ endpoints }: ApiDocumentationProps) {
   const [activeTab, setActiveTab] = useState<string>('');
@@ -32,16 +27,15 @@ export function ApiDocumentation({ endpoints }: ApiDocumentationProps) {
   const getMethodColor = (method: string) => {
     switch (method) {
       case 'GET':
-        return 'border-green-500 text-green-400';
+        return 'border-green-500 text-green-400',
       case 'POST':
-        return 'border-blue-500 text-blue-400';
+        return 'border-blue-500 text-blue-400',
       case 'PUT':
-        return 'border-yellow-500 text-yellow-400';
+        return 'border-yellow-500 text-yellow-400',
       case 'DELETE':
-        return 'border-red-500 text-red-400';
+        return 'border-red-500 text-red-400',
       default:
-        return 'border-gray-500 text-gray-400';
-    }
+        return 'border-gray-500 text-gray-400', }
   };
 
   const CodeBlock = ({ code, language }: { code: string; language: string }) => (
@@ -159,4 +153,3 @@ export function ApiDocumentation({ endpoints }: ApiDocumentationProps) {
       </Card>
     </div>
   );
-}

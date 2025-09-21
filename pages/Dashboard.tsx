@@ -1,6 +1,5 @@
 import React from 'react';
 import { Bell } from 'lucide-react';
-
 export default function Dashboard() {
   return (
     <div className="min-h-screen bg-zion-blue">

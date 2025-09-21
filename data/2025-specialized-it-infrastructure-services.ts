@@ -244,4 +244,4 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     rating: 4.6,
     reviews: 34
   }
-],
+];

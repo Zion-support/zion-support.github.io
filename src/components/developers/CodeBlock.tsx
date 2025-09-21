@@ -1,13 +1,11 @@
-import { useState } from 'react';
-import { Check, Copy } from 'lucide-react';
-import { cn } from "@/lib/utils";
-import { Button } from '@/components/ui/button';
-
+import { useState } from 'react',
+import { Check, Copy } from 'lucide-react',
+import { cn } from "@/lib/utils",
+import { Button } from '@/components/ui/button',
 interface CodeBlockProps {
   code: string;
   language?: string;
-  className?: string;
-}
+  className?: string, }
 
 export function CodeBlock({ code, language = 'bash', className }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
@@ -16,10 +14,8 @@ export function CodeBlock({ code, language = 'bash', className }: CodeBlockProps
     try {
       await navigator.clipboard.writeText(code);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (error) {
+      setTimeout(() => setCopied(false), 2000); catch (error) {
       console.error('Failed to copy code:', error);
-    }
   };
 
   return (
@@ -44,4 +40,3 @@ export function CodeBlock({ code, language = 'bash', className }: CodeBlockProps
       </pre>
     </div>
   );
-}

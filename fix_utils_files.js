@@ -1,5 +1,5 @@
-import fs from "fs";
-import { glob } from "glob";
+import fs from "fs",
+import { glob } from "glob",
 
 function fixUtilsFile(filePath) {
   try {
@@ -21,8 +21,8 @@ content = content.replace(
       "export const $1 = $2;",
     );
     content = content.replace(
-      /import\s+React\s+from\s*'rea\s*c\s*t';;'/g,
-      "import React from 'react';",
+      /import\s+React\s+from\s*'rea\s*c\s*t',;'/g,
+      "import React from 'react',";
     );
     content = content.replace(
       /const\s+([^=]+)\s*=\s*([^;]+);/g,

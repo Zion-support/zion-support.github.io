@@ -89,18 +89,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.trends || [],
     } catch (error) {
-      console.error('Error analyzing market trends:', error),
+      console.error('Error analyzing market trends:', error);
       throw error,
     }
   }
@@ -112,18 +110,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.competitors || [],
     } catch (error) {
-      console.error('Error analyzing competitors:', error),
+      console.error('Error analyzing competitors:', error);
       throw error,
     }
   }
@@ -135,18 +131,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.segments || [],
     } catch (error) {
-      console.error('Error segmenting market:', error),
+      console.error('Error segmenting market:', error);
       throw error,
     }
   }
@@ -158,18 +152,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.report,
     } catch (error) {
-      console.error('Error generating comprehensive report:', error),
+      console.error('Error generating comprehensive report:', error);
       throw error,
     }
   }
@@ -180,16 +172,14 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.trends || [],
     } catch (error) {
-      console.error('Error getting real-time insights:', error),
+      console.error('Error getting real-time insights:', error);
       throw error,
     }
   }
@@ -201,18 +191,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ format })
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.downloadUrl,
     } catch (error) {
-      console.error('Error exporting report:', error),
+      console.error('Error exporting report:', error);
       throw error,
     }
   }
@@ -224,21 +212,19 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ ...request, schedule })
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.scheduleId,
     } catch (error) {
-      console.error('Error scheduling report:', error),
+      console.error('Error scheduling report:', error);
       throw error,
     }
   }
 }
 
-export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key'),
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');

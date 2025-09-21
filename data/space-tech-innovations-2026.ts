@@ -272,7 +272,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     implementationDetails: 'Complete space weather monitoring platform with real-time tracking, prediction algorithms, and protection recommendations. Includes mobile apps and API access.',
     launchDate: '2026-03-01',
     customers: 150,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 85
   }
-],
+];

@@ -1,28 +1,25 @@
 export interface ContentAnalysis {
-  page: string;
-  wordCount: number;
-  headingCount: number;
-  imageCount: number;
-  linkCount: number;
-  readabilityScore: number;
-  seoScore: number;
-  issues: ContentIssue[];
-  suggestions: ContentSuggestion[];
-}
+  page: string,
+  wordCount: number,
+  headingCount: number,
+  imageCount: number,
+  linkCount: number,
+  readabilityScore: number,
+  seoScore: number,
+  issues: ContentIssue[],
+  suggestions: ContentSuggestion[], }
 
 export interface ContentIssue {
-  type: "missing-headings" | "minimal-content" | "no-images" | "poor-structure" | "missing-keywords";
-  severity: "high" | "medium" | "low";
-  description: string;
-  location?: string;
-}
+  type: "missing-headings" | "minimal-content" | "no-images" | "poor-structure" | "missing-keywords",
+  severity: "high" | "medium" | "low",
+  description: string,
+  location?: string, }
 
 export interface ContentSuggestion {
-  type: "add-headings" | "expand-content" | "add-images" | "improve-structure" | "add-keywords";
-  priority: "high" | "medium" | "low";
-  description: string;
-  example?: string;
-}
+  type: "add-headings" | "expand-content" | "add-images" | "improve-structure" | "add-keywords",
+  priority: "high" | "medium" | "low",
+  description: string,
+  example?: string, }
 
 export class ContentOptimizer {
   private static readonly MIN_WORD_COUNT = 300;
@@ -41,7 +38,7 @@ export class ContentOptimizer {
     const issues = this.identifyIssues(content, page, {
       wordCount,
       headingCount,
-      imageCount,
+      imageCount;
       linkCount
     });
 
@@ -57,12 +54,10 @@ export class ContentOptimizer {
       seoScore,
       issues,
       suggestions
-    };
-  }
+    }, }
 
   static generateMetaDescription(content: string, page: string): string {
-    const contentType = page.split("/")[0] || "home";
-    
+    const contentType = page.split("/")[0] || "home",
     const baseDescriptions: Record<string, string> = {
       home: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions. Transform your business with Zion Tech Group.",
       about: "Learn about Zion Tech Group's mission to revolutionize technology solutions. Expert team delivering innovative AI, cloud, and cybersecurity services.",
@@ -74,29 +69,24 @@ export class ContentOptimizer {
     const baseDescription = baseDescriptions[contentType];
     const pageKeywords = page.split("/").filter(Boolean).join(" ");
 
-    return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
-  }
+    return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`, }
 
   private static countWords(content: string): number {
     // Remove HTML tags and count words
     const textContent = content.replace(/<[^>]*>/g, " ").trim();
-    return textContent.split(/\s+/).filter(word => word.length > 0).length;
-  }
+    return textContent.split(/\s+/).filter(word => word.length > 0).length, }
 
   private static countHeadings(content: string): number {
     const headingMatches = content.match(/<h[1-6][^>]*>/gi);
-    return headingMatches ? headingMatches.length : 0;
-  }
+    return headingMatches ? headingMatches.length : 0, }
 
   private static countImages(content: string): number {
     const imageMatches = content.match(/<img[^>]*>/gi);
-    return imageMatches ? imageMatches.length : 0;
-  }
+    return imageMatches ? imageMatches.length : 0, }
 
   private static countLinks(content: string): number {
     const linkMatches = content.match(/<a[^>]*>/gi);
-    return linkMatches ? linkMatches.length : 0;
-  }
+    return linkMatches ? linkMatches.length : 0, }
 
   private static calculateReadabilityScore(content: string): number {
     const textContent = content.replace(/<[^>]*>/g, " ").trim();
@@ -109,7 +99,6 @@ export class ContentOptimizer {
     // Flesch Reading Ease formula
     const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
     return Math.max(0, Math.min(100, score));
-  }
 
   private static countSyllables(text: string): number {
     // Simplified syllable counting
@@ -118,16 +107,13 @@ export class ContentOptimizer {
 
     words.forEach(word => {
       if (word.length <= 3) {
-        syllableCount += 1;
-      } else {
+        syllableCount += 1, } else {
         // Count vowel groups
         const vowelGroups = word.match(/[aeiouy]+/g);
-        syllableCount += vowelGroups ? vowelGroups.length : 1;
-      }
+        syllableCount += vowelGroups ? vowelGroups.length : 1, }
     });
 
-    return syllableCount;
-  }
+    return syllableCount, }
 
   private static calculateSEOScore(content: string, page: string): number {
     let score = 100;
@@ -152,16 +138,13 @@ export class ContentOptimizer {
     if (internalLinks.length < 2) score -= 10;
 
     return Math.max(0, score);
-  }
 
   private static identifyIssues(content: string, page: string, metrics: {
-    wordCount: number;
-    headingCount: number;
-    imageCount: number;
-    linkCount: number;
-  }): ContentIssue[] {
-    const issues: ContentIssue[] = [];
-
+    wordCount: number,
+    headingCount: number,
+    imageCount: number,
+    linkCount: number, }): ContentIssue[] {
+    const issues: ContentIssue[] = [],
     // Check word count
     if (metrics.wordCount < this.MIN_WORD_COUNT) {
       issues.push({
@@ -169,7 +152,6 @@ export class ContentOptimizer {
         severity: "high",
         description: `Content has only ${metrics.wordCount} words. Minimum recommended is ${this.MIN_WORD_COUNT} words.`
       });
-    }
 
     // Check heading count
     if (metrics.headingCount < this.MIN_HEADING_COUNT) {
@@ -178,7 +160,6 @@ export class ContentOptimizer {
         severity: "medium",
         description: `Content has only ${metrics.headingCount} headings. Consider adding more structure with H2, H3 tags.`
       });
-    }
 
     // Check image count
     if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
@@ -187,7 +168,6 @@ export class ContentOptimizer {
         severity: "medium",
         description: "Content has no images. Consider adding relevant images to improve engagement."
       });
-    }
 
     // Check link count
     if (metrics.linkCount < this.MIN_LINK_COUNT) {
@@ -196,7 +176,6 @@ export class ContentOptimizer {
         severity: "low",
         description: `Content has only ${metrics.linkCount} links. Consider adding more internal and external links.`
       });
-    }
 
     // Check for keywords
     const pageKeywords = page.split("/").filter(Boolean);
@@ -210,14 +189,11 @@ export class ContentOptimizer {
         severity: "medium",
         description: `Content doesn't include page-specific keywords: ${pageKeywords.join(", ")}`
       });
-    }
 
-    return issues;
-  }
+    return issues, }
 
   private static generateSuggestions(issues: ContentIssue[], page: string): ContentSuggestion[] {
-    const suggestions: ContentSuggestion[] = [];
-
+    const suggestions: ContentSuggestion[] = [],
     issues.forEach(issue => {
       switch (issue.type) {
         case "minimal-content":
@@ -263,12 +239,10 @@ export class ContentOptimizer {
             description: "Include page-specific keywords naturally throughout the content.",
             example: `Use keywords like "${page.split("/").filter(Boolean).join(", ")}" in headings and body text.`
           });
-          break;
-      }
+          break, }
     });
 
-    return suggestions;
-  }
+    return suggestions, }
 }
 
 export default ContentOptimizer;

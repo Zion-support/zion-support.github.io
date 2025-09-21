@@ -4,10 +4,9 @@ import React, { createContext, useContext, useState, ReactNode } from 'react'
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
-  showNetworkError: (retryAction?: () => void) => void;
-  showAuthError: (loginAction?: () => void) => void;
-  clearAllErrors: () => void;
-}
+  showNetworkError: (retryAction?: () => void) => void,
+  showAuthError: (loginAction?: () => void) => void,
+  clearAllErrors: () => void, }
 
 const ErrorContext = createContext<ErrorContextType | undefined>(undefined);
 
@@ -15,22 +14,18 @@ export const useErrorHandler = () => {
   const context = useContext(ErrorContext);
   if (!context) {
     throw new Error('useErrorHandler must be used within an ErrorProvider');
-  }
-  return context;
-};
+  return context, };
 
 interface ErrorProviderProps {
-  children: ReactNode;
-}
+  children: ReactNode, }
 
 export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   const [errors, setErrors] = useState<Array<{
-    id: string;
-    type: 'error' | 'network' | 'auth';
-    message: string;
+    id: string,
+    type: 'error' | 'network' | 'auth',
+    message: string,
     retryAction?: () => void;
-    loginAction?: () => void;
-  }>>([]);
+    loginAction?: () => void, }>>([]);
 
   const reportError = (error: Error, context?: any) => {
     console.error('Error reported:', error, context);
@@ -44,8 +39,7 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
       type: 'error',
       message: error.message,
       retryAction
-    }]);
-  };
+    }]);;
 
   const showNetworkError = (retryAction?: () => void) => {
     const errorId = Date.now().toString();
@@ -54,8 +48,7 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
       type: 'network',
       message: 'Network connection failed. Please check your internet connection.',
       retryAction
-    }]);
-  };
+    }]);;
 
   const showAuthError = (loginAction?: () => void) => {
     const errorId = Date.now().toString();
@@ -64,22 +57,19 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
       type: 'auth',
       message: 'Authentication required. Please log in to continue.',
       loginAction
-    }]);
-  };
+    }]);;
 
   const clearAllErrors = () => {
-    setErrors([]);
-  };
+    setErrors([]);;
 
   const dismissError = (errorId: string) => {
-    setErrors(prev => prev.filter(error => error.id !== errorId));
-  };
+    setErrors(prev => prev.filter(error => error.id !== errorId));;
 
   const value: ErrorContextType = {
     reportError,
     showRetryableError,
     showNetworkError,
-    showAuthError,
+    showAuthError;
     clearAllErrors
   };
 
@@ -108,8 +98,7 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
                     <button
                       onClick={() => {
                         error.retryAction?.();
-                        dismissError(error.id);
-                      }}
+                        dismissError(error.id);}
                       className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover:bg-red-200"
                     >
                       <RefreshCw className="h-4 w-4 inline mr-1" />
@@ -120,8 +109,7 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
                     <button
                       onClick={() => {
                         error.loginAction?.();
-                        dismissError(error.id);
-                      }}
+                        dismissError(error.id);}
                       className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover:bg-red-200"
                     >
                       Login
@@ -140,5 +128,4 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
         </div>
       ))}
     </ErrorContext.Provider>
-  );
-};
+  );;

@@ -37,4 +37,4 @@ export const ultimate2026Services: Ultimate2026Service[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+];

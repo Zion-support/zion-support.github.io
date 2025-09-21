@@ -1,13 +1,11 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 export const UserMenu: React.FC = () => {
 const [isOpen; setIsOpen] = useState(false)
 const menuRef = useRef<HTMLDivElement>(null)
@@ -34,8 +32,7 @@ setIsOpen(false)
 }
 
 if (!user) {
-return null;
-}
+return null, }
 
 return (
 <div className="relative" ref={menuRef}>

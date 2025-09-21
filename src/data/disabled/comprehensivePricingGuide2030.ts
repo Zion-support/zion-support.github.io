@@ -1,12 +1,10 @@
-import React from "react";
-
+import React from "react",
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030 = {
-basic: {,
+basic: {;
 name: "Basic Plan",;
 price: 2999;,
 features: [
@@ -14,8 +12,7 @@ features: [
 "Standard Support",
 "Monthly Reports",
 "
-];
-},
+], },
 professional: {,
 name: "Professional Plan",
 price: 7999;,
@@ -25,8 +22,7 @@ features: [
 "Real-time Monitoring",
 "API Access",
 "
-];
-},
+], },
 enterprise: {,
 name: "Enterprise Plan",
 price: 19999;,
@@ -37,6 +33,5 @@ features: [
 "Advanced Security",
 "Unlimited Users",
 "
-];
-}
+], }
 }

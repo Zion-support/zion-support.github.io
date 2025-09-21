@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { Search } from 'lucide-react';
-import Link from 'next/link';
-
+import React, { useState } from 'react',
+import { Search } from 'lucide-react',
+import Link from 'next/link',
 interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  publishDate: string;
-  readTime: string;
-  category: string;
+  id: string,
+  title: string,
+  excerpt: string,
+  author: string,
+  publishDate: string,
+  readTime: string,
+  category: string,
   tags: string[];
-  featured: boolean;
-}
+  featured: boolean, }
 
 const Blog: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -38,7 +36,7 @@ const Blog: React.FC = () => {
       publishDate: '2024-01-10',
       readTime: '6 min read',
       category: 'DevOps',
-      tags: ['DevOps', 'Automation', 'Infrastructure', 'Self-Healing'],
+      tags: ['DevOps', 'Automation', 'Infrastructure', 'Self-Healing'];
       featured: false
     }
   ];
@@ -49,8 +47,7 @@ const Blog: React.FC = () => {
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch, });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -149,7 +146,6 @@ const Blog: React.FC = () => {
         )}
       </div>
     </div>
-  );
-};
+  );;
 
 export default Blog;

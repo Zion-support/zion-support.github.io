@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Header } from "../components/Header";
 import { SEO } from "../components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-
 export default function TranslationManager() {
   const [translations, setTranslations] = useState([]);
 

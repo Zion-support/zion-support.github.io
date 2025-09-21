@@ -460,7 +460,7 @@ export const realMarketServices: RealMarketService[] = [
     implementationDetails: 'Production-ready legal automation platform with AI-powered document generation, comprehensive workflow management, and compliance checking. Includes mobile apps and extensive integrations.',
     launchDate: '2024-01-15',
     customers: 850,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 480
   }
-],
+];

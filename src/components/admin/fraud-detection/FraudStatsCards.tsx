@@ -1,19 +1,16 @@
-import React from "react";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
-
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react',
 interface FraudStats {
-  totalTransactions: number;
-  flaggedTransactions: number;
-  highRiskTransactions: number;
-  criticalRiskTransactions: number;
-  falsePositives: number;
-  accuracy: number;
-}
+  totalTransactions: number,
+  flaggedTransactions: number,
+  highRiskTransactions: number,
+  criticalRiskTransactions: number,
+  falsePositives: number,
+  accuracy: number, }
 
 interface FraudStatsCardsProps {
-  stats: FraudStats;
-}
+  stats: FraudStats, }
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   const cards = [
@@ -94,5 +91,4 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </Card>
       ))}
     </div>
-  );
-};
+  );;

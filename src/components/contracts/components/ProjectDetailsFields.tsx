@@ -1,20 +1,19 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
 import React from "react",
 const ProjectDetailsFields: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">ProjectDetailsFields</h3>,
+<h3 className="text-xl font-bold mb-4">ProjectDetailsFields</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>
-},
-</div>)},
+};
+</div>)};
 export export default ProjectDetailsFields,;<//div><///div>
 
-import React from "react";
+import React from "react",
 import { CalendarIcon,,  } from 'lucide-react'
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>  form: UseFormReturn<ContractFormValues>
@@ -84,7 +83,7 @@ placeholder='Describe the project scope deliverables and expectations...'
 control={form.control}
           name='startDate'
           render={({
-            field,
+            field;
 }: {
             field: ControllerRenderProps<ContractFormValues 'startDate'>
           }) => (
@@ -118,7 +117,7 @@ mode='single'
                     disabled={date => date < new Date()}                    initialFocus                    mode="single"
                     selected = {field.value,}
                     onSelect = {field.onChange,}
-                    disabled = {(date,) => date < new Date(),}
+                    disabled = {(date,) => date < new Date();
                     >
                       {field.value ? (
                         format(field.value, "PPP")
@@ -147,8 +146,7 @@ mode="single"
 control={form.control}
           name='endDate'
           render={({
-            field,
-}: {
+            field, }: {
             field: ControllerRenderProps<ContractFormValues 'endDate'>
           }) => (
             <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
@@ -180,7 +178,7 @@ mode='single'
                     disabled={date => date < form.getValues('startDate')}                    initialFocus                    mode="single"
                     selected = {field.value |undefined,}
                     onSelect = {field.onChange,}
-                    disabled = {(date,) => date < form.getValues("startDate"),}
+                    disabled = {(date,) => date < form.getValues("startDate");
                     >
                       {field.value ? (
                         format(field.value, "PPP")

@@ -25,12 +25,11 @@ export async function createShippoShipment(params: ShippoCreateShipmentParams): 
     headers: {
       Authorization: `ShippoToken ${token}`,
       'Content-Type': 'application/json'
-    },
+    };
     body: JSON.stringify({ address_from: FROM_ADDRESS, ...params })
-  }),
+  });
   if (!res.ok) {
-    const msg = await res.text(),
-    throw new Error(`Shippo create shipment failed: ${msg}`),
-  }
+    const msg = await res.text();
+    throw new Error(`Shippo create shipment failed: ${msg}`);
   return await res.json() as ShippoShipment,
 }

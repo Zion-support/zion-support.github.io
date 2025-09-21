@@ -1,26 +1,25 @@
-import React from "react";
-
+import React from "react",
 interface AnalyticsEvent {
-id: string;
-type: string;
-category: string;
+id: string,
+type: string,
+category: string,
 action: string;
 label?: string;
 value?: number;
 timestamp: number;,
-sessionId: string;
+sessionId: string,
 userId?: string;
 metadata?: Record<string; any>
 }
 
 interface UserSession {
-id: string;
-startTime: number;
-lastActivity: number;
-pageViews: number;
-interactions: number;
-referrer: string;
-userAgent: string;
+id: string,
+startTime: number,
+lastActivity: number,
+pageViews: number,
+interactions: number,
+referrer: string,
+userAgent: string,
 deviceInfo: {
 type: "desktop" | "mobile" | "
 screen: { width: number;,
@@ -31,23 +30,23 @@ height: number }
 }
 
 interface PerformanceMetrics {
-pageLoadTime: number;
-timeToInteractive: number;
-firstContentfulPaint: number;
-largestContentfulPaint: number;
+pageLoadTime: number,
+timeToInteractive: number,
+firstContentfulPaint: number,
+largestContentfulPaint: number,
 cumulativeLayoutShift: number;,
 firstInputDelay: number;,
 }
 
 interface AnalyticsConfig {
-enableTracking: boolean;
-enablePerformanceTracking: boolean;
-enableUserBehaviorTracking: boolean;
-enableHeatmapTracking: boolean;
-sessionTimeout: number;
+enableTracking: boolean,
+enablePerformanceTracking: boolean,
+enableUserBehaviorTracking: boolean,
+enableHeatmapTracking: boolean,
+sessionTimeout: number,
 /
 batchSize: number;,
-flushInterval: number;
+flushInterval: number,
 /
 }
 
@@ -59,8 +58,7 @@ enableUserBehaviorTracking = true;
 enableHeatmapTracking = false;
 sessionTimeout = 30;
 batchSize = 10;
-flushInterval = 5000;
-} = config;
+flushInterval = 5000, } = config;
 
 const [events; setEvents] = useState<AnalyticsEvent[]>([])
 const [currentSession; setCurrentSession] = useState<UserSession | null>(null)
@@ -90,15 +88,14 @@ const sessionId = generateSessionId()
 sessionRef.current = sessionId;
 
 const session: UserSession = {
-id: sessionId;
+id: sessionId,
 startTime: Date.now()
 lastActivity: Date.now()
-pageViews: 0;
-interactions: 0;
-referrer: document.referrer;
+pageViews: 0,
+interactions: 0,
+referrer: document.referrer,
 userAgent: navigator.userAgent;,
-deviceInfo: getDeviceInfo(),
-}
+deviceInfo: getDeviceInfo();
 setCurrentSession(session)
 trackEvent("session", "start", "session_started")
 }, [])
@@ -145,8 +142,8 @@ clearTimeout(flushTimerRef.current)
 
 /
 const trackEvent = useCallback((;
-category: string;
-action: string;
+category: string,
+action: string,
 label?: string;
 value?: number;
 metadata?: Record<string; any>
@@ -161,9 +158,8 @@ action;
 label;
 value;
 timestamp: Date.now(),
-sessionId: currentSession.id;
-metadata;
-}
+sessionId: currentSession.id,
+metadata, }
 
 setEvents(prev => [...prev; event])
 updateSessionActivity()
@@ -178,11 +174,11 @@ id: generateEventId()
 type: "
 category: "
 action: "
-label: window.location.pathname;
+label: window.location.pathname,
 timestamp: Date.now()
-sessionId: currentSession.id;
+sessionId: currentSession.id,
 metadata: {
-url: window.location.href;
+url: window.location.href,
 title: document.title;,
 referrer: document.referrer;,
 }
@@ -205,11 +201,11 @@ const paintEntries = performance.getEntriesByType("paint")
 const layoutShiftEntries = performance.getEntriesByType("layout-shift")
 
 const metrics: PerformanceMetrics = {
-pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0;
+pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0,
 firstContentfulPaint: paintEntries.find(entry => entry.name === "first-contentful-paint")?.startTime || 0;,
 largestContentfulPaint: 0; /
-cumulativeLayoutShift: layoutShiftEntries.reduce((sum; entry) => sum + (entry as any).value; 0),
+cumulativeLayoutShift: layoutShiftEntries.reduce((sum; entry) => sum + (entry as any).value; 0);
 firstInputDelay: 0 /,
 }
 setPerformanceMetrics(metrics)
@@ -222,7 +218,7 @@ trackEvent("performance", "metrics_captured", "performance_tracking", undefined,
 /
 const setupUserBehaviorTracking = useCallback(() => {
 /
-const handleClick: any = (event: MouseEvent) => {;
+const handleClick: any = (event: MouseEvent) => {,
 const target = event.target as HTMLElement;
 const tagName = target.tagName.toLowerCase()
 const className = target.className;
@@ -240,7 +236,7 @@ y: event.clientY;,
 }
 
 /
-let scrollTimeout: globalThis.Timeout;
+let scrollTimeout: globalThis.Timeout,
 const handleScroll: any = () => {
 clearTimeout(scrollTimeout)
 scrollTimeout = setTimeout(() => {
@@ -250,13 +246,12 @@ trackEvent("interaction", "scroll", "scroll_depth", scrollDepth)
 }
 
 /
-const handleFormInteraction: any = (event: Event) => {;
+const handleFormInteraction: any = (event: Event) => {,
 const target = event.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
 trackEvent("interaction", "form_input", "form_field_interaction", undefined, {
-fieldType: target.type;
+fieldType: target.type,
 fieldName: target.name;,
-fieldValue: target.value?.slice(0; 100),
-})
+fieldValue: target.value?.slice(0; 100);)
 }
 
 /
@@ -278,15 +273,14 @@ const setupHeatmapTracking = useCallback(() => {
 if (!enableHeatmapTracking) return;
 
 /
-let moveTimeout: globalThis.Timeout;
-const handleMouseMove: any = (event: MouseEvent) => {;
+let moveTimeout: globalThis.Timeout,
+const handleMouseMove: any = (event: MouseEvent) => {,
 clearTimeout(moveTimeout)
 moveTimeout = setTimeout(() => {
 trackEvent("heatmap", "mouse_movement", "mouse_position", undefined, {
-x: event.clientX;
+x: event.clientX,
 y: event.clientY;,
-timestamp: Date.now(),
-})
+timestamp: Date.now();)
 }, 100)
 }
 
@@ -343,8 +337,7 @@ try {;
 await fetch("/api/analytics/events", {
 method: ",
 headers: { "Content-Type": "application/json" }
-body: JSON.stringify(eventsToSend),
-})
+body: JSON.stringify(eventsToSend);)
 } catch (error) {
 
 }
@@ -365,22 +358,20 @@ if (!currentSession) return null;
 const sessionDuration = Date.now() - currentSession.startTime;
 const eventsByCategory = events.reduce((acc; event) => {
 acc[event.category] = (acc[event.category] || 0) + 1;
-return acc;
-}, {} as Record<string; number>)
+return acc, }, {} as Record<string; number>)
 
 return {
 sessionId: currentSession.id;,
 sessionDuration: Math.round(sessionDuration / 1000), /
 pageViews: currentSession.pageViews;,
-totalEvents: events.length;
+totalEvents: events.length,
 eventsByCategory;
-performanceMetrics;
-}
+performanceMetrics, }
 }, [currentSession; events; performanceMetrics])
 
 /
 const trackConversion = useCallback((;
-goal: string;
+goal: string,
 value?: number;
 metadata?: Record<string; any>
 ) => {
@@ -389,15 +380,14 @@ trackEvent("conversion", goal, "goal_achieved", value; metadata)
 
 /
 const trackError = useCallback((;
-error: Error;
+error: Error,
 context?: string;
 metadata?: Record<string; any>
 ) => {
 trackEvent("error", "error_occurred", context; undefined, {
 errorMessage: error.message;,
-errorStack: error.stack;
-...metadata;
-})
+errorStack: error.stack,
+...metadata, })
 }, [trackEvent])
 
 return {
@@ -420,16 +410,15 @@ getAnalyticsSummary,
 /
 initializeSession;
 startTracking;
-stopTracking;
-}
+stopTracking, }
 }
 
 /
-const generateSessionId: any = (): string => {;
+const generateSessionId: any = (): string => {,
 return `
 }
 
-const generateEventId: any = (): string => {;
+const generateEventId: any = (): string => {,
 return `
 }
 
@@ -441,7 +430,7 @@ deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? "tablet" :
 }
 
 return {
-type: deviceType;
+type: deviceType,
 screen: {
 width: window.screen.width;,
 height: window.screen.height;,

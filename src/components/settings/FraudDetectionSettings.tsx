@@ -1,17 +1,17 @@
-import import React, { useState } from 'react';
-import import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,, ,,  } from '@/components/ui/card';
-import import { Switch,,, ,,  } from '@/components/ui/switch';
-import import { Button,,, ,,  } from '@/components/ui/button';
-import import { Label,,, ,,  } from '@/components/ui/label';
+import import React, { useState } from 'react',
+import import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,, ,,  } from '@/components/ui/card',
+import import { Switch,,, ,,  } from '@/components/ui/switch',
+import import { Button,,, ,,  } from '@/components/ui/button',
+import import { Label,,, ,,  } from '@/components/ui/label',
 import { ShieldAlert,,, Info,,  } from 'lucide-react'
-import import { logErrorToProduction } from '@/utils/productionLogger';
+import import { logErrorToProduction } from '@/utils/productionLogger',
 import import { Accordion;
 ,, ,, AccordionContent;
 ,, ,, AccordionItem;
 ,, ,, AccordionTrigger } from "@/components/ui/accordion",
-import import { toast,,, ,,  } from '@/hooks/use-toast';
-import import { supabase,,, ,,  } from '@/integrations/supabase/client';
-import import { useAuth,,  } from '@/hooks/useAuth';
+import import { toast,,, ,,  } from '@/hooks/use-toast',
+import import { supabase,,, ,,  } from '@/integrations/supabase/client',
+import import { useAuth,,  } from '@/hooks/useAuth',
 export function FraudDetectionSettings() {
   const { user } = useAuth()
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true)

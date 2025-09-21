@@ -271,7 +271,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     implementationDetails: 'Advanced smart city orchestrator with comprehensive infrastructure management, AI optimization, and real-time monitoring. Includes predictive maintenance and emergency response coordination.',
     launchDate: '2029-03-01',
     customers: 23,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 56
   }
-],
+];

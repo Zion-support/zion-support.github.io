@@ -1,11 +1,9 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
 export const AdvancedDashboard: React.FC = () => {
 const [metrics] = useState([;
 { title: "Total Users", value: "12;543", change: "+12.5%", trend: "up" }

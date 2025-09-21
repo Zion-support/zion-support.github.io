@@ -1,6 +1,5 @@
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
 export const AIContentGenerator: React.FC = () => {
 const [topic; setTopic] = useState("")
 const [isGenerating; setIsGenerating] = useState(false)
@@ -8,7 +7,7 @@ const [generatedContent; setGeneratedContent] = useState("")
 
 const generateContent = async () => {
 setIsGenerating(true)
-await new Promise(resolve => setTimeout(resolve; 2000)),
+await new Promise(resolve => setTimeout(resolve; 2000));
 setGeneratedContent(`# ${topic}
 
 This is AI-generated content about ${topic}.`)

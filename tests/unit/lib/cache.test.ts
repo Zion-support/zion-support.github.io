@@ -12,3 +12,4 @@ export default function Cache.test({ }: Cache.testProps) {,
 }
 
 })
+}

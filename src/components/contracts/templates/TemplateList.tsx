@@ -1,49 +1,43 @@
-import { useState } from 'react';
-import { ContractTemplate } from "@/types/contracts";
-import { Button } from "@/components/ui/button";
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { useAuth } from "@/hooks/useAuth";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
-
+import { useState } from 'react',
+import { ContractTemplate } from "@/types/contracts",
+import { Button } from "@/components/ui/button",
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react',
+import { useContractTemplates } from "@/hooks/useContractTemplates",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+import { useAuth } from "@/hooks/useAuth",
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 interface TemplateListProps {
-  templates: ContractTemplate[];
-  isLoading: boolean;
-  onSelect: (template: ContractTemplate) => void;
-  onEdit: (template: ContractTemplate) => void;
-}
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate) => void,
+  onEdit: (template: ContractTemplate) => void, }
 
 export function TemplateList({
   templates,
   isLoading,
   onSelect,
-  onEdit,
+  onEdit;
 }: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
   const { user } = useAuth();
   const { deleteTemplate, toggleStar } = useContractTemplates();
 
   const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId);
-  };
+    setTemplateToDelete(templateId);;
 
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
       await deleteTemplate(templateToDelete);
       setTemplateToDelete(null);
-    }
   };
 
   const handleSetDefault = async (templateId: string) => {
     if (!user) {
       // Redirect to login
-      return;
-    }
-    await toggleStar(templateId);
-  };
+      return, }
+    await toggleStar(templateId);;
 
   if (isLoading) {
     return (
@@ -51,7 +45,6 @@ export function TemplateList({
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
       </div>
     );
-  }
 
   if (!templates.length) {
     return (
@@ -60,7 +53,6 @@ export function TemplateList({
         <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>
       </div>
     );
-  }
 
   return (
     <div className="space-y-3">
@@ -156,4 +148,3 @@ export function TemplateList({
       </AlertDialog>
     </div>
   );
-}

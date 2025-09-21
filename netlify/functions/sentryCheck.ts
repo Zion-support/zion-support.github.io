@@ -14,4 +14,4 @@ export const handler = async () => {
       dsn: dsn.substring(0, 20) + '...', // Show partial DSN for verification
     })
   },
-},
+};

@@ -366,7 +366,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     implementationDetails: 'Complete 5G private network solution with deployment tools, management platform, and monitoring systems. Includes enterprise security and compliance features.',
     launchDate: '2026-03-30',
     customers: 80,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 45
   }
-],
+];

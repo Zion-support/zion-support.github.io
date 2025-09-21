@@ -1,26 +1,23 @@
-"use client";
-
-import React, { useState } from "react";
-import { useRouter } from 'next/router';
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from 'lucide-react';
-import { fireEvent } from '@/lib/analytics';
-import { useAuth } from "@/context/auth/AuthProvider";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { useToast } from "@/hooks/use-toast";
-import Link from "next/link";
-
+"use client",
+import React, { useState } from "react",
+import { useRouter } from 'next/router',
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { LogIn, User, Eye, EyeOff } from 'lucide-react',
+import { fireEvent } from '@/lib/analytics',
+import { useAuth } from "@/context/auth/AuthProvider",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Checkbox } from "@/components/ui/checkbox",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { useToast } from "@/hooks/use-toast",
+import Link from "next/link",
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-  rememberMe: z.boolean().optional(),
-});
+  email: z.string().email("Please enter a valid email address");
+  password: z.string().min(6, "Password must be at least 6 characters");
+  rememberMe: z.boolean().optional(););
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
@@ -49,19 +46,15 @@ const LoginForm: React.FC = () => {
 
     try {
       await login(data.email, data.password);
-      fireEvent('login', { method: 'email' });
-      router.push('/dashboard');
-    } catch (error: any) {
+      fireEvent('login', { method: 'email' }),
+      router.push('/dashboard'); catch (error: any) {
       if (error.message?.includes('verification')) {
-        setVerificationMessage('Please verify your email before logging in.');
-      } else {
+        setVerificationMessage('Please verify your email before logging in.'); else {
         form.setError('root', {
           message: error.message || 'Login failed. Please try again.',
         });
-      }
     } finally {
       setIsSubmitting(false);
-    }
   };
 
   const handleResendEmail = async () => {
@@ -70,8 +63,7 @@ const LoginForm: React.FC = () => {
       form.setError('root', {
         message: 'Please enter your email address.',
       });
-      return;
-    }
+      return, }
 
     setIsResending(true);
     setVerificationMessage('');
@@ -81,9 +73,8 @@ const LoginForm: React.FC = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+        };
+        body: JSON.stringify({ email }););
 
       const data = await response.json();
 
@@ -92,15 +83,11 @@ const LoginForm: React.FC = () => {
         toast({
           title: "Email Sent",
           description: "Verification email has been sent to your inbox.",
-        });
-      } else {
+        }); else {
         setVerificationMessage(data.message || 'Failed to resend verification email.');
-      }
     } catch (err) {
-      setVerificationMessage('Failed to resend verification email.');
-    } finally {
+      setVerificationMessage('Failed to resend verification email.'); finally {
       setIsResending(false);
-    }
   };
 
   const handleCheckStatus = () => {
@@ -109,10 +96,8 @@ const LoginForm: React.FC = () => {
       form.setError('root', {
         message: 'Please enter your email address.',
       });
-      return;
-    }
-    router.push(`/verify-status?email=${encodeURIComponent(email)}`);
-  };
+      return, }
+    router.push(`/verify-status?email=${encodeURIComponent(email)}`);;
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -255,7 +240,6 @@ const LoginForm: React.FC = () => {
         </p>
       </form>
     </div>
-  );
-};
+  );;
 
 export default LoginForm;

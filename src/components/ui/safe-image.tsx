@@ -1,13 +1,13 @@
 'use client',
 
-import import Image from 'next/image';
-import import { useState,,  } from 'react';
+import import Image from 'next/image',
+import import { useState,,  } from 'react',
 import { ImageIcon,,  } from 'lucide-react'
 interface SafeImageProps {
   src: string;
 alt: string;  width?: number;interface SafeImageProps {,
-src: string;
-alt: string;
+src: string,
+alt: string,
 interface SafeImageProps {
   // If we have an error and no fallback show a placeholder,
 if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {

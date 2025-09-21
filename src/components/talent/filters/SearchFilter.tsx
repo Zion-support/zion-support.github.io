@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react",
 import { SearchIcon,,  } from 'lucide-react'
-import React from "react";
+import React from "react",
 export function SearchFilter({ searchTerm setSearchTerm }: SearchFilterProps) {
   return (
     <div className='mb-6'>
@@ -16,7 +16,7 @@ id="talent-search"
           type="text"
           placeholder="Search talents..."
           value = {searchTerm,}
-          onChange = {(e,) => setSearchTerm(e.target.value),}
+          onChange = {(e,) => setSearchTerm(e.target.value);
           aria-describedby="talent-search-help"
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
         />

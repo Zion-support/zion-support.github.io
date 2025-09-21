@@ -229,4 +229,4 @@ export const enterpriseITBreakthroughServices2025 = [
     integrations: ['Data center infrastructureCloud platforms', 'Monitoring systemsSecurity tools', 'Enterprise systems'],
     compliance: ['SOC2ISO 27001', 'Data center standardsSecurity standards', 'Enterprise requirements']
   }
-],
+];

@@ -6,20 +6,19 @@ type Href = string | { pathname?: string, href?: string },
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {,
   href: Href,
   children: React.ReactNode},
-function resolveHref(href: Href): string {,
-  if (typeof href === 'string') return href,
+function resolveHref(href: Href): string {;
+  if (typeof href === 'string') return href;
   return href?.pathname || (href as any)?.href || '#'
 }
-export default function Link({ hrefchildrenclassName, ...rest }: LinkProps) {,
-  const resolved = resolveHref(href),
+export default function Link({ hrefchildrenclassName, ...rest }: LinkProps) {;
+  const resolved = resolveHref(href);
   if (React.isValidElement(children)) {,
     const existingClass = (children.props as any)?.className || '',
-    const mergedClassName = [existingClassclassName].filter(Boolean).join(' '),
+    const mergedClassName = [existingClassclassName].filter(Boolean).join(' ');
     return React.cloneElement(children as any, {,
       href: resolvedclassName: mergedClassName,
       ...rest
-    }),
-  }
+    });
 type Href = string | { pathname?: string, href?: string },
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {,
   "href": Href,
@@ -28,24 +27,23 @@ function resolveHref("href": Href): string {,
   if (typeof href === 'string') return href,
   return href?.pathname || (href as { href?: string })?.href || '#',
 }
-export default function Link({ hrefchildrenclassName, ...rest }: LinkProps) {,
-  const resolved = resolveHref(href),
+export default function Link({ hrefchildrenclassName, ...rest }: LinkProps) {;
+  const resolved = resolveHref(href);
   if (React.isValidElement(children)) {,
     const existingClass = (children.props as { className?: string })?.className || '',
-    const mergedClassName = [existingClass, className].filter(Boolean).join(' '),
+    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
     return React.cloneElement(children as React.ReactElement, {,
       "href": resolved,
       "className": mergedClassName,
-      ...rest}),
-  }
-  return (,
+      ...rest});
+  return (
     <a href={resolved} className={className} {...rest}>,
       {children}
-    </a>),
+    </a>);
 }
 }
 }
 }
 }
+;
 }
-,

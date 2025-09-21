@@ -1,4 +1,5 @@
 import React, { useState, createContext, useContext } from 'react';
+<<<<<<< HEAD
 
 interface TabsContextType {
   activeTab: string;
@@ -6,6 +7,9 @@ interface TabsContextType {
 }
 
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
+=======
+const TabsContext = createContext(undefined);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 
 export function Tabs({ defaultValue, children, className = '' }) {
   const [activeTab, setActiveTab] = useState(defaultValue || '');

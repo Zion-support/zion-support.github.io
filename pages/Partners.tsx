@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription } from '../components/ui/card';
-
 export default function Partners() {
   return (
     <div className="min-h-screen bg-zion-blue">

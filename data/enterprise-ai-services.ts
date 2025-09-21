@@ -462,4 +462,4 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.6,
     reviews: 52
   }
-],
+];

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -20,7 +19,6 @@ const Privacy = () => {
         </div>
       </div>
     </div>
-  );
-};
+  );;
 
 export default Privacy;

@@ -41,13 +41,11 @@ export interface CreateShortUrlRequest {
 }
 
 class UrlShortenerService {
-  private urls: Map<string, ShortUrl> = new Map(),
-  private analytics: Map<string, UrlAnalytics> = new Map(),
-  private clicks: Map<string, ClickEvent[]> = new Map(),
-
+  private urls: Map<string, ShortUrl> = new Map();
+  private analytics: Map<string, UrlAnalytics> = new Map();
+  private clicks: Map<string, ClickEvent[]> = new Map();
   async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {
-    const shortCode = request.customCode || this.generateShortCode(),
-    
+    const shortCode = request.customCode || this.generateShortCode();
     if (this.urls.has(shortCode)) {
       throw new Error('Short code already exists')
     }
@@ -63,7 +61,7 @@ class UrlShortenerService {
       userId: request.userId
     },
 
-    this.urls.set(shortCode, shortUrl),
+    this.urls.set(shortCode, shortUrl);
     this.analytics.set(shortCode, {
       totalClicks: 0,
       uniqueVisitors: 0,
@@ -73,14 +71,13 @@ class UrlShortenerService {
       browsers: [],
       lastClicked: new Date(),
       clickHistory: []
-    }),
-    this.clicks.set(shortCode, []),
-
+    });
+    this.clicks.set(shortCode, []);
     return shortUrl,
   }
 
   async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
-    const url = this.urls.get(shortCode),
+    const url = this.urls.get(shortCode);
     if (!url || !url.isActive) return null,
     
     if (url.expiresAt && url.expiresAt < new Date()) {
@@ -92,7 +89,7 @@ class UrlShortenerService {
   }
 
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
-    const url = this.urls.get(shortCode),
+    const url = this.urls.get(shortCode);
     if (!url) return,
 
     const clickEvent: ClickEvent = {
@@ -100,27 +97,21 @@ class UrlShortenerService {
       ...clickData
     },
 
-    const urlClicks = this.clicks.get(shortCode) || [],
-    urlClicks.push(clickEvent),
-    this.clicks.set(shortCode, urlClicks),
-
-    const analytics = this.analytics.get(shortCode),
+    const urlClicks = this.clicks.get(shortCode) || [];
+    urlClicks.push(clickEvent);
+    this.clicks.set(shortCode, urlClicks);
+    const analytics = this.analytics.get(shortCode);
     if (analytics) {
       analytics.totalClicks++,
-      analytics.lastClicked = new Date(),
-      
+      analytics.lastClicked = new Date();
       if (!analytics.referrers.includes(clickData.referrer)) {
-        analytics.referrers.push(clickData.referrer),
-      }
+        analytics.referrers.push(clickData.referrer);
       if (!analytics.countries.includes(clickData.country)) {
-        analytics.countries.push(clickData.country),
-      }
+        analytics.countries.push(clickData.country);
       if (!analytics.devices.includes(clickData.device)) {
-        analytics.devices.push(clickData.device),
-      }
+        analytics.devices.push(clickData.device);
       if (!analytics.browsers.includes(clickData.browser)) {
-        analytics.browsers.push(clickData.browser),
-      }
+        analytics.browsers.push(clickData.browser);
     }
   }
 
@@ -133,7 +124,7 @@ class UrlShortenerService {
   }
 
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
-    const url = this.urls.get(shortCode),
+    const url = this.urls.get(shortCode);
     if (!url || (userId && url.userId !== userId)) return false,
 
     url.isActive = false,
@@ -141,10 +132,10 @@ class UrlShortenerService {
   }
 
   async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
-    const url = this.urls.get(shortCode),
+    const url = this.urls.get(shortCode);
     if (!url || (userId && url.userId !== userId)) return false,
 
-    Object.assign(url, updates),
+    Object.assign(url, updates);
     return true,
   }
 
@@ -152,14 +143,12 @@ class UrlShortenerService {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
     let result = '',
     for (let i = 0, i < 6, i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length)),
-    }
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
     return result,
   }
 
   private generateId(): string {
-    return Math.random().toString(36).substr(2, 9),
-  }
+    return Math.random().toString(36).substr(2, 9);
 
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
@@ -171,10 +160,10 @@ class UrlShortenerService {
   }
 
   async importData(data: any): Promise<void> {
-    this.urls = new Map(data.urls),
-    this.analytics = new Map(data.analytics),
+    this.urls = new Map(data.urls);
+    this.analytics = new Map(data.analytics);
     this.clicks = new Map(data.clicks)
   }
 }
 
-export const urlShortenerService = new UrlShortenerService(),
+export const urlShortenerService = new UrlShortenerService();

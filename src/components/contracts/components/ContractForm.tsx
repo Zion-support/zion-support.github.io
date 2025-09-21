@@ -1,28 +1,25 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { TalentProfile } from "@/types/talent";
-
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { TalentProfile } from "@/types/talent",
 export interface ContractFormValues {
-  projectTitle: string;
-  description: string;
-  deliverables: string;
-  timeline: string;
-  budget: number;
-  paymentTerms: string;
-  startDate: string;
-  endDate: string;
-}
+  projectTitle: string,
+  description: string,
+  deliverables: string,
+  timeline: string,
+  budget: number,
+  paymentTerms: string,
+  startDate: string,
+  endDate: string, }
 
 interface ContractFormProps {
-  talent: TalentProfile;
+  talent: TalentProfile,
   clientName: string;
   initialValues?: ContractFormValues;
-  onFormValuesChange: (values: ContractFormValues) => void;
-  onContractGenerated: (contract: string) => void;
-}
+  onFormValuesChange: (values: ContractFormValues) => void,
+  onContractGenerated: (contract: string) => void, }
 
 export function ContractForm({
   talent,
@@ -47,8 +44,7 @@ export function ContractForm({
   const handleInputChange = (field: keyof ContractFormValues, value: string | number) => {
     const newData = { ...formData, [field]: value };
     setFormData(newData);
-    onFormValuesChange(newData);
-  };
+    onFormValuesChange(newData);;
 
   const handleGenerateContract = () => {
     const contract = `
@@ -86,8 +82,7 @@ ${formData.paymentTerms}
 **Talent Signature:** _________________ Date: _________
     `;
     
-    onContractGenerated(contract);
-  };
+    onContractGenerated(contract);;
 
   return (
     <div className="space-y-6">
@@ -182,4 +177,3 @@ ${formData.paymentTerms}
       </Button>
     </div>
   );
-}

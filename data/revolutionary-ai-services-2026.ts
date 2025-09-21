@@ -272,7 +272,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     implementationDetails: 'Advanced quantum logistics platform with optimization algorithms, real-time processing, and comprehensive logistics management capabilities.',
     launchDate: '2026-03-10',
     customers: 220,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 134
   }
-],
+];

@@ -275,4 +275,4 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Compliance management"
     ]
   }
-],
+];

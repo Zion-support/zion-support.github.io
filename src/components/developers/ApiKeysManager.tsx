@@ -1,35 +1,31 @@
-import { useState, useEffect } from 'react';
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
-import { format } from 'date-fns';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Badge } from '@/components/ui/badge';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
-
+import { useState, useEffect } from 'react',
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react',
+import { format } from 'date-fns',
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Label } from '@/components/ui/label',
+import { Badge } from '@/components/ui/badge',
+import { Checkbox } from '@/components/ui/checkbox',
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog',
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu',
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',
 interface ApiKey {
-  id: string;
-  name: string;
-  key_prefix: string;
-  is_active: boolean;
-  scopes: string[];
+  id: string,
+  name: string,
+  key_prefix: string,
+  is_active: boolean,
+  scopes: string[],
   created_at: string;
   last_used_at?: string;
-  expires_at?: string;
-}
+  expires_at?: string, }
 
-type ApiKeyScope = 'read' | 'write' | 'admin';
-
+type ApiKeyScope = 'read' | 'write' | 'admin',
 const scopeOptions = [
   { value: 'read', label: 'Read', description: 'Read access to public data' },
   { value: 'write', label: 'Write', description: 'Create and update resources' },
-  { value: 'admin', label: 'Admin', description: 'Full administrative access' },
-];
+  { value: 'admin', label: 'Admin', description: 'Full administrative access' }, ];
 
 export function ApiKeysManager() {
   const [keys, setKeys] = useState<ApiKey[]>([]);
@@ -42,8 +38,7 @@ export function ApiKeysManager() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchApiKeys();
-  }, []);
+    fetchApiKeys();, []);
 
   const fetchApiKeys = async () => {
     setLoading(true);
@@ -68,15 +63,11 @@ export function ApiKeysManager() {
           is_active: true,
           scopes: ['read'],
           created_at: '2024-01-10T09:00:00Z',
-        },
-      ];
+        }, ];
       
-      setKeys(mockKeys);
-    } catch (error) {
-      console.error('Failed to fetch API keys:', error);
-    } finally {
+      setKeys(mockKeys); catch (error) {
+      console.error('Failed to fetch API keys:', error); finally {
       setLoading(false);
-    }
   };
 
   const toggleScope = (scope: ApiKeyScope) => {
@@ -84,8 +75,7 @@ export function ApiKeysManager() {
       prev.includes(scope)
         ? prev.filter(s => s !== scope)
         : [...prev, scope]
-    );
-  };
+    );;
 
   const handleCreateKey = async () => {
     if (!keyName.trim() || selectedScopes.length === 0) return;
@@ -101,19 +91,16 @@ export function ApiKeysManager() {
       const newKeyObj: ApiKey = {
         id: Date.now().toString(),
         name: keyName,
-        key_prefix: newKey.substring(0, 8),
+        key_prefix: newKey.substring(0, 8);
         is_active: true,
         scopes: selectedScopes,
-        created_at: new Date().toISOString(),
-      };
+        created_at: new Date().toISOString();;
       
       setKeys(prev => [newKeyObj, ...prev]);
       setKeyName('');
       setSelectedScopes([]);
-      setShowCreateDialog(false);
-    } catch (error) {
+      setShowCreateDialog(false); catch (error) {
       console.error('Failed to create API key:', error);
-    }
   };
 
   const handleRegenerateKey = async (keyId: string) => {
@@ -132,10 +119,8 @@ export function ApiKeysManager() {
         )
       );
       
-      setShowRegenerateConfirm(null);
-    } catch (error) {
+      setShowRegenerateConfirm(null); catch (error) {
       console.error('Failed to regenerate API key:', error);
-    }
   };
 
   const handleRevokeKey = async (keyId: string) => {
@@ -151,26 +136,21 @@ export function ApiKeysManager() {
         )
       );
       
-      setShowDeleteConfirm(null);
-    } catch (error) {
+      setShowDeleteConfirm(null); catch (error) {
       console.error('Failed to revoke API key:', error);
-    }
   };
 
   const clearNewApiKey = () => {
-    setNewApiKey(null);
-  };
+    setNewApiKey(null);;
 
   const handleDialogClose = () => {
     setShowCreateDialog(false);
     setKeyName('');
-    setSelectedScopes([]);
-  };
+    setSelectedScopes([]);;
 
   const getExampleCode = (apiKey: string) => `curl -H "Authorization: Bearer ${apiKey}" \\
   -H "Content-Type: application/json" \\
-  https://api.ziontechgroup.com/v1/projects`;
-
+  https: //api.ziontechgroup.com/v1/projects`,
   const CodeBlock = ({ code, language = 'bash', className = '' }: { code: string; language?: string; className?: string }) => (
     <pre className={`bg-gray-900 text-gray-100 p-3 rounded-md overflow-x-auto text-sm font-mono ${className}`}>
       <code className={`language-${language}`}>{code}</code>
@@ -379,7 +359,7 @@ export function ApiKeysManager() {
                       <p className='text-xs text-zinc-400'>
                         {key.last_used_at
                           ? format(
-                              new Date(key.last_used_at),
+                              new Date(key.last_used_at);
                               'MMM d yyyy HH:mm:ss'
                             )
                           : 'This API key has never been used'}
@@ -466,4 +446,3 @@ export function ApiKeysManager() {
       </AlertDialog>
     </Card>
   );
-}

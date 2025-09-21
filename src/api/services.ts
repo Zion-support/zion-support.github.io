@@ -1,14 +1,11 @@
-
-import { NextApiRequest, NextApiResponse } from 'next';
-
+import { NextApiRequest, NextApiResponse } from 'next',
 // API services for the application
 export interface Service {
-  id: string;
-  name: string;
+  id: string,
+  name: string,
   description: string;
   price?: number;
-  rating?: number;
-}
+  rating?: number, }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -30,7 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ];
     
     return res.json(services);
-  }
   
   res.setHeader('Allow', ['GET']);
   res.status(405).end(`Method ${req.method} Not Allowed`);

@@ -151,7 +151,7 @@ export class APIDocGeneratorService {
     config: DocumentationConfig
   ): Promise<APIDocumentation> {
     const documentation: APIDocumentation = {
-      id: `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      id: `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       name: this.extractProjectName(sourcePath),
       version: await this.extractVersion(sourcePath),
       description: await this.extractDescription(sourcePath),
@@ -170,7 +170,7 @@ export class APIDocGeneratorService {
 
     try {
       // Analyze source code
-      const analysis = await this.analyzeSourceCode(sourcePath),
+      const analysis = await this.analyzeSourceCode(sourcePath);
       documentation.endpoints = analysis.endpoints,
       documentation.schemas = analysis.schemas,
       documentation.metadata.totalEndpoints = documentation.endpoints.length,
@@ -179,16 +179,13 @@ export class APIDocGeneratorService {
 
       // Generate examples if requested
       if (config.includeExamples) {
-        documentation.examples = await this.generateExamples(documentation.endpoints),
-      }
+        documentation.examples = await this.generateExamples(documentation.endpoints);
 
       // Calculate coverage
-      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints),
-
-    } catch (error) {
-      console.error('Error generating documentation:', error),
+      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints); catch (error) {
+      console.error('Error generating documentation:', error);
       // Fallback to basic documentation
-      documentation.endpoints = this.generateFallbackEndpoints(),
+      documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length,
     }
 
@@ -205,26 +202,20 @@ export class APIDocGeneratorService {
     const schemas: APISchema[] = [],
     const languages: string[] = [],
     const frameworks: string[] = [],
-
     // Simulate code analysis based on file extensions
-    const files = await this.scanDirectory(sourcePath),
-    
+    const files = await this.scanDirectory(sourcePath);
     for (const file of files) {
-      const extension = file.split('.').pop()?.toLowerCase(),
-      
+      const extension = file.split('.').pop()?.toLowerCase();
       if (extension === 'js' || extension === 'ts') {
-        languages.push('javascripttypescript'),
-        frameworks.push('expressfastify'),
-        endpoints.push(...this.analyzeJavaScriptFile(file)),
-      } else if (extension === 'py') {
-        languages.push('python'),
-        frameworks.push('djangoflask', 'fastapi'),
-        endpoints.push(...this.analyzePythonFile(file)),
-      } else if (extension === 'java') {
-        languages.push('java'),
-        frameworks.push('spring'),
-        endpoints.push(...this.analyzeJavaFile(file)),
-      }
+        languages.push('javascripttypescript');
+        frameworks.push('expressfastify');
+        endpoints.push(...this.analyzeJavaScriptFile(file)); else if (extension === 'py') {
+        languages.push('python');
+        frameworks.push('djangoflask', 'fastapi');
+        endpoints.push(...this.analyzePythonFile(file)); else if (extension === 'java') {
+        languages.push('java');
+        frameworks.push('spring');
+        endpoints.push(...this.analyzeJavaFile(file));
     }
 
     // Remove duplicates
@@ -232,7 +223,7 @@ export class APIDocGeneratorService {
     const uniqueFrameworks = [...new Set(frameworks)],
 
     return {
-      endpoints,
+      endpoints;
       schemas: this.generateSchemas(endpoints),
       languages: uniqueLanguages,
       frameworks: uniqueFrameworks
@@ -346,8 +337,7 @@ export class APIDocGeneratorService {
           tags: ['Users'],
           deprecated: false
         }
-      ),
-    }
+      );
 
     return endpoints,
   }
@@ -389,8 +379,7 @@ export class APIDocGeneratorService {
         ],
         tags: ['Products'],
         deprecated: false
-      }),
-    }
+      });
 
     return endpoints,
   }
@@ -432,8 +421,7 @@ export class APIDocGeneratorService {
         ],
         tags: ['Orders'],
         deprecated: false
-      }),
-    }
+      });
 
     return endpoints,
   }
@@ -519,7 +507,7 @@ export class APIDocGeneratorService {
             'Content-Type': 'application/jsonAuthorization': 'Bearer your-jwt-token'
           },
           body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : undefined
-        },
+        };
         response: {
           status: parseInt(endpoint.responses[0]?.code || '200'),
           headers: {
@@ -528,8 +516,7 @@ export class APIDocGeneratorService {
           body: this.generateExampleResponse(endpoint.responses[0])
         },
         tags: endpoint.tags
-      }),
-    }
+      });
 
     return examples,
   }
@@ -579,7 +566,7 @@ export class APIDocGeneratorService {
 
   private extractProjectName(sourcePath: string): string {
     // Extract project name from path
-    const parts = sourcePath.split('/'),
+    const parts = sourcePath.split('/');
     return parts[parts.length - 1] || 'API Documentation'
   }
 
@@ -602,22 +589,21 @@ export class APIDocGeneratorService {
     // Calculate documentation coverage based on endpoints
     if (endpoints.length === 0) return 0,
     
-    let documentedEndpoints = 0,
+    let documentedEndpoints = 0;
     for (const endpoint of endpoints) {
       if (endpoint.description && endpoint.description.length > 10) {
         documentedEndpoints++
       }
     }
     
-    return Math.round((documentedEndpoints / endpoints.length) * 100),
-  }
+    return Math.round((documentedEndpoints / endpoints.length) * 100);
 
   async exportDocumentation(
     documentation: APIDocumentation,
     format: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi'
   ): Promise<string> {
     // Simulate export functionality
-    const timestamp = new Date().toISOString(),
+    const timestamp = new Date().toISOString();
     return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`,
   }
 
@@ -637,4 +623,4 @@ export class APIDocGeneratorService {
   }
 }
 
-export const apiDocGeneratorService = new APIDocGeneratorService(),
+export const apiDocGeneratorService = new APIDocGeneratorService();

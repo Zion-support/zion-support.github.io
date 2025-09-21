@@ -8,8 +8,7 @@ import { formatDate,,  } from "@/utils/referralUtils"
 import { Badge,,  } from '@/components/ui/badge'
 import { Card,,, CardContent,,, CardHeader,,, CardTitle,,, CardDescription,,, CardFooter,,  } from '@/components/ui/card'
 interface RewardsCardProps {
-isLoading: boolean;
-}
+isLoading: boolean, }
 export function RewardsCard({ rewards isLoading }: RewardsCardProps) {
   if (isLoading) {
     return (

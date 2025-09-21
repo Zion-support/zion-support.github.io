@@ -469,4 +469,4 @@ export const innovativeMicroSAASServices2029: InnovativeMicroSAASService[] = [
     rating: 4.6,
     reviews: 28
   }
-],
+];

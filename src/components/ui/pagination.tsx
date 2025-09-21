@@ -12,7 +12,7 @@ role=&quot;navigation&quot;
 )
 Pagination.displayName = &quot;Pagination&quot;
 const PaginationContent = React.forwardRef<
-  HTMLUListElement,
+  HTMLUListElement;
 React.ComponentProps<&quot;ul&quot;>
 >(({ className, ...props }, ref) => (
   <ul
@@ -23,7 +23,7 @@ ref={ref}
 ))
 PaginationContent.displayName = &quot;PaginationContent&quot;
 const PaginationItem = React.forwardRef<
-  HTMLLIElement,
+  HTMLLIElement;
 React.ComponentProps<&quot;li&quot;>
 >(({ className, ...props }, ref) => (
   <li ref={ref} className={cn("&quot;, className)} {...props} />
@@ -31,15 +31,15 @@ React.ComponentProps<&quot;li&quot;>
 PaginationItem.displayName = &quot;PaginationItem&quot;
 type PaginationLinkProps = {
   isActive?: boolean,
-size?: ButtonProps[&quot;size&quot;]
+size?: ButtonProps[&quot;size&quot, ]
 } & React.ComponentProps<&quot;a&quot;>
 interface PaginationButtonProps,
 extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  page: number;
+  page: number,
 isActive?: boolean,
 }
 const PaginationLink = ({
-  className,
+  className;
 isActive
   size = &quot;icon&quot;
   ...props,
@@ -65,7 +65,7 @@ ref={ref}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
         buttonVariants({ variant: 'ghost', size: 'icon' })
-        isActive && 'bg-green-600 text-white';
+        isActive && 'bg-green-600 text-white',
         className;
       )}
       {...props}
@@ -77,8 +77,7 @@ ref={ref}
 PaginationButton.displayName = 'PaginationButton'
 const PaginationPrevious = ({
   className
-  ...props,
-}: Omit<PaginationLinkProps 'size'>) => (
+  ...props, }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
 aria-label="Go to previous page&quot;
     size=&quot;default"
@@ -92,8 +91,7 @@ aria-label="Go to previous page&quot;
 PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
 const PaginationNext = ({
   className
-  ...props,
-}: Omit<PaginationLinkProps 'size'>) => (
+  ...props, }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
 aria-label=&quot;Go to next page&quot;
     size=&quot;default"
@@ -107,8 +105,7 @@ aria-label=&quot;Go to next page&quot;
 PaginationNext.displayName = &quot;PaginationNext&quot;
 const PaginationEllipsis = ({
   className
-  ...props,
-}: React.ComponentProps<&quot;span">) => (
+  ...props, }: React.ComponentProps<&quot;span">) => (
   <span
 aria-hidden,
 className={cn("flex h-9 w-9 items-center justify-center", className)}

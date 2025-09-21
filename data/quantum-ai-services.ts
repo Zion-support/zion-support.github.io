@@ -545,4 +545,4 @@ export const quantumAIServices: QuantumAIService[] = [
     rating: 5.0,
     reviews: 38
   }
-],
+];

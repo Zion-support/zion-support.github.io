@@ -9,7 +9,7 @@ import import React, { useState; useEffect; useRef } from "react", import import
 </any>,
 </any>,
 </any>,
-</SearchResult>,
+</SearchResult>;
 </any>,;
 </any, >
 </any>

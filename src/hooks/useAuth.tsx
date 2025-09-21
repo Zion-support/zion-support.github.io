@@ -1,10 +1,10 @@
-import React, { useState, useEffect, createContext, useContext, ReactNode } from 'react';
+import React, { useState, useEffect, createContext, useContext, ReactNode } from 'react',
 interface User {
-  id: string;
+  id: string,
   email: string;
   name?: string;
   role?: string;
-  avatar?: string;}
+  avatar?: string, }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -15,9 +15,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {  const [us
     // Check for existing session
     const savedUser = localStorage.getItem('user');
     if (savedUser) {
-      setUser(JSON.parse(savedUser));    }
-    setLoading(false);
-  }, []);
+      setUser(JSON.parse(savedUser));
+    setLoading(false);, []);
 
   const login = async (email: string, password: string) => {
     setLoading(true);
@@ -31,17 +30,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {  const [us
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
       };
       setUser(mockUser);
-      localStorage.setItem('user', JSON.stringify(mockUser));
-    } catch (error) {
-      throw new Error('Login failed');
-    } finally {
-      setLoading(false);
-    }  };
+      localStorage.setItem('user', JSON.stringify(mockUser)); catch (error) {
+      throw new Error('Login failed'); finally {
+      setLoading(false);  };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('user');
-  };
+    localStorage.removeItem('user');;
 
   const register = async (email: string, password: string, name?: string) => {
     setLoading(true);
@@ -55,12 +50,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {  const [us
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
       };
       setUser(mockUser);
-      localStorage.setItem('user', JSON.stringify(mockUser));
-    } catch (error) {
-      throw new Error('Registration failed');
-    } finally {
+      localStorage.setItem('user', JSON.stringify(mockUser)); catch (error) {
+      throw new Error('Registration failed'); finally {
       setLoading(false);
-    }
   };
 
   const value = {
@@ -68,15 +60,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {  const [us
     loading,
     login,
     logout,
-    register,
-  };
+    register, };
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>, }
 
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');  }
-  return context;
-}
+    throw new Error('useAuth must be used within an AuthProvider');
+  return context, }

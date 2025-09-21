@@ -1,22 +1,22 @@
-import import React { useState useEffect } from 'react';
-import import { useAuth,,, ,,  } from '@/hooks/useAuth';
-import import { Card,,, CardContent,,, CardHeader,,, CardTitle,,, ,,  } from '@/components/ui/card';
-import import { Badge,,, ,,  } from '@/components/ui/badge';
-import import { Button,,, ,,  } from '@/components/ui/button';
-import import { Progress,,, ,,  } from '@/components/ui/progress';
+import import React { useState useEffect } from 'react',
+import import { useAuth,,, ,,  } from '@/hooks/useAuth',
+import import { Card,,, CardContent,,, CardHeader,,, CardTitle,,, ,,  } from '@/components/ui/card',
+import import { Badge,,, ,,  } from '@/components/ui/badge',
+import import { Button,,, ,,  } from '@/components/ui/button',
+import import { Progress,,, ,,  } from '@/components/ui/progress',
 import { AlertTriangle,,, Package,,, Zap,,  } from 'lucide-react'
-import import { logErrorToProduction } from '@/utils/productionLogger';
+import import { logErrorToProduction } from '@/utils/productionLogger',
 interface BundleInfo {
   totalSize: number;,
-gzippedSize: number;
+gzippedSize: number,
   chunkCount: number;,
-loadTime: number;
-  cacheHitRate: number;
+loadTime: number,
+  cacheHitRate: number,
 interface ChunkInfo {
   name: string;,
-size: number;
+size: number,
   loadTime: number;,
-cached: boolean;
+cached: boolean,
 export function BundleAnalyzer() {
 if (!shouldShow) {
     return null,

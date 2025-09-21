@@ -695,7 +695,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     implementationDetails: 'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.',
     launchDate: '2026-03-01',
     customers: 45,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 25
   }
-],
+];

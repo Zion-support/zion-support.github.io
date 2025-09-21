@@ -1,16 +1,14 @@
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-
+import React, { useState, useEffect } from 'react',
+import { motion } from 'framer-motion',
 interface AnalyticsData {
-  visitors: number;
-  pageViews: number;
-  conversionRate: number;
-  bounceRate: number;
+  visitors: number,
+  pageViews: number,
+  conversionRate: number,
+  bounceRate: number,
   avgSessionDuration: number;
-  topPages: Array<{ page: string; views: number }>;
-  trafficSources: Array<{ source: string; percentage: number }>;
-}
+  topPages: Array<{ page: string; views: number }>,
+  trafficSources: Array<{ source: string; percentage: number }>, }
 
 export const AdvancedAnalyticsDashboard: React.FC = () => {
   const [data, setData] = useState<AnalyticsData>({
@@ -42,8 +40,7 @@ export const AdvancedAnalyticsDashboard: React.FC = () => {
         { source: 'Social Media', percentage: 15 },
         { source: 'Referral', percentage: 10 }
       ]
-    });
-  }, []);
+    });, []);
 
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
@@ -113,7 +110,6 @@ export const AdvancedAnalyticsDashboard: React.FC = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
+  );;
 
 export default AdvancedAnalyticsDashboard;

@@ -666,7 +666,7 @@ export const addedITServices2025: AdvancedITService[] = [
     implementationDetails: 'Blueprints + policy packs + training',
     launchDate: '2025-06-23',
     customers: 3,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 2
   }
 ]

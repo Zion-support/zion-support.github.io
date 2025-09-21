@@ -463,6 +463,5 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     aiCapabilities: ['Autonomous OptimizationPerformance Prediction', 'Automatic RoutingTraffic Optimization'],
     marketDisruption: 'Revolutionizes network management with autonomous AI'
   }
-],
-
-export default enterpriseITInfrastructureServices2025,
+];
+export default enterpriseITInfrastructureServices2025;

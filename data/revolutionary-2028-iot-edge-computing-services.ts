@@ -272,7 +272,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     implementationDetails: 'Edge AI computing infrastructure with distributed computing, AI optimization, and comprehensive edge capabilities.',
     launchDate: '2028-07-30',
     customers: 380,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 280
   }
-],
+];
