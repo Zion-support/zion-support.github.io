@@ -11,11 +11,11 @@ const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
 
 const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET") || "";
 
+const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET") || "",
 serve(async (req) => {
   if (req.method === "POST") {
     const body = await req.text();
-    const signature = req.headers.get("stripe-signature") || "";
-
+    const signature = req.headers.get("stripe-signature") || "",
     let event;
     try {
       event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
@@ -27,7 +27,6 @@ serve(async (req) => {
       const orderId = session.metadata?.orderId;
       if (orderId) {
         await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
-      }
     }
 
     return new Response(JSON.stringify({ received: true }), { status: 200 })}

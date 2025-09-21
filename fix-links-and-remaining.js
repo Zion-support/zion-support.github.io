@@ -1,5 +1,4 @@
-
-    .join("")}
+.join("")}
 ;
 // Function to extract display name from service name;
 function getDisplayName(serviceName) {// Remove common prefixes and convert to readable format;

@@ -1,26 +1,24 @@
+// Polyfill for globalThis
+if (typeof globalThis === 'undefined') {
+  global.globalThis = global;
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Configure for static export with Next.js 11
-  output: 'export',
-  distDir: '.next',
-  trailingSlash: true,
-  
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
-  eslint: {
-    ignoreDuringBuilds: true,
+  images: {
+    domains: ["localhost"],
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  
-  // Image optimization
-  images: {
-    unoptimized: true, // Required for static export
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-  
-  // Exclude certain directories from compilation
-  webpack: (config, { dev, isServer }) => {
+  experimental: {
+    scrollRestoration: true,
+  },
+  webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -29,65 +27,15 @@ const nextConfig = {
       };
     }
     
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, '.'),
-    };
-    
-    // Exclude contracts directory from compilation
-    config.module.rules.push({
-      test: /\.ts$/,
-      include: require('path').resolve(__dirname, 'contracts'),
-      use: 'ignore-loader'
-    });
-    
-    if (!dev && !isServer) {
-      // Optimize bundle size
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[/]node_modules[/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    
-    // Fix for OpenSSL legacy provider issue
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      crypto: require.resolve('crypto-browserify'),
-    };
+    // Add globalThis polyfill
+    config.plugins = config.plugins || [];
+    config.plugins.push(
+      new (require('webpack')).DefinePlugin({
+        'globalThis': 'global',
+      })
+    );
     
     return config;
-  },
-  
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  
-  // Export path map for static generation
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      '/': { page: '/' },
-      '/contact': { page: '/contact' },
-      '/services': { page: '/services' },
-    }
-  },
-  
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
   },
 };
 

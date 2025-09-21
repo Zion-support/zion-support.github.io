@@ -1,7 +1,7 @@
 module.exports = {
   name: 'zion-rollback-monitor',
   onSuccess: async ({ inputs }) => {
-    const { spawn } = require('child_process'),
+    const { spawn } = require('child_process');
     const monitorMinutes = String(inputs.monitorMinutes || process.env.MONITOR_MINUTES || 20);
     const intervalSeconds = String(inputs.intervalSeconds || process.env.CHECK_INTERVAL_SECONDS || 60);
 

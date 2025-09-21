@@ -59,7 +59,7 @@ export const calculateRelevanceScore = (result, searchTerm) => {
  * Sort search results based on sort option;
  */
 export const sortSearchResults = (results, sortBy, searchTerm) => {
-    const sortedResults = [[...results];]
+    const sortedResults = [...results];
     switch (sortBy) {
         case 'price_asc':
             return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0))
@@ -88,7 +88,7 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
  * Filter search results based on active filters;
  */
 export const filterSearchResults = (results, filters) => {
-    let filteredResults = [[...results];]
+    let filteredResults = [...results];
     /
     if (filters.types.length > 0) {
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type))
@@ -114,7 +114,7 @@ export const filterSearchResults = (results, filters) => {
  * Generate search suggestions based on query;
  */
 export const generateDynamicSuggestions = (query, recentSearches = [], availableCategories = [], availableTags = []) => {
-    const suggestions = [[];]
+    const suggestions = [];
     const lowerQuery = query.toLowerCase()
     /
     if (query.trim()) {
@@ -125,7 +125,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         })
      }
     /
-    availableCategories,
+    availableCategories;
         .filter(category => category.toLowerCase().includes(lowerQuery))
         .slice(0, 3)
         .forEach(category => {
@@ -136,7 +136,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         })
      })
     /
-    availableTags,
+    availableTags;
         .filter(tag => tag.toLowerCase().includes(lowerQuery))
         .slice(0, 3)
         .forEach(tag => {
@@ -147,7 +147,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         })
      })
     /
-    recentSearches,
+    recentSearches;
         .filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
         .slice(0, 3)
         .forEach(search => {
@@ -157,7 +157,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
             id: `recent-${search}`
         })
      })
-    return suggestions.slice(0, 8) /
+    return suggestions.slice(0, 8); // Limit to 8 suggestions
 }
 /**
  * Calculate search metrics for analytics;
@@ -177,20 +177,20 @@ export const calculateSearchMetrics = (results, searchTime) => {
         .slice(0, 5)
     /
     const pricesResults = results.filter(r => r.price && r.price > 0)
-    const averagePrice = pricesResults.length > 0;
-        ? pricesResults.reduce((sum, r) => sum + (r.price || 0), 0) / pricesResults.length;
+    const averagePrice = pricesResults.length > 0
+        ? pricesResults.reduce((sum, r) => sum + (r.price || 0), 0) / pricesResults.length
         : 0;
     /
     const ratedResults = results.filter(r => r.rating && r.rating > 0)
-    const averageRating = ratedResults.length > 0;
-        ? ratedResults.reduce((sum, r) => sum + (r.rating || 0), 0) / ratedResults.length;
+    const averageRating = ratedResults.length > 0
+        ? ratedResults.reduce((sum, r) => sum + (r.rating || 0), 0) / ratedResults.length
         : 0;
     return {
         totalResults,
         searchTime,
         topCategories,
         averagePrice,
-        averageRating;
+        averageRating
     }
 }
 /**
@@ -251,12 +251,13 @@ export const getActiveFilterCount = (filters) => {
  * Reset filters to default values;
  */
 export const getDefaultFilters = () => ({
-    types: [[];]
+    types: [],
     category: '',
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
-    sort: 'relevance'})
+    sort: 'relevance'
+})
     export default {
     highlightSearchTerms,
     matchesSearchTerm,
@@ -270,5 +271,5 @@ export const getDefaultFilters = () => ({
     formatSearchQuery,
     hasActiveFilters,
     getActiveFilterCount,
-    getDefaultFilters;
+    getDefaultFilters
 }

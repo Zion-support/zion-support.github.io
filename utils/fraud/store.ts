@@ -32,7 +32,7 @@ export class FraudStore {,
       await supabase.from('fraud_events').insert([withId as any]);
       return withId}
 ,
-    ensureFiles(),
+    ensureFiles();
     const line = JSON.stringify(withId) + '\n',
     await fs.appendFile(eventsPath, line, 'utf8');
     return withId}
@@ -43,9 +43,9 @@ export class FraudStore {,
       await supabase.from('fraud_events').update({ status }).eq('id', fraudId);
       return}
 ,
-    ensureFiles(),
-    const events = await this._readAllEvents(),
-    const idx = events.findIndex((e) => e.id === fraudId),
+    ensureFiles();
+    const events = await this._readAllEvents();
+    const idx = events.findIndex((e) => e.id === fraudId);
     if (idx >= 0) {,
       events[idx].status = status,
       await this._writeAllEvents(events);
@@ -61,7 +61,7 @@ export class FraudStore {,
       await supabase.from('fraud_actions').insert([withId as any]);
       return withId}
 ,
-    ensureFiles(),
+    ensureFiles();
     const line = JSON.stringify(withId) + '\n',
     await fs.appendFile(actionsPath, line, 'utf8');
     return withId}
@@ -77,8 +77,8 @@ export class FraudStore {,
       const { data } = await query;
       return (data as any) as StoredFraudRecord[]}
 ,
-    ensureFiles(),
-    const events = await this._readAllEvents(),
+    ensureFiles();
+    const events = await this._readAllEvents();
     const filtered = events.filter((e) => {,
       if (filters.source && e.source !== filters.source) return false,
       if (filters.userId && e.userId !== filters.userId) return false,
@@ -135,17 +135,17 @@ export class FraudStore {,
       return updated;
     }
 ,
-    ensureFiles(),
-    const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}'),
+    ensureFiles();
+    const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}');
     json[userId] = updated,
     fs.writeFileSync(privacyPath, JSON.stringify(json, null, 2)),
     return updated}
 ,
   async generateMonthlyReport(month: string): Promise<MonthlyReport> {,
     // month format: YYYY-MM,
-    const [year, mon] = month.split('-').map((v) => parseInt(v, 10)),
-    const start = new Date(Date.UTC(year, mon - 1, 1, 0, 0, 0)),
-    const end = new Date(Date.UTC(year, mon, 1, 0, 0, 0)),
+    const [year, mon] = month.split('-').map((v) => parseInt(v, 10));
+    const start = new Date(Date.UTC(year, mon - 1, 1, 0, 0, 0));
+    const end = new Date(Date.UTC(year, mon, 1, 0, 0, 0));
     let events: StoredFraudRecord[] = [],
     if (isSupabaseConfigured()) {;
       const supabase = getSupabaseAdmin(),
@@ -222,7 +222,7 @@ export function getFraudStore(): FraudStore {,
   return new FraudStore()}
 ,
 export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>): FraudEvent {,
-  const id = uuidv4(),
+  const id = uuidv4();
   return {,
     id,
     userId: partial.userId ?? null,

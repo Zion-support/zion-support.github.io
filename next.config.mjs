@@ -7,93 +7,74 @@ const __dirname = path.dirname(__filename);
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Enable static export for Netlify
+  compress: true,
+  poweredByHeader: false,
   output: 'export',
   trailingSlash: true,
-  
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
   },
   
-  // Exclude certain directories from compilation
-  webpack: (config, { dev, isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibility
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-      };
-    }
-    
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
+  // TypeScript configuration
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
+  // ESLint configuration
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Transpile packages
+  transpilePackages: [],
+  
+  // Webpack configuration
+  webpack: (config, { isServer }) => {
     // Add path alias resolution
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname, '.'),
     };
     
-    // Exclude contracts directory from compilation
-    config.module.rules.push({
-      test: /\.ts$/,
-      include: path.resolve(__dirname, 'contracts'),
-      use: 'ignore-loader'
-    });
-    
-    if (!dev && !isServer) {
-      // Optimize bundle size
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[/]node_modules[/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
+    // Minimal webpack configuration for static export
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
       };
     }
-    
-    // Fix for OpenSSL legacy provider issue
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      crypto: false,
-    };
-    
-    // Disable PostCSS processing to avoid matchAll issues
-    config.module.rules.forEach((rule) => {
-      if (rule.oneOf) {
-        rule.oneOf.forEach((oneOf) => {
-          if (oneOf.use && Array.isArray(oneOf.use)) {
-            oneOf.use = oneOf.use.filter((use) => {
-              return !use.loader || !use.loader.includes('postcss-loader');
-            });
-          }
-        });
-      }
-    });
     
     return config;
   },
   
   // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
+  optimizeFonts: false,
   
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
   },
 };
 
