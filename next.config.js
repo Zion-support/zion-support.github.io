@@ -1,3 +1,8 @@
+// Polyfill for globalThis
+if (typeof globalThis === 'undefined') {
+  global.globalThis = global;
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -10,6 +15,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  swcMinify: true,
+  experimental: {
+    esmExternals: false,
+  },
   webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
@@ -18,8 +27,17 @@ const nextConfig = {
         fs: false,
       };
     }
+    
+    // Add globalThis polyfill
+    config.plugins = config.plugins || [];
+    config.plugins.push(
+      new (require('webpack')).DefinePlugin({
+        'globalThis': 'global',
+      })
+    );
+    
     return config;
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
