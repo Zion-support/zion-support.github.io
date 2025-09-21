@@ -54,5 +54,5 @@ export const scoreResumeWithGPT = async (args: {
       roleRelevance: { summary: "", score: 0 },
       experienceAlignment: { summary: "", score: 0 },
       techStack: { matched: [], missing: [], score: 0 }
-    }
+    },
   }},

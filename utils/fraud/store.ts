@@ -49,7 +49,7 @@ export class FraudStore {,
     if (idx >= 0) {,
       events[idx].status = status,
       await this._writeAllEvents(events);
-    }
+    },
   }
 ,
   async recordAction(action: Omit<AdminActionRecord, 'id' | 'createdAt'> & { id?: string, createdAt?: string }): Promise<AdminActionRecord> {,
@@ -133,7 +133,7 @@ export class FraudStore {,
       const supabase = getSupabaseAdmin(),
       await supabase.from('privacy_settings').upsert(updated as any, { onConflict: 'userId' }),
       return updated;
-    }
+    },
 ,
     ensureFiles();
     const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}');

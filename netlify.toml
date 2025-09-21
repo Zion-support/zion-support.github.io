@@ -1,21 +1,19 @@
 [build]
-  command = "npm install --ignore-scripts --legacy-peer-deps && npm install --save-dev @types/react @types/react-dom @types/node typescript@4.9.5 --legacy-peer-deps --ignore-scripts && npm run build && npx next export"
+  # Use custom build script to handle TypeScript configuration issues
+  command = "bash scripts/netlify-build.sh"
   publish = "out"
-
-[build.processing]
-  skip_processing = false
-
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
+  # Explicitly specify this is a Next.js static site
+  base = "."
 
 [build.environment]
-  NODE_VERSION = "22"
-  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=8192 --openssl-legacy-provider"
+  NETLIFY_USE_NPM = "true"
+  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "false"
+  CANONICAL_URL = "https://ziontechgroup.com"
+  # Force npm usage and disable pnpm detection
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NETLIFY_USE_PNPM = "false"
 
 # Performance optimizations
 [[plugins]]

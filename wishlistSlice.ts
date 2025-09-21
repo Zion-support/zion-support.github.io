@@ -31,7 +31,7 @@ const wishlistSlice = createSlice({,
     },
     removeFromWishlist(state, action: PayloadAction<{ id: string }>) {,
       state.items = state.items.filter((item) => item.id !== action.payload.id);
-    }
+    },
   },
   extraReducers: (builder) => {,
     builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {,

@@ -33,17 +33,17 @@ export class LinkChecker {
   normalizeUrl(url: string, basePage: string): string {
     if (url.startsWith("http")) {
       return url;
-    }
+    },
 
     if (url.startsWith("/")) {
       return `${this.baseUrl}${url}`;
-    }
+    },
 
     try {
       return `${this.baseUrl}${basePage}/${url}`;
     } catch {
       return url;
-    }
+    },
   }
 
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
@@ -61,7 +61,7 @@ export class LinkChecker {
         page: pagePath,
         anchor: url.startsWith("#") ? url : undefined
       });
-    }
+    },
 
     return links;
   }
@@ -72,7 +72,7 @@ export class LinkChecker {
       return response.ok;
     } catch {
       return false;
-    }
+    },
   }
 
   async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {
@@ -85,12 +85,12 @@ export class LinkChecker {
         if (!exists) {
           link.status = "missing";
           this.missingPages.push(link.url);
-        }
+        },
       } else {
         link.status = "external";
-      }
+      },
       checkedLinks.push(link);
-    }
+    },
 
     return {
       path: pagePath,

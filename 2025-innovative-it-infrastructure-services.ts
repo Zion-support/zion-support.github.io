@@ -86,7 +86,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-secure cloud infrastructure with post-quantum cryptography and quantum key distribution.',
     launchDate: '2025-01-15',
@@ -139,7 +139,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Edge computing orchestration platform with intelligent workload distribution and edge-to-cloud synchronization.',
     launchDate: '2025-01-20',
@@ -192,7 +192,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Neuromorphic computing infrastructure with brain-inspired neural architecture and ultra-efficient AI processing.',
     launchDate: '2025-02-01',
@@ -245,7 +245,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Hybrid quantum-classical infrastructure with seamless resource orchestration and hybrid algorithm optimization.',
     launchDate: '2025-01-25',
@@ -298,7 +298,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Autonomous data center management platform with AI-powered optimization and zero human intervention.',
     launchDate: '2025-02-05',

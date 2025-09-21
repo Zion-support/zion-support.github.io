@@ -62,7 +62,7 @@ export const specializedIndustrySolutions2026 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered healthcare diagnostics platform with comprehensive medical AI capabilities and regulatory compliance.',
     launchDate: '2024-12-10',
@@ -113,7 +113,7 @@ export const specializedIndustrySolutions2026 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced smart manufacturing platform with AI and IoT integration for comprehensive manufacturing optimization.',
     launchDate: '2024-11-20',
@@ -164,7 +164,7 @@ export const specializedIndustrySolutions2026 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered financial trading platform with comprehensive trading algorithms and risk management.',
     launchDate: '2024-10-25',
@@ -215,7 +215,7 @@ export const specializedIndustrySolutions2026 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced retail AI optimization platform with comprehensive retail optimization and personalized customer experiences.',
     launchDate: '2024-09-30',
@@ -266,7 +266,7 @@ export const specializedIndustrySolutions2026 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced logistics AI platform with comprehensive logistics optimization and real-time tracking capabilities.',
     launchDate: '2024-08-25',

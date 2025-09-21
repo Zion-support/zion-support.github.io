@@ -448,7 +448,7 @@ export class NavigationGenerator {
         },
         lastUpdated: '2025-01-15',
         priority: 25
-      }
+      },
     ],
     return this.services;
   }
@@ -587,7 +587,7 @@ export class NavigationGenerator {
         label: 'Accessibility',
         href: '/accessibility',
         priority: 22
-      }
+      },
     ],
     return this.pages;
   }
@@ -600,9 +600,9 @@ export class NavigationGenerator {
       if (service.category) {
         if (!categoryMap.has(service.category)) {
           categoryMap.set(service.category, []);
-        }
+        },
         categoryMap.get(service.category)!.push(service);
-      }
+      },
     }),
 
     // Create category objects
@@ -642,7 +642,7 @@ export class NavigationGenerator {
         serviceCount: 0,
         services: [],
         priority: 3
-      }
+      },
     ),
     return this.categories;
   }
@@ -714,7 +714,7 @@ export class NavigationGenerator {
         label: '🔎 Search',
         href: '/search',
         priority: 7
-      }
+      },
     ]}
 
   // Generate footer navigation
@@ -761,7 +761,7 @@ export class NavigationGenerator {
         label: 'Sitemap',
         href: '/sitemap.xml',
         priority: 7
-      }
+      },
     ]}
 
   // Generate sidebar navigation based on context
@@ -774,7 +774,7 @@ export class NavigationGenerator {
       case 'dashboard':
         return this.generateDashboardSidebar(),
       default: return this.generateDefaultSidebar()
-    }
+    },
   }
 
   private generateServiceSidebar(serviceId?: string): NavigationItem[] {
@@ -807,7 +807,7 @@ export class NavigationGenerator {
         href: `https://github.com/ai-factory/${service.id}`,
         priority: 4,
         isExternal: true
-      }
+      },
     ]}
 
   private generateCategorySidebar(categoryId?: string): NavigationItem[] {
@@ -857,7 +857,7 @@ export class NavigationGenerator {
         label: 'Settings',
         href: '/dashboard/settings',
         priority: 4
-      }
+      },
     ]}
 
   private generateDefaultSidebar(): NavigationItem[] {
@@ -879,7 +879,7 @@ export class NavigationGenerator {
         label: 'Browse Categories',
         href: '/explore',
         priority: 3
-      }
+      },
     ]}
 
   // Auto-update navigation when new services are added
@@ -910,7 +910,7 @@ export class NavigationGenerator {
           href: 'https://ziontechgroup.com',
           isExternal: true,
           priority: 2
-        }
+        },
       ]
     }}
 }

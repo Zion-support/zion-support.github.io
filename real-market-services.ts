@@ -176,7 +176,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'DNS checks, seed-list tests, blacklist APIs, and scheduled warmup orchestration.',
     launchDate: '2025-02-01',
@@ -223,7 +223,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Attribution pipelines, event deduplication, and payout batch jobs.',
     launchDate: '2025-01-15',
@@ -270,7 +270,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Knowledge sync, embeddings, intent detection, and action tools.',
     launchDate: '2025-02-05',
@@ -317,7 +317,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Snippet-based analytics with server-side aggregation and privacy safeguards.',
     launchDate: '2025-02-10',
@@ -532,7 +532,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Intune/Jamf policy packs, autopilot/ABM setup, patch automation runbooks.',
     launchDate: '2025-01-01',
@@ -578,7 +578,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Parsers, correlation rules, SOAR playbooks, on-call rotations.',
     launchDate: '2024-12-15',
@@ -624,7 +624,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Ingestion blueprints, ECS mappings, correlation packs, dashboards.',
     launchDate: '2025-01-10',
@@ -670,7 +670,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'IaC modules, registry setup, pipelines, monitoring dashboards.',
     launchDate: '2025-01-05',
@@ -715,7 +715,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Feature registry, offline/online stores, CI for features.',
     launchDate: '2025-01-06',
@@ -760,7 +760,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Tracking server, artifact store, SSO, templates.',
     launchDate: '2025-01-04',
@@ -805,7 +805,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Test suites, policies, CI gates, dashboards.',
     launchDate: '2025-01-03',
@@ -850,7 +850,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Data models, dashboards, alerts, export jobs.',
     launchDate: '2025-01-08',
@@ -895,7 +895,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'IaC landing zone, pipelines, cutover and rollback playbooks.',
     launchDate: '2025-01-07',
@@ -940,7 +940,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Theme analysis, lazy load, app pruning, CDN and image strategy.',
     launchDate: '2025-01-02',
@@ -1027,7 +1027,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Edge verify and adaptive challenge, policy config UI, analytics.',
     launchDate: '2025-02-25',
@@ -1073,7 +1073,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Connectors, incremental keys, idempotent upserts, error DLQ.',
     launchDate: '2025-02-26',
@@ -1119,7 +1119,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Document loaders, chunking, topic maps, structured draft generator.',
     launchDate: '2025-02-20',
@@ -1165,7 +1165,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Task runners, judge prompts, scoring stores, CI plugin.',
     launchDate: '2025-02-12',
@@ -1211,7 +1211,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Banner + middleware policy, receipts store, export jobs.',
     launchDate: '2025-02-18',
@@ -1257,7 +1257,7 @@ export const realMarketServices: RealMarketService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Worker pools, proxy rotation, rate-limiters, extractors, exporters.',
     launchDate: '2025-02-22',

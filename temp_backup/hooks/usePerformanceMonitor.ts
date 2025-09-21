@@ -19,7 +19,7 @@ export function usePerformanceMonitor() {
     if (!('PerformanceObserver' in window)) {
       setIsSupported(false);
       return;
-    }
+    },
     
     setIsSupported(true);
     
@@ -36,7 +36,7 @@ export function usePerformanceMonitor() {
             firstInputDelay: prev?.firstInputDelay || 0,
             cumulativeLayoutShift: prev?.cumulativeLayoutShift || 0
           }));
-        }
+        },
         
         if (entry.entryType === 'paint') {
           const paintEntry = entry as PerformancePaintTiming;
@@ -48,8 +48,8 @@ export function usePerformanceMonitor() {
               firstInputDelay: prev?.firstInputDelay || 0,
               cumulativeLayoutShift: prev?.cumulativeLayoutShift || 0
             }));
-          }
-        }
+          },
+        },
         
         if (entry.entryType === 'largest-contentful-paint') {
           const lcpEntry = entry as PerformanceEntry;
@@ -60,7 +60,7 @@ export function usePerformanceMonitor() {
             firstInputDelay: prev?.firstInputDelay || 0,
             cumulativeLayoutShift: prev?.cumulativeLayoutShift || 0
           }));
-        }
+        },
         
         if (entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
@@ -71,7 +71,7 @@ export function usePerformanceMonitor() {
             firstInputDelay: fidEntry.processingStart - fidEntry.startTime,
             cumulativeLayoutShift: prev?.cumulativeLayoutShift || 0
           }));
-        }
+        },
         
         if (entry.entryType === 'layout-shift') {
           const clsEntry = entry as PerformanceEntry & { value: number };
@@ -82,7 +82,7 @@ export function usePerformanceMonitor() {
             firstInputDelay: prev?.firstInputDelay || 0,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry.value
           }));
-        }
+        },
       });
     });
 
@@ -91,7 +91,7 @@ export function usePerformanceMonitor() {
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (error) {
       console.warn('Performance Observer not fully supported:', error);
-    }
+    },
 
     return () => {
       observer.disconnect();

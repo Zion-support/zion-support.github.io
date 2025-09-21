@@ -86,7 +86,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete blockchain supply chain platform with real-time tracking, smart contracts, and compliance monitoring. Includes ERP integration and mobile apps.',
     launchDate: '2028-01-20',
@@ -139,7 +139,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete IoT energy management system with real-time monitoring, AI optimization, and predictive maintenance. Includes mobile apps and analytics.',
     launchDate: '2028-01-25',
@@ -192,7 +192,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete AI customer service platform with chatbots, natural language processing, and intelligent routing. Includes CRM integration and analytics.',
     launchDate: '2028-02-01',
@@ -245,7 +245,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete quantum machine learning platform with quantum algorithm optimization and hybrid quantum-classical ML. Includes research tools and community support.',
     launchDate: '2028-01-15',
@@ -298,7 +298,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete autonomous vehicle fleet management platform with real-time monitoring, AI optimization, and safety systems. Includes mobile apps and analytics.',
     launchDate: '2028-02-05',
@@ -351,7 +351,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete digital twin platform with real-time simulation, predictive maintenance, and 3D visualization. Includes mobile apps and analytics.',
     launchDate: '2028-01-30',
@@ -404,7 +404,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete AI content creation platform with article generation, video creation, and image generation. Includes social media automation and analytics.',
     launchDate: '2028-02-01',
@@ -457,7 +457,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete quantum internet protocol with quantum key distribution, entanglement networks, and post-quantum cryptography. Includes security monitoring and analytics.',
     launchDate: '2028-02-15',
@@ -510,7 +510,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete AI legal research platform with document analysis, case research, and compliance monitoring. Includes mobile apps and analytics.',
     launchDate: '2028-01-20',

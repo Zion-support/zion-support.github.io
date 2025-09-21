@@ -17,7 +17,7 @@ export function usePageViewTracking() {
         window.gtag("config", process.env.NEXT_PUBLIC_GA_ID, {
           page_path: url,
         });
-      }
+      },
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);

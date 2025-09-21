@@ -9,10 +9,10 @@ export const optimizeImages = () => {
   images.forEach(img => {
     if (!img.loading) {
       img.loading = "lazy";
-    }
+    },
     if (!img.decoding) {
       img.decoding = "async";
-    }
+    },
   })
 }
 

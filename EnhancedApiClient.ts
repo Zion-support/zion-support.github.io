@@ -113,13 +113,13 @@ class EnhancedApiClient {
       const cached = this.cache.get(cacheKey);
       if (cached) {
         return { ...cached, cached: true };
-      }
-    }
+      },
+    },
 
     // Check if request is already in progress
     if (this.requestQueue.has(cacheKey)) {
       return this.requestQueue.get(cacheKey)!;
-    }
+    },
 
     // Create new request promise
     const requestPromise = this.executeRequest<T>(fullUrl, options, {
@@ -136,7 +136,7 @@ class EnhancedApiClient {
       return response;
     } finally {
       this.requestQueue.delete(cacheKey);
-    }
+    },
   }
 
   /**
@@ -151,7 +151,7 @@ class EnhancedApiClient {
       cacheKey: string;
       cache?: boolean;
       cacheTTL?: number;
-    }
+    },
   ): Promise<ApiResponse<T>> {
     const { timeout, retries, cacheKey, cache = true, cacheTTL } = options;
     let lastError: Error | null = null;
@@ -170,7 +170,7 @@ class EnhancedApiClient {
 
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
+        },
 
         const data = await response.json();
         const apiResponse: ApiResponse<T> = {
@@ -184,7 +184,7 @@ class EnhancedApiClient {
         // Cache the response if enabled
         if (this.config.cacheEnabled && cache) {
           this.cache.set(cacheKey, apiResponse);
-        }
+        },
 
         return apiResponse;
       } catch (error) {
@@ -193,9 +193,9 @@ class EnhancedApiClient {
         if (attempt < retries) {
           const delay = this.config.retryDelay * Math.pow(2, attempt);
           await new Promise(resolve => setTimeout(resolve, delay));
-        }
-      }
-    }
+        },
+      },
+    },
 
     throw lastError || new Error('Request failed after all retries');
   }

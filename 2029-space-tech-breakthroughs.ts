@@ -53,7 +53,7 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "Space Mining",
     technology: ["Space Robotics", "AI/ML", "Resource Detection", "Space Logistics"],
     benefits: [
@@ -103,7 +103,7 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "Metaverse",
     technology: ["Virtual Reality", "AI/ML", "Quantum Computing", "3D Graphics"],
     benefits: [
@@ -153,7 +153,7 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "Health Analytics",
     technology: ["AI/ML", "Quantum Computing", "Health Analytics", "Predictive Modeling"],
     benefits: [
@@ -203,7 +203,7 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "Holographic Events",
     technology: ["Holography", "3D Projection", "Spatial Audio", "Real-time Processing"],
     benefits: [
@@ -253,7 +253,7 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "Quantum Communication",
     technology: ["Quantum Entanglement", "Quantum Cryptography", "Space Communication", "Quantum Networks"],
     benefits: [

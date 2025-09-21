@@ -24,7 +24,7 @@ export async function openAuthPopup(provider: 'google' | 'facebook' | 'twitter')
         clearInterval(checkClosed);
         // In a real app, you'd check for authentication success
         resolve();
-      }
+      },
     }, 1000);
 
     // Timeout after 5 minutes

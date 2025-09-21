@@ -44,7 +44,7 @@ export class AutomatedTestingSuite {
     
     if (config.autoRun) {
       this.startAutoTesting();
-    }
+    },
   }
   
   private async initializeTestSuites(): Promise<void> {
@@ -62,25 +62,25 @@ export class AutomatedTestingSuite {
             }))
           });
         });
-      }
+      },
       
       this.notifyListeners();
     } catch (error) {
       console.error('Failed to initialize test suites:', error);
-    }
+    },
   }
   
   private startAutoTesting(): void {
     // Run tests on file changes
     if (this.configuration.runOnSave) {
       this.setupFileWatcher();
-    }
+    },
     
     // Run tests periodically
     setInterval(() => {
       if (!this.isRunning) {
         this.runAllTests();
-      }
+      },
     }, 60000); // Run every minute
   }
   
@@ -99,11 +99,11 @@ export class AutomatedTestingSuite {
         const changes = await response.json();
         if (changes.length > 0) {
           this.runAffectedTests(changes);
-        }
-      }
+        },
+      },
     } catch (error) {
       console.error('Failed to check for file changes:', error);
-    }
+    },
   }
   
   public async runAllTests(): Promise<void> {
@@ -115,7 +115,7 @@ export class AutomatedTestingSuite {
     try {
       for (const [suiteId, suite] of this.testSuites) {
         await this.runTestSuite(suiteId);
-      }
+      },
       
       console.log('✅ All test suites completed');
     } catch (error) {
@@ -123,7 +123,7 @@ export class AutomatedTestingSuite {
     } finally {
       this.isRunning = false;
       this.notifyListeners();
-    }
+    },
   }
   
   public async runTestSuite(suiteId: string): Promise<void> {
@@ -145,11 +145,11 @@ export class AutomatedTestingSuite {
       if (response.ok) {
         const result = await response.json();
         this.updateTestSuiteResults(suiteId, result);
-      }
+      },
     } catch (error) {
       console.error(`Failed to run test suite ${suiteId}:`, error);
       suite.status = 'failed';
-    }
+    },
     
     this.notifyListeners();
   }
@@ -176,12 +176,12 @@ export class AutomatedTestingSuite {
       if (response.ok) {
         const result = await response.json();
         this.updateTestCaseResult(suiteId, testCaseId, result);
-      }
+      },
     } catch (error) {
       console.error(`Failed to run test case ${testCaseId}:`, error);
       testCase.status = 'failed';
       testCase.error = error instanceof Error ? error.message : String(error);
-    }
+    },
     
     this.notifyListeners();
   }
@@ -199,7 +199,7 @@ export class AutomatedTestingSuite {
     // Run affected test suites
     for (const suite of affectedSuites) {
       await this.runTestSuite(suite.id);
-    }
+    },
   }
   
   private updateTestSuiteResults(suiteId: string, results: any): void {
@@ -219,7 +219,7 @@ export class AutomatedTestingSuite {
         testCase.error = result.error;
         testCase.coverage = result.coverage;
         testCase.timestamp = new Date();
-      }
+      },
     });
   }
   
@@ -234,7 +234,7 @@ export class AutomatedTestingSuite {
       testCase.error = result.error;
       testCase.coverage = result.coverage;
       testCase.timestamp = new Date();
-    }
+    },
   }
   
   public getTestSuites(): TestSuite[] {
@@ -272,14 +272,14 @@ export class AutomatedTestingSuite {
           case 'skipped':
             skipped++;
             break;
-        }
+        },
         
         if (testCase.coverage !== undefined) {
           totalCoverage += testCase.coverage;
           coverageCount++;
-        }
-      }
-    }
+        },
+      },
+    },
     
     return {
       total,
@@ -313,10 +313,10 @@ export class AutomatedTestingSuite {
         report += `- **${testCase.name}**: ${testCase.status}\n`;
         if (testCase.error) {
           report += `  - Error: ${testCase.error}\n`;
-        }
-      }
+        },
+      },
       report += '\n';
-    }
+    },
     
     return report;
   }
@@ -329,8 +329,8 @@ export class AutomatedTestingSuite {
         this.startAutoTesting();
       } else {
         this.stopAutoTesting();
-      }
-    }
+      },
+    },
   }
   
   private stopAutoTesting(): void {
@@ -346,7 +346,7 @@ export class AutomatedTestingSuite {
     const index = this.listeners.indexOf(listener);
     if (index > -1) {
       this.listeners.splice(index, 1);
-    }
+    },
   }
   
   private notifyListeners(): void {
@@ -356,7 +356,7 @@ export class AutomatedTestingSuite {
         listener(suites);
       } catch (error) {
         console.error('Error in testing suite listener:', error);
-      }
+      },
     });
   }
 }

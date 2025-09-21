@@ -86,7 +86,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for customer behavior analysis, churn prediction, and automated success workflows.',
     launchDate: '2024-12-01',
@@ -139,7 +139,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade SaaS platform with AI algorithms for supply chain optimization, real-time monitoring, and predictive analytics.',
     launchDate: '2024-11-15',
@@ -192,7 +192,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for financial forecasting, automated planning, and intelligent financial insights.',
     launchDate: '2024-10-15',
@@ -245,7 +245,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise SaaS platform with AI algorithms for HR analytics, predictive modeling, and intelligent workforce insights.',
     launchDate: '2024-09-01',
@@ -298,7 +298,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for sales intelligence, lead scoring, and automated sales workflows.',
     launchDate: '2024-08-15',
@@ -351,7 +351,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade SaaS platform with advanced AI algorithms for decision modeling, predictive analytics, and business intelligence.',
     launchDate: '2024-07-01',
@@ -404,7 +404,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for content generation, optimization, and multi-channel automation.',
     launchDate: '2024-06-15',
@@ -457,7 +457,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Intelligent SaaS platform that enhances existing CRM systems with AI-powered analytics, automation, and predictive insights.',
     launchDate: '2024-05-01',
@@ -510,7 +510,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'SDKs, OTel collectors, prebuilt dashboards and alert policies with guided onboarding.',
     launchDate: '2024-09-01',
@@ -563,7 +563,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Scanner engine with OpenAPI import, CI integration and dashboards.',
     launchDate: '2024-08-10',
@@ -616,7 +616,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'DNS checks, webhook ingestion and scoring dashboards.',
     launchDate: '2024-07-20',
@@ -669,7 +669,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'DNS polling and event rules with alerting and audits.',
     launchDate: '2024-06-10',
@@ -722,7 +722,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Cluster scanner, rules engine and policy generator with CI.',
     launchDate: '2024-04-05',
@@ -775,7 +775,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Ingest cloud billing, generate recs and automate remediation via tags and policies.',
     launchDate: '2024-03-01',
@@ -828,7 +828,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Runbook engine with chatops integrations, ownership model and templates.',
     launchDate: '2024-02-10',
@@ -881,7 +881,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Headless Chromium rendering service with queue and storage.',
     launchDate: '2024-01-30',
@@ -934,7 +934,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'SLO engine with burn rate policies and dashboards.',
     launchDate: '2024-05-20',
@@ -987,7 +987,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'JS SDK for RUM with ingestion and analytics UI.',
     launchDate: '2024-06-01',

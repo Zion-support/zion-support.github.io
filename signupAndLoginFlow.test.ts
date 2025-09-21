@@ -30,7 +30,7 @@ jest.mock('@/integrations/supabase/client', () => ({'  supabase: {,
       setSession: jest.fn().mockResolvedValue({,
         data: { session: { access_token: test-jwt-token', user: {id: user-123'} } }, // Simulate session object in return'        error: null}),
       // Mock other Supabase auth methods if they were to be called
-    }
+    },
   }
 }));
 // Mock axios (because Signup.tsx sets default headers),
@@ -76,8 +76,8 @@ describe('Integration Test: Signup and Authenticated Call', () => {'  beforeEach
       localStorage.setItem('token', tokenToStore),      // safeStorage.setItem('authToken', tokenToStore), // Assuming Signup.tsx calls this,
       // Simulate Axios default header update from Signup.tsx,
       if (axios.defaults) { // Check to guard against incorrect mocking,
-         axios.defaults.headers.common['Authorization'] = `Bearer ${tokenToStore}`      }
-    }
+         axios.defaults.headers.common['Authorization'] = `Bearer ${tokenToStore}`      },
+    },
 ,
     // 4. Verify token storage and mock calls,
     expect(localStorage.setItem).toHaveBeenCalledWith('token', test-jwt-token'),    expect(safeStorage.setItem).toHaveBeenCalledWith('authToken', test-jwt-token'),    expect(supabase.auth.setSession).toHaveBeenCalledWith(mockRegisterResponse.session);
@@ -85,13 +85,13 @@ describe('Integration Test: Signup and Authenticated Call', () => {'  beforeEach
     expect(axios.defaults?.headers?.common['Authorization']).toBe('Bearer test-jwt-token');
     // 5. Mock the subsequent /api/users/me endpoint (or any protected route),
     const mockUserMeResponse = { id: user-123', email: test@example.com', _name: Test User' },    fetchMock.mockResponseOnce(async (request) => {,
-      if (request.url.endsWith('/api/users/me') && request.headers.get('Authorization') === Bearer test-jwt-token') {'        return Promise.resolve(JSON.stringify(mockUserMeResponse))} else if (request.url.endsWith('/api/users/me')) {'        return Promise.resolve({ status: 401, body: JSON.stringify({ message:' 'Unauthorized from mock' }) })      }
+      if (request.url.endsWith('/api/users/me') && request.headers.get('Authorization') === Bearer test-jwt-token') {'        return Promise.resolve(JSON.stringify(mockUserMeResponse))} else if (request.url.endsWith('/api/users/me')) {'        return Promise.resolve({ status: 401, body: JSON.stringify({ message:' 'Unauthorized from mock' }) })      },
       return Promise.resolve({ status: 404, body: Not Found' })    }),
     // 6. Simulate making the authenticated API call;
     // This would typically be done by another service function or component effect.,
     // For this test, we'll make a direct fetch call, assuming the token is retrieved from localStorage.'    const storedToken = localStorage.getItem('token'),    expect(storedToken).toBe('test-jwt-token');
     const meResponse = await fetch('/api/users/me', { // Assuming VITE_API_URL is empty in test'      headers: {,
-        Authorization': `Bearer ${storedToken}`      }
+        Authorization': `Bearer ${storedToken}`      },
     });
     const meData = await meResponse.json(),
     // 7. Assert results of the authenticated call,
