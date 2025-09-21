@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './service-variants';
 
 export interface Innovative2026MicroSaasV2Service {
   id: string;
@@ -86,7 +86,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full-stack AI content platform with advanced language models, visual generation, and comprehensive content management.',
     launchDate: '2026-01-20',
@@ -139,7 +139,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered email marketing platform with machine learning optimization, advanced automation, and comprehensive analytics.',
     launchDate: '2026-01-25',
@@ -192,7 +192,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered customer support platform with natural language processing, intelligent automation, and comprehensive integration capabilities.',
     launchDate: '2026-02-01',
@@ -245,7 +245,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered project management platform with machine learning optimization, predictive analytics, and comprehensive team collaboration features.',
     launchDate: '2026-02-05',
@@ -298,7 +298,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered social media management platform with automated content creation, intelligent scheduling, and comprehensive performance analytics.',
     launchDate: '2026-02-10',
@@ -351,7 +351,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered analytics platform with machine learning insights, automated reporting, and comprehensive data visualization capabilities.',
     launchDate: '2026-02-15',
@@ -404,7 +404,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered SEO platform with machine learning optimization, comprehensive analysis, and actionable recommendations.',
     launchDate: '2026-02-20',
@@ -457,7 +457,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered invoicing platform with automated generation, intelligent tracking, and comprehensive financial management capabilities.',
     launchDate: '2026-02-25',
@@ -510,7 +510,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered meeting platform with advanced speech recognition, natural language processing, and comprehensive analysis capabilities.',
     launchDate: '2026-03-01',

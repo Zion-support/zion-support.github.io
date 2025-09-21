@@ -27,7 +27,7 @@ function safeConsoleError(message: string, error?: any): void {
     } else {
       // In production, you might want to send to a logging service
       logErrorToProduction(message, error);
-    }
+    },
   } catch {
     // Silent fail if console.error causes recursion
   } finally {
@@ -44,12 +44,12 @@ export const safeStorage = {
     try {
       if (isLocalStorageAvailable()) {
         return localStorage.getItem(key);
-      }
+      },
       return inMemoryStore[key] || null;
     } catch (error) {
       safeConsoleError("Failed to get item from storage", error);
       return inMemoryStore[key] || null;
-    }
+    },
   },
 
   setItem: (key: string, value: string): void => {
@@ -58,11 +58,11 @@ export const safeStorage = {
         localStorage.setItem(key, value);
       } else {
         inMemoryStore[key] = value;
-      }
+      },
     } catch (error) {
       safeConsoleError("Failed to set item in storage", error);
       inMemoryStore[key] = value;
-    }
+    },
   },
 
   removeItem: (key: string): void => {
@@ -71,11 +71,11 @@ export const safeStorage = {
         localStorage.removeItem(key);
       } else {
         delete inMemoryStore[key];
-      }
+      },
     } catch (error) {
       safeConsoleError("Failed to remove item from storage", error);
       delete inMemoryStore[key];
-    }
+    },
   },
 
   clear: (): void => {
@@ -84,11 +84,11 @@ export const safeStorage = {
         localStorage.clear();
       } else {
         Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
-      }
+      },
     } catch (error) {
       safeConsoleError("Failed to clear storage", error);
       Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
-    }
+    },
   },
 
   get isAvailable(): boolean {
@@ -100,7 +100,7 @@ export const safeStorage = {
       return true;
     } catch {
       return false;
-    }
+    },
   }
 };
 
@@ -114,7 +114,7 @@ export const safeSessionStorage = {
       return sessionStorage.getItem(key);
     } catch (e) {
       return sessionMemoryStore[key] || null;
-    }
+    },
   },
   setItem: (key: string, value: string) => {
     if (typeof window === "undefined") return;
@@ -122,7 +122,7 @@ export const safeSessionStorage = {
       sessionStorage.setItem(key, value);
     } catch (e) {
       sessionMemoryStore[key] = value;
-    }
+    },
   },
   removeItem: (key: string) => {
     if (typeof window === "undefined") return;
@@ -130,22 +130,22 @@ export const safeSessionStorage = {
       sessionStorage.removeItem(key);
     } catch (e) {
       delete sessionMemoryStore[key];
-    }
+    },
   },
   clear: () => {
     if (typeof window === "undefined") {
       for (const key in sessionMemoryStore) {
         delete sessionMemoryStore[key];
-      }
+      },
       return;
-    }
+    },
     try {
       sessionStorage.clear();
     } catch {
       for (const key in sessionMemoryStore) {
         delete sessionMemoryStore[key];
-      }
-    }
+      },
+    },
   },
   get isAvailable(): boolean {
     try {
@@ -156,7 +156,7 @@ export const safeSessionStorage = {
       return true;
     } catch {
       return false;
-    }
+    },
   }
 };
 

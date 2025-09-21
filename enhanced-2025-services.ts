@@ -60,7 +60,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 15000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/ai-autonomous-business-operations',
     icon: '🤖',
     isPopular: true,
@@ -80,7 +80,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   {
@@ -106,7 +106,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 8000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/ai-powered-cybersecurity-suite',
     icon: '🛡️',
     isPopular: true,
@@ -125,7 +125,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   {
@@ -151,7 +151,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 3500,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/ai-content-marketing-suite',
     icon: '✍️',
     marketPosition: 'All-in-one AI content creation and marketing automation',
@@ -169,7 +169,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   // Fintech & Blockchain Services
@@ -196,7 +196,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 15000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/ai-powered-fintech-platform',
     icon: '💰',
     isNew: true,
@@ -215,7 +215,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   {
@@ -241,7 +241,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 12000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/blockchain-supply-chain-tracking',
     icon: '🔗',
     marketPosition: 'Leading blockchain supply chain solution with smart contracts',
@@ -259,7 +259,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   // Healthcare & Biotech Services
@@ -286,7 +286,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 25000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics',
     icon: '🏥',
     isNew: true,
@@ -305,7 +305,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   // Education & Learning Services
@@ -332,7 +332,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 3000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/ai-personalized-learning-platform',
     icon: '🎓',
     marketPosition: 'Leading AI-powered personalized learning solution',
@@ -350,7 +350,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   // IoT & Edge Computing Services
@@ -377,7 +377,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 8000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/iot-edge-computing-platform',
     icon: '🌐',
     marketPosition: 'Leading edge computing platform for IoT applications',
@@ -395,7 +395,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   // Quantum Computing Services
@@ -422,7 +422,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 50000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/quantum-computing-solutions',
     icon: '⚛️',
     isNew: true,
@@ -441,7 +441,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   // Space Technology Services
@@ -468,7 +468,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 50000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/space-tech-innovations',
     icon: '🚀',
     isNew: true,
@@ -487,7 +487,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 
   // Advanced Analytics & BI
@@ -514,7 +514,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 7000,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/advanced-business-intelligence',
     icon: '📊',
     marketPosition: 'Leading AI-powered business intelligence platform',
@@ -532,7 +532,7 @@ export const enhancedServices2025: EnhancedService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 ],
 

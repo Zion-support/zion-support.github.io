@@ -63,7 +63,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['IBM QiskitGoogle Cirq', 'Microsoft Q#Python', 'TensorFlow Quantum'],
     integrations: ['AWS BraketAzure Quantum', 'IBM QuantumCustom APIs'],
@@ -106,7 +106,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['TensorFlowPyTorch', 'ElasticsearchKafka', 'PythonReact'],
     integrations: ['SIEM systemsEDR platforms', 'FirewallsCloud security tools'],
@@ -149,7 +149,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['OpenAI GPT-4Anthropic Claude', 'LangChainPython', 'Node.jsReact'],
     integrations: ['SalesforceHubSpot', 'ZapierMicrosoft 365', 'Google Workspace'],
@@ -192,7 +192,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['TensorFlowPyTorch', 'PythonReact', 'Node.jsPostgreSQL'],
     integrations: ['BinanceCoinbase', 'KrakenTraditional brokers', 'Bloomberg API'],
@@ -235,7 +235,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['TensorFlow LiteONNX Runtime', 'DockerKubernetes', 'PythonReact'],
     integrations: ['AWS IoTAzure IoT', 'Google Cloud IoTMQTT', 'CoAP'],
@@ -278,7 +278,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['TensorFlowPyTorch', 'OpenCVPython', 'ReactNode.js'],
     integrations: ['EpicCerner', 'AllscriptsDICOM systems', 'HL7'],
@@ -321,7 +321,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['EthereumHyperledger Fabric', 'SolidityNode.js', 'ReactMongoDB'],
     integrations: ['ERP systemsWMS systems', 'Logistics platformsPayment gateways'],
@@ -364,7 +364,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['OpenAI GPT-4TensorFlow', 'PythonReact', 'Node.jsPostgreSQL'],
     integrations: ['HubSpotSalesforce', 'MailchimpFacebook Ads', 'Google Ads'],
@@ -407,7 +407,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['KubernetesDocker', 'TerraformJenkins', 'ReactNode.js'],
     integrations: ['AWSAzure', 'Google CloudGitHub', 'GitLab'],
@@ -450,7 +450,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['OpenAI GPT-4TensorFlow', 'PythonReact', 'Node.jsMongoDB'],
     integrations: ['SalesforceHubSpot', 'ZendeskIntercom', 'Slack'],
@@ -493,7 +493,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['TensorFlowPyTorch', 'PythonReact', 'Node.jsPostgreSQL'],
     integrations: ['SalesforceHubSpot', 'Google AnalyticsAWS', 'Azure'],

@@ -57,7 +57,7 @@ class QRCodeService {
       size: {
         width: finalOptions.size!,
         height: finalOptions.size!
-      }
+      },
     }}
 
   async generateBusinessCardQR(data: {
@@ -173,7 +173,7 @@ class QRCodeService {
         description: 'Quick dial with pre-filled number',
         options: { size: 256, errorCorrectionLevel: 'M' },
         category: 'personal'
-      }
+      },
     ]}
 
   getErrorCorrectionInfo(): Record<string, any> {
@@ -182,14 +182,14 @@ class QRCodeService {
   private validateOptions(options: QRCodeOptions): void {
     if (!options.text || options.text.trim().length === 0) {
       throw new Error('Text content is required')
-    }
+    },
     
     if (options.size && (options.size < 64 || options.size > 1024)) {
       throw new Error('Size must be between 64 and 1024 pixels')}
     
     if (options.margin && (options.margin < 0 || options.margin > 10)) {
       throw new Error('Margin must be between 0 and 10');
-    }
+    },
   }
 
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
@@ -234,7 +234,7 @@ class QRCodeService {
     
     if (data.hidden) {
       wifiString += 'H: true,'
-    }
+    },
     
     wifiString += ,
     return wifiString}
@@ -254,7 +254,7 @@ class QRCodeService {
     let smsString = `sms:${data.phone}`,
     if (data.message) {
       smsString += `?body=${encodeURIComponent(data.message)}`;
-    }
+    },
     
     return smsString}
 

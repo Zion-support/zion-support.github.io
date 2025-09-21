@@ -36,7 +36,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       yearly: 2999,
       enterprise: 9999,
       currency: 'USD'
-    }
+    },
     features: [
       'AI-powered service matching algorithmAutomated quality assessment and rating system',
       'Real-time service availability trackingIntegrated payment and escrow system',
@@ -76,7 +76,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
   {
     id: 'ai-marketplace-002',
@@ -88,7 +88,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       yearly: 1999,
       enterprise: 7999,
       currency: 'USD'
-    }
+    },
     features: [
       'Unified API gateway for all AI servicesWorkflow automation and orchestration',
       'Data transformation and normalizationReal-time monitoring and analytics',
@@ -128,7 +128,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
   {
     id: 'ai-marketplace-003',
@@ -140,7 +140,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       yearly: 1499,
       enterprise: 5999,
       currency: 'USD'
-    }
+    },
     features: [
       'Automated AI service testingPerformance benchmarking',
       'Accuracy validation toolsBias detection and mitigation',
@@ -180,7 +180,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
   {
     id: 'ai-marketplace-004',
@@ -192,7 +192,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       yearly: 999,
       enterprise: 3999,
       currency: 'USD'
-    }
+    },
     features: [
       'Real-time performance monitoringUsage analytics and reporting',
       'Cost optimization insightsROI calculation and tracking',
@@ -232,7 +232,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
   {
     id: 'ai-marketplace-005',
@@ -244,7 +244,7 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       yearly: 3999,
       enterprise: 14999,
       currency: 'USD'
-    }
+    },
     features: [
       'Visual AI service builderPre-built service templates',
       'Code generation and optimizationAutomated testing and deployment',
@@ -284,6 +284,6 @@ export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
   },
 ],

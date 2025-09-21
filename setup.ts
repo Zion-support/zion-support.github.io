@@ -77,7 +77,7 @@ if (typeof BroadcastChannel === 'undefined') {
     constructor(name: string) {
       // @ts-expect-error - Mock name property assignment
       (this as any).name = name
-    }
+    },
     postMessage = vi.fn(),
     close = vi.fn();
     onmessage = null,
@@ -111,7 +111,7 @@ vi.mock('@/utils/safeStorage', async (importOriginal) => {
       setItem: vi.fn(),
       removeItem: vi.fn(),
       clear: vi.fn()
-    }
+    },
   }});
 // Mock the supabase client module
 vi.mock('@/integrations/supabase/client', () => ({
@@ -182,7 +182,7 @@ vi.mock('firebase/firestore', () => {
     Timestamp: {
       now: vi.fn(() => ({ toDate: () => new Date() })),
       fromDate: vi.fn((date: Date) => ({ toDate: () => date }))
-    }
+    },
   }});
 vi.mock('firebase/auth', () => ({
   getAuth: vi.fn(() => ({

@@ -56,7 +56,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       custom: "Enterprise threat intelligence solutions",
       currency: "$",
       pricingModel: "Monthly subscription with threat intelligence feeds"
-    }
+    },
     features: [
       "Real-time threat detection",
       "AI behavioral analysis",
@@ -118,7 +118,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR"],
       monitoring: "24/7 intelligent monitoring",
       response: "Automated incident response"
-    }
+    },
     roi: "400-800%",
     estimatedDelivery: "12-16 weeks",
     contactInfo: {
@@ -126,7 +126,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
   },
 
   // Quantum Cryptography Platform
@@ -142,7 +142,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       custom: "Quantum security solutions",
       currency: "$",
       pricingModel: "Quantum security platform subscription"
-    }
+    },
     features: [
       "Quantum key distribution (QKD)",
       "Post-quantum cryptography",
@@ -204,7 +204,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       compliance: ["NIST", "FIPS", "Government standards", "Military compliance"],
       monitoring: "Quantum security monitoring",
       response: "Quantum security response"
-    }
+    },
     roi: "800-1500%",
     estimatedDelivery: "20-28 weeks",
     contactInfo: {
@@ -212,7 +212,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
   },
 
   // Zero Trust Security Architecture
@@ -228,7 +228,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       custom: "Zero trust architecture implementation",
       currency: "$",
       pricingModel: "Architecture implementation with ongoing support"
-    }
+    },
     features: [
       "Identity verification",
       "Device trust assessment",
@@ -290,7 +290,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       compliance: ["SOC 2", "ISO 27001", "NIST", "Zero Trust framework"],
       monitoring: "24/7 security monitoring",
       response: "Automated incident response"
-    }
+    },
     roi: "500-1000%",
     estimatedDelivery: "16-24 weeks",
     contactInfo: {
@@ -298,7 +298,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
   },
 
   // Autonomous Security Operations Center
@@ -314,7 +314,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       custom: "Autonomous SOC implementation",
       currency: "$",
       pricingModel: "Autonomous SOC platform subscription"
-    }
+    },
     features: [
       "AI-powered threat detection",
       "Automated incident response",
@@ -376,7 +376,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       compliance: ["SOC 2", "ISO 27001", "NIST", "AI ethics"],
       monitoring: "Autonomous 24/7 monitoring",
       response: "Autonomous incident response"
-    }
+    },
     roi: "600-1200%",
     estimatedDelivery: "24-32 weeks",
     contactInfo: {
@@ -384,7 +384,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
   },
 
   // Quantum-Resistant Cryptography Platform
@@ -400,7 +400,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       custom: "Quantum-resistant security solutions",
       currency: "$",
       pricingModel: "Post-quantum security platform subscription"
-    }
+    },
     features: [
       "Post-quantum algorithms",
       "Hybrid encryption systems",
@@ -462,7 +462,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       compliance: ["NIST standards", "Post-quantum requirements", "Industry standards"],
       monitoring: "Quantum threat monitoring",
       response: "Quantum-resistant response"
-    }
+    },
     roi: "400-800%",
     estimatedDelivery: "16-20 weeks",
     contactInfo: {
@@ -470,6 +470,6 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
   },
 ],

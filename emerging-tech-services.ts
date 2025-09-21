@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './service-variants',
 export interface EmergingTechService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const emergingTechServices: EmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full quantum security platform with QKD hardware, post-quantum algorithms, comprehensive monitoring, and government compliance.',
     launchDate: '2024-01-01',
@@ -126,7 +126,7 @@ export const emergingTechServices: EmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full development platform with EEG processing, ML algorithms, comprehensive APIs, and medical device compliance.',
     launchDate: '2024-02-15',
@@ -173,7 +173,7 @@ export const emergingTechServices: EmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full autonomous vehicle platform with advanced AI, computer vision, safety systems, and comprehensive testing tools.',
     launchDate: '2024-01-15',
@@ -220,7 +220,7 @@ export const emergingTechServices: EmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full space technology platform with AI algorithms, materials science, mission planning, and comprehensive development tools.',
     launchDate: '2024-01-01',
@@ -267,7 +267,7 @@ export const emergingTechServices: EmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full biotech AI platform with advanced algorithms, computational biology tools, research collaboration, and regulatory compliance.',
     launchDate: '2024-02-01',

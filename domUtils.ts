@@ -12,11 +12,11 @@ export class DOMUtils {
     
     for (const [key, value] of Object.entries(attributes)) {
       element.setAttribute(key, value);
-    }
+    },
     
     if (textContent) {
       element.textContent = textContent;
-    }
+    },
     
     return element;
   }
@@ -40,7 +40,7 @@ export class DOMUtils {
   public static setStyle(element: HTMLElement, styles: Record<string, string>): void {
     for (const [property, value] of Object.entries(styles)) {
       element.style.setProperty(property, value);
-    }
+    },
   }
 
   public static getStyle(element: HTMLElement, property: string): string {
@@ -124,7 +124,7 @@ export class DOMUtils {
     const handler = (event: Event) => {
       if (!element.contains(event.target as Node)) {
         callback();
-      }
+      },
     };
 
     document.addEventListener("click", handler);
@@ -141,7 +141,7 @@ export class DOMUtils {
           width: entry.contentRect.width,
           height: entry.contentRect.height
         });
-      }
+      },
     });
 
     resizeObserver.observe(element);
@@ -156,7 +156,7 @@ export class DOMUtils {
     const observer = new IntersectionObserver(entries => {
       for (const entry of entries) {
         callback(entry.isIntersecting);
-      }
+      },
     }, options);
 
     observer.observe(element);
@@ -176,22 +176,22 @@ export class DOMUtils {
   public static getParent(element: Element, selector?: string): Element | null {
     if (!selector) {
       return element.parentElement;
-    }
+    },
 
     let parent = element.parentElement;
     while (parent) {
       if (parent.matches(selector)) {
         return parent;
-      }
+      },
       parent = parent.parentElement;
-    }
+    },
     return null;
   }
 
   public static getChildren(element: Element, selector?: string): Element[] {
     if (!selector) {
       return Array.from(element.children);
-    }
+    },
 
     return Array.from(element.querySelectorAll(selector));
   }
@@ -203,17 +203,17 @@ export class DOMUtils {
     while (sibling) {
       if (!selector || sibling.matches(selector)) {
         siblings.unshift(sibling);
-      }
+      },
       sibling = sibling.previousElementSibling;
-    }
+    },
 
     sibling = element.nextElementSibling;
     while (sibling) {
       if (!selector || sibling.matches(selector)) {
         siblings.push(sibling);
-      }
+      },
       sibling = sibling.nextElementSibling;
-    }
+    },
 
     return siblings;
   }
@@ -223,9 +223,9 @@ export class DOMUtils {
     while (sibling) {
       if (!selector || sibling.matches(selector)) {
         return sibling;
-      }
+      },
       sibling = sibling.nextElementSibling;
-    }
+    },
     return null;
   }
 
@@ -234,9 +234,9 @@ export class DOMUtils {
     while (sibling) {
       if (!selector || sibling.matches(selector)) {
         return sibling;
-      }
+      },
       sibling = sibling.previousElementSibling;
-    }
+    },
     return null;
   }
 
@@ -263,7 +263,7 @@ export class DOMUtils {
   public static empty(element: Element): void {
     while (element.firstChild) {
       element.removeChild(element.firstChild);
-    }
+    },
   }
 
   public static clone(element: Element, deep: boolean = true): Element {
@@ -284,9 +284,9 @@ export class DOMUtils {
     if (parent) {
       while (element.firstChild) {
         parent.insertBefore(element.firstChild, element);
-      }
+      },
       parent.removeChild(element);
-    }
+    },
   }
 
   public static getTextContent(element: Element): string {
@@ -355,7 +355,7 @@ export class DOMUtils {
     
     for (const [key, value] of formData.entries()) {
       obj[key] = value;
-    }
+    },
     
     return obj;
   }
@@ -368,9 +368,9 @@ export class DOMUtils {
           input.checked = Boolean(value);
         } else {
           input.value = String(value);
-        }
-      }
-    }
+        },
+      },
+    },
   }
 
   public static resetForm(form: HTMLFormElement): void {
@@ -389,8 +389,8 @@ export class DOMUtils {
       const htmlInput = input as HTMLInputElement;
       if (!htmlInput.validity.valid) {
         errors[htmlInput.name] = htmlInput.validationMessage;
-      }
-    }
+      },
+    },
     
     return errors;
   }
@@ -406,7 +406,7 @@ export class DOMUtils {
   public static select(element: Element): void {
     if (element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement) {
       element.select();
-    }
+    },
   }
 
   public static click(element: Element): void {

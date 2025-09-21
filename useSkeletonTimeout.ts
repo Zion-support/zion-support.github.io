@@ -12,7 +12,7 @@ export function useSkeletonTimeout(initialLoading: boolean = true, timeout: numb
       return () => clearTimeout(timer);
     } else {
       setIsLoading(false);
-    }
+    },
   }, [initialLoading, timeout]);
 
   return isLoading;

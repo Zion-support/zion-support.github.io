@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './service-variants',
 export interface UltimateFuturisticAIService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI consciousness development platform with consciousness algorithms, emotional intelligence training, and ethics compliance monitoring.',
     launchDate: '2024-12-01',
@@ -126,7 +126,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Autonomous AI research platform with independent research capabilities, hypothesis generation, and automated data analysis.',
     launchDate: '2024-11-01',
@@ -173,7 +173,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI emotional intelligence training platform with emotion recognition, social intelligence development, and empathy algorithms.',
     launchDate: '2024-10-01',
@@ -220,7 +220,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI autonomous business operations platform with fully automated decision-making, process optimization, and strategic planning.',
     launchDate: '2024-09-01',
@@ -267,7 +267,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI predictive healthcare platform with disease prediction, preventive care recommendations, and treatment optimization.',
     launchDate: '2024-08-01',
@@ -314,7 +314,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI autonomous code generation platform with independent coding, testing, optimization, and deployment capabilities.',
     launchDate: '2024-07-01',
@@ -361,7 +361,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI autonomous marketing platform with automated campaign creation, optimization, and performance tracking.',
     launchDate: '2024-06-01',
@@ -408,7 +408,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI autonomous sales platform with automated lead generation, qualification, nurturing, and deal closing capabilities.',
     launchDate: '2024-05-01',
@@ -455,7 +455,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI autonomous customer service platform with 24/7 support, multi-channel integration, and automatic issue resolution.',
     launchDate: '2024-04-01',

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './service-variants',
 export interface PracticalBusinessSolution2029 {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.',
     launchDate: '2024-07-01',
@@ -126,7 +126,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.',
     launchDate: '2024-08-15',
@@ -173,7 +173,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.',
     launchDate: '2024-09-01',
@@ -220,7 +220,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production HR management system with AI recruitment, employee analytics, and performance optimization.',
     launchDate: '2024-10-01',
@@ -267,7 +267,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced financial management platform with AI optimization, risk prediction, and automated accounting.',
     launchDate: '2024-11-15',
@@ -314,7 +314,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production marketing automation platform with AI optimization, personalization, and workflow automation.',
     launchDate: '2024-12-01',
@@ -361,7 +361,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced project management platform with AI optimization, risk prediction, and workflow automation.',
     launchDate: '2025-01-01',
@@ -408,7 +408,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.',
     launchDate: '2025-02-01',

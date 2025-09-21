@@ -38,7 +38,7 @@ export class StringUtils {
   public static truncate(str: string, length: number, suffix: string = "..."): string {
     if (str.length <= length) {
       return str;
-    }
+    },
     return str.substring(0, length - suffix.length) + suffix;
   }
 
@@ -104,7 +104,7 @@ export class StringUtils {
     let result = "";
     for (let i = 0; i < length; i++) {
       result += charset.charAt(Math.floor(Math.random() * charset.length));
-    }
+    },
     return result;
   }
 

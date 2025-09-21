@@ -68,7 +68,7 @@ export class PerformanceMonitorService {
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this.generateMockMetrics(url);
-    }
+    },
   }
 
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
@@ -76,7 +76,7 @@ export class PerformanceMonitorService {
       const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)}
@@ -85,7 +85,7 @@ export class PerformanceMonitorService {
     } catch (error) {
       // Generate mock historical data
       return this.generateMockHistoricalData(url, days);
-    }
+    },
   }
 
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
@@ -111,7 +111,7 @@ export class PerformanceMonitorService {
       const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)}
@@ -120,7 +120,7 @@ export class PerformanceMonitorService {
     } catch (error) {
       // Generate mock alerts
       return this.generateMockAlerts(url);
-    }
+    },
   }
 
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
@@ -229,7 +229,7 @@ export class PerformanceMonitorService {
         currentValue: 85,
         timestamp: new Date(),
         resolved: true
-      }
+      },
     ],
     return url ? alerts.filter(a => a.url === url) : alerts;
   }

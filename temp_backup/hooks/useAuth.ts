@@ -1,12 +1,16 @@
+import { useState, useEffect } from 'react';
+
 interface User {
-  id: string,
-  email: string,
-  name?: string, }
+  id: string;
+  email: string;
+  name?: string;
+}
 
 interface AuthState {
-  user: User | null,
-  loading: boolean,
-  isAuthenticated: boolean, }
+  user: User | null;
+  loading: boolean;
+  isAuthenticated: boolean;
+}
 
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
@@ -31,6 +35,7 @@ export function useAuth() {
         loading: false,
         isAuthenticated: false
       });
+    },
   }, []);
 
   const login = async (email: string, password: string) => {
@@ -49,7 +54,7 @@ export function useAuth() {
     } catch (error) {
       setAuthState(prev => ({ ...prev, loading: false }));
       return { success: false, error: 'Login failed' };
-    }
+    },
   };
 
   const logout = () => {

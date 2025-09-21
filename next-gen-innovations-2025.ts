@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './service-variants',
 export interface NextGenInnovation2025 {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered autonomous fleet management platform with real-time coordination, safety protocols, and comprehensive analytics.',
     launchDate: '2025-02-25',
@@ -125,7 +125,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-powered bioinformatics platform with DNA analysis, protein folding simulation, and drug discovery acceleration.',
     launchDate: '2025-01-30',
@@ -172,7 +172,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-powered privacy-preserving AI platform with federated learning, homomorphic encryption, and comprehensive privacy tools.',
     launchDate: '2025-02-15',
@@ -219,7 +219,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-powered energy optimization platform with grid optimization, renewable integration, and comprehensive sustainability tools.',
     launchDate: '2025-03-05',
@@ -266,7 +266,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered industrial automation platform with predictive maintenance, quality control, and comprehensive manufacturing optimization.',
     launchDate: '2025-02-20',
@@ -313,7 +313,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered quantum education platform with personalized learning, interactive simulations, and comprehensive curriculum.',
     launchDate: '2025-01-25',
@@ -360,7 +360,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered content creation platform with video generation, audio synthesis, and comprehensive creative tools.',
     launchDate: '2025-02-01',

@@ -50,7 +50,10 @@ const mockMatches: MatchResultItem[] = [
     updatedAt: '2024-01-18T16:45:00Z'
   }
 ];
+<<<<<<< HEAD:AIMatchingResults.tsx
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-ef46:components/AIMatchingResults.tsx
 const getCategoryIcon = (category: string) => {
   switch (category.toLowerCase()) {
     case 'ai tools':
@@ -59,7 +62,11 @@ const getCategoryIcon = (category: string) => {
       return <Monitor className="h-6 w-6" />;
     case 'security':
       return <BriefcaseIcon className="h-6 w-6" />;
+<<<<<<< HEAD:AIMatchingResults.tsx
     default:
+=======
+    default: 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-ef46:components/AIMatchingResults.tsx
       return <User className="h-6 w-6" />;
   }
 };
@@ -74,7 +81,10 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
     { value: 'cloud', label: 'Cloud Services', count: matches.filter(m => m.category === 'Cloud Services').length },
     { value: 'security', label: 'Security', count: matches.filter(m => m.category === 'Security').length }
   ];
+<<<<<<< HEAD:AIMatchingResults.tsx
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-ef46:components/AIMatchingResults.tsx
   const filteredMatches = (tabValue: string) => {
     if (tabValue === 'all') return matches;
     return matches.filter(match => 

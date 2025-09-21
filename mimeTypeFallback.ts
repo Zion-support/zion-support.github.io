@@ -55,13 +55,13 @@ export class MimeTypeFallback {
       if (!this.isSupported(contentType)) {
         const fallbackType = this.getFallbackType(contentType);
         console.warn(`Unsupported MIME type: ${contentType}, using fallback: ${fallbackType}`);
-      }
+      },
 
       return response;
     } catch (error) {
       console.error(`Failed to load resource: ${url}`, error);
       throw error;
-    }
+    },
   }
 
   /**
@@ -79,7 +79,7 @@ export class MimeTypeFallback {
       link.href = url;
       link.type = "text/css";
       return link;
-    }
+    },
   }
 
   /**

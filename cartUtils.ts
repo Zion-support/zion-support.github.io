@@ -19,7 +19,7 @@ export function mergeCartItems(base: CartItem[], extra: CartItem[]): CartItem[] 
       existing.quantity += item.quantity;
     } else {
       map.set(item.id, { ...item });
-    }
+    },
   });
   
   return Array.from(map.values());

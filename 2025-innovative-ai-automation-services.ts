@@ -20,25 +20,25 @@ export const innovativeAIAutomationServices2025 = [
         price: 299, 
         period: 'month', 
         features: ['Basic business management', 'Process automation', 'Email support', 'Standard reporting'] 
-      }
+      },
       professional: { 
         price: 799, 
         period: 'month', 
         features: ['Advanced AI decision-making', 'Strategic planning', 'Priority support', 'Custom integrations'] 
-      }
+      },
       enterprise: { 
         price: 1999, 
         period: 'month', 
         features: ['Full autonomy', 'Custom AI training', 'Dedicated support', 'White-label solution'] 
-      }
-    }
+      },
+    },
     category: 'AI & Automation',
     tags: ['AI', 'Autonomous Systems', 'Business Intelligence', 'Process Automation', 'Strategic Planning'],
     website: 'https://ziontechgroup.com/ai-autonomous-business-manager',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$25.8B',
     targetAudience: 'Enterprise businesses, startups, consulting firms, business consultants',
     competitiveAdvantage: 'World\'s first truly autonomous business management AI, industry-leading decision accuracy, and comprehensive business process automation',
@@ -73,25 +73,25 @@ export const innovativeAIAutomationServices2025 = [
         price: 149, 
         period: 'month', 
         features: ['Basic emotion recognition', 'Text analysis', 'Email support', 'Standard API access'] 
-      }
+      },
       professional: { 
         price: 399, 
         period: 'month', 
         features: ['Multi-modal analysis', 'Advanced AI models', 'Priority support', 'Custom training'] 
-      }
+      },
       enterprise: { 
         price: 999, 
         period: 'month', 
         features: ['Full emotional intelligence suite', 'Custom models', 'Dedicated support', 'White-label solution'] 
-      }
-    }
+      },
+    },
     category: 'AI & Consciousness',
     tags: ['AI', 'Emotional Intelligence', 'Human-AI Collaboration', 'Customer Experience', 'Mental Health'],
     website: 'https://ziontechgroup.com/ai-emotional-intelligence-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$18.4B',
     targetAudience: 'Healthcare providers, customer service companies, HR departments, mental health professionals',
     competitiveAdvantage: 'Industry-leading emotion recognition accuracy, comprehensive emotional intelligence capabilities, and privacy-preserving processing',
@@ -126,25 +126,25 @@ export const innovativeAIAutomationServices2025 = [
         price: 99, 
         period: 'month', 
         features: ['Basic content generation', 'Standard templates', 'Email support', 'Limited API calls'] 
-      }
+      },
       professional: { 
         price: 299, 
         period: 'month', 
         features: ['Advanced AI models', 'Custom styles', 'Priority support', 'Extended API access'] 
-      }
+      },
       enterprise: { 
         price: 799, 
         period: 'month', 
         features: ['Full creative suite', 'Custom training', 'Dedicated support', 'White-label solution'] 
-      }
-    }
+      },
+    },
     category: 'AI & Creativity',
     tags: ['AI', 'Quantum Computing', 'Creative Content', 'Artistic Intelligence', 'Design Automation'],
     website: 'https://ziontechgroup.com/ai-quantum-creativity-studio',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$32.1B',
     targetAudience: 'Creative agencies, marketing teams, content creators, designers, artists',
     competitiveAdvantage: 'Quantum computing integration for infinite creative possibilities, industry-leading artistic intelligence, and comprehensive creative automation',
@@ -179,25 +179,25 @@ export const innovativeAIAutomationServices2025 = [
         price: 199, 
         period: 'month', 
         features: ['Basic diagnostics', 'Health monitoring', 'Email support', 'Standard reports'] 
-      }
+      },
       professional: { 
         price: 599, 
         period: 'month', 
         features: ['Advanced AI models', 'Predictive analytics', 'Priority support', 'Custom integrations'] 
-      }
+      },
       enterprise: { 
         price: 1499, 
         period: 'month', 
         features: ['Full healthcare suite', 'Custom AI training', 'Dedicated support', 'White-label solution'] 
-      }
-    }
+      },
+    },
     category: 'AI & Healthcare',
     tags: ['AI', 'Healthcare', 'Predictive Analytics', 'Medical Diagnostics', 'Preventive Medicine'],
     website: 'https://ziontechgroup.com/ai-predictive-healthcare-diagnostics',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$45.7B',
     targetAudience: 'Hospitals, clinics, healthcare providers, insurance companies, pharmaceutical companies',
     competitiveAdvantage: 'Industry-leading diagnostic accuracy, comprehensive predictive analytics, and full HIPAA compliance for healthcare applications',
@@ -232,25 +232,25 @@ export const innovativeAIAutomationServices2025 = [
         price: 79, 
         period: 'month', 
         features: ['Basic financial planning', 'Portfolio monitoring', 'Email support', 'Standard reports'] 
-      }
+      },
       professional: { 
         price: 199, 
         period: 'month', 
         features: ['Advanced AI models', 'Portfolio optimization', 'Priority support', 'Custom strategies'] 
-      }
+      },
       enterprise: { 
         price: 499, 
         period: 'month', 
         features: ['Full financial suite', 'Custom AI training', 'Dedicated support', 'White-label solution'] 
-      }
-    }
+      },
+    },
     category: 'AI & Finance',
     tags: ['AI', 'Financial Planning', 'Investment Management', 'Wealth Management', 'Portfolio Optimization'],
     website: 'https://ziontechgroup.com/ai-autonomous-financial-advisor',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$38.9B',
     targetAudience: 'Individual investors, financial advisors, wealth management firms, banks, insurance companies',
     competitiveAdvantage: 'Autonomous financial decision-making, industry-leading market prediction accuracy, and comprehensive wealth optimization capabilities',

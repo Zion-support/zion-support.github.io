@@ -1,8 +1,4 @@
 import { useEffect, useMemo, useState } from 'react';
-import { translateTextViaAI } from '../utils/translation';
-
-export type UseAutoTranslateResult = {
-  translations: Record<string, string>;
 
 // Stub translation function
 const translateTextViaAI = async (text: string, target: string): Promise<string> => {
@@ -17,94 +13,41 @@ const translateTextViaAI = async (text: string, target: string): Promise<string>
 export type UseAutoTranslateResult = {
   translations: Record<string, string>;
   loading: boolean;
-  loading: boolean;
-  error?: string;
+  error: string | null;
+  translate: (text: string, targetLanguage: string) => Promise<void>;
 };
 
-export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
+export function useAutoTranslate(initialLanguage = 'en'): UseAutoTranslateResult {
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]);
-  
-  useEffect(() => {
-    if (!text || targets.length === 0) {
-      setTranslations({});
-      setLoading(false);
-      setError(undefined);
-      return;
-    }
+  const translate = async (text: string, targetLanguage: string) => {
+    if (!text.trim()) return;
     
+    const key = `${text}-${targetLanguage}`;
+    if (translations[key]) return;
+
     setLoading(true);
-    setError(undefined);
-    
-    const timeoutId = setTimeout(async () => {
-      try {
-        const newTranslations: Record<string, string> = {};
-        
-        // Translate to each target language
-        await Promise.all(
-          targets.map(async (target) => {
-            const translation = await translateTextViaAI(text, target);
-            newTranslations[target] = translation;
-          })
-        );
-        
-        setTranslations(newTranslations);
-        setError(undefined);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Translation failed');
-      } finally {
-        setLoading(false);
-      }
-    }, debounceMs);
+    setError(null);
 
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [key, debounceMs]);
-  
+    try {
+      const translatedText = await translateTextViaAI(text, targetLanguage);
+      setTranslations(prev => ({
+        ...prev,
+        [key]: translatedText
+      }));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Translation failed');
+    } finally {
+      setLoading(false);
+    },
+  };
+
   return {
     translations,
     loading,
-    error
+    error,
+    translate
   };
-  const [error, setError] = useState<string | undefined>();
-
-  const debouncedText = useMemo(() => {
-    const timer = setTimeout(() => text, debounceMs);
-    return () => clearTimeout(timer);
-  }, [text, debounceMs]);
-
-  useEffect(() => {
-    if (!text || targets.length === 0) return;
-
-    setLoading(true);
-    setError(undefined);
-
-    const translatePromises = targets.map(async (target) => {
-      try {
-        const result = await translateTextViaAI(text, target);
-        return { target, translation: result };
-      } catch (err) {
-        console.error(`Translation failed for ${target}:`, err);
-        return { target, translation: text };
-      }
-    });
-
-    Promise.all(translatePromises).then((results) => {
-      const newTranslations = results.reduce((acc, { target, translation }) => {
-        acc[target] = translation;
-        return acc;
-      }, {} as Record<string, string>);
-      
-      setTranslations(newTranslations);
-      setLoading(false);
-    }).catch((err) => {
-      setError(err.message);
-      setLoading(false);
-    });
-  }, [text, targets]);
-
-  return { translations, loading, error };
 }
