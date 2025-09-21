@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { AnimatedCard } from '../components/ui/AnimatedCard.tsx';
-import { GradientButton } from '../components/ui/GradientButton.tsx';
-import { FloatingElements } from '../components/ui/FloatingElements.tsx';
-import { TypewriterEffect } from '../components/ui/TypewriterEffect.tsx';
-import { SEOHead } from '../components/ui/SEOHead.tsx';
+import { AnimatedCard } from '../components/ui/AnimatedCard.jsx';
+import { GradientButton } from '../components/ui/GradientButton.jsx';
+import { FloatingElements } from '../components/ui/FloatingElements.jsx';
+import { TypewriterEffect } from '../components/ui/TypewriterEffect.jsx';
+import { SEOHead } from '../components/ui/SEOHead.jsx';
 
 export default function Home() {
   const services = [
