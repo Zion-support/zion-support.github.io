@@ -122,7 +122,7 @@ export class InvoicePDFGenerator {
         1: { halign: 'center' },
         2: { halign: 'right' },
         3: { halign: 'right' }
-      }
+      },
     });
   }
 
@@ -146,7 +146,7 @@ export class InvoicePDFGenerator {
       this.doc.setFont('helvetica', 'normal');
       this.doc.text('Notes:', 20, finalY);
       this.doc.text(data.notes, 20, finalY + 10);
-    }
+    },
   }
 
   private addFooter(): void {

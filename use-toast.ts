@@ -52,19 +52,19 @@ type Action =
   | {
       type: ActionType["ADD_TOAST"]
       toast: ToasterToast
-    }
+    },
   | {
       type: ActionType["UPDATE_TOAST"]
       toast: Partial<ToasterToast>
-    }
+    },
   | {
       type: ActionType["DISMISS_TOAST"]
       toastId?: ToasterToast["id"]
-    }
+    },
   | {
       type: ActionType["REMOVE_TOAST"]
       toastId?: ToasterToast["id"]
-    }
+    },
 
 interface State {
   toasts: ToasterToast[]
@@ -111,7 +111,7 @@ export const reducer = (state: State, action: Action): State => {
         state.toasts.forEach((toast) => {
           addToRemoveQueue(toast.id)
         })
-      }
+      },
 
       return {
         ...state,
@@ -120,17 +120,17 @@ export const reducer = (state: State, action: Action): State => {
             ? {
                 ...t,
                 open: false,
-              }
+              },
             : t
         );
-    }
+    },
     case "REMOVE_TOAST":
       if (action.toastId === undefined) {
         return {
           ...state,
           toasts: [],
-        }
-      }
+        },
+      },
       return {
         ...state,
         toasts: state.toasts.filter((t) => t.id !== action.toastId);
@@ -188,8 +188,8 @@ function useToast() {
       const index = listeners.indexOf(setState)
       if (index > -1) {
         listeners.splice(index, 1)
-      }
-    }
+      },
+    },
   }, [state])
 
   return {

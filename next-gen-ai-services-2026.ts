@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface NextGenAIService2026 {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete AI creative platform with multiple AI models, content management, collaboration tools, and enterprise features. Includes mobile apps and API access.',
     launchDate: '2026-01-25',
@@ -126,7 +126,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete autonomous business platform with AI-powered systems for all business functions. Includes enterprise features, custom AI training, and comprehensive integration.',
     launchDate: '2026-02-10',
@@ -173,7 +173,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete emotional intelligence platform with real-time emotion analysis, response generation, and analytics. Includes privacy protection and compliance features.',
     launchDate: '2026-03-01',
@@ -220,7 +220,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete multimodal AI platform with unified processing across all data types. Includes custom model training, API access, and enterprise features.',
     launchDate: '2026-02-20',
@@ -267,7 +267,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete AI-quantum hybrid platform with access to multiple quantum computers, custom algorithm development, and comprehensive support services.',
     launchDate: '2026-03-10',

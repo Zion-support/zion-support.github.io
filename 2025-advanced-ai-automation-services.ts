@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './src/types/service-variants';
 
 export interface AdvancedAIAutomationService {
   id: string;
@@ -86,7 +86,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered code review platform with automated analysis, security scanning, and quality metrics.',
     launchDate: '2025-01-20',
@@ -139,7 +139,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered content marketing platform with automated creation, optimization, and distribution.',
     launchDate: '2025-01-25',
@@ -192,7 +192,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered customer support platform with automated responses and intelligent issue resolution.',
     launchDate: '2025-02-01',
@@ -245,7 +245,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered financial analysis platform with automated trading and risk management capabilities.',
     launchDate: '2025-02-05',
@@ -298,7 +298,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered healthcare diagnostics platform with medical imaging analysis and diagnostic assistance.',
     launchDate: '2025-02-10',

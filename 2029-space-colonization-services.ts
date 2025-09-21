@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface SpaceColonization2029Service {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced Mars colonization platform with autonomous systems, AI-powered planning, robotic workforce management, and comprehensive colony monitoring. Includes real-time communication and emergency response.',
     launchDate: '2029-01-01',
@@ -125,7 +125,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real-time monitoring. Includes security protocols and emergency communication systems.',
     launchDate: '2029-01-15',
@@ -171,7 +171,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced space mining platform with autonomous operations, AI-powered resource detection, robotic equipment management, and comprehensive safety monitoring. Includes resource processing and optimization.',
     launchDate: '2029-02-01',
@@ -218,7 +218,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced space habitat design platform with AI-powered design tools, environmental simulation, material optimization, and comprehensive planning capabilities. Includes 3D modeling and structural analysis.',
     launchDate: '2029-02-15',
@@ -264,7 +264,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01',

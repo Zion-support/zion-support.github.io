@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface Revolutionary2027AIInnovationService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered drug discovery platform with molecular analysis, target identification, and comprehensive drug discovery pipeline.',
     launchDate: '2027-01-25',
@@ -126,7 +126,7 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered climate intelligence platform with satellite data analysis, climate modeling, and comprehensive risk assessment.',
     launchDate: '2027-03-10',
@@ -173,7 +173,7 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered autonomous vehicle platform with computer vision, sensor fusion, and comprehensive development tools.',
     launchDate: '2027-02-15',
@@ -220,7 +220,7 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered quantum computing platform with quantum algorithm development, AI optimization, and hybrid computing capabilities.',
     launchDate: '2027-04-20',
@@ -267,7 +267,7 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered space technology platform with satellite optimization, space debris tracking, and comprehensive mission planning.',
     launchDate: '2027-06-15',

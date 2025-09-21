@@ -123,7 +123,7 @@ export class ContentOptimizer {
         // Count vowel groups
         const vowelGroups = word.match(/[aeiouy]+/g);
         syllableCount += vowelGroups ? vowelGroups.length : 1;
-      }
+      },
     });
 
     return syllableCount;
@@ -169,7 +169,7 @@ export class ContentOptimizer {
         severity: "high",
         description: `Content has only ${metrics.wordCount} words. Minimum recommended is ${this.MIN_WORD_COUNT} words.`
       });
-    }
+    },
 
     // Check heading count
     if (metrics.headingCount < this.MIN_HEADING_COUNT) {
@@ -178,7 +178,7 @@ export class ContentOptimizer {
         severity: "medium",
         description: `Content has only ${metrics.headingCount} headings. Consider adding more structure with H2, H3 tags.`
       });
-    }
+    },
 
     // Check image count
     if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
@@ -187,7 +187,7 @@ export class ContentOptimizer {
         severity: "medium",
         description: "Content has no images. Consider adding relevant images to improve engagement."
       });
-    }
+    },
 
     // Check link count
     if (metrics.linkCount < this.MIN_LINK_COUNT) {
@@ -196,7 +196,7 @@ export class ContentOptimizer {
         severity: "low",
         description: `Content has only ${metrics.linkCount} links. Consider adding more internal and external links.`
       });
-    }
+    },
 
     // Check for keywords
     const pageKeywords = page.split("/").filter(Boolean);
@@ -210,7 +210,7 @@ export class ContentOptimizer {
         severity: "medium",
         description: `Content doesn't include page-specific keywords: ${pageKeywords.join(", ")}`
       });
-    }
+    },
 
     return issues;
   }
@@ -264,7 +264,7 @@ export class ContentOptimizer {
             example: `Use keywords like "${page.split("/").filter(Boolean).join(", ")}" in headings and body text.`
           });
           break;
-      }
+      },
     });
 
     return suggestions;

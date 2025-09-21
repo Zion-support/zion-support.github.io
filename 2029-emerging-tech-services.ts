@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './src/types/service-variants';
 
 export interface EmergingTech2029Service {
   id: string;
@@ -85,7 +85,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Functional neuromorphic computing platform with brain-inspired hardware, spiking neural networks, and comprehensive AI development tools. Includes research support and training.',
     launchDate: '2029-01-25',
@@ -136,7 +136,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready photonics quantum communication platform with quantum encryption, photon detection systems, and comprehensive network management. Includes deployment and training support.',
     launchDate: '2029-02-05',
@@ -187,7 +187,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Functional synthetic biology automation platform with DNA synthesis automation, genetic engineering tools, and comprehensive biological workflows. Includes laboratory setup and training.',
     launchDate: '2029-01-30',
@@ -238,7 +238,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced quantum machine learning platform with quantum algorithms, hybrid AI capabilities, and comprehensive machine learning tools. Includes quantum computing access and training.',
     launchDate: '2029-02-01',
@@ -289,7 +289,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Functional brain-computer interface platform with neural signal processing, thought-to-text conversion, and comprehensive neural interface tools. Includes medical validation and training.',
     launchDate: '2029-01-15',
@@ -340,7 +340,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced quantum sensing platform with quantum sensors, precision measurement tools, and comprehensive sensing capabilities. Includes calibration and training support.',
     launchDate: '2029-02-10',

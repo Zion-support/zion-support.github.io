@@ -157,7 +157,7 @@ export class APIDocGeneratorService {
         coverage: 0,
         languages: [],
         frameworks: []
-      }
+      },
     },
     try {
       // Analyze source code
@@ -171,7 +171,7 @@ export class APIDocGeneratorService {
       // Generate examples if requested
       if (config.includeExamples) {
         documentation.examples = await this.generateExamples(documentation.endpoints);
-      }
+      },
 
       // Calculate coverage
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints);
@@ -207,7 +207,7 @@ export class APIDocGeneratorService {
         languages.push('java');
         frameworks.push('spring');
         endpoints.push(...this.analyzeJavaFile(file))}
-    }
+    },
 
     // Remove duplicates
     const uniqueLanguages = [...new Set(languages)],
@@ -254,7 +254,7 @@ export class APIDocGeneratorService {
               required: false,
               schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 },
               description: 'Number of users per page'
-            }
+            },
           ],
           requestBody: undefined,
           responses: [
@@ -272,12 +272,12 @@ export class APIDocGeneratorService {
                       },
                       pagination: {
                         $ref: '#/components/schemas/Pagination'
-                      }
-                    }
-                  }
-                }
-              }
-            }
+                      },
+                    },
+                  },
+                },
+              },
+            },
           ],
           tags: ['Users'],
           deprecated: false,
@@ -289,7 +289,7 @@ export class APIDocGeneratorService {
             type: 'bearer',
             description: 'JWT token required',
             required: true
-          }
+          },
         },
         {
           id: `endpoint_${Date.now()}_2`,
@@ -304,7 +304,7 @@ export class APIDocGeneratorService {
               required: true,
               schema: { type: 'string', format: 'uuid' },
               description: 'User unique identifier'
-            }
+            },
           ],
           requestBody: undefined,
           responses: [
@@ -314,17 +314,17 @@ export class APIDocGeneratorService {
               content: {
                 'application/json': {
                   schema: { $ref: '#/components/schemas/User' }
-                }
-              }
+                },
+              },
             },
             {
               code: '404',
               description: 'User not found'
-            }
+            },
           ],
           tags: ['Users'],
           deprecated: false
-        }
+        },
       )}
 
     return endpoints;
@@ -346,8 +346,8 @@ export class APIDocGeneratorService {
           content: {
             'application/json': {
               schema: { $ref: '#/components/schemas/Product' }
-            }
-          }
+            },
+          },
         },
         responses: [
           {
@@ -356,13 +356,13 @@ export class APIDocGeneratorService {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/Product' }
-              }
-            }
+              },
+            },
           },
           {
             code: '400',
             description: 'Invalid input data'
-          }
+          },
         ],
         tags: ['Products'],
         deprecated: false
@@ -388,7 +388,7 @@ export class APIDocGeneratorService {
             required: false,
             schema: { type: 'string', enum: ['pendingprocessing', 'completedcancelled'] },
             description: 'Filter orders by status'
-          }
+          },
         ],
         requestBody: undefined,
         responses: [
@@ -400,10 +400,10 @@ export class APIDocGeneratorService {
                 schema: {
                   type: 'array',
                   items: { $ref: '#/components/schemas/Order' }
-                }
-              }
-            }
-          }
+                },
+              },
+            },
+          },
         ],
         tags: ['Orders'],
         deprecated: false
@@ -452,8 +452,8 @@ export class APIDocGeneratorService {
                 productId: { type: 'string', format: 'uuid' },
                 quantity: { type: 'integer', minimum: 1 },
                 price: { type: 'number', minimum: 0 }
-              }
-            }
+              },
+            },
           },
           total: { type: 'number', minimum: 0 },
           status: { type: 'string', enum: ['pendingprocessing', 'completedcancelled'] }
@@ -471,7 +471,7 @@ export class APIDocGeneratorService {
         },
         required: ['pagelimit', 'totalpages'],
         description: 'Pagination metadata schema'
-      }
+      },
     ],
     return schemas;
   }
@@ -538,11 +538,11 @@ export class APIDocGeneratorService {
           {
             code: '200',
             description: 'API is healthy'
-          }
+          },
         ],
         tags: ['System'],
         deprecated: false
-      }
+      },
     ]}
 
   private extractProjectName(sourcePath: string): string {
@@ -571,8 +571,8 @@ export class APIDocGeneratorService {
     for (const endpoint of endpoints) {
       if (endpoint.description && endpoint.description.length > 10) {
         documentedEndpoints++
-      }
-    }
+      },
+    },
     
     return Math.round((documentedEndpoints / endpoints.length) * 100)}
 
@@ -596,7 +596,7 @@ export class APIDocGeneratorService {
       metadata: {
         ...changes.metadata,
         lastGenerated: new Date()
-      }
+      },
     } as APIDocumentation}
 }
 

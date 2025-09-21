@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './src/types/service-variants';
 
 export interface CuttingEdgeAIService {
   id: string;
@@ -112,7 +112,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Cloud-native platform with quantum computing integration, real-time data processing, and AI-powered trading algorithms.',
     launchDate: '2024-12-01',
@@ -170,7 +170,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'HIPAA-compliant cloud platform with advanced AI algorithms for medical image analysis and diagnostic support.',
     launchDate: '2024-11-15',
@@ -223,7 +223,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       email: 'manufacturing@ziontechgroup.com',
       address: '123 Manufacturing Ave, Industrial City, IC 12345',
       website: 'https://ziontechgroup.com/manufacturing'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered manufacturing platform with IoT integration, predictive analytics, and autonomous operations.',
     launchDate: '2025-03-01',
@@ -249,7 +249,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Industrial-grade AI platform with IoT integration, predictive analytics, and autonomous manufacturing capabilities.',
     launchDate: '2024-10-01',
@@ -343,7 +343,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade cybersecurity platform with AI-powered threat detection and automated incident response.',
     launchDate: '2024-09-01',
@@ -444,7 +444,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Cloud-native content creation platform with advanced AI models and multi-format content generation capabilities.',
     launchDate: '2024-08-01',

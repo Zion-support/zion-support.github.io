@@ -84,7 +84,7 @@ export const advancedITServices: AdvancedITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced quantum cloud platform with real-time quantum processing, comprehensive algorithm library, and enterprise-grade security. Includes API access and performance monitoring.',
     launchDate: '2024-02-10',
@@ -137,7 +137,7 @@ export const advancedITServices: AdvancedITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered DevOps platform with intelligent automation, comprehensive testing, and predictive deployment. Includes team collaboration tools and analytics dashboard.',
     launchDate: '2024-01-15',
@@ -190,7 +190,7 @@ export const advancedITServices: AdvancedITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced real-time data analytics platform with streaming analytics, predictive modeling, and real-time insights. Includes comprehensive visualization tools and API access.',
     launchDate: '2024-01-20',
@@ -243,7 +243,7 @@ export const advancedITServices: AdvancedITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered threat intelligence platform with predictive analytics, automated response, and comprehensive security analytics. Includes compliance automation and real-time monitoring.',
     launchDate: '2024-02-01',
@@ -296,7 +296,7 @@ export const advancedITServices: AdvancedITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered IoT platform with device management, predictive maintenance, and intelligent automation. Includes real-time monitoring and scalable infrastructure.',
     launchDate: '2024-01-30',
@@ -349,7 +349,7 @@ export const advancedITServices: AdvancedITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced enterprise blockchain platform with smart contracts, decentralized applications, and comprehensive enterprise integrations. Includes developer tools and performance analytics.',
     launchDate: '2024-02-15',
@@ -402,7 +402,7 @@ export const advancedITServices: AdvancedITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered API management platform with intelligent optimization, security automation, and performance monitoring. Includes developer portal and comprehensive analytics.',
     launchDate: '2024-01-25',

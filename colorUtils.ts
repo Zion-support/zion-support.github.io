@@ -49,9 +49,9 @@ export class ColorUtils {
         case r: h = (g - b) / d + (g < b ? 6 : 0); break;
         case g: h = (b - r) / d + 2; break;
         case b: h = (r - g) / d + 4; break;
-      }
+      },
       h /= 6;
-    }
+    },
 
     return { h: h * 360, s: s * 100, l: l * 100 };
   }
@@ -80,7 +80,7 @@ export class ColorUtils {
       r = hue2rgb(p, q, h + 1/3);
       g = hue2rgb(p, q, h);
       b = hue2rgb(p, q, h - 1/3);
-    }
+    },
 
     return {
       r: Math.round(r * 255),
@@ -106,8 +106,8 @@ export class ColorUtils {
         h = (b - r) / diff + 2;
       } else {
         h = (r - g) / diff + 4;
-      }
-    }
+      },
+    },
     h = Math.round(h * 60);
     if (h < 0) h += 360;
 
@@ -140,7 +140,7 @@ export class ColorUtils {
       r = x; g = 0; b = c;
     } else {
       r = c; g = 0; b = x;
-    }
+    },
 
     return {
       r: Math.round((r + m) * 255),
@@ -337,7 +337,7 @@ export class ColorUtils {
       newHsl.h = (hsl.h + (i * 360) / count) % 360;
       const newRgb = this.hslToRgb(newHsl.h, newHsl.s, newHsl.l);
       palette.push(this.rgbToHex(newRgb.r, newRgb.g, newRgb.b));
-    }
+    },
 
     return palette;
   }
@@ -363,7 +363,7 @@ export class ColorUtils {
     
     if (hex.length === 4) {
       return "#" + hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3];
-    }
+    },
     
     return hex.toUpperCase();
   }

@@ -49,7 +49,7 @@ export function useAuth() {
     } catch (error) {
       setAuthState(prev => ({ ...prev, loading: false }));
       return { success: false, error: 'Login failed' };
-    }
+    },
   };
 
   const logout = () => {

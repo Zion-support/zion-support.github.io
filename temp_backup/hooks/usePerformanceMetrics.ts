@@ -17,7 +17,7 @@ export function usePerformanceMetrics() {
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return;
-    }
+    },
 
     setIsSupported(true);
 

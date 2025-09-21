@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface Innovative2029MicroSaasService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced emotional intelligence platform with real-time emotion detection, AI-powered responses, and comprehensive emotional analytics. Includes multi-modal recognition and empathy simulation.',
     launchDate: '2029-01-20',
@@ -125,7 +125,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced multimodal AI platform with unified processing capabilities, cross-modal understanding, and seamless data integration. Includes comprehensive API access and real-time processing.',
     launchDate: '2029-02-01',
@@ -172,7 +172,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced quantum blockchain platform with quantum-resistant cryptography, enhanced security, and high-performance capabilities. Includes smart contract automation and cross-chain interoperability.',
     launchDate: '2029-02-15',
@@ -219,7 +219,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced personalized medicine platform with AI-powered treatment planning, genetic analysis, drug discovery acceleration, and comprehensive clinical tools. Includes research collaboration features.',
     launchDate: '2029-01-30',
@@ -266,7 +266,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced smart city orchestrator with comprehensive infrastructure management, AI optimization, and real-time monitoring. Includes predictive maintenance and emergency response coordination.',
     launchDate: '2029-03-01',

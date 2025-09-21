@@ -34,7 +34,7 @@ export function useAuth() {
         loading: false,
         isAuthenticated: false
       });
-    }
+    },
   }, []);
 
   const login = async (email: string, password: string) => {
@@ -54,7 +54,7 @@ export function useAuth() {
     } catch (error) {
       setAuthState(prev => ({ ...prev, loading: false }));
       return { success: false, error: 'Login failed' };
-    }
+    },
   };
 
   const logout = () => {

@@ -16,9 +16,9 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           ui: ['framer-motion', 'lucide-react']
-        }
-      }
-    }
+        },
+      },
+    },
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']

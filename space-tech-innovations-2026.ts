@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface SpaceTechInnovation2026 {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete space technology platform with AI-powered operations, satellite management, and space data analysis. Includes mission planning tools and expert consultation.',
     launchDate: '2026-01-15',
@@ -126,7 +126,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete space mining platform with quantum computing analysis, resource assessment, and mission planning. Includes investment analysis and regulatory compliance tools.',
     launchDate: '2026-02-01',
@@ -173,7 +173,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete satellite operations platform with AI automation, monitoring, and management tools. Includes predictive maintenance and performance analytics.',
     launchDate: '2026-01-25',
@@ -220,7 +220,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete space debris tracking system with real-time monitoring, collision prediction, and avoidance recommendations. Includes mobile apps and API access.',
     launchDate: '2026-02-15',
@@ -267,7 +267,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete space weather monitoring platform with real-time tracking, prediction algorithms, and protection recommendations. Includes mobile apps and API access.',
     launchDate: '2026-03-01',

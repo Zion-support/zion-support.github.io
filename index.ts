@@ -30,7 +30,7 @@ serve(async (req) => {
     logStructured("INFO", "Received send-email request", { to, subjectPreview: subject?.substring(0, 50) }, FUNCTION_NAME);
     if (!resend) {
       throw new Error("Resend client is not initialized due to missing API key.");
-    }
+    },
 
     const emailResponse = await resend.emails.send({
       from: Deno.env.get("RESEND_FROM_EMAIL") || "Lovable <onboarding@resend.dev>", // Make FROM configurable

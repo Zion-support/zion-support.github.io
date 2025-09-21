@@ -55,8 +55,8 @@ serve(async (req) => {
         const imgData = await imgRes.json();
         results.push({ field: "image", url: img, result: imgData }),
         flagged ||= imgData.results?.some((r: any) => r.flagged)
-      }
-    }
+      },
+    },
 
     // Store moderation log
     await supabase.from("moderation_logs").insert({

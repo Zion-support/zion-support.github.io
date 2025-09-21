@@ -15,25 +15,25 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 2999, 
         period: 'month', 
         features: ['Basic quantum featuresStandard security', 'Email support'] 
-      }
+      },
       professional: { 
         price: 7999, 
         period: 'month', 
         features: ['Advanced quantum featuresCustom security', 'Priority support'] 
-      }
+      },
       enterprise: { 
         price: 19999, 
         period: 'month', 
         features: ['Full quantum suiteCustom development', 'Dedicated support'] 
-      }
-    }
+      },
+    },
     category: 'Cloud Infrastructure',
     tags: ['Quantum ComputingCloud Infrastructure', 'SecurityScalability', 'Enterprise'],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-pro',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$178.6B',
     targetAudience: 'Enterprises, cloud providers, government agencies, research institutions',
     competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, advanced security protocols, unprecedented performance optimization',
@@ -61,25 +61,25 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 1999, 
         period: 'month', 
         features: ['Basic edge featuresStandard optimization', 'Email support'] 
-      }
+      },
       professional: { 
         price: 5999, 
         period: 'month', 
         features: ['Advanced edge featuresCustom optimization', 'Priority support'] 
-      }
+      },
       enterprise: { 
         price: 14999, 
         period: 'month', 
         features: ['Full edge suiteCustom development', 'Dedicated support'] 
-      }
-    }
+      },
+    },
     category: 'Edge Computing',
     tags: ['Edge ComputingIoT', 'Real-time ProcessingPerformance Optimization', 'Enterprise'],
     website: 'https://ziontechgroup.com/edge-computing-orchestrator-pro',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$43.4B',
     targetAudience: 'IoT companies, manufacturing, smart cities, autonomous systems, edge computing providers',
     competitiveAdvantage: 'Advanced edge computing optimization, intelligent IoT management, comprehensive edge security',
@@ -107,25 +107,25 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 1499, 
         period: 'month', 
         features: ['Basic zero trustUp to 1000 users', 'Standard monitoringEmail support'] 
-      }
+      },
       professional: { 
         price: 3999, 
         period: 'month', 
         features: ['Advanced zero trustUnlimited users', 'Custom policiesPriority support', 'API access'] 
-      }
+      },
       enterprise: { 
         price: 9999, 
         period: 'month', 
         features: ['Full zero trust platformWhite-label solution', 'Dedicated supportCustom development', '24/7 monitoring'] 
-      }
-    }
+      },
+    },
     category: 'Cybersecurity',
     tags: ['Zero TrustCybersecurity', 'Identity ManagementAccess Control', 'Enterprise Security'],
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$45.2B',
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare providers',
     competitiveAdvantage: 'Comprehensive zero trust platform, advanced identity verification, adaptive security policies',
@@ -153,25 +153,25 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 999, 
         period: 'month', 
         features: ['Basic AI DevOpsUp to 10 applications', 'Standard automationEmail support'] 
-      }
+      },
       professional: { 
         price: 2999, 
         period: 'month', 
         features: ['Advanced AI DevOpsUnlimited applications', 'Custom automationPriority support', 'API access'] 
-      }
+      },
       enterprise: { 
         price: 7999, 
         period: 'month', 
         features: ['Full AI DevOps platformWhite-label solution', 'Dedicated supportCustom development', '24/7 monitoring'] 
-      }
-    }
+      },
+    },
     category: 'DevOps & Automation',
     tags: ['AIDevOps', 'AutomationCI/CD', 'Enterprise'],
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$67.8B',
     targetAudience: 'Enterprises, technology companies, development teams, DevOps engineers',
     competitiveAdvantage: 'First AI-powered DevOps platform, intelligent automation, comprehensive enterprise integration',
@@ -199,25 +199,25 @@ export const enterpriseITBreakthroughServices2025 = [
         price: 3999, 
         period: 'month', 
         features: ['Basic quantum data centerStandard quantum features', 'Email support'] 
-      }
+      },
       professional: { 
         price: 9999, 
         period: 'month', 
         features: ['Advanced quantum data centerCustom quantum features', 'Priority supportAPI access'] 
-      }
+      },
       enterprise: { 
         price: 24999, 
         period: 'month', 
         features: ['Full quantum data center platformWhite-label solution', 'Dedicated supportCustom development', '24/7 monitoring'] 
-      }
-    }
+      },
+    },
     category: 'Data Center',
     tags: ['Quantum ComputingData Center', 'Data ManagementEnterprise', 'Performance'],
     website: 'https://ziontechgroup.com/quantum-data-center-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    }
+    },
     marketSize: '$89.2B',
     targetAudience: 'Enterprises, data center providers, technology companies, research institutions',
     competitiveAdvantage: 'First quantum data center platform, quantum-enhanced performance, comprehensive enterprise integration',

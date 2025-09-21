@@ -49,7 +49,7 @@ test.describe('Smoke Tests', () => {
       await searchInput.press('Enter');
       // Should navigate to search results or show results
       await expect(page).not.toHaveURL('/');
-    }
+    },
   }),
 
   test('navigation between pages works', async ({ page }) => {
@@ -66,5 +66,5 @@ test.describe('Smoke Tests', () => {
         await expect(page).toHaveURL(href);
         // Page should load - use first() to handle multiple main elements
         await expect(page.locator('main').first()).toBeVisible()}
-    }
+    },
   })}),

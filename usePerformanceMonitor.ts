@@ -29,7 +29,7 @@ export function usePerformanceMonitor() {
         });
       } catch (error) {
         console.error('Error measuring performance:', error);
-      }
+      },
     };
 
     const timer = setTimeout(measurePerformance, 1000);

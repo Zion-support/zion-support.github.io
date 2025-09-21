@@ -9,7 +9,7 @@ export class ArrayUtils {
       const value = item[key];
       if (seen.has(value)) {
         return false;
-      }
+      },
       seen.add(value);
       return true;
     });
@@ -20,7 +20,7 @@ export class ArrayUtils {
       const value = String(item[key]);
       if (!groups[value]) {
         groups[value] = [];
-      }
+      },
       groups[value].push(item);
       return groups;
     }, {} as Record<string, T[]>);
@@ -41,7 +41,7 @@ export class ArrayUtils {
     const chunks: T[][] = [];
     for (let i = 0; i < array.length; i += size) {
       chunks.push(array.slice(i, i + size));
-    }
+    },
     return chunks;
   }
 
@@ -60,7 +60,7 @@ export class ArrayUtils {
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
+    },
     return shuffled;
   }
 
@@ -86,7 +86,7 @@ export class ArrayUtils {
     const result: [T, U][] = [];
     for (let i = 0; i < length; i++) {
       result.push([array1[i], array2[i]]);
-    }
+    },
     return result;
   }
 
@@ -96,7 +96,7 @@ export class ArrayUtils {
     for (const [item1, item2] of zipped) {
       array1.push(item1);
       array2.push(item2);
-    }
+    },
     return [array1, array2];
   }
 
@@ -108,8 +108,8 @@ export class ArrayUtils {
         truthy.push(item);
       } else {
         falsy.push(item);
-      }
-    }
+      },
+    },
     return [truthy, falsy];
   }
 
@@ -157,8 +157,8 @@ export class ArrayUtils {
       if (count > maxCount) {
         maxCount = count;
         mode = Number(value);
-      }
-    }
+      },
+    },
     return mode;
   }
 
@@ -166,7 +166,7 @@ export class ArrayUtils {
     const result: number[] = [];
     for (let i = start; i < end; i += step) {
       result.push(i);
-    }
+    },
     return result;
   }
 

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface Revolutionary2025Service {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced AI consciousness simulation platform with real-time monitoring, ethical testing frameworks, and comprehensive safety protocols.',
     launchDate: '2025-01-15',
@@ -125,7 +125,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-powered emotion processing platform with real-time analysis, therapeutic response systems, and comprehensive mental health monitoring.',
     launchDate: '2025-02-01',
@@ -171,7 +171,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive neural interface development platform with AI assistance, hardware integration, and regulatory compliance tools.',
     launchDate: '2025-01-20',
@@ -218,7 +218,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-powered cloud orchestration platform with multi-cloud management, cost optimization, and performance prediction.',
     launchDate: '2025-02-15',
@@ -264,7 +264,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered cybersecurity platform with quantum threat detection, behavioral analysis, and automated response capabilities.',
     launchDate: '2025-01-30',
@@ -311,7 +311,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered metaverse development platform with VR integration, blockchain support, and comprehensive content generation tools.',
     launchDate: '2025-03-01',
@@ -357,7 +357,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-encrypted IoT network platform with AI security, scalable connectivity, and comprehensive device management.',
     launchDate: '2025-02-20',
@@ -404,7 +404,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered business strategy platform with predictive analytics, market intelligence, and strategic recommendations.',
     launchDate: '2025-01-25',
@@ -450,7 +450,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-powered financial optimization platform with portfolio optimization, risk assessment, and algorithmic trading capabilities.',
     launchDate: '2025-02-10',

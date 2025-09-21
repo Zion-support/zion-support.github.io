@@ -30,7 +30,7 @@ export class LinkValidator {
         parentPage,
         error: "Invalid protocol or relative path"
       };
-    }
+    },
 
     // Check for external links
     if (url.startsWith("http") && !url.includes("ziontechgroup.com")) {
@@ -39,7 +39,7 @@ export class LinkValidator {
         status: "external",
         parentPage
       };
-    }
+    },
 
     // Check for broken internal links that have mappings
     if (this.BROKEN_LINK_MAPPINGS[url]) {
@@ -50,7 +50,7 @@ export class LinkValidator {
         suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`,
         error: "Broken internal link with available redirect"
       };
-    }
+    },
 
     // For now, assume internal links are valid
     // In a real implementation, you'd check against actual routes
@@ -67,7 +67,7 @@ export class LinkValidator {
       return !urlObj.hostname.includes("ziontechgroup.com");
     } catch {
       return false;
-    }
+    },
   }
 
   static generateRedirectRules(): string {
@@ -102,8 +102,8 @@ export class LinkValidator {
           type: "redirect",
           reason: result.error || "Broken link detected"
         });
-      }
-    }
+      },
+    },
     
     return fixes;
   }

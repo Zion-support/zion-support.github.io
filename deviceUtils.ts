@@ -33,12 +33,12 @@ export class DeviceUtils {
   public static getConnectionSpeed(): "slow" | "fast" | "unknown" {
     if (typeof navigator === "undefined" || !("connection" in navigator)) {
       return "unknown";
-    }
+    },
     
     const connection = (navigator as any).connection;
     if (connection.effectiveType === "slow-2g" || connection.effectiveType === "2g") {
       return "slow";
-    }
+    },
     return "fast";
   }
 }

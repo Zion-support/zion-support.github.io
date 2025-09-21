@@ -32,7 +32,7 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
         name: mockCartItem.name,
         price: mockCartItem.price,
         quantity: mockCartItem.quantity
-      }
+      },
     },
     mockDispatch(addToCartAction);
     expect(mockDispatch).toHaveBeenCalledWith(addToCartAction);
@@ -70,7 +70,7 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
         name: 'NVIDIA A100 GPU Server',
         price: 85000,
         quantity: 1
-      }
+      },
     ],
     // Simulate localStorage persistence
     const mockLocalStorage = {
@@ -126,7 +126,7 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
     const mockApiResponse = {
       data: {
         sessionId: 'cs_test_12345'
-      }
+      },
     },
     // Simulate successful checkout session creation
     expect(mockApiResponse.data.sessionId).toBe('cs_test_12345');

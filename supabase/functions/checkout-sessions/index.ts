@@ -37,7 +37,7 @@ serve(async (req) => {
     // Verify the amount is valid
     if (!amount || isNaN(Number(amount)) || Number(amount) <= 0) {
       throw new Error("Invalid payment amount");
-    }
+    },
 
     // Authenticate the user
     const authHeader = req.headers.get("Authorization")!,
@@ -78,7 +78,7 @@ serve(async (req) => {
             ...(productType === "subscription" ? { recurring: { interval: "month" } } : {})
           },
           quantity: 1
-        }
+        },
       ],
       mode: productType === "subscription" ? "subscription" : "payment",
       success_url: successUrl || `${req.headers.get("origin")}/payment-success`,
@@ -89,7 +89,7 @@ serve(async (req) => {
         providerId: providerId,
         escrow: escrow.toString(),
         productType: productType
-      }
+      },
     }),
     // Record transaction in database
     if (serviceId && providerId) {

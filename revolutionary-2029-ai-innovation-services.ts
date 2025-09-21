@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 
 export interface RevolutionaryAIInnovationService2029 {
   id: string,
@@ -82,7 +82,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, code analysis engine, CI/CD integration',
     launchDate: '2025-01-10',
@@ -131,7 +131,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, content templates, optimization engine',
     launchDate: '2025-01-12',
@@ -180,7 +180,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, project analytics, automation engine',
     launchDate: '2025-01-15',
@@ -229,7 +229,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, SEO analytics, optimization engine',
     launchDate: '2025-01-18',
@@ -277,7 +277,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, automation engine, analytics platform',
     launchDate: '2025-01-20',
@@ -325,7 +325,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, chatbot platform, analytics dashboard',
     launchDate: '2025-01-22',
@@ -374,7 +374,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, financial data connectors, analytics engine',
     launchDate: '2025-01-25',
@@ -423,7 +423,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, document processing, compliance engine',
     launchDate: '2025-01-28',
@@ -471,7 +471,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, video analysis, assessment engine',
     launchDate: '2025-01-30',

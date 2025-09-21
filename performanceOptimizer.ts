@@ -33,15 +33,15 @@ class PerformanceOptimizer {
             if (entry.entryType === "navigation") {
               const navEntry = entry as PerformanceNavigationTiming;
               this.metrics.loadTime = navEntry.loadEventEnd - navEntry.fetchStart;
-            }
+            },
           });
         });
         navObserver.observe({ entryTypes: ["navigation"] }),
         this.observers.push(navObserver);
       } catch (error) {
         console.warn("Navigation observer failed:", error);
-      }
-    }
+      },
+    },
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -102,7 +102,7 @@ class PerformanceOptimizer {
     if ('memory' in performance) {
       const memory = (performance as any).memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize;
-    }
+    },
   }
 
   public cleanup(): void {
@@ -141,7 +141,7 @@ export const usePerformanceMonitor = () => {
       updateMetrics();
     } else {
       window.addEventListener("load", updateMetrics);
-    }
+    },
 
     // Update metrics periodically
     const interval = setInterval(updateMetrics, 5000);

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface AutonomousSystemsRobotics2025 {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive autonomous manufacturing platform with equipment integration, predictive analytics, and quality control. Includes custom workflow development and equipment integration services.',
     launchDate: '2025-01-20',
@@ -126,7 +126,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade swarm robotics platform with robot coordination, task management, and performance analytics. Includes custom robot programming and integration services.',
     launchDate: '2025-01-25',
@@ -173,7 +173,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive autonomous vehicle platform with perception systems, decision-making algorithms, and safety protocols. Includes custom vehicle integration and safety certification services.',
     launchDate: '2025-02-01',
@@ -220,7 +220,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade advanced robotics platform with robot control, safety systems, and integration capabilities. Includes custom robot programming and safety certification services.',
     launchDate: '2025-02-05',
@@ -267,7 +267,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive autonomous supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring. Includes custom optimization development and system integration services.',
     launchDate: '2025-02-10',
