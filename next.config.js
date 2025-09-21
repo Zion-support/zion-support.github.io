@@ -11,10 +11,10 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
     // tsconfigPath: './tsconfig.json',
-  },origin/main
+  },
   eslint: {
     ignoreDuringBuilds: true,
-  },origin/main
+  },
   experimental: {
     esmExternals: false,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
