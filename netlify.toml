@@ -1,4 +1,5 @@
 [build]
+<<<<<<< HEAD
   # Use custom build script to handle TypeScript configuration issues
   command = "bash scripts/netlify-build.sh"
   publish = "out"
@@ -14,6 +15,14 @@
   # Force npm usage and disable pnpm detection
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NETLIFY_USE_PNPM = "false"
+=======
+  command = "npm ci --legacy-peer-deps && npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--legacy-peer-deps"
+>>>>>>> ebe5dcf457310696b4df96b5d46c71db1b17ecef
 
 # Note: Headers are now handled by the generated _headers file in the out directory
 # This ensures compatibility with Next.js static export and avoids conflicts

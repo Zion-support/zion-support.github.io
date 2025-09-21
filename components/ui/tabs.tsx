@@ -1,5 +1,11 @@
 import React, { useState, createContext, useContext } from 'react';
-const TabsContext = createContext(undefined);
+
+interface TabsContextType {
+  activeTab: string;
+  setActiveTab: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps {
   defaultValue?: string;
