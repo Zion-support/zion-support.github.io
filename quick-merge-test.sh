@@ -53,13 +53,7 @@ if [ "$COMMITS_AHEAD" -gt 0 ] && [ "$FILES_CHANGED" -gt 0 ]; then
                     cp "$file" "${file}.backup.$(date +%s)"
                     
                     # Remove conflict markers (keep main version)
-<<<<<<< HEAD
                     sed -i '/                    
-=======
-                    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-                    sed -i '/>>>>>>> /d' "$file"
-                    
->>>>>>> origin/auto/autonomy-17186719616
                     echo "✅ Resolved conflicts in $file"
                 fi
             done

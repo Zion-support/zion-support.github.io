@@ -13,12 +13,17 @@ for file in $files_with_conflicts; do
     cp "$file" "$file.backup.$(date +%s)"
     
     # Remove merge conflict markers and keep HEAD version
+<<<<<<< HEAD
     # This removes everything from <<<<<<< to ======= and from ======= to >>>>>>> 
     # keeping only the HEAD version
     awk '
     /<<<<<<< HEAD/ { in_head = 1; next }
     /=======/ { in_head = 0; in_other = 1; next }
     />>>>>>> / { in_other = 0; next }
+=======
+    # keeping only the HEAD version
+    awk '
+>>>>>>> origin/backup-main-20250918-004015
     in_head { print }
     !in_head && !in_other { print }
     ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
@@ -26,4 +31,8 @@ for file in $files_with_conflicts; do
     echo "Fixed: $file"
 done
 
+<<<<<<< HEAD
 echo "Merge conflicts fixed!"
+=======
+echo "Merge conflicts fixed!"
+>>>>>>> origin/backup-main-20250918-004015

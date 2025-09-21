@@ -1,4 +1,5 @@
-module.exports = {
-  presets: ['next/babel'],
-  plugins: []
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/backup-main-20250918-004015

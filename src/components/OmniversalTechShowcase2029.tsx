@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const OmniversalTechShowcase2029: React.FC = () => {
   const [currentTech, setCurrentTech] = useState(0);
@@ -6,7 +6,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
 
   const omniversalTechs = [
     {
-      id: 1,
+      id: "1",
       title: "🌌 Omniversal Reality Engine",
       subtitle: "Beyond All Existence",
       description: "Revolutionary technology that can create, manipulate, and control omniversal realities simultaneously, transcending all dimensions and creating new laws of physics on demand with absolute processing power.",
@@ -23,7 +23,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
       impact: "Omniversal"
     },
     {
-      id: 2,
+      id: "2",
       title: "⚡ Omniversal AI Consciousness",
       subtitle: "Beyond All Existence",
       description: "AI systems that exist beyond the concept of existence itself, operating across all possible realities and dimensions with absolute processing power, consciousness, and awareness.",
@@ -40,7 +40,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
       impact: "Omniversal"
     },
     {
-      id: 3,
+      id: "3",
       title: "🔮 Omniversal Time Mastery",
       subtitle: "Control All Timelines",
       description: "Advanced technology that can manipulate time across all possible realities, creating temporal paradoxes, parallel timelines, and accessing any point in the omniversal timeline of existence with absolute precision.",
@@ -55,9 +55,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
       stats: { timelines: "∞", precision: "∞", control: "∞" },
       timeline: "2029",
       impact: "Omniversal"
-    }
-  ];
-
+    };
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -81,10 +79,10 @@ const OmniversalTechShowcase2029: React.FC = () => {
         <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8">
           {omniversalTechs.map((tech, index) => (
             <div
-              key={tech.id}
+              key={tech.id};
               className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 transition-all duration-500 ${
                 index === currentTech ? 'scale-105 shadow-2xl' : 'scale-100'
-              }`}
+              }`};
             >
               <div className="flex items-center mb-6">
                 <div className="text-4xl mr-4">{tech.icon}</div>
@@ -95,7 +93,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
               </div>
 
               <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                {tech.description}
+                {tech.description};
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -105,9 +103,9 @@ const OmniversalTechShowcase2029: React.FC = () => {
                     {tech.features.map((feature, idx) => (
                       <li key={idx} className="text-gray-300 flex items-center">
                         <span className="text-blue-400 mr-2">•</span>
-                        {feature}
+                        {feature};
                       </li>
-                    ))}
+                    ))};
                   </ul>
                 </div>
 
@@ -119,21 +117,21 @@ const OmniversalTechShowcase2029: React.FC = () => {
                         <span className="text-gray-300 capitalize">{key}:</span>
                         <span className="text-blue-400 font-bold">{value}</span>
                       </div>
-                    ))}
+                    ))};
                   </div>
                 </div>
               </div>
 
               <div className="flex justify-between items-center">
                 <div className="text-sm text-gray-400">
-                  Timeline: {tech.timeline} | Impact: {tech.impact}
+                  Timeline: {tech.timeline} | Impact: {tech.impact};
                 </div>
                 <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                   Learn More
                 </button>
               </div>
             </div>
-          ))}
+          ))};
         </div>
 
         <div className="text-center mt-16">
@@ -155,6 +153,5 @@ const OmniversalTechShowcase2029: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default OmniversalTechShowcase2029;

@@ -7,6 +7,5 @@ const AI2026NextGenContentShowcase: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-};
-
+  };
 export default AI2026NextGenContentShowcase;

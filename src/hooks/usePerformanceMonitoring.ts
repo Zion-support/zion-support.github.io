@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState }  from 'react';
 
 export const usePerformanceMonitoring = () => {
   const [metrics, setMetrics] = useState({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-  });
+    loadTime: "0",
+    renderTime: "0",
+    memoryUsage: "0"});
 
   useEffect(() => {
     // Measure page load time
@@ -24,16 +23,14 @@ export const usePerformanceMonitoring = () => {
       const memoryUsage = performance.memory.usedJSHeapSize / 1024 / 1024; // MB
       setMetrics(prev => ({ ...prev, memoryUsage }));
     }
-
     // Cleanup
     return () => {
       // Cleanup logic if needed
-    };
+  };
   }, []);
 
   return metrics;
-};
-
+  };
 export const useLazyLoading = (importFunction, deps = []) => {
   const [Component, setComponent] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -61,14 +58,14 @@ export const useLazyLoading = (importFunction, deps = []) => {
           setLoading(false);
         }
       }
-    };
-
+  };
     loadComponent();
 
     return () => {
       isMounted = false;
-    };
+  };
   }, deps);
 
-  return { Component, loading, error };
-};
+  return { Component, loading, error
+  };
+  };

@@ -1,0 +1,112 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+<<<<<<< HEAD
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /services/
+Allow: /solutions/
+Allow: /news
+Allow: /blog
+Allow: /case-studies
+Allow: /events
+Allow: /docs
+Allow: /white-papers
+Allow: /webinars
+=======
+<<<<<<< HEAD
+Disallow: /api/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow important pages
+Allow: /services/
+Allow: /solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+Allow: /careers/
+Allow: /faq/
+Allow: /privacy/
+Allow: /terms/
+
+<<<<<<< HEAD
+=======
+# Duplicate section removed above; keep a single block for clarity
+
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block common AI training bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+<<<<<<< HEAD
+=======
+=======
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /services/
+Allow: /solutions/
+Allow: /news
+Allow: /blog
+Allow: /case-studies
+Allow: /events
+Allow: /docs
+Allow: /white-papers
+Allow: /webinars
+
+# Crawl delay
+Crawl-delay: 1
+>>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress

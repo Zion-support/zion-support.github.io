@@ -18,5 +18,4 @@ fi
 
 echo "Building project with npm run build:netlify ..."
 npm run build:netlify
-
 echo "Build completed successfully!"

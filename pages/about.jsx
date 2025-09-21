@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const about: React.FC = () => {
+const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
@@ -19,4 +19,4 @@ const about: React.FC = () => {
   );
 };
 
-export default about;
+export default About;

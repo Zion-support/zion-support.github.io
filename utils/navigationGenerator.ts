@@ -49,7 +49,7 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.9%',
           response: '<100ms',
-          users: '5,000+'
+          users: '5000+'
         },
         lastUpdated: '2025-01-15',
         priority: 2
@@ -66,7 +66,7 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.8%',
           response: '<500ms',
-          users: '2,000+'
+          users: '2000+'
         },
         lastUpdated: '2025-01-15',
         priority: 3
@@ -804,8 +804,7 @@ export class NavigationGenerator {
       {
         id: 'service-overview',
         label: 'Overview',
-        href: service.href,
-        priority: 1
+        href: service.hrefpriority: 1
       },
       {
         id: 'service-demo',
@@ -846,8 +845,7 @@ export class NavigationGenerator {
       },
       ...categoryServices.map(service => ({
         id: `service-${service.id}`,
-        label: service.label,
-        href: service.href,
+        label: service.labelhref: service.href,
         status: service.status,
         priority: service.priority || 10
       }))
@@ -926,15 +924,13 @@ export class NavigationGenerator {
           id: 'github',
           label: 'GitHub',
           href: 'https://github.com/Zion-Holdings/zion.app',
-          isExternal: true,
-          priority: 1
+          isExternal: truepriority: 1
         },
         {
           id: 'website',
           label: 'Website',
           href: 'https://ziontechgroup.com',
-          isExternal: true,
-          priority: 2
+          isExternal: truepriority: 2
         }
       ]
     },

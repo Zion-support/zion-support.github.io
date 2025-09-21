@@ -136,4 +136,4 @@ done
 
 echo "Committing merge..."
 git commit -m "Resolve all merge conflicts by accepting our clean version"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

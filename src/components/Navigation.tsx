@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link }  from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   return (
@@ -43,6 +43,12 @@ const Navigation: React.FC = () => {
               >
                 Contact
               </Link>
+              <Link
+                to="/dashboard"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg transition-all duration-300"
+              >
+                Dashboard
+              </Link>
             </div>
           </div>
         </div>
@@ -50,5 +56,4 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-
 export default Navigation;
