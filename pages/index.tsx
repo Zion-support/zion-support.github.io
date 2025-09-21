@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -19,13 +18,6 @@ export default function Home() {
           <p className="text-center text-xl mb-8">
             AI, IT and Micro SaaS Services
           </p>
-          <div className="text-center">
-            <Link href="/services-advertising">
-              <a className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg inline-block">
-                View Services
-              </a>
-            </Link>
-          </div>
         </div>
       </main>
     </div>
