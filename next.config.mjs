@@ -8,21 +8,9 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-    tsconfigPath: false,
   },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  swcMinify: false,
-  experimental: {
-    esmExternals: false,
-  },
-  cssModules: false,
-  cssLoaderOptions: {
-    url: false,
-  },
-  postcssLoaderOptions: {
-    postcssOptions: false,
   },
   webpack: (config, { isServer }) => {
     // Minimal webpack configuration
@@ -30,6 +18,12 @@ const nextConfig = {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
+        path: false,
+        crypto: false,
+        stream: false,
+        util: false,
+        buffer: false,
+        process: false,
       };
     }
     
