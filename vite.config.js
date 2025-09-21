@@ -11,20 +11,13 @@ module.exports = defineConfig({
   build: {
     outDir: "dist",
     sourcemap: true,
-    minify: "terser",
+    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ["react", "react-dom"],
-          ui: ["framer-motion", "lucide-react"],
-          router: ["react-router-dom"]
+          ui: ["framer-motion", "lucide-react"]
         }
-      }
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
       }
     }
   },
