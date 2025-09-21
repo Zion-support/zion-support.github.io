@@ -2,14 +2,13 @@ import import { useState, useEffect, useCallback, useMemo } from 'react, ';
 export const useSearch = (data, options) => {
     const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options;
     const [searchState, setSearchState] = useState({
-        query: '';
+        query: '',
         filters: {}
-        sortBy: null;
-        sortOrder: 'asc';
-        results: data;
-        isLoading: false;
-        totalResults: data.length,
-    })
+        sortBy: null,
+        sortOrder: 'asc',
+        results: data,
+        isLoading: false,
+        totalResults: data.length})
     const [debouncedQuery, setDebouncedQuery] = useState('')
     /
     useEffect(() => {
@@ -38,7 +37,7 @@ export const useSearch = (data, options) => {
     /
     const processedData = useMemo(() => {
         setSearchState(prev => ({ ...prev, isLoading: true }))
-    let results = data;
+    let results = data,
         /
         if (debouncedQuery) {
             results = results.filter(item => {
@@ -92,9 +91,8 @@ export const useSearch = (data, options) => {
         setSearchState(prev => ({
             ...prev,
             results,
-            totalResults: results.length;
-            isLoading: false,
-        }))
+            totalResults: results.length,
+            isLoading: false}))
     return results;
     }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch])
     /
@@ -116,19 +114,17 @@ export const useSearch = (data, options) => {
     const setSort = useCallback((field, order = 'asc') => {
         setSearchState(prev => ({
             ...prev,
-            sortBy: field;
-            sortOrder: order,
-        }))
+            sortBy: field,
+            sortOrder: order}))
      }, [])
     /
     const clearSearch = useCallback(() => {
         setSearchState(prev => ({
             ...prev,
-            query: '';
+            query: '',
             filters: {}
-            sortBy: null;
-            sortOrder: 'asc',
-        }))
+            sortBy: null,
+            sortOrder: 'asc'}))
      }, [])
     /
     const getSuggestions = useCallback((query, maxSuggestions = 5) => {
@@ -157,10 +153,9 @@ export const useSearch = (data, options) => {
         return {
             results: searchState.results.slice(startIndex, endIndex),
             totalPages: Math.ceil(searchState.totalResults / pageSize)
-            currentPage: page;
-            hasNextPage: endIndex < searchState.totalResults;
-            hasPrevPage: page > 1,
-        }
+            currentPage: page,
+            hasNextPage: endIndex < searchState.totalResults,
+            hasPrevPage: page > 1}
      }, [searchState.results, searchState.totalResults])
     return {
         ...searchState,

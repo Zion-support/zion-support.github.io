@@ -20,18 +20,18 @@ async function runDailyBuildTest() {
     // Install dependencies
     console.log('📦 Installing dependencies...');
     try {
-      execSync('npm ci', { stdio: 'inherit' });
+      execSync('npm ci', { stdio: 'inherit' }),
       console.log('✅ Dependencies installed');
     } catch (error) {
       console.log('⚠️  npm ci failed, trying npm install...');
-      execSync('npm install', { stdio: 'inherit' });
+      execSync('npm install', { stdio: 'inherit' }),
       console.log('✅ Dependencies installed with npm install');
     }
 
     // Run linting
     console.log('🔍 Running linter...');
     try {
-      execSync('npm run lint', { stdio: 'inherit' });
+      execSync('npm run lint', { stdio: 'inherit' }),
       console.log('✅ Linting passed');
     } catch (error) {
       console.log('⚠️  Linting failed, continuing...');
@@ -40,7 +40,7 @@ async function runDailyBuildTest() {
     // Run type checking
     console.log('🔍 Running type check...');
     try {
-      execSync('npm run type-check', { stdio: 'inherit' });
+      execSync('npm run type-check', { stdio: 'inherit' }),
       console.log('✅ Type checking passed');
     } catch (error) {
       console.log('⚠️  Type checking failed, continuing...');
@@ -48,13 +48,13 @@ async function runDailyBuildTest() {
 
     // Build project
     console.log('🏗️ Building project...');
-    execSync('npm run build', { stdio: 'inherit' });
+    execSync('npm run build', { stdio: 'inherit' }),
     console.log('✅ Build completed');
 
     // Run tests
     console.log('🧪 Running tests...');
     try {
-      execSync('npm test', { stdio: 'inherit' });
+      execSync('npm test', { stdio: 'inherit' }),
       console.log('✅ Tests passed');
     } catch (error) {
       console.log('⚠️  Tests failed, continuing...');
@@ -62,7 +62,7 @@ async function runDailyBuildTest() {
 
     // Check git status
     console.log('📊 Checking git status...');
-    const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+    const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' }),
     if (gitStatus.trim()) {
       console.log('⚠️  Uncommitted changes detected');
       console.log('Changes:', gitStatus);

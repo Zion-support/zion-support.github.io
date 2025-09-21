@@ -5,26 +5,24 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface ApiEndpoint {
-  method: string;
-  endpoint: string;
-  description: string;
+  method: string,
+  endpoint: string,
+  description: string,
   note?: string;
   params: Array<{
-    name: string;
-    type: string;
-    description: string;
-    required: boolean;
-  }>;
+    name: string,
+    type: string,
+    description: string,
+    required: boolean}>;
   codeExamples?: Record<string, string>;
   responseExamples?: {
-    success: string;
+    success: string,
     error?: string;
   };
 }
 
 interface ApiDocumentationProps {
-  endpoints: ApiEndpoint[];
-}
+  endpoints: ApiEndpoint[]}
 
 export function ApiDocumentation({ endpoints }: ApiDocumentationProps) {
   const [activeTab, setActiveTab] = useState<string>('');
@@ -32,24 +30,20 @@ export function ApiDocumentation({ endpoints }: ApiDocumentationProps) {
   const getMethodColor = (method: string) => {
     switch (method) {
       case 'GET':
-        return 'border-green-500 text-green-400';
+        return 'border-green-500 text-green-400',
       case 'POST':
         return 'border-blue-500 text-blue-400';
       case 'PUT':
         return 'border-yellow-500 text-yellow-400';
       case 'DELETE':
         return 'border-red-500 text-red-400';
-      default:
-        return 'border-gray-500 text-gray-400';
-    }
+      default: return 'border-gray-500 text-gray-400'}
   };
-
   const CodeBlock = ({ code, language }: { code: string; language: string }) => (
     <pre className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto">
       <code className={`language-${language}`}>{code}</code>
     </pre>
-  );
-
+  ),
   return (
     <div className="space-y-6">
       <Card>
@@ -126,7 +120,7 @@ export function ApiDocumentation({ endpoints }: ApiDocumentationProps) {
                             className={`px-3 py-1 text-xs font-medium ${
                               activeTab === lang
                                 ? 'bg-zinc-700 text-white'
-                                : 'text-zinc-400 hover:bg-zinc-800'
+                                : 'text-zinc-400 hover: bg-zinc-800'
                             }`}
                             onClick={() => setActiveTab(lang)}
                           >
@@ -158,5 +152,4 @@ export function ApiDocumentation({ endpoints }: ApiDocumentationProps) {
         </CardContent>
       </Card>
     </div>
-  );
-}
+  )}

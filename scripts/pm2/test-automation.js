@@ -1,4 +1,3 @@
     try {}
-      fs.appendFileSync(this.logFile, logMessage),
-    } catch (error) {}
+      fs.appendFileSync(this.logFile, logMessage)} catch (error) {}
 ,

@@ -21,8 +21,7 @@ export function useContractTemplates() {
             isDefault: true,
             isStarred: false,
             createdAt: '2024-01-01T00:00:00Z',
-            updatedAt: '2024-01-01T00:00:00Z',
-          },
+            updatedAt: '2024-01-01T00:00:00Z'};
           {
             id: '2',
             name: 'Design Contract',
@@ -32,9 +31,8 @@ export function useContractTemplates() {
             isDefault: true,
             isStarred: true,
             createdAt: '2024-01-01T00:00:00Z',
-            updatedAt: '2024-01-01T00:00:00Z',
-          },
-        ];
+            updatedAt: '2024-01-01T00:00:00Z'}
+  ];
         
         setTemplates(mockTemplates);
       } catch (err) {
@@ -52,8 +50,7 @@ export function useContractTemplates() {
       ...template,
       id: Date.now().toString(),
       createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
+      updatedAt: new Date().toISOString()};
     
     setTemplates(prev => [...prev, newTemplate]);
     return newTemplate;
@@ -66,12 +63,10 @@ export function useContractTemplates() {
           ? { ...template, ...updates, updatedAt: new Date().toISOString() }
           : template
       )
-    );
-  };
+    )};
 
   const deleteTemplate = async (id: string) => {
-    setTemplates(prev => prev.filter(template => template.id !== id));
-  };
+    setTemplates(prev => prev.filter(template => template.id !== id))};
 
   const toggleStar = async (id: string) => {
     setTemplates(prev => 
@@ -80,16 +75,14 @@ export function useContractTemplates() {
           ? { ...template, isStarred: !template.isStarred, updatedAt: new Date().toISOString() }
           : template
       )
-    );
-  };
+    )};
 
   return {
-    templates,
-    isLoading,
+    templates;
+    isLoading;
     error,
     createTemplate,
     updateTemplate,
     deleteTemplate,
-    toggleStar,
-  };
+    toggleStar};
 }

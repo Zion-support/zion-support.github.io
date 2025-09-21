@@ -3,17 +3,15 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
 
 interface FraudStats {
-  totalTransactions: number;
-  flaggedTransactions: number;
-  highRiskTransactions: number;
-  criticalRiskTransactions: number;
-  falsePositives: number;
-  accuracy: number;
-}
+  totalTransactions: number,
+  flaggedTransactions: number,
+  highRiskTransactions: number,
+  criticalRiskTransactions: number,
+  falsePositives: number,
+  accuracy: number}
 
 interface FraudStatsCardsProps {
-  stats: FraudStats;
-}
+  stats: FraudStats}
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   const cards = [
@@ -65,12 +63,11 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
       color: "text-green-600",
       bgColor: "bg-green-50"
     }
-  ];
-
+  ],
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {cards.map((card, index) => (
-        <Card key={index} className="hover:shadow-lg transition-shadow">
+        <Card key={index} className="hover: shadow-lg transition-shadow">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <div>
               <CardTitle className="text-sm font-medium text-gray-600">
@@ -94,5 +91,4 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </Card>
       ))}
     </div>
-  );
-};
+  )};

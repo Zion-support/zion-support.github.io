@@ -19,8 +19,7 @@ class BuildOptimizer {
       buildTime: 0,
       bundleSize: 0,
       pageCount: 0,
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
     this.optimizations = [];
   }
 
@@ -53,24 +52,21 @@ class BuildOptimizer {
     // Clear build cache
     this.optimizations.push('Cleared build cache');
     try {
-      execSync('rm -rf .next out', { stdio: 'pipe' });
-    } catch (error) {
+      execSync('rm -rf .next out', { stdio: 'pipe' })} catch (error) {
       // Ignore if directories don't exist
     }
     
     // Clear node modules cache
     this.optimizations.push('Cleared node modules cache');
     try {
-      execSync('rm -rf node_modules/.cache', { stdio: 'pipe' });
-    } catch (error) {
+      execSync('rm -rf node_modules/.cache', { stdio: 'pipe' })} catch (error) {
       // Ignore if cache doesn't exist
     }
     
     // Run dependency check
     this.optimizations.push('Checked dependencies');
     try {
-      execSync('npm ci --legacy-peer-deps', { stdio: 'pipe' });
-    } catch (error) {
+      execSync('npm ci --legacy-peer-deps', { stdio: 'pipe' })} catch (error) {
       console.warn('⚠️  Dependency check failed, continuing...');
     }
   }
@@ -81,8 +77,7 @@ class BuildOptimizer {
     
     try {
       // Run build with performance tracking
-      execSync('npm run build', { stdio: 'pipe' });
-      
+      execSync('npm run build', { stdio: 'pipe' }),
       this.metrics.buildTime = Date.now() - startTime;
       await this.analyzeBuildOutput();
       
@@ -137,11 +132,9 @@ class BuildOptimizer {
       js: [],
       html: [],
       other: []
-    };
-    
+    },
     const analyzeDir = (dirPath) => {
-      const files = fs.readdirSync(dirPath, { withFileTypes: true });
-      
+      const files = fs.readdirSync(dirPath, { withFileTypes: true }),
       for (const file of files) {
         const filePath = path.join(dirPath, file.name);
         
@@ -152,16 +145,11 @@ class BuildOptimizer {
           const size = fs.statSync(filePath).size;
           
           if (['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'].includes(ext)) {
-            assets.images.push({ name: file.name, size, path: filePath });
-          } else if (ext === '.css') {
-            assets.css.push({ name: file.name, size, path: filePath });
-          } else if (ext === '.js') {
-            assets.js.push({ name: file.name, size, path: filePath });
-          } else if (ext === '.html') {
-            assets.html.push({ name: file.name, size, path: filePath });
-          } else {
-            assets.other.push({ name: file.name, size, path: filePath });
-          }
+            assets.images.push({ name: file.name, size, path: filePath })} else if (ext === '.css') {
+            assets.css.push({ name: file.name, size, path: filePath })} else if (ext === '.js') {
+            assets.js.push({ name: file.name, size, path: filePath })} else if (ext === '.html') {
+            assets.html.push({ name: file.name, size, path: filePath })} else {
+            assets.other.push({ name: file.name, size, path: filePath })}
         }
       }
     };
@@ -184,8 +172,7 @@ class BuildOptimizer {
 
   countPages(dir) {
     let count = 0;
-    const files = fs.readdirSync(dir, { withFileTypes: true });
-    
+    const files = fs.readdirSync(dir, { withFileTypes: true }),
     for (const file of files) {
       if (file.isDirectory()) {
         count += this.countPages(path.join(dir, file.name));
@@ -201,8 +188,7 @@ class BuildOptimizer {
     let totalSize = 0;
     
     const calculateDirSize = (dirPath) => {
-      const files = fs.readdirSync(dirPath, { withFileTypes: true });
-      
+      const files = fs.readdirSync(dirPath, { withFileTypes: true }),
       for (const file of files) {
         const filePath = path.join(dirPath, file.name);
         
@@ -226,11 +212,9 @@ class BuildOptimizer {
         ...this.metrics,
         buildTimeSeconds: Math.round(this.metrics.buildTime / 1000),
         bundleSizeMB: Math.round(this.metrics.bundleSize / 1024 / 1024 * 100) / 100,
-        pagesPerSecond: Math.round(this.metrics.pageCount / (this.metrics.buildTime / 1000) * 100) / 100,
-      },
+        pagesPerSecond: Math.round(this.metrics.pageCount / (this.metrics.buildTime / 1000) * 100) / 100},
       optimizations: this.optimizations,
-      recommendations: this.generateRecommendations(),
-    };
+      recommendations: this.generateRecommendations()};
 
     // Save report
     const reportPath = path.join(__dirname, '..', 'build-optimization-report.json');
@@ -289,28 +273,27 @@ class BuildOptimizer {
     const report = await this.generatePerformanceReport();
     
     // Log summary
-    console.log('\n📊 Build Optimization Report:');
-    console.log(`⏱️  Build Time: ${report.metrics.buildTimeSeconds}s`);
-    console.log(`📦 Bundle Size: ${report.metrics.bundleSizeMB}MB`);
-    console.log(`📄 Pages: ${this.metrics.pageCount}`);
-    console.log(`🚀 Pages/sec: ${report.metrics.pagesPerSecond}`);
-    console.log(`🔧 Optimizations Applied: ${this.optimizations.length}`);
-    
+    console.log('\n📊 Build Optimization Report: '),
+    console.log(`⏱️  Build Time: ${report.metrics.buildTimeSeconds}s`),
+    console.log(`📦 Bundle Size: ${report.metrics.bundleSizeMB}MB`),
+    console.log(`📄 Pages: ${this.metrics.pageCount}`),
+    console.log(`🚀 Pages/sec: ${report.metrics.pagesPerSecond}`),
+    console.log(`🔧 Optimizations Applied: ${this.optimizations.length}`),
     if (report.recommendations.length > 0) {
-      console.log('\n💡 Recommendations:');
+      console.log('\n💡 Recommendations: '),
       report.recommendations.forEach(rec => console.log(`  • ${rec}`));
     }
     
     if (this.optimizations.length > 0) {
-      console.log('\n✅ Optimizations Applied:');
+      console.log('\n✅ Optimizations Applied: '),
       this.optimizations.forEach(opt => console.log(`  • ${opt}`));
     }
   }
 }
 
 // Run if called directly
-if (import.meta.url === `file://${__filename}`) {
-  const optimizer = new BuildOptimizer();
+if (import.meta.url === `file: //${__filename}`) {
+  const optimizer = new BuildOptimizer(),
   optimizer.startOptimization().catch(console.error);
 }
 

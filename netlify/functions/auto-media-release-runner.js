@@ -4,8 +4,7 @@ const { spawnSync } = require('child_process'),
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' },
-}
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }}
 
 exports.config = {
   schedule: '0 */6 * * *'
@@ -19,13 +18,11 @@ exports.handler = async () => {
     if (stdout) logs.push(stdout),
     if (stderr) logs.push(stderr),
     logs.push(`exit=${status}`),
-    return status,
-  }
+    return status}
 
   step('media:releaseautomation/auto-media-release.cjs'),
   step('og:imagesautomation/og-image-generator.cjs'),
   step('images:optimizeautomation/optimize-images.cjs'),
   step('git:syncautomation/advanced-git-sync.cjs'),
 
-  return { statusCode: 200, body: logs.join('\n') },
-},
+  return { statusCode: 200, body: logs.join('\n') }},

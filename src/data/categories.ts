@@ -48,4 +48,4 @@ export const CATEGORIES = [
     description: 'Security solutions and protection services',
     count: 10
   }
-];
+],

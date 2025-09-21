@@ -14,15 +14,13 @@ export function BillingDashboard() {
     price: 299,
     billing: "monthly",
     status: "active"
-  };
-
+  },
   const usage = {
     apiCalls: 125000,
     apiLimit: 200000,
     storage: 15.2,
     storageLimit: 50
-  };
-
+  },
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

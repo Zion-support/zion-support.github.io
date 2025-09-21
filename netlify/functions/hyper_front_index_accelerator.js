@@ -12,8 +12,7 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'hyper_front_index_accelerator'
       })
-    },
-  } catch (error) {
+    }} catch (error) {
     console.error('❌ hyper_front_index_accelerator function failed:', error),
     
     return {
@@ -23,6 +22,5 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    },
-  }
+    }}
 },

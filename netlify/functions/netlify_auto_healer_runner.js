@@ -12,8 +12,7 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'netlify_auto_healer_runner'
       })
-    },
-  } catch (error) {
+    }} catch (error) {
     console.error('❌ netlify_auto_healer_runner function failed:', error),
     
     return {
@@ -23,6 +22,5 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    },
-  }
+    }}
 },

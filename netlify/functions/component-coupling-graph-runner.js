@@ -42,9 +42,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ component-coupling-graph-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ component-coupling-graph-runner failed:', error),
     return {
       statusCode: 500,
@@ -54,6 +52,5 @@ exports.handler = async function(event, context) {
         function: 'component-coupling-graph-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

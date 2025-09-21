@@ -11,11 +11,11 @@ export const EQUIPMENT_DETAILS = {
             "/images/equipment-placeholder.svg",
             "/images/equipment-placeholder.svg"
         ],
-        price: 6999;
+        price: 6999,
         currency: "
-        rating: 4.9;
-        reviewCount: 87;
-        inStock: true;
+        rating: 4.9,
+        reviewCount: 87,
+        inStock: true,
         expectedShipping: "
         specifications: [
             { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" }
@@ -42,8 +42,7 @@ export const EQUIPMENT_DETAILS = {
             "Custom 3D LUT support"
         ],
         warranty: "
-        returnPolicy: "30-day return policy for unused items in original packaging",
-    }
+        returnPolicy: "30-day return policy for unused items in original packaging"}
     "audio-mixer-pro": {
         id: "
         name: "
@@ -55,11 +54,11 @@ export const EQUIPMENT_DETAILS = {
             "
             "/images/equipment-placeholder.svg"
         ],
-        price: 3499;
+        price: 3499,
         currency: "
-        rating: 4.8;
-        reviewCount: 42;
-        inStock: true;
+        rating: 4.8,
+        reviewCount: 42,
+        inStock: true,
         expectedShipping: "
         specifications: [
             { name: "Channels", value: "32 input channels" }
@@ -71,7 +70,7 @@ export const EQUIPMENT_DETAILS = {
             { name: "Effects", value: "8 stereo effects processors" }
             { name: "Recording", value: "64-channel USB interface" }
             { name: "Weight", value: "32 lbs" }
-        ];
+        ],
         features: [
             "
             "16 motorized faders with touch-sensitive control",
@@ -84,6 +83,5 @@ export const EQUIPMENT_DETAILS = {
             "Integrated WiFi for wireless control"
         ],
         warranty: "
-        returnPolicy: "21-day return policy for items in original condition",
-    }
+        returnPolicy: "21-day return policy for items in original condition"}
 }

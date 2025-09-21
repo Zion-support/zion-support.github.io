@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card"
 
 export default function TranslationManager() {
   const [translations, setTranslations] = useState([]);
-
   return (
     <div className="min-h-screen bg-zion-blue">
       <div className="container mx-auto px-4 py-12">

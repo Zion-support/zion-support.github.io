@@ -2,8 +2,7 @@ const { spawn } = require('child_process');
 console.log('🚀 Starting development server...');
 // Start the development server;
 const devProcess = spawn('npm', ['rundev'], {stdio: 'inherit';,
-shell: true;
-});
+shell: true});
 devProcess.on('error', (error) => {console.error('Error starting development server:', error);
 });
 devProcess.on('close', (code) => {console.log(`Development server exited with code ${code}`);

@@ -13,7 +13,7 @@ export default function TalentProfilePage() {
   }, []);
 
   if (loading) {
-    return <ProfileLoadingState />;
+    return <ProfileLoadingState />
   }
 
   return (

@@ -18,8 +18,7 @@ const plans = [
       { name: "Basic analytics", included: true },
       { name: "API access", included: false },
       { name: "Custom workflows", included: false },
-      { name: "Advanced security", included: false },
-    ],
+      { name: "Advanced security", included: false }];
   },
   {
     name: "Professional",
@@ -34,8 +33,7 @@ const plans = [
       { name: "Basic analytics", included: true },
       { name: "API access", included: true },
       { name: "Custom workflows", included: true },
-      { name: "Advanced security", included: false },
-    ],
+      { name: "Advanced security", included: false }];
   },
   {
     name: "Enterprise",
@@ -50,10 +48,8 @@ const plans = [
       { name: "Basic analytics", included: true },
       { name: "API access", included: true },
       { name: "Custom workflows", included: true },
-      { name: "Advanced security", included: true },
-    ],
-  },
-];
+      { name: "Advanced security", included: true }];
+  }];
 
 export function EnterprisePricingTable() {
   return (

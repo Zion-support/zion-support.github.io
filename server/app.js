@@ -15,8 +15,7 @@ app.use(express.json()),
 // New middleware to log all incoming request bodies
 app.use((req, res, next) => {
   console.log('Incoming request body:', req.body),
-  next(),
-}),
+  next()}),
 
 // Middleware to log request body for /api/talent and /api/talent/:id
 app.use('/api/talent', (req, res, next) => {
@@ -25,18 +24,15 @@ app.use('/api/talent', (req, res, next) => {
   // A more precise regex might be needed for strict matching if there are other /api/talent sub-routes not to be logged.
   if (req.originalUrl.startsWith('/api/talent')) {
     console.log('Talent API request:', req.method, req.originalUrl),
-    console.log('Body:', req.body),
-  }
-  next(),
-}),
+    console.log('Body:', req.body)}
+  next()}),
 
 // Log headers and body for all /auth/* requests
 app.use('/auth', (req, res, next) => {
   console.log('Auth request:', req.method, req.originalUrl),
   console.log('Headers:', req.headers),
   console.log('Body:', req.body),
-  next(),
-}),
+  next()}),
 
 app.use('/auth', authRoutes),
 app.use('/', authSocialRoutes),
@@ -52,7 +48,6 @@ app.use((err, req, res, next) => {
   console.error(err),
   res
     .status(err.status || 500)
-    .json({ code: err.code, message: err.message }),
-}),
+    .json({ code: err.code, message: err.message })}),
 
 module.exports = app,

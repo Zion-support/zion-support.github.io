@@ -46,8 +46,7 @@ function findAllMissingImports(content, filePath) {,
         'g'),
       const existingImport = content.match(importRegex),
       if (!existingImport) {,
-        missingImports.push(icon),
-      }
+        missingImports.push(icon)}
     }
   }),
   return [...new Set(missingImports)], // Remove duplicates
@@ -57,8 +56,7 @@ function findAllMissingImports(content, filePath) {,
 function fixAllMissingImports(content, filePath) {,
   const missingImports = findAllMissingImports(content, filePath),
   if (missingImports.length === 0) {,
-    return { content, changes: 0 },
-  }
+    return { content, changes: 0 }}
 ,
   let fixedContent = content,
   let changes = 0,

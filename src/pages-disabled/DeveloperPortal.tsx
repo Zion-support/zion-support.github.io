@@ -1,10 +1,9 @@
 import React from 'react';
 
 interface TabDefinition {
-  id: string;
-  label: string;
-  icon: React.ComponentType<any>;
-}
+  id: string,
+  label: string,
+  icon: React.ComponentType<any>}
 
 export default function DeveloperPortal() {
   return (
