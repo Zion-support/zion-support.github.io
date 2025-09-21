@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
 export interface AIEmergingTechService {
   id: string,
   name: string,
@@ -413,7 +413,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     implementationDetails: 'Advanced climate modeling platform with AI prediction models, comprehensive risk assessment, and adaptation planning tools. Includes real-time monitoring, scenario modeling, and policy recommendations.',
     launchDate: '2024-02-01',
     customers: 420,
-    rating: 4.8;
+    rating: 4.8,
     reviews: 280
   }
 ];

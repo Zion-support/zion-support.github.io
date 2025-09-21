@@ -45,19 +45,21 @@ const mockMatches: MatchResultItem[] = [
       avatar: '/avatars/cloud-experts.jpg',
       verified: true
     },
-    createdAt: '2024-01-10T09:00:00Z';
+    createdAt: '2024-01-10T09:00:00Z',
     updatedAt: '2024-01-18T16:45:00Z'
   }
-],
+];
 const getCategoryIcon = (category: string) => {
   switch (category.toLowerCase()) {
     case 'ai tools':
-      return <BarChart3 className="h-6 w-6" />,
+      return <BarChart3 className="h-6 w-6" />;
     case 'cloud services':
-      return <Monitor className="h-6 w-6" />
+      return <Monitor className="h-6 w-6" />;
     case 'security':
-      return <BriefcaseIcon className="h-6 w-6" />
-    default: return <User className="h-6 w-6" />}
+      return <BriefcaseIcon className="h-6 w-6" />;
+    default: 
+      return <User className="h-6 w-6" />;
+  }
 };
 export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
   const [isLoading, setIsLoading] = useState(false);
@@ -68,12 +70,13 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
     { value: 'ai', label: 'AI Tools', count: matches.filter(m => m.category === 'AI Tools').length },
     { value: 'cloud', label: 'Cloud Services', count: matches.filter(m => m.category === 'Cloud Services').length },
     { value: 'security', label: 'Security', count: matches.filter(m => m.category === 'Security').length }
-  ],
+  ];
   const filteredMatches = (tabValue: string) => {
-    if (tabValue === 'all') return matches,
+    if (tabValue === 'all') return matches;
     return matches.filter(match => 
       match.category.toLowerCase().includes(tabValue.toLowerCase())
-    );;
+    );
+  };
 
   return (
     <div className="space-y-6">
@@ -183,3 +186,4 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
       </Tabs>
     </div>
   );
+}

@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Globe } from 'lucide-react'
 
+interface CountryPricing {
+  country: string;
+  currency: string;
+  multiplier: number;
+  pricePerIncident: number;
 }
 
 interface CountrySelectorProps {
@@ -23,41 +28,6 @@ const onsiteServicePricing: CountryPricing[] = [
 
 export default function CountrySelector({ selectedCountry, onCountrySelect }: CountrySelectorProps) {
   const [topCountries] = useState(onsiteServicePricing.slice(0, 4));
-interface CountrySelectorProps {
-  selectedCountry: CountryPricing | null,
-  onCountrySelect: (country: CountryPricing) => void
-}
-
-interface CountryPricing {
-  name: string;
-  code: string;
-  multiplier: number;
-  country: string;
-  pricePerIncident: number;
-}
-
-export default function CountrySelector({ selectedCountry, onCountrySelect }: CountrySelectorProps) {
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
-  
-  // Set top/popular countries
-  useEffect(() => {
-    const popularCountries = [
-      { name: 'United States', code: 'US', country: 'United States', multiplier: 1.0, pricePerIncident: 150.00 },
-      { name: 'United Kingdom', code: 'GB', country: 'United Kingdom', multiplier: 1.2, pricePerIncident: 180.00 },
-      { name: 'Canada', code: 'CA', country: 'Canada', multiplier: 1.1, pricePerIncident: 165.00 },
-      { name: 'Australia', code: 'AU', country: 'Australia', multiplier: 1.3, pricePerIncident: 195.00 },
-      { name: 'Germany', code: 'DE', country: 'Germany', multiplier: 1.2, pricePerIncident: 180.00 },
-    ];
-    setTopCountries(popularCountries);
-  }, []);
-
-  const onsiteServicePricing: CountryPricing[] = [
-    { name: 'United States', code: 'US', country: 'United States', multiplier: 1.0, pricePerIncident: 150.00 },
-    { name: 'United Kingdom', code: 'GB', country: 'United Kingdom', multiplier: 1.2, pricePerIncident: 180.00 },
-    { name: 'Canada', code: 'CA', country: 'Canada', multiplier: 1.1, pricePerIncident: 165.00 },
-    { name: 'Australia', code: 'AU', country: 'Australia', multiplier: 1.3, pricePerIncident: 195.00 },
-    { name: 'Germany', code: 'DE', country: 'Germany', multiplier: 1.2, pricePerIncident: 180.00 },
-  ];
 
   const handleCountryChange = (countryName: string) => {
     const country = onsiteServicePricing.find(c => c.country === countryName);
