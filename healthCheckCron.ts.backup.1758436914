@@ -15,15 +15,28 @@ const handler: Handler = async (event: HandlerEvent,
 
   const healthEndpoint = `${siteUrl}/api/health`;
   const startTime = Date.now();
+<<<<<<< HEAD:healthCheckCron.ts
+  try {
+    const response = await fetch(healthEndpoint);
+    const duration = Date.now() - startTime;
+=======
 
   try {
     const response = await fetch(healthEndpoint);
     const duration = Date.now() - startTime;
 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4:netlify/functions/healthCheckCron.ts
     if (response.status !== 200) {
       const responseText = await response.text();
       console.error(
         `Health check failed for ${healthEndpoint}: Status code ${response.status}. Response: ${responseText.substring(0, 100)}... (truncated)`,
+<<<<<<< HEAD:healthCheckCron.ts
+      ); else {
+      console.log(`Health check successful for ${healthEndpoint}: Status ${response.status}, Duration ${duration}ms`);
+
+    if (duration > 1000) {
+      console.warn(`Health check latency exceeded for ${healthEndpoint}: ${duration}ms`);
+=======
       );
     } else {
       console.log(`Health check successful for ${healthEndpoint}: Status ${response.status}, Duration ${duration}ms`);
@@ -32,16 +45,26 @@ const handler: Handler = async (event: HandlerEvent,
     if (duration > 1000) {
       console.warn(`Health check latency exceeded for ${healthEndpoint}: ${duration}ms`);
     }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4:netlify/functions/healthCheckCron.ts
   } catch (error) {
     const duration = Date.now() - startTime;
     console.error(
+<<<<<<< HEAD:healthCheckCron.ts
+      `Error during health check for ${healthEndpoint}: ${error instanceof Error ? error.message : String(error)}. Duration: ${duration}ms. Stack: ${error instanceof Error ? error.stack?.substring(0, 100) : String(error)}...(truncated)`;
+    );
+=======
       `Error during health check for ${healthEndpoint}: ${error instanceof Error ? error.message : String(error)}. Duration: ${duration}ms. Stack: ${error instanceof Error ? error.stack?.substring(0, 100) : String(error)}...(truncated)`,
     );
   }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4:netlify/functions/healthCheckCron.ts
 
   return {
     statusCode: 200, // The function itself completed
   };
 };
 
+<<<<<<< HEAD:healthCheckCron.ts
 export { handler };
+=======
+export { handler };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4:netlify/functions/healthCheckCron.ts

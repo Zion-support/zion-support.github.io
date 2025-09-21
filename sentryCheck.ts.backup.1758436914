@@ -4,8 +4,12 @@ export const handler = async () => {
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Sentry DSN not configured' })
+<<<<<<< HEAD:sentryCheck.ts
+    }}
+=======
     };
   }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4:netlify/functions/sentryCheck.ts
 
   return {
     statusCode: 200,

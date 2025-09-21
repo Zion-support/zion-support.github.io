@@ -1,13 +1,8 @@
-import { measureLatency, Endpoint, EndpointTestResult } from './latencyTester';
-import { checkAndAlert, sendHealthSummary } from './alerter';
+import { testEndpointLatency, EndpointTestResult } from './latencyTester';
+import logger from './logger';
+import { triggerAlerts } from './alerter'; // Added this import
 import * as fs from 'fs';
 import * as path from 'path';
-
-// Stub logger
-const logger = {
-  error: (message: string, error?: any) => console.error(message, error),
-  info: (message: string) => console.log(message),
-};
 
 // Define the structure of the configuration file
 interface MonitoringConfig {
@@ -18,129 +13,92 @@ interface MonitoringConfig {
     baseURLKey: string;
     defaultBaseURL: string;
     path: string;
-    method: string;
-    headers?: Record<string, string>;
+    serviceName: string;
+    method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'OPTIONS';
     body?: any;
+    headers?: Record<string, string>;
   }>;
+}
+
+interface Endpoint {
+  name: string;
+  baseURL: string;
+  path: string;
+  serviceName: string;
+  method?: string;
+  body?: any;
+  headers?: Record<string, string>;
 }
 
 // Function to read and parse the configuration file
 function loadConfig(): MonitoringConfig {
-  const configPath = path.join(__dirname, '../../monitoring-config.json');
+  const configPath = path.join(__dirname, '../../monitoring-config.json'); // Adjust path as necessary
   try {
     const configFile = fs.readFileSync(configPath, 'utf-8');
     return JSON.parse(configFile) as MonitoringConfig;
   } catch (error) {
-    logger.error('Error reading or parsing monitoring-config.json: ' + error);
-    // Return default configuration if file doesn't exist or is invalid
+    logger.error('Error reading or parsing monitoring-config.json:', error);
+    // Return a default or minimal configuration to prevent crashing
     return {
-      alertThresholdMs: 1000,
-      consecutiveChecksLimit: 3,
-      endpoints: [
-        {
-          name: 'API Health Check',
-          baseURLKey: 'API_BASE_URL',
-          defaultBaseURL: 'http://localhost:3000',
-          path: '/api/health',
-          method: 'GET'
-        }
-      ]
+      alertThresholdMs: 1000, // Default threshold
+      consecutiveChecksLimit: 3, // Default limit
+      endpoints: [], // No endpoints if config fails
     };
   }
 }
 
-// Function to convert config endpoints to Endpoint objects
-function convertToEndpoints(config: MonitoringConfig): Endpoint[] {
-  return config.endpoints.map(endpoint => ({
-    name: endpoint.name,
-    url: `${process.env[endpoint.baseURLKey] || endpoint.defaultBaseURL}${endpoint.path}`,
-    method: endpoint.method as 'GET' | 'POST' | 'PUT' | 'DELETE',
-    headers: endpoint.headers || {},
-    body: endpoint.body
+const config = loadConfig();
+
+export async function runMonitoring() {
+  logger.info('Starting API latency monitoring run...');
+
+  const resolvedEndpoints: Endpoint[] = config.endpoints.map(e => ({
+    name: e.name,
+    baseURL: process.env[e.baseURLKey] || e.defaultBaseURL,
+    path: e.path,
+    serviceName: e.serviceName,
+    method: e.method,
+    body: e.body,
+    headers: e.headers
   }));
-}
 
-// Main monitoring function
-export async function runMonitoring(): Promise<void> {
-  const config = loadConfig();
-  const endpoints = convertToEndpoints(config);
-  const consecutiveFailures = new Map<string, number>();
-  
-  logger.info(`Starting monitoring for ${endpoints.length} endpoints`);
-  
+  // Test each endpoint
   const results: EndpointTestResult[] = [];
-  
-  for (const endpoint of endpoints) {
-    try {
-      const result = await measureLatency(endpoint);
-      results.push(result);
-      
-      // Check and alert if necessary
-      await checkAndAlert(endpoint.url, result, consecutiveFailures);
-      
-      logger.info(`Endpoint ${endpoint.name}: ${result.responseTime}ms (${result.statusCode || 'N/A'})`);
-    } catch (error) {
-      logger.error(`Error testing endpoint ${endpoint.name}:`, error);
-      
-      // Create a failed result for alerting
-      const failedResult: EndpointTestResult = {
-        responseTime: 0,
-        statusCode: null,
-        success: false,
-        error: error instanceof Error ? error.message : 'Unknown error'
-      };
-      
-      await checkAndAlert(endpoint.url, failedResult, consecutiveFailures);
-    }
-  }
-  
-  // Calculate summary statistics
-  const healthyResults = results.filter(r => r.success && r.responseTime <= config.alertThresholdMs);
-  const unhealthyResults = results.filter(r => !r.success || r.responseTime > config.alertThresholdMs);
-  const averageResponseTime = results.length > 0 
-    ? results.reduce((sum, r) => sum + r.responseTime, 0) / results.length 
-    : 0;
-  
-  const summary = {
-    totalEndpoints: endpoints.length,
-    healthyEndpoints: healthyResults.length,
-    unhealthyEndpoints: unhealthyResults.length,
-    averageResponseTime
-  };
-  
-  // Send health summary
-  await sendHealthSummary(summary);
-  
-  logger.info(`Monitoring complete. Healthy: ${summary.healthyEndpoints}/${summary.totalEndpoints}, Avg Response Time: ${summary.averageResponseTime.toFixed(2)}ms`);
-}
-
-// Function to run monitoring continuously
-export async function startContinuousMonitoring(intervalMs: number = 60000): Promise<void> {
-  logger.info(`Starting continuous monitoring with ${intervalMs}ms interval`);
-  
-  // Run immediately
-  await runMonitoring();
-  
-  // Then run at intervals
-  setInterval(async () => {
-    try {
-      await runMonitoring();
-    } catch (error) {
-      logger.error('Error in continuous monitoring:', error);
-    }
-  }, intervalMs);
-}
-
-// CLI execution
-if (require.main === module) {
-  const interval = process.env.MONITORING_INTERVAL_MS ? parseInt(process.env.MONITORING_INTERVAL_MS) : 60000;
-  
-  if (process.env.CONTINUOUS_MONITORING === 'true') {
-    startContinuousMonitoring(interval);
-  } else {
-    runMonitoring().catch(error => {
-      logger.error('Monitoring failed:', error);
-      process.exit(1);
+  for (const endpoint of resolvedEndpoints) {
+    const url = `${endpoint.baseURL}${endpoint.path}`;
+    const result = await testEndpointLatency(url, endpoint.method || 'GET');
+    results.push({
+      ...result,
+      serviceName: endpoint.serviceName
     });
   }
+
+  // Process alerts
+  for (const result of results) {
+    // No 'await' here if we want alerts to be non-blocking for the overall monitoring cycle.
+    // However, for logging clarity and ensuring restart attempts are logged within the same run,
+    // 'await' might be preferred. Let's use await.
+    await triggerAlerts(result); // Simplified call to triggerAlerts
+  }
+
+  const sortedResults = results.sort((a, b) => (b.latencyMs || 0) - (a.latencyMs || 0));
+  const slowestResponses = sortedResults.slice(0, 5);
+
+  if (slowestResponses.length > 0) {
+    logger.info('Top 5 slowest responses:', { slowestResponses });
+  } else {
+    logger.info('No responses measured or all responses were errors before latency could be determined.');
+  }
+
+  results.forEach(result => {
+    if (result.error) {
+      logger.error('Endpoint test failed:', result);
+    } else {
+      // logger.debug('Endpoint test succeeded:', result);
+    }
+  });
+
+  logger.info('API latency monitoring run finished.');
 }
+
+// Removed runMonitoring().catch(...) and process.exit(1) from here

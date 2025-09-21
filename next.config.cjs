@@ -4,6 +4,11 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
 
+  // Path aliases
+  async rewrites() {
+    return [];
+  },
+
   // Performance optimizations
   compress: true,
   poweredByHeader: false,

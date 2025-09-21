@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import PerformanceMonitor from '@/components/PerformanceMonitor'
+import { PerformanceMonitor } from '@/components/PerformanceMonitor'
 import Analytics from '@/components/Analytics'
 import SEOOptimizer from '@/components/SEOOptimizer'
 import { Button } from '@/components/ui/button'
@@ -24,10 +24,10 @@ const Header = () => (
     <div className="max-w-7xl mx-auto flex items-center justify-between">
       <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
       <nav className="hidden md:flex space-x-6">
-        <Link href="/" className="text-gray-600 hover:text-gray-900">Home</Link>
-        <Link href="/about" className="text-gray-600 hover:text-gray-900">About</Link>
-        <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
-        <Link href="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
+        <Link href="/"><a className="text-gray-600 hover:text-gray-900">Home</a></Link>
+        <Link href="/about"><a className="text-gray-600 hover:text-gray-900">About</a></Link>
+        <Link href="/services"><a className="text-gray-600 hover:text-gray-900">Services</a></Link>
+        <Link href="/contact"><a className="text-gray-600 hover:text-gray-900">Contact</a></Link>
       </nav>
     
       <RealTimePerformanceMonitor />

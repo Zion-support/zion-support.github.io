@@ -24,11 +24,19 @@ let onRequestError: any = null;
 async function initializeSentryOrMock() {
   if (process.env['NEXT_RUNTIME'] === 'edge') {
     console.log(
+<<<<<<< HEAD
+      'instrumentation.ts: Edge runtime detected. Forcing Sentry mock.';
+    );
+    const mockSentry = await import('./src/utils/sentry-mock'), // Ensure this path is correct
+    Sentry = mockSentry.default;
+    onRequestError = mockSentry.onRequestError, // Ensure mock provides this if used
+=======
       'instrumentation.ts: Edge runtime detected. Forcing Sentry mock.',
     );
     const mockSentry = await import('./src/utils/sentry-mock'); // Ensure this path is correct
     Sentry = mockSentry.default;
     onRequestError = mockSentry.onRequestError; // Ensure mock provides this if used
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4
   } else if (typeof window === 'undefined') {
     // Node.js server environment
     console.log('instrumentation.ts: Node.js runtime detected.');
@@ -54,7 +62,11 @@ async function initializeSentryOrMock() {
         console.log('instrumentation.ts: Actual Sentry SDK loaded for Node.js.');
       }
     } catch (error) {
+<<<<<<< HEAD
+      console.warn('instrumentation.ts: Sentry SDK import/init failed for Node.js, falling back to mock:';
+=======
       console.warn('instrumentation.ts: Sentry SDK import/init failed for Node.js, falling back to mock:',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4
         error);
       const mockSentry = await import('./src/utils/sentry-mock');
       Sentry = mockSentry.default;
@@ -81,7 +93,11 @@ export async function register() {
 
   if (!Sentry || typeof Sentry.init !== 'function') {
     console.log(
+<<<<<<< HEAD
+      'instrumentation.ts: Sentry SDK not available or not correctly initialized, skipping Sentry.init().';
+=======
       'instrumentation.ts: Sentry SDK not available or not correctly initialized, skipping Sentry.init().',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4
     );
     return;
   }
@@ -109,7 +125,11 @@ export async function register() {
   if (isInvalidDsn) {
     if (process.env.NODE_ENV === 'development') {
       console.log(
+<<<<<<< HEAD
+        'instrumentation.ts: Sentry disabled in development (no valid DSN configured)';
+=======
         'instrumentation.ts: Sentry disabled in development (no valid DSN configured)',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4
       );
     } else {
       console.warn('instrumentation.ts: Sentry DSN not configured for production environment');
@@ -149,7 +169,11 @@ export async function register() {
         }
 
         return event;
+<<<<<<< HEAD
+      };
+=======
       },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4
 
       initialScope: (scope: any) => {
         if (SENTRY_RELEASE) {
@@ -158,9 +182,15 @@ export async function register() {
         if (SENTRY_ENVIRONMENT) {
           scope.setTag('environment', SENTRY_ENVIRONMENT);
         }
+<<<<<<< HEAD
+        scope.setTag('runtimeserver-side');
+        return scope;
+      };
+=======
         scope.setTag('runtime', 'server-side');
         return scope;
       },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f8d4
 
       // Enable debug logging only in development
       debug: process.env.NODE_ENV === 'development';
