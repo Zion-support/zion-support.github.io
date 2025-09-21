@@ -6,6 +6,7 @@ if (typeof globalThis === 'undefined') {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   output: 'export',
@@ -17,6 +18,7 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
     domains: ["localhost"],
+    formats: ['image/webp', 'image/avif'],
   },
   
   // TypeScript configuration
@@ -33,6 +35,12 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
+  
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   
   generateBuildId: async () => {

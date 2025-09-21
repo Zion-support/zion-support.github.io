@@ -1,4 +1,5 @@
 import React from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -18,63 +19,68 @@ class ErrorBoundary extends React.Component {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // In production, you might want to send this to an error reporting service
-    // Example: Sentry.captureException(error, { extra: errorInfo });
+    // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
+
+  handleRefresh = () => {
+    window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
 
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-900 via-purple-900 to-red-900 text-white">
-          <div className="max-w-md mx-auto text-center p-8">
-            <div className="mb-6">
-              <svg
-                className="w-16 h-16 mx-auto text-red-400 mb-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
-                />
-              </svg>
-              <h1 className="text-2xl font-bold mb-2">Oops! Something went wrong</h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified.
-              </p>
-            </div>
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+            <div className="text-6xl mb-4">⚠️</div>
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
+            </p>
             
-            <div className="space-y-4">
+            <div className="space-y-3">
               <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                onClick={this.handleRefresh}
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
               >
-                Refresh Page
+                <RefreshCw className="w-4 h-4" />
+                <span>Try Again</span>
               </button>
               
               <button
-                onClick={() => window.location.href = '/'}
-                className="w-full bg-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors duration-300"
+                onClick={this.handleGoHome}
+                className="w-full border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
               >
-                Go Home
+                <Home className="w-4 h-4" />
+                <span>Go Home</span>
               </button>
             </div>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-8 text-left">
-                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white">
-                  Error Details (Development Only)
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white transition-colors">
+                  Error Details (Development)
                 </summary>
-                <pre className="mt-2 text-xs bg-black/50 p-4 rounded overflow-auto max-h-40">
-                  {this.state.error && this.state.error.toString()}
-                  {this.state.errorInfo.componentStack}
-                </pre>
+                <div className="mt-2 p-3 bg-black/50 rounded text-xs text-red-400 font-mono overflow-auto max-h-32">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.toString()}
+                  </div>
+                  <div>
+                    <strong>Stack:</strong>
+                    <pre className="whitespace-pre-wrap mt-1">
+                      {this.state.errorInfo.componentStack}
+                    </pre>
+                  </div>
+                </div>
               </details>
             )}
           </div>
