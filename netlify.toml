@@ -1,28 +1,65 @@
 [build]
-  # Use custom build script to handle TypeScript configuration issues
-  command = "bash scripts/netlify-build.sh"
+  command = "npm install --ignore-scripts --legacy-peer-deps && npm install --save-dev @types/react @types/react-dom @types/node typescript@4.9.5 --legacy-peer-deps --ignore-scripts && npm run build && npx next export"
   publish = "out"
-  # Explicitly specify this is a Next.js static site
-  base = "."
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
 
 [build.environment]
   NODE_VERSION = "22"
-  NODE_OPTIONS = "--max-old-space-size=8192 --openssl-legacy-provider"
-  NETLIFY_USE_NPM = "true"
-  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "false"
-  CANONICAL_URL = "https://ziontechgroup.com"
-  # Force npm usage and disable pnpm detection
-  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
-  NETLIFY_USE_PNPM = "false"
+  NPM_FLAGS = "--legacy-peer-deps"
 
+# Performance optimizations
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Image optimization
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
-# Next.js routing - remove the catch-all redirect that conflicts with Next.js
-# [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 200
+# Cache optimization
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Redirects for better SEO
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/index"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [functions]
   node_bundler = "esbuild" 
