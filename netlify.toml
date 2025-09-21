@@ -1,13 +1,26 @@
 [build]
-  command = "npm ci --legacy-peer-deps && npm run build"
-  publish = ".next"
+  # Use custom build script to handle TypeScript configuration issues
+  command = "bash scripts/netlify-build.sh"
+  publish = "out"
+  # Explicitly specify this is a Next.js static site
+  base = "."
 
 [build.environment]
-  NODE_VERSION = "18"
-  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=8192 --openssl-legacy-provider"
+  NETLIFY_USE_NPM = "true"
+  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "false"
+  CANONICAL_URL = "https://ziontechgroup.com"
+  # Force npm usage and disable pnpm detection
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NETLIFY_USE_PNPM = "false"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Note: Headers are now handled by the generated _headers file in the out directory
+# This ensures compatibility with Next.js static export and avoids conflicts
 
-[[plugins]]
-  package = "netlify-plugin-cloudinary" 
+# Next.js static export configuration for Netlify
+
+# Note: Redirects are now handled by the generated _redirects file in the out directory
+# This ensures compatibility with Next.js static export and avoids conflicts
+
+ # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v2) 
