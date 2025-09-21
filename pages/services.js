@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
+import ServiceModal from '../components/ServiceModal';
 
 export default function ServicesPage() {
   const [selectedService, setSelectedService] = useState(null);
@@ -148,6 +150,14 @@ export default function ServicesPage() {
 
   return (
     <div>
+      <Head>
+        <title>Technology Services - AI, IT & Micro SaaS | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive technology services including AI & Machine Learning, Enterprise IT Solutions, Micro SaaS Development, and Technology Consulting. Get started today!" />
+        <meta name="keywords" content="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps, technology consulting" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
+      </Head>
 
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Navigation */}
@@ -208,20 +218,24 @@ export default function ServicesPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {serviceCategories.map((category) => (
-                <div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-4xl mb-4">{category.icon}</div>
-                  <h3 className="text-xl font-bold mb-3">{category.title}</h3>
-                  <p className="text-gray-300 mb-6">{category.description}</p>
+              {serviceCategories.map((category, categoryIndex) => (
+                <div 
+                  key={category.id} 
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-500 group"
+                  style={{ animationDelay: `${categoryIndex * 100}ms` }}
+                >
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{category.icon}</div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">{category.title}</h3>
+                  <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors duration-300">{category.description}</p>
                   <div className="space-y-3">
                     {category.services.map((service, index) => (
                       <button
                         key={index}
                         onClick={() => handleServiceClick(service)}
-                        className="block w-full text-left p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors border border-white/10"
+                        className="block w-full text-left p-3 bg-white/5 rounded-lg hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 border border-white/10 group-hover:border-white/20"
                       >
-                        <div className="font-semibold text-sm">{service.name}</div>
-                        <div className="text-xs text-gray-400 mt-1">{service.pricing}</div>
+                        <div className="font-semibold text-sm text-white group-hover:text-cyan-400 transition-colors duration-300">{service.name}</div>
+                        <div className="text-xs text-gray-400 mt-1 group-hover:text-cyan-300 transition-colors duration-300">{service.pricing}</div>
                       </button>
                     ))}
                   </div>
@@ -252,6 +266,12 @@ export default function ServicesPage() {
         </section>
       </main>
 
+      {/* Service Modal */}
+      <ServiceModal 
+        service={selectedService}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </div>
   );
 }
