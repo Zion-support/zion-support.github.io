@@ -12,7 +12,6 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-    tsconfigPath: false,
   },
   
   // Image optimization
