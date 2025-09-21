@@ -14,5 +14,37 @@
         "staticExport": true
       }
     }
+  },
+  {
+    "timestamp": "2025-09-21T13:44:47.251Z",
+    "buildTime": 0,
+    "bundleSize": "23M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 8,
+      "timestamp": "2025-09-21T13:44:47.258Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:46:38.787Z",
+    "buildTime": 0,
+    "bundleSize": "34M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 7,
+      "timestamp": "2025-09-21T13:46:38.793Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
   }
 ]
