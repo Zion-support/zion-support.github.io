@@ -23,6 +23,8 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
+  // Typed routes configuration removed - not supported in Next.js 14
+  
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
