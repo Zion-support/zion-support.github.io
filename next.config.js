@@ -12,6 +12,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   distDir: 'out',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   // Image optimization
   images: {
@@ -41,6 +42,10 @@ const nextConfig = {
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+  
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
   },
   
   // Webpack configuration
