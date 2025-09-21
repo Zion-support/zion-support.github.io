@@ -3,8 +3,15 @@ import SEO from '../components/SEO';
 import Modal from '../components/Modal';
 import Link from 'next/link';
 
+interface Service {
+  name: string;
+  description: string;
+  features: string[];
+  pricing: string;
+}
+
 export default function ServicesPage() {
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const serviceCategories = [
