@@ -9,7 +9,7 @@ import { SEOHead } from '../components/ui/SEOHead';
 import { LazyImage } from '../components/ui/LazyImage';
 import { PerformanceMonitor } from '../components/PerformanceMonitor';
 import { Analytics } from '../components/Analytics';
-import { ThemeToggle } from '../components/ThemeToggle';
+import { ThemeToggle } from '../components/ThemeToggle.jsx';
 import { ScrollToTop } from '../components/ScrollToTop';
 
 export default function Home() {
