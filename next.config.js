@@ -1,41 +1,32 @@
-// Polyfill for globalThis
-if (typeof globalThis === 'undefined') {
-  global.globalThis = global;
-}
+const path = require('path');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  output: 'export',
   trailingSlash: true,
   distDir: 'out',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
+  
+  // Static export configuration
+  output: 'export',
   
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
-    domains: ["localhost"],
-    formats: ['image/webp', 'image/avif'],
   },
-  
-  // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
   },
-  
-  // ESLint configuration
   eslint: {
     ignoreDuringBuilds: true,
   },
   
-  // Experimental features for performance
+  // Experimental features
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    esmExternals: false,
   },
   
   // Compiler optimizations
@@ -43,12 +34,13 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
+  // Generate unique build ID for better caching
   generateBuildId: async () => {
     return 'build-' + Date.now()
   },
   
   // Webpack configuration
-  webpack: (config, { dev, isServer }) => {
+  webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -56,44 +48,14 @@ const nextConfig = {
         fs: false,
         net: false,
         tls: false,
-        crypto: false,
+        path: false,
+        crypto: require.resolve('crypto-browserify'),
+        stream: require.resolve('stream-browserify'),
+        util: false,
+        buffer: require.resolve('buffer'),
+        process: require.resolve('process/browser'),
       };
     }
-    
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, '.'),
-    };
-    
-    // Exclude problematic directories from compilation
-    config.module.rules.push({
-      test: /\.ts$/,
-      include: require('path').resolve(__dirname, 'contracts'),
-      use: 'ignore-loader'
-    });
-    
-    if (!dev && !isServer) {
-      // Optimize bundle size
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[/]node_modules[/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    
-    // Add globalThis polyfill
-    config.plugins = config.plugins || [];
-    config.plugins.push(
-      new (require('webpack')).DefinePlugin({
-        'globalThis': 'global',
-      })
-    );
     
     return config;
   },

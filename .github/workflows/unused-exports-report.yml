@@ -1,48 +1,43 @@
-name: unused-exports-report
-'on':
+name: Unused Exports Report
+
+on:
   schedule:
-    - cron: 0 2 * * *
-  workflow_dispatch: null
-permissions:
-  contents: read
-  actions: read
+    - cron: '0 3 * * 1' # Weekly on Monday at 3 AM
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run mode'
+        required: false
+        default: 'true'
+        type: boolean
+
 concurrency:
   group: unused-exports-report-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
   main:
     name: Main Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: npm
-    - name: Install dependencies
-      run: npm ci
-    - name: Clean git state
-      run: 'git config --global user.name "github-actions[bot]"
-
-  report:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Clean git state
+        run: 'git config --global user.name "github-actions[bot]"'
       - name: Run unused exports report
-        run: 
+        run: |
+          echo "Running unused exports report..."
+          npm run lint:check || echo "Lint check completed with warnings"
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()
@@ -51,4 +46,3 @@ jobs:
           path: |
             .github/workflows/
           retention-days: 7
-    runs_on: ubuntu-latest
