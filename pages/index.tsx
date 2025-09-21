@@ -162,25 +162,28 @@ export default function Home() {
                 </AnimatedCard>
               ))}
             </div>
+          </section>
+
+        {/* Contact CTA */}
+        <section className="text-center mt-16">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/30">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-gray-300 mb-6">Get in touch with our experts for a free consultation</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <GradientButton href="mailto:kleber@ziontechgroup.com" size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
+                Email Us
+              </GradientButton>
+              <GradientButton variant="outline" size="lg" href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709">
+                Visit Our Office
+              </GradientButton>
+            </div>
           </div>
         </section>
 
-          {/* Contact CTA */}
-          <section className="text-center mt-16">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/30">
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-              <p className="text-gray-300 mb-6">Get in touch with our experts for a free consultation</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <GradientButton href="mailto:kleber@ziontechgroup.com" size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
-                  Email Us
-                </GradientButton>
-                <GradientButton variant="outline" size="lg" href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709">
-                  Visit Our Office
-                </GradientButton>
-              </div>
-            </div>
-            
-            <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        {/* Footer */}
+        <footer className="bg-black/50 py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
               <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
             </div>
           </div>
