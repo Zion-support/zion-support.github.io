@@ -1,4 +1,4 @@
-import Link from 'next/link',
+import Link from 'next/link';
 export const metadata = {
 	title: 'AI 2026: Enterprise Agent Risk Scorecards',
 	description: 'A practical blueprint to define, measure, and govern risk for autonomous agents using scorecards and policy-as-code.'

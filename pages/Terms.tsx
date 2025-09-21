@@ -23,6 +23,7 @@ const Terms = () => {
         </div>
       </div>
     </div>
-  );;
+  );
+}
 
 export default Terms;

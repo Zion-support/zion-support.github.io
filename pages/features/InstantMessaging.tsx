@@ -1,7 +1,7 @@
-import React from "react",
-import { Header } from "../components/Header",
-import { SEO } from "../components/SEO",
-import { GradientHeading } from "../components/GradientHeading",
+import React from "react";
+import { Header } from "../components/Header";
+import { SEO } from "../components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 export default function InstantMessaging() {
   return (
     <div className="min-h-screen bg-zion-blue">

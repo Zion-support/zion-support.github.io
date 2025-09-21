@@ -24,6 +24,7 @@ export default function CaseStudy() {
         </div>
       </div>
     );
+  }
 
   return (
     <>
