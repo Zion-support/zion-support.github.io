@@ -1,21 +1,5 @@
 [
   {
-    "timestamp": "2025-09-21T12:37:01.200Z",
-    "buildTime": 0,
-    "bundleSize": "27M",
-    "pageCount": 7,
-    "performance": {
-      "buildTime": 13,
-      "timestamp": "2025-09-21T12:37:01.211Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": true,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
     "timestamp": "2025-09-21T12:55:52.626Z",
     "buildTime": 0,
     "bundleSize": "27M",
@@ -151,6 +135,22 @@
     "performance": {
       "buildTime": 10,
       "timestamp": "2025-09-21T13:14:05.951Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:15:42.455Z",
+    "buildTime": 0,
+    "bundleSize": "23M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 8,
+      "timestamp": "2025-09-21T13:15:42.461Z",
       "optimizations": {
         "cssOptimization": false,
         "compression": false,
