@@ -2,18 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  distDir: '.next',
   trailingSlash: true,
-  
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  swcMinify: true,
-  
-  // Image optimization
   images: {
-    unoptimized: true, // Required for static export
-    domains: ["localhost"],
+    unoptimized: true,
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
   },
@@ -21,18 +12,11 @@ const nextConfig = {
   // Disable ESLint and TypeScript checking during build to avoid parsing issues
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-    tsconfigPath: './tsconfig.json',
-  },
+  },origin/main
   experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
     esmExternals: false,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
   },
-  
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
@@ -67,6 +51,31 @@ const nextConfig = {
     });
     
     return config;
+  },
+  headers: async () => {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+    ];
   },
 };
 
