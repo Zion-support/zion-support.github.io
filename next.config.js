@@ -23,6 +23,7 @@ const nextConfig = {
   // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
+    tsconfigPath: './tsconfig.json',
   },
   
   // ESLint configuration
@@ -32,7 +33,7 @@ const nextConfig = {
   
   // Experimental features for performance
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
