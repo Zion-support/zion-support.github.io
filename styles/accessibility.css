@@ -1,7 +1,101 @@
+/* Accessibility Enhancements */
 
-/* Accessibility improvements */
+/* High Contrast Mode */
+.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #000000;
+  --border-color: #ffffff;
+  --accent-color: #ffff00;
+}
 
-/* Skip links */
+.high-contrast * {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.high-contrast button,
+.high-contrast a {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+.high-contrast button:hover,
+.high-contrast a:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Font Size Adjustments */
+.font-small {
+  font-size: 0.875rem;
+}
+
+.font-small h1 { font-size: 1.5rem; }
+.font-small h2 { font-size: 1.25rem; }
+.font-small h3 { font-size: 1.125rem; }
+.font-small h4 { font-size: 1rem; }
+.font-small h5 { font-size: 0.875rem; }
+.font-small h6 { font-size: 0.75rem; }
+
+.font-normal {
+  font-size: 1rem;
+}
+
+.font-normal h1 { font-size: 2.25rem; }
+.font-normal h2 { font-size: 1.875rem; }
+.font-normal h3 { font-size: 1.5rem; }
+.font-normal h4 { font-size: 1.25rem; }
+.font-normal h5 { font-size: 1.125rem; }
+.font-normal h6 { font-size: 1rem; }
+
+.font-large {
+  font-size: 1.125rem;
+}
+
+.font-large h1 { font-size: 2.5rem; }
+.font-large h2 { font-size: 2rem; }
+.font-large h3 { font-size: 1.75rem; }
+.font-large h4 { font-size: 1.5rem; }
+.font-large h5 { font-size: 1.25rem; }
+.font-large h6 { font-size: 1.125rem; }
+
+.font-extra-large {
+  font-size: 1.25rem;
+}
+
+.font-extra-large h1 { font-size: 3rem; }
+.font-extra-large h2 { font-size: 2.5rem; }
+.font-extra-large h3 { font-size: 2rem; }
+.font-extra-large h4 { font-size: 1.75rem; }
+.font-extra-large h5 { font-size: 1.5rem; }
+.font-extra-large h6 { font-size: 1.25rem; }
+
+/* Reduced Motion */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus Indicators */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.high-contrast *:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+/* Skip Link */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -11,15 +105,14 @@
   padding: 8px;
   text-decoration: none;
   z-index: 1000;
-  transform: translateY(-100%);
-  transition: transform 0.3s;
+  border-radius: 4px;
 }
 
 .skip-link:focus {
-  transform: translateY(0%);
+  top: 6px;
 }
 
-/* Screen reader only content */
+/* Screen Reader Only */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -32,37 +125,55 @@
   border: 0;
 }
 
-/* Focus indicators */
-*:focus {
-  outline: 2px solid #005fcc;
-  outline-offset: 2px;
+/* High contrast focus for interactive elements */
+.high-contrast button:focus,
+.high-contrast a:focus,
+.high-contrast input:focus,
+.high-contrast textarea:focus,
+.high-contrast select:focus {
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: 3px !important;
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  * {
-    border-color: ButtonText;
-  }
+/* Ensure sufficient color contrast */
+.high-contrast .text-gray-500,
+.high-contrast .text-gray-400,
+.high-contrast .text-gray-300 {
+  color: var(--text-primary) !important;
 }
 
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+/* High contrast for borders and dividers */
+.high-contrast .border-gray-200,
+.high-contrast .border-gray-300,
+.high-contrast .border-gray-400 {
+  border-color: var(--border-color) !important;
 }
 
-/* Color contrast improvements */
-.text-low-contrast {
-  color: #666;
+/* High contrast for backgrounds */
+.high-contrast .bg-gray-50,
+.high-contrast .bg-gray-100,
+.high-contrast .bg-gray-200 {
+  background-color: var(--bg-primary) !important;
 }
 
-@media (prefers-contrast: high) {
-  .text-low-contrast {
-    color: #000;
-  }
+.high-contrast .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Ensure text is always readable */
+.high-contrast p,
+.high-contrast span,
+.high-contrast div {
+  color: var(--text-primary) !important;
+}
+
+/* High contrast for links */
+.high-contrast a {
+  color: var(--accent-color) !important;
+  text-decoration: underline !important;
+}
+
+.high-contrast a:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--text-secondary) !important;
 }
