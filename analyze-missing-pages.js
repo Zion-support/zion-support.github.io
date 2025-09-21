@@ -4,8 +4,8 @@ import { execSync } from "child_process";
 const sitemapContent = fs.readFileSync("sitemap.xml", "utf8");
 // Extract URLs from sitemap,
 const urlMatches = sitemapContent.match(
-  /<loc>https:\/\/ziontechgroup\.com\/([^<]+)<\/loc>/g
-);
+  /<loc>https: \/\/ziontechgroup\.com\/([^<]+)<\/loc>/g
+),
 const sitemapUrls = urlMatches
   ? urlMatches.map((match) => {
       const url = match
@@ -21,7 +21,7 @@ const actualPages = execSync(
 )
   .trim()
   .split("\n")
-  .filter((page) => page !== "_app");
+  .filter((page) => page !== "_app"),
 console.log("=== SITEMAP ANALYSIS ===");
 console.log("Total URLs in sitemap:", sitemapUrls.length);
 console.log("Total actual pages:", actualPages.length);
@@ -54,8 +54,7 @@ actualPages.forEach((page) => {
           brokenLinks.push({
             page,
 brokenLink: `/${link}`
-            fullLink,
-});
+            fullLink});
         }
       });
     }
@@ -66,8 +65,7 @@ brokenLink: `/${link}`
 if (brokenLinks.length > 0) {
   console.log("Found broken internal links: ");,
   brokenLinks.forEach((link) => {
-    console.log(`- In ${link.page}.tsx: ${link.brokenLink} (${link.fullLink})`);
-  });
+    console.log(`- In ${link.page}.tsx: ${link.brokenLink} (${link.fullLink})`)});
 } else {
   console.log("No broken internal links found");
 }

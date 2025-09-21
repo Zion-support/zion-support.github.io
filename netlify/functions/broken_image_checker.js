@@ -6,13 +6,10 @@ function extractImages(html, origin) {,
     const src = m[1],
     if (!src) continue,
     if (src.startsWith('http')) {,
-      if (src.startsWith(origin)) imgs.push(src),
-    } else if (src.startsWith('/')) {,
-      imgs.push(origin.replace(/\/$/, '') + src),
-    }
+      if (src.startsWith(origin)) imgs.push(src)} else if (src.startsWith('/')) {,
+      imgs.push(origin.replace(/\/$/, '') + src)}
   }
-  return Array.from(new Set(imgs)),
-}
+  return Array.from(new Set(imgs))}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -26,18 +23,15 @@ exports.handler = async function(event, context) {,
       try {,
         const res = await fetch(origin + route),
         const html = await res.text(),
-        for (const img of extractImages(html, origin)) images.add(img),
-      } catch {}
+        for (const img of extractImages(html, origin)) images.add(img)} catch {}
     }
 ,
     const results = [],
     for (const url of images) {,
       try {,
         const res = await fetch(url, { method: 'HEAD' }),
-        results.push({ url, status: res.status, ok: res.ok }),
-      } catch (e) {,
-        results.push({ url, status: 0, ok: false, error: String(e) }),
-      }
+        results.push({ url, status: res.status, ok: res.ok })} catch (e) {,
+        results.push({ url, status: 0, ok: false, error: String(e) })}
     }
 ,
     const payload = { origin, generatedAt: new Date().toISOString(), results },
@@ -51,8 +45,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const b64 = Buffer.from(JSON.stringify(payload, null, 2), 'utf8').toString('base64'),
@@ -63,8 +56,6 @@ exports.handler = async function(event, context) {,
     }),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

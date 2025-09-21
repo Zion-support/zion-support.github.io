@@ -1,21 +1,32 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: ["localhost"],
+  reactStrictMode: false,
+  output: 'export',
+  trailingSlash: true,
+  
+  // Disable ESLint and TypeScript checking during build to avoid parsing issues
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
+  swcMinify: false,
+  experimental: {
+    esmExternals: false,
   },
-  swcMinify: true,
-  compiler: {
-    removeConsole: false,
-  },
+  
+  // Webpack configuration
   webpack: (config, { isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibility
+    // Add path alias resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, '.'),
+    };
+    
+    // Minimal webpack configuration
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -23,16 +34,12 @@ const nextConfig = {
       };
     }
     
-    // Disable PostCSS processing temporarily to fix build issues
-    config.module.rules.forEach((rule) => {
-      if (rule.test && rule.test.toString().includes('css')) {
-        rule.use = rule.use.filter((use) => {
-          return !use.loader || !use.loader.includes('postcss-loader');
-        });
-      }
-    });
-    
     return config;
+  },
+  
+  // Image optimization
+  images: {
+    unoptimized: true, // Required for static export
   },
 };
 

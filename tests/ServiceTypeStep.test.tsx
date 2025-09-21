@@ -12,8 +12,7 @@ const baseData: QuoteFormData = {
   endDate: undefined,
   timeline: 'flexible',
   budget: { amount: 0, type: 'fixed' },
-  contactInfo: { name: '', email: '', phone: '', company: '' },
-};
+  contactInfo: { name: '', email: '', phone: '', company: '' }};
 
 it('shows results when searching services', async () => {
   const data = { ...baseData };
@@ -22,8 +21,7 @@ it('shows results when searching services', async () => {
   global.fetch = jest.fn().mockResolvedValue({
     ok: true,
     json: async () => [
-      { id: 'service-3', title: 'IT Consulting', category: 'service' },
-    ],
+      { id: 'service-3', title: 'IT Consulting', category: 'service' }];
   }) as any;
 
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
@@ -31,11 +29,9 @@ it('shows results when searching services', async () => {
   fireEvent.click(screen.getByText('Services'));
 
   const input = screen.getByPlaceholderText(/search service/i);
-  fireEvent.change(input, { target: { value: 'IT' } });
-
+  fireEvent.change(input, { target: { value: 'IT' } }),
   await waitFor(() => {
-    expect(screen.getAllByRole('button', { name: /request quote/i }).length).toBeGreaterThan(0);
-  });
+    expect(screen.getAllByRole('button', { name: /request quote/i }).length).toBeGreaterThan(0)});
 });
 
 it('renders results from api', async () => {
@@ -47,8 +43,7 @@ it('renders results from api', async () => {
     json: async () => [
       { id: 's1', title: 'A', category: 'service' },
       { id: 's2', title: 'B', category: 'service' },
-      { id: 's3', title: 'C', category: 'service' },
-    ],
+      { id: 's3', title: 'C', category: 'service' }];
   }) as any;
 
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
@@ -56,7 +51,6 @@ it('renders results from api', async () => {
   fireEvent.click(screen.getByText('Services'));
 
   await waitFor(() => {
-    expect(screen.getAllByRole('button', { name: /request quote/i })).toHaveLength(3);
-  });
+    expect(screen.getAllByRole('button', { name: /request quote/i })).toHaveLength(3)});
 });
 

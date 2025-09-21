@@ -47,12 +47,11 @@ async function fixConsoleErrors() {
         
         if (modified) {
           fs.writeFileSync(file, newContent);
-          console.log(`✅ Fixed console errors in: ${file}`);
+          console.log(`✅ Fixed console errors in: ${file}`),
           fixedFiles++;
         }
       } catch (error) {
-        console.log(`⚠️  Could not process file: ${file}`);
-      }
+        console.log(`⚠️  Could not process file: ${file}`)}
     }
     
     console.log(`🎉 Console error fixer completed! Fixed ${fixedFiles} files`);

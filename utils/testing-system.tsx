@@ -1,7 +1,5 @@
-import React from 'react';
-import '@testing - library / jest - dom';
-
-
+import React from 'react',
+import '@testing - library / jest - dom',
 export class TestingSystem {
   static async testUserInteraction(element: HTMLElementaction: 'click' | 'type' | 'hover') {
     switch (action) {
@@ -11,7 +9,6 @@ export class TestingSystem {
       case 'type': /  / Handle typing;
         break;
       case 'hover': /  / Handle hover;
-        break;
-    }
+        break, }
   }
 }

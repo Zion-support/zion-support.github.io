@@ -10,8 +10,7 @@ module.exports = {
     await new Promise((resolve, reject) => {
       const child = spawn('node', ['automation/deployment-monitor.cjs'], {
         env: { ...process.env, MONITOR_MINUTES: monitorMinutes, CHECK_INTERVAL_SECONDS: intervalSeconds },
-        stdio: 'inherit',
-      });
+        stdio: 'inherit'});
       child.on('exit', (code) => {
         if (code === 0) resolve(); else reject(new Error('monitor exited with code ' + code));
       });
@@ -19,6 +18,4 @@ module.exports = {
   },
   inputs: {
     monitorMinutes: { type: 'number', default: 20 },
-    intervalSeconds: { type: 'number', default: 60 },
-  },
-};
+    intervalSeconds: { type: 'number', default: 60 }}};

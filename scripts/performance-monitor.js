@@ -22,12 +22,10 @@ class PerformanceMonitor {,
       bundleSize: 0,
       chunkCount: 0,
       warnings: 0,
-      errors: 0},
-  }
+      errors: 0}}
 ,
   log(message, color = 'reset') {,
-    console.log(`${colors[color]}${message}${colors.reset}`),
-  }
+    console.log(`${colors[color]}${message}${colors.reset}`)}
 ,
   async monitorBuild() {,
     this.log('🚀 Starting performance monitoring...cyan'),
@@ -37,13 +35,10 @@ class PerformanceMonitor {,
         this.log('📊 Analyzing bundle sizes...blue'),
         this.analyzeBundleSizes(),
         this.log('📈 Generating performance report...blue'),
-        this.generatePerformanceReport(),
-      } else {,
-        this.log('❌ No dist directory found. Run build first.red'),
-      }
+        this.generatePerformanceReport()} else {,
+        this.log('❌ No dist directory found. Run build first.red')}
     } catch (error) {,
-      this.log(`❌ Error during monitoring: ${error.message}`, 'red'),
-    }
+      this.log(`❌ Error during monitoring: ${error.message}`, 'red')}
   }
 ,
   analyzeBundleSizes() {,
@@ -57,21 +52,17 @@ class PerformanceMonitor {,
     // Performance recommendations,
     this.log(`\n💡 Performance Recommendations:`, 'bold'),
     if (bundleInfo.largestChunk.size > 500000) { // 500KB,
-      this.log(`   ⚠️  Largest chunk is ${this.formatBytes(bundleInfo.largestChunk.size)}. Consider code splitting.`, 'yellow'),
-    }
+      this.log(`   ⚠️  Largest chunk is ${this.formatBytes(bundleInfo.largestChunk.size)}. Consider code splitting.`, 'yellow')}
     if (bundleInfo.totalSize > 2000000) { // 2MB,
-      this.log(`   ⚠️  Total bundle size is ${this.formatBytes(bundleInfo.totalSize)}. Consider optimization.`, 'yellow'),
-    }
+      this.log(`   ⚠️  Total bundle size is ${this.formatBytes(bundleInfo.totalSize)}. Consider optimization.`, 'yellow')}
     if (bundleInfo.chunkCount < 5) {,
-      this.log(`   💡 Consider more granular code splitting for better caching.`, 'blue'),
-    }
+      this.log(`   💡 Consider more granular code splitting for better caching.`, 'blue')}
   }
 ,
   getBundleInfo() {,
     const distPath = 'dist/assets',
     if (!existsSync(distPath)) {,
-      return { totalSize: 0, chunkCount: 0, largestChunk: { name: 'none', size: 0 } },
-    }
+      return { totalSize: 0, chunkCount: 0, largestChunk: { name: 'none', size: 0 } }}
 ,
     const files = execSync(`find ${distPath} -name "*.js" -o -name "*.css"`, { encoding: 'utf8' }),
       .trim(),
@@ -84,18 +75,15 @@ class PerformanceMonitor {,
       const size = parseInt(stats.trim()),
       totalSize += size,
       if (size > largestChunk.size) {,
-        largestChunk = { name: path.basename(file), size },
-      }
+        largestChunk = { name: path.basename(file), size }}
 ,
-      return { name: path.basename(file), size },
-    }),
+      return { name: path.basename(file), size }}),
     return {,
       totalSize,
       chunkCount: files.length,
       largestChunk,
       files: fileSizes.sort((a, b) => b.size - a.size)
-    },
-  }
+    }}
 ,
   generatePerformanceReport() {,
     const report = {,
@@ -106,42 +94,36 @@ class PerformanceMonitor {,
       recommendations: this.getRecommendations()},
     // Save to file,
     writeFileSync('performance-report.json', JSON.stringify(report, null, 2)),
-    this.log('📄 Performance report saved to performance-report.jsongreen'),
-  }
+    this.log('📄 Performance report saved to performance-report.jsongreen')}
 ,
   getRecommendations() {,
     const recommendations = [],
     if (this.metrics.bundleSize > 2000000) {,
       recommendations.push('Consider implementing lazy loading for routes'),
       recommendations.push('Review and remove unused dependencies'),
-      recommendations.push('Implement tree shaking for better bundle optimization'),
-    }
+      recommendations.push('Implement tree shaking for better bundle optimization')}
 ,
     if (this.metrics.chunkCount < 5) {,
       recommendations.push('Implement more granular code splitting'),
-      recommendations.push('Consider dynamic imports for large components'),
-    }
+      recommendations.push('Consider dynamic imports for large components')}
 ,
     recommendations.push('Enable gzip/brotli compression on server'),
     recommendations.push('Implement service worker for caching'),
     recommendations.push('Use CDN for static assets'),
-    return recommendations,
-  }
+    return recommendations}
 ,
   formatBytes(bytes) {,
     if (bytes === 0) return '0 Bytes',
     const k = 1024,
     const sizes = ['BytesKBMBGB'],
     const i = Math.floor(Math.log(bytes) / Math.log(k)),
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i],
-  }
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
 ,
   async run() {,
     await this.monitorBuild(),
-    this.log('\n✅ Performance monitoring completed!green'),
-  }
+    this.log('\n✅ Performance monitoring completed!green')}
 }
 ,
 // Run the monitor,
 const monitor = new PerformanceMonitor(),
-monitor.run().catch(console.error),]]]]]]]
+monitor.run().catch(console.error)]]]]]]]

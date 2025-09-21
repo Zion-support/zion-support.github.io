@@ -19,22 +19,17 @@ self.addEventListener('install', (event) => {
           STATIC_FILES.map(url => 
             cache.add(url).catch(error => {
               console.warn(`Dev SW: Failed to cache ${url}:`, error),
-              return null,
-            })
+              return null})
           )
-        ),
-      })
+        )})
       .then((results) => {
         const successful = results.filter(r => r.status === 'fulfilled').length,
         const failed = results.filter(r => r.status === 'rejected').length,
         console.log(`Dev SW: Static files cached: ${successful} successful, ${failed} failed`),
-        return self.skipWaiting(),
-      })
+        return self.skipWaiting()})
       .catch((error) => {
-        console.error('Dev SW: Error in install:', error),
-      })
-  ),
-}),
+        console.error('Dev SW: Error in install:', error)})
+  )}),
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
@@ -45,17 +40,14 @@ self.addEventListener('activate', (event) => {
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
               console.log('Dev SW: Deleting old cache:', cacheName),
-              return caches.delete(cacheName),
-            }
+              return caches.delete(cacheName)}
           })
-        ),
-      })
+        )})
       .then(() => {
         console.log('Dev SW: Activated'),
         return self.clients.claim()
       })
-  ),
-}),
+  )}),
 
 // Fetch event - network first for development
 self.addEventListener('fetch', (event) => {
@@ -64,8 +56,7 @@ self.addEventListener('fetch', (event) => {
 
   // Skip non-GET requests
   if (request.method !== 'GET') {
-    return,
-  }
+    return}
 
   // Handle external requests (fonts, etc.)
   if (url.origin !== self.location.origin) {
@@ -73,11 +64,9 @@ self.addEventListener('fetch', (event) => {
       fetch(request).catch((error) => {
         console.warn('Dev SW: External request failed:', url.href, error),
         // Return empty response for failed external requests
-        return new Response('', { status: 204 }),
-      })
+        return new Response('', { status: 204 })})
     ),
-    return,
-  }
+    return}
 
   // For development, always try network first, then cache
   event.respondWith(
@@ -87,24 +76,16 @@ self.addEventListener('fetch', (event) => {
         if (response.ok) {
           const responseClone = response.clone(),
           caches.open(CACHE_NAME).then((cache) => {
-            cache.put(request, responseClone),
-          }),
-        }
-        return response,
-      })
+            cache.put(request, responseClone)})}
+        return response})
       .catch((error) => {
         console.log('Dev SW: Network failed, trying cache:', url.href),
         // Try to serve from cache if network fails
         return caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
-            return cachedResponse,
-          }
+            return cachedResponse}
           // Return offline page for navigation requests
           if (request.destination === 'document') {
-            return caches.match('/offline.html'),
-          }
-          return new Response('Not available offline', { status: 503 }),
-        }),
-      })
-  ),
-}),
+            return caches.match('/offline.html')}
+          return new Response('Not available offline', { status: 503 })})})
+  )}),

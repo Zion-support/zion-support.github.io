@@ -26,8 +26,7 @@ vi.mock('@prisma/client', async () => {
       ANALYZED: 'ANALYZED',
       FIX_SUGGESTED: 'FIX_SUGGESTED'
     }
-  },
-}),
+  }}),
 
 // Mock child_process.exec
 const mockExec = vi.fn(),
@@ -36,8 +35,7 @@ vi.mock('child_process', async () => {
   return {
     ...(actual as any),
     exec: mockExec
-  },
-}),
+  }}),
 
 // Mock Sentry's captureException
 const mockCaptureException = vi.fn(),
@@ -71,11 +69,9 @@ const createMockReqRes = (method = 'POST', body = {}) => {
     end: vi.fn(function (this: any, message?: string) {
       if (message) this.jsonData = message,
       this.ended = true,
-      return this,
-    })
+      return this})
   },
-  return { req, res },
-},
+  return { req, res }},
 
 
 describe('/api/log-error Endpoint', () => {
@@ -85,11 +81,9 @@ describe('/api/log-error Endpoint', () => {
       const apiModule = await import('../../pages/api/log-error.ts'),
       logErrorApiHandler = apiModule.default,
       if (typeof logErrorApiHandler !== 'function') {
-        throw new Error("Failed to load API handler. Ensure pages/api/log-error.ts exports its handler function as default."),
-      }
+        throw new Error("Failed to load API handler. Ensure pages/api/log-error.ts exports its handler function as default.")}
     } catch (e) {
-      console.error("Error loading API handler for tests:", e),
-    }
+      console.error("Error loading API handler for tests:", e)}
   }),
 
   beforeEach(() => {
@@ -97,24 +91,21 @@ describe('/api/log-error Endpoint', () => {
     mockPrismaErrorAnalysisSuggestion.findUnique.mockResolvedValue(null),
     mockPrismaErrorAnalysisSuggestion.create.mockImplementation((data: any) => Promise.resolve({ id: 'new-db-id-123', ...data.data })),
     mockPrismaErrorAnalysisSuggestion.update.mockImplementation((data: any) => Promise.resolve({ id: data.where.id || 'updated-db-id-456', ...data.data })),
-    mockExec.mockImplementation((command: any, callback: any) => callback(null, '{"success":true,"suggestion":"Mocked Codex suggestion","model":"gpt-4o-mock"}', '')),
-  }),
+    mockExec.mockImplementation((command: any, callback: any) => callback(null, '{"success":true,"suggestion":"Mocked Codex suggestion","model":"gpt-4o-mock"}', ''))}),
 
   test('should return 405 if not a POST request', async () => {
     if (!logErrorApiHandler) return,
     const { req, res } = createMockReqRes('GET'),
     await logErrorApiHandler(req, res),
     expect(res.status).toHaveBeenCalledWith(405),
-    expect(res.end).toHaveBeenCalledWith('Method Not Allowed'),
-  }),
+    expect(res.end).toHaveBeenCalledWith('Method Not Allowed')}),
 
   test('should return 400 if message or stack is missing', async () => {
     if (!logErrorApiHandler) return,
     const { req, res } = createMockReqRes('POST', { message: 'Test error' }),
     await logErrorApiHandler(req, res),
     expect(res.status).toHaveBeenCalledWith(400),
-    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ error: expect.stringContaining('message and stack are required') })),
-  }),
+    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ error: expect.stringContaining('message and stack are required') }))}),
 
   const validErrorPayload = {
     message: 'Test error message',
@@ -150,8 +141,7 @@ describe('/api/log-error Endpoint', () => {
     expect(mockPrismaErrorAnalysisSuggestion.update).toHaveBeenCalledWith(expect.objectContaining({
       where: { id: createdRecord.id },
       data: expect.objectContaining({ status: 'FIX_SUGGESTED', codex_suggestion: 'Mocked Codex suggestion' })
-    })),
-  }),
+    }))}),
 
   test('New Error - Codex Failure (Script Error): should update with ANALYZED status and analysis_error', async () => {
     if (!logErrorApiHandler) return,
@@ -167,8 +157,7 @@ describe('/api/log-error Endpoint', () => {
     expect(mockPrismaErrorAnalysisSuggestion.update).toHaveBeenCalledWith(expect.objectContaining({
       where: { id: createdRecord.id },
       data: expect.objectContaining({ status: 'ANALYZED', analysis_error: scriptErrorOutput.error })
-    })),
-  }),
+    }))}),
 
   test('New Error - Codex Failure (Exec Error): should update with ANALYZED status and exec error message', async () => {
     if (!logErrorApiHandler) return,
@@ -184,8 +173,7 @@ describe('/api/log-error Endpoint', () => {
     expect(mockPrismaErrorAnalysisSuggestion.update).toHaveBeenCalledWith(expect.objectContaining({
       where: { id: createdRecord.id },
       data: expect.objectContaining({ status: 'ANALYZED', analysis_error: expect.stringContaining('Exec error: Command failed') })
-    })),
-  }),
+    }))}),
 
   test('Recurring Error - Codex Success: should update count, call exec, then update with suggestion', async () => {
     if (!logErrorApiHandler) return,
@@ -209,8 +197,7 @@ describe('/api/log-error Endpoint', () => {
     expect(mockPrismaErrorAnalysisSuggestion.update).toHaveBeenNthCalledWith(2, expect.objectContaining({
       where: { id: existingRecord.id },
       data: expect.objectContaining({ status: 'FIX_SUGGESTED', codex_suggestion: 'Mocked Codex suggestion' })
-    })),
-  }),
+    }))}),
 
   test('Recurring Error - Already Has Suggestion: (Informational) current logic re-analyzes', () => {
     console.log("INFO: Current logic in api/log-error.js re-analyzes errors even if they already have a suggestion. This is a potential area for future optimization."),
@@ -230,8 +217,7 @@ describe('/api/log-error Endpoint', () => {
           sourceContext: 'pages/api/log-error'
         })
       })
-    ),
-  }),
+    )}),
 
   test('Database Error (Initial): should return 500 if Prisma throws during initial find/create/update', async () => {
     if (!logErrorApiHandler) return,
@@ -239,8 +225,7 @@ describe('/api/log-error Endpoint', () => {
     mockPrismaErrorAnalysisSuggestion.findUnique.mockRejectedValue(new Error('DB connection error')),
     await logErrorApiHandler(req, res),
     expect(res.status).toHaveBeenCalledWith(500),
-    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ error: 'Server error during error processing.' })),
-  }),
+    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ error: 'Server error during error processing.' }))}),
 
   test('Database Error (Callback): should log error if Prisma throws during exec callback update (API already returned 202)', async () => {
     if (!logErrorApiHandler) return,
@@ -261,6 +246,4 @@ describe('/api/log-error Endpoint', () => {
       expect.stringContaining(`Failed to update DB record ${createdRecord.id} after Codex script execution:`),
       expect.any(Error)
     ),
-    consoleErrorSpy.mockRestore(),
-  }),
-}),
+    consoleErrorSpy.mockRestore()})}),

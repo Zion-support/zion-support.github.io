@@ -1,5 +1,5 @@
 // Test for cart and checkout fixes - Issue #7
-import { describe, test, expect, vi } from 'vitest',
+import { describe, test, expect, vi } from 'vitest';
 
 describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
   test('cart page is accessible without authentication', () => {
@@ -9,9 +9,8 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
       isAuthenticated: false,
       isLoading: false
     },
-
     // Cart should be accessible even when not authenticated
-    expect(mockUseAuth.isAuthenticated).toBe(false),
+    expect(mockUseAuth.isAuthenticated).toBe(false);
     // Cart page should still render (no redirect to login required)
     expect(true).toBe(true), // Placeholder for actual cart rendering test
   }),
@@ -24,9 +23,7 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
       price: 85000,
       quantity: 1
     },
-
-    const mockDispatch = vi.fn(),
-
+    const mockDispatch = vi.fn();
     // Simulate add to cart action
     const addToCartAction = {
       type: 'ADD_ITEM',
@@ -37,10 +34,8 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
         quantity: mockCartItem.quantity
       }
     },
-
-    mockDispatch(addToCartAction),
-
-    expect(mockDispatch).toHaveBeenCalledWith(addToCartAction),
+    mockDispatch(addToCartAction);
+    expect(mockDispatch).toHaveBeenCalledWith(addToCartAction);
   }),
 
   test('guest checkout modal opens for unauthenticated users', () => {
@@ -48,11 +43,9 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
       user: null,
       isAuthenticated: false
     },
-
     // When user is not authenticated and clicks checkout
-    const shouldOpenGuestModal = !mockAuth.isAuthenticated,
-    
-    expect(shouldOpenGuestModal).toBe(true),
+    const shouldOpenGuestModal = !mockAuth.isAuthenticated;
+    expect(shouldOpenGuestModal).toBe(true);
   }),
 
   test('authenticated users can proceed directly to checkout', () => {
@@ -63,12 +56,11 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
       },
       isAuthenticated: true
     },
-
     // When user is authenticated, they can checkout directly
     const shouldOpenGuestModal = !mockAuth.isAuthenticated,
     
-    expect(shouldOpenGuestModal).toBe(false),
-    expect(mockAuth.user.email).toBe('test@example.com'),
+    expect(shouldOpenGuestModal).toBe(false);
+    expect(mockAuth.user.email).toBe('test@example.com');
   }),
 
   test('cart persists items in localStorage', () => {
@@ -80,7 +72,6 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
         quantity: 1
       }
     ],
-
     // Simulate localStorage persistence
     const mockLocalStorage = {
       getItem: vi.fn(() => JSON.stringify(mockCartItems)),
@@ -88,13 +79,12 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
       removeItem: vi.fn(),
       clear: vi.fn() // Added clear for completeness
     },
-
-    const stored = mockLocalStorage.getItem('zion_cart'),
+    const stored = mockLocalStorage.getItem('zion_cart');
     const parsedItems = JSON.parse(stored!), // Added non-null assertion
 
-    expect(parsedItems).toEqual(mockCartItems),
-    expect(parsedItems[0].name).toBe('NVIDIA A100 GPU Server'),
-    expect(parsedItems[0].price).toBe(85000),
+    expect(parsedItems).toEqual(mockCartItems);
+    expect(parsedItems[0].name).toBe('NVIDIA A100 GPU Server');
+    expect(parsedItems[0].price).toBe(85000);
   }),
 
   test('cart calculates totals correctly', () => {
@@ -102,7 +92,6 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
       { id: '1', name: 'Server 1', price: 1000, quantity: 2 },
       { id: '2', name: 'Server 2', price: 500, quantity: 1 }
     ],
-
     const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0),
     const tax = subtotal * 0.08, // 8% tax
     const shipping = subtotal > 100 ? 0 : 15, // Free shipping over $100
@@ -119,7 +108,6 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
       { id: '1', name: 'Server 1', price: 1000, quantity: 2 },
       { id: '2', name: 'Server 2', price: 500, quantity: 3 }
     ],
-
     const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0),
     
     expect(totalCount).toBe(5), // 2 + 3
@@ -129,22 +117,18 @@ describe('Cart and Checkout Functionality - Issue #7 Fix', () => {
     const mockCartItems = [
       { id: '1', name: 'Test Equipment', price: 1000, quantity: 1 }
     ],
-
     const mockCheckoutData = {
       customer_email: 'test@example.com',
       cartItems: mockCartItems,
       shipping_address: 'Test Address'
     },
-
     // Mock successful API response
     const mockApiResponse = {
       data: {
         sessionId: 'cs_test_12345'
       }
     },
-
     // Simulate successful checkout session creation
-    expect(mockApiResponse.data.sessionId).toBe('cs_test_12345'),
-    expect(mockCheckoutData.cartItems).toEqual(mockCartItems),
-  }),
-}), 
+    expect(mockApiResponse.data.sessionId).toBe('cs_test_12345');
+    expect(mockCheckoutData.cartItems).toEqual(mockCartItems);
+  })}), 

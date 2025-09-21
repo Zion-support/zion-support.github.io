@@ -1,9 +1,9 @@
-import React from 'react',
-import { render, screen, fireEvent, waitFor } from '@testing-library/react',
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom',
-import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
-import { supabase } from '@/integrations/supabase/client', // To mock its functions
-import { vi, describe, test, expect, beforeEach, type MockInstance } from 'vitest',
+import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
+import { supabase } from '@/integrations/supabase/client'; // To mock its functions
+import { vi, describe, test, expect, beforeEach, type MockInstance } from 'vitest';
 
 // Mock Supabase client
 vi.mock('@/integrations/supabase/client', () => ({
@@ -13,7 +13,6 @@ vi.mock('@/integrations/supabase/client', () => ({
     }
   }
 })),
-
 // Mock sonner/toast
 vi.mock('sonner', () => ({
   toast: {
@@ -22,7 +21,6 @@ vi.mock('sonner', () => ({
     info: vi.fn()
   }
 })),
-
 describe('WhitepaperSectionEditor', () => {
   const mockOnContentChange = vi.fn(),
   const defaultProps = {
@@ -30,24 +28,22 @@ describe('WhitepaperSectionEditor', () => {
     content: 'This is the initial content.',
     onContentChange: mockOnContentChange
   },
-
   beforeEach(() => {
     // Clear mocks before each test
-    vi.clearAllMocks(),
-    (supabase.functions.invoke as MockInstance<any,any>).mockReset(),
-  }),
+    vi.clearAllMocks();
+    (supabase.functions.invoke as MockInstance<any,any>).mockReset()}),
 
   test('renders with title and content', () => {
-    render(<WhitepaperSectionEditor {...defaultProps} />),
+    render(<WhitepaperSectionEditor {...defaultProps} />);
     expect(screen.getByText('Executive Summary')).toBeInTheDocument(),
-    expect(screen.getByRole('textbox')).toHaveValue('This is the initial content.'),
+    expect(screen.getByRole('textbox')).toHaveValue('This is the initial content.');
   }),
 
   test('calls onContentChange when textarea value changes', () => {
-    render(<WhitepaperSectionEditor {...defaultProps} />),
-    const textarea = screen.getByRole('textbox'),
+    render(<WhitepaperSectionEditor {...defaultProps} />);
+    const textarea = screen.getByRole('textbox');
     fireEvent.change(textarea, { target: { value: 'New content' } }),
-    expect(mockOnContentChange).toHaveBeenCalledWith('New content'),
+    expect(mockOnContentChange).toHaveBeenCalledWith('New content');
   }),
 
   test('"Get AI Suggestions" button click calls Supabase function and displays suggestions', async () => {
@@ -56,11 +52,9 @@ describe('WhitepaperSectionEditor', () => {
       data: { suggestions: mockSuggestions },
       error: null
     }),
-
-    render(<WhitepaperSectionEditor {...defaultProps} />),
+    render(<WhitepaperSectionEditor {...defaultProps} />);
     const suggestionsButton = screen.getByRole('button', { name: /Get AI Suggestions/i }),
-    fireEvent.click(suggestionsButton),
-
+    fireEvent.click(suggestionsButton);
     expect(suggestionsButton).toBeDisabled(),
     expect(screen.getByText(/Getting Suggestions.../i)).toBeInTheDocument(),
 
@@ -70,15 +64,12 @@ describe('WhitepaperSectionEditor', () => {
           sectionTitle: defaultProps.title,
           sectionContent: defaultProps.content
         }
-      }),
-    }),
-
+      })});
     await waitFor(() => {
         expect(screen.getByText('Suggestions: ')).toBeInTheDocument()
     }),
-    expect(screen.getByText(mockSuggestions)).toBeInTheDocument(),
-    expect(suggestionsButton).not.toBeDisabled(),
-  }),
+    expect(screen.getByText(mockSuggestions)).toBeInTheDocument();
+    expect(suggestionsButton).not.toBeDisabled()}),
 
   test('handles error when fetching AI suggestions', async () => {
     const errorMessage = 'Failed to fetch suggestions from Supabase.',
@@ -86,54 +77,42 @@ describe('WhitepaperSectionEditor', () => {
       data: null,
       error: { message: errorMessage }
     }),
-
-    render(<WhitepaperSectionEditor {...defaultProps} />),
+    render(<WhitepaperSectionEditor {...defaultProps} />);
     const suggestionsButton = screen.getByRole('button', { name: /Get AI Suggestions/i }),
-    fireEvent.click(suggestionsButton),
-
+    fireEvent.click(suggestionsButton);
     await waitFor(() => {
-      expect(supabase.functions.invoke).toHaveBeenCalledTimes(1),
+      expect(supabase.functions.invoke).toHaveBeenCalledTimes(1);
     }),
 
     await waitFor(() => {
-        expect(screen.getByText(`Error: Supabase function error: ${errorMessage}`)).toBeInTheDocument(),
-    }),
-    expect(suggestionsButton).not.toBeDisabled(),
-  }),
+        expect(screen.getByText(`Error: Supabase function error: ${errorMessage}`)).toBeInTheDocument()});
+    expect(suggestionsButton).not.toBeDisabled()}),
 
    test('handles error when suggestions data is invalid', async () => {
     (supabase.functions.invoke as MockInstance<any,any>).mockResolvedValueOnce({
       data: { message: "This is not a suggestion" },
       error: null
     }),
-
-    render(<WhitepaperSectionEditor {...defaultProps} />),
+    render(<WhitepaperSectionEditor {...defaultProps} />);
     const suggestionsButton = screen.getByRole('button', { name: /Get AI Suggestions/i }),
-    fireEvent.click(suggestionsButton),
-
+    fireEvent.click(suggestionsButton);
     await waitFor(() => {
-      expect(supabase.functions.invoke).toHaveBeenCalledTimes(1),
+      expect(supabase.functions.invoke).toHaveBeenCalledTimes(1);
     }),
 
     await waitFor(() => {
         expect(screen.getByText('Error: No suggestions received from the function.')).toBeInTheDocument()
-    }),
-  }),
-
+    })});
   test('hides suggestions when "Hide Suggestions" button is clicked', async () => {
     const mockSuggestions = "Some suggestions.",
     (supabase.functions.invoke as MockInstance<any,any>).mockResolvedValueOnce({
       data: { suggestions: mockSuggestions },
       error: null
     }),
-
-    render(<WhitepaperSectionEditor {...defaultProps} />),
+    render(<WhitepaperSectionEditor {...defaultProps} />);
     fireEvent.click(screen.getByRole('button', { name: /Get AI Suggestions/i })),
-
     await waitFor(() => screen.getByText('Suggestions: ')),
-    expect(screen.getByText(mockSuggestions)).toBeVisible(),
-
+    expect(screen.getByText(mockSuggestions)).toBeVisible();
     fireEvent.click(screen.getByRole('button', { name: /Hide Suggestions/i })),
-    expect(screen.queryByText(mockSuggestions)).not.toBeVisible(),
-  }),
-}),
+    expect(screen.queryByText(mockSuggestions)).not.toBeVisible();
+  })}),

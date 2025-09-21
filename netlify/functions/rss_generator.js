@@ -1,13 +1,11 @@
 function rssTemplate(items) {,
   const now = new Date().toUTCString(),
   const entries = items.map(i => `    <item>\n      <title><![CDATA[${i.title}]]></title>\n      <link>${i.link}</link>\n      <pubDate>${i.date}</pubDate>\n      <guid>${i.link}</guid>\n      <description><![CDATA[${i.description||''}]]></description>\n    </item>`).join('\n'),
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n  <channel>\n    <title>Zion Blog</title>\n    <link>${items[0]?.site || ''}</link>\n    <description>Latest posts from Zion</description>\n    <lastBuildDate>${now}</lastBuildDate>\n${entries}\n  </channel>\n</rss>\n`,
-}
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n  <channel>\n    <title>Zion Blog</title>\n    <link>${items[0]?.site || ''}</link>\n    <description>Latest posts from Zion</description>\n    <lastBuildDate>${now}</lastBuildDate>\n${entries}\n  </channel>\n</rss>\n`}
 ,
 function extractTitle(content) {,
   const m = content.match(/<title>([^<]+)<\/title>/),
-  return m ? m[1] : 'Untitled',
-}
+  return m ? m[1] : 'Untitled'}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -16,8 +14,7 @@ exports.handler = async function(event, context) {,
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) }}
 ,
     // List blog TSX files,
     const resTree = await fetch(`https: //api.github.com/repos/${repo}/git/trees/${encodeURIComponent(branch)}?recursive=1`, {,
@@ -46,8 +43,7 @@ exports.handler = async function(event, context) {,
         title,
         link: origin + slug,
         date,
-        description: ''}),
-    }
+        description: ''})}
 ,
     items.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
     const xml = rssTemplate(items),
@@ -62,8 +58,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const resCommit = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`, {,
@@ -73,8 +68,6 @@ exports.handler = async function(event, context) {,
     }),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
-    return { statusCode: 200, body: JSON.stringify({ ok: true, updated: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, updated: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

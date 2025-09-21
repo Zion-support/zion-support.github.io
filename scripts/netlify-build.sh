@@ -5,9 +5,9 @@ set -e
 
 echo "Starting Netlify build process..."
 
-# Install dependencies with legacy peer deps
+# Install dependencies with legacy peer deps and ignore scripts
 echo "Installing dependencies..."
-npm ci --legacy-peer-deps
+npm install --legacy-peer-deps --ignore-scripts
 
 # Temporarily rename tsconfig.json to avoid TypeScript validation issues
 if [ -f "tsconfig.json" ]; then
@@ -15,13 +15,12 @@ if [ -f "tsconfig.json" ]; then
     mv tsconfig.json tsconfig.json.netlify-backup
 fi
 
-# Run the build with OpenSSL legacy provider (includes static export)
-echo "Running Next.js build with static export..."
-NODE_OPTIONS="--openssl-legacy-provider" npm run build
+# Run the build and export
+echo "Running Next.js build and export..."
+npm run export
 
-# Export is now handled by the build process with output: 'export'
-# Note: Static export is handled automatically by Next.js when output: 'export' is set in next.config.js
-echo "Static export completed during build process"32616daaeac3828e6fde88b4b76e
+# Static export completed
+echo "Static export completed successfully"
 # Restore tsconfig.json
 if [ -f "tsconfig.json.netlify-backup" ]; then
     echo "Restoring tsconfig.json..."
