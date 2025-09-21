@@ -8,13 +8,10 @@ import { ThemeToggle } from '../components/ThemeToggle';
 import { MobileNavigation } from '../components/MobileNavigation';
 import SearchModal from '../components/SearchModal';
 import SEO from '../components/SEO';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import FAQSection from '../components/FAQSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
-import { CookieConsent } from '../components/CookieConsent';
-import { NotificationSystem } from '../components/NotificationSystem';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -342,15 +339,6 @@ export default function Home() {
 
         {/* Search Modal */}
         <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-        
-        {/* Accessibility Enhancer */}
-        <AccessibilityEnhancer />
-        
-        {/* Cookie Consent */}
-        <CookieConsent />
-        
-        {/* Notification System */}
-        <NotificationSystem />
       </div>
     </ErrorBoundary>
   );
