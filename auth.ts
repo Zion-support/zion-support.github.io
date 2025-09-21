@@ -1,15 +1,29 @@
-import { GetServerSidePropsContext } from 'next';
-import { createServerClient } from '@supabase/ssr';
-import type { CookieOptions } from '@supabase/ssr';
-import type { NextApiRequest } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export function getRequestUserEmail(req: NextApiRequest): string | null {
-  const emailHeader = req.headers['x-user-email'],
-  if (Array.isArray(emailHeader)) return emailHeader[0] || null;
-  return (emailHeader as string) || null
-}
+export type CurrentUser = {
+  userId: string,
+  role: 'client' | 'talent' | 'admin'
+},
+export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
+  const headerUser = req.headers['x-user-id'],
+  const headerRole = req.headers['x-user-role'] as string | undefined;
+  const cookie = req.cookies || {},
+  const cookieUser = cookie['x-user-id'],
+  const cookieRole = cookie['x-user-role'];
+  const userId = (headerUser as string) || cookieUser;
+  const role = (headerRole as CurrentUser['role']) || (cookieRole as CurrentUser['role']);
+  if (!userId || !role) return null,
+  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null,
 
-export function isAdminEmail(email: string | null | undefined): boolean {
-  if (!email) return false,
-  const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
-  return admins.includes(email.toLowerCase())}
+  return { userId, role }}
+
+export function requireUser(
+  req: NextApiRequest,
+  res: NextApiResponse
+): CurrentUser | null {
+  const user = getCurrentUser(req);
+  if (!user) {
+    res.status(401).json({ error: 'Unauthorized' }),
+    return null;
+  }
+  return user}

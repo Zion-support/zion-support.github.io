@@ -1,2 +1,0 @@
-// Lint target file
-export {};

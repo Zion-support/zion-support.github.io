@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
@@ -9,22 +9,52 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
+    "incremental": true,
     "module": "esnext",
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "out/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "contracts/**/*",
+    "dao/**/*",
+    "automation/**/*",
+    "scripts/**/*",
+    "cypress/**/*",
+    "cypress.config.ts",
+    "deployment/**/*",
+    "deployments/**/*",
+    "data/**/*",
+    "ts-backup/**/*",
+    "jest.config.ts",
+    "jest.setup.ts",
+    "netlify/**/*",
+    "pages._quarantine/**/*",
+    "pages.bak/**/*",
+    "pages.old/**/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.ts.disabled",
+    "instrumentation.disabled.ts"
   ]
 }

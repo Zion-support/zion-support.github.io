@@ -1,35 +1,8 @@
 export type EnhancedRealMicroSaasService = {
 	id: string;
 	name: string;
-	tagline?: string;
-	price?: string;
-	period?: string;
-	description?: string;
-	features?: string[];
-	popular?: boolean;
-	icon?: string;
-	color?: string;
-	textColor?: string;
-	link?: string;
-	marketPosition?: string;
-	competitors?: string[];
-	targetAudience?: string;
-	useCases?: string[];
-	integrationOptions?: string[];
-	technicalRequirements?: string[];
-	onboardingProcess?: string[];
-	supportChannels?: string[];
-	slaDetails?: string[];
-	pricingTiers?: any[];
-	reviews?: number;
 	category?: string;
-	trialDays?: number;
-	setupTime?: string;
-	realService?: boolean;
-	technology?: string[];
-	integrations?: string[];
-	roi?: string;
-	[key: string]: any;
+	description?: string;
 };
 
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [];
