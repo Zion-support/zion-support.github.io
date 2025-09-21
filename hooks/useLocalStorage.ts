@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-// Empty module to satisfy TypeScript isolatedModules requirement
-export {};
-=======
 import { useState, useEffect } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T) => void] {
@@ -30,4 +26,5 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T)
 
   return [storedValue, setValue];
 }
->>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
+// useLocalStorage hook module
+export {};

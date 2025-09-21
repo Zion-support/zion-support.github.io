@@ -143,7 +143,7 @@ export class APIDocGeneratorService {
     config: DocumentationConfig
   ): Promise<APIDocumentation> {
     const documentation: APIDocumentation = {
-      id: `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      id: `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       name: this.extractProjectName(sourcePath),
       version: await this.extractVersion(sourcePath),
       description: await this.extractDescription(sourcePath),
@@ -196,8 +196,7 @@ export class APIDocGeneratorService {
     // Simulate code analysis based on file extensions
     const files = await this.scanDirectory(sourcePath);
     for (const file of files) {
-      const extension = file.split('.').pop()?.toLowerCase(),
-      
+      const extension = file.split('.').pop()?.toLowerCase();
       if (extension === 'js' || extension === 'ts') {
         languages.push('javascripttypescript');
         frameworks.push('expressfastify');
@@ -215,7 +214,7 @@ export class APIDocGeneratorService {
     const uniqueFrameworks = [...new Set(frameworks)],
 
     return {
-      endpoints,
+      endpoints;
       schemas: this.generateSchemas(endpoints),
       languages: uniqueLanguages,
       frameworks: uniqueFrameworks
@@ -492,7 +491,7 @@ export class APIDocGeneratorService {
             'Content-Type': 'application/jsonAuthorization': 'Bearer your-jwt-token'
           },
           body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : undefined
-        },
+        };
         response: {
           status: parseInt(endpoint.responses[0]?.code || '200'),
           headers: {
@@ -548,7 +547,7 @@ export class APIDocGeneratorService {
 
   private extractProjectName(sourcePath: string): string {
     // Extract project name from path
-    const parts = sourcePath.split('/'),
+    const parts = sourcePath.split('/');
     return parts[parts.length - 1] || 'API Documentation'
   }
 
@@ -601,4 +600,4 @@ export class APIDocGeneratorService {
     } as APIDocumentation}
 }
 
-export const apiDocGeneratorService = new APIDocGeneratorService(),
+export const apiDocGeneratorService = new APIDocGeneratorService();

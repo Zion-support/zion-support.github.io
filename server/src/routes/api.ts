@@ -33,7 +33,7 @@ router.post('/users', [,
   try {;
     const { name, email } = req.body,
     // Example user creation - replace with actual database operation,
-    const newUser = {,
+    const newUser = {;
       id: Date.now(),
       name;
       email,
@@ -51,7 +51,7 @@ router.get('/users/:id', async (req, res) => {,
   try {,
     const { id } = req.params,
     // Example user lookup - replace with actual database query,
-    const user = {,
+    const user = {;
       id: parseInt(id),
       name: 'John Doe',
       email: 'john@example.com',

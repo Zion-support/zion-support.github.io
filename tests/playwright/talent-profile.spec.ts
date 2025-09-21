@@ -10,7 +10,7 @@ test('talent profile name visible', async ({ page }) => {
           id: '123',
           full_name: 'Playwright Talent',
           bio: '',
-          skills: [],
+          skills: [];
           hourly_rate: 100
         }
       })

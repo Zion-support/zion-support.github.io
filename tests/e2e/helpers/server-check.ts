@@ -23,7 +23,7 @@ export async function getServerURL(): Promise<string | null> {
   return cachedURL}
 
 export async function skipIfNoServer(testInfo: any): Promise<string | null> {
-  const url = await getServerURL(),
+  const url = await getServerURL();
   if (!url) {
     testInfo.skip(`Server not running at ${baseURL} or ${fallbackURL}`);
   }

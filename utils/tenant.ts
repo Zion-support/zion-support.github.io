@@ -34,7 +34,7 @@ export async function fetchTenantBySubdomain(subdomain: string): Promise<Tenant 
       .from('tenants')
       .select('*')
       .eq('subdomain', subdomain)
-      .maybeSingle(),
+      .maybeSingle();
     if (error) {
       // fallback to file if supabase fails
       // eslint-disable-next-line no-console
@@ -46,7 +46,7 @@ export async function fetchTenantBySubdomain(subdomain: string): Promise<Tenant 
 }
 
 async function fetchTenantFromFile(subdomain: string): Promise<Tenant | null> {
-  const tenants = await import('../data/tenants.json').then((m) => m.default as Tenant[]),
+  const tenants = await import('../data/tenants.json').then((m) => m.default as Tenant[]);
   return tenants.find((t) => t.subdomain === subdomain) ?? null
 }
 

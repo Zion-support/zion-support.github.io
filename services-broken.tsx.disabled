@@ -7,7 +7,7 @@ import {,
 	Cloud,
 	Shield,
 	Code,
-export default function Services() {,
+export default function Services() {
 	const title = \"Services — Zion Tech Group\",
 	const description = \"AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.\",
 	return (
@@ -286,16 +286,24 @@ export default function Services() {,
 							</Link>,
 							<Link;
 								href=\"/\",
+<<<<<<< HEAD:services-broken.tsx
+								className=\"text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group\",
+								aria-label=\"Back to homepage\";
+							>;
+								Back to Home;
+								<span aria-hidden=\"true\" className=\"group-hover:translate-x-1 transition-transform inline-block\">→</span>
+=======
 								className=\"text-sm font-semibold leading-6 text-white hover: text-blue-100 transition-colors group\",
 								aria-label=\"Back to homepage\";
 							>,
 								Back to Home,
 								<span aria-hidden=\"true\" className=\"group-hover: translate-x-1 transition-transform inline-block\">→</span>
+>>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:services-broken.tsx.disabled
 							</Link>
 						</div>
 					</div>
 				</div>
-			</section>,
+			</section>;
 		</>
 	)}
 

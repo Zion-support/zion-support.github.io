@@ -1,6 +1,6 @@
 #!/usr/bin/env node,
-import fs from 'fs';
-import _path from 'path';
+import fs from 'fs',
+import _path from 'path',
 console.log('🔧 Fixing all syntax errors...');
 // Fix accessibility.tsx,
 const fixAccessibility = () => {
@@ -104,3 +104,4 @@ const main = () => {console.log('Starting comprehensive syntax fixes...');
   }
 }
 main();
+}

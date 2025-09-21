@@ -9,7 +9,7 @@ interface ErrorReport {,
   userAgent: string,
   url: string}
 export default function handler("req": NextApiRequest, "res": NextApiResponse) {,
-  if (req.method !== 'POST') {,
+  if (req.method !== 'POST') {;
     return res.status(405).json({ message: 'Method not allowed' })}
   try {,
     const "errorReport": ErrorReport = req.body;
@@ -29,4 +29,5 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
     console.error('Error processing error "report": ', error);
     res.status(500).json({ "message": 'Internal server error' })}
 }
-,
+;
+}

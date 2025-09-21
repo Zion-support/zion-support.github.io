@@ -594,8 +594,7 @@ export class NavigationGenerator {
 
   // Generate categories from services
   async generateCategories(): Promise<NavigationCategory[]> {
-    const categoryMap = new Map<string, NavigationItem[]>(),
-    
+    const categoryMap = new Map<string, NavigationItem[]>();
     // Group services by category
     this.services.forEach(service => {
       if (service.category) {
@@ -769,7 +768,7 @@ export class NavigationGenerator {
   generateSidebarNavigation(context: any): NavigationItem[] {
     switch (context.pageType) {
       case 'service':
-        return this.generateServiceSidebar(context.currentService),
+        return this.generateServiceSidebar(context.currentService);
       case 'category':
         return this.generateCategorySidebar(context.currentCategory);
       case 'dashboard':

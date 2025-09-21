@@ -1,8 +1,3 @@
-import { useState, useEffect } from 'react';
-
-export function useUnreadNotificationsCount() {
-  const [unreadCount, setUnreadCount] = useState(0);
-
   useEffect(() => {
     // Simulate fetching unread notifications count
     // In a real app, this would fetch from an API
@@ -22,3 +17,5 @@ export function useUnreadNotificationsCount() {
 
   return unreadCount;
 }
+// useUnreadNotificationsCount hook module
+export {};

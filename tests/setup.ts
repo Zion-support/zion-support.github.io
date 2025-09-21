@@ -27,8 +27,7 @@ afterEach(() => {
   vi.restoreAllMocks()}),
 
 // Clean up after the tests are finished.
-afterAll(() => server.close()),
-
+afterAll(() => server.close());
 // Common global mocks
 
 // Mock window.matchMedia
@@ -100,7 +99,7 @@ if (typeof window.Shoplocket === 'undefined') {
 vi.mock('@/utils/safeStorage', async (importOriginal) => {
   const actual = await importOriginal() as any, // Type assertion
   return {
-    ...actual,
+    ...actual;
     safeStorage: {
       getItem: vi.fn((key: string) => null), // Default to returning null
       setItem: vi.fn(),
@@ -120,13 +119,12 @@ vi.mock('@/integrations/supabase/client', () => ({
     auth: {
       onAuthStateChange: vi.fn(() => ({
         data: { subscription: { unsubscribe: vi.fn() } }
-      })),
+      }));
       // Add any other specific methods from supabase.auth if they get called
     };
     // Add other top-level Supabase client methods if they get called
   }
-})),
-
+}));
 // Mock Firebase/Firestore
 vi.mock('firebase/app', () => ({
   initializeApp: vi.fn()
@@ -144,7 +142,7 @@ vi.mock('firebase/firestore', () => {
         update: vi.fn(() => Promise.resolve()),
         delete: vi.fn(() => Promise.resolve()),
         onSnapshot: vi.fn(() => vi.fn()), // Returns an unsubscribe function
-      })),
+      }));
       getDocs: vi.fn(() => Promise.resolve({ docs: [] })),
       addDoc: vi.fn(() => Promise.resolve({ id: 'mockedDocId' })),
       onSnapshot: vi.fn(() => vi.fn()), // Returns an unsubscribe function
@@ -169,7 +167,7 @@ vi.mock('firebase/firestore', () => {
     getFirestore: vi.fn(() => ({
       collection: mockCollection,
       doc: mockDoc
-    })),
+    }));
     collection: mockCollection,
     doc: mockDoc,
     getDoc: vi.fn(() => Promise.resolve({ exists: () => false, data: () => undefined })),
@@ -177,10 +175,10 @@ vi.mock('firebase/firestore', () => {
     updateDoc: vi.fn(() => Promise.resolve()),
     deleteDoc: vi.fn(() => Promise.resolve()),
     onSnapshot: vi.fn(() => vi.fn()),
-    query: vi.fn((collectionRef, ...constraints) => ({ ref: collectionRef, constraints })),
-    where: vi.fn((fieldPath, opStr, value) => ({ type: 'where', fieldPath, opStr, value })),
-    orderBy: vi.fn((fieldPath, directionStr) => ({ type: 'orderBy', fieldPath, directionStr })),
-    limit: vi.fn((count) => ({ type: 'limit', count })),
+    query: vi.fn((collectionRef, ...constraints) => ({ ref: collectionRef, constraints }));
+    where: vi.fn((fieldPath, opStr, value) => ({ type: 'where', fieldPath, opStr, value }));
+    orderBy: vi.fn((fieldPath, directionStr) => ({ type: 'orderBy', fieldPath, directionStr }));
+    limit: vi.fn((count) => ({ type: 'limit', count }));
     Timestamp: {
       now: vi.fn(() => ({ toDate: () => new Date() })),
       fromDate: vi.fn((date: Date) => ({ toDate: () => date }))
@@ -190,7 +188,7 @@ vi.mock('firebase/auth', () => ({
   getAuth: vi.fn(() => ({
     currentUser: null,
     onAuthStateChanged: vi.fn(() => vi.fn())
-  })),
+  }));
   createUserWithEmailAndPassword: vi.fn(() => Promise.resolve({ user: { uid: 'mock-uid', email: 'mock@example.com' } })),
   signInWithEmailAndPassword: vi.fn(() => Promise.resolve({ user: { uid: 'mock-uid', email: 'mock@example.com' } })),
   sendEmailVerification: vi.fn(() => Promise.resolve()),
@@ -202,11 +200,11 @@ vi.mock('firebase/storage', () => ({
   ref: vi.fn((storageInstance, path) => ({
     name: path ? path.substring(path.lastIndexOf('/') + 1) : 'mockfile.txt',
     fullPath: path || 'mock/full/path/mockfile.txt'
-  })),
+  }));
   uploadBytes: vi.fn((storageRef, data, metadata) => Promise.resolve({
     metadata: { fullPath: storageRef.fullPath, ...metadata },
     ref: storageRef
-  })),
+  }));
   getDownloadURL: vi.fn((storageRef) => Promise.resolve(`https://mockstorage.com/${storageRef.fullPath}`)),
   deleteObject: vi.fn(() => Promise.resolve())
 })),
@@ -217,11 +215,9 @@ vi.mock('axios', () => ({
     create: vi.fn(function() { return this }), // Mock create to return the mock itself
   },
   get: vi.fn(() => Promise.resolve({ data: {} })),
-  post: vi.fn(() => Promise.resolve({ data: {} })),
+  post: vi.fn(() => Promise.resolve({ data: {} }));
   create: vi.fn(function() { return this }), // Mock create to return the mock itself
-})),
-
-
+}));
 // Lightweight Context & Redux mocks
 vi.mock('@/context/auth/AuthProvider', () => {
   const useAuth = () => ({
@@ -257,7 +253,7 @@ vi.mock('@/context/FeedbackContext', () => {
 vi.mock('react-redux', async () => {
   const actualRedux = await vi.importActual('react-redux') as object,
   return {
-    ...actualRedux,
+    ...actualRedux;
     useDispatch: () => vi.fn(),
     useSelector: vi.fn(() => ({}))
   }});

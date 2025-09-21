@@ -29,9 +29,7 @@ serve(async (req) => {
   const requestBody = await req.json() as RequestBody;
   const userMessages = requestBody.messages,
   const lastUserMessage = userMessages.length > 0 ? userMessages[userMessages.length - 1].content : "N/A",
-
-  logStructured("INFO", "Request received", { path: req.url, method: req.method, lastUserMessagePreview: lastUserMessage.substring(0, 50) }, FUNCTION_NAME),
-
+  logStructured("INFO", "Request received", { path: req.url, method: req.method, lastUserMessagePreview: lastUserMessage.substring(0, 50) }, FUNCTION_NAME);
   try {
     const { messages } = requestBody,
 
@@ -81,7 +79,7 @@ serve(async (req) => {
       request_url: req.url,
       request_method: req.method,
       request_body_preview: JSON.stringify(requestBody).substring(0, 200) // Log a preview
-    }),
+    });
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }

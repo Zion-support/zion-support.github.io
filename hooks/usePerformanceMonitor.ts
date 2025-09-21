@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-// Simple performance monitor hook
-export function usePerformanceMonitor() {
-  return {
-    metrics: {},
-    isSupported: false
-  }}
-=======
 import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -46,4 +38,5 @@ export function usePerformanceMonitor() {
 
   return metrics;
 }
->>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
+// usePerformanceMonitor hook module
+export {};

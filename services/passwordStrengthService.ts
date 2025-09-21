@@ -128,7 +128,7 @@ class PasswordStrengthService {
    * Check if password contains common words
    */
   private hasCommonWords(password: string): boolean {
-    const lowerPassword = password.toLowerCase(),
+    const lowerPassword = password.toLowerCase();
     for (const word of this.commonWords) {
       if (lowerPassword.includes(word)) {
         return true
@@ -170,7 +170,7 @@ class PasswordStrengthService {
    * Estimate time to crack password
    */
   private estimateCrackTime(password: string): string {
-    const entropy = this.calculateEntropy(password),
+    const entropy = this.calculateEntropy(password);
     const attemptsPerSecond = 1000000000, // 1 billion attempts per second
     const totalAttempts = Math.pow(2, entropy);
     const seconds = totalAttempts / attemptsPerSecond,

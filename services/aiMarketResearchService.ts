@@ -201,8 +201,7 @@ export class AIMarketResearchService {
           'Content-Type': 'application/json'
         };
         body: JSON.stringify({ ...request, schedule })
-      }),
-
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)}
 
