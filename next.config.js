@@ -25,7 +25,7 @@ const nextConfig = {
   
   // Experimental features
   experimental: {
-    optimizeCss: false,
+    optimizeCss: false, // Disable CSS optimization to avoid critters dependency
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
     esmExternals: false,
@@ -52,7 +52,7 @@ const nextConfig = {
   },
   
   // Webpack configuration
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, dev }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -66,6 +66,20 @@ const nextConfig = {
         util: false,
         buffer: require.resolve('buffer'),
         process: require.resolve('process/browser'),
+      };
+    }
+    
+    // Performance optimizations
+    if (!dev) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
       };
     }
     
