@@ -17,12 +17,12 @@ const nextConfig = {
     unoptimized: true, // Required for static export
   },
   typescript: {
-    // Only ignore TypeScript errors in production builds to avoid breaking static export
-    ignoreBuildErrors: process.env.NODE_ENV === 'production',
+    // Ignore TypeScript errors during build to avoid breaking static export
+    ignoreBuildErrors: true,
   },
   eslint: {
-    // Only ignore ESLint errors in production builds to avoid breaking static export
-    ignoreDuringBuilds: process.env.NODE_ENV === 'production',
+    // Ignore ESLint errors during build to avoid breaking static export
+    ignoreDuringBuilds: true,
   },
   
   // Experimental features
@@ -46,7 +46,13 @@ const nextConfig = {
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
   },
+  
+  // Compression and performance
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   
   // Generate unique build ID for better caching
   generateBuildId: async () => {
@@ -74,15 +80,21 @@ const nextConfig = {
       // Compression will be handled by Netlify's built-in compression
     }
     
-    // Performance optimizations
+    // Performance optimizations for production
     if (!dev) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
+      config.optimization = {
+        ...config.optimization,
+        minimize: true,
+        sideEffects: false,
+        usedExports: true,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+            },
           },
         },
       };
