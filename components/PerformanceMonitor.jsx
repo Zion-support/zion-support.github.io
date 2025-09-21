@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export const PerformanceMonitor = () => {
+const PerformanceMonitor = () => {
   const [metrics, setMetrics] = useState({
     loadTime: 0,
     renderTime: 0,
@@ -43,3 +43,5 @@ export const PerformanceMonitor = () => {
     </div>
   );
 };
+
+export default PerformanceMonitor;

@@ -7,10 +7,10 @@ import { FloatingElements } from '../components/ui/FloatingElements';
 import { TypewriterEffect } from '../components/ui/TypewriterEffect';
 import { SEOHead } from '../components/ui/SEOHead';
 import { LazyImage } from '../components/ui/LazyImage';
-import { PerformanceMonitor } from '../components/PerformanceMonitor';
-import { Analytics } from '../components/Analytics';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import Analytics from '../components/Analytics';
 import { ThemeToggle } from '../components/ThemeToggle';
-import { ScrollToTop } from '../components/ScrollToTop';
+import ScrollToTop from '../components/ScrollToTop';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);

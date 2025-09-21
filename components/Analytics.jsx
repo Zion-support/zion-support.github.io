@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-export const Analytics = () => {
+const Analytics = () => {
   useEffect(() => {
     // Simple analytics tracking
     const trackEvent = (eventName, properties = {}) => {
@@ -41,3 +41,5 @@ export const Analytics = () => {
 
   return null;
 };
+
+export default Analytics;

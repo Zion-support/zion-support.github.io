@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import '../styles/globals.css';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import { ThemeProvider } from '../components/ThemeProvider';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -22,8 +24,12 @@ export default function App({ Component, pageProps }) {
         <link rel="preload" href="/favicon.ico" as="image" />
       </Head>
       
-      <Component {...pageProps} />
-      <PerformanceMonitor />
+      <ErrorBoundary>
+        <ThemeProvider>
+          <Component {...pageProps} />
+          <PerformanceMonitor />
+        </ThemeProvider>
+      </ErrorBoundary>
     </>
   );
 }
