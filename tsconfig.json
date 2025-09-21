@@ -17,7 +17,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",
@@ -25,6 +38,21 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "contracts/**/*",
+    "cypress/**/*",
+    "cypress.config.ts",
+    "jest.config.ts",
+    "jest.setup.ts",
+    "netlify/**/*",
+    "pages._quarantine/**/*",
+    "pages.bak/**/*",
+    "pages.old/**/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.ts.disabled",
+    "instrumentation.disabled.ts"
   ]
 }
