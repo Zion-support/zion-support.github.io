@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../src/types/service-variants',
+import { ServiceVariant } from '../s./service-variants',
 
 export interface Zion2026EmergingTechnologyService {
   id: string,

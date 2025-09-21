@@ -53,7 +53,7 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "AI Consciousness",
     technology: ["Advanced AI", "Neuroscience", "Consciousness Research", "Ethical AI"]
     benefits: [
@@ -103,7 +103,7 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "Quantum AI",
     technology: ["Quantum Computing", "AI/ML", "Quantum Algorithms", "Hybrid Processing"]
     benefits: [
@@ -153,7 +153,7 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "AI Creativity",
     technology: ["Multi-Model AI", "Creative AI", "Fusion Algorithms", "Collaborative AI"]
     benefits: [
@@ -203,7 +203,7 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "Autonomous Business",
     technology: ["Autonomous AI", "Business Intelligence", "Strategic Planning", "Operational AI"]
     benefits: [
@@ -253,7 +253,7 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    },
     category: "Emotional AI",
     technology: ["Emotional AI", "Computer Vision", "Natural Language Processing", "Affective Computing"]
     benefits: [

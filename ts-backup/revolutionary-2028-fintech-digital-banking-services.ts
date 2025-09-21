@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './service-variants',
 export interface Revolutionary2028FintechDigitalBankingService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered digital banking platform with personalized services, automated investment, and comprehensive financial management.',
     launchDate: '2028-01-25',
@@ -126,7 +126,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered investment management platform with automated trading, portfolio optimization, and comprehensive risk management.',
     launchDate: '2028-03-10',
@@ -173,7 +173,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Blockchain-based payment platform with smart contracts, AI fraud detection, and comprehensive payment solutions.',
     launchDate: '2028-02-20',
@@ -220,7 +220,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered insurance platform with automated underwriting, claims processing, and comprehensive risk management.',
     launchDate: '2028-04-15',
@@ -267,7 +267,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'DeFi lending and borrowing platform with AI risk management, smart contracts, and comprehensive DeFi solutions.',
     launchDate: '2028-06-20',

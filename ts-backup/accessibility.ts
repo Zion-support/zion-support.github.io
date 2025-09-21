@@ -31,14 +31,14 @@ export class AccessibilityManager {
         const skipLink = document.querySelector('[data-skip-to-main]') as HTMLElement;
         if (skipLink) {
           skipLink.focus();
-      }
+      },
       
       // Close modals with Escape
       if (event.key === 'Escape') {
         const modal = document.querySelector('.modal[aria-hidden="false"]') as HTMLElement;
         if (modal) {
           modal.setAttribute('aria-hidden', 'true');
-      }
+      },
     });
   
   private setupScreenReaderSupport() {

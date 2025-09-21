@@ -78,7 +78,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'System integration, IoT deployment, AI model training, and team training',
     launchDate: '2025-01-20',
@@ -125,7 +125,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'EHR integration, AI model training, regulatory compliance, and clinical validation',
     launchDate: '2025-01-25',
@@ -172,7 +172,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'System integration, AI model deployment, regulatory compliance, and team training',
     launchDate: '2025-02-01',
@@ -219,7 +219,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'System integration, AI model training, data migration, and team training',
     launchDate: '2025-01-30',
@@ -266,7 +266,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'LMS integration, AI model training, content migration, and educator training',
     launchDate: '2025-02-05',
@@ -313,7 +313,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'System integration, IoT deployment, AI model training, and team training',
     launchDate: '2025-02-10',
@@ -360,7 +360,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'System integration, IoT deployment, AI model training, and team training',
     launchDate: '2025-02-15',

@@ -96,7 +96,7 @@ self.addEventListener("activate", (event: ExtendableEvent) => {
         cacheNames.map(cacheName => {
           if (!Object.values(CACHE_NAMES).includes(cacheName)) {
             return caches.delete(cacheName);
-          }
+          },
         })
       );
     }).then(() => {
@@ -152,7 +152,7 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
     if (networkResponse.ok) {
       const cache = await caches.open(cacheName);
       cache.put(request, networkResponse.clone());
-    }
+    },
     return networkResponse;
   } catch (error) {
     throw error;
@@ -165,13 +165,13 @@ async function networkFirst(request: Request, cacheName: string): Promise<Respon
     if (networkResponse.ok) {
       const cache = await caches.open(cacheName);
       cache.put(request, networkResponse.clone());
-    }
+    },
     return networkResponse;
   } catch (error) {
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
-    }
+    },
     throw error;
   }
 }
@@ -183,7 +183,7 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
     if (networkResponse.ok) {
       const cache = caches.open(cacheName);
       cache.then(c => c.put(request, networkResponse.clone()));
-    }
+    },
     return networkResponse;
   });
 
@@ -203,7 +203,7 @@ async function doBackgroundSync(): Promise<void> {
     const pendingActions = await getPendingActions();
     for (const action of pendingActions) {
       await processPendingAction(action);
-    }
+    },
   } catch (error) {
     console.error("Background sync failed:", error);
   }
@@ -239,7 +239,7 @@ self.addEventListener("push", (event: PushEvent) => {
           action: "close",
           title: "Close",
           icon: "/logo192.png"
-        }
+        },
       ]
     };
 

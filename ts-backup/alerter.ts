@@ -69,9 +69,9 @@ async function sendWebhookAlert(endpoint: string, result: EndpointTestResult, co
             title: 'Timestamp',
             value: new Date().toISOString(),
             short: false
-          }
+          },
         ]
-      }
+      },
     ]
   };
 
@@ -103,7 +103,7 @@ export async function checkAndAlert(endpoint: string, result: EndpointTestResult
       await sendWebhookAlert(endpoint, result, config);
       // Reset counter after sending alert
       consecutiveFailures.set(endpoint, 0);
-    }
+    },
   } else {
     // Reset counter on successful response
     consecutiveFailures.set(endpoint, 0);
@@ -144,9 +144,9 @@ export async function sendHealthSummary(summary: { totalEndpoints: number, healt
             title: 'Timestamp',
             value: new Date().toISOString(),
             short: false
-          }
+          },
         ]
-      }
+      },
     ]
   };
 

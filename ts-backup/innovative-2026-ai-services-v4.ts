@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './service-variants';
 
 export interface Innovative2026AIServiceV4 {
   id: string;
@@ -86,7 +86,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full AI consciousness simulation platform with cognitive modeling, emotional intelligence, and comprehensive research tools.',
     launchDate: '2024-12-01',
@@ -139,7 +139,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full autonomous AI agents platform with learning capabilities, multi-agent coordination, and comprehensive automation features.',
     launchDate: '2024-11-15',
@@ -192,7 +192,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full AI healthcare companion platform with personalized monitoring, health insights, and comprehensive healthcare integration.',
     launchDate: '2024-10-01',
@@ -245,7 +245,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full AI content creation platform with unlimited generation, multi-format support, and comprehensive content optimization.',
     launchDate: '2024-09-15',
@@ -298,7 +298,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.',
     launchDate: '2024-08-01',

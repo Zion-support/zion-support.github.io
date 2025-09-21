@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './service-variants',
 export interface Revolutionary2026HealthcareBiotechService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete AI drug discovery platform with molecular analysis, drug prediction, and clinical trial optimization.',
     launchDate: '2024-12-01',
@@ -126,7 +126,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete autonomous healthcare AI platform with self-learning capabilities, continuous improvement, and comprehensive healthcare support.',
     launchDate: '2024-12-01',
@@ -173,7 +173,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete quantum machine learning platform with quantum AI integration, research acceleration, and breakthrough capabilities.',
     launchDate: '2024-12-01',
@@ -220,7 +220,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete AI legal research platform with case analysis, outcome prediction, and comprehensive legal insights.',
     launchDate: '2024-12-01',
@@ -267,7 +267,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete biotech AI research platform with genetic analysis, protein prediction, and personalized medicine capabilities.',
     launchDate: '2024-12-01',

@@ -39,7 +39,7 @@ export async function measureLatency(endpoint: Endpoint): Promise<EndpointTestRe
     
     if (endpoint.body && (endpoint.method === 'POST' || endpoint.method === 'PUT')) {
       config.data = endpoint.body;
-    }
+    },
     
     const response = await axios(config);
     const endTime = Date.now();
@@ -63,7 +63,7 @@ export async function measureLatency(endpoint: Endpoint): Promise<EndpointTestRe
       errorMessage = error.message;
     } else if (error instanceof Error) {
       errorMessage = error.message;
-    }
+    },
     
     logger.error(`Error testing endpoint ${endpoint.name}:`, errorMessage);
     
@@ -92,7 +92,7 @@ export async function testEndpoints(endpoints: Endpoint[]): Promise<EndpointTest
         success: false,
         error: error instanceof Error ? error.message : 'Unknown error'
       });
-    }
+    },
   }
   
   return results;
@@ -125,7 +125,7 @@ export function getSlowestEndpoint(results: EndpointTestResult[], endpoints: End
     if (results[i].responseTime > slowestTime) {
       slowestTime = results[i].responseTime;
       slowestIndex = i;
-    }
+    },
   }
   
   return {
@@ -144,7 +144,7 @@ export function getFailedEndpoints(results: EndpointTestResult[], endpoints: End
         endpoint: endpoints[i]
         result: results[i]
       });
-    }
+    },
   }
   
   return failed;

@@ -239,7 +239,7 @@ if (typeof BroadcastChannel === 'undefined') {
     constructor(name: string) {
       // @ts-expect-error - Mock name property assignment
       this.name = name
-    }
+    },
     postMessage = jest.fn(),
     close = jest.fn();
     onmessage = null,

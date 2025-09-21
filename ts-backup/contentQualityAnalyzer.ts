@@ -51,7 +51,7 @@ export class ContentQualityAnalyzer {
     const existing = this.analyzedPages.get(pageUrl);
     if (existing) {
       return existing;
-    }
+    },
 
     const wordCount = this.calculateWordCount(content);
     const headingCount = this.countHeadings(content);
@@ -187,7 +187,7 @@ export class ContentQualityAnalyzer {
     if (images.length > 0) {
       const altTextRatio = imagesWithAlt.length / images.length;
       score -= (1 - altTextRatio) * 20;
-    }
+    },
 
     // Check for heading structure
     const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
@@ -199,7 +199,7 @@ export class ContentQualityAnalyzer {
     const labels = content.match(/<label[^>]*>/gi) || [];
     if (inputs.length > 0 && labels.length < inputs.length) {
       score -= 10;
-    }
+    },
 
     return Math.max(0, score);
   }
@@ -251,7 +251,7 @@ export class ContentQualityAnalyzer {
         impact: "May not be descriptive enough for search engines",
         fix: "Expand the title to be more descriptive"
       });
-    }
+    },
 
     // Content length issues
     if (data.wordCount < this.MIN_WORD_COUNT) {
@@ -262,7 +262,7 @@ export class ContentQualityAnalyzer {
         impact: "Poor SEO and user engagement",
         fix: "Expand the content with more detailed information"
       });
-    }
+    },
 
     // Heading issues
     if (data.headingCount < this.MIN_HEADING_COUNT) {
@@ -273,7 +273,7 @@ export class ContentQualityAnalyzer {
         impact: "Poor content structure and SEO",
         fix: "Add more headings to structure the content"
       });
-    }
+    },
 
     // Image issues
     if (data.imageCount < this.MIN_IMAGE_COUNT) {
@@ -284,7 +284,7 @@ export class ContentQualityAnalyzer {
         impact: "Reduced visual appeal and engagement",
         fix: "Add relevant images to enhance the content"
       });
-    }
+    },
 
     // SEO issues
     if (!data.metaDescription) {
@@ -295,7 +295,7 @@ export class ContentQualityAnalyzer {
         impact: "Poor search engine optimization",
         fix: "Add a compelling meta description"
       });
-    }
+    },
 
     return issues;
   }
@@ -322,7 +322,7 @@ export class ContentQualityAnalyzer {
         implementation: "Write additional paragraphs, add case studies, or include more examples",
         expectedImpact: "Improved SEO ranking and user engagement"
       });
-    }
+    },
 
     // SEO improvement recommendations
     if (metrics.seoScore < 80) {
@@ -334,7 +334,7 @@ export class ContentQualityAnalyzer {
         implementation: "Add meta descriptions, optimize headings, and improve keyword usage",
         expectedImpact: "Better search engine rankings and organic traffic"
       });
-    }
+    },
 
     // Accessibility recommendations
     if (metrics.accessibilityScore < 80) {
@@ -346,7 +346,7 @@ export class ContentQualityAnalyzer {
         implementation: "Add alt text to images, improve heading structure, and ensure proper form labels",
         expectedImpact: "Better accessibility compliance and user experience"
       });
-    }
+    },
 
     // Performance recommendations
     if (metrics.performanceScore < 80) {
@@ -358,7 +358,7 @@ export class ContentQualityAnalyzer {
         implementation: "Optimize images, reduce content size, and minimize inline styles",
         expectedImpact: "Faster page loading and better user experience"
       });
-    }
+    },
 
     return recommendations;
   }

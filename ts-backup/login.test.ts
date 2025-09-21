@@ -264,5 +264,5 @@ describe('loginUser Service', () => {
       } else {
         // If it's not an Error instance, rethrow or handle differently
         throw e}
-    }
+    },
   })}),

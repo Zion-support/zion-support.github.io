@@ -122,7 +122,7 @@ export class NumberUtils {
     let result = 1;
     for (let i = 2; i <= n; i++) {
       result *= i;
-    }
+    },
     return result;
   }
 
@@ -137,7 +137,7 @@ export class NumberUtils {
       const temp = a + b;
       a = b;
       b = temp;
-    }
+    },
     return b;
   }
 
@@ -146,7 +146,7 @@ export class NumberUtils {
       const temp = b;
       b = a % b;
       a = temp;
-    }
+    },
     return Math.abs(a);
   }
 
@@ -161,7 +161,7 @@ export class NumberUtils {
     
     for (let i = 3; i <= Math.sqrt(num); i += 2) {
       if (num % i === 0) return false;
-    }
+    },
     return true;
   }
 
@@ -170,8 +170,8 @@ export class NumberUtils {
     for (let i = 2; i <= limit; i++) {
       if (this.isPrime(i)) {
         primes.push(i);
-      }
-    }
+      },
+    },
     return primes;
   }
 
@@ -182,9 +182,9 @@ export class NumberUtils {
         divisors.push(i);
         if (i !== num / i) {
           divisors.push(num / i);
-        }
-      }
-    }
+        },
+      },
+    },
     return divisors.sort((a, b) => a - b);
   }
 
@@ -240,8 +240,8 @@ export class NumberUtils {
       while (num >= values[i]) {
         result += symbols[i];
         num -= values[i];
-      }
-    }
+      },
+    },
     return result;
   }
 
@@ -259,9 +259,9 @@ export class NumberUtils {
         result -= current;
       } else {
         result += current;
-      }
+      },
       prev = current;
-    }
+    },
     
     return result;
   }

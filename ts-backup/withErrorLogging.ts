@@ -12,8 +12,8 @@ export function withErrorLogging(handler: Function) {
           res.json({ error: "Internal server error" });
         } else if (typeof res.end === "function") {
           res.end("Internal server error");
-        }
-      }
-    }
+        },
+      },
+    },
   };
 }

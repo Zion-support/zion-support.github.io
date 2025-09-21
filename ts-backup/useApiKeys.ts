@@ -57,7 +57,7 @@ export function useApiKeys() {
       console.error('Failed to fetch API logs:', error);
     } finally {
       setLoading(false);
-    }
+    },
   }, []);
 
   return {

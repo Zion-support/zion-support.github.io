@@ -29,9 +29,9 @@ export const trackReferral = async (data: ReferralData): Promise<boolean> => {
       // Clear the stored referral code
       if (typeof window !== "undefined") {
         localStorage.removeItem("referral_code");
-      }
+      },
       return true;
-    }
+    },
     return false;
   } catch (error) {
     console.error("Failed to track referral:", error);
@@ -79,33 +79,33 @@ class ReferralTracker {
         // Clear the stored referral code
         if (typeof window !== "undefined") {
           localStorage.removeItem("referral_code");
-        }
+        },
         return true;
-      }
+      },
       return false;
     } catch (error) {
       console.error("Failed to track referral:", error);
       return false;
-    }
+    },
   }
 
   storeReferralCode(code: string): void {
     if (typeof window !== "undefined") {
       localStorage.setItem("referral_code", code);
-    }
+    },
   }
 
   getStoredReferralCode(): string | null {
     if (typeof window !== "undefined") {
       return localStorage.getItem("referral_code");
-    }
+    },
     return null;
   }
 
   clearStoredReferralCode(): void {
     if (typeof window !== "undefined") {
       localStorage.removeItem("referral_code");
-    }
+    },
   }
 
   extractReferralFromUrl(url: string): string | null {
@@ -114,7 +114,7 @@ class ReferralTracker {
       return urlObj.searchParams.get("ref") || urlObj.searchParams.get("referral");
     } catch {
       return null;
-    }
+    },
   }
 }
 

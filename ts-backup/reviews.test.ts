@@ -24,7 +24,7 @@ vi.mock('@/integrations/supabase/client', () => ({
   supabase: {
     auth: {
       getSession: vi.fn()
-    }
+    },
   }
 })),
 // Define expected response types

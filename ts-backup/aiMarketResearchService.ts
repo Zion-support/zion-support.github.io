@@ -162,7 +162,7 @@ export class AIMarketResearchService {
       const response = await fetch(`${this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)}

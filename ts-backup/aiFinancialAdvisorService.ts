@@ -171,7 +171,7 @@ export class AIFinancialAdvisorService {
       const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)}
@@ -225,7 +225,7 @@ export class AIFinancialAdvisorService {
       const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)}
@@ -241,7 +241,7 @@ export class AIFinancialAdvisorService {
       const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)}

@@ -68,7 +68,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 14,
     setupTime: '5 minutes',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business']
@@ -117,7 +117,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 21,
     setupTime: '1-2 days',
     competitors: ['Gainsight', 'Totango', 'ClientSuccess', 'ChurnZero']
@@ -166,7 +166,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 30,
     setupTime: '2-4 weeks',
     competitors: ['SAS', 'IBM', 'Oracle', 'SAP']
@@ -215,7 +215,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 60,
     setupTime: '4-6 weeks',
     competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips']
@@ -264,7 +264,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 14,
     setupTime: '1-2 days',
     competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia']
@@ -313,7 +313,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 30,
     setupTime: '1-2 weeks',
     competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance']
@@ -362,7 +362,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 21,
     setupTime: '1-2 weeks',
     competitors: ['Fivetran', 'Alteryx', 'Talend', 'Informatica']
@@ -411,7 +411,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 14,
     setupTime: '1-2 days',
     competitors: ['HireVue', 'Pymetrics', 'HiredScore', 'Entelo']
@@ -460,7 +460,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 30,
     setupTime: '1-2 weeks',
     competitors: ['Evisort', 'ContractPodAi', 'Kira Systems', 'Luminance']
@@ -509,7 +509,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     trialDays: 60,
     setupTime: '4-6 weeks',
     competitors: ['PTC', 'Siemens', 'GE Digital', 'Rockwell Automation']

@@ -20,7 +20,7 @@ export class EventUtils {
         func(...args);
         inThrottle = true;
         setTimeout(() => (inThrottle = false), limit);
-      }
+      },
     };
   }
 
@@ -32,7 +32,7 @@ export class EventUtils {
       if (!called) {
         called = true;
         func(...args);
-      }
+      },
     };
   }
 
@@ -51,7 +51,7 @@ export class EventUtils {
       emit(event: string, ...args: any[]) {
         if (!listeners[event]) return;
         listeners[event].forEach(listener => listener(...args));
-      }
+      },
     };
   }
 }

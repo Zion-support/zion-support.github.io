@@ -30,15 +30,15 @@ class ResourceMonitor {
             timestamp: Date.now()
           };
           this.errors.push(resourceError);
-        }
-      }
+        },
+      },
     }, true);
 
     // Monitor resource load failures
     window.addEventListener('unhandledrejection', (event) => {
       if (event.reason && typeof event.reason === 'string') {
         this.recordError('unknown', event.reason);
-      }
+      },
     });
   }
 
@@ -49,7 +49,7 @@ class ResourceMonitor {
       return element.href;
     } else if (element instanceof HTMLImageElement) {
       return element.src;
-    }
+    },
     return null;
   }
 
@@ -76,7 +76,7 @@ class ResourceMonitor {
     if (attempts < this.maxRetries) {
       this.retryAttempts.set(url, attempts + 1);
       // Implement retry logic here if needed
-    }
+    },
   }
 
   getErrors(): ResourceError[] {

@@ -40,7 +40,7 @@ export async function fetchTenantBySubdomain(subdomain: string): Promise<Tenant 
       // eslint-disable-next-line no-console
       console.warn('Supabase fetch tenant error, falling back to file:', error.message);
       return fetchTenantFromFile(subdomain);
-    }
+    },
     return (data as Tenant) ?? null}
   return fetchTenantFromFile(subdomain);
 }

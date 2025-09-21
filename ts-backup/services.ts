@@ -44,7 +44,7 @@ export const services: Service[] = [
       enterprise: 999,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/ai-chatbot-platform',
     icon: '🤖',
     isPopular: true
@@ -69,7 +69,7 @@ export const services: Service[] = [
       enterprise: 499,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/ai-content-generator',
     icon: '✍️'
   }
@@ -93,7 +93,7 @@ export const services: Service[] = [
       enterprise: 1499,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/ai-data-analytics',
     icon: '📊',
     isNew: true
@@ -120,7 +120,7 @@ export const services: Service[] = [
       enterprise: 1499,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/managed-it-services',
     icon: '🖥️'
   }
@@ -144,7 +144,7 @@ export const services: Service[] = [
       enterprise: 1999,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/cybersecurity-suite',
     icon: '🔒',
     isPopular: true
@@ -169,7 +169,7 @@ export const services: Service[] = [
       enterprise: 19999,
       currency: 'USD',
       period: 'one-time'
-    }
+    },
     link: 'https://ziontechgroup.com/services/cloud-migration',
     icon: '☁️'
   }
@@ -195,7 +195,7 @@ export const services: Service[] = [
       enterprise: 199,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/project-management-platform',
     icon: '📋'
   }
@@ -219,7 +219,7 @@ export const services: Service[] = [
       enterprise: 299,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/crm-system',
     icon: '👥',
     isPopular: true
@@ -244,7 +244,7 @@ export const services: Service[] = [
       enterprise: 399,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/hr-management-system',
     icon: '👨‍💼'
   }
@@ -270,7 +270,7 @@ export const services: Service[] = [
       enterprise: 19999,
       currency: 'USD',
       period: 'one-time'
-    }
+    },
     link: 'https://ziontechgroup.com/services/web-development',
     icon: '🌐'
   }
@@ -294,7 +294,7 @@ export const services: Service[] = [
       enterprise: 49999,
       currency: 'USD',
       period: 'one-time'
-    }
+    },
     link: 'https://ziontechgroup.com/services/mobile-app-development',
     icon: '📱'
   }
@@ -318,7 +318,7 @@ export const services: Service[] = [
       enterprise: 14999,
       currency: 'USD',
       period: 'one-time'
-    }
+    },
     link: 'https://ziontechgroup.com/services/api-development',
     icon: '🔌'
   }
@@ -344,7 +344,7 @@ export const services: Service[] = [
       enterprise: 2499,
       currency: 'USD',
       period: 'month'
-    }
+    },
     link: 'https://ziontechgroup.com/services/business-intelligence',
     icon: '📈'
   }

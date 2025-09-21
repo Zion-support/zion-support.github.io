@@ -12,7 +12,7 @@ test('talent profile name visible', async ({ page }) => {
           bio: '',
           skills: [];
           hourly_rate: 100
-        }
+        },
       })
     })});
   await page.goto('/talent/123');

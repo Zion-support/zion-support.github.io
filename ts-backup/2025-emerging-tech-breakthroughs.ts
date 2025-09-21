@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './service-variants';
 
 export interface EmergingTechBreakthrough2025 {
   id: string;
@@ -86,7 +86,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete brain-computer interface platform with neural signal processing, real-time monitoring, and application development tools.',
     launchDate: '2025-03-01',
@@ -139,7 +139,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete quantum internet security platform with quantum cryptography, network monitoring, and compliance tools.',
     launchDate: '2025-02-15',
@@ -192,7 +192,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete space mining operations platform with asteroid identification, automated mining, and resource management.',
     launchDate: '2025-04-01',
@@ -245,7 +245,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete quantum robotics platform with quantum-enhanced AI, autonomous navigation, and multi-robot coordination.',
     launchDate: '2025-03-15',
@@ -298,7 +298,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete autonomous vehicle AI platform with computer vision, decision-making, and safety systems.',
     launchDate: '2025-02-20',
@@ -351,7 +351,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete quantum materials discovery platform with quantum chemistry, AI design, and property prediction.',
     launchDate: '2025-03-10',
@@ -404,7 +404,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete metaverse AI development platform with AI-powered tools, dynamic generation, and intelligent environments.',
     launchDate: '2025-02-25',

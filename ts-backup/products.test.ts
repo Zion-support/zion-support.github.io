@@ -68,7 +68,7 @@ describe('/api/products API Endpoint', () => {
         url: '/api/products?q=gpt',
         query: {
           q: 'gpt'
-        }
+        },
       }),
       // 3. Call API handler
       await productHandler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
@@ -91,7 +91,7 @@ describe('/api/products API Endpoint', () => {
         where: {
           id: {
             in: expectedProductIds
-          }
-        }
+          },
+        },
       })});
   })}),

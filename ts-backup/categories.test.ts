@@ -96,7 +96,7 @@ describe('/api/categories API Endpoint', () => {
       method: 'POST',
       body: {
         name: 'Test Category'
-      }
+      },
     }),
     await categoriesApiHandler(req, res);
     expect(res._getStatusCode()).toBe(405);

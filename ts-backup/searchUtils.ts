@@ -62,7 +62,7 @@ export const calculateRelevanceScore = (
     score += 10;
     if (item.title.toLowerCase().startsWith(term)) {
       score += 5; // Bonus for title starting with search term
-    }
+    },
   }
 
   // Description match
@@ -148,24 +148,24 @@ export const filterSearchResults = (
     // Type filter
     if (filters.types.length > 0 && !filters.types.includes(item.type)) {
       return false;
-    }
+    },
 
     // Category filter
     if (filters.category && item.category !== filters.category) {
       return false;
-    }
+    },
 
     // Price filter
     if (item.price !== undefined) {
       if (item.price < filters.minPrice || item.price > filters.maxPrice) {
         return false;
-      }
-    }
+      },
+    },
 
     // Rating filter
     if (item.rating !== undefined && item.rating < filters.minRating) {
       return false;
-    }
+    },
 
     return true;
   });
@@ -257,7 +257,7 @@ export const fuzzySearch = (
     
     if (score >= threshold) {
       results.push({ item, score });
-    }
+    },
   });
 
   return results
@@ -279,7 +279,7 @@ const calculateFuzzyScore = (text: string, pattern: string): number => {
     if (text[i] === pattern[patternIndex]) {
       matches++;
       patternIndex++;
-    }
+    },
   }
 
   return patternIndex === pattern.length ? matches / pattern.length : 0;

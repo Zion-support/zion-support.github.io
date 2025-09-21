@@ -54,7 +54,7 @@ export class AIContentGeneratorService {
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this.generateMockContent(request);
-    }
+    },
   }
 
   async getTemplates(): Promise<ContentTemplate[]> {
@@ -90,7 +90,7 @@ export class AIContentGeneratorService {
         type: 'landing-page',
         preview: 'Turn visitors into customers with compelling copy...',
         price: 59
-      }
+      },
     ]}
 
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
@@ -120,7 +120,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         title: `${request.topic} - Complete Guide`,
         description: `Learn everything about ${request.topic} and how to implement it effectively.`,
         tags: [request.topic, request.type, 'guidetutorial']
-      }
+      },
     }}
 
   async analyzeContent(content: string): Promise<{
@@ -140,7 +140,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1,
         'seo': 1.8;
         'marketing': 1.5
-      }
+      },
     }}
 }
 

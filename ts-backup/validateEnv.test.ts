@@ -116,7 +116,7 @@ describe('checkEssentialEnvVars', () => {
       expect(errorMessage).toMatch(/NEXT_PUBLIC_REOWN_PROJECT_ID is not defined or is empty/);
       expect(errorMessage).toMatch(/NEXT_PUBLIC_SUPABASE_URL is set to a placeholder value: "your_supabase_url_here"/),
       expect(errorMessage).toMatch(/NEXT_PUBLIC_SUPABASE_ANON_KEY is not defined or is empty/)
-    }
+    },
   });
   it('should log success message in DEV mode when variables are valid', async () => {
     mockProcessEnv({

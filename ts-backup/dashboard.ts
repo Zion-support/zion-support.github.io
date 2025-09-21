@@ -67,7 +67,7 @@ export class AdvancedAnalyticsDashboard {
       this.notifyListeners();
     } catch (error) {
       console.error('Failed to initialize analytics dashboard:', error);
-    }
+    },
   }
   
   private async loadMetrics(): Promise<void> {
@@ -81,10 +81,10 @@ export class AdvancedAnalyticsDashboard {
             timestamp: new Date(metric.timestamp)
           });
         });
-      }
+      },
     } catch (error) {
       console.error('Failed to load metrics:', error);
-    }
+    },
   }
   
   private async loadCharts(): Promise<void> {
@@ -95,10 +95,10 @@ export class AdvancedAnalyticsDashboard {
         chartsData.forEach((chart: any) => {
           this.charts.set(chart.id, chart);
         });
-      }
+      },
     } catch (error) {
       console.error('Failed to load charts:', error);
-    }
+    },
   }
   
   private async loadUserEvents(): Promise<void> {
@@ -110,10 +110,10 @@ export class AdvancedAnalyticsDashboard {
           ...event,
           timestamp: new Date(event.timestamp)
         }));
-      }
+      },
     } catch (error) {
       console.error('Failed to load user events:', error);
-    }
+    },
   }
   
   private connectRealTimeData(): void {
@@ -130,7 +130,7 @@ export class AdvancedAnalyticsDashboard {
           this.handleRealTimeUpdate(data);
         } catch (error) {
           console.error('Failed to parse real-time analytics data:', error);
-        }
+        },
       };
       
       this.realTimeConnection.onclose = () => {
@@ -143,7 +143,7 @@ export class AdvancedAnalyticsDashboard {
       };
     } catch (error) {
       console.error('Failed to connect to analytics real-time data:', error);
-    }
+    },
   }
   
   private handleRealTimeUpdate(data: any): void {
@@ -157,7 +157,7 @@ export class AdvancedAnalyticsDashboard {
       case 'user_event':
         this.addUserEvent(data.event);
         break;
-    }
+    },
     
     this.notifyListeners();
   }
@@ -185,7 +185,7 @@ export class AdvancedAnalyticsDashboard {
     // Keep only last 1000 events
     if (this.userEvents.length > 1000) {
       this.userEvents = this.userEvents.slice(0, 1000);
-    }
+    },
     
     // Send to server
     this.sendUserEventToServer(userEvent);
@@ -202,7 +202,7 @@ export class AdvancedAnalyticsDashboard {
       });
     } catch (error) {
       console.error('Failed to send user event to server:', error);
-    }
+    },
   }
   
   private startAutoRefresh(): void {
@@ -216,7 +216,7 @@ export class AdvancedAnalyticsDashboard {
     if (this.refreshInterval) {
       clearInterval(this.refreshInterval);
       this.refreshInterval = null;
-    }
+    },
   }
   
   public getDashboard(): AnalyticsDashboard {
@@ -251,7 +251,7 @@ export class AdvancedAnalyticsDashboard {
         insights.push(`${metric.name} has increased by ${metric.change}% in the last period`);
       } else if (metric.change < -10) {
         insights.push(`${metric.name} has decreased by ${Math.abs(metric.change)}% in the last period`);
-      }
+      },
     });
     
     // Analyze user behavior
@@ -264,7 +264,7 @@ export class AdvancedAnalyticsDashboard {
     const topEventType = Object.entries(eventTypes).reduce((a, b) => eventTypes[a[0]] > eventTypes[b[0]] ? a : b);
     if (topEventType) {
       insights.push(`Most common user action: ${topEventType[0]} (${topEventType[1]} times)`);
-    }
+    },
     
     return insights;
   }
@@ -281,7 +281,7 @@ export class AdvancedAnalyticsDashboard {
       return csvLines.join('\n');
     } else {
       return JSON.stringify(dashboard, null, 2);
-    }
+    },
   }
   
   public addListener(listener: (dashboard: AnalyticsDashboard) => void): void {
@@ -292,7 +292,7 @@ export class AdvancedAnalyticsDashboard {
     const index = this.listeners.indexOf(listener);
     if (index > -1) {
       this.listeners.splice(index, 1);
-    }
+    },
   }
   
   private notifyListeners(): void {
@@ -302,7 +302,7 @@ export class AdvancedAnalyticsDashboard {
         listener(dashboard);
       } catch (error) {
         console.error('Error in analytics dashboard listener:', error);
-      }
+      },
     });
   }
   
@@ -311,7 +311,7 @@ export class AdvancedAnalyticsDashboard {
     if (this.realTimeConnection) {
       this.realTimeConnection.close();
       this.realTimeConnection = null;
-    }
+    },
   }
 }
 

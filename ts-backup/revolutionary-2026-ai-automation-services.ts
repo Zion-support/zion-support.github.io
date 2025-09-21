@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './service-variants',
 export interface Revolutionary2026AIAutomationService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full-featured consciousness orchestration platform with real-time coordination, ethical frameworks, and breakthrough problem-solving capabilities.',
     launchDate: '2024-12-01',
@@ -126,7 +126,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete autonomous business ecosystem with real-time optimization, predictive analytics, and self-evolving capabilities.',
     launchDate: '2024-12-01',
@@ -173,7 +173,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full-featured quantum memory fabric with infinite capacity, quantum entanglement, and global instant access.',
     launchDate: '2024-12-01',
@@ -220,7 +220,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full-featured time manipulation platform with temporal intelligence, multi-dimensional optimization, and business transformation capabilities.',
     launchDate: '2024-12-01',
@@ -267,7 +267,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Complete neural interface development platform with AI assistance, testing environments, and compliance frameworks.',
     launchDate: '2024-12-01',

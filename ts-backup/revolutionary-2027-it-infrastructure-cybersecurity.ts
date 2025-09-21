@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './service-variants',
 export interface Revolutionary2027ITInfrastructureCybersecurityService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Comprehensive zero-trust security platform with AI-powered threat detection, continuous authentication, and automated incident response.',
     launchDate: '2027-01-10',
@@ -126,7 +126,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-resistant cryptography platform with NIST-compliant algorithms, hybrid encryption, and comprehensive key management.',
     launchDate: '2027-02-20',
@@ -173,7 +173,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered network operations center with 24/7 monitoring, automated incident response, and predictive maintenance capabilities.',
     launchDate: '2027-03-15',
@@ -220,7 +220,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Edge computing infrastructure platform with intelligent workload orchestration, edge analytics, and seamless cloud integration.',
     launchDate: '2027-04-25',
@@ -267,7 +267,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered DevOps automation platform with intelligent code review, automated testing, and comprehensive deployment automation.',
     launchDate: '2027-05-30',
