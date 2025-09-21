@@ -9,7 +9,7 @@
   "scripts": {
     "sitemap": "node scripts/generate-sitemap.mjs",
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' next build && NODE_OPTIONS='--openssl-legacy-provider' next export",
     "export": "next build",
     "start": "next start",
     "lint": "next lint",

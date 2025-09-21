@@ -1,13 +1,7 @@
-// Polyfill for globalThis
-if (typeof globalThis === 'undefined') {
-  global.globalThis = global;
-}
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
-  output: 'export',
   trailingSlash: true,
   distDir: 'out',
   
@@ -15,13 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
   },
-  
-  // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
   },
-  
-  // ESLint configuration
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -53,8 +43,10 @@ const nextConfig = {
         fs: false,
         net: false,
         tls: false,
+        path: false,
         crypto: require.resolve('crypto-browserify'),
         stream: require.resolve('stream-browserify'),
+        util: false,
         buffer: require.resolve('buffer'),
         process: require.resolve('process/browser'),
       };
@@ -64,4 +56,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
