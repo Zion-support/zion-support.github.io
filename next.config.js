@@ -23,6 +23,9 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
+  // Typed routes configuration
+  typedRoutes: false,
+  
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
@@ -54,6 +57,7 @@ const nextConfig = {
     
     return config;
   },
+<<<<<<< HEAD
   // Headers are handled by Netlify configuration
   // headers: async () => {
   //   return [
@@ -80,6 +84,10 @@ const nextConfig = {
   //     },
   //   ];
   // },
+=======
+  
+  // Headers are handled by netlify.toml for static export
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-cb53
 };
 
 module.exports = nextConfig;

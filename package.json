@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22.0.0",
+    "node": ">=20.18.1",
     "npm": ">=10.0.0"
   },
   "scripts": {
@@ -26,6 +26,7 @@
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
+    "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
@@ -51,6 +52,7 @@
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "lucide-react": "^0.536.0",
+<<<<<<< HEAD
     "next": "^14.2.32",
     "next-themes": "^0.4.6",
     "node-cron": "^4.2.1",
@@ -59,7 +61,18 @@
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
     "react-dom": "^18.3.1",
+=======
+    "next": "^15.5.3",
+    "next-themes": "^0.4.6",
+    "node-cron": "^4.2.1",
+    "openai": "^5.11.0",
+    "react": "^19.1.1",
+    "react-datepicker": "^8.4.0",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-cb53
     "sonner": "^2.0.7",
+    "swr": "^2.3.6",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
@@ -69,11 +82,14 @@
     "@testing-library/react": "^13.4.0",
     "@types/node": "^24.5.2",
     "@types/node-cron": "^3.0.11",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
+<<<<<<< HEAD
     "@vitejs/plugin-react": "^4.3.4",
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-cb53
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
     "css-loader": "^6.11.0",
@@ -89,8 +105,12 @@
     "postcss-loader": "^6.2.1",
     "tailwindcss": "^3.4.0",
     "ts-node": "^10.9.2",
+<<<<<<< HEAD
     "typescript": "^5.9.2",
     "vite": "^5.4.10",
     "web-vitals": "^3.0.0"
+=======
+    "typescript": "^5.9.2"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-cb53
   }
 }
