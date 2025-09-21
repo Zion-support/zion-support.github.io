@@ -1,19 +1,10 @@
 [build]
-  # Use custom build script to handle TypeScript configuration issues
-  command = "bash scripts/netlify-build.sh"
-  publish = "out"
-  # Explicitly specify this is a Next.js static site
-  base = "."
+  command = "npm ci --legacy-peer-deps && npm run build"
+  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=8192"
-  NETLIFY_USE_NPM = "true"
-  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "false"
-  CANONICAL_URL = "https://ziontechgroup.com"
-  # Force npm usage and disable pnpm detection
-  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
-  NETLIFY_USE_PNPM = "false"
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 # Note: Headers are now handled by the generated _headers file in the out directory
 # This ensures compatibility with Next.js static export and avoids conflicts

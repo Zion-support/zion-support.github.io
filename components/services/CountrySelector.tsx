@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Globe } from 'lucide-react'
+<<<<<<< HEAD
 
+=======
+selectedCountry: CountryPricing | null,
+>>>>>>> origin/working-build-1758422960
 }
 
 interface CountrySelectorProps {

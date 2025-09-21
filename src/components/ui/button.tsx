@@ -1,7 +1,16 @@
 import * as React from "react";
+<<<<<<< HEAD
 // import { Slot } from "@radix-ui/react-slot"; // Temporarily disabled for build fix
 import { cva } from "class-variance-authority";
 import type { VariantProps } from "class-variance-authority";
+=======
+<<<<<<< HEAD
+import { cva, type VariantProps } from "class-variance-authority";
+=======
+// import { Slot } from "@radix-ui/react-slot";
+import { cva } from "class-variance-authority";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a0e0
+>>>>>>> origin/working-build-1758422960
 import { cn } from "@/lib/utils";
 
 // Simple Slot replacement
@@ -42,14 +51,17 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
+<<<<<<< HEAD
     const Comp = asChild ? "button" : "button"; // Temporarily disabled Slot for build fix
+=======
+    const Comp = "button"; // asChild ? Slot : "button";
+>>>>>>> origin/working-build-1758422960
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
