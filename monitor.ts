@@ -28,13 +28,13 @@ export class PerformanceMonitor {
     if ('performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
-    }
+    },
 
     // First Contentful Paint
     const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
     if (fcpEntry) {
       this.metrics.firstContentfulPaint = fcpEntry.startTime;
-    }
+    },
 
     // Largest Contentful Paint
     if ('PerformanceObserver' in window) {
@@ -60,11 +60,11 @@ export class PerformanceMonitor {
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             this.metrics.cumulativeLayoutShift += entry.value;
-          }
+          },
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-    }
+    },
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -88,9 +88,9 @@ export class PerformanceMonitor {
           'lcp': this.metrics.largestContentfulPaint,
           'fid': this.metrics.firstInputDelay,
           'cls': this.metrics.cumulativeLayoutShift,
-        }
+        },
       });
-    }
+    },
   }
 }
 

@@ -58,7 +58,7 @@ serve(async (req) => {
     const data = await response.json();
     if (data.error) {
       throw new Error(data.error.message);
-    }
+    },
 
     const assistantMessage = data.choices[0].message.content,
 

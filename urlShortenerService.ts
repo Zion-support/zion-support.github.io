@@ -48,7 +48,7 @@ class UrlShortenerService {
     const shortCode = request.customCode || this.generateShortCode(),
     if (this.urls.has(shortCode)) {
       throw new Error('Short code already exists')
-    }
+    },
 
     const shortUrl: ShortUrl = {
       id: this.generateId(),
@@ -80,7 +80,7 @@ class UrlShortenerService {
     if (url.expiresAt && url.expiresAt < new Date()) {
       url.isActive = false,
       return null
-    }
+    },
 
     return url}
 
@@ -101,17 +101,17 @@ class UrlShortenerService {
       analytics.lastClicked = new Date();
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer);
-      }
+      },
       if (!analytics.countries.includes(clickData.country)) {
         analytics.countries.push(clickData.country);
-      }
+      },
       if (!analytics.devices.includes(clickData.device)) {
         analytics.devices.push(clickData.device);
-      }
+      },
       if (!analytics.browsers.includes(clickData.browser)) {
         analytics.browsers.push(clickData.browser);
-      }
-    }
+      },
+    },
   }
 
   async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {

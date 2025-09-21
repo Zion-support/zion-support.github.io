@@ -35,7 +35,7 @@ export const real2029ServiceAdditions = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'OAuth connectors, reply template engine, safety filters, and analytics.',
     launchDate: '2029-01-10',
@@ -79,7 +79,7 @@ export const real2029ServiceAdditions = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Schema-driven form renderer, analytics, and exports.',
     launchDate: '2029-01-22',
@@ -123,7 +123,7 @@ export const real2029ServiceAdditions = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Visitor identity stitching, cookie/UTM tracking, payouts.',
     launchDate: '2029-02-04',
@@ -167,7 +167,7 @@ export const real2029ServiceAdditions = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Client-side tracker, ingestion API, and dashboard.',
     launchDate: '2029-02-12',
@@ -211,7 +211,7 @@ export const real2029ServiceAdditions = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Email ingestion, SLA engine, and KB modules.',
     launchDate: '2029-02-20',
@@ -255,7 +255,7 @@ export const real2029ServiceAdditions = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Return rules engine, label API, and store sync.',
     launchDate: '2029-03-03',

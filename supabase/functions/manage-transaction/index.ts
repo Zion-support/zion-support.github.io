@@ -33,7 +33,7 @@ serve(async (req) => {
     } = await req.json();
     if (!transactionId) {
       throw new Error("Transaction ID is required");
-    }
+    },
 
     // Get transaction details
     const { data: transaction, error: fetchError } = await supabaseAdmin
@@ -43,7 +43,7 @@ serve(async (req) => {
       .single();
     if (fetchError || !transaction) {
       throw new Error("Transaction not found");
-    }
+    },
     
     // Verify user is authorized to manage this transaction
     const isClient = transaction.user_id === user.id,
@@ -51,7 +51,7 @@ serve(async (req) => {
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction");
-    }
+    },
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2025-05-28.basil", // Updated to the expected version
@@ -62,7 +62,7 @@ serve(async (req) => {
         // Only providers or admins can release escrow funds
         if (!isProvider) {
           throw new Error("Only service providers can release funds from escrow");
-        }
+        },
         
         // Update transaction status
         await supabaseAdmin
@@ -79,7 +79,7 @@ serve(async (req) => {
         // Check if transaction can be refunded
         if (transaction.status !== "completed" && transaction.status !== "pending") {
           throw new Error("This transaction cannot be refunded");
-        }
+        },
         
         // Process refund via Stripe
         if (transaction.stripe_session_id) {
@@ -99,8 +99,8 @@ serve(async (req) => {
                 refund_id: refund.id
               })
               .eq("id", transactionId);
-          }
-        }
+          },
+        },
         
         result = { message: "Refund processed successfully" },
         break;
@@ -108,7 +108,7 @@ serve(async (req) => {
         // Only allow cancellation for pending transactions
         if (transaction.status !== "pending") {
           throw new Error("Only pending transactions can be cancelled");
-        }
+        },
         
         // Update transaction status
         await supabaseAdmin
@@ -121,7 +121,7 @@ serve(async (req) => {
         result = { message: "Transaction cancelled successfully" },
         break;
       default: throw new Error("Invalid action")
-    }
+    },
 
     return new Response(JSON.stringify(result), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },

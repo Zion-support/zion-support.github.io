@@ -40,7 +40,7 @@ export async function getCurrentUserId(): Promise<string | null> {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('zion_user_id');
       if (stored) return stored
-    }
+    },
   } catch {}
   
   try {
@@ -48,7 +48,7 @@ export async function getCurrentUserId(): Promise<string | null> {
       const url = new URL(window.location.href);
       const q = url.searchParams.get('userId');
       if (q) return q
-    }
+    },
   } catch {}
   
   return null
@@ -66,7 +66,7 @@ export async function fetchOnboardingProgress(userId: string, role: 'talent' | '
     if (error) {
       // eslint-disable-next-line no-console
       console.warn('Supabase onboarding fetch error:', (error as any).message || String(error))
-    }
+    },
     
     return (data as OnboardingRecord | null) ?? null
   } catch (e) {

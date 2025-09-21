@@ -6,7 +6,7 @@ vi.mock('@prisma/client', () => {
   const mPrisma = {
     forumPost: {
       findMany: vi.fn()
-    }
+    },
   },
   return { PrismaClient: vi.fn(() => mPrisma) }}, { virtual: true }),
 describe('forum post queries', () => {

@@ -12,7 +12,7 @@ const resources = {
       resources: 'Resources',
       blog: 'Blog',
       contact: 'Contact'
-    }
+    },
   },
   'es-ES': {
     translation: {
@@ -22,7 +22,7 @@ const resources = {
       resources: 'Recursos',
       blog: 'Blog',
       contact: 'Contacto'
-    }
+    },
   }
 };
 
@@ -42,7 +42,7 @@ const resources = {
 //       lookupCookie: 'zion_language',
 //       lookupLocalStorage: 'zion_language',
 //       caches: ['cookie']
-//     }
+//     },
 //   });
 
 // export default i18n;

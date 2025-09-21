@@ -63,7 +63,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['CubeSat technologySatellite communication protocols', 'Ground station softwareOrbital mechanics algorithms'],
     integrations: ['IoT platformsWeather services', 'Government agenciesTelecom networks'],
@@ -106,7 +106,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['Machine learning algorithmsIoT sensors', 'Cloud computingBlockchain for energy trading'],
     integrations: ['Solar panel systemsWind turbines', 'Battery storageSmart meters', 'Grid infrastructure'],
@@ -149,7 +149,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['Computer visionLIDAR systems', 'Machine learning5G connectivity', 'Edge computing'],
     integrations: ['Vehicle manufacturersTraffic management systems', 'Insurance companiesFleet operators'],
@@ -192,7 +192,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['Deep learningBioinformatics', 'Molecular modelingHigh-performance computing'],
     integrations: ['Laboratory equipmentClinical databases', 'Pharmaceutical companiesResearch institutions'],
@@ -235,7 +235,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['ROS (Robot Operating System)Computer vision', 'Machine learningIoT sensors', 'Edge computing'],
     integrations: ['Manufacturing systemsWarehouse management', 'Healthcare equipmentLogistics platforms'],
@@ -278,7 +278,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['Unity 3DUnreal Engine', 'ARKitARCore', 'WebXRComputer vision'],
     integrations: ['CAD softwarePLM systems', 'Training platformsCRM systems'],
@@ -321,7 +321,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['IBM QiskitGoogle Cirq', 'Microsoft Q#Amazon Braket', 'D-Wave Ocean'],
     integrations: ['Cloud platformsScientific software', 'Machine learning frameworksHigh-performance computing'],
@@ -364,7 +364,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['Atomic force microscopyScanning tunneling microscopy', 'Molecular beam epitaxyChemical vapor deposition'],
     integrations: ['Manufacturing systemsResearch laboratories', 'Quality control equipmentAnalytical instruments'],
@@ -407,7 +407,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['IoT sensors5G networks', 'Edge computingMachine learning', 'Big data analytics'],
     integrations: ['Traffic systemsEnergy grids', 'Public transportationEmergency services', 'Municipal databases'],
@@ -450,7 +450,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['IoT sensors3D modeling', 'Real-time data processingMachine learning', 'Cloud computing'],
     integrations: ['PLM systemsIoT platforms', 'CAD softwareERP systems', 'SCADA systems'],
@@ -493,7 +493,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     technology: ['Unity 3DUnreal Engine', 'Web3 technologiesBlockchain', 'VR/AR SDKs'],
     integrations: ['E-commerce platformsSocial media', 'Payment gatewaysAnalytics tools'],

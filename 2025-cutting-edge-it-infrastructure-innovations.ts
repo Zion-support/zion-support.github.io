@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './service-variants';
 
 export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string;
@@ -55,7 +55,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       professional: '$1,999/month',
       enterprise: '$4,999/month',
       custom: 'Contact for pricing'
-    }
+    },
     features: [
       'Quantum-resistant encryption algorithms',
       'Post-quantum cryptography implementation',
@@ -111,7 +111,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       professional: '$1,299/month',
       enterprise: '$2,999/month',
       custom: 'Contact for pricing'
-    }
+    },
     features: [
       'AI-powered edge resource management',
       'Autonomous load balancing and scaling',
@@ -167,7 +167,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       professional: '$6,999/month',
       enterprise: '$14,999/month',
       custom: 'Contact for pricing'
-    }
+    },
     features: [
       'Neuromorphic chip architecture',
       'Brain-inspired neural networks',
@@ -223,7 +223,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       professional: '$3,499/month',
       enterprise: '$7,999/month',
       custom: 'Contact for pricing'
-    }
+    },
     features: [
       'Autonomous power management',
       'AI-driven cooling optimization',

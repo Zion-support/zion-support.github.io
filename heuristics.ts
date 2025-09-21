@@ -1,4 +1,4 @@
-    }
+    },
   }
 ,
   if ((event.source === 'message' || event.source === 'job_post' || event.source === 'quote' || event.source === 'review') && event.content) {,

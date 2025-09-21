@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './service-variants';
 
 export interface Revolutionary2026ITInfrastructureService {
   id: string;
@@ -85,7 +85,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full quantum cloud infrastructure with advanced computing, security, and monitoring capabilities.',
     launchDate: '2026-02-01',
@@ -136,7 +136,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full neuromorphic computing platform with brain-inspired architecture and advanced AI capabilities.',
     launchDate: '2026-01-25',
@@ -187,7 +187,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full photonic computing infrastructure with light-speed processing and advanced optical capabilities.',
     launchDate: '2026-02-10',
@@ -238,7 +238,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced DNA computing platform with molecular processing and biological algorithms.',
     launchDate: '2026-03-01',
@@ -289,7 +289,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full holographic computing infrastructure with 3D processing and immersive capabilities.',
     launchDate: '2026-01-30',
@@ -340,7 +340,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full quantum internet infrastructure with ultra-secure communication and advanced networking capabilities.',
     launchDate: '2026-02-20',
@@ -391,7 +391,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced edge quantum computing platform with real-time processing and mobile optimization.',
     launchDate: '2026-02-15',
@@ -442,7 +442,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full quantum robotics infrastructure with advanced automation and real-time control capabilities.',
     launchDate: '2026-03-10',

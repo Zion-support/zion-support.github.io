@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './service-variants',
 export interface Revolutionary2025SpecializedITAIService {
   id: string,
   name: string,

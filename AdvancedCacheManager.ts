@@ -53,7 +53,7 @@ class AdvancedCacheManager<T = any> {
     // Load from localStorage if persistence is enabled
     if (this.config.persist) {
       this.loadFromStorage();
-    }
+    },
   }
 
   set(key: string, value: T): void {
@@ -68,7 +68,7 @@ class AdvancedCacheManager<T = any> {
     // Check if we need to evict
     if (this.cache.size >= this.config.maxSize && !this.cache.has(key)) {
       this.evict();
-    }
+    },
 
     this.cache.set(key, entry);
     this.updateStats();
@@ -76,7 +76,7 @@ class AdvancedCacheManager<T = any> {
     // Persist to localStorage if enabled
     if (this.config.persist) {
       this.saveToStorage();
-    }
+    },
   }
 
   get(key: string): T | null {
@@ -86,7 +86,7 @@ class AdvancedCacheManager<T = any> {
       this.stats.misses++;
       this.updateStats();
       return null;
-    }
+    },
 
     // Check if expired
     if (this.config.strategy === "ttl" && Date.now() - entry.timestamp > this.config.ttl) {
@@ -94,7 +94,7 @@ class AdvancedCacheManager<T = any> {
       this.stats.misses++;
       this.updateStats();
       return null;
-    }
+    },
 
     // Update access info
     entry.accessCount++;
@@ -115,8 +115,8 @@ class AdvancedCacheManager<T = any> {
       this.updateStats();
       if (this.config.persist) {
         this.saveToStorage();
-      }
-    }
+      },
+    },
     return deleted;
   }
 
@@ -133,7 +133,7 @@ class AdvancedCacheManager<T = any> {
     
     if (this.config.persist) {
       localStorage.removeItem('advanced_cache');
-    }
+    },
   }
 
   private evict(): void {
@@ -154,11 +154,11 @@ class AdvancedCacheManager<T = any> {
       case "ttl":
         keyToEvict = this.findExpiredKey();
         break;
-    }
+    },
 
     if (keyToEvict) {
       this.cache.delete(keyToEvict);
-    }
+    },
   }
 
   private findLRUKey(): string | null {
@@ -169,8 +169,8 @@ class AdvancedCacheManager<T = any> {
       if (entry.lastAccessed < oldestTime) {
         oldestTime = entry.lastAccessed;
         oldestKey = key;
-      }
-    }
+      },
+    },
 
     return oldestKey;
   }
@@ -183,8 +183,8 @@ class AdvancedCacheManager<T = any> {
       if (entry.accessCount < leastUsedCount) {
         leastUsedCount = entry.accessCount;
         leastUsedKey = key;
-      }
-    }
+      },
+    },
 
     return leastUsedKey;
   }
@@ -197,8 +197,8 @@ class AdvancedCacheManager<T = any> {
       if (entry.timestamp < oldestTime) {
         oldestTime = entry.timestamp;
         oldestKey = key;
-      }
-    }
+      },
+    },
 
     return oldestKey;
   }
@@ -209,8 +209,8 @@ class AdvancedCacheManager<T = any> {
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.timestamp > this.config.ttl) {
         return key;
-      }
-    }
+      },
+    },
 
     return null;
   }
@@ -223,12 +223,12 @@ class AdvancedCacheManager<T = any> {
       for (const [key, entry] of this.cache.entries()) {
         if (now - entry.timestamp > this.config.ttl) {
           keysToDelete.push(key);
-        }
-      }
+        },
+      },
 
       keysToDelete.forEach(key => this.cache.delete(key));
       this.updateStats();
-    }
+    },
   }
 
   private updateStats(): void {
@@ -247,7 +247,7 @@ class AdvancedCacheManager<T = any> {
       localStorage.setItem('advanced_cache', JSON.stringify(data));
     } catch (error) {
       console.warn('Failed to save cache to localStorage:', error);
-    }
+    },
   }
 
   private loadFromStorage(): void {
@@ -257,10 +257,10 @@ class AdvancedCacheManager<T = any> {
         const entries = JSON.parse(data);
         this.cache = new Map(entries);
         this.updateStats();
-      }
+      },
     } catch (error) {
       console.warn('Failed to load cache from localStorage:', error);
-    }
+    },
   }
 
   getStats(): CacheStats {
@@ -278,7 +278,7 @@ class AdvancedCacheManager<T = any> {
   destroy(): void {
     if (this.cleanupInterval) {
       clearInterval(this.cleanupInterval);
-    }
+    },
     this.clear();
   }
 }

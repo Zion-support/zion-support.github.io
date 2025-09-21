@@ -71,10 +71,10 @@ ${messageSuffix}`, // Use the dynamic message suffix
         logger.error('Notification failed with response:', {
             status: error.response.status, data: error.response.data
         });
-      }
+      },
     } else if (error instanceof Error) {
       errorMessage = error.message;
-    }
+    },
     logger.error(`Failed to send notification. Error: ${errorMessage}`);
   }
 }
@@ -113,10 +113,10 @@ export async function triggerAlerts(result: EndpointTestResult): Promise<void> {
             logger.error(`Remediation script error for ${serviceName} ('${result.name}'): ${error.message}`, { command, stdout, stderr });
             // Optionally send another webhook if remediation script fails
             return;
-          }
+          },
           if (stderr) {
             logger.warn(`Remediation script for ${serviceName} ('${result.name}') produced stderr: ${stderr}`, { command, stdout });
-          }
+          },
           logger.info(`Remediation script for ${serviceName} ('${result.name}') executed. Output: ${stdout}`);
         });
       } else {
@@ -124,18 +124,18 @@ export async function triggerAlerts(result: EndpointTestResult): Promise<void> {
         webhookMessageSuffix = "No specific serviceName defined for remediation.";
         logger.warn(`High latency alert for ${result.name}. ${webhookMessageSuffix} No remediation attempted.`);
         await sendWebhookNotification(result, webhookMessageSuffix);
-      }
+      },
 
       // Reset count after alert and remediation attempt (or decision not to attempt)
       alertConsecutiveCounts.set(result.name, 0);
     } else {
       logger.warn(`High latency detected for ${result.name} (${result.url}): ${result.latencyMs}ms. Consecutive count: ${currentCount}/${CONSECUTIVE_CHECKS_LIMIT}. No alert triggered yet.`);
-    }
+    },
   } else {
     // Latency is fine, reset consecutive count for this endpoint.
     if (alertConsecutiveCounts.get(result.name) !== 0) { // Only log if it was previously not 0
         logger.info(`Latency for ${result.name} is normal (${result.latencyMs}ms). Resetting consecutive count.`);
-    }
+    },
     alertConsecutiveCounts.set(result.name, 0);
   }
 }

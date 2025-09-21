@@ -167,7 +167,7 @@ class AICustomerSupportService {
         satisfactionScore: 4.0,
         lastContactDate: new Date('2025-01-08'),
         createdAt: new Date('2024-08-15')
-      }
+      },
     ],
     // Initialize sample agents
     this.agents = [
@@ -186,7 +186,7 @@ class AICustomerSupportService {
           customerSatisfaction: 4.6,
           firstResponseTime: 12,
           escalationRate: 8
-        }
+        },
       },
       {
         id: 'agent_002',
@@ -203,8 +203,8 @@ class AICustomerSupportService {
           customerSatisfaction: 4.4,
           firstResponseTime: 8,
           escalationRate: 15
-        }
-      }
+        },
+      },
     ],
     // Initialize sample tickets
     this.tickets = [
@@ -237,12 +237,12 @@ class AICustomerSupportService {
             isInternal: false,
             createdAt: new Date('2025-01-10T10:15:00Z'),
             attachments: []
-          }
+          },
         ],
         createdAt: new Date('2025-01-10T10:00:00Z'),
         updatedAt: new Date('2025-01-10T10:15:00Z'),
         firstResponseTime: 15
-      }
+      },
     ],
     // Initialize knowledge base
     this.knowledgeBase = [
@@ -257,7 +257,7 @@ class AICustomerSupportService {
         notHelpful: 12,
         lastUpdated: new Date('2025-01-05'),
         createdBy: 'agent_001'
-      }
+      },
     ]}
 
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
@@ -281,7 +281,7 @@ class AICustomerSupportService {
       ticket.status = 'in_progress',
       ticket.updatedAt = new Date();
       this.updateAnalytics()
-    }
+    },
   }
 
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
@@ -294,8 +294,8 @@ class AICustomerSupportService {
         ticket.resolvedAt = new Date();
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
-        }
-      }
+        },
+      },
       
       this.updateAnalytics()}
   }
@@ -304,7 +304,7 @@ class AICustomerSupportService {
     const ticket = this.tickets.find(t => t.id === ticketId);
     if (!ticket) {
       throw new Error(`Ticket ${ticketId} not found`);
-    }
+    },
 
     const message: TicketMessage = {
       id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -341,7 +341,7 @@ class AICustomerSupportService {
     const session = this.chatbotSessions.find(s => s.id === sessionId);
     if (!session) {
       throw new Error(`Session ${sessionId} not found`);
-    }
+    },
 
     const message: ChatbotMessage = {
       id: `chat_msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -375,7 +375,7 @@ class AICustomerSupportService {
       session.escalated = escalated,
       session.satisfaction = satisfaction,
       this.updateAnalytics()
-    }
+    },
   }
 
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
@@ -417,7 +417,7 @@ class AICustomerSupportService {
           'Review ticket classification criteria'
         ]
       });
-    }
+    },
 
     // Agent assignment recommendation
     const availableAgents = this.agents.filter(a => a.isAvailable && a.currentTickets < a.maxTickets);
@@ -435,7 +435,7 @@ class AICustomerSupportService {
           'Review agent availability and workload'
         ]
       });
-    }
+    },
 
     // Knowledge base recommendation
     const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10);
@@ -451,7 +451,7 @@ class AICustomerSupportService {
           'Consider consolidating similar articles'
         ]
       });
-    }
+    },
 
     return recommendations}
 

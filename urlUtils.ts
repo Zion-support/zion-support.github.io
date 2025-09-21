@@ -21,7 +21,7 @@ export class URLUtils {
       };
     } catch {
       return null;
-    }
+    },
   }
 
   public static isValidURL(url: string): boolean {
@@ -30,7 +30,7 @@ export class URLUtils {
       return true;
     } catch {
       return false;
-    }
+    },
   }
 
   public static getDomain(url: string): string | null {
@@ -55,7 +55,7 @@ export class URLUtils {
       return params;
     } catch {
       return {};
-    }
+    },
   }
 
   public static addQueryParam(url: string, key: string, value: string): string {
@@ -65,7 +65,7 @@ export class URLUtils {
       return urlObj.toString();
     } catch {
       return url;
-    }
+    },
   }
 
   public static removeQueryParam(url: string, key: string): string {
@@ -75,20 +75,20 @@ export class URLUtils {
       return urlObj.toString();
     } catch {
       return url;
-    }
+    },
   }
 
   public static isExternalURL(url: string): boolean {
     if (typeof window === "undefined") {
       return false;
-    }
+    },
 
     try {
       const urlObj = new URL(url);
       return urlObj.hostname !== window.location.hostname;
     } catch {
       return false;
-    }
+    },
   }
 
   public static isSameOrigin(url: string): boolean {
@@ -101,19 +101,19 @@ export class URLUtils {
       return urlObj.toString();
     } catch {
       return url;
-    }
+    },
   }
 
   public static getRelativeURL(url: string): string {
     if (typeof window === "undefined") {
       return url;
-    }
+    },
 
     try {
       const urlObj = new URL(url, window.location.origin);
       return urlObj.pathname + urlObj.search + urlObj.hash;
     } catch {
       return url;
-    }
+    },
   }
 }

@@ -132,8 +132,8 @@ class PasswordStrengthService {
     for (const word of this.commonWords) {
       if (lowerPassword.includes(word)) {
         return true
-      }
-    }
+      },
+    },
     return false;
   }
 
@@ -144,8 +144,8 @@ class PasswordStrengthService {
     for (const pattern of this.patterns) {
       if (pattern.test(password.toLowerCase())) {
         return true
-      }
-    }
+      },
+    },
     return false}
 
   /**
@@ -155,8 +155,8 @@ class PasswordStrengthService {
     for (let i = 0, i < password.length - 2, i++) {
       if (password[i] === password[i + 1] && password[i] === password[i + 2]) {
         return true
-      }
-    }
+      },
+    },
     return false}
 
   /**
@@ -191,35 +191,35 @@ class PasswordStrengthService {
       feedback.push('Password is too short - minimum 8 characters recommended')
     } else if (details.length < 12) {
       feedback.push('Consider using a longer password for better security');
-    }
+    },
 
     if (!details.hasUppercase) {
       feedback.push('Add uppercase letters to increase complexity');
-    }
+    },
 
     if (!details.hasLowercase) {
       feedback.push('Add lowercase letters to increase complexity');
-    }
+    },
 
     if (!details.hasNumbers) {
       feedback.push('Include numbers to make password harder to guess');
-    }
+    },
 
     if (!details.hasSymbols) {
       feedback.push('Add special characters for maximum security');
-    }
+    },
 
     if (details.hasCommonWords) {
       feedback.push('Avoid common words that are easily guessed');
-    }
+    },
 
     if (details.hasSequentialChars) {
       feedback.push('Avoid sequential character patterns');
-    }
+    },
 
     if (details.hasRepeatingChars) {
       feedback.push('Avoid repeating character patterns');
-    }
+    },
 
     return feedback}
 
@@ -230,19 +230,19 @@ class PasswordStrengthService {
     const suggestions: string[] = [],
     if (details.length < 12) {
       suggestions.push('Use at least 12 characters for strong passwords')
-    }
+    },
 
     if (!details.hasUppercase || !details.hasLowercase || !details.hasNumbers || !details.hasSymbols) {
       suggestions.push('Mix uppercase, lowercase, numbers, and symbols');
-    }
+    },
 
     if (details.hasCommonWords) {
       suggestions.push('Use random combinations instead of dictionary words');
-    }
+    },
 
     if (details.hasSequentialChars) {
       suggestions.push('Avoid keyboard patterns like qwerty or 123456');
-    }
+    },
 
     suggestions.push('Consider using a passphrase with random words');
     suggestions.push('Use unique passwords for each account');
@@ -256,19 +256,19 @@ class PasswordStrengthService {
     const warnings: string[] = [],
     if (details.length < 8) {
       warnings.push('CRITICAL: Password is extremely weak and easily crackable')
-    }
+    },
 
     if (details.hasCommonWords) {
       warnings.push('WARNING: Common words make password vulnerable to dictionary attacks')
-    }
+    },
 
     if (details.entropy < 2.0) {
       warnings.push('WARNING: Low entropy makes password predictable')
-    }
+    },
 
     if (details.crackTime === 'Instantly' || details.crackTime.includes('seconds')) {
       warnings.push('WARNING: Password can be cracked in seconds')
-    }
+    },
 
     return warnings}
 

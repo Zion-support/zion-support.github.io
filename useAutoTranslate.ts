@@ -41,7 +41,7 @@ export function useAutoTranslate(initialLanguage = 'en'): UseAutoTranslateResult
       setError(err instanceof Error ? err.message : 'Translation failed');
     } finally {
       setLoading(false);
-    }
+    },
   };
 
   return {

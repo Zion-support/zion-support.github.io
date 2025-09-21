@@ -32,7 +32,7 @@ export const validators = {
       return true;
     } catch {
       return false;
-    }
+    },
   },
   required: (value: unknown): boolean => {
     return value !== null && value !== undefined && value !== '';

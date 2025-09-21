@@ -55,7 +55,7 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    },
     technology: ["GPT-4", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
     integrations: ["Salesforce", "HubSpot", "Google Analytics", "Facebook Ads", "LinkedIn Ads"],
     compliance: ["GDPR", "CCPA", "SOC 2"],
@@ -113,7 +113,7 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    },
     technology: ["Quantum algorithms", "Python", "TensorFlow", "Kubernetes", "Apache Kafka"],
     integrations: ["AWS", "Azure", "Google Cloud", "Snowflake", "Databricks"],
     compliance: ["ISO 27001", "SOC 2", "HIPAA", "GDPR"],
