@@ -4,6 +4,7 @@ import { ThemeProvider } from '../components/ThemeProvider.jsx';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import Analytics from '../components/Analytics.jsx';
 import ScrollToTop from '../components/ScrollToTop.jsx';
+import PerformanceMonitor from '../components/PerformanceMonitor.jsx';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -42,6 +43,7 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
           <ScrollToTop />
           <Analytics />
+          <PerformanceMonitor />
         </ThemeProvider>
       </ErrorBoundary>
     </>
