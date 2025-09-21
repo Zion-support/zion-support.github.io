@@ -1,12 +1,22 @@
 import { MapPin } from 'lucide-react'
-import { PaymentButton } from "@/components/transactions/PaymentButton",
 import React from "react";
-import React from "react";
+
+interface CountryPricing {
+  country: string;
+  pricePerIncident: number;
+}
+
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
+}
+
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
-  // Handle successful payment,
-return (
+  const handlePaymentInitiated = () => {
+    // Handle payment initiation
+    console.log('Payment initiated for', selectedCountry.country);
+  };
+
+  return (
     <div className='text-center'>
       <p className='text-zion-slate-light mb-2'>Selected Country</p>
       <h4 className='text-xl font-bold text-white mb-2 flex items-center justify-center'>
@@ -16,18 +26,15 @@ return (
       <p className='text-2xl font-bold text-zion-cyan mb-6'>
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
-      <PaymentButton
-amount={selectedCountry.pricePerIncident}
-        serviceId='it-onsite-service'
-        providerId='zion-tech-group'
-        buttonText={`Pay for Service in ${selectedCountry.country}`}
-        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6'
-        redirectUrl='/it-onsite-services?success=true'
-        onPaymentInitiated={handlePaymentInitiated}      />
+      <button
+        onClick={handlePaymentInitiated}
+        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6 rounded-lg font-medium'
+      >
+        Pay for Service in {selectedCountry.country}
+      </button>
       <p className='text-xs text-zion-slate-light mt-2'>
-        Price includes transportation and first hour onsite. Additional hours,
-billed separately.
+        Price includes transportation and first hour onsite. Additional hours billed separately.
       </p>
     </div>
   )
-}"}
+}

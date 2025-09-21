@@ -665,7 +665,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     reviews: 67,
     innovationLevel: 'Advanced',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['Quantum Energy Optimization', 'AI Grid Management', 'Predictive Analytics', 'Cost Optimization'];
+    aiCapabilities: ['Quantum Energy Optimization', 'AI Grid Management', 'Predictive Analytics', 'Cost Optimization'],
     marketDisruption: 'Advances energy technology by introducing quantum computing optimization and AI-powered grid management.'
   }
 ];
