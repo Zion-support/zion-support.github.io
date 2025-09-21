@@ -1,0 +1,35 @@
+[build]
+  command = "npm install --legacy-peer-deps --ignore-scripts && npm run build"
+  publish = ".next"
+
+[build.environment]
+<<<<<<< HEAD
+  NODE_VERSION = "16"
+=======
+  NODE_VERSION = "22"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-cc6c
+  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+# Note: Headers are now handled by the generated _headers file in the out directory
+# This ensures compatibility with Next.js static export and avoids conflicts
+
+<<<<<<< HEAD
+# Next.js static export configuration for Netlify
+
+# Note: Redirects are now handled by the generated _redirects file in the out directory
+# This ensures compatibility with Next.js static export and avoids conflicts
+
+ # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v2) 
+=======
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild" 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-cc6c

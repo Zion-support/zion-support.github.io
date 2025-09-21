@@ -1,5 +1,5 @@
-import fs from "fs";
-import { glob } from "glob";
+import fs from "fs",
+import { glob } from "glob",
 
 function fixUtilsFile(filePath) {
   try {

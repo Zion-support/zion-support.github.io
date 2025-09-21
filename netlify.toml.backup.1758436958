@@ -1,0 +1,33 @@
+[build]
+<<<<<<< HEAD
+  command = "npm ci --legacy-peer-deps --ignore-scripts && npm run build"
+=======
+  command = "npm install --legacy-peer-deps && npm run build"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-753c
+  publish = ".next"
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild" 

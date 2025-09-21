@@ -1,5 +1,6 @@
 // @playwright/test package is not installed, commenting out to avoid build errors
 export {};
+
 /*
 import { defineConfig, devices } from '@playwright/test',
 
@@ -42,7 +43,7 @@ export default defineConfig({
   browserName: 'webkit',
         ...devices['iPhone 12']
       }
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test',
 use: {,
 browserName: 'firefox'
 }
@@ -56,8 +57,11 @@ browserName: 'webkit'
     }
   ],
   reporter: [
-    ['list'],
+    ['list'];
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
   ]
-}),
+});
 */
+
+// Make this file a module to avoid TypeScript isolatedModules error
+export {};

@@ -2,12 +2,28 @@
   command = "npm install --ignore-scripts --legacy-peer-deps && npm install --save-dev @types/react @types/react-dom @types/node --legacy-peer-deps && npm run export"
   publish = "out"
 
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--legacy-peer-deps"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "netlify-plugin-cloudinary"
 
-[[plugins]]
-  package = "netlify-plugin-cloudinary" 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild" 
