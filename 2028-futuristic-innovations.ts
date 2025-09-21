@@ -133,7 +133,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     competitors: ['Palo Alto Networks', 'Cisco', 'Fortinet'],
     marketSize: '$45B cybersecurity market',
     growthRate: '35% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -239,7 +239,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],
     marketSize: '$67B AI healthcare market',
     growthRate: '40% annual growth',
-    variant: 'ai-healthcare',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -292,7 +292,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     competitors: ['Siemens', 'IBM', 'Cisco'],
     marketSize: '$25B smart city market',
     growthRate: '30% annual growth',
-    variant: 'iot-futuristic',
+    variant: 'iot',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -345,7 +345,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     competitors: ['Bloomberg Terminal', 'Thomson Reuters', 'Interactive Brokers'],
     marketSize: '$35B algorithmic trading market',
     growthRate: '50% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -398,7 +398,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     competitors: ['Coursera', 'Udemy', 'Khan Academy'],
     marketSize: '$18B AI education market',
     growthRate: '35% annual growth',
-    variant: 'ai-education',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -504,7 +504,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     competitors: ['Cloudflare', 'Akamai', 'Fastly'],
     marketSize: '$20B internet security market',
     growthRate: '30% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

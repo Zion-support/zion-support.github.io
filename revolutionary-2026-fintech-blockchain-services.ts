@@ -73,7 +73,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     competitors: ['SAPOracle', 'Manhattan AssociatesJDA Software', 'Blue Yonder'],
     marketSize: '$45.2B market',
     growthRate: '21.7% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     competitors: ['HubSpotMarketo', 'Salesforce Marketing CloudAdobe Marketing Cloud', 'Pardot'],
     marketSize: '$56.8B market',
     growthRate: '24.3% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     competitors: ['CrowdStrikeSentinelOne', 'Carbon BlackCylance', 'Darktrace'],
     marketSize: '$78.9B market',
     growthRate: '28.7% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     competitors: ['TableauPower BI', 'QlikViewLooker', 'Domo'],
     marketSize: '$67.3B market',
     growthRate: '22.8% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     competitors: ['EthereumSolana', 'CardanoPolkadot', 'Cosmos'],
     marketSize: '$89.4B market',
     growthRate: '42.1% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

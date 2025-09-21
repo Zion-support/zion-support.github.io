@@ -73,7 +73,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     competitors: ['UnityUnreal Engine', 'RobloxMinecraft', 'Second Life'],
     marketSize: '$74.4B market',
     growthRate: '38.2% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     competitors: ['LeoLabsSpace-Track', 'ESANASA', 'JAXA'],
     marketSize: '$23.8B market',
     growthRate: '45.7% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     competitors: ['ClimateAIJupiter Intelligence', 'The Climate CorporationIBM Weather', 'AccuWeather'],
     marketSize: '$56.3B market',
     growthRate: '22.8% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     competitors: ['SiemensRockwell Automation', 'GE DigitalABB', 'Honeywell'],
     marketSize: '$89.7B market',
     growthRate: '19.3% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     competitors: ['CiscoJuniper', 'HuaweiNokia', 'Ericsson'],
     marketSize: '$127.3B market',
     growthRate: '35.8% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

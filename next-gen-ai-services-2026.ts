@@ -261,7 +261,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     competitors: ['IBM QuantumGoogle Quantum AI', 'Amazon BraketMicrosoft Azure Quantum', 'Rigetti Computing'],
     marketSize: '$6.8B market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

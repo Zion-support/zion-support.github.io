@@ -73,7 +73,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     competitors: ['Hyperledger FabricCorda', 'Ethereum EnterpriseQuorum', 'Custom solutions'],
     marketSize: '$67B blockchain market',
     growthRate: '300% annual growth',
-    variant: 'quantum-cyberpunk',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     competitors: ['Traditional DeFi protocolsCentralized finance platforms', 'Custom solutions'],
     marketSize: '$80B DeFi market',
     growthRate: '400% annual growth',
-    variant: 'quantum-financial',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     competitors: ['OpenSea ProRarible', 'FoundationCustom solutions'],
     marketSize: '$35B NFT market',
     growthRate: '500% annual growth',
-    variant: 'holographic-advanced',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     competitors: ['SAP SCMOracle SCM', 'IBM BlockchainCustom solutions'],
     marketSize: '$28B supply chain market',
     growthRate: '280% annual growth',
-    variant: 'quantum-cyberpunk',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     competitors: ['OktaAuth0', 'Ping IdentityCustom solutions'],
     marketSize: '$22B identity management market',
     growthRate: '250% annual growth',
-    variant: 'quantum-cyberpunk',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

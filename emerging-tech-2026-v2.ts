@@ -167,7 +167,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     competitors: ['Specialized quantum platformsAdvanced security solutions', 'Government tools'],
     marketSize: '$20B market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

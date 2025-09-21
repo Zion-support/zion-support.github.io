@@ -73,7 +73,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Space infrastructure platformsSpace research tools', 'Government space programs'],
     marketSize: '$100B space economy market',
     growthRate: '500% annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -119,7 +119,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Satellite communication networksSpace communication platforms', 'Government space networks'],
     marketSize: '$80B satellite communication market',
     growthRate: '400% annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -165,7 +165,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Terrestrial mining platformsSpace research tools', 'Resource extraction platforms'],
     marketSize: '$60B space mining market',
     growthRate: '600% annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -212,7 +212,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Architectural design platformsEngineering design tools', 'Space research platforms'],
     marketSize: '$45B architectural design market',
     growthRate: '300% annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -258,7 +258,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     competitors: ['Renewable energy platformsPower management systems', 'Space research platforms'],
     marketSize: '$70B renewable energy market',
     growthRate: '350% annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

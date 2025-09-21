@@ -12,7 +12,7 @@ const nextConfig = {
   // Disable ESLint and TypeScript checking during build to avoid parsing issues
   eslint: {
     ignoreDuringBuilds: true,
-  },origin/main
+  },
   experimental: {
     esmExternals: false,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],

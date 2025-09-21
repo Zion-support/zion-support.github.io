@@ -120,7 +120,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Symantec'],
     marketSize: '$45.2B market',
     growthRate: '280% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     competitors: ['IBM Blockchain, SAP, Oracle, Microsoft Azure Blockchain, Amazon Managed Blockchain'],
     marketSize: '$12.3B market',
     growthRate: '250% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     competitors: ['IBM Quantum, Google Quantum, Amazon Braket, Microsoft Azure Quantum, D-Wave'],
     marketSize: '$8.9B market',
     growthRate: '350% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -355,7 +355,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry, KubeEdge'],
     marketSize: '$11.2B market',
     growthRate: '240% annual growth',
-    variant: 'edge-futuristic',
+    variant: 'edge-computing',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

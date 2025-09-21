@@ -73,7 +73,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point'],
     marketSize: '$45B cybersecurity market',
     growthRate: '35% annual growth',
-    variant: 'quantum-security-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     competitors: ['Jenkins, GitLab CI/CD, CircleCI, GitHub Actions'],
     marketSize: '$8B DevOps market',
     growthRate: '25% annual growth',
-    variant: 'autonomous-devops-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'],
     marketSize: '$480B cloud computing market',
     growthRate: '25% annual growth',
-    variant: 'quantum-cloud-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     competitors: ['ServiceNow ITAM, BMC Helix, Ivanti, Flexera'],
     marketSize: '$2B IT asset management market',
     growthRate: '20% annual growth',
-    variant: 'ai-itam-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     competitors: ['Cisco DNA Center, Juniper Mist, Arista CloudVision, VMware NSX'],
     marketSize: '$12B network management market',
     growthRate: '30% annual growth',
-    variant: 'autonomous-networking-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     competitors: ['Equinix, Digital Realty, CoreSite, CyrusOne'],
     marketSize: '$50B data center market',
     growthRate: '20% annual growth',
-    variant: 'quantum-datacenter-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -355,7 +355,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     competitors: ['ServiceNow, BMC Remedy, Jira Service Desk, Zendesk'],
     marketSize: '$8B IT service management market',
     growthRate: '25% annual growth',
-    variant: 'ai-itsm-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     competitors: ['Veeam, Commvault, Veritas, Acronis'],
     marketSize: '$15B backup and recovery market',
     growthRate: '20% annual growth',
-    variant: 'quantum-backup-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -449,7 +449,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     competitors: ['MetricStream, LogicManager, RSA Archer, ServiceNow GRC'],
     marketSize: '$5B GRC market',
     growthRate: '15% annual growth',
-    variant: 'autonomous-compliance-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

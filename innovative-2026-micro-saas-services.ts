@@ -120,7 +120,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     competitors: ['SignalWhatsApp Business', 'Telegram BusinessWickr', 'Threema'],
     marketSize: '$15.8B market',
     growthRate: '180% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     competitors: ['Bloomberg TerminalThomson Reuters', 'TradingViewMetaTrader', 'NinjaTrader'],
     marketSize: '$45.2B market',
     growthRate: '300% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     competitors: ['Palo Alto NetworksFortinet', 'CiscoCheck Point', 'Juniper Networks'],
     marketSize: '$35.8B market',
     growthRate: '250% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     competitors: ['SpaceX StarlinkOneWeb', 'TelesatIridium', 'Globalstar'],
     marketSize: '$12.3B market',
     growthRate: '350% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -496,7 +496,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     competitors: ['EthereumSolana', 'PolygonCardano', 'Polkadot'],
     marketSize: '$19.8B market',
     growthRate: '320% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

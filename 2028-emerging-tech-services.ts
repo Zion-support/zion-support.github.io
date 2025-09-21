@@ -80,7 +80,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain'],
     marketSize: '$15B blockchain supply chain market',
     growthRate: '45% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -133,7 +133,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['Schneider Electric', 'Siemens', 'Honeywell'],
     marketSize: '$22B smart building market',
     growthRate: '35% annual growth',
-    variant: 'iot-futuristic',
+    variant: 'iot',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -239,7 +239,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
     marketSize: '$8B quantum computing market',
     growthRate: '60% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -451,7 +451,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['No direct competitors', 'Traditional internet protocols', 'Security solutions'],
     marketSize: '$5B quantum internet market',
     growthRate: '80% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

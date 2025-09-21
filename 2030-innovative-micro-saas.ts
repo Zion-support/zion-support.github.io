@@ -120,7 +120,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     competitors: ['Limited competition in quantum security'],
     marketSize: 'Growing market - $150B+ potential',
     growthRate: '1200%+ annual growth potential',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     competitors: ['Limited competition in blockchain supply chain'],
     marketSize: 'Growing market - $120B+ potential',
     growthRate: '900%+ annual growth potential',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

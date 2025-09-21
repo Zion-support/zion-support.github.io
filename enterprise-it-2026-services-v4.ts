@@ -73,7 +73,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['CiscoPalo Alto Networks', 'VMware'],
     marketSize: '$60B cybersecurity market',
     growthRate: '50% annual growth',
-    variant: 'enterprise-futuristic',
+    variant: 'enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['EntrustDigiCert', 'GlobalSign'],
     marketSize: '$15B cryptography market',
     growthRate: '70% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoT'],
     marketSize: '$40B edge computing market',
     growthRate: '80% annual growth',
-    variant: 'edge-futuristic',
+    variant: 'edge-computing',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['AWS S3Azure Blob', 'Google Cloud Storage'],
     marketSize: '$80B cloud storage market',
     growthRate: '65% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

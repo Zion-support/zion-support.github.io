@@ -73,7 +73,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'],
     marketSize: '$25.6B marketing automation market',
     growthRate: '19% annual growth',
-    variant: 'ai-marketing-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     competitors: ['Salesforce, Pipedrive, HubSpot Sales, Zoho CRM'],
     marketSize: '$18.9B sales intelligence market',
     growthRate: '21% annual growth',
-    variant: 'ai-sales-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     competitors: ['BambooHR, Workday, ADP, Gusto'],
     marketSize: '$22.4B HR management market',
     growthRate: '18% annual growth',
-    variant: 'ai-hr-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     competitors: ['QuickBooks, Xero, FreshBooks, Sage'],
     marketSize: '$28.7B financial software market',
     growthRate: '16% annual growth',
-    variant: 'ai-finance-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     competitors: ['SAP, Oracle, Infor, Manhattan Associates'],
     marketSize: '$31.2B supply chain management market',
     growthRate: '17% annual growth',
-    variant: 'ai-supply-chain-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

@@ -73,7 +73,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     competitors: ['OpenAIAnthropic', 'Google DeepMindMicrosoft Research', 'IBM Watson'],
     marketSize: '$85.3B market',
     growthRate: '32.1% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     competitors: ['SalesforceHubSpot', 'Microsoft DynamicsOracle', 'SAP'],
     marketSize: '$67.8B market',
     growthRate: '24.5% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     competitors: ['Google CloudAWS', 'Microsoft AzureIBM Cloud', 'Oracle Cloud'],
     marketSize: '$92.1B market',
     growthRate: '28.7% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     competitors: ['McKinseyBCG', 'BainDeloitte', 'PwC'],
     marketSize: '$156.7B market',
     growthRate: '18.9% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     competitors: ['NeuralinkKernel', 'CTRL-labsOpenBCI', 'Emotiv'],
     marketSize: '$34.2B market',
     growthRate: '41.3% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

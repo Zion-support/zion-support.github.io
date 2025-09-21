@@ -130,7 +130,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     competitors: ['Traditional encryption', 'Basic quantum communication', 'Fiber optic networks'],
     marketSize: '$40B quantum communication market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -181,7 +181,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     competitors: ['Manual genetic engineering', 'Basic lab automation', 'Traditional research methods'],
     marketSize: '$35B synthetic biology market',
     growthRate: '300% annual growth',
-    variant: 'biotech-futuristic',
+    variant: 'biotech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -232,7 +232,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     competitors: ['Traditional machine learning', 'Basic quantum computing', 'Classical AI platforms'],
     marketSize: '$50B quantum AI market',
     growthRate: '450% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -334,7 +334,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     competitors: ['Traditional sensors', 'Basic measurement tools', 'Conventional sensing'],
     marketSize: '$20B quantum sensing market',
     growthRate: '350% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

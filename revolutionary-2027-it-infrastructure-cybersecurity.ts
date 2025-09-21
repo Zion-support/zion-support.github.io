@@ -120,7 +120,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     competitors: ['ID QuantiqueQrypt', 'Quantum XchangePost-Quantum', 'ISARA'],
     marketSize: '$8.7B market',
     growthRate: '280% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     competitors: ['AWS OutpostsAzure Stack', 'Google AnthosVMware', 'Red Hat'],
     marketSize: '$18.9B market',
     growthRate: '225% annual growth',
-    variant: 'edge-futuristic',
+    variant: 'edge-computing',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

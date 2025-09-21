@@ -1,5 +1,6 @@
+import { ServiceVariant } from './src/types/service-variants';
+
 export interface EmergingTechInnovationService {
-export interface EmergingTechService {
   id: string;
   name: string;
   tagline: string;
@@ -24,67 +25,7 @@ export interface EmergingTechService {
   setupTime: string;
   competitors: string[];
   roi: string;
-import { ServiceVariant } from './src/types/service-variants';
-
-export interface EmergingTechInnovationService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: {
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  technologyStack: string[];
-  innovationLevel: string;
-  futureProofing: string;
-  researchPartnerships: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link?: string;
-  marketPosition?: string;
-  technology?: string[];
-  growthRate?: string;
-  variant?: string;
-  contactInfo?: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  realImplementation?: boolean;
-  implementationDetails?: string;
+  variant: ServiceVariant;
 }
 
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
@@ -111,7 +52,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     category: 'Quantum Computing & Advanced Computing',
     marketSize: '$8.7B',
     targetAudience: ['Pharmaceutical companies', 'Financial institutions', 'Research universities', 'Government agencies', 'Technology companies'],
-    competitiveAdvantage: 'First-to-market quantum computing platform with proprietary error correction algorithms',
     competitiveAdvantage: 'Largest quantum processor access, hybrid computing capabilities, comprehensive algorithm library, expert consultation',
     useCases: [
       'Drug discovery and molecular modeling',
@@ -123,30 +63,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     integrations: ['AWS Braket', 'Azure Quantum', 'IBM Quantum', 'Google Quantum AI', 'D-Wave Leap'],
     compliance: ['ISO 27001', 'SOC2', 'FedRAMP', 'GDPR', 'CCPA'],
     website: 'https://ziontechgroup.com/quantum-computing-as-a-service',
-      'Machine learning acceleration',
-      'Climate modeling and simulation',
-      'Supply chain optimization',
-      'Logistics and routing problems'
-    ],
-    integrations: [
-      'AWS Quantum Braket',
-      'IBM Quantum Experience',
-      'Google Quantum AI',
-      'Microsoft Azure Quantum',
-      'Custom quantum simulators',
-      'Classical computing clusters',
-      'Data visualization tools',
-      'Machine learning frameworks'
-    ],
-    compliance: [
-      'ISO 27001',
-      'SOC 2 Type II',
-      'GDPR compliance',
-      'HIPAA compliance',
-      'Quantum-safe cryptography standards',
-      'Export control compliance'
-    ],
-    website: 'https://ziontechgroup.com/quantum-computing',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -421,7 +337,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     competitors: ['SpaceX, OneWeb, Boeing, Lockheed Martin, Northrop Grumman'],
     marketSize: '$469B global space economy',
     growthRate: '8.1% annual growth',
-    variant: 'space-tech-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -474,7 +390,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     competitors: ['Roblox, Unity, Unreal Engine, Decentraland, The Sandbox'],
     marketSize: '$74.4B metaverse market',
     growthRate: '37.7% annual growth',
-    variant: 'metaverse-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -527,7 +443,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     competitors: ['Schneider Electric, Siemens, ABB, General Electric, Honeywell'],
     marketSize: '$1.2T global energy management market',
     growthRate: '12.3% annual growth',
-    variant: 'sustainable-energy-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -580,7 +496,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     competitors: ['ABB Robotics, FANUC, KUKA, Yaskawa, Universal Robots'],
     marketSize: '$43.8B robotics market',
     growthRate: '17.2% annual growth',
-    variant: 'advanced-robotics-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -633,7 +549,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     competitors: ['Traditional ISPs, Government networks, Research networks'],
     marketSize: '$1.5B quantum internet market',
     growthRate: '52% annual growth',
-    variant: 'quantum-internet-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -686,7 +602,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     competitors: ['ClimateAI, Jupiter Intelligence, Climate Corporation, One Concern'],
     marketSize: '$2.5B climate tech market',
     growthRate: '24.3% annual growth',
-    variant: 'climate-analytics-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -739,7 +655,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     competitors: ['Samsara, Geotab, Verizon Connect, Fleet Complete'],
     marketSize: '$19.9B fleet management market',
     growthRate: '11.8% annual growth',
-    variant: 'autonomous-fleet-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -792,7 +708,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     competitors: ['Neuralink, CTRL-labs, Kernel, Paradromics'],
     marketSize: '$1.9B brain-computer interface market',
     growthRate: '15.5% annual growth',
-    variant: 'bci-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -845,7 +761,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     competitors: ['Benchling, SnapGene, VectorBuilder, Twist Bioscience'],
     marketSize: '$13.4B synthetic biology market',
     growthRate: '26.5% annual growth',
-    variant: 'synthetic-biology-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

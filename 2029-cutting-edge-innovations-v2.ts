@@ -166,7 +166,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     competitors: ['ID Quantique, Toshiba Quantum, Quantum Xchange'],
     marketSize: '$8.5B market',
     growthRate: '300% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -213,7 +213,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     competitors: ['No direct competitors in automated space mining'],
     marketSize: '$100B+ emerging market',
     growthRate: '1000%+ annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -260,7 +260,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     competitors: ['Meta Horizon Worlds, Roblox, Decentraland, Sandbox'],
     marketSize: '$12.5B market',
     growthRate: '400% annual growth',
-    variant: 'metaverse-futuristic',
+    variant: 'metaverse',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -354,7 +354,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     competitors: ['No direct competitors in DNA computing'],
     marketSize: '$15B+ emerging market',
     growthRate: '800%+ annual growth',
-    variant: 'biotech-futuristic',
+    variant: 'biotech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -401,7 +401,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     competitors: ['Goldman Sachs Quantum, JP Morgan Quantum, Traditional trading platforms'],
     marketSize: '$45B market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

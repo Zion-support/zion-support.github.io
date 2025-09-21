@@ -120,7 +120,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     competitors: ['IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum'],
     marketSize: '$1.8B market',
     growthRate: '65% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     competitors: ['CrowdStrike, SentinelOne, Darktrace, Cylance, Carbon Black'],
     marketSize: '$173.5B market',
     growthRate: '18.3% annual growth',
-    variant: 'enterprise-futuristic',
+    variant: 'enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     competitors: ['Boston Dynamics, Fetch Robotics, Rethink Robotics, Universal Robots, ABB'],
     marketSize: '$23.9B market',
     growthRate: '25.8% annual growth',
-    variant: 'autonomous-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     competitors: ['SingularityNET, Ocean Protocol, Fetch.ai, Bittensor, Cortex'],
     marketSize: '$2.1B market',
     growthRate: '52% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Edge TPU, NVIDIA Jetson, Intel OpenVINO'],
     marketSize: '$12.1B market',
     growthRate: '38.9% annual growth',
-    variant: 'edge-futuristic',
+    variant: 'edge-computing',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -355,7 +355,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     competitors: ['Atomwise, BenevolentAI, Insilico Medicine, Exscientia, Recursion Pharmaceuticals'],
     marketSize: '$1.2B market',
     growthRate: '42% annual growth',
-    variant: 'biotech-futuristic',
+    variant: 'biotech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     competitors: ['ClimateAI, Jupiter Intelligence, Climate X, The Climate Corporation, Climate Central'],
     marketSize: '$1.8B market',
     growthRate: '35% annual growth',
-    variant: 'simulation-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

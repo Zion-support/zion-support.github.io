@@ -167,7 +167,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Kong, Tyk, AWS API Gateway, Azure API Management, Google Cloud Endpoints'],
     marketSize: '$4.5B market',
     growthRate: '18.5% annual growth',
-    variant: 'enterprise-futuristic',
+    variant: 'enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['BambooHR, Workday, ADP, Paychex, Gusto'],
     marketSize: '$15.6B market',
     growthRate: '12.8% annual growth',
-    variant: 'hr-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['HubSpot, Marketo, Pardot, Mailchimp, ActiveCampaign'],
     marketSize: '$25.1B market',
     growthRate: '19.8% annual growth',
-    variant: 'marketing-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -449,7 +449,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['DocuSign, PandaDoc, HelloSign, ContractPodAi, Evisort'],
     marketSize: '$2.8B market',
     growthRate: '28.5% annual growth',
-    variant: 'legal-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

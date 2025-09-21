@@ -131,7 +131,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     competitors: ['Gainsight, Totango, ChurnZero, CustomerSuccessBox, Planhat'],
     marketSize: '$1.2B market',
     growthRate: '15.8% annual growth',
-    variant: 'customer-service-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -184,7 +184,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     competitors: ['Signal, Telegram, Wickr, Wire, Threema'],
     marketSize: '$3.8B market',
     growthRate: '18.5% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -237,7 +237,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     competitors: ['IBM Food Trust, Provenance, VeChain, OriginTrail, WaltonChain'],
     marketSize: '$2.9B market',
     growthRate: '22.4% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -290,7 +290,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     competitors: ['Ahrefs, SEMrush, Moz, Ubersuggest, Mangools'],
     marketSize: '$1.8B market',
     growthRate: '16.2% annual growth',
-    variant: 'marketing-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -343,7 +343,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     competitors: ['Buffer, Hootsuite, Later, Sprout Social, Agorapulse'],
     marketSize: '$2.1B market',
     growthRate: '19.3% annual growth',
-    variant: 'marketing-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -396,7 +396,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     competitors: ['Mailchimp, ConvertKit, ActiveCampaign, Drip, Klaviyo'],
     marketSize: '$1.5B market',
     growthRate: '14.7% annual growth',
-    variant: 'marketing-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -449,7 +449,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     competitors: ['Zendesk, Intercom, Freshdesk, Help Scout, Zoho Desk'],
     marketSize: '$2.8B market',
     growthRate: '17.2% annual growth',
-    variant: 'customer-service-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -502,7 +502,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     competitors: ['Asana, Monday.com, ClickUp, Basecamp, TeamGantt'],
     marketSize: '$3.2B market',
     growthRate: '15.9% annual growth',
-    variant: 'project-management-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

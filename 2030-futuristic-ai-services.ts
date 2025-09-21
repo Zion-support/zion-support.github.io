@@ -120,7 +120,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     competitors: ['None - First to market'],
     marketSize: 'Emerging market - $200B+ potential',
     growthRate: '1500%+ annual growth potential',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     competitors: ['None - First to market'],
     marketSize: 'Growing market - $300B+ potential',
     growthRate: '1200%+ annual growth potential',
-    variant: 'metaverse-futuristic',
+    variant: 'metaverse',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     competitors: ['Limited competition in AI space technology'],
     marketSize: 'Emerging market - $800B+ potential',
     growthRate: '3000%+ annual growth potential',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

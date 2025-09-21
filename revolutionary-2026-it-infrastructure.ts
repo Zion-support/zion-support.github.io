@@ -79,7 +79,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     competitors: ['AWS', 'Google Cloud', 'Microsoft Azure', 'IBM Cloud', 'Oracle Cloud'],
     marketSize: '$45B market',
     growthRate: '280% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -181,7 +181,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     competitors: ['Intel', 'AMD', 'NVIDIA', 'IBM', 'Hewlett Packard Enterprise'],
     marketSize: '$12B market',
     growthRate: '220% annual growth',
-    variant: 'it-futuristic',
+    variant: 'it-infrastructure',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -232,7 +232,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     competitors: ['No direct competitors', 'Research institutions developing similar concepts'],
     marketSize: '$35B emerging market',
     growthRate: '400% annual growth',
-    variant: 'healthcare-futuristic',
+    variant: 'healthcare',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -283,7 +283,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     competitors: ['Microsoft HoloLens', 'Magic Leap', 'Meta', 'Google Glass', 'Apple Vision Pro'],
     marketSize: '$18B market',
     growthRate: '280% annual growth',
-    variant: 'holographic-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -334,7 +334,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     competitors: ['Traditional ISPs', 'Emerging quantum networks', 'Government quantum initiatives'],
     marketSize: '$28B market',
     growthRate: '320% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -385,7 +385,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     competitors: ['No direct competitors', 'Traditional edge computing providers'],
     marketSize: '$22B emerging market',
     growthRate: '350% annual growth',
-    variant: 'edge-futuristic',
+    variant: 'edge-computing',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -436,7 +436,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     competitors: ['Traditional robotics companies', 'Emerging AI robotics', 'Industrial automation companies'],
     marketSize: '$32B market',
     growthRate: '280% annual growth',
-    variant: 'autonomous-futuristic',
+    variant: 'autonomous-systems',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

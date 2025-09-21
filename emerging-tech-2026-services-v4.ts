@@ -73,7 +73,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['Intel LoihiIBM TrueNorth', 'BrainChip'],
     marketSize: '$8B neuromorphic computing market by 2030',
     growthRate: '150% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['CiscoPalo Alto Networks', 'Fortinet'],
     marketSize: '$45B cybersecurity market',
     growthRate: '60% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     competitors: ['IBM QiskitGoogle Cirq', 'Rigetti'],
     marketSize: '$20B quantum computing market',
     growthRate: '120% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
