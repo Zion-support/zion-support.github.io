@@ -2,11 +2,25 @@ const path = require('path');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
-  
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    unoptimized: true, // Required for static export
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+    tsconfigPath: './tsconfig.json',
+  },
+  transpilePackages: [],
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -31,29 +45,8 @@ const nextConfig = {
         fs: false,
       };
     }
-    
-    // globalThis polyfill is imported at the top level
-    
-    // Disable PostCSS processing temporarily
-    config.module.rules.forEach((rule) => {
-      if (rule.test && rule.test.toString().includes('css')) {
-        rule.use = rule.use || [];
-        rule.use = rule.use.map((use) => {
-          if (typeof use === 'string' && use.includes('postcss')) {
-            return 'css-loader';
-          }
-          return use;
-        });
-      }
-    });
-    
-    return config;
-  },
-  
-  // Image optimization
-  images: {
-    unoptimized: true, // Required for static export
-  },
+  // Disable CSS optimization to avoid matchAll issues
+  optimizeFonts: false,
 };
 
 export default nextConfig;
