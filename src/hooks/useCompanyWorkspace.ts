@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
 
 interface Company {
-  id: string;
-  name: string;
-  plan: string;
-  teamSize: number;
-  teamLimit: number | null;
-  billingCycle: string;
+  id: string,
+  name: string,
+  plan: string,
+  teamSize: number,
+  teamLimit: number | null,
+  billingCycle: string,
   logoUrl?: string;
-  workspaceUrl: string;
-}
+  workspaceUrl: string}
 
 export function useCompanyWorkspace() {
   const [company, setCompany] = useState<Company | null>(null);
@@ -30,8 +29,7 @@ export function useCompanyWorkspace() {
           teamLimit: null, // Unlimited
           billingCycle: 'Annual',
           logoUrl: 'https://via.placeholder.com/40/0000FF/FFFFFF?text=AC',
-          workspaceUrl: 'acme.ziontechgroup.com',
-        };
+          workspaceUrl: 'acme.ziontechgroup.com'};
         
         setCompany(mockCompany);
       } catch (error) {
@@ -46,6 +44,5 @@ export function useCompanyWorkspace() {
 
   return {
     company,
-    loading,
-  };
+    loading};
 }

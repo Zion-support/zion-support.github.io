@@ -2,24 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface DashboardMetric {
-  id: string;
-  title: string;
-  value: string;
-  change: string;
-  trend: 'up' | 'down' | 'stable';
-  icon: string;
-  color: string;
-}
+  id: string,
+  title: string,
+  value: string,
+  change: string,
+  trend: 'up' | 'down' | 'stable',
+  icon: string,
+  color: string}
 
 interface ChartData {
-  labels: string[];
+  labels: string[],
   datasets: Array<{
-    label: string;
-    data: number[];
-    borderColor: string;
-    backgroundColor: string;
-    tension: number;
-  }>;
+    label: string,
+    data: number[],
+    borderColor: string,
+    backgroundColor: string,
+    tension: number}>;
 }
 
 export const AdvancedDashboardV2: React.FC = () => {
@@ -78,8 +76,7 @@ export const AdvancedDashboardV2: React.FC = () => {
       icon: '🚀',
       color: 'indigo'
     }
-  ]);
-
+  ]),
   const [chartData, setChartData] = useState<ChartData>({
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
@@ -98,39 +95,32 @@ export const AdvancedDashboardV2: React.FC = () => {
         tension: 0.4
       }
     ]
-  });
-
+  }),
   const [timeRange, setTimeRange] = useState('6m');
   const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return '↗️';
+      case 'up': return '↗️',
       case 'down': return '↘️';
-      default: return '➡️';
-    }
+      default: return '➡️'}
   };
-
   const getTrendColor = (trend: string) => {
     switch (trend) {
-      case 'up': return 'text-green-400';
+      case 'up': return 'text-green-400',
       case 'down': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
+      default: return 'text-gray-400'}
   };
-
   const getMetricColor = (color: string) => {
     switch (color) {
-      case 'green': return 'from-green-500 to-emerald-600';
+      case 'green': return 'from-green-500 to-emerald-600',
       case 'blue': return 'from-blue-500 to-cyan-600';
       case 'red': return 'from-red-500 to-rose-600';
       case 'yellow': return 'from-yellow-500 to-amber-600';
       case 'purple': return 'from-purple-500 to-violet-600';
       case 'indigo': return 'from-indigo-500 to-blue-600';
-      default: return 'from-gray-500 to-slate-600';
-    }
+      default: return 'from-gray-500 to-slate-600'}
   };
-
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div
@@ -286,7 +276,5 @@ export const AdvancedDashboardV2: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );
-};
-
+  )};
 export default AdvancedDashboardV2;

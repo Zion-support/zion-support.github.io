@@ -1,11 +1,10 @@
 
-import { ApplicationStatus,,  } from "@/types/jobs",
+import { ApplicationStatus,} from "@/types/jobs";
 import React from "react";
-import { CheckCircle2,,, Circle,,, CircleDot,,  } from 'lucide-react'
+import { CheckCircle2,,, Circle,,, CircleDot,} from 'lucide-react'
 import React from "react";
 interface ApplicationProgressProps {
-className?: string,
-}
+className?: string}
 export function ApplicationProgress({ status className }: ApplicationProgressProps) {
   // Define the progress value based on status,
 if (currentRank < statusRank_) {

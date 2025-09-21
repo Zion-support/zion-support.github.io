@@ -77,7 +77,7 @@ export function ServiceLandingTemplate({
 
       {/* CTA Section */}
       <div className="bg-blue-600 text-white py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
@@ -93,5 +93,4 @@ export function ServiceLandingTemplate({
         </div>
       </div>
     </div>
-  );
-}
+  )}

@@ -30,8 +30,7 @@ function getAllFiles(dir, extensions) {
         files.push(fullPath)}
     }
   } catch (error) {
-    // Skip directories that can't be read,
-}
+    // Skip directories that can't be read}
   return files}
 // Main execution,
 async function main() {

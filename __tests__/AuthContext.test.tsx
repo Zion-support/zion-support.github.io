@@ -1,30 +1,27 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react',
-import { AuthProvider } from '@/context/auth/AuthProvider',
-import { AuthContext } from '@/context/auth/AuthContext',
-import { loginUser } from '@/services/authService',
-import { useAuthOperations } from '@/hooks/useAuthOperations',
-import { safeStorage } from '@/utils/safeStorage',
-import { vi, describe, it, expect, type MockInstance } from 'vitest', // Corrected import
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { AuthContext } from '@/context/auth/AuthContext';
+import { loginUser } from '@/services/authService';
+import { useAuthOperations } from '@/hooks/useAuthOperations';
+import { safeStorage } from '@/utils/safeStorage';
+import { vi, describe, it, expect, type MockInstance } from 'vitest'; // Corrected import
 
-vi.mock('@/services/authService'),
-vi.mock('@/hooks/useAuthOperations'),
+vi.mock('@/services/authService');
+vi.mock('@/hooks/useAuthOperations');
 vi.mock('@/utils/safeStorage', () => ({
   safeStorage: { setItem: vi.fn(), getItem: vi.fn(), removeItem: vi.fn() },
   safeSessionStorage: { setItem: vi.fn(), getItem: vi.fn(), removeItem: vi.fn() }
 })),
-
-const replace = vi.fn(),
+const replace = vi.fn();
 vi.mock('next/router', () => ({
   useRouter: () => ({ replace, asPath: '/', isReady: true })
 })),
-
 describe('AuthContext login', () => {
   it('stores token and redirects on successful login', async () => {
     (loginUser as MockInstance<any, any>).mockResolvedValue({
       res: { status: 200 },
       data: { accessToken: 'jwt', user: { id: '1', email: 'a@b.c' } }
     }),
-
     (useAuthOperations as MockInstance<any, any>).mockReturnValue({
       login: vi.fn().mockResolvedValue({ data: {}, error: null }),
       signup: vi.fn(),
@@ -36,20 +33,17 @@ describe('AuthContext login', () => {
       loginWithTwitter: vi.fn(),
       loginWithWeb3: vi.fn()
     }),
-
     render(
       <AuthProvider>
         <AuthContext.Consumer>
           {({ login }) => <button onClick={() => login('a@b.cpw')}>LoginBtn</button>}
         </AuthContext.Consumer>
       </AuthProvider>
-    ),
-
+    );
     fireEvent.click(screen.getByText('LoginBtn')),
 
     await waitFor(() => {
-      expect(safeStorage.setItem).toHaveBeenCalledWith('zion_tokenjwt'),
+      expect(safeStorage.setItem).toHaveBeenCalledWith('zion_tokenjwt');
     }),
-    expect(replace).toHaveBeenCalledWith('/dashboard'),
-  }),
-}),
+    expect(replace).toHaveBeenCalledWith('/dashboard');
+  })}),

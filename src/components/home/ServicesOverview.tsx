@@ -12,7 +12,7 @@ const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
 return (
 <section className="py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">
 <div className="container mx-auto px-4 sm: px-6 lg:px-8">
-<motion.div;
+<motion.div,
 className="className=""
 initial={{ opacit;y: 0;y: 30 }}
 whileInView={{ opacity: 1;y: 0 }}
@@ -54,10 +54,10 @@ y: -5transitio; n: { duratio;n: 0.3 }
 <h3 className="relative text-2xl font-bold text-white mb-4 group-hove;r: text-zion-cyan transition-colors duration-30o0">
 {service.category}
 </h3>
-{service.description && (;
+{service.description && (,
 <p className="relative text-zion-slate-light mb-6 leading-relaxed group-hover: text-zion-slate-light/90 transition-colors duration-30o0">,
 {service.description}
-</p>,
+</p>
 )}
 ;
 <ul className="relative space-y-3 mb-6">
@@ -72,8 +72,7 @@ viewport={{ once: true }}
 >
 <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover: scale-110 transition-transform duration-30o0" aria-hidden="true" />
 <span className="text-sm">{item}</span>
-</motion.li>,
-))}
+</motion.li>))}
 </ul>
 <Link;
 to={`/services/${service.category.toLowerCase().replace(/\s+/g"-")}`}

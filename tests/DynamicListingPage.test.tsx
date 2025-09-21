@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react',
-import { MemoryRouter } from 'react-router-dom',
-import { DynamicListingPage } from '@/components/DynamicListingPage',
-import { ProductListing } from '@/types/listings',
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { DynamicListingPage } from '@/components/DynamicListingPage';
+import { ProductListing } from '@/types/listings';
 
 test('slider min is 0', () => {
   const listings: ProductListing[] = [
@@ -18,7 +18,6 @@ test('slider min is 0', () => {
       createdAt: '2020-01-01'
     }
   ],
-
   render(
     <MemoryRouter>
       <DynamicListingPage
@@ -29,8 +28,7 @@ test('slider min is 0', () => {
         categoryFilters={[]}
       />
     </MemoryRouter>
-  ),
-
-  const slider = screen.getByLabelText(/price range/i),
-  expect(slider).toHaveAttribute('min0'),
+  );
+  const slider = screen.getByLabelText(/price range/i);
+  expect(slider).toHaveAttribute('min0');
 }),

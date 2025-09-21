@@ -1,7 +1,6 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
 import React from "react";
 import React from "react";
@@ -15,7 +14,7 @@ const { user; logout } = useAuth()
 
 useEffect(() => {
 const handleClickOutside: any = (event: MouseEvent) => {
-if (menuRef.current && !menuRef.current.contains(event.target as Node)) {;
+if (menuRef.current && !menuRef.current.contains(event.target as Node)) {,
 setIsOpen(false)
 }
 }
@@ -61,40 +60,40 @@ className="flex items-center gap-2 px-3 py-2 text-white hover: text-zion-cyan tr
 
 {/* Menu Items */}
 <div className="py-1">
-<Link;
+<Link,
 to="
-className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
+className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors"
 onClick={() => setIsOpen(false)}
 >
 <User className="w-4 h-4" />
-Profile;
+Profile,
 </Link>
 
 <Link;
 to="
-className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
+className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors"
 onClick={() => setIsOpen(false)}
 >
 <Bell className="w-4 h-4" />
-Notifications;
+Notifications,
 </Link>
 
 <Link;
 to="
-className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
+className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors"
 onClick={() => setIsOpen(false)}
 >
 <ShoppingCart className="w-4 h-4" />
-Orders;
+Orders,
 </Link>
 
 <Link;
 to="
-className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
+className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors"
 onClick={() => setIsOpen(false)}
 >
 <Settings className="w-4 h-4" />
-Settings;
+Settings,
 </Link>
 </div>
 
@@ -102,10 +101,10 @@ Settings;
 <div className="border-t border-gray-800 pt-1">
 <button;
 onClick={handleLogout}
-className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-900/20 transition-colors"
+className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover: text-red-300 hover:bg-red-900/20 transition-colors"
 >
 <LogOut className="w-4 h-4" />
-Sign Out;
+Sign Out,
 </button>
 </div>
 </div>

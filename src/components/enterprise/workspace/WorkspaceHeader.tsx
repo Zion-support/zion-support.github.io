@@ -4,15 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Bell, Users, Settings } from 'lucide-react';
 
 interface Company {
-  name: string;
+  name: string,
   logoUrl?: string;
-  plan: string;
-  teamSize: number;
-}
+  plan: string,
+  teamSize: number}
 
 interface WorkspaceHeaderProps {
-  company: Company;
-}
+  company: Company}
 
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
@@ -48,7 +46,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           </Button>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">
             Active Job Listings
@@ -69,5 +67,4 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
       </div>
     </div>
-  );
-}
+  )}

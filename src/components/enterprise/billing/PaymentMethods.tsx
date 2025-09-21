@@ -22,8 +22,7 @@ export function PaymentMethods() {
       expYear: '2026',
       isDefault: false
     }
-  ];
-
+  ],
   return (
     <Card>
       <CardHeader>

@@ -1,16 +1,15 @@
 export interface URLParts {
-  protocol: string;
-  hostname: string;
-  port: string;
-  pathname: string;
-  search: string;
-  hash: string;
-}
+  protocol: string,
+  hostname: string,
+  port: string,
+  pathname: string,
+  search: string,
+  hash: string}
 
 export class URLUtils {
   public static parseURL(url: string): URLParts | null {
     try {
-      const urlObj = new URL(url);
+      const urlObj = new URL(url),
       return {
         protocol: urlObj.protocol,
         hostname: urlObj.hostname,
@@ -18,15 +17,14 @@ export class URLUtils {
         pathname: urlObj.pathname,
         search: urlObj.search,
         hash: urlObj.hash
-      };
-    } catch {
+      }} catch {
       return null;
     }
   }
 
   public static isValidURL(url: string): boolean {
     try {
-      new URL(url);
+      new URL(url),
       return true;
     } catch {
       return false;
@@ -34,12 +32,12 @@ export class URLUtils {
   }
 
   public static getDomain(url: string): string | null {
-    const parts = this.parseURL(url);
+    const parts = this.parseURL(url),
     return parts ? parts.hostname : null;
   }
 
   public static getPath(url: string): string | null {
-    const parts = this.parseURL(url);
+    const parts = this.parseURL(url),
     return parts ? parts.pathname : null;
   }
 
@@ -60,7 +58,7 @@ export class URLUtils {
 
   public static addQueryParam(url: string, key: string, value: string): string {
     try {
-      const urlObj = new URL(url);
+      const urlObj = new URL(url),
       urlObj.searchParams.set(key, value);
       return urlObj.toString();
     } catch {
@@ -70,7 +68,7 @@ export class URLUtils {
 
   public static removeQueryParam(url: string, key: string): string {
     try {
-      const urlObj = new URL(url);
+      const urlObj = new URL(url),
       urlObj.searchParams.delete(key);
       return urlObj.toString();
     } catch {
@@ -80,8 +78,7 @@ export class URLUtils {
 
   public static isExternalURL(url: string): boolean {
     if (typeof window === "undefined") {
-      return false;
-    }
+      return false}
 
     try {
       const urlObj = new URL(url);
@@ -92,12 +89,11 @@ export class URLUtils {
   }
 
   public static isSameOrigin(url: string): boolean {
-    return !this.isExternalURL(url);
-  }
+    return !this.isExternalURL(url)}
 
   public static normalizeURL(url: string): string {
     try {
-      const urlObj = new URL(url);
+      const urlObj = new URL(url),
       return urlObj.toString();
     } catch {
       return url;
@@ -106,8 +102,7 @@ export class URLUtils {
 
   public static getRelativeURL(url: string): string {
     if (typeof window === "undefined") {
-      return url;
-    }
+      return url}
 
     try {
       const urlObj = new URL(url, window.location.origin);

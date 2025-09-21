@@ -13,7 +13,7 @@ export const HeroSection = () => {
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Discover cutting-edge AI solutions, expert talent, and innovative technology services to accelerate your digital transformation
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Get Started Today
             </button>
@@ -24,5 +24,4 @@ export const HeroSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};

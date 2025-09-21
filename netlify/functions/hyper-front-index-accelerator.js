@@ -42,9 +42,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ hyper-front-index-accelerator completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ hyper-front-index-accelerator failed:', error),
     return {
       statusCode: 500,
@@ -54,6 +52,5 @@ exports.handler = async function(event, context) {
         function: 'hyper-front-index-accelerator',
         status: 'error'
       })
-    },
-  }
+    }}
 },

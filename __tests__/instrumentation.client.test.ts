@@ -1,7 +1,7 @@
-import { register } from '../sentry',
-import * as Sentry from '@sentry/nextjs',
-import { Integrations } from "@sentry/tracing", // Import this if it's used in the Sentry.init call options
-import { vi, describe, test, expect, beforeEach, afterEach, type SpyInstance } from 'vitest',
+import { register } from '../sentry';
+import * as Sentry from '@sentry/nextjs';
+import { Integrations } from "@sentry/tracing"; // Import this if it's used in the Sentry.init call options
+import { vi, describe, test, expect, beforeEach, afterEach, type SpyInstance } from 'vitest';
 
 describe('Sentry Initialization', () => {
   let consoleWarnSpy: SpyInstance<[message?: any, ...optionalParams: any[]], void>,
@@ -14,13 +14,11 @@ describe('Sentry Initialization', () => {
     // Mock console.warn
     consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {}),
     // Mock Sentry.init
-    sentryInitSpy = vi.spyOn(Sentry, 'init').mockImplementation(() => {}),
-  }),
+    sentryInitSpy = vi.spyOn(Sentry, 'init').mockImplementation(() => {})}),
 
   afterEach(() => {
     // Restore all mocks
-    vi.restoreAllMocks(),
-  }),
+    vi.restoreAllMocks()}),
 
   test('should warn and not initialize Sentry if DSN is missing', () => {
     delete process.env.NEXT_PUBLIC_SENTRY_DSN,
@@ -29,11 +27,10 @@ describe('Sentry Initialization', () => {
       'Warning: NEXT_PUBLIC_SENTRY_DSN is not set. Sentry will not be initialized.'
     ),
     expect(sentryInitSpy).not.toHaveBeenCalled()
-  }),
-
+  });
   test('should warn for missing release and environment if only DSN is present', () => {
     process.env.NEXT_PUBLIC_SENTRY_DSN = 'https: //mockdsn@sentry.io/123',
-    delete process.env.NEXT_PUBLIC_SENTRY_RELEASE,
+    delete process.env.NEXT_PUBLIC_SENTRY_RELEASE;
     delete process.env.NEXT_PUBLIC_SENTRY_ENVIRONMENT,
 
     register(),
@@ -48,12 +45,10 @@ describe('Sentry Initialization', () => {
       dsn: 'https://mockdsn@sentry.io/123',
       tracesSampleRate: 1.0,
       integrations: [new Integrations.Http({ tracing: true })]
-    }),
-  }),
-
+    })});
   test('should initialize Sentry with DSN, release, and environment if all are present', () => {
     process.env.NEXT_PUBLIC_SENTRY_DSN = 'https: //mockdsn@sentry.io/123',
-    process.env.NEXT_PUBLIC_SENTRY_RELEASE = 'mock-release-1.0.0',
+    process.env.NEXT_PUBLIC_SENTRY_RELEASE = 'mock-release-1.0.0';
     process.env.NEXT_PUBLIC_SENTRY_ENVIRONMENT = 'test-env',
 
     register(),
@@ -65,12 +60,10 @@ describe('Sentry Initialization', () => {
       environment: 'test-env',
       tracesSampleRate: 1.0,
       integrations: [new Integrations.Http({ tracing: true })]
-    }),
-  }),
-
+    })});
   test('should initialize Sentry with DSN and release if environment is missing', () => {
     process.env.NEXT_PUBLIC_SENTRY_DSN = 'https: //mockdsn@sentry.io/123',
-    process.env.NEXT_PUBLIC_SENTRY_RELEASE = 'mock-release-1.0.1',
+    process.env.NEXT_PUBLIC_SENTRY_RELEASE = 'mock-release-1.0.1';
     delete process.env.NEXT_PUBLIC_SENTRY_ENVIRONMENT,
 
     register(),
@@ -83,12 +76,10 @@ describe('Sentry Initialization', () => {
       release: 'mock-release-1.0.1',
       tracesSampleRate: 1.0,
       integrations: [new Integrations.Http({ tracing: true })]
-    }),
-  }),
-
+    })});
   test('should initialize Sentry with DSN and environment if release is missing', () => {
     process.env.NEXT_PUBLIC_SENTRY_DSN = 'https: //mockdsn@sentry.io/123',
-    delete process.env.NEXT_PUBLIC_SENTRY_RELEASE,
+    delete process.env.NEXT_PUBLIC_SENTRY_RELEASE;
     process.env.NEXT_PUBLIC_SENTRY_ENVIRONMENT = 'test-env-2',
 
     register(),
@@ -101,6 +92,5 @@ describe('Sentry Initialization', () => {
       environment: 'test-env-2',
       tracesSampleRate: 1.0,
       integrations: [new Integrations.Http({ tracing: true })]
-    }),
-  }),
+    })});
 }),

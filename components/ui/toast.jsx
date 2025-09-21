@@ -83,5 +83,4 @@ export {
   ToastTitle,
   ToastDescription,
   ToastClose,
-  ToastAction,
-}
+  ToastAction}

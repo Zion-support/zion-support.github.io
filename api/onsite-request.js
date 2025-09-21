@@ -7,22 +7,19 @@ async function handler(req, res) {
     res.statusCode = 405,
     res.setHeader('AllowPOST'),
     res.end('Method Not Allowed'),
-    return,
-  }
+    return}
 
   const { name, email, phone: _phone, company: _company, location, details: _details } = req.body || {},
   if (!name || !email || !location) {
     res.statusCode = 400,
     res.json({ error: 'Missing required fields' }),
-    return,
-  }
+    return}
 
   const file = path.join(process.cwd(), 'dataonsite-requests.json'),
   let existing = [],
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8')),
-    if (!Array.isArray(existing)) existing = [],
-  } catch {
+    if (!Array.isArray(existing)) existing = []} catch {
     // File doesn't exist or is invalid, use empty array
   }
   existing.push({
@@ -37,7 +34,6 @@ async function handler(req, res) {
   fs.writeFileSync(file, JSON.stringify(existing, null, 2)),
 
   res.statusCode = 200,
-  res.json({ success: true }),
-}
+  res.json({ success: true })}
 
 module.exports = withSentry(handler),

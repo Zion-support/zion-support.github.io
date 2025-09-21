@@ -3,16 +3,15 @@ import { Search } from 'lucide-react';
 import Link from 'next/link';
 
 interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  publishDate: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-}
+  id: string,
+  title: string,
+  excerpt: string,
+  author: string,
+  publishDate: string,
+  readTime: string,
+  category: string,
+  tags: string[],
+  featured: boolean}
 
 const Blog: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -41,8 +40,7 @@ const Blog: React.FC = () => {
       tags: ['DevOps', 'Automation', 'Infrastructure', 'Self-Healing'],
       featured: false
     }
-  ];
-
+  ],
   const categories = ['All', 'AI & Technology', 'DevOps', 'Cybersecurity', 'Cloud Computing'];
 
   const filteredPosts = blogPosts.filter(post => {

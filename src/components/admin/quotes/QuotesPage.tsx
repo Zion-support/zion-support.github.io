@@ -4,17 +4,16 @@ import { QuotesForm } from './QuotesForm';
 import { QuotesModal } from './QuotesModal';
 
 interface Quote {
-  id: string;
-  clientName: string;
-  projectTitle: string;
-  description: string;
-  amount: number;
-  status: 'pending' | 'approved' | 'rejected' | 'expired';
-  createdAt: string;
-  validUntil: string;
-  notes: string;
-  isArchived: boolean;
-}
+  id: string,
+  clientName: string,
+  projectTitle: string,
+  description: string,
+  amount: number,
+  status: 'pending' | 'approved' | 'rejected' | 'expired',
+  createdAt: string,
+  validUntil: string,
+  notes: string,
+  isArchived: boolean}
 
 type ViewMode = 'list' | 'form' | 'modal';
 
@@ -29,12 +28,12 @@ export const QuotesPage: React.FC = () => {
   };
 
   const handleEditQuote = (quote: Quote) => {
-    setEditingQuote(quote);
+    setEditingQuote(quote),
     setViewMode('form');
   };
 
   const handleViewQuote = (quote: Quote) => {
-    setSelectedQuote(quote);
+    setSelectedQuote(quote),
     setViewMode('modal');
   };
 
@@ -109,5 +108,4 @@ export const QuotesPage: React.FC = () => {
         />
       )}
     </div>
-  );
-};
+  )};

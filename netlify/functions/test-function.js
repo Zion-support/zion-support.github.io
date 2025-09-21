@@ -15,5 +15,4 @@ exports.handler = async function(event, context) {
     headers: {
       'Content-Type': 'application/json'
     }
-  },
-},
+  }},

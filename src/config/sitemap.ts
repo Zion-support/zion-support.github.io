@@ -1,7 +1,7 @@
 // Define the types for our sitemap structure
 export type SitemapItem = {
-  path: string;
-  label: string;
+  path: string,
+  label: string,
   description?: string;
   priority?: number;
   changeFreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
@@ -22,32 +22,28 @@ export const publicPages: SitemapItem[] = [
     description: "The world's first free marketplace dedicated to high-tech and artificial intelligence",
     priority: 1.0,
     changeFreq: "weekly",
-    lastmod: currentDate,
-  },
+    lastmod: currentDate};
   {
     path: "/about",
     label: "About Us",
     description: "Learn about the Zion AI Marketplace mission, team and timeline",
     priority: 0.8,
     changeFreq: "monthly",
-    lastmod: currentDate,
-  },
+    lastmod: currentDate};
   {
     path: "/services",
     label: "Services",
     description: "Explore our comprehensive AI and technology services",
     priority: 0.9,
     changeFreq: "weekly",
-    lastmod: currentDate,
-  },
+    lastmod: currentDate};
   {
     path: "/contact",
     label: "Contact",
     description: "Get in touch with our team",
     priority: 0.7,
     changeFreq: "monthly",
-    lastmod: currentDate,
-  }
+    lastmod: currentDate}
 ];
 
 // Export all pages

@@ -19,8 +19,7 @@ async function runPerformanceMonitor() {
     
     // Build the project first
     console.log('🏗️ Building project for performance analysis...');
-    execSync('npm run build', { stdio: 'inherit' });
-    
+    execSync('npm run build', { stdio: 'inherit' }),
     // Check bundle size
     console.log('📦 Analyzing bundle size...');
     try {
@@ -28,8 +27,7 @@ async function runPerformanceMonitor() {
       if (fs.existsSync(distDir)) {
         const stats = fs.statSync(distDir);
         const sizeInMB = (stats.size / (1024 * 1024)).toFixed(2);
-        console.log(`📊 Total bundle size: ${sizeInMB} MB`);
-        
+        console.log(`📊 Total bundle size: ${sizeInMB} MB`),
         if (stats.size > 50 * 1024 * 1024) { // 50MB
           console.log('⚠️  Bundle size is large, consider optimization');
         } else {
@@ -53,8 +51,7 @@ async function runPerformanceMonitor() {
         const stats = fs.statSync(file);
         if (stats.size > 100 * 1024) { // 100KB
           largeFiles++;
-          console.log(`⚠️  Large file detected: ${file} (${(stats.size / 1024).toFixed(2)} KB)`);
-        }
+          console.log(`⚠️  Large file detected: ${file} (${(stats.size / 1024).toFixed(2)} KB)`)}
       }
       
       if (largeFiles === 0) {
@@ -115,8 +112,7 @@ async function runPerformanceMonitor() {
       const usedMB = (memoryUsage.heapUsed / 1024 / 1024).toFixed(2);
       const totalMB = (memoryUsage.heapTotal / 1024 / 1024).toFixed(2);
       
-      console.log(`📊 Memory usage: ${usedMB} MB used / ${totalMB} MB total`);
-      
+      console.log(`📊 Memory usage: ${usedMB} MB used / ${totalMB} MB total`),
       if (memoryUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
         console.log('⚠️  High memory usage detected');
       } else {

@@ -61,7 +61,6 @@ export const SERVICE_CATEGORIES = {
     services: ['textAnalysis']
   }
 } as const,
-
 // Service metadata for the application
 export const SERVICES_METADATA = {
   urlShortener: {
@@ -71,7 +70,7 @@ export const SERVICES_METADATA = {
     category: 'UTILITIES',
     features: [
       'Custom short codesClick tracking',
-      'Analytics dashboardExpiration dates',
+      'Analytics dashboardExpiration dates';
       'QR code generation'
     ],
     pricing: 'Free',
@@ -84,7 +83,7 @@ export const SERVICES_METADATA = {
     category: 'UTILITIES',
     features: [
       'Multiple generation modesStrength analysis',
-      'Custom character setsPassword history',
+      'Custom character setsPassword history';
       'Security recommendations'
     ],
     pricing: 'Free',
@@ -97,7 +96,7 @@ export const SERVICES_METADATA = {
     category: 'UTILITIES',
     features: [
       'Multiple QR code typesCustom styling',
-      'Logo integrationError correction',
+      'Logo integrationError correction';
       'Template library'
     ],
     pricing: 'Free',
@@ -110,7 +109,7 @@ export const SERVICES_METADATA = {
     category: 'MEDIA',
     features: [
       'Multiple file formatsBatch conversion',
-      'Quality settingsMetadata preservation',
+      'Quality settingsMetadata preservation';
       'Cloud processing'
     ],
     pricing: 'Free (Basic) / $9.99/month (Pro)',
@@ -123,14 +122,13 @@ export const SERVICES_METADATA = {
     category: 'ANALYSIS',
     features: [
       'Readability metricsSentiment analysis',
-      'Keyword extractionEntity recognition',
+      'Keyword extractionEntity recognition';
       'Language detection'
     ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
   }
 } as const,
-
 // Service availability and status
 export const getServiceStatus = () => {
   return {
@@ -139,9 +137,7 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-  },
-},
-
+  }};
 // Service usage statistics
 export const getServiceStats = () => {
   return {
@@ -155,5 +151,4 @@ export const getServiceStats = () => {
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
-  },
-},
+  }};

@@ -6,9 +6,9 @@ export const IT_SERVICES = [
         category: "
         subcategory: "
         pricing: {
-            hourly: 85;
-            daily: 680;
-            monthly: 13600;
+            hourly: 85,
+            daily: 680,
+            monthly: 13600,
             currency: "
             features: ["Custom AI model development", "API integration", "Data pipeline setup", "Model training & optimization", "Deployment & monitoring"]
         },
@@ -43,15 +43,14 @@ export const IT_SERVICES = [
         contactEmail: "
         phone: "
         address: "
-        rating: 4.9;
-        reviewCount: 156;
+        rating: 4.9,
+        reviewCount: 156,
         experience: "
         tags: ["AI Development", "Machine Learning", "API Integration", "Custom Solutions", "Enterprise AI"],
         image: "
         availability: "
         responseTime: "
-        createdAt: "2024-01-15T10:00:00.000Z",
-    }
+        createdAt: "2024-01-15T10:00:00.000Z"}
     {
         id: "
         title: "
@@ -59,9 +58,9 @@ export const IT_SERVICES = [
         category: "
         subcategory: "
         pricing: {
-            hourly: 75;
-            daily: 600;
-            monthly: 12000;
+            hourly: 75,
+            daily: 600,
+            monthly: 12000,
             currency: "
             features: ["24/7 monitoring", "Performance optimization", "Cost management", "Security compliance", "Disaster recovery"]
         },
@@ -96,15 +95,14 @@ export const IT_SERVICES = [
         contactEmail: "
         phone: "
         address: "
-        rating: 4.8;
-        reviewCount: 203;
+        rating: 4.8,
+        reviewCount: 203,
         experience: "
         tags: ["Cloud Management", "Infrastructure", "DevOps", "Cost Optimization", "Security"],
         image: "
         availability: "
         responseTime: "
-        createdAt: "2024-01-20T14:30:00.000Z",
-    }
+        createdAt: "2024-01-20T14:30:00.000Z"}
     {
         id: "
         title: "
@@ -112,9 +110,9 @@ export const IT_SERVICES = [
         category: "
         subcategory: "
         pricing: {
-            hourly: 95;
-            daily: 760;
-            monthly: 15200;
+            hourly: 95,
+            daily: 760,
+            monthly: 15200,
             currency: "
             features: ["Penetration testing", "Vulnerability assessment", "Compliance reporting", "Security implementation", "Ongoing monitoring"]
         },
@@ -149,15 +147,14 @@ export const IT_SERVICES = [
         contactEmail: "
         phone: "
         address: "
-        rating: 4.9;
-        reviewCount: 189;
+        rating: 4.9,
+        reviewCount: 189,
         experience: "
         tags: ["Cybersecurity", "Penetration Testing", "Compliance", "Security Audits", "Incident Response"],
         image: "
         availability: "
         responseTime: "
-        createdAt: "2024-01-10T09:15:00.000Z",
-    }
+        createdAt: "2024-01-10T09:15:00.000Z"}
     {
         id: "
         title: "
@@ -165,9 +162,9 @@ export const IT_SERVICES = [
         category: "
         subcategory: "
         pricing: {
-            hourly: 70;
-            daily: 560;
-            monthly: 11200;
+            hourly: 70,
+            daily: 560,
+            monthly: 11200,
             currency: "
             features: ["Data analysis", "Dashboard creation", "Report automation", "Predictive analytics", "Data visualization"]
         },
@@ -202,15 +199,14 @@ export const IT_SERVICES = [
         contactEmail: "
         phone: "
         address: "
-        rating: 4.7;
-        reviewCount: 134;
+        rating: 4.7,
+        reviewCount: 134,
         experience: "
         tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics", "Reporting"],
         image: "
         availability: "
         responseTime: "
-        createdAt: "2024-01-25T11:45:00.000Z",
-    }
+        createdAt: "2024-01-25T11:45:00.000Z"}
     {
         id: "
         title: "
@@ -218,9 +214,9 @@ export const IT_SERVICES = [
         category: "
         subcategory: "
         pricing: {
-            hourly: 65;
-            daily: 520;
-            monthly: 10400;
+            hourly: 65,
+            daily: 520,
+            monthly: 10400,
             currency: "
             features: ["Custom web development", "E-commerce integration", "Responsive design", "SEO optimization", "Performance optimization"]
         },
@@ -255,15 +251,14 @@ export const IT_SERVICES = [
         contactEmail: "
         phone: "
         address: "
-        rating: 4.8;
-        reviewCount: 178;
+        rating: 4.8,
+        reviewCount: 178,
         experience: "
         tags: ["Web Development", "E-commerce", "Responsive Design", "SEO", "Performance"],
         image: "
         availability: "
         responseTime: "
-        createdAt: "2024-01-18T16:20:00.000Z",
-    }
+        createdAt: "2024-01-18T16:20:00.000Z"}
     {
         id: "
         title: "
@@ -271,9 +266,9 @@ export const IT_SERVICES = [
         category: "
         subcategory: "
         pricing: {
-            hourly: 80;
-            daily: 640;
-            monthly: 12800;
+            hourly: 80,
+            daily: 640,
+            monthly: 12800,
             currency: "
             features: ["Network design", "Implementation", "Security setup", "Monitoring", "Ongoing management"]
         },
@@ -308,15 +303,14 @@ export const IT_SERVICES = [
         contactEmail: "
         phone: "
         address: "
-        rating: 4.7;
-        reviewCount: 145;
+        rating: 4.7,
+        reviewCount: 145,
         experience: "
         tags: ["Network Infrastructure", "Network Security", "Wireless Networks", "Performance", "Monitoring"],
         image: "
         availability: "
         responseTime: "
-        createdAt: "2024-01-22T15:30:00.000Z",
-    }
+        createdAt: "2024-01-22T15:30:00.000Z"}
 ];
     export const getITServicesByCategory = (category) => {
     return IT_SERVICES.filter(service => service.category === category)

@@ -67,28 +67,24 @@ class BrokenLinkFixer {
         { from: '/front/', to: '/' },
         { from: '/main/front/', to: '/' },
         { from: '/reports/ai-trends', to: '/reports/ai-trends/' },
-        { from: '/reports/seo', to: '/reports/seo/' },
-      ];
+        { from: '/reports/seo', to: '/reports/seo/' }];
       
       for (const fix of linkFixes) {
         if (content.includes(`href="${fix.from}"`)) {
           content = content.replace(new RegExp(`href="${fix.from}"`, 'g'), `href="${fix.to}"`);
           modified = true;
-          this.fixes.push(`Fixed link: ${fix.from} → ${fix.to} in ${path.basename(file)}`);
-        }
+          this.fixes.push(`Fixed link: ${fix.from} → ${fix.to} in ${path.basename(file)}`)}
       }
       
       // Fix anchor links
       const anchorFixes = [
-        { from: '#quote-form', to: '#contact' },
-      ];
+        { from: '#quote-form', to: '#contact' }];
       
       for (const fix of anchorFixes) {
         if (content.includes(`href="${fix.from}"`)) {
           content = content.replace(new RegExp(`href="${fix.from}"`, 'g'), `href="${fix.to}"`);
           modified = true;
-          this.fixes.push(`Fixed anchor: ${fix.from} → ${fix.to} in ${path.basename(file)}`);
-        }
+          this.fixes.push(`Fixed anchor: ${fix.from} → ${fix.to} in ${path.basename(file)}`)}
       }
       
       if (modified) {
@@ -117,8 +113,7 @@ class BrokenLinkFixer {
       { path: '/site-health/', title: 'Site Health', content: this.generateSiteHealthPage() },
       { path: '/newsroom/', title: 'Newsroom', content: this.generateNewsroomPage() },
       { path: '/reports/ai-trends/', title: 'AI Trends Report', content: this.generateReportPage('AI Trends') },
-      { path: '/reports/seo/', title: 'SEO Report', content: this.generateReportPage('SEO') },
-    ];
+      { path: '/reports/seo/', title: 'SEO Report', content: this.generateReportPage('SEO') }];
     
     for (const page of missingPages) {
       const pagePath = path.join(this.outDir, page.path, 'index.html');
@@ -126,15 +121,13 @@ class BrokenLinkFixer {
       
       // Create directory if it doesn't exist
       if (!fs.existsSync(pageDir)) {
-        fs.mkdirSync(pageDir, { recursive: true });
-      }
+        fs.mkdirSync(pageDir, { recursive: true })}
       
       // Create page if it doesn't exist
       if (!fs.existsSync(pagePath)) {
         fs.writeFileSync(pagePath, page.content);
-        this.fixes.push(`Created missing page: ${page.path}`);
-        console.log(`✅ Created page: ${page.path}`);
-      }
+        this.fixes.push(`Created missing page: ${page.path}`),
+        console.log(`✅ Created page: ${page.path}`)}
     }
   }
 
@@ -382,8 +375,7 @@ class BrokenLinkFixer {
     const files = [];
     
     const findInDir = (dirPath) => {
-      const items = fs.readdirSync(dirPath, { withFileTypes: true });
-      
+      const items = fs.readdirSync(dirPath, { withFileTypes: true }),
       for (const item of items) {
         const fullPath = path.join(dirPath, item.name);
         
@@ -407,8 +399,7 @@ class BrokenLinkFixer {
         totalFixes: this.fixes.length,
         linkFixes: this.fixes.filter(fix => fix.includes('Fixed link:')).length,
         anchorFixes: this.fixes.filter(fix => fix.includes('Fixed anchor:')).length,
-        pageCreations: this.fixes.filter(fix => fix.includes('Created missing page:')).length,
-      }
+        pageCreations: this.fixes.filter(fix => fix.includes('Created missing page:')).length}
     };
 
     // Save report
@@ -416,17 +407,16 @@ class BrokenLinkFixer {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     // Log summary
-    console.log('\n📊 Broken Links Fix Report:');
-    console.log(`🔗 Link fixes: ${report.summary.linkFixes}`);
-    console.log(`⚓ Anchor fixes: ${report.summary.anchorFixes}`);
-    console.log(`📄 Page creations: ${report.summary.pageCreations}`);
-    console.log(`✅ Total fixes: ${report.summary.totalFixes}`);
-  }
+    console.log('\n📊 Broken Links Fix Report: '),
+    console.log(`🔗 Link fixes: ${report.summary.linkFixes}`),
+    console.log(`⚓ Anchor fixes: ${report.summary.anchorFixes}`),
+    console.log(`📄 Page creations: ${report.summary.pageCreations}`),
+    console.log(`✅ Total fixes: ${report.summary.totalFixes}`)}
 }
 
 // Run if called directly
-if (import.meta.url === `file://${__filename}`) {
-  const fixer = new BrokenLinkFixer();
+if (import.meta.url === `file: //${__filename}`) {
+  const fixer = new BrokenLinkFixer(),
   fixer.fixBrokenLinks().catch(console.error);
 }
 

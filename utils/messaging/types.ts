@@ -7,11 +7,11 @@ export interface UserSummary {,
   role: UserRole,
   avatarUrl?: string
 }
-,
+;
 export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite',
 export interface ConversationContext {,
   type: ConversationContextType,
-  jobId?: string,
+  jobId?: string;
   jobTitle?: string,
   talentId?: string,
   talentName?: string,

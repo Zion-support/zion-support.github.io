@@ -1,19 +1,17 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
-}
+  children: ReactNode}
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
 }
 
 class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+    super(props),
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
@@ -36,14 +34,13 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-zion-cyan text-zion-blue px-4 py-2 rounded hover:bg-zion-cyan/80 transition-colors"
+              className="bg-zion-cyan text-zion-blue px-4 py-2 rounded hover: bg-zion-cyan/80 transition-colors"
             >
               Refresh Page
             </button>
           </div>
         </div>
-      );
-    }
+      )}
 
     return this.props.children;
   }
