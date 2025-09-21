@@ -38,7 +38,6 @@ export default function App({ Component, pageProps }) {
       </Head>
       
       <ErrorBoundary>
-<<<<<<< HEAD
         <PerformanceOptimizer>
           <NotificationProvider>
             <ThemeProvider>
@@ -49,14 +48,6 @@ export default function App({ Component, pageProps }) {
             </ThemeProvider>
           </NotificationProvider>
         </PerformanceOptimizer>
-=======
-        <ThemeProvider>
-          <Component {...pageProps} />
-          <ScrollToTop />
-          <Analytics />
-          <PerformanceMonitor />
-        </ThemeProvider>
->>>>>>> e74601310839c0620f735ff0d1ce88382c0487bb
       </ErrorBoundary>
     </>
   );
