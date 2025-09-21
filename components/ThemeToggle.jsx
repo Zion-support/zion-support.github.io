@@ -3,17 +3,15 @@ import { useTheme } from './ThemeProvider';
 
 export const ThemeToggle = () => {
   // Handle case when ThemeProvider is not available (during static generation)
-  let theme = 'dark';
-  let toggleTheme = () => {};
-
+  let theme, toggleTheme;
   try {
     const themeContext = useTheme();
     theme = themeContext.theme;
     toggleTheme = themeContext.toggleTheme;
   } catch (error) {
-    // During static generation, useTheme will throw an error
-    // Use default values
-    console.warn('ThemeToggle: useTheme not available, using defaults');
+    // Fallback for static generation
+    theme = 'dark';
+    toggleTheme = () => {};
   }
 
   return (

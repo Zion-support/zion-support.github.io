@@ -5,7 +5,11 @@ const ThemeContext = createContext();
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    // Return default values when not within ThemeProvider (during SSR)
+    return {
+      theme: 'dark',
+      toggleTheme: () => {}
+    };
   }
   return context;
 };
