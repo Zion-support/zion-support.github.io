@@ -42,11 +42,7 @@
     "cypress.config.ts",
     "deployment/**/*",
     "deployments/**/*",
-<<<<<<< HEAD
-    "data/**/*"
-=======
     "data/**/*",
     "data_backup/**/*"
->>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
   ]
 }
