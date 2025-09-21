@@ -2,14 +2,15 @@
 import React from 'react';
 
 interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness',
-  data: any}
+  type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';
+  data: any;
+}
 
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   const getStructuredData = () => {
     const baseStructure = {
-      '@context': 'https: //schema.org',
-      '@type': type;
+      '@context': 'https://schema.org',
+      '@type': type,
       ...data
     };
 
@@ -48,10 +49,11 @@ export const OrganizationSchema = {
   },
   sameAs: [
     'https://twitter.com/ziontechgroup',
-    'https: //linkedin.com/company/ziontechgroup',
-    'https: //github.com/ziontechgroup'
+    'https://linkedin.com/company/ziontechgroup',
+    'https://github.com/ziontechgroup'
   ]
-},
+};
+
 export const WebSiteSchema = {
   name: 'Zion Tech Group',
   url: 'https://ziontechgroup.com',
