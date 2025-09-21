@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   // Configure for static export with Next.js 11
+  output: 'export',
   distDir: '.next',
   trailingSlash: true,
   
