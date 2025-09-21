@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --legacy-peer-deps && NODE_OPTIONS='--openssl-legacy-provider' npm run build"
+  command = "npm install --legacy-peer-deps && NODE_OPTIONS='--openssl-legacy-provider' npm run build && cp -r out/server/pages/* out/ && cp -r out/static/* out/"
   publish = "out"
 
 [build.processing]
