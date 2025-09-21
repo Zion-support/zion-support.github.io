@@ -41,6 +41,21 @@ export default function SEO({
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      
+      {/* Favicon and Icons */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
       <script
@@ -53,6 +68,8 @@ export default function SEO({
             "url": "https://zion.app",
             "logo": "https://zion.app/logo.png",
             "description": description,
+            "foundingDate": "2020",
+            "numberOfEmployees": "10-50",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "364 E Main St STE 1008",
@@ -61,11 +78,53 @@ export default function SEO({
               "postalCode": "19709",
               "addressCountry": "US"
             },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "email": "kleber@ziontechgroup.com"
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com",
+                "availableLanguage": "English"
+              }
+            ],
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.4496,
+                "longitude": -75.7163
+              },
+              "geoRadius": "50000000"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "IT Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI & Machine Learning Solutions",
+                    "description": "Custom AI solutions, ML model development, and intelligent automation"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Enterprise IT Solutions",
+                    "description": "Cloud infrastructure, DevOps, security, and system integration"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Micro SaaS Development",
+                    "description": "Rapid prototyping, MVP development, and scalable SaaS platforms"
+                  }
+                }
+              ]
             },
             "sameAs": [
               "https://linkedin.com/company/zion-tech-group",
@@ -74,6 +133,20 @@ export default function SEO({
           })
         }}
       />
+      
+      {/* Additional Performance Meta Tags */}
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* DNS Prefetch for performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
     </Head>
   );
 }

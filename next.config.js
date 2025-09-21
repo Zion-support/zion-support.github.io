@@ -9,8 +9,6 @@ const nextConfig = {
   
   // Static export configuration
   output: 'export',
-  skipTrailingSlashRedirect: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   // Image optimization
   images: {
@@ -27,24 +25,20 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'react', 'react-dom'],
     esmExternals: false,
-    gzipSize: true,
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
   },
   
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
   },
+  
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  generateEtags: true,
   
   // Generate unique build ID for better caching
   generateBuildId: async () => {
