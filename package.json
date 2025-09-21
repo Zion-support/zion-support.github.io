@@ -9,7 +9,12 @@
   "scripts": {
     "sitemap": "node scripts/generate-sitemap.mjs",
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
+    "build": "node scripts/performance-monitor.js start && NODE_OPTIONS='--openssl-legacy-provider' next build && node scripts/performance-monitor.js end",
+    "build:analyze": "npm run build && node scripts/performance-monitor.js compare",
+    "cleanup": "node scripts/cleanup-repository.js",
+    "optimize": "node scripts/optimize-performance.js",
+    "security:audit": "node scripts/security-audit.js",
+    "audit:full": "npm run security:audit && npm audit",
     "export": "next build",
     "start": "next start",
     "lint": "next lint",

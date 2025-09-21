@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-09-21T12:57:55.995Z",
+  "securityIssues": [
+    {
+      "type": "package-security",
+      "severity": "high",
+      "issue": "Potential sensitive information in package.json: key",
+      "recommendation": "Remove any sensitive information from package.json"
+    },
+    {
+      "type": "package-security",
+      "severity": "high",
+      "issue": "Potential sensitive information in package.json: auth",
+      "recommendation": "Remove any sensitive information from package.json"
+    },
+    {
+      "type": "configuration",
+      "severity": "medium",
+      "issue": "TypeScript build errors are ignored",
+      "recommendation": "Enable TypeScript error checking in production"
+    },
+    {
+      "type": "configuration",
+      "severity": "medium",
+      "issue": "ESLint errors are ignored during builds",
+      "recommendation": "Enable ESLint error checking in production"
+    },
+    {
+      "type": "code-security",
+      "severity": "critical",
+      "issue": "Use of eval() function found in scripts/security-audit.js",
+      "recommendation": "Review and refactor to use safer alternatives"
+    },
+    {
+      "type": "code-security",
+      "severity": "medium",
+      "issue": "Use of document.write() found in scripts/security-audit.js",
+      "recommendation": "Review and refactor to use safer alternatives"
+    }
+  ],
+  "recommendations": [],
+  "checks": [
+    {
+      "type": "dependencies",
+      "status": "checked",
+      "recommendation": "Run npm audit regularly and update dependencies"
+    }
+  ],
+  "summary": {
+    "totalIssues": 6,
+    "criticalIssues": 1,
+    "highIssues": 2,
+    "status": "critical"
+  }
+}
