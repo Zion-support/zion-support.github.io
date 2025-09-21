@@ -22,20 +22,50 @@ class ErrorBoundary extends Component {
       errorInfo: errorInfo
     });
 
+    // Enhanced error logging
+    const errorDetails = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+      retryCount: this.state.retryCount
+    };
+
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', errorDetails);
     }
 
     // Log error to monitoring service
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', errorDetails);
     
-    // You can also log the error to an error reporting service here
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.toString(),
-        fatal: false
-      });
+    // Enhanced error tracking
+    if (typeof window !== 'undefined') {
+      // Google Analytics error tracking
+      if (window.gtag) {
+        window.gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          custom_map: {
+            error_stack: error.stack,
+            component_stack: errorInfo.componentStack,
+            retry_count: this.state.retryCount
+          }
+        });
+      }
+
+      // Send error to custom endpoint (if available)
+      if (process.env.NEXT_PUBLIC_ERROR_REPORTING_ENDPOINT) {
+        fetch(process.env.NEXT_PUBLIC_ERROR_REPORTING_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(errorDetails)
+        }).catch(err => console.error('Failed to send error report:', err));
+      }
     }
   }
 

@@ -8,6 +8,7 @@
   },
   "scripts": {
     "sitemap": "node scripts/generate-sitemap.mjs",
+    "postbuild": "npm run sitemap",
     "dev": "next dev",
     "build": "node scripts/performance-monitor.js start && NODE_OPTIONS='--openssl-legacy-provider' next build && node scripts/performance-monitor.js end",
     "build:analyze": "npm run build && node scripts/performance-monitor.js compare",

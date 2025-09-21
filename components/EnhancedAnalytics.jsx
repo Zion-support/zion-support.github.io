@@ -1,212 +1,157 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-export const EnhancedAnalytics = () => {
+export default function EnhancedAnalytics() {
+  const router = useRouter();
+
   useEffect(() => {
-    // Track page views
-    const trackPageView = () => {
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
+    // Initialize Google Analytics 4
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Load Google Analytics
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
+      document.head.appendChild(script);
+
+      // Initialize gtag
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
       }
-    };
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
 
-    // Track performance metrics
-    const trackPerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            const navigation = performance.getEntriesByType('navigation')[0];
-            const paint = performance.getEntriesByType('paint');
-            
-            if (navigation && paint) {
-              const metrics = {
-                page_load_time: navigation.loadEventEnd - navigation.fetchStart,
-                dom_content_loaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
-                first_contentful_paint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-                largest_contentful_paint: 0
-              };
-
-              // Track LCP if available
-              if ('PerformanceObserver' in window) {
-                const observer = new PerformanceObserver((list) => {
-                  const entries = list.getEntries();
-                  const lastEntry = entries[entries.length - 1];
-                  metrics.largest_contentful_paint = lastEntry.startTime;
-                  
-                  // Send to analytics
-                  if (window.gtag) {
-                    window.gtag('event', 'web_vitals', {
-                      event_category: 'Performance',
-                      event_label: 'LCP',
-                      value: Math.round(metrics.largest_contentful_paint)
-                    });
-                  }
-                });
-                
-                try {
-                  observer.observe({ entryTypes: ['largest-contentful-paint'] });
-                } catch (e) {
-                  // LCP not supported
-                }
-              }
-
-              // Send performance metrics
-              if (window.gtag) {
-                Object.entries(metrics).forEach(([key, value]) => {
-                  window.gtag('event', 'web_vitals', {
-                    event_category: 'Performance',
-                    event_label: key,
-                    value: Math.round(value)
-                  });
-                });
-              }
-            }
-          }, 0);
+      // Track page views on route change
+      const handleRouteChange = (url) => {
+        gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+          page_path: url,
         });
-      }
-    };
+      };
 
-    // Track user interactions
-    const trackInteractions = () => {
-      if (typeof window !== 'undefined') {
-        // Track clicks on important elements
-        document.addEventListener('click', (e) => {
-          const element = e.target;
-          const tagName = element.tagName.toLowerCase();
-          
-          if (tagName === 'a') {
-            const href = element.getAttribute('href');
-            const text = element.textContent?.trim();
-            
-            if (window.gtag && href) {
-              window.gtag('event', 'click', {
-                event_category: 'Navigation',
-                event_label: text || href,
-                value: href
-              });
-            }
-          }
-          
-          if (element.classList.contains('cta-button')) {
-            if (window.gtag) {
-              window.gtag('event', 'click', {
-                event_category: 'CTA',
-                event_label: element.textContent?.trim() || 'CTA Button'
+      router.events.on('routeChangeComplete', handleRouteChange);
+      return () => {
+        router.events.off('routeChangeComplete', handleRouteChange);
+      };
+    }
+  }, [router.events]);
+
+  // Track custom events
+  const trackEvent = (action, category, label, value) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', action, {
+        event_category: category,
+        event_label: label,
+        value: value,
+      });
+    }
+  };
+
+  // Track performance metrics
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      // Track Core Web Vitals
+      const trackWebVitals = (metric) => {
+        window.gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+        });
+      };
+
+      // Track LCP
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'largest-contentful-paint') {
+              trackWebVitals({
+                name: 'LCP',
+                value: entry.startTime,
+                id: entry.id,
               });
             }
           }
         });
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
 
-        // Track form submissions
-        document.addEventListener('submit', (e) => {
-          const form = e.target;
-          if (window.gtag && form.tagName.toLowerCase() === 'form') {
-            window.gtag('event', 'form_submit', {
-              event_category: 'Form',
-              event_label: form.id || form.className || 'Unknown Form'
-            });
-          }
-        });
-
-        // Track scroll depth
-        let maxScroll = 0;
-        const trackScrollDepth = () => {
-          const scrollPercent = Math.round(
-            (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-          );
-          
-          if (scrollPercent > maxScroll) {
-            maxScroll = scrollPercent;
-            
-            // Track milestone scroll depths
-            if (maxScroll >= 25 && maxScroll < 50) {
-              if (window.gtag) {
-                window.gtag('event', 'scroll', {
-                  event_category: 'Engagement',
-                  event_label: '25%',
-                  value: 25
-                });
-              }
-            } else if (maxScroll >= 50 && maxScroll < 75) {
-              if (window.gtag) {
-                window.gtag('event', 'scroll', {
-                  event_category: 'Engagement',
-                  event_label: '50%',
-                  value: 50
-                });
-              }
-            } else if (maxScroll >= 75 && maxScroll < 90) {
-              if (window.gtag) {
-                window.gtag('event', 'scroll', {
-                  event_category: 'Engagement',
-                  event_label: '75%',
-                  value: 75
-                });
-              }
-            } else if (maxScroll >= 90) {
-              if (window.gtag) {
-                window.gtag('event', 'scroll', {
-                  event_category: 'Engagement',
-                  event_label: '90%',
-                  value: 90
-                });
-              }
+      // Track FID
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'first-input') {
+              trackWebVitals({
+                name: 'FID',
+                value: entry.processingStart - entry.startTime,
+                id: entry.id,
+              });
             }
           }
-        };
-
-        window.addEventListener('scroll', trackScrollDepth, { passive: true });
-      }
-    };
-
-    // Track time on page
-    const trackTimeOnPage = () => {
-      if (typeof window !== 'undefined') {
-        const startTime = Date.now();
-        
-        window.addEventListener('beforeunload', () => {
-          const timeOnPage = Date.now() - startTime;
-          
-          if (window.gtag && timeOnPage > 1000) { // Only track if user spent more than 1 second
-            window.gtag('event', 'page_view_time', {
-              event_category: 'Engagement',
-              event_label: 'Time on Page',
-              value: Math.round(timeOnPage / 1000) // Convert to seconds
-            });
-          }
         });
+        observer.observe({ entryTypes: ['first-input'] });
       }
-    };
 
-    // Initialize tracking
-    trackPageView();
-    trackPerformance();
-    trackInteractions();
-    trackTimeOnPage();
-
-    // Track errors
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', (e) => {
-        if (window.gtag) {
-          window.gtag('event', 'exception', {
-            description: e.message,
-            fatal: false
+      // Track CLS
+      if ('PerformanceObserver' in window) {
+        let clsValue = 0;
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          }
+          trackWebVitals({
+            name: 'CLS',
+            value: clsValue,
+            id: 'cls-observer',
           });
-        }
-      });
-
-      window.addEventListener('unhandledrejection', (e) => {
-        if (window.gtag) {
-          window.gtag('event', 'exception', {
-            description: e.reason?.toString() || 'Unhandled Promise Rejection',
-            fatal: false
-          });
-        }
-      });
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
+      }
     }
   }, []);
 
-  return null; // This component doesn't render anything
+  // Expose tracking functions globally for use in components
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.trackEvent = trackEvent;
+    }
+  }, []);
+
+  return null;
+}
+
+// Helper functions for tracking specific events
+export const trackButtonClick = (buttonName, location) => {
+  if (typeof window !== 'undefined' && window.trackEvent) {
+    window.trackEvent('click', 'Button', `${buttonName} - ${location}`);
+  }
+};
+
+export const trackFormSubmit = (formName) => {
+  if (typeof window !== 'undefined' && window.trackEvent) {
+    window.trackEvent('submit', 'Form', formName);
+  }
+};
+
+export const trackPageView = (pageName) => {
+  if (typeof window !== 'undefined' && window.trackEvent) {
+    window.trackEvent('page_view', 'Navigation', pageName);
+  }
+};
+
+export const trackServiceInterest = (serviceName) => {
+  if (typeof window !== 'undefined' && window.trackEvent) {
+    window.trackEvent('service_interest', 'Services', serviceName);
+  }
+};
+
+export const trackContactAttempt = (method) => {
+  if (typeof window !== 'undefined' && window.trackEvent) {
+    window.trackEvent('contact_attempt', 'Contact', method);
+  }
 };
