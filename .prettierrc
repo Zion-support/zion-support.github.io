@@ -1,19 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-  "semi": false,
-  "singleQuote": true,
-  "tabWidth": 2,
-  "trailingComma": "es5",
-  "printWidth": 80,
-  "bracketSpacing": true,
-  "arrowParens": "avoid",
-  "endOfLine": "lf"
-<<<<<<< HEAD
-}
-=======
   "semi": true,
   "trailingComma": "es5",
   "singleQuote": true,
@@ -28,7 +13,3 @@
   "jsxSingleQuote": true,
   "proseWrap": "preserve"
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
