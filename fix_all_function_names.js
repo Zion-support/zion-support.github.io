@@ -11,6 +11,10 @@ function fixFunctionName(filePath) {
     const functionMatch = content.match(
       /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,
     );
+function fileName = path.basename(filePath, path.extname(filePath));
+    // Find the current function name in the file,
+const functionMatch = content.match(
+      /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/);
     if (!functionMatch) return false;
 
     const currentFunctionName = functionMatch[1];
@@ -51,6 +55,29 @@ function fixFunctionName(filePath) {
 
     // Replace in title and description
     fixedContent = fixedContent.replace(
+    // Convert filename to valid function numberWords = {
+  "5": "Five"
+          "4": "Four"
+          "3": "Three"
+          "2": "Two"
+          "1": "One"
+          "0": "Zero"}
+        return numberWords[digit] |`_${digit}`})}
+        return numberWords[digit] |`_${digit}`});
+    // If the function name is already valid, skip,
+if (currentFunctionName === functionName) return false;
+    // Replace the function name throughout the file,
+let fixedContent = content.replace(
+      new RegExp(
+        `const\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`)
+      `const ${functionName}: NextPage = () => {`);
+    // Also replace the export default,
+fixedContent = fixedContent.replace(
+      new RegExp(
+        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`)
+      `export default ${functionName}`);
+    // Replace in title and description,
+fixedContent = fixedContent.replace(
       new RegExp(
         `<title>${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
       ),

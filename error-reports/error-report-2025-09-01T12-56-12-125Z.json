@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-09-01T12:56:12.125Z",
+  "reportId": "2025-09-01T12-56-12-125Z",
+  "summary": {
+    "totalErrors": 0,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "typeErrors": 0,
+    "buildSuccess": false,
+    "corruptedFiles": 0
+  },
+  "details": {
+    "lint": {
+      "hasErrors": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    "typeCheck": {
+      "hasErrors": true,
+      "errorCount": 0,
+      "output": "\n> zion-tech-group@0.1.0 type-check\n> tsc --noEmit\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
+    },
+    "build": {
+      "hasErrors": true,
+      "buildSuccess": false,
+      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    "corruptedFiles": []
+  },
+  "recommendations": [
+    {
+      "priority": "critical",
+      "action": "fix_build_errors",
+      "description": "Project build is failing - fix build errors immediately"
+    }
+  ]
+}
