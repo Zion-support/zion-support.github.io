@@ -67,7 +67,7 @@ const nextConfig = {
     // Fix for OpenSSL legacy provider issue
     config.resolve.alias = {
       ...config.resolve.alias,
-      crypto: require.resolve('crypto-browserify'),
+      crypto: false,
     };
     
     // Disable PostCSS processing to avoid matchAll issues
