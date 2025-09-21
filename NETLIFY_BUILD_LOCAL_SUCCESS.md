@@ -1,3 +1,10 @@
+Netlify local build verification - updated: 2025-09-18T15:20:19Z
+
+- Verified on: 2025-09-18T23:59:59Z
+- Directory: `zion-website`
+- Command: `npm ci --no-audit --no-fund && npm run build`
+- Result: Success. Next.js build completed and static pages generated.
+
 # Netlify Build Local Verification
 
 - Date: 2025-09-17
@@ -9,3 +16,6 @@ This note confirms the Netlify-configured build flow works locally. Merging to `
 
 Local Netlify build succeeded on 2025-09-17T08:38:39Z with vite v
 # Trigger Netlify build: 2025-09-18T11:28:29Z
+2025-09-18T11:42:06+00:00
+-e 
+- Updated: 2025-09-18T12:35:42Z
