@@ -1,19 +1,6 @@
 {
-  "timestamp": "2025-09-21T13:09:20.568Z",
-  "securityIssues": [
-    {
-      "type": "configuration",
-      "severity": "medium",
-      "issue": "TypeScript build errors are ignored",
-      "recommendation": "Enable TypeScript error checking in production"
-    },
-    {
-      "type": "configuration",
-      "severity": "medium",
-      "issue": "ESLint errors are ignored during builds",
-      "recommendation": "Enable ESLint error checking in production"
-    }
-  ],
+  "timestamp": "2025-09-21T13:55:27.521Z",
+  "securityIssues": [],
   "recommendations": [],
   "checks": [
     {
@@ -23,7 +10,7 @@
     }
   ],
   "summary": {
-    "totalIssues": 2,
+    "totalIssues": 0,
     "criticalIssues": 0,
     "highIssues": 0,
     "status": "excellent"

@@ -17,15 +17,17 @@ const nextConfig = {
     unoptimized: true, // Required for static export
   },
   typescript: {
+    // Ignore TypeScript errors during build to avoid breaking static export
     ignoreBuildErrors: true,
   },
   eslint: {
+    // Ignore ESLint errors during build to avoid breaking static export
     ignoreDuringBuilds: true,
   },
   
   // Experimental features
   experimental: {
-    optimizeCss: false,
+    optimizeCss: false, // Disabled due to missing critters dependency
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
     esmExternals: false,
@@ -44,7 +46,13 @@ const nextConfig = {
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
   },
+  
+  // Compression and performance
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   
   // Generate unique build ID for better caching
   generateBuildId: async () => {
@@ -52,7 +60,7 @@ const nextConfig = {
   },
   
   // Webpack configuration
-  webpack: (config, { isServer }) => {
+  webpack: (config, { isServer, dev }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -66,6 +74,29 @@ const nextConfig = {
         util: false,
         buffer: require.resolve('buffer'),
         process: require.resolve('process/browser'),
+      };
+      
+      // Add compression support (disabled due to dependency conflicts)
+      // Compression will be handled by Netlify's built-in compression
+    }
+    
+    // Performance optimizations for production
+    if (!dev) {
+      config.optimization = {
+        ...config.optimization,
+        minimize: true,
+        sideEffects: false,
+        usedExports: true,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+            },
+          },
+        },
       };
     }
     

@@ -14,6 +14,7 @@
     "build:analyze": "npm run build && node scripts/performance-monitor.js compare",
     "cleanup": "node scripts/cleanup-repository.js",
     "optimize": "node scripts/optimize-performance.js",
+    "build:optimize": "node scripts/build-optimizer.js",
     "security:audit": "node scripts/security-audit.js",
     "audit:full": "npm run security:audit && npm audit",
     "export": "next build",
@@ -110,7 +111,11 @@
     "linting:start": "npm run linting:orchestrator continuous",
     "linting:status": "npm run linting:orchestrator status",
     "linting:check": "npm run linting:orchestrator check",
-    "linting:fix": "npm run linting:orchestrator fix"
+    "linting:fix": "npm run linting:orchestrator fix",
+    "perf:improve": "node scripts/performance-improvements.js",
+    "perf:analyze": "npm run build && npm run build:analyze",
+    "perf:audit": "npm run security:audit && npm run optimize",
+    "perf:full": "npm run perf:improve && npm run perf:analyze && npm run perf:audit"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -153,13 +158,14 @@
     "@testing-library/react": "^14.2.1",
     "@types/node": "^24.5.2",
     "@types/node-cron": "^3.0.11",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
+    "@types/react": "^17.0.88",
+    "@types/react-dom": "^17.0.26",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
     "buffer": "^6.0.3",
+    "compression-webpack-plugin": "^11.1.0",
     "crypto-browserify": "^3.12.1",
     "eslint": "^9.32.0",
     "eslint-config-next": "^14.0.0",
@@ -175,7 +181,7 @@
     "stream-browserify": "^3.0.0",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
-    "typescript": "^5.0.0",
+    "typescript": "^5.9.2",
     "vite": "^5.4.10",
     "web-vitals": "^3.0.0"
   }
