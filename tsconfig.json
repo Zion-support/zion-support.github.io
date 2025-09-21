@@ -46,6 +46,7 @@
     "cypress.config.ts",
     "deployment/**/*",
     "deployments/**/*",
-    "data/**/*"
+    "data/**/*",
+    "data_backup/**/*"
   ]
 }

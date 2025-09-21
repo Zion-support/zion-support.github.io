@@ -11,7 +11,7 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
-  
+
   const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]);
   
   useEffect(() => {

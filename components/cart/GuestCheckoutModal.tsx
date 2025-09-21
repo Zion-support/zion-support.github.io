@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
-import { Input } from '../ui/input';
+import { Input } from '../../src/components/ui/input';
 import { Label } from '../ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 
@@ -34,10 +34,11 @@ export function GuestCheckoutModal({ isOpen, onClose, onCheckout }: GuestCheckou
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <Label htmlFor="email">Email Address</Label>
               <Input
                 id="email"
                 type="email"
+                label="Email Address"
+                error=""
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
