@@ -10,6 +10,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  swcMinify: true,
+  compiler: {
+    removeConsole: false,
+  },
   webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
@@ -18,8 +22,18 @@ const nextConfig = {
         fs: false,
       };
     }
+    
+    // Disable PostCSS processing temporarily to fix build issues
+    config.module.rules.forEach((rule) => {
+      if (rule.test && rule.test.toString().includes('css')) {
+        rule.use = rule.use.filter((use) => {
+          return !use.loader || !use.loader.includes('postcss-loader');
+        });
+      }
+    });
+    
     return config;
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
