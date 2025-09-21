@@ -8,12 +8,12 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
+    "moduleResolution": "node",
     "strict": false,
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -23,7 +23,11 @@
       }
     ],
     "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "**/*.ts",
@@ -40,8 +44,25 @@
     "scripts/**/*",
     "cypress/**/*",
     "cypress.config.ts",
+    "jest.config.ts",
+    "jest.setup.ts",
     "deployment/**/*",
     "deployments/**/*",
-    "data/**/*"
+    "data/**/*",
+    "monitoring/**/*",
+    "netlify/**/*",
+    "pages-quarantine/**/*",
+    "pages._quarantine/**/*",
+    "pages.bak/**/*",
+    "pages.old/**/*",
+    "pages_backup/**/*",
+    "pages_minimal/**/*",
+    "playwright.config.ts",
+    "prisma/**/*",
+    "seed.ts",
+    "server/**/*",
+    "services-broken.tsx",
+    "services/**/*",
+    "src-clean/**/*"
   ]
 }
