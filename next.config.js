@@ -35,8 +35,6 @@ const nextConfig = {
     scrollRestoration: true,
   },
   
-  // Typed routes configuration removed - not supported in this Next.js version
-  
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
@@ -46,7 +44,7 @@ const nextConfig = {
         fs: false,
         net: false,
         tls: false,
-        crypto: require.resolve('crypto-browserify'),
+        crypto: false,
       };
     }
     
@@ -87,9 +85,6 @@ const nextConfig = {
     
     return config;
   },
-  
-  // Headers removed - not compatible with static export
-  // Headers will be handled by Netlify configuration instead
 };
 
 module.exports = nextConfig;
