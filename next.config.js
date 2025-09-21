@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Configure for static export with Next.js 11
+  // Configure for static export with Next.js 14
   output: 'export',
-  distDir: '.next',
+  distDir: 'out',
   trailingSlash: true,
   
   // Disable ESLint and TypeScript checking during build to avoid parsing issues
@@ -72,17 +72,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
-  // Export path map for static generation
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      '/': { page: '/' },
-      '/contact': { page: '/contact' },
-      '/services': { page: '/services' },
-    }
-  },
+  // Static generation is handled by Next.js 14 automatically
   
   // Experimental features for performance
   experimental: {
