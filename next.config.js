@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  swcMinify: true,
   trailingSlash: true,
+  distDir: 'out',
+  
+  // Image optimization
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for static export
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -11,12 +15,15 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  swcMinify: false,
+  
+  // Experimental features
   experimental: {
     esmExternals: false,
   },
+  
+  // Webpack configuration
   webpack: (config, { isServer }) => {
-    // Minimal webpack configuration
+    // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,

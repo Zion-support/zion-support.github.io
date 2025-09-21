@@ -10,6 +10,8 @@ import SEO from '../components/SEO';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
+import FAQSection from '../components/FAQSection';
+import TestimonialsCarousel from '../components/TestimonialsCarousel';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -268,51 +270,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it - hear from businesses we've transformed.
-              </p>
-            </div>
+        {/* Enhanced Testimonials Carousel */}
+        <TestimonialsCarousel />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <div className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  "Zion Tech Group transformed our business with their AI solutions. We saw a 300% increase in efficiency within the first month."
-                </p>
-                <div className="text-cyan-400 font-semibold">- Sarah Johnson, CEO TechCorp</div>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <div className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  "Their micro SaaS development service helped us launch our product 50% faster than expected. Exceptional team!"
-                </p>
-                <div className="text-cyan-400 font-semibold">- Michael Chen, Founder StartupXYZ</div>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <div className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  "24/7 support and enterprise-grade security. Zion Tech Group is our trusted technology partner."
-                </p>
-                <div className="text-cyan-400 font-semibold">- Emily Rodriguez, CTO EnterpriseCo</div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* FAQ Section */}
+        <FAQSection />
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">

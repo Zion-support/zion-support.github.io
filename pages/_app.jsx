@@ -7,6 +7,7 @@ import ScrollToTop from '../components/ScrollToTop.jsx';
 import { NotificationProvider } from '../components/NotificationSystem.jsx';
 import CookieConsent from '../components/CookieConsent.jsx';
 import PerformanceOptimizer from '../components/PerformanceOptimizer.jsx';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer.jsx';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -48,6 +49,7 @@ export default function App({ Component, pageProps }) {
               <ScrollToTop />
               <Analytics />
               <CookieConsent />
+              <AccessibilityEnhancer />
             </ThemeProvider>
           </NotificationProvider>
         </PerformanceOptimizer>
