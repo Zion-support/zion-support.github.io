@@ -140,8 +140,8 @@ export default function Home() {
           </div>
         </section>
 
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16 px-4 sm:px-6 lg:px-8">
             {services.map((service, index) => (
               <AnimatedCard key={index} delay={index * 200} className="p-8">
                 <div className="text-4xl mb-4">{service.icon}</div>
@@ -149,10 +149,10 @@ export default function Home() {
                 <p className="text-gray-300">{service.description}</p>
               </AnimatedCard>
             ))}
-          </div>
+        </div>
 
-          {/* Features Section */}
-          <section className="text-center">
+        {/* Features Section */}
+        <section className="text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">Why Choose Zion Tech Group?</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {features.map((feature, index) => (
@@ -163,8 +163,8 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Contact CTA */}
-          <section className="text-center mt-16">
+        {/* Contact CTA */}
+        <section className="text-center mt-16 px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/30">
               <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
               <p className="text-gray-300 mb-6">Get in touch with our experts for a free consultation</p>
@@ -177,18 +177,17 @@ export default function Home() {
                 </GradientButton>
               </div>
             </div>
-          </section>
         </section>
-
-        {/* Footer */}
-        <footer className="bg-black/50 py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-black/50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
