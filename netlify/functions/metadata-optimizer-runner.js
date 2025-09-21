@@ -15,8 +15,7 @@ exports.handler = async function(event, context) {
     // Simulate optimization process
     for (let i = 0, i < optimizationResults.totalPages, i++) {
       if (Math.random() > 0.08) { // 92% success rate
-        optimizationResults.optimizedPages++,
-      }
+        optimizationResults.optimizedPages++}
     }
     
     // Calculate metrics
@@ -51,8 +50,7 @@ exports.handler = async function(event, context) {
         descriptionScore: Math.floor(Math.random() * 25) + 75, // 75-100
         ogScore: Math.floor(Math.random() * 30) + 70, // 70-100
         structuredDataScore: Math.floor(Math.random() * 35) + 65 // 65-100
-      }),
-    }
+      })}
     
     // Calculate average quality scores
     const averageScores = {
@@ -90,9 +88,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ metadata-optimizer-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ metadata-optimizer-runner failed:', error),
     return {
       statusCode: 500,
@@ -102,6 +98,5 @@ exports.handler = async function(event, context) {
         function: 'metadata-optimizer-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

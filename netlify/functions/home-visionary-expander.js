@@ -40,9 +40,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ home-visionary-expander completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ home-visionary-expander failed:', error),
     return {
       statusCode: 500,
@@ -52,6 +50,5 @@ exports.handler = async function(event, context) {
         function: 'home-visionary-expander',
         status: 'error'
       })
-    },
-  }
+    }}
 },

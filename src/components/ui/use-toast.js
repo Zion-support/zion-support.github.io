@@ -8,8 +8,7 @@ export function useToast() {
             title: options.title,
             description: options.description,
             variant: options.variant || 'default',
-            duration: options.duration || 5000,
-        }
+            duration: options.duration || 5000}
         setToasts(prev => [...prev, newToast])
         /
         setTimeout(() => {
@@ -59,8 +58,7 @@ export function useToast() {
         toasts,
         toast,
         dismiss,
-        dismissAll,
-    }
+        dismissAll}
 }
 /
 export const toast = (options) => {

@@ -6,7 +6,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance for IoT and real-time applications.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -49,16 +49,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Docker", "React", "Node.js", "Redis", "AWS Edge"],
         integrations: ["AWS", "Azure", "Google Cloud", "IoT platforms", "Monitoring tools"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
         roi: "
         competitors: ["AWS Edge", "Azure Edge", "Google Edge", "Cloudflare Workers"],
         marketTrend: "
-        innovationLevel: "Advanced edge computing with AI capabilities",
-    }
+        innovationLevel: "Advanced edge computing with AI capabilities"}
     /
     {
         id: "
@@ -66,7 +64,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -109,16 +107,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Node.js", "PostgreSQL", "Redis", "OAuth 2.0", "SAML"],
         integrations: ["Active Directory", "LDAP", "SAML providers", "SIEM systems", "Firewalls"],
         compliance: ["NIST", "SOC 2", "ISO 27001", "GDPR", "HIPAA"],
         roi: "
         competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
         marketTrend: "
-        innovationLevel: "Advanced zero-trust with AI-powered threat detection",
-    }
+        innovationLevel: "Advanced zero-trust with AI-powered threat detection"}
     /
     {
         id: "
@@ -126,7 +122,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -169,16 +165,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Terraform", "React", "Node.js", "MongoDB", "Docker"],
         integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
         roi: "
         competitors: ["VMware", "Red Hat", "HashiCorp", "CloudBolt"],
         marketTrend: "
-        innovationLevel: "Advanced hybrid cloud with AI-powered optimization",
-    }
+        innovationLevel: "Advanced hybrid cloud with AI-powered optimization"}
     /
     {
         id: "
@@ -186,7 +180,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         description: "Intelligent networking platform that centralizes network control and management through software, enabling dynamic configuration and automation of network resources.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -229,16 +223,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["OpenFlow", "React", "Node.js", "PostgreSQL", "Redis", "Docker"],
         integrations: ["Cisco", "Juniper", "VMware", "OpenStack", "Kubernetes"],
         compliance: ["ISO 27001", "SOC 2", "GDPR"],
         roi: "
         competitors: ["VMware NSX", "Cisco ACI", "Juniper Contrail", "OpenDaylight"],
         marketTrend: "
-        innovationLevel: "Advanced SDN with AI-powered traffic optimization",
-    }
+        innovationLevel: "Advanced SDN with AI-powered traffic optimization"}
     /
     {
         id: "
@@ -246,7 +238,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         description: "Enterprise-grade container orchestration platform that automates deployment, scaling, and management of containerized applications across distributed environments.",
         category: "
         subcategory: "
-        price: 1500;
+        price: 1500,
         currency: "
         pricingModel: "
         features: [
@@ -289,14 +281,12 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Docker", "React", "Node.js", "MongoDB", "Redis"],
         integrations: ["AWS EKS", "Azure AKS", "Google GKE", "Docker Swarm", "OpenShift"],
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
         roi: "
         competitors: ["Red Hat OpenShift", "VMware Tanzu", "Docker Enterprise", "Rancher"],
         marketTrend: "
-        innovationLevel: "Advanced container orchestration with AI-powered optimization",
-    }
+        innovationLevel: "Advanced container orchestration with AI-powered optimization"}
 ];

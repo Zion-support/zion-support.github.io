@@ -6,7 +6,7 @@ export const CYBERSECURITY_SERVICES = [
         description: "Comprehensive zero trust security platform that provides continuous verification, least privilege access, and advanced threat detection for modern enterprise environments.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -45,8 +45,7 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -55,7 +54,7 @@ export const CYBERSECURITY_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 3200;
+        price: 3200,
         currency: "
         pricingModel: "
         features: [
@@ -94,8 +93,7 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -104,7 +102,7 @@ export const CYBERSECURITY_SERVICES = [
         description: "Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi-cloud environments.",
         category: "
         subcategory: "
-        price: 2400;
+        price: 2400,
         currency: "
         pricingModel: "
         features: [
@@ -143,8 +141,7 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -153,7 +150,7 @@ export const CYBERSECURITY_SERVICES = [
         description: "Automated privacy compliance platform that helps organizations manage GDPR, CCPA, and other privacy regulations while protecting sensitive data.",
         category: "
         subcategory: "
-        price: 1900;
+        price: 1900,
         currency: "
         pricingModel: "
         features: [
@@ -192,8 +189,7 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -202,7 +198,7 @@ export const CYBERSECURITY_SERVICES = [
         description: "Comprehensive IoT security platform that protects connected devices, monitors network traffic, and manages device lifecycle security.",
         category: "
         subcategory: "
-        price: 2100;
+        price: 2100,
         currency: "
         pricingModel: "
         features: [
@@ -241,7 +237,6 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];

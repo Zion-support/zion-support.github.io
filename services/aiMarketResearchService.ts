@@ -63,7 +63,7 @@ export interface MarketResearchResponse {
   success: boolean,
   data: {
     trends?: MarketTrend[],
-    competitors?: CompetitorAnalysis[],
+    competitors?: CompetitorAnalysis[];
     segments?: MarketSegment[],
     report?: MarketReport
   },
@@ -76,7 +76,6 @@ export interface MarketResearchResponse {
 export class AIMarketResearchService {
   private apiKey: string,
   private baseUrl: string,
-
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey,
     this.baseUrl = baseUrl
@@ -89,20 +88,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.trends || [],
-    } catch (error) {
-      console.error('Error analyzing market trends:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.trends || []} catch (error) {
+      console.error('Error analyzing market trends:', error);
+      throw error}
   }
 
   async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]> {
@@ -112,20 +107,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.competitors || [],
-    } catch (error) {
-      console.error('Error analyzing competitors:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.competitors || []} catch (error) {
+      console.error('Error analyzing competitors:', error);
+      throw error}
   }
 
   async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]> {
@@ -135,20 +126,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.segments || [],
-    } catch (error) {
-      console.error('Error segmenting market:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.segments || []} catch (error) {
+      console.error('Error segmenting market:', error);
+      throw error}
   }
 
   async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport> {
@@ -158,20 +145,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.report,
-    } catch (error) {
-      console.error('Error generating comprehensive report:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.report} catch (error) {
+      console.error('Error generating comprehensive report:', error);
+      throw error}
   }
 
   async getRealTimeInsights(keyword: string): Promise<MarketTrend[]> {
@@ -181,17 +164,13 @@ export class AIMarketResearchService {
           'Authorization': `Bearer ${this.apiKey}`
         }
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.trends || [],
-    } catch (error) {
-      console.error('Error getting real-time insights:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.trends || []} catch (error) {
+      console.error('Error getting real-time insights:', error);
+      throw error}
   }
 
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
@@ -201,20 +180,16 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ format })
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.downloadUrl,
-    } catch (error) {
-      console.error('Error exporting report:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.downloadUrl} catch (error) {
+      console.error('Error exporting report:', error);
+      throw error}
   }
 
   async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {
@@ -224,21 +199,18 @@ export class AIMarketResearchService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ ...request, schedule })
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.scheduleId,
-    } catch (error) {
-      console.error('Error scheduling report:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.scheduleId} catch (error) {
+      console.error('Error scheduling report:', error);
+      throw error}
   }
 }
 
-export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key'),
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');

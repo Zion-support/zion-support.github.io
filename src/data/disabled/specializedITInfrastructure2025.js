@@ -6,7 +6,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         description: "Advanced edge computing platform that distributes computing resources closer to data sources, enabling real-time processing, reduced latency, and improved performance for IoT and mobile applications.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -47,8 +47,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Docker", "Python", "Node.js", "Edge hardware"],
         integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "5G networks"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry 4.0"],
@@ -56,8 +55,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
         infrastructure: "
         scalability: "
-        uptime: "99.9% edge availability",
-    }
+        uptime: "99.9% edge availability"}
     /
     {
         id: "
@@ -65,7 +63,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         description: "Future-proof cloud infrastructure designed to seamlessly integrate with quantum computing resources, enabling hybrid classical-quantum applications and quantum algorithm development.",
         category: "
         subcategory: "
-        price: 3200;
+        price: 3200,
         currency: "
         pricingModel: "
         features: [
@@ -106,8 +104,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Qiskit", "Cirq", "Python", "Quantum hardware", "Cloud platforms"],
         integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum"],
         compliance: ["ISO 27001", "SOC 2", "Quantum security standards"],
@@ -115,8 +112,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
         infrastructure: "
         scalability: "
-        uptime: "99.5% quantum availability",
-    }
+        uptime: "99.5% quantum availability"}
     /
     {
         id: "
@@ -124,7 +120,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         description: "Self-healing, self-optimizing infrastructure platform that automatically manages deployments, scaling, monitoring, and incident response using AI and machine learning.",
         category: "
         subcategory: "
-        price: 1400;
+        price: 1400,
         currency: "
         pricingModel: "
         features: [
@@ -165,8 +161,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Docker", "Terraform", "Python", "Machine Learning"],
         integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "Slack"],
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
@@ -174,8 +169,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["HashiCorp", "Puppet", "Chef", "Ansible"],
         infrastructure: "
         scalability: "
-        uptime: "99.99% availability",
-    }
+        uptime: "99.99% availability"}
     /
     {
         id: "
@@ -183,7 +177,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         description: "Comprehensive zero-trust security platform that implements continuous verification, least-privilege access, and micro-segmentation across all infrastructure components.",
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -224,8 +218,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Identity providers", "Network security", "SIEM", "SOAR", "AI/ML"],
         integrations: ["Active Directory", "Okta", "CrowdStrike", "Palo Alto Networks"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
@@ -233,8 +226,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["Palo Alto Networks", "Cisco", "Fortinet"],
         infrastructure: "
         scalability: "
-        uptime: "99.9% security availability",
-    }
+        uptime: "99.9% security availability"}
     /
     {
         id: "
@@ -242,7 +234,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         description: "Environmentally sustainable infrastructure platform that optimizes energy consumption, uses renewable energy sources, and implements carbon-neutral computing practices.",
         category: "
         subcategory: "
-        price: 1600;
+        price: 1600,
         currency: "
         pricingModel: "
         features: [
@@ -283,8 +275,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Energy management", "Renewable energy", "IoT sensors", "AI optimization"],
         integrations: ["Energy providers", "Sustainability platforms", "IoT networks"],
         compliance: ["ISO 14001", "LEED", "BREEAM", "Green Building Standards"],
@@ -292,8 +283,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["Google Cloud", "Microsoft Azure", "AWS"],
         infrastructure: "
         scalability: "
-        uptime: "99.5% green availability",
-    }
+        uptime: "99.5% green availability"}
     /
     {
         id: "
@@ -301,7 +291,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         description: "Intelligent platform that orchestrates workloads across multiple cloud providers and on-premises infrastructure, optimizing costs, performance, and compliance.",
         category: "
         subcategory: "
-        price: 1900;
+        price: 1900,
         currency: "
         pricingModel: "
         features: [
@@ -342,8 +332,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Terraform", "Ansible", "Python", "Cloud APIs"],
         integrations: ["AWS", "Azure", "Google Cloud", "On-premises systems"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
@@ -351,6 +340,5 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025 = [
         competitors: ["HashiCorp", "VMware", "Red Hat"],
         infrastructure: "
         scalability: "
-        uptime: "99.9% orchestration availability",
-    }
+        uptime: "99.9% orchestration availability"}
 ];

@@ -12,8 +12,7 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'anchor_links_auto_fixer'
       })
-    },
-  } catch (error) {
+    }} catch (error) {
     console.error('❌ anchor_links_auto_fixer function failed:', error),
     
     return {
@@ -23,6 +22,5 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    },
-  }
+    }}
 },

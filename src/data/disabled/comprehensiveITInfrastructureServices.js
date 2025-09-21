@@ -6,7 +6,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Enterprise-grade cloud-native infrastructure platform that provides seamless multi-cloud management, container orchestration, and automated scaling.",
         category: "
         subcategory: "
-        price: 1200;
+        price: 1200,
         currency: "
         pricingModel: "
         features: [
@@ -47,8 +47,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Docker", "Terraform", "AWS", "Azure", "GCP"],
         integrations: ["CI/CD pipelines", "Monitoring tools", "Security platforms", "Backup systems"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
@@ -56,8 +55,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["AWS EKS", "Azure AKS", "Google GKE", "Red Hat OpenShift"],
         uniqueValue: "
         sla: "
-        uptime: "99.99%",
-    }
+        uptime: "99.99%"}
     /
     {
         id: "
@@ -65,7 +63,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 899;
+        price: 899,
         currency: "
         pricingModel: "
         features: [
@@ -106,8 +104,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes Edge", "5G Core", "Edge AI", "MQTT", "WebRTC"],
         integrations: ["IoT platforms", "Cloud services", "5G networks", "Enterprise systems"],
         compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -115,8 +112,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
         uniqueValue: "
         sla: "
-        uptime: "99.9%",
-    }
+        uptime: "99.9%"}
     /
     {
         id: "
@@ -124,7 +120,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Unified platform for managing hybrid cloud environments, providing seamless integration between on-premises and cloud infrastructure.",
         category: "
         subcategory: "
-        price: 1500;
+        price: 1500,
         currency: "
         pricingModel: "
         features: [
@@ -165,8 +161,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Terraform", "Ansible", "Kubernetes", "VMware", "OpenStack"],
         integrations: ["AWS", "Azure", "GCP", "On-premises systems", "Monitoring tools"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
@@ -174,8 +169,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["VMware vCloud", "Microsoft Azure Stack", "AWS Outposts", "Google Anthos"],
         uniqueValue: "
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -183,7 +177,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Comprehensive network security platform that provides next-generation firewall, intrusion detection, and threat intelligence capabilities.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -224,8 +218,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "Custom solutions"],
         integrations: ["SIEM systems", "Identity providers", "Cloud platforms", "Monitoring tools"],
         compliance: ["NIST", "FIPS", "SOC 2", "ISO 27001", "GDPR"],
@@ -233,8 +226,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
         uniqueValue: "
         sla: "
-        uptime: "99.99%",
-    }
+        uptime: "99.99%"}
     /
     {
         id: "
@@ -242,7 +234,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Enterprise-grade data center infrastructure with high availability, redundancy, and energy-efficient design for mission-critical applications.",
         category: "
         subcategory: "
-        price: 2500;
+        price: 2500,
         currency: "
         pricingModel: "
         features: [
@@ -283,8 +275,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["VMware", "Hyper-V", "Storage arrays", "Network switches", "UPS systems"],
         integrations: ["Monitoring tools", "Backup systems", "Cloud platforms", "Management tools"],
         compliance: ["SOC 2", "ISO 27001", "Uptime Institute", "Industry-specific"],
@@ -292,8 +283,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["Equinix", "Digital Realty", "CoreSite", "Cyxtera"],
         uniqueValue: "
         sla: "
-        uptime: "99.999%",
-    }
+        uptime: "99.999%"}
     /
     {
         id: "
@@ -301,7 +291,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Scalable storage infrastructure platform that provides high-performance, reliable, and cost-effective storage solutions for enterprise applications.",
         category: "
         subcategory: "
-        price: 999;
+        price: 999,
         currency: "
         pricingModel: "
         features: [
@@ -342,8 +332,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["NetApp", "EMC", "Pure Storage", "HPE", "Custom solutions"],
         integrations: ["Backup systems", "Monitoring tools", "Cloud platforms", "Management tools"],
         compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -351,8 +340,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["NetApp", "EMC", "Pure Storage", "HPE", "Dell"],
         uniqueValue: "
         sla: "
-        uptime: "99.9%",
-    }
+        uptime: "99.9%"}
     /
     {
         id: "
@@ -360,7 +348,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Enterprise-grade backup and disaster recovery platform that ensures business continuity with automated backup, replication, and recovery capabilities.",
         category: "
         subcategory: "
-        price: 699;
+        price: 699,
         currency: "
         pricingModel: "
         features: [
@@ -401,8 +389,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Custom solutions"],
         integrations: ["Storage systems", "Cloud platforms", "Monitoring tools", "Management tools"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
@@ -410,8 +397,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Dell EMC"],
         uniqueValue: "
         sla: "
-        uptime: "99.9%",
-    }
+        uptime: "99.9%"}
     /
     {
         id: "
@@ -419,7 +405,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Comprehensive network monitoring platform that provides real-time visibility, performance analysis, and proactive alerting for network infrastructure.",
         category: "
         subcategory: "
-        price: 599;
+        price: 599,
         currency: "
         pricingModel: "
         features: [
@@ -460,8 +446,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Custom solutions"],
         integrations: ["Network devices", "Cloud platforms", "Management tools", "Alerting systems"],
         compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -469,8 +454,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"],
         uniqueValue: "
         sla: "
-        uptime: "99.9%",
-    }
+        uptime: "99.9%"}
     /
     {
         id: "
@@ -478,7 +462,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "High-performance virtualization platform that maximizes resource utilization, improves scalability, and reduces infrastructure costs.",
         category: "
         subcategory: "
-        price: 799;
+        price: 799,
         currency: "
         pricingModel: "
         features: [
@@ -519,8 +503,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["VMware", "Hyper-V", "KVM", "Xen", "Custom solutions"],
         integrations: ["Storage systems", "Network infrastructure", "Management tools", "Monitoring tools"],
         compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -528,6 +511,5 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["VMware", "Microsoft Hyper-V", "Red Hat", "Citrix", "Oracle"],
         uniqueValue: "
         sla: "
-        uptime: "99.9%",
-    }
+        uptime: "99.9%"}
 ];

@@ -42,9 +42,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ orphan-pages-detector completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ orphan-pages-detector failed:', error),
     return {
       statusCode: 500,
@@ -54,6 +52,5 @@ exports.handler = async function(event, context) {
         function: 'orphan-pages-detector',
         status: 'error'
       })
-    },
-  }
+    }}
 },

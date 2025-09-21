@@ -9,17 +9,15 @@ import { Sparkles, ArrowRight } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
 
 interface GeneratedContent {
-  description: string;
-  tags: string[];
+  description: string,
+  tags: string[],
   suggestedPrice: {
-    min: number;
-    max: number;
-  };
-  keyPoints: string[];
-}
+    min: number,
+    max: number};
+  keyPoints: string[]}
 
 interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void;
+  onApplyGenerated?: (content: GeneratedContent) => void,
   initialValues?: {
     title?: string;
     category?: string;
@@ -59,10 +57,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListin
       toast({
         title: "Missing Information",
         description: "Please provide both title and category.",
-        variant: "destructive",
-      })
-      return
-    }
+        variant: "destructive"})
+      return }
 
     setIsLoading(true)
     try {
@@ -78,7 +74,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListin
         },
         keyPoints: [
           `Advanced ${category.toLowerCase()} capabilities`,
-          'Easy to use and implement',
+          'Easy to use and implement';
           '24/7 customer support',
           'Regular updates and improvements'
         ]
@@ -87,14 +83,12 @@ export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListin
       setGeneratedContent(mockContent)
       toast({
         title: "Content Generated",
-        description: "AI has generated optimized content for your listing.",
-      })
+        description: "AI has generated optimized content for your listing."})
     } catch (error) {
       toast({
         title: "Generation Failed",
         description: "Failed to generate content. Please try again.",
-        variant: "destructive",
-      })
+        variant: "destructive"})
     } finally {
       setIsLoading(false)
     }
@@ -105,8 +99,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListin
       onApplyGenerated(generatedContent)
       toast({
         title: "Content Applied",
-        description: "Generated content has been applied to your listing.",
-      })
+        description: "Generated content has been applied to your listing."})
     }
   }
 

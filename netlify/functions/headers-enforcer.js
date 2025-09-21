@@ -16,10 +16,8 @@ exports.handler = async function(event, context) {
     // Simulate enforcement process
     for (let i = 0, i < enforcementResults.totalPages, i++) {
       if (Math.random() > 0.15) { // 85% compliance rate
-        enforcementResults.compliantPages++,
-      } else {
-        enforcementResults.nonCompliantPages++,
-      }
+        enforcementResults.compliantPages++} else {
+        enforcementResults.nonCompliantPages++}
     }
     
     // Calculate metrics
@@ -52,8 +50,7 @@ exports.handler = async function(event, context) {
         missingHeaders: ['X-Frame-OptionsContent-Security-Policy', 'Strict-Transport-Security'].slice(0, Math.floor(Math.random() * 3) + 1),
         severity: ['lowmedium', 'high'][Math.floor(Math.random() * 3)],
         recommendedAction: 'Add missing security headers'
-      }),
-    }
+      })}
     
     const result = {
       statusCode: 200,
@@ -80,9 +77,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ headers-enforcer completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ headers-enforcer failed:', error),
     return {
       statusCode: 500,
@@ -92,6 +87,5 @@ exports.handler = async function(event, context) {
         function: 'headers-enforcer',
         status: 'error'
       })
-    },
-  }
+    }}
 },

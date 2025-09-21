@@ -1,15 +1,14 @@
 
-import import { Certification,,, ,,  } from '@/types/resume';
-import import { Card,,, CardContent,,, ,,  } from '@/components/ui/card';
-import import { Button,,, ,,  } from '@/components/ui/button';
-import { Edit,,, Trash2,,  } from 'lucide-react'
-import import { format,,  } from 'date-fns';
+import import { Certification,,, ,} from '@/types/resume';
+import import { Card,,, CardContent,,, ,} from '@/components/ui/card';
+import import { Button,,, ,} from '@/components/ui/button';
+import { Edit,,, Trash2,} from 'lucide-react'
+import import { format,} from 'date-fns';
 interface CertificationsListProps {
-onDelete: (id: string) => void,
-}
+onDelete: (id: string) => void}
 export function CertificationsList({ certifications onEdit onDelete }: CertificationsListProps) {
   if (certifications.length === 0) {
-    return null,
+    return null;
 }
   return (
     <div className='space-y-4'>
@@ -65,7 +64,7 @@ variant='ghost'
                   onClick={() => onEdit(cert)}
                   aria-label='Edit certification'                  variant="ghost"
                   size="icon"
-                  onClick = {() => onEdit(cert),}
+                  onClick = {() => onEdit(cert)}
                   aria-label="Edit certification"
                 >
                   <Edit className='h-4 w-4' />
@@ -90,7 +89,7 @@ href={cert.credential_url}
                   rel='noopener noreferrer'
                   className='text-primary hover:underline'                >              <p className="text-xs mt-2">
                 <a
-href = {cert.credential_url,}
+href = {cert.credential_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"

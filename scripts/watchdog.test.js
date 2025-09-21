@@ -43,8 +43,7 @@ describe('Watchdog Script Tests', () => {
         osUtils.memUsage.mockClear()
     }
     if (osUtils.cpuUsage && typeof osUtils.cpuUsage.mockClear === 'function') {
-        osUtils.cpuUsage.mockClear(),
-    }
+        osUtils.cpuUsage.mockClear()}
 
 
     actualWatchdogModule._resetStateForTests(),
@@ -54,13 +53,11 @@ describe('Watchdog Script Tests', () => {
     consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {}),
     consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {}),
 
-    constants = actualWatchdogModule._getConstantsForTests(),
-  }),
+    constants = actualWatchdogModule._getConstantsForTests()}),
 
   afterEach(() => {
     vi.clearAllTimers(),
-    vi.restoreAllMocks(),
-  }),
+    vi.restoreAllMocks()}),
 
   describe('monitorSystemResources', () => {
     let monitorSystemResources, _getStateForTests, _setStateForTests,
@@ -72,13 +69,11 @@ describe('Watchdog Script Tests', () => {
       _setStateForTests = actualWatchdogModule._setStateForTests,
 
       triggerSelfHealSpy = vi.spyOn(actualWatchdogModule, 'triggerSelfHeal').mockImplementation(mockTriggerSelfHealImpl),
-      appendToSelfHealLogSpy = vi.spyOn(actualWatchdogModule, 'appendToSelfHealLog').mockImplementation(mockAppendToSelfHealLogImpl),
-    }),
+      appendToSelfHealLogSpy = vi.spyOn(actualWatchdogModule, 'appendToSelfHealLog').mockImplementation(mockAppendToSelfHealLogImpl)}),
 
     it('should call triggerSelfHeal if memory usage exceeds threshold', () => {
       osUtils.memUsage.mockImplementation(callback => {
-        callback({ freeMemPercentage: 1 - (constants.MEMORY_THRESHOLD + 0.1) }),
-      }),
+        callback({ freeMemPercentage: 1 - (constants.MEMORY_THRESHOLD + 0.1) })}),
       osUtils.cpuUsage.mockImplementation(callback => callback(0.1)),
 
       monitorSystemResources(),
@@ -86,41 +81,34 @@ describe('Watchdog Script Tests', () => {
       expect(osUtils.memUsage).toHaveBeenCalled(),
       expect(mockTriggerSelfHealImpl).toHaveBeenCalledWith(
         expect.stringContaining(`High memory usage detected: ${((constants.MEMORY_THRESHOLD + 0.1) * 100).toFixed(2)}%`)
-      ),
-    }),
+      )}),
 
     it('should not call triggerSelfHeal if memory usage is below threshold', () => {
       osUtils.memUsage.mockImplementation(callback => {
-        callback({ freeMemPercentage: 1 - (constants.MEMORY_THRESHOLD - 0.1) }),
-      }),
+        callback({ freeMemPercentage: 1 - (constants.MEMORY_THRESHOLD - 0.1) })}),
       osUtils.cpuUsage.mockImplementation(callback => callback(0.1)),
 
       monitorSystemResources(),
-      expect(mockTriggerSelfHealImpl).not.toHaveBeenCalled(),
-    }),
+      expect(mockTriggerSelfHealImpl).not.toHaveBeenCalled()}),
 
     it('should call triggerSelfHeal if CPU usage exceeds threshold for sustained period', () => {
       osUtils.memUsage.mockImplementation(callback => callback({ freeMemPercentage: 0.5 })),
       osUtils.cpuUsage.mockImplementation(callback => callback(constants.CPU_THRESHOLD + 0.1)),
 
       for (let i = 0, i < constants.CPU_SUSTAINED_CHECKS, i++) {
-        monitorSystemResources(),
-      }
+        monitorSystemResources()}
       expect(osUtils.cpuUsage).toHaveBeenCalledTimes(constants.CPU_SUSTAINED_CHECKS),
       expect(mockTriggerSelfHealImpl).toHaveBeenCalledWith(
         expect.stringContaining(`Sustained high CPU usage for ${constants.CPU_SUSTAINED_CHECKS} checks`)
-      ),
-    }),
+      )}),
 
     it('should not call triggerSelfHeal if CPU usage is high for less than sustained period', () => {
       osUtils.memUsage.mockImplementation(callback => callback({ freeMemPercentage: 0.5 })),
       osUtils.cpuUsage.mockImplementation(callback => callback(constants.CPU_THRESHOLD + 0.1)),
 
       for (let i = 0, i < constants.CPU_SUSTAINED_CHECKS - 1, i++) {
-        monitorSystemResources(),
-      }
-      expect(mockTriggerSelfHealImpl).not.toHaveBeenCalled(),
-    }),
+        monitorSystemResources()}
+      expect(mockTriggerSelfHealImpl).not.toHaveBeenCalled()}),
 
     it('should reset highCpuUsageCount if CPU usage drops below threshold', () => {
       osUtils.memUsage.mockImplementation(callback => callback({ freeMemPercentage: 0.5 })),
@@ -142,9 +130,7 @@ describe('Watchdog Script Tests', () => {
       _setStateForTests({ isHealing: true }),
       monitorSystemResources(),
       expect(osUtils.memUsage).not.toHaveBeenCalled(),
-      expect(osUtils.cpuUsage).not.toHaveBeenCalled(),
-    }),
-  }),
+      expect(osUtils.cpuUsage).not.toHaveBeenCalled()})}),
 
   describe('sendDiscordAlert', () => {
     const originalEnv = { ...process.env },
@@ -160,12 +146,10 @@ describe('Watchdog Script Tests', () => {
 
 
       appendToSelfHealLogSpy = vi.spyOn(actualWatchdogModule, 'appendToSelfHealLog').mockImplementation(mockAppendToSelfHealLogImpl),
-      logErrorSpy = vi.spyOn(actualWatchdogModule, 'logError').mockImplementation(mockLogErrorImpl),
-    }),
+      logErrorSpy = vi.spyOn(actualWatchdogModule, 'logError').mockImplementation(mockLogErrorImpl)}),
 
     afterEach(() => {
-      process.env = originalEnv,
-    }),
+      process.env = originalEnv}),
 
     it('should send a POST request to DISCORD_WEBHOOK_URL with the message when URL is set', async () => {
       process.env.DISCORD_WEBHOOK_URL = 'https: //fake.discord.webhook/url',
@@ -179,8 +163,7 @@ describe('Watchdog Script Tests', () => {
         { content: alertMessage },
         { timeout: 10000 }
       ),
-      expect(mockAppendToSelfHealLogImpl).toHaveBeenCalledWith(expect.stringContaining('Successfully sent alert to Discord.')),
-    }),
+      expect(mockAppendToSelfHealLogImpl).toHaveBeenCalledWith(expect.stringContaining('Successfully sent alert to Discord.'))}),
 
     it('should log a warning and not make an HTTP request if DISCORD_WEBHOOK_URL is not set', async () => {
       delete process.env.DISCORD_WEBHOOK_URL,
@@ -204,8 +187,7 @@ describe('Watchdog Script Tests', () => {
       expect(axios.post).toHaveBeenCalledTimes(1),
       expect(mockLogErrorImpl).toHaveBeenCalledWith(expect.stringContaining('Failed to send alert to Discord. Error: Network Error')),
       expect(mockAppendToSelfHealLogImpl).toHaveBeenCalledWith(expect.stringContaining('ERROR: Failed to send alert to Discord. Error: Network Error'))
-    }),
-  }),
+    })}),
 
   describe('triggerSelfHeal (actual implementation)', () => {
     let actualTriggerSelfHealFunc, actual_getStateForTestsFunc, actual_setStateForTestsFunc, actual_getConstantsForTestsFunc, localConstants,
@@ -225,8 +207,7 @@ describe('Watchdog Script Tests', () => {
         const { exec } = require('child_process'), // get the mocked exec
         execMock = exec,
         execMock.mockImplementation((command, callback) => {
-          callback(null, 'stdout mockstderr mock'),
-        }),
+          callback(null, 'stdout mockstderr mock')}),
 
         mockSendDiscordAlertImpl.mockClear(), // Ensure this is cleared
         mockAppendToSelfHealLogImpl.mockClear(), // Ensure this is cleared
@@ -278,6 +259,4 @@ describe('Watchdog Script Tests', () => {
       expect(actual_getStateForTestsFunc().securityPatchStreak).toBe(0),
       expect(actual_getStateForTestsFunc().highCpuUsageCount).toBe(0),
       sendDiscordAlertSpy.mockRestore(), // Clean up spy
-    }),
-  }),
-}),
+    })})}),

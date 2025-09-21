@@ -16,10 +16,8 @@ exports.handler = async function(event, context) {
     // Simulate update process
     for (let i = 0, i < updateResults.totalPages, i++) {
       if (Math.random() > 0.08) { // 92% success rate
-        updateResults.updatedPages++,
-      } else {
-        updateResults.failedUpdates++,
-      }
+        updateResults.updatedPages++} else {
+        updateResults.failedUpdates++}
     }
     
     // Calculate metrics
@@ -52,8 +50,7 @@ exports.handler = async function(event, context) {
         newFormat: ['webpjpg', 'png'][Math.floor(Math.random() * 3)],
         sizeReduction: Math.floor(Math.random() * 80) + 20, // 20-100% reduction
         quality: Math.floor(Math.random() * 20) + 80 // 80-100% quality
-      }),
-    }
+      })}
     
     // Simulate social media previews
     const socialPreviews = {
@@ -90,9 +87,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ og-image-update-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ og-image-update-runner failed:', error),
     return {
       statusCode: 500,
@@ -102,6 +97,5 @@ exports.handler = async function(event, context) {
         function: 'og-image-update-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

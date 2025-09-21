@@ -31,8 +31,7 @@ export interface PortfolioAsset {
     monthlyReturn: number,
     yearlyReturn: number,
     totalReturn: number
-  },
-}
+  }}
 
 export interface PortfolioPerformance {
   totalReturn: number,
@@ -142,14 +141,13 @@ export interface FinancialRequest {
   userId: string,
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record<string, any>,
-  preferences?: Record<string, any>,
-}
+  preferences?: Record<string, any>}
 
 export interface FinancialResponse {
   success: boolean,
   data: {
     portfolio?: InvestmentPortfolio,
-    recommendations?: InvestmentRecommendation[],
+    recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan,
     analysis?: MarketAnalysis,
     goals?: FinancialGoal[]
@@ -163,7 +161,6 @@ export interface FinancialResponse {
 export class AIFinancialAdvisorService {
   private apiKey: string,
   private baseUrl: string,
-
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey,
     this.baseUrl = baseUrl
@@ -176,17 +173,13 @@ export class AIFinancialAdvisorService {
           'Authorization': `Bearer ${this.apiKey}`
         }
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.portfolio,
-    } catch (error) {
-      console.error('Error analyzing portfolio:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.portfolio} catch (error) {
+      console.error('Error analyzing portfolio:', error);
+      throw error}
   }
 
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
@@ -196,20 +189,17 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ userId, riskTolerance, investmentHorizon })
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.recommendations || [],
-    } catch (error) {
-      console.error('Error getting investment recommendations:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.recommendations || []} catch (error) {
+      console.error('Error getting investment recommendations:', error);
+      throw error}
   }
 
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
@@ -219,20 +209,16 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.plan,
-    } catch (error) {
-      console.error('Error creating financial plan:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.plan} catch (error) {
+      console.error('Error creating financial plan:', error);
+      throw error}
   }
 
   async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
@@ -242,17 +228,13 @@ export class AIFinancialAdvisorService {
           'Authorization': `Bearer ${this.apiKey}`
         }
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.goals || [],
-    } catch (error) {
-      console.error('Error tracking financial goals:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.goals || []} catch (error) {
+      console.error('Error tracking financial goals:', error);
+      throw error}
   }
 
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
@@ -262,17 +244,13 @@ export class AIFinancialAdvisorService {
           'Authorization': `Bearer ${this.apiKey}`
         }
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.analysis,
-    } catch (error) {
-      console.error('Error getting market analysis:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.analysis} catch (error) {
+      console.error('Error getting market analysis:', error);
+      throw error}
   }
 
   async rebalancePortfolio(portfolioId: string, targetAllocation: Record<string, number>): Promise<{
@@ -293,20 +271,16 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ targetAllocation })
       }),
-
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.rebalancing,
-    } catch (error) {
-      console.error('Error rebalancing portfolio:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.rebalancing} catch (error) {
+      console.error('Error rebalancing portfolio:', error);
+      throw error}
   }
 
   async calculateRetirementNeeds(userId: string, targetAge: number, desiredIncome: number): Promise<{
@@ -322,20 +296,17 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ userId, targetAge, desiredIncome })
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.calculation,
-    } catch (error) {
-      console.error('Error calculating retirement needs:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.calculation} catch (error) {
+      console.error('Error calculating retirement needs:', error);
+      throw error}
   }
 
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
@@ -343,28 +314,24 @@ export class AIFinancialAdvisorService {
     estimatedSavings: number,
     implementation: string[],
     risks: string[],
-    deadlines: Record<string, Date>,
-  }> {
+    deadlines: Record<string, Date>}> {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/tax-optimization`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ userId, taxYear })
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.optimization,
-    } catch (error) {
-      console.error('Error getting tax optimization strategies:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.optimization} catch (error) {
+      console.error('Error getting tax optimization strategies:', error);
+      throw error}
   }
 
   async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{
@@ -381,21 +348,18 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ userId, reportType })
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`)}
 
-      const data = await response.json(),
-      return data.report,
-    } catch (error) {
-      console.error('Error generating financial report:', error),
-      throw error,
-    }
+      const data = await response.json();
+      return data.report} catch (error) {
+      console.error('Error generating financial report:', error);
+      throw error}
   }
 }
 
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key'),
+export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');

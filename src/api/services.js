@@ -7,9 +7,8 @@ export async function fetchServices(category, q) {
         params.append('q', q)
     const url = `
     const res = await fetch(url, {
-        mode: 'cors';
-  headers: { 'Content-Type': 'application/json' };
-    });
+        mode: 'cors',
+  headers: { 'Content-Type': 'application/json' }});
     if (!res.ok) {
         throw new Error('Failed to fetch services')
     }

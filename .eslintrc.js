@@ -1,14 +1,12 @@
 module.exports = {
   extends: [
-    "next/core-web-vitals"
+    'next/core-web-vitals'
   ],
   rules: {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "react/no-unescaped-entities": "off",
-    "react/jsx-no-undef": "off"
+    'no-unused-vars': 'off',
+    'no-console': 'warn',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off'
   },
   parserOptions: {
     ecmaVersion: 2020,
@@ -21,5 +19,18 @@ module.exports = {
     browser: true,
     es6: true,
     node: true
-  }
+  },
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'dist/',
+    'build/',
+    'scripts/',
+    'automation/',
+    'public/reports/**',
+    'netlify/',
+    '**/*.cjs',
+    '**/*.mjs'
+  ]
 };

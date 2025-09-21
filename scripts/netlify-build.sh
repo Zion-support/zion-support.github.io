@@ -5,9 +5,9 @@ set -e
 
 echo "Starting Netlify build process..."
 
-# Install dependencies with legacy peer deps
+# Install dependencies with legacy peer deps and ignore scripts
 echo "Installing dependencies..."
-npm ci --legacy-peer-deps
+NODE_OPTIONS='--openssl-legacy-provider' npm install --legacy-peer-deps --ignore-scripts
 
 # Temporarily rename tsconfig.json to avoid TypeScript validation issues
 if [ -f "tsconfig.json" ]; then

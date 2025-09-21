@@ -101,16 +101,13 @@ function generateReadme() {
     const existingContent = fs.readFileSync(outputPath, 'utf8'),
     if (existingContent.length > 1000) {
       console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),
-      return,
-    }
+      return}
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
-  console.log(`✅ README generated at: ${outputPath}`),
-}
+  console.log(`✅ README generated at: ${outputPath}`)}
 
 if (require.main === module) {
-  generateReadme(),
-}
+  generateReadme()}
 
 module.exports = { generateReadme },

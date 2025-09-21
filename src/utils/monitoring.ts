@@ -1,9 +1,8 @@
 import React from "react";
 
 interface Service {
-  id: string;
-  name: string;
-}
+  id: string,
+  name: string}
 
 // Monitoring utilities
 export const logEvent = (event: string) => {

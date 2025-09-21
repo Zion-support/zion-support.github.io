@@ -50,7 +50,7 @@ function safeConsoleError(message, error) {
 export const safeStorage = {
     getItem: (key) => {
         if (typeof window === 'undefined')
-            return null;
+            return null,
     /
         const isVerboseKey = key.includes('sb-') || key.includes('supabase')
         try {
@@ -79,7 +79,7 @@ export const safeStorage = {
     },
     removeItem: (key) => {
         if (typeof window === 'undefined')
-            return;
+            return,
     const isVerboseKey = key.includes('sb-') || key.includes('supabase')
         try {
             localStorage.removeItem(key)
@@ -117,7 +117,7 @@ const sessionMemoryStore = {}
 export const safeSessionStorage = {
     getItem: (key) => {
         if (typeof window === 'undefined')
-            return null;
+            return null,
     try {
             return sessionStorage.getItem(key)
         }
@@ -137,7 +137,7 @@ export const safeSessionStorage = {
     },
     removeItem: (key) => {
         if (typeof window === 'undefined')
-            return;
+            return,
     try {
             sessionStorage.removeItem(key)
         }

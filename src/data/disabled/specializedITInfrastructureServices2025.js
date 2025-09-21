@@ -6,7 +6,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Revolutionary AI-powered edge computing platform that brings machine learning capabilities to edge devices, enabling real-time processing, reduced latency, and improved performance for IoT and mobile applications.",
-        price: 1800;
+        price: 1800,
         pricingModel: "
         userLimit: "
         features: [
@@ -46,16 +46,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 14;
+        freeTrial: true,
+        freeTrialDays: 14,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "400% annual growth expected",
-    }
+        growthPotential: "400% annual growth expected"}
     /
     {
         id: "
@@ -63,7 +61,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Advanced AI-powered zero trust security platform that continuously monitors, authenticates, and authorizes every user and device in real-time, providing enterprise-grade security for modern hybrid work environments.",
-        price: 2500;
+        price: 2500,
         pricingModel: "
         userLimit: "
         features: [
@@ -103,16 +101,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 14;
+        freeTrial: true,
+        freeTrialDays: 14,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "500% annual growth expected",
-    }
+        growthPotential: "500% annual growth expected"}
     /
     {
         id: "
@@ -120,7 +116,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Intelligent AI-powered hybrid cloud management platform that optimizes workloads across multiple cloud providers, on-premises infrastructure, and edge locations for maximum performance and cost efficiency.",
-        price: 2200;
+        price: 2200,
         pricingModel: "
         userLimit: "
         features: [
@@ -160,16 +156,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 14;
+        freeTrial: true,
+        freeTrialDays: 14,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "450% annual growth expected",
-    }
+        growthPotential: "450% annual growth expected"}
     /
     {
         id: "
@@ -177,7 +171,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Next-generation AI-powered data center automation platform that optimizes operations, reduces energy consumption, and ensures maximum uptime through intelligent monitoring and predictive maintenance.",
-        price: 3000;
+        price: 3000,
         pricingModel: "
         userLimit: "
         features: [
@@ -217,16 +211,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 7;
+        freeTrial: true,
+        freeTrialDays: 7,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "600% annual growth expected",
-    }
+        growthPotential: "600% annual growth expected"}
     /
     {
         id: "
@@ -234,7 +226,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Advanced AI-powered network performance optimization platform that continuously monitors, analyzes, and optimizes network performance in real-time, ensuring maximum efficiency and user experience.",
-        price: 1900;
+        price: 1900,
         pricingModel: "
         userLimit: "
         features: [
@@ -274,14 +266,12 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 14;
+        freeTrial: true,
+        freeTrialDays: 14,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "500% annual growth expected",
-    }
+        growthPotential: "500% annual growth expected"}
 ];

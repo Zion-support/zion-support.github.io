@@ -4,8 +4,7 @@ import React, {
   lazy,
   useState,
   useEffect,
-  ComponentType,
-} from 'react'
+  ComponentType} from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -14,28 +13,26 @@ import { cn } from '@/lib/utils'
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface LoadingState {
-  isLoading: boolean;
-  error: Error | null;
-  retryCount: number;
-  isOnline: boolean;
-}
+  isLoading: boolean,
+  error: Error | null,
+  retryCount: number,
+  isOnline: boolean}
 
 interface DynamicLoaderProps {
-  importFn: () => Promise<{ default: ComponentType<any> }>;
+  importFn: () => Promise<{ default: ComponentType<any> }>,
   fallback?: React.ReactNode;
-  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>;
+  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>,
   loadingComponent?: React.ComponentType;
   enableRetry?: boolean;
   maxRetries?: number;
   prefetch?: boolean;
   className?: string;
   children?: React.ReactNode;
-  [key: string]: any;
-}
+  [key: string]: any}
 
 // Enhanced Loading Component
 const EnhancedLoading: React.FC<{
-  progress?: number;
+  progress?: number,
   message?: string;
   showProgress?: boolean;
 }> = ({ progress = 0, message = "Loading...", showProgress = false }) => (
@@ -64,8 +61,7 @@ const EnhancedLoading: React.FC<{
       </motion.div>
     </CardContent>
   </Card>
-);
-
+),
 // Error Fallback Component
 const ErrorFallback: React.FC<{ error: Error; retry: () => void }> = ({ error, retry }) => (
   <Card className="w-full border-destructive">
@@ -90,8 +86,7 @@ const ErrorFallback: React.FC<{ error: Error; retry: () => void }> = ({ error, r
       </motion.div>
     </CardContent>
   </Card>
-);
-
+),
 // Network Status Component
 const NetworkStatus: React.FC<{ isOnline: boolean }> = ({ isOnline }) => (
   <motion.div
@@ -110,10 +105,10 @@ const NetworkStatus: React.FC<{ isOnline: boolean }> = ({ isOnline }) => (
 
 const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn,
-  fallback,
+  fallback;
   errorFallback: ErrorFallbackComponent = ErrorFallback,
   loadingComponent: LoadingComponent = EnhancedLoading,
-  enableRetry = true,
+  enableRetry = true;
   maxRetries = 3,
   prefetch = false,
   className,
@@ -124,38 +119,33 @@ const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     isLoading: true,
     error: null,
     retryCount: 0,
-    isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
-  });
+    isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true});
 
   const [Component, setComponent] = useState<ComponentType<any> | null>(null);
 
   const loadComponent = async () => {
     if (loadingState.retryCount >= maxRetries) {
-      setLoadingState(prev => ({ ...prev, isLoading: false }));
+      setLoadingState(prev => ({ ...prev, isLoading: false })),
       return;
     }
 
-    setLoadingState(prev => ({ ...prev, isLoading: true, error: null }));
-
+    setLoadingState(prev => ({ ...prev, isLoading: true, error: null })),
     try {
       const module = await importFn();
       setComponent(() => module.default);
-      setLoadingState(prev => ({ ...prev, isLoading: false, retryCount: 0 }));
-    } catch (error) {
+      setLoadingState(prev => ({ ...prev, isLoading: false, retryCount: 0 }))} catch (error) {
       const errorObj = error instanceof Error ? error : new Error('Failed to load component');
-      logErrorToProduction('Dynamic component load failed:', { error: errorObj, retryCount: loadingState.retryCount });
-      
+      logErrorToProduction('Dynamic component load failed:', { error: errorObj, retryCount: loadingState.retryCount }),
       setLoadingState(prev => ({
-        ...prev,
+        ...prev;
         isLoading: false,
         error: errorObj,
-        retryCount: prev.retryCount + 1,
-      }));
+        retryCount: prev.retryCount + 1}));
     }
   };
 
   const retry = () => {
-    setLoadingState(prev => ({ ...prev, retryCount: 0 }));
+    setLoadingState(prev => ({ ...prev, retryCount: 0 })),
     loadComponent();
   };
 
@@ -164,9 +154,8 @@ const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   }, []);
 
   useEffect(() => {
-    const handleOnline = () => setLoadingState(prev => ({ ...prev, isOnline: true }));
-    const handleOffline = () => setLoadingState(prev => ({ ...prev, isOnline: false }));
-
+    const handleOnline = () => setLoadingState(prev => ({ ...prev, isOnline: true })),
+    const handleOffline = () => setLoadingState(prev => ({ ...prev, isOnline: false })),
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
@@ -199,7 +188,7 @@ const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   }
 
   if (!Component) {
-    return fallback || <LoadingComponent />;
+    return fallback || <LoadingComponent />
   }
 
   return (

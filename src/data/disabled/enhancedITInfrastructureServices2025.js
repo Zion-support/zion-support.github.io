@@ -1,12 +1,12 @@
 export const enhancedITInfrastructureServices2025 = [
     {
-        id: 201;
+        id: 201,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 4500;
+        price: 4500,
         pricingModel: "
         features: [
             "
@@ -32,8 +32,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$4,500/month (Industry average: $8,500/month)",
         competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
         roi: "
@@ -44,13 +43,13 @@ export const enhancedITInfrastructureServices2025 = [
         certifications: ["CISSP", "CISM", "CCSP", "NIST", "ISO 27001"]
     },
     {
-        id: 202;
+        id: 202,
         name: "
         category: "
         subcategory: "
         description: "Next-generation hyperconverged infrastructure combining compute, storage, and networking with AI-powered management",
         pricing: "
-        price: 3200;
+        price: 3200,
         pricingModel: "
         features: [
             "
@@ -76,8 +75,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$3,200/month (Industry average: $6,200/month)",
         competitors: ["Nutanix", "VMware vSAN", "HPE SimpliVity", "Dell EMC VxRail"],
         roi: "
@@ -88,13 +86,13 @@ export const enhancedITInfrastructureServices2025 = [
         certifications: ["VMware", "Microsoft", "Red Hat", "AWS", "Azure"]
     },
     {
-        id: 203;
+        id: 203,
         name: "
         category: "
         subcategory: "
         description: "Enterprise-grade 5G private network solutions for industrial IoT, smart manufacturing, and autonomous operations",
         pricing: "
-        price: 2800;
+        price: 2800,
         pricingModel: "
         features: [
             "
@@ -120,8 +118,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$2,800/month (Industry average: $5,500/month)",
         competitors: ["Ericsson", "Nokia", "Huawei", "Cisco", "Samsung"],
         roi: "
@@ -132,13 +129,13 @@ export const enhancedITInfrastructureServices2025 = [
         certifications: ["3GPP", "5G Americas", "GSMA", "IEEE"]
     },
     {
-        id: 204;
+        id: 204,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 5500;
+        price: 5500,
         pricingModel: "
         features: [
             "
@@ -164,8 +161,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$5,500/month (Industry average: $10,000/month)",
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "Amazon Braket"],
         roi: "
@@ -176,13 +172,13 @@ export const enhancedITInfrastructureServices2025 = [
         certifications: ["Quantum Computing", "Research", "Academic", "Government"]
     },
     {
-        id: 205;
+        id: 205,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 2400;
+        price: 2400,
         pricingModel: "
         features: [
             "
@@ -208,8 +204,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$2,400/month (Industry average: $4,800/month)",
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Cisco Edge"],
         roi: "
@@ -220,13 +215,13 @@ export const enhancedITInfrastructureServices2025 = [
         certifications: ["Kubernetes", "Docker", "IoT", "Edge Computing"]
     },
     {
-        id: 206;
+        id: 206,
         name: "
         category: "
         subcategory: "
         description: "Environmentally conscious data center solutions with renewable energy, efficient cooling, and carbon footprint reduction",
         pricing: "
-        price: 3800;
+        price: 3800,
         pricingModel: "
         features: [
             "
@@ -252,8 +247,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$3,800/month (Industry average: $7,200/month)",
         competitors: ["Google Cloud", "Microsoft Azure", "AWS", "Equinix", "Digital Realty"],
         roi: "
@@ -264,13 +258,13 @@ export const enhancedITInfrastructureServices2025 = [
         certifications: ["LEED", "Energy Star", "ISO 14001", "Green Building Council"]
     },
     {
-        id: 207;
+        id: 207,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 2600;
+        price: 2600,
         pricingModel: "
         features: [
             "
@@ -296,8 +290,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$2,600/month (Industry average: $5,200/month)",
         competitors: ["ServiceNow", "BMC", "BMC Helix", "IBM Watson AIOps", "Splunk"],
         roi: "
@@ -308,13 +301,13 @@ export const enhancedITInfrastructureServices2025 = [
         certifications: ["ITIL", "ISO 20000", "AI Operations", "Machine Learning"]
     },
     {
-        id: 208;
+        id: 208,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 3200;
+        price: 3200,
         pricingModel: "
         features: [
             "
@@ -340,8 +333,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$3,200/month (Industry average: $6,400/month)",
         competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
         roi: "
@@ -352,13 +344,13 @@ export const enhancedITInfrastructureServices2025 = [
         certifications: ["Blockchain", "Smart Contracts", "Cryptocurrency", "Web3"]
     },
     {
-        id: 209;
+        id: 209,
         name: "
         category: "
         subcategory: "
         description: "Comprehensive IoT infrastructure management platform for device provisioning, monitoring, and data processing",
         pricing: "
-        price: 1800;
+        price: 1800,
         pricingModel: "
         features: [
             "
@@ -384,8 +376,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$1,800/month (Industry average: $3,600/month)",
         competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
         roi: "
@@ -396,13 +387,13 @@ export const enhancedITInfrastructureServices2025 = [
         certifications: ["IoT", "Edge Computing", "Device Management", "Data Analytics"]
     },
     {
-        id: 210;
+        id: 210,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 2900;
+        price: 2900,
         pricingModel: "
         features: [
             "
@@ -428,8 +419,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$2,900/month (Industry average: $5,800/month)",
         competitors: ["VMware Cloud", "Red Hat OpenShift", "HashiCorp", "CloudBolt", "RightScale"],
         roi: "

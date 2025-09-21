@@ -38,7 +38,7 @@ try {
   execSync('NODE_OPTIONS="--openssl-legacy-provider" npm run build', { 
     stdio: 'inherit',
     cwd: __dirname 
-  });
+  }),
   console.log('Build completed successfully!');
 } catch (error) {
   console.error('Build failed:', error.message);
@@ -60,8 +60,7 @@ try {
         let content = fs.readFileSync(oldPath, 'utf8');
         // Restore TypeScript syntax
         content = content.replace(/import { NextPage } from/g, 'import type { NextPage } from');
-        content = content.replace(/const Home = \(\) =>/g, 'const Home: NextPage = () =>');
-        
+        content = content.replace(/const Home = \(\) =>/g, 'const Home: NextPage = () =>'),
         fs.writeFileSync(newPath, content);
         fs.unlinkSync(oldPath);
       }

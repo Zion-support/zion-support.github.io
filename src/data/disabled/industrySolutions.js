@@ -6,7 +6,7 @@ export const INDUSTRY_SOLUTIONS = [
         description: "Comprehensive healthcare AI platform that provides clinical decision support, patient monitoring, and predictive analytics for improved patient outcomes and operational efficiency.",
         category: "
         subcategory: "
-        price: 4500;
+        price: 4500,
         currency: "
         pricingModel: "
         features: [
@@ -45,8 +45,7 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -55,7 +54,7 @@ export const INDUSTRY_SOLUTIONS = [
         description: "Advanced financial services platform that provides AI-powered risk assessment, fraud detection, compliance automation, and portfolio optimization for financial institutions.",
         category: "
         subcategory: "
-        price: 3800;
+        price: 3800,
         currency: "
         pricingModel: "
         features: [
@@ -94,8 +93,7 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -104,7 +102,7 @@ export const INDUSTRY_SOLUTIONS = [
         description: "Comprehensive IoT platform for manufacturing that enables predictive maintenance, quality control, supply chain optimization, and real-time production monitoring.",
         category: "
         subcategory: "
-        price: 3200;
+        price: 3200,
         currency: "
         pricingModel: "
         features: [
@@ -143,8 +141,7 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -153,7 +150,7 @@ export const INDUSTRY_SOLUTIONS = [
         description: "Advanced retail analytics platform that provides customer behavior insights, inventory optimization, demand forecasting, and personalized marketing automation.",
         category: "
         subcategory: "
-        price: 2400;
+        price: 2400,
         currency: "
         pricingModel: "
         features: [
@@ -192,8 +189,7 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -202,7 +198,7 @@ export const INDUSTRY_SOLUTIONS = [
         description: "Comprehensive education technology platform that provides personalized learning, student analytics, course management, and educational content delivery.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -241,7 +237,6 @@ export const INDUSTRY_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];

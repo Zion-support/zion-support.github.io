@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface BundleModule {
-  name: string;
-  size: number;
-  gzipSize: number;
-  percentage: number;
+  name: string,
+  size: number,
+  gzipSize: number,
+  percentage: number,
   children?: BundleModule[];
 }
 
@@ -63,8 +63,7 @@ export const BundleAnalyzer: React.FC = () => {
             { name: 'custom', size: 139140, gzipSize: 18120, percentage: 35.1 }
           ]
         }
-      ];
-      
+      ],
       const total = mockModules.reduce((sum, module) => sum + module.size, 0);
       setModules(mockModules);
       setTotalSize(total);
@@ -80,7 +79,7 @@ export const BundleAnalyzer: React.FC = () => {
   }, []);
 
   const formatBytes = (bytes: number) => {
-    if (bytes === 0) return '0 Bytes';
+    if (bytes === 0) return '0 Bytes',
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
@@ -88,13 +87,13 @@ export const BundleAnalyzer: React.FC = () => {
   };
 
   const getSizeColor = (percentage: number) => {
-    if (percentage > 50) return 'text-red-400';
+    if (percentage > 50) return 'text-red-400',
     if (percentage > 25) return 'text-yellow-400';
     return 'text-green-400';
   };
 
   const getSizeBg = (percentage: number) => {
-    if (percentage > 50) return 'bg-red-500/20 border-red-500/30';
+    if (percentage > 50) return 'bg-red-500/20 border-red-500/30',
     if (percentage > 25) return 'bg-yellow-500/20 border-yellow-500/30';
     return 'bg-green-500/20 border-green-500/30';
   };

@@ -15,8 +15,7 @@ class PM2Monitor {
       processes: {},
       systemMetrics: {},
       recommendations: []
-    },
-  }
+    }}
 
   async start() {
     try {
@@ -29,24 +28,18 @@ class PM2Monitor {
       await this.generateHealthReport(),
       // Send notifications if needed
       await this.sendNotifications(),
-      console.log('✅ PM2 Monitor completed successfully'),
-    } catch (error) {
+      console.log('✅ PM2 Monitor completed successfully')} catch (error) {
       console.error('❌ PM2 Monitor failed:', error),
       this.healthReport.overallHealth = 'critical',
-      this.healthReport.error = error.message,
-    } finally {
-      pm2.disconnect(),
-    }
+      this.healthReport.error = error.message} finally {
+      pm2.disconnect()}
   }
 
   async connectToPM2() {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) reject(err),
-        else resolve(),
-      }),
-    }),
-  }
+        else resolve()})})}
 
   async collectHealthData() {
     console.log('📊 Collecting health data...'),
@@ -61,23 +54,18 @@ class PM2Monitor {
         uptime: process.pm2_env.pm_uptime,
         restarts: process.pm2_env.restart_time,
         health: this.assessProcessHealth(process)
-      },
-    }
+      }}
 
     // Collect system metrics
     this.healthReport.systemMetrics = await this.collectSystemMetrics(),
     // Assess overall health
-    this.assessOverallHealth(),
-  }
+    this.assessOverallHealth()}
 
   async getPM2Status() {
     return new Promise((resolve, reject) => {
       pm2.list((err, list) => {
         if (err) reject(err),
-        else resolve(list),
-      }),
-    }),
-  }
+        else resolve(list)})})}
 
   assessProcessHealth(process) {
     const health = {
@@ -90,40 +78,32 @@ class PM2Monitor {
     if (process.monit.memory > 100 * 1024 * 1024) { // 100MB
       health.score -= 20,
       health.issues.push('High memory usage'),
-      health.recommendations.push('Consider optimizing memory usage or increasing memory limit'),
-    }
+      health.recommendations.push('Consider optimizing memory usage or increasing memory limit')}
 
     // Check CPU usage
     if (process.monit.cpu > 80) {
       health.score -= 15,
       health.issues.push('High CPU usage'),
-      health.recommendations.push('Investigate CPU-intensive operations'),
-    }
+      health.recommendations.push('Investigate CPU-intensive operations')}
 
     // Check restart count
     if (process.pm2_env.restart_time > 5) {
       health.score -= 25,
       health.issues.push('Frequent restarts'),
-      health.recommendations.push('Investigate root cause of crashes'),
-    }
+      health.recommendations.push('Investigate root cause of crashes')}
 
     // Check uptime
     const uptime = Date.now() - process.pm2_env.pm_uptime,
     if (uptime < 5 * 60 * 1000) { // Less than 5 minutes
       health.score -= 10,
-      health.issues.push('Recent restart'),
-    }
+      health.issues.push('Recent restart')}
 
     if (health.score < 50) {
-      health.status = 'critical',
-    } else if (health.score < 80) {
-      health.status = 'warning',
-    } else {
-      health.status = 'healthy',
-    }
+      health.status = 'critical'} else if (health.score < 80) {
+      health.status = 'warning'} else {
+      health.status = 'healthy'}
 
-    return health,
-  }
+    return health}
 
   async collectSystemMetrics() {
     const os = require('os'),
@@ -141,8 +121,7 @@ class PM2Monitor {
       uptime: os.uptime(),
       platform: os.platform(),
       arch: os.arch()
-    },
-  }
+    }}
 
   assessOverallHealth() {
     const processes = Object.values(this.healthReport.processes),
@@ -151,14 +130,11 @@ class PM2Monitor {
 
     if (criticalCount > 0) {
       this.healthReport.overallHealth = 'critical',
-      this.healthReport.recommendations.push(`Immediate attention required: ${criticalCount} critical processes`),
-    } else if (warningCount > 0) {
+      this.healthReport.recommendations.push(`Immediate attention required: ${criticalCount} critical processes`)} else if (warningCount > 0) {
       this.healthReport.overallHealth = 'warning',
-      this.healthReport.recommendations.push(`Monitor closely: ${warningCount} processes showing warnings`),
-    } else {
+      this.healthReport.recommendations.push(`Monitor closely: ${warningCount} processes showing warnings`)} else {
       this.healthReport.overallHealth = 'healthy',
-      this.healthReport.recommendations.push('All systems operating normally'),
-    }
+      this.healthReport.recommendations.push('All systems operating normally')}
   }
 
   async generateHealthReport() {
@@ -166,8 +142,7 @@ class PM2Monitor {
     // Create reports directory if it doesn't exist
     const reportsDir = path.join(__dirname, '../../reports'),
     if (!fs.existsSync(reportsDir)) {
-      fs.mkdirSync(reportsDir, { recursive: true }),
-    }
+      fs.mkdirSync(reportsDir, { recursive: true })}
 
     // Save detailed report
     const reportPath = path.join(reportsDir, `pm2-health-${Date.now()}.json`),
@@ -177,8 +152,7 @@ class PM2Monitor {
     fs.writeFileSync(latestReportPath, JSON.stringify(this.healthReport, null, 2)),
     // Generate summary
     this.generateSummary(),
-    console.log(`📄 Health report saved to: ${reportPath}`),
-  }
+    console.log(`📄 Health report saved to: ${reportPath}`)}
 
   generateSummary() {
     const summary = {
@@ -200,9 +174,7 @@ class PM2Monitor {
     console.log(`Memory Usage: ${summary.memoryUsage}`),
     console.log('\nTop Recommendations: '),
     summary.topRecommendations.forEach((rec, i) => {
-      console.log(`${i + 1}. ${rec}`),
-    }),
-  }
+      console.log(`${i + 1}. ${rec}`)})}
 
   async sendNotifications() {
     // Check if notifications are needed
@@ -218,7 +190,6 @@ class PM2Monitor {
 // Run the monitor
 if (require.main === module) {
   const monitor = new PM2Monitor(),
-  monitor.start().catch(console.error),
-}
+  monitor.start().catch(console.error)}
 
 module.exports = PM2Monitor,

@@ -1,22 +1,20 @@
 interface SitemapUrl {
-  url: string;
+  url: string,
   lastmod?: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority?: number;
 }
 
 interface SitemapConfig {
-  baseUrl: string;
-  urls: SitemapUrl[];
+  baseUrl: string,
+  urls: SitemapUrl[],
   outputPath?: string;
 }
 
 class SitemapGenerator {
-  private config: SitemapConfig;
-
+  private config: SitemapConfig,
   constructor(config: SitemapConfig) {
-    this.config = config;
-  }
+    this.config = config}
 
   /**
    * Generate XML sitemap content
@@ -36,10 +34,9 @@ class SitemapGenerator {
     }).join("\n");
 
     return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
 ${xmlUrls}
-</urlset>`;
-  }
+</urlset>`}
 
   /**
    * Generate robots.txt content
@@ -50,8 +47,7 @@ ${xmlUrls}
 Allow: /
 
 Sitemap: ${baseUrl}/sitemap.xml
-Sitemap: ${baseUrl}/sitemap-index.xml`;
-  }
+Sitemap: ${baseUrl}/sitemap-index.xml`}
 
   /**
    * Save sitemap to file
@@ -82,13 +78,12 @@ const defaultSitemapConfig: SitemapConfig = {
     { url: "/privacy", priority: 0.3, changefreq: "yearly" },
     { url: "/terms", priority: 0.3, changefreq: "yearly" }
   ]
-};
-
+},
 /**
  * Generate sitemap XML
  */
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
+  const generator = new SitemapGenerator(config),
   return generator.generateXML();
 }
 
@@ -96,7 +91,7 @@ export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): s
  * Generate robots.txt
  */
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
+  const generator = new SitemapGenerator(config),
   return generator.generateRobotsTxt();
 }
 
@@ -104,7 +99,7 @@ export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig):
  * Save sitemap files
  */
 export async function saveSitemapFiles(config: SitemapConfig = defaultSitemapConfig): Promise<void> {
-  const generator = new SitemapGenerator(config);
+  const generator = new SitemapGenerator(config),
   return generator.saveToFile();
 }
 

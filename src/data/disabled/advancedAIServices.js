@@ -6,7 +6,7 @@ export const ADVANCED_AI_SERVICES = [
         description: "Advanced algorithmic trading platform that uses machine learning to analyze market data, predict trends, and execute trades with high accuracy and minimal risk.",
         category: "
         subcategory: "
-        price: 2500;
+        price: 2500,
         currency: "
         pricingModel: "
         features: [
@@ -47,16 +47,14 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Apache Kafka"],
         integrations: ["Bloomberg Terminal", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
         compliance: ["SEC", "FINRA", "MiFID II", "GDPR"],
         roi: "
         competitors: ["Alpaca", "QuantConnect", "Zipline", "Backtrader"],
         marketSize: "
-        growthRate: "23.5% annually",
-    }
+        growthRate: "23.5% annually"}
     /
     {
         id: "
@@ -64,7 +62,7 @@ export const ADVANCED_AI_SERVICES = [
         description: "Comprehensive medical diagnostics platform that uses deep learning to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
         category: "
         subcategory: "
-        price: 1500;
+        price: 1500,
         currency: "
         pricingModel: "
         features: [
@@ -105,16 +103,14 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "HL7 FHIR", "React"],
         integrations: ["Epic", "Cerner", "Allscripts", "Practice Fusion", "eClinicalWorks"],
         compliance: ["HIPAA", "FDA", "SOC 2", "HITECH"],
         roi: "
         competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "NVIDIA Clara"],
         marketSize: "
-        growthRate: "28.7% annually",
-    }
+        growthRate: "28.7% annually"}
     /
     {
         id: "
@@ -122,7 +118,7 @@ export const ADVANCED_AI_SERVICES = [
         description: "Intelligent supply chain management platform that uses AI to predict demand, optimize inventory, reduce costs, and improve efficiency across the entire supply chain.",
         category: "
         subcategory: "
-        price: 1200;
+        price: 1200,
         currency: "
         pricingModel: "
         features: [
@@ -163,16 +159,14 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "Apache Spark", "PostgreSQL", "Redis", "React"],
         integrations: ["SAP", "Oracle", "NetSuite", "Salesforce", "Shopify", "WMS systems"],
         compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
         roi: "
         competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
         marketSize: "
-        growthRate: "18.9% annually",
-    }
+        growthRate: "18.9% annually"}
     /
     {
         id: "
@@ -180,7 +174,7 @@ export const ADVANCED_AI_SERVICES = [
         description: "Advanced cybersecurity platform that uses machine learning to detect, analyze, and respond to cyber threats in real-time, providing comprehensive protection for organizations.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -221,16 +215,14 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "PostgreSQL", "React"],
         integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         roi: "
         competitors: ["Darktrace", "CrowdStrike", "SentinelOne", "Cylance"],
         marketSize: "
-        growthRate: "31.2% annually",
-    }
+        growthRate: "31.2% annually"}
     /
     {
         id: "
@@ -238,7 +230,7 @@ export const ADVANCED_AI_SERVICES = [
         description: "Comprehensive content creation platform that uses AI to generate high-quality articles, videos, graphics, and social media content with human-like creativity and accuracy.",
         category: "
         subcategory: "
-        price: 399;
+        price: 399,
         currency: "
         pricingModel: "
         features: [
@@ -279,16 +271,14 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"],
         integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social platforms"],
         compliance: ["GDPR", "SOC 2", "Content guidelines"],
         roi: "
         competitors: ["Jasper", "Copy.ai", "Lumen5", "Canva Pro"],
         marketSize: "
-        growthRate: "26.4% annually",
-    }
+        growthRate: "26.4% annually"}
     /
     {
         id: "
@@ -296,7 +286,7 @@ export const ADVANCED_AI_SERVICES = [
         description: "Intelligent legal document review and analysis platform that uses AI to extract key information, identify risks, and provide insights from contracts, agreements, and legal documents.",
         category: "
         subcategory: "
-        price: 800;
+        price: 800,
         currency: "
         pricingModel: "
         features: [
@@ -337,16 +327,14 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["NLP", "Machine Learning", "Python", "React", "PostgreSQL", "Elasticsearch"],
         integrations: ["DocuSign", "Adobe Acrobat", "Microsoft Office", "Legal databases", "Case management systems"],
         compliance: ["GDPR", "SOC 2", "Legal ethics", "Data privacy"],
         roi: "
         competitors: ["Kira Systems", "Luminance", "eBrevia", "ContractPodAi"],
         marketSize: "
-        growthRate: "22.1% annually",
-    }
+        growthRate: "22.1% annually"}
     /
     {
         id: "
@@ -354,7 +342,7 @@ export const ADVANCED_AI_SERVICES = [
         description: "Advanced real estate analytics platform that uses AI to predict property values, analyze market trends, and provide investment insights for real estate professionals and investors.",
         category: "
         subcategory: "
-        price: 299;
+        price: 299,
         currency: "
         pricingModel: "
         features: [
@@ -395,16 +383,14 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "PostgreSQL", "React", "Redis", "Machine Learning"],
         integrations: ["MLS systems", "Zillow API", "Redfin API", "Property databases", "Financial data sources"],
         compliance: ["GDPR", "SOC 2", "Real estate regulations"],
         roi: "
         competitors: ["Zillow Offers", "Redfin", "Opendoor", "Compass"],
         marketSize: "
-        growthRate: "19.8% annually",
-    }
+        growthRate: "19.8% annually"}
     /
     {
         id: "
@@ -412,7 +398,7 @@ export const ADVANCED_AI_SERVICES = [
         description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and reduce costs for commercial and industrial facilities.",
         category: "
         subcategory: "
-        price: 1500;
+        price: 1500,
         currency: "
         pricingModel: "
         features: [
@@ -453,14 +439,12 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time series databases"],
         integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage", "Utility APIs"],
         compliance: ["ISO 50001", "LEED", "Energy Star", "SOC 2"],
         roi: "
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
         marketSize: "
-        growthRate: "24.6% annually",
-    }
+        growthRate: "24.6% annually"}
 ];
