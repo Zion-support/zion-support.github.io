@@ -1,13 +1,10 @@
-import { useState, useEffect } from 'react';
-
 interface ResponsiveState {
-  screenWidth: number;
-  screenHeight: number;
-  orientation: "landscape" | "portrait";
-  isMobile: boolean;
-  isTablet: boolean;
-  isDesktop: boolean;
-}
+  screenWidth: number,
+  screenHeight: number,
+  orientation: "landscape" | "portrait",
+  isMobile: boolean,
+  isTablet: boolean,
+  isDesktop: boolean, }
 
 const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
@@ -24,7 +21,8 @@ const useResponsive = (): ResponsiveState => {
       setState({
         screenWidth: window.innerWidth,
         screenHeight: window.innerHeight,
-        orientation: window.innerWidth > window.innerHeight ? "landscape" : "portrait",
+        orientation:
+          window.innerWidth > window.innerHeight ? "landscape" : "portrait",
         isMobile: window.innerWidth < 768,
         isTablet: window.innerWidth >= 768 && window.innerWidth < 1024,
         isDesktop: window.innerWidth >= 1024
@@ -33,10 +31,10 @@ const useResponsive = (): ResponsiveState => {
 
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
+    return () => window.removeEventListener("resize", updateDimensions);, []);
 
-  return state;
-};
+  return state, };
 
 export default useResponsive;
+// useResponsive hook module
+export {};

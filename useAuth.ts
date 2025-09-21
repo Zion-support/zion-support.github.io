@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 interface User {
   id: string;
   email: string;
@@ -34,7 +35,7 @@ export function useAuth() {
         loading: false,
         isAuthenticated: false
       });
-    }
+    },
   }, []);
 
   const login = async (email: string, password: string) => {
@@ -49,12 +50,11 @@ export function useAuth() {
         loading: false,
         isAuthenticated: true
       });
-      
       return { success: true };
     } catch (error) {
       setAuthState(prev => ({ ...prev, loading: false }));
       return { success: false, error: 'Login failed' };
-    }
+    },
   };
 
   const logout = () => {
@@ -72,3 +72,5 @@ export function useAuth() {
     logout
   };
 }
+// useAuth hook module
+export {};

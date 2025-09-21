@@ -6,13 +6,11 @@ if (typeof globalThis === 'undefined') {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
-  distDir: '.next',
-  trailingSlash: true,
-  
-  // Performance optimizations
   compress: true,
   poweredByHeader: false,
+  output: 'export',
+  trailingSlash: true,
+  distDir: '.next',
   
   // Image optimization
   images: {
@@ -20,13 +18,15 @@ const nextConfig = {
     domains: ["localhost"],
   },
   
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
     // tsconfigPath: './tsconfig.json',
+  },
+  
+  // ESLint configuration
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   
   // Experimental features for performance
@@ -34,6 +34,7 @@ const nextConfig = {
     optimizeCss: false,
     scrollRestoration: true,
     esmExternals: false,
+    typedRoutes: false,
   },
   
   // Webpack configuration
@@ -43,12 +44,11 @@ const nextConfig = {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
+        net: false,
+        tls: false,
         crypto: require.resolve('crypto-browserify'),
       };
     }
-    
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
     
     // Add path alias resolution
     config.resolve.alias = {
