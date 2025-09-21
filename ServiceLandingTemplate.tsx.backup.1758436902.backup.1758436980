@@ -1,7 +1,13 @@
 import React from "react";
+<<<<<<< HEAD:ServiceLandingTemplate.tsx.backup.1758436902
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+=======
 import { GradientHeading } from "../../components/GradientHeading";
 import { Button } from "../../src/components/ui/button";
 import { Card, CardContent, CardFooter } from "../../src/components/ui/card";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-99fe:components/services/ServiceLandingTemplate.tsx
 import Image from "next/image";
 
 export interface Benefit {
