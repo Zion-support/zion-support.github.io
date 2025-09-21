@@ -1,4 +1,4 @@
-import { ServiceVariant } from './service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface Revolutionary2026FintechBlockchainService {
   id: string,
   name: string,

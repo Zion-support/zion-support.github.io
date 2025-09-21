@@ -1,4 +1,4 @@
-import { ServiceVariant } from './service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface Revolutionary2028FintechDigitalBankingService {
   id: string,
   name: string,
