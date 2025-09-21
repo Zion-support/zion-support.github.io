@@ -96,13 +96,13 @@
     }
   },
   {
-    "timestamp": "2025-09-21T13:05:35.271Z",
+    "timestamp": "2025-09-21T13:07:58.415Z",
     "buildTime": 0,
     "bundleSize": "16M",
     "pageCount": 7,
     "performance": {
-      "buildTime": 13,
-      "timestamp": "2025-09-21T13:05:35.282Z",
+      "buildTime": 11,
+      "timestamp": "2025-09-21T13:07:58.425Z",
       "optimizations": {
         "cssOptimization": false,
         "compression": false,
