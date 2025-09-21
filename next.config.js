@@ -35,9 +35,6 @@ const nextConfig = {
     scrollRestoration: true,
   },
   
-  // Typed routes configuration
-  typedRoutes: false,
-  
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility

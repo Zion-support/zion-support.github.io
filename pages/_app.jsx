@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from '../components/ThemeProvider.jsx';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
-import { Analytics } from '../components/Analytics.jsx';
-import { ScrollToTop } from '../components/ScrollToTop.jsx';
+import Analytics from '../components/Analytics.jsx';
+import ScrollToTop from '../components/ScrollToTop.jsx';
 
 export default function App({ Component, pageProps }) {
   return (
