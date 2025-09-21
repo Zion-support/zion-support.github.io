@@ -10,7 +10,7 @@ export default function Modal({
   closeOnOverlayClick = true,
   closeOnEscape = true
 }) {
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const sizeClasses = {
     sm: 'max-w-md',
