@@ -267,7 +267,7 @@ class PerformanceMonitor {
 
   private getAverages() {
     const averages: { [key: string]: number } = {};
-    const uniqueNames = [...new Set(this.metrics.map(m => m.name))];
+    const uniqueNames = Array.from(new Set(this.metrics.map(m => m.name)));
     
     uniqueNames.forEach(name => {
       averages[name] = this.getAverageMetric(name);
@@ -278,7 +278,7 @@ class PerformanceMonitor {
 
   private getTrends() {
     const trends: { [key: string]: string } = {};
-    const uniqueNames = [...new Set(this.metrics.map(m => m.name))];
+    const uniqueNames = Array.from(new Set(this.metrics.map(m => m.name)));
     
     uniqueNames.forEach(name => {
       trends[name] = this.getMetricTrend(name);

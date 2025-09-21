@@ -54,7 +54,7 @@ function ToastContainer({ toasts, removeToast }) {
   );
 }
 
-function ToastItem({ toast, onRemove }: { toast: Toast; onRemove: () => void }) {
+function ToastItem({ toast, onRemove }) {
   const typeStyles = {
     success: 'bg-green-500 border-green-600',
     error: 'bg-red-500 border-red-600',
