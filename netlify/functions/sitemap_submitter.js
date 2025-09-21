@@ -1,10 +1,8 @@
 async function ping(url){,
   try {,
     const res = await fetch(url),
-    return { url, status: res.status, ok: res.ok },
-  } catch (e) {,
-    return { url, status: 0, ok: false, error: String(e) },
-  }
+    return { url, status: res.status, ok: res.ok }} catch (e) {,
+    return { url, status: 0, ok: false, error: String(e) }}
 }
 ,
 exports.handler = async function(event, context) {,
@@ -39,8 +37,6 @@ exports.handler = async function(event, context) {,
     }),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

@@ -5,21 +5,20 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCw, WifiOff } from 'lucide-react'
 
 interface ApiErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode,
   queryClient?: QueryClient;
   fallback?: ReactNode;
 }
 
 interface ApiErrorBoundaryState {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
 }
 
 export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
   constructor(props: ApiErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
-  }
+    super(props),
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): ApiErrorBoundaryState {
     return { hasError: true, error };
@@ -30,7 +29,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false, error: undefined }),
     if (this.props.queryClient) {
       this.props.queryClient.invalidateQueries();
     }

@@ -16,8 +16,7 @@ exports.handler = async function(event, context) {
     for (const op of indexOperations) {
       await new Promise(resolve => setTimeout(resolve, 30)), // Simulate operation time
       // Simulate 95% success rate with some operations potentially failing
-      operationResults[op] = Math.random() > 0.05 ? 'success' : 'partial-failure',
-    }
+      operationResults[op] = Math.random() > 0.05 ? 'success' : 'partial-failure'}
     
     // Simulate index statistics
     const indexStats = {
@@ -43,9 +42,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ front-index-orchestrator completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ front-index-orchestrator failed:', error),
     return {
       statusCode: 500,
@@ -55,6 +52,5 @@ exports.handler = async function(event, context) {
         function: 'front-index-orchestrator',
         status: 'error'
       })
-    },
-  }
+    }}
 },

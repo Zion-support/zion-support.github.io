@@ -1,33 +1,34 @@
-
 /** @type {import('next').NextConfig} */
-const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
-  // Enable static export for Netlify
+  reactStrictMode: true,
+  // Configure for static export with Next.js 11
   output: 'export',
+  distDir: '.next',
   trailingSlash: true,
   
-  // Configure pages directory
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  // Disable ESLint and TypeScript checking during build to avoid parsing issues
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
-    formats: ['image/webp', 'image/avif'],
   },
-
-  // Bundle analyzer
+  
+  // Exclude certain directories from compilation
   webpack: (config, { dev, isServer }) => {
+    // Fix for CSS processing issues with Node.js compatibility
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    
     // Configure webpack extensions
     config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
     
@@ -36,38 +37,58 @@ const nextConfig = {
       ...config.resolve.alias,
       '@': require('path').resolve(__dirname, '.'),
     };
+    
+    // Exclude contracts directory from compilation
+    config.module.rules.push({
+      test: /\.ts$/,
+      include: require('path').resolve(__dirname, 'contracts'),
+      use: 'ignore-loader'
+    });
+    
     if (!dev && !isServer) {
       // Optimize bundle size
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[\/]node_modules[\/]/,
+            test: /[/]node_modules[/]/,
             name: 'vendors',
             chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
           },
         },
       };
     }
-
+    
+    // Fix for OpenSSL legacy provider issue
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      crypto: require.resolve('crypto-browserify'),
+    };
+    
     return config;
   },
-
-  // Ignore build errors to allow deployment with syntax issues
-  typescript: {
-    ignoreBuildErrors: true,
+  
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  
+  // Export path map for static generation
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/': { page: '/' },
+      '/contact': { page: '/contact' },
+      '/services': { page: '/services' },
+    }
   },
-  eslint: {
-    ignoreDuringBuilds: true,
+  
+  // Experimental features for performance
+  experimental: {
+    optimizeCss: false,
+    scrollRestoration: true,
   },
-  // Force static export
-  distDir: 'out',
 };
 
 module.exports = nextConfig;

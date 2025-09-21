@@ -24,7 +24,7 @@ const fixedImports = imports
       return match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
-    content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
+    content = content.replace(/(\w+):\s*([^}]+);/g, "$1: $2,");
     // Fix function parameter syntax errors,
 content = content.replace(
       /function\s*\(([^)]+)\)\s*{/g
@@ -87,7 +87,6 @@ console.log(`Found ${files.length} files to check for syntax errors...`);
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
-    console.log(`Fixed syntax in: ${file}`);
-  }
+    console.log(`Fixed syntax in: ${file}`)}
 }
 console.log(`\nFixed syntax errors in ${fixedCount} files.`);

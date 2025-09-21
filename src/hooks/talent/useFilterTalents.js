@@ -79,8 +79,7 @@ export function useFilterTalents(talents = []) {
                 result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0))
                 break;
             default: // Default sorting by relevance (no specific order)
-                break;
-     }
+                break}
         return result;
     }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption])
     return {
@@ -99,6 +98,5 @@ export function useFilterTalents(talents = []) {
         toggleSkill,
         toggleAvailability,
         toggleRegion,
-        clearFilters,
-    }
+        clearFilters}
 }

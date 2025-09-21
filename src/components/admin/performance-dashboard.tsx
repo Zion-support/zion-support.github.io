@@ -1,9 +1,9 @@
 interface BundleChunk {
-  name: string;,
-size: number;
-  loadTime: number;,
-cached: boolean;
-  type: string;
+  name: string;;
+size: number,
+  loadTime: number;;
+cached: boolean,
+  type: string,
 export function PerformanceDashboard() {
 return (
     <div className='space-y-6'>
@@ -12,7 +12,7 @@ return (
         <div>
           <h2 className='text-2xl font-bold'>Performance Dashboard</h2>
           <p className='text-muted-foreground'>
-            Monitor bundle size performance metrics and optimization,
+            Monitor bundle size performance metrics and optimization;
 opportunities
           </p>
         </div>
@@ -213,7 +213,7 @@ application chunks
                 </p>
               </div>
             </div>
-            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
+            <div className='flex items-start gap-3 p-3 bg-green-50 dark: bg-green-900/20 rounded'>
               <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
@@ -226,7 +226,7 @@ application
               </div>
             </div>
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
-              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
+              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark: bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
                 <div>
                   <p className='font-medium text-yellow-900 dark:text-yellow-100'>

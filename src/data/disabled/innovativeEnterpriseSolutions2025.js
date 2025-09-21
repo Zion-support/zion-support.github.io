@@ -6,7 +6,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         description: "Comprehensive digital transformation platform that autonomously assesses, plans, and executes digital transformation initiatives across enterprises using AI, automation, and advanced analytics.",
         category: "
         subcategory: "
-        price: 18000;
+        price: 18000,
         currency: "
         pricingModel: "
         features: [
@@ -52,8 +52,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Analytics", "Integration Platforms"],
         complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry-specific regulations"],
@@ -69,7 +68,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         description: "Revolutionary data analytics platform that leverages quantum computing algorithms to process massive datasets, perform complex analytics, and deliver insights at unprecedented speeds.",
         category: "
         subcategory: "
-        price: 22000;
+        price: 22000,
         currency: "
         pricingModel: "
         features: [
@@ -115,8 +114,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Quantum Computing", "Advanced Analytics", "Machine Learning", "Big Data", "Cloud Computing"],
         complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry-specific data regulations"],
@@ -132,7 +130,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         description: "Intelligent IT infrastructure management platform that autonomously monitors, optimizes, and maintains enterprise IT systems using advanced AI, machine learning, and automation.",
         category: "
         subcategory: "
-        price: 9500;
+        price: 9500,
         currency: "
         pricingModel: "
         features: [
@@ -178,8 +176,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Monitoring Tools", "Integration Platforms"],
         complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry-specific regulations"],
@@ -195,7 +192,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         description: "Secure and decentralized digital identity management platform that uses blockchain technology to provide self-sovereign identity, secure authentication, and privacy-preserving identity verification.",
         category: "
         subcategory: "
-        price: 6800;
+        price: 6800,
         currency: "
         pricingModel: "
         features: [
@@ -241,8 +238,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Blockchain", "Cryptography", "Zero-Knowledge Proofs", "Mobile Apps", "Web Applications"],
         complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Identity regulations"],
@@ -258,7 +254,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         description: "Intelligent R&D platform that autonomously conducts research, analyzes data, generates hypotheses, and accelerates scientific discovery using advanced AI, machine learning, and automation.",
         category: "
         subcategory: "
-        price: 12500;
+        price: 12500,
         currency: "
         pricingModel: "
         features: [
@@ -304,8 +300,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["AI/ML", "Research Tools", "Data Analytics", "Cloud Computing", "Collaboration Platforms"],
         complianceStandards: ["Research ethics", "Data protection", "Intellectual property", "Industry-specific regulations"],
@@ -321,7 +316,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         description: "Revolutionary machine learning platform that leverages quantum computing to train models faster, handle larger datasets, and solve complex problems that are impossible for classical computers.",
         category: "
         subcategory: "
-        price: 18500;
+        price: 18500,
         currency: "
         pricingModel: "
         features: [
@@ -367,8 +362,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Quantum Computing", "Machine Learning", "AI Frameworks", "Cloud Computing", "Advanced Algorithms"],
         complianceStandards: ["Data protection", "AI ethics", "Industry-specific regulations", "Intellectual property"],
@@ -384,7 +378,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         description: "Intelligent edge computing platform that autonomously manages distributed computing resources, optimizes performance, and enables real-time processing at the network edge.",
         category: "
         subcategory: "
-        price: 7200;
+        price: 7200,
         currency: "
         pricingModel: "
         features: [
@@ -430,8 +424,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Edge Computing", "IoT", "AI/ML", "Cloud Computing", "Distributed Systems"],
         complianceStandards: ["Data protection", "Security standards", "Industry-specific regulations"],
@@ -447,7 +440,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         description: "Intelligent compliance management platform that autonomously monitors, analyzes, and ensures compliance with regulatory requirements across industries using AI and automation.",
         category: "
         subcategory: "
-        price: 8900;
+        price: 8900,
         currency: "
         pricingModel: "
         features: [
@@ -493,8 +486,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["AI/ML", "Compliance Tools", "Analytics", "Cloud Computing", "Integration Platforms"],
         complianceStandards: ["Industry-specific regulations", "Data protection", "Security standards", "Quality standards"],

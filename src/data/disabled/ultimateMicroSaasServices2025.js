@@ -6,7 +6,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.",
         category: "
         subcategory: "
-        price: 2999;
+        price: 2999,
         currency: "
         pricingModel: "
         features: [
@@ -51,8 +51,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -61,7 +60,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Comprehensive customer experience platform that uses AI to personalize interactions, predict customer needs, and optimize every touchpoint across the customer journey.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -106,8 +105,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -116,7 +114,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent supply chain platform that uses AI to optimize inventory management, demand forecasting, and logistics operations for maximum efficiency and cost savings.",
         category: "
         subcategory: "
-        price: 3499;
+        price: 3499,
         currency: "
         pricingModel: "
         features: [
@@ -161,8 +159,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -171,7 +168,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Comprehensive financial technology platform that uses AI to automate financial processes, detect fraud, and provide intelligent financial insights for businesses and individuals.",
         category: "
         subcategory: "
-        price: 3999;
+        price: 3999,
         currency: "
         pricingModel: "
         features: [
@@ -216,8 +213,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -226,7 +222,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Advanced healthcare technology platform that uses AI to improve patient care, automate medical processes, and provide intelligent healthcare insights for medical professionals.",
         category: "
         subcategory: "
-        price: 4999;
+        price: 4999,
         currency: "
         pricingModel: "
         features: [
@@ -271,8 +267,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -281,7 +276,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Innovative education technology platform that uses AI to personalize learning experiences, automate assessment, and provide intelligent educational insights for students and educators.",
         category: "
         subcategory: "
-        price: 1499;
+        price: 1499,
         currency: "
         pricingModel: "
         features: [
@@ -326,8 +321,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -336,7 +330,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels and touchpoints.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -381,8 +375,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -391,7 +384,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Comprehensive HR platform that uses AI to streamline recruitment, optimize employee management, and provide intelligent insights for human resources professionals.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -436,8 +429,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -446,7 +438,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Advanced legal technology platform that uses AI to automate legal research, document analysis, and case management for legal professionals and law firms.",
         category: "
         subcategory: "
-        price: 2999;
+        price: 2999,
         currency: "
         pricingModel: "
         features: [
@@ -491,8 +483,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -501,7 +492,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Innovative real estate platform that uses AI to optimize property management, automate transactions, and provide intelligent insights for real estate professionals and investors.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -546,8 +537,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -556,7 +546,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Advanced manufacturing platform that uses AI to optimize production processes, predict maintenance needs, and improve quality control for manufacturing operations.",
         category: "
         subcategory: "
-        price: 3999;
+        price: 3999,
         currency: "
         pricingModel: "
         features: [
@@ -601,8 +591,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -611,7 +600,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and improve sustainability for businesses and organizations.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -656,8 +645,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -666,7 +654,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Comprehensive transportation and logistics platform that uses AI to optimize routes, predict demand, and improve efficiency across all transportation operations.",
         category: "
         subcategory: "
-        price: 2999;
+        price: 2999,
         currency: "
         pricingModel: "
         features: [
@@ -711,8 +699,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -721,7 +708,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Innovative agriculture platform that uses AI to optimize crop management, predict yields, and improve farming efficiency for agricultural operations.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -766,8 +753,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -776,7 +762,7 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         description: "Advanced environmental monitoring platform that uses AI to track environmental conditions, predict changes, and provide insights for environmental management and sustainability.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -821,7 +807,6 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];

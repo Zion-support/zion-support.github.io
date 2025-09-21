@@ -1,18 +1,16 @@
 export type Theme = "light" | "dark" | "system";
 
 export interface ThemeConfig {
-  defaultTheme: Theme;
-  storageKey: string;
-  enableSystem: boolean;
-}
+  defaultTheme: Theme,
+  storageKey: string,
+  enableSystem: boolean}
 
 export class ThemeUtils {
   private static config: ThemeConfig = {
     defaultTheme: "system",
     storageKey: "theme",
     enableSystem: true
-  };
-
+  },
   public static setConfig(config: Partial<ThemeConfig>): void {
     this.config = { ...this.config, ...config };
   }
@@ -28,8 +26,7 @@ export class ThemeUtils {
 
   public static setTheme(theme: Theme): void {
     if (typeof window === "undefined") {
-      return;
-    }
+      return}
 
     localStorage.setItem(this.config.storageKey, theme);
     this.applyTheme(theme);
@@ -37,13 +34,12 @@ export class ThemeUtils {
 
   public static applyTheme(theme: Theme): void {
     if (typeof window === "undefined") {
-      return;
-    }
+      return}
 
     const root = document.documentElement;
     
     if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
       root.setAttribute("data-theme", systemTheme);
     } else {
       root.setAttribute("data-theme", theme);
@@ -55,19 +51,15 @@ export class ThemeUtils {
       return "light";
     }
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"}
 
   public static watchSystemTheme(callback: (theme: Theme) => void): () => void {
     if (typeof window === "undefined") {
-      return () => {};
-    }
+      return () => {}}
 
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)"),
     const handler = (e: MediaQueryListEvent) => {
-      callback(e.matches ? "dark" : "light");
-    };
-
+      callback(e.matches ? "dark" : "light")};
     mediaQuery.addEventListener("change", handler);
     
     return () => mediaQuery.removeEventListener("change", handler);

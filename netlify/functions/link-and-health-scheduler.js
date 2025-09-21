@@ -18,8 +18,7 @@ exports.handler = async function(event, context) {
       if (Math.random() > 0.05) { // 95% success rate
         schedulingResults.scheduledChecks++,
         if (Math.random() > 0.3) { // 70% health checks
-          schedulingResults.healthChecks++,
-        }
+          schedulingResults.healthChecks++}
       }
     }
     
@@ -53,8 +52,7 @@ exports.handler = async function(event, context) {
         schedule: ['hourlydaily', 'weeklymonthly'][Math.floor(Math.random() * 4)],
         nextRun: new Date(Date.now() + Math.random() * 24 * 60 * 60 * 1000).toISOString(), // 0-24 hours from now
         priority: ['lowmedium', 'high'][Math.floor(Math.random() * 3)]
-      }),
-    }
+      })}
     
     const result = {
       statusCode: 200,
@@ -73,8 +71,7 @@ exports.handler = async function(event, context) {
           linksPerSecond: linksPerSecond,
           averageScheduleInterval: (Object.entries(checkSchedules).reduce((sum, [schedule, count]) => {
             const intervals = { 'hourly': 1, 'daily': 24, 'weekly': 168, 'monthly': 720 },
-            return sum + (intervals[schedule] * count),
-          }, 0) / schedulingResults.scheduledChecks).toFixed(1)
+            return sum + (intervals[schedule] * count)}, 0) / schedulingResults.scheduledChecks).toFixed(1)
         },
         recommendations: [
           'Optimize check frequenciesImplement priority-based scheduling',
@@ -85,9 +82,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ link-and-health-scheduler completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ link-and-health-scheduler failed:', error),
     return {
       statusCode: 500,
@@ -97,6 +92,5 @@ exports.handler = async function(event, context) {
         function: 'link-and-health-scheduler',
         status: 'error'
       })
-    },
-  }
+    }}
 },

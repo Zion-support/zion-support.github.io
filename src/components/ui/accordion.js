@@ -34,7 +34,7 @@ const AccordionContent = React.forwardRef((_a, ref) => {
     var { className, children, isOpen = false } = _a, props = __rest(_a, ["className", "children", "isOpen"])
     return (_jsx("div", Object.assign({ ref: ref, className: cn('overflow-hidden text-sm transition-all', isOpen ? 'max-h-96 pb-4' : 'max-h-0', className) }, props, { children: children })))
 })
-AccordionContent.displayName = 'AccordionContent';
+AccordionContent.displayName = 'AccordionContent',
 "
 import React from "react";
 import React from "react";

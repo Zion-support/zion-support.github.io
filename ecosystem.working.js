@@ -24,8 +24,7 @@ restart_delay: 4000,
 kill_timeout: 5000,
 wait_ready: true,
 listen_timeout: 8000,
-kill_retry_time: 100,
-}
+kill_retry_time: 100}
     {
       name: "zion-dev",
 script: "npm"
@@ -45,8 +44,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 5,
 min_uptime: "5s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
     {
       name: "zion-build",
 script: "npm"
@@ -65,8 +63,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "30s",
-restart_delay: 5000,
-}
+restart_delay: 5000}
     {
       name: "zion-lint",
 script: "npm"
@@ -85,8 +82,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 2,
 min_uptime: "5s",
-restart_delay: 1000,
-}
+restart_delay: 1000}
     {
       name: "zion-test",
 script: "npm"
@@ -105,8 +101,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "10s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
   ]
   deploy: {,
 production: {
@@ -145,12 +140,10 @@ cwd: "./"
 exec_mode: "fork",
 env: {
         NODE_ENV: "production",
-PORT: 3000,
-}
+PORT: 3000}
       env_development: {,
 NODE_ENV: "development"
-        PORT: 3000,
-}
+        PORT: 3000}
       watch: false,
 ignore_watch: ["node_modules", "logs", "*.log"]
       max_memory_restart: "1G",
@@ -166,8 +159,7 @@ restart_delay: 4000,
 kill_timeout: 5000,
 wait_ready: true,
 listen_timeout: 8000,
-kill_retry_time: 100,
-}
+kill_retry_time: 100}
     // Development server
     {
       name: "zion-dev",
@@ -178,8 +170,7 @@ cwd: "./"
 exec_mode: "fork",
 env: {
         NODE_ENV: "development",
-PORT: 3000,
-}
+PORT: 3000}
       watch: true,
 ignore_watch: ["node_modules", "logs", "*.log", ".next"]
       max_memory_restart: "512M",
@@ -191,8 +182,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 5,
 min_uptime: "5s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
     // Build process
     {
       name: "zion-build",
@@ -214,8 +204,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "30s",
-restart_delay: 5000,
-}
+restart_delay: 5000}
     // Linting process
     {
       name: "zion-lint",
@@ -237,8 +226,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 2,
 min_uptime: "5s",
-restart_delay: 1000,
-}
+restart_delay: 1000}
     // Testing process
     {
       name: "zion-test",
@@ -260,8 +248,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "10s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
   ]
   deploy: {,
 production: {
@@ -314,8 +301,7 @@ restart_delay: 4000,
 kill_timeout: 5000,
 wait_ready: true,
 listen_timeout: 8000,
-kill_retry_time: 100,
-}
+kill_retry_time: 100}
     {
       name: "zion-dev",
 script: "npm"
@@ -335,8 +321,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 5,
 min_uptime: "5s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
     {
       name: "zion-build",
 script: "npm"
@@ -355,8 +340,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "30s",
-restart_delay: 5000,
-}
+restart_delay: 5000}
     {
       name: "zion-lint",
 script: "npm"
@@ -375,8 +359,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 2,
 min_uptime: "5s",
-restart_delay: 1000,
-}
+restart_delay: 1000}
     {
       name: "zion-test",
 script: "npm"
@@ -395,8 +378,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "10s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
   ]
   deploy: {,
 production: {
@@ -449,8 +431,7 @@ restart_delay: 4000,
 kill_timeout: 5000,
 wait_ready: true,
 listen_timeout: 8000,
-kill_retry_time: 100,
-}
+kill_retry_time: 100}
     {
       name: "zion-dev",
 script: "npm"
@@ -470,8 +451,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 5,
 min_uptime: "5s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
     {
       name: "zion-build",
 script: "npm"
@@ -490,8 +470,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "30s",
-restart_delay: 5000,
-}
+restart_delay: 5000}
     {
       name: "zion-lint",
 script: "npm"
@@ -510,8 +489,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 2,
 min_uptime: "5s",
-restart_delay: 1000,
-}
+restart_delay: 1000}
     {
       name: "zion-test",
 script: "npm"
@@ -530,8 +508,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "10s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
   ]
   deploy: {,
 production: {
@@ -584,8 +561,7 @@ restart_delay: 4000,
 kill_timeout: 5000,
 wait_ready: true,
 listen_timeout: 8000,
-kill_retry_time: 100,
-}
+kill_retry_time: 100}
     {
       name: "zion-dev",
 script: "npm"
@@ -605,8 +581,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 5,
 min_uptime: "5s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
     {
       name: "zion-build",
 script: "npm"
@@ -625,8 +600,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "30s",
-restart_delay: 5000,
-}
+restart_delay: 5000}
     {
       name: "zion-lint",
 script: "npm"
@@ -645,8 +619,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 2,
 min_uptime: "5s",
-restart_delay: 1000,
-}
+restart_delay: 1000}
     {
       name: "zion-test",
 script: "npm"
@@ -665,8 +638,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "10s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
   ]
   deploy: {,
 production: {
@@ -719,8 +691,7 @@ restart_delay: 4000,
 kill_timeout: 5000,
 wait_ready: true,
 listen_timeout: 8000,
-kill_retry_time: 100,
-}
+kill_retry_time: 100}
     {
       name: "zion-dev",
 script: "npm"
@@ -740,8 +711,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 5,
 min_uptime: "5s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
     {
       name: "zion-build",
 script: "npm"
@@ -760,8 +730,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "30s",
-restart_delay: 5000,
-}
+restart_delay: 5000}
     {
       name: "zion-lint",
 script: "npm"
@@ -780,8 +749,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 2,
 min_uptime: "5s",
-restart_delay: 1000,
-}
+restart_delay: 1000}
     {
       name: "zion-test",
 script: "npm"
@@ -800,8 +768,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "10s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
   ]
   deploy: {,
 production: {
@@ -854,8 +821,7 @@ restart_delay: 4000,
 kill_timeout: 5000,
 wait_ready: true,
 listen_timeout: 8000,
-kill_retry_time: 100,
-}
+kill_retry_time: 100}
     {
       name: "zion-dev",
 script: "npm"
@@ -875,8 +841,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 5,
 min_uptime: "5s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
     {
       name: "zion-build",
 script: "npm"
@@ -895,8 +860,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "30s",
-restart_delay: 5000,
-}
+restart_delay: 5000}
     {
       name: "zion-lint",
 script: "npm"
@@ -915,8 +879,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 2,
 min_uptime: "5s",
-restart_delay: 1000,
-}
+restart_delay: 1000}
     {
       name: "zion-test",
 script: "npm"
@@ -935,8 +898,7 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
 merge_logs: true,
 max_restarts: 3,
 min_uptime: "10s",
-restart_delay: 2000,
-}
+restart_delay: 2000}
   ]
   deploy: {,
 production: {

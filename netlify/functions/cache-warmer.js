@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
   const timeoutMs = 15000,
   const concurrency = 12,
 
-  function log(msg) { console.log(`[cache-warmer] ${msg}`), }
+  function log(msg) { console.log(`[cache-warmer] ${msg}`)}
 
   const ROOT = path.join(__dirname, '....'),
 
@@ -17,25 +17,21 @@ exports.handler = async function(event, context) {
       const regPath = path.join(ROOT, 'publicautomation', 'content-registry.json'),
       const json = JSON.parse(fs.readFileSync(regPath, 'utf8')),
       const routes = Array.isArray(json.pages) ? json.pages.map(p => p.route).filter(Boolean) : [],
-      return routes,
-    } catch (e) {
+      return routes} catch (e) {
       log(`No content registry or failed to read: ${e.message}`),
-      return ['//automation','/main/front/reports/seo','/reports/ai-trends/newsroom'],
-    }
+      return ['//automation','/main/front/reports/seo','/reports/ai-trends/newsroom']}
   }
 
   function getFunctionNames() {
     try {
       const manifest = require('./functions-manifest.json'),
-      if (Array.isArray(manifest.functions)) return manifest.functions.filter(n => n !== 'cache-warmer'),
-    } catch (e) {}
+      if (Array.isArray(manifest.functions)) return manifest.functions.filter(n => n !== 'cache-warmer')} catch (e) {}
     // Fallback to a small curated list
     return [
       'front-enhancerfrontpage-enhancer',
       'homepage_advertisercloud_orchestrator',
       'readme-advertiserfeatures-capabilities-benefits-advertiser'
-    ],
-  }
+    ]}
 
   async function fetchWithTimeout(url) {
     const controller = new AbortController(),
@@ -45,12 +41,10 @@ exports.handler = async function(event, context) {
       const res = await fetch(url, { signal: controller.signal }),
       const ms = Date.now() - startedAt,
       clearTimeout(id),
-      return { url, ok: res.ok, status: res.status, ms },
-    } catch (e) {
+      return { url, ok: res.ok, status: res.status, ms }} catch (e) {
       const ms = Date.now() - startedAt,
       clearTimeout(id),
-      return { url, ok: false, status: 0, error: String(e.message || e), ms },
-    }
+      return { url, ok: false, status: 0, error: String(e.message || e), ms }}
   }
 
   async function warmUrls(urls) {
@@ -59,13 +53,11 @@ exports.handler = async function(event, context) {
     async function worker() {
       while (index < urls.length) {
         const u = urls[index++],
-        results.push(await fetchWithTimeout(u)),
-      }
+        results.push(await fetchWithTimeout(u))}
     }
     const workers = Array.from({ length: Math.min(concurrency, urls.length) }, () => worker()),
     await Promise.all(workers),
-    return results,
-  }
+    return results}
 
   async function commitFile(repoPath, contentObj, messageSuffix = '') {
     if (!githubToken) return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' },
@@ -80,8 +72,7 @@ exports.handler = async function(event, context) {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath)}?ref=${encodeURIComponent(githubBranch)}`, { headers }),
       if (getRes.ok) {
         const json = await getRes.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     } catch {}
     const body = {
       message: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`,
@@ -98,10 +89,9 @@ exports.handler = async function(event, context) {
     const status = putRes.status,
     let error,
     if (!ok) {
-      try { error = await putRes.text(), } catch (e) { error = String(e), }
+      try { error = await putRes.text()} catch (e) { error = String(e)}
     }
-    return { ok, status, error },
-  }
+    return { ok, status, error }}
 
   try {
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-'),
@@ -133,16 +123,13 @@ exports.handler = async function(event, context) {
     let commitLatest = { ok: false }, commitHistory = { ok: false },
     if (githubToken) {
       commitHistory = await commitFile(dirHistory, summary, '[history]'),
-      commitLatest = await commitFile(dirLatest, summary, '[latest]'),
-    }
+      commitLatest = await commitFile(dirLatest, summary, '[latest]')}
 
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ok: true, summary, commitLatest, commitHistory })
-    },
-  } catch (err) {
+    }} catch (err) {
     log(String(err)),
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(err) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(err) }) }}
 },

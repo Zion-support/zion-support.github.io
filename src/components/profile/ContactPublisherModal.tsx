@@ -2,8 +2,7 @@ import React from "react";
 import import { Dialog;
 DialogContent;
 DialogHeader;
-DialogTitle,
-} from "
+DialogTitle} from "
 import React from "react";
 import React from "react";
 import React from "react";
@@ -12,8 +11,7 @@ FormField;
 FormItem;
 FormLabel;
 FormControl;
-FormMessage,
-} from "
+FormMessage} from "
 import React from "react";
 import React from "react";
 import React from "react";
@@ -22,34 +20,33 @@ import React from "react";
 import React from "react";
 
 interface ContactPublisherModalProps {
-isOpen: boolean;
-onClose: () => void;,
-publisherName: string;
+isOpen: boolean,
+onClose: () => void;;
+publisherName: string,
 publisherEmail?: string;
 productId?: string;
 }
 type FormValues = {;
-subject: string;,
-message: string;,
+subject: string;;
+message: string;;
 }
 
 const schema = z.object({;
-subject: z;
+subject: z,
 .string()
 .min(5, "Subject must be at least 5 characters")
-.nonempty("Subject is required"),
-message: z;
+.nonempty("Subject is required");
+message: z,
 .string()
 .min(20, "Message must be at least 20 characters")
-.nonempty("Message is required"),
+.nonempty("Message is required");
 })
 
 export export function ContactPublisherModal({;
 isOpen;
 onClose;
 publisherName;
-publisherEmail,
-}: ContactPublisherModalProps) {
+publisherEmail}: ContactPublisherModalProps) {
 const [isSubmitting; setIsSubmitting] = React.useState(false)
 
 const form = useForm<FormValues>({;
@@ -64,8 +61,8 @@ setIsSubmitting(true)
 try {
 await api.post("/messages", {
 productId;
-subject: values.subject;,
-body: values.message;,
+subject: values.subject;;
+body: values.message;;
 })
 toast.success("Message sent!")
 form.reset()
@@ -83,12 +80,12 @@ return (
 <DialogHeader>
 <DialogTitle className="text-xl font-bold text-white flex items-center gap-2">
 <Mail className="h-5 w-5 text-zion-cyan" />
-Contact Publisher;
+Contact Publisher,
 </DialogTitle>
 </DialogHeader>
 {publisherEmail && (
 <div className="mb-4 text-zion-slate-light">
-<span className="block">Email:</span>
+<span className="block">Email: </span>
 <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
 {publisherEmail}
 </a>
@@ -96,7 +93,7 @@ Contact Publisher;
 )}
 <Form {...form}>
 <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
-<FormField;
+<FormField,
 control={form.control}
 name="
 render={({ field }) => (
@@ -230,7 +227,7 @@ onClick={handleSend}
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent
 className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-          onKeyDown = {handleKeyDown,}          aria-modal="true"
+          onKeyDown = {handleKeyDown}          aria-modal="true"
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -249,11 +246,11 @@ className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-m
           </div>
         )}
         <Form {...form}>
-          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
             <FormField
-control = {form.control,}
+control = {form.control}
               name="subject"
-              render={({ field }: { field: any },) => (                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -267,9 +264,9 @@ placeholder="Subject"
               )}
             />
             <FormField
-control = {form.control,}
+control = {form.control}
               name="message"
-              render={({ field }: { field: any },) => (                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -283,9 +280,9 @@ placeholder={`Message to ${publisherName}...`}
               )}
             />
             <Button
-onClick = {handleSend,}
+onClick = {handleSend}
               className="w-full"
-              disabled = {!form.formState.isValid |isSubmitting,}            >
+              disabled = {!form.formState.isValid |isSubmitting}            >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>

@@ -13,16 +13,13 @@ exports.handler = async function(event, context) {,
         const res = await fetch(url, { method: 'HEAD' }),
         const present = {},
         for (const k of must) present[k] = res.headers.has(k),
-        results.push({ route, status: res.status, present }),
-      } catch (e) {,
-        results.push({ route, status: 0, error: String(e) }),
-      }
+        results.push({ route, status: res.status, present })} catch (e) {,
+        results.push({ route, status: 0, error: String(e) })}
     }
 ,
     const payload = { origin, results, generatedAt: new Date().toISOString() },
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) }}
 ,
     const path = 'data/security-headers.json',
     // Fetch existing sha,
@@ -33,8 +30,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const b64 = Buffer.from(JSON.stringify(payload, null, 2), 'utf8').toString('base64'),
@@ -48,11 +44,8 @@ exports.handler = async function(event, context) {,
     }),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) {,
-      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
-    }
+      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) }}
 ,
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

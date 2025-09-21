@@ -1,32 +1,28 @@
 interface CacheConfig {
-  maxSize: number;
-  ttl: number;
-  strategy: "lru" | "lfu" | "fifo" | "ttl";
-  persist: boolean;
-}
+  maxSize: number,
+  ttl: number,
+  strategy: "lru" | "lfu" | "fifo" | "ttl",
+  persist: boolean}
 
 interface CacheEntry<T> {
-  value: T;
-  timestamp: number;
-  accessCount: number;
-  lastAccessed: number;
-}
+  value: T,
+  timestamp: number,
+  accessCount: number,
+  lastAccessed: number}
 
 interface CacheStats {
-  hits: number;
-  misses: number;
-  size: number;
-  maxSize: number;
-  hitRate: number;
-  memoryUsage: number;
-}
+  hits: number,
+  misses: number,
+  size: number,
+  maxSize: number,
+  hitRate: number,
+  memoryUsage: number}
 
 class AdvancedCacheManager<T = any> {
   private cache: Map<string, CacheEntry<T>> = new Map();
-  private config: CacheConfig;
-  private stats: CacheStats;
-  private cleanupInterval: NodeJS.Timeout;
-
+  private config: CacheConfig,
+  private stats: CacheStats,
+  private cleanupInterval: NodeJS.Timeout,
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
       maxSize: 1000,
@@ -43,8 +39,7 @@ class AdvancedCacheManager<T = any> {
       maxSize: this.config.maxSize,
       hitRate: 0,
       memoryUsage: 0
-    };
-
+    },
     // Initialize cleanup interval
     this.cleanupInterval = setInterval(() => {
       this.cleanup();
@@ -57,14 +52,13 @@ class AdvancedCacheManager<T = any> {
   }
 
   set(key: string, value: T): void {
-    const now = Date.now();
+    const now = Date.now(),
     const entry: CacheEntry<T> = {
       value,
       timestamp: now,
       accessCount: 0,
       lastAccessed: now
-    };
-
+    },
     // Check if we need to evict
     if (this.cache.size >= this.config.maxSize && !this.cache.has(key)) {
       this.evict();
@@ -80,8 +74,7 @@ class AdvancedCacheManager<T = any> {
   }
 
   get(key: string): T | null {
-    const entry = this.cache.get(key);
-    
+    const entry = this.cache.get(key),
     if (!entry) {
       this.stats.misses++;
       this.updateStats();
@@ -106,11 +99,10 @@ class AdvancedCacheManager<T = any> {
   }
 
   has(key: string): boolean {
-    return this.cache.has(key);
-  }
+    return this.cache.has(key)}
 
   delete(key: string): boolean {
-    const deleted = this.cache.delete(key);
+    const deleted = this.cache.delete(key),
     if (deleted) {
       this.updateStats();
       if (this.config.persist) {
@@ -129,8 +121,7 @@ class AdvancedCacheManager<T = any> {
       maxSize: this.config.maxSize,
       hitRate: 0,
       memoryUsage: 0
-    };
-    
+    },
     if (this.config.persist) {
       localStorage.removeItem('advanced_cache');
     }
@@ -139,8 +130,7 @@ class AdvancedCacheManager<T = any> {
   private evict(): void {
     if (this.cache.size === 0) return;
 
-    let keyToEvict: string | null = null;
-
+    let keyToEvict: string | null = null,
     switch (this.config.strategy) {
       case "lru":
         keyToEvict = this.findLRUKey();
@@ -162,7 +152,7 @@ class AdvancedCacheManager<T = any> {
   }
 
   private findLRUKey(): string | null {
-    let oldestKey: string | null = null;
+    let oldestKey: string | null = null,
     let oldestTime = Date.now();
 
     for (const [key, entry] of this.cache.entries()) {
@@ -176,7 +166,7 @@ class AdvancedCacheManager<T = any> {
   }
 
   private findLFUKey(): string | null {
-    let leastUsedKey: string | null = null;
+    let leastUsedKey: string | null = null,
     let leastUsedCount = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -190,7 +180,7 @@ class AdvancedCacheManager<T = any> {
   }
 
   private findFIFOKey(): string | null {
-    let oldestKey: string | null = null;
+    let oldestKey: string | null = null,
     let oldestTime = Date.now();
 
     for (const [key, entry] of this.cache.entries()) {
@@ -218,8 +208,7 @@ class AdvancedCacheManager<T = any> {
   private cleanup(): void {
     if (this.config.strategy === "ttl") {
       const now = Date.now();
-      const keysToDelete: string[] = [];
-
+      const keysToDelete: string[] = [],
       for (const [key, entry] of this.cache.entries()) {
         if (now - entry.timestamp > this.config.ttl) {
           keysToDelete.push(key);

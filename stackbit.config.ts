@@ -1,4 +1,4 @@
-import { defineStackbitConfig } from '@stackbit/types',
+import { defineStackbitConfig } from '@stackbit/types';
 
 export default defineStackbitConfig({
   stackbitVersion: '~0.6.0',
@@ -6,4 +6,4 @@ export default defineStackbitConfig({
   ssgName: 'custom',
   contentSources: [],
   postInstallCommand: 'npm i --no-save @stackbit/types'
-}),
+});

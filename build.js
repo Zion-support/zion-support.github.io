@@ -5,21 +5,16 @@ const { execSync } = require('child_process');
 console.log('Starting build process...');
 
 try {
-  // Set Node.js options for legacy OpenSSL
-  process.env.NODE_OPTIONS = '--openssl-legacy-provider';
-  
   // Run the build command
   execSync('npx next build --no-lint', { 
-    stdio: 'inherit',
-    env: { ...process.env, NODE_OPTIONS: '--openssl-legacy-provider' }
+    stdio: 'inherit'
   });
   
   console.log('Build completed successfully!');
   
   // Run the export command
   execSync('npx next export', { 
-    stdio: 'inherit',
-    env: { ...process.env, NODE_OPTIONS: '--openssl-legacy-provider' }
+    stdio: 'inherit'
   });
   
   console.log('Export completed successfully!');

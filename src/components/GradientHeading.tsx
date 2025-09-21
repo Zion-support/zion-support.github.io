@@ -17,7 +17,7 @@ export function GradientHeading({
   className = '', 
   as: Component 
 }: GradientHeadingProps) {
-  const HeadingComponent = Component || level;
+  const HeadingComponent = Component || level,
   const content = children || title;
 
   return (

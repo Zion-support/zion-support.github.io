@@ -50,8 +50,8 @@ export function FooterNewsletter() {
     }
     return (<form onSubmit={handleSubmit} className="flex flex-col s,  m:flex-row gap-2">
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" className="flex-1 px-3 py-2 bg-zion-slate-dark border border-zion-slate rounded-md text-white placeholder-zion-slate-light focu,  s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan" required/>
-      <button type="submit" className="px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hove, r:bg-zion-cyan-light transition-colors">
-        Subscribe;
+      <button type="submit" className="px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hove, r: bg-zion-cyan-light transition-colors">
+        Subscribe,
       </button>
     </form>)
 }

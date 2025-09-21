@@ -36,9 +36,7 @@ async function main() {,
   const patterns = ['src/**/*.tsxsrc/**/*.tscomponents/**/*.tsxcomponents/**/*.ts',
     'pages/**/*.tsxpages/**/*.ts'
   ],
-  let totalFixed = 0,
-  ),
-    }
+  let totalFixed = 0)}
   }
   console.log(`\nFixed type names in ${totalFixed} files`)}
 ,

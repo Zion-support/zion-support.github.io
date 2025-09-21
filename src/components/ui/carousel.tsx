@@ -1,44 +1,40 @@
 import import * as React from &quot;react&quot;
 import import useEmblaCarousel from &quot;embla-carousel-react&quot;
-import { ArrowLeft,,, ArrowRight,,  } from 'lucide-react'
-import import { cn,,  } from &quot;@/lib/utils&quot;
-import import { Button,,  } from &quot;@/components/ui/button&quot;
+import { ArrowLeft,,, ArrowRight,} from 'lucide-react'
+import import { cn,} from &quot;@/lib/utils&quot;
+import import { Button,} from &quot;@/components/ui/button&quot;
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
-  [key: string]: any,
-}
-type CarouselPlugin = any,
+  [key: string]: any}
+type CarouselPlugin = any;
 type CarouselProps = {
   opts?: CarouselOptions,
 plugins?: CarouselPlugin,
 orientation?: &quot;horizontal&quot; | &quot;vertical&quot;
-  setApi?: (api: CarouselApi) => void,
-}
+  setApi?: (api: CarouselApi) => void}
 type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0],
 api: ReturnType<typeof useEmblaCarousel>[1]
   scrollPrev: () => void,
 scrollNext: () => void,
-canScrollPrev: boolean;
-canScrollNext: boolean;
-}
+canScrollPrev: boolean,
+canScrollNext: boolean}
   return context as CarouselContextProps;
 }
 const Carousel = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement> & CarouselProps
 >(
   (
     {
       orientation = &quot;horizontal&quot;
-      opts,
+      opts;
 setApi
       plugins,
 className
       children
-      ...props,
-}
+      ...props}
     ref
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
@@ -51,8 +47,7 @@ className
     const [canScrollNext, setCanScrollNext] = React.useState(false)
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return,
-}
+        return}
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
     }, [])
@@ -93,13 +88,13 @@ onSelect(api)
       <CarouselContext.Provider,
 value={{
           carouselRef,
-api: api;
+api: api,
 opts
 orientation:
             orientation |(opts && opts.axis === &quot;y&quot; ? &quot;vertical&quot; : &quot;horizontal&quot;)
-          scrollPrev,
+          scrollPrev;
 scrollNext
-          canScrollPrev,
+          canScrollPrev;
 canScrollNext}}
       >
         <div;
@@ -172,8 +167,8 @@ ref={ref}
       className={cn(
         &quot;absolute h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
-          ? &quot;left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2&quot;
-          : &quot;top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90&quot;
+          ? &quot;left-1 sm: left-2 md:-left-12 top-1/2 -translate-y-1/2&quot,
+          : &quot;top-1 sm: top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90&quot,
         className
       )}
       disabled={!canScrollPrev}
@@ -187,7 +182,7 @@ ref={ref}
 })
 CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
 const CarouselNext = React.forwardRef<
-  HTMLButtonElement,
+  HTMLButtonElement;
 React.ComponentProps<typeof Button>
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
   const { orientation scrollNext canScrollNext } = useCarousel()
@@ -199,8 +194,8 @@ ref={ref}
       className={cn(
         &quot;absolute h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
-          ? &quot;right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2&quot;
-          : &quot;bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90&quot;
+          ? &quot;right-1 sm: right-2 md:-right-12 top-1/2 -translate-y-1/2&quot,
+          : &quot;bottom-1 sm: bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90&quot,
         className
       )}
       disabled={!canScrollNext}
@@ -214,9 +209,9 @@ ref={ref}
 })
 CarouselNext.displayName = &quot;CarouselNext&quot;
 export {
-  type CarouselApi,
+  type CarouselApi;
 Carousel
-  CarouselContent,
+  CarouselContent;
 CarouselItem
   CarouselPrevious,
 CarouselNext}

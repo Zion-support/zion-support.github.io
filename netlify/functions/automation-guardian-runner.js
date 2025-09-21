@@ -4,8 +4,7 @@ const { spawnSync } = require('child_process'),
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' },
-}
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }}
 
 exports.config = {
   schedule: '*/10 * * * *'
@@ -19,18 +18,15 @@ exports.handler = async () => {
     if (stdout) logs.push(stdout),
     if (stderr) logs.push(stderr),
     logs.push(`exit=${status}`),
-    return status,
-  }
+    return status}
 
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js')),
 
   // Build search index if available
   try {
-    logStep('search:index', () => runNode('scripts/generate-search-index.js')),
-  } catch (error) {
-    logs.push(`Search index generation skipped: ${String(error)}`),
-  }
+    logStep('search:index', () => runNode('scripts/generate-search-index.js'))} catch (error) {
+    logs.push(`Search index generation skipped: ${String(error)}`)}
 
   // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs')),
@@ -38,5 +34,4 @@ exports.handler = async () => {
   // Commit and push changes
   logStep('git:sync', () => runNode('automation/git-sync.cjs')),
 
-  return { statusCode: 200, body: logs.join('\n') },
-},
+  return { statusCode: 200, body: logs.join('\n') }},

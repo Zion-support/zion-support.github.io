@@ -12,8 +12,6 @@ exports.handler = async () => {
     run('git add -A'),
     run('git commit -m "chore(automation): update repo knowledge graph and radar metrics [skip ci]" || true'),
     run('git push origin main || true'),
-    return { statusCode: 200, body: JSON.stringify({ ok: true, tool: 'knowledge-graph-orchestrator' }) },
-  } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, tool: 'knowledge-graph-orchestrator' }) }} catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) }}
 },
