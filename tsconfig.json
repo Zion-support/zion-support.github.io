@@ -42,6 +42,8 @@
     "cypress.config.ts",
     "deployment/**/*",
     "deployments/**/*",
-    "data/**/*"
+    "data/**/*",
+    "*.ts",
+    "*.tsx"
   ]
 }

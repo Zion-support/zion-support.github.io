@@ -1,33 +1,33 @@
-import React from 'react'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8">
-          Zion App - Advanced AI Services Platform
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="p-6 bg-white/10 backdrop-blur-sm rounded-lg">
-            <h3 className="text-xl font-bold mb-4">AI-Powered Services</h3>
-            <p className="text-gray-300">
-              Advanced AI automation and marketplace services for the future.
-            </p>
-          </div>
-          <div className="p-6 bg-white/10 backdrop-blur-sm rounded-lg">
-            <h3 className="text-xl font-bold mb-4">Micro-SaaS Solutions</h3>
-            <p className="text-gray-300">
-              Innovative micro-SaaS services for 2025-2030.
-            </p>
-          </div>
-          <div className="p-6 bg-white/10 backdrop-blur-sm rounded-lg">
-            <h3 className="text-xl font-bold mb-4">Enterprise Solutions</h3>
-            <p className="text-gray-300">
-              Comprehensive IT infrastructure and cybersecurity services.
-            </p>
+    <div>
+      <Head>
+        <title>Zion Tech Group</title>
+        <meta name="description" content="AI, IT and Micro SaaS Services" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-center mb-8">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-center text-xl mb-8">
+            AI, IT and Micro SaaS Services
+          </p>
+          <div className="text-center">
+            <Link href="/services-advertising">
+              <a className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg inline-block">
+                View Services
+              </a>
+            </Link>
           </div>
         </div>
-      </div>
+      </main>
     </div>
-  )
+  );
 }

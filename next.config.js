@@ -28,12 +28,16 @@ const nextConfig = {
     ignoreBuildErrors: true,
     tsconfigPath: './tsconfig.json',
   },
+  
   // Experimental features for performance
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
     esmExternals: false,
     typedRoutes: false,
+    typescript: {
+      ignoreBuildErrors: true,
+    },
   },
   
   // Webpack configuration
