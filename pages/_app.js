@@ -4,6 +4,8 @@ import '../styles/globals.css';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import { ThemeProvider } from '../components/ThemeProvider';
 import ErrorBoundary from '../components/ErrorBoundary';
+import { NotificationProvider } from '../components/NotificationSystem';
+import CookieConsent from '../components/CookieConsent';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -26,8 +28,11 @@ export default function App({ Component, pageProps }) {
       
       <ErrorBoundary>
         <ThemeProvider>
-          <Component {...pageProps} />
-          <PerformanceMonitor />
+          <NotificationProvider>
+            <Component {...pageProps} />
+            <PerformanceMonitor />
+            <CookieConsent />
+          </NotificationProvider>
         </ThemeProvider>
       </ErrorBoundary>
     </>

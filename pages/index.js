@@ -11,9 +11,13 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import Analytics from '../components/Analytics';
 import { ThemeToggle } from '../components/ThemeToggle';
 import ScrollToTop from '../components/ScrollToTop';
+import SearchModal from '../components/SearchModal';
+import { useNotification } from '../components/NotificationSystem';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const { addNotification } = useNotification();
 
   useEffect(() => {
     setIsVisible(true);
@@ -132,6 +136,16 @@ export default function Home() {
                 <ThemeToggle />
               </div>
               <div className="flex items-center space-x-4">
+                <button
+                  onClick={() => setIsSearchOpen(true)}
+                  className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
+                  aria-label="Search"
+                  title="Search"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
                 <ThemeToggle />
                 <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                   Call Now
@@ -342,6 +356,12 @@ export default function Home() {
       
       {/* Scroll to Top Button */}
       <ScrollToTop />
+      
+      {/* Search Modal */}
+      <SearchModal 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+      />
     </div>
   );
 }
