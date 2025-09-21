@@ -7,16 +7,15 @@ import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface ModelConfig {
-  id: string;
-  version: number;
-  purpose: string;
-  baseModel: string;
-  active: boolean;
-  createdAt: string;
-}
+  id: string,
+  version: number,
+  purpose: string,
+  baseModel: string,
+  active: boolean,
+  createdAt: string}
 
 interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string;
 }
 
@@ -69,8 +68,7 @@ export function ModelManager() {
           trainingStatus: 'failed',
           errorMessage: 'Training data insufficient'
         }
-      ];
-      
+      ],
       setModels(mockModels);
     } catch (error) {
       logErrorToProduction('Failed to fetch models:', { error });
@@ -89,8 +87,7 @@ export function ModelManager() {
         model.id === modelId 
           ? { ...model, trainingStatus: 'succeeded' as const }
           : model
-      ));
-    } catch (error) {
+      ))} catch (error) {
       logErrorToProduction('Failed to check training status:', { error, modelId });
     } finally {
       setActiveJobs(prev => ({ ...prev, [modelId]: false }));
@@ -106,8 +103,7 @@ export function ModelManager() {
         model.id === modelId 
           ? { ...model, active: !currentActive }
           : model
-      ));
-    } catch (error) {
+      ))} catch (error) {
       logErrorToProduction('Failed to toggle model status:', { error, modelId });
     }
   };

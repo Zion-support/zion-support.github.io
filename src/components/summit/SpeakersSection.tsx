@@ -1,16 +1,14 @@
 import React from "react";
-import { Twitter,,, Linkedin,,  } from 'lucide-react'
+import { Twitter,,, Linkedin,} from 'lucide-react'
 interface Speaker {
-  name: string;
-title: string;
-avatar: string;
-twitter?: string,
-linkedin?: string,
-linkedin?: string,
-}
+  name: string,
+title: string,
+avatar: string,
+twitter?: string;
+linkedin?: string;
+linkedin?: string}
 interface Speaker {
-linkedin?: string,
-}
+linkedin?: string}
 const speakers: Speaker[] = [
   {
 export function SpeakersSection() {
@@ -24,7 +22,7 @@ export function SpeakersSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-          {speakers.map((sp,) => (
+          {speakers.map((sp) => (
             <div key={sp.name} className="text-center space-y-2">
                 src={sp.avatar}
                 alt={sp.name}
@@ -42,7 +40,7 @@ href={sp.twitter}
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex items-center'
-                    href = {sp.twitter,}
+                    href = {sp.twitter}
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"

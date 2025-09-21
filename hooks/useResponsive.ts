@@ -16,7 +16,7 @@ const useResponsive = (): ResponsiveState => {
     orientation: "landscape",
     isMobile: false,
     isTablet: false,
-    isDesktop: true,
+    isDesktop: true
   });
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const useResponsive = (): ResponsiveState => {
           window.innerWidth > window.innerHeight ? "landscape" : "portrait",
         isMobile: window.innerWidth < 768,
         isTablet: window.innerWidth >= 768 && window.innerWidth < 1024,
-        isDesktop: window.innerWidth >= 1024,
+        isDesktop: window.innerWidth >= 1024
       });
     };
 

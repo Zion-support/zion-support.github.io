@@ -4,12 +4,11 @@
  */
 
 export interface SecurityConfig {
-  enableCSRF: boolean;
-  enableXSS: boolean;
-  enableSQLInjection: boolean;
-  maxPasswordLength: number;
-  minPasswordLength: number;
-}
+  enableCSRF: boolean,
+  enableXSS: boolean,
+  enableSQLInjection: boolean,
+  maxPasswordLength: number,
+  minPasswordLength: number}
 
 export class SecurityManager {
   private config: SecurityConfig = {
@@ -18,11 +17,9 @@ export class SecurityManager {
     enableSQLInjection: true,
     maxPasswordLength: 128,
     minPasswordLength: 8
-  };
-  
+  },
   validatePassword(password: string): { valid: boolean; errors: string[] } {
-    const errors: string[] = [];
-    
+    const errors: string[] = [],
     if (password.length < this.config.minPasswordLength) {
       errors.push(`Password must be at least ${this.config.minPasswordLength} characters`);
     }

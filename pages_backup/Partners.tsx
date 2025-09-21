@@ -13,7 +13,7 @@ export default function Partners() {
             We work with industry-leading partners to deliver the best solutions.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Technology Partners</h3>
@@ -44,5 +44,4 @@ export default function Partners() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

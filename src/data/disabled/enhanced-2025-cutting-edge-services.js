@@ -6,7 +6,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         description: "Revolutionary AI-powered quantum computing platform for high-frequency trading, risk management, and portfolio optimization with real-time market analysis.",
         category: "
         subcategory: "
-        price: 25000;
+        price: 25000,
         currency: "
         pricingModel: "
         features: [
@@ -49,8 +49,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["IBM Qiskit", "TensorFlow", "Python", "React", "Node.js", "PostgreSQL"],
         integrations: ["Bloomberg Terminal", "Reuters Eikon", "TradingView", "MetaTrader", "Binance API"],
         compliance: ["MiFID II", "Dodd-Frank", "Basel III", "GDPR", "SOC 2"],
@@ -61,8 +60,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         websiteUrl: "
         industryTrends: ["Quantum supremacy in finance", "AI-driven trading", "RegTech innovation"],
         marketSize: "
-        growthPotential: "High - 45% CAGR expected",
-    }
+        growthPotential: "High - 45% CAGR expected"}
     /
     {
         id: "
@@ -70,7 +68,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         description: "
         category: "
         subcategory: "
-        price: 35000;
+        price: 35000,
         currency: "
         pricingModel: "
         features: [
@@ -113,8 +111,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Intel Loihi", "IBM TrueNorth", "BrainChip Akida", "Python", "C++", "TensorFlow Lite"],
         integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "OPC UA"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA", "IEC 62443"],
@@ -125,8 +122,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         websiteUrl: "
         industryTrends: ["Edge computing growth", "Neuromorphic hardware", "AI efficiency"],
         marketSize: "
-        growthPotential: "Very High - 55% CAGR expected",
-    }
+        growthPotential: "Very High - 55% CAGR expected"}
     /
     {
         id: "
@@ -134,7 +130,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         description: "Advanced federated learning platform that enables organizations to collaborate on AI model training without sharing sensitive data, ensuring privacy and compliance.",
         category: "
         subcategory: "
-        price: 18000;
+        price: 18000,
         currency: "
         pricingModel: "
         features: [
@@ -177,8 +173,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow Federated", "PySyft", "Homomorphic Encryption", "Python", "React", "PostgreSQL"],
         integrations: ["HIPAA-compliant systems", "GDPR tools", "SOC 2 platforms", "Cloud providers"],
         compliance: ["HIPAA", "GDPR", "CCPA", "SOC 2", "ISO 27001"],
@@ -189,8 +184,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         websiteUrl: "
         industryTrends: ["Privacy-first AI", "Collaborative learning", "Regulatory compliance"],
         marketSize: "
-        growthPotential: "High - 40% CAGR expected",
-    }
+        growthPotential: "High - 40% CAGR expected"}
     /
     {
         id: "
@@ -198,7 +192,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         description: "Comprehensive AI ethics and governance platform that ensures responsible AI development, deployment, and monitoring with automated compliance and bias detection.",
         category: "
         subcategory: "
-        price: 22000;
+        price: 22000,
         currency: "
         pricingModel: "
         features: [
@@ -241,8 +235,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "Explainable AI libraries", "React", "Node.js", "MongoDB"],
         integrations: ["Compliance platforms", "Legal systems", "Audit tools", "Risk management"],
         compliance: ["GDPR", "CCPA", "AI Act", "Algorithmic Accountability", "SOC 2"],
@@ -253,8 +246,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         websiteUrl: "
         industryTrends: ["AI regulation", "Ethical AI", "Responsible development"],
         marketSize: "
-        growthPotential: "High - 35% CAGR expected",
-    }
+        growthPotential: "High - 35% CAGR expected"}
     /
     {
         id: "
@@ -262,7 +254,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         description: "
         category: "
         subcategory: "
-        price: 28000;
+        price: 28000,
         currency: "
         pricingModel: "
         features: [
@@ -305,8 +297,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Post-quantum algorithms", "AI/ML", "Blockchain", "Python", "React", "Kubernetes"],
         integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Cloud security"],
         compliance: ["NIST", "ISO 27001", "SOC 2", "FedRAMP", "GDPR"],
@@ -317,8 +308,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         websiteUrl: "
         industryTrends: ["Quantum threats", "Post-quantum crypto", "AI security"],
         marketSize: "
-        growthPotential: "Very High - 50% CAGR expected",
-    }
+        growthPotential: "Very High - 50% CAGR expected"}
     /
     {
         id: "
@@ -326,7 +316,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         description: "Intelligent DevOps platform that autonomously manages, monitors, and heals infrastructure using AI and machine learning for continuous optimization.",
         category: "
         subcategory: "
-        price: 15000;
+        price: 15000,
         currency: "
         pricingModel: "
         features: [
@@ -369,8 +359,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Docker", "Terraform", "Python", "React", "Prometheus"],
         integrations: ["AWS", "Azure", "GCP", "GitHub", "GitLab", "Jenkins"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
@@ -381,8 +370,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         websiteUrl: "
         industryTrends: ["Autonomous operations", "AI-driven DevOps", "Self-healing systems"],
         marketSize: "
-        growthPotential: "High - 42% CAGR expected",
-    }
+        growthPotential: "High - 42% CAGR expected"}
     /
     {
         id: "
@@ -390,7 +378,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         description: "
         category: "
         subcategory: "
-        price: 20000;
+        price: 20000,
         currency: "
         pricingModel: "
         features: [
@@ -433,8 +421,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes Edge", "TensorFlow Lite", "MQTT", "Python", "React", "Redis"],
         integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT brokers", "Edge devices"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "IEC 62443"],
@@ -445,8 +432,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         websiteUrl: "
         industryTrends: ["Edge computing growth", "AI at the edge", "5G networks"],
         marketSize: "
-        growthPotential: "Very High - 48% CAGR expected",
-    }
+        growthPotential: "Very High - 48% CAGR expected"}
     /
     {
         id: "
@@ -454,7 +440,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         description: "Revolutionary platform that combines blockchain technology with AI to create decentralized, transparent, and intelligent systems for various industries.",
         category: "
         subcategory: "
-        price: 25000;
+        price: 25000,
         currency: "
         pricingModel: "
         features: [
@@ -497,8 +483,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Ethereum", "Polygon", "Solana", "TensorFlow", "Python", "React"],
         integrations: ["MetaMask", "WalletConnect", "Uniswap", "OpenSea", "Chainlink"],
         compliance: ["GDPR", "AML/KYC", "Regulatory frameworks"],
@@ -509,7 +494,6 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         websiteUrl: "
         industryTrends: ["Web3 adoption", "AI decentralization", "DeFi growth"],
         marketSize: "
-        growthPotential: "Very High - 55% CAGR expected",
-    }
+        growthPotential: "Very High - 55% CAGR expected"}
 ];
     export export default CUTTING_EDGE_SERVICES_2025;

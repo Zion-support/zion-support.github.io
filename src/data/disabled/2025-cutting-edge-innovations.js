@@ -1,13 +1,13 @@
 export const cuttingEdgeInnovations2025 = [
     /
     {
-        id: 1;
+        id: 1,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 299;
+        price: 299,
         pricingModel: "
         userLimit: "
         features: [
@@ -34,27 +34,26 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],
         roi: "
         setupTime: "
         integrations: ["Python", "TensorFlow", "PyTorch", "Jupyter", "GitHub"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
         technology: ["Quantum Computing", "AI/ML", "Python", "Cloud Computing"],
         compliance: ["ISO 27001", "SOC 2", "GDPR"],
         useCases: ["Drug discovery", "Financial modeling", "Logistics optimization", "Climate modeling"]
     },
     {
-        id: 2;
+        id: 2,
         name: "
         category: "
         subcategory: "
         description: "Advanced neural network architecture platform with automated model design, training, and deployment for enterprise AI applications",
         pricing: "
-        price: 199;
+        price: 199,
         pricingModel: "
         userLimit: "
         features: [
@@ -81,27 +80,26 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["Weights & Biases", "MLflow", "Neptune.ai"],
         roi: "
         setupTime: "
         integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "TensorFlow", "PyTorch"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["Deep Learning", "AutoML", "Kubernetes", "Cloud Computing"],
         compliance: ["SOC 2", "ISO 27001"],
         useCases: ["Computer vision", "Natural language processing", "Recommendation systems", "Predictive analytics"]
     },
     {
-        id: 3;
+        id: 3,
         name: "
         category: "
         subcategory: "
         description: "Intelligent edge AI deployment and management platform for IoT devices, enabling real-time AI inference at the network edge",
         pricing: "
-        price: 0.05;
+        price: 0.05,
         pricingModel: "
         userLimit: "
         features: [
@@ -128,14 +126,13 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Edge TPU"],
         roi: "
         setupTime: "
         integrations: ["TensorFlow Lite", "ONNX", "MQTT", "CoAP", "REST APIs"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["Edge Computing", "IoT", "AI/ML", "Real-time Systems"],
         compliance: ["ISO 27001", "SOC 2", "GDPR"],
@@ -143,13 +140,13 @@ export const cuttingEdgeInnovations2025 = [
     },
     /
     {
-        id: 4;
+        id: 4,
         name: "
         category: "
         subcategory: "
         description: "Next-generation zero-trust network architecture with AI-powered threat detection, micro-segmentation, and automated security response",
         pricing: "
-        price: 599;
+        price: 599,
         pricingModel: "
         userLimit: "
         features: [
@@ -176,27 +173,26 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["Cisco Zero Trust", "Palo Alto Networks", "Fortinet"],
         roi: "
         setupTime: "
         integrations: ["Active Directory", "Okta", "CrowdStrike", "Splunk", "ServiceNow"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
         technology: ["Zero Trust Architecture", "AI/ML", "Network Security", "Automation"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         useCases: ["Enterprise security", "Financial compliance", "Healthcare data protection", "Government networks"]
     },
     {
-        id: 5;
+        id: 5,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 399;
+        price: 399,
         pricingModel: "
         userLimit: "
         features: [
@@ -223,14 +219,13 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["IBM Cloud", "AWS Braket", "Azure Quantum"],
         roi: "
         setupTime: "
         integrations: ["Python", "Qiskit", "Cirq", "PennyLane", "Jupyter"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["Quantum Computing", "Cloud Computing", "Python", "Quantum Algorithms"],
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
@@ -238,13 +233,13 @@ export const cuttingEdgeInnovations2025 = [
     },
     /
     {
-        id: 6;
+        id: 6,
         name: "
         category: "
         subcategory: "
         description: "Complete metaverse development platform with 3D world creation, avatar customization, and virtual reality integration for businesses and creators",
         pricing: "
-        price: 89;
+        price: 89,
         pricingModel: "
         userLimit: "
         features: [
@@ -271,27 +266,26 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["Roblox Studio", "Unity", "Unreal Engine"],
         roi: "
         setupTime: "
         integrations: ["VR headsets", "AR glasses", "Web browsers", "Mobile apps", "Social platforms"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["3D Graphics", "VR/AR", "Web3D", "Real-time Rendering"],
         compliance: ["GDPR", "COPPA", "Accessibility"],
         useCases: ["Virtual retail", "Virtual events", "Training simulations", "Virtual tourism"]
     },
     {
-        id: 7;
+        id: 7,
         name: "
         category: "
         subcategory: "
         description: "Enterprise-grade blockchain platform with smart contract automation, DeFi integration, and regulatory compliance for financial services and supply chain",
         pricing: "
-        price: 799;
+        price: 799,
         pricingModel: "
         userLimit: "
         features: [
@@ -318,14 +312,13 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["IBM Blockchain", "ConsenSys", "R3 Corda"],
         roi: "
         setupTime: "
         integrations: ["Ethereum", "Polygon", "Solana", "Hyperledger", "Traditional banking APIs"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
         technology: ["Blockchain", "Smart Contracts", "DeFi", "Web3", "Cryptography"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Financial regulations"],
@@ -333,13 +326,13 @@ export const cuttingEdgeInnovations2025 = [
     },
     /
     {
-        id: 8;
+        id: 8,
         name: "
         category: "
         subcategory: "
         description: "Comprehensive hyperautomation platform combining RPA, AI, and process mining to automate complex business processes end-to-end",
         pricing: "
-        price: 299;
+        price: 299,
         pricingModel: "
         userLimit: "
         features: [
@@ -366,27 +359,26 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
         roi: "
         setupTime: "
         integrations: ["SAP", "Salesforce", "Oracle", "Microsoft 365", "Custom APIs"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["RPA", "AI/ML", "Process Mining", "Workflow Automation"],
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
         useCases: ["Invoice processing", "Customer service", "HR automation", "Supply chain management"]
     },
     {
-        id: 9;
+        id: 9,
         name: "
         category: "
         subcategory: "
         description: "Comprehensive AI ethics and governance platform ensuring responsible AI development, deployment, and monitoring with bias detection and fairness metrics",
         pricing: "
-        price: 449;
+        price: 449,
         pricingModel: "
         userLimit: "
         features: [
@@ -413,14 +405,13 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["Fiddler AI", "Weights & Biases", "Arize AI"],
         roi: "
         setupTime: "
         integrations: ["TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face", "Custom models"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
         technology: ["AI/ML", "Explainable AI", "Bias Detection", "Compliance Monitoring"],
         compliance: ["GDPR", "AI Act", "Algorithmic Accountability", "Fair Credit Reporting"],
@@ -428,13 +419,13 @@ export const cuttingEdgeInnovations2025 = [
     },
     /
     {
-        id: 10;
+        id: 10,
         name: "
         category: "
         subcategory: "
         description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated infrastructure control",
         pricing: "
-        price: 1299;
+        price: 1299,
         pricingModel: "
         userLimit: "
         features: [
@@ -461,14 +452,13 @@ export const cuttingEdgeInnovations2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["Cisco Smart Cities", "Siemens", "Schneider Electric"],
         roi: "
         setupTime: "
         integrations: ["Traffic systems", "Energy grids", "Water systems", "Public transport", "Emergency services"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
         technology: ["IoT", "Edge Computing", "AI/ML", "Predictive Analytics", "Real-time Systems"],
         compliance: ["ISO 27001", "NIST", "Municipal regulations"],

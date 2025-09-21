@@ -7,7 +7,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         industry: "
         category: "
         subcategory: "
-        price: 45000;
+        price: 45000,
         currency: "
         pricingModel: "
         features: [
@@ -50,8 +50,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "HL7 FHIR", "Python", "React"],
         integrations: ["Epic", "Cerner", "Allscripts", "PACS systems", "EHR platforms"],
         compliance: ["HIPAA", "FDA", "CE Mark", "SOC 2", "ISO 27001"],
@@ -62,8 +61,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "
         industryChallenges: ["Diagnostic accuracy", "Healthcare costs", "Access to specialists", "Patient wait times"],
         marketOpportunity: "
-        competitiveAdvantage: "Advanced AI algorithms with healthcare-specific training",
-    }
+        competitiveAdvantage: "Advanced AI algorithms with healthcare-specific training"}
     /
     {
         id: "
@@ -72,7 +70,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         industry: "
         category: "
         subcategory: "
-        price: 32000;
+        price: 32000,
         currency: "
         pricingModel: "
         features: [
@@ -115,8 +113,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "NLP", "Blockchain", "React", "PostgreSQL"],
         integrations: ["Core banking systems", "Payment processors", "Trading platforms", "CRM systems"],
         compliance: ["AML/KYC", "MiFID II", "Dodd-Frank", "Basel III", "GDPR", "SOC 2"],
@@ -127,8 +124,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "
         industryChallenges: ["Regulatory complexity", "Compliance costs", "Detection accuracy", "Reporting efficiency"],
         marketOpportunity: "
-        competitiveAdvantage: "AI-powered compliance with real-time monitoring",
-    }
+        competitiveAdvantage: "AI-powered compliance with real-time monitoring"}
     /
     {
         id: "
@@ -137,7 +133,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         industry: "
         category: "
         subcategory: "
-        price: 25000;
+        price: 25000,
         currency: "
         pricingModel: "
         features: [
@@ -180,8 +176,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["IoT sensors", "Edge computing", "Machine learning", "Python", "React", "Kubernetes"],
         integrations: ["ERP systems", "MES platforms", "SCADA systems", "Cloud platforms"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry 4.0 standards"],
@@ -192,8 +187,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "
         industryChallenges: ["Equipment downtime", "Maintenance costs", "Quality control", "Energy efficiency"],
         marketOpportunity: "
-        competitiveAdvantage: "Comprehensive IoT platform with AI-powered analytics",
-    }
+        competitiveAdvantage: "Comprehensive IoT platform with AI-powered analytics"}
     /
     {
         id: "
@@ -202,7 +196,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         industry: "
         category: "
         subcategory: "
-        price: 18000;
+        price: 18000,
         currency: "
         pricingModel: "
         features: [
@@ -245,8 +239,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine learning", "NLP", "Computer vision", "Python", "React", "MongoDB"],
         integrations: ["E-commerce platforms", "POS systems", "CRM systems", "Marketing tools"],
         compliance: ["GDPR", "CCPA", "PCI DSS", "SOC 2"],
@@ -257,8 +250,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "
         industryChallenges: ["Customer retention", "Inventory management", "Personalization", "Competition"],
         marketOpportunity: "
-        competitiveAdvantage: "AI-powered personalization with real-time optimization",
-    }
+        competitiveAdvantage: "AI-powered personalization with real-time optimization"}
     /
     {
         id: "
@@ -267,7 +259,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         industry: "
         category: "
         subcategory: "
-        price: 35000;
+        price: 35000,
         currency: "
         pricingModel: "
         features: [
@@ -310,8 +302,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["IoT sensors", "Machine learning", "Edge computing", "Python", "React", "Kubernetes"],
         integrations: ["SCADA systems", "Smart meters", "Building management systems", "Weather APIs"],
         compliance: ["NERC", "ISO 27001", "SOC 2", "NIST"],
@@ -322,8 +313,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "
         industryChallenges: ["Grid reliability", "Energy costs", "Renewable integration", "Carbon reduction"],
         marketOpportunity: "
-        competitiveAdvantage: "AI-powered energy optimization with sustainability focus",
-    }
+        competitiveAdvantage: "AI-powered energy optimization with sustainability focus"}
     /
     {
         id: "
@@ -332,7 +322,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         industry: "
         category: "
         subcategory: "
-        price: 22000;
+        price: 22000,
         currency: "
         pricingModel: "
         features: [
@@ -375,8 +365,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine learning", "GPS tracking", "IoT sensors", "Python", "React", "PostgreSQL"],
         integrations: ["TMS systems", "WMS platforms", "ERP systems", "GPS providers"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "Transportation regulations"],
@@ -387,8 +376,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "
         industryChallenges: ["Transportation costs", "Delivery times", "Fleet optimization", "Supply chain visibility"],
         marketOpportunity: "
-        competitiveAdvantage: "AI-powered logistics with real-time optimization",
-    }
+        competitiveAdvantage: "AI-powered logistics with real-time optimization"}
     /
     {
         id: "
@@ -397,7 +385,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         industry: "
         category: "
         subcategory: "
-        price: 15000;
+        price: 15000,
         currency: "
         pricingModel: "
         features: [
@@ -440,8 +428,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine learning", "NLP", "Computer vision", "Python", "React", "MongoDB"],
         integrations: ["LMS platforms", "SIS systems", "Content management", "Assessment tools"],
         compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
@@ -452,8 +439,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "
         industryChallenges: ["Student engagement", "Learning outcomes", "Personalization", "Resource optimization"],
         marketOpportunity: "
-        competitiveAdvantage: "AI-powered personalized learning with adaptive content",
-    }
+        competitiveAdvantage: "AI-powered personalized learning with adaptive content"}
     /
     {
         id: "
@@ -462,7 +448,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         industry: "
         category: "
         subcategory: "
-        price: 20000;
+        price: 20000,
         currency: "
         pricingModel: "
         features: [
@@ -505,8 +491,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine learning", "Big data analytics", "Predictive modeling", "Python", "React", "PostgreSQL"],
         integrations: ["MLS systems", "Property databases", "Financial platforms", "CRM systems"],
         compliance: ["GDPR", "CCPA", "SOC 2", "Real estate regulations"],
@@ -517,7 +502,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "
         industryChallenges: ["Market volatility", "Investment decisions", "Market research", "Portfolio optimization"],
         marketOpportunity: "
-        competitiveAdvantage: "AI-powered market intelligence with predictive analytics",
-    }
+        competitiveAdvantage: "AI-powered market intelligence with predictive analytics"}
 ];
     export export default SPECIALIZED_INDUSTRY_SOLUTIONS_2025;

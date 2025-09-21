@@ -6,7 +6,7 @@ export const ADVANCED_MICRO_SERVICES = [
         description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting for enterprise decision-making.",
         category: "
         subcategory: "
-        price: 899;
+        price: 899,
         currency: "
         pricingModel: "
         features: [
@@ -52,12 +52,11 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        aiScore: 98;
-        rating: 4.9;
-        reviewCount: 156;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        aiScore: 98,
+        rating: 4.9,
+        reviewCount: 156,
+        featured: true,
         technologyStack: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         apiEndpoints: ["/api/v1/analytics", "/api/v1/forecasting", "/api/v1/reports"],
         integrations: ["Salesforce", "HubSpot", "QuickBooks", "Shopify", "Zapier"],
@@ -71,7 +70,7 @@ export const ADVANCED_MICRO_SERVICES = [
         description: "Next-generation cybersecurity platform that implements quantum-resistant encryption algorithms, advanced threat detection, and zero-trust security architecture for future-proof protection.",
         category: "
         subcategory: "
-        price: 1299;
+        price: 1299,
         currency: "
         pricingModel: "
         features: [
@@ -117,12 +116,11 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        aiScore: 97;
-        rating: 4.8;
-        reviewCount: 89;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        aiScore: 97,
+        rating: 4.8,
+        reviewCount: 89,
+        featured: true,
         technologyStack: ["Rust", "Go", "Python", "Kubernetes", "Elasticsearch", "Prometheus"],
         apiEndpoints: ["/api/v1/threats", "/api/v1/incidents", "/api/v1/compliance"],
         integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Cloud platforms"],
@@ -136,7 +134,7 @@ export const ADVANCED_MICRO_SERVICES = [
         description: "Intelligent edge computing platform that optimizes application deployment, manages distributed resources, and provides real-time processing capabilities for IoT and edge devices.",
         category: "
         subcategory: "
-        price: 699;
+        price: 699,
         currency: "
         pricingModel: "
         features: [
@@ -182,12 +180,11 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        aiScore: 95;
-        rating: 4.7;
-        reviewCount: 134;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        aiScore: 95,
+        rating: 4.7,
+        reviewCount: 134,
+        featured: true,
         technologyStack: ["Kubernetes", "Docker", "Go", "Rust", "WebAssembly", "MQTT"],
         apiEndpoints: ["/api/v1/deployments", "/api/v1/devices", "/api/v1/analytics"],
         integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker"],
@@ -201,7 +198,7 @@ export const ADVANCED_MICRO_SERVICES = [
         description: "End-to-end supply chain visibility platform using blockchain technology to ensure transparency, traceability, and compliance across global supply networks.",
         category: "
         subcategory: "
-        price: 599;
+        price: 599,
         currency: "
         pricingModel: "
         features: [
@@ -247,12 +244,11 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        aiScore: 93;
-        rating: 4.6;
-        reviewCount: 78;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        aiScore: 93,
+        rating: 4.6,
+        reviewCount: 78,
+        featured: true,
         technologyStack: ["Hyperledger Fabric", "Ethereum", "IPFS", "Node.js", "React", "MongoDB"],
         apiEndpoints: ["/api/v1/traceability", "/api/v1/compliance", "/api/v1/analytics"],
         integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "QuickBooks"],
@@ -266,7 +262,7 @@ export const ADVANCED_MICRO_SERVICES = [
         description: "Intelligent DevOps platform that automates software development, testing, deployment, and monitoring using AI and machine learning for continuous improvement.",
         category: "
         subcategory: "
-        price: 799;
+        price: 799,
         currency: "
         pricingModel: "
         features: [
@@ -312,12 +308,11 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        aiScore: 96;
-        rating: 4.8;
-        reviewCount: 167;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        aiScore: 96,
+        rating: 4.8,
+        reviewCount: 167,
+        featured: true,
         technologyStack: ["Jenkins", "GitLab CI", "Kubernetes", "Docker", "Terraform", "Ansible"],
         apiEndpoints: ["/api/v1/pipelines", "/api/v1/deployments", "/api/v1/monitoring"],
         integrations: ["GitHub", "GitLab", "Bitbucket", "AWS", "Azure", "Google Cloud"],
@@ -331,7 +326,7 @@ export const ADVANCED_MICRO_SERVICES = [
         description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate AI training, and unlock new computational capabilities.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -377,12 +372,11 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        aiScore: 99;
-        rating: 4.9;
-        reviewCount: 45;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        aiScore: 99,
+        rating: 4.9,
+        reviewCount: 45,
+        featured: true,
         technologyStack: ["Qiskit", "Cirq", "PennyLane", "Python", "Jupyter", "TensorFlow"],
         apiEndpoints: ["/api/v1/quantum", "/api/v1/optimization", "/api/v1/simulation"],
         integrations: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Microsoft Azure Quantum"],
@@ -396,7 +390,7 @@ export const ADVANCED_MICRO_SERVICES = [
         description: "AI-powered data governance platform that automatically discovers, classifies, and manages data assets while ensuring compliance, privacy, and security across the organization.",
         category: "
         subcategory: "
-        price: 899;
+        price: 899,
         currency: "
         pricingModel: "
         features: [
@@ -442,12 +436,11 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        aiScore: 94;
-        rating: 4.7;
-        reviewCount: 112;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        aiScore: 94,
+        rating: 4.7,
+        reviewCount: 112,
+        featured: true,
         technologyStack: ["Python", "Apache Atlas", "Apache Ranger", "Elasticsearch", "Kafka", "Spark"],
         apiEndpoints: ["/api/v1/governance", "/api/v1/compliance", "/api/v1/quality"],
         integrations: ["Snowflake", "Databricks", "AWS Glue", "Azure Purview", "Google Cloud Data Catalog"],
@@ -461,7 +454,7 @@ export const ADVANCED_MICRO_SERVICES = [
         description: "Advanced API management platform with AI-powered analytics, automated documentation, security monitoring, and intelligent rate limiting for modern API ecosystems.",
         category: "
         subcategory: "
-        price: 649;
+        price: 649,
         currency: "
         pricingModel: "
         features: [
@@ -507,12 +500,11 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        aiScore: 95;
-        rating: 4.8;
-        reviewCount: 203;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        aiScore: 95,
+        rating: 4.8,
+        reviewCount: 203,
+        featured: true,
         technologyStack: ["Kong", "Apigee", "AWS API Gateway", "Azure API Management", "Node.js", "Python"],
         apiEndpoints: ["/api/v1/management", "/api/v1/analytics", "/api/v1/security"],
         integrations: ["Kubernetes", "Docker", "AWS", "Azure", "Google Cloud", "CI/CD tools"],
@@ -526,7 +518,7 @@ export const ADVANCED_MICRO_SERVICES = [
         description: "Comprehensive hyperautomation platform that combines RPA, AI, and process mining to automate complex business processes and workflows across the organization.",
         category: "
         subcategory: "
-        price: 1099;
+        price: 1099,
         currency: "
         pricingModel: "
         features: [
@@ -572,12 +564,11 @@ export const ADVANCED_MICRO_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        aiScore: 96;
-        rating: 4.8;
-        reviewCount: 178;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        aiScore: 96,
+        rating: 4.8,
+        reviewCount: 178,
+        featured: true,
         technologyStack: ["UiPath", "Automation Anywhere", "Blue Prism", "Python", "Node.js", "Kubernetes"],
         apiEndpoints: ["/api/v1/automation", "/api/v1/workflows", "/api/v1/analytics"],
         integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Office", "Slack", "Teams"],

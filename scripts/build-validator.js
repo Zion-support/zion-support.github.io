@@ -20,8 +20,7 @@ class BuildValidator {
       failed: 0,
       warnings: 0,
       checks: []
-    };
-  }
+    }}
 
   async validateBuild() {
     console.log('🔍 Starting comprehensive build validation...');
@@ -178,9 +177,8 @@ class BuildValidator {
         const link = match[1];
         
         // Skip external links
-        if (link.startsWith('http') || link.startsWith('mailto:') || link.startsWith('tel:')) {
-          continue;
-        }
+        if (link.startsWith('http') || link.startsWith('mailto: ') || link.startsWith('tel:')) {
+          continue}
         
         // Check if internal link exists
         const linkPath = path.join(dir, link);
@@ -195,7 +193,7 @@ class BuildValidator {
     this.addCheck('No broken internal links', brokenLinks.length === 0, 'critical');
     
     if (brokenLinks.length > 0) {
-      console.warn('⚠️  Broken links found:');
+      console.warn('⚠️  Broken links found: '),
       brokenLinks.forEach(({ file, link }) => {
         console.warn(`  • ${file}: ${link}`);
       });
@@ -220,7 +218,7 @@ class BuildValidator {
       this.addCheck('No files larger than 1MB', largeFiles.length === 0, 'warning');
       
       if (largeFiles.length > 0) {
-        console.warn('⚠️  Large files found:');
+        console.warn('⚠️  Large files found: '),
         largeFiles.forEach(file => {
           const sizeMB = file.size / 1024 / 1024;
           console.warn(`  • ${file.name}: ${sizeMB.toFixed(2)}MB`);
@@ -248,7 +246,7 @@ class BuildValidator {
         this.addCheck(`Meta keywords in ${path.basename(file)}`, hasMetaKeywords, 'info');
         
         // Check for Open Graph tags
-        const hasOGTitle = content.includes('property="og:title"');
+        const hasOGTitle = content.includes('property="og: title"'),
         this.addCheck(`Open Graph title in ${path.basename(file)}`, hasOGTitle, 'info');
         
         // Check for structured data
@@ -314,8 +312,7 @@ class BuildValidator {
     const extArray = Array.isArray(extensions) ? extensions : [extensions];
     
     const findInDir = (dirPath) => {
-      const items = fs.readdirSync(dirPath, { withFileTypes: true });
-      
+      const items = fs.readdirSync(dirPath, { withFileTypes: true }),
       for (const item of items) {
         const fullPath = path.join(dirPath, item.name);
         
@@ -338,8 +335,7 @@ class BuildValidator {
     const largeFiles = [];
     
     const findInDir = (dirPath) => {
-      const items = fs.readdirSync(dirPath, { withFileTypes: true });
-      
+      const items = fs.readdirSync(dirPath, { withFileTypes: true }),
       for (const item of items) {
         const fullPath = path.join(dirPath, item.name);
         
@@ -351,8 +347,7 @@ class BuildValidator {
             largeFiles.push({
               name: fullPath,
               size: stats.size
-            });
-          }
+            })}
         }
       }
     };
@@ -365,8 +360,7 @@ class BuildValidator {
     let totalSize = 0;
     
     const calculateSize = (dirPath) => {
-      const items = fs.readdirSync(dirPath, { withFileTypes: true });
-      
+      const items = fs.readdirSync(dirPath, { withFileTypes: true }),
       for (const item of items) {
         const fullPath = path.join(dirPath, item.name);
         
@@ -389,8 +383,7 @@ class BuildValidator {
       passed,
       severity,
       timestamp: new Date().toISOString()
-    };
-    
+    },
     this.validationResults.checks.push(check);
     
     if (passed) {
@@ -419,21 +412,19 @@ class BuildValidator {
       },
       checks: this.validationResults.checks,
       recommendations: this.generateRecommendations()
-    };
-
+    },
     // Save report
     const reportPath = path.join(__dirname, '..', 'build-validation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     // Log summary
-    console.log('\n📊 Build Validation Report:');
-    console.log(`✅ Passed: ${report.summary.passed}`);
-    console.log(`❌ Failed: ${report.summary.failed}`);
-    console.log(`⚠️  Warnings: ${report.summary.warnings}`);
-    console.log(`📈 Success Rate: ${report.summary.successRate}%`);
-    
+    console.log('\n📊 Build Validation Report: '),
+    console.log(`✅ Passed: ${report.summary.passed}`),
+    console.log(`❌ Failed: ${report.summary.failed}`),
+    console.log(`⚠️  Warnings: ${report.summary.warnings}`),
+    console.log(`📈 Success Rate: ${report.summary.successRate}%`),
     if (report.recommendations.length > 0) {
-      console.log('\n💡 Recommendations:');
+      console.log('\n💡 Recommendations: '),
       report.recommendations.forEach(rec => console.log(`  • ${rec}`));
     }
     
@@ -469,8 +460,8 @@ class BuildValidator {
 }
 
 // Run if called directly
-if (import.meta.url === `file://${__filename}`) {
-  const validator = new BuildValidator();
+if (import.meta.url === `file: //${__filename}`) {
+  const validator = new BuildValidator(),
   validator.validateBuild().catch(console.error);
 }
 

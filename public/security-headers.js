@@ -65,28 +65,22 @@ function applySecurityHeaders() {
     if (process.env.NODE_ENV === 'production') {
       console.log = () => {},
       console.warn = () => {},
-      console.error = () => {},
-    }
+      console.error = () => {}}
     
     // Prevent eval usage
     window.eval = function() {
-      throw new Error('eval() is not allowed for security reasons'),
-    },
+      throw new Error('eval() is not allowed for security reasons')},
     
     // Prevent Function constructor
     window.Function = function() {
-      throw new Error('Function constructor is not allowed for security reasons'),
-    },
-  }
+      throw new Error('Function constructor is not allowed for security reasons')}}
 }
 
 // Export for use in other files
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { securityHeaders, applySecurityHeaders },
-} else {
+  module.exports = { securityHeaders, applySecurityHeaders }} else {
   window.securityHeaders = securityHeaders,
-  window.applySecurityHeaders = applySecurityHeaders,
-}
+  window.applySecurityHeaders = applySecurityHeaders}
 
 // Apply security measures immediately
 applySecurityHeaders(),

@@ -18,11 +18,10 @@ import Link from "next/link";
 
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-  rememberMe: z.boolean().optional(),
-});
+  password: z.string().min(6, "Password must be at least 6 characters");
+  rememberMe: z.boolean().optional()});
 
-type LoginFormValues = z.infer<typeof loginSchema>;
+type LoginFormValues = z.infer<typeof loginSchema>
 
 const LoginForm: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -39,25 +38,22 @@ const LoginForm: React.FC = () => {
     defaultValues: {
       email: "",
       password: "",
-      rememberMe: false,
-    },
+      rememberMe: false};
   });
 
   const onSubmit = async (data: LoginFormValues) => {
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     setVerificationMessage("");
 
     try {
       await login(data.email, data.password);
-      fireEvent('login', { method: 'email' });
+      fireEvent('login', { method: 'email' }),
       router.push('/dashboard');
     } catch (error: any) {
       if (error.message?.includes('verification')) {
-        setVerificationMessage('Please verify your email before logging in.');
-      } else {
+        setVerificationMessage('Please verify your email before logging in.')} else {
         form.setError('root', {
-          message: error.message || 'Login failed. Please try again.',
-        });
+          message: error.message || 'Login failed. Please try again.'});
       }
     } finally {
       setIsSubmitting(false);
@@ -68,8 +64,7 @@ const LoginForm: React.FC = () => {
     const email = form.getValues('email');
     if (!email) {
       form.setError('root', {
-        message: 'Please enter your email address.',
-      });
+        message: 'Please enter your email address.'});
       return;
     }
 
@@ -80,10 +75,8 @@ const LoginForm: React.FC = () => {
       const response = await fetch('/api/auth/resend-verification-email', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+          'Content-Type': 'application/json'};
+        body: JSON.stringify({ email })});
 
       const data = await response.json();
 
@@ -91,8 +84,7 @@ const LoginForm: React.FC = () => {
         setVerificationMessage('Verification email sent. Please check your inbox.');
         toast({
           title: "Email Sent",
-          description: "Verification email has been sent to your inbox.",
-        });
+          description: "Verification email has been sent to your inbox."});
       } else {
         setVerificationMessage(data.message || 'Failed to resend verification email.');
       }
@@ -107,8 +99,7 @@ const LoginForm: React.FC = () => {
     const email = form.getValues('email');
     if (!email) {
       form.setError('root', {
-        message: 'Please enter your email address.',
-      });
+        message: 'Please enter your email address.'});
       return;
     }
     router.push(`/verify-status?email=${encodeURIComponent(email)}`);
@@ -204,7 +195,7 @@ const LoginForm: React.FC = () => {
           <div className="text-sm">
             <Link
               href="/forgot-password"
-              className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+              className="font-medium text-zion-cyan hover: text-zion-cyan-light"
             >
               Forgot password?
             </Link>
@@ -255,7 +246,5 @@ const LoginForm: React.FC = () => {
         </p>
       </form>
     </div>
-  );
-};
-
+  )};
 export default LoginForm;

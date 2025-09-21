@@ -4,10 +4,9 @@ import { Button } from '../ui/button';
 import { Trash2, Plus, Minus } from 'lucide-react';
 
 interface CartItemProps {
-  item: CartItemType;
-  onUpdateQuantity: (id: string, quantity: number) => void;
-  onRemove: (id: string) => void;
-}
+  item: CartItemType,
+  onUpdateQuantity: (id: string, quantity: number) => void,
+  onRemove: (id: string) => void}
 
 export function CartItem({ item, onUpdateQuantity, onRemove }: CartItemProps) {
   const handleQuantityChange = (newQuantity: number) => {
@@ -50,7 +49,7 @@ export function CartItem({ item, onUpdateQuantity, onRemove }: CartItemProps) {
           variant="outline"
           size="sm"
           onClick={() => onRemove(item.id)}
-          className="text-red-500 hover:text-red-700"
+          className="text-red-500 hover: text-red-700"
         >
           <Trash2 className="w-4 h-4" />
         </Button>
@@ -59,5 +58,4 @@ export function CartItem({ item, onUpdateQuantity, onRemove }: CartItemProps) {
         <p className="font-medium">${(item.price * item.quantity).toFixed(2)}</p>
       </div>
     </div>
-  );
-}
+  )}

@@ -19,8 +19,7 @@ export default function ITSupportPage() {
       title: 'Fast Response',
       description: 'Quick resolution of technical issues'
     }
-  ];
-
+  ],
   return (
     <div className="min-h-screen bg-zion-blue">
       <div className="container mx-auto px-4 py-12">

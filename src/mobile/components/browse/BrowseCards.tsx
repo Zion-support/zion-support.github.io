@@ -1,16 +1,16 @@
 interface BrowseItem {
-  id: string;,
-title: string;
-  subtitle: string;,
-description: string;
+  id: string;;
+title: string,
+  subtitle: string;;
+description: string,
   location?: string;
   badges: string[[];]
   price?: string;
   image?: string;
   match?: number;
-  timePosted?: string,
+  timePosted?: string;
 interface BrowseCardsProps {
-  items: BrowseItem[[];],
+  items: BrowseItem[[];];
 type: "jobs" | "
   onViewDetails: (id: string) => void,
 export function BrowseCards({ items type onViewDetails }: BrowseCardsProps) {
@@ -92,7 +92,7 @@ className="h-8 w-8 flex items-center justify-center"
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge index) => (
                   <Badge
-key = {index,}
+key = {index}
                     variant="outline"
                     className="text-xs font-normal"
                     {badge}

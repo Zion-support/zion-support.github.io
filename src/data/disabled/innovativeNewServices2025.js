@@ -5,7 +5,7 @@ export const INNOVATIVE_NEW_SERVICES_2025 = [
         description: "Advanced business intelligence platform that uses machine learning to predict market trends, customer behavior, and business outcomes with 95% accuracy.",
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -42,8 +42,7 @@ export const INNOVATIVE_NEW_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     {
         id: "
@@ -51,7 +50,7 @@ export const INNOVATIVE_NEW_SERVICES_2025 = [
         description: "Self-evolving AI platform that automatically designs, trains, and deploys machine learning models without human intervention, continuously improving performance.",
         category: "
         subcategory: "
-        price: 5000;
+        price: 5000,
         currency: "
         pricingModel: "
         features: [
@@ -88,8 +87,7 @@ export const INNOVATIVE_NEW_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];
     export const getServicesByCategory = (category) => {

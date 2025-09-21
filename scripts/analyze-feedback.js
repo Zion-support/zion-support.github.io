@@ -11,10 +11,8 @@ const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback'),
 function readAll() {,
   try {,
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8'),
-    return JSON.parse(raw || '[]'),
-  } catch (e) {,
-    return [],
-  }
+    return JSON.parse(raw || '[]')} catch (e) {,
+    return []}
 }
 ,
   const now = Date && Date.now(),

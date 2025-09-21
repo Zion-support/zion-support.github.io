@@ -6,7 +6,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "Revolutionary AI platform that seamlessly orchestrates text, image, video, and audio processing for comprehensive content understanding and generation.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -51,12 +51,11 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["GPT-4", "DALL-E 3", "Whisper", "React", "Python", "TensorFlow"],
             integrations: ["OpenAI API", "Azure", "AWS", "Google Cloud", "Custom APIs"],
-            apiEndpoints: 50;
+            apiEndpoints: 50,
             uptime: "
             security: ["SOC 2", "ISO 27001", "GDPR", "CCPA"],
             compliance: ["AI Ethics", "Bias Detection", "Audit Trails"]
@@ -72,7 +71,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "Comprehensive enterprise blockchain solution for supply chain transparency, smart contracts, and decentralized applications with enterprise-grade security.",
         category: "
         subcategory: "
-        price: 3999;
+        price: 3999,
         currency: "
         pricingModel: "
         features: [
@@ -117,19 +116,17 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Ethereum", "Solidity", "React", "Node.js", "IPFS", "Web3.js"],
             integrations: ["MetaMask", "WalletConnect", "Chainlink", "The Graph"],
-            apiEndpoints: 100;
+            apiEndpoints: 100,
             uptime: "
             security: ["Multi-sig wallets", "Cold storage", "Audit trails"],
             compliance: ["KYC/AML", "GDPR", "Financial regulations"]
         },
         competitors: ["ConsenSys", "Chainalysis", "Alchemy", "Infura"],
-        demoUrl: "https://ziontechgroup.com/demo/blockchain-suite",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/blockchain-suite"}
     /
     {
         id: "
@@ -137,7 +134,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "Advanced quantum computing platform for solving complex optimization problems in logistics, finance, and scientific research with hybrid quantum-classical algorithms.",
         category: "
         subcategory: "
-        price: 5999;
+        price: 5999,
         currency: "
         pricingModel: "
         features: [
@@ -182,19 +179,17 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Python", "Quantum algorithms"],
             integrations: ["IBM Quantum", "Google Quantum", "Azure Quantum", "AWS Braket"],
-            apiEndpoints: 25;
+            apiEndpoints: 25,
             uptime: "
             security: ["Quantum-safe cryptography", "Multi-factor authentication"],
             compliance: ["Research ethics", "Data privacy", "Export controls"]
         },
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
-        demoUrl: "https://ziontechgroup.com/demo/quantum-platform",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/quantum-platform"}
     /
     {
         id: "
@@ -202,7 +197,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "Next-generation cybersecurity platform that uses AI to detect, analyze, and respond to advanced threats in real-time with predictive capabilities.",
         category: "
         subcategory: "
-        price: 3499;
+        price: 3499,
         currency: "
         pricingModel: "
         features: [
@@ -247,19 +242,17 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Machine Learning", "NLP", "Python", "Elasticsearch", "Kafka", "React"],
             integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Cloud platforms"],
-            apiEndpoints: 75;
+            apiEndpoints: 75,
             uptime: "
             security: ["Zero-trust architecture", "Encryption at rest", "Multi-factor auth"],
             compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
         },
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "FireEye"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence"}
     /
     {
         id: "
@@ -267,7 +260,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "Intelligent edge computing platform that brings AI processing closer to data sources for real-time analytics, automation, and decision-making.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -312,19 +305,17 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Kubernetes", "Docker", "Python", "TensorFlow Lite", "MQTT", "React"],
             integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Custom protocols"],
-            apiEndpoints: 150;
+            apiEndpoints: 150,
             uptime: "
             security: ["Edge encryption", "Device authentication", "Secure boot"],
             compliance: ["GDPR", "CCPA", "Industry standards"]
         },
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "NVIDIA Jetson"],
-        demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator"}
     /
     {
         id: "
@@ -332,7 +323,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "Unified data platform that provides real-time data processing, analytics, and insights across multiple sources with AI-powered automation.",
         category: "
         subcategory: "
-        price: 2799;
+        price: 2799,
         currency: "
         pricingModel: "
         features: [
@@ -377,19 +368,17 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Apache Kafka", "Apache Spark", "Python", "React", "PostgreSQL", "Redis"],
             integrations: ["Cloud platforms", "Databases", "APIs", "BI tools", "ML platforms"],
-            apiEndpoints: 200;
+            apiEndpoints: 200,
             uptime: "
             security: ["Data encryption", "Access controls", "Audit logging"],
             compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"]
         },
         competitors: ["Databricks", "Snowflake", "Confluent", "Apache Kafka"],
-        demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric"}
     /
     {
         id: "
@@ -397,7 +386,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "Intelligent workflow automation platform that uses AI to design, optimize, and execute complex business processes autonomously.",
         category: "
         subcategory: "
-        price: 1899;
+        price: 1899,
         currency: "
         pricingModel: "
         features: [
@@ -442,19 +431,17 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations: ["CRM systems", "ERP platforms", "Email systems", "APIs", "Databases"],
-            apiEndpoints: 100;
+            apiEndpoints: 100,
             uptime: "
             security: ["Role-based access", "Audit logging", "Data encryption"],
             compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"]
         },
         competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
-        demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow"}
     /
     {
         id: "
@@ -462,7 +449,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "Advanced digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring and predictive capabilities.",
         category: "
         subcategory: "
-        price: 4499;
+        price: 4499,
         currency: "
         pricingModel: "
         features: [
@@ -507,19 +494,17 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Unity 3D", "Unreal Engine", "Python", "React", "Three.js", "WebGL"],
             integrations: ["IoT platforms", "SCADA systems", "Building management", "Energy systems"],
-            apiEndpoints: 75;
+            apiEndpoints: 75,
             uptime: "
             security: ["3D model protection", "Access controls", "Data encryption"],
             compliance: ["Industry standards", "Data privacy", "Security protocols"]
         },
         competitors: ["Siemens", "GE Digital", "PTC", "Bentley Systems"],
-        demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform"}
     /
     {
         id: "
@@ -527,7 +512,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "Comprehensive platform for building immersive metaverse experiences, virtual worlds, and digital environments with advanced 3D graphics and AI integration.",
         category: "
         subcategory: "
-        price: 3299;
+        price: 3299,
         currency: "
         pricingModel: "
         features: [
@@ -572,19 +557,17 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Unity 3D", "Unreal Engine", "WebXR", "Three.js", "React", "Node.js"],
             integrations: ["VR headsets", "AR devices", "Payment systems", "Social platforms"],
-            apiEndpoints: 125;
+            apiEndpoints: 125,
             uptime: "
             security: ["Content protection", "User privacy", "Payment security"],
             compliance: ["GDPR", "CCPA", "Content moderation", "Age verification"]
         },
         competitors: ["Roblox", "Decentraland", "Meta", "Unity", "Epic Games"],
-        demoUrl: "https://ziontechgroup.com/demo/metaverse-platform",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/metaverse-platform"}
     /
     {
         id: "
@@ -592,7 +575,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         description: "AI-powered platform for optimizing energy consumption, reducing carbon footprint, and implementing sustainable technology solutions across organizations.",
         category: "
         subcategory: "
-        price: 1599;
+        price: 1599,
         currency: "
         pricingModel: "
         features: [
@@ -637,17 +620,15 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
             integrations: ["Building management systems", "Energy monitoring", "IoT platforms", "Analytics tools"],
-            apiEndpoints: 80;
+            apiEndpoints: 80,
             uptime: "
             security: ["Data encryption", "Access controls", "Audit logging"],
             compliance: ["ISO 14001", "LEED certification", "Sustainability standards"]
         },
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-        demoUrl: "https://ziontechgroup.com/demo/sustainable-tech-optimizer",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/sustainable-tech-optimizer"}
 ];

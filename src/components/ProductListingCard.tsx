@@ -6,30 +6,29 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DollarSign, Star, Eye } from 'lucide-react';
 
 interface ProductListing {
-  id: string;
-  title: string;
-  description: string;
+  id: string,
+  title: string,
+  description: string,
   price?: number;
   rating?: number;
-  category: string;
-  tags: string[];
+  category: string,
+  tags: string[],
   imageUrl?: string;
   provider: {
-    name: string;
-    verified: boolean;
-  };
+    name: string,
+    verified: boolean};
 }
 
 interface ProductListingCardProps {
-  listing: ProductListing;
+  listing: ProductListing,
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
+  onRequestQuote?: (id: string) => void,
   detailBasePath?: string;
 }
 
 export function ProductListingCard({ 
-  listing, 
-  view = 'grid', 
+  listing;
+  view = 'grid';
   onRequestQuote,
   detailBasePath = '/listings'
 }: ProductListingCardProps) {

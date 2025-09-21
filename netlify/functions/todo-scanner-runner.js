@@ -35,9 +35,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ todo-scanner-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ todo-scanner-runner failed:', error),
     return {
       statusCode: 500,
@@ -47,6 +45,5 @@ exports.handler = async function(event, context) {
         function: 'todo-scanner-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

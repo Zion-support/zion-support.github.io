@@ -14,7 +14,7 @@ const Home: React.FC = () => {
           
           <div className="flex space-x-4">
             <Link href="/services">
-              <button className="bg-zion-blue text-white px-6 py-3 rounded-lg hover:bg-zion-blue-dark">
+              <button className="bg-zion-blue text-white px-6 py-3 rounded-lg hover: bg-zion-blue-dark">
                 Our Services
               </button>
             </Link>
@@ -27,7 +27,5 @@ const Home: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
+  )};
 export default Home;

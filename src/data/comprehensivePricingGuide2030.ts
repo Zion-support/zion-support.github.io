@@ -4,7 +4,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030 = {
     price: 2999,
     features: [
       'Basic AI Analytics',
-      'Standard Support',
+      'Standard Support';
       'Monthly Reports',
       'Email Integration'
     ]
@@ -14,7 +14,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030 = {
     price: 7999,
     features: [
       'Advanced AI Analytics',
-      'Priority Support',
+      'Priority Support';
       'Real-time Monitoring',
       'API Access',
       'Custom Dashboards'
@@ -25,7 +25,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030 = {
     price: 19999,
     features: [
       'Full AI Suite',
-      '24/7 Dedicated Support',
+      '24/7 Dedicated Support';
       'Custom Development',
       'Advanced Security',
       'Unlimited Users',

@@ -29,7 +29,7 @@ if (filePath.endsWith(".jsx") |filePath.endsWith(".tsx")) {
       // If file is empty or has syntax errors, create a valid component,
 const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
-        console.log(`Fixed: ${filePath}`);
+        console.log(`Fixed: ${filePath}`),
         return 1;
       }
     }

@@ -33,8 +33,7 @@ const categories = [
     icon: '👥',
     count: 6
   }
-];
-
+],
 export default function AllCategoriesPage() {
   return (
     <div className='min-h-screen bg-zion-blue'>
@@ -45,7 +44,7 @@ export default function AllCategoriesPage() {
           className="text-center mb-12"
         />
         
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+        <div className='grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6'>
           {categories.map((category) => (
             <CategoryCard
               key={category.id}
@@ -55,5 +54,4 @@ export default function AllCategoriesPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

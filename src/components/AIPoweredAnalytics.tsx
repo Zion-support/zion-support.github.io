@@ -2,23 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface AIInsight {
-  id: string;
-  type: 'trend' | 'anomaly' | 'recommendation' | 'prediction';
-  title: string;
-  description: string;
-  confidence: number;
-  impact: 'high' | 'medium' | 'low';
-  category: string;
-  timestamp: string;
-}
+  id: string,
+  type: 'trend' | 'anomaly' | 'recommendation' | 'prediction',
+  title: string,
+  description: string,
+  confidence: number,
+  impact: 'high' | 'medium' | 'low',
+  category: string,
+  timestamp: string}
 
 interface PredictionData {
-  metric: string;
-  currentValue: number;
-  predictedValue: number;
-  confidence: number;
-  timeframe: string;
-}
+  metric: string,
+  currentValue: number,
+  predictedValue: number,
+  confidence: number,
+  timeframe: string}
 
 export const AIPoweredAnalytics: React.FC = () => {
   const [insights, setInsights] = useState<AIInsight[]>([
@@ -62,8 +60,7 @@ export const AIPoweredAnalytics: React.FC = () => {
       category: 'Business',
       timestamp: '2024-01-20T07:20:00Z'
     }
-  ]);
-
+  ]),
   const [predictions, setPredictions] = useState<PredictionData[]>([
     {
       metric: 'Monthly Active Users',
@@ -86,32 +83,27 @@ export const AIPoweredAnalytics: React.FC = () => {
       confidence: 0.78,
       timeframe: 'Next 30 days'
     }
-  ]);
-
+  ]),
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const getInsightIcon = (type: string) => {
     switch (type) {
-      case 'trend': return '📈';
+      case 'trend': return '📈',
       case 'anomaly': return '⚠️';
       case 'recommendation': return '💡';
       case 'prediction': return '🔮';
-      default: return '📊';
-    }
+      default: return '📊'}
   };
-
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case 'high': return 'text-red-400 bg-red-900';
+      case 'high': return 'text-red-400 bg-red-900',
       case 'medium': return 'text-yellow-400 bg-yellow-900';
       case 'low': return 'text-green-400 bg-green-900';
-      default: return 'text-gray-400 bg-gray-900';
-    }
+      default: return 'text-gray-400 bg-gray-900'}
   };
-
   const getConfidenceColor = (confidence: number) => {
-    if (confidence >= 0.9) return 'text-green-400';
+    if (confidence >= 0.9) return 'text-green-400',
     if (confidence >= 0.7) return 'text-yellow-400';
     return 'text-red-400';
   };
@@ -138,8 +130,7 @@ export const AIPoweredAnalytics: React.FC = () => {
       impact: 'medium',
       category: 'AI Analysis',
       timestamp: new Date().toISOString()
-    };
-    
+    },
     setInsights(prev => [newInsight, ...prev]);
   };
 
@@ -321,7 +312,5 @@ export const AIPoweredAnalytics: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );
-};
-
+  )};
 export default AIPoweredAnalytics;

@@ -66,5 +66,4 @@ export function EnhancedSEO({
         />
       )}
     </Head>
-  );
-}
+  )}

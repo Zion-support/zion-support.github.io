@@ -6,7 +6,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industry: "
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -52,12 +52,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        industryExpertise: 98;
-        rating: 4.9;
-        reviewCount: 234;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        industryExpertise: 98,
+        rating: 4.9,
+        reviewCount: 234,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -77,7 +76,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industry: "
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -123,12 +122,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        industryExpertise: 96;
-        rating: 4.8;
-        reviewCount: 189;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        industryExpertise: 96,
+        rating: 4.8,
+        reviewCount: 189,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -148,7 +146,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industry: "
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -194,12 +192,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        industryExpertise: 97;
-        rating: 4.9;
-        reviewCount: 156;
-        featured: true;
+            website: "https://ziontechgroup.com"}
+        industryExpertise: 97,
+        rating: 4.9,
+        reviewCount: 156,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -219,7 +216,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industry: "
         category: "
         subcategory: "
-        price: 1500;
+        price: 1500,
         currency: "
         pricingModel: "
         features: [
@@ -265,12 +262,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        industryExpertise: 94;
-        rating: 4.8;
-        reviewCount: 267;
-        featured: false;
+            website: "https://ziontechgroup.com"}
+        industryExpertise: 94,
+        rating: 4.8,
+        reviewCount: 267,
+        featured: false,
         location: "
         availability: "
         demoUrl: "
@@ -290,7 +286,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industry: "
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -336,12 +332,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        industryExpertise: 95;
-        rating: 4.8;
-        reviewCount: 134;
-        featured: false;
+            website: "https://ziontechgroup.com"}
+        industryExpertise: 95,
+        rating: 4.8,
+        reviewCount: 134,
+        featured: false,
         location: "
         availability: "
         demoUrl: "
@@ -361,7 +356,7 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         industry: "
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -407,12 +402,11 @@ export const INDUSTRY_SPECIFIC_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
-        industryExpertise: 93;
-        rating: 4.7;
-        reviewCount: 189;
-        featured: false;
+            website: "https://ziontechgroup.com"}
+        industryExpertise: 93,
+        rating: 4.7,
+        reviewCount: 189,
+        featured: false,
         location: "
         availability: "
         demoUrl: "

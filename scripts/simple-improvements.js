@@ -24,9 +24,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
+      '@': path.resolve(__dirname, './src')}},
   build: {
     target: 'es2020',
     minify: 'terser',
@@ -57,7 +55,7 @@ const createEssentialComponents = () => {
 export const CategoriesSection = () => {
   return (
     <div className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Categories</h2>
           <p className="text-lg text-gray-600">Explore our comprehensive range of technology services</p>
@@ -82,8 +80,7 @@ export const CategoriesSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 `,
     
     'src/components/BenefitsSection.tsx': `import React from 'react';
@@ -91,7 +88,7 @@ export const CategoriesSection = () => {
 export const BenefitsSection = () => {
   return (
     <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
           <p className="text-lg text-gray-600">Discover the advantages of partnering with Zion Tech Group</p>
@@ -128,8 +125,7 @@ export const BenefitsSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 `,
     
     'src/components/HowItWorksSection.tsx': `import React from 'react';
@@ -137,7 +133,7 @@ export const BenefitsSection = () => {
 export const HowItWorksSection = () => {
   return (
     <div className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
           <p className="text-lg text-gray-600">Our streamlined process ensures successful project delivery</p>
@@ -174,8 +170,7 @@ export const HowItWorksSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 `,
     
     'src/components/FeaturedListingsSection.tsx': `import React from 'react';
@@ -242,15 +237,14 @@ export const FeaturedListingsSection = () => {
               </div>
               <div className="text-lg font-bold text-blue-600">$5,000</div>
             </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+            <button className="w-full bg-blue-600 hover: bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
               Learn More
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )};
 `,
     
     'src/components/HeroSection.tsx': `import React from 'react';
@@ -268,7 +262,7 @@ export const HeroSection = () => {
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Discover cutting-edge AI solutions, expert talent, and innovative technology services to accelerate your digital transformation
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Get Started Today
             </button>
@@ -279,15 +273,14 @@ export const HeroSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 `,
     
     'src/components/SEO.tsx': `import React from 'react';
 
 interface SEOProps {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   canonical?: string;
   url?: string;
   image?: string;
@@ -299,7 +292,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical || url} />
-      <meta property="og:title" content={title} />
+      <meta property="og: title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image || '/og-image.jpg'} />
@@ -307,8 +300,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </>
-  );
-};
+  )};
 `
   };
   
@@ -317,12 +309,10 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
     const dir = path.dirname(fullPath);
     
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+      fs.mkdirSync(dir, { recursive: true })}
     
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created component: ${filePath}`);
-  });
+    console.log(`✅ Created component: ${filePath}`)});
 };
 
 // 3. Create home components
@@ -333,7 +323,7 @@ const createHomeComponents = () => {
 export const QuickAccess = () => {
   return (
     <div className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Quick Access</h2>
           <p className="text-lg text-gray-600">Navigate to our most popular services and features</p>
@@ -358,15 +348,14 @@ export const QuickAccess = () => {
         </div>
       </div>
     </div>
-  );
-};`,
+  )};`,
     
     'src/components/home/FeatureCTAs.tsx': `import React from 'react';
 
 export const FeatureCTAs = () => {
   return (
     <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-gray-600">Choose the best way to connect with our team</p>
@@ -390,15 +379,14 @@ export const FeatureCTAs = () => {
         </div>
       </div>
     </div>
-  );
-};`,
+  )};`,
     
     'src/components/home/FeatureHighlights.tsx': `import React from 'react';
 
 export const FeatureHighlights = () => {
   return (
     <div className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group</h2>
           <p className="text-lg text-gray-600">Discover the advantages that make us the preferred choice</p>
@@ -428,8 +416,7 @@ export const FeatureHighlights = () => {
         </div>
       </div>
     </div>
-  );
-};`,
+  )};`,
     
     'src/components/home/ITServiceRequestHero.tsx': `import React from 'react';
 
@@ -437,7 +424,7 @@ export const ITServiceRequestHero = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900">
       <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Request IT Services
@@ -456,8 +443,7 @@ export const ITServiceRequestHero = () => {
         </div>
       </div>
     </div>
-  );
-};`
+  )};`
   };
   
   Object.entries(homeComponents).forEach(([filePath, content]) => {
@@ -465,12 +451,10 @@ export const ITServiceRequestHero = () => {
     const dir = path.dirname(fullPath);
     
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+      fs.mkdirSync(dir, { recursive: true })}
     
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created home component: ${filePath}`);
-  });
+    console.log(`✅ Created home component: ${filePath}`)});
 };
 
 // 4. Create other essential components
@@ -491,13 +475,12 @@ export const FloatingCTA = () => {
         <p className="text-sm text-blue-100 mb-3">
           Chat with our experts to get personalized recommendations
         </p>
-        <button className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-50 transition-colors">
+        <button className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover: bg-blue-50 transition-colors">
           Start Chat
         </button>
       </div>
     </div>
-  );
-};`,
+  )};`,
     
     'src/components/ServicesShowcase.tsx': `import React from 'react';
 
@@ -548,15 +531,14 @@ export const ServicesShowcase = () => {
               </div>
               <div className="text-lg font-bold text-blue-600">$8,000</div>
             </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+            <button className="w-full bg-blue-600 hover: bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
               Learn More
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
-};`
+  )};`
   };
   
   Object.entries(otherComponents).forEach(([filePath, content]) => {
@@ -564,12 +546,10 @@ export const ServicesShowcase = () => {
     const dir = path.dirname(fullPath);
     
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+      fs.mkdirSync(dir, { recursive: true })}
     
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created component: ${filePath}`);
-  });
+    console.log(`✅ Created component: ${filePath}`)});
 };
 
 // 5. Create data files
@@ -665,12 +645,10 @@ const createDataFiles = () => {
     const dir = path.dirname(fullPath);
     
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+      fs.mkdirSync(dir, { recursive: true })}
     
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created data file: ${filePath}`);
-  });
+    console.log(`✅ Created data file: ${filePath}`)});
 };
 
 // Main execution
@@ -683,6 +661,6 @@ createOtherComponents();
 createDataFiles();
 
 console.log('🎉 Simple improvements completed!');
-console.log('📊 Next steps:');
+console.log('📊 Next steps: '),
 console.log('1. Run "npm run build" to test the build');
 console.log('2. Run "npm run dev" to start development server');
