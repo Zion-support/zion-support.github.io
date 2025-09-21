@@ -8,11 +8,13 @@
   },
   "scripts": {
     "sitemap": "node scripts/generate-sitemap.mjs",
+    "postbuild": "npm run sitemap",
     "dev": "next dev",
     "build": "node scripts/performance-monitor.js start && NODE_OPTIONS='--openssl-legacy-provider' next build && node scripts/performance-monitor.js end",
     "build:analyze": "npm run build && node scripts/performance-monitor.js compare",
     "cleanup": "node scripts/cleanup-repository.js",
     "optimize": "node scripts/optimize-performance.js",
+    "build:optimize": "node scripts/build-optimizer.js",
     "security:audit": "node scripts/security-audit.js",
     "audit:full": "npm run security:audit && npm audit",
     "export": "next build",
@@ -109,7 +111,11 @@
     "linting:start": "npm run linting:orchestrator continuous",
     "linting:status": "npm run linting:orchestrator status",
     "linting:check": "npm run linting:orchestrator check",
-    "linting:fix": "npm run linting:orchestrator fix"
+    "linting:fix": "npm run linting:orchestrator fix",
+    "perf:improve": "node scripts/performance-improvements.js",
+    "perf:analyze": "npm run build && npm run build:analyze",
+    "perf:audit": "npm run security:audit && npm run optimize",
+    "perf:full": "npm run perf:improve && npm run perf:analyze && npm run perf:audit"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -159,6 +165,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
     "buffer": "^6.0.3",
+    "compression-webpack-plugin": "^11.1.0",
     "crypto-browserify": "^3.12.1",
     "eslint": "^9.32.0",
     "eslint-config-next": "^14.0.0",
