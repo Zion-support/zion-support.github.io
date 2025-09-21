@@ -1,0 +1,104 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es6"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+<<<<<<< HEAD:tsconfig.json.disabled
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+=======
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "services/**/*.ts",
+    "services/**/*.tsx",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "out/types/**/*.ts"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7ca5:tsconfig.json
+  ],
+  "exclude": [
+    "node_modules",
+    "contracts/**/*",
+    "dao/**/*",
+    "automation/**/*",
+    "scripts/**/*",
+    "cypress/**/*",
+    "cypress.config.ts",
+    "jest.config.ts",
+    "jest.setup.ts",
+    "deployment/**/*",
+    "deployments/**/*",
+    "data/**/*",
+<<<<<<< HEAD:tsconfig.json.disabled
+    "monitoring/**/*",
+    "netlify/**/*",
+    "pages-quarantine/**/*",
+    "pages._quarantine/**/*",
+    "pages.bak/**/*",
+    "pages.old/**/*",
+    "pages_backup/**/*",
+    "pages_minimal/**/*",
+    "playwright.config.ts",
+    "prisma/**/*",
+    "seed.ts",
+    "server/**/*",
+    "services-broken.tsx",
+    "services/**/*",
+    "src-clean/**/*"
+=======
+    "monitoring.bak/**/*",
+    "netlify.bak/**/*",
+    "i18n.bak/**/*",
+    "pages-quarantine/**/*",
+    "pages._quarantine/**/*",
+    "services.bak/**/*",
+    "**/*.bak/**/*",
+    "**/*.tsx.bak",
+    "**/*.ts.bak"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7ca5:tsconfig.json
+  ]
+}

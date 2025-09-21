@@ -1,30 +1,26 @@
-const path = require('path');
+// Polyfill for globalThis
+if (typeof globalThis === 'undefined') {
+  global.globalThis = global;
+}
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
-  output: 'export',
-  trailingSlash: true,
-  
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
-  eslint: {
-    ignoreDuringBuilds: true,
+  reactStrictMode: true,
+  images: {
+    domains: ["localhost"],
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Removed deprecated swcMinify option (defaults to true in Next.js 15+)
-  // Removed experimental.esmExternals (not recommended)
-  
-  // Webpack configuration
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  swcMinify: true,
+  experimental: {
+    esmExternals: false,
+  },
   webpack: (config, { isServer }) => {
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': path.resolve(__dirname, '.'),
-    };
-    
-    // Minimal webpack configuration
+    // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -32,12 +28,15 @@ const nextConfig = {
       };
     }
     
+    // Add globalThis polyfill
+    config.plugins = config.plugins || [];
+    config.plugins.push(
+      new (require('webpack')).DefinePlugin({
+        'globalThis': 'global',
+      })
+    );
+    
     return config;
-  },
-  
-  // Image optimization
-  images: {
-    unoptimized: true, // Required for static export
   },
 };
 

@@ -12,10 +12,5 @@ export const handler = async () => {
       message: 'Sentry DSN is configured',
       dsn: dsn.substring(0, 20) + '...' // Show partial DSN for verification
     })
-<<<<<<< HEAD:netlify/functions/sentryCheck.ts
-  },
-};
-=======
   };
 };
->>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:netlify/functions/sentryCheck.ts.disabled

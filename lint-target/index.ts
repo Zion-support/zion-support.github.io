@@ -1,1 +1,2 @@
+// Lint target file
 export {};

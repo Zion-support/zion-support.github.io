@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+// Lint target configuration
+=======
+// Lint target file
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7ca5
+export {};

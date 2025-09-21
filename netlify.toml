@@ -1,17 +1,29 @@
 [build]
-  command = "npm install --ignore-scripts --legacy-peer-deps && npm install --save-dev @types/react @types/react-dom @types/node --legacy-peer-deps && npm run export"
-  publish = "out"
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = ".next"
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
 
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--legacy-peer-deps"
 
-# Note: Headers are now handled by the generated _headers file in the out directory
-# This ensures compatibility with Next.js static export and avoids conflicts
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
 
-# Next.js static export configuration for Netlify
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-# Note: Redirects are now handled by the generated _redirects file in the out directory
-# This ensures compatibility with Next.js static export and avoids conflicts
-
- # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v2) 
+[functions]
+  node_bundler = "esbuild" 
