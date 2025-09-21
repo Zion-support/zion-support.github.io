@@ -1,18 +1,26 @@
 {
-  "timestamp": "2025-09-21T13:55:27.521Z",
-  "securityIssues": [],
-  "recommendations": [],
-  "checks": [
+  "timestamp": "2025-09-21T14:15:03.976Z",
+  "score": 85,
+  "issues": [
     {
-      "type": "dependencies",
-      "status": "checked",
-      "recommendation": "Run npm audit regularly and update dependencies"
+      "category": "environment",
+      "severity": "high",
+      "message": "Hardcoded secret in .env: NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "details": [],
+      "timestamp": "2025-09-21T14:15:03.972Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Secure environment variables",
+      "description": "Move secrets to environment variables and use proper secret management"
     }
   ],
   "summary": {
-    "totalIssues": 0,
-    "criticalIssues": 0,
-    "highIssues": 0,
-    "status": "excellent"
+    "totalIssues": 1,
+    "criticalIssues": 1,
+    "mediumIssues": 0,
+    "lowIssues": 0
   }
 }
