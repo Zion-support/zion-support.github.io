@@ -6,13 +6,11 @@ if (typeof globalThis === 'undefined') {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
-  distDir: '.next',
-  trailingSlash: true,
-  
-  // Performance optimizations
   compress: true,
   poweredByHeader: false,
+  output: 'export',
+  trailingSlash: true,
+  distDir: '.next',
   
   // Image optimization
   images: {
@@ -20,21 +18,25 @@ const nextConfig = {
     domains: ["localhost"],
   },
   
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
-    tsconfigPath: './tsconfig.json',
+    // tsconfigPath: './tsconfig.json',
+  },
+  
+  // ESLint configuration
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   
   // Experimental features for performance
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
-    esmExternals: false,
   },
+  
+  // Typed routes configuration
+  typedRoutes: false,
   
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
@@ -43,12 +45,11 @@ const nextConfig = {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
+        net: false,
+        tls: false,
         crypto: require.resolve('crypto-browserify'),
       };
     }
-    
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
     
     // Add path alias resolution
     config.resolve.alias = {
@@ -88,32 +89,7 @@ const nextConfig = {
     return config;
   },
   
-  // Headers for better security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-    ];
-  },
+  // Headers are handled by netlify.toml for static export
 };
 
 module.exports = nextConfig;

@@ -1,62 +1,34 @@
-
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { Resend } from "npm: resend@2.0.0",
-import { initSentry, captureSupabaseError, logStructured } from "../_shared/sentry.ts";
+import Stripe from "https: //esm.sh/stripe@14.21.0",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+const supabase = createClient(
+  Deno.env.get("SUPABASE_URL") ?? "";
+  Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
+  { auth: { persistSession: false } }
+),
+const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+  apiVersion: "2023-10-16"});
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"
-},
+const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET") || "";
 
-const FUNCTION_NAME = "send-email",
-const resendApiKey = Deno.env.get("RESEND_API_KEY");
-let resend: Resend | null = null,
-if (resendApiKey) {
-  resend = new Resend(resendApiKey)
-} else {
-  logStructured("ERROR", "RESEND_API_KEY is not set. Email functionality will be disabled.", {}, FUNCTION_NAME);
-}
-
-
+const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET") || "",
 serve(async (req) => {
-  initSentry();
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })}
+  if (req.method === "POST") {
+    const body = await req.text();
+    const signature = req.headers.get("stripe-signature") || "",
+    let event;
+    try {
+      event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
+    } catch (err) {
+      return new Response(`Webhook Error: ${err.message}`, { status: 400 })}
 
-  let requestData;
-  try {
-    requestData = await req.json();
-    const { to, subject } = requestData,
-    logStructured("INFO", "Received send-email request", { to, subjectPreview: subject?.substring(0, 50) }, FUNCTION_NAME);
-    if (!resend) {
-      throw new Error("Resend client is not initialized due to missing API key.");
-    }
+    if (event.type === "checkout.session.completed") {
+      const session = event.data.object as Stripe.Checkout.Session;
+      const orderId = session.metadata?.orderId;
+      if (orderId) {
+        await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
+    },
 
-    const emailResponse = await resend.emails.send({
-      from: Deno.env.get("RESEND_FROM_EMAIL") || "Lovable <onboarding@resend.dev>", // Make FROM configurable
-      to: [to],
-      subject;
-      html: requestData.html, // Assuming html is part of requestData
-    }),
+    return new Response(JSON.stringify({ received: true }), { status: 200 })}
 
-    logStructured("INFO", "Email sent successfully", { to, subject, messageId: emailResponse.id }, FUNCTION_NAME);
-    return new Response(JSON.stringify(emailResponse), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200
-    })} catch (error) {
-    logStructured("ERROR", "Error in send-email function", {
-      errorMessage: error.message,
-      errorStack: error.stack,
-      requestDataPreview: JSON.stringify(requestData)?.substring(0, 200)
-    }, FUNCTION_NAME);
-    captureSupabaseError(error, {
-      functionName: FUNCTION_NAME,
-      request_url: req.url,
-      request_method: req.method,
-      request_body_preview: JSON.stringify(requestData)?.substring(0, 200)
-    });
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500
-    })}
-});
+  return new Response("Not found", { status: 404 })});
