@@ -1,130 +1,83 @@
-// Polyfill for globalThis
-if (typeof globalThis === 'undefined') {
-  global.globalThis = global;
-}
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  distDir: '.next',
   trailingSlash: true,
-  
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  
-  // Image optimization
   images: {
-    unoptimized: true, // Required for static export
-    domains: ["localhost"],
-  },
-  
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
-  eslint: {
-    ignoreDuringBuilds: true,
+    unoptimized: true,
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
   },
   typescript: {
     ignoreBuildErrors: true,
     // tsconfigPath: './tsconfig.json',
   },
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
-    esmExternals: false,
-    typedRoutes: false,
+  eslint: {
+    ignoreDuringBuilds: false,
   },
-  
-  // Webpack configuration
-  webpack: (config, { dev, isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibility
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  experimental: {
+    esmExternals: false,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config, { isServer, dev }) => {
+    // Performance optimizations
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
-        crypto: require.resolve('crypto-browserify'),
+        net: false,
+        tls: false,
+        crypto: false,
       };
     }
-    
-    // Disable CSS processing to avoid matchAll error
-    config.module.rules = config.module.rules.map(rule => {
-      if (rule.test && rule.test.toString().includes('css')) {
-        return {
-          ...rule,
-          use: 'ignore-loader'
-        };
-      }
-      return rule;
-    });
-    
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, '.'),
-    };
-    
-    // Exclude problematic directories from compilation
-    config.module.rules.push({
-      test: /\.ts$/,
-      include: require('path').resolve(__dirname, 'contracts'),
-      use: 'ignore-loader'
-    });
-    
-    if (!dev && !isServer) {
-      // Optimize bundle size
+
+    // Bundle analyzer for production builds
+    if (process.env.ANALYZE === 'true') {
+      const { BundleAnalyzerPlugin } = require('@next/bundle-analyzer');
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'server',
+          analyzerPort: isServer ? 8888 : 8889,
+          openAnalyzer: true,
+        })
+      );
+    }
+
+    // Optimize chunks
+    if (!dev) {
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
           vendor: {
-            test: /[/]node_modules[/]/,
+            test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
+            priority: -10,
             chunks: 'all',
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            priority: -5,
+            reuseExistingChunk: true,
           },
         },
       };
     }
-    
-    // Add globalThis polyfill
-    config.plugins = config.plugins || [];
-    config.plugins.push(
-      new (require('webpack')).DefinePlugin({
-        'globalThis': 'global',
-      })
-    );
-    
+
     return config;
   },
-  
-  // Headers for better security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-    ];
-  },
+  // Headers are configured in netlify.toml for static export
 };
 
 module.exports = nextConfig;
