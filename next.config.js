@@ -8,7 +8,7 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  output: 'export',
+  // output: 'export',
   trailingSlash: true,
   distDir: 'out',
   
