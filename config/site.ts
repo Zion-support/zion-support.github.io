@@ -15,4 +15,5 @@ export const siteConfig = {
     salesEmail: 'sales@ziontechgroup.com'
   }
 } as const;
+
 export type SiteConfig = typeof siteConfig;
