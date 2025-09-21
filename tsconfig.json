@@ -32,6 +32,12 @@
     "out/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "contracts/**/*",
+    "dao/**/*",
+    "automation/**/*",
+    "scripts/**/*",
+    "cypress/**/*",
+    "data/**/*"
   ]
 }
