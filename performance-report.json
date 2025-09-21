@@ -14,5 +14,21 @@
         "staticExport": true
       }
     }
+  },
+  {
+    "timestamp": "2025-09-21T12:57:42.019Z",
+    "buildTime": 0,
+    "bundleSize": "16M",
+    "pageCount": 7,
+    "performance": {
+      "buildTime": 12,
+      "timestamp": "2025-09-21T12:57:42.030Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
   }
 ]
