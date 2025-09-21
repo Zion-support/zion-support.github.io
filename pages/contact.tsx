@@ -49,20 +49,14 @@ export default function Contact() {
           <div className="container mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
               <Link href="/">
-                <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent cursor-pointer">
+                <a className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Zion Tech Group
-                </span>
+                </a>
               </Link>
               <div className="hidden md:flex space-x-8">
-                <Link href="/">
-                  <span className="text-gray-300 hover:text-white transition-colors cursor-pointer">Home</span>
-                </Link>
-                <Link href="/about">
-                  <span className="text-gray-300 hover:text-white transition-colors cursor-pointer">About</span>
-                </Link>
-                <Link href="/contact">
-                  <span className="text-white font-semibold cursor-pointer">Contact</span>
-                </Link>
+                <Link href="/"><a className="text-gray-300 hover:text-white transition-colors">Home</a></Link>
+                <Link href="/about"><a className="text-gray-300 hover:text-white transition-colors">About</a></Link>
+                <Link href="/contact"><a className="text-white font-semibold">Contact</a></Link>
               </div>
               <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Call Now
