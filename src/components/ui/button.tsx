@@ -1,8 +1,21 @@
 import * as React from "react";
-import { Slot } from "@radix-ui/react-slot";
-import { cva } from "class-variance-authority";
-import type { VariantProps } from "class-variance-authority";
+import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+
+// Simple Slot replacement
+const Slot = React.forwardRef<HTMLElement, React.HTMLAttributes<HTMLElement> & { asChild?: boolean }>(
+  ({ children, ...props }, ref) => {
+    if (React.isValidElement(children)) {
+      return React.cloneElement(children, {
+        ...props,
+        ref: ref,
+        className: `${children.props.className || ''} ${props.className || ''}`.trim()
+      });
+    }
+    return React.createElement('div', { ...props, ref }, children);
+  }
+);
+Slot.displayName = "Slot";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
