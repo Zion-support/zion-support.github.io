@@ -1,133 +1,29 @@
-import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
 
-export default [
-  js.configs.recommended,
+export default tseslint.config(
+  { ignores: ["dist"] },
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 2022,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        browser: true,
-        es2022: true,
-        node: true,
-      },
+      ecmaVersion: 2020,
+      globals: globals.browser,
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...nextPlugin.configs.recommended.rules,
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'off',
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+      "@typescript-eslint/no-unused-vars": "off",
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      'build/',
-      'scripts/',
-      'automation/',
-      'public/reports/**',
-      'netlify/',
-      '**/*.cjs',
-      '**/*.mjs',
-      '**/.scripts/**',
-      '**/temp_*/**',
-      '**/temp-*/**',
-      '**/temp*/**',
-      '**/broken*/**',
-      '**/corrupted*/**',
-      '**/disabled*/**',
-      '**/backup*/**',
-      '**/exclude*/**',
-      '**/conflicted*/**',
-      '**/working*/**',
-      '**/essential*/**',
-      '**/test_build/**',
-      '**/tests/**',
-      '**/token/**',
-      '**/zion-hire-ai.tsx',
-      '**/terms.tsx',
-      '**/test-utils.jsx',
-      '**/src_backup*/**',
-      '**/supabase/**',
-      '**/stories/**',
-      '**/talent/**',
-      '**/__tests__/**',
-      '**/apps.backup/**',
-      '**/dao/**',
-      '**/deployment/**',
-      '**/deployments/**',
-      '**/ecosystem*.js',
-      '**/fix-*.js',
-      '**/fix_*.js',
-      '**/merge-*.js',
-      '**/resolve-*.js',
-      '**/selective-merge.js',
-      '**/restore-*.js',
-      '**/monitoring-*.js',
-      '**/performance-*.js',
-      '**/maintenance-*.js',
-      '**/comprehensive-*.js',
-      '**/execute-*.js',
-      '**/improve-*.js',
-      '**/mcp*.js',
-      '**/health-endpoint.js',
-      '**/lib.broken/**',
-      '**/offworld/**',
-      '**/pages._archive_corrupted/**',
-      '**/pages.bak/**',
-      '**/remote/**',
-      '**/src-clean/**',
-      '**/zion_academy/**',
-      '**/*.test.js',
-      '**/*.test.ts',
-      '**/*.test.tsx',
-      '**/.storybook/**',
-      '**/advanced-*.js',
-      '**/aggressive-*.js',
-      '**/analyze-*.js',
-      '**/build*.js',
-      '**/bundle-*.js',
-      '**/code-splitting-*.js',
-      '**/config/**',
-      '**/cypress/**',
-      '**/jest*.js',
-      '**/next.config*.js',
-      '**/start-dev.js',
-    ],
-  },
-];
+  }
+);
