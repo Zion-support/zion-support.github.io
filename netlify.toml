@@ -20,4 +20,4 @@
 # Note: Redirects are now handled by the generated _redirects file in the out directory
 # This ensures compatibility with Next.js static export and avoids conflicts
 
- # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v2)
+ # build trigger: chore(netlify): retrigger Netlify deploy (no-op change v3)
