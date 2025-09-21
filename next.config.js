@@ -36,6 +36,8 @@ const nextConfig = {
     optimizeCss: false,
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
+    gzipSize: true,
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
     turbo: {
       rules: {
         '*.svg': {
