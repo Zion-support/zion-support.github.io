@@ -6,22 +6,24 @@ if (typeof globalThis === 'undefined') {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   compress: true,
   poweredByHeader: false,
-  // output: 'export',
+  output: 'export',
   trailingSlash: true,
   distDir: 'out',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
     domains: ["localhost"],
+    formats: ['image/webp', 'image/avif'],
   },
   
   // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
-    // tsconfigPath: './tsconfig.json',
   },
   
   // ESLint configuration
@@ -33,10 +35,17 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   
-  // Typed routes configuration
-  typedRoutes: false,
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
+  },
   
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
@@ -48,6 +57,9 @@ const nextConfig = {
         net: false,
         tls: false,
         crypto: require.resolve('crypto-browserify'),
+        stream: require.resolve('stream-browserify'),
+        buffer: require.resolve('buffer'),
+        process: require.resolve('process/browser'),
       };
     }
     
@@ -87,33 +99,6 @@ const nextConfig = {
     );
     
     return config;
-  },
-  
-  // Headers for better security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-    ];
   },
 };
 
