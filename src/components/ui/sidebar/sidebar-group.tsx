@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { ChevronDown,,  } from 'lucide-react'
+import { ChevronDown,} from 'lucide-react'
 import React from "react";
 import React from "react";
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {

@@ -1,8 +1,7 @@
 export class ObjectUtils {
   public static deepClone<T>(obj: T): T {
     if (obj === null || typeof obj !== "object") {
-      return obj;
-    }
+      return obj}
 
     if (obj instanceof Date) {
       return new Date(obj.getTime()) as T;
@@ -26,8 +25,7 @@ export class ObjectUtils {
   }
 
   public static deepMerge<T extends Record<string, any>>(target: T, source: Partial<T>): T {
-    const result = { ...target };
-    
+    const result = { ...target },
     for (const key in source) {
       if (source.hasOwnProperty(key)) {
         if (typeof source[key] === "object" && source[key] !== null && !Array.isArray(source[key])) {
@@ -60,12 +58,10 @@ export class ObjectUtils {
   }
 
   public static keys<T extends Record<string, any>>(obj: T): (keyof T)[] {
-    return Object.keys(obj) as (keyof T)[];
-  }
+    return Object.keys(obj) as (keyof T)[]}
 
   public static values<T extends Record<string, any>>(obj: T): T[keyof T][] {
-    return Object.values(obj);
-  }
+    return Object.values(obj)}
 
   public static entries<T extends Record<string, any>>(obj: T): [keyof T, T[keyof T]][];
   public static entries<T extends Record<string, any>>(obj: T): [string, any][] {
@@ -74,8 +70,7 @@ export class ObjectUtils {
 
   public static isEmpty(obj: any): boolean {
     if (obj === null || obj === undefined) {
-      return true;
-    }
+      return true}
 
     if (typeof obj === "string" || Array.isArray(obj)) {
       return obj.length === 0;
@@ -90,8 +85,7 @@ export class ObjectUtils {
 
   public static isEqual(obj1: any, obj2: any): boolean {
     if (obj1 === obj2) {
-      return true;
-    }
+      return true}
 
     if (obj1 === null || obj2 === null || obj1 === undefined || obj2 === undefined) {
       return obj1 === obj2;
@@ -141,7 +135,7 @@ export class ObjectUtils {
   }
 
   public static has<T extends Record<string, any>>(obj: T, path: string): boolean {
-    const keys = path.split(".");
+    const keys = path.split("."),
     let current = obj;
     
     for (const key of keys) {
@@ -169,10 +163,9 @@ export class ObjectUtils {
   }
 
   public static set<T extends Record<string, any>>(obj: T, path: string, value: any): T {
-    const keys = path.split(".");
+    const keys = path.split("."),
     const result = this.deepClone(obj);
-    let current: any = result;
-    
+    let current: any = result,
     for (let i = 0; i < keys.length - 1; i++) {
       const key = keys[i];
       if (!(key in current) || typeof current[key] !== "object" || current[key] === null) {
@@ -186,7 +179,7 @@ export class ObjectUtils {
   }
 
   public static unset<T extends Record<string, any>>(obj: T, path: string): T {
-    const keys = path.split(".");
+    const keys = path.split("."),
     const result = this.deepClone(obj);
     let current = result;
     
@@ -247,7 +240,7 @@ export class ObjectUtils {
     obj: T,
     fn: (value: T[keyof T], key: keyof T) => U
   ): Record<keyof T, U> {
-    const result = {} as Record<keyof T, U>;
+    const result = {} as Record<keyof T, U>
     
     for (const key in obj) {
       if (obj.hasOwnProperty(key)) {
@@ -262,8 +255,7 @@ export class ObjectUtils {
     obj: T,
     predicate: (value: T[keyof T], key: keyof T) => boolean
   ): Partial<T> {
-    const result = {} as Partial<T>;
-    
+    const result = {} as Partial<T>,
     for (const key in obj) {
       if (obj.hasOwnProperty(key) && predicate(obj[key], key)) {
         result[key] = obj[key];
@@ -288,8 +280,7 @@ export class ObjectUtils {
 
   public static size(obj: any): number {
     if (obj === null || obj === undefined) {
-      return 0;
-    }
+      return 0}
 
     if (typeof obj === "string" || Array.isArray(obj)) {
       return obj.length;

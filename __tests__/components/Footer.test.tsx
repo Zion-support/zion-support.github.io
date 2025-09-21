@@ -1,8 +1,8 @@
-import React from 'react',
-import { render, screen } from '@testing-library/react',
-import { Footer } from '@/components/Footer',
-import nextRouterMock from 'next-router-mock',
-import { vi, describe, test, expect, beforeEach, afterEach } from 'vitest',
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { Footer } from '@/components/Footer';
+import nextRouterMock from 'next-router-mock';
+import { vi, describe, test, expect, beforeEach, afterEach } from 'vitest';
 
 vi.mock('next/router', () => nextRouterMock),
 
@@ -22,31 +22,28 @@ describe('Footer social links', () => {
       NEXT_PUBLIC_SOCIAL_FACEBOOK_URL: "https://facebook.com/ZionTechGroup",
       NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL: "https://instagram.com/ZionTechGroup",
       NEXT_PUBLIC_SOCIAL_GITHUB_URL: "https://github.com/ZionTechGroup"
-    },
-  }),
-
+    }});
   afterEach(() => {
     process.env = originalEnv, // Restore original env
   }),
 
   test('links use configured URLs from environment variables', () => {
-    render(<Footer />),
-
+    render(<Footer />);
     expect(
       screen.getByRole('link', { name: 'Twitter' })
-    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL),
+    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL);
     expect(
       screen.getByRole('link', { name: 'LinkedIn' })
-    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL),
+    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL);
     expect(
       screen.getByRole('link', { name: 'Facebook' })
-    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL),
+    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL);
     expect(
       screen.getByRole('link', { name: 'Instagram' })
-    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL),
+    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL);
     expect(
       screen.getByRole('link', { name: 'GitHub' })
-    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL),
+    ).toHaveAttribute('href', process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL);
   }),
 
   test('links fall back to defaults when env values are invalid', () => {
@@ -56,8 +53,7 @@ describe('Footer social links', () => {
     delete process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL,
     delete process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
 
-    render(<Footer />),
-
+    render(<Footer />);
     expect(screen.getByRole('link', { name: 'Twitter' })).toHaveAttribute(
       'hrefhttps: //twitter.com/ZionTechGroup'
     ),
@@ -73,5 +69,4 @@ describe('Footer social links', () => {
     expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute(
       'hrefhttps: //github.com/ZionTechGroup'
     )
-  }),
-}),
+  })});

@@ -19,10 +19,7 @@ async function prerender() {
             const file = args.path.replace(/^@\//, '');
             return { path: path.resolve('src', file) };
           });
-        },
-      },
-    ],
-  });
+        }}]});
 
   const text = result.outputFiles[0].text;
   const mod = await import(`data:text/javascript;base64,${Buffer.from(text).toString('base64')}`);

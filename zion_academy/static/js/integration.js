@@ -16,74 +16,61 @@ class ZionIntegration {,
         // Wait for analytics and feedback to be loaded,
         if (!this.analytics || !this.feedback) {,
             setTimeout(() => this.init(), 100),
-            return,
-        }
+            return}
 ,
         this.setupContentTracking(),
         this.setupFeedbackIntegration(),
-        console.log('Zion Analytics & Feedback integration initialized'),
-    }
+        console.log('Zion Analytics & Feedback integration initialized')}
 ,
     setupContentTracking() {,
         // Add data attributes to existing content for better tracking,
         this.addTrackingAttributes(),
         // Track custom events for existing functionality,
-        this.trackExistingFeatures(),
-    }
+        this.trackExistingFeatures()}
 ,
     addTrackingAttributes() {,
         // Add course tracking to course cards,
         document.querySelectorAll('.course-card, .course-item').forEach(card => {,
             const courseId = card.dataset.courseId || this.extractIdFromUrl(card.querySelector('a')?.href),
             if (courseId) {,
-                card.dataset.courseId = courseId,
-            }
+                card.dataset.courseId = courseId}
         }),
         // Add lesson tracking to lesson items,
         document.querySelectorAll('.lesson-card, .lesson-item').forEach(item => {,
             const lessonId = item.dataset.lessonId || this.extractIdFromUrl(item.querySelector('a')?.href),
             if (lessonId) {,
-                item.dataset.lessonId = lessonId,
-            }
+                item.dataset.lessonId = lessonId}
         }),
         // Add tracking to buttons,
         document.querySelectorAll('.enroll-btn, .enroll-button').forEach(btn => {,
             const courseId = btn.dataset.courseId || this.findNearestCourseId(btn),
             if (courseId) {,
-                btn.dataset.courseId = courseId,
-            }
+                btn.dataset.courseId = courseId}
         }),
         document.querySelectorAll('.complete-btn, .mark-complete').forEach(btn => {,
             const lessonId = btn.dataset.lessonId || this.findNearestLessonId(btn),
             if (lessonId) {,
-                btn.dataset.lessonId = lessonId,
-            }
-        }),
-    }
+                btn.dataset.lessonId = lessonId}
+        })}
 ,
     extractIdFromUrl(url) {,
         if (!url) return null,
         const match = url.match(/\/(\d+)/),
-        return match ? match[1] : null,
-    }
+        return match ? match[1] : null}
 ,
     findNearestCourseId(element) {,
         let current = element,
         while (current && current !== document.body) {,
             if (current.dataset.courseId) return current.dataset.courseId,
-            current = current.parentElement,
-        }
-        return null,
-    }
+            current = current.parentElement}
+        return null}
 ,
     findNearestLessonId(element) {,
         let current = element,
         while (current && current !== document.body) {,
             if (current.dataset.lessonId) return current.dataset.lessonId,
-            current = current.parentElement,
-        }
-        return null,
-    }
+            current = current.parentElement}
+        return null}
 ,
     trackExistingFeatures() {,
         // Track search functionality,
@@ -92,10 +79,8 @@ class ZionIntegration {,
             form.addEventListener('submit', (e) => {,
                 const query = form.querySelector('input[name="q"], input[type="search"]')?.value,
                 if (query) {,
-                    this.analytics.trackEvent('search', { query: query }),
-                }
-            }),
-        }),
+                    this.analytics.trackEvent('search', { query: query })}
+            })}),
         // Track navigation,
         const navLinks = document.querySelectorAll('nav a, .nav-link'),
         navLinks.forEach(link => {,
@@ -103,9 +88,7 @@ class ZionIntegration {,
                 this.analytics.trackEvent('navigation', {,
                     from: window.location.pathname,
                     to: link.href,
-                    link_text: link.textContent?.trim()}),
-            }),
-        }),
+                    link_text: link.textContent?.trim()})})}),
         // Track form submissions,
         const forms = document.querySelectorAll('form: not(.feedback-form)'),
         forms.forEach(form => {,
@@ -113,32 +96,26 @@ class ZionIntegration {,
                 this.analytics.trackEvent('form_submit', {,
                     form_id: form.id || 'unknown',
                     form_action: form.action,
-                    form_method: form.method}),
-            }),
-        }),
-    }
+                    form_method: form.method})})})}
 ,
     setupFeedbackIntegration() {,
         // Add feedback buttons to content pages,
         this.addFeedbackButtons(),
         // Add feedback links to course/lesson pages,
-        this.addFeedbackLinks(),
-    }
+        this.addFeedbackLinks()}
 ,
     addFeedbackButtons() {,
         // Add feedback button to course pages,
         const courseContent = document.querySelector('.course-content, .course-detail'),
         if (courseContent) {,
             const feedbackBtn = this.createFeedbackButton('course'),
-            courseContent.appendChild(feedbackBtn),
-        }
+            courseContent.appendChild(feedbackBtn)}
 ,
         // Add feedback button to lesson pages,
         const lessonContent = document.querySelector('.lesson-content, .lesson-detail'),
         if (lessonContent) {,
             const feedbackBtn = this.createFeedbackButton('lesson'),
-            lessonContent.appendChild(feedbackBtn),
-        }
+            lessonContent.appendChild(feedbackBtn)}
     }
 ,
     createFeedbackButton(contentType) {,
@@ -153,24 +130,19 @@ class ZionIntegration {,
         button.addEventListener('click', () => {,
             const contentId = this.getCurrentContentId(),
             const contentTitle = document.title,
-            this.feedback.showFeedbackForContent(contentType, contentId, contentTitle),
-        }),
-        return button,
-    }
+            this.feedback.showFeedbackForContent(contentType, contentId, contentTitle)}),
+        return button}
 ,
     addFeedbackLinks() {,
         // Add feedback links to course/lesson lists,
         const courseItems = document.querySelectorAll('.course-item, .course-card'),
         courseItems.forEach(item => {,
             const feedbackLink = this.createFeedbackLink('course', item),
-            item.appendChild(feedbackLink),
-        }),
+            item.appendChild(feedbackLink)}),
         const lessonItems = document.querySelectorAll('.lesson-item, .lesson-card'),
         lessonItems.forEach(item => {,
             const feedbackLink = this.createFeedbackLink('lesson', item),
-            item.appendChild(feedbackLink),
-        }),
-    }
+            item.appendChild(feedbackLink)})}
 ,
     createFeedbackLink(contentType, parentElement) {,
         const link = document.createElement('a'),
@@ -181,10 +153,8 @@ class ZionIntegration {,
             e.preventDefault(),
             const contentId = parentElement.dataset.courseId || parentElement.dataset.lessonId,
             const contentTitle = parentElement.querySelector('h3, h4')?.textContent || 'Unknown',
-            this.feedback.showFeedbackForContent(contentType, contentId, contentTitle),
-        }),
-        return link,
-    }
+            this.feedback.showFeedbackForContent(contentType, contentId, contentTitle)}),
+        return link}
 ,
     getCurrentContentId() {,
         const path = window.location.pathname,
@@ -192,14 +162,12 @@ class ZionIntegration {,
         const lessonMatch = path.match(/\/lesson\/(\d+)/),
         if (courseMatch) return courseMatch[1],
         if (lessonMatch) return lessonMatch[1],
-        return null,
-    }
+        return null}
 ,
     // Utility methods for manual tracking,
     trackCustomEvent(eventName, data = {}) {,
         if (this.analytics) {,
-            this.analytics.trackCustomEvent(eventName, data),
-        }
+            this.analytics.trackCustomEvent(eventName, data)}
     }
 ,
     trackContentView(contentType, contentId, contentTitle) {,
@@ -209,31 +177,26 @@ class ZionIntegration {,
                 content_title: contentTitle}, {,
                 content_type: contentType,
                 [contentType === 'course' ? 'course_id' : 'lesson_id']: contentId
-            }),
-        }
+            })}
     }
 ,
     trackContentCompletion(contentType, contentId, contentTitle) {,
         if (this.analytics) {,
-            this.analytics.trackCompletion(contentType, contentId, contentTitle),
-        }
+            this.analytics.trackCompletion(contentType, contentId, contentTitle)}
     }
 ,
     showFeedback(contentType, contentId, contentTitle) {,
         if (this.feedback) {,
-            this.feedback.showFeedbackForContent(contentType, contentId, contentTitle),
-        }
+            this.feedback.showFeedbackForContent(contentType, contentId, contentTitle)}
     }
 ,
     // Method to get analytics data for display,
     async getContentAnalytics(contentType, contentId) {,
         try {,
             const response = await fetch(`/api/analytics/content/${contentType}/${contentId}`),
-            return await response.json(),
-        } catch (error) {,
+            return await response.json()} catch (error) {,
             console.error('Failed to fetch analytics:', error),
-            return null,
-        }
+            return null}
     }
 ,
     // Method to display analytics widget,
@@ -262,17 +225,13 @@ class ZionIntegration {,
                             </div>,
                         </div>,
                     </div>,
-                `,
-            }
-        }),
-    }
+                `}
+        })}
 }
 ,
 // Initialize integration when DOM is ready,
 document.addEventListener('DOMContentLoaded', () => {,
-    window.zionIntegration = new ZionIntegration(),
-}),
+    window.zionIntegration = new ZionIntegration()}),
 // Export for module systems,
 if (typeof module !== 'undefined' && module.exports) {,
-    module.exports = ZionIntegration,
-}
+    module.exports = ZionIntegration}

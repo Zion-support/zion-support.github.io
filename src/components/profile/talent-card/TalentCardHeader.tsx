@@ -1,14 +1,14 @@
 import React from 'react'
-import { BadgeCheck,,  } from 'lucide-react'
+import { BadgeCheck,} from 'lucide-react'
 import React from "react";
 import React from "react";
 interface TalentCardHeaderProps {
-  fullName: string;,
-professionalTitle: string;
+  fullName: string;;
+professionalTitle: string,
   profilePicture?: string;
-  availabilityType: string;,
-yearsExperience: number;
-yearsExperience,
+  availabilityType: string;;
+yearsExperience: number,
+yearsExperience;
 }: TalentCardHeaderProps) {
   return (
     <div className='flex items-start gap-4 mb-4'>

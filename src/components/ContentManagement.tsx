@@ -2,14 +2,13 @@ import import React, { useState } from 'react';
 import import { motion } from 'framer-motion';
 
 interface ContentItem {
-  id: string;
-  title: string;
-  type: 'blog' | 'page' | 'product' | 'service';
-  status: 'published' | 'draft' | 'scheduled';
-  publishDate: string;
-  views: number;
-  author: string;
-}
+  id: string,
+  title: string,
+  type: 'blog' | 'page' | 'product' | 'service',
+  status: 'published' | 'draft' | 'scheduled',
+  publishDate: string,
+  views: number,
+  author: string}
 
 export const ContentManagement: React.FC = () => {
   const [content, setContent] = useState<ContentItem[]>([
@@ -49,8 +48,7 @@ export const ContentManagement: React.FC = () => {
       views: 0,
       author: 'Sarah Wilson'
     }
-  ]);
-
+  ]),
   const [selectedType, setSelectedType] = useState<string>('all');
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
 
@@ -62,23 +60,19 @@ export const ContentManagement: React.FC = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'published': return 'text-green-400 bg-green-900';
+      case 'published': return 'text-green-400 bg-green-900',
       case 'draft': return 'text-yellow-400 bg-yellow-900';
       case 'scheduled': return 'text-blue-400 bg-blue-900';
-      default: return 'text-gray-400 bg-gray-900';
-    }
+      default: return 'text-gray-400 bg-gray-900'}
   };
-
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'blog': return '📝';
+      case 'blog': return '📝',
       case 'page': return '📄';
       case 'product': return '🛍️';
       case 'service': return '⚙️';
-      default: return '📄';
-    }
+      default: return '📄'}
   };
-
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div
@@ -204,7 +198,5 @@ export const ContentManagement: React.FC = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
-
+  )};
 export default ContentManagement;

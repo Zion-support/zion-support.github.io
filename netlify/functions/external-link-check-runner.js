@@ -18,12 +18,9 @@ exports.handler = async function(event, context) {
     for (let i = 0, i < linkCheckResults.totalExternalLinks, i++) {
       const linkStatus = Math.random(),
       if (linkStatus > 0.85) { // 15% broken links
-        linkCheckResults.brokenLinks++,
-      } else if (linkStatus > 0.70) { // 15% redirects
-        linkCheckResults.redirectLinks++,
-      } else { // 70% working links
-        linkCheckResults.workingLinks++,
-      }
+        linkCheckResults.brokenLinks++} else if (linkStatus > 0.70) { // 15% redirects
+        linkCheckResults.redirectLinks++} else { // 70% working links
+        linkCheckResults.workingLinks++}
     }
     
     // Calculate metrics
@@ -40,8 +37,7 @@ exports.handler = async function(event, context) {
         page: `page-${Math.floor(Math.random() * 40) + 1}`,
         lastWorking: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString(), // 0-30 days ago
         suggestedReplacement: Math.random() > 0.7 ? `https://alternative-${i + 1}.com` : null
-      }),
-    }
+      })}
     
     // Simulate redirect details
     const redirectDetails = [],
@@ -51,8 +47,7 @@ exports.handler = async function(event, context) {
         redirectUrl: `https://new-site-${i + 1}.com/page-${i + 1}`,
         statusCode: Math.random() > 0.5 ? 301 : 302,
         page: `page-${Math.floor(Math.random() * 40) + 1}`
-      }),
-    }
+      })}
     
     const result = {
       statusCode: 200,
@@ -79,9 +74,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ external-link-check-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ external-link-check-runner failed:', error),
     return {
       statusCode: 500,
@@ -91,6 +84,5 @@ exports.handler = async function(event, context) {
         function: 'external-link-check-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

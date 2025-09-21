@@ -18,20 +18,19 @@ on: jest.fn()
         off: jest.fn(),
 emit: jest.fn()
       }
-      isFallback: false,
-}
+      isFallback: false}
   }
 }));
 // Mock Next.js Image component,
 jest.mock("next/image", () => {
   return function MockImage({ src, alt, ...props }) {
-    return <img src={src} alt={alt} {...props} />;
+    return <img src={src} alt={alt} {...props} />
   }
 });
 // Mock Next.js Link component,
 jest.mock("next/link", () => {
   return function MockLink({ children, href, ...props }) {
-    return <a href={href} {...props}>{children}</a>;
+    return <a href={href} {...props}>{children}</a>
   }
 });
 // Mock window.matchMedia,
@@ -47,7 +46,7 @@ removeListener: jest.fn()
 removeEventListener: jest.fn()
     dispatchEvent: jest.fn()
   }))
-});
+}),
 // Mock IntersectionObserver,
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}

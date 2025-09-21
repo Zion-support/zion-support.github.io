@@ -3,16 +3,15 @@ import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface QuotesPaginationProps {
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-  totalItems: number;
-  itemsPerPage: number;
-}
+  currentPage: number,
+  totalPages: number,
+  onPageChange: (page: number) => void,
+  totalItems: number,
+  itemsPerPage: number}
 
 export const QuotesPagination: React.FC<QuotesPaginationProps> = ({
   currentPage,
-  totalPages,
+  totalPages;
   onPageChange,
   totalItems,
   itemsPerPage

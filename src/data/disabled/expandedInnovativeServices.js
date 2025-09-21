@@ -6,7 +6,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Comprehensive AI-powered platform for creating, optimizing, and distributing content across multiple channels with intelligent automation.",
         category: "
         subcategory: "
-        price: 399;
+        price: 399,
         currency: "
         pricingModel: "
         features: [
@@ -49,16 +49,14 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["OpenAI GPT-4", "React", "Node.js", "MongoDB", "AWS"],
         integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
         compliance: ["GDPR", "CCPA", "SOC 2"],
         roi: "
         competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
         demoUrl: "
-        documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite",
-    }
+        documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"}
     /
     {
         id: "
@@ -66,7 +64,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Advanced video analytics platform that uses computer vision and AI to extract insights, detect objects, and analyze behavior patterns in video content.",
         category: "
         subcategory: "
-        price: 599;
+        price: 599,
         currency: "
         pricingModel: "
         features: [
@@ -109,8 +107,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "OpenCV", "Python", "React", "AWS", "Docker"],
         integrations: ["CCTV systems", "IP cameras", "Security platforms", "Analytics tools"],
         compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
@@ -124,7 +121,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Intelligent financial planning platform that provides personalized investment advice, portfolio optimization, and financial goal tracking using AI algorithms.",
         category: "
         subcategory: "
-        price: 299;
+        price: 299,
         currency: "
         pricingModel: "
         features: [
@@ -167,8 +164,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Plaid", "Yodlee", "TD Ameritrade", "Charles Schwab", "Fidelity"],
         compliance: ["SEC", "FINRA", "SOC 2", "GDPR"],
@@ -182,7 +178,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Advanced medical imaging analysis platform that uses AI to detect diseases, analyze medical scans, and provide diagnostic assistance to healthcare professionals.",
         category: "
         subcategory: "
-        price: 899;
+        price: 899,
         currency: "
         pricingModel: "
         features: [
@@ -225,8 +221,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "PyTorch", "Python", "React", "DICOM", "HL7"],
         integrations: ["PACS systems", "EHR systems", "Radiology information systems"],
         compliance: ["HIPAA", "FDA", "SOC 2", "ISO 13485"],
@@ -240,7 +235,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Intelligent supply chain platform that uses AI to predict demand, optimize inventory, reduce costs, and improve operational efficiency across the entire supply chain.",
         category: "
         subcategory: "
-        price: 799;
+        price: 799,
         currency: "
         pricingModel: "
         features: [
@@ -283,8 +278,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"],
         compliance: ["ISO 28000", "SOC 2", "GDPR"],
@@ -298,7 +292,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Advanced legal research platform that uses AI to analyze legal documents, predict case outcomes, and provide comprehensive legal research assistance.",
         category: "
         subcategory: "
-        price: 499;
+        price: 499,
         currency: "
         pricingModel: "
         features: [
@@ -341,8 +335,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["NLP", "Python", "React", "Node.js", "Elasticsearch", "PostgreSQL"],
         integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
         compliance: ["SOC 2", "GDPR", "CCPA", "ISO 27001"],
@@ -356,7 +349,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Comprehensive real estate platform that uses AI to analyze market trends, predict property values, and provide investment recommendations for real estate professionals.",
         category: "
         subcategory: "
-        price: 399;
+        price: 399,
         currency: "
         pricingModel: "
         features: [
@@ -399,8 +392,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],
         compliance: ["SOC 2", "GDPR", "CCPA"],
@@ -414,7 +406,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Intelligent HR platform that uses AI to streamline recruitment, improve employee engagement, optimize workforce planning, and enhance HR decision-making.",
         category: "
         subcategory: "
-        price: 299;
+        price: 299,
         currency: "
         pricingModel: "
         features: [
@@ -457,8 +449,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack"],
         compliance: ["SOC 2", "GDPR", "CCPA", "ISO 27001"],
@@ -472,7 +463,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and improve sustainability across commercial and industrial facilities.",
         category: "
         subcategory: "
-        price: 599;
+        price: 599,
         currency: "
         pricingModel: "
         features: [
@@ -515,8 +506,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "IoT protocols", "PostgreSQL"],
         integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage"],
         compliance: ["ISO 50001", "LEED", "SOC 2", "GDPR"],
@@ -530,7 +520,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Advanced manufacturing platform that uses AI to monitor quality, predict equipment failures, and optimize production processes in real-time.",
         category: "
         subcategory: "
-        price: 799;
+        price: 799,
         currency: "
         pricingModel: "
         features: [
@@ -573,8 +563,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
         integrations: ["MES systems", "ERP systems", "PLC controllers", "Quality control equipment"],
         compliance: ["ISO 9001", "ISO 14001", "SOC 2", "GDPR"],
@@ -588,7 +577,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Intelligent education platform that uses AI to personalize learning experiences, track student progress, and provide adaptive content recommendations.",
         category: "
         subcategory: "
-        price: 199;
+        price: 199,
         currency: "
         pricingModel: "
         features: [
@@ -631,8 +620,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
         compliance: ["FERPA", "COPPA", "SOC 2", "GDPR"],
@@ -646,7 +634,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Intelligent agriculture platform that uses AI, IoT sensors, and satellite imagery to optimize crop yields, reduce resource usage, and improve farming efficiency.",
         category: "
         subcategory: "
-        price: 499;
+        price: 499,
         currency: "
         pricingModel: "
         features: [
@@ -689,8 +677,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
         integrations: ["Weather APIs", "Satellite imagery", "Farm equipment", "Soil sensors"],
         compliance: ["Organic certification", "SOC 2", "GDPR"],
@@ -704,7 +691,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Intelligent transportation platform that uses AI to optimize routes, predict demand, reduce costs, and improve efficiency across transportation and logistics operations.",
         category: "
         subcategory: "
-        price: 699;
+        price: 699,
         currency: "
         pricingModel: "
         features: [
@@ -747,8 +734,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["TMS systems", "GPS tracking", "Fuel cards", "Maintenance systems"],
         compliance: ["DOT", "FMCSA", "SOC 2", "GDPR"],
@@ -762,7 +748,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Intelligent insurance platform that uses AI to assess risks, automate underwriting, detect fraud, and provide personalized insurance recommendations.",
         category: "
         subcategory: "
-        price: 599;
+        price: 599,
         currency: "
         pricingModel: "
         features: [
@@ -805,8 +791,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Policy management systems", "Claims systems", "CRM systems", "Payment gateways"],
         compliance: ["SOC 2", "GDPR", "CCPA", "Insurance regulations"],
@@ -820,7 +805,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         description: "Intelligent gaming platform that uses AI to create personalized gaming experiences, optimize gameplay, and provide intelligent matchmaking and recommendations.",
         category: "
         subcategory: "
-        price: 199;
+        price: 199,
         currency: "
         pricingModel: "
         features: [
@@ -863,8 +848,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Unity", "Unreal Engine", "Steam", "Twitch", "Discord"],
         compliance: ["COPPA", "SOC 2", "GDPR"],

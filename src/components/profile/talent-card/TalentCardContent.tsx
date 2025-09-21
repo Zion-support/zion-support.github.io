@@ -1,11 +1,11 @@
 
 import React from "react";
-import { MapPin,,  } from 'lucide-react'
+import { MapPin,} from 'lucide-react'
 import React from "react";
 interface TalentCardContentProps {
-  summary: string | undefined;,
-bio: string;
-  timezone: string | undefined;,
+  summary: string | undefined;;
+bio: string,
+  timezone: string | undefined;;
 skills: string[] | undefined,
 return (
     <div>
@@ -30,8 +30,8 @@ className='overflow-hidden transition-all duration-300'        style={{ maxHeigh
       <div
 className="overflow-hidden transition-all duration-300"
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
-        onMouseEnter = {() => setIsHovering(true),}
-        onMouseLeave = {() => setIsHovering(false),}
+        onMouseEnter = {() => setIsHovering(true)}
+        onMouseLeave = {() => setIsHovering(false)}
       >
         <p className='text-zion-slate mb-4'>{summary |bio}</p>
       </div>

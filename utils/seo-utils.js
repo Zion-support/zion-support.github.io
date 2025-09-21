@@ -17,5 +17,4 @@ export const generateStructuredData = (pageData) => {,
       "telephone": "+1-555-0123",
       "contactType": "customer service"
     }
-  },
-},
+  }},

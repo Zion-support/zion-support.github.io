@@ -6,7 +6,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         description: "Next-generation edge computing infrastructure that processes data at the source with AI acceleration, 5G integration, and real-time decision-making capabilities.",
         category: "
         subcategory: "
-        price: 15000;
+        price: 15000,
         currency: "
         pricingModel: "
         features: [
@@ -52,8 +52,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -61,7 +60,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         description: "
         category: "
         subcategory: "
-        price: 25000;
+        price: 25000,
         currency: "
         pricingModel: "
         features: [
@@ -107,8 +106,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -116,7 +114,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         description: "Self-managing IT infrastructure powered by AI that automatically optimizes performance, predicts failures, and resolves issues without human intervention.",
         category: "
         subcategory: "
-        price: 12000;
+        price: 12000,
         currency: "
         pricingModel: "
         features: [
@@ -162,8 +160,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -171,7 +168,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         description: "Advanced infrastructure supporting virtual and augmented reality collaboration with spatial computing, haptic feedback, and real-time 3D rendering capabilities.",
         category: "
         subcategory: "
-        price: 18000;
+        price: 18000,
         currency: "
         pricingModel: "
         features: [
@@ -217,8 +214,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -226,7 +222,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         description: "Sustainable IT infrastructure solution that optimizes energy consumption, reduces carbon footprint, and maximizes renewable energy usage through AI-driven efficiency.",
         category: "
         subcategory: "
-        price: 8000;
+        price: 8000,
         currency: "
         pricingModel: "
         features: [
@@ -272,8 +268,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -281,7 +276,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         description: "Complete blockchain infrastructure platform supporting multiple protocols, smart contracts, DeFi applications, and enterprise-grade security for Web3 transformation.",
         category: "
         subcategory: "
-        price: 20000;
+        price: 20000,
         currency: "
         pricingModel: "
         features: [
@@ -327,8 +322,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -336,7 +330,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         description: "Integrated infrastructure combining compute, storage, networking, and AI acceleration in a single platform optimized for machine learning workloads and AI applications.",
         category: "
         subcategory: "
-        price: 30000;
+        price: 30000,
         currency: "
         pricingModel: "
         features: [
@@ -382,7 +376,6 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
 ];

@@ -6,7 +6,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         description: "Revolutionary video creation platform that uses AI to generate professional-quality videos from text, images, and audio inputs, perfect for marketing, education, and entertainment.",
         category: "
         subcategory: "
-        price: 99;
+        price: 99,
         currency: "
         pricingModel: "
         features: [
@@ -48,8 +48,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["GPT-4", "Stable Video Diffusion", "ElevenLabs", "React", "Node.js", "PostgreSQL"],
         integrations: ["YouTube", "TikTok", "Instagram", "LinkedIn", "Facebook", "Twitter"],
         compliance: ["GDPR", "Content guidelines", "Copyright compliance"],
@@ -57,8 +56,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Lumen5", "InVideo", "Synthesia", "Runway ML", "Pictory"],
         marketSize: "
         growthRate: "
-        fundingTrends: "High investor interest in AI video tools",
-    }
+        fundingTrends: "High investor interest in AI video tools"}
     /
     {
         id: "
@@ -66,7 +64,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         description: "Intelligent customer success platform that predicts churn, automates onboarding, and provides personalized recommendations to improve customer retention and satisfaction.",
         category: "
         subcategory: "
-        price: 199;
+        price: 199,
         currency: "
         pricingModel: "
         features: [
@@ -107,8 +105,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine Learning", "Python", "React", "PostgreSQL", "Redis", "Analytics"],
         integrations: ["Salesforce", "HubSpot", "Intercom", "Zendesk", "Slack", "Email platforms"],
         compliance: ["GDPR", "SOC 2", "Data privacy"],
@@ -116,8 +113,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Gainsight", "Totango", "ClientSuccess", "ChurnZero", "Vitally"],
         marketSize: "
         growthRate: "
-        fundingTrends: "Growing focus on customer retention tools",
-    }
+        fundingTrends: "Growing focus on customer retention tools"}
     /
     {
         id: "
@@ -125,7 +121,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         description: "Advanced email marketing platform that uses AI to optimize send times, personalize content, and predict customer behavior for maximum engagement and conversion rates.",
         category: "
         subcategory: "
-        price: 79;
+        price: 79,
         currency: "
         pricingModel: "
         features: [
@@ -167,8 +163,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine Learning", "Python", "React", "PostgreSQL", "Redis", "Email APIs"],
         integrations: ["Shopify", "WooCommerce", "Salesforce", "HubSpot", "Zapier", "Webhooks"],
         compliance: ["GDPR", "CAN-SPAM", "Email compliance"],
@@ -176,8 +171,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Mailchimp", "ConvertKit", "ActiveCampaign", "Drip", "Klaviyo"],
         marketSize: "
         growthRate: "
-        fundingTrends: "AI-powered marketing tools gaining traction",
-    }
+        fundingTrends: "AI-powered marketing tools gaining traction"}
     /
     {
         id: "
@@ -185,7 +179,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         description: "Intelligent social media management platform that automates content creation, scheduling, and engagement while providing AI-driven insights for optimal performance.",
         category: "
         subcategory: "
-        price: 149;
+        price: 149,
         currency: "
         pricingModel: "
         features: [
@@ -227,8 +221,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["GPT-4", "Machine Learning", "React", "Node.js", "PostgreSQL", "Social APIs"],
         integrations: ["Instagram", "Facebook", "Twitter", "LinkedIn", "TikTok", "YouTube"],
         compliance: ["GDPR", "Social media policies", "Content guidelines"],
@@ -236,8 +229,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Hootsuite", "Buffer", "Sprout Social", "Later", "Planoly"],
         marketSize: "
         growthRate: "
-        fundingTrends: "High demand for AI-powered social tools",
-    }
+        fundingTrends: "High demand for AI-powered social tools"}
     /
     {
         id: "
@@ -245,7 +237,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         description: "Advanced SEO platform that uses AI to analyze content, optimize keywords, track rankings, and provide actionable insights to improve search engine visibility.",
         category: "
         subcategory: "
-        price: 89;
+        price: 89,
         currency: "
         pricingModel: "
         features: [
@@ -287,8 +279,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "SEO APIs"],
         integrations: ["Google Analytics", "Google Search Console", "WordPress", "Shopify", "WooCommerce"],
         compliance: ["GDPR", "SEO best practices", "Search guidelines"],
@@ -296,8 +287,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Ahrefs", "SEMrush", "Moz", "Ubersuggest", "Clearscope"],
         marketSize: "
         growthRate: "
-        fundingTrends: "AI SEO tools in high demand",
-    }
+        fundingTrends: "AI SEO tools in high demand"}
     /
     {
         id: "
@@ -305,7 +295,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         description: "Intelligent chatbot platform that provides 24/7 customer support, answers questions, resolves issues, and escalates complex problems to human agents seamlessly.",
         category: "
         subcategory: "
-        price: 129;
+        price: 129,
         currency: "
         pricingModel: "
         features: [
@@ -347,8 +337,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["GPT-4", "NLP", "React", "Node.js", "PostgreSQL", "WebSocket"],
         integrations: ["Zendesk", "Intercom", "Freshdesk", "Shopify", "WooCommerce", "Slack"],
         compliance: ["GDPR", "Data privacy", "Support standards"],
@@ -356,8 +345,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Intercom", "Zendesk", "Freshdesk", "Drift", "Tawk.to"],
         marketSize: "
         growthRate: "
-        fundingTrends: "AI chatbots gaining significant investment",
-    }
+        fundingTrends: "AI chatbots gaining significant investment"}
     /
     {
         id: "
@@ -365,7 +353,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         description: "Intelligent project management platform that uses AI to predict project timelines, identify risks, optimize resource allocation, and automate routine project tasks.",
         category: "
         subcategory: "
-        price: 179;
+        price: 179,
         currency: "
         pricingModel: "
         features: [
@@ -407,8 +395,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Analytics"],
         integrations: ["Slack", "Microsoft Teams", "Google Workspace", "GitHub", "Jira", "Trello"],
         compliance: ["GDPR", "Project standards", "Data security"],
@@ -416,8 +403,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Asana", "Monday.com", "ClickUp", "Notion", "Basecamp"],
         marketSize: "
         growthRate: "
-        fundingTrends: "AI project management tools attracting investors",
-    }
+        fundingTrends: "AI project management tools attracting investors"}
     /
     {
         id: "
@@ -425,7 +411,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         description: "Intelligent financial planning platform that uses AI to analyze spending patterns, create budgets, provide investment advice, and help users achieve their financial goals.",
         category: "
         subcategory: "
-        price: 69;
+        price: 69,
         currency: "
         pricingModel: "
         features: [
@@ -467,8 +453,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Financial APIs"],
         integrations: ["Bank accounts", "Credit cards", "Investment platforms", "Tax software", "Budgeting apps"],
         compliance: ["FINRA", "SEC", "Financial regulations", "Data security"],
@@ -476,6 +461,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         competitors: ["Mint", "YNAB", "Personal Capital", "Acorns", "Robinhood"],
         marketSize: "
         growthRate: "
-        fundingTrends: "Fintech AI tools receiving significant funding",
-    }
+        fundingTrends: "Fintech AI tools receiving significant funding"}
 ];

@@ -1,232 +1,152 @@
-#!/usr/bin/env node,
-/**,
- * Health Check Script for Zion App,
- * Performs comprehensive health checks on the application,
- */,
-import { readFileSync, existsSync, statSync } from 'fs',
-import { execSync } from 'child_process',
-import path from 'path',
-const colors = {,
+#!/usr/bin/env node
+/**
+ * Health Check Script for Zion App
+ * Performs comprehensive health checks on the application
+ */
+import { readFileSync, existsSync, statSync } from 'fs'
+import { execSync } from 'child_process'
+import path from 'path'
+
+const colors = {
   green: '\x1b[32m',
   red: '\x1b[31m',
   yellow: '\x1b[33m',
   blue: '\x1b[34m',
   cyan: '\x1b[36m',
   reset: '\x1b[0m',
-  bold: '\x1b[1m'},
-class HealthChecker {,
-  constructor() {,
-    this.checks = [],
-    this.results = {,
+  bold: '\x1b[1m'
+}
+
+class HealthChecker {
+  constructor() {
+    this.checks = []
+    this.results = {
       passed: 0,
       failed: 0,
-      warnings: 0},
+      warnings: 0
+    }
   }
-,
-  log(message, color = 'reset') {,
-    console.log(`${colors[color]}${message}${colors.reset}`),
+
+  addCheck(name, checkFn) {
+    this.checks.push({ name, checkFn })
   }
-,
-  addCheck(name, checkFn) {,
-    this.checks.push({ name, checkFn }),
-  }
-,
-  async runChecks() {,
-    this.log('🏥 Starting health checks...cyan'),
-    for (const check of this.checks) {,
-      try {,
-        const result = await check.checkFn(),
-        if (result.status === 'pass') {,
-          this.log(`✅ ${check.name}`, 'green'),
-          this.results.passed++,
-        } else if (result.status === 'warning') {,
-          this.log(`⚠️  ${check.name}: ${result.message}`, 'yellow'),
-          this.results.warnings++,
-        } else {,
-          this.log(`❌ ${check.name}: ${result.message}`, 'red'),
-          this.results.failed++,
+
+  async runChecks() {
+    console.log(`${colors.bold}${colors.blue}🏥 Running Health Checks for Zion App${colors.reset}\n`)
+
+    for (const check of this.checks) {
+      try {
+        const result = await check.checkFn()
+        if (result.status === 'pass') {
+          console.log(`${colors.green}✅ ${check.name}${colors.reset}`)
+          this.results.passed++
+        } else if (result.status === 'warn') {
+          console.log(`${colors.yellow}⚠️  ${check.name}: ${result.message}${colors.reset}`)
+          this.results.warnings++
+        } else {
+          console.log(`${colors.red}❌ ${check.name}: ${result.message}${colors.reset}`)
+          this.results.failed++
         }
-      } catch (error) {,
-        this.log(`❌ ${check.name}: ${error.message}`, 'red'),
-        this.results.failed++,
+      } catch (error) {
+        console.log(`${colors.red}❌ ${check.name}: Error - ${error.message}${colors.reset}`)
+        this.results.failed++
       }
     }
-,
-    this.generateReport(),
+
+    this.printSummary()
   }
-,
-  generateReport() {,
-    const total = this.results.passed + this.results.failed + this.results.warnings,
-    this.log('\n📊 Health Check Summary: bold'),
-    this.log(`   Total Checks: ${total}`, 'blue'),
-    this.log(`   ✅ Passed: ${this.results.passed}`, 'green'),
-    this.log(`   ⚠️  Warnings: ${this.results.warnings}`, 'yellow'),
-    this.log(`   ❌ Failed: ${this.results.failed}`, 'red'),
-    const healthScore = Math.round((this.results.passed / total) * 100),
-    if (healthScore >= 90) {,
-      this.log(`\n🎉 Health Score: ${healthScore}% - Excellent!`, 'green'),
-    } else if (healthScore >= 70) {,
-      this.log(`\n👍 Health Score: ${healthScore}% - Good!`, 'blue'),
-    } else if (healthScore >= 50) {,
-      this.log(`\n⚠️  Health Score: ${healthScore}% - Needs attention`, 'yellow'),
-    } else {,
-      this.log(`\n🚨 Health Score: ${healthScore}% - Critical issues found`, 'red'),
+
+  printSummary() {
+    console.log(`\n${colors.bold}📊 Health Check Summary:${colors.reset}`)
+    console.log(`${colors.green}✅ Passed: ${this.results.passed}${colors.reset}`)
+    console.log(`${colors.yellow}⚠️  Warnings: ${this.results.warnings}${colors.reset}`)
+    console.log(`${colors.red}❌ Failed: ${this.results.failed}${colors.reset}`)
+    
+    if (this.results.failed === 0) {
+      console.log(`\n${colors.green}${colors.bold}🎉 All health checks passed!${colors.reset}`)
+    } else {
+      console.log(`\n${colors.red}${colors.bold}⚠️  Some health checks failed. Please review the issues above.${colors.reset}`)
     }
-  }
-,
-  // Health check functions,
-  checkPackageJson() {,
-    if (!existsSync('package.json')) {,
-      return { status: 'fail', message: 'package.json not found' },
-    }
-,
-    try {,
-      const pkg = JSON.parse(readFileSync('package.jsonutf8')),
-      if (!pkg.name || !pkg.version) {,
-        return { status: 'warning', message: 'Missing name or version in package.json' },
-      }
-,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Invalid package.json format' },
-    }
-  }
-,
-  checkBuildFiles() {,
-    const requiredFiles = ['dist/index.htmldist/assets'],
-    const missingFiles = [],
-    for (const file of requiredFiles) {,
-      if (!existsSync(file)) {,
-        missingFiles.push(file),
-      }
-    }
-,
-    if (missingFiles.length > 0) {,
-      return { status: 'fail', message: `Missing build files: ${missingFiles.join()}` },
-    }
-,
-    return { status: 'pass' },
-  }
-,
-  checkDependencies() {,
-    try {,
-      const pkg = JSON.parse(readFileSync('package.jsonutf8')),
-      const deps = Object.keys(pkg.dependencies || {}),
-      const devDeps = Object.keys(pkg.devDependencies || {}),
-      if (deps.length === 0) {,
-        return { status: 'warning', message: 'No production dependencies found' },
-      }
-,
-      if (devDeps.length === 0) {,
-        return { status: 'warning', message: 'No development dependencies found' },
-      }
-,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Could not check dependencies' },
-    }
-  }
-,
-  checkNodeModules() {,
-    if (!existsSync('node_modules')) {,
-      return { status: 'fail', message: 'node_modules directory not found. Run npm install' },
-    }
-,
-    try {,
-      const stats = statSync('node_modules'),
-      if (!stats.isDirectory()) {,
-        return { status: 'fail', message: 'node_modules is not a directory' },
-      }
-,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Could not access node_modules' },
-    }
-  }
-,
-  checkViteConfig() {,
-    if (!existsSync('vite.config.ts') && !existsSync('vite.config.js')) {,
-      return { status: 'warning', message: 'No Vite configuration file found' },
-    }
-,
-    return { status: 'pass' },
-  }
-,
-  checkTypeScriptConfig() {,
-    if (!existsSync('tsconfig.json')) {,
-      return { status: 'warning', message: 'No TypeScript configuration found' },
-    }
-,
-    try {,
-      const config = JSON.parse(readFileSync('tsconfig.jsonutf8')),
-      if (!config.compilerOptions) {,
-        return { status: 'warning', message: 'TypeScript config missing compilerOptions' },
-      }
-,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Invalid TypeScript configuration' },
-    }
-  }
-,
-  checkNetlifyConfig() {,
-    if (!existsSync('netlify.toml') && !existsSync('_redirects')) {,
-      return { status: 'warning', message: 'No Netlify configuration found' },
-    }
-,
-    return { status: 'pass' },
-  }
-,
-  checkEnvironmentFiles() {,
-    const envFiles = ['.env.env.local.env.production'],
-    const foundEnvFiles = envFiles.filter(file => existsSync(file)),
-    if (foundEnvFiles.length === 0) {,
-      return { status: 'warning', message: 'No environment files found' },
-    }
-,
-    return { status: 'pass' },
-  }
-,
-  checkGitConfig() {,
-    if (!existsSync('.git')) {,
-      return { status: 'warning', message: 'Not a Git repository' },
-    }
-,
-    return { status: 'pass' },
-  }
-,
-  checkBuildScripts() {,
-    try {,
-      const pkg = JSON.parse(readFileSync('package.jsonutf8')),
-      const scripts = pkg.scripts || {},
-      const requiredScripts = ['builddev'],
-      const missingScripts = requiredScripts.filter(script => !scripts[script]),
-      if (missingScripts.length > 0) {,
-        return { status: 'warning', message: `Missing scripts: ${missingScripts.join()}` },
-      }
-,
-      return { status: 'pass' },
-    } catch (error) {,
-      return { status: 'fail', message: 'Could not check build scripts' },
-    }
-  }
-,
-  async run() {,
-    // Add all health checks,
-    this.addCheck('Package.json exists and valid', () => this.checkPackageJson()),
-    this.addCheck('Build files present', () => this.checkBuildFiles()),
-    this.addCheck('Dependencies configured', () => this.checkDependencies()),
-    this.addCheck('Node modules installed', () => this.checkNodeModules()),
-    this.addCheck('Vite configuration', () => this.checkViteConfig()),
-    this.addCheck('TypeScript configuration', () => this.checkTypeScriptConfig()),
-    this.addCheck('Netlify configuration', () => this.checkNetlifyConfig()),
-    this.addCheck('Environment files', () => this.checkEnvironmentFiles()),
-    this.addCheck('Git repository', () => this.checkGitConfig()),
-    this.addCheck('Build scripts', () => this.checkBuildScripts()),
-    await this.runChecks(),
   }
 }
-,
-// Run the health checker,
-const checker = new HealthChecker(),
-checker.run().catch(console.error),]]]]]]]
+
+// Create health checker instance
+const checker = new HealthChecker()
+
+// Add health checks
+checker.addCheck('Build Directory Exists', () => {
+  const buildDir = 'out'
+  if (existsSync(buildDir)) {
+    return { status: 'pass' }
+  } else {
+    return { status: 'warn', message: 'Build directory not found. Run npm run build first.' }
+  }
+})
+
+checker.addCheck('Package.json Exists', () => {
+  if (existsSync('package.json')) {
+    return { status: 'pass' }
+  } else {
+    return { status: 'fail', message: 'package.json not found' }
+  }
+})
+
+checker.addCheck('Next.js Config Exists', () => {
+  if (existsSync('next.config.mjs') || existsSync('next.config.js')) {
+    return { status: 'pass' }
+  } else {
+    return { status: 'fail', message: 'Next.js config not found' }
+  }
+})
+
+checker.addCheck('Security Headers', () => {
+  if (existsSync('public/_headers')) {
+    return { status: 'pass' }
+  } else {
+    return { status: 'warn', message: 'Security headers file not found' }
+  }
+})
+
+checker.addCheck('Robots.txt', () => {
+  if (existsSync('public/robots.txt')) {
+    return { status: 'pass' }
+  } else {
+    return { status: 'warn', message: 'robots.txt not found' }
+  }
+})
+
+checker.addCheck('Gitignore Clean', () => {
+  if (existsSync('.gitignore')) {
+    const content = readFileSync('.gitignore', 'utf8')
+    if (content.includes('node_modules') && content.includes('.next')) {
+      return { status: 'pass' }
+    } else {
+      return { status: 'warn', message: '.gitignore may be missing important patterns' }
+    }
+  } else {
+    return { status: 'fail', message: '.gitignore not found' }
+  }
+})
+
+checker.addCheck('No Large Files in Root', () => {
+  const largeFiles = []
+  const files = ['core', '*.log', '*.tmp']
+  
+  for (const pattern of files) {
+    if (existsSync(pattern)) {
+      const stats = statSync(pattern)
+      if (stats.size > 10 * 1024 * 1024) { // 10MB
+        largeFiles.push(pattern)
+      }
+    }
+  }
+  
+  if (largeFiles.length === 0) {
+    return { status: 'pass' }
+  } else {
+    return { status: 'warn', message: `Large files found: ${largeFiles.join(', ')}` }
+  }
+})
+
+// Run all health checks
+checker.runChecks().catch(console.error)

@@ -47,9 +47,7 @@ describe("ZionDAO", function () {
     // fast forward voting period: our settings approximate by blocks ~ 5d/12s
     const votingPeriod = await dao.votingPeriod(),
     for (let i = 0, i < votingPeriod, i++) {
-      await ethers.provider.send("evm_mine", []),
-    }
+      await ethers.provider.send("evm_mine", [])}
 
     expect(await dao.state(proposalId)).to.equal(4), // Succeeded
-  }),
-}),
+  })}),

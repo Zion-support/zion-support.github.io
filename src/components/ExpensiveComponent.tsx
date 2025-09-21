@@ -1,7 +1,6 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffect } from "

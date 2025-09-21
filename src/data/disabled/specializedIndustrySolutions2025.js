@@ -6,7 +6,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         description: "Advanced AI-powered diagnostic platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
         category: "
         subcategory: "
-        price: 3999;
+        price: 3999,
         currency: "
         pricingModel: "
         features: [
@@ -51,12 +51,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Deep Learning", "Computer Vision", "Python", "React", "PostgreSQL", "DICOM"],
             integrations: ["Epic", "Cerner", "PACS systems", "Lab systems", "Patient portals"],
-            apiEndpoints: 100;
+            apiEndpoints: 100,
             uptime: "
             security: ["HIPAA compliance", "Data encryption", "Access controls"],
             compliance: ["HIPAA", "HITECH", "FDA 21 CFR Part 11", "SOC 2"]
@@ -72,7 +71,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         description: "
         category: "
         subcategory: "
-        price: 4999;
+        price: 4999,
         currency: "
         pricingModel: "
         features: [
@@ -117,19 +116,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "Redis"],
             integrations: ["Core banking systems", "Payment gateways", "CRM platforms", "Analytics tools"],
-            apiEndpoints: 150;
+            apiEndpoints: 150,
             uptime: "
             security: ["PCI DSS compliance", "Encryption", "Multi-factor authentication"],
             compliance: ["PCI DSS", "SOC 2", "ISO 27001", "Financial regulations"]
         },
         competitors: ["FICO", "LexisNexis", "Experian", "TransUnion"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection"}
     /
     {
         id: "
@@ -137,7 +134,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         description: "Comprehensive Industry 4.0 platform that integrates IoT, AI, and automation to optimize manufacturing processes, predict maintenance, and improve quality control.",
         category: "
         subcategory: "
-        price: 3499;
+        price: 3499,
         currency: "
         pricingModel: "
         features: [
@@ -182,19 +179,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["IoT platforms", "Machine Learning", "Python", "React", "PostgreSQL", "MQTT"],
             integrations: ["SCADA systems", "ERP platforms", "MES systems", "PLC controllers"],
-            apiEndpoints: 200;
+            apiEndpoints: 200,
             uptime: "
             security: ["Industrial security", "Network segmentation", "Access controls"],
             compliance: ["ISO 27001", "NIST", "Industry standards"]
         },
         competitors: ["Siemens", "GE Digital", "Rockwell Automation", "ABB"],
-        demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing"}
     /
     {
         id: "
@@ -202,7 +197,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         description: "Intelligent retail platform that uses AI to optimize inventory, personalize customer experiences, and predict demand for maximum profitability.",
         category: "
         subcategory: "
-        price: 2299;
+        price: 2299,
         currency: "
         pricingModel: "
         features: [
@@ -247,19 +242,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations: ["POS systems", "E-commerce platforms", "CRM systems", "Analytics tools"],
-            apiEndpoints: 100;
+            apiEndpoints: 100,
             uptime: "
             security: ["Data encryption", "Access controls", "PCI compliance"],
             compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"]
         },
         competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization"}
     /
     {
         id: "
@@ -267,7 +260,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         description: "AI-powered logistics platform that optimizes routes, predicts demand, and automates supply chain operations for maximum efficiency and cost savings.",
         category: "
         subcategory: "
-        price: 2799;
+        price: 2799,
         currency: "
         pricingModel: "
         features: [
@@ -312,19 +305,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations: ["GPS systems", "Fleet management", "WMS systems", "Analytics platforms"],
-            apiEndpoints: 125;
+            apiEndpoints: 125,
             uptime: "
             security: ["Data encryption", "Access controls", "Real-time monitoring"],
             compliance: ["Industry standards", "Data privacy", "Security protocols"]
         },
         competitors: ["Manhattan Associates", "Oracle Transportation", "SAP Transportation", "JDA Software"],
-        demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics"}
     /
     {
         id: "
@@ -332,7 +323,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         description: "Intelligent energy management platform that optimizes power generation, distribution, and consumption using AI and IoT for maximum efficiency and sustainability.",
         category: "
         subcategory: "
-        price: 3999;
+        price: 3999,
         currency: "
         pricingModel: "
         features: [
@@ -377,19 +368,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
             integrations: ["SCADA systems", "Smart meters", "Building management", "Analytics platforms"],
-            apiEndpoints: 150;
+            apiEndpoints: 150,
             uptime: "
             security: ["Grid security", "Data encryption", "Access controls"],
             compliance: ["NERC CIP", "ISO 27001", "Industry standards"]
         },
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-        demoUrl: "https://ziontechgroup.com/demo/smart-energy-management",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/smart-energy-management"}
     /
     {
         id: "
@@ -397,7 +386,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         description: "Intelligent education platform that personalizes learning experiences, tracks student progress, and provides adaptive content for maximum educational outcomes.",
         category: "
         subcategory: "
-        price: 1899;
+        price: 1899,
         currency: "
         pricingModel: "
         features: [
@@ -442,19 +431,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations: ["LMS platforms", "Student information systems", "Content management", "Analytics tools"],
-            apiEndpoints: 75;
+            apiEndpoints: 75,
             uptime: "
             security: ["Data encryption", "Access controls", "Student privacy"],
             compliance: ["FERPA", "COPPA", "GDPR", "Data privacy"]
         },
         competitors: ["Blackboard", "Canvas", "Moodle", "Google Classroom"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-education-platform",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/ai-education-platform"}
     /
     {
         id: "
@@ -462,7 +449,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         description: "Intelligent property management platform that automates operations, optimizes maintenance, and enhances tenant experiences using AI and IoT technology.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -507,19 +494,17 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["IoT sensors", "Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
             integrations: ["Building management systems", "IoT platforms", "Payment systems", "Analytics tools"],
-            apiEndpoints: 100;
+            apiEndpoints: 100,
             uptime: "
             security: ["Data encryption", "Access controls", "Tenant privacy"],
             compliance: ["Data privacy", "Industry standards", "Security protocols"]
         },
         competitors: ["Yardi", "RealPage", "AppFolio", "Buildium"],
-        demoUrl: "https://ziontechgroup.com/demo/smart-property-management",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/smart-property-management"}
     /
     {
         id: "
@@ -527,7 +512,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         description: "Intelligent legal compliance platform that automates regulatory monitoring, risk assessment, and compliance reporting using AI and machine learning.",
         category: "
         subcategory: "
-        price: 3299;
+        price: 3299,
         currency: "
         pricingModel: "
         features: [
@@ -572,17 +557,15 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technicalSpecs: {
             technology: ["Machine Learning", "NLP", "Python", "React", "Node.js", "PostgreSQL"],
             integrations: ["Legal databases", "Document management", "CRM systems", "Analytics tools"],
-            apiEndpoints: 75;
+            apiEndpoints: 75,
             uptime: "
             security: ["Data encryption", "Access controls", "Audit logging"],
             compliance: ["SOC 2", "ISO 27001", "Legal industry standards"]
         },
         competitors: ["Thomson Reuters", "LexisNexis", "Westlaw", "Bloomberg Law"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance",
-    }
+        demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance"}
 ];

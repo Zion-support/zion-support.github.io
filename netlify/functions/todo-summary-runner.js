@@ -16,10 +16,8 @@ exports.handler = async function(event, context) {
     // Simulate todo processing
     for (let i = 0, i < summaryResults.totalTodos, i++) {
       if (Math.random() > 0.4) { // 60% completion rate
-        summaryResults.completedTodos++,
-      } else {
-        summaryResults.pendingTodos++,
-      }
+        summaryResults.completedTodos++} else {
+        summaryResults.pendingTodos++}
     }
     
     // Calculate metrics
@@ -53,8 +51,7 @@ exports.handler = async function(event, context) {
         status: i < summaryResults.completedTodos ? 'completed' : 'pending',
         assignee: `Developer ${Math.floor(Math.random() * 10) + 1}`,
         estimatedHours: Math.floor(Math.random() * 16) + 1 // 1-16 hours
-      }),
-    }
+      })}
     
     // Simulate progress metrics
     const progressMetrics = {
@@ -91,9 +88,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ todo-summary-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ todo-summary-runner failed:', error),
     return {
       statusCode: 500,
@@ -103,6 +98,5 @@ exports.handler = async function(event, context) {
         function: 'todo-summary-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

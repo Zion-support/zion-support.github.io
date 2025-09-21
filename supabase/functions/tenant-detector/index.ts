@@ -1,6 +1,5 @@
 import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7',
-
 interface TenantInfo {
   id: string,
   brand_name: string,
@@ -17,42 +16,37 @@ const corsHeaders = {
 },
 
 // Initialize Supabase client
-const supabaseUrl = Deno.env.get('SUPABASE_URL'),
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'),
-
+const supabaseUrl = Deno.env.get('SUPABASE_URL');
+const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 if (!supabaseUrl || !supabaseServiceKey) {
-  throw new Error('Required environment variables are not set'),
+  throw new Error('Required environment variables are not set');
 }
 
-const supabase = createClient(supabaseUrl, supabaseServiceKey),
-
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Enhanced CORS preflight handling
   if (req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204,
       headers: corsHeaders
-    }),
-  }
+    })}
 
   try {
-    const url = new URL(req.url),
-    const hostnameParam = url.searchParams.get('host'),
-    const subdomainParam = url.searchParams.get('subdomain'),
-    
+    const url = new URL(req.url);
+    const hostnameParam = url.searchParams.get('host');
+    const subdomainParam = url.searchParams.get('subdomain');
     // Get hostname from parameters or headers
-    const forwardedHost = req.headers.get('x-forwarded-host'),
+    const forwardedHost = req.headers.get('x-forwarded-host');
     const hostname = hostnameParam || 
       (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) ||
       url.hostname,
 
     if (!hostname && !subdomainParam) {
-      throw new Error('No hostname or subdomain provided'),
+      throw new Error('No hostname or subdomain provided');
     }
 
     // Extract tenant info
     let tenantInfo: TenantInfo | null = null,
-
     if (subdomainParam) {
       // Direct subdomain lookup with error handling
       const { data, error } = await supabase
@@ -63,11 +57,10 @@ serve(async (req) => {
         .single(),
 
       if (error) {
-        console.error('Database error:', error),
-        throw new Error(`Database error: ${error.message}`),
-      }
+        console.error('Database error:', error);
+        throw new Error(`Database error: ${error.message}`)}
 
-      tenantInfo = data as TenantInfo,
+      tenantInfo = data as TenantInfo;
     } else {
       // Try matching custom domain first
       const { data, error } = await supabase
@@ -89,12 +82,10 @@ serve(async (req) => {
             .single(),
 
           if (!subdomainResult.error) {
-            tenantInfo = subdomainResult.data as TenantInfo,
-          }
+            tenantInfo = subdomainResult.data as TenantInfo}
         }
       } else if (data) {
-        tenantInfo = data as TenantInfo,
-      }
+        tenantInfo = data as TenantInfo}
     }
 
     // Return response with enhanced headers
@@ -108,11 +99,9 @@ serve(async (req) => {
           'Content-Type': 'application/json',
           ...corsHeaders
         }
-      },
-    ),
-  } catch (error) {
-    console.error('Tenant detector error:', error),
-    
+      };
+    )} catch (error) {
+    console.error('Tenant detector error:', error);
     // Enhanced error response
     return new Response(
       JSON.stringify({ 
@@ -127,7 +116,6 @@ serve(async (req) => {
           'Content-Type': 'application/json',
           ...corsHeaders
         }
-      },
-    ),
-  }
+      };
+    )}
 }),

@@ -19,8 +19,7 @@ export default function ITSupportPage() {
       description: 'Direct access to our support team',
       icon: <Phone className="h-6 w-6" />
     }
-  ];
-
+  ],
   const testimonials = [
     {
       name: 'John Smith',
@@ -28,8 +27,7 @@ export default function ITSupportPage() {
       text: 'Excellent support and quick response times.',
       avatar: '/images/avatars/john.jpg'
     }
-  ];
-
+  ],
   return (
     <ServiceLandingTemplate
       title="IT Support Services"

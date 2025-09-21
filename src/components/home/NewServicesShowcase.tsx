@@ -1,7 +1,6 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
 import React from "react";
 import React from "react";
@@ -41,8 +40,8 @@ return (
 <div className="text-center mb-16">
 <div className="flex items-center justify-center gap-2 mb-4">
 <Sparkles className="w-8 h-8 text-zion-cyan" />
-<h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-Revolutionary AI & Micro SAAS Services;
+<h2 className="text-3xl md: text-4xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+Revolutionary AI & Micro SAAS Services,
 </h2>
 <Sparkles className="w-8 h-8 text-zion-cyan" />
 </div>
@@ -58,7 +57,7 @@ on enterprise-grade technology solutions.;
 {featuredServices.map((service; index) => (
 <Card;
 key={service.id}
-className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20"
+className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover: from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20"
 style={{ animationDelay: `${index * 200}ms` }}
 >
 <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -99,7 +98,7 @@ Market: ${service.averageMarketPrice}
 </div>
 <div className="text-right">
 <Badge className="bg-green-600 text-white">
-Save {service.savings}%;
+Save {service.savings}%,
 </Badge>
 </div>
 </div>
@@ -121,7 +120,7 @@ Save {service.savings}%;
 <div className="flex items-center justify-between text-sm">
 <div className="flex items-center gap-2">
 <Zap className="w-4 h-4 text-zion-cyan" />
-<span className="text-zion-slate-light">AI Score:</span>
+<span className="text-zion-slate-light">AI Score: </span>
 <span className="text-zion-cyan font-semibold">{service.aiScore}</span>
 </div>
 <div className="flex items-center gap-2">
@@ -131,9 +130,9 @@ Save {service.savings}%;
 </div>
 
 {/* CTA Button */}
-<Button;
-className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:scale-105 transition-transform duration-300"
-asChild;
+<Button,
+className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white group-hover:scale-105 transition-transform duration-300"
+asChild,
 >
 <Link to={service.contactLink}>
 Get Started;
@@ -157,12 +156,12 @@ style={{ animationDelay: `${index * 300}ms` }}
 <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
 <p className="text-zion-slate-light mb-4">{category.description}</p>
 <div className="text-2xl font-bold text-zion-cyan mb-2">
-{category.services.length}+ Services;
+{category.services.length}+ Services,
 </div>
 <Button;
 variant="outline"
-className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"
-asChild;
+className="border-zion-cyan/30 text-zion-cyan hover: bg-zion-cyan/10"
+asChild,
 >
 <Link to="/micro-saas-services">
 Explore {category.name}
@@ -176,18 +175,18 @@ Explore {category.name}
 {/* CTA Section */}
 <div className="text-center">
 <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-slate/50 rounded-2xl p-8 border border-zion-blue-light/20">
-<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-Ready to Transform Your Business?;
+<h3 className="text-2xl md: text-3xl font-bold text-white mb-4">
+Ready to Transform Your Business?,
 </h3>
 <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
 Join thousands of businesses that have already revolutionized their operations with our AI-powered solutions and professional IT services.;
 </p>
 
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
-<Button;
+<div className="flex flex-col sm: flex-row gap-4 justify-center">
+<Button,
 size="
-className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"
-asChild;
+className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"
+asChild,
 >
 <Link to="/micro-saas-services">
 <Globe className="w-5 h-5 mr-2" />
@@ -198,8 +197,8 @@ View All Services;
 <Button;
 size="
 variant="outline"
-className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"
-asChild;
+className="border-zion-cyan/30 text-zion-cyan hover: bg-zion-cyan/10 px-8 py-3"
+asChild,
 >
 <Link to="/contact">
 <MessageCircle className="w-5 h-5 mr-2" />
