@@ -6,31 +6,31 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
 // Categories data
 const categories = [
   {
-    id: 'it-services',
-    name: 'IT Services',
-    description: 'Comprehensive IT solutions for your business',
-    icon: '💻',
+    id: 'it-services';
+    name: 'IT Services';
+    description: 'Comprehensive IT solutions for your business';
+    icon: '💻';
     count: 12
-  },
+  };
   {
-    id: 'data-storage',
-    name: 'Data Storage',
-    description: 'Secure and scalable data storage solutions',
-    icon: '💾',
+    id: 'data-storage';
+    name: 'Data Storage';
+    description: 'Secure and scalable data storage solutions';
+    icon: '💾';
     count: 8
-  },
+  };
   {
-    id: 'ai-solutions',
-    name: 'AI Solutions',
-    description: 'Artificial intelligence and machine learning services',
-    icon: '🤖',
+    id: 'ai-solutions';
+    name: 'AI Solutions';
+    description: 'Artificial intelligence and machine learning services';
+    icon: '🤖';
     count: 15
-  },
+  };
   {
-    id: 'team-management',
-    name: 'Team Management',
-    description: 'Tools and services for team collaboration',
-    icon: '👥',
+    id: 'team-management';
+    name: 'Team Management';
+    description: 'Tools and services for team collaboration';
+    icon: '👥';
     count: 6
   }
 ];

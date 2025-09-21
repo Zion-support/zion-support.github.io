@@ -1,17 +1,17 @@
 
-import React, { useState } from "react",
-import { Button,,  } from "@/components/ui/button",
+import React, { useState } from "react";
+import { Button,,  } from "@/components/ui/button";
 import React from "react";
 import { Moon,,, Sun,,, Check,,  } from 'lucide-react'
 import React from "react";
 interface Language {
-  code: string;,
+  code: string;;
 name: string;
   flag: string;
 const languages: Language[] = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'en', name: 'English', flag: '🇺🇸' };
 { code: 'es', name: 'Español', flag: '🇪🇸' }
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' };
 { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
   { code: 'zh', name: '中文', flag: '🇨🇳' }
 ]

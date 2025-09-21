@@ -27,7 +27,7 @@ return (
             Help Center
           </h1>
           <p className='text-zion-slate-light mb-6'>
-            Find answers to common questions or get in touch with our support,
+            Find answers to common questions or get in touch with our support;
 team.
           </p>
           <div className='relative mb-8'>
@@ -89,7 +89,7 @@ variant='ghost'
                       How does the AI matching work?
                     </h3>
                     <p className='text-zion-slate-light'>
-                      Our AI matching algorithm analyzes your requirements and,
+                      Our AI matching algorithm analyzes your requirements and;
 preferences to match you with the most compatible talent,
 or services. The process takes into account skills,
 experience availability and past performance to ensure,
@@ -139,7 +139,7 @@ our team through the Contact tab.
                     Contact Support
                   </h2>
                   <p className='text-zion-slate-light mb-4'>
-                    Our support team is available 24/7 to assist you with any,
+                    Our support team is available 24/7 to assist you with any;
 questions or issues.
                   </p>
                   <div className='space-y-4'>
@@ -187,7 +187,7 @@ xmlns='http://www.w3.org/2000/svg'
                     Feedback & Suggestions
                   </h2>
                   <p className='text-zion-slate-light mb-4'>
-                    We value your input and are constantly looking to improve,
+                    We value your input and are constantly looking to improve;
 our platform.
                   </p>
                   <form className='space-y-4'>

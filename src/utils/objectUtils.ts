@@ -244,7 +244,7 @@ export class ObjectUtils {
   }
 
   public static mapValues<T extends Record<string, any>, U>(
-    obj: T,
+    obj: T;
     fn: (value: T[keyof T], key: keyof T) => U
   ): Record<keyof T, U> {
     const result = {} as Record<keyof T, U>;
@@ -259,7 +259,7 @@ export class ObjectUtils {
   }
 
   public static filterValues<T extends Record<string, any>>(
-    obj: T,
+    obj: T;
     predicate: (value: T[keyof T], key: keyof T) => boolean
   ): Partial<T> {
     const result = {} as Partial<T>;

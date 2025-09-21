@@ -21,8 +21,8 @@ interface MilestoneSuggestionsProps {
 }
 
 export function MilestoneSuggestions({
-  projectName,
-  scopeSummary,
+  projectName;
+  scopeSummary;
   startDate,
   endDate,
   projectType,
@@ -43,21 +43,21 @@ export function MilestoneSuggestions({
     setTimeout(() => {
       const mockMilestones: Milestone[] = [
         {
-          title: "Project Setup & Planning",
+          title: "Project Setup & Planning";
           description: "Initial project setup, environment configuration, and detailed planning phase",
-          dueDate: startDate,
+          dueDate: startDate;
           estimatedHours: 8
-        },
+        };
         {
-          title: "Core Development",
-          description: "Main development work based on project scope and requirements",
-          dueDate: endDate,
+          title: "Core Development";
+          description: "Main development work based on project scope and requirements";
+          dueDate: endDate;
           estimatedHours: 24
-        },
+        };
         {
-          title: "Testing & Quality Assurance",
+          title: "Testing & Quality Assurance";
           description: "Comprehensive testing, bug fixes, and quality assurance processes",
-          dueDate: endDate,
+          dueDate: endDate;
           estimatedHours: 8
         }
       ];

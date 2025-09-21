@@ -23,25 +23,25 @@ import React from "react";
 
 interface ContactPublisherModalProps {
 isOpen: boolean;
-onClose: () => void;,
+onClose: () => void;;
 publisherName: string;
 publisherEmail?: string;
 productId?: string;
 }
 type FormValues = {;
-subject: string;,
-message: string;,
+subject: string;;
+message: string;;
 }
 
 const schema = z.object({;
 subject: z;
 .string()
 .min(5, "Subject must be at least 5 characters")
-.nonempty("Subject is required"),
+.nonempty("Subject is required");
 message: z;
 .string()
 .min(20, "Message must be at least 20 characters")
-.nonempty("Message is required"),
+.nonempty("Message is required");
 })
 
 export export function ContactPublisherModal({;
@@ -54,7 +54,7 @@ const [isSubmitting; setIsSubmitting] = React.useState(false)
 
 const form = useForm<FormValues>({;
 resolver: zodResolver(schema)
-mode: ",
+mode: ";
 defaultValues: { subject: "", message: "" }
 })
 
@@ -64,8 +64,8 @@ setIsSubmitting(true)
 try {
 await api.post("/messages", {
 productId;
-subject: values.subject;,
-body: values.message;,
+subject: values.subject;;
+body: values.message;;
 })
 toast.success("Message sent!")
 form.reset()

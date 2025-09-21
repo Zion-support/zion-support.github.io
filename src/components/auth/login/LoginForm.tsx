@@ -17,9 +17,9 @@ import { useToast } from "@/hooks/use-toast";
 import Link from "next/link";
 
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-  rememberMe: z.boolean().optional(),
+  email: z.string().email("Please enter a valid email address");
+  password: z.string().min(6, "Password must be at least 6 characters");
+  rememberMe: z.boolean().optional();
 });
 
 type LoginFormValues = z.infer<typeof loginSchema>;
@@ -35,12 +35,12 @@ const LoginForm: React.FC = () => {
   const { toast } = useToast();
 
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(loginSchema);
     defaultValues: {
-      email: "",
-      password: "",
-      rememberMe: false,
-    },
+      email: "";
+      password: "";
+      rememberMe: false;
+    };
   });
 
   const onSubmit = async (data: LoginFormValues) => {
@@ -56,7 +56,7 @@ const LoginForm: React.FC = () => {
         setVerificationMessage('Please verify your email before logging in.');
       } else {
         form.setError('root', {
-          message: error.message || 'Login failed. Please try again.',
+          message: error.message || 'Login failed. Please try again.';
         });
       }
     } finally {
@@ -68,7 +68,7 @@ const LoginForm: React.FC = () => {
     const email = form.getValues('email');
     if (!email) {
       form.setError('root', {
-        message: 'Please enter your email address.',
+        message: 'Please enter your email address.';
       });
       return;
     }
@@ -78,11 +78,11 @@ const LoginForm: React.FC = () => {
 
     try {
       const response = await fetch('/api/auth/resend-verification-email', {
-        method: 'POST',
+        method: 'POST';
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
+          'Content-Type': 'application/json';
+        };
+        body: JSON.stringify({ email });
       });
 
       const data = await response.json();
@@ -90,8 +90,8 @@ const LoginForm: React.FC = () => {
       if (response.ok) {
         setVerificationMessage('Verification email sent. Please check your inbox.');
         toast({
-          title: "Email Sent",
-          description: "Verification email has been sent to your inbox.",
+          title: "Email Sent";
+          description: "Verification email has been sent to your inbox.";
         });
       } else {
         setVerificationMessage(data.message || 'Failed to resend verification email.');
@@ -107,7 +107,7 @@ const LoginForm: React.FC = () => {
     const email = form.getValues('email');
     if (!email) {
       form.setError('root', {
-        message: 'Please enter your email address.',
+        message: 'Please enter your email address.';
       });
       return;
     }

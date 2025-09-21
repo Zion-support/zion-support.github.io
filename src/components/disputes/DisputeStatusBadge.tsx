@@ -7,7 +7,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let variant: "default" | "destructive" | "secondary" | "outline" = "
   let message = null;
     default:
-      break,
+      break;
 }
   return (
     <Tooltip>

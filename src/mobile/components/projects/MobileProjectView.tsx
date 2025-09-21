@@ -1,23 +1,23 @@
 interface Milestone {
-  id: string;,
+  id: string;;
 title: string;
-  dueDate: string;,
+  dueDate: string;;
 status: "completed" | "in_progress" | "
-  paymentStatus: "paid" | "pending" | ",
+  paymentStatus: "paid" | "pending" | ";
 amount: string;
 interface ProjectViewProps {
-  project: {,
+  project: {;
 id: string;
-    title: string;,
+    title: string;;
 client: {
       name: string;
-      avatar?: string,
-},
+      avatar?: string;
+};
     startDate: string;
     endDate?: string;
-    status: string;,
+    status: string;;
 totalAmount: string;
-    progress: number;,
+    progress: number;;
 description: string;
 }
   milestones: Milestone[]

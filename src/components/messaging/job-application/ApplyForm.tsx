@@ -1,14 +1,14 @@
 
-import React, { useState } from 'react',
-import { Button,,  } from "@/components/ui/button",
+import React, { useState } from 'react';
+import { Button,,  } from "@/components/ui/button";
 import { Loader2,,  } from 'lucide-react'
-import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from "@/components/ui/tabs",
-import { useJobApplications,,  } from "@/hooks/useJobApplications",
-import { useMessaging,,  } from "@/context/MessagingContext",
-import { toast,,  } from "@/hooks/use-toast",
-import { ResumeSelector,,, ResumeOption,,  } from "../resume-selector",
-import { MessageTab,,  } from "./MessageTab",
-import { ResumeTab,,  } from "./ResumeTab",
+import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from "@/components/ui/tabs";
+import { useJobApplications,,  } from "@/hooks/useJobApplications";
+import { useMessaging,,  } from "@/context/MessagingContext";
+import { toast,,  } from "@/hooks/use-toast";
+import { ResumeSelector,,, ResumeOption,,  } from "../resume-selector";
+import { MessageTab,,  } from "./MessageTab";
+import { ResumeTab,,  } from "./ResumeTab";
 import React from "react";
 import import { logErrorToProduction } from '@/utils/productionLogger';
 interface ApplyFormProps {
@@ -73,26 +73,26 @@ type="button"
   )
   if (!message.trim () ) {
   toast ({
-  return,
+  return;
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id message selectedResume && selectedResume.type === 'ai resume'? selectedResumeId |undefined : undefined selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
 if (!applicationSuccess) {
-}//Format message with proposal link if provided let fullMessage = message,
+}//Format message with proposal link if provided let fullMessage = message;
 if (proposalLink) {'
   fullMessage += `\n\nHere's a link to my proposal: $ {
-  proposalLink,
+  proposalLink;
 }`
 }//Add info about attached resume if available if (selectedResume) {'
   fullMessage += `\n\nI've attached my resume: $ {
-  selectedResume.title,
+  selectedResume.title;
 }`
 }//Create context data for the conversation const contextData = {
-  title: job.title,
-description: job.description,
-attachedResume: selectedResume ? {,
-id: selectedResume.id,
-title: selectedResume.title,
-type: selectedResume.type,
-}: null,
+  title: job.title;
+description: job.description;
+attachedResume: selectedResume ? {;
+id: selectedResume.id;
+title: selectedResume.title;
+type: selectedResume.type;
+}: null;
 }
 fullMessage;'
 'job'
@@ -108,11 +108,11 @@ toast ({
   setIsSubmitting (false)
 }
 return (<> <Tabs value= {
-  activeTab,
+  activeTab;
 }onValueChange= {
   setActiveTab "
 }className="w-full" > <TabsList className="w-full mb-4 bg-zion-blue-dark/30" > <TabsTrigger value="message" className="flex-1" > resume"className=" flex-1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {
-  message,
+  message;
 }setMessage= {
   setMessage,
 }proposalLink= {

@@ -4,8 +4,8 @@ import { Button,,  } from '@/components/ui/button'
 import { Label,,  } from '@/components/ui/label'
 import { CalendarIcon,,  } from 'lucide-react'
 interface TimelineStepProps {
-  formData: QuoteFormData;,
-updateFormData: (data: Partial<QuoteFormData>) => void,
+  formData: QuoteFormData;;
+updateFormData: (data: Partial<QuoteFormData>) => void;
 export function TimelineStep({ formData updateFormData }: TimelineStepProps) {
   return (
                       )}
@@ -19,7 +19,7 @@ className='w-auto p-0 bg-zion-blue-dark border border-zion-blue-light'
 mode='single'
                       selected={formData.endDate}
                       onSelect={date => updateFormData({ endDate: date })}
-                      initialFocus,
+                      initialFocus;
 className='p-3 pointer-events-auto'
                       disabled={date =>
                         date < (formData.startDate |new Date())

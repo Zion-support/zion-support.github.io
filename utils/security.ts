@@ -13,10 +13,10 @@ export interface SecurityConfig {
 
 export class SecurityManager {
   private config: SecurityConfig = {
-    enableCSRF: true,
-    enableXSS: true,
-    enableSQLInjection: true,
-    maxPasswordLength: 128,
+    enableCSRF: true;
+    enableXSS: true;
+    enableSQLInjection: true;
+    maxPasswordLength: 128;
     minPasswordLength: 8
   };
   

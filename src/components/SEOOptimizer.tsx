@@ -46,21 +46,21 @@ interface SEOAnalysis {
 
 const SEOOptimizer: React.FC = () => {
   const [analysis, setAnalysis] = useState<SEOAnalysis>({
-    score: 0,
-    title: '',
-    description: '',
-    keywords: [],
-    issues: [],
-    recommendations: [],
+    score: 0;
+    title: '';
+    description: '';
+    keywords: [];
+    issues: [];
+    recommendations: [];
     technical: {
-      metaTags: false,
-      structuredData: false,
-      sitemap: false,
-      robotsTxt: false,
-      ssl: false,
-      mobileFriendly: false,
-      pageSpeed: 0,
-    },
+      metaTags: false;
+      structuredData: false;
+      sitemap: false;
+      robotsTxt: false;
+      ssl: false;
+      mobileFriendly: false;
+      pageSpeed: 0;
+    };
   });
 
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -73,55 +73,55 @@ const SEOOptimizer: React.FC = () => {
       setTimeout(() => {
         setAnalysis({
           score: Math.floor(Math.random() * 40) + 60, // 60-100
-          title: "Zion Tech Group - Innovative Technology Solutions",
+          title: "Zion Tech Group - Innovative Technology Solutions";
           description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions. Transform your business with cutting-edge technology.",
           keywords: ["AI solutions", "cloud computing", "cybersecurity", "digital transformation", "technology consulting"],
           issues: [
             {
-              type: 'warning',
-              message: 'Title tag is too long (65+ characters)',
+              type: 'warning';
+              message: 'Title tag is too long (65+ characters)';
               suggestion: 'Keep title under 60 characters for better search visibility'
-            },
+            };
             {
-              type: 'info',
-              message: 'Missing Open Graph image',
+              type: 'info';
+              message: 'Missing Open Graph image';
               suggestion: 'Add og:image meta tag for better social media sharing'
-            },
+            };
             {
-              type: 'error',
-              message: 'No structured data found',
+              type: 'error';
+              message: 'No structured data found';
               suggestion: 'Implement JSON-LD structured data for better search results'
             }
-          ],
+          ];
           recommendations: [
             {
-              category: 'Content',
-              priority: 'high',
+              category: 'Content';
+              priority: 'high';
               description: 'Add more relevant keywords to improve search ranking'
-            },
+            };
             {
-              category: 'Technical',
-              priority: 'high',
+              category: 'Technical';
+              priority: 'high';
               description: 'Implement structured data markup'
-            },
+            };
             {
-              category: 'Performance',
-              priority: 'medium',
+              category: 'Performance';
+              priority: 'medium';
               description: 'Optimize images and enable compression'
-            },
+            };
             {
-              category: 'Mobile',
-              priority: 'medium',
+              category: 'Mobile';
+              priority: 'medium';
               description: 'Improve mobile responsiveness'
             }
-          ],
+          ];
           technical: {
-            metaTags: true,
-            structuredData: false,
-            sitemap: true,
-            robotsTxt: true,
-            ssl: true,
-            mobileFriendly: true,
+            metaTags: true;
+            structuredData: false;
+            sitemap: true;
+            robotsTxt: true;
+            ssl: true;
+            mobileFriendly: true;
             pageSpeed: Math.floor(Math.random() * 30) + 70, // 70-100
           },
         });

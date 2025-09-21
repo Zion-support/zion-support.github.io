@@ -17,15 +17,15 @@ class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
+      hasError: false;
       retryCount: 0
     };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true,
-      error,
+      hasError: true;
+      error;
       retryCount: 0
     };
   }
@@ -36,7 +36,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error to monitoring service
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", "exception", {
-        description: error.message,
+        description: error.message;
         fatal: false
       });
     }
@@ -44,9 +44,9 @@ class ErrorBoundary extends Component<Props, State> {
 
   handleRetry = () => {
     this.setState(prevState => ({
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
+      hasError: false;
+      error: undefined;
+      errorInfo: undefined;
       retryCount: prevState.retryCount + 1
     }));
   };

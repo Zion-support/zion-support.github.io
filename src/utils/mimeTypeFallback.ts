@@ -3,8 +3,8 @@ export class MimeTypeFallback {
 
   constructor() {
     this.supportedTypes = new Set([
-      "text/html",
-      "text/css",
+      "text/html";
+      "text/css";
       "text/javascript",
       "application/javascript",
       "application/json",

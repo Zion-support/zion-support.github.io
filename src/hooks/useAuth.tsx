@@ -24,10 +24,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {  const [us
     try {
       // Mock login - replace with actual API call
       const mockUser = { 
-        id: '1', 
-        email, 
-        name: email.split('@')[0],
-        role: 'user',
+        id: '1';
+        email;
+        name: email.split('@')[0];
+        role: 'user';
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
       };
       setUser(mockUser);
@@ -48,10 +48,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {  const [us
     try {
       // Mock registration - replace with actual API call
       const mockUser = { 
-        id: '1', 
-        email, 
-        name: name || email.split('@')[0],
-        role: 'user',
+        id: '1';
+        email;
+        name: name || email.split('@')[0];
+        role: 'user';
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
       };
       setUser(mockUser);

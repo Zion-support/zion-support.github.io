@@ -165,8 +165,8 @@ export class ContentOptimizer {
     // Check word count
     if (metrics.wordCount < this.MIN_WORD_COUNT) {
       issues.push({
-        type: "minimal-content",
-        severity: "high",
+        type: "minimal-content";
+        severity: "high";
         description: `Content has only ${metrics.wordCount} words. Minimum recommended is ${this.MIN_WORD_COUNT} words.`
       });
     }
@@ -174,8 +174,8 @@ export class ContentOptimizer {
     // Check heading count
     if (metrics.headingCount < this.MIN_HEADING_COUNT) {
       issues.push({
-        type: "missing-headings",
-        severity: "medium",
+        type: "missing-headings";
+        severity: "medium";
         description: `Content has only ${metrics.headingCount} headings. Consider adding more structure with H2, H3 tags.`
       });
     }
@@ -183,8 +183,8 @@ export class ContentOptimizer {
     // Check image count
     if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
       issues.push({
-        type: "no-images",
-        severity: "medium",
+        type: "no-images";
+        severity: "medium";
         description: "Content has no images. Consider adding relevant images to improve engagement."
       });
     }
@@ -192,8 +192,8 @@ export class ContentOptimizer {
     // Check link count
     if (metrics.linkCount < this.MIN_LINK_COUNT) {
       issues.push({
-        type: "poor-structure",
-        severity: "low",
+        type: "poor-structure";
+        severity: "low";
         description: `Content has only ${metrics.linkCount} links. Consider adding more internal and external links.`
       });
     }
@@ -206,8 +206,8 @@ export class ContentOptimizer {
 
     if (!hasKeywords && pageKeywords.length > 0) {
       issues.push({
-        type: "missing-keywords",
-        severity: "medium",
+        type: "missing-keywords";
+        severity: "medium";
         description: `Content doesn't include page-specific keywords: ${pageKeywords.join(", ")}`
       });
     }
@@ -222,8 +222,8 @@ export class ContentOptimizer {
       switch (issue.type) {
         case "minimal-content":
           suggestions.push({
-            type: "expand-content",
-            priority: "high",
+            type: "expand-content";
+            priority: "high";
             description: "Expand the content with more detailed information, examples, and explanations.",
             example: "Add case studies, detailed explanations, or step-by-step guides."
           });
@@ -231,36 +231,36 @@ export class ContentOptimizer {
 
         case "missing-headings":
           suggestions.push({
-            type: "add-headings",
-            priority: "medium",
-            description: "Add more headings to improve content structure and readability.",
+            type: "add-headings";
+            priority: "medium";
+            description: "Add more headings to improve content structure and readability.";
             example: "Use H2 for main sections, H3 for subsections."
           });
           break;
 
         case "no-images":
           suggestions.push({
-            type: "add-images",
-            priority: "medium",
-            description: "Add relevant images to make the content more engaging.",
+            type: "add-images";
+            priority: "medium";
+            description: "Add relevant images to make the content more engaging.";
             example: "Include screenshots, diagrams, or infographics related to the topic."
           });
           break;
 
         case "poor-structure":
           suggestions.push({
-            type: "improve-structure",
-            priority: "low",
-            description: "Improve content structure with better organization and more links.",
+            type: "improve-structure";
+            priority: "low";
+            description: "Improve content structure with better organization and more links.";
             example: "Add internal links to related pages and external links to authoritative sources."
           });
           break;
 
         case "missing-keywords":
           suggestions.push({
-            type: "add-keywords",
-            priority: "medium",
-            description: "Include page-specific keywords naturally throughout the content.",
+            type: "add-keywords";
+            priority: "medium";
+            description: "Include page-specific keywords naturally throughout the content.";
             example: `Use keywords like "${page.split("/").filter(Boolean).join(", ")}" in headings and body text.`
           });
           break;

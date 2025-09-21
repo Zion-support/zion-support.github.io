@@ -1,8 +1,8 @@
 import React from "react,,
 ,
-import { SEO,  } from "@/components/SEO",
-export default function ChatAssistant(props: any) {return (,
-<div className="min-h-screen bg-white">,
+import { SEO,  } from "@/components/SEO";
+export default function ChatAssistant(props: any) {return (;
+<div className="min-h-screen bg-white">;
 <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />,
 <div className="container mx-auto px-4 py-20">,
 <h1 className="text-4xl font-bold text-white mb-8">ChatAssistant</h1>,
@@ -15,9 +15,9 @@ Professional ChatAssistant services to help your business grow.,
 "<//div><///div>
   const isGuest = !auth?.isAuthenticated,
 const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return,
+    if (!messageContent.trim()) return;
 import React {
-read?: boolean,
+read?: boolean;
 }
 export interface ChatAssistantProps {
   /** Optional canned questions shown when the chat is empty */

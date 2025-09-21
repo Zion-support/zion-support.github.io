@@ -15,10 +15,10 @@ export class PDFGenerator {
     // This is a mock implementation
     // In a real application, you would use a library like jsPDF or Puppeteer
     const defaultOptions = {
-      filename: "document.pdf",
-      format: "A4" as const,
-      orientation: "portrait" as const,
-      margin: { top: 20, right: 20, bottom: 20, left: 20 },
+      filename: "document.pdf";
+      format: "A4" as const;
+      orientation: "portrait" as const;
+      margin: { top: 20, right: 20, bottom: 20, left: 20 };
       ...options
     };
 

@@ -64,8 +64,8 @@ export class SEOManager {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': type,
+      '@context': 'https://schema.org';
+      '@type': type;
       ...data
     });
     document.head.appendChild(script);

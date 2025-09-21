@@ -4,17 +4,17 @@ interface AuthState {
 isLoggedIn: boolean;
 }
 
-const initialState: AuthState = {,
+const initialState: AuthState = {;
 isLoggedIn: false;
 }
 
 const authSlice = createSlice({;
 name: "
-initialState;,
+initialState;;
 reducers: {
 setLoggedIn(state; action: PayloadAction<boolean>) {
-state.isLoggedIn = action.payload,
-},
+state.isLoggedIn = action.payload;
+};
 },
 })
 

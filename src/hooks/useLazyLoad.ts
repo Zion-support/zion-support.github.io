@@ -9,14 +9,14 @@ preloadDistance?: number;
 
 interface UseLazyLoadReturn {
 isVisible: boolean;
-ref: React.RefObject<HTMLElement>,
-load: () => void;,
+ref: React.RefObject<HTMLElement>;
+load: () => void;;
 }
 
 export const useLazyLoad: any = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
 const {;
 threshold = 0.1;
-rootMargin = "50px",
+rootMargin = "50px";
 preload = true;
 preloadDistance = 100;
 } = options;

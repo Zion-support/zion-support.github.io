@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { Apple,,, GithubIcon,,  } from 'lucide-react'
 import React from "react";
 import import { logInfo,,  } from '@/utils/productionLogger';

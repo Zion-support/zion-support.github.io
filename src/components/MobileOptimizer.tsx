@@ -25,36 +25,36 @@ interface MobileOptimizerProps {
 }
 
 export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ 
-  enabled = true, 
-  showPanel = false, 
+  enabled = true;
+  showPanel = false;
   autoDetect = true 
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"general" | "touch" | "display" | "performance" | "help">("general");
   const [settings, setSettings] = useState<MobileSettings>({
-    touchOptimization: true,
-    gestureSupport: true,
-    pinchZoom: true,
-    rotationSupport: true,
-    hapticFeedback: true,
-    adaptiveLayout: true,
-    mobileNavigation: true,
-    touchTargets: true,
-    swipeGestures: true,
-    orientationLock: "auto",
-    fontSize: "medium",
-    contrast: "normal",
+    touchOptimization: true;
+    gestureSupport: true;
+    pinchZoom: true;
+    rotationSupport: true;
+    hapticFeedback: true;
+    adaptiveLayout: true;
+    mobileNavigation: true;
+    touchTargets: true;
+    swipeGestures: true;
+    orientationLock: "auto";
+    fontSize: "medium";
+    contrast: "normal";
     brightness: "auto"
   });
   const [deviceInfo, setDeviceInfo] = useState({
-    isMobile: false,
-    isTablet: false,
-    isDesktop: false,
-    orientation: "portrait",
-    screenSize: { width: 0, height: 0 },
-    pixelRatio: 1,
-    touchSupport: false,
-    batteryLevel: 0,
+    isMobile: false;
+    isTablet: false;
+    isDesktop: false;
+    orientation: "portrait";
+    screenSize: { width: 0, height: 0 };
+    pixelRatio: 1;
+    touchSupport: false;
+    batteryLevel: 0;
     connectionType: "unknown"
   });
   const [isOptimizing, setIsOptimizing] = useState(false);
@@ -69,10 +69,10 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       isMobile,
       isTablet,
       isDesktop,
-      orientation: window.innerHeight > window.innerWidth ? "portrait" : "landscape",
-      screenSize: { width: window.innerWidth, height: window.innerHeight },
-      pixelRatio: window.devicePixelRatio || 1,
-      touchSupport: 'ontouchstart' in window,
+      orientation: window.innerHeight > window.innerWidth ? "portrait" : "landscape";
+      screenSize: { width: window.innerWidth, height: window.innerHeight };
+      pixelRatio: window.devicePixelRatio || 1;
+      touchSupport: 'ontouchstart' in window;
       batteryLevel: 0, // Would need battery API
       connectionType: "unknown" // Would need connection API
     });

@@ -153,7 +153,7 @@ key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
                         <ImageWithRetry
 src={relatedPost.featuredImage}
                           alt={
-                            relatedPost.featuredImageAlt |relatedPost.title,
+                            relatedPost.featuredImageAlt |relatedPost.title;
 }
                           className='object-cover w-full h-full'
                           fallbackSrc='/images/blog-placeholder.svg'                        />
@@ -207,11 +207,11 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
   getShareUrl ('facebook') "
 }target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>)
 }</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
-  post.content,
+  post.content;
 }</ReactMarkdown> </div> <span key= {
   tag "
 }className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
-  tag,
+  tag;
 }</span>) ) "
 }</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) )
 }</div> </div>) "
@@ -223,13 +223,13 @@ export default function Page() {
 }
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {
-      year: 'numeric',
+      year: 'numeric';
 month: 'long'
-      day: 'numeric',
+      day: 'numeric';
 })
 }
   const getCategoryIcon = (category: string) => {
-    const categoryIcons: { [key: string]: any } = {,
+    const categoryIcons: { [key: string]: any } = {;
 ai: Brain;
 quantum: Cpu;
 security: Shield;
@@ -238,17 +238,17 @@ business: TrendingUp;
 iot: Network;
 emerging: Zap;
 }
-    return categoryIcons[category] |BookOpen,
+    return categoryIcons[category] |BookOpen;
 }
   const getCategoryName = (category: string) => {
-    const categoryNames: { [key: string]: string } = {,
+    const categoryNames: { [key: string]: string } = {;
 ai: 'Artificial Intelligence'
-      quantum: 'Quantum Computing',
+      quantum: 'Quantum Computing';
 security: 'Cybersecurity'
-      cloud: 'Cloud & DevOps',
+      cloud: 'Cloud & DevOps';
 business: 'Business Insights'
-      iot: 'IoT & Edge',
-emerging: 'Emerging Tech',
+      iot: 'IoT & Edge';
+emerging: 'Emerging Tech';
 }
     return categoryNames[category] |'Uncategorized'
 }
@@ -271,7 +271,7 @@ to="/blog"
       {/* Article Header */}
       <section className="py-12">
         <div className="container mx - auto px-4">
-          <motion.div,
+          <motion.div;
 initial={{ opacity: 0 y: 20 }}
             animate={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
@@ -280,7 +280,7 @@ initial={{ opacity: 0 y: 20 }}
             <div className="flex items - center space - x-3 mb-6">
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
                 {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w-4 h-4',
+                  className: 'w-4 h-4';
 }) }
                 <span>{getCategoryName(blogPost.category) }</span>
               </span>
@@ -341,7 +341,7 @@ initial={{ opacity: 0 y: 20 }}
       <section className="py-12">
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
-            <motion.div,
+            <motion.div;
 initial={{ opacity: 0 y: 20 }}
               whileInView={{ opacity: 1 y: 0 }}
               transition={{ duration: 0.8 }}
@@ -384,7 +384,7 @@ key={tag}
       <section className="py-12">
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
-            <motion.div,
+            <motion.div;
 initial={{ opacity: 0 y: 20 }}
               whileInView={{ opacity: 1 y: 0 }}
               transition={{ duration: 0.8 }}
@@ -411,7 +411,7 @@ initial={{ opacity: 0 y: 20 }}
       {/* Related Posts */}
       <section className="py-20 bg-slate -800 / 50">
         <div className="container mx - auto px-4">
-          <motion.div,
+          <motion.div;
 initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
@@ -424,7 +424,7 @@ initial={{ opacity: 0 y: 20 }}
             </p>
           </motion.div>
           <div className="grid md:grid - cols - 3 gap-8 max - w-6xl mx -auto">
-            {blogPost.relatedPosts.map((post index) => (<motion.article,
+            {blogPost.relatedPosts.map((post index) => (<motion.article;
 key={post.id}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}
@@ -463,7 +463,7 @@ key={post.id}
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx - auto px-4">
-          <motion.div,
+          <motion.div;
 initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
@@ -472,7 +472,7 @@ initial={{ opacity: 0 y: 20 }}
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray - 300 mb-8">
-              Let's discuss how our AI - powered solutions can drive innovation,
+              Let's discuss how our AI - powered solutions can drive innovation;
 and growth for your organization.</p>
             <div className="flex flex - wrap justify - center gap-4">
               <Link

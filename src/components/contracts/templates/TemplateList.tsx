@@ -17,8 +17,8 @@ interface TemplateListProps {
 }
 
 export function TemplateList({
-  templates,
-  isLoading,
+  templates;
+  isLoading;
   onSelect,
   onEdit,
 }: TemplateListProps) {

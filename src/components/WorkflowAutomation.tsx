@@ -8,16 +8,16 @@ import React from "react";
 
 export const WorkflowAutomation: React.FC = () => {
 const [workflows] = useState([;
-{;,
-id: "1", name: ",
-description: "Automated workflow for new user onboarding",
-enabled: true;,
+{;;
+id: "1", name: ";
+description: "Automated workflow for new user onboarding";
+enabled: true;;
 steps: [["Trigger", "Send Email", "Wait 24h", "Send Guide"];]
 },
 {
-id: "2", name: ",
-description: "Automated escalation for support tickets",
-enabled: false;,
+id: "2", name: ";
+description: "Automated escalation for support tickets";
+enabled: false;;
 steps: [["Trigger", "Check Priority", "Notify Manager"];]
 }
 ])

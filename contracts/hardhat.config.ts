@@ -14,37 +14,37 @@ const accounts = PRIVATE_KEY ? [PRIVATE_KEY] : [];
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: '0.8.24',
+    version: '0.8.24';
     settings: {
-      optimizer: { enabled: true, runs: 200 },
-    },
+      optimizer: { enabled: true, runs: 200 };
+    };
   },
   networks: {
     polygon_amoy: {
-      url: AMOY_RPC_URL,
-      chainId: 80002,
-      accounts,
-      type: 'http',
-    },
+      url: AMOY_RPC_URL;
+      chainId: 80002;
+      accounts;
+      type: 'http';
+    };
     polygon_mumbai: {
-      url: MUMBAI_RPC_URL,
-      chainId: 80001,
-      accounts,
-      type: 'http',
-    },
+      url: MUMBAI_RPC_URL;
+      chainId: 80001;
+      accounts;
+      type: 'http';
+    };
   },
   // etherscan: {
   //   apiKey: {
-  //     polygonAmoy: POLYGONSCAN_API_KEY,
-  //     polygonMumbai: POLYGONSCAN_API_KEY,
-  //   } as any,
+  //     polygonAmoy: POLYGONSCAN_API_KEY;
+  //     polygonMumbai: POLYGONSCAN_API_KEY;
+  //   } as any;
   // },
   paths: {
-    sources: './contracts',
-    tests: './test',
-    cache: './cache',
-    artifacts: './artifacts',
-  },
+    sources: './contracts';
+    tests: './test';
+    cache: './cache';
+    artifacts: './artifacts';
+  };
 };
 
 export default config;

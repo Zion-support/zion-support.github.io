@@ -10,8 +10,8 @@ import React from "react";
 
 interface ProjectCardProps {
 project: PortfolioProject;
-onEdit: (project: PortfolioProject) => void;,
-onDelete: (projectId: string) => void;,
+onEdit: (project: PortfolioProject) => void;;
+onDelete: (projectId: string) => void;;
 }
 export export function ProjectCard({ project; onEdit; onDelete }: ProjectCardProps) {
 const [deleteDialogOpen; setDeleteDialogOpen] = useState(false)

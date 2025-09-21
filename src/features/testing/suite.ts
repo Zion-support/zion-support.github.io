@@ -57,7 +57,7 @@ export class AutomatedTestingSuite {
           this.testSuites.set(suite.id, {
             ...suite,
             testCases: suite.testCases.map((test: any) => ({
-              ...test,
+              ...test;
               timestamp: new Date(test.timestamp)
             }))
           });
@@ -135,11 +135,11 @@ export class AutomatedTestingSuite {
     
     try {
       const response = await fetch('/api/testing/run-suite', {
-        method: 'POST',
+        method: 'POST';
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ suiteId }),
+          'Content-Type': 'application/json';
+        };
+        body: JSON.stringify({ suiteId });
       });
       
       if (response.ok) {
@@ -166,11 +166,11 @@ export class AutomatedTestingSuite {
     
     try {
       const response = await fetch('/api/testing/run-test', {
-        method: 'POST',
+        method: 'POST';
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ suiteId, testCaseId }),
+          'Content-Type': 'application/json';
+        };
+        body: JSON.stringify({ suiteId, testCaseId });
       });
       
       if (response.ok) {
@@ -282,8 +282,8 @@ export class AutomatedTestingSuite {
     }
     
     return {
-      total,
-      passed,
+      total;
+      passed;
       failed,
       skipped,
       coverage: coverageCount > 0 ? totalCoverage / coverageCount : 0

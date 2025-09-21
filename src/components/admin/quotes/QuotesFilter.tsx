@@ -23,8 +23,8 @@ interface QuotesFilterProps {
 }
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-  searchQuery,
-  setSearchQuery,
+  searchQuery;
+  setSearchQuery;
   statusFilter,
   setStatusFilter,
   archiveFilter,

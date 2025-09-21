@@ -8,8 +8,8 @@ export interface ThemeConfig {
 
 export class ThemeUtils {
   private static config: ThemeConfig = {
-    defaultTheme: "system",
-    storageKey: "theme",
+    defaultTheme: "system";
+    storageKey: "theme";
     enableSystem: true
   };
 

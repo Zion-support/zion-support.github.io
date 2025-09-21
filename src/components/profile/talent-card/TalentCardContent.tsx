@@ -3,10 +3,10 @@ import React from "react";
 import { MapPin,,  } from 'lucide-react'
 import React from "react";
 interface TalentCardContentProps {
-  summary: string | undefined;,
+  summary: string | undefined;;
 bio: string;
-  timezone: string | undefined;,
-skills: string[] | undefined,
+  timezone: string | undefined;;
+skills: string[] | undefined;
 return (
     <div>
       {/* Location */}

@@ -40,11 +40,11 @@ export class ContentQualityAnalyzer {
   private readonly MIN_LINK_COUNT = 3;
 
   analyzePageContent(
-    pageUrl: string,
-    title: string,
-    content: string,
-    metaDescription: string = "",
-    images: string[] = [],
+    pageUrl: string;
+    title: string;
+    content: string;
+    metaDescription: string = "";
+    images: string[] = [];
     links: string[] = []
   ): ContentQualityMetrics {
     // Check if we already analyzed this page
@@ -91,8 +91,8 @@ export class ContentQualityAnalyzer {
     });
 
     const metrics: ContentQualityMetrics = {
-      pageUrl,
-      title,
+      pageUrl;
+      title;
       wordCount,
       headingCount,
       imageCount,
@@ -237,18 +237,18 @@ export class ContentQualityAnalyzer {
     // Title issues
     if (!data.title) {
       issues.push({
-        type: "missing-title",
-        severity: "high",
-        description: "Page is missing a title tag",
-        impact: "Poor SEO and user experience",
+        type: "missing-title";
+        severity: "high";
+        description: "Page is missing a title tag";
+        impact: "Poor SEO and user experience";
         fix: "Add a descriptive title tag to the page"
       });
     } else if (data.title.length < 30) {
       issues.push({
-        type: "missing-title",
-        severity: "medium",
-        description: "Title is too short (less than 30 characters)",
-        impact: "May not be descriptive enough for search engines",
+        type: "missing-title";
+        severity: "medium";
+        description: "Title is too short (less than 30 characters)";
+        impact: "May not be descriptive enough for search engines";
         fix: "Expand the title to be more descriptive"
       });
     }
@@ -256,10 +256,10 @@ export class ContentQualityAnalyzer {
     // Content length issues
     if (data.wordCount < this.MIN_WORD_COUNT) {
       issues.push({
-        type: "short-content",
-        severity: "high",
-        description: `Content has only ${data.wordCount} words (minimum recommended: ${this.MIN_WORD_COUNT})`,
-        impact: "Poor SEO and user engagement",
+        type: "short-content";
+        severity: "high";
+        description: `Content has only ${data.wordCount} words (minimum recommended: ${this.MIN_WORD_COUNT})`;
+        impact: "Poor SEO and user engagement";
         fix: "Expand the content with more detailed information"
       });
     }
@@ -267,10 +267,10 @@ export class ContentQualityAnalyzer {
     // Heading issues
     if (data.headingCount < this.MIN_HEADING_COUNT) {
       issues.push({
-        type: "no-headings",
-        severity: "medium",
-        description: `Content has only ${data.headingCount} headings (minimum recommended: ${this.MIN_HEADING_COUNT})`,
-        impact: "Poor content structure and SEO",
+        type: "no-headings";
+        severity: "medium";
+        description: `Content has only ${data.headingCount} headings (minimum recommended: ${this.MIN_HEADING_COUNT})`;
+        impact: "Poor content structure and SEO";
         fix: "Add more headings to structure the content"
       });
     }
@@ -278,10 +278,10 @@ export class ContentQualityAnalyzer {
     // Image issues
     if (data.imageCount < this.MIN_IMAGE_COUNT) {
       issues.push({
-        type: "no-images",
-        severity: "medium",
-        description: "Content has no images",
-        impact: "Reduced visual appeal and engagement",
+        type: "no-images";
+        severity: "medium";
+        description: "Content has no images";
+        impact: "Reduced visual appeal and engagement";
         fix: "Add relevant images to enhance the content"
       });
     }
@@ -289,10 +289,10 @@ export class ContentQualityAnalyzer {
     // SEO issues
     if (!data.metaDescription) {
       issues.push({
-        type: "poor-seo",
-        severity: "high",
-        description: "Missing meta description",
-        impact: "Poor search engine optimization",
+        type: "poor-seo";
+        severity: "high";
+        description: "Missing meta description";
+        impact: "Poor search engine optimization";
         fix: "Add a compelling meta description"
       });
     }
@@ -315,10 +315,10 @@ export class ContentQualityAnalyzer {
     // Content expansion recommendations
     if (metrics.wordCount < this.MIN_WORD_COUNT) {
       recommendations.push({
-        type: "content-expansion",
-        priority: "high",
-        title: "Expand Content",
-        description: "Add more detailed information to improve SEO and user engagement",
+        type: "content-expansion";
+        priority: "high";
+        title: "Expand Content";
+        description: "Add more detailed information to improve SEO and user engagement";
         implementation: "Write additional paragraphs, add case studies, or include more examples",
         expectedImpact: "Improved SEO ranking and user engagement"
       });
@@ -327,10 +327,10 @@ export class ContentQualityAnalyzer {
     // SEO improvement recommendations
     if (metrics.seoScore < 80) {
       recommendations.push({
-        type: "seo-improvement",
-        priority: "high",
-        title: "Improve SEO",
-        description: "Optimize page elements for better search engine visibility",
+        type: "seo-improvement";
+        priority: "high";
+        title: "Improve SEO";
+        description: "Optimize page elements for better search engine visibility";
         implementation: "Add meta descriptions, optimize headings, and improve keyword usage",
         expectedImpact: "Better search engine rankings and organic traffic"
       });
@@ -339,10 +339,10 @@ export class ContentQualityAnalyzer {
     // Accessibility recommendations
     if (metrics.accessibilityScore < 80) {
       recommendations.push({
-        type: "accessibility-fix",
-        priority: "medium",
-        title: "Improve Accessibility",
-        description: "Make the content more accessible to users with disabilities",
+        type: "accessibility-fix";
+        priority: "medium";
+        title: "Improve Accessibility";
+        description: "Make the content more accessible to users with disabilities";
         implementation: "Add alt text to images, improve heading structure, and ensure proper form labels",
         expectedImpact: "Better accessibility compliance and user experience"
       });
@@ -351,10 +351,10 @@ export class ContentQualityAnalyzer {
     // Performance recommendations
     if (metrics.performanceScore < 80) {
       recommendations.push({
-        type: "performance-optimization",
-        priority: "medium",
-        title: "Optimize Performance",
-        description: "Improve page loading speed and performance",
+        type: "performance-optimization";
+        priority: "medium";
+        title: "Optimize Performance";
+        description: "Improve page loading speed and performance";
         implementation: "Optimize images, reduce content size, and minimize inline styles",
         expectedImpact: "Faster page loading and better user experience"
       });
@@ -370,9 +370,9 @@ export class ContentQualityAnalyzer {
     performanceScore: number;
   }): number {
     const weights = {
-      readability: 0.3,
-      seo: 0.3,
-      accessibility: 0.2,
+      readability: 0.3;
+      seo: 0.3;
+      accessibility: 0.2;
       performance: 0.2
     };
 

@@ -5,11 +5,11 @@ import import { Button,,, ,,  } from '@/components/ui/button';
 import { Edit,,, Trash2,,  } from 'lucide-react'
 import import { format,,  } from 'date-fns';
 interface CertificationsListProps {
-onDelete: (id: string) => void,
+onDelete: (id: string) => void;
 }
 export function CertificationsList({ certifications onEdit onDelete }: CertificationsListProps) {
   if (certifications.length === 0) {
-    return null,
+    return null;
 }
   return (
     <div className='space-y-4'>

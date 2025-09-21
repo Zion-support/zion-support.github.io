@@ -8,7 +8,7 @@ export const useTenantAdminStatus: any = (tenantId?: string): TenantAdminStatus 
 const [_setStatus] = useState<{;
 isAdmin: boolean; isLoading: boolean;
 }>({
-isAdmin: false;,
+isAdmin: false;;
 isLoading: true;
 })
 
@@ -17,9 +17,9 @@ const checkTenantAdminStatus = async (_tenantId: string) => {
 try {;
 /
 / return a mock response;
-return true,
+return true;
 } catch {
-return false,
+return false;
 }
 }
 
@@ -28,6 +28,6 @@ checkTenantAdminStatus(tenantId || "default")
 
 return {
 isAdmin: false; / as the status is not directly managed by this hook;
-isLoading: true; / as the status is not directly managed by this hook,
+isLoading: true; / as the status is not directly managed by this hook;
 }
 }

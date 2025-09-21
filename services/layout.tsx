@@ -2,16 +2,16 @@
 ,
 class ErrorBoundary extends React.Component {,
   constructor(props) {,
-    super(props),
-    this.state = { hasError: false },
+    super(props);
+    this.state = { hasError: false };
   }
-,
+;
   static getDerivedStateFromError(error) {,
-    return { hasError: true },
+    return { hasError: true };
   }
-,
+;
   componentDidCatch(error, errorInfo) {,
-    console.error('Error caught by boundary:', error, errorInfo),
+    console.error('Error caught by boundary:', error, errorInfo);
   }
 ,
   render() {,
@@ -22,11 +22,11 @@ class ErrorBoundary extends React.Component {,
     return this.props.children,
   }
 }
-import React from 'react',
+import React from 'react';
 export default function ServicesLayout(): any ({,
   children,
 }: {,
-  children: React && React.ReactNode}) {,
-  return <div>{children}</div>,
+  children: React && React.ReactNode}) {;
+  return <div>{children}</div>;
 }
 ,

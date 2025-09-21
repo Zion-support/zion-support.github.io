@@ -3,10 +3,10 @@ import import React from 'react';
 import React from "react";
 import { Upload,,, FileText,,  } from 'lucide-react'
 interface UploadSectionProps {
-  customFile: File | null;,
-onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  customFile: File | null;;
+onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
 export function UploadSection({
-  customFile,
+  customFile;
 onFileUpload,
 }: UploadSectionProps) {
   return (

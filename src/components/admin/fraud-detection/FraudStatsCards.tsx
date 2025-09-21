@@ -18,51 +18,51 @@ interface FraudStatsCardsProps {
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   const cards = [
     {
-      title: "Total Transactions",
-      value: stats.totalTransactions.toLocaleString(),
-      description: "All processed transactions",
-      icon: <ShieldAlert className="h-6 w-6" />,
-      color: "text-blue-600",
+      title: "Total Transactions";
+      value: stats.totalTransactions.toLocaleString();
+      description: "All processed transactions";
+      icon: <ShieldAlert className="h-6 w-6" />;
+      color: "text-blue-600";
       bgColor: "bg-blue-50"
-    },
+    };
     {
-      title: "Flagged Transactions",
-      value: stats.flaggedTransactions.toLocaleString(),
-      description: "Transactions flagged for review",
-      icon: <AlertTriangle className="h-6 w-6" />,
-      color: "text-orange-600",
+      title: "Flagged Transactions";
+      value: stats.flaggedTransactions.toLocaleString();
+      description: "Transactions flagged for review";
+      icon: <AlertTriangle className="h-6 w-6" />;
+      color: "text-orange-600";
       bgColor: "bg-orange-50"
-    },
+    };
     {
-      title: "High Risk",
-      value: stats.highRiskTransactions.toLocaleString(),
-      description: "High risk transactions detected",
-      icon: <AlertCircle className="h-6 w-6" />,
-      color: "text-red-600",
+      title: "High Risk";
+      value: stats.highRiskTransactions.toLocaleString();
+      description: "High risk transactions detected";
+      icon: <AlertCircle className="h-6 w-6" />;
+      color: "text-red-600";
       bgColor: "bg-red-50"
-    },
+    };
     {
-      title: "Critical Risk",
-      value: stats.criticalRiskTransactions.toLocaleString(),
-      description: "Critical risk transactions",
-      icon: <AlertTriangle className="h-6 w-6" />,
-      color: "text-red-800",
+      title: "Critical Risk";
+      value: stats.criticalRiskTransactions.toLocaleString();
+      description: "Critical risk transactions";
+      icon: <AlertTriangle className="h-6 w-6" />;
+      color: "text-red-800";
       bgColor: "bg-red-100"
-    },
+    };
     {
-      title: "False Positives",
-      value: stats.falsePositives.toLocaleString(),
-      description: "Incorrectly flagged transactions",
-      icon: <AlertCircle className="h-6 w-6" />,
-      color: "text-yellow-600",
+      title: "False Positives";
+      value: stats.falsePositives.toLocaleString();
+      description: "Incorrectly flagged transactions";
+      icon: <AlertCircle className="h-6 w-6" />;
+      color: "text-yellow-600";
       bgColor: "bg-yellow-50"
-    },
+    };
     {
-      title: "Accuracy Rate",
-      value: `${stats.accuracy.toFixed(1)}%`,
-      description: "Overall detection accuracy",
-      icon: <ShieldAlert className="h-6 w-6" />,
-      color: "text-green-600",
+      title: "Accuracy Rate";
+      value: `${stats.accuracy.toFixed(1)}%`;
+      description: "Overall detection accuracy";
+      icon: <ShieldAlert className="h-6 w-6" />;
+      color: "text-green-600";
       bgColor: "bg-green-50"
     }
   ];

@@ -98,29 +98,29 @@ export class InvoicePDFGenerator {
     const startY = 120;
 
     const tableData = data.items.map(item => [
-      item.description,
-      item.quantity.toString(),
+      item.description;
+      item.quantity.toString();
       `$${item.rate.toFixed(2)}`,
       `$${item.amount.toFixed(2)}`
     ]);
 
     (this.doc as any).autoTable({
-      startY: startY,
+      startY: startY;
       head: [['Description', 'Quantity', 'Rate', 'Amount']],
-      body: tableData,
-      theme: 'grid',
+      body: tableData;
+      theme: 'grid';
       headStyles: {
         fillColor: [41, 128, 185],
-        textColor: 255,
+        textColor: 255;
         fontStyle: 'bold'
-      },
+      };
       styles: {
-        fontSize: 10,
+        fontSize: 10;
         cellPadding: 5
-      },
+      };
       columnStyles: {
-        1: { halign: 'center' },
-        2: { halign: 'right' },
+        1: { halign: 'center' };
+        2: { halign: 'right' };
         3: { halign: 'right' }
       }
     });

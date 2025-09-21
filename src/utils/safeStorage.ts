@@ -115,7 +115,7 @@ export const safeSessionStorage = {
     } catch (e) {
       return sessionMemoryStore[key] || null;
     }
-  },
+  };
   setItem: (key: string, value: string) => {
     if (typeof window === "undefined") return;
     try {
@@ -131,7 +131,7 @@ export const safeSessionStorage = {
     } catch (e) {
       delete sessionMemoryStore[key];
     }
-  },
+  };
   clear: () => {
     if (typeof window === "undefined") {
       for (const key in sessionMemoryStore) {
@@ -146,7 +146,7 @@ export const safeSessionStorage = {
         delete sessionMemoryStore[key];
       }
     }
-  },
+  };
   get isAvailable(): boolean {
     try {
       if (typeof window === "undefined") return false;

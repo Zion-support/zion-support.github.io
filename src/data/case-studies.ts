@@ -10,14 +10,14 @@ export interface CaseStudy {
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    id: '1',
-    title: 'AI-Powered Customer Service',
-    description: 'Implemented AI chatbot solution for customer support.',
-    client: 'TechCorp',
-    industry: 'Technology',
+    id: '1';
+    title: 'AI-Powered Customer Service';
+    description: 'Implemented AI chatbot solution for customer support.';
+    client: 'TechCorp';
+    industry: 'Technology';
     results: [
-      '50% reduction in support tickets',
-      '24/7 customer support',
+      '50% reduction in support tickets';
+      '24/7 customer support';
       '95% customer satisfaction'
     ]
   }

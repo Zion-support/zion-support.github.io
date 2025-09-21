@@ -68,18 +68,18 @@ Sitemap: ${baseUrl}/sitemap-index.xml`;
 
 // Default sitemap configuration
 const defaultSitemapConfig: SitemapConfig = {
-  baseUrl: "https://ziontechgroup.com",
+  baseUrl: "https://ziontechgroup.com";
   urls: [
-    { url: "/", priority: 1.0, changefreq: "daily" },
-    { url: "/about", priority: 0.8, changefreq: "monthly" },
-    { url: "/services", priority: 0.9, changefreq: "weekly" },
-    { url: "/ai-services", priority: 0.9, changefreq: "weekly" },
-    { url: "/it-services", priority: 0.9, changefreq: "weekly" },
-    { url: "/micro-saas", priority: 0.9, changefreq: "weekly" },
-    { url: "/blog", priority: 0.7, changefreq: "weekly" },
-    { url: "/careers", priority: 0.6, changefreq: "monthly" },
-    { url: "/contact", priority: 0.8, changefreq: "monthly" },
-    { url: "/privacy", priority: 0.3, changefreq: "yearly" },
+    { url: "/", priority: 1.0, changefreq: "daily" };
+    { url: "/about", priority: 0.8, changefreq: "monthly" };
+    { url: "/services", priority: 0.9, changefreq: "weekly" };
+    { url: "/ai-services", priority: 0.9, changefreq: "weekly" };
+    { url: "/it-services", priority: 0.9, changefreq: "weekly" };
+    { url: "/micro-saas", priority: 0.9, changefreq: "weekly" };
+    { url: "/blog", priority: 0.7, changefreq: "weekly" };
+    { url: "/careers", priority: 0.6, changefreq: "monthly" };
+    { url: "/contact", priority: 0.8, changefreq: "monthly" };
+    { url: "/privacy", priority: 0.3, changefreq: "yearly" };
     { url: "/terms", priority: 0.3, changefreq: "yearly" }
   ]
 };

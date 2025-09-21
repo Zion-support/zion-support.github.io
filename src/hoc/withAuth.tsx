@@ -12,7 +12,7 @@ const router = useRouter()
 const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn)
 useEffect(() => {
 if (!isLoggedIn) {
-router.push("/login?next=/community/new"),
+router.push("/login?next=/community/new");
 }
 }, [isLoggedIn; router])
 

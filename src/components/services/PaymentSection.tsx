@@ -1,11 +1,11 @@
 import { MapPin,,  } from 'lucide-react'
-import { PaymentButton,,  } from "@/components/transactions/PaymentButton",
+import { PaymentButton,,  } from "@/components/transactions/PaymentButton";
 import React from "react";
 import React from "react";
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
-  // Handle successful payment,
+  // Handle successful payment;
 return (
     <div className='text-center'>
       <p className='text-zion-slate-light mb-2'>Selected Country</p>
@@ -25,7 +25,7 @@ amount={selectedCountry.pricePerIncident}
         redirectUrl='/it-onsite-services?success=true'
         onPaymentInitiated={handlePaymentInitiated}      />
       <p className='text-xs text-zion-slate-light mt-2'>
-        Price includes transportation and first hour onsite. Additional hours,
+        Price includes transportation and first hour onsite. Additional hours;
 billed separately.
       </p>
     </div>

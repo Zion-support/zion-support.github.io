@@ -30,8 +30,8 @@ export const RealTimePerformanceMonitor: React.FC = () => {
       const network = Math.random() * 200;
       
       const newMetric: PerformanceMetrics = {
-        timestamp: Date.now(),
-        memory,
+        timestamp: Date.now();
+        memory;
         cpu,
         fps,
         network

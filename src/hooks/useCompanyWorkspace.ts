@@ -23,14 +23,14 @@ export function useCompanyWorkspace() {
         await new Promise(resolve => setTimeout(resolve, 1000));
         
         const mockCompany: Company = {
-          id: '1',
-          name: 'Acme Corporation',
-          plan: 'Enterprise',
-          teamSize: 45,
+          id: '1';
+          name: 'Acme Corporation';
+          plan: 'Enterprise';
+          teamSize: 45;
           teamLimit: null, // Unlimited
-          billingCycle: 'Annual',
-          logoUrl: 'https://via.placeholder.com/40/0000FF/FFFFFF?text=AC',
-          workspaceUrl: 'acme.ziontechgroup.com',
+          billingCycle: 'Annual';
+          logoUrl: 'https://via.placeholder.com/40/0000FF/FFFFFF?text=AC';
+          workspaceUrl: 'acme.ziontechgroup.com';
         };
         
         setCompany(mockCompany);

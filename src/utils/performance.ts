@@ -38,8 +38,8 @@ export class PerformanceMonitor {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (navigation) {
           console.log('Page Load Performance:', {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
             totalTime: navigation.loadEventEnd - navigation.fetchStart
           })
         }
@@ -52,8 +52,8 @@ export class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           console.log('Resource Performance:', {
-            name: entry.name,
-            duration: entry.duration,
+            name: entry.name;
+            duration: entry.duration;
             transferSize: (entry as any).transferSize || 0
           })
         }
@@ -88,8 +88,8 @@ export const getMemoryUsage = () => {
   if (typeof window !== 'undefined' && 'memory' in performance) {
     const memory = (performance as any).memory
     return {
-      used: memory.usedJSHeapSize,
-      total: memory.totalJSHeapSize,
+      used: memory.usedJSHeapSize;
+      total: memory.totalJSHeapSize;
       limit: memory.jsHeapSizeLimit
     }
   }

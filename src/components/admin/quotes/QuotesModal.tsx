@@ -27,8 +27,8 @@ interface QuotesModalProps {
 }
 
 export const QuotesModal: React.FC<QuotesModalProps> = ({
-  quote,
-  isOpen,
+  quote;
+  isOpen;
   onClose,
   onEdit,
   onApprove,
@@ -53,8 +53,8 @@ export const QuotesModal: React.FC<QuotesModalProps> = ({
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
+      year: 'numeric';
+      month: 'long';
       day: 'numeric'
     });
   };

@@ -15,8 +15,8 @@ export class StorageUtils {
   }
 
   public static setItem(
-    key: string,
-    value: any,
+    key: string;
+    value: any;
     options: StorageOptions = {}
   ): void {
     const { type = "localStorage", prefix = "", expiration } = options;
@@ -25,7 +25,7 @@ export class StorageUtils {
     
     const data = {
       value,
-      timestamp: Date.now(),
+      timestamp: Date.now();
       expiration: expiration ? Date.now() + expiration : null
     };
     
@@ -33,7 +33,7 @@ export class StorageUtils {
   }
 
   public static getItem<T = any>(
-    key: string,
+    key: string;
     options: StorageOptions = {}
   ): T | null {
     const { type = "localStorage", prefix = "" } = options;
@@ -139,7 +139,7 @@ export class StorageUtils {
   }
 
   public static removeMultipleItems(
-    keys: string[],
+    keys: string[];
     options: StorageOptions = {}
   ): void {
     for (const key of keys) {
@@ -223,8 +223,8 @@ export class StorageUtils {
       if ("storage" in navigator && "estimate" in navigator.storage) {
         navigator.storage.estimate().then((estimate) => {
           resolve({
-            quota: estimate.quota || 0,
-            usage: estimate.usage || 0,
+            quota: estimate.quota || 0;
+            usage: estimate.usage || 0;
             available: (estimate.quota || 0) - (estimate.usage || 0)
           });
         });
@@ -232,8 +232,8 @@ export class StorageUtils {
         // Fallback for browsers that don't support storage quota API
         const info = this.getStorageInfo(type);
         resolve({
-          quota: info.total,
-          usage: info.used,
+          quota: info.total;
+          usage: info.used;
           available: info.available
         });
       }
@@ -267,8 +267,8 @@ export class StorageUtils {
   }
 
   public static importStorage(
-    data: string,
-    type: StorageType = "localStorage",
+    data: string;
+    type: StorageType = "localStorage";
     merge: boolean = false
   ): void {
     try {
@@ -290,8 +290,8 @@ export class StorageUtils {
     type: StorageType;
   } {
     return {
-      data: this.exportStorage(type),
-      timestamp: Date.now(),
+      data: this.exportStorage(type);
+      timestamp: Date.now();
       type
     };
   }

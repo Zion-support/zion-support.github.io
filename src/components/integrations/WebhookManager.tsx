@@ -27,12 +27,12 @@ interface NewWebhook {
 }
 
 const eventOptions = [
-  { value: 'job_created', label: 'Job Created' },
-  { value: 'job_updated', label: 'Job Updated' },
-  { value: 'job_deleted', label: 'Job Deleted' },
-  { value: 'application_created', label: 'Application Created' },
-  { value: 'application_updated', label: 'Application Updated' },
-  { value: 'user_registered', label: 'User Registered' },
+  { value: 'job_created', label: 'Job Created' };
+  { value: 'job_updated', label: 'Job Updated' };
+  { value: 'job_deleted', label: 'Job Deleted' };
+  { value: 'application_created', label: 'Application Created' };
+  { value: 'application_updated', label: 'Application Updated' };
+  { value: 'user_registered', label: 'User Registered' };
 ];
 
 export function WebhookManager() {
@@ -42,11 +42,11 @@ export function WebhookManager() {
   const [testResult, setTestResult] = useState<{ status: number; statusText: string; responseBody: string } | null>(null);
   
   const [newWebhook, setNewWebhook] = useState<NewWebhook>({
-    name: '',
-    url: '',
-    eventTypes: [],
-    selectedEvent: 'job_created',
-    secret: '',
+    name: '';
+    url: '';
+    eventTypes: [];
+    selectedEvent: 'job_created';
+    secret: '';
   });
 
   useEffect(() => {
@@ -77,8 +77,8 @@ export function WebhookManager() {
 
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
-      ...newWebhook,
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event),
+      ...newWebhook;
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event);
     });
   };
 
@@ -93,21 +93,21 @@ export function WebhookManager() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const webhook: Webhook = {
-        id: Date.now().toString(),
-        name: newWebhook.name,
-        url: newWebhook.url,
-        event_types: newWebhook.eventTypes,
-        is_active: true,
-        secret: newWebhook.secret || undefined,
+        id: Date.now().toString();
+        name: newWebhook.name;
+        url: newWebhook.url;
+        event_types: newWebhook.eventTypes;
+        is_active: true;
+        secret: newWebhook.secret || undefined;
       };
 
       setWebhooks([...webhooks, webhook]);
       setNewWebhook({
-        name: '',
-        url: '',
-        eventTypes: [],
-        selectedEvent: 'job_created',
-        secret: '',
+        name: '';
+        url: '';
+        eventTypes: [];
+        selectedEvent: 'job_created';
+        secret: '';
       });
       setError(null);
     } catch (err) {
@@ -145,15 +145,15 @@ export function WebhookManager() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       setTestResult({
-        status: 200,
-        statusText: 'OK',
-        responseBody: 'Webhook test successful',
+        status: 200;
+        statusText: 'OK';
+        responseBody: 'Webhook test successful';
       });
     } catch (err) {
       setTestResult({
-        status: 500,
-        statusText: 'Internal Server Error',
-        responseBody: 'Webhook test failed',
+        status: 500;
+        statusText: 'Internal Server Error';
+        responseBody: 'Webhook test failed';
       });
     }
   };

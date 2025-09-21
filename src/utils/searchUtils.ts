@@ -51,7 +51,7 @@ export const matchesSearchTerm = (text: string | undefined, searchTerm: string):
  * Calculate search relevance score based on multiple factors
  */
 export const calculateRelevanceScore = (
-  item: SearchResult,
+  item: SearchResult;
   searchTerm: string
 ): number => {
   let score = 0;
@@ -95,8 +95,8 @@ export const calculateRelevanceScore = (
  * Sort search results by relevance and other factors
  */
 export const sortSearchResults = (
-  results: SearchResult[],
-  searchTerm: string,
+  results: SearchResult[];
+  searchTerm: string;
   sortBy: string = "relevance"
 ): SearchResult[] => {
   const sortedResults = [...results];
@@ -141,7 +141,7 @@ export const sortSearchResults = (
  * Filter search results based on criteria
  */
 export const filterSearchResults = (
-  results: SearchResult[],
+  results: SearchResult[];
   filters: SearchFilters
 ): SearchResult[] => {
   return results.filter(item => {
@@ -175,9 +175,9 @@ export const filterSearchResults = (
  * Generate search suggestions based on query and available data
  */
 export const generateDynamicSuggestions = (
-  query: string,
-  recentSearches: string[] = [],
-  availableCategories: string[] = [],
+  query: string;
+  recentSearches: string[] = [];
+  availableCategories: string[] = [];
   availableTags: string[] = []
 ): SearchSuggestion[] => {
   const suggestions: SearchSuggestion[] = [];
@@ -186,8 +186,8 @@ export const generateDynamicSuggestions = (
   // Add current query as recent search suggestion
   if (query.trim()) {
     suggestions.push({
-      text: query,
-      type: "recent",
+      text: query;
+      type: "recent";
       id: `query-${query}`
     });
   }
@@ -198,8 +198,8 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(category => {
       suggestions.push({
-        text: category,
-        type: "category",
+        text: category;
+        type: "category";
         id: `category-${category}`
       });
     });
@@ -210,8 +210,8 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(tag => {
       suggestions.push({
-        text: tag,
-        type: "tag",
+        text: tag;
+        type: "tag";
         id: `tag-${tag}`
       });
     });
@@ -222,8 +222,8 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(search => {
       suggestions.push({
-        text: search,
-        type: "recent",
+        text: search;
+        type: "recent";
         id: `recent-${search}`
       });
     });
@@ -235,8 +235,8 @@ export const generateDynamicSuggestions = (
  * Perform fuzzy search on a collection of items
  */
 export const fuzzySearch = (
-  items: SearchResult[],
-  searchTerm: string,
+  items: SearchResult[];
+  searchTerm: string;
   threshold: number = 0.6
 ): SearchResult[] => {
   if (!searchTerm.trim()) return items;
@@ -246,8 +246,8 @@ export const fuzzySearch = (
 
   items.forEach(item => {
     const searchableText = [
-      item.title,
-      item.description,
+      item.title;
+      item.description;
       item.category,
       ...(item.tags || [])
     ].join(" ").toLowerCase();
@@ -289,17 +289,17 @@ const calculateFuzzyScore = (text: string, pattern: string): number => {
  * Default search filters
  */
 export const defaultSearchFilters: SearchFilters = {
-  types: [],
-  category: "",
-  minPrice: 0,
-  maxPrice: 10000,
-  minRating: 0,
+  types: [];
+  category: "";
+  minPrice: 0;
+  maxPrice: 10000;
+  minRating: 0;
   sort: "relevance"
 };
 
 export default {
-  highlightSearchTerms,
-  matchesSearchTerm,
+  highlightSearchTerms;
+  matchesSearchTerm;
   calculateRelevanceScore,
   sortSearchResults,
   filterSearchResults,

@@ -1,7 +1,7 @@
 interface SearchResult {
-  id: string;,
+  id: string;;
 title: string;
-  description: string;,
+  description: string;;
 type: 'product' | 'talent' | 'blog' | 'service';
   category?: string;
   url?: string;
@@ -10,19 +10,19 @@ type: 'product' | 'talent' | 'blog' | 'service';
   currency?: string;
   rating?: number;
   tags?: string[[];]
-  date?: string,
+  date?: string;
 interface SearchFilters {
-  types: string[[];],
+  types: string[[];];
 category: string;
-  minPrice: number;,
+  minPrice: number;;
 maxPrice: number;
-  minRating: number;,
+  minRating: number;;
 sort: string;
 interface SearchResponse {
-  results: SearchResult[[];],
+  results: SearchResult[[];];
 totalCount: number;
-  page: number;,
+  page: number;;
 limit: number;
-  query: string;,
+  query: string;;
 hasMore: boolean
 // Highlight search terms in text

@@ -91,8 +91,8 @@ class PerformanceMonitor {
   }
 
   measureFunction<T extends (...args: any[]) => any>(
-    name: string,
-    func: T,
+    name: string;
+    func: T;
     ...args: Parameters<T>
   ): ReturnType<T> {
     this.startTiming(name);
@@ -109,8 +109,8 @@ class PerformanceMonitor {
   private logMetric(name: string, value: number): void {
     if (typeof window !== "undefined" && "gtag" in window) {
       (window as any).gtag("event", "performance_metric", {
-        metric_name: name,
-        metric_value: value,
+        metric_name: name;
+        metric_value: value;
         event_category: "Performance"
       });
     }
@@ -180,10 +180,10 @@ class PerformanceAnalyzer {
     }
 
     return {
-      LCP: this.getLCP(),
-      FID: this.getFID(),
-      CLS: this.getCLS(),
-      FCP: this.getFCP(),
+      LCP: this.getLCP();
+      FID: this.getFID();
+      CLS: this.getCLS();
+      FCP: this.getFCP();
       TTFB: this.getTTFB()
     };
   }
@@ -195,10 +195,10 @@ class PerformanceAnalyzer {
     }
 
     return {
-      LCP: (metrics.LCP ?? Infinity) <= this.thresholds.LCP,
-      FID: (metrics.FID ?? Infinity) <= this.thresholds.FID,
-      CLS: (metrics.CLS ?? Infinity) <= this.thresholds.CLS,
-      FCP: (metrics.FCP ?? Infinity) <= this.thresholds.FCP,
+      LCP: (metrics.LCP ?? Infinity) <= this.thresholds.LCP;
+      FID: (metrics.FID ?? Infinity) <= this.thresholds.FID;
+      CLS: (metrics.CLS ?? Infinity) <= this.thresholds.CLS;
+      FCP: (metrics.FCP ?? Infinity) <= this.thresholds.FCP;
       TTFB: (metrics.TTFB ?? Infinity) <= this.thresholds.TTFB
     };
   }

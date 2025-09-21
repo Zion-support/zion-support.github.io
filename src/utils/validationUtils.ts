@@ -55,7 +55,7 @@ export class ValidationUtils {
     }
 
     return {
-      isValid: errors.length === 0,
+      isValid: errors.length === 0;
       errors
     };
   }
@@ -89,7 +89,7 @@ export class ValidationUtils {
     }
 
     return {
-      isValid: errors.length === 0,
+      isValid: errors.length === 0;
       errors
     };
   }

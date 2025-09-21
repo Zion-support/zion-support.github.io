@@ -53,7 +53,7 @@ className={cn(
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
   </MenubarPrimitive.SubTrigger>
 ))
-MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName,
+MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName;
 const MenubarSubContent = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.SubContent>
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubContent>

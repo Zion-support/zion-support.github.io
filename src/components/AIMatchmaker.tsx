@@ -21,9 +21,9 @@ export function AIMatchmaker({ serviceType }: AIMatchmakerProps) {
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
-        title: "Empty Query",
-        description: "Please describe what you're looking for.",
-        variant: "destructive",
+        title: "Empty Query";
+        description: "Please describe what you're looking for.";
+        variant: "destructive";
       })
       return
     }
@@ -36,21 +36,21 @@ export function AIMatchmaker({ serviceType }: AIMatchmakerProps) {
       await new Promise(resolve => setTimeout(resolve, 2000))
       
       const results = await findMatches({
-        category: serviceType,
+        category: serviceType;
         tags: query.toLowerCase().split(' ').filter(word => word.length > 3)
       })
       
       setMatchItems(results.items)
       
       toast({
-        title: "Matches Found",
-        description: `Found ${results.items.length} potential matches for your needs.`,
+        title: "Matches Found";
+        description: `Found ${results.items.length} potential matches for your needs.`;
       })
     } catch (error) {
       toast({
-        title: "Search Failed",
-        description: "Failed to find matches. Please try again.",
-        variant: "destructive",
+        title: "Search Failed";
+        description: "Failed to find matches. Please try again.";
+        variant: "destructive";
       })
     } finally {
       setIsMatchmaking(false)
@@ -59,8 +59,8 @@ export function AIMatchmaker({ serviceType }: AIMatchmakerProps) {
 
   const handleItemSelect = (item: MatchResultItem) => {
     toast({
-      title: "Item Selected",
-      description: `You selected: ${item.title}`,
+      title: "Item Selected";
+      description: `You selected: ${item.title}`;
     })
   }
 

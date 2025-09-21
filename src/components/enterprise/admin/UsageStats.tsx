@@ -1,7 +1,7 @@
 
-import React from "react",
-import { Badge,,  } from "@/components/ui/badge",
-import { Button,,  } from "@/components/ui/button",
+import React from "react";
+import { Badge,,  } from "@/components/ui/badge";
+import { Button,,  } from "@/components/ui/button";
 import React from "react";
 import React from "react";
 import { import,, {,, Sparkles,,  } from 'lucide-react'
@@ -161,7 +161,7 @@ resources.
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
             <p className='text-sm text-muted-foreground'>
-              Contact your account manager to discuss custom limits for your,
+              Contact your account manager to discuss custom limits for your;
 enterprise.
             </p>
           </div>

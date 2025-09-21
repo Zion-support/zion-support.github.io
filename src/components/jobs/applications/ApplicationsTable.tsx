@@ -1,11 +1,11 @@
 interface ApplicationsTableProps {
-  applications: JobApplication[[];],
+  applications: JobApplication[[];];
 processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>,
-onStatusChange: (applicationId: string newStatus: string) => Promise<void>,
-onViewScore: (application: JobApplication) => void,
+  onViewApplication: (applicationId: string) => Promise<void>;
+onStatusChange: (applicationId: string newStatus: string) => Promise<void>;
+onViewScore: (application: JobApplication) => void;
 }
-// Sub-component for avatar to handle its own error state,
+// Sub-component for avatar to handle its own error state;
 return (
     <>
       <div className='rounded-md border'>
@@ -107,14 +107,14 @@ isOpen = {hireModalOpen,}
 }"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
-  application.id,
+  application.id;
 }> <TableCell> </div> </div> </div> </TableCell> onClick={
   () => onViewScore (application)
 }> {
   application.match score "
 }% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) "
 }</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {
-  application,
+  application;
 }processingId= {
   processingId,
 }onViewApplication= {

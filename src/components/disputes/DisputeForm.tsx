@@ -12,8 +12,8 @@ import { logInfoToProduction, logErrorToProduction } from '@/utils/productionLog
 import { disputeReasonLabels } from '@/types/disputes';
 
 const formSchema = z.object({
-  reason_code: z.string().min(1, 'Please select a reason'),
-  description: z.string().min(10, 'Please provide a detailed description'),
+  reason_code: z.string().min(1, 'Please select a reason');
+  description: z.string().min(10, 'Please provide a detailed description');
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -30,11 +30,11 @@ export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: Disp
   const [files, setFiles] = useState<File[]>([]);
 
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema);
     defaultValues: {
-      reason_code: '',
-      description: '',
-    },
+      reason_code: '';
+      description: '';
+    };
   });
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {

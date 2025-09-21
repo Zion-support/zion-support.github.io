@@ -1,16 +1,14 @@
-import React from 'react',
-import { render, screen, fireEvent } from '@testing-library/react',
-import GlobalErrorBoundary from '@/components/GlobalErrorBoundary',
-import { vi, describe, it, expect, beforeAll, afterAll, type SpyInstance } from 'vitest',
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
+import { vi, describe, it, expect, beforeAll, afterAll, type SpyInstance } from 'vitest';
 
 // Mocking logError to prevent actual logging during tests
 vi.mock('@/utils/logError', () => ({
   logError: vi.fn()
-})),
-
+}));
 // Mocking console.error to keep test output clean
-let consoleErrorMock: SpyInstance,
-
+let consoleErrorMock: SpyInstance;
 beforeAll(() => {
   consoleErrorMock = vi.spyOn(console, 'error').mockImplementation(() => {}),
 }),
@@ -27,20 +25,20 @@ describe('GlobalErrorBoundary', () => {
       <GlobalErrorBoundary>
         <TestChild />
       </GlobalErrorBoundary>
-    ),
+    );
     expect(screen.getByText('Test Child Content')).toBeInTheDocument(),
   }),
 
   // Test Case 2: Catches an error and renders the fallback UI
   it('catches an error and renders the fallback UI with error details', () => {
     const ErrorComponent = () => {
-      throw new Error('Test error'),
+      throw new Error('Test error');
     },
     render(
       <GlobalErrorBoundary>
         <ErrorComponent />
       </GlobalErrorBoundary>
-    ),
+    );
     // Check for fallback UI elements
     expect(screen.getByText('Oops! Something went wrong.')).toBeInTheDocument(),
     expect(screen.getByText('We apologize for the inconvenience.')).toBeInTheDocument(),
@@ -48,15 +46,15 @@ describe('GlobalErrorBoundary', () => {
 
     // Check for error details (assuming it's displayed)
     // Open the details section first if necessary
-    const detailsSummary = screen.getByText('Error Details'),
-    fireEvent.click(detailsSummary),
+    const detailsSummary = screen.getByText('Error Details');
+    fireEvent.click(detailsSummary);
     expect(screen.getByText('Test error')).toBeInTheDocument(),
   }),
 
   // Test Case 3: "Reload" button in fallback UI attempts to refresh the page
   it('"Reload" button in fallback UI attempts to refresh the page', () => {
     const ErrorComponent = () => {
-      throw new Error('Another test error'),
+      throw new Error('Another test error');
     },
 
     // Mock window.location.reload
@@ -64,18 +62,15 @@ describe('GlobalErrorBoundary', () => {
     // @ts-expect-error - Intentionally deleting window.location for test mocking
     delete window.location,
     // Intentionally overriding window.location with mock for testing
-    window.location = { ...originalLocation, reload: vi.fn() as () => void },
-
+    window.location = { ...originalLocation, reload: vi.fn() as () => void };
     render(
       <GlobalErrorBoundary>
         <ErrorComponent />
       </GlobalErrorBoundary>
-    ),
-
-    const reloadButton = screen.getByRole('button', { name: /Reload/i }),
-    fireEvent.click(reloadButton),
-    expect(window.location.reload).toHaveBeenCalledTimes(1),
-
+    );
+    const reloadButton = screen.getByRole('button', { name: /Reload/i });
+    fireEvent.click(reloadButton);
+    expect(window.location.reload).toHaveBeenCalledTimes(1);
     // Restore original window.location
     window.location = originalLocation,
   }),

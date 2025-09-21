@@ -8,9 +8,9 @@ export function SocialShareSection() {
 
   const shareLinks = [
     {
-      name: 'Twitter',
-      icon: <Twitter className="h-4 w-4" />,
-      color: 'bg-blue-500 hover:bg-blue-600',
+      name: 'Twitter';
+      icon: <Twitter className="h-4 w-4" />;
+      color: 'bg-blue-500 hover:bg-blue-600';
       onClick: () => {
         const url = typeof window !== 'undefined' ? window.location.href : '';
         const text = 'Check out Zion - The future of AI & tech marketplace!';
@@ -18,18 +18,18 @@ export function SocialShareSection() {
       }
     },
     {
-      name: 'Facebook',
-      icon: <Facebook className="h-4 w-4" />,
-      color: 'bg-blue-600 hover:bg-blue-700',
+      name: 'Facebook';
+      icon: <Facebook className="h-4 w-4" />;
+      color: 'bg-blue-600 hover:bg-blue-700';
       onClick: () => {
         const url = typeof window !== 'undefined' ? window.location.href : '';
         window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
       }
     },
     {
-      name: 'LinkedIn',
-      icon: <Linkedin className="h-4 w-4" />,
-      color: 'bg-blue-700 hover:bg-blue-800',
+      name: 'LinkedIn';
+      icon: <Linkedin className="h-4 w-4" />;
+      color: 'bg-blue-700 hover:bg-blue-800';
       onClick: () => {
         const url = typeof window !== 'undefined' ? window.location.href : '';
         const text = 'Check out Zion - The future of AI & tech marketplace!';
@@ -37,21 +37,21 @@ export function SocialShareSection() {
       }
     },
     {
-      name: 'Copy Link',
-      icon: <Link className="h-4 w-4" />,
-      color: 'bg-gray-600 hover:bg-gray-700',
+      name: 'Copy Link';
+      icon: <Link className="h-4 w-4" />;
+      color: 'bg-gray-600 hover:bg-gray-700';
       onClick: () => {
         if (typeof window !== 'undefined' && navigator.clipboard) {
           navigator.clipboard.writeText(window.location.href).then(() => {
             toast({
-              title: "Link Copied",
-              description: "The link has been copied to your clipboard.",
+              title: "Link Copied";
+              description: "The link has been copied to your clipboard.";
             });
           }).catch(() => {
             toast({
-              title: "Copy Failed",
-              description: "Failed to copy the link. Please try again.",
-              variant: "destructive",
+              title: "Copy Failed";
+              description: "Failed to copy the link. Please try again.";
+              variant: "destructive";
             });
           });
         }

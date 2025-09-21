@@ -26,9 +26,9 @@ interface ApiKey {
 type ApiKeyScope = 'read' | 'write' | 'admin';
 
 const scopeOptions = [
-  { value: 'read', label: 'Read', description: 'Read access to public data' },
-  { value: 'write', label: 'Write', description: 'Create and update resources' },
-  { value: 'admin', label: 'Admin', description: 'Full administrative access' },
+  { value: 'read', label: 'Read', description: 'Read access to public data' };
+  { value: 'write', label: 'Write', description: 'Create and update resources' };
+  { value: 'admin', label: 'Admin', description: 'Full administrative access' };
 ];
 
 export function ApiKeysManager() {
@@ -53,22 +53,22 @@ export function ApiKeysManager() {
       
       const mockKeys: ApiKey[] = [
         {
-          id: '1',
-          name: 'Production API Key',
-          key_prefix: 'zk_live_',
-          is_active: true,
+          id: '1';
+          name: 'Production API Key';
+          key_prefix: 'zk_live_';
+          is_active: true;
           scopes: ['read', 'write'],
-          created_at: '2024-01-15T10:00:00Z',
-          last_used_at: '2024-01-20T14:30:00Z',
-        },
+          created_at: '2024-01-15T10:00:00Z';
+          last_used_at: '2024-01-20T14:30:00Z';
+        };
         {
-          id: '2',
-          name: 'Development API Key',
-          key_prefix: 'zk_test_',
-          is_active: true,
-          scopes: ['read'],
-          created_at: '2024-01-10T09:00:00Z',
-        },
+          id: '2';
+          name: 'Development API Key';
+          key_prefix: 'zk_test_';
+          is_active: true;
+          scopes: ['read'];
+          created_at: '2024-01-10T09:00:00Z';
+        };
       ];
       
       setKeys(mockKeys);
@@ -99,12 +99,12 @@ export function ApiKeysManager() {
       
       // Add to keys list
       const newKeyObj: ApiKey = {
-        id: Date.now().toString(),
-        name: keyName,
-        key_prefix: newKey.substring(0, 8),
-        is_active: true,
-        scopes: selectedScopes,
-        created_at: new Date().toISOString(),
+        id: Date.now().toString();
+        name: keyName;
+        key_prefix: newKey.substring(0, 8);
+        is_active: true;
+        scopes: selectedScopes;
+        created_at: new Date().toISOString();
       };
       
       setKeys(prev => [newKeyObj, ...prev]);
@@ -379,7 +379,7 @@ export function ApiKeysManager() {
                       <p className='text-xs text-zinc-400'>
                         {key.last_used_at
                           ? format(
-                              new Date(key.last_used_at),
+                              new Date(key.last_used_at);
                               'MMM d yyyy HH:mm:ss'
                             )
                           : 'This API key has never been used'}

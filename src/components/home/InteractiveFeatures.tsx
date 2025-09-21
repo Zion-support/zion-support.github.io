@@ -6,27 +6,27 @@ import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 export function InteractiveFeatures() {
   const features = [
     {
-      icon: Search,
-      title: "Smart Search",
-      description: "Find exactly what you need with our AI-powered search",
+      icon: Search;
+      title: "Smart Search";
+      description: "Find exactly what you need with our AI-powered search";
       action: "Try Search"
-    },
+    };
     {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Work together seamlessly with your team",
+      icon: Users;
+      title: "Team Collaboration";
+      description: "Work together seamlessly with your team";
       action: "Start Collaborating"
-    },
+    };
     {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Experience blazing fast performance",
+      icon: Zap;
+      title: "Lightning Fast";
+      description: "Experience blazing fast performance";
       action: "See Performance"
-    },
+    };
     {
-      icon: Settings,
-      title: "Easy Configuration",
-      description: "Customize everything to your needs",
+      icon: Settings;
+      title: "Easy Configuration";
+      description: "Customize everything to your needs";
       action: "Configure Now"
     }
   ];

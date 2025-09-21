@@ -36,10 +36,10 @@ size?: ButtonProps[&quot;size&quot;]
 interface PaginationButtonProps,
 extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number;
-isActive?: boolean,
+isActive?: boolean;
 }
 const PaginationLink = ({
-  className,
+  className;
 isActive
   size = &quot;icon&quot;
   ...props,
@@ -77,7 +77,7 @@ ref={ref}
 PaginationButton.displayName = 'PaginationButton'
 const PaginationPrevious = ({
   className
-  ...props,
+  ...props;
 }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
 aria-label="Go to previous page&quot;

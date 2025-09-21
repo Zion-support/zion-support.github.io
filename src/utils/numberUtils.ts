@@ -5,15 +5,15 @@ export class NumberUtils {
 
   public static formatCurrency(amount: number, currency: string = "USD", options: Intl.NumberFormatOptions = {}): string {
     return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency,
+      style: "currency";
+      currency;
       ...options
     }).format(amount);
   }
 
   public static formatPercentage(value: number, options: Intl.NumberFormatOptions = {}): string {
     return new Intl.NumberFormat("en-US", {
-      style: "percent",
+      style: "percent";
       ...options
     }).format(value / 100);
   }

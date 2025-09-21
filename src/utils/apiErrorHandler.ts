@@ -3,8 +3,8 @@ import { toast } from "@/hooks/use-toast";
 export const showApiError = (error: any, fallbackMessage?: string) => {
   const message = error?.message || fallbackMessage || "An unexpected error occurred";
   toast({
-    variant: "destructive",
-    title: "Error",
+    variant: "destructive";
+    title: "Error";
     description: message
   });
   

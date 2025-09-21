@@ -5,9 +5,9 @@ interface StepProgressProps {
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps; label: string }[] = [
-    { id: 'service', label: 'Service' },
+    { id: 'service', label: 'Service' };
 { id: 'details', label: 'Details' }
-    { id: 'timeline', label: 'Timeline' },
+    { id: 'timeline', label: 'Timeline' };
 { id: 'budget', label: 'Budget' }
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps label: string }[] = [
                   "text-zion-slate-light"

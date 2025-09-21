@@ -40,9 +40,9 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   const showRetryableError = (error: Error, retryAction?: () => void) => {
     const errorId = Date.now().toString();
     setErrors(prev => [...prev, {
-      id: errorId,
-      type: 'error',
-      message: error.message,
+      id: errorId;
+      type: 'error';
+      message: error.message;
       retryAction
     }]);
   };
@@ -50,9 +50,9 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   const showNetworkError = (retryAction?: () => void) => {
     const errorId = Date.now().toString();
     setErrors(prev => [...prev, {
-      id: errorId,
-      type: 'network',
-      message: 'Network connection failed. Please check your internet connection.',
+      id: errorId;
+      type: 'network';
+      message: 'Network connection failed. Please check your internet connection.';
       retryAction
     }]);
   };
@@ -60,9 +60,9 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   const showAuthError = (loginAction?: () => void) => {
     const errorId = Date.now().toString();
     setErrors(prev => [...prev, {
-      id: errorId,
-      type: 'auth',
-      message: 'Authentication required. Please log in to continue.',
+      id: errorId;
+      type: 'auth';
+      message: 'Authentication required. Please log in to continue.';
       loginAction
     }]);
   };
@@ -76,8 +76,8 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   };
 
   const value: ErrorContextType = {
-    reportError,
-    showRetryableError,
+    reportError;
+    showRetryableError;
     showNetworkError,
     showAuthError,
     clearAllErrors

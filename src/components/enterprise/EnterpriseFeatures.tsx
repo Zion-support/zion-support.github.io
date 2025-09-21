@@ -3,35 +3,35 @@ import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 
 const features = [
   {
-    title: "Advanced Team Management",
+    title: "Advanced Team Management";
     description: "Comprehensive tools for managing large teams, departments, and complex organizational structures.",
-    icon: Users,
-  },
+    icon: Users;
+  };
   {
-    title: "Enterprise Security",
+    title: "Enterprise Security";
     description: "Bank-level security with SSO, RBAC, and compliance with industry standards like SOC 2 and GDPR.",
-    icon: Shield,
-  },
+    icon: Shield;
+  };
   {
-    title: "Custom Workflows",
-    description: "Tailored hiring processes that match your organization's unique requirements and approval chains.",
-    icon: Briefcase,
-  },
+    title: "Custom Workflows";
+    description: "Tailored hiring processes that match your organization's unique requirements and approval chains.";
+    icon: Briefcase;
+  };
   {
-    title: "Analytics & Reporting",
-    description: "Advanced analytics dashboard with custom reports and insights for data-driven hiring decisions.",
-    icon: Award,
-  },
+    title: "Analytics & Reporting";
+    description: "Advanced analytics dashboard with custom reports and insights for data-driven hiring decisions.";
+    icon: Award;
+  };
   {
-    title: "API Integration",
+    title: "API Integration";
     description: "Seamless integration with your existing HR systems, ATS, and third-party tools via robust APIs.",
-    icon: Settings,
-  },
+    icon: Settings;
+  };
   {
-    title: "Global Reach",
-    description: "Multi-language support and compliance with international hiring laws and regulations.",
-    icon: Globe,
-  },
+    title: "Global Reach";
+    description: "Multi-language support and compliance with international hiring laws and regulations.";
+    icon: Globe;
+  };
 ];
 
 export function EnterpriseFeatures() {

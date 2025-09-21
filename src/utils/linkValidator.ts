@@ -26,8 +26,8 @@ export class LinkValidator {
     if (!url.startsWith("http") && !url.startsWith("/") && !url.startsWith("#")) {
       return {
         url,
-        status: "protocol",
-        parentPage,
+        status: "protocol";
+        parentPage;
         error: "Invalid protocol or relative path"
       };
     }
@@ -35,8 +35,8 @@ export class LinkValidator {
     // Check for external links
     if (url.startsWith("http") && !url.includes("ziontechgroup.com")) {
       return {
-        url,
-        status: "external",
+        url;
+        status: "external";
         parentPage
       };
     }
@@ -44,10 +44,10 @@ export class LinkValidator {
     // Check for broken internal links that have mappings
     if (this.BROKEN_LINK_MAPPINGS[url]) {
       return {
-        url,
-        status: "broken",
-        parentPage,
-        suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`,
+        url;
+        status: "broken";
+        parentPage;
+        suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`;
         error: "Broken internal link with available redirect"
       };
     }
@@ -56,7 +56,7 @@ export class LinkValidator {
     // In a real implementation, you'd check against actual routes
     return {
       url,
-      status: "valid",
+      status: "valid";
       parentPage
     };
   }
@@ -72,7 +72,7 @@ export class LinkValidator {
 
   static generateRedirectRules(): string {
     const rules = [
-      "# Redirect rules for broken links",
+      "# Redirect rules for broken links";
       "RewriteRule ^old-page/?$ /new-page [R=301,L]",
       "RewriteRule ^legacy/?$ /modern [R=301,L]",
       "RewriteRule ^deprecated/?$ /current [R=301,L]"
@@ -97,9 +97,9 @@ export class LinkValidator {
     for (const result of results) {
       if (result.status === "broken" && result.suggestedFix) {
         fixes.push({
-          originalUrl: result.url,
-          newUrl: result.suggestedFix.replace("Redirect to: ", ""),
-          type: "redirect",
+          originalUrl: result.url;
+          newUrl: result.suggestedFix.replace("Redirect to: ", "");
+          type: "redirect";
           reason: result.error || "Broken link detected"
         });
       }

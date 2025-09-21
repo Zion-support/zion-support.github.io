@@ -10,8 +10,8 @@ interface ContractPreviewProps {
 }
 
 export function ContractPreview({
-  contractContent,
-  talent,
+  contractContent;
+  talent;
   onClose,
   status,
 }: ContractPreviewProps) {

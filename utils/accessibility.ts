@@ -12,9 +12,9 @@ export interface AccessibilityConfig {
 
 export class AccessibilityManager {
   private config: AccessibilityConfig = {
-    enableKeyboardNavigation: true,
-    enableScreenReader: true,
-    enableHighContrast: false,
+    enableKeyboardNavigation: true;
+    enableScreenReader: true;
+    enableHighContrast: false;
     fontSize: 'medium'
   };
   
@@ -75,8 +75,8 @@ export class AccessibilityManager {
   
   private setupFontSizeControl() {
     const fontSizes = {
-      small: '14px',
-      medium: '16px',
+      small: '14px';
+      medium: '16px';
       large: '18px'
     };
     

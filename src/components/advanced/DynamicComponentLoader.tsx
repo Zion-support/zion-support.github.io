@@ -99,7 +99,7 @@ const NetworkStatus: React.FC<{ isOnline: boolean }> = ({ isOnline }) => (
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
     className={cn(
-      "fixed top-4 right-4 z-50 flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium",
+      "fixed top-4 right-4 z-50 flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium";
       isOnline ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
     )}
   >
@@ -109,11 +109,11 @@ const NetworkStatus: React.FC<{ isOnline: boolean }> = ({ isOnline }) => (
 );
 
 const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
-  importFn,
-  fallback,
-  errorFallback: ErrorFallbackComponent = ErrorFallback,
-  loadingComponent: LoadingComponent = EnhancedLoading,
-  enableRetry = true,
+  importFn;
+  fallback;
+  errorFallback: ErrorFallbackComponent = ErrorFallback;
+  loadingComponent: LoadingComponent = EnhancedLoading;
+  enableRetry = true;
   maxRetries = 3,
   prefetch = false,
   className,
@@ -121,10 +121,10 @@ const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   ...props
 }) => {
   const [loadingState, setLoadingState] = useState<LoadingState>({
-    isLoading: true,
-    error: null,
-    retryCount: 0,
-    isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
+    isLoading: true;
+    error: null;
+    retryCount: 0;
+    isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true;
   });
 
   const [Component, setComponent] = useState<ComponentType<any> | null>(null);
@@ -146,10 +146,10 @@ const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       logErrorToProduction('Dynamic component load failed:', { error: errorObj, retryCount: loadingState.retryCount });
       
       setLoadingState(prev => ({
-        ...prev,
-        isLoading: false,
-        error: errorObj,
-        retryCount: prev.retryCount + 1,
+        ...prev;
+        isLoading: false;
+        error: errorObj;
+        retryCount: prev.retryCount + 1;
       }));
     }
   };

@@ -54,7 +54,7 @@ export class DOMUtils {
   public static getOffset(element: Element): { top: number; left: number } {
     const rect = this.getRect(element);
     return {
-      top: rect.top + window.scrollY,
+      top: rect.top + window.scrollY;
       left: rect.left + window.scrollX
     };
   }
@@ -62,7 +62,7 @@ export class DOMUtils {
   public static getDimensions(element: Element): { width: number; height: number } {
     const rect = this.getRect(element);
     return {
-      width: rect.width,
+      width: rect.width;
       height: rect.height
     };
   }
@@ -84,9 +84,9 @@ export class DOMUtils {
 
   public static scrollIntoView(element: Element, options: ScrollIntoViewOptions = {}): void {
     element.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center",
+      behavior: "smooth";
+      block: "center";
+      inline: "center";
       ...options
     });
   }
@@ -100,25 +100,25 @@ export class DOMUtils {
   }
 
   public static addEventListener(
-    element: Element,
-    event: string,
-    handler: EventListener,
+    element: Element;
+    event: string;
+    handler: EventListener;
     options: AddEventListenerOptions = {}
   ): void {
     element.addEventListener(event, handler, options);
   }
 
   public static removeEventListener(
-    element: Element,
-    event: string,
-    handler: EventListener,
+    element: Element;
+    event: string;
+    handler: EventListener;
     options: AddEventListenerOptions = {}
   ): void {
     element.removeEventListener(event, handler, options);
   }
 
   public static addClickOutsideListener(
-    element: Element,
+    element: Element;
     callback: () => void
   ): () => void {
     const handler = (event: Event) => {
@@ -132,13 +132,13 @@ export class DOMUtils {
   }
 
   public static addResizeListener(
-    element: Element,
+    element: Element;
     callback: (dimensions: { width: number; height: number }) => void
   ): () => void {
     const resizeObserver = new ResizeObserver(entries => {
       for (const entry of entries) {
         callback({
-          width: entry.contentRect.width,
+          width: entry.contentRect.width;
           height: entry.contentRect.height
         });
       }
@@ -149,8 +149,8 @@ export class DOMUtils {
   }
 
   public static addIntersectionListener(
-    element: Element,
-    callback: (isIntersecting: boolean) => void,
+    element: Element;
+    callback: (isIntersecting: boolean) => void;
     options: IntersectionObserverInit = {}
   ): () => void {
     const observer = new IntersectionObserver(entries => {
@@ -164,8 +164,8 @@ export class DOMUtils {
   }
 
   public static addMutationListener(
-    element: Element,
-    callback: (mutations: MutationRecord[]) => void,
+    element: Element;
+    callback: (mutations: MutationRecord[]) => void;
     options: MutationObserverInit = {}
   ): () => void {
     const observer = new MutationObserver(callback);

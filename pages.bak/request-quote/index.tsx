@@ -1,5 +1,5 @@
-import React from 'react',
-import * as React from 'react',
+import React from 'react';
+import * as React from 'react';
 interface IndexProps {,
   // Add props here as needed
 }

@@ -24,9 +24,9 @@ class ResourceMonitor {
         const url = this.getResourceUrl(target);
         if (url) {
           const resourceError: ResourceError = {
-            url,
-            type: this.getResourceTypeFromUrl(url),
-            error: event.message || 'Resource failed to load',
+            url;
+            type: this.getResourceTypeFromUrl(url);
+            error: event.message || 'Resource failed to load';
             timestamp: Date.now()
           };
           this.errors.push(resourceError);
@@ -55,9 +55,9 @@ class ResourceMonitor {
 
   private recordError(url: string, errorMessage: string): void {
     const resourceError: ResourceError = {
-      url,
-      type: this.getResourceTypeFromUrl(url),
-      error: errorMessage,
+      url;
+      type: this.getResourceTypeFromUrl(url);
+      error: errorMessage;
       timestamp: Date.now()
     };
     this.errors.push(resourceError);
@@ -94,7 +94,7 @@ class ResourceMonitor {
     recent: number;
   } {
     const summary = {
-      total: this.errors.length,
+      total: this.errors.length;
       byType: {} as Record<string, number>,
       recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute
     };

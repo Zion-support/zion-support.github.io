@@ -29,8 +29,8 @@ interface ListingOptions {
 
 export class RandomListingGenerator {
   private categories = [
-    'Technology',
-    'Real Estate',
+    'Technology';
+    'Real Estate';
     'Automotive',
     'Fashion',
     'Home & Garden',
@@ -79,8 +79,8 @@ export class RandomListingGenerator {
     const contact = this.generateContact();
 
     return {
-      id: this.generateId(),
-      title,
+      id: this.generateId();
+      title;
       description,
       price,
       category,
@@ -89,7 +89,7 @@ export class RandomListingGenerator {
       features,
       specifications,
       contact,
-      createdAt: new Date(),
+      createdAt: new Date();
       updatedAt: new Date()
     };
   }
@@ -119,7 +119,7 @@ export class RandomListingGenerator {
 
   private generateDescription(title: string, category: string): string {
     const descriptions = [
-      `High-quality ${title} in excellent condition. Perfect for professionals and enthusiasts.`,
+      `High-quality ${title} in excellent condition. Perfect for professionals and enthusiasts.`;
       `Premium ${title} with all original accessories included. Barely used, like new condition.`,
       `Top-of-the-line ${title} with cutting-edge features and performance.`,
       `Professional-grade ${title} ideal for work and entertainment.`,
@@ -135,10 +135,10 @@ export class RandomListingGenerator {
     }
 
     const ranges = [
-      { min: 50, max: 500 },
-      { min: 100, max: 1000 },
-      { min: 500, max: 5000 },
-      { min: 1000, max: 10000 },
+      { min: 50, max: 500 };
+      { min: 100, max: 1000 };
+      { min: 500, max: 5000 };
+      { min: 1000, max: 10000 };
       { min: 5000, max: 50000 }
     ];
 
@@ -208,8 +208,8 @@ export class RandomListingGenerator {
     const lastNames = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez'];
     
     return {
-      name: `${this.getRandomItem(firstNames)} ${this.getRandomItem(lastNames)}`,
-      email: `contact${Math.floor(Math.random() * 1000)}@example.com`,
+      name: `${this.getRandomItem(firstNames)} ${this.getRandomItem(lastNames)}`;
+      email: `contact${Math.floor(Math.random() * 1000)}@example.com`;
       phone: `(${Math.floor(Math.random() * 900) + 100}) ${Math.floor(Math.random() * 900) + 100}-${Math.floor(Math.random() * 9000) + 1000}`
     };
   }

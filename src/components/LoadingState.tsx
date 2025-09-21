@@ -10,21 +10,21 @@ interface LoadingStateProps {
 }
 
 export const LoadingState: React.FC<LoadingStateProps> = ({
-  type = 'spinner',
-  size = 'md',
+  type = 'spinner';
+  size = 'md';
   color = 'blue',
   text
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
+    sm: 'w-4 h-4';
+    md: 'w-8 h-8';
     lg: 'w-12 h-12'
   };
 
   const colorClasses = {
-    blue: 'border-blue-500',
-    green: 'border-green-500',
-    purple: 'border-purple-500',
+    blue: 'border-blue-500';
+    green: 'border-green-500';
+    purple: 'border-purple-500';
     red: 'border-red-500'
   };
 
@@ -65,8 +65,8 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
                 className={\`w-2 h-2 bg-${color}-500 rounded-full\`}
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{
-                  duration: 0.6,
-                  repeat: Infinity,
+                  duration: 0.6;
+                  repeat: Infinity;
                   delay: i * 0.2
                 }}
               />

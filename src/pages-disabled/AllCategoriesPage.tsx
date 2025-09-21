@@ -16,8 +16,8 @@ export default function AllCategoriesPage() {
             All Categories
           </GradientHeading>
           <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
-            Explore our extensive range of AI services and products. Find,
-exactly what you're looking for to enhance your business or personal,
+            Explore our extensive range of AI services and products. Find;
+exactly what you're looking for to enhance your business or personal;
 projects.          </p>
         </div>
         <ErrorBoundary>

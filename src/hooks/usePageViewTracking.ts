@@ -15,7 +15,7 @@ export function usePageViewTracking() {
       // Track page view
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("config", process.env.NEXT_PUBLIC_GA_ID, {
-          page_path: url,
+          page_path: url;
         });
       }
     };

@@ -1,10 +1,10 @@
 import React from "react";
 
 export; interface; ComprehensiveITService20o29 {
-id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: string;email: stringwebsit;e: stringaddres;s: string;,
+id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: string;email: stringwebsit;e: stringaddres;s: string;;
 }
 technicalSpecs?: {
-technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[[];],
+technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[[];];
 }
 competitors?: string[],marketSize?: string;demoUrl?: string;documentationUrl?: string,}export; const; COMPREHENSIVE_IT_SERVICES_20o29: ComprehensiveITService20o29[] = [;
 /
@@ -17,9 +17,9 @@ i;d: "cloud-infrastructure-optimization",title: "Cloud; Infrastructure; Optimiza
 "Enterprise; cloud; migration","Cost optimization","Performance improvement","Security enhancement""
 ,  ],targetAudience: [;
 "Enterprises","SMBs","Startups","Government agencies""
-,  ],tags: ["Cloud", "Infrastructure", "DevOps",, "Optimization""Security"],estimatedDelivery: "4-8 weeks",supportLevel: "enterprise",marketPrice: "$2;50o0 - $8;0o00/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ",
+,  ],tags: ["Cloud", "Infrastructure", "DevOps",, "Optimization""Security"],estimatedDelivery: "4-8 weeks",supportLevel: "enterprise",marketPrice: "$2;50o0 - $8;0o00/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ";
 },technicalSpecs: {,technology: ["AWS", "Azure", "GCP", "Kubernetes",, "Docker""Terraform"],integrations: ["CI/CD pipelines", "Monitoring tools", "Security tools""Backup; solutions"],apiEndpoints: 10o00;uptime: "99.9%",security: [["SOC 2", "ISO 270o01""NIST""GDPR""Zero-trust; architecture"];]
-},competitors: ["AWS; Professional; Services", "Azure Consulting""Google; Cloud,, Consulting"],marketSize: "$45.2B (Cloud; Infrastructure; Services)",demoUrl: "http;s://ziontechgroup.com/demo/cloud-infrastructure-optimization",documentationUrl: ",
+},competitors: ["AWS; Professional; Services", "Azure Consulting""Google; Cloud,, Consulting"],marketSize: "$45.2B (Cloud; Infrastructure; Services)",demoUrl: "http;s://ziontechgroup.com/demo/cloud-infrastructure-optimization",documentationUrl: ";
 }
 /
 {
@@ -31,9 +31,9 @@ id: "comprehensive-cybersecurity",title: "Comprehensive Cybersecurity & Complian
 "Enterprise security","Compliance management","Incident response","Security assessment""
 ,  ],targetAudience: [;
 "Enterprises","Financial institutions","Healthcare organizations","Government agencies""
-,  ],tags: ["Cybersecurity", "Compliance", "Security", "Risk; Management""Audit"],estimatedDelivery: "6-10 weeks",supportLevel: "enterprise",marketPrice: "$3;50o0 - $12;0o00/month",roi: "30o0-60o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ",
+,  ],tags: ["Cybersecurity", "Compliance", "Security", "Risk; Management""Audit"],estimatedDelivery: "6-10 weeks",supportLevel: "enterprise",marketPrice: "$3;50o0 - $12;0o00/month",roi: "30o0-60o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ";
 },technicalSpecs: {,technology: ["SIEM", "EDR", "Firewalls", "IDS/IPS""Vulnerability; scanners"],integrations: ["Security tools", "Monitoring systems""Compliance; platforms"],apiEndpoints: 80o0;uptime: "99.99%",security: [["SOC 2", "ISO 270o01""NIST""GDPR""Zero-trust; architecture"];]
-},competitors: ["Deloitte", "PwC", "EY",, "KPMG""Accenture"],marketSize: "$22.1B (Cybersecurity Services)",demoUrl: "http;s://ziontechgroup.com/demo/comprehensive-cybersecurity",documentationUrl: ",
+},competitors: ["Deloitte", "PwC", "EY",, "KPMG""Accenture"],marketSize: "$22.1B (Cybersecurity Services)",demoUrl: "http;s://ziontechgroup.com/demo/comprehensive-cybersecurity",documentationUrl: ";
 }
 / Transformation; Consulting;
 {
@@ -45,9 +45,9 @@ id: "digital-transformation-consulting",title: "Digital; Transformation; Consult
 "Business; process; optimization","Technology modernization","Customer; experience; improvement","Operational efficiency""
 ,  ],targetAudience: [;
 "Enterprises","SMBs","Government agencies","Healthcare organizations""
-,  ],tags: ["Digital Transformation", "Consulting", "Strategy", "Process Optimization""Change; Management"],estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$5;0o00 - $15;0o00/month",roi: "20o0-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ",
-},technicalSpecs: {,technology: ["Business Intelligence", "Process Mining", "RPA", "Cloud; Platforms""Analytics"],integrations: ["ERP systems", "CRM platforms", "Business tools""Analytics; platforms"],apiEndpoints: 50o0;uptime: "99.9%",security: [["SOC 2""ISO 270o01""Data protection""Access; controls"];],
-},competitors: ["McKinsey", "BCG", "Bain",, "Deloitte""Accenture"],marketSize: "$28.5B (Digital; Transformation; Consulting)",demoUrl: "http;s://ziontechgroup.com/demo/digital-transformation-consulting",documentationUrl: ",
+,  ],tags: ["Digital Transformation", "Consulting", "Strategy", "Process Optimization""Change; Management"],estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$5;0o00 - $15;0o00/month",roi: "20o0-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ";
+},technicalSpecs: {,technology: ["Business Intelligence", "Process Mining", "RPA", "Cloud; Platforms""Analytics"],integrations: ["ERP systems", "CRM platforms", "Business tools""Analytics; platforms"],apiEndpoints: 50o0;uptime: "99.9%",security: [["SOC 2""ISO 270o01""Data protection""Access; controls"];];
+},competitors: ["McKinsey", "BCG", "Bain",, "Deloitte""Accenture"],marketSize: "$28.5B (Digital; Transformation; Consulting)",demoUrl: "http;s://ziontechgroup.com/demo/digital-transformation-consulting",documentationUrl: ";
 }
 /
 {
@@ -59,9 +59,9 @@ id: "data-analytics-business-intelligence",title: "Data Analytics & Business Int
 "Business; performance; analysis","Customer insights","Operational optimization","Financial analysis""
 ,  ],targetAudience: [;
 "Enterprises","SMBs","Financial institutions","Healthcare organizations""
-,  ],tags: ["Data Analytics", "Business Intelligence", "Machine Learning", "Predictive Analytics""Data; Visualization"],estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$3;0o00 - $10;0o00/month",roi: "250-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ",
+,  ],tags: ["Data Analytics", "Business Intelligence", "Machine Learning", "Predictive Analytics""Data; Visualization"],estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$3;0o00 - $10;0o00/month",roi: "250-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ";
 },technicalSpecs: {,technology: ["Python", "R", "SQL", "Tableau", "Power BI""Machine; Learning"],integrations: ["Databases", "Cloud platforms", "Business applications""Data; sources"],apiEndpoints: 60o0;uptime: "99.9%",security: [["SOC 2", "GDPR""Data encryption""Access controls""Audit; trails"];]
-},competitors: ["Tableau", "Power BI", "Qlik",, "Looker""Sisense"],marketSize: "$18.7B (Business Intelligence)",demoUrl: "http;s://ziontechgroup.com/demo/data-analytics-business-intelligence",documentationUrl: ",
+},competitors: ["Tableau", "Power BI", "Qlik",, "Looker""Sisense"],marketSize: "$18.7B (Business Intelligence)",demoUrl: "http;s://ziontechgroup.com/demo/data-analytics-business-intelligence",documentationUrl: ";
 }
 / Infrastructure; Management;
 {
@@ -73,9 +73,9 @@ id: "it-infrastructure-management",title: "IT; Infrastructure; Management",descr
 "Infrastructure optimization","Performance improvement","Security enhancement","Cost reduction""
 ,  ],targetAudience: [;
 "Enterprises","SMBs","Healthcare organizations","Financial institutions""
-,  ],tags: ["Infrastructure", "Network Management", "Server Administration",, "Storage""Performance"],estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$2;0o00 - $6;0o00/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ",
+,  ],tags: ["Infrastructure", "Network Management", "Server Administration",, "Storage""Performance"],estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$2;0o00 - $6;0o00/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ";
 },technicalSpecs: {,technology: ["VMware", "Hyper-V", "Windows Server", "Linux""Storage; systems"],integrations: ["Monitoring tools", "Backup solutions", "Security tools""Management; platforms"],apiEndpoints: 40o0;uptime: "99.9%",security: [["SOC 2", "ISO 270o01""Data encryption""Access controls""Audit; logs"];]
-},competitors: ["Dell Technologies", "HPE", "IBM",, "Cisco""VMware"],marketSize: "$35.8B (IT; Infrastructure; Management)",demoUrl: "http;s://ziontechgroup.com/demo/it-infrastructure-management",documentationUrl: ",
+},competitors: ["Dell Technologies", "HPE", "IBM",, "Cisco""VMware"],marketSize: "$35.8B (IT; Infrastructure; Management)",demoUrl: "http;s://ziontechgroup.com/demo/it-infrastructure-management",documentationUrl: ";
 }
 /
 {
@@ -87,9 +87,9 @@ id: "custom-software-development",title: "Custom; Software; Development",descrip
 "Business applications","E-commerce platforms","Customer portals","Internal tools""
 ,  ],targetAudience: [;
 "Enterprises","SMBs","Startups","Government agencies""
-,  ],tags: ["Software Development", "Custom Solutions", "Web Development", "Mobile Apps""API; Development"],estimatedDelivery: "8-16 weeks",supportLevel: "premium",marketPrice: "$150 - $250/hour",roi: "30o0-60o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ",
-},technicalSpecs: {,technology: ["React", "Node.js", "Python", "Java""Mobile; frameworks"],integrations: ["Databases", "APIs", "Third-party services""Cloud; platforms"],apiEndpoints: 30o0;uptime: "99.9%",security: [["Secure coding""Data encryption""Access controls""Security; testing"];],
-},competitors: ["Accenture", "Infosys", "Tata Consultancy",, "Wipro""Cognizant"],marketSize: "$22.8B (Custom; Software; Development)",demoUrl: "http;s://ziontechgroup.com/demo/custom-software-development",documentationUrl: ",
+,  ],tags: ["Software Development", "Custom Solutions", "Web Development", "Mobile Apps""API; Development"],estimatedDelivery: "8-16 weeks",supportLevel: "premium",marketPrice: "$150 - $250/hour",roi: "30o0-60o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ";
+},technicalSpecs: {,technology: ["React", "Node.js", "Python", "Java""Mobile; frameworks"],integrations: ["Databases", "APIs", "Third-party services""Cloud; platforms"],apiEndpoints: 30o0;uptime: "99.9%",security: [["Secure coding""Data encryption""Access controls""Security; testing"];];
+},competitors: ["Accenture", "Infosys", "Tata Consultancy",, "Wipro""Cognizant"],marketSize: "$22.8B (Custom; Software; Development)",demoUrl: "http;s://ziontechgroup.com/demo/custom-software-development",documentationUrl: ";
 }
 / IT; Services;
 {
@@ -101,9 +101,9 @@ id: "managed-it-services",title: "Managed; IT; Services",description: "Comprehen
 "IT; infrastructure; management","Help; desk; support","Security management","Performance optimization""
 ,  ],targetAudience: [;
 "SMBs","Enterprises","Healthcare organizations","Financial institutions""
-,  ],tags: ["Managed Services", "IT Management", "24/7 Support", "Proactive Maintenance""Help; Desk"],estimatedDelivery: "2-4 weeks",supportLevel: "enterprise",marketPrice: "$1;50o0 - $5;0o00/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ",
+,  ],tags: ["Managed Services", "IT Management", "24/7 Support", "Proactive Maintenance""Help; Desk"],estimatedDelivery: "2-4 weeks",supportLevel: "enterprise",marketPrice: "$1;50o0 - $5;0o00/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ";
 },technicalSpecs: {,technology: ["Monitoring tools", "Management platforms", "Security tools""Backup; solutions"],integrations: ["IT systems", "Monitoring platforms", "Security tools""Management; tools"],apiEndpoints: 20o0;uptime: "99.9%",security: [["SOC 2", "ISO 270o01""Data encryption""Access controls""Audit; logs"];]
-},competitors: ["Dell Technologies", "HPE", "IBM",, "Cisco""VMware"],marketSize: "$42.1B (Managed; IT; Services)",demoUrl: "http;s://ziontechgroup.com/demo/managed-it-services",documentationUrl: ",
+},competitors: ["Dell Technologies", "HPE", "IBM",, "Cisco""VMware"],marketSize: "$42.1B (Managed; IT; Services)",demoUrl: "http;s://ziontechgroup.com/demo/managed-it-services",documentationUrl: ";
 }
 /
 {
@@ -115,9 +115,9 @@ id: "network-security-firewall",title: "Network Security & Firewall Management",
 "Network protection","Compliance management","Threat prevention","Incident response""
 ,  ],targetAudience: [;
 "Enterprises","SMBs","Financial institutions","Healthcare organizations""
-,  ],tags: ["Network Security", "Firewall Management", "Threat Detection",, "Compliance""VPN"],estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$1;80o0 - $6;0o00/month",roi: "250-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ",
+,  ],tags: ["Network Security", "Firewall Management", "Threat Detection",, "Compliance""VPN"],estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$1;80o0 - $6;0o00/month",roi: "250-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ";
 },technicalSpecs: {,technology: ["Firewalls", "IDS/IPS", "VPN solutions", "Network monitoring""Security; tools"],integrations: ["Security platforms", "Monitoring systems""Management; tools"],apiEndpoints: 30o0;uptime: "99.9%",security: [["SOC 2", "ISO 270o01""NIST""Data encryption""Access; controls"];]
-},competitors: ["Cisco", "Palo; Alto; Networks", "Fortinet", "Check; Point""Juniper"],marketSize: "$18.9B (Network Security)",demoUrl: "http;s://ziontechgroup.com/demo/network-security-firewall",documentationUrl: ",
+},competitors: ["Cisco", "Palo; Alto; Networks", "Fortinet", "Check; Point""Juniper"],marketSize: "$18.9B (Network Security)",demoUrl: "http;s://ziontechgroup.com/demo/network-security-firewall",documentationUrl: ";
 }
 /
 {
@@ -129,9 +129,9 @@ id: "cloud-migration-strategy",title: "Cloud Migration & Strategy",description: 
 "Data; center; migration","Application migration","Hybrid; cloud; setup","Multi-cloud strategy""
 ,  ],targetAudience: [;
 "Enterprises","SMBs","Government agencies","Healthcare organizations""
-,  ],tags: ["Cloud Migration", "Strategy", "Risk Assessment", "Cost Analysis""Performance; Optimization"],estimatedDelivery: "12-20 weeks",supportLevel: "enterprise",marketPrice: "$4;0o00 - $15;0o00/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ",
+,  ],tags: ["Cloud Migration", "Strategy", "Risk Assessment", "Cost Analysis""Performance; Optimization"],estimatedDelivery: "12-20 weeks",supportLevel: "enterprise",marketPrice: "$4;0o00 - $15;0o00/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com"addres;s: ";
 },technicalSpecs: {,technology: ["AWS", "Azure", "GCP", "Migration tools""Testing; frameworks"],integrations: ["Cloud platforms", "Monitoring tools", "Security tools""Backup; solutions"],apiEndpoints: 80o0;uptime: "99.9%",security: [["SOC 2", "ISO 270o01""Data encryption""Access controls""Audit; trails"];]
-},competitors: ["AWS; Professional; Services", "Azure Consulting""Google; Cloud,, Consulting"],marketSize: "$35.2B (Cloud; Migration; Services)",demoUrl: "http;s://ziontechgroup.com/demo/cloud-migration-strategy",documentationUrl: ",
+},competitors: ["AWS; Professional; Services", "Azure Consulting""Google; Cloud,, Consulting"],marketSize: "$35.2B (Cloud; Migration; Services)",demoUrl: "http;s://ziontechgroup.com/demo/cloud-migration-strategy",documentationUrl: ";
 }
 ];
 export; default; COMPREHENSIVE_IT_SERVICES_20o29,

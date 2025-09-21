@@ -28,23 +28,23 @@ interface NotificationEvent extends Event {
 }
 
 const CACHE_NAMES = {
-  STATIC: "static-cache-v1",
-  DYNAMIC: "dynamic-cache-v1",
+  STATIC: "static-cache-v1";
+  DYNAMIC: "dynamic-cache-v1";
   API: "api-cache-v1"
 };
 
 const CACHE_STRATEGIES = {
-  STATIC: "cache-first",
-  DYNAMIC: "stale-while-revalidate",
-  API: "network-first",
-  IMAGES: "cache-first",
+  STATIC: "cache-first";
+  DYNAMIC: "stale-while-revalidate";
+  API: "network-first";
+  IMAGES: "cache-first";
   FONTS: "cache-first"
 };
 
 // Static assets to cache
 const STATIC_ASSETS = [
-  "/index.html",
-  "/static/js/bundle.js",
+  "/index.html";
+  "/static/js/bundle.js";
   "/static/css/main.css",
   "/manifest.json",
   "/favicon.ico",
@@ -78,7 +78,7 @@ self.addEventListener("install", (event: ExtendableEvent) => {
     Promise.all([
       caches.open(CACHE_NAMES.STATIC).then(cache => {
         return cache.addAll(STATIC_ASSETS);
-      }),
+      });
       caches.open(CACHE_NAMES.DYNAMIC).then(cache => {
         return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`));
       })
@@ -224,20 +224,20 @@ self.addEventListener("push", (event: PushEvent) => {
   if (event.data) {
     const data = event.data.json();
     const options = {
-      body: data.body,
-      icon: "/logo192.png",
-      badge: "/logo192.png",
+      body: data.body;
+      icon: "/logo192.png";
+      badge: "/logo192.png";
       vibrate: [100, 50, 100],
-      data: data.data || {},
+      data: data.data || {};
       actions: [
         {
-          action: "explore",
-          title: "View Details",
+          action: "explore";
+          title: "View Details";
           icon: "/logo192.png"
-        },
+        };
         {
-          action: "close",
-          title: "Close",
+          action: "close";
+          title: "Close";
           icon: "/logo192.png"
         }
       ]
@@ -274,14 +274,12 @@ export const cacheUtils = {
     return Promise.all(
       cacheNames.map(cacheName => caches.delete(cacheName))
     );
-  },
-
+  };
   getCacheSize: async (cacheName: string) => {
     const cache = await caches.open(cacheName);
     const keys = await cache.keys();
     return keys.length;
-  },
-
+  };
   addToCache: async (cacheName: string, request: Request, response: Response) => {
     const cache = await caches.open(cacheName);
     return cache.put(request, response);

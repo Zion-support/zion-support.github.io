@@ -28,17 +28,17 @@ interface QuotesFormProps {
 }
 
 export const QuotesForm: React.FC<QuotesFormProps> = ({
-  initialData,
-  onSave,
+  initialData;
+  onSave;
   onCancel,
   isEditing = false
 }) => {
   const [formData, setFormData] = useState<QuoteFormData>({
-    clientName: initialData?.clientName || '',
-    projectTitle: initialData?.projectTitle || '',
-    description: initialData?.description || '',
-    amount: initialData?.amount || 0,
-    status: initialData?.status || 'pending',
+    clientName: initialData?.clientName || '';
+    projectTitle: initialData?.projectTitle || '';
+    description: initialData?.description || '';
+    amount: initialData?.amount || 0;
+    status: initialData?.status || 'pending';
     validUntil: initialData?.validUntil || new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
     notes: initialData?.notes || ''
   });

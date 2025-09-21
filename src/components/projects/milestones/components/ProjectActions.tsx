@@ -5,13 +5,13 @@ import import Link from 'next/link';
 import { ShieldAlert,,  } from 'lucide-react'
 import import { RaiseDisputeButton,,  } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
-  projectId: string;,
+  projectId: string;;
 isUnderDispute: boolean;
   disputeId?: string;
-  isTalent: boolean;,
-onAddMilestone: () => void,
+  isTalent: boolean;;
+onAddMilestone: () => void;
 export function ProjectActions({
-onAddMilestone,
+onAddMilestone;
 }: ProjectActionsProps) {
   return (
     <div className='flex gap-2'>

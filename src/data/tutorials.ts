@@ -9,11 +9,11 @@ export interface Tutorial {
 
 export const TUTORIALS: Tutorial[] = [
   {
-    id: '1',
-    title: 'Getting Started with AI',
-    description: 'Learn the basics of artificial intelligence',
-    duration: '30 minutes',
-    difficulty: 'beginner',
+    id: '1';
+    title: 'Getting Started with AI';
+    description: 'Learn the basics of artificial intelligence';
+    duration: '30 minutes';
+    difficulty: 'beginner';
     category: 'AI'
   }
 ];

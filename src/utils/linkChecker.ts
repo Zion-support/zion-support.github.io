@@ -56,9 +56,9 @@ export class LinkChecker {
       const normalizedUrl = this.normalizeUrl(url, pagePath);
 
       links.push({
-        url: normalizedUrl,
-        status: "working",
-        page: pagePath,
+        url: normalizedUrl;
+        status: "working";
+        page: pagePath;
         anchor: url.startsWith("#") ? url : undefined
       });
     }
@@ -93,9 +93,9 @@ export class LinkChecker {
     }
 
     return {
-      path: pagePath,
-      title: this.extractPageTitle(pageContent),
-      links: checkedLinks,
+      path: pagePath;
+      title: this.extractPageTitle(pageContent);
+      links: checkedLinks;
       exists: true
     };
   }
@@ -107,9 +107,9 @@ export class LinkChecker {
 
   getSummary() {
     return {
-      totalLinks: this.visitedUrls.size,
-      brokenLinks: this.brokenLinks.length,
-      missingPages: this.missingPages.length,
+      totalLinks: this.visitedUrls.size;
+      brokenLinks: this.brokenLinks.length;
+      missingPages: this.missingPages.length;
       externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length
     };
   }

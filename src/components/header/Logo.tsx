@@ -24,7 +24,7 @@ return (
 {isWhitelabel ? brandName : "ZION"}
 </div>
 <div className="text-xs text-zion-cyan font-medium leading-tight">
-TECH GROUP,
+TECH GROUP;
 </div>
 </div>
 </div>
@@ -32,7 +32,7 @@ TECH GROUP,
 </Link>
 )
 }<//Link><///Link>
-import React from 'react',
+import React from 'react';
 import import Link from 'next/link';
 import import { useWhitelabel,,  } from '@/context/WhitelabelContext';
 interface LogoProps {

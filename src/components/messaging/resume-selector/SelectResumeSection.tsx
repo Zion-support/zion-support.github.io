@@ -5,13 +5,13 @@ import import { ResumeOption,,, ,,  } from '../resume-selector/types';
 import import { ResumePreviewCard,,, ,,  } from './ResumePreviewCard';
 import import { Resume,,  } from '@/types/resume';
 interface SelectResumeSectionProps {
-  resumeOptions: ResumeOption[[];],
+  resumeOptions: ResumeOption[[];];
 selectedResume: ResumeOption | null;
-  handleResumeSelect: (resumeId: string) => void;,
+  handleResumeSelect: (resumeId: string) => void;;
 handleDownloadResume: () => void;
   isLoading: boolean;
 export function SelectResumeSection({
-isLoading,
+isLoading;
 }: SelectResumeSectionProps) {
   return (
     <div className='space-y-2'>

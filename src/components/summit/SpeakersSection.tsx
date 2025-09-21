@@ -4,8 +4,8 @@ interface Speaker {
   name: string;
 title: string;
 avatar: string;
-twitter?: string,
-linkedin?: string,
+twitter?: string;
+linkedin?: string;
 linkedin?: string,
 }
 interface Speaker {

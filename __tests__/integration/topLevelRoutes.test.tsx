@@ -1,11 +1,11 @@
-import React from 'react',
+import React from 'react';
 // __tests__/integration/topLevelRoutes.test.tsx,
 // This is a conceptual test file. Actual implementation would depend on the specific testing framework used (e.g., Playwright, Cypress, or Jest with React Testing Library).,
 // For this example, we'll use a structure that resembles Jest/RTL for page component checks,// and a more descriptive style for E2E checks.,
 // Helper function to simulate page navigation and content checking (conceptual),
 const checkPageContent = async (_path: string, _expectedText: string | RegExp, _unexpectedTestId?: string) => {,
   // In a real E2E test (Cypress/Playwright):,
-  // await page.goto(path),
+  // await page.goto(path);
   // await expect(page.locator(`text=${expectedText}`)).toBeVisible(),
   // if (unexpectedTestId) {,
   //   await expect(page.locator(`[data-testid="${unexpectedTestId}"]`)).not.toBeVisible(),"  // }""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
@@ -28,7 +28,7 @@ describe('Top-Level Navigation Routes', () => {'  it('should render the Home pag
   it('should render the Status page correctly and not the Community Forum', async () => {'    // Assuming src/pages/Status.tsx has a unique element like <h1 data-testid="status-page-title">API Status</h1>"    await checkPageContent('/status', /API Status/i, COMMUNITY_FORUM_TEST_ID)  }),
   // It would also be good to have a test that explicitly checks if /community renders the forum,
   // to ensure the COMMUNITY_FORUM_TEST_ID is valid.,
-  it('should render the Community Forum for the /community path', async () => {'    // Conceptual check: ,
-    // Navigate to /community,
+  it('should render the Community Forum for the /community path', async () => {'    // Conceptual check: ;
+    // Navigate to /community;
     // Expect element with data-testid="community-forum-page" TO BE VISIBLE"    // Expect some text unique to non-forum pages NOT TO BE VISIBLE"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}),
 }),

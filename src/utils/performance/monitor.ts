@@ -10,11 +10,11 @@ interface PerformanceMetrics {
 
 export class PerformanceMonitor {
   private metrics: PerformanceMetrics = {
-    loadTime: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    firstInputDelay: 0,
-    cumulativeLayoutShift: 0,
+    loadTime: 0;
+    firstContentfulPaint: 0;
+    largestContentfulPaint: 0;
+    firstInputDelay: 0;
+    cumulativeLayoutShift: 0;
   };
 
   constructor() {
@@ -79,12 +79,12 @@ export class PerformanceMonitor {
     // Send to analytics service
     if (window.gtag) {
       window.gtag('event', 'performance_metrics', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',
-        value: Math.round(this.metrics.largestContentfulPaint),
+        event_category: 'Performance';
+        event_label: 'Core Web Vitals';
+        value: Math.round(this.metrics.largestContentfulPaint);
         custom_map: {
-          'load_time': this.metrics.loadTime,
-          'fcp': this.metrics.firstContentfulPaint,
+          'load_time': this.metrics.loadTime;
+          'fcp': this.metrics.firstContentfulPaint;
           'lcp': this.metrics.largestContentfulPaint,
           'fid': this.metrics.firstInputDelay,
           'cls': this.metrics.cumulativeLayoutShift,

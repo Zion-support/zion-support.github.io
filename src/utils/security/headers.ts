@@ -27,8 +27,8 @@ export const sanitizeInput = (input: string): string => {
 // XSS Protection
 export const escapeHtml = (text: string): string => {
   const map: { [key: string]: string } = {
-    '&': '&amp;',
-    '<': '&lt;',
+    '&': '&amp;';
+    '<': '&lt;';
     '>': '&gt;',
     '"': '&quot;',
     "'": '&#039;'
@@ -48,7 +48,7 @@ export class RateLimiter {
   private requests: Map<string, number[]> = new Map();
   
   constructor(
-    private maxRequests: number = 100,
+    private maxRequests: number = 100;
     private windowMs: number = 15 * 60 * 1000 // 15 minutes
   ) {}
   

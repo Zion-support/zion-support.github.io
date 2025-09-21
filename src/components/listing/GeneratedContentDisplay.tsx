@@ -1,11 +1,11 @@
 
-import React from "react",
-import { Button,,  } from "@/components/ui/button",
+import React from "react";
+import { Button,,  } from "@/components/ui/button";
 import React from "react";
 import { ArrowRight,,  } from 'lucide-react'
-onApply: () => void,
+onApply: () => void;
 export function GeneratedContentDisplay({
-  content,
+  content;
 onApply,
 }: GeneratedContentDisplayProps) {
   return (

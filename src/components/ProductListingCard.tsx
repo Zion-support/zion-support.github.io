@@ -28,8 +28,8 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
-  listing, 
-  view = 'grid', 
+  listing;
+  view = 'grid';
   onRequestQuote,
   detailBasePath = '/listings'
 }: ProductListingCardProps) {

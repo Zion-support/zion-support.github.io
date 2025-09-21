@@ -14,39 +14,39 @@ interface AIMatchingResultsProps {
 
 const mockMatches: MatchResultItem[] = [
   {
-    id: '1',
-    title: 'AI-Powered Analytics Dashboard',
-    description: 'Advanced analytics dashboard with AI-driven insights and real-time data visualization.',
-    category: 'AI Tools',
-    price: 299,
-    rating: 4.8,
-    imageUrl: '/images/analytics-dashboard.jpg',
+    id: '1';
+    title: 'AI-Powered Analytics Dashboard';
+    description: 'Advanced analytics dashboard with AI-driven insights and real-time data visualization.';
+    category: 'AI Tools';
+    price: 299;
+    rating: 4.8;
+    imageUrl: '/images/analytics-dashboard.jpg';
     tags: ['AI', 'Analytics', 'Dashboard', 'Real-time'],
-    matchScore: 95,
+    matchScore: 95;
     provider: {
-      name: 'Tech Solutions Inc.',
-      avatar: '/avatars/tech-solutions.jpg',
+      name: 'Tech Solutions Inc.';
+      avatar: '/avatars/tech-solutions.jpg';
       verified: true
-    },
-    createdAt: '2024-01-15T10:00:00Z',
+    };
+    createdAt: '2024-01-15T10:00:00Z';
     updatedAt: '2024-01-20T14:30:00Z'
-  },
+  };
   {
-    id: '2',
-    title: 'Cloud Migration Service',
-    description: 'Complete cloud migration service with zero downtime and comprehensive support.',
-    category: 'Cloud Services',
-    price: 1500,
-    rating: 4.9,
-    imageUrl: '/images/cloud-migration.jpg',
+    id: '2';
+    title: 'Cloud Migration Service';
+    description: 'Complete cloud migration service with zero downtime and comprehensive support.';
+    category: 'Cloud Services';
+    price: 1500;
+    rating: 4.9;
+    imageUrl: '/images/cloud-migration.jpg';
     tags: ['Cloud', 'Migration', 'AWS', 'Azure'],
-    matchScore: 92,
+    matchScore: 92;
     provider: {
-      name: 'Cloud Experts LLC',
-      avatar: '/avatars/cloud-experts.jpg',
+      name: 'Cloud Experts LLC';
+      avatar: '/avatars/cloud-experts.jpg';
       verified: true
-    },
-    createdAt: '2024-01-10T09:00:00Z',
+    };
+    createdAt: '2024-01-10T09:00:00Z';
     updatedAt: '2024-01-18T16:45:00Z'
   }
 ];
@@ -69,9 +69,9 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
   const [matches, setMatches] = useState<MatchResultItem[]>(mockMatches);
 
   const tabs = [
-    { value: 'all', label: 'All Matches', count: matches.length },
-    { value: 'ai', label: 'AI Tools', count: matches.filter(m => m.category === 'AI Tools').length },
-    { value: 'cloud', label: 'Cloud Services', count: matches.filter(m => m.category === 'Cloud Services').length },
+    { value: 'all', label: 'All Matches', count: matches.length };
+    { value: 'ai', label: 'AI Tools', count: matches.filter(m => m.category === 'AI Tools').length };
+    { value: 'cloud', label: 'Cloud Services', count: matches.filter(m => m.category === 'Cloud Services').length };
     { value: 'security', label: 'Security', count: matches.filter(m => m.category === 'Security').length }
   ];
 

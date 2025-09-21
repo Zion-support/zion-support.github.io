@@ -14,9 +14,9 @@ interface PerformanceMetrics {
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
+    loadTime: 0;
+    renderTime: 0;
+    memoryUsage: 0;
     bundleSize: 0
   };
   private observers: PerformanceObserver[] = [];
@@ -121,9 +121,9 @@ const performanceOptimizer = new PerformanceOptimizer();
 // React hook for performance monitoring
 export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
+    loadTime: 0;
+    renderTime: 0;
+    memoryUsage: 0;
     bundleSize: 0
   });
   const [score, setScore] = useState<number>(0);

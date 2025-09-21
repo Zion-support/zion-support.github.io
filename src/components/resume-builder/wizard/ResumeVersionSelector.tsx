@@ -2,8 +2,8 @@ import { Save,,, ChevronDown,,, Plus,,, Loader2,,  } from 'lucide-react'
 import import { Resume,,, ,,  } from '@/types/resume';
 import import { useResume,,  } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
-  currentResume: Resume;,
-onResumeChange: (resumeId: string) => void,
+  currentResume: Resume;;
+onResumeChange: (resumeId: string) => void;
 return (
     <div className='flex items-center gap-2'>
       <span className='text-sm text-muted-foreground'>Resume:</span>

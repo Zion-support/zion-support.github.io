@@ -28,8 +28,8 @@ interface QuotesTableProps {
 }
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
-  quotes,
-  selectedQuotes,
+  quotes;
+  selectedQuotes;
   onSelectQuote,
   onSelectAll,
   onViewQuote,

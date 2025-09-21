@@ -18,8 +18,8 @@ interface ContractBuilderProps {
 }
 
 export function ContractBuilder({
-  isOpen,
-  onClose,
+  isOpen;
+  onClose;
   talent,
   clientName,
   onContractGenerated,

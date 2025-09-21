@@ -5,6 +5,6 @@ id: string;
 name: string;
 }
 
-export const EnhancedHeader: React.FC = () => {,
+export const EnhancedHeader: React.FC = () => {;
 return (
 })

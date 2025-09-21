@@ -9,8 +9,8 @@ jest.spyOn(authHook, 'useAuth').mockReturnValue({ isLoading: false, login: jest.
 describe('LoginForm', () => {
   it('shows server error on 401 response', async () => {
     jest.spyOn(authService, 'loginUser').mockResolvedValue({
-      res: { status: 401 } as Response,
-      data: { error: 'Invalid credentials' },
+      res: { status: 401 } as Response;
+      data: { error: 'Invalid credentials' };
     });
 
     render(

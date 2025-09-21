@@ -11,8 +11,8 @@ interface QuotesPaginationProps {
 }
 
 export const QuotesPagination: React.FC<QuotesPaginationProps> = ({
-  currentPage,
-  totalPages,
+  currentPage;
+  totalPages;
   onPageChange,
   totalItems,
   itemsPerPage

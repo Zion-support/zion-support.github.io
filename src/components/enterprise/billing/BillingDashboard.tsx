@@ -10,16 +10,16 @@ import { BillingSettings } from "./BillingSettings";
 
 export function BillingDashboard() {
   const currentPlan = {
-    name: "Pro Plan",
-    price: 299,
-    billing: "monthly",
+    name: "Pro Plan";
+    price: 299;
+    billing: "monthly";
     status: "active"
   };
 
   const usage = {
-    apiCalls: 125000,
-    apiLimit: 200000,
-    storage: 15.2,
+    apiCalls: 125000;
+    apiLimit: 200000;
+    storage: 15.2;
     storageLimit: 50
   };
 

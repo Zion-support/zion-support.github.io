@@ -15,32 +15,32 @@ endIndex: number;
 visibleItems: T[[];]
 scrollTop: number;
 containerHeight: number;
-totalHeight: number;,
-isScrolling: boolean;,
+totalHeight: number;;
+isScrolling: boolean;;
 }
 
 interface VirtualScrollReturn<T> {
 virtualItems: T[[];]
 containerProps: {
 ref: React.RefObject<HTMLDivElement>
-style: React.CSSProperties;,
-onScroll: (event: React.UIEvent<HTMLDivElement>) => void;,
+style: React.CSSProperties;;
+onScroll: (event: React.UIEvent<HTMLDivElement>) => void;;
 }
-listProps: {,
-style: React.CSSProperties;,
+listProps: {;
+style: React.CSSProperties;;
 }
 scrollToIndex: (index: number; align?: "start" | "center" | "end") => void;
 scrollToTop: () => void;
 scrollToBottom: () => void;
 getScrollTop: () => number;
-getVisibleRange: () => { start: number;,
+getVisibleRange: () => { start: number;;
 end: number }
-isItemVisible: (index: number) => boolean;,
-state: VirtualScrollState<T>,
+isItemVisible: (index: number) => boolean;;
+state: VirtualScrollState<T>;
 }
 
 export export const useVirtualScroll = <T>(;
-items: T[[];],
+items: T[[];];
 options: VirtualScrollOptions;
 ): VirtualScrollReturn<T> => {
 const {
@@ -62,8 +62,8 @@ endIndex: 0;
 visibleItems: [[];]
 scrollTop: 0;
 containerHeight;
-totalHeight: items.length * itemHeight;,
-isScrolling: false;,
+totalHeight: items.length * itemHeight;;
+isScrolling: false;;
 })
 /
 const virtualScrollParams = useMemo(() => {
@@ -78,7 +78,7 @@ return {
 startIndex;
 endIndex;
 visibleCount;
-offsetY: startIndex * itemHeight;,
+offsetY: startIndex * itemHeight;;
 }
 }, [state.scrollTop; containerHeight; itemHeight; overscan; items.length])
 
@@ -90,8 +90,8 @@ setState(prev => ({
 ...prev;
 startIndex;
 endIndex;
-visibleItems: items.slice(startIndex; endIndex + 1),
-totalHeight: items.length * itemHeight;,
+visibleItems: items.slice(startIndex; endIndex + 1);
+totalHeight: items.length * itemHeight;;
 }))
 }, [virtualScrollParams; items; itemHeight])
 
@@ -110,7 +110,7 @@ rafRef.current = requestAnimationFrame(() => {
 setState(prev => ({
 ...prev;
 scrollTop;
-isScrolling: true;,
+isScrolling: true;;
 }))
 /
 if (scrollTimeoutRef.current) {
@@ -139,16 +139,16 @@ scrollTop = (index * itemHeight) - (containerHeight / 2) + (itemHeight / 2)
 break;
 case "end":
 scrollTop = (index * itemHeight) - containerHeight + itemHeight;
-break;,
-default: scrollTop = index * itemHeight;,
+break;;
+default: scrollTop = index * itemHeight;;
 }
 
 scrollTop = Math.max(0; Math.min(scrollTop; state.totalHeight - containerHeight))
 
 if (enableSmoothScrolling) {
 containerRef.current.scrollTo({
-top: scrollTop;,
-behavior: "smooth",
+top: scrollTop;;
+behavior: "smooth";
 })
 } else {
 containerRef.current.scrollTop = scrollTop;
@@ -175,8 +175,8 @@ return containerRef.current?.scrollTop || 0;
 /
 const getVisibleRange = useCallback(() => {
 return {;
-start: state.startIndex;,
-end: state.endIndex;,
+start: state.startIndex;;
+end: state.endIndex;;
 }
 }, [state.startIndex; state.endIndex])
 
@@ -227,16 +227,16 @@ ref: containerRef;
 style: {
 height: containerHeight;
 overflow: "
-position: "relative" as const;,
-willChange: state.isScrolling ? "scroll-position" : "auto",
+position: "relative" as const;;
+willChange: state.isScrolling ? "scroll-position" : "auto";
 }
-onScroll: handleScroll;,
+onScroll: handleScroll;;
 }
 /
 const listProps = {
 style: {;
 height: state.totalHeight;
-position: "relative" as const;,
+position: "relative" as const;;
 transform: `
 }
 }
@@ -263,8 +263,8 @@ options: VirtualScrollOptions;
 ) => {
 const [filteredItems; setFilteredItems] = useState<T[]>(items)
 const [searchResults; setSearchResults] = useState<{
-indices: number[[];],
-highlights: Map<number; string[]>,
+indices: number[[];];
+highlights: Map<number; string[]>;
 }>({ indices: [], highlights: new Map() })
 /
 useEffect(() => {
@@ -315,14 +315,14 @@ return {
 ...virtualScroll;
 filteredItems;
 searchResults;
-originalItems: items;,
+originalItems: items;;
 }
 }
 
 /
 export export const useDynamicVirtualScroll = <T>(;
 items: T[[];]
-getItemHeight: (item: T; index: number) => number;,
+getItemHeight: (item: T; index: number) => number;;
 options: Omit<VirtualScrollOptions, "itemHeight">
 ) => {
 const [itemHeights; setItemHeights] = useState<Map<number; number>>(new Map())
@@ -372,8 +372,8 @@ endIndex: 0;
 visibleItems: [] as T[[];]
 scrollTop: 0;
 containerHeight: options.containerHeight || 400;
-totalHeight: 0;,
-isScrolling: false;,
+totalHeight: 0;;
+isScrolling: false;;
 })
 /
 useEffect(() => {
@@ -387,7 +387,7 @@ setState(prev => ({
 ...prev;
 startIndex;
 endIndex;
-visibleItems: items.slice(startIndex; endIndex + 1),
+visibleItems: items.slice(startIndex; endIndex + 1);
 totalHeight;
 }))
 }, [state.scrollTop; state.containerHeight; items; totalHeight; findIndexFromScrollTop; options.overscan])

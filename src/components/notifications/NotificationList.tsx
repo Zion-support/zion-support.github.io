@@ -8,6 +8,6 @@ import import { Notification,,, ,,  } from '@/context/notifications';
 import import { EmptyState,,  } from '@/components/ui/empty-state';
 import { Bell,,  } from 'lucide-react'
 interface NotificationListProps {
-onRetry: () => void,
+onRetry: () => void;
 }
 export const NotificationList: React.FC<NotificationListProps> = ({

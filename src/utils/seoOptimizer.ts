@@ -2,7 +2,7 @@ import React from "
 
 export interface SEOData {
 title: string;
-description: string;,
+description: string;;
 keywords: string[[];]
 ogImage?: string;
 canonicalUrl?: string;
@@ -12,14 +12,14 @@ structuredData?: object;
 export interface ContentQualityIssue {
 page: string;
 issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "
-severity: "high" | "medium" | ",
-suggestedFix: string;,
+severity: "high" | "medium" | ";
+suggestedFix: string;;
 }
 
 export class SEOOptimizer {
 private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {
-"/": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services. Transform your business with Zion Tech Group.",
-"/services": "Comprehensive AI services; cybersecurity solutions; cloud infrastructure; and emerging technology services. Expert IT solutions for modern businesses.",
+"/": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services. Transform your business with Zion Tech Group.";
+"/services": "Comprehensive AI services; cybersecurity solutions; cloud infrastructure; and emerging technology services. Expert IT solutions for modern businesses.";
 "/ai-solutions": "Advanced AI solutions including autonomous systems; machine learning; and intelligent automation. Drive innovation with our cutting-edge AI technology.",
 "/about": "Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.",
 "/contact": "Get in touch with Zion Tech Group. Contact our expert team for technology solutions; consultations; and partnership opportunities.",
@@ -106,27 +106,27 @@ return `
 
 static generateStructuredData(path: string): object {
 const baseData = {
-"@context": "https://schema.org",
-"@type": "WebPage",
-"name": this.generateTitle(path),
-"description": this.generateDescription(path),
-"url": this.generateCanonicalUrl(path),
+"@context": "https://schema.org";
+"@type": "WebPage";
+"name": this.generateTitle(path);
+"description": this.generateDescription(path);
+"url": this.generateCanonicalUrl(path);
 "publisher": {
 "@type": "Organization",
 "name": "Zion Tech Group",
-"url": "https://ziontechgroup.com",
-"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+"url": "https://ziontechgroup.com";
+"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
 }
 }
 /
 if (path === "/") {
 return {
-...baseData,
+...baseData;
 "@type": "Organization",
 "name": "Zion Tech Group",
-"url": "https://ziontechgroup.com",
-"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
-"description": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services.",
+"url": "https://ziontechgroup.com";
+"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+"description": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services.";
 "address": {
 "@type": "PostalAddress",
 "streetAddress": "364 E Main St STE 1008",
@@ -148,7 +148,7 @@ if (path.startsWith("/services/")) {
 return {
 ...baseData,
 "@type": "Service",
-"serviceType": path.split("/").pop()?.replace(/-/g, " "),
+"serviceType": path.split("/").pop()?.replace(/-/g, " ");
 "provider": {
 "@type": "Organization",
 "name": "
@@ -164,10 +164,10 @@ const issues: ContentQualityIssue[] = [[];]
 /
 if (!content.includes("<title>") || content.includes("<title></title>")) {
 issues.push({
-page;,
-issue: "missing-title",
-severity: "high",
-suggestedFix: "Add a descriptive title tag with relevant keywords",
+page;;
+issue: "missing-title";
+severity: "high";
+suggestedFix: "Add a descriptive title tag with relevant keywords";
 })
 }
 
@@ -175,9 +175,9 @@ suggestedFix: "Add a descriptive title tag with relevant keywords",
 if (!content.includes("name="description"")) {
 issues.push({
 page;
-issue: "missing-description",
-severity: "high",
-suggestedFix: "Add a meta description tag with compelling content",
+issue: "missing-description";
+severity: "high";
+suggestedFix: "Add a meta description tag with compelling content";
 })
 }
 
@@ -186,9 +186,9 @@ const descMatch = content.match(/name="description" content="([^"]+)"/)
 if (descMatch && descMatch[1].length < 120) {
 issues.push({
 page;
-issue: "short-description",
-severity: "medium",
-suggestedFix: "Expand meta description to 120-160 characters for better SEO",
+issue: "short-description";
+severity: "medium";
+suggestedFix: "Expand meta description to 120-160 characters for better SEO";
 })
 }
 
@@ -196,9 +196,9 @@ suggestedFix: "Expand meta description to 120-160 characters for better SEO",
 if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {
 issues.push({
 page;
-issue: "no-headings",
-severity: "medium",
-suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization",
+issue: "no-headings";
+severity: "medium";
+suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization";
 })
 }
 
@@ -207,9 +207,9 @@ const textContent = content.replace(/<[^>]*>/g, "").trim()
 if (textContent.length < 300) {
 issues.push({
 page;
-issue: "minimal-content",
-severity: "medium",
-suggestedFix: "Add more relevant content to improve user experience and SEO value",
+issue: "minimal-content";
+severity: "medium";
+suggestedFix: "Add more relevant content to improve user experience and SEO value";
 })
 }
 

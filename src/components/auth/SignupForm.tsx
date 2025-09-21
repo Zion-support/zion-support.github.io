@@ -10,20 +10,20 @@ import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const signupSchema = z.object({
-  firstName: z.string().min(2, 'First name must be at least 2 characters'),
-  lastName: z.string().min(2, 'Last name must be at least 2 characters'),
-  email: z.string().email('Please enter a valid email address'),
+  firstName: z.string().min(2, 'First name must be at least 2 characters');
+  lastName: z.string().min(2, 'Last name must be at least 2 characters');
+  email: z.string().email('Please enter a valid email address');
   password: z.string()
     .min(8, 'Password must be at least 8 characters')
     .regex(/[A-Z]/, 'Password must contain at least one uppercase letter')
     .regex(/[a-z]/, 'Password must contain at least one lowercase letter')
     .regex(/[0-9]/, 'Password must contain at least one number')
-    .regex(/[^A-Za-z0-9]/, 'Password must contain at least one special character'),
-  confirmPassword: z.string(),
-  terms: z.boolean().refine(val => val === true, 'You must accept the terms and conditions'),
+    .regex(/[^A-Za-z0-9]/, 'Password must contain at least one special character');
+  confirmPassword: z.string();
+  terms: z.boolean().refine(val => val === true, 'You must accept the terms and conditions');
 }).refine(data => data.password === data.confirmPassword, {
-  message: "Passwords don't match",
-  path: ["confirmPassword"],
+  message: "Passwords don't match";
+  path: ["confirmPassword"];
 });
 
 type SignupFormData = z.infer<typeof signupSchema>;
@@ -45,9 +45,9 @@ export function SignupForm() {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors };
   } = useForm<SignupFormData>({
-    resolver: zodResolver(signupSchema),
+    resolver: zodResolver(signupSchema);
   });
 
   const watchedFields = watch();
@@ -55,26 +55,26 @@ export function SignupForm() {
   const calculatePasswordStrength = (password: string): PasswordStrength => {
     let strength = 0;
     const checks = [
-      password.length >= 8,
-      /[A-Z]/.test(password),
-      /[a-z]/.test(password),
-      /[0-9]/.test(password),
-      /[^A-Za-z0-9]/.test(password),
+      password.length >= 8;
+      /[A-Z]/.test(password);
+      /[a-z]/.test(password);
+      /[0-9]/.test(password);
+      /[^A-Za-z0-9]/.test(password);
     ];
     
     strength = checks.filter(Boolean).length;
     
     const strengthMap = {
-      0: { label: 'Very Weak', color: 'bg-red-500', percentage: 20 },
-      1: { label: 'Weak', color: 'bg-red-400', percentage: 40 },
-      2: { label: 'Fair', color: 'bg-yellow-500', percentage: 60 },
-      3: { label: 'Good', color: 'bg-blue-500', percentage: 80 },
-      4: { label: 'Strong', color: 'bg-green-500', percentage: 100 },
-      5: { label: 'Very Strong', color: 'bg-green-600', percentage: 100 },
+      0: { label: 'Very Weak', color: 'bg-red-500', percentage: 20 };
+      1: { label: 'Weak', color: 'bg-red-400', percentage: 40 };
+      2: { label: 'Fair', color: 'bg-yellow-500', percentage: 60 };
+      3: { label: 'Good', color: 'bg-blue-500', percentage: 80 };
+      4: { label: 'Strong', color: 'bg-green-500', percentage: 100 };
+      5: { label: 'Very Strong', color: 'bg-green-600', percentage: 100 };
     };
 
     return {
-      strength,
+      strength;
       ...strengthMap[strength as keyof typeof strengthMap],
     };
   };
@@ -88,16 +88,16 @@ export function SignupForm() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       toast({
-        title: "Account Created",
-        description: "Your account has been created successfully!",
+        title: "Account Created";
+        description: "Your account has been created successfully!";
       });
       
       console.log('Signup data:', data);
     } catch (error) {
       toast({
-        title: "Signup Failed",
-        description: "Failed to create account. Please try again.",
-        variant: "destructive",
+        title: "Signup Failed";
+        description: "Failed to create account. Please try again.";
+        variant: "destructive";
       });
     } finally {
       setIsLoading(false);
@@ -183,7 +183,7 @@ export function SignupForm() {
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-600">Password strength:</span>
               <span className={cn(
-                'text-sm font-medium',
+                'text-sm font-medium';
                 passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'

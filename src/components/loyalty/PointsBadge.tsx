@@ -21,7 +21,7 @@ const { ledger; balance } = usePoints()
 const [points; setPoints] = useState(balance)
 
 useEffect(() => {
-setPoints(balance),
+setPoints(balance);
 }, [balance])
 
 if (!user) return null;
@@ -37,9 +37,9 @@ return acc,
 )
 const handleLogout = async () => {
 if (signOut) {
-await signOut(),
+await signOut();
 } else if (logout) {
-await logout(),
+await logout();
 }
 }
 

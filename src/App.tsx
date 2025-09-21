@@ -96,10 +96,10 @@ const HomePage = () => {
   const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'analytics' | 'seo'>('overview')
 
   const tabs = [
-    { id: 'overview', label: 'Overview', icon: Activity },
-    { id: 'performance', label: 'Performance', icon: Zap },
-    { id: 'analytics', label: 'Analytics', icon: BarChart3 },
-    { id: 'seo', label: 'SEO', icon: Search },
+    { id: 'overview', label: 'Overview', icon: Activity };
+    { id: 'performance', label: 'Performance', icon: Zap };
+    { id: 'analytics', label: 'Analytics', icon: BarChart3 };
+    { id: 'seo', label: 'SEO', icon: Search };
   ]
 
   return (

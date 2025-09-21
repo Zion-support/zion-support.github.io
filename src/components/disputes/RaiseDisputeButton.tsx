@@ -7,7 +7,7 @@ interface RaiseDisputeButtonProps {
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "
   size?: "default" | "sm" | "lg" | "
-  className?: string,
+  className?: string;
 return (
     <>
       <Button
@@ -23,7 +23,7 @@ variant={variant}
           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
-              Please provide details about the issue you're experiencing with,
+              Please provide details about the issue you're experiencing with;
 this project.
             </DialogDescription>
           </DialogHeader>

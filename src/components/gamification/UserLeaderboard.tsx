@@ -3,7 +3,7 @@ export interface LeaderboardEntry {
   name: string;
 points: number;
 interface UserLeaderboardProps {
-  entries: LeaderboardEntry[],
+  entries: LeaderboardEntry[];
 entries: LeaderboardEntry[]
 }
 export interface LeaderboardEntry {

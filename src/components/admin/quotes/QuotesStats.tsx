@@ -12,8 +12,8 @@ interface QuotesStatsProps {
 }
 
 export const QuotesStats: React.FC<QuotesStatsProps> = ({
-  totalQuotes,
-  pendingQuotes,
+  totalQuotes;
+  pendingQuotes;
   approvedQuotes,
   totalValue,
   averageValue,
@@ -21,45 +21,45 @@ export const QuotesStats: React.FC<QuotesStatsProps> = ({
 }) => {
   const stats = [
     {
-      title: 'Total Quotes',
-      value: totalQuotes.toLocaleString(),
-      icon: <DollarSign className="h-5 w-5" />,
-      color: 'text-blue-600',
+      title: 'Total Quotes';
+      value: totalQuotes.toLocaleString();
+      icon: <DollarSign className="h-5 w-5" />;
+      color: 'text-blue-600';
       bgColor: 'bg-blue-100'
-    },
+    };
     {
-      title: 'Pending Quotes',
-      value: pendingQuotes.toLocaleString(),
-      icon: <Clock className="h-5 w-5" />,
-      color: 'text-yellow-600',
+      title: 'Pending Quotes';
+      value: pendingQuotes.toLocaleString();
+      icon: <Clock className="h-5 w-5" />;
+      color: 'text-yellow-600';
       bgColor: 'bg-yellow-100'
-    },
+    };
     {
-      title: 'Approved Quotes',
-      value: approvedQuotes.toLocaleString(),
-      icon: <CheckCircle className="h-5 w-5" />,
-      color: 'text-green-600',
+      title: 'Approved Quotes';
+      value: approvedQuotes.toLocaleString();
+      icon: <CheckCircle className="h-5 w-5" />;
+      color: 'text-green-600';
       bgColor: 'bg-green-100'
-    },
+    };
     {
-      title: 'Total Value',
-      value: `$${totalValue.toLocaleString()}`,
-      icon: <TrendingUp className="h-5 w-5" />,
-      color: 'text-purple-600',
+      title: 'Total Value';
+      value: `$${totalValue.toLocaleString()}`;
+      icon: <TrendingUp className="h-5 w-5" />;
+      color: 'text-purple-600';
       bgColor: 'bg-purple-100'
-    },
+    };
     {
-      title: 'Average Value',
-      value: `$${averageValue.toLocaleString()}`,
-      icon: <DollarSign className="h-5 w-5" />,
-      color: 'text-indigo-600',
+      title: 'Average Value';
+      value: `$${averageValue.toLocaleString()}`;
+      icon: <DollarSign className="h-5 w-5" />;
+      color: 'text-indigo-600';
       bgColor: 'bg-indigo-100'
-    },
+    };
     {
-      title: 'Conversion Rate',
-      value: `${conversionRate.toFixed(1)}%`,
-      icon: <TrendingUp className="h-5 w-5" />,
-      color: 'text-emerald-600',
+      title: 'Conversion Rate';
+      value: `${conversionRate.toFixed(1)}%`;
+      icon: <TrendingUp className="h-5 w-5" />;
+      color: 'text-emerald-600';
       bgColor: 'bg-emerald-100'
     }
   ];

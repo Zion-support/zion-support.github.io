@@ -19,8 +19,8 @@ class Analytics {
     this.track('page_view', {
       path,
       title,
-      referrer: document.referrer,
-      user_agent: navigator.userAgent,
+      referrer: document.referrer;
+      user_agent: navigator.userAgent;
       timestamp: Date.now()
     });
   }
@@ -39,7 +39,7 @@ class Analytics {
   }) {
     this.track('performance', {
       ...metrics,
-      url: window.location.href,
+      url: window.location.href;
       timestamp: Date.now()
     });
   }
@@ -47,10 +47,10 @@ class Analytics {
   // Track errors
   trackError(error: Error, context?: Record<string, any>) {
     this.track('error', {
-      message: error.message,
-      stack: error.stack,
-      url: window.location.href,
-      ...context,
+      message: error.message;
+      stack: error.stack;
+      url: window.location.href;
+      ...context;
       timestamp: Date.now()
     });
   }
@@ -63,8 +63,8 @@ class Analytics {
     }
 
     const event: AnalyticsEvent = {
-      name,
-      properties,
+      name;
+      properties;
       timestamp: Date.now()
     };
 

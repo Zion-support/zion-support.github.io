@@ -14,13 +14,13 @@ interface CartState {
 }
 
 const initialState: CartState = {
-  items: [],
-  total: 0,
+  items: [];
+  total: 0;
 };
 
 const cartSlice = createSlice({
-  name: 'cart',
-  initialState,
+  name: 'cart';
+  initialState;
   reducers: {
     addItem: (state, action: PayloadAction<CartItem>) => {
       const existingItem = state.items.find(item => item.id === action.payload.id);
@@ -45,8 +45,8 @@ const cartSlice = createSlice({
     clearCart: (state) => {
       state.items = [];
       state.total = 0;
-    },
-  },
+    };
+  };
 });
 
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;

@@ -14,7 +14,7 @@ export function ServiceIncludes() {
             <div>
               <h3 className='text-white font-medium'>Transportation to Site</h3>
               <p className='text-zion-slate-light'>
-                All travel costs to your location are included in the base,
+                All travel costs to your location are included in the base;
 price.
               </p>
             </div>

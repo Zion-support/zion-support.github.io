@@ -24,16 +24,16 @@ const authReducer = (state: AuthState, action: any) => {
   switch (action.type) {
     case 'LOGIN_SUCCESS':
       return {
-        ...state,
-        user: action.payload,
-        isAuthenticated: true,
+        ...state;
+        user: action.payload;
+        isAuthenticated: true;
         isLoading: false
       };
     case 'LOGOUT':
       return {
-        ...state,
-        user: null,
-        isAuthenticated: false,
+        ...state;
+        user: null;
+        isAuthenticated: false;
         isLoading: false
       };
     case 'SET_LOADING':
@@ -45,8 +45,8 @@ const authReducer = (state: AuthState, action: any) => {
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, {
-    user: null,
-    isAuthenticated: false,
+    user: null;
+    isAuthenticated: false;
     isLoading: false
   });
 

@@ -25,14 +25,14 @@ const cartReducer = (state: CartState, action: any) => {
   switch (action.type) {
     case 'ADD_ITEM':
       return {
-        ...state,
+        ...state;
         items: [...state.items, action.payload],
         total: state.total + action.payload.price
       };
     case 'REMOVE_ITEM':
       return {
-        ...state,
-        items: state.items.filter(item => item.id !== action.payload),
+        ...state;
+        items: state.items.filter(item => item.id !== action.payload);
         total: state.items.reduce((sum, item) => sum + item.price, 0)
       };
     case 'CLEAR_CART':

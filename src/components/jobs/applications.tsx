@@ -17,12 +17,12 @@ interface Application {
 export function ApplicationsTracker() {
   const applications: Application[] = [
     {
-      id: '1',
-      jobTitle: 'Frontend Developer',
-      company: 'Tech Corp',
+      id: '1';
+      jobTitle: 'Frontend Developer';
+      company: 'Tech Corp';
       location: 'San Francisco, CA',
-      status: 'pending',
-      appliedDate: '2024-01-15',
+      status: 'pending';
+      appliedDate: '2024-01-15';
       salary: '$80,000 - $100,000'
     }
   ];

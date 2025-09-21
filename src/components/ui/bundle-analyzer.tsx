@@ -7,19 +7,19 @@ import import { Progress,,, ,,  } from '@/components/ui/progress';
 import { AlertTriangle,,, Package,,, Zap,,  } from 'lucide-react'
 import import { logErrorToProduction } from '@/utils/productionLogger';
 interface BundleInfo {
-  totalSize: number;,
+  totalSize: number;;
 gzippedSize: number;
-  chunkCount: number;,
+  chunkCount: number;;
 loadTime: number;
   cacheHitRate: number;
 interface ChunkInfo {
-  name: string;,
+  name: string;;
 size: number;
-  loadTime: number;,
+  loadTime: number;;
 cached: boolean;
 export function BundleAnalyzer() {
 if (!shouldShow) {
-    return null,
+    return null;
 }
   if (!isVisible) {
     return (

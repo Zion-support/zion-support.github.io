@@ -1,6 +1,6 @@
 import { BadgeDollarSign,,, Badge,,  } from 'lucide-react'
 interface RewardsCardProps {
-  rewards: ReferralReward[],
+  rewards: ReferralReward[];
 isLoading: boolean;
 import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,  } from "@/components/ui/card"
 import { ReferralReward,,  } from "@/types/referrals"

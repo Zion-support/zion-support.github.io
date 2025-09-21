@@ -3,10 +3,10 @@ id: string;
 name: string;
 }
 
-import React from "react",
+import React from "react";
 const ProjectDetailsFields: React.FC = () => {
-,
-return (,
+;
+return (;
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">ProjectDetailsFields</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>
@@ -26,7 +26,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 control={form.control}
         name='projectName'
         render={({
-          field,
+          field;
 }: {
           field: ControllerRenderProps<ContractFormValues 'projectName'>
         }) => (
@@ -49,7 +49,7 @@ control={form.control}
 control={form.control}
         name='scopeSummary'
         render={({
-          field,
+          field;
 }: {
           field: ControllerRenderProps<ContractFormValues 'scopeSummary'>
         }) => (          <FormItem>
@@ -84,7 +84,7 @@ placeholder='Describe the project scope deliverables and expectations...'
 control={form.control}
           name='startDate'
           render={({
-            field,
+            field;
 }: {
             field: ControllerRenderProps<ContractFormValues 'startDate'>
           }) => (

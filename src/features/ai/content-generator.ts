@@ -29,12 +29,12 @@ export class AIContentGenerator {
     
     try {
       const response = await fetch('/api/ai/generate-content', {
-        method: 'POST',
+        method: 'POST';
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.apiKey}`,
+          'Content-Type': 'application/json';
+          'Authorization': `Bearer ${this.apiKey}`;
         },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ prompt });
       });
       
       if (!response.ok) {
@@ -51,8 +51,8 @@ export class AIContentGenerator {
   
   private buildPrompt(request: AIContentRequest): string {
     const lengthMap = {
-      short: '100-200 words',
-      medium: '300-500 words',
+      short: '100-200 words';
+      medium: '300-500 words';
       long: '800-1200 words'
     };
     
@@ -61,12 +61,12 @@ export class AIContentGenerator {
   
   private processResponse(data: any, request: AIContentRequest): AIContentResponse {
     return {
-      content: data.content || '',
-      suggestions: data.suggestions || [],
+      content: data.content || '';
+      suggestions: data.suggestions || [];
       metadata: {
-        wordCount: data.content?.split(' ').length || 0,
-        readabilityScore: this.calculateReadability(data.content || ''),
-        seoScore: this.calculateSEOScore(data.content || ''),
+        wordCount: data.content?.split(' ').length || 0;
+        readabilityScore: this.calculateReadability(data.content || '');
+        seoScore: this.calculateSEOScore(data.content || '');
       }
     };
   }

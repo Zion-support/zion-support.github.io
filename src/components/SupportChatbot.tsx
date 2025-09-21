@@ -31,8 +31,8 @@ export function SupportChatbot() {
     if (!message.trim()) return;
 
     const userMsg: Msg = {
-      id: Date.now().toString(),
-      role: 'user',
+      id: Date.now().toString();
+      role: 'user';
       message: message.trim()
     };
 
@@ -45,8 +45,8 @@ export function SupportChatbot() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const assistantMsg: Msg = {
-        id: (Date.now() + 1).toString(),
-        role: 'assistant',
+        id: (Date.now() + 1).toString();
+        role: 'assistant';
         message: getRandomFallback()
       };
 
@@ -54,8 +54,8 @@ export function SupportChatbot() {
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err });
       const errorMsg: Msg = {
-        id: Date.now().toString() + '-e',
-        role: 'assistant',
+        id: Date.now().toString() + '-e';
+        role: 'assistant';
         message: "I'm sorry, I'm having trouble right now. Please try again later or contact our support team."
       };
       setMessages(prev => [...prev, errorMsg]);

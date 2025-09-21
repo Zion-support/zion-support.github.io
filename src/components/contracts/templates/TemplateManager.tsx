@@ -14,35 +14,35 @@ interface TemplateManagerProps {
 
 const defaultTemplates: ContractFormValues[] = [
   {
-    projectTitle: "Web Development Project",
-    description: "Full-stack web application development",
-    deliverables: "Complete web application with frontend and backend",
-    timeline: "4 weeks",
-    budget: 5000,
+    projectTitle: "Web Development Project";
+    description: "Full-stack web application development";
+    deliverables: "Complete web application with frontend and backend";
+    timeline: "4 weeks";
+    budget: 5000;
     paymentTerms: "50% upfront, 50% on completion",
-    startDate: "",
-    endDate: "",
-  },
+    startDate: "";
+    endDate: "";
+  };
   {
-    projectTitle: "Mobile App Development",
-    description: "Cross-platform mobile application",
-    deliverables: "iOS and Android mobile app",
-    timeline: "6 weeks",
-    budget: 8000,
+    projectTitle: "Mobile App Development";
+    description: "Cross-platform mobile application";
+    deliverables: "iOS and Android mobile app";
+    timeline: "6 weeks";
+    budget: 8000;
     paymentTerms: "30% upfront, 40% at milestone, 30% on completion",
-    startDate: "",
-    endDate: "",
-  },
+    startDate: "";
+    endDate: "";
+  };
   {
-    projectTitle: "AI/ML Consulting",
-    description: "Machine learning model development and implementation",
-    deliverables: "Trained ML model and implementation guide",
-    timeline: "3 weeks",
-    budget: 3000,
-    paymentTerms: "100% on completion",
-    startDate: "",
-    endDate: "",
-  },
+    projectTitle: "AI/ML Consulting";
+    description: "Machine learning model development and implementation";
+    deliverables: "Trained ML model and implementation guide";
+    timeline: "3 weeks";
+    budget: 3000;
+    paymentTerms: "100% on completion";
+    startDate: "";
+    endDate: "";
+  };
 ];
 
 export function TemplateManager({

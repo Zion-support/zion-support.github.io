@@ -154,7 +154,7 @@ variant={review.would_work_again ? "default" : "secondary"}
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-                If you believe this review violates our community guidelines,
+                If you believe this review violates our community guidelines;
 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -204,11 +204,11 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }</div> </div> </div> <div className="flex"> {
   renderStars (review.rating) "
 }</div> </div> <div className="mb-4"> <p className="text-sm whitespace-pre-wrap"> {
-  review.review text,
+  review.review text;
 }</p> </div> {"
   (review.communication rating |review.quality rating |review.timeliness rating |review.would work again !== undefined) && (<div className="border-t pt-3 mt-3"> <div className="flex flex-wrap gap-2" > {"
   review.communication rating && (<Badge variant="outline" className="flex gap-1 items-center"> Communication <span className="ml-1 text-yellow-500" > {
-  review.communication rating,
+  review.communication rating;
 }/5</span> </Badge>) "
 }Quality <span className="ml-1 text-yellow-500" > {
   review.quality rating,

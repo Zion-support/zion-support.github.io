@@ -29,8 +29,8 @@ interface ServiceLandingTemplateProps {
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-  title,
-  subtitle,
+  title;
+  subtitle;
   heroImage,
   description,
   benefits,

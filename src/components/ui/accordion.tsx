@@ -3,10 +3,10 @@ id: string;
 name: string;
 }
 
-import React from "react",
+import React from "react";
 const accordion: React.FC = () => {
-,
-return (,
+;
+return (;
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">accordion</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>
@@ -48,7 +48,7 @@ ref={ref}
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
-AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName,
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>
   ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>

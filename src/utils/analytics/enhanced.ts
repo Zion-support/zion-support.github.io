@@ -29,23 +29,23 @@ export class EnhancedAnalytics {
   private initializeTracking(): void {
     // Initialize user journey
     this.userJourney = {
-      userId: this.getUserId(),
-      sessionId: this.getSessionId(),
-      events: [],
-      startTime: new Date(),
-      lastActivity: new Date(),
+      userId: this.getUserId();
+      sessionId: this.getSessionId();
+      events: [];
+      startTime: new Date();
+      lastActivity: new Date();
     };
     
     // Track page view
     this.trackEvent({
-      event: 'page_view',
-      category: 'Navigation',
-      action: 'Page Load',
-      label: window.location.pathname,
+      event: 'page_view';
+      category: 'Navigation';
+      action: 'Page Load';
+      label: window.location.pathname;
       custom_parameters: {
-        referrer: document.referrer,
-        userAgent: navigator.userAgent,
-        screenResolution: `${screen.width}x${screen.height}`,
+        referrer: document.referrer;
+        userAgent: navigator.userAgent;
+        screenResolution: `${screen.width}x${screen.height}`;
       }
     });
   }
@@ -72,10 +72,10 @@ export class EnhancedAnalytics {
     if (!this.userJourney) return;
     
     const enrichedEvent = {
-      ...event,
-      timestamp: new Date().toISOString(),
-      sessionId: this.userJourney.sessionId,
-      userId: this.userJourney.userId,
+      ...event;
+      timestamp: new Date().toISOString();
+      sessionId: this.userJourney.sessionId;
+      userId: this.userJourney.userId;
     };
     
     this.eventQueue.push(enrichedEvent);
@@ -85,10 +85,10 @@ export class EnhancedAnalytics {
     // Send to Google Analytics
     if (window.gtag) {
       window.gtag('event', event.event, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-        custom_map: event.custom_parameters,
+        event_category: event.category;
+        event_label: event.label;
+        value: event.value;
+        custom_map: event.custom_parameters;
       });
     }
     
@@ -100,24 +100,24 @@ export class EnhancedAnalytics {
   
   public trackUserEngagement(element: string, action: string): void {
     this.trackEvent({
-      event: 'user_engagement',
-      category: 'Interaction',
-      action: action,
-      label: element,
+      event: 'user_engagement';
+      category: 'Interaction';
+      action: action;
+      label: element;
       custom_parameters: {
-        elementType: this.getElementType(element),
-        timeOnPage: this.getTimeOnPage(),
+        elementType: this.getElementType(element);
+        timeOnPage: this.getTimeOnPage();
       }
     });
   }
   
   public trackConversion(conversionType: string, value?: number): void {
     this.trackEvent({
-      event: 'conversion',
-      category: 'Business',
-      action: 'Conversion',
-      label: conversionType,
-      value: value,
+      event: 'conversion';
+      category: 'Business';
+      action: 'Conversion';
+      label: conversionType;
+      value: value;
     });
   }
   
@@ -157,14 +157,14 @@ export class EnhancedAnalytics {
     
     try {
       await fetch('/api/analytics/events', {
-        method: 'POST',
+        method: 'POST';
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json';
+        };
         body: JSON.stringify({
-          events: eventsToFlush,
-          userJourney: this.userJourney,
-        }),
+          events: eventsToFlush;
+          userJourney: this.userJourney;
+        });
       });
     } catch (error) {
       console.error('Failed to flush analytics events:', error);
@@ -177,13 +177,13 @@ export class EnhancedAnalytics {
     if (!this.userJourney) return null;
     
     return {
-      sessionId: this.userJourney.sessionId,
-      userId: this.userJourney.userId,
-      duration: Date.now() - this.userJourney.startTime.getTime(),
-      eventCount: this.userJourney.events.length,
-      pageViews: this.userJourney.events.filter(e => e.event === 'page_view').length,
-      conversions: this.userJourney.events.filter(e => e.event === 'conversion').length,
-      lastActivity: this.userJourney.lastActivity,
+      sessionId: this.userJourney.sessionId;
+      userId: this.userJourney.userId;
+      duration: Date.now() - this.userJourney.startTime.getTime();
+      eventCount: this.userJourney.events.length;
+      pageViews: this.userJourney.events.filter(e => e.event === 'page_view').length;
+      conversions: this.userJourney.events.filter(e => e.event === 'conversion').length;
+      lastActivity: this.userJourney.lastActivity;
     };
   }
 }

@@ -28,8 +28,8 @@ export function DisputeDetail() {
   const [isSending, setIsSending] = useState(false);
   const [message, setMessage] = useState('');
   const [resolution, setResolution] = useState({
-    summary: '',
-    resolution_type: 'compromise' as ResolutionType,
+    summary: '';
+    resolution_type: 'compromise' as ResolutionType;
   });
 
   useEffect(() => {
@@ -64,16 +64,16 @@ export function DisputeDetail() {
     }
 
     const success = await resolveDispute(disputeId as string, {
-      summary: resolution.summary,
-      resolution_type: resolution.resolution_type,
+      summary: resolution.summary;
+      resolution_type: resolution.resolution_type;
     });
 
     if (success && dispute) {
       setDispute({
-        ...dispute,
-        resolution_summary: resolution.summary,
-        resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString(),
+        ...dispute;
+        resolution_summary: resolution.summary;
+        resolution_type: resolution.resolution_type;
+        resolved_at: new Date().toISOString();
       });
       toast.success('Dispute resolved successfully');
     } else {
@@ -90,16 +90,16 @@ export function DisputeDetail() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const newMessage: DisputeMessage = {
-        id: Date.now().toString(),
-        dispute_id: disputeId as string,
-        user_id: user?.id || '',
-        message: message.trim(),
-        created_at: new Date().toISOString(),
-        is_admin_note: false,
+        id: Date.now().toString();
+        dispute_id: disputeId as string;
+        user_id: user?.id || '';
+        message: message.trim();
+        created_at: new Date().toISOString();
+        is_admin_note: false;
         user_profile: {
-          display_name: user?.name || 'You',
-          avatar_url: user?.avatar || '',
-        },
+          display_name: user?.name || 'You';
+          avatar_url: user?.avatar || '';
+        };
       };
       
       setMessages(prev => [...prev, newMessage]);

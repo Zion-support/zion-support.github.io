@@ -4,12 +4,12 @@ import React from "react";
 import { Star,,  } from 'lucide-react'
 interface SaveTalentButtonProps {
   talentId: string;
-onSave: (talentId: string) => void,
+onSave: (talentId: string) => void;
 isSaved: boolean;
 export function SaveTalentButton({
-  talentId,
+  talentId;
 onSave
-  isSaved,
+  isSaved;
 }: SaveTalentButtonProps) {
       onClick={() => onSave(talentId)}
       variant={isSaved ? 'default' : 'outline'}

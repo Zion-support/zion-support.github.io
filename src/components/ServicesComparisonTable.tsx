@@ -15,14 +15,14 @@ export export function ServicesComparisonTable() {;
 const serviceCategories = [["A;  I Service; s", "I; T Service; s", "Micr; o SAA; S"];]
 
 const getCategoryServices: any = (categor; y: string) => {
-return COMPREHENSIVE_SERVICES.filter(service => service.category === category),
+return COMPREHENSIVE_SERVICES.filter(service => service.category === category);
 }
 
 const getFeatureIcon: any = (hasFeatur;  e: boolean) => {
 return hasFeature ? (<Check className="w-4 h-4 text-green-500" />
 ) : (
 <X className="w-4 h-4 text-red-500" />
-),
+);
 }
 
 return (

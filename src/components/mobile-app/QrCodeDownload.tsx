@@ -47,7 +47,7 @@ googlePlayUrl={googlePlayUrl}
 {/* This would be replaced with an actual QR code in production */}
 </div>
 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">
-Scan to download,
+Scan to download;
 </p>
 </div>
 </div>

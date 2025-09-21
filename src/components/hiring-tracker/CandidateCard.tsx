@@ -45,8 +45,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-      title: "Notes saved",
-      description: "Your notes have been saved",
+      title: "Notes saved";
+      description: "Your notes have been saved";
     });
     setShowNotes(false);
   };
@@ -54,8 +54,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
-      title: "Hiring process initiated",
-      description: "Offer has been sent to the talent.",
+      title: "Hiring process initiated";
+      description: "Offer has been sent to the talent.";
     });
   };
 

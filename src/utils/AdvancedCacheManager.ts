@@ -29,19 +29,19 @@ class AdvancedCacheManager<T = any> {
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      maxSize: 1000,
+      maxSize: 1000;
       ttl: 5 * 60 * 1000, // 5 minutes
-      strategy: "lru",
-      persist: false,
+      strategy: "lru";
+      persist: false;
       ...config
     };
 
     this.stats = {
-      hits: 0,
-      misses: 0,
-      size: 0,
-      maxSize: this.config.maxSize,
-      hitRate: 0,
+      hits: 0;
+      misses: 0;
+      size: 0;
+      maxSize: this.config.maxSize;
+      hitRate: 0;
       memoryUsage: 0
     };
 
@@ -59,9 +59,9 @@ class AdvancedCacheManager<T = any> {
   set(key: string, value: T): void {
     const now = Date.now();
     const entry: CacheEntry<T> = {
-      value,
-      timestamp: now,
-      accessCount: 0,
+      value;
+      timestamp: now;
+      accessCount: 0;
       lastAccessed: now
     };
 
@@ -123,11 +123,11 @@ class AdvancedCacheManager<T = any> {
   clear(): void {
     this.cache.clear();
     this.stats = {
-      hits: 0,
-      misses: 0,
-      size: 0,
-      maxSize: this.config.maxSize,
-      hitRate: 0,
+      hits: 0;
+      misses: 0;
+      size: 0;
+      maxSize: this.config.maxSize;
+      hitRate: 0;
       memoryUsage: 0
     };
     

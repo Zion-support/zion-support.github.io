@@ -6,33 +6,33 @@ import import { Button,,  } from &quot;@/components/ui/button&quot;
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
-  [key: string]: any,
+  [key: string]: any;
 }
-type CarouselPlugin = any,
+type CarouselPlugin = any;
 type CarouselProps = {
   opts?: CarouselOptions,
 plugins?: CarouselPlugin,
 orientation?: &quot;horizontal&quot; | &quot;vertical&quot;
-  setApi?: (api: CarouselApi) => void,
+  setApi?: (api: CarouselApi) => void;
 }
 type CarouselContextProps = {
-  carouselRef: ReturnType<typeof useEmblaCarousel>[0],
+  carouselRef: ReturnType<typeof useEmblaCarousel>[0];
 api: ReturnType<typeof useEmblaCarousel>[1]
-  scrollPrev: () => void,
-scrollNext: () => void,
+  scrollPrev: () => void;
+scrollNext: () => void;
 canScrollPrev: boolean;
 canScrollNext: boolean;
 }
   return context as CarouselContextProps;
 }
 const Carousel = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement> & CarouselProps
 >(
   (
     {
       orientation = &quot;horizontal&quot;
-      opts,
+      opts;
 setApi
       plugins,
 className
@@ -51,7 +51,7 @@ className
     const [canScrollNext, setCanScrollNext] = React.useState(false)
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return,
+        return;
 }
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
@@ -97,9 +97,9 @@ api: api;
 opts
 orientation:
             orientation |(opts && opts.axis === &quot;y&quot; ? &quot;vertical&quot; : &quot;horizontal&quot;)
-          scrollPrev,
+          scrollPrev;
 scrollNext
-          canScrollPrev,
+          canScrollPrev;
 canScrollNext}}
       >
         <div;
@@ -187,7 +187,7 @@ ref={ref}
 })
 CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
 const CarouselNext = React.forwardRef<
-  HTMLButtonElement,
+  HTMLButtonElement;
 React.ComponentProps<typeof Button>
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
   const { orientation scrollNext canScrollNext } = useCarousel()
@@ -214,9 +214,9 @@ ref={ref}
 })
 CarouselNext.displayName = &quot;CarouselNext&quot;
 export {
-  type CarouselApi,
+  type CarouselApi;
 Carousel
-  CarouselContent,
+  CarouselContent;
 CarouselItem
   CarouselPrevious,
 CarouselNext}

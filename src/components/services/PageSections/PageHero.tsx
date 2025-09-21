@@ -18,7 +18,7 @@ export function PageHero() {
           </div>
           <h3 className='text-xl font-bold text-white mb-2'>Global Coverage</h3>
           <p className='text-zion-slate-light'>
-            IT onsite services available in over 190 countries and territories,
+            IT onsite services available in over 190 countries and territories;
 worldwide
           </p>
         </div>
@@ -28,7 +28,7 @@ worldwide
           </div>
           <h3 className='text-xl font-bold text-white mb-2'>Rapid Response</h3>
           <p className='text-zion-slate-light'>
-            Guaranteed 4-hour response time for critical issues in most major,
+            Guaranteed 4-hour response time for critical issues in most major;
 cities
           </p>
         </div>

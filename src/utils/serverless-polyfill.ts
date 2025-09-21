@@ -13,7 +13,7 @@
  *
  * This runs as the VERY FIRST script before any other code loads.
  */
-// Type declarations for global augmentation,
+// Type declarations for global augmentation;
 declare global {
   var webpackChunk_N_E: any[][];
   var __webpack_require__: any;

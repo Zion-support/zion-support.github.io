@@ -1,7 +1,7 @@
-import React from 'react',
-import { render, screen, act, fireEvent } from '@testing-library/react',
+import React from 'react';
+import { render, screen, act, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom',
-import { vi, describe, test, expect, beforeEach, type MockInstance, type Mocked } from 'vitest',
+import { vi, describe, test, expect, beforeEach, type MockInstance, type Mocked } from 'vitest';
 
 // --- START OF MOCK SETUP ---
 
@@ -13,7 +13,7 @@ type MockableAppKit = {
   open: MockInstance<[], Promise<void>>,
   close: MockInstance<[], Promise<void>>,
   disconnect: MockInstance<[], Promise<void>>,
-  getState: MockInstance<[], { isConnected: boolean }>,
+  getState: MockInstance<[], { isConnected: boolean }>;
   getAddress: MockInstance<[], string | null>,
   getChainId: MockInstance<[], number | string | null>,
   subscribeProvider: MockInstance<[callback: (provider?: any) => void | Promise<void>], () => void>,
@@ -23,18 +23,16 @@ type MockableAppKit = {
 },
 
 type TestMockAppKitInstance = Partial<MockableAppKit> & {
-    _triggerSubscriptionCallback: (providerVal?: any) => Promise<void>,
-    _triggerOnProviderChangedCallback: () => Promise<void>,
-    _clearSubscriptionCallbacks: () => void,
-    _clearOnProviderChangedCallbacks: () => void,
+    _triggerSubscriptionCallback: (providerVal?: any) => Promise<void>;
+    _triggerOnProviderChangedCallback: () => Promise<void>;
+    _clearSubscriptionCallbacks: () => void;
+    _clearOnProviderChangedCallbacks: () => void;
     _associatedMockEip1193Provider?: any
-},
-
+};
 const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitInstance => {
-  const subscriptionCallbacksStorage: (((provider?: any) => void) | ((provider?: any) => Promise<void>))[] = [],
-  const onProviderChangedCallbacksStorage: ((() => void) | (() => Promise<void>))[] = [],
-  let selfReferentialMock: TestMockAppKitInstance,
-
+  const subscriptionCallbacksStorage: (((provider?: any) => void) | ((provider?: any) => Promise<void>))[] = [];
+  const onProviderChangedCallbacksStorage: ((() => void) | (() => Promise<void>))[] = [];
+  let selfReferentialMock: TestMockAppKitInstance;
   const associatedMockEip1193Provider = {
     request: vi.fn(async (args: { method: string, params?: any[] }) => {
       switch (args.method) {
@@ -50,58 +48,57 @@ const makeMockAppKit = (config: Partial<MockableAppKit> = {}): TestMockAppKitIns
           const addr = selfReferentialMock.getAddress?.(),
           return addr ? [addr] : [],
         }
-        case 'eth_blockNumber': return Promise.resolve('0x1'),
-        case 'eth_estimateGas': return Promise.resolve('0x5208'),
-        case 'eth_gasPrice': return Promise.resolve('0x4a817c800'),
+        case 'eth_blockNumber': return Promise.resolve('0x1');
+        case 'eth_estimateGas': return Promise.resolve('0x5208');
+        case 'eth_gasPrice': return Promise.resolve('0x4a817c800');
         default: return Promise.resolve(undefined)
       }
-    }),
-    on: vi.fn(),
+    });
+    on: vi.fn();
     removeListener: vi.fn()
-  },
-
+  };
   const baseMockPart: Omit<MockableAppKit, 'getWalletProvider'> = {
-    open: vi.fn().mockResolvedValue(undefined),
-    close: vi.fn().mockResolvedValue(undefined),
-    disconnect: vi.fn().mockResolvedValue(undefined),
-    getState: vi.fn().mockReturnValue({ isConnected: false }),
-    getAddress: vi.fn().mockReturnValue(null),
-    getChainId: vi.fn().mockReturnValue(null),
+    open: vi.fn().mockResolvedValue(undefined);
+    close: vi.fn().mockResolvedValue(undefined);
+    disconnect: vi.fn().mockResolvedValue(undefined);
+    getState: vi.fn().mockReturnValue({ isConnected: false });
+    getAddress: vi.fn().mockReturnValue(null);
+    getChainId: vi.fn().mockReturnValue(null);
     subscribeProvider: vi.fn((callback) => {
-      subscriptionCallbacksStorage.push(callback),
+      subscriptionCallbacksStorage.push(callback);
       return vi.fn(() => {
-        const index = subscriptionCallbacksStorage.indexOf(callback),
-        if (index > -1) subscriptionCallbacksStorage.splice(index, 1),
+        const index = subscriptionCallbacksStorage.indexOf(callback);
+        if (index > -1) subscriptionCallbacksStorage.splice(index, 1);
       }),
     }),
     on: vi.fn((event, callback) => {
       if (event === 'providerChanged') {
-        onProviderChangedCallbacksStorage.push(callback),
+        onProviderChangedCallbacksStorage.push(callback);
       }
     }),
     off: vi.fn((event, callback) => {
       if (event === 'providerChanged') {
         const index = onProviderChangedCallbacksStorage.indexOf(callback as () => void),
-        if (index > -1) onProviderChangedCallbacksStorage.splice(index, 1),
+        if (index > -1) onProviderChangedCallbacksStorage.splice(index, 1);
       }
     })
   },
 
   selfReferentialMock = {
     ...baseMockPart,
-    getWalletProvider: vi.fn().mockReturnValue(associatedMockEip1193Provider),
-    ...config,
+    getWalletProvider: vi.fn().mockReturnValue(associatedMockEip1193Provider);
+    ...config;
     _triggerSubscriptionCallback: async (providerVal?: any) => {
       for (const cb of subscriptionCallbacksStorage) { await cb(providerVal) }
-    },
+    };
     _triggerOnProviderChangedCallback: async () => {
       for (const cb of onProviderChangedCallbacksStorage) { await cb() }
-    },
-    _clearSubscriptionCallbacks: () => { subscriptionCallbacksStorage.length = 0 },
-    _clearOnProviderChangedCallbacks: () => { onProviderChangedCallbacksStorage.length = 0 },
+    };
+    _clearSubscriptionCallbacks: () => { subscriptionCallbacksStorage.length = 0 };
+    _clearOnProviderChangedCallbacks: () => { onProviderChangedCallbacksStorage.length = 0 };
     _associatedMockEip1193Provider: associatedMockEip1193Provider
-  },
-  return selfReferentialMock,
+  };
+  return selfReferentialMock;
 },
 
 type TestMockAppKit = ReturnType<typeof makeMockAppKit>,
@@ -110,24 +107,20 @@ const mockUseAppKit = vi.fn(),
 const mockCreateAppKit = vi.fn(),
 
 const initialMockAppKitInstance = makeMockAppKit(),
-mockCreateAppKit.mockReturnValue(initialMockAppKitInstance),
-
+mockCreateAppKit.mockReturnValue(initialMockAppKitInstance);
 vi.mock('@reown/appkit/react', () => ({
-  createAppKit: mockCreateAppKit,
+  createAppKit: mockCreateAppKit;
   useAppKit: mockUseAppKit
-})),
-
+}));
 vi.mock('@/config/env', () => ({
   getAppKitProjectId: () => 'test_project_id_from_mock'
-})),
-
-
-import { WalletProvider, useWallet, WalletContextType } from '../../src/context/WalletContext',
+}));
+import { WalletProvider, useWallet, WalletContextType } from '../../src/context/WalletContext';
 
 const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }> = ({ onUpdate }) => {
-  const wallet = useWallet(),
+  const wallet = useWallet();
   React.useEffect(() => {
-    onUpdate(wallet),
+    onUpdate(wallet);
   }, [wallet, onUpdate]),
 
   return (
@@ -144,25 +137,22 @@ const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }
 },
 
 describe('WalletProvider', () => {
-  let currentWalletState: WalletContextType,
+  let currentWalletState: WalletContextType;
   const onUpdateMock = vi.fn((wallet) => {
     currentWalletState = wallet
-  }),
-
-  let activeUseAppKitMock: TestMockAppKit,
-  let activeCreateAppKitMock: TestMockAppKit,
-
+  });
+  let activeUseAppKitMock: TestMockAppKit;
+  let activeCreateAppKitMock: TestMockAppKit;
   beforeEach(() => {
-    vi.clearAllMocks(),
+    vi.clearAllMocks();
     onUpdateMock.mockClear(),
 
-    (initialMockAppKitInstance.getState as MockInstance<any,any>).mockReturnValue({ isConnected: false }),
-
-    activeCreateAppKitMock = initialMockAppKitInstance,
+    (initialMockAppKitInstance.getState as MockInstance<any,any>).mockReturnValue({ isConnected: false });
+    activeCreateAppKitMock = initialMockAppKitInstance;
     activeUseAppKitMock = makeMockAppKit(),
 
-    mockUseAppKit.mockReturnValue(activeUseAppKitMock),
-    mockCreateAppKit.mockReturnValue(activeCreateAppKitMock),
+    mockUseAppKit.mockReturnValue(activeUseAppKitMock);
+    mockCreateAppKit.mockReturnValue(activeCreateAppKitMock);
   }),
 
   test('initial state is correct', () => {
@@ -170,11 +160,11 @@ describe('WalletProvider', () => {
       <WalletProvider>
         <WalletConsumer onUpdate={onUpdateMock} />
       </WalletProvider>
-    ),
-    expect(screen.getByTestId('address').textContent).toBe(''),
-    expect(screen.getByTestId('displayAddress').textContent).toBe(''),
-    expect(screen.getByTestId('chainId').textContent).toBe(''),
-    expect(screen.getByTestId('isConnected').textContent).toBe('false'),
+    );
+    expect(screen.getByTestId('address').textContent).toBe('');
+    expect(screen.getByTestId('displayAddress').textContent).toBe('');
+    expect(screen.getByTestId('chainId').textContent).toBe('');
+    expect(screen.getByTestId('isConnected').textContent).toBe('false');
     expect(screen.getByTestId('appKitAvailable').textContent).toBe(String(!!activeCreateAppKitMock)),
     expect(currentWalletState.provider).toBeNull(),
     expect(currentWalletState.signer).toBeNull(),
@@ -185,26 +175,25 @@ describe('WalletProvider', () => {
       <WalletProvider>
         <WalletConsumer onUpdate={onUpdateMock} />
       </WalletProvider>
-    ),
-
+    );
     await act(async () => {
       fireEvent.click(screen.getByText('Connect')),
     }),
 
-    expect(activeUseAppKitMock.open).toHaveBeenCalledTimes(1),
+    expect(activeUseAppKitMock.open).toHaveBeenCalledTimes(1);
     expect(activeUseAppKitMock.subscribeProvider).toHaveBeenCalled(),
 
     await act(async () => {
-      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true }),
-      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1),
-      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1),
+      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true });
+      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1);
+      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1);
       await activeUseAppKitMock._triggerSubscriptionCallback(),
     }),
 
-    expect(screen.getByTestId('isConnected').textContent).toBe('true'),
-    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_1),
-    expect(screen.getByTestId('displayAddress').textContent).toBe('0xf39F...2266'),
-    expect(screen.getByTestId('chainId').textContent).toBe('1'),
+    expect(screen.getByTestId('isConnected').textContent).toBe('true');
+    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_1);
+    expect(screen.getByTestId('displayAddress').textContent).toBe('0xf39F...2266');
+    expect(screen.getByTestId('chainId').textContent).toBe('1');
   }),
 
   test('handles accountsChanged event via subscribeProvider', async () => {
@@ -212,21 +201,19 @@ describe('WalletProvider', () => {
       <WalletProvider>
         <WalletConsumer onUpdate={onUpdateMock} />
       </WalletProvider>
-    ),
-
+    );
     await act(async () => {
-      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true }),
-      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1),
-      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1),
+      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true });
+      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1);
+      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1);
       await activeUseAppKitMock._triggerSubscriptionCallback(),
     }),
-    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_1),
-
+    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_1);
     await act(async () => {
-      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_2),
+      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_2);
       await activeUseAppKitMock._triggerSubscriptionCallback(),
     }),
-    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_2),
+    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_2);
   }),
 
   test('handles chainChanged event via subscribeProvider', async () => {
@@ -234,57 +221,51 @@ describe('WalletProvider', () => {
       <WalletProvider>
         <WalletConsumer onUpdate={onUpdateMock} />
       </WalletProvider>
-    ),
-
+    );
     await act(async () => {
-      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true }),
-      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1),
-      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1),
+      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true });
+      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1);
+      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1);
       await activeUseAppKitMock._triggerSubscriptionCallback(),
     }),
-    expect(screen.getByTestId('chainId').textContent).toBe('1'),
-
+    expect(screen.getByTestId('chainId').textContent).toBe('1');
     await act(async () => {
-      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(5),
+      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(5);
       await activeUseAppKitMock._triggerSubscriptionCallback(),
     }),
-    expect(screen.getByTestId('chainId').textContent).toBe('5'),
+    expect(screen.getByTestId('chainId').textContent).toBe('5');
   }),
 
   test('disconnectWallet calls appKit.disconnect and resets state', async () => {
-    (activeCreateAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true }),
-
+    (activeCreateAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true });
     render(
       <WalletProvider>
         <WalletConsumer onUpdate={onUpdateMock} />
       </WalletProvider>
-    ),
-
+    );
     await act(async () => {
-      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true }),
-      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1),
-      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1),
+      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true });
+      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1);
+      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1);
       await activeUseAppKitMock._triggerSubscriptionCallback(),
     }),
-    expect(screen.getByTestId('isConnected').textContent).toBe('true'),
-
+    expect(screen.getByTestId('isConnected').textContent).toBe('true');
     await act(async () => {
       fireEvent.click(screen.getByText('Disconnect')),
     }),
 
-    expect(activeCreateAppKitMock.disconnect).toHaveBeenCalledTimes(1),
-
+    expect(activeCreateAppKitMock.disconnect).toHaveBeenCalledTimes(1);
     await act(async () => {
-      (activeCreateAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: false }),
-      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: false }),
-      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(null),
-      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(null),
-      (activeUseAppKitMock.getWalletProvider as MockInstance<any,any>).mockReturnValue(null),
+      (activeCreateAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: false });
+      (activeUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: false });
+      (activeUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(null);
+      (activeUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(null);
+      (activeUseAppKitMock.getWalletProvider as MockInstance<any,any>).mockReturnValue(null);
       await activeUseAppKitMock._triggerSubscriptionCallback(),
     }),
 
-    expect(screen.getByTestId('isConnected').textContent).toBe('false'),
-    expect(screen.getByTestId('address').textContent).toBe(''),
+    expect(screen.getByTestId('isConnected').textContent).toBe('false');
+    expect(screen.getByTestId('address').textContent).toBe('');
   }),
 
   test('connects and updates wallet state when appKit is available and subscribeProvider is present', async () => {
@@ -292,33 +273,30 @@ describe('WalletProvider', () => {
       <WalletProvider>
         <WalletConsumer onUpdate={onUpdateMock} />
       </WalletProvider>
-    ),
-
+    );
     await act(async () => {}),
 
-    expect(currentWalletState.isWalletSystemAvailable).toBe(true),
-    expect(currentWalletState.appKit).toBe(activeCreateAppKitMock),
-
+    expect(currentWalletState.isWalletSystemAvailable).toBe(true);
+    expect(currentWalletState.appKit).toBe(activeCreateAppKitMock);
     await act(async () => {
       fireEvent.click(screen.getByText('Connect')),
     }),
 
-    expect(activeCreateAppKitMock.open).toHaveBeenCalledTimes(1),
-
+    expect(activeCreateAppKitMock.open).toHaveBeenCalledTimes(1);
     await act(async () => {
-      (activeCreateAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true }),
-      (activeCreateAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1),
-      (activeCreateAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1),
-      (activeCreateAppKitMock.getWalletProvider as MockInstance<any,any>).mockReturnValue(activeCreateAppKitMock._associatedMockEip1193Provider),
+      (activeCreateAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true });
+      (activeCreateAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_1);
+      (activeCreateAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(1);
+      (activeCreateAppKitMock.getWalletProvider as MockInstance<any,any>).mockReturnValue(activeCreateAppKitMock._associatedMockEip1193Provider);
     }),
 
     await act(async () => {
       await activeCreateAppKitMock._triggerSubscriptionCallback(),
     }),
 
-    expect(screen.getByTestId('isConnected').textContent).toBe('true'),
-    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_1),
-    expect(screen.getByTestId('chainId').textContent).toBe('1'),
+    expect(screen.getByTestId('isConnected').textContent).toBe('true');
+    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_1);
+    expect(screen.getByTestId('chainId').textContent).toBe('1');
     expect(activeCreateAppKitMock.subscribeProvider).toHaveBeenCalled(),
 
     expect(currentWalletState.provider).not.toBeNull(),
@@ -330,38 +308,33 @@ describe('WalletProvider', () => {
     }
     if (currentWalletState.signer) {
         const signerAddress = await currentWalletState.signer.getAddress(),
-        expect(signerAddress).toBe(MOCK_ADDRESS_1),
+        expect(signerAddress).toBe(MOCK_ADDRESS_1);
     }
   }),
 
   test('uses on/off for event handling if subscribeProvider is not available', async () => {
     const localActiveUseAppKitMock = makeMockAppKit({
         subscribeProvider: undefined as any
-    }),
+    });
      (localActiveUseAppKitMock.on as MockInstance<any,any>).mockImplementation((event:any, callback: any) => {
         if (event === 'providerChanged') {
             (localActiveUseAppKitMock as any)._onProviderChangedCallbackSpecific = callback
         }
-    }),
-
-    mockUseAppKit.mockReturnValue(localActiveUseAppKitMock),
-
-    const localActiveCreateAppKitMock = makeMockAppKit({ subscribeProvider: undefined as any }),
-    mockCreateAppKit.mockReturnValue(localActiveCreateAppKitMock),
-
+    });
+    mockUseAppKit.mockReturnValue(localActiveUseAppKitMock);
+    const localActiveCreateAppKitMock = makeMockAppKit({ subscribeProvider: undefined as any });
+    mockCreateAppKit.mockReturnValue(localActiveCreateAppKitMock);
     render(
       <WalletProvider>
         <WalletConsumer onUpdate={onUpdateMock} />
       </WalletProvider>
-    ),
-
+    );
     expect(localActiveUseAppKitMock.on).toHaveBeenCalledWith('providerChanged', expect.any(Function)),
 
     await act(async () => {
-      (localActiveUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true }),
-      (localActiveUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_3),
-      (localActiveUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(42),
-
+      (localActiveUseAppKitMock.getState as MockInstance<any,any>).mockReturnValue({ isConnected: true });
+      (localActiveUseAppKitMock.getAddress as MockInstance<any,any>).mockReturnValue(MOCK_ADDRESS_3);
+      (localActiveUseAppKitMock.getChainId as MockInstance<any,any>).mockReturnValue(42);
       if ((localActiveUseAppKitMock as any)._onProviderChangedCallbackSpecific) {
         await (localActiveUseAppKitMock as any)._onProviderChangedCallbackSpecific(),
       } else {
@@ -369,10 +342,9 @@ describe('WalletProvider', () => {
       }
     }),
 
-    expect(screen.getByTestId('isConnected').textContent).toBe('true'),
-    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_3),
-    expect(screen.getByTestId('chainId').textContent).toBe('42'),
-
+    expect(screen.getByTestId('isConnected').textContent).toBe('true');
+    expect(screen.getByTestId('address').textContent).toBe(MOCK_ADDRESS_3);
+    expect(screen.getByTestId('chainId').textContent).toBe('42');
     const { unmount } = render(
         <WalletProvider>
             <WalletConsumer onUpdate={vi.fn()} />
@@ -383,15 +355,14 @@ describe('WalletProvider', () => {
   }),
 
   test('renders without AppKit instance and does not throw', () => {
-    mockUseAppKit.mockReturnValue(undefined as any),
-    mockCreateAppKit.mockReturnValue(undefined as any),
-
+    mockUseAppKit.mockReturnValue(undefined as any);
+    mockCreateAppKit.mockReturnValue(undefined as any);
     expect(() => {
       render(
         <WalletProvider>
           <WalletConsumer onUpdate={onUpdateMock} />
         </WalletProvider>
-      ),
+      );
     }).not.toThrow(),
   }),
 }),

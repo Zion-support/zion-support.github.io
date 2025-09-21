@@ -32,28 +32,28 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   constructor(props: ErrorBoundaryProps) {
     super(props)
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
-      retryCount: 0,
-      userFeedback: '',
-      showDetails: false,
+      hasError: false;
+      error: null;
+      errorInfo: null;
+      errorId: null;
+      retryCount: 0;
+      userFeedback: '';
+      showDetails: false;
     }
   }
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
-      hasError: true,
-      error,
+      hasError: true;
+      error;
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo,
+      error;
+      errorInfo;
     })
 
     // Log error to console in development
@@ -78,10 +78,10 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
     if (retryCount < maxRetries) {
       this.setState(prevState => ({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        retryCount: prevState.retryCount + 1,
+        hasError: false;
+        error: null;
+        errorInfo: null;
+        retryCount: prevState.retryCount + 1;
       }))
     }
   }
@@ -214,7 +214,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
 // HOC for wrapping components with error boundary
 export function withErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
+  Component: React.ComponentType<P>;
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
 ) {
   const WrappedComponent = (props: P) => (

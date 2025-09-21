@@ -40,37 +40,37 @@ export interface Service {
  */
 export function map2026ServicesToExistingStructure(): Service[] {
   return specializedIndustrySolutions2026.map(service => ({
-    id: service.id,
-    title: service.title,
-    description: service.description,
-    category: service.category,
-    subcategory: service.subcategory,
+    id: service.id;
+    title: service.title;
+    description: service.description;
+    category: service.category;
+    subcategory: service.subcategory;
     price: parseInt(service.price.replace(/[$]/g, "")),
-    currency: "USD",
-    pricingModel: service.pricingModel,
-    features: service.features,
-    benefits: service.benefits,
-    useCases: service.useCases,
-    targetAudience: service.targetAudience,
-    tags: service.tags,
-    estimatedDelivery: service.estimatedDelivery,
-    supportLevel: service.supportLevel,
-    marketPrice: service.marketPrice,
-    roi: service.roi,
+    currency: "USD";
+    pricingModel: service.pricingModel;
+    features: service.features;
+    benefits: service.benefits;
+    useCases: service.useCases;
+    targetAudience: service.targetAudience;
+    tags: service.tags;
+    estimatedDelivery: service.estimatedDelivery;
+    supportLevel: service.supportLevel;
+    marketPrice: service.marketPrice;
+    roi: service.roi;
     contactInfo: {
-      phone: service.contactInfo.mobile,
-      email: service.contactInfo.email,
-      website: service.contactInfo.website,
-    },
+      phone: service.contactInfo.mobile;
+      email: service.contactInfo.email;
+      website: service.contactInfo.website;
+    };
     technicalSpecs: {
-      technology: service.technology,
-      integrations: service.integrations,
-      apiEndpoints: 200,
-      uptime: service.uptime,
+      technology: service.technology;
+      integrations: service.integrations;
+      apiEndpoints: 200;
+      uptime: service.uptime;
       security: ["SOC 2", "ISO 27001", "Data encryption"],
     },
-    competitors: service.competitors,
-    marketSize: service.marketSize,
+    competitors: service.competitors;
+    marketSize: service.marketSize;
     compliance: ["SOC 2", "ISO 27001"]
   }));
 }

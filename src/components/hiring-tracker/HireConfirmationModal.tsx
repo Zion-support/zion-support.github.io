@@ -14,8 +14,8 @@ interface HireConfirmationModalProps {
 }
 
 export function HireConfirmationModal({ 
-  isOpen, 
-  onClose, 
+  isOpen;
+  onClose;
   application, 
   onConfirm 
 }: HireConfirmationModalProps) {

@@ -45,10 +45,10 @@ class CacheManager {
     }
 
     const cacheItem: CacheItem<T> = {
-      data,
-      timestamp: now,
-      expiresAt: now + itemTTL,
-      accessCount: 0,
+      data;
+      timestamp: now;
+      expiresAt: now + itemTTL;
+      accessCount: 0;
       lastAccessed: now
     };
 
@@ -166,9 +166,9 @@ class CacheManager {
     }
 
     return {
-      size: this.cache.size,
-      maxSize: this.options.maxSize || 1000,
-      expiredCount,
+      size: this.cache.size;
+      maxSize: this.options.maxSize || 1000;
+      expiredCount;
       totalAccessCount,
       averageAccessCount: this.cache.size > 0 ? totalAccessCount / this.cache.size : 0
     };

@@ -1,6 +1,6 @@
 export class EventUtils {
   public static debounce<T extends (...args: any[]) => any>(
-    func: T,
+    func: T;
     wait: number
   ): (...args: Parameters<T>) => void {
     let timeout: NodeJS.Timeout;
@@ -11,7 +11,7 @@ export class EventUtils {
   }
 
   public static throttle<T extends (...args: any[]) => any>(
-    func: T,
+    func: T;
     limit: number
   ): (...args: Parameters<T>) => void {
     let inThrottle: boolean;
@@ -43,11 +43,11 @@ export class EventUtils {
       on(event: string, listener: Function) {
         if (!listeners[event]) listeners[event] = [];
         listeners[event].push(listener);
-      },
+      };
       off(event: string, listener: Function) {
         if (!listeners[event]) return;
         listeners[event] = listeners[event].filter(l => l !== listener);
-      },
+      };
       emit(event: string, ...args: any[]) {
         if (!listeners[event]) return;
         listeners[event].forEach(listener => listener(...args));

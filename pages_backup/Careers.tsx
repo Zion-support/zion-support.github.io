@@ -19,25 +19,25 @@ We offer:
 
 const benefits = [
   {
-    title: 'Competitive Compensation',
-    description: 'Attractive salaries and performance-based bonuses.',
-    icon: <DollarSign className='h-6 w-6 text-zion-purple' />,
-  },
+    title: 'Competitive Compensation';
+    description: 'Attractive salaries and performance-based bonuses.';
+    icon: <DollarSign className='h-6 w-6 text-zion-purple' />;
+  };
   {
-    title: 'Health & Wellness',
+    title: 'Health & Wellness';
     description: 'Comprehensive health, dental, and vision plans.',
-    icon: <Heart className='h-6 w-6 text-zion-purple' />,
-  },
+    icon: <Heart className='h-6 w-6 text-zion-purple' />;
+  };
   {
-    title: 'Professional Growth',
+    title: 'Professional Growth';
     description: 'Opportunities for learning, development, and career advancement.',
-    icon: <Lightbulb className='h-6 w-6 text-zion-purple' />,
-  },
+    icon: <Lightbulb className='h-6 w-6 text-zion-purple' />;
+  };
   {
-    title: 'Innovative Environment',
-    description: 'Work on cutting-edge AI and technology projects.',
-    icon: <Briefcase className='h-6 w-6 text-zion-purple' />,
-  },
+    title: 'Innovative Environment';
+    description: 'Work on cutting-edge AI and technology projects.';
+    icon: <Briefcase className='h-6 w-6 text-zion-purple' />;
+  };
 ];
 
 function Careers() {
@@ -186,8 +186,8 @@ asChild
               Don't see the right position?
             </h2>
             <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
-              We're always looking for talented individuals who are passionate,
-about AI and technology. Send us your resume and let's start a,
+              We're always looking for talented individuals who are passionate;
+about AI and technology. Send us your resume and let's start a;
 conversation. You can also apply directly by emailing us at
               <a
 href={`mailto:${applyEmail}`}

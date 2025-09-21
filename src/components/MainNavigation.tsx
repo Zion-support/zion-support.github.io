@@ -26,82 +26,82 @@ return () => window.removeEventListener("scroll",  handleScroll)
 
 const navigation = [
 {;
-na; m; e: "Service; s",
-hr; e; f: "/service; s",
+na; m; e: "Service; s";
+hr; e; f: "/service; s";
 dropdo; w; n: [
-{ na; m; e: "A; I Solution; s",
-hr; e; f: "/service; s/a; i" },
-{ na; m; e: "Cybersecurit; y",
-hr; e; f: "/service; s/cybersecurit; y" },
-{ na; m; e: "Clou; d Computin; g",
-hr; e; f: "/service; s/clou; d" },
-{ na; m; e: "I; T Consultin; g",
-hr; e; f: "/service; s/consultin; g" },
-{ na; m; e: "Digita; l Transformatio; n",
+{ na; m; e: "A; I Solution; s";
+hr; e; f: "/service; s/a; i" };
+{ na; m; e: "Cybersecurit; y";
+hr; e; f: "/service; s/cybersecurit; y" };
+{ na; m; e: "Clou; d Computin; g";
+hr; e; f: "/service; s/clou; d" };
+{ na; m; e: "I; T Consultin; g";
+hr; e; f: "/service; s/consultin; g" };
+{ na; m; e: "Digita; l Transformatio; n";
 hr; e; f: "/service; s/digita; l-transformatio; n" }
 ];
-},
+};
 {
 nam; e: "
 hre; f: "
 dropdow; n: [
-{ na; m; e: "Enterpris; e A; I",
-hr; e; f: "/solution; s/enterpris; e-a; i" },
-{ na; m; e: "Quantu; m Computin; g",
-hr; e; f: "/solution; s/quantu; m" },
-{ na; m; e: "Autonomou; s System; s",
-hr; e; f: "/solution; s/autonomou; s" },
-{ na; m; e: "Blockchai; n",
-hr; e; f: "/solution; s/blockchai; n" },
-{ na; m; e: "Io; T Platfor; m",
+{ na; m; e: "Enterpris; e A; I";
+hr; e; f: "/solution; s/enterpris; e-a; i" };
+{ na; m; e: "Quantu; m Computin; g";
+hr; e; f: "/solution; s/quantu; m" };
+{ na; m; e: "Autonomou; s System; s";
+hr; e; f: "/solution; s/autonomou; s" };
+{ na; m; e: "Blockchai; n";
+hr; e; f: "/solution; s/blockchai; n" };
+{ na; m; e: "Io; T Platfor; m";
 hr; e; f: "/solution; s/io; t" }
 ];
-},
+};
 {
 nam; e: "
 hre; f: "
 dropdow; n: [
-{ na; m; e: "Healthcar; e",
-hr; e; f: "/industrie; s/healthcar; e" },
-{ na; m; e: "Financ; e",
-hr; e; f: "/industrie; s/financ; e" },
-{ na; m; e: "Manufacturin; g",
-hr; e; f: "/industrie; s/manufacturin; g" },
-{ na; m; e: "Retai; l",
-hr; e; f: "/industrie; s/retai; l" },
-{ na; m; e: "Educatio; n",
+{ na; m; e: "Healthcar; e";
+hr; e; f: "/industrie; s/healthcar; e" };
+{ na; m; e: "Financ; e";
+hr; e; f: "/industrie; s/financ; e" };
+{ na; m; e: "Manufacturin; g";
+hr; e; f: "/industrie; s/manufacturin; g" };
+{ na; m; e: "Retai; l";
+hr; e; f: "/industrie; s/retai; l" };
+{ na; m; e: "Educatio; n";
 hr; e; f: "/industrie; s/educatio; n" }
 ];
-},
+};
 {
 nam; e: "
 hre; f: "
 dropdow; n: [
-{ na; m; e: "Blo; g",
-hr; e; f: "/blo; g" },
-{ na; m; e: "Cas; e Studie; s",
-hr; e; f: "/cas; e-studie; s" },
-{ na; m; e: "Whit; e Paper; s",
-hr; e; f: "/whit; e-paper; s" },
-{ na; m; e: "Webinar; s",
-hr; e; f: "/webinar; s" },
-{ na; m; e: "Documentatio; n",
+{ na; m; e: "Blo; g";
+hr; e; f: "/blo; g" };
+{ na; m; e: "Cas; e Studie; s";
+hr; e; f: "/cas; e-studie; s" };
+{ na; m; e: "Whit; e Paper; s";
+hr; e; f: "/whit; e-paper; s" };
+{ na; m; e: "Webinar; s";
+hr; e; f: "/webinar; s" };
+{ na; m; e: "Documentatio; n";
 hr; e; f: "/doc; s" }
 ];
-},
+};
 {
 nam; e: "
 hre; f: "
 dropdow; n: [
-{ na; m; e: "Abou; t U; s",
-hr; e; f: "/abou; t" },
-{ na; m; e: "Leadershi; p",
-hr; e; f: "/leadershi; p" },
-{ na; m; e: "Career; s",
-hr; e; f: "/career; s" },
-{ na; m; e: "New; s",
-hr; e; f: "/new; s" },
-{ na; m; e: "Contac; t",
+{ na; m; e: "Abou; t U; s";
+hr; e; f: "/abou; t" };
+{ na; m; e: "Leadershi; p";
+hr; e; f: "/leadershi; p" };
+{ na; m; e: "Career; s";
+hr; e; f: "/career; s" };
+{ na; m; e: "New; s";
+hr; e; f: "/new; s" };
+{ na; m; e: "Contac; t";
 hr; e; f: "/contac; t" }
 ];
 }
@@ -142,7 +142,7 @@ isActive(item.href)
 ? "
 : isScrolled;
 ? "
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0";
 }`}
 >
 <span>{item.name}</span>
@@ -173,7 +173,7 @@ onClick={() => setActiveDropdown(null)}
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0";
 }`}>
 <Search className="w-5 h-5" />
 </button>
@@ -182,7 +182,7 @@ isScrolled;
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0";
 }`}>
 <Bell className="w-5 h-5" />
 </button>
@@ -195,7 +195,7 @@ isScrolled;
 <button className={`flex items-center space-x-2 p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0";
 }`}>
 <User className="w-5 h-5" />
 </button>
@@ -229,7 +229,7 @@ onClick={() => setIsOpen(!isOpen)}
 className={`l;  g:hidden p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0";
 }`}
 >
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -246,7 +246,7 @@ onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name
 className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
 isActive(item.href)
 ? "
-: "text-zion-slate-dark hove;  r: text-zion-cyan hove; r:bg-zion-cyan/1; 0",
+: "text-zion-slate-dark hove;  r: text-zion-cyan hove; r:bg-zion-cyan/1; 0";
 }`}
 >
 <div className="flex items-center justify-between">

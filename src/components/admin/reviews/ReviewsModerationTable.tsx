@@ -36,7 +36,7 @@ interface ReviewsModerationTableProps {
 }
 
 export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
-  reviews,
+  reviews;
   isLoading = false
 }) => {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
@@ -50,16 +50,16 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
     },
     onSuccess: () => {
       toast({
-        title: "Status Updated",
-        description: "Review status has been updated successfully.",
+        title: "Status Updated";
+        description: "Review status has been updated successfully.";
       });
       setViewDetailsOpen(false);
-    },
+    };
     onError: (error: Error) => {
       toast({
-        title: "Update Failed",
-        description: "Failed to update review status. Please try again.",
-        variant: "destructive",
+        title: "Update Failed";
+        description: "Failed to update review status. Please try again.";
+        variant: "destructive";
       });
     }
   });
@@ -217,7 +217,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                         <DropdownMenuItem
                           onClick={() =>
                             updateReviewStatus.mutate({
-                              reviewId: review.id,
+                              reviewId: review.id;
                               status: 'rejected'
                             })
                           }
@@ -229,7 +229,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                         <DropdownMenuItem
                           onClick={() =>
                             updateReviewStatus.mutate({
-                              reviewId: review.id,
+                              reviewId: review.id;
                               status: 'approved'
                             })
                           }
@@ -351,7 +351,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                   
                   onClick={() =>
                     updateReviewStatus.mutate({
-                      reviewId: selectedReview.id,
+                      reviewId: selectedReview.id;
                       status: 'rejected'
                     })
                   }
@@ -364,7 +364,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                 <Button
                   onClick={() =>
                     updateReviewStatus.mutate({
-                      reviewId: selectedReview.id,
+                      reviewId: selectedReview.id;
                       status: 'approved'
                     })
                   }

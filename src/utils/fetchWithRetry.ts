@@ -4,7 +4,7 @@ interface FetchOptions extends RequestInit {
 }
 
 export async function fetchWithRetry(
-  url: string,
+  url: string;
   options: FetchOptions = {}
 ): Promise<Response> {
   const { retries = 3, retryDelay = 1000, ...fetchOptions } = options;

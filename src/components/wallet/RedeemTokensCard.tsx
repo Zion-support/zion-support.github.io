@@ -16,8 +16,8 @@ type RewardOption = {;
 id: string;
 title: string;
 description: string;
-cost: number;,
-type: "credit" | "feature" | ",
+cost: number;;
+type: "credit" | "feature" | ";
 }
 
 const REWARD_OPTIONS: RewardOption[] = [
@@ -25,22 +25,22 @@ const REWARD_OPTIONS: RewardOption[] = [
 id: "
 title: "
 description: "
-cost: 100;,
-type: "feature",
+cost: 100;;
+type: "feature";
 }
 {
 id: "
 title: "
 description: "
-cost: 50;,
-type: "feature",
+cost: 50;;
+type: "feature";
 }
 {
 id: "
 title: "
 description: "
-cost: 100;,
-type: "credit",
+cost: 100;;
+type: "credit";
 }
 ];
 export export function RedeemTokensCard() {;
@@ -107,8 +107,8 @@ Learn More <ExternalLink aria-hidden="true" className="ml-1 h-3 w-3" />
 )
 }
 <//Card><///Card>
-import React, { useState } from "react",
-import { useWallet,,  } from "@/hooks/useWallet",
+import React, { useState } from "react";
+import { useWallet,,  } from "@/hooks/useWallet";
 import React from "react";
 import React from "react";
 import { Gift,,, ArrowRight,,, ExternalLink,,  } from 'lucide-react'

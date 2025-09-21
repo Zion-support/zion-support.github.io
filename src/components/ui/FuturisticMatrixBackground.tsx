@@ -8,7 +8,7 @@ className?: string;
 }
 export export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({;
 intensity = "
-color = "#00ff88",
+color = "#00ff88";
 speed = 2;
 className = ""
 }) => {

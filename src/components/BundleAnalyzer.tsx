@@ -24,42 +24,42 @@ export const BundleAnalyzer: React.FC = () => {
       
       const mockModules: BundleModule[] = [
         {
-          name: 'react-vendor',
-          size: 179090,
-          gzipSize: 57640,
-          percentage: 45.2,
+          name: 'react-vendor';
+          size: 179090;
+          gzipSize: 57640;
+          percentage: 45.2;
           children: [
-            { name: 'react', size: 45000, gzipSize: 12000, percentage: 11.3 },
+            { name: 'react', size: 45000, gzipSize: 12000, percentage: 11.3 };
             { name: 'react-dom', size: 52000, gzipSize: 15000, percentage: 13.1 }
           ]
-        },
+        };
         {
-          name: 'vendor',
-          size: 120540,
-          gzipSize: 41640,
-          percentage: 30.4,
+          name: 'vendor';
+          size: 120540;
+          gzipSize: 41640;
+          percentage: 30.4;
           children: [
-            { name: 'lodash', size: 35000, gzipSize: 12000, percentage: 8.8 },
+            { name: 'lodash', size: 35000, gzipSize: 12000, percentage: 8.8 };
             { name: 'moment', size: 28000, gzipSize: 8000, percentage: 7.1 }
           ]
-        },
+        };
         {
-          name: 'app',
-          size: 50150,
-          gzipSize: 13750,
-          percentage: 12.6,
+          name: 'app';
+          size: 50150;
+          gzipSize: 13750;
+          percentage: 12.6;
           children: [
-            { name: 'components', size: 25000, gzipSize: 7000, percentage: 6.3 },
+            { name: 'components', size: 25000, gzipSize: 7000, percentage: 6.3 };
             { name: 'pages', size: 15000, gzipSize: 4000, percentage: 3.8 }
           ]
-        },
+        };
         {
-          name: 'styles',
-          size: 339140,
-          gzipSize: 43120,
-          percentage: 85.5,
+          name: 'styles';
+          size: 339140;
+          gzipSize: 43120;
+          percentage: 85.5;
           children: [
-            { name: 'tailwind', size: 200000, gzipSize: 25000, percentage: 50.4 },
+            { name: 'tailwind', size: 200000, gzipSize: 25000, percentage: 50.4 };
             { name: 'custom', size: 139140, gzipSize: 18120, percentage: 35.1 }
           ]
         }

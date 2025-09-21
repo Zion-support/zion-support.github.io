@@ -27,7 +27,7 @@ className={cn(
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
   </ContextMenuPrimitive.SubTrigger>
 ))
-ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName,
+ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName;
 const ContextMenuSubContent = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubContent>
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>

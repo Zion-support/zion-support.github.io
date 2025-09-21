@@ -17,8 +17,8 @@ export const AIAssistant: React.FC = () => {
     // Simulate AI response
     setTimeout(() => {
       const aiResponse = { 
-        id: Date.now() + 1, 
-        text: `I understand you're asking about "${inputText}". Here's my response.`, 
+        id: Date.now() + 1;
+        text: `I understand you're asking about "${inputText}". Here's my response.`;
         isUser: false 
       };
       setMessages(prev => [...prev, aiResponse]);

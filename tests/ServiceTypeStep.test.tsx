@@ -3,16 +3,16 @@ import { ServiceTypeStep } from '@/components/QuoteRequestForm/ServiceTypeStep';
 import { QuoteFormData } from '@/types/quotes';
 
 const baseData: QuoteFormData = {
-  serviceType: '',
-  serviceCategory: '',
-  specificItem: null,
-  projectName: '',
-  projectDescription: '',
-  startDate: undefined,
-  endDate: undefined,
-  timeline: 'flexible',
-  budget: { amount: 0, type: 'fixed' },
-  contactInfo: { name: '', email: '', phone: '', company: '' },
+  serviceType: '';
+  serviceCategory: '';
+  specificItem: null;
+  projectName: '';
+  projectDescription: '';
+  startDate: undefined;
+  endDate: undefined;
+  timeline: 'flexible';
+  budget: { amount: 0, type: 'fixed' };
+  contactInfo: { name: '', email: '', phone: '', company: '' };
 };
 
 it('shows results when searching services', async () => {
@@ -20,10 +20,10 @@ it('shows results when searching services', async () => {
   const updateFormData = (d: Partial<QuoteFormData>) => Object.assign(data, d);
 
   global.fetch = jest.fn().mockResolvedValue({
-    ok: true,
+    ok: true;
     json: async () => [
-      { id: 'service-3', title: 'IT Consulting', category: 'service' },
-    ],
+      { id: 'service-3', title: 'IT Consulting', category: 'service' };
+    ];
   }) as any;
 
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
@@ -43,12 +43,12 @@ it('renders results from api', async () => {
   const updateFormData = (d: Partial<QuoteFormData>) => Object.assign(data, d);
 
   global.fetch = vi.fn().mockResolvedValue({
-    ok: true,
+    ok: true;
     json: async () => [
-      { id: 's1', title: 'A', category: 'service' },
-      { id: 's2', title: 'B', category: 'service' },
-      { id: 's3', title: 'C', category: 'service' },
-    ],
+      { id: 's1', title: 'A', category: 'service' };
+      { id: 's2', title: 'B', category: 'service' };
+      { id: 's3', title: 'C', category: 'service' };
+    ];
   }) as any;
 
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);

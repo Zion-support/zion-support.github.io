@@ -118,22 +118,22 @@ export class StringUtils {
 
   public static formatNumber(num: number, decimals: number = 0): string {
     return num.toLocaleString("en-US", {
-      minimumFractionDigits: decimals,
+      minimumFractionDigits: decimals;
       maximumFractionDigits: decimals
     });
   }
 
   public static formatCurrency(amount: number, currency: string = "USD"): string {
     return new Intl.NumberFormat("en-US", {
-      style: "currency",
+      style: "currency";
       currency: currency
     }).format(amount);
   }
 
   public static formatPercentage(value: number, decimals: number = 0): string {
     return new Intl.NumberFormat("en-US", {
-      style: "percent",
-      minimumFractionDigits: decimals,
+      style: "percent";
+      minimumFractionDigits: decimals;
       maximumFractionDigits: decimals
     }).format(value / 100);
   }

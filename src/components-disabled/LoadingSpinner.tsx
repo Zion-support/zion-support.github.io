@@ -12,8 +12,8 @@ text?: string;}
 className?: string};
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-size = "md",
-text = "Loading...",
+size = "md";
+text = "Loading...";
 className = ""
 }) => {
 const sizeClasses = {;

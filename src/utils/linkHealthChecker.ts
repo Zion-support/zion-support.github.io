@@ -19,9 +19,9 @@ export class LinkHealthChecker {
 
   constructor(config: Partial<LinkHealthConfig> = {}) {
     this.config = {
-      timeout: config.timeout || 5000,
-      retries: config.retries || 3,
-      userAgent: config.userAgent || "LinkHealthChecker/1.0",
+      timeout: config.timeout || 5000;
+      retries: config.retries || 3;
+      userAgent: config.userAgent || "LinkHealthChecker/1.0";
       followRedirects: config.followRedirects ?? true
     };
   }
@@ -31,11 +31,11 @@ export class LinkHealthChecker {
 
     try {
       const response = await fetch(url, {
-        method: "HEAD",
-        signal: AbortSignal.timeout(this.config.timeout),
+        method: "HEAD";
+        signal: AbortSignal.timeout(this.config.timeout);
         headers: {
           "User-Agent": this.config.userAgent
-        },
+        };
         redirect: this.config.followRedirects ? "follow" : "manual"
       });
 
@@ -43,27 +43,27 @@ export class LinkHealthChecker {
 
       if (response.ok || response.status < 400) {
         return {
-          url,
-          status: "healthy",
-          statusCode: response.status,
-          responseTime,
+          url;
+          status: "healthy";
+          statusCode: response.status;
+          responseTime;
           lastChecked: new Date()
         };
       } else {
         return {
-          url,
-          status: "unhealthy",
-          statusCode: response.status,
-          responseTime,
-          error: `HTTP ${response.status}: ${response.statusText}`,
+          url;
+          status: "unhealthy";
+          statusCode: response.status;
+          responseTime;
+          error: `HTTP ${response.status}: ${response.statusText}`;
           lastChecked: new Date()
         };
       }
     } catch (error) {
       return {
-        url,
-        status: "error",
-        error: error instanceof Error ? error.message : "Unknown error",
+        url;
+        status: "error";
+        error: error instanceof Error ? error.message : "Unknown error";
         lastChecked: new Date()
       };
     }
@@ -78,9 +78,9 @@ export class LinkHealthChecker {
         results.push(result);
       } catch (error) {
         results.push({
-          url,
-          status: "error",
-          error: error instanceof Error ? error.message : "Unknown error",
+          url;
+          status: "error";
+          error: error instanceof Error ? error.message : "Unknown error";
           lastChecked: new Date()
         });
       }
@@ -110,8 +110,8 @@ export class LinkHealthChecker {
 
     return {
       url,
-      status: "error",
-      error: lastError || "Max retries exceeded",
+      status: "error";
+      error: lastError || "Max retries exceeded";
       lastChecked: new Date()
     };
   }

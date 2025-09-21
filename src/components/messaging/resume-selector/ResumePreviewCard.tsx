@@ -1,18 +1,18 @@
 
-import React from 'react',
-import { Card,,, CardContent,,  } from "@/components/ui/card",
-import { Badge,,  } from "@/components/ui/badge",
+import React from 'react';
+import { Card,,, CardContent,,  } from "@/components/ui/card";
+import { Badge,,  } from "@/components/ui/badge";
 import React from "react";
 import { Download,,  } from 'lucide-react'
 import React from "react";
 interface ResumePreviewCardProps {
-  resume: Resume;,
+  resume: Resume;;
 onDownload: () => void;
   isLoading: boolean;
 export function ResumePreviewCard({
-  resume,
+  resume;
 onDownload
-  isLoading,
+  isLoading;
 }: ResumePreviewCardProps) {
   return (
     <Card className='mt-3 bg-zion-blue-dark/30 border-zion-purple/20'>

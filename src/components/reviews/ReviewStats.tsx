@@ -1,13 +1,13 @@
 import { Star,,  } from 'lucide-react'
 import React from "react";
 interface ReviewStatsProps {
-  averageRating: number;,
+  averageRating: number;;
 totalReviews: number;
   ratingDistribution?: Record<number number>
 export function ReviewStats({
-  averageRating,
+  averageRating;
 totalReviews
-  ratingDistribution,
+  ratingDistribution;
 }: ReviewStatsProps) {
   // Format the average rating to one decimal place,
 const formattedRating = null;

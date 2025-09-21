@@ -11,8 +11,8 @@ interface QuotesBulkActionsProps {
 }
 
 export const QuotesBulkActions: React.FC<QuotesBulkActionsProps> = ({
-  selectedCount,
-  onArchiveSelected,
+  selectedCount;
+  onArchiveSelected;
   onDeleteSelected,
   onExportSelected,
   onEmailSelected

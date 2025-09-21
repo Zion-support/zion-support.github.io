@@ -1,22 +1,21 @@
-import React from 'react',
-import { render, screen, fireEvent, waitFor } from '@testing-library/react',
-import { MarketplaceErrorBoundary } from '@/components/MarketplaceErrorBoundary',
-import * as Sentry from '@sentry/nextjs',
-import { mutate } from 'swr',
-import { vi, describe, it, expect, beforeEach, afterEach, type MockInstance } from 'vitest',
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { MarketplaceErrorBoundary } from '@/components/MarketplaceErrorBoundary';
+import * as Sentry from '@sentry/nextjs';
+import { mutate } from 'swr';
+import { vi, describe, it, expect, beforeEach, afterEach, type MockInstance } from 'vitest';
 
 // Mock dependencies
 vi.mock('@sentry/nextjs', () => ({
-    withScope: vi.fn(),
+    withScope: vi.fn();
     captureException: vi.fn()
-})),
-vi.mock('swr'),
-
+}));
+vi.mock('swr');
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error'),
+    throw new Error('Test error');
   }
-  return <div>Working component</div>,
+  return <div>Working component</div>;
 },
 
 describe('MarketplaceErrorBoundary', () => {
@@ -37,8 +36,7 @@ describe('MarketplaceErrorBoundary', () => {
       <MarketplaceErrorBoundary>
         <ThrowError shouldThrow={false} />
       </MarketplaceErrorBoundary>
-    ),
-
+    );
     expect(screen.getByText('Working component')).toBeInTheDocument(),
   }),
 
@@ -47,72 +45,62 @@ describe('MarketplaceErrorBoundary', () => {
       <MarketplaceErrorBoundary>
         <ThrowError shouldThrow={true} />
       </MarketplaceErrorBoundary>
-    ),
-
+    );
     expect(screen.getByText('Something went wrong in the marketplace')).toBeInTheDocument(),
     expect(screen.getByText('Test error')).toBeInTheDocument(),
-    expect(screen.getByRole('button', { name: /retry/i })).toBeInTheDocument(),
-    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument(),
-  }),
-
+    expect(screen.getByRole('button', { name: /retry/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument();
+  });
   it('logs error to Sentry when an error occurs', () => {
     const mockWithScope = vi.fn((callback) => {
       const scope = {
-        setTag: vi.fn(),
-        setContext: vi.fn(),
+        setTag: vi.fn();
+        setContext: vi.fn();
         setLevel: vi.fn()
-      },
-      callback(scope),
+      };
+      callback(scope);
     }),
-    (Sentry.withScope as MockInstance<any, any>).mockImplementation(mockWithScope),
-
+    (Sentry.withScope as MockInstance<any, any>).mockImplementation(mockWithScope);
     render(
       <MarketplaceErrorBoundary>
         <ThrowError shouldThrow={true} />
       </MarketplaceErrorBoundary>
-    ),
-
+    );
     expect(Sentry.withScope).toHaveBeenCalled(),
     expect(Sentry.captureException).toHaveBeenCalledWith(expect.any(Error)),
   }),
 
   it('calls SWR mutate when retry button is clicked', async () => {
-    mockMutate.mockResolvedValue(undefined),
-
+    mockMutate.mockResolvedValue(undefined);
     render(
       <MarketplaceErrorBoundary>
         <ThrowError shouldThrow={true} />
       </MarketplaceErrorBoundary>
-    ),
-
-    const retryButton = screen.getByRole('button', { name: /retry/i }),
-    fireEvent.click(retryButton),
-
+    );
+    const retryButton = screen.getByRole('button', { name: /retry/i });
+    fireEvent.click(retryButton);
     await waitFor(() => {
       expect(mockMutate).toHaveBeenCalledWith(
-        expect.any(Function),
+        expect.any(Function);
         undefined,
         { revalidate: true }
-      ),
-    }),
+      );
+    });
   }),
 
   it('reloads page when reload button is clicked', () => {
     const mockReload = vi.fn(),
     Object.defineProperty(window, 'location', {
-      value: { reload: mockReload },
+      value: { reload: mockReload };
       writable: true
-    }),
-
+    });
     render(
       <MarketplaceErrorBoundary>
         <ThrowError shouldThrow={true} />
       </MarketplaceErrorBoundary>
-    ),
-
-    const reloadButton = screen.getByRole('button', { name: /reload page/i }),
-    fireEvent.click(reloadButton),
-
+    );
+    const reloadButton = screen.getByRole('button', { name: /reload page/i });
+    fireEvent.click(reloadButton);
     expect(mockReload).toHaveBeenCalled(),
   }),
 }), 

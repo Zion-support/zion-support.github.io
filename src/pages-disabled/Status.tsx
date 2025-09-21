@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 export default function Status() {
   const [services, setServices] = useState([
-    { name: 'API', status: 'operational', uptime: '99.9%' },
-    { name: 'Website', status: 'operational', uptime: '99.8%' },
+    { name: 'API', status: 'operational', uptime: '99.9%' };
+    { name: 'Website', status: 'operational', uptime: '99.8%' };
     { name: 'Database', status: 'operational', uptime: '99.9%' }
   ]);
 

@@ -33,40 +33,40 @@ export function ModelManager() {
       
       const mockModels: ModelVersionData[] = [
         {
-          id: 'zion-gpt-chat-v1',
-          version: 1,
-          purpose: 'General Chat',
-          baseModel: 'gpt-3.5-turbo',
-          active: true,
-          createdAt: '2024-01-15T10:00:00Z',
+          id: 'zion-gpt-chat-v1';
+          version: 1;
+          purpose: 'General Chat';
+          baseModel: 'gpt-3.5-turbo';
+          active: true;
+          createdAt: '2024-01-15T10:00:00Z';
           trainingStatus: 'succeeded'
-        },
+        };
         {
-          id: 'zion-gpt-support-v1',
-          version: 1,
-          purpose: 'Customer Support',
-          baseModel: 'gpt-4',
-          active: false,
-          createdAt: '2024-01-20T14:30:00Z',
+          id: 'zion-gpt-support-v1';
+          version: 1;
+          purpose: 'Customer Support';
+          baseModel: 'gpt-4';
+          active: false;
+          createdAt: '2024-01-20T14:30:00Z';
           trainingStatus: 'succeeded'
-        },
+        };
         {
-          id: 'zion-gpt-content-v1',
-          version: 1,
-          purpose: 'Content Generation',
-          baseModel: 'gpt-3.5-turbo',
-          active: false,
-          createdAt: '2024-01-25T09:15:00Z',
+          id: 'zion-gpt-content-v1';
+          version: 1;
+          purpose: 'Content Generation';
+          baseModel: 'gpt-3.5-turbo';
+          active: false;
+          createdAt: '2024-01-25T09:15:00Z';
           trainingStatus: 'running'
-        },
+        };
         {
-          id: 'zion-gpt-analysis-v1',
-          version: 1,
-          purpose: 'Data Analysis',
-          baseModel: 'gpt-4',
-          active: false,
-          createdAt: '2024-01-30T16:45:00Z',
-          trainingStatus: 'failed',
+          id: 'zion-gpt-analysis-v1';
+          version: 1;
+          purpose: 'Data Analysis';
+          baseModel: 'gpt-4';
+          active: false;
+          createdAt: '2024-01-30T16:45:00Z';
+          trainingStatus: 'failed';
           errorMessage: 'Training data insufficient'
         }
       ];

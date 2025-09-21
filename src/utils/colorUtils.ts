@@ -20,8 +20,8 @@ export class ColorUtils {
   public static hexToRgb(hex: string): RGB | null {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
-      r: parseInt(result[1], 16),
-      g: parseInt(result[2], 16),
+      r: parseInt(result[1], 16);
+      g: parseInt(result[2], 16);
       b: parseInt(result[3], 16)
     } : null;
   }
@@ -83,8 +83,8 @@ export class ColorUtils {
     }
 
     return {
-      r: Math.round(r * 255),
-      g: Math.round(g * 255),
+      r: Math.round(r * 255);
+      g: Math.round(g * 255);
       b: Math.round(b * 255)
     };
   }
@@ -143,8 +143,8 @@ export class ColorUtils {
     }
 
     return {
-      r: Math.round((r + m) * 255),
-      g: Math.round((g + m) * 255),
+      r: Math.round((r + m) * 255);
+      g: Math.round((g + m) * 255);
       b: Math.round((b + m) * 255)
     };
   }
@@ -266,7 +266,7 @@ export class ColorUtils {
     const rgb2 = this.hslToRgb(h2, hsl.s, hsl.l);
 
     return [
-      this.rgbToHex(rgb1.r, rgb1.g, rgb1.b),
+      this.rgbToHex(rgb1.r, rgb1.g, rgb1.b);
       this.rgbToHex(rgb2.r, rgb2.g, rgb2.b)
     ];
   }
@@ -283,7 +283,7 @@ export class ColorUtils {
     const rgb2 = this.hslToRgb(h2, hsl.s, hsl.l);
 
     return [
-      this.rgbToHex(rgb1.r, rgb1.g, rgb1.b),
+      this.rgbToHex(rgb1.r, rgb1.g, rgb1.b);
       this.rgbToHex(rgb2.r, rgb2.g, rgb2.b)
     ];
   }
@@ -300,7 +300,7 @@ export class ColorUtils {
     const rgb2 = this.hslToRgb(h2, hsl.s, hsl.l);
 
     return [
-      this.rgbToHex(rgb1.r, rgb1.g, rgb1.b),
+      this.rgbToHex(rgb1.r, rgb1.g, rgb1.b);
       this.rgbToHex(rgb2.r, rgb2.g, rgb2.b)
     ];
   }
@@ -319,8 +319,8 @@ export class ColorUtils {
     const rgb3 = this.hslToRgb(h3, hsl.s, hsl.l);
 
     return [
-      this.rgbToHex(rgb1.r, rgb1.g, rgb1.b),
-      this.rgbToHex(rgb2.r, rgb2.g, rgb2.b),
+      this.rgbToHex(rgb1.r, rgb1.g, rgb1.b);
+      this.rgbToHex(rgb2.r, rgb2.g, rgb2.b);
       this.rgbToHex(rgb3.r, rgb3.g, rgb3.b)
     ];
   }

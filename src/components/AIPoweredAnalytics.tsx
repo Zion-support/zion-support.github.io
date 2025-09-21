@@ -23,67 +23,67 @@ interface PredictionData {
 export const AIPoweredAnalytics: React.FC = () => {
   const [insights, setInsights] = useState<AIInsight[]>([
     {
-      id: '1',
-      type: 'trend',
-      title: 'User Engagement Spike Detected',
+      id: '1';
+      type: 'trend';
+      title: 'User Engagement Spike Detected';
       description: 'User engagement increased by 34% in the last 7 days, primarily driven by mobile users.',
-      confidence: 0.92,
-      impact: 'high',
-      category: 'User Behavior',
+      confidence: 0.92;
+      impact: 'high';
+      category: 'User Behavior';
       timestamp: '2024-01-20T10:30:00Z'
-    },
+    };
     {
-      id: '2',
-      type: 'anomaly',
-      title: 'Unusual API Response Pattern',
-      description: 'API response times for /api/analytics endpoint showing 3x normal latency during peak hours.',
-      confidence: 0.87,
-      impact: 'medium',
-      category: 'Performance',
+      id: '2';
+      type: 'anomaly';
+      title: 'Unusual API Response Pattern';
+      description: 'API response times for /api/analytics endpoint showing 3x normal latency during peak hours.';
+      confidence: 0.87;
+      impact: 'medium';
+      category: 'Performance';
       timestamp: '2024-01-20T09:15:00Z'
-    },
+    };
     {
-      id: '3',
-      type: 'recommendation',
-      title: 'Optimization Opportunity',
-      description: 'Implementing caching for user preferences could reduce database queries by 40%.',
-      confidence: 0.95,
-      impact: 'high',
-      category: 'Performance',
+      id: '3';
+      type: 'recommendation';
+      title: 'Optimization Opportunity';
+      description: 'Implementing caching for user preferences could reduce database queries by 40%.';
+      confidence: 0.95;
+      impact: 'high';
+      category: 'Performance';
       timestamp: '2024-01-20T08:45:00Z'
-    },
+    };
     {
-      id: '4',
-      type: 'prediction',
-      title: 'Revenue Forecast',
+      id: '4';
+      type: 'prediction';
+      title: 'Revenue Forecast';
       description: 'Based on current trends, monthly revenue is predicted to reach $3.2M by end of month.',
-      confidence: 0.88,
-      impact: 'high',
-      category: 'Business',
+      confidence: 0.88;
+      impact: 'high';
+      category: 'Business';
       timestamp: '2024-01-20T07:20:00Z'
     }
   ]);
 
   const [predictions, setPredictions] = useState<PredictionData[]>([
     {
-      metric: 'Monthly Active Users',
-      currentValue: 45672,
-      predictedValue: 52100,
-      confidence: 0.89,
+      metric: 'Monthly Active Users';
+      currentValue: 45672;
+      predictedValue: 52100;
+      confidence: 0.89;
       timeframe: 'Next 30 days'
-    },
+    };
     {
-      metric: 'Revenue',
-      currentValue: 2847392,
-      predictedValue: 3200000,
-      confidence: 0.85,
+      metric: 'Revenue';
+      currentValue: 2847392;
+      predictedValue: 3200000;
+      confidence: 0.85;
       timeframe: 'Next 30 days'
-    },
+    };
     {
-      metric: 'Conversion Rate',
-      currentValue: 3.24,
-      predictedValue: 3.45,
-      confidence: 0.78,
+      metric: 'Conversion Rate';
+      currentValue: 3.24;
+      predictedValue: 3.45;
+      confidence: 0.78;
       timeframe: 'Next 30 days'
     }
   ]);
@@ -130,13 +130,13 @@ export const AIPoweredAnalytics: React.FC = () => {
     
     // Add new insight
     const newInsight: AIInsight = {
-      id: Date.now().toString(),
-      type: 'recommendation',
-      title: 'AI Analysis Complete',
-      description: 'New insights generated based on latest data patterns and trends.',
-      confidence: 0.91,
-      impact: 'medium',
-      category: 'AI Analysis',
+      id: Date.now().toString();
+      type: 'recommendation';
+      title: 'AI Analysis Complete';
+      description: 'New insights generated based on latest data patterns and trends.';
+      confidence: 0.91;
+      impact: 'medium';
+      category: 'AI Analysis';
       timestamp: new Date().toISOString()
     };
     

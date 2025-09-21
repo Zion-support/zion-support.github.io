@@ -8,8 +8,8 @@ interface ContractTypeCardsProps {
 }
 
 export function ContractTypeCards({
-  onStandardClick,
-  onSmartClick,
+  onStandardClick;
+  onSmartClick;
 }: ContractTypeCardsProps) {
   return (
     <div className='grid md:grid-cols-2 gap-6 mb-10'>

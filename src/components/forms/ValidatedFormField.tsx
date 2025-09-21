@@ -31,8 +31,8 @@ interface ValidatedFormFieldProps {
 }
 
 export function ValidatedFormField({
-  name,
-  label,
+  name;
+  label;
   type = 'text',
   placeholder,
   description,
@@ -94,10 +94,10 @@ export function ValidatedFormField({
 
   const renderInput = () => {
     const commonProps = {
-      id: name,
-      placeholder,
+      id: name;
+      placeholder;
       disabled,
-      className: `w-full ${hasError ? 'border-red-500' : isValid ? 'border-green-500' : ''} ${className}`,
+      className: `w-full ${hasError ? 'border-red-500' : isValid ? 'border-green-500' : ''} ${className}`;
     };
 
     switch (type) {

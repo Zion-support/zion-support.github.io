@@ -1,15 +1,15 @@
 import React from "react";
 import import { useRouter,,, ,,  } from 'next/router';
-import { useJobApplications,,  } from "@/hooks/useJobApplications",
-import { useResume,,  } from "@/hooks/useResume",
-import { useAuth,,  } from "@/hooks/useAuth",
-import { Button,,  } from "@/components/ui/button",
-import { Textarea,,  } from "@/components/ui/textarea",
-import { Label,,  } from "@/components/ui/label",
-import { Select,,, SelectContent,,, SelectItem,,, SelectTrigger,,, SelectValue,,  } from "@/components/ui/select",
-import { Alert,,, AlertDescription,,  } from "@/components/ui/alert",
+import { useJobApplications,,  } from "@/hooks/useJobApplications";
+import { useResume,,  } from "@/hooks/useResume";
+import { useAuth,,  } from "@/hooks/useAuth";
+import { Button,,  } from "@/components/ui/button";
+import { Textarea,,  } from "@/components/ui/textarea";
+import { Label,,  } from "@/components/ui/label";
+import { Select,,, SelectContent,,, SelectItem,,, SelectTrigger,,, SelectValue,,  } from "@/components/ui/select";
+import { Alert,,, AlertDescription,,  } from "@/components/ui/alert";
 import { AlertCircle,,, FileText,,, Loader2,,  } from 'lucide-react'
-import { formatDistanceToNow,,  } from "date-fns",
+import { formatDistanceToNow,,  } from "date-fns";
 import React from "react";
 import React from "react";
 interface ApplyToJobFormProps {

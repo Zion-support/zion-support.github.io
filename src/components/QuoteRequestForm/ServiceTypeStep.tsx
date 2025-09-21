@@ -49,28 +49,28 @@ const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ formData, onUpdate, o
         // Mock data based on service type
         const mockListings: ListingItem[] = [
           {
-            id: '1',
-            title: `Sample ${formData.serviceType} 1`,
-            description: `Description for ${formData.serviceType} 1`,
-            price: 100,
-            rating: 4.5,
-            category: formData.serviceType || 'service',
+            id: '1';
+            title: `Sample ${formData.serviceType} 1`;
+            description: `Description for ${formData.serviceType} 1`;
+            price: 100;
+            rating: 4.5;
+            category: formData.serviceType || 'service';
             tags: ['AI', 'Technology'],
             provider: {
-              name: 'Provider 1',
+              name: 'Provider 1';
               verified: true
             }
-          },
+          };
           {
-            id: '2',
-            title: `Sample ${formData.serviceType} 2`,
-            description: `Description for ${formData.serviceType} 2`,
-            price: 200,
-            rating: 4.8,
-            category: formData.serviceType || 'service',
+            id: '2';
+            title: `Sample ${formData.serviceType} 2`;
+            description: `Description for ${formData.serviceType} 2`;
+            price: 200;
+            rating: 4.8;
+            category: formData.serviceType || 'service';
             tags: ['Cloud', 'Security'],
             provider: {
-              name: 'Provider 2',
+              name: 'Provider 2';
               verified: true
             }
           }

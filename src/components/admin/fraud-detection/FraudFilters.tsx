@@ -10,13 +10,13 @@ interface FraudFiltersProps {
 }
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  onFilterChange,
+  onFilterChange;
   resetFilters
 }) => {
   const [filters, setFilters] = useState({
-    search: '',
-    riskLevel: '',
-    status: '',
+    search: '';
+    riskLevel: '';
+    status: '';
     dateRange: ''
   });
 
@@ -28,9 +28,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
   const handleReset = () => {
     setFilters({
-      search: '',
-      riskLevel: '',
-      status: '',
+      search: '';
+      riskLevel: '';
+      status: '';
       dateRange: ''
     });
     resetFilters();

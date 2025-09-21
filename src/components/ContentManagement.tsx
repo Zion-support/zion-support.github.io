@@ -14,39 +14,39 @@ interface ContentItem {
 export const ContentManagement: React.FC = () => {
   const [content, setContent] = useState<ContentItem[]>([
     {
-      id: '1',
-      title: 'AI Revolution in Enterprise',
-      type: 'blog',
-      status: 'published',
-      publishDate: '2024-01-15',
-      views: 1234,
+      id: '1';
+      title: 'AI Revolution in Enterprise';
+      type: 'blog';
+      status: 'published';
+      publishDate: '2024-01-15';
+      views: 1234;
       author: 'John Doe'
-    },
+    };
     {
-      id: '2',
-      title: 'Quantum Computing Solutions',
-      type: 'service',
-      status: 'published',
-      publishDate: '2024-01-14',
-      views: 987,
+      id: '2';
+      title: 'Quantum Computing Solutions';
+      type: 'service';
+      status: 'published';
+      publishDate: '2024-01-14';
+      views: 987;
       author: 'Jane Smith'
-    },
+    };
     {
-      id: '3',
-      title: 'Digital Transformation Guide',
-      type: 'blog',
-      status: 'draft',
-      publishDate: '2024-01-16',
-      views: 0,
+      id: '3';
+      title: 'Digital Transformation Guide';
+      type: 'blog';
+      status: 'draft';
+      publishDate: '2024-01-16';
+      views: 0;
       author: 'Mike Johnson'
-    },
+    };
     {
-      id: '4',
-      title: 'Cybersecurity Services',
-      type: 'service',
-      status: 'scheduled',
-      publishDate: '2024-01-17',
-      views: 0,
+      id: '4';
+      title: 'Cybersecurity Services';
+      type: 'service';
+      status: 'scheduled';
+      publishDate: '2024-01-17';
+      views: 0;
       author: 'Sarah Wilson'
     }
   ]);
@@ -184,9 +184,9 @@ export const ContentManagement: React.FC = () => {
         {/* Quick Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
           {[
-            { label: 'Total Content', value: content.length, icon: '📄' },
-            { label: 'Published', value: content.filter(c => c.status === 'published').length, icon: '✅' },
-            { label: 'Drafts', value: content.filter(c => c.status === 'draft').length, icon: '📝' },
+            { label: 'Total Content', value: content.length, icon: '📄' };
+            { label: 'Published', value: content.filter(c => c.status === 'published').length, icon: '✅' };
+            { label: 'Drafts', value: content.filter(c => c.status === 'draft').length, icon: '📝' };
             { label: 'Total Views', value: content.reduce((sum, c) => sum + c.views, 0).toLocaleString(), icon: '👁️' }
           ].map((stat, index) => (
             <motion.div

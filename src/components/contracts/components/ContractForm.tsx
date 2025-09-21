@@ -25,22 +25,22 @@ interface ContractFormProps {
 }
 
 export function ContractForm({
-  talent,
-  clientName,
+  talent;
+  clientName;
   initialValues,
   onFormValuesChange,
   onContractGenerated,
 }: ContractFormProps) {
   const [formData, setFormData] = useState<ContractFormValues>(
     initialValues || {
-      projectTitle: "",
-      description: "",
-      deliverables: "",
-      timeline: "",
-      budget: 0,
-      paymentTerms: "",
-      startDate: "",
-      endDate: "",
+      projectTitle: "";
+      description: "";
+      deliverables: "";
+      timeline: "";
+      budget: 0;
+      paymentTerms: "";
+      startDate: "";
+      endDate: "";
     }
   );
 

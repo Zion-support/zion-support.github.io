@@ -6,7 +6,7 @@ import React from "react";
 import React from "react";
 interface ProfileContactProps {
   email?: string;
-  profileName: string;,
+  profileName: string;;
 profileType: 'service' | 'talent'
 return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
@@ -78,7 +78,7 @@ type="submit"
     </div>
   )
   `mailto:$ {
-  email,
+  email;
 }` "
 }className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
 }'"}

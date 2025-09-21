@@ -27,7 +27,7 @@ return () => window.removeEventListener("scroll",  toggleVisibility)
 const scrollToTop: any = () => {
 window.scrollTo({;
 to;  p: 0;
-behavio; r: "smooth",
+behavio; r: "smooth";
 })
 }
 

@@ -16,39 +16,39 @@ export const SecurityHeadersValidator: React.FC = () => {
 
   const securityHeaders: SecurityHeaders[] = [
     {
-      name: 'Content-Security-Policy',
-      present: false,
-      severity: 'high',
+      name: 'Content-Security-Policy';
+      present: false;
+      severity: 'high';
       description: 'Prevents XSS attacks by controlling resource loading'
-    },
+    };
     {
-      name: 'X-Frame-Options',
-      present: false,
-      severity: 'high',
+      name: 'X-Frame-Options';
+      present: false;
+      severity: 'high';
       description: 'Prevents clickjacking attacks'
-    },
+    };
     {
-      name: 'X-Content-Type-Options',
-      present: false,
-      severity: 'medium',
+      name: 'X-Content-Type-Options';
+      present: false;
+      severity: 'medium';
       description: 'Prevents MIME type sniffing'
-    },
+    };
     {
-      name: 'Referrer-Policy',
-      present: false,
-      severity: 'medium',
+      name: 'Referrer-Policy';
+      present: false;
+      severity: 'medium';
       description: 'Controls referrer information'
-    },
+    };
     {
-      name: 'Permissions-Policy',
-      present: false,
-      severity: 'medium',
+      name: 'Permissions-Policy';
+      present: false;
+      severity: 'medium';
       description: 'Controls browser features'
-    },
+    };
     {
-      name: 'Strict-Transport-Security',
-      present: false,
-      severity: 'high',
+      name: 'Strict-Transport-Security';
+      present: false;
+      severity: 'high';
       description: 'Enforces HTTPS connections'
     }
   ];

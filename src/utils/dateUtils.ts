@@ -13,9 +13,9 @@ export class DateUtils {
     const dateObj = typeof date === "string" ? new Date(date) : date;
     
     const defaultOptions: DateFormatOptions = {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
+      year: "numeric";
+      month: "long";
+      day: "numeric";
       ...options
     };
 
@@ -26,11 +26,11 @@ export class DateUtils {
     const dateObj = typeof date === "string" ? new Date(date) : date;
     
     const defaultOptions: DateFormatOptions = {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "2-digit",
+      year: "numeric";
+      month: "long";
+      day: "numeric";
+      hour: "numeric";
+      minute: "2-digit";
       ...options
     };
 
@@ -41,8 +41,8 @@ export class DateUtils {
     const dateObj = typeof date === "string" ? new Date(date) : date;
     
     const defaultOptions: DateFormatOptions = {
-      hour: "numeric",
-      minute: "2-digit",
+      hour: "numeric";
+      minute: "2-digit";
       ...options
     };
 

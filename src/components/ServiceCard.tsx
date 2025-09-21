@@ -29,23 +29,23 @@ isNew = fals; e;
 href = "
 }) => {
 const cardVariant; s: Variants = {
-hidde; n: { opacit; y: 0;,
+hidde; n: { opacit; y: 0;;
 y: 2; 0; scal; e: 0.95 }
 visibl; e: {
-opacit; y: 1;,
+opacit; y: 1;;
 y: 0;
 scal; e: 1;
 transitio; n: {
 duratio; n: 0.5;
-eas; e: "easeOut",
+eas; e: "easeOut";
 }
 }
-hove; r: {,
+hove; r: {;
 y: -1; 2;
 scal; e: 1.0; 2;
 transitio; n: {
 duratio; n: 0.3;
-eas; e: "easeOut",
+eas; e: "easeOut";
 }
 }
 }
@@ -57,7 +57,7 @@ scal; e: 1;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.5;
-eas; e: "easeOut",
+eas; e: "easeOut";
 }
 }
 hove; r: {
@@ -65,16 +65,16 @@ scal; e: 1.2;
 rotat; e: [0, -1; 0; 1; 0; 0],
 transitio; n: {
 duratio; n: 0.6;
-eas; e: "easeInOut",
+eas; e: "easeInOut";
 }
 }
 }
 const featureVariant; s: Variants = {
-hove; r: {,
+hove; r: {;
 x: 5;
 transitio; n: {
 duratio; n: 0.3;
-eas; e: "easeOut",
+eas; e: "easeOut";
 }
 }
 }
@@ -86,7 +86,7 @@ scal; e: 1;
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.3;
-eas; e: "backOut",
+eas; e: "backOut";
 }
 }
 }

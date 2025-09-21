@@ -107,7 +107,7 @@ export class AdvancedAnalyticsDashboard {
       if (response.ok) {
         const eventsData = await response.json();
         this.userEvents = eventsData.map((event: any) => ({
-          ...event,
+          ...event;
           timestamp: new Date(event.timestamp)
         }));
       }
@@ -164,7 +164,7 @@ export class AdvancedAnalyticsDashboard {
   
   private updateMetric(metricData: any): void {
     const metric: AnalyticsMetric = {
-      ...metricData,
+      ...metricData;
       timestamp: new Date()
     };
     this.metrics.set(metric.id, metric);
@@ -176,7 +176,7 @@ export class AdvancedAnalyticsDashboard {
   
   public addUserEvent(event: Omit<UserBehaviorEvent, 'timestamp'>): void {
     const userEvent: UserBehaviorEvent = {
-      ...event,
+      ...event;
       timestamp: new Date()
     };
     
@@ -194,11 +194,11 @@ export class AdvancedAnalyticsDashboard {
   private async sendUserEventToServer(event: UserBehaviorEvent): Promise<void> {
     try {
       await fetch('/api/analytics/user-events', {
-        method: 'POST',
+        method: 'POST';
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event),
+          'Content-Type': 'application/json';
+        };
+        body: JSON.stringify(event);
       });
     } catch (error) {
       console.error('Failed to send user event to server:', error);
@@ -221,10 +221,10 @@ export class AdvancedAnalyticsDashboard {
   
   public getDashboard(): AnalyticsDashboard {
     return {
-      metrics: Array.from(this.metrics.values()),
-      charts: Array.from(this.charts.values()),
-      realTimeData: this.realTimeConnection?.readyState === WebSocket.OPEN,
-      autoRefresh: this.refreshInterval !== null,
+      metrics: Array.from(this.metrics.values());
+      charts: Array.from(this.charts.values());
+      realTimeData: this.realTimeConnection?.readyState === WebSocket.OPEN;
+      autoRefresh: this.refreshInterval !== null;
       refreshInterval: 30000
     };
   }

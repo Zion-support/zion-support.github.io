@@ -25,8 +25,8 @@ interface OptimizedImageProps {
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
+  src;
+  alt;
   width,
   height,
   quality = 80,
@@ -100,7 +100,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       onLoad={handleLoad}
       onError={handleError}
       style={{
-        opacity: isLoaded ? 1 : 0,
+        opacity: isLoaded ? 1 : 0;
         transition: 'opacity 0.3s ease-in-out'
       }}
     />
@@ -108,8 +108,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export const LazyImage: React.FC<ImageOptimizerProps> = ({
-  src,
-  alt,
+  src;
+  alt;
   width,
   height,
   quality = 80,
@@ -137,7 +137,7 @@ export const LazyImage: React.FC<ImageOptimizerProps> = ({
         }
       },
       {
-        threshold: 0.1,
+        threshold: 0.1;
         rootMargin: '50px'
       }
     );

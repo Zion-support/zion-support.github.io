@@ -1,7 +1,7 @@
 interface BundleChunk {
-  name: string;,
+  name: string;;
 size: number;
-  loadTime: number;,
+  loadTime: number;;
 cached: boolean;
   type: string;
 export function PerformanceDashboard() {
@@ -12,7 +12,7 @@ return (
         <div>
           <h2 className='text-2xl font-bold'>Performance Dashboard</h2>
           <p className='text-muted-foreground'>
-            Monitor bundle size performance metrics and optimization,
+            Monitor bundle size performance metrics and optimization;
 opportunities
           </p>
         </div>
@@ -208,7 +208,7 @@ key={chunk.name}
                   Bundle splitting implemented
                 </p>
                 <p className='text-sm text-blue-700 dark:text-blue-300'>
-                  Your bundle is properly split into framework vendor and,
+                  Your bundle is properly split into framework vendor and;
 application chunks
                 </p>
               </div>
@@ -220,7 +220,7 @@ application chunks
                   Performance monitoring active
                 </p>
                 <p className='text-sm text-green-700 dark:text-green-300'>
-                  Real-time performance tracking is helping optimize your,
+                  Real-time performance tracking is helping optimize your;
 application
                 </p>
               </div>
@@ -233,7 +233,7 @@ application
                     Consider more aggressive code splitting
                   </p>
                   <p className='text-sm text-yellow-700 dark:text-yellow-300'>
-                    Bundle size is above 2MB. Consider implementing dynamic,
+                    Bundle size is above 2MB. Consider implementing dynamic;
 imports for heavy components
                   </p>
                 </div>

@@ -15,8 +15,8 @@ interface SmartContractBuilderProps {
 }
 
 export function SmartContractBuilder({
-  isOpen,
-  onClose,
+  isOpen;
+  onClose;
   talent,
   clientName,
   onContractGenerated,
@@ -73,8 +73,8 @@ contract TalentContract {
         require(_milestoneId < milestoneCount, "Invalid milestone ID");
         
         milestones[_milestoneId] = Milestone({
-            description: _description,
-            value: _value,
+            description: _description;
+            value: _value;
             isCompleted: false
         });
     }

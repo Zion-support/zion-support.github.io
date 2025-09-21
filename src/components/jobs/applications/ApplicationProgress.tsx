@@ -1,5 +1,5 @@
 
-import { ApplicationStatus,,  } from "@/types/jobs",
+import { ApplicationStatus,,  } from "@/types/jobs";
 import React from "react";
 import { CheckCircle2,,, Circle,,, CircleDot,,  } from 'lucide-react'
 import React from "react";

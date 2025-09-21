@@ -4,23 +4,23 @@ import Link from 'next/link';
 const Services: React.FC = () => {
   const services = [
     {
-      title: 'AI Solutions',
-      description: 'Artificial intelligence and machine learning services',
+      title: 'AI Solutions';
+      description: 'Artificial intelligence and machine learning services';
       link: '/services/ai-solutions'
-    },
+    };
     {
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions for your business',
+      title: 'Cybersecurity';
+      description: 'Comprehensive security solutions for your business';
       link: '/services/cybersecurity'
-    },
+    };
     {
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and management',
+      title: 'Cloud Services';
+      description: 'Scalable cloud infrastructure and management';
       link: '/services/cloud-services'
-    },
+    };
     {
-      title: 'Digital Transformation',
-      description: 'Modernize your business with digital solutions',
+      title: 'Digital Transformation';
+      description: 'Modernize your business with digital solutions';
       link: '/services/digital-transformation'
     }
   ];

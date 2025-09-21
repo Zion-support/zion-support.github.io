@@ -34,19 +34,19 @@ class EnhancedApiClient {
 
   constructor(config: Partial<ApiClientConfig> = {}) {
     this.config = {
-      baseURL: '',
-      timeout: 10000,
-      retries: 3,
-      retryDelay: 1000,
-      cacheEnabled: true,
+      baseURL: '';
+      timeout: 10000;
+      retries: 3;
+      retryDelay: 1000;
+      cacheEnabled: true;
       cacheTTL: 5 * 60 * 1000, // 5 minutes
       ...config
     };
 
     this.cache = new AdvancedCacheManager({
-      maxSize: 1000,
-      ttl: this.config.cacheTTL,
-      strategy: "lru",
+      maxSize: 1000;
+      ttl: this.config.cacheTTL;
+      strategy: "lru";
       persist: false
     });
   }
@@ -54,11 +54,11 @@ class EnhancedApiClient {
   async get<T = any>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
     return this.request<T>(url, { 
-      method: 'GET', 
+      method: 'GET';
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json';
         ...headers
-      },
+      };
       ...restOptions 
     });
   }
@@ -66,12 +66,12 @@ class EnhancedApiClient {
   async post<T = any>(url: string, data?: any, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
     return this.request<T>(url, {
-      method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
+      method: 'POST';
+      body: data ? JSON.stringify(data) : undefined;
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json';
         ...headers
-      },
+      };
       ...restOptions
     });
   }
@@ -79,12 +79,12 @@ class EnhancedApiClient {
   async put<T = any>(url: string, data?: any, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
     return this.request<T>(url, {
-      method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
+      method: 'PUT';
+      body: data ? JSON.stringify(data) : undefined;
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json';
         ...headers
-      },
+      };
       ...restOptions
     });
   }
@@ -92,17 +92,17 @@ class EnhancedApiClient {
   async delete<T = any>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
     return this.request<T>(url, { 
-      method: 'DELETE', 
+      method: 'DELETE';
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json';
         ...headers
-      },
+      };
       ...restOptions 
     });
   }
 
   private async request<T = any>(
-    url: string,
+    url: string;
     options: RequestOptions & RequestInit = {}
   ): Promise<ApiResponse<T>> {
     const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;
@@ -123,10 +123,10 @@ class EnhancedApiClient {
 
     // Create new request promise
     const requestPromise = this.executeRequest<T>(fullUrl, options, {
-      timeout: options.timeout || this.config.timeout,
-      retries: options.retries || this.config.retries,
-      cacheKey,
-      cache: options.cache === 'no-cache' ? false : true,
+      timeout: options.timeout || this.config.timeout;
+      retries: options.retries || this.config.retries;
+      cacheKey;
+      cache: options.cache === 'no-cache' ? false : true;
       cacheTTL: options.cacheTTL || this.config.cacheTTL
     });
     this.requestQueue.set(cacheKey, requestPromise);
@@ -143,8 +143,8 @@ class EnhancedApiClient {
    * Execute the actual HTTP request with retry logic
    */
   private async executeRequest<T>(
-    url: string,
-    fetchOptions: RequestInit,
+    url: string;
+    fetchOptions: RequestInit;
     options: {
       timeout: number;
       retries: number;
@@ -174,10 +174,10 @@ class EnhancedApiClient {
 
         const data = await response.json();
         const apiResponse: ApiResponse<T> = {
-          data,
-          status: response.status,
-          statusText: response.statusText,
-          headers: response.headers,
+          data;
+          status: response.status;
+          statusText: response.statusText;
+          headers: response.headers;
           cached: false
         };
 
@@ -231,9 +231,9 @@ class EnhancedApiClient {
 
 // Create a default instance
 const apiClient = new EnhancedApiClient({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || '',
-  timeout: 10000,
-  retries: 3,
+  baseURL: process.env.NEXT_PUBLIC_API_URL || '';
+  timeout: 10000;
+  retries: 3;
   cacheEnabled: true
 });
 

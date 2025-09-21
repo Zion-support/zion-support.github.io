@@ -1,10 +1,10 @@
 import { Copy,,, Facebook,,, Link,,, Share,,, Twitter,,  } from 'lucide-react'
 interface ReferralLinkProps {
-  referralLink: string;,
+  referralLink: string;;
 onCopy: () => void;
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void,
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
 export function ReferralLink({
-  referralLink,
+  referralLink;
 onCopy
   onShare,
 }: ReferralLinkProps) {

@@ -1,10 +1,10 @@
 
-import React from 'react',
+import React from 'react';
 import React from "react";
 import React from "react";
 import { ArrowLeft,,  } from 'lucide-react'
 interface ProfileErrorStateProps {
-  error: string | null,
+  error: string | null;
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4'>
@@ -22,7 +22,7 @@ href='/talents'
 import { Button,,  } from "@/components/ui/button"
 import Link from "next/link"
 interface ProfileErrorStateProps {
-  error: string | null,
+  error: string | null;
 }
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (

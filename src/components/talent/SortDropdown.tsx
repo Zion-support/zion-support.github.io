@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import React from "react";
 import React from "react";
 import { SortDesc,,, ChevronDown,,  } from 'lucide-react'
@@ -9,7 +9,7 @@ import import { DropdownMenu;
 ,, ,, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
 
 interface SortDropdownProps {
-setSortOption: (option: string) => void,
+setSortOption: (option: string) => void;
 }
 export function SortDropdown({ sortOption setSortOption }: SortDropdownProps) {
   return (

@@ -13,14 +13,14 @@ interface ApiClient {
 export const trackReferral = async (data: ReferralData): Promise<boolean> => {
   try {
     const response = await fetch("/api/track-referral", {
-      method: "POST",
+      method: "POST";
       headers: {
-        "Content-Type": "application/json",
-      },
+        "Content-Type": "application/json";
+      };
       body: JSON.stringify({
-        refCode: data.refCode,
-        userId: data.userId,
-        email: data.email,
+        refCode: data.refCode;
+        userId: data.userId;
+        email: data.email;
         ipAddress: data.ipAddress || "" // This will be captured by the server
       })
     });
@@ -63,14 +63,14 @@ class ReferralTracker {
   async trackReferral(data: ReferralData): Promise<boolean> {
     try {
       const response = await this.apiClient("/api/track-referral", {
-        method: "POST",
+        method: "POST";
         headers: {
-          "Content-Type": "application/json",
-        },
+          "Content-Type": "application/json";
+        };
         body: JSON.stringify({
-          refCode: data.refCode,
-          userId: data.userId,
-          email: data.email,
+          refCode: data.refCode;
+          userId: data.userId;
+          email: data.email;
           ipAddress: data.ipAddress || "" // This will be captured by the server
         })
       });

@@ -27,7 +27,7 @@ export function ApiLogsChart({ logs }: ApiLogsChartProps) {
 
   const chartData = Object.entries(logsByDay).map(([date, count]) => ({
     date,
-    requests: count,
+    requests: count;
   }));
 
   return (
@@ -47,10 +47,10 @@ export function ApiLogsChart({ logs }: ApiLogsChartProps) {
           />
           <Tooltip
             contentStyle={{
-              backgroundColor: '#1F2937',
-              border: '1px solid #374151',
-              borderRadius: '6px',
-              color: '#F9FAFB',
+              backgroundColor: '#1F2937';
+              border: '1px solid #374151';
+              borderRadius: '6px';
+              color: '#F9FAFB';
             }}
           />
           <Bar 
