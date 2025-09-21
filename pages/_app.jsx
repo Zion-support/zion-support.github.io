@@ -4,9 +4,6 @@ import { ThemeProvider } from '../components/ThemeProvider.jsx';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import Analytics from '../components/Analytics.jsx';
 import ScrollToTop from '../components/ScrollToTop.jsx';
-import { NotificationProvider } from '../components/NotificationSystem.jsx';
-import CookieConsent from '../components/CookieConsent.jsx';
-import PerformanceOptimizer from '../components/PerformanceOptimizer.jsx';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -35,19 +32,17 @@ export default function App({ Component, pageProps }) {
             font-family: 'Inter', sans-serif;
           }
         `}</style>
+        
+        {/* Accessibility styles */}
+        <link rel="stylesheet" href="/styles/accessibility.css" />
       </Head>
       
       <ErrorBoundary>
-        <PerformanceOptimizer>
-          <NotificationProvider>
-            <ThemeProvider>
-              <Component {...pageProps} />
-              <ScrollToTop />
-              <Analytics />
-              <CookieConsent />
-            </ThemeProvider>
-          </NotificationProvider>
-        </PerformanceOptimizer>
+        <ThemeProvider>
+          <Component {...pageProps} />
+          <ScrollToTop />
+          <Analytics />
+        </ThemeProvider>
       </ErrorBoundary>
     </>
   );

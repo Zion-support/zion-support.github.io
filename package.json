@@ -9,7 +9,12 @@
   "scripts": {
     "sitemap": "node scripts/generate-sitemap.mjs",
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
+    "build": "node scripts/performance-monitor.js start && NODE_OPTIONS='--openssl-legacy-provider' next build && node scripts/performance-monitor.js end",
+    "build:analyze": "npm run build && node scripts/performance-monitor.js compare",
+    "cleanup": "node scripts/cleanup-repository.js",
+    "optimize": "node scripts/optimize-performance.js",
+    "security:audit": "node scripts/security-audit.js",
+    "audit:full": "npm run security:audit && npm audit",
     "export": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -144,7 +149,7 @@
   "devDependencies": {
     "@eslint/js": "^9.32.0",
     "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^16.3.0",
+    "@testing-library/react": "^14.2.1",
     "@types/node": "^24.5.2",
     "@types/node-cron": "^3.0.11",
     "@types/react": "^18.3.24",
@@ -164,12 +169,12 @@
     "jest-environment-jsdom": "^29.0.0",
     "lint-staged": "^15.0.0",
     "postcss": "^8.5.6",
-    "prettier": "^3.3.3",
+    "prettier": "^3.6.2",
     "process": "^0.11.10",
     "stream-browserify": "^3.0.0",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
-    "typescript": "^4.9.5",
+    "typescript": "^5.0.0",
     "vite": "^5.4.10",
     "web-vitals": "^3.0.0"
   }
