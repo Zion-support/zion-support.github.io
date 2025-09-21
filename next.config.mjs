@@ -1,3 +1,9 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -34,13 +40,24 @@ const nextConfig = {
     // Add path alias resolution
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, '.'),
+      '@': path.resolve(__dirname, '.'),
     };
     
     // Exclude contracts directory from compilation
     config.module.rules.push({
       test: /\.ts$/,
-      include: require('path').resolve(__dirname, 'contracts'),
+      include: path.resolve(__dirname, 'contracts'),
+      use: 'ignore-loader'
+    });
+    
+    // Exclude corrupted component files from compilation
+    config.module.rules.push({
+      test: /\.(tsx|ts)$/,
+      include: [
+        path.resolve(__dirname, 'components/services'),
+        path.resolve(__dirname, 'src'),
+        path.resolve(__dirname, 'src/mobile')
+      ],
       use: 'ignore-loader'
     });
     
@@ -85,4 +102,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
