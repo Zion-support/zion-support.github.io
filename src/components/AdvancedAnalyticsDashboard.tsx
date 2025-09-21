@@ -59,15 +59,15 @@ export const AdvancedAnalyticsDashboard: React.FC = () => {
           {[
             { label: 'Total Visitors', value: data.visitors.toLocaleString(), color: 'bg-blue-500' },
             { label: 'Page Views', value: data.pageViews.toLocaleString(), color: 'bg-green-500' },
-            { label: 'Conversion Rate', value: `${data.conversionRate}%`, color: 'bg-purple-500' },
-            { label: 'Bounce Rate', value: `${data.bounceRate}%`, color: 'bg-red-500' }
+            { label: 'Conversion Rate', value: \`\${data.conversionRate}%\`, color: 'bg-purple-500' },
+            { label: 'Bounce Rate', value: \`\${data.bounceRate}%\`, color: 'bg-red-500' }
           ].map((metric, index) => (
             <motion.div
               key={metric.label}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className={`${metric.color} p-6 rounded-lg text-white`}
+              className={\`\${metric.color} p-6 rounded-lg text-white\`}
             >
               <h3 className="text-lg font-semibold">{metric.label}</h3>
               <p className="text-3xl font-bold mt-2">{metric.value}</p>

@@ -5,24 +5,13 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
-import { FlatCompat } from "@eslint/eslintrc";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname
-});
 
 export default [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
         ...globals.browser,
@@ -33,6 +22,7 @@ export default [
         module: 'readonly',
         exports: 'readonly',
         require: 'readonly',
+        __dirname: 'readonly',
         setTimeout: 'readonly',
         setInterval: 'readonly',
         clearTimeout: 'readonly',
@@ -40,7 +30,7 @@ export default [
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
+          jsx: true,
         }
       }
     },
@@ -49,24 +39,31 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
+      "react-hooks": reactHooks,
+},
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/jsx-uses-react': 'off',
+<<<<<<< HEAD
+      'react/react-in-jsx-scope': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react-refresh/only-export-components': 'warn'
+=======
       'react/react-in-jsx-scope': 'off'
     }
   },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 2020,
       sourceType: 'module',
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
           jsx: true
-        },
-        project: './tsconfig.json'
+        }
       },
       globals: {
         ...globals.browser,
@@ -77,6 +74,7 @@ export default [
         module: 'readonly',
         exports: 'readonly',
         require: 'readonly',
+        __dirname: 'readonly',
         setTimeout: 'readonly',
         setInterval: 'readonly',
         clearTimeout: 'readonly',
@@ -95,6 +93,7 @@ export default [
       'no-console': 'warn',
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off'
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-1e34
     }
   },
   {
@@ -104,31 +103,67 @@ export default [
       'out/',
       'dist/',
       'build/',
-      '*.config.js',
-      '*.config.ts',
       'scripts/',
       'automation/',
       'public/reports/**',
       'netlify/',
-      'ecosystem*.cjs',
       '**/*.cjs',
-      '**/*.disabled/**',
-      '**/tests.disabled/**',
-      '**/typechain-types.disabled/**',
-      '**/types.disabled/**',
-      '**/utils.disabled/**',
-      '**/zion-os.disabled/**',
-      '**/zion_academy/**',
-      '**/src_backup/**',
-      '**/src_disabled/**',
-      '**/services.disabled.temp/**',
-      'test-*.js',
-      'workbox-config.js',
-      '*.backup.*',
-      '**/data/*.ts',
-      '**/pages/*.tsx',
-      '**/public/*.js',
       '**/*.mjs',
+<<<<<<< HEAD
+      '**/.scripts/**',
+      '**/temp_*/**',
+      '**/temp-*/**',
+      '**/temp*/**',
+      '**/broken*/**',
+      '**/corrupted*/**',
+      '**/disabled*/**',
+      '**/backup*/**',
+      '**/exclude*/**',
+      '**/conflicted*/**',
+      '**/working*/**',
+      '**/essential*/**',
+      '**/test_build/**',
+      '**/__tests__/**',
+      '**/src_backup*/**',
+      '**/apps.backup/**',
+      '**/ecosystem*.js',
+      '**/fix-*.js',
+      '**/fix_*.js',
+      '**/merge-*.js',
+      '**/resolve-*.js',
+      '**/selective-merge.js',
+      '**/restore-*.js',
+      '**/monitoring-*.js',
+      '**/performance-*.js',
+      '**/maintenance-*.js',
+      '**/comprehensive-*.js',
+      '**/execute-*.js',
+      '**/improve-*.js',
+      '**/mcp*.js',
+      '**/health-endpoint.js',
+      '**/lib.broken/**',
+      '**/offworld/**',
+      '**/pages._archive_corrupted/**',
+      '**/pages.bak/**',
+      '**/remote/**',
+      '**/solutions/**',
+      '**/src-clean/**',
+      '**/zion_academy/**',
+      '**/*.test.js',
+      '**/*.test.ts',
+      '**/*.test.tsx',
+      '**/.storybook/**',
+      '**/advanced-*.js',
+      '**/aggressive-*.js',
+      '**/analyze-*.js',
+      '**/build*.js',
+      '**/bundle-*.js',
+      '**/code-splitting-*.js',
+      '**/cypress/**',
+      '**/jest*.js',
+      '**/next.config*.js',
+      '**/start-dev.js'
+=======
       '**/server.mjs',
       '**/seed.js',
       '**/jest.setup.js',
@@ -191,48 +226,73 @@ export default [
       '**/pages/**',
       'test*.js',
       'test*.ts',
-      'test*.tsx',
-      '**/src/data/disabled/**',
-      '**/src/pages-disabled/**',
-      '**/src/hooks/**',
-      '**/src/routes/**',
-      '**/src/services/**',
-      '**/src/store/**',
-      '**/src/types/**',
-      '**/src/layout/**',
-      '**/src/lib/**',
-      '**/src/mobile/**',
-      '**/src/data/**',
-      '**/src/features/**',
-      '**/src/integrations/**',
-      '**/src/test/**',
-      '**/src/vite-env.d.ts',
-      '**/temp_*/**',
-      '**/temp-*/**',
-      '**/temp*/**',
-      '**/broken*/**',
-      '**/corrupted*/**',
-      '**/disabled*/**',
-      '**/backup*/**',
-      '**/exclude*/**',
-      '**/conflicted*/**',
-      '**/working*/**',
-      '**/essential*/**',
-      '**/test_build/**',
-      '**/tests/**',
-      '**/utils/**',
-      '**/token/**',
-      '**/vite.config-backup.ts',
-      '**/zion-hire-ai.tsx',
-      '**/terms.tsx',
-      '**/test-utils.jsx',
-      '**/src_backup*/**',
-      '**/src_backup_temp/**',
-      '**/supabase/**',
-      '**/store/**',
-      '**/stories/**',
-      '**/talent/**',
-      '**/start-dev.js'
+      'test*.tsx'
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-1e34
     ]
   }
 ];
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {,
+ecmaVersion: 2021,
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: "readonly",
+        jest: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly"
+      },
+      parser: tsparser,
+      parserOptions: {,
+ecmaFeatures: {
+          jsx: true,
+}
+      }
+    },
+    plugins: {
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+    },
+    settings: {,
+react: {
+        version: "detect"
+      }
+    }
+  },
+  {
+    files: [
+      "**/*.cjs",
+      "**/scripts/**/*.js",
+      "**/automation/**/*.js",
+      "**/pm2/**/*.js"
+    ],
+    languageOptions: {,
+ecmaVersion: 2021,
+      sourceType: "script",
+      globals: {
+        ...globals.node,
+        console: "readonly",
+        process: "readonly",
+        require: "readonly",
+        module: "readonly",
+        exports: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        Buffer: "readonly",
+        global: "readonly"
+      }
+    },
+    rules: {
+      "no-unused-vars": "warn",
+      "no-console": "warn",

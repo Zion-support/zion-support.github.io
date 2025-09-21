@@ -1,6 +1,11 @@
 import React, { useState, createContext, useContext } from 'react';
 
-const TabsContext = createContext(undefined);
+interface TabsContextType {
+  activeTab: string;
+  setActiveTab: (value: string) => void;
+}
+
+const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 export function Tabs({ defaultValue, children, className = '' }) {
   const [activeTab, setActiveTab] = useState(defaultValue || '');

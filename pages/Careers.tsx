@@ -1,10 +1,10 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "../components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import Link from "next/link";
-import { CAREER_JOBS } from "@/data/careerJobs";
+import { CAREER_JOBS } from "../data/careerJobs";
 import { Briefcase, DollarSign, Heart, Lightbulb } from 'lucide-react';
 import React from 'react';
 
@@ -41,7 +41,13 @@ const benefits = [
 ];
 
 function Careers() {
-  const jobs = CAREER_JOBS;
+  const jobs = CAREER_JOBS.reduce((acc, job) => {
+    if (!acc[job.department]) {
+      acc[job.department] = [];
+    }
+    acc[job.department].push(job);
+    return acc;
+  }, {});
   const applyEmail = 'careers@ziontechgroup.com';
 
 return (
@@ -128,11 +134,13 @@ value='operations'
                   Operations
                 </TabsTrigger>
               </TabsList>
-              <TabsContent
-                value='engineering'
-                className='space-y-6'
-              >
-                {jobs.map((job, index) => (
+              {Object.entries(jobs).map(([department, jobList]) => (
+                <TabsContent
+key={department}
+                  value={department}
+                  className='space-y-6'
+                >
+                  {jobList.map((job, index) => (
                     <Card
 key={index}
                       className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
@@ -168,8 +176,9 @@ asChild
                         </div>
                       </CardContent>
                     </Card>
-                ))}
-              </TabsContent>
+                  ))}
+                </TabsContent>
+              ))}
             </Tabs>
           </div>
           <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
