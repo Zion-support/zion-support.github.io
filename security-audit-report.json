@@ -1,13 +1,41 @@
 {
-  "timestamp": "2025-09-21T14:14:36.210Z",
-  "score": 45,
+  "timestamp": "2025-09-21T14:16:24.086Z",
+  "score": 25,
   "issues": [
     {
       "category": "environment",
       "severity": "high",
       "message": "Hardcoded secret in .env: NEXT_PUBLIC_SUPABASE_ANON_KEY",
       "details": [],
-      "timestamp": "2025-09-21T14:14:36.207Z"
+      "timestamp": "2025-09-21T14:16:24.082Z"
+    },
+    {
+      "category": "permissions",
+      "severity": "medium",
+      "message": "File package.json has overly permissive permissions",
+      "details": [],
+      "timestamp": "2025-09-21T14:16:24.083Z"
+    },
+    {
+      "category": "permissions",
+      "severity": "medium",
+      "message": "File package-lock.json has overly permissive permissions",
+      "details": [],
+      "timestamp": "2025-09-21T14:16:24.083Z"
+    },
+    {
+      "category": "permissions",
+      "severity": "medium",
+      "message": "File .env has overly permissive permissions",
+      "details": [],
+      "timestamp": "2025-09-21T14:16:24.083Z"
+    },
+    {
+      "category": "permissions",
+      "severity": "medium",
+      "message": "File .env.production has overly permissive permissions",
+      "details": [],
+      "timestamp": "2025-09-21T14:16:24.083Z"
     },
     {
       "category": "headers",
@@ -17,21 +45,21 @@
         "Strict-Transport-Security",
         "Content-Security-Policy"
       ],
-      "timestamp": "2025-09-21T14:14:36.207Z"
+      "timestamp": "2025-09-21T14:16:24.083Z"
     },
     {
       "category": "authentication",
       "severity": "high",
       "message": "No authentication system detected",
       "details": [],
-      "timestamp": "2025-09-21T14:14:36.209Z"
+      "timestamp": "2025-09-21T14:16:24.085Z"
     },
     {
       "category": "network",
       "severity": "medium",
       "message": "HTTPS enforcement not configured",
       "details": [],
-      "timestamp": "2025-09-21T14:14:36.210Z"
+      "timestamp": "2025-09-21T14:16:24.086Z"
     }
   ],
   "recommendations": [
@@ -47,9 +75,9 @@
     }
   ],
   "summary": {
-    "totalIssues": 4,
+    "totalIssues": 8,
     "criticalIssues": 2,
-    "mediumIssues": 2,
+    "mediumIssues": 6,
     "lowIssues": 0
   }
 }
