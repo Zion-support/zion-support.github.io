@@ -6,13 +6,11 @@ if (typeof globalThis === 'undefined') {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
-  distDir: '.next',
-  trailingSlash: true,
-  
-  // Performance optimizations
   compress: true,
   poweredByHeader: false,
+  output: 'export',
+  trailingSlash: true,
+  distDir: '.next',
   
   // Image optimization
   images: {
@@ -20,14 +18,17 @@ const nextConfig = {
     domains: ["localhost"],
   },
   
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
+  // TypeScript configuration
+  typescript: {
+    ignoreBuildErrors: true,
+    // tsconfigPath: './tsconfig.json',
+  },
+  
+  // ESLint configuration
   eslint: {
     ignoreDuringBuilds: true,
   },
-  typescript: {
-    ignoreBuildErrors: true,
-    tsconfigPath: './tsconfig.json',
-  },
+  
   // Experimental features for performance
   experimental: {
     optimizeCss: false,
@@ -43,23 +44,11 @@ const nextConfig = {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
+        net: false,
+        tls: false,
         crypto: require.resolve('crypto-browserify'),
       };
     }
-    
-    // Disable CSS processing to avoid matchAll error
-    config.module.rules = config.module.rules.map(rule => {
-      if (rule.test && rule.test.toString().includes('css')) {
-        return {
-          ...rule,
-          use: 'ignore-loader'
-        };
-      }
-      return rule;
-    });
-    
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
     
     // Add path alias resolution
     config.resolve.alias = {
