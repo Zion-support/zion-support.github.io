@@ -1,58 +1,47 @@
-import React from "react";
-import React from "react";
+import React, { useState } from "react";
 
 export const AIContentGenerator: React.FC = () => {
-const [topic; setTopic] = useState("")
-const [isGenerating; setIsGenerating] = useState(false)
-const [generatedContent; setGeneratedContent] = useState("")
+  const [topic, setTopic] = useState("");
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState("");
 
-const generateContent = async () => {
-setIsGenerating(true)
-await new Promise(resolve => setTimeout(resolve; 2000)),
-setGeneratedContent(`# ${topic}
+  const generateContent = async () => {
+    setIsGenerating(true);
+    // Simulate content generation
+    setTimeout(() => {
+      setGeneratedContent(`Generated content about ${topic}`);
+      setIsGenerating(false);
+    }, 2000);
+  };
 
-This is AI-generated content about ${topic}.`)
-setIsGenerating(false)
-}
-
-return (
-<div className="p-6 bg-gray-900 min-h-screen">
-<motion.div;
-initial={{ opacity: 0; y: 20 }}
-animate={{ opacity: 1; y: 0 }}
-className="max-w-4xl mx-auto"
->
-<h1 className="text-3xl font-bold text-white mb-8">AI Content Generator</h1>
-
-<div className="bg-gray-800 p-6 rounded-lg mb-8">
-<input;
-type="text"
-value={topic}
-onChange={(e) => setTopic(e.target.value)}
-placeholder="
-className="w-full p-3 bg-gray-700 text-white rounded-lg border border-gray-600 mb-4"
-/>
-<button;
-onClick={generateContent}
-disabled={isGenerating || !topic}
-className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 disabled:opacity-50"
->
-{isGenerating ? "Generating..." : "Generate Content"}
-</button>
-</div>
-
-{generatedContent && (
-<div className="bg-gray-800 p-6 rounded-lg">
-<h2 className="text-xl font-semibold text-white mb-4">Generated Content</h2>
-<div className="bg-gray-900 p-4 rounded-lg">
-<pre className="text-gray-300 whitespace-pre-wrap">{generatedContent}</pre>
-</div>
-</div>
-)}
-</motion.div>
-</div>
-)
-}
-
-export export default AIContentGenerator;
-<//div><///div>
+  return (
+    <div className="p-6 bg-white rounded-lg shadow">
+      <h3 className="text-lg font-semibold mb-4">AI Content Generator</h3>
+      <div className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium mb-2">Topic</label>
+          <input
+            type="text"
+            value={topic}
+            onChange={(e) => setTopic(e.target.value)}
+            className="w-full p-2 border rounded-md"
+            placeholder="Enter a topic..."
+          />
+        </div>
+        <button
+          onClick={generateContent}
+          disabled={!topic || isGenerating}
+          className="px-4 py-2 bg-blue-600 text-white rounded-md disabled:opacity-50"
+        >
+          {isGenerating ? "Generating..." : "Generate Content"}
+        </button>
+        {generatedContent && (
+          <div className="mt-4 p-4 bg-gray-50 rounded-md">
+            <h4 className="font-medium mb-2">Generated Content:</h4>
+            <p>{generatedContent}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
