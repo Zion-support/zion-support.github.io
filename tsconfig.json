@@ -17,12 +17,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
     "plugins": [
       {
         "name": "next"
@@ -48,18 +42,6 @@
     "cypress.config.ts",
     "deployment/**/*",
     "deployments/**/*",
-    "data/**/*",
-    "jest.config.ts",
-    "jest.setup.ts",
-    "netlify/**/*",
-    "pages._quarantine/**/*",
-    "pages.bak/**/*",
-    "pages.old/**/*",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.ts.disabled",
-    "instrumentation.disabled.ts"
+    "data/**/*"
   ]
 }
