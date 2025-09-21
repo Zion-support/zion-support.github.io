@@ -18,8 +18,18 @@ const nextConfig = {
         fs: false,
       };
     }
+    
+    // Fix for globalThis compatibility issues
+    if (isServer) {
+      config.plugins.push(
+        new (require('webpack')).DefinePlugin({
+          globalThis: 'global',
+        })
+      );
+    }
+    
     return config;
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
