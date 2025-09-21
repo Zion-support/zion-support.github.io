@@ -9,9 +9,17 @@ export default function EnterpriseAgentRiskScorecards2026() {
 		<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
 			<section className="container mx-auto px-6 py-14">
 				<nav className="mb-8">
-					<Link href="/" className="text-cyan-400 hover:text-cyan-300">← Home</Link>
+					<Link href="/">
+              <span className="text-cyan-400 hover:text-cyan-300">
+                ← Home
+              </span>
+            </Link>
 					<span className="mx-2 text-white/40">/</span>
-					<Link href="/blog" className="text-cyan-400 hover:text-cyan-300">Blog</Link>
+					<Link href="/blog">
+              <span className="text-cyan-400 hover:text-cyan-300">
+                Blog
+              </span>
+            </Link>
 				</nav>
 				<header className="max-w-4xl">
 					<p className="text-sm text-white/60">September 16, 2025 · 9 min read</p>
@@ -45,15 +53,31 @@ export default function EnterpriseAgentRiskScorecards2026() {
 					<div className="mt-10 p-6 rounded-xl bg-white/5 border border-white/10">
 						<p className="text-white/80">Starter resources: </p>
 						<ul className="list-disc pl-5 mt-2">
-							<li><Link href="/content/ai-2026-guardrail-scorecards-starter-kit" className="text-cyan-300 hover:text-cyan-200">Guardrail Scorecards Starter Kit</Link></li>
-							<li><Link href="/content/ai-2026-evidence-driven-operations" className="text-cyan-300 hover:text-cyan-200">Evidence‑Driven Operations</Link></li>
-							<li><Link href="/content/ai-2026-reliable-agent-rollouts" className="text-cyan-300 hover:text-cyan-200">Reliable Agent Rollouts</Link></li>
+							<li><Link href="/content/ai-2026-guardrail-scorecards-starter-kit" >
+              <span className="text-cyan-300 hover:text-cyan-200">
+                Guardrail Scorecards Starter Kit
+              </span>
+            </Link></li>
+							<li><Link href="/content/ai-2026-evidence-driven-operations" >
+              <span className="text-cyan-300 hover:text-cyan-200">
+                Evidence‑Driven Operations
+              </span>
+            </Link></li>
+							<li><Link href="/content/ai-2026-reliable-agent-rollouts" >
+              <span className="text-cyan-300 hover:text-cyan-200">
+                Reliable Agent Rollouts
+              </span>
+            </Link></li>
 						</ul>
 					</div>
 				</article>
 
 				<footer className="mt-12">
-					<Link href="/contact" className="inline-flex items-center px-5 py-3 rounded-lg bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-semibold">Talk to our team</Link>
+					<Link href="/contact" >
+              <span className="inline-flex items-center px-5 py-3 rounded-lg bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-semibold">
+                Talk to our team
+              </span>
+            </Link>
 				</footer>
 			</section>
 		</main>

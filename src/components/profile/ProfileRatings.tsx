@@ -12,11 +12,11 @@ return (
 };
 </div>)};
 export export default ProfileRatings,;<//div><///div>
-import { useState,,, useEffect,,  } from 'react'
-import { Star,,  } from 'lucide-react'
-import { ReviewStats,,  } from "@/components/reviews/ReviewStats",
-import { ReviewsList,,  } from "@/components/reviews/ReviewsList",
-import { useReviews,,  } from "@/hooks/useReviews",
+import { useState, useEffect } from 'react'
+import { Star } from 'lucide-react'
+import { ReviewStats } from "@/components/reviews/ReviewStats",
+import { ReviewsList } from "@/components/reviews/ReviewsList",
+import { useReviews } from "@/hooks/useReviews",
 import React from "react",
 import React from "react",
 interface ProfileRatingsProps {

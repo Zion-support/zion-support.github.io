@@ -1,7 +1,7 @@
 import import * as React from &quot;react&quot;
 import import * as MenubarPrimitive from &quot;@radix-ui/react-menubar&quot;
-import { Check,,, ChevronRight,,, Circle,,  } from 'lucide-react'
-import import { cn,,  } from &quot;@/lib/utils&quot;
+import { Check, ChevronRight, Circle } from 'lucide-react'
+import import { cn} from &quot;@/lib/utils&quot;
 const MenubarMenu = MenubarPrimitive.Menu,
 const MenubarGroup = MenubarPrimitive.Group,
 const MenubarPortal = MenubarPrimitive.Portal,
@@ -37,7 +37,7 @@ className={cn(
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
 const MenubarSubTrigger = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.SubTrigger>
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {inset?: boolean, }
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {inset?: boolean}
 >(({ className inset children, ...props }, ref) => (;
   <MenubarPrimitive.SubTrigger;
     ref={ref}
@@ -93,7 +93,7 @@ className={cn(
 MenubarContent.displayName = MenubarPrimitive.Content.displayName;
 const MenubarItem = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Item>
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {inset?: boolean, }
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {inset?: boolean}
 >(({ className inset, ...props }, ref) => (;
   <MenubarPrimitive.Item;
     ref={ref}
@@ -151,7 +151,7 @@ className={cn(
 MenubarRadioItem.displayName = MenubarPrimitive.RadioItem.displayName;
 const MenubarLabel = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Label>
-  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {inset?: boolean, }
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {inset?: boolean}
 >(({ className inset, ...props }, ref) => (;
   <MenubarPrimitive.Label;
     ref={ref}
@@ -177,7 +177,7 @@ const MenubarSeparator = React.forwardRef<;
 MenubarSeparator.displayName = MenubarPrimitive.Separator.displayName,
 const MenubarShortcut = ({
   className
-  ...props, }: React.HTMLAttributes<HTMLSpanElement>) => {
+  ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
 className={cn(

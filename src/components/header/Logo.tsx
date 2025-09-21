@@ -32,7 +32,7 @@ TECH GROUP;
 }<//Link><///Link>
 import React from 'react',
 import import Link from 'next/link',
-import import { useWhitelabel,,  } from '@/context/WhitelabelContext',
+import import { useWhitelabel } from '@/context/WhitelabelContext',
 interface LogoProps {
   customLogo?: string,
 export function Logo({ customLogo }: LogoProps) {

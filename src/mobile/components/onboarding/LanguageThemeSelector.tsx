@@ -1,18 +1,16 @@
 
-import React, { useState } from "react",
-import { Button,,  } from "@/components/ui/button",
+import React{ useState } from "react",
+import { Button } from "@/components/ui/button",
 import React from "react",
-import { Moon,,, Sun,,, Check,,  } from 'lucide-react'
+import { Moon, Sun, Check } from 'lucide-react'
 import React from "react",
 interface Language {
   code: string;,
 name: string,
   flag: string,
 const languages: Language[] = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-{ code: 'es', name: 'Español', flag: '🇪🇸' }
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-{ code: 'de', name: 'Deutsch', flag: '🇩🇪' }
+  { code: 'en', name: 'English', flag: '🇺🇸' }{ code: 'es', name: 'Español', flag: '🇪🇸' }
+  { code: 'fr', name: 'Français', flag: '🇫🇷' }{ code: 'de', name: 'Deutsch', flag: '🇩🇪' }
   { code: 'zh', name: '中文', flag: '🇨🇳' }
 ]
 export function LanguageThemeSelector() {
@@ -33,7 +31,7 @@ key={language.code}    <div className="space-y-8 px-4">
         <div className="grid grid-cols-2 gap-3 mt-4">
           {languages.map((language,) => (
             <Card
-key = {language.code,}
+key = {language.code}
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
                   ? 'border-primary bg-primary/5'

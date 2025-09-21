@@ -1,25 +1,24 @@
 
-import import { useState,,, useEffect,,, ,,  } from 'react',
-import import { useAuth,,, ,,  } from '@/hooks/useAuth',
-import import { useResume,,, ,,  } from '@/hooks/useResume',
-import import { Tabs,,, ,,  } from '@/components/ui/tabs',
-import import { Card,,, CardContent,,, ,,  } from '@/components/ui/card',
-import import { Alert,,, AlertDescription,,, AlertTitle,,, ,,  } from '@/components/ui/alert',
-import { AlertCircle,,, FilePlus,,, Loader2,,  } from 'lucide-react'
-import import { Button,,, ,,  } from '@/components/ui/button',
-import import { Resume,,, ,,  } from '@/types/resume',
+import import { useState, useEffect} from 'react',
+import import { useAuth } from '@/hooks/useAuth',
+import import { useResume } from '@/hooks/useResume',
+import import { Tabs } from '@/components/ui/tabs',
+import import { Card, CardContent} from '@/components/ui/card',
+import import { Alert, AlertDescription, AlertTitle} from '@/components/ui/alert',
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
+import import { Button } from '@/components/ui/button',
+import import { Resume } from '@/types/resume',
 // Import components,
-import import { ResumeProgress,,, ,,  } from './ResumeProgress',
-import import { EmptyResumeState,,, ,,  } from './EmptyResumeState',
-import import { CreateResumeForm,,, ,,  } from './CreateResumeForm',
-import import { ResumeSteps,,, ,,  } from './ResumeSteps',
-import import { ResumeStepContent,,, ,,  } from './ResumeStepContent',
-import import { useResumeProgress,,, ,,  } from './useResumeProgress',
-import import { ResumeVersionSelector,,, ,,  } from './ResumeVersionSelector',
-import import { RESUME_STEPS,,  } from './constants',
+import import { ResumeProgress } from './ResumeProgress',
+import import { EmptyResumeState } from './EmptyResumeState',
+import import { CreateResumeForm } from './CreateResumeForm',
+import import { ResumeSteps } from './ResumeSteps',
+import import { ResumeStepContent } from './ResumeStepContent',
+import import { useResumeProgress } from './useResumeProgress',
+import import { ResumeVersionSelector } from './ResumeVersionSelector',
+import import { RESUME_STEPS } from './constants',
 export function ResumeWizard() {
-createResume,
-} = useResume()
+createResume} = useResume()
   const [activeTab, setActiveTab] = useState('basic-info')
   const [showNewResumeForm, setShowNewResumeForm] = useState(false)
   // Use the extracted hook for progress calculation,
@@ -45,9 +44,9 @@ if (isLoading) {
   if (showNewResumeForm) {
     return (
       <CreateResumeForm
-onCreateResume = {handleCreateNewResume,}
+onCreateResume = {handleCreateNewResume}
         onCancel = {(,) => setShowNewResumeForm(false);
-        isLoading = {isLoading,}
+        isLoading = {isLoading}
       />
     )
   }
@@ -76,16 +75,16 @@ onClick = {(,) => setShowNewResumeForm(true);
           </div>
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <ResumeSteps
-steps = {RESUME_STEPS,}
-              activeTab = {activeTab,}
-              onChange = {setActiveTab,}
+steps = {RESUME_STEPS}
+              activeTab = {activeTab}
+              onChange = {setActiveTab}
             />
             {resume && (
               <ResumeStepContent
-activeTab = {activeTab,}
-                resume = {resume as Resume,}
-                onNextStep = {nextStep,}
-                onPrevStep = {prevStep,}
+activeTab = {activeTab}
+                resume = {resume as Resume}
+                onNextStep = {nextStep}
+                onPrevStep = {prevStep}
               />
             )}
           </Tabs>
@@ -96,31 +95,21 @@ activeTab = {activeTab,}
 }
 }
 <AlertTitle>Error</AlertTitle> <AlertDescription> {
-  error,
-}</AlertDescription> </Alert>)
+  error}</AlertDescription> </Alert>)
 }if (showNewResumeForm) {
   () => setShowNewResumeForm (false)
 }isLoading= {
-  isLoading,
-}/>)
+  isLoading}/>)
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {
-  activeTab,
-}onValueChange= {
-  setActiveTab,
-}> <ResumeSteps steps= {
-  RESUME STEPS,
-}activeTab= {
-  activeTab,
-}onChange= {
-  setActiveTab,
-}/> {
+  activeTab}onValueChange= {
+  setActiveTab}> <ResumeSteps steps= {
+  RESUME STEPS}activeTab= {
+  activeTab}onChange= {
+  setActiveTab}/> {
   resume && (<ResumeStepContent activeTab= {
-  activeTab,
-}resume= {
-  resume as Resume,
-}onNextStep= {
-  nextStep,
-}onPrevStep= {
+  activeTab}resume= {
+  resume as Resume}onNextStep= {
+  nextStep}onPrevStep= {
   prevStep;
 }/>)
 }</Tabs> </CardContent> </Card> </div>)

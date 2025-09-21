@@ -1,65 +1,52 @@
-import { useState,,, useEffect,,  } from 'react'
-import { Globe,,  } from 'lucide-react'
-selectedCountry: CountryPricing | null,
+import { useState, useEffect } from 'react'
+import { Globe } from 'lucide-react'
+
+interface CountryPricing {
+  country: string;
+  currency: string;
+  price: number;
 }
-  // Set top/popular countries,
-useEffect(() => {
-return (
+
+interface CountrySelectorProps {
+  selectedCountry: CountryPricing | null;
+  onCountrySelect: (country: CountryPricing) => void;
+}
+
+export default function CountrySelector({ selectedCountry, onCountrySelect }: CountrySelectorProps) {
+  const [countries] = useState<CountryPricing[]>([
+    { country: 'United States', currency: 'USD', price: 299 },
+    { country: 'Canada', currency: 'CAD', price: 399 },
+    { country: 'United Kingdom', currency: 'GBP', price: 249 },
+    { country: 'Germany', currency: 'EUR', price: 279 },
+    { country: 'Australia', currency: 'AUD', price: 449 },
+  ]);
+
+  return (
     <div className='mb-6'>
       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>
         <Globe className='mr-2 h-5 w-5 text-zion-cyan' />
-        {selectedCountry
-          ? `IT Onsite Service in ${selectedCountry.country}`
-          : 'Select Country for IT Onsite Service'}
+        Select Your Country
       </h3>
-      <Select
-onValueChange={handleCountryChange}
-        value={selectedCountry?.country}      >
-        <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
-          <SelectValue placeholder='Select a country' />
-        </SelectTrigger>
-        <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>
-          <div className='p-2 border-b border-zion-blue-light'>
-            <p className='text-sm text-zion-slate-light pb-1'>
-              Popular Countries
-            </p>
-            {topCountries.map(item => (
-              <SelectItem
-key={item.country}
-                value={item.country}
-                className='text-white'
-              >                {item.country} - ${item.pricePerIncident.toFixed(2)}
-              </SelectItem>
-            ))}
-          </div>        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
-          <div className="p-2 border-b border-zion-blue-light">
-            <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
-            {topCountries.map((item,) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">
-              </SelectItem>
-            ))}
-          </div>
-          <div className='p-2'>
-            <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>
-            {onsiteServicePricing
-              .sort((a b) => a.country.localeCompare(b.country))
-              .map(item => (
-                <SelectItem
-key={item.country}
-                  value={item.country}
-                  className='text-white'
-                >
-                  {item.country} - ${item.pricePerIncident.toFixed(2)}
-                </SelectItem>
-              ))}          </div>              .map((item) => (
-              .sort((a b,) => a.country.localeCompare(b.country))
-              .map((item,) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">
-                {item.country} - ${item.pricePerIncident.toFixed(2)}
-              </SelectItem>
-            ))}
-        </SelectContent>
-      </Select>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3'>
+        {countries.map((country) => (
+          <button
+            key={country.country}
+            onClick={() => onCountrySelect(country)}
+            className={`p-4 rounded-lg border-2 transition-all duration-200 ${
+              selectedCountry?.country === country.country
+                ? 'border-zion-cyan bg-zion-cyan/10 text-white'
+                : 'border-gray-600 bg-gray-800/50 text-gray-300 hover:border-zion-cyan/50 hover:bg-gray-700/50'
+            }`}
+          >
+            <div className='text-left'>
+              <div className='font-medium'>{country.country}</div>
+              <div className='text-sm opacity-75'>
+                {country.currency} {country.price}/month
+              </div>
+            </div>
+          </button>
+        ))}
+      </div>
     </div>
-  )
+  );
 }

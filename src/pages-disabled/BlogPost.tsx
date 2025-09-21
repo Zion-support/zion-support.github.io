@@ -174,13 +174,17 @@ src={relatedPost.featuredImage}
             <div className='mt-12 text-center'>
               <p className='text-zion-slate-light'>
                 Ready to put these ideas into action? Explore our{' '}
-                <Link href='/services' className='text-zion-cyan underline'>
-                  AI services
-                </Link>{' '}
+                <Link href='/services' >
+              <span className='text-zion-cyan underline'>
+                AI services
+              </span>
+            </Link>{' '}
                 or browse expert{' '}
-                <Link href='/talent' className='text-zion-cyan underline'>
-                  talent
-                </Link>{' '}
+                <Link href='/talent' >
+              <span className='text-zion-cyan underline'>
+                talent
+              </span>
+            </Link>{' '}
                 to accelerate your projects.
               </p>
             </div>
@@ -217,7 +221,7 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }</div> </div>) "
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
 }'"import React from 'react'
-import { SEO,,  } from '@/components / SEO'
+import { SEO } from '@/components / SEO'
 export default function Page() {
     ],
 }
@@ -473,16 +477,18 @@ initial={{ opacity: 0 y: 20 }}
               Let's discuss how our AI - powered solutions can drive innovation;
 and growth for your organization.</p>
             <div className="flex flex - wrap justify - center gap-4">
-              <Link
-to="/contact"
-                className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300">
+              <Linkto="/contact"
+                >
+              <span className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300">
                 Get Started Today
-              </Link>
-              <Link
-to="/services"
-                className="px-8 py-3 border border-cyan - 400 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 hover:text-white transition - all duration -300">
+              </span>
+            </Link>
+              <Linkto="/services"
+                >
+              <span className="px-8 py-3 border border-cyan - 400 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 hover:text-white transition - all duration -300">
                 Explore Our Services
-              </Link>
+              </span>
+            </Link>
             </div>
           </motion.div>
         </div>

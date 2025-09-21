@@ -1,12 +1,12 @@
-import { Rocket,,, FileText,,, Users,,, Calendar,,, Eye,,, MessageSquare,,  } from 'lucide-react'
-import import { cn,,  } from '@/lib/utils';
+import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
+import import { cn } from '@/lib/utils';
 interface WizardStep {
   title: string;,
 description: string,
   icon: React.ReactNode;,
 action: {
     text: string;,
-url: string, }
+url: string}
   skipText?: string,
 interface OnboardingWizardProps {
   type: 'client' | 'talent';,

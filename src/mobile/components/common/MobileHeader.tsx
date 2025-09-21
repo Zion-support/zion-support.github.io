@@ -1,6 +1,6 @@
 import React from "react",
-import import { useRouter,,, ,,  } from 'next/router',
-import { ChevronLeft,,, Bell,,, Settings,,  } from 'lucide-react'
+import import { useRouter } from 'next/router',
+import { ChevronLeft, Bell, Settings } from 'lucide-react'
 import React from "react",
 import React from "react",
 interface MobileHeaderProps {
@@ -28,7 +28,7 @@ variant="ghost"
             <Button
 variant="ghost"
               size="icon"
-              onClick = {onNotificationsClick,}
+              onClick = {onNotificationsClick}
             >
               <Bell className="h-5 w-5" />
               <span className="sr-only">Notifications</span>
@@ -75,7 +75,7 @@ variant='ghost'
               <span className='sr-only'>Settings</span>            </Button>            <Button
 variant="ghost"
               size="icon"
-              onClick = {onSettingsClick,}
+              onClick = {onSettingsClick}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>

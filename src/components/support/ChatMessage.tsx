@@ -1,5 +1,5 @@
-import React, { useMemo } from "react",
-import { Avatar,,, AvatarFallback,,, AvatarImage,,  } from "@/components/ui/avatar",
+import React{ useMemo } from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import React from "react",
 import React from "react",
 // Use the wrapper hook so TypeScript properly infers the return type

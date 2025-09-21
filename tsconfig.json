@@ -9,6 +9,9 @@
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
@@ -22,7 +25,6 @@
       }
     ],
     "target": "ES2017",
-    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {

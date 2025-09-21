@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Clock,,, Map,,, DollarSign,,  } from 'lucide-react'
+import { Clock, Map, DollarSign } from 'lucide-react'
 export function PageHero() {
   return (
     <div className='text-center mb-12'>

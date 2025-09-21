@@ -1,9 +1,9 @@
 
-import import React, { useMemo } from 'react',
-import { User,,  } from 'lucide-react'
-import import { Conversation,,, ,,  } from '@/types/messaging',
-import import { ConversationItem,,, ,,  } from './ConversationItem',
-import import { FixedSizeList,,, as,,, List,,, ListChildComponentProps,,  } from 'react-window',
+import import React{ useMemo } from 'react',
+import { User } from 'lucide-react'
+import import { Conversation } from '@/types/messaging',
+import import { ConversationItem } from './ConversationItem',
+import import { FixedSizeList, as, List, ListChildComponentProps } from 'react-window',
 interface ConversationsListProps {
   conversations: Conversation[[], ],
 activeConversation: Conversation | null;

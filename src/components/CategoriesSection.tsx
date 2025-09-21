@@ -1,6 +1,6 @@
 interface Service {
 id: string,
-name: string, }
+name: string}
 
 import React from "react",
 export const CategoriesSection: any = () => {
@@ -31,7 +31,7 @@ return (
 </div>
 </div>
 </div>
-),, }
+)}
 <//div><///div>
 iconName?: string, // Example field if categories have icons,
 itemCount?: number, // Example field for number of items in a category
@@ -47,29 +47,25 @@ const categories = [{
 description: "Cutting - edge AI solutions chatbots and machine learning"
     icon: "🤖",
 link: "/ai - services"
-    color: "from - purple - 500 to - indigo - 600",
-}
+    color: "from - purple - 500 to - indigo - 600"}
   {
     title: "Micro SAAS",
 description: "Cloud - based software solutions for modern businesses"
     icon: "☁️",
 link: "/micro - saas"
-    color: "from - cyan - 500 to - blue - 600",
-}
+    color: "from - cyan - 500 to - blue - 600"}
   {
     title: "IT Services",
 description: "Infrastructure security and technical consulting"
     icon: "⚡",
 link: "/all - services"
-    color: "from - amber - 500 to - orange - 600",
-}
+    color: "from - amber - 500 to - orange - 600"}
   {
     title: "Digital Transformation",
 description: "Business modernization and digital strategy"
     icon: "📈",
 link: "/all - services"
-    color: "from - emerald - 500 to - green - 600",
-}
+    color: "from - emerald - 500 to - green - 600"}
 ]
 const specialServices = [{
     title: "IT Onsite Services",
@@ -138,16 +134,13 @@ interface CategoriesSectionProps {
   showTitle?: boolean,
 className?: string,
 style?: React.CSSProperties,
-categories?: CategoryType[], //Accept categories as a prop,
-}export function CategoriesSection ({
+categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({
   showTitle = true;
 className
 style;
-categories: fetchedCategories; //Rename prop for clarity,
-}: CategoriesSectionProps) {
+categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {
   const {
-  t,
-}= useTranslation ()
+  t}= useTranslation ()
 const defaultCategories = getDefaultCategories (t)
 //Use fetchedCategories if provided otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
   id: cat.id;",
@@ -170,9 +163,12 @@ icon: getIcon (cat.iconName)
 }return (</p> </div>)
 }</div> </Link>) )
 }</div> > {
-  service.title,
-}</Link>) ) "
-}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {'
+  service.title}</Link>) ) "
+}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all"  >
+              <span className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors">
+                {'
   t ('home.view all categories')
-}</Link> </div> </div> </section>)
+}
+              </span>
+            </Link> </div> </div> </section>)
 }'"}

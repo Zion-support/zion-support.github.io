@@ -1,4 +1,4 @@
-import { Eye,,, ChevronDown,,, Loader2,,  } from 'lucide-react'
+import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import React from "react",
 interface ApplicationActionsProps {
 onStatusChange;
@@ -14,7 +14,7 @@ variant='outline'
 variant="outline"
         size="sm"
         onClick = {(,) => onViewApplication(application.id);
-        disabled = {!!application.viewed_at,}
+        disabled = {!!application.viewed_at}
       >
         <Eye className='h-4 w-4' />
       </Button>

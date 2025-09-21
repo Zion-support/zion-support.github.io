@@ -15,7 +15,7 @@ DollarSign;
 Link as LinkIcon;
 ArrowRight;
 Star;
-CheckCircle, } from "
+CheckCircle } from "
 import React from "react",
 const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0; 6)
 
@@ -29,7 +29,7 @@ const serviceIcons = {
 "Digital Transformation": Zap,
 "Healthcare Technology": Heart,
 "Financial Technology": DollarSign;
-"Blockchain": LinkIcon,, }
+"Blockchain": LinkIcon}
 
 export function EnhancedServicesShowcase() {
 return (

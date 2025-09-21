@@ -1,8 +1,8 @@
 
-import React, { useState } from "react",
+import React{ useState } from "react",
 import React from "react",
 import React from "react",
-import { Briefcase,,, Users,,, Check,,  } from 'lucide-react'
+import { Briefcase, Users, Check } from 'lucide-react'
 
 type UserRole = any;
   return (

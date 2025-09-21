@@ -60,3 +60,6 @@ browserName: 'webkit'
   ]
 });
 */
+
+// Make this a module to avoid TypeScript errors
+export {};

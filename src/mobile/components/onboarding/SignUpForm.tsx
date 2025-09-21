@@ -173,8 +173,8 @@ Sign In;
 )
 }
 <//div><///div>
-import { AlertCircle,,  } from 'lucide-react'
-import { Alert,,, AlertDescription,,  } from "@/components/ui/alert",
+import { AlertCircle } from 'lucide-react'
+import { Alert, AlertDescription } from "@/components/ui/alert",
 import React from "react",
 import import { logErrorToProduction } from '@/utils/productionLogger',
 export function SignUpForm() {
@@ -299,12 +299,13 @@ type="submit"
           ? "Already have an account? "
           : "Don't have an account? "
         }
-        <Link
-href="/login"
-          className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer"
+        <Link href="/login"
+          
         >
-          Sign In
-        </Link>
+              <span className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">
+                Sign In
+              </span>
+            </Link>
       </p>
     </div>
   )
@@ -337,5 +338,9 @@ if (error) {
 }</div> <div className="space-y-2" > <Label htmlFor="password" >Password</Label> <Input)
 }</div> <Button > {"
   isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") "
-}</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>)
+}</Button> </form> <Link href="/login"  >
+              <span className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">
+                Sign In
+              </span>
+            </Link> </p> </div>)
 }"}

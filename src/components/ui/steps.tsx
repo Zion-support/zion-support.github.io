@@ -1,7 +1,7 @@
 
 import React from "react",
 import React from "react",
-import { CheckIcon,,  } from 'lucide-react'
+import { CheckIcon } from 'lucide-react'
 
 interface StepProps {
 className?: string, }

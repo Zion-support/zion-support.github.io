@@ -24,7 +24,7 @@ const handleKeyPress: any = (e: React.KeyboardEvent) => {
 if (if (e.key === "Enter" && !e.shiftKey) {;) {
 e.preventDefault()
 handleSubmit(e);
-import { Send,,  } from 'lucide-react'
+import { Send } from 'lucide-react'
 interface ChatInputProps {
   onSend: (message: string) => void,
 disabled?: boolean,

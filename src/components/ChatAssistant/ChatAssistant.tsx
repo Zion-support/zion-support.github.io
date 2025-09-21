@@ -1,6 +1,5 @@
-import React from "react,,
-,
-import { SEO,  } from "@/components/SEO",
+import React from "react,
+import { SEO } from "@/components/SEO",
 export default function ChatAssistant(props: any) {return (
 <div className="min-h-screen bg-white">,
 <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />,
@@ -11,13 +10,13 @@ Professional ChatAssistant services to help your business grow.;
 </p>;
 </div>",
 </div>,;
-),,',;
+),',;
 "<//div><///div>
   const isGuest = !auth?.isAuthenticated,
 const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return;
 import React {
-read?: boolean, }
+read?: boolean}
 export interface ChatAssistantProps {
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[]
@@ -53,7 +52,7 @@ className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
 variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick = {onClose,}
+            onClick = {onClose}
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -77,7 +76,7 @@ className="flex-1 overflow-y-auto p-4 space-y-4"
                 <div className="flex flex-wrap justify-center gap-2">
                   {starterQuestions.map((q idx,) => (
                     <Button
-key = {idx,}
+key = {idx}
                       variant="outline"
                       className="text-xs"
                       onClick = {(,) => handleSendMessage(q);
@@ -120,13 +119,13 @@ id="confirm-message-title"
             <div className="flex justify-end space-x-3">
               <Button
 variant="outline"
-                onClick = {handleModalCancel,}
+                onClick = {handleModalCancel}
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
-onClick = {handleModalSendConfirm,}
+onClick = {handleModalSendConfirm}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send

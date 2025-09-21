@@ -1,9 +1,9 @@
 
 import React from 'react',
-import { Card,,, CardContent,,  } from "@/components/ui/card",
-import { Badge,,  } from "@/components/ui/badge",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 import React from "react",
-import { Download,,  } from 'lucide-react'
+import { Download } from 'lucide-react'
 import React from "react",
 interface ResumePreviewCardProps {
   resume: Resume;,

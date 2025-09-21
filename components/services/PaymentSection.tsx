@@ -1,5 +1,5 @@
-import { MapPin,,  } from 'lucide-react'
-import { PaymentButton,,  } from "@/components/transactions/PaymentButton",
+import { MapPin } from 'lucide-react'
+import { PaymentButton } from "@/components/transactions/PaymentButton",
 import React from "react";
 import React from "react";
 interface PaymentSectionProps {

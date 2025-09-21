@@ -1,8 +1,8 @@
 
 import React from "react",
-import { Apple,,, GithubIcon,,  } from 'lucide-react'
+import { Apple, GithubIcon } from 'lucide-react'
 import React from "react",
-import import { logInfo,,  } from '@/utils/productionLogger',
+import import { logInfo } from '@/utils/productionLogger',
 interface AppStoreButtonsProps {
   className?: string;
   appStoreUrl?: string;

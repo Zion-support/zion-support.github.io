@@ -1,5 +1,5 @@
-import { formatDistanceToNow,,  } from 'date-fns'
-import { Calendar,,, User,,, FileText,,, BarChart,,  } from 'lucide-react'
+import { formatDistanceToNow } from 'date-fns'
+import { Calendar, User, FileText, BarChart } from 'lucide-react'
 }
 export function ApplicationRow({
 return (
@@ -34,8 +34,8 @@ onError={() => setAvatarError(true)}
         <div className='flex items-center gap-1'>
           <Calendar className='h-4 w-4 text-muted-foreground' />
           <span>
-            {formatDistanceToNow(new Date(application.created_at), {
-              addSuffix: true, })}
+            {formatDistanceToNow(new Date(application.created_at){
+              addSuffix: true})}
           </span>
         </div>
       </TableCell>
@@ -69,10 +69,10 @@ href={application.resume.file_url |'#'}
       </TableCell>
       <TableCell className='text-right'>
         <ApplicationActions
-application = {application,}
-          processingId = {processingId,}
-          onViewApplication = {onViewApplication,}
-          onStatusChange = {onStatusChange,}
+application = {application}
+          processingId = {processingId}
+          onViewApplication = {onViewApplication}
+          onStatusChange = {onStatusChange}
         />
       </TableCell>
     </TableRow>

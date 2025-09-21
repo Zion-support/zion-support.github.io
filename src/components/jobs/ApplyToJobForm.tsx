@@ -1,27 +1,26 @@
 import React from "react",
-import import { useRouter,,, ,,  } from 'next/router',
-import { useJobApplications,,  } from "@/hooks/useJobApplications",
-import { useResume,,  } from "@/hooks/useResume",
-import { useAuth,,  } from "@/hooks/useAuth",
-import { Button,,  } from "@/components/ui/button",
-import { Textarea,,  } from "@/components/ui/textarea",
-import { Label,,  } from "@/components/ui/label",
-import { Select,,, SelectContent,,, SelectItem,,, SelectTrigger,,, SelectValue,,  } from "@/components/ui/select",
-import { Alert,,, AlertDescription,,  } from "@/components/ui/alert",
-import { AlertCircle,,, FileText,,, Loader2,,  } from 'lucide-react'
-import { formatDistanceToNow,,  } from "date-fns",
+import import { useRouter } from 'next/router',
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useResume } from "@/hooks/useResume",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { AlertCircle, FileText, Loader2 } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",
 import React from "react",
 import React from "react",
 interface ApplyToJobFormProps {
-onSuccess?: () => void,
-}
+onSuccess?: () => void}
 export function ApplyToJobForm({ job onSuccess }: ApplyToJobFormProps) {
 return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>
         <p className="text-sm text-muted-foreground mb-4">
-          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
+          Posted {formatDistanceToNow(new Date(job.created_at){ addSuffix: true })}
         </p>
       </div>
       {error && (
@@ -35,9 +34,9 @@ return (
           <Label htmlFor="coverLetter">Cover Letter</Label>
           <Textarea
 id="coverLetter"
-            value = {coverLetter,}
+            value = {coverLetter}
             onChange = {(e,) => setCoverLetter(e.target.value);
-            rows = {6,}
+            rows = {6}
             placeholder="Introduce yourself and explain why you are a good fit for this job..."
             className="mt-1"
           />
@@ -54,8 +53,8 @@ id="coverLetter"
             </div>
           ) : resumes && resumes.length > 0 ? (
             <Select
-value = {selectedResumeId,}
-              onValueChange = {setSelectedResumeId,}
+value = {selectedResumeId}
+              onValueChange = {setSelectedResumeId}
             >
               <SelectTrigger className="mt-1">
                 <SelectValue placeholder="Select a resume" />
@@ -70,8 +69,7 @@ value = {selectedResumeId,}
                       </SelectItem>
                     )
                   }
-                  return null,
-})}
+                  return null})}
               </SelectContent>
             </Select>
           ) : (
@@ -106,7 +104,7 @@ id="cvUpload"
         <Button
 type="button"
           variant="outline"
-          disabled = {isSubmitting,}
+          disabled = {isSubmitting}
           onClick={() => {
             if (onSuccess) onSuccess()
           }}
@@ -132,13 +130,10 @@ if (success) {
 }finally {
   setIsSubmitting (false)
 }
-handleSubmit,
-}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
-  error,
-}</AlertDescription> </Alert>) "
+handleSubmit}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
+  error}</AlertDescription> </Alert>) "
 }<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
-  selectedResumeId,
-}onValueChange= {
+  selectedResumeId}onValueChange= {
   setSelectedResumeId "
 }> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>)
 }return null;

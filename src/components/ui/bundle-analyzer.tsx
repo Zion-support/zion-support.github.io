@@ -1,10 +1,10 @@
 import import React { useState useEffect } from 'react',
-import import { useAuth,,, ,,  } from '@/hooks/useAuth',
-import import { Card,,, CardContent,,, CardHeader,,, CardTitle,,, ,,  } from '@/components/ui/card',
-import import { Badge,,, ,,  } from '@/components/ui/badge',
-import import { Button,,, ,,  } from '@/components/ui/button',
-import import { Progress,,, ,,  } from '@/components/ui/progress',
-import { AlertTriangle,,, Package,,, Zap,,  } from 'lucide-react'
+import import { useAuth } from '@/hooks/useAuth',
+import import { Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card',
+import import { Badge } from '@/components/ui/badge',
+import import { Button } from '@/components/ui/button',
+import import { Progress } from '@/components/ui/progress',
+import { AlertTriangle, Package, Zap } from 'lucide-react'
 import import { logErrorToProduction } from '@/utils/productionLogger',
 interface BundleInfo {
   totalSize: number;,
@@ -19,8 +19,7 @@ size: number,
 cached: boolean,
 export function BundleAnalyzer() {
 if (!shouldShow) {
-    return null,
-}
+    return null}
   if (!isVisible) {
     return (
       <div className='fixed bottom-20 right-4 z-50'>

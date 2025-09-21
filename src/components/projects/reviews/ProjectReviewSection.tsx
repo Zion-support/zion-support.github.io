@@ -1,6 +1,6 @@
-import import { Project,,, ,,  } from '@/types/projects',
-import { useState,,  } from "react",
-import { Star,,  } from 'lucide-react'
+import import { Project } from '@/types/projects',
+import { useState } from "react",
+import { Star } from 'lucide-react'
 return (
     <Card className='mt-6'>
       <CardHeader>

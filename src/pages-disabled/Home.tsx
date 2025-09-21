@@ -11,9 +11,11 @@ const Home: React.FC = () => {
           Leading AI and technology solutions
         </p>
         <div className="text-center">
-          <Link href="/services" className="bg-zion-cyan text-zion-blue px-6 py-3 rounded-lg hover:bg-zion-cyan/80 transition-colors">
-            Explore Services
-          </Link>
+          <Link href="/services" >
+              <span className="bg-zion-cyan text-zion-blue px-6 py-3 rounded-lg hover:bg-zion-cyan/80 transition-colors">
+                Explore Services
+              </span>
+            </Link>
         </div>
       </div>
     </div>

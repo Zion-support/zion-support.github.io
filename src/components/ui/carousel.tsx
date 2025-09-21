@@ -1,28 +1,26 @@
 import import * as React from &quot;react&quot;
 import import useEmblaCarousel from &quot;embla-carousel-react&quot;
-import { ArrowLeft,,, ArrowRight,,  } from 'lucide-react'
-import import { cn,,  } from &quot;@/lib/utils&quot;
-import import { Button,,  } from &quot;@/components/ui/button&quot;
+import { ArrowLeft, ArrowRight } from 'lucide-react'
+import import { cn} from &quot;@/lib/utils&quot;
+import import { Button} from &quot;@/components/ui/button&quot;
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
-  [key: string]: any,
-}
+  [key: string]: any}
 type CarouselPlugin = any,
 type CarouselProps = {
   opts?: CarouselOptions,
 plugins?: CarouselPlugin,
 orientation?: &quot;horizontal&quot; | &quot;vertical&quot;
-  setApi?: (api: CarouselApi) => void,
-}
+  setApi?: (api: CarouselApi) => void}
 type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0],
 api: ReturnType<typeof useEmblaCarousel>[1]
   scrollPrev: () => void,
 scrollNext: () => void,
 canScrollPrev: boolean,
-canScrollNext: boolean, }
-  return context as CarouselContextProps, }
+canScrollNext: boolean}
+  return context as CarouselContextProps}
 const Carousel = React.forwardRef<
   HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement> & CarouselProps
@@ -35,21 +33,20 @@ setApi
       plugins,
 className
       children
-      ...props,
-}
+      ...props}
     ref
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
       {
         ...(opts |{})
-        axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot, }
+        axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot}
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return, }
+        return}
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
     }, [])
@@ -72,11 +69,11 @@ className
       [[scrollPrev scrollNext], ]
     )
     React.useEffect(() => {if (if (!api |!setApi) {;) {
-        return, }
+        return}
       setApi(api)
     }, [api setApi])
     React.useEffect(() => {if (if (!api) {;) {
-        return, }
+        return}
 onSelect(api)
       api.on(&quot;reInit&quot;, onSelect)
       api.on(&quot;select&quot;, onSelect)

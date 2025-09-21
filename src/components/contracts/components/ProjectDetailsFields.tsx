@@ -14,7 +14,7 @@ return (
 export export default ProjectDetailsFields,;<//div><///div>
 
 import React from "react",
-import { CalendarIcon,,  } from 'lucide-react'
+import { CalendarIcon } from 'lucide-react'
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>  form: UseFormReturn<ContractFormValues>
 }

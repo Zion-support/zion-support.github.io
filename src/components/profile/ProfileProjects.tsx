@@ -4,11 +4,11 @@ import React from "react",
 import React from "react",
 import React from "react",
 import React from "react",
-import { Card,,, CardContent,,  } from "@/components/ui/card",
-import { Badge,,  } from "@/components/ui/badge",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 import React from "react",
 import React from "react",
-import { FileText,,  } from 'lucide-react'
+import { FileText } from 'lucide-react'
 interface ProfileProjectsProps {
 projects: ProfileProject[], }
 export function ProfileProjects({ projects }: ProfileProjectsProps) {

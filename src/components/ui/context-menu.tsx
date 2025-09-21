@@ -1,7 +1,7 @@
 import import * as React from &quot;react&quot;
 import import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
-import { Check,,, ChevronRight,,, Circle,,  } from 'lucide-react'
-import import { cn,,  } from &quot;@/lib/utils&quot;
+import { Check, ChevronRight, Circle } from 'lucide-react'
+import import { cn} from &quot;@/lib/utils&quot;
 const ContextMenu = ContextMenuPrimitive.Root,
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger,
 const ContextMenuGroup = ContextMenuPrimitive.Group,
@@ -11,7 +11,7 @@ const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup,
 const ContextMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
-    inset?: boolean, }
+    inset?: boolean}
 >(({ className inset children, ...props }, ref) => (;
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
@@ -59,7 +59,7 @@ className={cn(
 ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.Item>
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {inset?: boolean, }
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {inset?: boolean}
 >(({ className inset, ...props }, ref) => (;
   <ContextMenuPrimitive.Item;
     ref={ref}
@@ -118,7 +118,7 @@ className={cn(
 ContextMenuRadioItem.displayName = ContextMenuPrimitive.RadioItem.displayName;
 const ContextMenuLabel = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.Label>
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {inset?: boolean, }
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {inset?: boolean}
 >(({ className inset, ...props }, ref) => (;
   <ContextMenuPrimitive.Label;
     ref={ref}
@@ -144,7 +144,7 @@ const ContextMenuSeparator = React.forwardRef<;
 ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName,
 const ContextMenuShortcut = ({
   className
-  ...props, }: React.HTMLAttributes<HTMLSpanElement>) => {
+  ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
 className={cn(

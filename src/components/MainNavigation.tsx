@@ -195,15 +195,21 @@ isScrolled;
 
 {/* User Dropdown */}
 <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 invisible group-hove; r:opacity-100 group-hove; r:translate-y-0 group-hove; r:visible transition-all duration-300">
-<Link to="/login" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
-Sign In;
-</Link>
-<Link to="/signup" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
-Sign Up;
-</Link>
-<Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
-Dashboard;
-</Link>
+<Linkto="/login" >
+              <span className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
+                Sign In;
+              </span>
+            </Link>
+<Linkto="/signup" >
+              <span className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
+                Sign Up;
+              </span>
+            </Link>
+<Linkto="/dashboard" >
+              <span className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
+                Dashboard;
+              </span>
+            </Link>
 </div>
 </div>
 

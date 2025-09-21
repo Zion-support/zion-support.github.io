@@ -1,7 +1,7 @@
 
 import React from "react",
 import React from "react",
-import { Search,,, Sliders,,  } from 'lucide-react'
+import { Search, Sliders } from 'lucide-react'
 import React from "react",
 interface MobileFilterBarProps {
   searchTerm: string;,

@@ -1,8 +1,7 @@
-import { Globe,,, Server,,, Clock,,, MapPin,,, Check,,  } from 'lucide-react'
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
 import React from "react",
 interface CountryServiceCardProps {
-isPopular?: boolean,
-}
+isPopular?: boolean}
 export function CountryServiceCard({
   country,
 onSelect

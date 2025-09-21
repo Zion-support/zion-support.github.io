@@ -9,8 +9,7 @@ import React from "react",
 interface ProjectCardProps {
 project: PortfolioProject;
 onEdit: (project: PortfolioProject) => void;,
-onDelete: (projectId: string) => void;,
-}
+onDelete: (projectId: string) => void;}
 export export function ProjectCard({ project; onEdit; onDelete }: ProjectCardProps) {
 const [deleteDialogOpen; setDeleteDialogOpen] = useState(false)
 
@@ -118,9 +117,9 @@ Delete;
 )
 }
 <//Card><///Card>
-import { Edit,,, Trash2,,, Github,,, Link,,, FileText,,  } from 'lucide-react'
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import import Image from 'next/image',
-import import { PortfolioProject,,  } from '@/types/resume',
+import import { PortfolioProject } from '@/types/resume',
 interface ProjectCardProps {
 }
 export function ProjectCard({ project onEdit onDelete }: ProjectCardProps) {
@@ -192,7 +191,7 @@ href={project.github_url}
               rel='noopener noreferrer'
               aria-label='GitHub'
               title='GitHub'
-              href = {project.github_url,}
+              href = {project.github_url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"

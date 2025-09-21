@@ -1,7 +1,7 @@
 
 import import React from 'react',
 import React from "react",
-import { Star,,  } from 'lucide-react'
+import { Star } from 'lucide-react'
 interface SaveTalentButtonProps {
   talentId: string,
 onSave: (talentId: string) => void,
@@ -19,7 +19,7 @@ onSave
           ? 'bg-yellow-500 hover:bg-yellow-600 text-white'
           : 'text-yellow-500 border-yellow-500 hover:bg-yellow-500/10'
       }    >
-import { Button,,  } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 interface SaveTalentButtonProps {
 isSaved: boolean, }
 export function SaveTalentButton({ talentId onSave isSaved }: SaveTalentButtonProps) {

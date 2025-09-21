@@ -1,4 +1,4 @@
-import { ChevronRight,,, FileText,,, Image,,, Clock,,, Zap,,, BookOpen,,  } from 'lucide-react'
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import React from "react";
 export function TalentDashboard() {
   return (

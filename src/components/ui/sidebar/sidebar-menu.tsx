@@ -1,6 +1,6 @@
 
 import React, { forwardRef } from "react",
-import { ChevronDown,,  } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import React from "react",
 import React from "react",
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {

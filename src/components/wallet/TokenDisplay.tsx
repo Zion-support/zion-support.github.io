@@ -45,7 +45,7 @@ View Wallet;
 }
 <//Card><///Card>
 import React from 'react'
-import { BadgeDollarSign,,  } from 'lucide-react'
+import { BadgeDollarSign } from 'lucide-react'
 export function TokenDisplay() {
   const { wallet, loading } = useWallet()
   return (

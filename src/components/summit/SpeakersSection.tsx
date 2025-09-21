@@ -1,5 +1,5 @@
 import React from "react",
-import { Twitter,,, Linkedin,,  } from 'lucide-react'
+import { Twitter, Linkedin } from 'lucide-react'
 interface Speaker {
   name: string,
 title: string,

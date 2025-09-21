@@ -1,14 +1,12 @@
 
-import { SearchSuggestion,,  } from "@/types/search",
+import { SearchSuggestion } from "@/types/search",
 import React, { useState } from "react",
 import import Link from 'next/link',
-import import { useRouter,,, ,,  } from 'next/router',
-import { Search,,  } from 'lucide-react'
+import import { useRouter } from 'next/router',
+import { Search } from 'lucide-react'
 import React from "react",
 import React from "react",
-import import { getDocsSearchPath;
-,, docsSearchSuggestions,
- } from "@/data/docsSearchData"
+import import { getDocsSearchPath;, docsSearchSuggestions } from "@/data/docsSearchData"
 interface ApiDocsLayoutProps {
   children: React.ReactNode,
 }

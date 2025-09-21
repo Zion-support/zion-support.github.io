@@ -1,8 +1,8 @@
 import import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
-import import { cva,,, type,,, VariantProps,,  } from &quot;class-variance-authority&quot;
-import { X,,  } from 'lucide-react'
+import import { cva, type, VariantProps} from &quot;class-variance-authority&quot;
+import { X } from 'lucide-react'
 import import * as React from &quot;react&quot;
-import import { cn,,  } from &quot;@/lib/utils&quot;
+import import { cn} from &quot;@/lib/utils&quot;
 const Sheet = SheetPrimitive.Root,
 const SheetTrigger = SheetPrimitive.Trigger,
 const SheetClose = SheetPrimitive.Close,
@@ -31,9 +31,9 @@ bottom:
           &quot;inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom&quot;
         left: &quot;inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm&quot;,
 right:
-          &quot;inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm&quot, }},
+          &quot;inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm&quot}},
 defaultVariants: {
-      side: &quot;right&quot, }}
+      side: &quot;right&quot}}
 )
 interface SheetContentProps,
 extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>
@@ -60,7 +60,7 @@ ref={ref}
 SheetContent.displayName = SheetPrimitive.Content.displayName,
 const SheetHeader = ({
   className
-  ...props, }: React.HTMLAttributes<HTMLDivElement>) => (
+  ...props}: React.HTMLAttributes<HTMLDivElement>) => (
   <div
 className={cn(
       &quot;flex flex-col space-y-2 text-center sm: text-left&quot,
@@ -72,7 +72,7 @@ className={cn(
 SheetHeader.displayName = &quot;SheetHeader&quot;
 const SheetFooter = ({
   className
-  ...props, }: React.HTMLAttributes<HTMLDivElement>) => (
+  ...props}: React.HTMLAttributes<HTMLDivElement>) => (
   <div
 className={cn(
       &quot;flex flex-col-reverse sm: flex-row sm:justify-end sm:space-x-2&quot,
@@ -105,4 +105,4 @@ const SheetDescription = React.forwardRef<;
 ))
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
 export export {Sheet SheetClose;
-  SheetContent SheetDescription SheetFooter SheetHeader SheetOverlay SheetPortal SheetTitle SheetTrigger, }
+  SheetContent SheetDescription SheetFooter SheetHeader SheetOverlay SheetPortal SheetTitle SheetTrigger}

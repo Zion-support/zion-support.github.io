@@ -1,6 +1,6 @@
 interface Service {
 id: string,
-name: string, }
+name: string}
 
 import React from "react";
 export const FeatureCTAs: any = () => {
@@ -30,7 +30,7 @@ return (
 </div>
 </div>
 </div>
-),, }<//div><///div>
+)}<//div><///div>
 interface FeatureCTAsProps {
   className?: string;
   style?: React.CSSProperties,

@@ -15,22 +15,25 @@ export default function Header() {
           </Link>
           <nav className="flex items-center gap-6 text-sm font-medium">
             <Link
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
               href="/about"
             >
-              About
+              <span className="transition-colors hover:text-foreground/80 text-foreground/60">
+                About
+              </span>
             </Link>
             <Link
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
               href="/services"
             >
-              Services
+              <span className="transition-colors hover:text-foreground/80 text-foreground/60">
+                Services
+              </span>
             </Link>
             <Link
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
               href="/contact"
             >
-              Contact
+              <span className="transition-colors hover:text-foreground/80 text-foreground/60">
+                Contact
+              </span>
             </Link>
           </nav>
         </div>

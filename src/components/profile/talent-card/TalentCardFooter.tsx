@@ -1,12 +1,12 @@
 import React, { useState } from "react",
-import { Star,,  } from 'lucide-react'
-import { Button,,  } from "@/components/ui/button",
-import { ExternalLink,,  } from 'lucide-react'
-import { TalentProfile,,  } from "@/types/talent",
-import { HireRequestModal,,  } from "@/components/profile/hire-request",
+import { Star } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { ExternalLink } from 'lucide-react'
+import { TalentProfile } from "@/types/talent",
+import { HireRequestModal } from "@/components/profile/hire-request",
 import React from "react",
 import React from "react",
-import import { useRouter,,  } from 'next/router',
+import import { useRouter } from 'next/router',
 interface TalentCardFooterProps {
 }
 export function TalentCardFooter({ profile onViewProfile onRequestHire }: TalentCardFooterProps) {

@@ -1,11 +1,11 @@
 
-import { useState,,  } from "react",
-import { useJobApplications,,  } from "@/hooks/useJobApplications",
-import { Card,,, CardContent,,, CardHeader,,, CardTitle,,  } from "@/components/ui/card",
-import { Badge,,  } from "@/components/ui/badge",
-import { Button,,  } from "@/components/ui/button",
-import { Loader2,,, MessageSquare,,, ExternalLink,,  } from 'lucide-react'
-import { formatDistanceToNow,,  } from "date-fns",
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",
 import React from "react",
 import React from "react",
 export function MyApplications() {
@@ -49,7 +49,7 @@ if (isLoading) {
               {getStatusBadge(application.status)}
             </div>
             <p className="text-sm text-muted-foreground">
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+              Applied {formatDistanceToNow(new Date(application.created_at){ addSuffix: true })}
             </p>
           </CardHeader>
           <CardContent>

@@ -187,11 +187,12 @@ const LoginForm: React.FC = () => {
             {/* Space for future forgot password link */}
           </div>
           <div className="text-sm">
-            <Link
-              href="/forgot-password"
-              className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+            <Link href="/forgot-password"
+              
             >
-              Forgot password?
+              <span className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+                Forgot password?
+              </span>
             </Link>
           </div>
         </div>
@@ -231,12 +232,13 @@ const LoginForm: React.FC = () => {
         </div>
 
         <p className="text-sm text-center mt-4">
-          <Link
-            href="/signup"
-            className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+          <Link href="/signup"
+            
           >
-            Create account
-          </Link>
+              <span className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+                Create account
+              </span>
+            </Link>
         </p>
       </form>
     </div>
