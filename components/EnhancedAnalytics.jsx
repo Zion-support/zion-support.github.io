@@ -1,11 +1,6 @@
 import React, { useEffect } from 'react';
 
-interface AnalyticsEvent {
-  event: string;
-  properties?: Record<string, any>;
-}
-
-const EnhancedAnalytics: React.FC = () => {
+const EnhancedAnalytics = () => {
   useEffect(() => {
     // Track page views
     const trackPageView = () => {
@@ -38,7 +33,7 @@ const EnhancedAnalytics: React.FC = () => {
     };
 
     // Track user interactions
-    const trackInteraction = (event: AnalyticsEvent) => {
+    const trackInteraction = (event) => {
       if (typeof window !== 'undefined') {
         // Google Analytics 4
         if (window.gtag) {
@@ -116,11 +111,6 @@ const EnhancedAnalytics: React.FC = () => {
   return null;
 };
 
-// Extend window interface for TypeScript
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
+// Global gtag function for analytics
 
 export default EnhancedAnalytics;

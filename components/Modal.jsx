@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
+
 export default function Modal({
   isOpen,
   onClose,
@@ -10,7 +11,7 @@ export default function Modal({
   closeOnOverlayClick = true,
   closeOnEscape = true
 }) {
-  const modalRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef(null);
 
   const sizeClasses = {
     sm: 'max-w-md',
