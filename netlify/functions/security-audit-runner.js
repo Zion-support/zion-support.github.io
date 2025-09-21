@@ -36,9 +36,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ security-audit-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ security-audit-runner failed:', error),
     return {
       statusCode: 500,
@@ -48,6 +46,5 @@ exports.handler = async function(event, context) {
         function: 'security-audit-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

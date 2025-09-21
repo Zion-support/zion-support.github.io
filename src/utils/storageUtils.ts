@@ -9,14 +9,13 @@ export interface StorageOptions {
 export class StorageUtils {
   private static getStorage(type: StorageType): Storage {
     if (typeof window === "undefined") {
-      throw new Error("Storage is not available in server environment");
-    }
+      throw new Error("Storage is not available in server environment")}
     return type === "localStorage" ? localStorage : sessionStorage;
   }
 
   public static setItem(
-    key: string;
-    value: any;
+    key: string,
+    value: any,
     options: StorageOptions = {}
   ): void {
     const { type = "localStorage", prefix = "", expiration } = options;
@@ -25,15 +24,14 @@ export class StorageUtils {
     
     const data = {
       value,
-      timestamp: Date.now();
+      timestamp: Date.now(),
       expiration: expiration ? Date.now() + expiration : null
-    };
-    
+    },
     storage.setItem(fullKey, JSON.stringify(data));
   }
 
   public static getItem<T = any>(
-    key: string;
+    key: string,
     options: StorageOptions = {}
   ): T | null {
     const { type = "localStorage", prefix = "" } = options;
@@ -43,7 +41,6 @@ export class StorageUtils {
     try {
       const item = storage.getItem(fullKey);
       if (!item) return null;
-      
       const data = JSON.parse(item);
       
       // Check if item has expired
@@ -66,7 +63,7 @@ export class StorageUtils {
   }
 
   public static clear(type: StorageType = "localStorage"): void {
-    const storage = this.getStorage(type);
+    const storage = this.getStorage(type),
     storage.clear();
   }
 
@@ -80,8 +77,7 @@ export class StorageUtils {
   public static getKeys(options: StorageOptions = {}): string[] {
     const { type = "localStorage", prefix = "" } = options;
     const storage = this.getStorage(type);
-    const keys: string[] = [];
-    
+    const keys: string[] = [],
     for (let i = 0; i < storage.length; i++) {
       const key = storage.key(i);
       if (key && key.startsWith(prefix)) {
@@ -139,7 +135,7 @@ export class StorageUtils {
   }
 
   public static removeMultipleItems(
-    keys: string[];
+    keys: string[],
     options: StorageOptions = {}
   ): void {
     for (const key of keys) {
@@ -148,9 +144,8 @@ export class StorageUtils {
   }
 
   public static cleanExpiredItems(type: StorageType = "localStorage"): void {
-    const storage = this.getStorage(type);
-    const keysToRemove: string[] = [];
-    
+    const storage = this.getStorage(type),
+    const keysToRemove: string[] = [],
     for (let i = 0; i < storage.length; i++) {
       const key = storage.key(i);
       if (key) {
@@ -175,11 +170,10 @@ export class StorageUtils {
   }
 
   public static getStorageInfo(type: StorageType = "localStorage"): {
-    used: number;
-    available: number;
-    total: number;
-    percentage: number;
-  } {
+    used: number,
+    available: number,
+    total: number,
+    percentage: number} {
     const storage = this.getStorage(type);
     const used = this.getSize({ type });
     
@@ -204,7 +198,7 @@ export class StorageUtils {
 
   public static isStorageAvailable(type: StorageType = "localStorage"): boolean {
     try {
-      const storage = this.getStorage(type);
+      const storage = this.getStorage(type),
       const testKey = "__storage_test__";
       storage.setItem(testKey, "test");
       storage.removeItem(testKey);
@@ -215,28 +209,25 @@ export class StorageUtils {
   }
 
   public static getStorageQuota(type: StorageType = "localStorage"): Promise<{
-    quota: number;
-    usage: number;
-    available: number;
-  }> {
+    quota: number,
+    usage: number,
+    available: number}> {
     return new Promise((resolve) => {
       if ("storage" in navigator && "estimate" in navigator.storage) {
         navigator.storage.estimate().then((estimate) => {
           resolve({
-            quota: estimate.quota || 0;
-            usage: estimate.usage || 0;
+            quota: estimate.quota || 0,
+            usage: estimate.usage || 0,
             available: (estimate.quota || 0) - (estimate.usage || 0)
-          });
-        });
+          })});
       } else {
         // Fallback for browsers that don't support storage quota API
         const info = this.getStorageInfo(type);
         resolve({
-          quota: info.total;
-          usage: info.used;
+          quota: info.total,
+          usage: info.used,
           available: info.available
-        });
-      }
+        })}
     });
   }
 
@@ -262,18 +253,17 @@ export class StorageUtils {
   }
 
   public static exportStorage(type: StorageType = "localStorage"): string {
-    const items = this.getAllItems({ type });
+    const items = this.getAllItems({ type }),
     return JSON.stringify(items, null, 2);
   }
 
   public static importStorage(
-    data: string;
-    type: StorageType = "localStorage";
+    data: string,
+    type: StorageType = "localStorage",
     merge: boolean = false
   ): void {
     try {
-      const items = JSON.parse(data);
-      
+      const items = JSON.parse(data),
       if (!merge) {
         this.clear(type);
       }
@@ -285,22 +275,20 @@ export class StorageUtils {
   }
 
   public static backupStorage(type: StorageType = "localStorage"): {
-    data: string;
-    timestamp: number;
-    type: StorageType;
-  } {
+    data: string,
+    timestamp: number,
+    type: StorageType} {
     return {
-      data: this.exportStorage(type);
-      timestamp: Date.now();
+      data: this.exportStorage(type),
+      timestamp: Date.now(),
       type
     };
   }
 
   public static restoreStorage(backup: {
-    data: string;
-    timestamp: number;
-    type: StorageType;
-  }): void {
+    data: string,
+    timestamp: number,
+    type: StorageType}): void {
     this.importStorage(backup.data, backup.type, false);
   }
 }

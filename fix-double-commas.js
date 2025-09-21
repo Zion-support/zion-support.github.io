@@ -63,7 +63,6 @@ console.log(`Found ${files.length} files to check for double commas...`);
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
-    console.log(`Fixed double commas in: ${file}`);
-  }
+    console.log(`Fixed double commas in: ${file}`)}
 }
 console.log(`\nFixed double commas in ${fixedCount} files.`);

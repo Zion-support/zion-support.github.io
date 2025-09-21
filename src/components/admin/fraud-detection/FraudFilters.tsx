@@ -5,21 +5,19 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, Filter } from 'lucide-react';
 
 interface FraudFiltersProps {
-  onFilterChange: (filters: any) => void;
-  resetFilters: () => void;
-}
+  onFilterChange: (filters: any) => void,
+  resetFilters: () => void}
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  onFilterChange;
+  onFilterChange,
   resetFilters
 }) => {
   const [filters, setFilters] = useState({
-    search: '';
-    riskLevel: '';
-    status: '';
+    search: '',
+    riskLevel: '',
+    status: '',
     dateRange: ''
-  });
-
+  }),
   const handleFilterChange = (key: string, value: string) => {
     const newFilters = { ...filters, [key]: value };
     setFilters(newFilters);
@@ -28,11 +26,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
   const handleReset = () => {
     setFilters({
-      search: '';
-      riskLevel: '';
-      status: '';
+      search: '',
+      riskLevel: '',
+      status: '',
       dateRange: ''
-    });
+    }),
     resetFilters();
   };
 

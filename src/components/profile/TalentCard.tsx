@@ -1,8 +1,7 @@
-import { Button,,  } from '@/components/ui/button'
-import { Card,,  } from '@/components/ui/card'
-import { Star,,, MapPin,,, Clock,,, ArrowRight,,, CheckCircle2,,  } from 'lucide-react'
-isAuthenticated: boolean;
-}
+import { Button,} from '@/components/ui/button'
+import { Card,} from '@/components/ui/card'
+import { Star,,, MapPin,,, Clock,,, ArrowRight,,, CheckCircle2,} from 'lucide-react'
+isAuthenticated: boolean}
 export function TalentCard({
               {talent.profile_picture_url && !avatarError ? (
                 <Image
@@ -14,7 +13,7 @@ src={talent.profile_picture_url}
                 />
               ) : (
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container,
 onError={() => setAvatarError(true)}
                   priority={false}                />
               ) : (
@@ -22,7 +21,7 @@ onError={() => setAvatarError(true)}
                   alt={talent.full_name |'Talent Avatar'}
                   fill={true}
                   style={{ objectFit: 'cover' }}
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container,
 onError={() => setAvatarError(true)}
                   priority={false}
                 />
@@ -50,7 +49,7 @@ variant='ghost'
                 onClick={handleToggleSave}                variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
-                onClick = {handleToggleSave,}
+                onClick = {handleToggleSave}
               >
                 <Star
 className={`h-5 w-5 ${isSaved ? 'fill-yellow-400 text-yellow-400' : ''}`}
@@ -92,9 +91,9 @@ className={`h-5 w-5 ${isSaved ? 'fill-yellow-400 text-yellow-400' : ''}`}
 key={index}
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >          <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill index,) => (
+              {skills.map((skill index) => (
                 <span
-key = {index,}
+key = {index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                   {skill}
                 </span>

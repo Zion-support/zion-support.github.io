@@ -6,7 +6,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Revolutionary platform that orchestrates quantum computing resources with AI to solve complex optimization problems, drug discovery, and financial modeling.",
         category: "
         subcategory: "
-        price: 4999;
+        price: 4999,
         currency: "
         pricingModel: "
         features: [
@@ -51,8 +51,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -61,7 +60,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Next-generation autonomous fleet management platform that uses AI to coordinate self-driving vehicles, optimize routes, and ensure safety compliance.",
         category: "
         subcategory: "
-        price: 2999;
+        price: 2999,
         currency: "
         pricingModel: "
         features: [
@@ -106,8 +105,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -116,7 +114,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Enterprise-grade blockchain orchestration platform that manages multiple blockchain networks, smart contracts, and DeFi protocols for business applications.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -161,8 +159,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -171,7 +168,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analysis, and automated response for enterprise security.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -216,8 +213,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -226,7 +222,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Revolutionary AI platform that accelerates medical research, drug discovery, and clinical trials through advanced machine learning and data analysis.",
         category: "
         subcategory: "
-        price: 3999;
+        price: 3999,
         currency: "
         pricingModel: "
         features: [
@@ -271,8 +267,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -281,7 +276,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Advanced AI-powered financial trading platform that provides algorithmic trading, risk management, and market analysis for institutional investors.",
         category: "
         subcategory: "
-        price: 4999;
+        price: 4999,
         currency: "
         pricingModel: "
         features: [
@@ -326,8 +321,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -336,7 +330,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Comprehensive AI platform for Industry 4.0 that optimizes manufacturing processes, predictive maintenance, and quality control through intelligent automation.",
         category: "
         subcategory: "
-        price: 3499;
+        price: 3499,
         currency: "
         pricingModel: "
         features: [
@@ -381,8 +375,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -391,7 +384,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Intelligent platform that optimizes energy consumption, manages renewable energy systems, and provides sustainability analytics for organizations.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -436,8 +429,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -446,7 +438,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Comprehensive AI platform for smart cities that manages transportation, utilities, public safety, and urban planning through intelligent automation.",
         category: "
         subcategory: "
-        price: 4999;
+        price: 4999,
         currency: "
         pricingModel: "
         features: [
@@ -491,8 +483,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -501,7 +492,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Advanced AI platform that provides comprehensive learning analytics, student performance tracking, and personalized education recommendations.",
         category: "
         subcategory: "
-        price: 1499;
+        price: 1499,
         currency: "
         pricingModel: "
         features: [
@@ -546,8 +537,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -556,7 +546,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Cutting-edge AI platform that revolutionizes retail through personalized shopping experiences, inventory optimization, and predictive analytics.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -601,8 +591,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -611,7 +600,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Advanced AI platform that automates legal document generation, compliance monitoring, and regulatory reporting for enterprises.",
         category: "
         subcategory: "
-        price: 3999;
+        price: 3999,
         currency: "
         pricingModel: "
         features: [
@@ -656,8 +645,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -666,7 +654,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Revolutionary AI platform that optimizes agricultural operations through precision farming, crop monitoring, and sustainable agriculture practices.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -711,8 +699,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -721,7 +708,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Advanced AI platform that optimizes construction projects through intelligent planning, resource management, and performance analytics.",
         category: "
         subcategory: "
-        price: 2999;
+        price: 2999,
         currency: "
         pricingModel: "
         features: [
@@ -766,8 +753,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -776,7 +762,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         description: "Intelligent platform that optimizes hospitality operations through guest experience enhancement, operational efficiency, and revenue optimization.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -821,8 +807,7 @@ export const INNOVATIVE_NEW_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];
     export const getServicesByCategory = (category) => {

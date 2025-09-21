@@ -33,9 +33,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ seo-audit-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ seo-audit-runner failed:', error),
     return {
       statusCode: 500,
@@ -45,6 +43,5 @@ exports.handler = async function(event, context) {
         function: 'seo-audit-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

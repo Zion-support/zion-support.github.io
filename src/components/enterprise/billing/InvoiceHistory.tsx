@@ -13,26 +13,24 @@ export function InvoiceHistory() {
   // Mock invoice data
   const invoices = [
     {
-      id: "INV-001";
-      date: "2024-01-15";
-      amount: 299.00;
-      status: "paid";
+      id: "INV-001",
+      date: "2024-01-15",
+      amount: 299.00,
+      status: "paid",
       description: "Pro Plan - Monthly"
-    };
+    },
     {
-      id: "INV-002";
-      date: "2024-02-15";
-      amount: 299.00;
-      status: "paid";
+      id: "INV-002",
+      date: "2024-02-15",
+      amount: 299.00,
+      status: "paid",
       description: "Pro Plan - Monthly"
     }
-  ];
-
+  ],
   const handleDownload = (invoiceId: string) => {
     toast({
-      title: "Download Started";
-      description: `Downloading invoice ${invoiceId}`;
-    });
+      title: "Download Started",
+      description: `Downloading invoice ${invoiceId}`});
   };
 
   return (

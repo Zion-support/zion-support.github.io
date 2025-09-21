@@ -1,14 +1,13 @@
 interface PerformanceMetric {
-  name: string;
-  startTime: number;
+  name: string,
+  startTime: number,
   endTime?: number;
   duration?: number;
 }
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
-  private observers: PerformanceObserver[] = [];
-
+  private observers: PerformanceObserver[] = [],
   constructor() {
     this.initializeObservers();
   }
@@ -23,7 +22,7 @@ class PerformanceMonitor {
           const lastEntry = entries[entries.length - 1];
           this.logMetric("LCP", lastEntry.startTime);
         });
-        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] }),
         this.observers.push(lcpObserver);
       } catch (error) {
         console.warn("LCP observer failed:", error);
@@ -37,7 +36,7 @@ class PerformanceMonitor {
             this.logMetric("FID", (entry as any).processingStart - entry.startTime);
           });
         });
-        fidObserver.observe({ entryTypes: ["first-input"] });
+        fidObserver.observe({ entryTypes: ["first-input"] }),
         this.observers.push(fidObserver);
       } catch (error) {
         console.warn("FID observer failed:", error);
@@ -56,7 +55,7 @@ class PerformanceMonitor {
             this.logMetric("CLS", clsValue);
           }
         });
-        clsObserver.observe({ entryTypes: ["layout-shift"] });
+        clsObserver.observe({ entryTypes: ["layout-shift"] }),
         this.observers.push(clsObserver);
       } catch (error) {
         console.warn("CLS observer failed:", error);
@@ -68,13 +67,12 @@ class PerformanceMonitor {
     this.metrics.set(name, {
       name,
       startTime: performance.now()
-    });
-  }
+    })}
 
   endTiming(name: string): number {
-    const metric = this.metrics.get(name);
+    const metric = this.metrics.get(name),
     if (!metric) {
-      console.warn(`No timing started for: ${name}`);
+      console.warn(`No timing started for: ${name}`),
       return 0;
     }
 
@@ -91,11 +89,11 @@ class PerformanceMonitor {
   }
 
   measureFunction<T extends (...args: any[]) => any>(
-    name: string;
-    func: T;
+    name: string,
+    func: T,
     ...args: Parameters<T>
   ): ReturnType<T> {
-    this.startTiming(name);
+    this.startTiming(name),
     try {
       const result = func(...args);
       this.endTiming(name);
@@ -109,11 +107,10 @@ class PerformanceMonitor {
   private logMetric(name: string, value: number): void {
     if (typeof window !== "undefined" && "gtag" in window) {
       (window as any).gtag("event", "performance_metric", {
-        metric_name: name;
-        metric_value: value;
+        metric_name: name,
+        metric_value: value,
         event_category: "Performance"
-      });
-    }
+      })}
     
     console.log(`Performance Metric - ${name}: ${value.toFixed(2)}ms`);
   }
@@ -151,15 +148,14 @@ interface PerformanceMetrics {
 }
 
 class PerformanceAnalyzer {
-  private metrics: PerformanceMetrics = {};
+  private metrics: PerformanceMetrics = {},
   private thresholds: PerformanceThresholds = {
     LCP: 2500, // Good: < 2.5s, Needs Improvement: 2.5-4s, Poor: > 4s
     FID: 100,  // Good: < 100ms, Needs Improvement: 100-300ms, Poor: > 300ms
     CLS: 0.1,  // Good: < 0.1, Needs Improvement: 0.1-0.25, Poor: > 0.25
     FCP: 1800, // Good: < 1.8s, Needs Improvement: 1.8-3s, Poor: > 3s
     TTFB: 800  // Good: < 800ms, Needs Improvement: 800-1800ms, Poor: > 1800ms
-  };
-
+  },
   constructor() {
     this.initializeMetrics();
   }
@@ -180,13 +176,12 @@ class PerformanceAnalyzer {
     }
 
     return {
-      LCP: this.getLCP();
-      FID: this.getFID();
-      CLS: this.getCLS();
-      FCP: this.getFCP();
+      LCP: this.getLCP(),
+      FID: this.getFID(),
+      CLS: this.getCLS(),
+      FCP: this.getFCP(),
       TTFB: this.getTTFB()
-    };
-  }
+    }}
 
   public checkThresholds(): { [K in keyof PerformanceThresholds]: boolean } {
     const metrics = this.getMetrics();
@@ -195,13 +190,12 @@ class PerformanceAnalyzer {
     }
 
     return {
-      LCP: (metrics.LCP ?? Infinity) <= this.thresholds.LCP;
-      FID: (metrics.FID ?? Infinity) <= this.thresholds.FID;
-      CLS: (metrics.CLS ?? Infinity) <= this.thresholds.CLS;
-      FCP: (metrics.FCP ?? Infinity) <= this.thresholds.FCP;
+      LCP: (metrics.LCP ?? Infinity) <= this.thresholds.LCP,
+      FID: (metrics.FID ?? Infinity) <= this.thresholds.FID,
+      CLS: (metrics.CLS ?? Infinity) <= this.thresholds.CLS,
+      FCP: (metrics.FCP ?? Infinity) <= this.thresholds.FCP,
       TTFB: (metrics.TTFB ?? Infinity) <= this.thresholds.TTFB
-    };
-  }
+    }}
 
   public getPerformanceScore(): number {
     const thresholds = this.checkThresholds();

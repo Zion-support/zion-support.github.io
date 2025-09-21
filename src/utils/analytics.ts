@@ -1,14 +1,13 @@
 // Analytics utility for tracking user interactions and performance
 export interface AnalyticsEvent {
-  name: string;
+  name: string,
   properties?: Record<string, any>;
   timestamp?: number;
 }
 
 class Analytics {
-  private isEnabled: boolean = false;
-  private events: AnalyticsEvent[] = [];
-
+  private isEnabled: boolean = false,
+  private events: AnalyticsEvent[] = [],
   constructor() {
     // Only enable in production
     this.isEnabled = process.env.NODE_ENV === 'production';
@@ -19,11 +18,10 @@ class Analytics {
     this.track('page_view', {
       path,
       title,
-      referrer: document.referrer;
-      user_agent: navigator.userAgent;
+      referrer: document.referrer,
+      user_agent: navigator.userAgent,
       timestamp: Date.now()
-    });
-  }
+    })}
 
   // Track user interactions
   trackEvent(name: string, properties?: Record<string, any>) {
@@ -32,28 +30,26 @@ class Analytics {
 
   // Track performance metrics
   trackPerformance(metrics: {
-    loadTime?: number;
+    loadTime?: number,
     renderTime?: number;
     memoryUsage?: number;
     networkLatency?: number;
   }) {
     this.track('performance', {
       ...metrics,
-      url: window.location.href;
+      url: window.location.href,
       timestamp: Date.now()
-    });
-  }
+    })}
 
   // Track errors
   trackError(error: Error, context?: Record<string, any>) {
     this.track('error', {
-      message: error.message;
-      stack: error.stack;
-      url: window.location.href;
+      message: error.message,
+      stack: error.stack,
+      url: window.location.href,
       ...context;
       timestamp: Date.now()
-    });
-  }
+    })}
 
   // Internal tracking method
   private track(name: string, properties?: Record<string, any>) {
@@ -63,11 +59,10 @@ class Analytics {
     }
 
     const event: AnalyticsEvent = {
-      name;
+      name,
       properties;
       timestamp: Date.now()
-    };
-
+    },
     this.events.push(event);
 
     // Send to analytics service (example implementations)
@@ -83,7 +78,7 @@ class Analytics {
 
     // Example: Custom analytics endpoint
     if (navigator.sendBeacon) {
-      const data = JSON.stringify(event);
+      const data = JSON.stringify(event),
       navigator.sendBeacon('/api/analytics', data);
     }
   }
@@ -110,7 +105,7 @@ export const trackEvent = (name: string, properties?: Record<string, any>) =>
   analytics.trackEvent(name, properties);
 
 export const trackPerformance = (metrics: {
-  loadTime?: number;
+  loadTime?: number,
   renderTime?: number;
   memoryUsage?: number;
   networkLatency?: number;
@@ -145,5 +140,4 @@ export const usePageTracking = () => {
 };
 
 declare global {
-  function gtag(...args: any[]): void;
-}
+  function gtag(...args: any[]): void}

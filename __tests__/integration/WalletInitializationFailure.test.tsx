@@ -15,34 +15,30 @@ beforeAll(() => {
   // @ts-ignore
   globalThis.importMeta = {
     env: {
-      VITE_REOWN_PROJECT_ID: 'YOUR_DEFAULT_PROJECT_ID_ENV_MISSING';
-      VITE_API_BASE_URL: 'http://localhost:3001/api';
-      VITE_APP_NAME: 'Zion Test App';
-      VITE_ENABLE_MAINTENANCE_MODE: 'false';
-      VITE_SENTRY_DSN: '';
-      VITE_ENVIRONMENT: 'test';
+      VITE_REOWN_PROJECT_ID: 'YOUR_DEFAULT_PROJECT_ID_ENV_MISSING',
+      VITE_API_BASE_URL: 'http://localhost:3001/api',
+      VITE_APP_NAME: 'Zion Test App',
+      VITE_ENABLE_MAINTENANCE_MODE: 'false',
+      VITE_SENTRY_DSN: '',
+      VITE_ENVIRONMENT: 'test',
       VITE_FLAG_SHOW_NEW_FEATURE: 'false'
     }
-  };
-});
+  }});
 afterAll(() => {
   // Restore original import.meta to avoid affecting other tests
   // @ts-ignore
-  globalThis.importMeta = originalImportMeta,
-}),
+  globalThis.importMeta = originalImportMeta}),
 
 describe('App Integration - Wallet Initialization Failure', () => {
   let consoleErrorSpy: SpyInstance<[message?: any, ...optionalParams: any[]], void>,
 
   beforeEach(() => {
     // Spy on console.error and mock its implementation to suppress output during tests
-    consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {}),
-  }),
+    consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})}),
 
   afterEach(() => {
     // Restore the original console.error implementation
-    consoleErrorSpy.mockRestore(),
-  }),
+    consoleErrorSpy.mockRestore()}),
 
   test('should log critical error and still render basic app layout when VITE_REOWN_PROJECT_ID is invalid', async () => {
     render(
@@ -54,11 +50,10 @@ describe('App Integration - Wallet Initialization Failure', () => {
       expect(consoleErrorSpy).toHaveBeenCalledWith(
         expect.stringContaining('WalletContext: CRITICAL - Wallet system disabled. Invalid, missing, or placeholder VITE_REOWN_PROJECT_ID. Detected ID: "YOUR_DEFAULT_PROJECT_ID_ENV_MISSING"')
       )
-    });
+    }),
     const headerElement = await screen.findByRole('banner');
     expect(headerElement).toBeInTheDocument(),
 
-    const connectWalletButton = screen.queryByRole('button', { name: /connect wallet/i });
+    const connectWalletButton = screen.queryByRole('button', { name: /connect wallet/i }),
     expect(connectWalletButton).not.toBeInTheDocument();
-  }),
-}),
+  })}),

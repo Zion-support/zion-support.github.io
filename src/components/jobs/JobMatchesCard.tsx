@@ -1,20 +1,19 @@
-import { useState,,  } from 'react'
+import { useState,} from 'react'
 import { Card,
 CardContent
 ,, ,, CardHeader,
 CardTitle
 ,, ,, CardDescription,
-CardFooter,
- } from '@/components/ui/card'
-import { Badge,,  } from '@/components/ui/badge'
-import { Button,,  } from '@/components/ui/button'
-import { DollarSign,,, Calendar,,, CheckCircle,,, XCircle,,  } from 'lucide-react'
+CardFooter} from '@/components/ui/card'
+import { Badge,} from '@/components/ui/badge'
+import { Button,} from '@/components/ui/button'
+import { DollarSign,,, Calendar,,, CheckCircle,,, XCircle,} from 'lucide-react'
 import React from "react";
 import React from "react";
 interface JobMatchCardProps {
   match: JobMatch;;
 onApply: (matchId: string jobId: string) => void;;
-onDecline: (matchId: string) => void;
+onDecline: (matchId: string) => void,
   showApplied?: boolean;
 return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>

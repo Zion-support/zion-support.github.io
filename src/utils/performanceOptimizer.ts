@@ -6,21 +6,19 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-}
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  bundleSize: number}
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
-    loadTime: 0;
-    renderTime: 0;
-    memoryUsage: 0;
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
     bundleSize: 0
-  };
-  private observers: PerformanceObserver[] = [];
-
+  },
+  private observers: PerformanceObserver[] = [],
   constructor() {
     this.initializeObservers();
   }
@@ -38,7 +36,7 @@ class PerformanceOptimizer {
             }
           });
         });
-        navObserver.observe({ entryTypes: ["navigation"] });
+        navObserver.observe({ entryTypes: ["navigation"] }),
         this.observers.push(navObserver);
       } catch (error) {
         console.warn("Navigation observer failed:", error);
@@ -70,7 +68,7 @@ class PerformanceOptimizer {
 
   public preloadResources(urls: string[]): void {
     urls.forEach(url => {
-      const link = document.createElement("link");
+      const link = document.createElement("link"),
       link.rel = "preload";
       link.href = url;
       link.as = this.getResourceType(url);
@@ -79,7 +77,7 @@ class PerformanceOptimizer {
   }
 
   private getResourceType(url: string): string {
-    const extension = url.split('.').pop()?.toLowerCase();
+    const extension = url.split('.').pop()?.toLowerCase(),
     switch (extension) {
       case 'css':
         return 'style';
@@ -97,9 +95,7 @@ class PerformanceOptimizer {
       case 'webp':
       case 'svg':
         return 'image';
-      default:
-        return 'fetch';
-    }
+      default: return 'fetch'}
   }
 
   private updateMemoryUsage(): void {
@@ -121,11 +117,11 @@ const performanceOptimizer = new PerformanceOptimizer();
 // React hook for performance monitoring
 export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0;
-    renderTime: 0;
-    memoryUsage: 0;
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
     bundleSize: 0
-  });
+  }),
   const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
@@ -161,8 +157,7 @@ export const usePerformanceMonitor = () => {
 };
 
 const calculatePerformanceScore = (metrics: PerformanceMetrics): number => {
-  let score = 100;
-  
+  let score = 100,
   // Deduct points for poor performance
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.renderTime > 100) score -= 15;

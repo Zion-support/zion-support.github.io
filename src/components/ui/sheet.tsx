@@ -1,8 +1,8 @@
 import import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
-import import { cva,,, type,,, VariantProps,,  } from &quot;class-variance-authority&quot;
-import { X,,  } from 'lucide-react'
+import import { cva,,, type,,, VariantProps,} from &quot;class-variance-authority&quot;
+import { X,} from 'lucide-react'
 import import * as React from &quot;react&quot;
-import import { cn,,  } from &quot;@/lib/utils&quot;
+import import { cn,} from &quot;@/lib/utils&quot;
 const Sheet = SheetPrimitive.Root,
 const SheetTrigger = SheetPrimitive.Trigger,
 const SheetClose = SheetPrimitive.Close,
@@ -24,7 +24,7 @@ SheetOverlay.displayName = SheetPrimitive.Overlay.displayName,
 const sheetVariants = cva(
   &quot;fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500&quot;
   {
-    variants: {;
+    variants: {,
 side: {
         top: &quot;inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top&quot;;
 bottom:
@@ -64,7 +64,7 @@ const SheetHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
 className={cn(
-      &quot;flex flex-col space-y-2 text-center sm:text-left&quot;
+      &quot;flex flex-col space-y-2 text-center sm: text-left&quot,
       className
     )}
     {...props}
@@ -77,7 +77,7 @@ const SheetFooter = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
 className={cn(
-      &quot;flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2&quot;
+      &quot;flex flex-col-reverse sm: flex-row sm:justify-end sm:space-x-2&quot,
       className
     )}
     {...props}

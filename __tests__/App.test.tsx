@@ -5,8 +5,7 @@ import App from '../components/App';
 describe('App', () => {,
   test('renders without crashing', () => {,
     render(<App />);
-    expect(screen.getByTestId('app')).toBeInTheDocument(),
-  }),
+    expect(screen.getByTestId('app')).toBeInTheDocument()}),
   test('displays correct content', () => {,
     render(<App />);
   }),
@@ -15,5 +14,4 @@ describe('App', () => {,
   }),
   test('applies correct styling', () => {,
     render(<App />);
-  }),
-}),
+  })}),

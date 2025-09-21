@@ -1,8 +1,7 @@
 import import React from 'react';
 import import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
-  author: BlogAuthor;
-}
+  author: BlogAuthor}
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null;
   return (
@@ -24,6 +23,5 @@ export function AuthorBio({ author }: AuthorBioProps) {
   author.title;
 }</p>
 }<p> {
-  author.bio,
-}</p>
+  author.bio}</p>
 }'"}

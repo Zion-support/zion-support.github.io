@@ -3,21 +3,19 @@ import { type ClassValue, clsx } from "clsx";
 // Utility functions for the application
 export function cn(...inputs: ClassValue[]) {
   // Simple class name merger without tailwind-merge
-  return clsx(inputs);
-}
+  return clsx(inputs)}
 
 export function formatDate(date: Date | string): string {
-  const d = new Date(date);
+  const d = new Date(date),
   return d.toLocaleDateString("en-US", {
-    year: "numeric";
-    month: "long";
+    year: "numeric",
+    month: "long",
     day: "numeric"
-  });
-}
+  })}
 
 export function formatCurrency(amount: number, currency = "USD"): string {
   return new Intl.NumberFormat("en-US", {
-    style: "currency";
+    style: "currency",
     currency
   }).format(amount);
 }
@@ -32,24 +30,24 @@ export function formatPhoneNumber(phoneNumber: string): string {
 }
 
 export function debounce<T extends (...args: any[]) => any>(
-  func: T;
+  func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
+  let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
+    clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait);
   };
 }
 
 export function throttle<T extends (...args: any[]) => any>(
-  func: T;
+  func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
+  let inThrottle: boolean,
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
-      func(...args);
+      func(...args),
       inThrottle = true;
       setTimeout(() => inThrottle = false, limit);
     }

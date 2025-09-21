@@ -13,28 +13,26 @@ export function useContractTemplates() {
         // In a real app, this would fetch from an API
         const mockTemplates: ContractTemplate[] = [
           {
-            id: '1';
-            name: 'Web Development Contract';
-            description: 'Standard contract for web development projects';
-            category: 'Development';
-            content: 'Web development contract template...';
-            isDefault: true;
-            isStarred: false;
-            createdAt: '2024-01-01T00:00:00Z';
-            updatedAt: '2024-01-01T00:00:00Z';
-          };
+            id: '1',
+            name: 'Web Development Contract',
+            description: 'Standard contract for web development projects',
+            category: 'Development',
+            content: 'Web development contract template...',
+            isDefault: true,
+            isStarred: false,
+            createdAt: '2024-01-01T00:00:00Z',
+            updatedAt: '2024-01-01T00:00:00Z'};
           {
-            id: '2';
-            name: 'Design Contract';
-            description: 'Contract for design services';
-            category: 'Design';
-            content: 'Design contract template...';
-            isDefault: true;
-            isStarred: true;
-            createdAt: '2024-01-01T00:00:00Z';
-            updatedAt: '2024-01-01T00:00:00Z';
-          };
-        ];
+            id: '2',
+            name: 'Design Contract',
+            description: 'Contract for design services',
+            category: 'Design',
+            content: 'Design contract template...',
+            isDefault: true,
+            isStarred: true,
+            createdAt: '2024-01-01T00:00:00Z',
+            updatedAt: '2024-01-01T00:00:00Z'}
+  ];
         
         setTemplates(mockTemplates);
       } catch (err) {
@@ -49,11 +47,10 @@ export function useContractTemplates() {
 
   const createTemplate = async (template: Omit<ContractTemplate, 'id' | 'createdAt' | 'updatedAt'>) => {
     const newTemplate: ContractTemplate = {
-      ...template;
-      id: Date.now().toString();
-      createdAt: new Date().toISOString();
-      updatedAt: new Date().toISOString();
-    };
+      ...template,
+      id: Date.now().toString(),
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()};
     
     setTemplates(prev => [...prev, newTemplate]);
     return newTemplate;
@@ -66,12 +63,10 @@ export function useContractTemplates() {
           ? { ...template, ...updates, updatedAt: new Date().toISOString() }
           : template
       )
-    );
-  };
+    )};
 
   const deleteTemplate = async (id: string) => {
-    setTemplates(prev => prev.filter(template => template.id !== id));
-  };
+    setTemplates(prev => prev.filter(template => template.id !== id))};
 
   const toggleStar = async (id: string) => {
     setTemplates(prev => 
@@ -80,8 +75,7 @@ export function useContractTemplates() {
           ? { ...template, isStarred: !template.isStarred, updatedAt: new Date().toISOString() }
           : template
       )
-    );
-  };
+    )};
 
   return {
     templates;
@@ -90,6 +84,5 @@ export function useContractTemplates() {
     createTemplate,
     updateTemplate,
     deleteTemplate,
-    toggleStar,
-  };
+    toggleStar};
 }

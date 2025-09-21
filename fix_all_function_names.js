@@ -9,14 +9,12 @@ function fixFunctionName(filePath) {
 
     // Find the current function name in the file
     const functionMatch = content.match(
-      /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,
-    );
+      /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/);
 function fileName = path.basename(filePath, path.extname(filePath));
     // Find the current function name in the file,
 const functionMatch = content.match(
       /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/);
     if (!functionMatch) return false;
-
     const currentFunctionName = functionMatch[1];
 
     // Convert filename to valid function name
@@ -29,30 +27,22 @@ const functionMatch = content.match(
           3: "Three",
           2: "Two",
           1: "One",
-          0: "Zero",
-        };
+          0: "Zero"};
         return numberWords[digit] || `_${digit}`;
       });
 
     // If the function name is already valid, skip
     if (currentFunctionName === functionName) return false;
-
     // Replace the function name throughout the file
     let fixedContent = content.replace(
       new RegExp(
-        `const\\s+${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,
-      ),
-      `const ${functionName}: NextPage = () => {`,
-    );
+        `const\\s+${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`),
+      `const ${functionName}: NextPage = () => {`);
 
-    // Also replace the export default
-    fixedContent = fixedContent.replace(
+    // Also replace the export default fixedContent = fixedContent.replace(
       new RegExp(
-        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
-      ),
-      `export default ${functionName}`,
-    );
-
+        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`),
+      `export default ${functionName}`);
     // Replace in title and description
     fixedContent = fixedContent.replace(
     // Convert filename to valid function numberWords = {
@@ -79,23 +69,18 @@ fixedContent = fixedContent.replace(
     // Replace in title and description,
 fixedContent = fixedContent.replace(
       new RegExp(
-        `<title>${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
-      ),
-      `<title>${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`,
-    );
+        `<title>${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`),
+      `<title>${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`);
 
     fixedContent = fixedContent.replace(
       new RegExp(
-        `content="${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
-      ),
-      `content="${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`,
-    );
+        `content="${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`),
+      `content="${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`);
 
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, "utf8");
       console.log(
-        `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,
-      );
+        `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`);
       return true;
     }
     return false;
@@ -107,8 +92,7 @@ fixedContent = fixedContent.replace(
 
 async function fixAllFiles() {
   const files = await glob("pages/**/*.{ts,tsx}", {
-    ignore: ["node_modules/**", ".next/**"],
-  });
+    ignore: ["node_modules/**", ".next/**"]});
 
   let fixedCount = 0;
   for (const file of files) {

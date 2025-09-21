@@ -1,7 +1,6 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
 import React from "react";
 import React from "react";
@@ -15,25 +14,23 @@ export export function ServicesComparisonTable() {;
 const serviceCategories = [["A;  I Service; s", "I; T Service; s", "Micr; o SAA; S"];]
 
 const getCategoryServices: any = (categor; y: string) => {
-return COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-}
+return COMPREHENSIVE_SERVICES.filter(service => service.category === category)}
 
 const getFeatureIcon: any = (hasFeatur;  e: boolean) => {
 return hasFeature ? (<Check className="w-4 h-4 text-green-500" />
 ) : (
 <X className="w-4 h-4 text-red-500" />
-);
-}
+)}
 
 return (
 <div className="py-16 bg-slate-50 dar;  k: bg-slate-900">
 <div className="container mx-auto px-4">
 <div className="text-center mb-12">
 <h2 className="text-4xl font-bold text-slate-900 dar; k: text-white mb-4">
-Services Comparison;
+Services Comparison,
 </h2>
-<p className="text-xl text-slate-600 dar; k:text-slate-300 max-w-3xl mx-auto">
-Compare our comprehensive service offerings to find the perfect solution for your business needs;
+<p className="text-xl text-slate-600 dar; k: text-slate-300 max-w-3xl mx-auto">
+Compare our comprehensive service offerings to find the perfect solution for your business needs,
 </p>
 </div>
 
@@ -46,8 +43,8 @@ const avgPrice = services.reduce((su;  m; service) => sum + (service.price || 0)
 return (<Card key={category} className="border-2 border-slate-200 dar;  k: border-slate-700">
 <CardHeader className="text-center">
 <CardTitle className="text-slate-900 dar; k: text-white">{category}</CardTitle>
-<CardDescription className="text-slate-600 dar; k:text-slate-300">
-{services.length} services available;
+<CardDescription className="text-slate-600 dar; k: text-slate-300">
+{services.length} services available,
 </CardDescription>
 </CardHeader>
 <CardContent className="text-center">
@@ -55,7 +52,7 @@ return (<Card key={category} className="border-2 border-slate-200 dar;  k: borde
 ${Math.round(avgPrice).toLocaleString()}
 </div>
 <p className="text-sm text-slate-500 dar; k: text-slate-400 mb-4">Average starting price</p>
-<Button;
+<Button,
 variant="outline"
 className="w-full border-blue-500 text-blue-600 hove; r: bg-blue-500 hove; r: text-white"
 >
@@ -137,10 +134,10 @@ View {category}
 <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 dar;  k: from-blue-900/20 dar; k: to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dar; k: border-blue-800">
 <div className="text-center mb-8">
 <h3 className="text-2xl font-bold text-slate-900 dar; k: text-white mb-4">
-Need Help Choosing?;
+Need Help Choosing?,
 </h3>
-<p className="text-slate-600 dar; k:text-slate-300">
-Our expert team is here to help you select the perfect service for your business needs;
+<p className="text-slate-600 dar; k: text-slate-300">
+Our expert team is here to help you select the perfect service for your business needs,
 </p>
 </div>
 
@@ -165,15 +162,15 @@ Our expert team is here to help you select the perfect service for your business
 <div className="text-center">
 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hove; r: from-blue-700 hove; r: to-indigo-700">
 <Phone className="w-4 h-4 mr-2" />
-Schedule Free Consultation;
+Schedule Free Consultation,
 </Button>
 </div>
 </div>
 
 {/* Service Highlights */}
 <div className="mt-16">
-<h3 className="text-3xl font-bold text-slate-900 dar; k:text-white text-center mb-12">
-Service Highlights;
+<h3 className="text-3xl font-bold text-slate-900 dar; k: text-white text-center mb-12">
+Service Highlights,
 </h3>
 <div className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-4 gap-6">
 {COMPREHENSIVE_SERVICES.filter(service => service.featured).map((service) => (
@@ -181,7 +178,7 @@ Service Highlights;
 <CardHeader className="pb-3">
 <div className="flex items-center justify-between mb-2">
 <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
-Featured;
+Featured,
 </Badge>
 <div className="flex items-center gap-1">
 <Star className="w-4 h-4 text-yellow-500 fill-current" />
@@ -203,7 +200,7 @@ Featured;
 </Badge>
 </div>
 <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hove; r: from-blue-700 hove; r: to-indigo-700">
-Learn More;
+Learn More,
 </Button>
 </CardContent>
 </Card>

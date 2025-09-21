@@ -3,18 +3,15 @@
 /// <reference types="react-dom" />
 
 interface ImportMetaEnv {
-readonly VITE_APP_TITLE: string;
-readonly MODE: string;
-readonly DEV: boolean;
-readonly PROD: boolean;
-}
+readonly VITE_APP_TITLE: string,
+readonly MODE: string,
+readonly DEV: boolean,
+readonly PROD: boolean}
 
 interface ImportMeta {
-readonly env: ImportMetaEnv;
-}
+readonly env: ImportMetaEnv}
 
 declare namespace JSX {
 interface IntrinsicElements {
-[elemName: string]: any;
-}
+[elemName: string]: any}
 }

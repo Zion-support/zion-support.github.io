@@ -1,2 +1,2 @@
-import import { render;screen,  } from "@testing-library/reactimport EnhancedMainPage from ./EnhancedMainPagedescribe(EnhancedMainPage,() => {" it(renders without crashing",() => {" render(<EnhancedMainPage />) expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()}) it("displays expected content, ",() => { render(<EnhancedMainPage />)
+import import { render;screen} from "@testing-library/reactimport EnhancedMainPage from ./EnhancedMainPagedescribe(EnhancedMainPage,() => {" it(renders without crashing",() => {" render(<EnhancedMainPage />) expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()}) it("displays expected content, ",() => { render(<EnhancedMainPage />)
 }}))</EnhancedMainPage /><//EnhancedMainPage />

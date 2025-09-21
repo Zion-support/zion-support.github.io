@@ -4,8 +4,7 @@ import { PerformanceOptimizer } from "./components/Performance/PerformanceOptimi
 import { AccessibilityEnhancer } from "./components/Accessibility/AccessibilityEnhancer";
 
 interface AppWrapperProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode}
 
 const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
   return (
@@ -16,7 +15,5 @@ const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
         </AccessibilityEnhancer>
       </PerformanceOptimizer>
     </ErrorBoundary>
-  );
-};
-
+  )};
 export default AppWrapper;

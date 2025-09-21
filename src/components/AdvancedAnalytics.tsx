@@ -2,37 +2,35 @@ import import React, { useState, useEffect } from 'react';
 import import { motion } from 'framer-motion';
 
 interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number }>;
-  trafficSources: Array<{ source: string; percentage: number }>;
-}
+  pageViews: number,
+  uniqueVisitors: number,
+  bounceRate: number,
+  avgSessionDuration: number,
+  conversionRate: number,
+  topPages: Array<{ page: string; views: number }>,
+  trafficSources: Array<{ source: string; percentage: number }>}
 
 export const AdvancedAnalytics: React.FC = () => {
   const [data, setData] = useState<AnalyticsData>({
-    pageViews: 45672;
-    uniqueVisitors: 12345;
-    bounceRate: 32.5;
-    avgSessionDuration: 245;
-    conversionRate: 4.2;
+    pageViews: 45672,
+    uniqueVisitors: 12345,
+    bounceRate: 32.5,
+    avgSessionDuration: 245,
+    conversionRate: 4.2,
     topPages: [
-      { page: '/dashboard', views: 1234 };
-      { page: '/services', views: 987 };
-      { page: '/contact', views: 654 };
+      { page: '/dashboard', views: 1234 },
+      { page: '/services', views: 987 },
+      { page: '/contact', views: 654 },
       { page: '/about', views: 432 }
-    ];
+    ],
     trafficSources: [
-      { source: 'Organic Search', percentage: 45 };
-      { source: 'Direct', percentage: 25 };
-      { source: 'Social Media', percentage: 15 };
-      { source: 'Referral', percentage: 10 };
+      { source: 'Organic Search', percentage: 45 },
+      { source: 'Direct', percentage: 25 },
+      { source: 'Social Media', percentage: 15 },
+      { source: 'Referral', percentage: 10 },
       { source: 'Email', percentage: 5 }
     ]
-  });
-
+  }),
   const [timeRange, setTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -43,11 +41,9 @@ export const AdvancedAnalytics: React.FC = () => {
   }, [timeRange]);
 
   const formatNumber = (num: number) => {
-    return new Intl.NumberFormat().format(num);
-  };
-
+    return new Intl.NumberFormat().format(num)};
   const formatDuration = (seconds: number) => {
-    const minutes = Math.floor(seconds / 60);
+    const minutes = Math.floor(seconds / 60),
     const remainingSeconds = seconds % 60;
     return `${minutes}m ${remainingSeconds}s`;
   };
@@ -84,10 +80,10 @@ export const AdvancedAnalytics: React.FC = () => {
         {/* Key Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
           {[
-            { label: 'Page Views', value: formatNumber(data.pageViews), icon: '👁️', color: 'blue' };
-            { label: 'Unique Visitors', value: formatNumber(data.uniqueVisitors), icon: '👥', color: 'green' };
-            { label: 'Bounce Rate', value: `${data.bounceRate}%`, icon: '📈', color: 'yellow' };
-            { label: 'Avg Session', value: formatDuration(data.avgSessionDuration), icon: '⏱️', color: 'purple' };
+            { label: 'Page Views', value: formatNumber(data.pageViews), icon: '👁️', color: 'blue' },
+            { label: 'Unique Visitors', value: formatNumber(data.uniqueVisitors), icon: '👥', color: 'green' },
+            { label: 'Bounce Rate', value: `${data.bounceRate}%`, icon: '📈', color: 'yellow' },
+            { label: 'Avg Session', value: formatDuration(data.avgSessionDuration), icon: '⏱️', color: 'purple' },
             { label: 'Conversion Rate', value: `${data.conversionRate}%`, icon: '🎯', color: 'red' }
           ].map((metric, index) => (
             <motion.div
@@ -181,7 +177,5 @@ export const AdvancedAnalytics: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );
-};
-
+  )};
 export default AdvancedAnalytics;

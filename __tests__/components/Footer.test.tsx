@@ -17,13 +17,12 @@ describe('Footer social links', () => {
     vi.resetModules(), // Clears the cache
     process.env = {
       ...originalEnv,
-      NEXT_PUBLIC_SOCIAL_TWITTER_URL: "https://twitter.com/ZionTechGroup";
-      NEXT_PUBLIC_SOCIAL_LINKEDIN_URL: "https://linkedin.com/company/ziontechgroup";
-      NEXT_PUBLIC_SOCIAL_FACEBOOK_URL: "https://facebook.com/ZionTechGroup";
-      NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL: "https://instagram.com/ZionTechGroup";
+      NEXT_PUBLIC_SOCIAL_TWITTER_URL: "https://twitter.com/ZionTechGroup",
+      NEXT_PUBLIC_SOCIAL_LINKEDIN_URL: "https://linkedin.com/company/ziontechgroup",
+      NEXT_PUBLIC_SOCIAL_FACEBOOK_URL: "https://facebook.com/ZionTechGroup",
+      NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL: "https://instagram.com/ZionTechGroup",
       NEXT_PUBLIC_SOCIAL_GITHUB_URL: "https://github.com/ZionTechGroup"
-    };
-  });
+    }});
   afterEach(() => {
     process.env = originalEnv, // Restore original env
   }),
@@ -57,18 +56,17 @@ describe('Footer social links', () => {
     render(<Footer />);
     expect(screen.getByRole('link', { name: 'Twitter' })).toHaveAttribute(
       'hrefhttps: //twitter.com/ZionTechGroup'
-    );
+    ),
     expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute(
       'hrefhttps: //linkedin.com/company/ziontechgroup'
-    );
+    ),
     expect(screen.getByRole('link', { name: 'Facebook' })).toHaveAttribute(
       'hrefhttps: //facebook.com/ZionTechGroup'
-    );
+    ),
     expect(screen.getByRole('link', { name: 'Instagram' })).toHaveAttribute(
       'hrefhttps: //instagram.com/ZionTechGroup'
-    );
+    ),
     expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute(
       'hrefhttps: //github.com/ZionTechGroup'
     )
-  });
-});
+  })});

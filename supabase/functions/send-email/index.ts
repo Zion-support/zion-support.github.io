@@ -1,6 +1,6 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm: resend@2.0.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Resend } from "npm: resend@2.0.0",
 import { initSentry, captureSupabaseError, logStructured } from "../_shared/sentry.ts";
 
 const corsHeaders = {
@@ -10,7 +10,7 @@ const corsHeaders = {
 
 const FUNCTION_NAME = "send-email",
 const resendApiKey = Deno.env.get("RESEND_API_KEY");
-let resend: Resend | null = null;
+let resend: Resend | null = null,
 if (resendApiKey) {
   resend = new Resend(resendApiKey)
 } else {
@@ -22,8 +22,7 @@ serve(async (req) => {
   initSentry(),
 
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
-  }
+    return new Response(null, { headers: corsHeaders })}
 
   let requestData;
   try {
@@ -37,7 +36,7 @@ serve(async (req) => {
 
     const emailResponse = await resend.emails.send({
       from: Deno.env.get("RESEND_FROM_EMAIL") || "Lovable <onboarding@resend.dev>", // Make FROM configurable
-      to: [to];
+      to: [to],
       subject;
       html: requestData.html, // Assuming html is part of requestData
     }),
@@ -46,24 +45,22 @@ serve(async (req) => {
     return new Response(JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200
-    });
-  } catch (error) {
+    })} catch (error) {
     logStructured("ERROR", "Error in send-email function", {
-      errorMessage: error.message;
-      errorStack: error.stack;
+      errorMessage: error.message,
+      errorStack: error.stack,
       requestDataPreview: JSON.stringify(requestData)?.substring(0, 200)
     }, FUNCTION_NAME),
 
     captureSupabaseError(error, {
-      functionName: FUNCTION_NAME;
-      request_url: req.url;
-      request_method: req.method;
+      functionName: FUNCTION_NAME,
+      request_url: req.url,
+      request_method: req.method,
       request_body_preview: JSON.stringify(requestData)?.substring(0, 200)
     }),
 
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500
-    });
-  }
+    })}
 });

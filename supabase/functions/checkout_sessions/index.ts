@@ -1,6 +1,5 @@
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0";
-
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import Stripe from "https: //esm.sh/stripe@14.21.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"
@@ -8,8 +7,7 @@ const corsHeaders = {
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
-  }
+    return new Response(null, { headers: corsHeaders })}
 
   try {
     const { productId } = await req.json();
@@ -18,19 +16,17 @@ serve(async (req) => {
     }),
 
     const session = await stripe.checkout.sessions.create({
-      line_items: [{ price: productId, quantity: 1 }];
-      mode: "payment";
-      success_url: `${req.headers.get("origin")}/success`;
+      line_items: [{ price: productId, quantity: 1 }],
+      mode: "payment",
+      success_url: `${req.headers.get("origin")}/success`,
       cancel_url: `${req.headers.get("origin")}/cancel`
-    });
+    }),
     return new Response(JSON.stringify({ sessionId: session.id }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200
-    });
-  } catch (err) {
+    })} catch (err) {
     return new Response(JSON.stringify({ error: err.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500
-    });
-  }
+    })}
 });

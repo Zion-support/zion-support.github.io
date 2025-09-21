@@ -5,5 +5,4 @@ describe('request quote wizard', () => {
     cy.window()
       .its('wizardState.step')
       .should('eqDetails');
-  }),
-}),
+  })}),

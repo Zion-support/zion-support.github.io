@@ -5,8 +5,7 @@ import PageTransition from '../components/PageTransition';
 describe('PageTransition', () => {,
   test('renders without crashing', () => {,
     render(<PageTransition />);
-    expect(screen.getByTestId('pagetransition')).toBeInTheDocument(),
-  }),
+    expect(screen.getByTestId('pagetransition')).toBeInTheDocument()}),
   test('displays correct content', () => {,
     render(<PageTransition />);
   }),
@@ -15,5 +14,4 @@ describe('PageTransition', () => {,
   }),
   test('applies correct styling', () => {,
     render(<PageTransition />);
-  }),
-}),
+  })}),

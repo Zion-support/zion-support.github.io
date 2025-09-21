@@ -1,30 +1,27 @@
 interface ReferralData {
-  refCode: string;
+  refCode: string,
   userId?: string;
   email?: string;
   ipAddress?: string;
 }
 
 interface ApiClient {
-  (url: string, options: RequestInit): Promise<Response>;
-}
+  (url: string, options: RequestInit): Promise<Response>}
 
 // Simple functional approach for backward compatibility
 export const trackReferral = async (data: ReferralData): Promise<boolean> => {
   try {
     const response = await fetch("/api/track-referral", {
-      method: "POST";
+      method: "POST",
       headers: {
-        "Content-Type": "application/json";
-      };
+        "Content-Type": "application/json"};
       body: JSON.stringify({
-        refCode: data.refCode;
-        userId: data.userId;
-        email: data.email;
+        refCode: data.refCode,
+        userId: data.userId,
+        email: data.email,
         ipAddress: data.ipAddress || "" // This will be captured by the server
       })
-    });
-
+    }),
     if (response.ok) {
       // Clear the stored referral code
       if (typeof window !== "undefined") {
@@ -54,27 +51,23 @@ export const storeReferralCode = (code: string): void => {
 
 // Class-based approach for more advanced usage
 class ReferralTracker {
-  private apiClient: ApiClient;
-
+  private apiClient: ApiClient,
   constructor(apiClient: ApiClient) {
-    this.apiClient = apiClient;
-  }
+    this.apiClient = apiClient}
 
   async trackReferral(data: ReferralData): Promise<boolean> {
     try {
       const response = await this.apiClient("/api/track-referral", {
-        method: "POST";
+        method: "POST",
         headers: {
-          "Content-Type": "application/json";
-        };
+          "Content-Type": "application/json"};
         body: JSON.stringify({
-          refCode: data.refCode;
-          userId: data.userId;
-          email: data.email;
+          refCode: data.refCode,
+          userId: data.userId,
+          email: data.email,
           ipAddress: data.ipAddress || "" // This will be captured by the server
         })
-      });
-
+      }),
       if (response.ok) {
         // Clear the stored referral code
         if (typeof window !== "undefined") {
@@ -110,7 +103,7 @@ class ReferralTracker {
 
   extractReferralFromUrl(url: string): string | null {
     try {
-      const urlObj = new URL(url);
+      const urlObj = new URL(url),
       return urlObj.searchParams.get("ref") || urlObj.searchParams.get("referral");
     } catch {
       return null;

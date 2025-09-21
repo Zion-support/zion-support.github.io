@@ -23,7 +23,7 @@ content = content.replace(/;\s*\n\s*\]/g, '\n]');
   // Fix missing commas between array items,
 content = content.replace(/\}\s*\n\s*\{/g, '},\n  {');
   // Fix malformed array items with missing brackets,
-content = content.replace(/features:\s*\[\s*""\s*\]\s*\n\s*"([^"]+)"/g, 'features: [\n      "$1"');
+content = content.replace(/features:\s*\[\s*""\s*\]\s*\n\s*"([^"]+)"/g, 'features: [\n      "$1"'),
   // Fix array items that are outside the array brackets,
 content = content.replace(/\[\s*""\s*\]\s*\n\s*"([^"]+)"/g, '[\n      "$1"');
   // Fix double quotes in features arrays,
@@ -60,7 +60,7 @@ function processFile(filePath) {
     const fixedContent = fixRemainingSyntax(content);
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`),
       return true;
     }
     return false;

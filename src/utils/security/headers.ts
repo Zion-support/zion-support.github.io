@@ -48,12 +48,12 @@ export class RateLimiter {
   private requests: Map<string, number[]> = new Map();
   
   constructor(
-    private maxRequests: number = 100;
+    private maxRequests: number = 100,
     private windowMs: number = 15 * 60 * 1000 // 15 minutes
   ) {}
   
   public isAllowed(identifier: string): boolean {
-    const now = Date.now();
+    const now = Date.now(),
     const requests = this.requests.get(identifier) || [];
     
     // Remove old requests outside the window

@@ -41,9 +41,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ trigger-all-and-commit completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ trigger-all-and-commit failed:', error),
     return {
       statusCode: 500,
@@ -53,6 +51,5 @@ exports.handler = async function(event, context) {
         function: 'trigger-all-and-commit',
         status: 'error'
       })
-    },
-  }
+    }}
 },

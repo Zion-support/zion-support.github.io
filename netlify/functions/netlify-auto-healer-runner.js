@@ -26,9 +26,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ netlify-auto-healer-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ netlify-auto-healer-runner failed:', error),
     return {
       statusCode: 500,
@@ -38,6 +36,5 @@ exports.handler = async function(event, context) {
         function: 'netlify-auto-healer-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

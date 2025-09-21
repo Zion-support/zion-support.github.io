@@ -18,16 +18,13 @@ function findImages(dir, images = []) {,
     const filePath = path.join(dir, file),
     const stat = fs.statSync(filePath),
     if (stat.isDirectory()) {,
-      findImages(filePath, images),
-    } else {,
+      findImages(filePath, images)} else {,
       const ext = path.extname(file).toLowerCase(),
       if (imageExtensions.includes(ext)) {,
-        images.push(filePath),
-      }
+        images.push(filePath)}
     }
   }),
-  return images,
-}
+  return images}
 ,
 function optimizeImage(imagePath) {,
   const ext = path.extname(imagePath).toLowerCase(),
@@ -42,11 +39,9 @@ function optimizeImage(imagePath) {,
     // For now, we'll just copy the original,
     if (!fs.existsSync(optimizedPath)) {,
       fs.copyFileSync(imagePath, optimizedPath),
-      optimizedImages.push(optimizedPath),
-    }
+      optimizedImages.push(optimizedPath)}
   }),
-  return optimizedImages,
-}
+  return optimizedImages}
 ,
 try {,
   const publicImages = findImages(publicDir),
@@ -56,8 +51,7 @@ try {,
   let optimizedCount = 0,
   allImages.forEach(imagePath => {,
     const optimized = optimizeImage(imagePath),
-    optimizedCount += optimized.length,
-  }),
+    optimizedCount += optimized.length}),
   console.log(`✅ Optimized ${optimizedCount} images`),
   // Generate responsive image component,
   const responsiveImageComponent = `import React from 'react',
@@ -92,14 +86,10 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({,
       alt={alt}
       className={`responsive-image ${className}`}
       loading={loading}
-    />),
-},`,
+    />)},`,
   fs.writeFileSync(,
     path.join(__dirname, '..srccomponents', 'ResponsiveImage.tsx'),
-    responsiveImageComponent,
-  ),
-  console.log('✅ Created responsive image component'),
-} catch (error) {,
+    responsiveImageComponent),
+  console.log('✅ Created responsive image component')} catch (error) {,
   console.error('❌ Image optimization failed:', error),
-  process.exit(1),
-}
+  process.exit(1)}

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { Input,,  } from '@/components/ui/input'
-import { Button,,  } from '@/components/ui/button'
-import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from '@/components/ui/tabs'
-import { HelpCategoryList,,  } from './HelpCategoryList'
-import { HelpArticleList,,  } from './HelpArticleList'
-import { HelpArticleView,,  } from './HelpArticleView'
-import { HELP_CATEGORIES,,  } from './help-content'
-import { Search,,  } from 'lucide-react'
+import { Input,} from '@/components/ui/input'
+import { Button,} from '@/components/ui/button'
+import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,} from '@/components/ui/tabs'
+import { HelpCategoryList,} from './HelpCategoryList'
+import { HelpArticleList,} from './HelpArticleList'
+import { HelpArticleView,} from './HelpArticleView'
+import { HELP_CATEGORIES,} from './help-content'
+import { Search,} from 'lucide-react'
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
@@ -27,7 +27,7 @@ return (
             Help Center
           </h1>
           <p className='text-zion-slate-light mb-6'>
-            Find answers to common questions or get in touch with our support;
+            Find answers to common questions or get in touch with our support,
 team.
           </p>
           <div className='relative mb-8'>
@@ -133,20 +133,20 @@ our team through the Contact tab.
               </div>
             </TabsContent>
             <TabsContent value='contact'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
                 <div className='bg-zion-blue-light/20 rounded-lg p-6'>
                   <h2 className='text-xl font-semibold mb-4'>
                     Contact Support
                   </h2>
                   <p className='text-zion-slate-light mb-4'>
-                    Our support team is available 24/7 to assist you with any;
+                    Our support team is available 24/7 to assist you with any,
 questions or issues.
                   </p>
                   <div className='space-y-4'>
                     <div className='flex items-center'>
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
                         <svg
-xmlns='http://www.w3.org/2000/svg'
+xmlns='http: //www.w3.org/2000/svg'
                           className='h-5 w-5 text-zion-purple'
                           viewBox='0 0 20 20'
                           fill='currentColor'
@@ -187,7 +187,7 @@ xmlns='http://www.w3.org/2000/svg'
                     Feedback & Suggestions
                   </h2>
                   <p className='text-zion-slate-light mb-4'>
-                    We value your input and are constantly looking to improve;
+                    We value your input and are constantly looking to improve,
 our platform.
                   </p>
                   <form className='space-y-4'>

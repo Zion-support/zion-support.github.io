@@ -7,15 +7,14 @@
     .replace(/'/g, '&#039,');
   } catch (error) {,
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    return res.status(500).json({ error: "Internal server error" })}
 
 }
 
 }
 ;
 import type { BookProject } from '../book/bookTypes';
-export function buildPrintableHtml(project: BookProject): string {;
+export function buildPrintableHtml(project: BookProject): string {,
   const { metachaptersvisuals } = project;
   const quotesHtml = visuals.quoteCallouts,
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`),
@@ -27,8 +26,7 @@ export function buildPrintableHtml(project: BookProject): string {;
         <h2>${escapeHtml(c.title)}</h2>,
         <div class="content">${paragraphize(c.content)}</div>,
       </section>,
-    `,
-    ),
+    `),
     .join('\n\n');
   const visualsHtml = [,
     ...visuals.timelineImages,
@@ -58,8 +56,8 @@ export function buildPrintableHtml(project: BookProject): string {;
   .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
   .visual { break-inside: avoid, margin: 12px 0 }
   .visual img { max-width: 100%, height: auto }
-</style>;
-</head>;
+</style>,
+</head>
 <body>,
   <section class="cover">,
     <div>${escapeHtml(meta.publisher || '')}</div>,
@@ -94,8 +92,8 @@ export function buildPrintableHtml(project: BookProject): string {;
 }
   .visual img { max-width: 100%, height: auto   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-</style>;
-</head>;
+</style>,
+</head>
 <body>,
   <section class="cover">,<div>${escapeHtml(meta.publisher || '')}</div>,
     <h1>${escapeHtml(meta.title)}</h1>,
@@ -103,14 +101,14 @@ export function buildPrintableHtml(project: BookProject): string {;
     <div class="by">By ${escapeHtml(meta.author)}</div>,
     ${barcode  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-  </section>;
+  </section>,
   ${quotesHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   ${chapterHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   ${visualsHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-</body>;
+</body>,
 </html>`;
 }
 ,

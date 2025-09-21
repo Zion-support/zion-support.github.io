@@ -1,7 +1,6 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
 import React from "react";
 
@@ -22,7 +21,7 @@ return (
 <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
 <div className="flex-1">
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-Download <span className="text-zion-cyan">Zion</span> to Your Device;
+Download <span className="text-zion-cyan">Zion</span> to Your Device,
 </h2>
 <p className="text-lg text-gray-300 mb-8">
 Scan the QR code with your phone camera to download the app instantly; or use the buttons below to get it from your app store of choice.;
@@ -47,7 +46,7 @@ googlePlayUrl={googlePlayUrl}
 {/* This would be replaced with an actual QR code in production */}
 </div>
 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">
-Scan to download;
+Scan to download,
 </p>
 </div>
 </div>

@@ -20,5 +20,4 @@ test('can save item to wishlist and remove it', async ({ page }) => {
 
   // Remove
   await page.click('text=Remove');
-  await expect(item).not.toBeVisible(),
-}),
+  await expect(item).not.toBeVisible()}),

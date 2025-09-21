@@ -1,12 +1,11 @@
 import React from "react";
 
 interface CacheItem<T> {
-  data: T;
-  timestamp: number;
+  data: T,
+  timestamp: number,
   expiresAt?: number;
-  accessCount: number;
-  lastAccessed: number;
-}
+  accessCount: number,
+  lastAccessed: number}
 
 interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
@@ -15,10 +14,9 @@ interface CacheOptions {
 }
 
 class CacheManager {
-  private static instance: CacheManager;
+  private static instance: CacheManager,
   private cache: Map<string, CacheItem<any>> = new Map();
-  private options: CacheOptions;
-
+  private options: CacheOptions,
   private constructor(options: CacheOptions = {}) {
     this.options = {
       ttl: 5 * 60 * 1000, // 5 minutes default
@@ -45,19 +43,17 @@ class CacheManager {
     }
 
     const cacheItem: CacheItem<T> = {
-      data;
-      timestamp: now;
-      expiresAt: now + itemTTL;
-      accessCount: 0;
+      data,
+      timestamp: now,
+      expiresAt: now + itemTTL,
+      accessCount: 0,
       lastAccessed: now
-    };
-
+    },
     this.cache.set(key, cacheItem);
   }
 
   get<T>(key: string): T | null {
-    const item = this.cache.get(key);
-    
+    const item = this.cache.get(key),
     if (!item) {
       return null;
     }
@@ -84,9 +80,8 @@ class CacheManager {
   }
 
   has(key: string): boolean {
-    const item = this.cache.get(key);
+    const item = this.cache.get(key),
     if (!item) return false;
-
     const now = Date.now();
     
     // Check if expired
@@ -105,8 +100,7 @@ class CacheManager {
   }
 
   delete(key: string): boolean {
-    return this.cache.delete(key);
-  }
+    return this.cache.delete(key)}
 
   clear(): void {
     this.cache.clear();
@@ -121,7 +115,7 @@ class CacheManager {
   }
 
   private evictOldest(): void {
-    let oldestKey: string | null = null;
+    let oldestKey: string | null = null,
     let oldestTime = Date.now();
 
     for (const [key, item] of this.cache.entries()) {
@@ -139,8 +133,7 @@ class CacheManager {
   // Clean up expired items
   cleanup(): void {
     const now = Date.now();
-    const keysToDelete: string[] = [];
-
+    const keysToDelete: string[] = [],
     for (const [key, item] of this.cache.entries()) {
       if (item.expiresAt && now > item.expiresAt) {
         keysToDelete.push(key);
@@ -166,22 +159,20 @@ class CacheManager {
     }
 
     return {
-      size: this.cache.size;
-      maxSize: this.options.maxSize || 1000;
+      size: this.cache.size,
+      maxSize: this.options.maxSize || 1000,
       expiredCount;
       totalAccessCount,
       averageAccessCount: this.cache.size > 0 ? totalAccessCount / this.cache.size : 0
-    };
-  }
+    }}
 }
 
 // React hook for cache
 export function useCache<T>(key: string, fetcher: () => Promise<T>, options?: { ttl?: number }): {
-  data: T | null;
-  loading: boolean;
-  error: Error | null;
-  refetch: () => void;
-} {
+  data: T | null,
+  loading: boolean,
+  error: Error | null,
+  refetch: () => void} {
   const [data, setData] = React.useState<T | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);

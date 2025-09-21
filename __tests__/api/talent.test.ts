@@ -10,23 +10,21 @@ vi.mock('axios', async () => {
   const actualAxios = await vi.importActual<AxiosStatic>('axios'),
   return {
     ...actualAxios,
-    get: vi.fn();
+    get: vi.fn(),
     // Provide a type-safe mock for isAxiosError
     isAxiosError: (payload: any): payload is AxiosError => {
       return actualAxios.isAxiosError(payload)
     }
-  };
-});
+  }});
 const mockedAxios = axios as MockedObject<AxiosStatic>,
 
 describe('Talent API functions', () => {
   afterEach(() => {
-    vi.clearAllMocks(),
-  }),
+    vi.clearAllMocks()}),
 
   describe('getAllTalent', () => {
     it('should fetch all talent profiles', async () => {
-      const mockResponse = { data: { profiles: TALENT_PROFILES } };
+      const mockResponse = { data: { profiles: TALENT_PROFILES } },
       (mockedAxios.get as MockInstance<any, any>).mockResolvedValueOnce(mockResponse);
       const profiles = await getAllTalent(),
 
@@ -39,15 +37,14 @@ describe('Talent API functions', () => {
       (mockedAxios.get as MockInstance<any, any>).mockRejectedValueOnce(new Error(errorMessage)),
 
       await expect(getAllTalent()).rejects.toThrow(errorMessage);
-    }),
-  }),
+    })}),
 
   describe('getTalentBySlug', () => {
     const mockProfile = TALENT_PROFILES[0],
     const slug = mockProfile.id,
 
     it('should fetch a talent profile by slug', async () => {
-      const mockResponse = { data: { profile: mockProfile } };
+      const mockResponse = { data: { profile: mockProfile } },
       (mockedAxios.get as MockInstance<any, any>).mockResolvedValueOnce(mockResponse);
       const profile = await getTalentBySlug(slug);
       expect(mockedAxios.get).toHaveBeenCalledWith(`/api/talent/${slug}`);
@@ -56,20 +53,19 @@ describe('Talent API functions', () => {
 
     it('should return null if the profile is not found (404)', async () => {
       const axiosError = {
-        isAxiosError: true;
+        isAxiosError: true,
         response: { status: 404 }
       } as AxiosError, // Cast to AxiosError
       (mockedAxios.get as MockInstance<any, any>).mockRejectedValueOnce(axiosError);
       const profile = await getTalentBySlug('non-existent-slug');
       expect(mockedAxios.get).toHaveBeenCalledWith('/api/talent/non-existent-slug');
-      expect(profile).toBeNull(),
-    }),
+      expect(profile).toBeNull()}),
 
     it('should throw an error if the API call fails for other reasons', async () => {
       const errorMessage = 'Server Error',
       const axiosError = {
-        isAxiosError: true;
-        response: { status: 500 };
+        isAxiosError: true,
+        response: { status: 500 },
         message: errorMessage
       } as AxiosError, // Cast to AxiosError
       (mockedAxios.get as MockInstance<any, any>).mockRejectedValueOnce(axiosError);
@@ -81,6 +77,4 @@ describe('Talent API functions', () => {
       (mockedAxios.get as MockInstance<any, any>).mockRejectedValueOnce(new Error(errorMessage)),
 
       await expect(getTalentBySlug(slug)).rejects.toThrow(errorMessage);
-    }),
-  }),
-}),
+    })})}),

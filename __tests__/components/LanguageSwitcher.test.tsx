@@ -20,8 +20,7 @@ describe('LanguageSwitcher', () => {
     );
     expect(screen.getByText('English')).toBeInTheDocument(),
     expect(screen.getByText('Español')).toBeInTheDocument(),
-    expect(screen.getByText('Português')).toBeInTheDocument(),
-  }),
+    expect(screen.getByText('Português')).toBeInTheDocument()}),
 
   test('changes language when Spanish button is clicked', async () => {
     render(
@@ -35,7 +34,7 @@ describe('LanguageSwitcher', () => {
     fireEvent.click(screen.getByText('Español')),
     // Wait for the language to change and component to re-render
     // Adjust the timeout if necessary based on your application's performance
-    await screen.findByText('¡Hola Mundo!', {}, { timeout: 2000 });
+    await screen.findByText('¡Hola Mundo!', {}, { timeout: 2000 }),
     expect(screen.getByText('¡Hola Mundo!')).toBeInTheDocument();
   }),
 
@@ -49,7 +48,7 @@ describe('LanguageSwitcher', () => {
       </I18nextProvider>
     );
     fireEvent.click(screen.getByText('Português')),
-    await screen.findByText('Olá Mundo!', {}, { timeout: 2000 });
+    await screen.findByText('Olá Mundo!', {}, { timeout: 2000 }),
     expect(screen.getByText('Olá Mundo!')).toBeInTheDocument();
   }),
 
@@ -64,10 +63,8 @@ describe('LanguageSwitcher', () => {
     );
     // Change to Spanish first
     fireEvent.click(screen.getByText('Español')),
-    await screen.findByText('¡Hola Mundo!', {}, { timeout: 2000 });
+    await screen.findByText('¡Hola Mundo!', {}, { timeout: 2000 }),
     // Change back to English
     fireEvent.click(screen.getByText('English'));
-    await screen.findByText('Hello, World!', {}, { timeout: 2000 });
-    expect(screen.getByText('Hello, World!')).toBeInTheDocument(),
-  }),
-}),
+    await screen.findByText('Hello, World!', {}, { timeout: 2000 }),
+    expect(screen.getByText('Hello, World!')).toBeInTheDocument()})}),

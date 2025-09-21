@@ -5,22 +5,21 @@ import { Phone, ShieldCheck, Clock } from 'lucide-react';
 export default function ITSupportPage() {
   const benefits = [
     {
-      icon: Phone;
-      title: '24/7 Support';
+      icon: Phone,
+      title: '24/7 Support',
       description: 'Round-the-clock technical assistance'
-    };
+    },
     {
-      icon: ShieldCheck;
-      title: 'Security First';
+      icon: ShieldCheck,
+      title: 'Security First',
       description: 'Enterprise-grade security solutions'
-    };
+    },
     {
-      icon: Clock;
-      title: 'Fast Response';
+      icon: Clock,
+      title: 'Fast Response',
       description: 'Quick resolution of technical issues'
     }
-  ];
-
+  ],
   return (
     <div className="min-h-screen bg-zion-blue">
       <div className="container mx-auto px-4 py-12">

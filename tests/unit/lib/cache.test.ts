@@ -8,7 +8,6 @@ export default function Cache.test({ }: Cache.testProps) {,
     <div>,
       <h1>Cache.test</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>)}
 
 })

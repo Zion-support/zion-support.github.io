@@ -1,15 +1,13 @@
 interface ResourceError {
-  url: string;
-  type: "script" | "stylesheet" | "image" | "font" | "other";
-  error: string;
-  timestamp: number;
-}
+  url: string,
+  type: "script" | "stylesheet" | "image" | "font" | "other",
+  error: string,
+  timestamp: number}
 
 class ResourceMonitor {
-  private errors: ResourceError[] = [];
+  private errors: ResourceError[] = [],
   private retryAttempts: Map<string, number> = new Map();
-  private maxRetries: number = 3;
-
+  private maxRetries: number = 3,
   constructor() {
     this.initializeMonitoring();
   }
@@ -24,11 +22,11 @@ class ResourceMonitor {
         const url = this.getResourceUrl(target);
         if (url) {
           const resourceError: ResourceError = {
-            url;
-            type: this.getResourceTypeFromUrl(url);
-            error: event.message || 'Resource failed to load';
+            url,
+            type: this.getResourceTypeFromUrl(url),
+            error: event.message || 'Resource failed to load',
             timestamp: Date.now()
-          };
+          },
           this.errors.push(resourceError);
         }
       }
@@ -44,8 +42,7 @@ class ResourceMonitor {
 
   private getResourceUrl(element: HTMLElement): string | null {
     if (element instanceof HTMLScriptElement) {
-      return element.src;
-    } else if (element instanceof HTMLLinkElement) {
+      return element.src} else if (element instanceof HTMLLinkElement) {
       return element.href;
     } else if (element instanceof HTMLImageElement) {
       return element.src;
@@ -55,16 +52,16 @@ class ResourceMonitor {
 
   private recordError(url: string, errorMessage: string): void {
     const resourceError: ResourceError = {
-      url;
-      type: this.getResourceTypeFromUrl(url);
-      error: errorMessage;
+      url,
+      type: this.getResourceTypeFromUrl(url),
+      error: errorMessage,
       timestamp: Date.now()
-    };
+    },
     this.errors.push(resourceError);
   }
 
   private getResourceTypeFromUrl(url: string): ResourceError["type"] {
-    if (url.includes(".js")) return "script";
+    if (url.includes(".js")) return "script",
     if (url.includes(".css")) return "stylesheet";
     if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) return "image";
     if (url.match(/\.(woff|woff2|ttf|eot)$/)) return "font";
@@ -72,7 +69,7 @@ class ResourceMonitor {
   }
 
   private handleRetry(url: string): void {
-    const attempts = this.retryAttempts.get(url) || 0;
+    const attempts = this.retryAttempts.get(url) || 0,
     if (attempts < this.maxRetries) {
       this.retryAttempts.set(url, attempts + 1);
       // Implement retry logic here if needed
@@ -89,16 +86,14 @@ class ResourceMonitor {
   }
 
   getErrorSummary(): {
-    total: number;
+    total: number,
     byType: Record<string, number>;
-    recent: number;
-  } {
+    recent: number} {
     const summary = {
-      total: this.errors.length;
+      total: this.errors.length,
       byType: {} as Record<string, number>,
       recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute
-    };
-
+    },
     // Count errors by type
     this.errors.forEach(error => {
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
@@ -108,16 +103,15 @@ class ResourceMonitor {
   }
 
   getErrorsByType(type: ResourceError["type"]): ResourceError[] {
-    return this.errors.filter(error => error.type === type);
-  }
+    return this.errors.filter(error => error.type === type)}
 
   getRecentErrors(minutes: number = 5): ResourceError[] {
-    const cutoff = Date.now() - (minutes * 60 * 1000);
+    const cutoff = Date.now() - (minutes * 60 * 1000),
     return this.errors.filter(error => error.timestamp > cutoff);
   }
 
   isResourceHealthy(url: string): boolean {
-    const recentErrors = this.getRecentErrors(5);
+    const recentErrors = this.getRecentErrors(5),
     return !recentErrors.some(error => error.url === url);
   }
 }
@@ -125,6 +119,5 @@ class ResourceMonitor {
 // Export instances for backward compatibility
 export const resourceMonitor = new ResourceMonitor();
 export default resourceMonitor;
-
 export { ResourceMonitor };
 export type { ResourceError };

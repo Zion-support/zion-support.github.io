@@ -1,10 +1,9 @@
 ,"}
-)}),
-),"
+)})),"
 import import React from 'react';
-import { Heart,,  } from 'lucide-react'
+import { Heart,} from 'lucide-react'
 interface FavoriteButtonProps {
-  itemId: string;
+  itemId: string,
   className?: string;
 export function FavoriteButton({ itemId className }: FavoriteButtonProps) {
             </button>

@@ -32,9 +32,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ ultrafast-orchestrator completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ ultrafast-orchestrator failed:', error),
     return {
       statusCode: 500,
@@ -44,6 +42,5 @@ exports.handler = async function(event, context) {
         function: 'ultrafast-orchestrator',
         status: 'error'
       })
-    },
-  }
+    }}
 },

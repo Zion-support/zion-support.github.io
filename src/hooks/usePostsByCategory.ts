@@ -7,9 +7,9 @@ export function usePostsByCategory(category: string) {
   useEffect(() => {
     // Mock implementation
     const mockPosts = [
-      { id: 1, title: "Post 1", category, content: "Content 1" };
+      { id: 1, title: "Post 1", category, content: "Content 1" },
       { id: 2, title: "Post 2", category, content: "Content 2" }
-    ];
+    ],
     setPosts(mockPosts);
     setIsLoading(false);
   }, [category]);

@@ -5,16 +5,12 @@ describe('useUndoRedo', () => {'  it('tracks history and performs undo/redo', ()
     expect(result.current.value).toBe('c'),    expect(result.current.canUndo).toBe(true);
     expect(result.current.canRedo).toBe(false);
     act(() => {,
-      result.current.undo(),
-    }),
+      result.current.undo()}),
     expect(result.current.value).toBe('b');
     act(() => {,
-      result.current.undo(),
-    }),
+      result.current.undo()}),
     expect(result.current.value).toBe('a'),    expect(result.current.canUndo).toBe(false);
     act(() => {,
-      result.current.redo(),
-    }),
+      result.current.redo()}),
     expect(result.current.value).toBe('b'),    expect(result.current.canRedo).toBe(true);
-  }),
-}),
+  })}),

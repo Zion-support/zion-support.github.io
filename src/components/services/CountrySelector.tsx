@@ -1,7 +1,6 @@
-import { useState,,, useEffect,,  } from 'react'
-import { Globe,,  } from 'lucide-react'
-selectedCountry: CountryPricing | null;
-}
+import { useState,,, useEffect,} from 'react'
+import { Globe,} from 'lucide-react'
+selectedCountry: CountryPricing | null}
   // Set top/popular countries;
 useEffect(() => {
 return (
@@ -34,7 +33,7 @@ key={item.country}
           </div>        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
           <div className="p-2 border-b border-zion-blue-light">
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
-            {topCountries.map((item,) => (
+            {topCountries.map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
               </SelectItem>
             ))}
@@ -52,8 +51,8 @@ key={item.country}
                   {item.country} - ${item.pricePerIncident.toFixed(2)}
                 </SelectItem>
               ))}          </div>              .map((item) => (
-              .sort((a b,) => a.country.localeCompare(b.country))
-              .map((item,) => (
+              .sort((a b) => a.country.localeCompare(b.country))
+              .map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>

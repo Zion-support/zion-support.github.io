@@ -7,10 +7,10 @@ import { vi, describe, it, expect, beforeEach, type MockInstance } from 'vitest'
 
 vi.mock('@/integrations/mailchimp', () => ({
   mailchimpService: { addSubscriber: vi.fn() }
-}));
+})),
 vi.mock('@/lib/email', () => ({
   sendEmailWithSendGrid: vi.fn().mockResolvedValue(undefined)
-}));
+})),
 describe('/api/newsletter API', () => {
   // Type assertion for the mocked mailchimpService
   const mc = mailchimpService as { addSubscriber: MockInstance<[any], Promise<any>> },
@@ -19,41 +19,38 @@ describe('/api/newsletter API', () => {
 
 
   beforeEach(() => {
-    vi.clearAllMocks(),
-  }),
+    vi.clearAllMocks()}),
 
   it('rejects non-POST requests', async () => {
-    const { req, res } = createMocks({ method: 'GET' as RequestMethod });
+    const { req, res } = createMocks({ method: 'GET' as RequestMethod }),
     await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
     expect(res._getStatusCode()).toBe(405);
   }),
 
   it('validates email', async () => {
     const { req, res } = createMocks({
-      method: 'POST' as RequestMethod;
+      method: 'POST' as RequestMethod,
       body: { email: 'bad-email' }
-    });
+    }),
     await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
     expect(res._getStatusCode()).toBe(400);
-    expect(mc.addSubscriber).not.toHaveBeenCalled(),
-  }),
+    expect(mc.addSubscriber).not.toHaveBeenCalled()}),
 
   it('subscribes valid email', async () => {
     mc.addSubscriber.mockResolvedValue({});
     const { req, res } = createMocks({
-      method: 'POST' as RequestMethod;
+      method: 'POST' as RequestMethod,
       body: { email: 'test@example.com' }
-    });
+    }),
     await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
     expect(res._getStatusCode()).toBe(200);
-    expect(res._getJSONData()).toEqual({ status: 'subscribed' });
+    expect(res._getJSONData()).toEqual({ status: 'subscribed' }),
     expect(mc.addSubscriber).toHaveBeenCalledWith(
       expect.objectContaining({
-        email: 'test@example.com';
+        email: 'test@example.com',
         mergeFields: expect.any(Object)
       })
-    );
+    ),
     // Access the mock directly if it's hoisted and available in scope
     expect(mockedSendEmail).toHaveBeenCalled();
-  }),
-}),
+  })}),

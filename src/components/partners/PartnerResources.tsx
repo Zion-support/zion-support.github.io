@@ -1,10 +1,10 @@
 interface ResourceItem {
   id: string;;
-title: string;
+title: string,
   description: string;;
-type: 'image' | 'video' | 'document' | 'link';
+type: 'image' | 'video' | 'document' | 'link',
   icon: JSX.Element;;
-url: string;
+url: string,
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
@@ -60,7 +60,7 @@ onClick={() => handleDownload(resource)}
               <li>Use our official brand assets from the resources provided</li>
               <li>Share your unique referral link in your content</li>
               <li>
-                Highlight the benefits of the Zion AI Marketplace for both;
+                Highlight the benefits of the Zion AI Marketplace for both,
 talent and clients
               </li>
               <li>

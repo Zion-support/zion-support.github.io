@@ -7,11 +7,11 @@ import * as AuthHook from '@/hooks/useAuth'; // Import namespace
 
 vi.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({
-    signup: vi.fn().mockResolvedValue({});
-    login: vi.fn().mockResolvedValue({});
+    signup: vi.fn().mockResolvedValue({}),
+    login: vi.fn().mockResolvedValue({}),
     loginWithGoogle: vi.fn()
   })
-}));
+})),
 vi.mock('next/router', () => require('next-router-mock')),
 
 describe('SignUpForm', () => {
@@ -19,19 +19,18 @@ describe('SignUpForm', () => {
     const authSpy = vi.spyOn(AuthHook, 'useAuth');
     const loginWithGoogleMock = vi.fn(),
     authSpy.mockReturnValue({
-        signup: vi.fn().mockResolvedValue({});
-        login: vi.fn().mockResolvedValue({});
+        signup: vi.fn().mockResolvedValue({}),
+        login: vi.fn().mockResolvedValue({}),
         loginWithGoogle: loginWithGoogleMock
-    } as any);
+    } as any),
     render(
       <MemoryRouterProvider>
         <SignUpForm />
       </MemoryRouterProvider>
     );
-    fireEvent.click(screen.getByRole('button', { name: /continue with google/i }));
+    fireEvent.click(screen.getByRole('button', { name: /continue with google/i })),
     expect(loginWithGoogleMock).toHaveBeenCalled();
-    authSpy.mockRestore(),
-  }),
+    authSpy.mockRestore()}),
 
   test('updates form fields', () => {
     render(
@@ -39,9 +38,8 @@ describe('SignUpForm', () => {
         <SignUpForm />
       </MemoryRouterProvider>
     );
-    fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: 'user@example.com' } });
-    fireEvent.change(screen.getByLabelText(/password/i), { target: { value: 'secret' } });
+    fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: 'user@example.com' } }),
+    fireEvent.change(screen.getByLabelText(/password/i), { target: { value: 'secret' } }),
     expect(screen.getByLabelText(/email address/i)).toHaveValue('user@example.com');
     expect(screen.getByLabelText(/password/i)).toHaveValue('secret');
-  }),
-}),
+  })}),

@@ -28,9 +28,8 @@ export function DisputeDetail() {
   const [isSending, setIsSending] = useState(false);
   const [message, setMessage] = useState('');
   const [resolution, setResolution] = useState({
-    summary: '';
-    resolution_type: 'compromise' as ResolutionType;
-  });
+    summary: '',
+    resolution_type: 'compromise' as ResolutionType});
 
   useEffect(() => {
     if (disputeId) {
@@ -64,17 +63,15 @@ export function DisputeDetail() {
     }
 
     const success = await resolveDispute(disputeId as string, {
-      summary: resolution.summary;
-      resolution_type: resolution.resolution_type;
-    });
+      summary: resolution.summary,
+      resolution_type: resolution.resolution_type});
 
     if (success && dispute) {
       setDispute({
         ...dispute;
-        resolution_summary: resolution.summary;
-        resolution_type: resolution.resolution_type;
-        resolved_at: new Date().toISOString();
-      });
+        resolution_summary: resolution.summary,
+        resolution_type: resolution.resolution_type,
+        resolved_at: new Date().toISOString()});
       toast.success('Dispute resolved successfully');
     } else {
       toast.error('Failed to resolve dispute');
@@ -90,16 +87,15 @@ export function DisputeDetail() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const newMessage: DisputeMessage = {
-        id: Date.now().toString();
-        dispute_id: disputeId as string;
-        user_id: user?.id || '';
-        message: message.trim();
-        created_at: new Date().toISOString();
-        is_admin_note: false;
+        id: Date.now().toString(),
+        dispute_id: disputeId as string,
+        user_id: user?.id || '',
+        message: message.trim(),
+        created_at: new Date().toISOString(),
+        is_admin_note: false,
         user_profile: {
-          display_name: user?.name || 'You';
-          avatar_url: user?.avatar || '';
-        };
+          display_name: user?.name || 'You',
+          avatar_url: user?.avatar || ''};
       };
       
       setMessages(prev => [...prev, newMessage]);
@@ -116,22 +112,17 @@ export function DisputeDetail() {
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case 'open':
-        return 'default';
+        return 'default',
       case 'under_review':
         return 'secondary';
       case 'resolved':
         return 'outline';
       case 'closed':
         return 'destructive';
-      default:
-        return 'default';
-    }
+      default: return 'default'}
   };
-
   const isCurrentUser = (userId: string) => {
-    return user?.id === userId;
-  };
-
+    return user?.id === userId};
   if (isLoading) {
     return (
       <div className="p-8 text-center">
@@ -175,8 +166,7 @@ export function DisputeDetail() {
             <Button
               onClick={() => {
                 // Handle start review
-                toast.info('Review started');
-              }}
+                toast.info('Review started')}}
             >
               Start Review
             </Button>
@@ -416,7 +406,7 @@ export function DisputeDetail() {
                 </Badge>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Raised by:</span>
+                <span className="font-medium">Raised by: </span>
                 <span>
                   {dispute.client_profile &&
                   dispute.talent_profile &&
@@ -433,5 +423,4 @@ export function DisputeDetail() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

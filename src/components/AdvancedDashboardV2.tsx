@@ -2,135 +2,125 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface DashboardMetric {
-  id: string;
-  title: string;
-  value: string;
-  change: string;
-  trend: 'up' | 'down' | 'stable';
-  icon: string;
-  color: string;
-}
+  id: string,
+  title: string,
+  value: string,
+  change: string,
+  trend: 'up' | 'down' | 'stable',
+  icon: string,
+  color: string}
 
 interface ChartData {
-  labels: string[];
+  labels: string[],
   datasets: Array<{
-    label: string;
-    data: number[];
-    borderColor: string;
-    backgroundColor: string;
-    tension: number;
-  }>;
+    label: string,
+    data: number[],
+    borderColor: string,
+    backgroundColor: string,
+    tension: number}>;
 }
 
 export const AdvancedDashboardV2: React.FC = () => {
   const [metrics, setMetrics] = useState<DashboardMetric[]>([
     {
-      id: '1';
-      title: 'Total Revenue';
+      id: '1',
+      title: 'Total Revenue',
       value: '$2,847,392',
-      change: '+12.5%';
-      trend: 'up';
-      icon: '💰';
+      change: '+12.5%',
+      trend: 'up',
+      icon: '💰',
       color: 'green'
-    };
+    },
     {
-      id: '2';
-      title: 'Active Users';
+      id: '2',
+      title: 'Active Users',
       value: '45,672',
-      change: '+8.3%';
-      trend: 'up';
-      icon: '👥';
+      change: '+8.3%',
+      trend: 'up',
+      icon: '👥',
       color: 'blue'
-    };
+    },
     {
-      id: '3';
-      title: 'Conversion Rate';
-      value: '3.24%';
-      change: '-2.1%';
-      trend: 'down';
-      icon: '📈';
+      id: '3',
+      title: 'Conversion Rate',
+      value: '3.24%',
+      change: '-2.1%',
+      trend: 'down',
+      icon: '📈',
       color: 'red'
-    };
+    },
     {
-      id: '4';
-      title: 'Customer Satisfaction';
-      value: '4.8/5';
-      change: '+0.2';
-      trend: 'up';
-      icon: '⭐';
+      id: '4',
+      title: 'Customer Satisfaction',
+      value: '4.8/5',
+      change: '+0.2',
+      trend: 'up',
+      icon: '⭐',
       color: 'yellow'
-    };
+    },
     {
-      id: '5';
-      title: 'System Uptime';
-      value: '99.9%';
-      change: 'stable';
-      trend: 'stable';
-      icon: '⚡';
+      id: '5',
+      title: 'System Uptime',
+      value: '99.9%',
+      change: 'stable',
+      trend: 'stable',
+      icon: '⚡',
       color: 'purple'
-    };
+    },
     {
-      id: '6';
-      title: 'API Response Time';
-      value: '145ms';
-      change: '-12ms';
-      trend: 'up';
-      icon: '🚀';
+      id: '6',
+      title: 'API Response Time',
+      value: '145ms',
+      change: '-12ms',
+      trend: 'up',
+      icon: '🚀',
       color: 'indigo'
     }
-  ]);
-
+  ]),
   const [chartData, setChartData] = useState<ChartData>({
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
       {
-        label: 'Revenue';
+        label: 'Revenue',
         data: [120000, 190000, 300000, 500000, 200000, 300000],
         borderColor: 'rgb(34, 197, 94)',
         backgroundColor: 'rgba(34, 197, 94, 0.1)',
         tension: 0.4
-      };
+      },
       {
-        label: 'Users';
+        label: 'Users',
         data: [10000, 15000, 25000, 35000, 40000, 45000],
         borderColor: 'rgb(59, 130, 246)',
         backgroundColor: 'rgba(59, 130, 246, 0.1)',
         tension: 0.4
       }
     ]
-  });
-
+  }),
   const [timeRange, setTimeRange] = useState('6m');
   const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return '↗️';
+      case 'up': return '↗️',
       case 'down': return '↘️';
-      default: return '➡️';
-    }
+      default: return '➡️'}
   };
-
   const getTrendColor = (trend: string) => {
     switch (trend) {
-      case 'up': return 'text-green-400';
+      case 'up': return 'text-green-400',
       case 'down': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
+      default: return 'text-gray-400'}
   };
-
   const getMetricColor = (color: string) => {
     switch (color) {
-      case 'green': return 'from-green-500 to-emerald-600';
+      case 'green': return 'from-green-500 to-emerald-600',
       case 'blue': return 'from-blue-500 to-cyan-600';
       case 'red': return 'from-red-500 to-rose-600';
       case 'yellow': return 'from-yellow-500 to-amber-600';
       case 'purple': return 'from-purple-500 to-violet-600';
       case 'indigo': return 'from-indigo-500 to-blue-600';
-      default: return 'from-gray-500 to-slate-600';
-    }
+      default: return 'from-gray-500 to-slate-600'}
   };
-
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
       <motion.div
@@ -258,10 +248,10 @@ export const AdvancedDashboardV2: React.FC = () => {
           <h3 className="text-xl font-semibold text-white mb-6">Recent Activity</h3>
           <div className="space-y-4">
             {[
-              { action: 'New user registration', user: 'john.doe@example.com', time: '2 minutes ago', type: 'success' };
-              { action: 'Payment processed', user: '$2,450.00', time: '5 minutes ago', type: 'info' };
-              { action: 'System backup completed', user: 'Database', time: '15 minutes ago', type: 'success' };
-              { action: 'API rate limit warning', user: 'Endpoint: /api/users', time: '1 hour ago', type: 'warning' };
+              { action: 'New user registration', user: 'john.doe@example.com', time: '2 minutes ago', type: 'success' },
+              { action: 'Payment processed', user: '$2,450.00', time: '5 minutes ago', type: 'info' },
+              { action: 'System backup completed', user: 'Database', time: '15 minutes ago', type: 'success' },
+              { action: 'API rate limit warning', user: 'Endpoint: /api/users', time: '1 hour ago', type: 'warning' },
               { action: 'New feature deployed', user: 'Dashboard v2.1', time: '2 hours ago', type: 'info' }
             ].map((activity, index) => (
               <motion.div
@@ -286,7 +276,5 @@ export const AdvancedDashboardV2: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );
-};
-
+  )};
 export default AdvancedDashboardV2;

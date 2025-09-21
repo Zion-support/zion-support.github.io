@@ -17,7 +17,7 @@ import { professionalServices } from '../data/professional-services';
 import { real2029Q2Additions } from '../data/real-2029-q2-additions';
 export type ServiceRecord = any,
 const allServiceArrays: ServiceRecord[][] = [
-	enhancedRealMicroSaasServices;
+	enhancedRealMicroSaasServices,
 	innovativeMicroSaasServices;
 	additionalEnhancedServices,
 	innovativeAIServices,
@@ -38,24 +38,20 @@ const allServiceArrays: ServiceRecord[][] = [
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	for (const arr of allServiceArrays) {
 		const hit = arr.find((s: any) => {
-			if (!s) return false;
+			if (!s) return false,
 			if (s.id && s.id === slug) return true;
 			if (s.link && typeof s.link === 'string') {
 				try {
 					const url = new URL(s.link);
-					return url.pathname.replace(/^\/+|\/+$/g, '') === slug,
-				} catch {
+					return url.pathname.replace(/^\/+|\/+$/g, '') === slug} catch {
 					return s.link.endsWith('/' + slug);
 				}
 			}
-			return false,
-		}),
-		if (hit) return hit,
-	}
-	return undefined,
-}
+			return false}),
+		if (hit) return hit}
+	return undefined}
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
-	const results: ServiceRecord[] = [];
+	const results: ServiceRecord[] = [],
 	for (const arr of allServiceArrays) {
 		for (const s of arr) {
 			if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
@@ -69,6 +65,4 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		const key = s.id || s.link || s.name,
 		if (seen.has(key)) return false,
 		seen.add(key);
-		return true,
-	}),
-}
+		return true})}

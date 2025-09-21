@@ -26,7 +26,6 @@ function fixAllSyntaxErrors(content) {
   
   // Fix missing return statements
   fixed = fixed.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{\s*$/gm, 'export default function $1() {\n  return (');
-  
   // Fix missing closing braces
   fixed = fixed.replace(/(\w+)\s*{\s*$/gm, '$1 {\n  ');
   
@@ -46,10 +45,8 @@ function fixAllSyntaxErrors(content) {
   
   // Fix duplicate return statements
   fixed = fixed.replace(/return\s*\(\s*return\s*\(/g, 'return (');
-  
   // Fix missing return statements in function components
   fixed = fixed.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{\s*$/gm, 'export default function $1() {\n  return (');
-  
   // Fix JSX fragments
   fixed = fixed.replace(/<>\s*$/gm, '<>');
   fixed = fixed.replace(/^\s*<\/>/gm, '</>');
@@ -68,7 +65,7 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`),
       return true;
     }
     return false;

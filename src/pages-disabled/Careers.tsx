@@ -8,12 +8,11 @@ import { CAREER_JOBS } from "@/data/careers";
 
 export default function Careers() {
   const benefits = [
-    { title: 'Health Insurance', icon: '🏥' };
-    { title: 'Remote Work', icon: '🏠' };
-    { title: 'Learning Budget', icon: '📚' };
+    { title: 'Health Insurance', icon: '🏥' },
+    { title: 'Remote Work', icon: '🏠' },
+    { title: 'Learning Budget', icon: '📚' },
     { title: 'Flexible Hours', icon: '⏰' }
-  ];
-
+  ],
   const jobs = {
     'Engineering': CAREER_JOBS.filter(job => job.department === 'Engineering');
     'Operations': CAREER_JOBS.filter(job => job.department === 'Operations')

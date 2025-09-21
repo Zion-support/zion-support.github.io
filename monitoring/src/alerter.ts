@@ -41,7 +41,7 @@ const alertConsecutiveCounts: Map<string, number> = new Map();
 async function sendWebhookNotification(result: EndpointTestResult, messageSuffix: string = "Attempting service remediation... (if applicable)"): Promise<void> {
   if (!ALERT_WEBHOOK_URL) {
     logger.warn('ALERT_WEBHOOK_URL is not set. Skipping notification.');
-    return
+    return;
   }
 
   // Ensure serviceName is included in the webhook if available
@@ -55,7 +55,7 @@ Status: \`${result.status}\`
 Timestamp: \`${result.timestamp}\`${serviceNameText}
 ${messageSuffix}`, // Use the dynamic message suffix
     // Add more structured data if your webhook receiver supports it (e.g., Slack blocks)
-  }
+  };
 
   try {
     logger.info(`Sending webhook notification for ${result.name} (Service: ${result.serviceName || 'N/A'}) to ${ALERT_WEBHOOK_URL}`);
@@ -116,7 +116,7 @@ export async function triggerAlerts(result: EndpointTestResult): Promise<void> {
         });
       } else {
         // No serviceName, so no remediation script to call.
-        webhookMessageSuffix = "No specific serviceName defined for remediation.",
+        webhookMessageSuffix = "No specific serviceName defined for remediation.";
         logger.warn(`High latency alert for ${result.name}. ${webhookMessageSuffix} No remediation attempted.`);
         await sendWebhookNotification(result, webhookMessageSuffix);
       }

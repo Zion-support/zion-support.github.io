@@ -1,15 +1,15 @@
 interface Service {
-id: string;
-name: string;
+id: string,
+name: string,
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Home,, Users,, Settings,, DollarSign,, Phone,, Menu } from 'lucide-react'
 const Sidebar = () => {
   const navigation = [
-    { name: 'Home', href: '/', icon: Home };
-    { name: 'About', href: '/about', icon: Users };
-    { name: 'Services', href: '/services', icon: Settings };
-    { name: 'Pricing', href: '/pricing', icon: DollarSign };
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone }
   ]
   return (
@@ -38,10 +38,10 @@ const Sidebar = () => {
   )
 }
 
-import React from "react";
+import React from "react",
 const Sidebar: React.FC = () => {
-;
-return (;
+,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">Sidebar</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>

@@ -9,10 +9,9 @@ import { useDebounce } from "@/hooks/useDebounce";
 import { useIsMounted } from "@/hooks/useIsMounted";
 
 interface ServiceTypeStepProps {
-  formData: QuoteFormData;
-  onUpdate: (data: Partial<QuoteFormData>) => void;
-  onNext: () => void;
-}
+  formData: QuoteFormData,
+  onUpdate: (data: Partial<QuoteFormData>) => void,
+  onNext: () => void}
 
 const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ formData, onUpdate, onNext }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -24,15 +23,14 @@ const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ formData, onUpdate, o
   const isMounted = useIsMounted();
 
   const handleTypeSelect = (type: ServiceType) => {
-    onUpdate({ serviceType: type });
+    onUpdate({ serviceType: type }),
     setSearchQuery("");
     setSelectedListing(null);
   };
 
   const handleListingSelect = (listing: ListingItem) => {
-    setSelectedListing(listing);
-    onUpdate({ selectedListing: listing });
-  };
+    setSelectedListing(listing),
+    onUpdate({ selectedListing: listing })};
 
   useEffect(() => {
     if (!debouncedSearch || !formData.serviceType) {
@@ -49,33 +47,32 @@ const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ formData, onUpdate, o
         // Mock data based on service type
         const mockListings: ListingItem[] = [
           {
-            id: '1';
-            title: `Sample ${formData.serviceType} 1`;
-            description: `Description for ${formData.serviceType} 1`;
-            price: 100;
-            rating: 4.5;
-            category: formData.serviceType || 'service';
+            id: '1',
+            title: `Sample ${formData.serviceType} 1`,
+            description: `Description for ${formData.serviceType} 1`,
+            price: 100,
+            rating: 4.5,
+            category: formData.serviceType || 'service',
             tags: ['AI', 'Technology'],
             provider: {
-              name: 'Provider 1';
+              name: 'Provider 1',
               verified: true
             }
-          };
+          },
           {
-            id: '2';
-            title: `Sample ${formData.serviceType} 2`;
-            description: `Description for ${formData.serviceType} 2`;
-            price: 200;
-            rating: 4.8;
-            category: formData.serviceType || 'service';
+            id: '2',
+            title: `Sample ${formData.serviceType} 2`,
+            description: `Description for ${formData.serviceType} 2`,
+            price: 200,
+            rating: 4.8,
+            category: formData.serviceType || 'service',
             tags: ['Cloud', 'Security'],
             provider: {
-              name: 'Provider 2';
+              name: 'Provider 2',
               verified: true
             }
           }
-        ];
-        
+        ],
         setListings(mockListings);
       } catch (error) {
         console.error('Search error:', error);
@@ -88,7 +85,7 @@ const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ formData, onUpdate, o
   }, [debouncedSearch, formData.serviceType]);
 
   if (!isMounted) {
-    return <Skeleton className="h-64 w-full" />;
+    return <Skeleton className="h-64 w-full" />
   }
 
   return (

@@ -1,8 +1,8 @@
 export interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  type: "product" | "talent" | "blog" | "service" | "doc";
+  id: string,
+  title: string,
+  description: string,
+  type: "product" | "talent" | "blog" | "service" | "doc",
   category?: string;
   url?: string;
   image?: string;
@@ -14,25 +14,23 @@ export interface SearchResult {
 }
 
 export interface SearchFilters {
-  types: string[];
-  category: string;
-  minPrice: number;
-  maxPrice: number;
-  minRating: number;
-  sort: string;
-}
+  types: string[],
+  category: string,
+  minPrice: number,
+  maxPrice: number,
+  minRating: number,
+  sort: string}
 
 export interface SearchSuggestion {
-  text: string;
-  type: "recent" | "category" | "tag" | "popular";
-  id: string;
-}
+  text: string,
+  type: "recent" | "category" | "tag" | "popular",
+  id: string}
 
 /**
  * Highlight search terms in text with HTML mark tags
  */
 export const highlightSearchTerms = (text: string, searchTerm: string): string => {
-  if (!searchTerm.trim()) return text;
+  if (!searchTerm.trim()) return text,
   const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const regex = new RegExp(`(${escaped})`, "gi");
 
@@ -43,7 +41,7 @@ export const highlightSearchTerms = (text: string, searchTerm: string): string =
  * Check if a text contains the search term (case-insensitive)
  */
 export const matchesSearchTerm = (text: string | undefined, searchTerm: string): boolean => {
-  if (!text || !searchTerm.trim()) return false;
+  if (!text || !searchTerm.trim()) return false,
   return text.toLowerCase().includes(searchTerm.toLowerCase());
 };
 
@@ -51,10 +49,10 @@ export const matchesSearchTerm = (text: string | undefined, searchTerm: string):
  * Calculate search relevance score based on multiple factors
  */
 export const calculateRelevanceScore = (
-  item: SearchResult;
+  item: SearchResult,
   searchTerm: string
 ): number => {
-  let score = 0;
+  let score = 0,
   const term = searchTerm.toLowerCase();
 
   // Title match (highest weight)
@@ -95,12 +93,11 @@ export const calculateRelevanceScore = (
  * Sort search results by relevance and other factors
  */
 export const sortSearchResults = (
-  results: SearchResult[];
-  searchTerm: string;
+  results: SearchResult[],
+  searchTerm: string,
   sortBy: string = "relevance"
 ): SearchResult[] => {
-  const sortedResults = [...results];
-
+  const sortedResults = [...results],
   switch (sortBy) {
     case "relevance":
       return sortedResults.sort((a, b) => {
@@ -111,13 +108,10 @@ export const sortSearchResults = (
 
     case "price-low":
       return sortedResults.sort((a, b) => (a.price || 0) - (b.price || 0));
-
     case "price-high":
       return sortedResults.sort((a, b) => (b.price || 0) - (a.price || 0));
-
     case "rating":
       return sortedResults.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-
     case "date-newest":
       return sortedResults.sort((a, b) => {
         const dateA = new Date(a.date || 0).getTime();
@@ -132,23 +126,19 @@ export const sortSearchResults = (
         return dateA - dateB;
       });
 
-    default:
-      return sortedResults;
-  }
+    default: return sortedResults}
 };
-
 /**
  * Filter search results based on criteria
  */
 export const filterSearchResults = (
-  results: SearchResult[];
+  results: SearchResult[],
   filters: SearchFilters
 ): SearchResult[] => {
   return results.filter(item => {
     // Type filter
     if (filters.types.length > 0 && !filters.types.includes(item.type)) {
-      return false;
-    }
+      return false}
 
     // Category filter
     if (filters.category && item.category !== filters.category) {
@@ -175,22 +165,21 @@ export const filterSearchResults = (
  * Generate search suggestions based on query and available data
  */
 export const generateDynamicSuggestions = (
-  query: string;
-  recentSearches: string[] = [];
-  availableCategories: string[] = [];
+  query: string,
+  recentSearches: string[] = [],
+  availableCategories: string[] = [],
   availableTags: string[] = []
 ): SearchSuggestion[] => {
-  const suggestions: SearchSuggestion[] = [];
+  const suggestions: SearchSuggestion[] = [],
   const lowerQuery = query.toLowerCase();
 
   // Add current query as recent search suggestion
   if (query.trim()) {
     suggestions.push({
-      text: query;
-      type: "recent";
+      text: query,
+      type: "recent",
       id: `query-${query}`
-    });
-  }
+    })}
 
   // Category suggestions
   availableCategories
@@ -198,11 +187,10 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(category => {
       suggestions.push({
-        text: category;
-        type: "category";
+        text: category,
+        type: "category",
         id: `category-${category}`
-      });
-    });
+      })});
 
   // Tag suggestions
   availableTags
@@ -210,11 +198,10 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(tag => {
       suggestions.push({
-        text: tag;
-        type: "tag";
+        text: tag,
+        type: "tag",
         id: `tag-${tag}`
-      });
-    });
+      })});
 
   // Recent searches suggestions
   recentSearches
@@ -222,11 +209,10 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(search => {
       suggestions.push({
-        text: search;
-        type: "recent";
+        text: search,
+        type: "recent",
         id: `recent-${search}`
-      });
-    });
+      })});
 
   return suggestions;
 };
@@ -235,15 +221,13 @@ export const generateDynamicSuggestions = (
  * Perform fuzzy search on a collection of items
  */
 export const fuzzySearch = (
-  items: SearchResult[];
-  searchTerm: string;
+  items: SearchResult[],
+  searchTerm: string,
   threshold: number = 0.6
 ): SearchResult[] => {
-  if (!searchTerm.trim()) return items;
-
+  if (!searchTerm.trim()) return items,
   const term = searchTerm.toLowerCase();
-  const results: Array<{ item: SearchResult; score: number }> = [];
-
+  const results: Array<{ item: SearchResult; score: number }> = [],
   items.forEach(item => {
     const searchableText = [
       item.title;
@@ -269,9 +253,8 @@ export const fuzzySearch = (
  * Calculate fuzzy matching score between two strings
  */
 const calculateFuzzyScore = (text: string, pattern: string): number => {
-  if (pattern.length === 0) return 1;
+  if (pattern.length === 0) return 1,
   if (text.length === 0) return 0;
-
   let matches = 0;
   let patternIndex = 0;
 
@@ -289,14 +272,13 @@ const calculateFuzzyScore = (text: string, pattern: string): number => {
  * Default search filters
  */
 export const defaultSearchFilters: SearchFilters = {
-  types: [];
-  category: "";
-  minPrice: 0;
-  maxPrice: 10000;
-  minRating: 0;
+  types: [],
+  category: "",
+  minPrice: 0,
+  maxPrice: 10000,
+  minRating: 0,
   sort: "relevance"
-};
-
+},
 export default {
   highlightSearchTerms;
   matchesSearchTerm;

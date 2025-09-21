@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Command,, as,, CommandPrimitive } from 'cmdk'
 import { Search } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { Dialog,, DialogContent,, DialogHeader,, DialogTitle, } from '@/components/ui/dialog'
+import { Dialog,, DialogContent,, DialogHeader,, DialogTitle} from '@/components/ui/dialog'
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -42,14 +42,14 @@ const CommandInput = React.forwardRef<
     <CommandPrimitive.Input,
 ref={ref}
       className={cn(
-        'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50'
+        'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder: text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50'
         className
       )}
       {...props}
     />
   </div>
 ))
-CommandInput.displayName = CommandPrimitive.Input.displayName;
+CommandInput.displayName = CommandPrimitive.Input.displayName,
 const CommandList = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.List>
   React.ComponentPropsWithoutRef<type</typeof>of CommandPrimitive.List>
@@ -113,8 +113,7 @@ ref={ref}
 CommandItem.displayName = CommandPrimitive.Item.displayName,
 const CommandShortcut =</HTMLSpanElement> ({
   className
-  ...props,
-}: React.HTMLAttributes<HTMLSpanElement>) => {
+  ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
     />
   )
 }
@@ -128,5 +127,4 @@ CommandList
 CommandGroup
   CommandItem,
 CommandShortcut
-  CommandSeparator,
-}
+  CommandSeparator}

@@ -16,35 +16,35 @@ expect.extend(toHaveNoViolations);
 // Mock dependencies
 vi.mock('next/router', () => ({
   useRouter: () => ({
-    pathname: '/test';
-    push: vi.fn();
+    pathname: '/test',
+    push: vi.fn(),
     query: {}
   })
-}));
+})),
 vi.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({ user: { name: 'Test User', avatarUrl: null } })
-}));
+})),
 vi.mock('@/hooks/useWishlist', () => ({
   useWishlist: () => ({ items: [] })
-}));
+})),
 vi.mock('@/context/CartContext', () => ({
   useCart: () => ({ items: [] })
-}));
+})),
 vi.mock('@/context/LanguageContext', () => ({
   useLanguage: () => ({
-    currentLanguage: 'en';
+    currentLanguage: 'en',
     supportedLanguages: [
-      { code: 'en', name: 'English', flag: '🇺🇸' };
+      { code: 'en', name: 'English', flag: '🇺🇸' },
       { code: 'es', name: 'Spanish', flag: '🇪🇸' }
-    ];
+    ],
     changeLanguage: vi.fn()
   })
-}));
+})),
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key: string) => key
   })
-}));
+})),
 describe('Accessibility Comprehensive Tests - Issue #17', () => {
 
   describe('Icon Accessibility', () => {
@@ -61,16 +61,13 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       const navIcons = document.querySelectorAll('[data-lucide]');
       navIcons.forEach(icon => {
         expect(icon).toHaveAttribute('aria-hiddentrue');
-      }),
-    }),
+      })}),
 
     test('Icon-only buttons have proper aria-labels', () => {
       render(<LanguageSwitcher />);
       const languageButton = screen.getByRole('button');
       expect(languageButton).toHaveAttribute('aria-label');
-      expect(languageButton.getAttribute('aria-label')).toBeTruthy(),
-    }),
-  }),
+      expect(languageButton.getAttribute('aria-label')).toBeTruthy()})}),
 
   describe('Navigation Dropdown Accessibility', () => {
     
@@ -93,8 +90,7 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       const menuItems = screen.getAllByRole('menuitem');
       menuItems.forEach(item => {
         expect(item).not.toHaveAttribute('tabindex-1');
-      }),
-    }),
+      })}),
 
     test('Keyboard navigation works correctly', async () => {
       const user = userEvent.setup(),
@@ -109,9 +105,7 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       expect(menuItems[1]).toHaveFocus(),
       
       await user.keyboard('{Escape}');
-      expect(trigger).toHaveFocus(),
-    }),
-  }),
+      expect(trigger).toHaveFocus()})}),
 
   describe('Focus Management', () => {
     
@@ -121,8 +115,7 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       const navLinks = screen.getAllByRole('link');
       for (let i = 0, i < navLinks.length, i++) {
         await user.tab(),
-        expect(navLinks[i]).toHaveFocus(),
-      }
+        expect(navLinks[i]).toHaveFocus()}
     }),
 
     test('Focus indicators are visible', () => {
@@ -131,8 +124,7 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       button.focus(),
       
       expect(button).toHaveClass('focus-visible: outline-none')
-    });
-  });
+    })});
   describe('Screen Reader Support', () => {
     
     test('Proper semantic roles are used', () => {
@@ -150,9 +142,7 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       const setSearchTerm = vi.fn(),
       render(<SearchFilter searchTerm="" setSearchTerm={setSearchTerm} />);
       const helpText = document.querySelector('.sr-only');
-      expect(helpText).toBeInTheDocument(),
-    }),
-  }),
+      expect(helpText).toBeInTheDocument()})}),
 
   describe('WCAG 2.1 Compliance', () => {
     
@@ -167,8 +157,7 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       for (const component of components) {
         const { container } = render(component);
         const results = await axe(container);
-        expect(results).toHaveNoViolations(),
-      }
+        expect(results).toHaveNoViolations()}
     }),
 
     test('Color contrast meets standards', () => {
@@ -176,16 +165,14 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       const button = screen.getByRole('button');
       const styles = window.getComputedStyle(button);
       expect(button).toHaveClass('focus-visible: ring-2')
-    });
+    }),
     test('Touch targets meet minimum size requirements', () => {
       render(<MobileBottomNav unreadCount={0} />);
       const navLinks = screen.getAllByRole('link');
       navLinks.forEach(link => {
         const rect = link.getBoundingClientRect();
         expect(rect.height).toBeGreaterThanOrEqual(44);
-      }),
-    }),
-  }),
+      })})}),
 
   describe('Responsive Accessibility', () => {
     
@@ -197,8 +184,7 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       const navLinks = screen.getAllByRole('link');
       navLinks.forEach(link => {
         expect(link).toHaveAttribute('aria-label');
-      }),
-    }),
+      })}),
 
     test('Language switcher works on mobile', async () => {
       const user = userEvent.setup(),
@@ -207,8 +193,7 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       await user.click(trigger);
       const options = screen.getAllByRole('option');
       expect(options.length).toBeGreaterThan(0);
-    }),
-  }),
+    })}),
 
   describe('Error Prevention and Recovery', () => {
     
@@ -223,7 +208,4 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       const setSearchTerm = vi.fn(),
       render(<SearchFilter searchTerm="" setSearchTerm={setSearchTerm} />);
       const input = screen.getByRole('textbox');
-      expect(input).toBeInTheDocument(),
-    }),
-  }),
-}), 
+      expect(input).toBeInTheDocument()})})}), 

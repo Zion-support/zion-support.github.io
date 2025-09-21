@@ -1,9 +1,9 @@
-import { ShieldAlert,,  } from 'lucide-react'
+import { ShieldAlert,} from 'lucide-react'
   DialogDescription} from "@/components/ui/dialog"
-import { DisputeForm,,  } from "./DisputeForm"
-import { useRouter,,  } from 'next/router'
+import { DisputeForm,} from "./DisputeForm"
+import { useRouter,} from 'next/router'
 interface RaiseDisputeButtonProps {
-  projectId: string;
+  projectId: string,
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "
   size?: "default" | "sm" | "lg" | "
@@ -19,11 +19,11 @@ variant={variant}
         Raise Dispute
       </Button>
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className='sm:max-w-[550px]'>
+        <DialogContent className='sm: max-w-[550px]'>
           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
-              Please provide details about the issue you're experiencing with;
+              Please provide details about the issue you're experiencing with,
 this project.
             </DialogDescription>
           </DialogHeader>

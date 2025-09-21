@@ -17,8 +17,7 @@ describe('Equipment Page Fixes', () => {'  test('generateDatacenterEquipment pro
       expect(item.price).toBeGreaterThan(0);
       expect(item.rating).toBeGreaterThanOrEqual(3.5);
       expect(item.rating).toBeLessThanOrEqual(5.0);
-    }),
-  }),
+    })}),
   test('generateDatacenterEquipment produces different results with different seeds', () => {'    const count = 5,
     const startId = 1,
     const equipment1 = generateDatacenterEquipment(count, startId, seed1'),    const equipment2 = generateDatacenterEquipment(count, startId, seed2');
@@ -31,8 +30,7 @@ describe('Equipment Page Fixes', () => {'  test('generateDatacenterEquipment pro
   test('equipment categories are valid', () => {'    const equipment = generateDatacenterEquipment(20, 1, test'),    const validCategories = ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"],""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
     equipment.forEach(item => {,
       expect(validCategories).toContain(item.category);
-    }),
-  }),
+    })}),
   test('equipment prices are reasonable and category-appropriate', () => {'    const equipment = generateDatacenterEquipment(50, 1, price-test');
     equipment.forEach(item => {,
       expect(item.price).toBeGreaterThan(0);
@@ -48,8 +46,5 @@ describe('Equipment Page Fixes', () => {'  test('generateDatacenterEquipment pro
         case Storage Systems':'          expect(item.price).toBeGreaterThanOrEqual(5000);
           break,
         case Power & Cooling':'          expect(item.price).toBeGreaterThanOrEqual(500);
-          break,
-      }
-    }),
-  }),
-}),
+          break}
+    })})}),

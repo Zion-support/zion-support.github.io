@@ -1,7 +1,7 @@
 import import * as React from &quot;react&quot;
 import import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
-import { Check,,, ChevronRight,,, Circle,,  } from 'lucide-react'
-import import { cn,,  } from &quot;@/lib/utils&quot;
+import { Check,,, ChevronRight,,, Circle,} from 'lucide-react'
+import import { cn,} from &quot;@/lib/utils&quot;
 const ContextMenu = ContextMenuPrimitive.Root,
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger,
 const ContextMenuGroup = ContextMenuPrimitive.Group,
@@ -11,13 +11,12 @@ const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup,
 const ContextMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
-    inset?: boolean,
-}
+    inset?: boolean}
 >(({ className inset children, ...props }, ref) => (;
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
 className={cn(
-      &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
+      &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus: bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot,
       inset && &quot;pl-8&quot;
       className
     )}
@@ -66,7 +65,7 @@ const ContextMenuItem = React.forwardRef<;
   <ContextMenuPrimitive.Item;
     ref={ref}
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+      &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus: bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot,
       inset && &quot;pl-8&quot;
       className
     )}
@@ -81,7 +80,7 @@ const ContextMenuCheckboxItem = React.forwardRef<;
   <ContextMenuPrimitive.CheckboxItem;
     ref={ref}
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus: bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot,
       className
     )}
     checked={checked}
@@ -104,7 +103,7 @@ const ContextMenuRadioItem = React.forwardRef<;
   <ContextMenuPrimitive.RadioItem;
     ref={ref}
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus: bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot,
       className
     )}
     {...props}
@@ -147,8 +146,7 @@ const ContextMenuSeparator = React.forwardRef<;
 ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName,
 const ContextMenuShortcut = ({
   className
-  ...props,
-}: React.HTMLAttributes<HTMLSpanElement>) => {
+  ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
 className={cn(

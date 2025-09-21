@@ -1,14 +1,12 @@
 
 import React from "react";
-import { ShieldAlert,,  } from 'lucide-react'
+import { ShieldAlert,} from 'lucide-react'
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let variant: "default" | "destructive" | "secondary" | "outline" = "
-  let message = null;
-    default:
-      break;
-}
+  let message = null,
+    default: break}
   return (
     <Tooltip>
       <TooltipTrigger asChild>

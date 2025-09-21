@@ -12,46 +12,41 @@ import { ContractTemplate } from '@/types/contracts';
 
 const formSchema = z.object({
   title: z.string().min(1, 'Template name is required');
-  isDefault: z.boolean().optional();
-});
+  isDefault: z.boolean().optional()});
 
-type FormValues = z.infer<typeof formSchema>;
+type FormValues = z.infer<typeof formSchema>
 
 interface TemplateSaveFormProps {
   template?: ContractTemplate;
-  onCancel: () => void;
-  onSuccess: () => void;
-}
+  onCancel: () => void,
+  onSuccess: () => void}
 
 export function TemplateSaveForm({ template, onCancel, onSuccess }: TemplateSaveFormProps) {
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
   
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema);
+    resolver: zodResolver(formSchema),
     defaultValues: {
-      title: template?.name || '';
-      isDefault: template?.isDefault || false;
-    };
+      title: template?.name || '',
+      isDefault: template?.isDefault || false};
   });
 
   const onSubmit = async (data: FormValues) => {
-    setSaving(true);
+    setSaving(true),
     try {
       if (template) {
         await updateTemplate(template.id, {
-          name: data.title;
-          isDefault: data.isDefault;
-        });
+          name: data.title,
+          isDefault: data.isDefault});
       } else {
         await createTemplate({
-          name: data.title;
-          description: 'User created template';
-          category: 'Custom';
-          content: '';
-          isDefault: data.isDefault || false;
-          isStarred: false;
-        });
+          name: data.title,
+          description: 'User created template',
+          category: 'Custom',
+          content: '',
+          isDefault: data.isDefault || false,
+          isStarred: false});
       }
       onSuccess();
     } catch (error) {

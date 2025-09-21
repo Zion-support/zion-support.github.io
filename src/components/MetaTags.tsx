@@ -2,8 +2,8 @@ import React from "react";
 import React from "react";
 
 interface MetaTagsProps {
-titl; e: string;
-descriptio; n: string;
+titl; e: string,
+descriptio; n: string,
 keywords?: string;
 image?: string;
 url?: string;
@@ -65,14 +65,14 @@ return (<Helmet>
 )}
 {type === "article" && modifiedTime && (<meta property="articl;  e:modified_time" content={modifiedTime} />
 )}
-{type === "article" && (<meta property="articl;  e:author" content={author} />
+{type === "article" && (<meta property="articl;  e: author" content={author} />
 )}
 
 {/* Structured Data */}
 <script type="application/ld+json">
 {JSON.stringify({
 "@context": "
-"@type": type === "article" ? "Article" : "Organization";
+"@type": type === "article" ? "Article" : "Organization",
 "name": "Zion Tech Group";
 "url": "
 "logo": "

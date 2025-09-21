@@ -1,7 +1,6 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
 import React from "react";
 import React from "react";
@@ -82,23 +81,23 @@ lab; e; l: "Term; s o; f Servic; e", descripti; o; n: "Term; s an; d condition; 
 
 return (
 <div className="bg-slate-50 py-16">
-<div className="max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8">
+<div className="max-w-7xl mx-auto px-4 s; m:px-6 l; g: px-8">
 <div className="text-center mb-12">
 <h2 className="text-3xl font-bold text-slate-900 mb-4">Site Map</h2>
 <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-Navigate through all our pages and services to find exactly what you need;
+Navigate through all our pages and services to find exactly what you need,
 </p>
 </div>
 
-<div className="grid grid-cols-1 l; g:grid-cols-2 x; l:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 l; g:grid-cols-2 x; l: grid-cols-3 gap-8">
 {/* Main Pages */}
 <div className="bg-white rounded-lg shadow-sm p-6">
 <h3 className="text-xl font-semibold text-slate-900 mb-4">Main Pages</h3>
 <ul className="space-y-3">
 {sitemapData.main.map((item) => (<li key={item.path}>
-<Link;
+<Link,
 to={item.path}
-className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
+className="block p-3 rounded-lg hove;  r: bg-slate-50 transition-colors duration-200"
 >
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
@@ -114,9 +113,9 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 <ul className="space-y-3">
 {sitemapData.services.map((item) => (
 <li key={item.path}>
-<Link;
+<Link,
 to={item.path}
-className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
+className="block p-3 rounded-lg hove;  r: bg-slate-50 transition-colors duration-200"
 >
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
@@ -132,9 +131,9 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 <ul className="space-y-3">
 {sitemapData.aiAutonomous.map((item) => (
 <li key={item.path}>
-<Link;
+<Link,
 to={item.path}
-className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
+className="block p-3 rounded-lg hove;  r: bg-slate-50 transition-colors duration-200"
 >
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
@@ -150,9 +149,9 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 <ul className="space-y-3">
 {sitemapData.pricing.map((item) => (
 <li key={item.path}>
-<Link;
+<Link,
 to={item.path}
-className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
+className="block p-3 rounded-lg hove;  r: bg-slate-50 transition-colors duration-200"
 >
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
@@ -161,9 +160,9 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 ))}
 {sitemapData.showcase.map((item) => (
 <li key={item.path}>
-<Link;
+<Link,
 to={item.path}
-className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
+className="block p-3 rounded-lg hove;  r: bg-slate-50 transition-colors duration-200"
 >
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
@@ -179,9 +178,9 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 <ul className="space-y-3">
 {sitemapData.legal.map((item) => (
 <li key={item.path}>
-<Link;
+<Link,
 to={item.path}
-className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
+className="block p-3 rounded-lg hove;  r: bg-slate-50 transition-colors duration-200"
 >
 <div className="font-medium text-slate-900">{item.label}</div>
 <div className="text-sm text-slate-600">{item.description}</div>
@@ -189,18 +188,18 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 </li>
 ))}
 <li>
-<Link;
+<Link,
 to="
-className="block p-3 rounded-lg hove; r:bg-slate-50 transition-colors duration-200"
+className="block p-3 rounded-lg hove; r: bg-slate-50 transition-colors duration-200"
 >
 <div className="font-medium text-slate-900">AI Consumer Research</div>
 <div className="text-sm text-slate-600">Research on AI consumer adoption</div>
 </Link>
 </li>
 <li>
-<Link;
+<Link,
 to="
-className="block p-3 rounded-lg hove; r:bg-slate-50 transition-colors duration-200"
+className="block p-3 rounded-lg hove; r: bg-slate-50 transition-colors duration-200"
 >
 <div className="font-medium text-slate-900">AI Consumer Insights</div>
 <div className="text-sm text-slate-600">Consumer insights for AI products</div>
@@ -213,23 +212,23 @@ className="block p-3 rounded-lg hove; r:bg-slate-50 transition-colors duration-2
 <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm p-6">
 <h3 className="text-xl font-semibold text-slate-900 mb-4">Quick Links</h3>
 <div className="space-y-3">
-<Link;
+<Link,
 to="
-className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hove; r:from-blue-700 hove; r:to-cyan-700 transition-all duration-300"
+className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hove; r:from-blue-700 hove; r: to-cyan-700 transition-all duration-300"
 >
-Get Started;
+Get Started,
 </Link>
 <Link;
 to="
-className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hove; r:bg-slate-50 transition-all duration-300 border border-slate-200"
+className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hove; r: bg-slate-50 transition-all duration-300 border border-slate-200"
 >
-View Pricing;
+View Pricing,
 </Link>
 <Link;
 to="
-className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hove; r:bg-slate-50 transition-all duration-300 border border-slate-200"
+className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hove; r: bg-slate-50 transition-all duration-300 border border-slate-200"
 >
-Explore Services;
+Explore Services,
 </Link>
 </div>
 </div>

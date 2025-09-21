@@ -5,31 +5,29 @@ import { Bot, Users, TrendingUp } from 'lucide-react';
 export default function AITalentMatchingPage() {
   const benefits = [
     {
-      title: 'AI-Powered Matching';
-      description: 'Advanced algorithms match talent with opportunities';
+      title: 'AI-Powered Matching',
+      description: 'Advanced algorithms match talent with opportunities',
       icon: <Bot className="h-6 w-6" />
-    };
+    },
     {
-      title: 'Quality Candidates';
-      description: 'Pre-screened and verified professionals';
+      title: 'Quality Candidates',
+      description: 'Pre-screened and verified professionals',
       icon: <Users className="h-6 w-6" />
-    };
+    },
     {
-      title: 'Success Metrics';
-      description: 'Track and measure placement success rates';
+      title: 'Success Metrics',
+      description: 'Track and measure placement success rates',
       icon: <TrendingUp className="h-6 w-6" />
     }
-  ];
-
+  ],
   const testimonials = [
     {
-      name: 'Sarah Johnson';
-      role: 'HR Director';
-      text: 'The AI matching system has revolutionized our hiring process.';
+      name: 'Sarah Johnson',
+      role: 'HR Director',
+      text: 'The AI matching system has revolutionized our hiring process.',
       avatar: '/images/avatars/sarah.jpg'
     }
-  ];
-
+  ],
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"

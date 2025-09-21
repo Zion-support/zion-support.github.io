@@ -6,54 +6,50 @@ import { Badge } from "@/components/ui/badge";
 
 const plans = [
   {
-    name: "Starter";
-    price: "$99";
-    billing: "per month";
-    description: "Perfect for small teams getting started";
-    users: "Up to 10 users";
-    popular: false;
+    name: "Starter",
+    price: "$99",
+    billing: "per month",
+    description: "Perfect for small teams getting started",
+    users: "Up to 10 users",
+    popular: false,
     features: [
-      { name: "Basic AI matching", included: true };
-      { name: "Standard support", included: true };
-      { name: "Basic analytics", included: true };
-      { name: "API access", included: false };
-      { name: "Custom workflows", included: false };
-      { name: "Advanced security", included: false };
-    ];
+      { name: "Basic AI matching", included: true },
+      { name: "Standard support", included: true },
+      { name: "Basic analytics", included: true },
+      { name: "API access", included: false },
+      { name: "Custom workflows", included: false },
+      { name: "Advanced security", included: false }];
   },
   {
-    name: "Professional";
-    price: "$299";
-    billing: "per month";
-    description: "Ideal for growing companies";
-    users: "Up to 50 users";
-    popular: true;
+    name: "Professional",
+    price: "$299",
+    billing: "per month",
+    description: "Ideal for growing companies",
+    users: "Up to 50 users",
+    popular: true,
     features: [
-      { name: "Basic AI matching", included: true };
-      { name: "Standard support", included: true };
-      { name: "Basic analytics", included: true };
-      { name: "API access", included: true };
-      { name: "Custom workflows", included: true };
-      { name: "Advanced security", included: false };
-    ];
+      { name: "Basic AI matching", included: true },
+      { name: "Standard support", included: true },
+      { name: "Basic analytics", included: true },
+      { name: "API access", included: true },
+      { name: "Custom workflows", included: true },
+      { name: "Advanced security", included: false }];
   },
   {
-    name: "Enterprise";
-    price: "Custom";
-    billing: "contact us";
-    description: "Tailored solutions for large organizations";
-    users: "Unlimited users";
-    popular: false;
+    name: "Enterprise",
+    price: "Custom",
+    billing: "contact us",
+    description: "Tailored solutions for large organizations",
+    users: "Unlimited users",
+    popular: false,
     features: [
-      { name: "Basic AI matching", included: true };
-      { name: "Standard support", included: true };
-      { name: "Basic analytics", included: true };
-      { name: "API access", included: true };
-      { name: "Custom workflows", included: true };
-      { name: "Advanced security", included: true };
-    ];
-  },
-];
+      { name: "Basic AI matching", included: true },
+      { name: "Standard support", included: true },
+      { name: "Basic analytics", included: true },
+      { name: "API access", included: true },
+      { name: "Custom workflows", included: true },
+      { name: "Advanced security", included: true }];
+  }];
 
 export function EnterprisePricingTable() {
   return (

@@ -10,11 +10,11 @@ export class LinkValidator {
         'twitch.tv'
     ];
     static PROTOCOL_LINKS = [
-        'tel: ';
-        'mailto: ';
-        'sms: ';
+        'tel: ',
+        'mailto: ',
+        'sms: ',
         'whatsapp: '
-    ];
+    ],
     static BROKEN_LINK_MAPPINGS = {
         /
         '/quantum-neural-network-platform/': '/services/quantum-technology',
@@ -88,45 +88,41 @@ export class LinkValidator {
         if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
             return {
                 url,
-                status: 'protocol';
+                status: 'protocol',
                 parentPage,
-                suggestedFix: 'Keep as-is - these are valid protocol links',
-            }
+                suggestedFix: 'Keep as-is - these are valid protocol links'}
      }
         /
         if (this.isExternalLink(url)) {
             return {
                 url,
-                status: 'external';
+                status: 'external',
                 parentPage,
-                suggestedFix: 'Add rel="nofollow" and validate periodically',
-            }
+                suggestedFix: 'Add rel="nofollow" and validate periodically'}
      }
         /
         if (this.BROKEN_LINK_MAPPINGS[url]) {
             return {
                 url,
-                status: 'broken';
+                status: 'broken',
                 parentPage,
                 suggestedFix: `
-                error: 'Broken internal link with available redirect',
-            }
+                error: 'Broken internal link with available redirect'}
      }
         /
         /
         return {
             url,
-            status: 'valid';
+            status: 'valid',
             parentPage;
         }
     }
     static getSuggestedFixes() {
         return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
-            originalUrl: original;
-            newUrl: newUrl;
-            type: 'redirect';
-            reason: 'Broken internal link with available redirect mapping',
-        }))
+            originalUrl: original,
+            newUrl: newUrl,
+            type: 'redirect',
+            reason: 'Broken internal link with available redirect mapping'}))
      }
     static isExternalLink(url) {
         try {
@@ -135,8 +131,7 @@ export class LinkValidator {
         }
         catch {
             /
-            return false;
-        }
+            return false}
     }
     static generateRedirectRules() {
         const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS)

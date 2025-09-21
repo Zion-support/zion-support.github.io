@@ -7,6 +7,5 @@ export function getEthereumProvider(): WalletProvider | null {,
   if (typeof window === 'undefined') return null,
   // @ts-ignore,
   const { ethereum } = window,
-  return ethereum ?? null,
-}
+  return ethereum ?? null}
 ,

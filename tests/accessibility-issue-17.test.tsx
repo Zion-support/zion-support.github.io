@@ -12,25 +12,25 @@ import { ServiceQuoteModal } from '@/components/ServiceQuoteModal';
 vi.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({
     user: {
-      name: 'Test User';
-      displayName: 'Test User';
+      name: 'Test User',
+      displayName: 'Test User',
       avatarUrl: '/test-avatar.jpg'
-    };
+    },
     logout: vi.fn()
   })
-}));
+})),
 expect.extend(toHaveNoViolations);
 describe('Accessibility Fixes for Issue #17', () => {
   
   test('UserProfileDropdown: Menu items are Tab-focusable', async () => {
     const user = userEvent.setup(),
     render(<UserProfileDropdown />);
-    const triggerButton = screen.getByRole('button', { name: /user profile/i });
+    const triggerButton = screen.getByRole('button', { name: /user profile/i }),
     await user.click(triggerButton);
-    const profileLink = screen.getByRole('menuitem', { name: /profile/i });
-    const ordersLink = screen.getByRole('menuitem', { name: /orders/i });
-    const settingsLink = screen.getByRole('menuitem', { name: /settings/i });
-    const logoutButton = screen.getByRole('menuitem', { name: /logout/i });
+    const profileLink = screen.getByRole('menuitem', { name: /profile/i }),
+    const ordersLink = screen.getByRole('menuitem', { name: /orders/i }),
+    const settingsLink = screen.getByRole('menuitem', { name: /settings/i }),
+    const logoutButton = screen.getByRole('menuitem', { name: /logout/i }),
     expect(profileLink).not.toHaveAttribute('tabindex-1');
     expect(ordersLink).not.toHaveAttribute('tabindex-1');
     expect(settingsLink).not.toHaveAttribute('tabindex-1');
@@ -42,28 +42,26 @@ describe('Accessibility Fixes for Issue #17', () => {
     expect(ordersLink).toHaveFocus(),
     
     await user.keyboard('{Escape}');
-    expect(triggerButton).toHaveFocus(),
-  }),
+    expect(triggerButton).toHaveFocus()}),
   
   test('UserProfileDropdown: Proper ARIA attributes', async () => {
     const user = userEvent.setup(),
     render(<UserProfileDropdown />);
-    const triggerButton = screen.getByRole('button', { name: /user profile/i });
+    const triggerButton = screen.getByRole('button', { name: /user profile/i }),
     expect(triggerButton).toHaveAttribute('aria-haspopuptrue');
     expect(triggerButton).toHaveAttribute('aria-expandedfalse');
     expect(triggerButton).toHaveAttribute('aria-labelUser profile');
     await user.click(triggerButton);
     expect(triggerButton).toHaveAttribute('aria-expandedtrue');
     const menu = screen.getByRole('menu');
-    expect(menu).toBeInTheDocument(),
-  }),
+    expect(menu).toBeInTheDocument()}),
   
   test('ServiceQuoteModal: Calendar icons have aria-hidden', () => {
     const mockService = {
-      id: '1';
-      title: 'Test Service';
+      id: '1',
+      title: 'Test Service',
       category: 'Test Category'
-    };
+    },
     render(
       <ServiceQuoteModal 
         open={true} 
@@ -74,21 +72,19 @@ describe('Accessibility Fixes for Issue #17', () => {
     const calendarIcons = document.querySelectorAll('svg[data-lucide="calendar"]');
     calendarIcons.forEach(icon => {
       expect(icon).toHaveAttribute('aria-hiddentrue');
-    }),
-  }),
+    })}),
   
   test('Navigation components have no accessibility violations', async () => {
     const { container } = render(<UserProfileDropdown />);
     const results = await axe(container);
-    expect(results).toHaveNoViolations(),
-  }),
+    expect(results).toHaveNoViolations()}),
   
   test('Modal components have no accessibility violations', async () => {
     const mockService = {
-      id: '1';
-      title: 'Test Service';
+      id: '1',
+      title: 'Test Service',
       category: 'Test Category'
-    };
+    },
     const { container } = render(
       <ServiceQuoteModal 
         open={true} 
@@ -97,25 +93,23 @@ describe('Accessibility Fixes for Issue #17', () => {
       />
     );
     const results = await axe(container);
-    expect(results).toHaveNoViolations(),
-  }),
+    expect(results).toHaveNoViolations()}),
   
   test('Focus management works correctly', async () => {
     const user = userEvent.setup(),
     render(<UserProfileDropdown />);
-    const triggerButton = screen.getByRole('button', { name: /user profile/i });
+    const triggerButton = screen.getByRole('button', { name: /user profile/i }),
     triggerButton.focus();
     await user.keyboard('{Enter}');
-    const profileLink = screen.getByRole('menuitem', { name: /profile/i });
+    const profileLink = screen.getByRole('menuitem', { name: /profile/i }),
     expect(profileLink).toHaveFocus();
     await user.keyboard('{Escape}');
-    expect(triggerButton).toHaveFocus(),
-  }),
+    expect(triggerButton).toHaveFocus()}),
   
   test('Keyboard navigation follows accessibility standards', async () => {
     const user = userEvent.setup(),
     render(<UserProfileDropdown />);
-    const triggerButton = screen.getByRole('button', { name: /user profile/i });
+    const triggerButton = screen.getByRole('button', { name: /user profile/i }),
     await user.click(triggerButton);
     const menuItems = screen.getAllByRole('menuitem');
     await user.keyboard('{ArrowDown}');
@@ -128,9 +122,7 @@ describe('Accessibility Fixes for Issue #17', () => {
     expect(menuItems[0]).toHaveFocus(),
     
     await user.keyboard('{ArrowUp}');
-    expect(menuItems[menuItems.length - 1]).toHaveFocus(),
-  }),
-}),
+    expect(menuItems[menuItems.length - 1]).toHaveFocus()})}),
 
 // Additional validation for common icon accessibility patterns
 describe('Icon Accessibility Patterns', () => {
@@ -160,7 +152,6 @@ describe('Icon Accessibility Patterns', () => {
     ),
     
     render(<TestComponent />);
-    const button = screen.getByRole('button', { name: /search/i });
+    const button = screen.getByRole('button', { name: /search/i }),
     expect(button).toHaveAttribute('aria-labelSearch');
-  }),
-}), 
+  })}), 

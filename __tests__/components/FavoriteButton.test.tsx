@@ -8,15 +8,13 @@ import { vi, test, expect, beforeEach, type MockInstance } from 'vitest';
 
 vi.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({ isAuthenticated: true, user: { id: 'u1' } })
-}));
+})),
 beforeEach(() => {
-  global.fetch = vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve([]) })) as MockInstance<any,any>,
-}),
+  global.fetch = vi.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve([]) })) as MockInstance<any,any>}),
 
 const renderWithStore = (ui: React.ReactElement) => {
-  const store = configureStore({ reducer: { wishlist: wishlistReducer } });
-  return { ...render(<Provider store={store}>{ui}</Provider>), store },
-},
+  const store = configureStore({ reducer: { wishlist: wishlistReducer } }),
+  return { ...render(<Provider store={store}>{ui}</Provider>), store }},
 
 test('clicking heart adds item to wishlist', () => {
   const { store } = renderWithStore(<FavoriteButton itemId="p1" itemType="product" />);

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import import Image { type ImageProps } from 'next/image';
-import import { cn,,  } from '@/lib/utils';
+import import { cn,} from '@/lib/utils';
 interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {
-  src: string;
+  src: string,
   alt?: string;
   /** Source to use if the main src fails */
   /** CSS class for the retry button */

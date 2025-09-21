@@ -7,23 +7,22 @@ export function PaymentMethods() {
   // Mock payment methods
   const paymentMethods = [
     {
-      id: '1';
-      brand: 'Visa';
-      last4: '4242';
-      expMonth: '12';
-      expYear: '2025';
+      id: '1',
+      brand: 'Visa',
+      last4: '4242',
+      expMonth: '12',
+      expYear: '2025',
       isDefault: true
-    };
+    },
     {
-      id: '2';
-      brand: 'Mastercard';
-      last4: '5555';
-      expMonth: '08';
-      expYear: '2026';
+      id: '2',
+      brand: 'Mastercard',
+      last4: '5555',
+      expMonth: '08',
+      expYear: '2026',
       isDefault: false
     }
-  ];
-
+  ],
   return (
     <Card>
       <CardHeader>

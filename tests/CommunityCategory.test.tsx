@@ -8,20 +8,20 @@ import { vi, it, expect } from 'vitest';
 it('loads posts for category', async () => {
   vi.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([
     {
-      id: '1';
-      title: 'Sample post';
-      content: 'Content';
-      authorId: '1';
-      authorName: 'Test';
-      categoryId: 'getting-hired';
-      tags: [];
-      createdAt: '';
-      updatedAt: '';
-      upvotes: 0;
-      downvotes: 0;
+      id: '1',
+      title: 'Sample post',
+      content: 'Content',
+      authorId: '1',
+      authorName: 'Test',
+      categoryId: 'getting-hired',
+      tags: [],
+      createdAt: '',
+      updatedAt: '',
+      upvotes: 0,
+      downvotes: 0,
       replyCount: 0
     }
-  ]);
+  ]),
   render(
     <QueryClientProvider client={new QueryClient()}>
       <MemoryRouter initialEntries={['/community/category/getting-hired']}>
@@ -31,8 +31,7 @@ it('loads posts for category', async () => {
       </MemoryRouter>
     </QueryClientProvider>
   );
-  expect(await screen.findByText(/getting hired/i)).toBeInTheDocument(),
-}),
+  expect(await screen.findByText(/getting hired/i)).toBeInTheDocument()}),
 
 it('shows message when no posts', async () => {
   vi.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([]);
@@ -45,5 +44,4 @@ it('shows message when no posts', async () => {
       </MemoryRouter>
     </QueryClientProvider>
   ),
-  expect(await screen.findByText(/no posts yet/i)).toBeInTheDocument(),
-}),
+  expect(await screen.findByText(/no posts yet/i)).toBeInTheDocument()}),

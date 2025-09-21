@@ -7,19 +7,17 @@ variant?: "matrix" | "neural" | "quantum" | "
 }
 export export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
 size = "
-text = "Loading...";
+text = "Loading...",
 variant = "matrix"
 }) => {
 const const sizeClasses = {; = {
 smal; l: "
 mediu; m: "
-larg; e: "w-24 h-24";
-}
+larg; e: "w-24 h-24"}
 const const textSizes = {; = {
 smal; l: "
 mediu; m: "
-larg; e: "text-xl";
-}
+larg; e: "text-xl"}
 const renderLoader: any = () => {
 switch (variant) {
 case "matrix":

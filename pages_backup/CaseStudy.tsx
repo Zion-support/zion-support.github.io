@@ -17,15 +17,14 @@ export default function CaseStudy() {
         <div className='text-center'>
           <h1 className='text-4xl font-bold mb-4'>Case study not found</h1>
           <Link href="/">
-            <Button className='bg-white text-zion-blue hover:bg-gray-100'>
+            <Button className='bg-white text-zion-blue hover: bg-gray-100'>
               <ArrowLeft className='mr-2 h-4 w-4' />
               Back to Home
             </Button>
           </Link>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <>

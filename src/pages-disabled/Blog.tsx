@@ -3,16 +3,15 @@ import { Search } from 'lucide-react';
 import Link from 'next/link';
 
 interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  publishDate: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-}
+  id: string,
+  title: string,
+  excerpt: string,
+  author: string,
+  publishDate: string,
+  readTime: string,
+  category: string,
+  tags: string[],
+  featured: boolean}
 
 const Blog: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -20,29 +19,28 @@ const Blog: React.FC = () => {
 
   const blogPosts: BlogPost[] = [
     {
-      id: 'quantum-ai-future-business';
-      title: 'The Future of Business Intelligence: How Quantum AI is Revolutionizing Data Analytics';
-      excerpt: 'Explore how quantum computing combined with artificial intelligence is creating unprecedented opportunities for business intelligence and predictive analytics.';
-      author: 'Dr. Sarah Chen';
-      publishDate: '2024-01-15';
-      readTime: '8 min read';
-      category: 'AI & Technology';
+      id: 'quantum-ai-future-business',
+      title: 'The Future of Business Intelligence: How Quantum AI is Revolutionizing Data Analytics',
+      excerpt: 'Explore how quantum computing combined with artificial intelligence is creating unprecedented opportunities for business intelligence and predictive analytics.',
+      author: 'Dr. Sarah Chen',
+      publishDate: '2024-01-15',
+      readTime: '8 min read',
+      category: 'AI & Technology',
       tags: ['Quantum Computing', 'AI', 'Business Intelligence', 'Data Analytics'],
       featured: true
-    };
+    },
     {
-      id: 'autonomous-devops-guide';
-      title: 'Autonomous DevOps: The Complete Guide to Self-Healing Infrastructure';
-      excerpt: 'Learn how autonomous DevOps practices can transform your infrastructure management and reduce operational overhead.';
-      author: 'Michael Rodriguez';
-      publishDate: '2024-01-10';
-      readTime: '6 min read';
-      category: 'DevOps';
+      id: 'autonomous-devops-guide',
+      title: 'Autonomous DevOps: The Complete Guide to Self-Healing Infrastructure',
+      excerpt: 'Learn how autonomous DevOps practices can transform your infrastructure management and reduce operational overhead.',
+      author: 'Michael Rodriguez',
+      publishDate: '2024-01-10',
+      readTime: '6 min read',
+      category: 'DevOps',
       tags: ['DevOps', 'Automation', 'Infrastructure', 'Self-Healing'],
       featured: false
     }
-  ];
-
+  ],
   const categories = ['All', 'AI & Technology', 'DevOps', 'Cybersecurity', 'Cloud Computing'];
 
   const filteredPosts = blogPosts.filter(post => {

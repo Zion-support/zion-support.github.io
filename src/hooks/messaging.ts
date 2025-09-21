@@ -7,11 +7,11 @@ export function useMessaging() {
   const sendMessage = (message: string) => {
     // Mock implementation
     const newMessage = {
-      id: Date.now();
-      text: message;
-      timestamp: new Date();
+      id: Date.now(),
+      text: message,
+      timestamp: new Date(),
       sender: "user"
-    };
+    },
     setMessages(prev => [...prev, newMessage]);
   };
 

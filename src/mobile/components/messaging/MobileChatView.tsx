@@ -1,20 +1,20 @@
 interface Message {
   id: string;;
-content: string;
+content: string,
   timestamp: string;;
-isMe: boolean;
+isMe: boolean,
   sender?: string;
   avatar?: string;
   status?: 'sent' | 'delivered' | 'read'
 interface MobileChatViewProps {
-  contact: {;
-id: string;
-    name: string;
+  contact: {,
+id: string,
+    name: string,
     avatar?: string;
     status?: string;
 };
   messages: Message[[];];
-onBack: () => void;
+onBack: () => void,
   onSendMessage: (content: string) => void
                 {message.timestamp}
                 {message.isMe && message.status && (

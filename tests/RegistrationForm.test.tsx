@@ -7,22 +7,21 @@ import { mockFetch } from './__mocks__/server';
 
 jest.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({
-    loginWithGoogle: jest.fn();
-    loginWithFacebook: jest.fn();
-    loginWithTwitter: jest.fn();
-    isAuthenticated: false;
+    loginWithGoogle: jest.fn(),
+    loginWithFacebook: jest.fn(),
+    loginWithTwitter: jest.fn(),
+    isAuthenticated: false,
     user: null
   })
-}));
+})),
 jest.mock('@/hooks/use-toast');
 jest.mock('react-router-dom', () => ({
   ...(jest.requireActual('react-router-dom') as any),
   useNavigate: jest.fn()
-}));
+})),
 describe('RegistrationForm', () => {
   beforeEach(() => {
-    jest.clearAllMocks(),
-  }),
+    jest.clearAllMocks()}),
 
   it('renders form fields', () => {
     render(
@@ -34,8 +33,7 @@ describe('RegistrationForm', () => {
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument(),
     expect(screen.getByLabelText(/^password$/i)).toBeInTheDocument(),
     expect(screen.getByLabelText(/confirm password/i)).toBeInTheDocument(),
-    expect(screen.getByRole('button', { name: /create account/i })).toBeInTheDocument();
-  });
+    expect(screen.getByRole('button', { name: /create account/i })).toBeInTheDocument()});
   it('submits valid form', async () => {
     const navigateMock = jest.fn(),
     (router.useNavigate as jest.Mock).mockReturnValue(navigateMock);
@@ -46,16 +44,16 @@ describe('RegistrationForm', () => {
         <Signup />
       </MemoryRouter>
     );
-    fireEvent.input(screen.getByLabelText(/full name/i), { target: { value: 'John Doe' } });
-    fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: 'john@example.com' } });
-    fireEvent.input(screen.getByLabelText(/^password$/i), { target: { value: 'Password123' } });
-    fireEvent.input(screen.getByLabelText(/confirm password/i), { target: { value: 'Password123' } });
+    fireEvent.input(screen.getByLabelText(/full name/i), { target: { value: 'John Doe' } }),
+    fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: 'john@example.com' } }),
+    fireEvent.input(screen.getByLabelText(/^password$/i), { target: { value: 'Password123' } }),
+    fireEvent.input(screen.getByLabelText(/confirm password/i), { target: { value: 'Password123' } }),
     fireEvent.click(screen.getByLabelText(/i agree/i));
-    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
+    fireEvent.submit(screen.getByRole('button', { name: /create account/i })),
     expect(global.fetch).toHaveBeenCalledWith(
       expect.stringContaining('/auth/register');
       expect.objectContaining({ method: 'POST' })
-    );
+    ),
     expect(toastHook.toast.success).toHaveBeenCalledWith('Welcome to ZionAI 🎉');
     expect(navigateMock).toHaveBeenCalledWith('/dashboard');
   }),
@@ -68,13 +66,12 @@ describe('RegistrationForm', () => {
         <Signup />
       </MemoryRouter>
     );
-    fireEvent.input(screen.getByLabelText(/full name/i), { target: { value: 'John Doe' } });
-    fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: 'john@example.com' } });
-    fireEvent.input(screen.getByLabelText(/^password$/i), { target: { value: 'Password123' } });
-    fireEvent.input(screen.getByLabelText(/confirm password/i), { target: { value: 'Password123' } });
+    fireEvent.input(screen.getByLabelText(/full name/i), { target: { value: 'John Doe' } }),
+    fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: 'john@example.com' } }),
+    fireEvent.input(screen.getByLabelText(/^password$/i), { target: { value: 'Password123' } }),
+    fireEvent.input(screen.getByLabelText(/confirm password/i), { target: { value: 'Password123' } }),
     fireEvent.click(screen.getByLabelText(/i agree/i));
-    fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
+    fireEvent.submit(screen.getByRole('button', { name: /create account/i })),
     expect(toastHook.toast.error).toHaveBeenCalledWith('Bad');
-  }),
-}),
+  })}),
 

@@ -14,37 +14,35 @@ describe('ConnectWalletButton', () => {
   test('renders connect button when disconnected', () => {
     const connectWallet = vi.fn(),
     mockUseWallet.mockReturnValue({
-      isConnected: false;
+      isConnected: false,
       connectWallet;
-      disconnectWallet: vi.fn();
-      displayAddress: null;
-      address: null;
-      chainId: null;
+      disconnectWallet: vi.fn(),
+      displayAddress: null,
+      address: null,
+      chainId: null,
       provider: null
-    });
+    }),
     mockUseTokenBalance.mockReturnValue(null);
     render(<ConnectWalletButton />);
     const button = screen.getByText('Connect Wallet');
     fireEvent.click(button);
-    expect(connectWallet).toHaveBeenCalled(),
-  }),
+    expect(connectWallet).toHaveBeenCalled()}),
 
   test('shows address and disconnect button when connected', () => {
     const disconnectWallet = vi.fn(),
     mockUseWallet.mockReturnValue({
-      isConnected: true;
-      connectWallet: vi.fn();
+      isConnected: true,
+      connectWallet: vi.fn(),
       disconnectWallet;
-      displayAddress: '0x1234...abcd';
-      address: '0x1234';
-      chainId: 1;
+      displayAddress: '0x1234...abcd',
+      address: '0x1234',
+      chainId: 1,
       provider: {}
-    });
+    }),
     mockUseTokenBalance.mockReturnValue('100');
     render(<ConnectWalletButton />);
-    expect(screen.getByText(/Connected: /)).toBeInTheDocument();
+    expect(screen.getByText(/Connected: /)).toBeInTheDocument(),
     const button = screen.getByText('Disconnect Wallet');
     fireEvent.click(button);
     expect(disconnectWallet).toHaveBeenCalled()
-  }),
-}),
+  })}),

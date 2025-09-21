@@ -7,16 +7,15 @@ import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface ModelConfig {
-  id: string;
-  version: number;
-  purpose: string;
-  baseModel: string;
-  active: boolean;
-  createdAt: string;
-}
+  id: string,
+  version: number,
+  purpose: string,
+  baseModel: string,
+  active: boolean,
+  createdAt: string}
 
 interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string;
 }
 
@@ -33,44 +32,43 @@ export function ModelManager() {
       
       const mockModels: ModelVersionData[] = [
         {
-          id: 'zion-gpt-chat-v1';
-          version: 1;
-          purpose: 'General Chat';
-          baseModel: 'gpt-3.5-turbo';
-          active: true;
-          createdAt: '2024-01-15T10:00:00Z';
+          id: 'zion-gpt-chat-v1',
+          version: 1,
+          purpose: 'General Chat',
+          baseModel: 'gpt-3.5-turbo',
+          active: true,
+          createdAt: '2024-01-15T10:00:00Z',
           trainingStatus: 'succeeded'
-        };
+        },
         {
-          id: 'zion-gpt-support-v1';
-          version: 1;
-          purpose: 'Customer Support';
-          baseModel: 'gpt-4';
-          active: false;
-          createdAt: '2024-01-20T14:30:00Z';
+          id: 'zion-gpt-support-v1',
+          version: 1,
+          purpose: 'Customer Support',
+          baseModel: 'gpt-4',
+          active: false,
+          createdAt: '2024-01-20T14:30:00Z',
           trainingStatus: 'succeeded'
-        };
+        },
         {
-          id: 'zion-gpt-content-v1';
-          version: 1;
-          purpose: 'Content Generation';
-          baseModel: 'gpt-3.5-turbo';
-          active: false;
-          createdAt: '2024-01-25T09:15:00Z';
+          id: 'zion-gpt-content-v1',
+          version: 1,
+          purpose: 'Content Generation',
+          baseModel: 'gpt-3.5-turbo',
+          active: false,
+          createdAt: '2024-01-25T09:15:00Z',
           trainingStatus: 'running'
-        };
+        },
         {
-          id: 'zion-gpt-analysis-v1';
-          version: 1;
-          purpose: 'Data Analysis';
-          baseModel: 'gpt-4';
-          active: false;
-          createdAt: '2024-01-30T16:45:00Z';
-          trainingStatus: 'failed';
+          id: 'zion-gpt-analysis-v1',
+          version: 1,
+          purpose: 'Data Analysis',
+          baseModel: 'gpt-4',
+          active: false,
+          createdAt: '2024-01-30T16:45:00Z',
+          trainingStatus: 'failed',
           errorMessage: 'Training data insufficient'
         }
-      ];
-      
+      ],
       setModels(mockModels);
     } catch (error) {
       logErrorToProduction('Failed to fetch models:', { error });
@@ -89,8 +87,7 @@ export function ModelManager() {
         model.id === modelId 
           ? { ...model, trainingStatus: 'succeeded' as const }
           : model
-      ));
-    } catch (error) {
+      ))} catch (error) {
       logErrorToProduction('Failed to check training status:', { error, modelId });
     } finally {
       setActiveJobs(prev => ({ ...prev, [modelId]: false }));
@@ -106,8 +103,7 @@ export function ModelManager() {
         model.id === modelId 
           ? { ...model, active: !currentActive }
           : model
-      ));
-    } catch (error) {
+      ))} catch (error) {
       logErrorToProduction('Failed to toggle model status:', { error, modelId });
     }
   };

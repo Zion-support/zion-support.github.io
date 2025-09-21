@@ -17,7 +17,7 @@ const SEO = ({
       {canonical && <link rel="canonical" href={canonical} />}
       
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
+      <meta property="og: title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       {ogImage && <meta property="og:image" content={ogImage} />}
@@ -28,8 +28,6 @@ const SEO = ({
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
     </Head>
-  );
-};
-
+  )};
 export default SEO;
 export { SEO };

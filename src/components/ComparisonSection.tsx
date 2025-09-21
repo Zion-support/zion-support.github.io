@@ -1,7 +1,7 @@
 
-import { GradientHeading,,  } from "./GradientHeading";
+import { GradientHeading,} from "./GradientHeading";
 import React from "react";
-import { CheckCircle2,,  } from 'lucide-react'
+import { CheckCircle2,} from 'lucide-react'
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -20,7 +20,7 @@ import { CheckCircle2,,  } from 'lucide-react'
                   Up to 65%
                 </span>
                 <span className='block text-sm text-zion-slate-light mt-1'>
-                  Results may vary based on specific requirements and service;
+                  Results may vary based on specific requirements and service,
 levels
                 </span>
               </p>

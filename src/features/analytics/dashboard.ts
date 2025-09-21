@@ -1,52 +1,48 @@
 import { useState, useEffect, useCallback } from 'react';
 
 interface AnalyticsMetric {
-  id: string;
-  name: string;
-  value: number;
-  change: number;
-  changeType: 'increase' | 'decrease' | 'neutral';
-  format: 'number' | 'percentage' | 'currency' | 'duration';
-  category: string;
-  timestamp: Date;
-}
+  id: string,
+  name: string,
+  value: number,
+  change: number,
+  changeType: 'increase' | 'decrease' | 'neutral',
+  format: 'number' | 'percentage' | 'currency' | 'duration',
+  category: string,
+  timestamp: Date}
 
 interface AnalyticsChart {
-  id: string;
-  title: string;
-  type: 'line' | 'bar' | 'pie' | 'area' | 'scatter';
-  data: any[];
+  id: string,
+  title: string,
+  type: 'line' | 'bar' | 'pie' | 'area' | 'scatter',
+  data: any[],
   xAxis?: string;
   yAxis?: string;
   colors?: string[];
 }
 
 interface AnalyticsDashboard {
-  metrics: AnalyticsMetric[];
-  charts: AnalyticsChart[];
-  realTimeData: boolean;
-  autoRefresh: boolean;
-  refreshInterval: number;
-}
+  metrics: AnalyticsMetric[],
+  charts: AnalyticsChart[],
+  realTimeData: boolean,
+  autoRefresh: boolean,
+  refreshInterval: number}
 
 interface UserBehaviorEvent {
-  userId: string;
-  eventType: string;
-  eventData: any;
-  timestamp: Date;
-  sessionId: string;
-  pageUrl: string;
-  userAgent: string;
-}
+  userId: string,
+  eventType: string,
+  eventData: any,
+  timestamp: Date,
+  sessionId: string,
+  pageUrl: string,
+  userAgent: string}
 
 export class AdvancedAnalyticsDashboard {
   private metrics: Map<string, AnalyticsMetric> = new Map();
   private charts: Map<string, AnalyticsChart> = new Map();
-  private userEvents: UserBehaviorEvent[] = [];
-  private realTimeConnection: WebSocket | null = null;
-  private refreshInterval: NodeJS.Timeout | null = null;
-  private listeners: Array<(dashboard: AnalyticsDashboard) => void> = [];
-  
+  private userEvents: UserBehaviorEvent[] = [],
+  private realTimeConnection: WebSocket | null = null,
+  private refreshInterval: NodeJS.Timeout | null = null,
+  private listeners: Array<(dashboard: AnalyticsDashboard) => void> = [],
   constructor() {
     this.initializeDashboard();
     this.connectRealTimeData();
@@ -79,8 +75,7 @@ export class AdvancedAnalyticsDashboard {
           this.metrics.set(metric.id, {
             ...metric,
             timestamp: new Date(metric.timestamp)
-          });
-        });
+          })});
       }
     } catch (error) {
       console.error('Failed to load metrics:', error);
@@ -107,10 +102,9 @@ export class AdvancedAnalyticsDashboard {
       if (response.ok) {
         const eventsData = await response.json();
         this.userEvents = eventsData.map((event: any) => ({
-          ...event;
+          ...event,
           timestamp: new Date(event.timestamp)
-        }));
-      }
+        }))}
     } catch (error) {
       console.error('Failed to load user events:', error);
     }
@@ -118,8 +112,7 @@ export class AdvancedAnalyticsDashboard {
   
   private connectRealTimeData(): void {
     try {
-      this.realTimeConnection = new WebSocket('wss://api.ziontechgroup.com/analytics/realtime');
-      
+      this.realTimeConnection = new WebSocket('wss: //api.ziontechgroup.com/analytics/realtime'),
       this.realTimeConnection.onopen = () => {
         console.log('📊 Connected to analytics real-time data');
       };
@@ -149,7 +142,7 @@ export class AdvancedAnalyticsDashboard {
   private handleRealTimeUpdate(data: any): void {
     switch (data.type) {
       case 'metric_update':
-        this.updateMetric(data.metric);
+        this.updateMetric(data.metric),
         break;
       case 'chart_update':
         this.updateChart(data.chart);
@@ -164,9 +157,9 @@ export class AdvancedAnalyticsDashboard {
   
   private updateMetric(metricData: any): void {
     const metric: AnalyticsMetric = {
-      ...metricData;
+      ...metricData,
       timestamp: new Date()
-    };
+    },
     this.metrics.set(metric.id, metric);
   }
   
@@ -176,10 +169,9 @@ export class AdvancedAnalyticsDashboard {
   
   public addUserEvent(event: Omit<UserBehaviorEvent, 'timestamp'>): void {
     const userEvent: UserBehaviorEvent = {
-      ...event;
+      ...event,
       timestamp: new Date()
-    };
-    
+    },
     this.userEvents.unshift(userEvent);
     
     // Keep only last 1000 events
@@ -194,12 +186,10 @@ export class AdvancedAnalyticsDashboard {
   private async sendUserEventToServer(event: UserBehaviorEvent): Promise<void> {
     try {
       await fetch('/api/analytics/user-events', {
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json';
-        };
-        body: JSON.stringify(event);
-      });
+          'Content-Type': 'application/json'};
+        body: JSON.stringify(event)});
     } catch (error) {
       console.error('Failed to send user event to server:', error);
     }
@@ -221,28 +211,25 @@ export class AdvancedAnalyticsDashboard {
   
   public getDashboard(): AnalyticsDashboard {
     return {
-      metrics: Array.from(this.metrics.values());
-      charts: Array.from(this.charts.values());
-      realTimeData: this.realTimeConnection?.readyState === WebSocket.OPEN;
-      autoRefresh: this.refreshInterval !== null;
+      metrics: Array.from(this.metrics.values()),
+      charts: Array.from(this.charts.values()),
+      realTimeData: this.realTimeConnection?.readyState === WebSocket.OPEN,
+      autoRefresh: this.refreshInterval !== null,
       refreshInterval: 30000
-    };
-  }
+    }}
   
   public getMetricsByCategory(category: string): AnalyticsMetric[] {
-    return Array.from(this.metrics.values()).filter(metric => metric.category === category);
-  }
+    return Array.from(this.metrics.values()).filter(metric => metric.category === category)}
   
   public getUserEventsByType(eventType: string): UserBehaviorEvent[] {
-    return this.userEvents.filter(event => event.eventType === eventType);
-  }
+    return this.userEvents.filter(event => event.eventType === eventType)}
   
   public getRecentUserEvents(limit: number = 50): UserBehaviorEvent[] {
     return this.userEvents.slice(0, limit);
   }
   
   public generateInsights(): string[] {
-    const insights: string[] = [];
+    const insights: string[] = [],
     const metrics = Array.from(this.metrics.values());
     
     // Analyze metric trends
@@ -263,15 +250,13 @@ export class AdvancedAnalyticsDashboard {
     
     const topEventType = Object.entries(eventTypes).reduce((a, b) => eventTypes[a[0]] > eventTypes[b[0]] ? a : b);
     if (topEventType) {
-      insights.push(`Most common user action: ${topEventType[0]} (${topEventType[1]} times)`);
-    }
+      insights.push(`Most common user action: ${topEventType[0]} (${topEventType[1]} times)`)}
     
     return insights;
   }
   
   public exportData(format: 'json' | 'csv' = 'json'): string {
-    const dashboard = this.getDashboard();
-    
+    const dashboard = this.getDashboard(),
     if (format === 'csv') {
       // Convert to CSV format
       const csvLines = ['Metric Name,Value,Change,Category'];
@@ -285,11 +270,10 @@ export class AdvancedAnalyticsDashboard {
   }
   
   public addListener(listener: (dashboard: AnalyticsDashboard) => void): void {
-    this.listeners.push(listener);
-  }
+    this.listeners.push(listener)}
   
   public removeListener(listener: (dashboard: AnalyticsDashboard) => void): void {
-    const index = this.listeners.indexOf(listener);
+    const index = this.listeners.indexOf(listener),
     if (index > -1) {
       this.listeners.splice(index, 1);
     }
@@ -323,7 +307,7 @@ export const useAdvancedAnalytics = () => {
   
   useEffect(() => {
     const updateDashboard = (newDashboard: AnalyticsDashboard) => {
-      setDashboardData(newDashboard);
+      setDashboardData(newDashboard),
       setInsights(dashboard.generateInsights());
     };
     
@@ -342,17 +326,11 @@ export const useAdvancedAnalytics = () => {
   }, [dashboard]);
   
   const getMetricsByCategory = useCallback((category: string) => {
-    return dashboard.getMetricsByCategory(category);
-  }, [dashboard]);
-  
+    return dashboard.getMetricsByCategory(category)}, [dashboard]);
   const getUserEventsByType = useCallback((eventType: string) => {
-    return dashboard.getUserEventsByType(eventType);
-  }, [dashboard]);
-  
+    return dashboard.getUserEventsByType(eventType)}, [dashboard]);
   const exportData = useCallback((format: 'json' | 'csv' = 'json') => {
-    return dashboard.exportData(format);
-  }, [dashboard]);
-  
+    return dashboard.exportData(format)}, [dashboard]);
   useEffect(() => {
     return () => {
       dashboard.disconnect();
@@ -366,6 +344,5 @@ export const useAdvancedAnalytics = () => {
     addUserEvent,
     getMetricsByCategory,
     getUserEventsByType,
-    exportData,
-  };
+    exportData};
 };

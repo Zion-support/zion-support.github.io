@@ -3,12 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface SecurityHeaders {
-  name: string;
-  present: boolean;
+  name: string,
+  present: boolean,
   value?: string;
-  severity: 'high' | 'medium' | 'low';
-  description: string;
-}
+  severity: 'high' | 'medium' | 'low',
+  description: string}
 
 export const SecurityHeadersValidator: React.FC = () => {
   const [headers, setHeaders] = useState<SecurityHeaders[]>([]);
@@ -16,43 +15,42 @@ export const SecurityHeadersValidator: React.FC = () => {
 
   const securityHeaders: SecurityHeaders[] = [
     {
-      name: 'Content-Security-Policy';
-      present: false;
-      severity: 'high';
+      name: 'Content-Security-Policy',
+      present: false,
+      severity: 'high',
       description: 'Prevents XSS attacks by controlling resource loading'
-    };
+    },
     {
-      name: 'X-Frame-Options';
-      present: false;
-      severity: 'high';
+      name: 'X-Frame-Options',
+      present: false,
+      severity: 'high',
       description: 'Prevents clickjacking attacks'
-    };
+    },
     {
-      name: 'X-Content-Type-Options';
-      present: false;
-      severity: 'medium';
+      name: 'X-Content-Type-Options',
+      present: false,
+      severity: 'medium',
       description: 'Prevents MIME type sniffing'
-    };
+    },
     {
-      name: 'Referrer-Policy';
-      present: false;
-      severity: 'medium';
+      name: 'Referrer-Policy',
+      present: false,
+      severity: 'medium',
       description: 'Controls referrer information'
-    };
+    },
     {
-      name: 'Permissions-Policy';
-      present: false;
-      severity: 'medium';
+      name: 'Permissions-Policy',
+      present: false,
+      severity: 'medium',
       description: 'Controls browser features'
-    };
+    },
     {
-      name: 'Strict-Transport-Security';
-      present: false;
-      severity: 'high';
+      name: 'Strict-Transport-Security',
+      present: false,
+      severity: 'high',
       description: 'Enforces HTTPS connections'
     }
-  ];
-
+  ],
   const scanHeaders = async () => {
     setIsScanning(true);
     
@@ -65,8 +63,7 @@ export const SecurityHeadersValidator: React.FC = () => {
         ...header,
         present: Math.random() > 0.3, // Simulate some headers being present
         value: header.present ? `sample-${header.name.toLowerCase()}` : undefined
-      }));
-      
+      })),
       setHeaders(scannedHeaders);
     } catch (error) {
       console.error('Error scanning headers:', error);
@@ -81,22 +78,18 @@ export const SecurityHeadersValidator: React.FC = () => {
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'high': return 'text-red-400';
+      case 'high': return 'text-red-400',
       case 'medium': return 'text-yellow-400';
       case 'low': return 'text-green-400';
-      default: return 'text-gray-400';
-    }
+      default: return 'text-gray-400'}
   };
-
   const getSeverityBg = (severity: string) => {
     switch (severity) {
-      case 'high': return 'bg-red-500/20 border-red-500/30';
+      case 'high': return 'bg-red-500/20 border-red-500/30',
       case 'medium': return 'bg-yellow-500/20 border-yellow-500/30';
       case 'low': return 'bg-green-500/20 border-green-500/30';
-      default: return 'bg-gray-500/20 border-gray-500/30';
-    }
+      default: return 'bg-gray-500/20 border-gray-500/30'}
   };
-
   const securityScore = headers.length > 0 
     ? Math.round((headers.filter(h => h.present).length / headers.length) * 100)
     : 0;
@@ -175,7 +168,5 @@ export const SecurityHeadersValidator: React.FC = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
-
+  )};
 export default SecurityHeadersValidator;

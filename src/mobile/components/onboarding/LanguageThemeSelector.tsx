@@ -1,17 +1,17 @@
 
 import React, { useState } from "react";
-import { Button,,  } from "@/components/ui/button";
+import { Button,} from "@/components/ui/button";
 import React from "react";
-import { Moon,,, Sun,,, Check,,  } from 'lucide-react'
+import { Moon,,, Sun,,, Check,} from 'lucide-react'
 import React from "react";
 interface Language {
   code: string;;
-name: string;
-  flag: string;
+name: string,
+  flag: string,
 const languages: Language[] = [
-  { code: 'en', name: 'English', flag: '🇺🇸' };
+  { code: 'en', name: 'English', flag: '🇺🇸' },
 { code: 'es', name: 'Español', flag: '🇪🇸' }
-  { code: 'fr', name: 'Français', flag: '🇫🇷' };
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
 { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
   { code: 'zh', name: '中文', flag: '🇨🇳' }
 ]
@@ -32,15 +32,15 @@ key={language.code}    <div className="space-y-8 px-4">
         <h2 className="text-xl font-medium">Select your language</h2>
         <p className="text-muted-foreground">Choose your preferred language</p>
         <div className="grid grid-cols-2 gap-3 mt-4">
-          {languages.map((language,) => (
+          {languages.map((language) => (
             <Card
-key = {language.code,}
+key = {language.code}
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
                   ? 'border-primary bg-primary/5'
                   : 'border-border hover:border-primary/40'
               }`}
-              onClick = {(,) => setSelectedLanguage(language.code),}
+              onClick = {() => setSelectedLanguage(language.code)}
             >
               <CardContent className='p-3 flex items-center justify-between'>
                 <div className='flex items-center'>
@@ -82,7 +82,7 @@ theme === 'light'
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
             }`}
-            onClick = {() => setTheme('light'),}
+            onClick = {() => setTheme('light')}
           >
             <CardContent className='p-3 flex flex-col items-center justify-center'>
               <Sun className='h-8 w-8 mb-2' />
@@ -98,7 +98,7 @@ className={`flex-1 cursor-pointer transition-all ${
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
             }`}
-            onClick = {() => setTheme('dark'),}
+            onClick = {() => setTheme('dark')}
           >
             <CardContent className='p-3 flex flex-col items-center justify-center'>
               <Moon className='h-8 w-8 mb-2' />

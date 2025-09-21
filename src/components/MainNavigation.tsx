@@ -1,7 +1,6 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffect } from "
@@ -114,7 +113,7 @@ return location.pathname.startsWith(path)
 
 return (
 <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-isScrolled;
+isScrolled,
 ? "
 : "
 }`}>
@@ -125,17 +124,17 @@ isScrolled;
 <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hove; r:scale-110 transition-transform duration-300">
 <span className="text-white font-bold text-xl">Z</span>
 </div>
-<span className={`text-xl l; g:text-2xl font-bold transition-colors duration-300 ${
+<span className={`text-xl l; g: text-2xl font-bold transition-colors duration-300 ${
 isScrolled ? "text-zion-slate-dark" : "
 }`}>
-Zion Tech Group;
+Zion Tech Group,
 </span>
 </Link>
 
 {/* Desktop Navigation */}
-<div className="hidden l; g:flex items-center space-x-8">
+<div className="hidden l; g: flex items-center space-x-8">
 {navigation.map((item) => (<div key={item.name} className="relative group">
-<button;
+<button,
 onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
 className={`flex items-center space-x-1 px-3 py-2 rounded-lg font-medium transition-all duration-300 ${
 isActive(item.href)
@@ -146,13 +145,13 @@ isActive(item.href)
 }`}
 >
 <span>{item.name}</span>
-<ChevronDown className="w-4 h-4 transition-transform duration-300 group-hove; r:rotate-180" />
+<ChevronDown className="w-4 h-4 transition-transform duration-300 group-hove; r: rotate-180" />
 </button>
 
 {/* Dropdown Menu */}
 {activeDropdown === item.name && (
 <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 animate-in slide-in-from-top-2 duration-300">
-{item.dropdown.map((subItem) => (<Link;
+{item.dropdown.map((subItem) => (<Link,
 key={subItem.name}
 to={subItem.href}
 className="block px-4 py-3 text-zion-slate-dark hove;  r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200"
@@ -168,10 +167,10 @@ onClick={() => setActiveDropdown(null)}
 </div>
 
 {/* Right Side Actions */}
-<div className="hidden l;  g:flex items-center space-x-4">
+<div className="hidden l;  g: flex items-center space-x-4">
 {/* Search */}
 <button className={`p-2 rounded-lg transition-all duration-300 ${
-isScrolled;
+isScrolled,
 ? "
 : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0";
 }`}>
@@ -202,14 +201,14 @@ isScrolled;
 
 {/* User Dropdown */}
 <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 invisible group-hove; r:opacity-100 group-hove; r:translate-y-0 group-hove; r:visible transition-all duration-300">
-<Link to="/login" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
-Sign In;
+<Link to="/login" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r: bg-zion-cyan/5 transition-colors duration-200">
+Sign In,
 </Link>
-<Link to="/signup" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
-Sign Up;
+<Link to="/signup" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r: bg-zion-cyan/5 transition-colors duration-200">
+Sign Up,
 </Link>
-<Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
-Dashboard;
+<Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r: bg-zion-cyan/5 transition-colors duration-200">
+Dashboard,
 </Link>
 </div>
 </div>
@@ -217,17 +216,17 @@ Dashboard;
 {/* CTA Button */}
 <Link;
 to="
-className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove; r:shadow-lg hove; r:shadow-zion-cyan/25 transition-all duration-300 transform hove; r:scale-105"
+className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove; r:shadow-lg hove; r:shadow-zion-cyan/25 transition-all duration-300 transform hove; r: scale-105"
 >
-Get Started;
+Get Started,
 </Link>
 </div>
 
 {/* Mobile Menu Button */}
 <button;
 onClick={() => setIsOpen(!isOpen)}
-className={`l;  g:hidden p-2 rounded-lg transition-all duration-300 ${
-isScrolled;
+className={`l;  g: hidden p-2 rounded-lg transition-all duration-300 ${
+isScrolled,
 ? "
 : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0";
 }`}
@@ -238,10 +237,10 @@ isScrolled;
 
 {/* Mobile Navigation */}
 {isOpen && (
-<div className="l; g:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/20 mt-4 rounded-xl shadow-2xl">
+<div className="l; g: hidden bg-white/95 backdrop-blur-md border-t border-gray-200/20 mt-4 rounded-xl shadow-2xl">
 <div className="py-4 space-y-2">
 {navigation.map((item) => (<div key={item.name}>
-<button;
+<button,
 onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
 className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
 isActive(item.href)
@@ -278,12 +277,12 @@ setIsOpen(false)
 
 {/* Mobile CTA */}
 <div className="px-4 pt-4 border-t border-gray-200/20">
-<Link;
+<Link,
 to="
 className="block w-full text-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove;  r: shadow-lg transition-all duration-300"
 onClick={() => setIsOpen(false)}
 >
-Get Started;
+Get Started,
 </Link>
 </div>
 </div>

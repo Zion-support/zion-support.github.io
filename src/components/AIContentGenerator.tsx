@@ -25,7 +25,7 @@ className="max-w-4xl mx-auto"
 <h1 className="text-3xl font-bold text-white mb-8">AI Content Generator</h1>
 
 <div className="bg-gray-800 p-6 rounded-lg mb-8">
-<input;
+<input,
 type="text"
 value={topic}
 onChange={(e) => setTopic(e.target.value)}
@@ -35,7 +35,7 @@ className="w-full p-3 bg-gray-700 text-white rounded-lg border border-gray-600 m
 <button;
 onClick={generateContent}
 disabled={isGenerating || !topic}
-className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 disabled:opacity-50"
+className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 disabled:opacity-50"
 >
 {isGenerating ? "Generating..." : "Generate Content"}
 </button>
@@ -54,5 +54,5 @@ className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 
 )
 }
 
-export export default AIContentGenerator;
+export export default AIContentGenerator,
 <//div><///div>

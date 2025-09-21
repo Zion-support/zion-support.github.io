@@ -10,33 +10,30 @@ vi.mock('@prisma/client', () => {
   const mockPrismaClient = {
     category: {
       findMany: vi.fn()
-    };
+    },
     $disconnect: vi.fn()
-  };
-  return { PrismaClient: vi.fn(() => mockPrismaClient) };
-});
+  },
+  return { PrismaClient: vi.fn(() => mockPrismaClient) }});
 // Mock console.error
-let consoleErrorSpy: SpyInstance;
+let consoleErrorSpy: SpyInstance,
 describe('/api/categories API Endpoint', () => {
-  let mockPrismaCategory: any;
+  let mockPrismaCategory: any,
   beforeEach(() => {
     vi.clearAllMocks();
     consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {}),
     // Use the already imported and mocked PrismaClient
     const prisma = new PrismaClient(),
-    mockPrismaCategory = (prisma as any).category,
-  }),
+    mockPrismaCategory = (prisma as any).category}),
 
   afterEach(() => {
-    consoleErrorSpy.mockRestore(),
-  }),
+    consoleErrorSpy.mockRestore()}),
 
   test('should return categories from DB if query is successful', async () => {
-    const dbCategories = [{ id: 'db1', name: 'DB Category', slug: 'db-cat', icon: 'Database' }];
+    const dbCategories = [{ id: 'db1', name: 'DB Category', slug: 'db-cat', icon: 'Database' }],
     mockPrismaCategory.findMany.mockResolvedValueOnce(dbCategories);
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-    });
+    }),
     await categoriesApiHandler(req, res);
     expect(res._getStatusCode()).toBe(200);
     expect(JSON.parse(res._getData())).toEqual(dbCategories);
@@ -48,20 +45,18 @@ describe('/api/categories API Endpoint', () => {
     // Ensure CATEGORIES has data for this test case
     const _originalCategories = [...CATEGORIES],
     if (CATEGORIES.length === 0) {
-        CATEGORIES.push({ id: 'fallback1', name: 'Fallback Category', slug: 'fallback-cat', icon: 'FallbackIcon' });
-    }
+        CATEGORIES.push({ id: 'fallback1', name: 'Fallback Category', slug: 'fallback-cat', icon: 'FallbackIcon' })}
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-    });
+    }),
     await categoriesApiHandler(req, res);
     expect(res._getStatusCode()).toBe(200);
     expect(JSON.parse(res._getData())).toEqual(CATEGORIES);
     expect(mockPrismaCategory.findMany).toHaveBeenCalledTimes(1);
     // Restore original CATEGORIES if modified
     if (_originalCategories.length === 0 && CATEGORIES.length > 0) {
-        CATEGORIES.pop(),
-    }
+        CATEGORIES.pop()}
   }),
 
   test('should return empty array if DB query returns empty array and CATEGORIES is also empty', async () => {
@@ -74,7 +69,7 @@ describe('/api/categories API Endpoint', () => {
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-    });
+    }),
     await categoriesApiHandler(req, res);
     expect(res._getStatusCode()).toBe(200);
     expect(JSON.parse(res._getData())).toEqual([]);
@@ -88,24 +83,23 @@ describe('/api/categories API Endpoint', () => {
     mockPrismaCategory.findMany.mockRejectedValueOnce(dbError);
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-    });
+    }),
     await categoriesApiHandler(req, res);
     expect(res._getStatusCode()).toBe(500);
-    expect(res._getJSONData()).toEqual({ error: 'Failed to fetch categories from database.' });
+    expect(res._getJSONData()).toEqual({ error: 'Failed to fetch categories from database.' }),
     expect(mockPrismaCategory.findMany).toHaveBeenCalledTimes(1);
     expect(consoleErrorSpy).toHaveBeenCalledWith('Failed to fetch categories from database:', dbError);
   }),
 
   test('should return 405 if method is not GET', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
-      method: 'POST';
+      method: 'POST',
       body: {
         name: 'Test Category'
       }
-    });
+    }),
     await categoriesApiHandler(req, res);
     expect(res._getStatusCode()).toBe(405);
-    expect(res._getJSONData()).toEqual({ error: 'Method POST Not Allowed' });
+    expect(res._getJSONData()).toEqual({ error: 'Method POST Not Allowed' }),
     expect(mockPrismaCategory.findMany).not.toHaveBeenCalled();
-  }),
-}),
+  })}),

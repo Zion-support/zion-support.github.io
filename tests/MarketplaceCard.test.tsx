@@ -6,16 +6,16 @@ import { toast } from '@/hooks/use-toast';
 
 jest.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({ isAuthenticated: false })
-}));
+})),
 jest.mock('@/hooks/use-toast', () => ({
   toast: {
     error: jest.fn()
   }
-}));
+})),
 jest.mock('react-router-dom', () => ({
   ...(jest.requireActual('react-router-dom') as any),
   useNavigate: jest.fn()
-}));
+})),
 describe('MarketplaceCard Buy Now', () => {
   it('navigates to login when unauthenticated', () => {
     const navigateMock = jest.fn(),
@@ -27,6 +27,5 @@ describe('MarketplaceCard Buy Now', () => {
     );
     fireEvent.click(screen.getByRole('button')),
     expect(navigateMock).toHaveBeenCalledWith('/login?next=%2Fcheckout%3Fsku%3D1');
-  }),
-}),
+  })}),
 

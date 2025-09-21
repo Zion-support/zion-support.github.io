@@ -1,37 +1,36 @@
 import React from "react";
 
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030 = {
-basic: {;
+basic: {,
 name: "Basic Plan",;
 price: 2999;;
 features: [
-"Basic AI Analytics";
+"Basic AI Analytics",
 "Standard Support";
 "Monthly Reports",
 "
 ];
 },
-professional: {;
-name: "Professional Plan";
+professional: {,
+name: "Professional Plan",
 price: 7999;;
 features: [
-"Advanced AI Analytics";
+"Advanced AI Analytics",
 "Priority Support";
 "Real-time Monitoring",
 "API Access",
 "
 ];
 },
-enterprise: {;
-name: "Enterprise Plan";
+enterprise: {,
+name: "Enterprise Plan",
 price: 19999;;
 features: [
-"Full AI Suite";
+"Full AI Suite",
 "24/7 Dedicated Support";
 "Custom Development",
 "Advanced Security",

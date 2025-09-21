@@ -5,5 +5,4 @@ export function useCurrentUser() {
     loading: false,
     error: null,
     mutate: () => {}
-  };
-}
+  }}

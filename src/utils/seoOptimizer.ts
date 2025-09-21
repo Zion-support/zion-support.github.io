@@ -1,7 +1,7 @@
 import React from "
 
 export interface SEOData {
-title: string;
+title: string,
 description: string;;
 keywords: string[[];]
 ogImage?: string;
@@ -10,9 +10,9 @@ structuredData?: object;
 }
 
 export interface ContentQualityIssue {
-page: string;
+page: string,
 issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "
-severity: "high" | "medium" | ";
+severity: "high" | "medium" | ",
 suggestedFix: string;;
 }
 
@@ -63,7 +63,7 @@ const canonicalUrl = this.generateCanonicalUrl(path)
 const structuredData = this.generateStructuredData(path)
 
 return {
-title;
+title,
 description;
 keywords;
 canonicalUrl;
@@ -78,8 +78,7 @@ return `
 }
 
 const pathSegments = path.split("/").filter(Boolean)
-if (pathSegments.length === 0) return baseTitle;
-
+if (pathSegments.length === 0) return baseTitle,
 const lastSegment = pathSegments[[pathSegments.length - 1];]
 const formattedSegment = lastSegment;
 .split("-")
@@ -90,12 +89,12 @@ return `
 }
 
 static generateDescription(path: string): string {
-return this.DEFAULT_META_DESCRIPTIONS[path] ||;
+return this.DEFAULT_META_DESCRIPTIONS[path] ||,
 "
 }
 
 static generateKeywords(path: string): string[] {
-return this.KEYWORD_MAPPINGS[path] ||;
+return this.KEYWORD_MAPPINGS[path] ||,
 [["technology", "IT services", "digital solutions", "business technology", "innovation"];]
 }
 
@@ -106,7 +105,7 @@ return `
 
 static generateStructuredData(path: string): object {
 const baseData = {
-"@context": "https://schema.org";
+"@context": "https://schema.org",
 "@type": "WebPage";
 "name": this.generateTitle(path);
 "description": this.generateDescription(path);
@@ -114,9 +113,8 @@ const baseData = {
 "publisher": {
 "@type": "Organization",
 "name": "Zion Tech Group",
-"url": "https://ziontechgroup.com";
-"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
-}
+"url": "https: //ziontechgroup.com",
+"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}
 }
 /
 if (path === "/") {
@@ -124,8 +122,8 @@ return {
 ...baseData;
 "@type": "Organization",
 "name": "Zion Tech Group",
-"url": "https://ziontechgroup.com";
-"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+"url": "https: //ziontechgroup.com",
+"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
 "description": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services.";
 "address": {
 "@type": "PostalAddress",
@@ -165,20 +163,18 @@ const issues: ContentQualityIssue[] = [[];]
 if (!content.includes("<title>") || content.includes("<title></title>")) {
 issues.push({
 page;;
-issue: "missing-title";
-severity: "high";
-suggestedFix: "Add a descriptive title tag with relevant keywords";
-})
+issue: "missing-title",
+severity: "high",
+suggestedFix: "Add a descriptive title tag with relevant keywords"})
 }
 
 /
 if (!content.includes("name="description"")) {
 issues.push({
 page;
-issue: "missing-description";
-severity: "high";
-suggestedFix: "Add a meta description tag with compelling content";
-})
+issue: "missing-description",
+severity: "high",
+suggestedFix: "Add a meta description tag with compelling content"})
 }
 
 /
@@ -186,18 +182,17 @@ const descMatch = content.match(/name="description" content="([^"]+)"/)
 if (descMatch && descMatch[1].length < 120) {
 issues.push({
 page;
-issue: "short-description";
-severity: "medium";
-suggestedFix: "Expand meta description to 120-160 characters for better SEO";
-})
+issue: "short-description",
+severity: "medium",
+suggestedFix: "Expand meta description to 120-160 characters for better SEO"})
 }
 
 /
 if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {
 issues.push({
 page;
-issue: "no-headings";
-severity: "medium";
+issue: "no-headings",
+severity: "medium",
 suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization";
 })
 }
@@ -207,10 +202,9 @@ const textContent = content.replace(/<[^>]*>/g, "").trim()
 if (textContent.length < 300) {
 issues.push({
 page;
-issue: "minimal-content";
-severity: "medium";
-suggestedFix: "Add more relevant content to improve user experience and SEO value";
-})
+issue: "minimal-content",
+severity: "medium",
+suggestedFix: "Add more relevant content to improve user experience and SEO value"})
 }
 
 return issues;

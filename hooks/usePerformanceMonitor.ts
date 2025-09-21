@@ -3,5 +3,4 @@ export function usePerformanceMonitor() {
   return {
     metrics: {},
     isSupported: false
-  };
-}
+  }}

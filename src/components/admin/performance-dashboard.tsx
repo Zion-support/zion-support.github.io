@@ -1,9 +1,9 @@
 interface BundleChunk {
   name: string;;
-size: number;
+size: number,
   loadTime: number;;
-cached: boolean;
-  type: string;
+cached: boolean,
+  type: string,
 export function PerformanceDashboard() {
 return (
     <div className='space-y-6'>
@@ -208,32 +208,32 @@ key={chunk.name}
                   Bundle splitting implemented
                 </p>
                 <p className='text-sm text-blue-700 dark:text-blue-300'>
-                  Your bundle is properly split into framework vendor and;
+                  Your bundle is properly split into framework vendor and,
 application chunks
                 </p>
               </div>
             </div>
-            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
+            <div className='flex items-start gap-3 p-3 bg-green-50 dark: bg-green-900/20 rounded'>
               <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
                 </p>
                 <p className='text-sm text-green-700 dark:text-green-300'>
-                  Real-time performance tracking is helping optimize your;
+                  Real-time performance tracking is helping optimize your,
 application
                 </p>
               </div>
             </div>
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
-              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
+              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark: bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
                 <div>
                   <p className='font-medium text-yellow-900 dark:text-yellow-100'>
                     Consider more aggressive code splitting
                   </p>
                   <p className='text-sm text-yellow-700 dark:text-yellow-300'>
-                    Bundle size is above 2MB. Consider implementing dynamic;
+                    Bundle size is above 2MB. Consider implementing dynamic,
 imports for heavy components
                   </p>
                 </div>

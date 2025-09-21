@@ -1,23 +1,23 @@
 export class EventUtils {
   public static debounce<T extends (...args: any[]) => any>(
-    func: T;
+    func: T,
     wait: number
   ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout;
+    let timeout: NodeJS.Timeout,
     return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
+      clearTimeout(timeout),
       timeout = setTimeout(() => func(...args), wait);
     };
   }
 
   public static throttle<T extends (...args: any[]) => any>(
-    func: T;
+    func: T,
     limit: number
   ): (...args: Parameters<T>) => void {
-    let inThrottle: boolean;
+    let inThrottle: boolean,
     return (...args: Parameters<T>) => {
       if (!inThrottle) {
-        func(...args);
+        func(...args),
         inThrottle = true;
         setTimeout(() => (inThrottle = false), limit);
       }
@@ -27,10 +27,10 @@ export class EventUtils {
   public static once<T extends (...args: any[]) => any>(
     func: T
   ): (...args: Parameters<T>) => void {
-    let called = false;
+    let called = false,
     return (...args: Parameters<T>) => {
       if (!called) {
-        called = true;
+        called = true,
         func(...args);
       }
     };
@@ -41,15 +41,15 @@ export class EventUtils {
     
     return {
       on(event: string, listener: Function) {
-        if (!listeners[event]) listeners[event] = [];
+        if (!listeners[event]) listeners[event] = [],
         listeners[event].push(listener);
       };
       off(event: string, listener: Function) {
-        if (!listeners[event]) return;
+        if (!listeners[event]) return,
         listeners[event] = listeners[event].filter(l => l !== listener);
       };
       emit(event: string, ...args: any[]) {
-        if (!listeners[event]) return;
+        if (!listeners[event]) return,
         listeners[event].forEach(listener => listener(...args));
       }
     };

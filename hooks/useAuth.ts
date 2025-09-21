@@ -40,7 +40,6 @@ export function useAuth() {
 
   const login = async (email: string, password: string) => {
     setAuthState(prev => ({ ...prev, loading: true }));
-    
     try {
       // In a real app, you'd make an API call here
       const mockUser = { id: '1', email };
@@ -51,7 +50,6 @@ export function useAuth() {
         loading: false,
         isAuthenticated: true
       });
-      
       return { success: true };
     } catch (error) {
       setAuthState(prev => ({ ...prev, loading: false }));

@@ -1,13 +1,12 @@
-import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts';
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
-
+import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7',
 interface TenantInfo {
-  id: string;
-  brand_name: string;
-  subdomain: string;
-  custom_domain: string | null;
-  primary_color: string;
-  logo_url: string | null;
+  id: string,
+  brand_name: string,
+  subdomain: string,
+  custom_domain: string | null,
+  primary_color: string,
+  logo_url: string | null,
   theme_preset: string
 }
 
@@ -28,10 +27,9 @@ serve(async (req) => {
   // Enhanced CORS preflight handling
   if (req.method === 'OPTIONS') {
     return new Response(null, {
-      status: 204;
+      status: 204,
       headers: corsHeaders
-    });
-  }
+    })}
 
   try {
     const url = new URL(req.url);
@@ -48,7 +46,7 @@ serve(async (req) => {
     }
 
     // Extract tenant info
-    let tenantInfo: TenantInfo | null = null;
+    let tenantInfo: TenantInfo | null = null,
     if (subdomainParam) {
       // Direct subdomain lookup with error handling
       const { data, error } = await supabase
@@ -60,8 +58,7 @@ serve(async (req) => {
 
       if (error) {
         console.error('Database error:', error);
-        throw new Error(`Database error: ${error.message}`);
-      }
+        throw new Error(`Database error: ${error.message}`)}
 
       tenantInfo = data as TenantInfo;
     } else {
@@ -85,44 +82,40 @@ serve(async (req) => {
             .single(),
 
           if (!subdomainResult.error) {
-            tenantInfo = subdomainResult.data as TenantInfo,
-          }
+            tenantInfo = subdomainResult.data as TenantInfo}
         }
       } else if (data) {
-        tenantInfo = data as TenantInfo,
-      }
+        tenantInfo = data as TenantInfo}
     }
 
     // Return response with enhanced headers
     return new Response(
       JSON.stringify({
-        tenant: tenantInfo;
+        tenant: tenantInfo,
         status: 'success'
-      });
+      }),
       {
         headers: {
-          'Content-Type': 'application/json';
+          'Content-Type': 'application/json',
           ...corsHeaders
         }
       };
-    ),
-  } catch (error) {
+    )} catch (error) {
     console.error('Tenant detector error:', error);
     // Enhanced error response
     return new Response(
       JSON.stringify({ 
-        error: error.message || 'Internal server error';
-        status: 'error';
-        timestamp: new Date().toISOString();
+        error: error.message || 'Internal server error',
+        status: 'error',
+        timestamp: new Date().toISOString(),
         details: error.stack
-      });
+      }),
       {
-        status: error.message.includes('No hostname') ? 400 : 500;
+        status: error.message.includes('No hostname') ? 400 : 500,
         headers: {
-          'Content-Type': 'application/json';
+          'Content-Type': 'application/json',
           ...corsHeaders
         }
       };
-    ),
-  }
+    )}
 }),

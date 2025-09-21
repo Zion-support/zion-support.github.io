@@ -1,9 +1,9 @@
-import { MapPin,,  } from 'lucide-react'
-import { PaymentButton,,  } from "@/components/transactions/PaymentButton";
+import { MapPin,} from 'lucide-react'
+import { PaymentButton,} from "@/components/transactions/PaymentButton";
 import React from "react";
 import React from "react";
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing;
+  selectedCountry: CountryPricing,
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment;
 return (
@@ -21,11 +21,11 @@ amount={selectedCountry.pricePerIncident}
         serviceId='it-onsite-service'
         providerId='zion-tech-group'
         buttonText={`Pay for Service in ${selectedCountry.country}`}
-        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6'
+        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white w-full py-6'
         redirectUrl='/it-onsite-services?success=true'
         onPaymentInitiated={handlePaymentInitiated}      />
       <p className='text-xs text-zion-slate-light mt-2'>
-        Price includes transportation and first hour onsite. Additional hours;
+        Price includes transportation and first hour onsite. Additional hours,
 billed separately.
       </p>
     </div>

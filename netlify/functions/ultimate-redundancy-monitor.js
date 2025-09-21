@@ -32,8 +32,7 @@ exports.handler = async function() {
           system: healthStatus.system
         }
       })
-    },
-  } catch (error) {
+    }} catch (error) {
     // Log error for monitoring
     console.error('Ultimate Redundancy Monitor error:', {
       error: error.message,
@@ -57,8 +56,7 @@ exports.handler = async function() {
           recovery: 'attempting'
         }
       })
-    },
-  }
+    }}
 },
 
 async function checkUltimateRedundancyHealth() {
@@ -99,5 +97,4 @@ async function checkUltimateRedundancyHealth() {
       platform: process.platform,
       nodeVersion: process.version
     }
-  },
-}
+  }}

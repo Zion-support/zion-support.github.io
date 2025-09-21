@@ -9,45 +9,41 @@ import { PlusCircle, Save, Trash } from 'lucide-react';
 type WebhookEventType = 'job_created' | 'job_updated' | 'job_deleted' | 'application_created' | 'application_updated' | 'user_registered';
 
 interface Webhook {
-  id: string;
-  name: string;
-  url: string;
-  event_types: WebhookEventType[];
-  is_active: boolean;
+  id: string,
+  name: string,
+  url: string,
+  event_types: WebhookEventType[],
+  is_active: boolean,
   last_triggered_at?: string;
   secret?: string;
 }
 
 interface NewWebhook {
-  name: string;
-  url: string;
-  eventTypes: WebhookEventType[];
-  selectedEvent: WebhookEventType;
-  secret: string;
-}
+  name: string,
+  url: string,
+  eventTypes: WebhookEventType[],
+  selectedEvent: WebhookEventType,
+  secret: string}
 
 const eventOptions = [
-  { value: 'job_created', label: 'Job Created' };
-  { value: 'job_updated', label: 'Job Updated' };
-  { value: 'job_deleted', label: 'Job Deleted' };
-  { value: 'application_created', label: 'Application Created' };
-  { value: 'application_updated', label: 'Application Updated' };
-  { value: 'user_registered', label: 'User Registered' };
-];
+  { value: 'job_created', label: 'Job Created' },
+  { value: 'job_updated', label: 'Job Updated' },
+  { value: 'job_deleted', label: 'Job Deleted' },
+  { value: 'application_created', label: 'Application Created' },
+  { value: 'application_updated', label: 'Application Updated' },
+  { value: 'user_registered', label: 'User Registered' }];
 
 export function WebhookManager() {
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [testResult, setTestResult] = useState<{ status: number; statusText: string; responseBody: string } | null>(null);
-  
+  const [testResult, setTestResult] = useState<{ status: number; statusText: string; responseBody: string } | null>(null),
   const [newWebhook, setNewWebhook] = useState<NewWebhook>({
-    name: '';
-    url: '';
-    eventTypes: [];
-    selectedEvent: 'job_created';
-    secret: '';
-  });
+    name: '',
+    url: '',
+    eventTypes: [],
+    selectedEvent: 'job_created',
+    secret: ''});
 
   useEffect(() => {
     loadWebhooks();
@@ -70,16 +66,14 @@ export function WebhookManager() {
     if (newWebhook.selectedEvent && !newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       setNewWebhook({
         ...newWebhook,
-        eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
-      });
+        eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent]});
     }
   };
 
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
-      ...newWebhook;
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event);
-    });
+      ...newWebhook,
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event)});
   };
 
   const handleCreateWebhook = async () => {
@@ -93,22 +87,20 @@ export function WebhookManager() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const webhook: Webhook = {
-        id: Date.now().toString();
-        name: newWebhook.name;
-        url: newWebhook.url;
-        event_types: newWebhook.eventTypes;
-        is_active: true;
-        secret: newWebhook.secret || undefined;
-      };
+        id: Date.now().toString(),
+        name: newWebhook.name,
+        url: newWebhook.url,
+        event_types: newWebhook.eventTypes,
+        is_active: true,
+        secret: newWebhook.secret || undefined};
 
       setWebhooks([...webhooks, webhook]);
       setNewWebhook({
-        name: '';
-        url: '';
-        eventTypes: [];
-        selectedEvent: 'job_created';
-        secret: '';
-      });
+        name: '',
+        url: '',
+        eventTypes: [],
+        selectedEvent: 'job_created',
+        secret: ''});
       setError(null);
     } catch (err) {
       setError('Failed to create webhook');
@@ -122,8 +114,7 @@ export function WebhookManager() {
       
       setWebhooks(webhooks.map(w => 
         w.id === id ? { ...w, is_active: isActive } : w
-      ));
-    } catch (err) {
+      ))} catch (err) {
       setError('Failed to toggle webhook');
     }
   };
@@ -145,16 +136,14 @@ export function WebhookManager() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       setTestResult({
-        status: 200;
-        statusText: 'OK';
-        responseBody: 'Webhook test successful';
-      });
+        status: 200,
+        statusText: 'OK',
+        responseBody: 'Webhook test successful'});
     } catch (err) {
       setTestResult({
-        status: 500;
-        statusText: 'Internal Server Error';
-        responseBody: 'Webhook test failed';
-      });
+        status: 500,
+        statusText: 'Internal Server Error',
+        responseBody: 'Webhook test failed'});
     }
   };
 
@@ -346,7 +335,7 @@ export function WebhookManager() {
             <CardContent>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="font-medium">Status:</span>
+                  <span className="font-medium">Status: </span>
                   <span
                     className={
                       testResult.status >= 200 && testResult.status < 300
@@ -369,5 +358,4 @@ export function WebhookManager() {
         )}
       </div>
     </div>
-  );
-}
+  )}

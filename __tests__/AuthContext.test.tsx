@@ -9,30 +9,30 @@ import { vi, describe, it, expect, type MockInstance } from 'vitest'; // Correct
 vi.mock('@/services/authService');
 vi.mock('@/hooks/useAuthOperations');
 vi.mock('@/utils/safeStorage', () => ({
-  safeStorage: { setItem: vi.fn(), getItem: vi.fn(), removeItem: vi.fn() };
+  safeStorage: { setItem: vi.fn(), getItem: vi.fn(), removeItem: vi.fn() },
   safeSessionStorage: { setItem: vi.fn(), getItem: vi.fn(), removeItem: vi.fn() }
-}));
+})),
 const replace = vi.fn();
 vi.mock('next/router', () => ({
   useRouter: () => ({ replace, asPath: '/', isReady: true })
-}));
+})),
 describe('AuthContext login', () => {
   it('stores token and redirects on successful login', async () => {
     (loginUser as MockInstance<any, any>).mockResolvedValue({
-      res: { status: 200 };
+      res: { status: 200 },
       data: { accessToken: 'jwt', user: { id: '1', email: 'a@b.c' } }
-    });
+    }),
     (useAuthOperations as MockInstance<any, any>).mockReturnValue({
-      login: vi.fn().mockResolvedValue({ data: {}, error: null });
-      signup: vi.fn();
-      logout: vi.fn();
-      resetPassword: vi.fn();
-      updateProfile: vi.fn();
-      loginWithGoogle: vi.fn();
-      loginWithFacebook: vi.fn();
-      loginWithTwitter: vi.fn();
+      login: vi.fn().mockResolvedValue({ data: {}, error: null }),
+      signup: vi.fn(),
+      logout: vi.fn(),
+      resetPassword: vi.fn(),
+      updateProfile: vi.fn(),
+      loginWithGoogle: vi.fn(),
+      loginWithFacebook: vi.fn(),
+      loginWithTwitter: vi.fn(),
       loginWithWeb3: vi.fn()
-    });
+    }),
     render(
       <AuthProvider>
         <AuthContext.Consumer>
@@ -46,5 +46,4 @@ describe('AuthContext login', () => {
       expect(safeStorage.setItem).toHaveBeenCalledWith('zion_tokenjwt');
     }),
     expect(replace).toHaveBeenCalledWith('/dashboard');
-  }),
-}),
+  })}),

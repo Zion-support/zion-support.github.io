@@ -9,17 +9,15 @@ import { Sparkles, ArrowRight } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
 
 interface GeneratedContent {
-  description: string;
-  tags: string[];
+  description: string,
+  tags: string[],
   suggestedPrice: {
-    min: number;
-    max: number;
-  };
-  keyPoints: string[];
-}
+    min: number,
+    max: number};
+  keyPoints: string[]}
 
 interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void;
+  onApplyGenerated?: (content: GeneratedContent) => void,
   initialValues?: {
     title?: string;
     category?: string;
@@ -57,12 +55,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListin
   const handleGenerate = async () => {
     if (!title || !category) {
       toast({
-        title: "Missing Information";
-        description: "Please provide both title and category.";
-        variant: "destructive";
-      })
-      return
-    }
+        title: "Missing Information",
+        description: "Please provide both title and category.",
+        variant: "destructive"})
+      return }
 
     setIsLoading(true)
     try {
@@ -70,14 +66,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListin
       await new Promise(resolve => setTimeout(resolve, 2000))
       
       const mockContent: GeneratedContent = {
-        description: `A comprehensive ${category.toLowerCase()} solution that ${title.toLowerCase()}. Perfect for ${targetAudience || 'businesses'} looking to enhance their operations with cutting-edge technology.`;
+        description: `A comprehensive ${category.toLowerCase()} solution that ${title.toLowerCase()}. Perfect for ${targetAudience || 'businesses'} looking to enhance their operations with cutting-edge technology.`,
         tags: [category, 'AI-powered', 'automation', 'productivity', 'innovation'],
         suggestedPrice: {
-          min: 99;
+          min: 99,
           max: 499
-        };
+        },
         keyPoints: [
-          `Advanced ${category.toLowerCase()} capabilities`;
+          `Advanced ${category.toLowerCase()} capabilities`,
           'Easy to use and implement';
           '24/7 customer support',
           'Regular updates and improvements'
@@ -86,15 +82,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListin
       
       setGeneratedContent(mockContent)
       toast({
-        title: "Content Generated";
-        description: "AI has generated optimized content for your listing.";
-      })
+        title: "Content Generated",
+        description: "AI has generated optimized content for your listing."})
     } catch (error) {
       toast({
-        title: "Generation Failed";
-        description: "Failed to generate content. Please try again.";
-        variant: "destructive";
-      })
+        title: "Generation Failed",
+        description: "Failed to generate content. Please try again.",
+        variant: "destructive"})
     } finally {
       setIsLoading(false)
     }
@@ -104,9 +98,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListin
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent)
       toast({
-        title: "Content Applied";
-        description: "Generated content has been applied to your listing.";
-      })
+        title: "Content Applied",
+        description: "Generated content has been applied to your listing."})
     }
   }
 

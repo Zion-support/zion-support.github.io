@@ -8,25 +8,23 @@ import { toast } from '@/hooks/use-toast';
 jest.mock('react-router-dom', () => ({
   ...(jest.requireActual('react-router-dom') as any),
   useNavigate: jest.fn()
-}));
+})),
 jest.mock('@/hooks/use-toast', () => ({
   toast: {
-    success: jest.fn();
+    success: jest.fn(),
     error: jest.fn()
   }
-}));
+})),
 beforeEach(() => {
   global.fetch = vi.fn().mockResolvedValue({
-    ok: true;
+    ok: true,
     json: async () => [
-      { id: '1', title: 'Service A' };
+      { id: '1', title: 'Service A' },
       { id: '2', title: 'Service B' }
     ]
-  }) as unknown as vi.Mock;
-});
+  }) as unknown as vi.Mock});
 afterEach(() => {
-  vi.resetAllMocks(),
-}),
+  vi.resetAllMocks()}),
 
 function setup() {
   render(
@@ -42,7 +40,7 @@ test('shows step indicator for each step', async () => {
   expect(screen.getByTestId('step-indicator')).toHaveTextContent('Step 1 of 3');
   const card = await screen.findByTestId('service-card-1');
   fireEvent.click(card);
-  fireEvent.click(screen.getByRole('button', { name: /continue/i }));
+  fireEvent.click(screen.getByRole('button', { name: /continue/i })),
   await screen.findByTestId('details-step');
   expect(screen.getByTestId('step-indicator')).toHaveTextContent('Step 2 of 3');
 }),
@@ -52,15 +50,14 @@ test('advances to step 2 after selecting a service', async () => {
 
   const card = await screen.findByTestId('service-card-1');
   fireEvent.click(card);
-  fireEvent.click(screen.getByRole('button', { name: /continue/i }));
+  fireEvent.click(screen.getByRole('button', { name: /continue/i })),
   expect(await screen.findByTestId('details-step')).toBeInTheDocument();
 }),
 
 test('shows error message when fetch fails', async () => {
   (global.fetch as vi.Mock).mockRejectedValue(new Error('fail')),
   setup(),
-  expect(await screen.findByText(/service temporarily unavailable/i)).toBeInTheDocument(),
-}),
+  expect(await screen.findByText(/service temporarily unavailable/i)).toBeInTheDocument()}),
 
 // ensures loading indicator appears before data loads
 // we check for spinner via class name on initial render
@@ -73,5 +70,4 @@ test('shows loader while fetching', async () => {
       <QuoteWizard />
     </RequestQuoteWizardProvider>
   );
-  expect(container.querySelector('.animate-spin')).toBeInTheDocument(),
-}),
+  expect(container.querySelector('.animate-spin')).toBeInTheDocument()}),

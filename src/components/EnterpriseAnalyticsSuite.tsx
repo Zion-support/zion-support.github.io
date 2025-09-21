@@ -2,229 +2,213 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface EnterpriseMetric {
-  id: string;
-  title: string;
-  value: string;
-  change: string;
-  trend: 'up' | 'down' | 'stable';
-  department: 'sales' | 'marketing' | 'operations' | 'finance' | 'hr';
-  priority: 'high' | 'medium' | 'low';
-  icon: string;
-}
+  id: string,
+  title: string,
+  value: string,
+  change: string,
+  trend: 'up' | 'down' | 'stable',
+  department: 'sales' | 'marketing' | 'operations' | 'finance' | 'hr',
+  priority: 'high' | 'medium' | 'low',
+  icon: string}
 
 interface DepartmentPerformance {
-  department: string;
-  revenue: number;
-  growth: number;
-  efficiency: number;
-  satisfaction: number;
-  color: string;
-}
+  department: string,
+  revenue: number,
+  growth: number,
+  efficiency: number,
+  satisfaction: number,
+  color: string}
 
 interface ProjectStatus {
-  name: string;
-  progress: number;
-  status: 'on-track' | 'delayed' | 'at-risk' | 'completed';
-  team: string;
-  deadline: string;
-}
+  name: string,
+  progress: number,
+  status: 'on-track' | 'delayed' | 'at-risk' | 'completed',
+  team: string,
+  deadline: string}
 
 export const EnterpriseAnalyticsSuite: React.FC = () => {
   const [metrics, setMetrics] = useState<EnterpriseMetric[]>([
     {
-      id: '1';
-      title: 'Enterprise Revenue';
-      value: '$45.2M';
-      change: '+23.1%';
-      trend: 'up';
-      department: 'sales';
-      priority: 'high';
+      id: '1',
+      title: 'Enterprise Revenue',
+      value: '$45.2M',
+      change: '+23.1%',
+      trend: 'up',
+      department: 'sales',
+      priority: 'high',
       icon: '💰'
-    };
+    },
     {
-      id: '2';
-      title: 'Lead Generation';
+      id: '2',
+      title: 'Lead Generation',
       value: '12,847',
-      change: '+18.7%';
-      trend: 'up';
-      department: 'marketing';
-      priority: 'high';
+      change: '+18.7%',
+      trend: 'up',
+      department: 'marketing',
+      priority: 'high',
       icon: '🎯'
-    };
+    },
     {
-      id: '3';
-      title: 'Operational Efficiency';
-      value: '96.8%';
-      change: '+1.2%';
-      trend: 'up';
-      department: 'operations';
-      priority: 'medium';
+      id: '3',
+      title: 'Operational Efficiency',
+      value: '96.8%',
+      change: '+1.2%',
+      trend: 'up',
+      department: 'operations',
+      priority: 'medium',
       icon: '⚙️'
-    };
+    },
     {
-      id: '4';
-      title: 'Profit Margin';
-      value: '34.2%';
-      change: '+2.8%';
-      trend: 'up';
-      department: 'finance';
-      priority: 'high';
+      id: '4',
+      title: 'Profit Margin',
+      value: '34.2%',
+      change: '+2.8%',
+      trend: 'up',
+      department: 'finance',
+      priority: 'high',
       icon: '📊'
-    };
+    },
     {
-      id: '5';
-      title: 'Employee Retention';
-      value: '94.5%';
-      change: '+0.8%';
-      trend: 'up';
-      department: 'hr';
-      priority: 'medium';
+      id: '5',
+      title: 'Employee Retention',
+      value: '94.5%',
+      change: '+0.8%',
+      trend: 'up',
+      department: 'hr',
+      priority: 'medium',
       icon: '👥'
-    };
+    },
     {
-      id: '6';
-      title: 'Customer Acquisition Cost';
-      value: '$245';
-      change: '-12.3%';
-      trend: 'up';
-      department: 'marketing';
-      priority: 'high';
+      id: '6',
+      title: 'Customer Acquisition Cost',
+      value: '$245',
+      change: '-12.3%',
+      trend: 'up',
+      department: 'marketing',
+      priority: 'high',
       icon: '💸'
     }
-  ]);
-
+  ]),
   const [departmentPerformance, setDepartmentPerformance] = useState<DepartmentPerformance[]>([
     {
-      department: 'Sales';
-      revenue: 45200000;
-      growth: 23.1;
-      efficiency: 94.2;
-      satisfaction: 4.7;
+      department: 'Sales',
+      revenue: 45200000,
+      growth: 23.1,
+      efficiency: 94.2,
+      satisfaction: 4.7,
       color: 'blue'
-    };
+    },
     {
-      department: 'Marketing';
-      revenue: 8500000;
-      growth: 18.7;
-      efficiency: 91.8;
-      satisfaction: 4.5;
+      department: 'Marketing',
+      revenue: 8500000,
+      growth: 18.7,
+      efficiency: 91.8,
+      satisfaction: 4.5,
       color: 'green'
-    };
+    },
     {
-      department: 'Operations';
-      revenue: 3200000;
-      growth: 15.3;
-      efficiency: 96.8;
-      satisfaction: 4.8;
+      department: 'Operations',
+      revenue: 3200000,
+      growth: 15.3,
+      efficiency: 96.8,
+      satisfaction: 4.8,
       color: 'purple'
-    };
+    },
     {
-      department: 'Finance';
-      revenue: 1200000;
-      growth: 12.9;
-      efficiency: 98.1;
-      satisfaction: 4.6;
+      department: 'Finance',
+      revenue: 1200000,
+      growth: 12.9,
+      efficiency: 98.1,
+      satisfaction: 4.6,
       color: 'yellow'
-    };
+    },
     {
-      department: 'HR';
-      revenue: 800000;
-      growth: 8.4;
-      efficiency: 89.5;
-      satisfaction: 4.4;
+      department: 'HR',
+      revenue: 800000,
+      growth: 8.4,
+      efficiency: 89.5,
+      satisfaction: 4.4,
       color: 'indigo'
     }
-  ]);
-
+  ]),
   const [projectStatus, setProjectStatus] = useState<ProjectStatus[]>([
     {
-      name: 'Digital Transformation Initiative';
-      progress: 78;
-      status: 'on-track';
-      team: 'Engineering';
+      name: 'Digital Transformation Initiative',
+      progress: 78,
+      status: 'on-track',
+      team: 'Engineering',
       deadline: '2024-03-15'
-    };
+    },
     {
-      name: 'Customer Experience Platform';
-      progress: 92;
-      status: 'on-track';
-      team: 'Product';
+      name: 'Customer Experience Platform',
+      progress: 92,
+      status: 'on-track',
+      team: 'Product',
       deadline: '2024-02-28'
-    };
+    },
     {
-      name: 'AI Integration Project';
-      progress: 45;
-      status: 'at-risk';
-      team: 'Data Science';
+      name: 'AI Integration Project',
+      progress: 45,
+      status: 'at-risk',
+      team: 'Data Science',
       deadline: '2024-04-30'
-    };
+    },
     {
-      name: 'Security Infrastructure Upgrade';
-      progress: 100;
-      status: 'completed';
-      team: 'Security';
+      name: 'Security Infrastructure Upgrade',
+      progress: 100,
+      status: 'completed',
+      team: 'Security',
       deadline: '2024-01-15'
-    };
+    },
     {
-      name: 'Mobile App Redesign';
-      progress: 65;
-      status: 'delayed';
-      team: 'Design';
+      name: 'Mobile App Redesign',
+      progress: 65,
+      status: 'delayed',
+      team: 'Design',
       deadline: '2024-03-01'
     }
-  ]);
-
+  ]),
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedPriority, setSelectedPriority] = useState('all');
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return '↗️';
+      case 'up': return '↗️',
       case 'down': return '↘️';
-      default: return '➡️';
-    }
+      default: return '➡️'}
   };
-
   const getTrendColor = (trend: string) => {
     switch (trend) {
-      case 'up': return 'text-green-400';
+      case 'up': return 'text-green-400',
       case 'down': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
+      default: return 'text-gray-400'}
   };
-
   const getDepartmentColor = (department: string) => {
     switch (department) {
-      case 'sales': return 'from-blue-500 to-cyan-600';
+      case 'sales': return 'from-blue-500 to-cyan-600',
       case 'marketing': return 'from-green-500 to-emerald-600';
       case 'operations': return 'from-purple-500 to-violet-600';
       case 'finance': return 'from-yellow-500 to-amber-600';
       case 'hr': return 'from-indigo-500 to-blue-600';
-      default: return 'from-gray-500 to-slate-600';
-    }
+      default: return 'from-gray-500 to-slate-600'}
   };
-
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'high': return 'text-red-400 bg-red-900';
+      case 'high': return 'text-red-400 bg-red-900',
       case 'medium': return 'text-yellow-400 bg-yellow-900';
       case 'low': return 'text-green-400 bg-green-900';
-      default: return 'text-gray-400 bg-gray-900';
-    }
+      default: return 'text-gray-400 bg-gray-900'}
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'on-track': return 'text-green-400 bg-green-900';
+      case 'on-track': return 'text-green-400 bg-green-900',
       case 'completed': return 'text-blue-400 bg-blue-900';
       case 'at-risk': return 'text-yellow-400 bg-yellow-900';
       case 'delayed': return 'text-red-400 bg-red-900';
-      default: return 'text-gray-400 bg-gray-900';
-    }
+      default: return 'text-gray-400 bg-gray-900'}
   };
-
   const getProgressColor = (progress: number) => {
-    if (progress >= 80) return 'bg-green-500';
+    if (progress >= 80) return 'bg-green-500',
     if (progress >= 60) return 'bg-yellow-500';
     if (progress >= 40) return 'bg-orange-500';
     return 'bg-red-500';
@@ -422,7 +406,5 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );
-};
-
+  )};
 export default EnterpriseAnalyticsSuite;

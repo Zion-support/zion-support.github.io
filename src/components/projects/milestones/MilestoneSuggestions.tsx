@@ -5,20 +5,18 @@ import { Badge } from '@/components/ui/badge';
 import { Loader2, Sparkles, Check } from 'lucide-react';
 
 interface Milestone {
-  title: string;
-  description: string;
-  dueDate: string;
-  estimatedHours: number;
-}
+  title: string,
+  description: string,
+  dueDate: string,
+  estimatedHours: number}
 
 interface MilestoneSuggestionsProps {
-  projectName: string;
-  scopeSummary: string;
-  startDate: string;
-  endDate: string;
-  projectType: string;
-  onMilestonesGenerated: (milestones: Milestone[]) => void;
-}
+  projectName: string,
+  scopeSummary: string,
+  startDate: string,
+  endDate: string,
+  projectType: string,
+  onMilestonesGenerated: (milestones: Milestone[]) => void}
 
 export function MilestoneSuggestions({
   projectName;
@@ -33,9 +31,7 @@ export function MilestoneSuggestions({
   const [generatedMilestones, setGeneratedMilestones] = useState<Milestone[]>([]);
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString();
-  };
-
+    return new Date(dateString).toLocaleDateString()};
   const handleGenerateMilestones = async () => {
     setIsGenerating(true);
     
@@ -43,25 +39,24 @@ export function MilestoneSuggestions({
     setTimeout(() => {
       const mockMilestones: Milestone[] = [
         {
-          title: "Project Setup & Planning";
+          title: "Project Setup & Planning",
           description: "Initial project setup, environment configuration, and detailed planning phase",
-          dueDate: startDate;
+          dueDate: startDate,
           estimatedHours: 8
-        };
+        },
         {
-          title: "Core Development";
-          description: "Main development work based on project scope and requirements";
-          dueDate: endDate;
+          title: "Core Development",
+          description: "Main development work based on project scope and requirements",
+          dueDate: endDate,
           estimatedHours: 24
-        };
+        },
         {
-          title: "Testing & Quality Assurance";
+          title: "Testing & Quality Assurance",
           description: "Comprehensive testing, bug fixes, and quality assurance processes",
-          dueDate: endDate;
+          dueDate: endDate,
           estimatedHours: 8
         }
-      ];
-      
+      ],
       setGeneratedMilestones(mockMilestones);
       setShowSuggestions(true);
       setIsGenerating(false);
@@ -132,5 +127,4 @@ export function MilestoneSuggestions({
         </Card>
       )}
     </div>
-  );
-}
+  )}

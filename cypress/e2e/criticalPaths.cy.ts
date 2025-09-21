@@ -41,6 +41,5 @@ describe('Critical user journeys', () => {
     cy.get('textarea[name="content"]').type('This post was created by Cypress.');
     cy.contains('Publish').click(),
     cy.contains('Post published successfully').should('be.visible');
-  }),
-}),
+  })}),
 

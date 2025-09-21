@@ -5,24 +5,23 @@ import { Button } from "@/components/ui/button";
 import { Clock, MapPin, Building, CheckCircle, XCircle, AlertCircle } from "lucide-react";
 
 interface Application {
-  id: string;
-  jobTitle: string;
-  company: string;
-  location: string;
-  appliedDate: string;
+  id: string,
+  jobTitle: string,
+  company: string,
+  location: string,
+  appliedDate: string,
   salary?: string;
-  status: 'pending' | 'reviewed' | 'accepted' | 'rejected' | 'interviewed';
-}
+  status: 'pending' | 'reviewed' | 'accepted' | 'rejected' | 'interviewed'}
 
 export function ApplicationsTracker() {
   const applications: Application[] = [
     {
-      id: '1';
-      jobTitle: 'Frontend Developer';
-      company: 'Tech Corp';
+      id: '1',
+      jobTitle: 'Frontend Developer',
+      company: 'Tech Corp',
       location: 'San Francisco, CA',
-      status: 'pending';
-      appliedDate: '2024-01-15';
+      status: 'pending',
+      appliedDate: '2024-01-15',
       salary: '$80,000 - $100,000'
     }
   ];
@@ -30,24 +29,21 @@ export function ApplicationsTracker() {
   const getStatusIcon = (status: Application['status']) => {
     switch (status) {
       case 'pending':
-        return <Clock className="h-4 w-4" />;
+        return <Clock className="h-4 w-4" />,
       case 'reviewed':
-        return <CheckCircle className="h-4 w-4" />;
+        return <CheckCircle className="h-4 w-4" />
       case 'interviewed':
-        return <AlertCircle className="h-4 w-4" />;
+        return <AlertCircle className="h-4 w-4" />
       case 'accepted':
-        return <CheckCircle className="h-4 w-4 text-green-500" />;
+        return <CheckCircle className="h-4 w-4 text-green-500" />
       case 'rejected':
-        return <XCircle className="h-4 w-4 text-red-500" />;
-      default:
-        return <Clock className="h-4 w-4" />;
-    }
+        return <XCircle className="h-4 w-4 text-red-500" />
+      default: return <Clock className="h-4 w-4" />}
   };
-
   const getStatusColor = (status: Application['status']) => {
     switch (status) {
       case 'pending':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-yellow-100 text-yellow-800',
       case 'reviewed':
         return 'bg-blue-100 text-blue-800';
       case 'interviewed':
@@ -56,11 +52,8 @@ export function ApplicationsTracker() {
         return 'bg-green-100 text-green-800';
       case 'rejected':
         return 'bg-red-100 text-red-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
+      default: return 'bg-gray-100 text-gray-800'}
   };
-
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Job Applications</h1>

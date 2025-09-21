@@ -7,36 +7,33 @@ import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 // Mock Sentry
 vi.mock('@sentry/nextjs', () => ({
   withScope: vi.fn((callback) => callback({
-    setTag: vi.fn();
-    setContext: vi.fn();
+    setTag: vi.fn(),
+    setContext: vi.fn(),
     setLevel: vi.fn()
-  }));
+  })),
   captureException: vi.fn()
-}));
+})),
 // Component that throws an error
 const ThrowError = ({ shouldError }: { shouldError: boolean }) => {
   if (shouldError) {
-    throw new Error('Test error for ApiErrorBoundary');
-  }
-  return <div>No error</div>;
+    throw new Error('Test error for ApiErrorBoundary')}
+  return <div>No error</div>
 },
 
 describe('ApiErrorBoundary', () => {
-  let queryClient: QueryClient;
+  let queryClient: QueryClient,
   beforeEach(() => {
     queryClient = new QueryClient({
       defaultOptions: {
-        queries: { retry: false };
+        queries: { retry: false },
         mutations: { retry: false }
       }
-    });
+    }),
     // Mock console.error to avoid noise in tests
-    vi.spyOn(console, 'error').mockImplementation(() => {}),
-  }),
+    vi.spyOn(console, 'error').mockImplementation(() => {})}),
 
   afterEach(() => {
-    vi.restoreAllMocks(),
-  }),
+    vi.restoreAllMocks()}),
 
   it('renders children when there is no error', () => {
     render(
@@ -46,8 +43,7 @@ describe('ApiErrorBoundary', () => {
         </ApiErrorBoundary>
       </QueryClientProvider>
     );
-    expect(screen.getByText('No error')).toBeInTheDocument(),
-  }),
+    expect(screen.getByText('No error')).toBeInTheDocument()}),
 
   it('displays error UI when an error occurs', () => {
     render(
@@ -59,13 +55,12 @@ describe('ApiErrorBoundary', () => {
     );
     expect(screen.getByText('Something went wrong')).toBeInTheDocument(),
     expect(screen.getByText('An unexpected error occurred while loading the page.')).toBeInTheDocument(),
-    expect(screen.getByRole('button', { name: /try again/i })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument();
-  });
+    expect(screen.getByRole('button', { name: /try again/i })).toBeInTheDocument(),
+    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument()});
   it('shows network error message for network-related errors', () => {
     const NetworkError = () => {
       throw new Error('fetch failed: network error')
-    };
+    },
     render(
       <QueryClientProvider client={queryClient}>
         <ApiErrorBoundary queryClient={queryClient}>
@@ -74,8 +69,7 @@ describe('ApiErrorBoundary', () => {
       </QueryClientProvider>
     );
     expect(screen.getByText('Connection Problem')).toBeInTheDocument(),
-    expect(screen.getByText(/Unable to connect to our servers/)).toBeInTheDocument(),
-  }),
+    expect(screen.getByText(/Unable to connect to our servers/)).toBeInTheDocument()}),
 
   it('shows retry button that can be clicked', async () => {
     const mockInvalidateQueries = vi.spyOn(queryClient, 'invalidateQueries').mockResolvedValue(undefined);
@@ -87,15 +81,13 @@ describe('ApiErrorBoundary', () => {
         </ApiErrorBoundary>
       </QueryClientProvider>
     );
-    const retryButton = screen.getByRole('button', { name: /try again/i });
+    const retryButton = screen.getByRole('button', { name: /try again/i }),
     fireEvent.click(retryButton);
     expect(screen.getByText('Retrying...')).toBeInTheDocument(),
 
     await waitFor(() => {
       expect(mockInvalidateQueries).toHaveBeenCalled(),
-      expect(mockRefetchQueries).toHaveBeenCalled(),
-    }),
-  }),
+      expect(mockRefetchQueries).toHaveBeenCalled()})}),
 
   it('shows custom fallback when provided', () => {
     const customFallback = <div>Custom error message</div>,
@@ -108,6 +100,4 @@ describe('ApiErrorBoundary', () => {
       </QueryClientProvider>
     );
     expect(screen.getByText('Custom error message')).toBeInTheDocument(),
-    expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument(),
-  }),
-}), 
+    expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument()})}), 

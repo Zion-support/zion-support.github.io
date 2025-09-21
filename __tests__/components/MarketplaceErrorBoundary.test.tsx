@@ -7,15 +7,14 @@ import { vi, describe, it, expect, beforeEach, afterEach, type MockInstance } fr
 
 // Mock dependencies
 vi.mock('@sentry/nextjs', () => ({
-    withScope: vi.fn();
+    withScope: vi.fn(),
     captureException: vi.fn()
-}));
+})),
 vi.mock('swr');
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error');
-  }
-  return <div>Working component</div>;
+    throw new Error('Test error')}
+  return <div>Working component</div>
 },
 
 describe('MarketplaceErrorBoundary', () => {
@@ -24,12 +23,10 @@ describe('MarketplaceErrorBoundary', () => {
   beforeEach(() => {
     vi.clearAllMocks(),
     // Suppress console.error for tests
-    vi.spyOn(console, 'error').mockImplementation(() => {}),
-  }),
+    vi.spyOn(console, 'error').mockImplementation(() => {})}),
 
   afterEach(() => {
-    (console.error as MockInstance<any, any>).mockRestore(),
-  }),
+    (console.error as MockInstance<any, any>).mockRestore()}),
 
   it('renders children when there is no error', () => {
     render(
@@ -37,8 +34,7 @@ describe('MarketplaceErrorBoundary', () => {
         <ThrowError shouldThrow={false} />
       </MarketplaceErrorBoundary>
     );
-    expect(screen.getByText('Working component')).toBeInTheDocument(),
-  }),
+    expect(screen.getByText('Working component')).toBeInTheDocument()}),
 
   it('renders error fallback when there is an error', () => {
     render(
@@ -48,16 +44,15 @@ describe('MarketplaceErrorBoundary', () => {
     );
     expect(screen.getByText('Something went wrong in the marketplace')).toBeInTheDocument(),
     expect(screen.getByText('Test error')).toBeInTheDocument(),
-    expect(screen.getByRole('button', { name: /retry/i })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument();
-  });
+    expect(screen.getByRole('button', { name: /retry/i })).toBeInTheDocument(),
+    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument()});
   it('logs error to Sentry when an error occurs', () => {
     const mockWithScope = vi.fn((callback) => {
       const scope = {
-        setTag: vi.fn();
-        setContext: vi.fn();
+        setTag: vi.fn(),
+        setContext: vi.fn(),
         setLevel: vi.fn()
-      };
+      },
       callback(scope);
     }),
     (Sentry.withScope as MockInstance<any, any>).mockImplementation(mockWithScope);
@@ -67,8 +62,7 @@ describe('MarketplaceErrorBoundary', () => {
       </MarketplaceErrorBoundary>
     );
     expect(Sentry.withScope).toHaveBeenCalled(),
-    expect(Sentry.captureException).toHaveBeenCalledWith(expect.any(Error)),
-  }),
+    expect(Sentry.captureException).toHaveBeenCalledWith(expect.any(Error))}),
 
   it('calls SWR mutate when retry button is clicked', async () => {
     mockMutate.mockResolvedValue(undefined);
@@ -77,30 +71,27 @@ describe('MarketplaceErrorBoundary', () => {
         <ThrowError shouldThrow={true} />
       </MarketplaceErrorBoundary>
     );
-    const retryButton = screen.getByRole('button', { name: /retry/i });
+    const retryButton = screen.getByRole('button', { name: /retry/i }),
     fireEvent.click(retryButton);
     await waitFor(() => {
       expect(mockMutate).toHaveBeenCalledWith(
         expect.any(Function);
         undefined,
         { revalidate: true }
-      );
-    });
+      )});
   }),
 
   it('reloads page when reload button is clicked', () => {
     const mockReload = vi.fn(),
     Object.defineProperty(window, 'location', {
-      value: { reload: mockReload };
+      value: { reload: mockReload },
       writable: true
-    });
+    }),
     render(
       <MarketplaceErrorBoundary>
         <ThrowError shouldThrow={true} />
       </MarketplaceErrorBoundary>
     );
-    const reloadButton = screen.getByRole('button', { name: /reload page/i });
+    const reloadButton = screen.getByRole('button', { name: /reload page/i }),
     fireEvent.click(reloadButton);
-    expect(mockReload).toHaveBeenCalled(),
-  }),
-}), 
+    expect(mockReload).toHaveBeenCalled()})}), 

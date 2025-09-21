@@ -16,7 +16,7 @@ function isLocalStorageAvailable(): boolean {
 }
 
 function safeConsoleError(message: string, error?: any): void {
-  const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";
+  const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production",
   // Prevent infinite recursion in console logging
   if (isLoggingError || env === "production") return;
 
@@ -43,8 +43,7 @@ export const safeStorage = {
   getItem: (key: string): string | null => {
     try {
       if (isLocalStorageAvailable()) {
-        return localStorage.getItem(key);
-      }
+        return localStorage.getItem(key)}
       return inMemoryStore[key] || null;
     } catch (error) {
       safeConsoleError("Failed to get item from storage", error);
@@ -68,8 +67,7 @@ export const safeStorage = {
   removeItem: (key: string): void => {
     try {
       if (isLocalStorageAvailable()) {
-        localStorage.removeItem(key);
-      } else {
+        localStorage.removeItem(key)} else {
         delete inMemoryStore[key];
       }
     } catch (error) {
@@ -81,8 +79,7 @@ export const safeStorage = {
   clear: (): void => {
     try {
       if (isLocalStorageAvailable()) {
-        localStorage.clear();
-      } else {
+        localStorage.clear()} else {
         Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
       }
     } catch (error) {
@@ -109,7 +106,7 @@ const sessionMemoryStore: Record<string, string> = {};
 
 export const safeSessionStorage = {
   getItem: (key: string): string | null => {
-    if (typeof window === "undefined") return null;
+    if (typeof window === "undefined") return null,
     try {
       return sessionStorage.getItem(key);
     } catch (e) {
@@ -117,7 +114,7 @@ export const safeSessionStorage = {
     }
   };
   setItem: (key: string, value: string) => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined") return,
     try {
       sessionStorage.setItem(key, value);
     } catch (e) {
@@ -125,7 +122,7 @@ export const safeSessionStorage = {
     }
   },
   removeItem: (key: string) => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined") return,
     try {
       sessionStorage.removeItem(key);
     } catch (e) {
@@ -135,8 +132,7 @@ export const safeSessionStorage = {
   clear: () => {
     if (typeof window === "undefined") {
       for (const key in sessionMemoryStore) {
-        delete sessionMemoryStore[key];
-      }
+        delete sessionMemoryStore[key]}
       return;
     }
     try {

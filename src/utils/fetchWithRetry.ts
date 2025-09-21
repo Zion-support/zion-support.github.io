@@ -4,13 +4,12 @@ interface FetchOptions extends RequestInit {
 }
 
 export async function fetchWithRetry(
-  url: string;
+  url: string,
   options: FetchOptions = {}
 ): Promise<Response> {
   const { retries = 3, retryDelay = 1000, ...fetchOptions } = options;
   
-  let lastError: Error;
-  
+  let lastError: Error,
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const response = await fetch(url, fetchOptions);

@@ -6,7 +6,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and risk management using advanced AI algorithms.",
         category: "
         subcategory: "
-        price: 2999;
+        price: 2999,
         currency: "
         pricingModel: "
         features: [
@@ -47,15 +47,13 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning Models", "Real-time Data Processing", "Secure API Integration", "Multi-platform Support"],
         integrationOptions: ["Brokerage APIs", "Banking Systems", "Tax Software", "CRM Systems"],
         complianceStandards: ["SEC Compliance", "FINRA Guidelines", "GDPR", "SOC 2 Type II"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -63,7 +61,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 4500;
+        price: 4500,
         currency: "
         pricingModel: "
         features: [
@@ -104,15 +102,13 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Post-Quantum Algorithms", "Hybrid Encryption", "Zero-Trust Architecture", "AI-Powered Detection"],
         integrationOptions: ["SIEM Systems", "EDR Solutions", "Identity Providers", "Cloud Platforms"],
         complianceStandards: ["NIST Standards", "ISO 27001", "SOC 2", "FedRAMP", "HIPAA"],
         sla: "
-        uptime: "99.99%",
-    }
+        uptime: "99.99%"}
     /
     {
         id: "
@@ -120,7 +116,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "Comprehensive healthcare analytics platform that uses AI to analyze patient data, predict outcomes, and optimize healthcare delivery while maintaining strict privacy and compliance standards.",
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -161,8 +157,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning Models", "Real-time Processing", "Secure Data Pipeline", "Scalable Architecture"],
         integrationOptions: ["EHR Systems", "PACS", "Lab Systems", "Insurance Platforms"],
@@ -175,7 +170,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "AI-powered supply chain platform that autonomously manages inventory, predicts demand, optimizes logistics, and mitigates supply chain risks in real-time.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -216,8 +211,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["AI Algorithms", "IoT Integration", "Real-time Analytics", "Predictive Modeling"],
         integrationOptions: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "E-commerce Platforms"],
@@ -230,7 +224,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate drug discovery, and advance scientific research.",
         category: "
         subcategory: "
-        price: 8000;
+        price: 8000,
         currency: "
         pricingModel: "
         features: [
@@ -271,8 +265,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Quantum Algorithms", "Hybrid Computing", "Cloud Infrastructure", "Real-time Processing"],
         integrationOptions: ["Research Tools", "Data Platforms", "Cloud Services", "Scientific Software"],
@@ -285,7 +278,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "Intelligent legal research platform that uses AI to analyze case law, predict legal outcomes, and provide comprehensive legal insights for attorneys and legal professionals.",
         category: "
         subcategory: "
-        price: 1200;
+        price: 1200,
         currency: "
         pricingModel: "
         features: [
@@ -326,8 +319,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Secure Access"],
         integrationOptions: ["Legal Research Platforms", "Document Management", "Case Management", "Legal Databases"],
@@ -340,7 +332,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "AI-powered energy management platform that autonomously optimizes energy consumption, predicts demand, and manages renewable energy integration for commercial and industrial facilities.",
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -381,8 +373,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["AI Algorithms", "IoT Sensors", "Real-time Analytics", "Predictive Modeling"],
         integrationOptions: ["Building Management Systems", "Smart Meters", "Solar Panels", "Battery Storage"],
@@ -395,7 +386,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "Comprehensive content creation platform that uses AI to generate high-quality written content, videos, graphics, and marketing materials with brand consistency and SEO optimization.",
         category: "
         subcategory: "
-        price: 899;
+        price: 899,
         currency: "
         pricingModel: "
         features: [
@@ -436,8 +427,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Natural Language Generation", "Computer Vision", "Machine Learning", "Content Optimization"],
         integrationOptions: ["CMS Platforms", "Social Media", "Email Marketing", "Analytics Tools"],
@@ -450,7 +440,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 15000;
+        price: 15000,
         currency: "
         pricingModel: "
         features: [
@@ -491,8 +481,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Quantum Key Distribution", "Quantum Networks", "Post-Quantum Cryptography", "Secure Protocols"],
         integrationOptions: ["Government Networks", "Military Systems", "Financial Networks", "Critical Infrastructure"],
@@ -505,7 +494,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         description: "Intelligent talent acquisition platform that uses AI to source, screen, and match candidates with job opportunities, reducing hiring time and improving candidate quality.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -546,8 +535,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Integration APIs"],
         integrationOptions: ["ATS Systems", "HRIS", "Job Boards", "Social Media", "Background Check Services"],

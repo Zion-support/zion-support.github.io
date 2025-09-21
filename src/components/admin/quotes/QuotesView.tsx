@@ -8,15 +8,14 @@ import { Button } from '@/components/ui/button';
 import { Plus } from 'lucide-react';
 
 interface Quote {
-  id: string;
-  clientName: string;
-  projectTitle: string;
-  amount: number;
-  status: 'pending' | 'approved' | 'rejected' | 'expired';
-  createdAt: string;
-  validUntil: string;
-  isArchived: boolean;
-}
+  id: string,
+  clientName: string,
+  projectTitle: string,
+  amount: number,
+  status: 'pending' | 'approved' | 'rejected' | 'expired',
+  createdAt: string,
+  validUntil: string,
+  isArchived: boolean}
 
 type QuoteStatus = 'pending' | 'approved' | 'rejected' | 'expired';
 
@@ -34,36 +33,36 @@ export const QuotesView: React.FC = () => {
   useEffect(() => {
     const mockQuotes: Quote[] = [
       {
-        id: '1';
-        clientName: 'Acme Corp';
-        projectTitle: 'Website Redesign';
-        amount: 15000;
-        status: 'pending';
-        createdAt: '2024-01-15';
-        validUntil: '2024-02-15';
+        id: '1',
+        clientName: 'Acme Corp',
+        projectTitle: 'Website Redesign',
+        amount: 15000,
+        status: 'pending',
+        createdAt: '2024-01-15',
+        validUntil: '2024-02-15',
         isArchived: false
-      };
+      },
       {
-        id: '2';
-        clientName: 'TechStart Inc';
-        projectTitle: 'Mobile App Development';
-        amount: 25000;
-        status: 'approved';
-        createdAt: '2024-01-10';
-        validUntil: '2024-02-10';
+        id: '2',
+        clientName: 'TechStart Inc',
+        projectTitle: 'Mobile App Development',
+        amount: 25000,
+        status: 'approved',
+        createdAt: '2024-01-10',
+        validUntil: '2024-02-10',
         isArchived: false
-      };
+      },
       {
-        id: '3';
-        clientName: 'Global Solutions';
-        projectTitle: 'Cloud Migration';
-        amount: 50000;
-        status: 'rejected';
-        createdAt: '2024-01-05';
-        validUntil: '2024-02-05';
+        id: '3',
+        clientName: 'Global Solutions',
+        projectTitle: 'Cloud Migration',
+        amount: 50000,
+        status: 'rejected',
+        createdAt: '2024-01-05',
+        validUntil: '2024-02-05',
         isArchived: false
       }
-    ];
+    ],
     setQuotes(mockQuotes);
   }, []);
 
@@ -145,12 +144,10 @@ export const QuotesView: React.FC = () => {
       prev.map(quote =>
         quote.id === id ? { ...quote, isArchived: !quote.isArchived } : quote
       )
-    );
-  };
+    )};
 
   const handleDeleteQuote = (id: string) => {
-    setQuotes(prev => prev.filter(quote => quote.id !== id));
-  };
+    setQuotes(prev => prev.filter(quote => quote.id !== id))};
 
   const handleArchiveSelected = () => {
     setQuotes(prev =>
@@ -159,7 +156,7 @@ export const QuotesView: React.FC = () => {
           ? { ...quote, isArchived: true }
           : quote
       )
-    );
+    ),
     setSelectedQuotes([]);
   };
 

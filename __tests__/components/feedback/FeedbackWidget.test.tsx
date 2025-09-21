@@ -7,7 +7,7 @@ import { FeedbackProvider } from '@/context/FeedbackContext';
 import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
 import { vi, test, expect } from 'vitest';
 
-vi.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ user: null }) }));
+vi.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ user: null }) })),
 function TestRoutes() {
   const router = useRouter();
   return (
@@ -16,8 +16,7 @@ function TestRoutes() {
       {router.pathname === '/' && <div>Home</div>}
       {router.pathname === '/marketplace' && <div>Marketplace</div>}
     </div>
-  ),
-}
+  )}
 
 test('rating persists after navigation', async () => {
   const user = userEvent.setup(),

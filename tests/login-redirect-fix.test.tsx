@@ -6,22 +6,21 @@ import { vi, describe, it, expect, beforeEach, type MockInstance } from 'vitest'
 // Mock Next.js router
 vi.mock('next/router', () => ({
   useRouter: vi.fn()
-}));
+})),
 // Mock Head component
 vi.mock('next/head', () => {
   return {
     default: ({ children }: { children: React.ReactNode }) => <>{children}</>
-  };
-});
+  }});
 describe('Login Redirect Fix - Issue #2', () => {
   const mockReplace = vi.fn(),
-  let mockRouter: { replace: MockInstance<any, any>, query: any };
+  let mockRouter: { replace: MockInstance<any, any>, query: any },
   beforeEach(() => {
     vi.clearAllMocks();
     mockRouter = { // Re-initialize mockRouter before each test
-      replace: mockReplace;
+      replace: mockReplace,
       query: {}
-    };
+    },
     (useRouter as MockInstance<any,any>).mockReturnValue(mockRouter);
   }),
 
@@ -32,25 +31,22 @@ describe('Login Redirect Fix - Issue #2', () => {
       render(<LoginRedirect />);
       await waitFor(() => {
         expect(mockReplace).toHaveBeenCalledWith('/auth/login');
-      }),
-    }),
+      })}),
 
     it('should preserve query parameters during redirect', async () => {
       mockRouter.query = { 
-        returnTo: '/dashboard';
+        returnTo: '/dashboard',
         source: 'header'
-      };
+      },
       render(<LoginRedirect />);
       await waitFor(() => {
         expect(mockReplace).toHaveBeenCalledWith('/auth/login?returnTo=%2Fdashboard&source=header');
-      }),
-    }),
+      })}),
 
     it('should display loading state while redirecting', () => {
       render(<LoginRedirect />);
       expect(screen.getByText('Redirecting to login...')).toBeInTheDocument(),
-      expect(screen.getByText(/animate-spin/)).toBeInTheDocument(),
-    }),
+      expect(screen.getByText(/animate-spin/)).toBeInTheDocument()}),
 
     it('should provide fallback link if redirect fails', () => {
       render(<LoginRedirect />);
@@ -61,9 +57,7 @@ describe('Login Redirect Fix - Issue #2', () => {
 
     it('should have proper meta tags for SEO', () => {
       render(<LoginRedirect />);
-      expect(screen.getByText('Redirecting to login...')).toBeInTheDocument(),
-    }),
-  }),
+      expect(screen.getByText('Redirecting to login...')).toBeInTheDocument()})}),
 
   describe('Navigation Link Updates', () => {
     it('should verify login links use Auth0 route', () => {
@@ -76,8 +70,7 @@ describe('Login Redirect Fix - Issue #2', () => {
     it('should preserve language support for "Iniciar Sesión"', () => {
       const spanishLoginText = 'Iniciar Sesión',
       expect(spanishLoginText).toBe('Iniciar Sesión');
-    }),
-  }),
+    })}),
 
   describe('Edge Cases', () => {
     it('should handle empty query object', async () => {
@@ -86,35 +79,30 @@ describe('Login Redirect Fix - Issue #2', () => {
       render(<LoginRedirect />);
       await waitFor(() => {
         expect(mockReplace).toHaveBeenCalledWith('/auth/login');
-      }),
-    }),
+      })}),
 
     it('should handle complex query parameters', async () => {
       mockRouter.query = {
-        returnTo: '/marketplace/category/ai-tools';
-        utm_source: 'newsletter';
-        utm_campaign: 'login_prompt';
+        returnTo: '/marketplace/category/ai-tools',
+        utm_source: 'newsletter',
+        utm_campaign: 'login_prompt',
         locale: 'es'
-      };
+      },
       render(<LoginRedirect />);
       await waitFor(() => {
         const expectedUrl = '/auth/login?returnTo=%2Fmarketplace%2Fcategory%2Fai-tools&utm_source=newsletter&utm_campaign=login_prompt&locale=es',
         expect(mockReplace).toHaveBeenCalledWith(expectedUrl);
-      }),
-    }),
+      })}),
 
     it('should handle special characters in query parameters', async () => {
       mockRouter.query = {
-        returnTo: '/search?q=AI & Machine Learning';
+        returnTo: '/search?q=AI & Machine Learning',
         message: 'Please login to continue'
-      };
+      },
       render(<LoginRedirect />);
       await waitFor(() => {
         expect(mockReplace).toHaveBeenCalledWith(expect.stringContaining('/auth/login?')),
-        expect(mockReplace).toHaveBeenCalledWith(expect.stringContaining('returnTo=')),
-      }),
-    }),
-  }),
+        expect(mockReplace).toHaveBeenCalledWith(expect.stringContaining('returnTo='))})})}),
 
   describe('Error Handling', () => {
     it('should handle router.replace failure gracefully', async () => {
@@ -122,15 +110,13 @@ describe('Login Redirect Fix - Issue #2', () => {
       
       render(<LoginRedirect />);
       expect(screen.getByText('Redirecting to login...')).toBeInTheDocument(),
-      expect(screen.getByText('click here')).toBeInTheDocument(),
-    }),
+      expect(screen.getByText('click here')).toBeInTheDocument()}),
 
     it('should provide manual fallback if JavaScript is disabled', () => {
       render(<LoginRedirect />);
       const fallbackLink = screen.getByText('click here');
       expect(fallbackLink.closest('a')).toHaveAttribute('href/auth/login');
-    }),
-  }),
+    })}),
 
   describe('Performance', () => {
     it('should redirect immediately without delay', async () => {
@@ -138,8 +124,7 @@ describe('Login Redirect Fix - Issue #2', () => {
       
       render(<LoginRedirect />);
       await waitFor(() => {
-        expect(mockReplace).toHaveBeenCalled(),
-      }),
+        expect(mockReplace).toHaveBeenCalled()}),
       
       const endTime = Date.now(),
       const redirectTime = endTime - startTime,
@@ -151,9 +136,7 @@ describe('Login Redirect Fix - Issue #2', () => {
       render(<LoginRedirect />);
       await waitFor(() => {
         expect(mockReplace).toHaveBeenCalledTimes(1);
-      }),
-    }),
-  }),
+      })})}),
 
   describe('Integration with Auth0', () => {
     it('should redirect to route that works with Auth0', () => {
@@ -164,13 +147,11 @@ describe('Login Redirect Fix - Issue #2', () => {
     }),
 
     it('should preserve returnTo parameter for Auth0 redirect', async () => {
-      mockRouter.query = { returnTo: '/dashboard' };
+      mockRouter.query = { returnTo: '/dashboard' },
       render(<LoginRedirect />);
       await waitFor(() => {
         expect(mockReplace).toHaveBeenCalledWith('/auth/login?returnTo=%2Fdashboard');
-      }),
-    }),
-  }),
+      })})}),
 
   describe('Backward Compatibility', () => {
     it('should maintain functionality for existing bookmarks', async () => {
@@ -179,68 +160,54 @@ describe('Login Redirect Fix - Issue #2', () => {
       render(<LoginRedirect />);
       await waitFor(() => {
         expect(mockReplace).toHaveBeenCalledWith('/auth/login');
-      }),
-    }),
+      })}),
 
     it('should preserve deep link functionality', async () => {
       mockRouter.query = { 
-        returnTo: '/marketplace/product/123';
+        returnTo: '/marketplace/product/123',
         ref: 'email_campaign'
-      };
+      },
       render(<LoginRedirect />);
       await waitFor(() => {
         expect(mockReplace).toHaveBeenCalledWith(
           expect.stringContaining('/auth/login?returnTo=%2Fmarketplace%2Fproduct%2F123')
-        ),
-      }),
-    }),
-  }),
+        )})})}),
 
   describe('User Experience', () => {
     it('should show appropriate loading message', () => {
       render(<LoginRedirect />);
       expect(screen.getByText('Redirecting to login...')).toBeInTheDocument(),
-      expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument(),
-    }),
+      expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument()}),
 
     it('should provide clear fallback instructions', () => {
       render(<LoginRedirect />);
       expect(screen.getByText("If you're not redirected automatically,")).toBeInTheDocument(),
-      expect(screen.getByText('click here')).toBeInTheDocument(),
-    }),
+      expect(screen.getByText('click here')).toBeInTheDocument()}),
 
     it('should have proper loading spinner', () => {
       render(<LoginRedirect />);
       const spinner = screen.getByText(/Redirecting to login.../).previousElementSibling,
       expect(spinner).toHaveClass('animate-spin');
-    }),
-  }),
+    })}),
 
   describe('Security', () => {
     it('should not expose sensitive information in redirect', async () => {
       mockRouter.query = { 
-        token: 'sensitive-token-123';
+        token: 'sensitive-token-123',
         returnTo: '/dashboard'
-      };
+      },
       render(<LoginRedirect />);
       await waitFor(() => {
         expect(mockReplace).toHaveBeenCalledWith(
           expect.stringContaining('/auth/login?token=sensitive-token-123&returnTo=%2Fdashboard')
-        ),
-      }),
-      
-    }),
+        )})}),
 
     it('should use replace() instead of push() to prevent back button issues', async () => {
       render(<LoginRedirect />);
       await waitFor(() => {
-        expect(mockReplace).toHaveBeenCalled(),
-      }),
+        expect(mockReplace).toHaveBeenCalled()}),
       
-      expect(mockRouter.replace).toHaveBeenCalled(),
-    }),
-  }),
-}),
+      expect(mockRouter.replace).toHaveBeenCalled()})})}),
 
 describe('Login Fix Integration Tests', () => {
   describe('Route Resolution', () => {
@@ -259,17 +226,16 @@ describe('Login Fix Integration Tests', () => {
       ],
       
       expect(flowSteps).toHaveLength(4);
-    }),
-  }),
+    })}),
 
   describe('Multi-language Support', () => {
     it('should support Spanish login button', () => {
       const translations = {
-        en: 'Sign In';
-        es: 'Iniciar Sesión';
-        pt: 'Entrar';
+        en: 'Sign In',
+        es: 'Iniciar Sesión',
+        pt: 'Entrar',
         fr: 'Se connecter'
-      };
+      },
       expect(translations.es).toBe('Iniciar Sesión');
     }),
 
@@ -280,37 +246,31 @@ describe('Login Fix Integration Tests', () => {
       locales.forEach(locale => {
         const localizedRoute = `${loginRoute}?locale=${locale}`,
         expect(localizedRoute).toContain('/auth/login');
-      }),
-    }),
-  }),
+      })})}),
 
   describe('Mobile Support', () => {
     it('should work on mobile navigation', () => {
       const mobileLoginRoute = '/auth/login',
       expect(mobileLoginRoute).toBe('/auth/login');
-    }),
-  }),
-}),
+    })})}),
 
 export const testLoginRedirect = async (queryParams: Record<string, string> = {}) => {
   const mockRouter = {
-    replace: vi.fn();
+    replace: vi.fn(),
     query: queryParams
-  };
+  },
   (useRouter as MockInstance<any,any>).mockReturnValue(mockRouter);
   render(<LoginRedirect />);
   await waitFor(() => {
-    expect(mockRouter.replace).toHaveBeenCalled(),
-  }),
+    expect(mockRouter.replace).toHaveBeenCalled()}),
   
-  return mockRouter.replace.mock.calls[0][0],
-},
+  return mockRouter.replace.mock.calls[0][0]},
 
 export const LOGIN_ROUTES = {
-  OLD_SUPABASE: '/login';
-  NEW_AUTH0: '/auth/login';
+  OLD_SUPABASE: '/login',
+  NEW_AUTH0: '/auth/login',
   API_AUTH0: '/api/auth/login'
-};
+},
 export const validateAuth0Route = (route: string) => {
   return route === LOGIN_ROUTES.NEW_AUTH0
 };

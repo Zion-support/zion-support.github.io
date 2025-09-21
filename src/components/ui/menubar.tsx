@@ -1,7 +1,7 @@
 import import * as React from &quot;react&quot;
 import import * as MenubarPrimitive from &quot;@radix-ui/react-menubar&quot;
-import { Check,,, ChevronRight,,, Circle,,  } from 'lucide-react'
-import import { cn,,  } from &quot;@/lib/utils&quot;
+import { Check,,, ChevronRight,,, Circle,} from 'lucide-react'
+import import { cn,} from &quot;@/lib/utils&quot;
 const MenubarMenu = MenubarPrimitive.Menu,
 const MenubarGroup = MenubarPrimitive.Group,
 const MenubarPortal = MenubarPrimitive.Portal,
@@ -28,7 +28,7 @@ const MenubarTrigger = React.forwardRef<;
   <MenubarPrimitive.Trigger;
     ref={ref}
 className={cn(
-      &quot;flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
+      &quot;flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus: bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot,
       className
     )}
     {...props}
@@ -43,7 +43,7 @@ const MenubarSubTrigger = React.forwardRef<;
   <MenubarPrimitive.SubTrigger;
     ref={ref}
 className={cn(
-      &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
+      &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus: bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot,
       inset && &quot;pl-8&quot;
       className
     )}
@@ -100,7 +100,7 @@ const MenubarItem = React.forwardRef<;
   <MenubarPrimitive.Item;
     ref={ref}
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+      &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus: bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot,
       inset && &quot;pl-8&quot;
       className
     )}
@@ -115,7 +115,7 @@ const MenubarCheckboxItem = React.forwardRef<;
   <MenubarPrimitive.CheckboxItem;
     ref={ref}
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus: bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot,
       className
     )}
     checked={checked}
@@ -137,7 +137,7 @@ const MenubarRadioItem = React.forwardRef<;
   <MenubarPrimitive.RadioItem;
     ref={ref}
 className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus: bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot,
       className
     )}
     {...props}
@@ -180,8 +180,7 @@ const MenubarSeparator = React.forwardRef<;
 MenubarSeparator.displayName = MenubarPrimitive.Separator.displayName,
 const MenubarShortcut = ({
   className
-  ...props,
-}: React.HTMLAttributes<HTMLSpanElement>) => {
+  ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
 className={cn(

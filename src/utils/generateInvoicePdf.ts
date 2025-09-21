@@ -2,41 +2,37 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
 interface InvoiceData {
-  invoiceNumber: string;
-  date: string;
-  dueDate: string;
+  invoiceNumber: string,
+  date: string,
+  dueDate: string,
   client: {
-    name: string;
-    email: string;
-    address: string;
-  };
+    name: string,
+    email: string,
+    address: string};
   company: {
-    name: string;
-    email: string;
-    address: string;
-    phone: string;
-  };
+    name: string,
+    email: string,
+    address: string,
+    phone: string};
   items: Array<{
-    description: string;
-    quantity: number;
-    rate: number;
-    amount: number;
-  }>;
-  subtotal: number;
-  tax: number;
-  total: number;
+    description: string,
+    quantity: number,
+    rate: number,
+    amount: number}>;
+  subtotal: number,
+  tax: number,
+  total: number,
   notes?: string;
 }
 
 export class InvoicePDFGenerator {
-  private doc: jsPDF;
-
+  private doc: jsPDF,
   constructor() {
     this.doc = new jsPDF();
   }
 
   generateInvoice(data: InvoiceData): void {
-    this.setupDocument();
+    this.setupDocument(),
     this.addHeader(data);
     this.addClientInfo(data);
     this.addInvoiceDetails(data);
@@ -53,7 +49,7 @@ export class InvoicePDFGenerator {
 
   private addHeader(data: InvoiceData): void {
     // Company name
-    this.doc.setFontSize(24);
+    this.doc.setFontSize(24),
     this.doc.setFont('helvetica', 'bold');
     this.doc.text(data.company.name, 20, 30);
 
@@ -71,8 +67,7 @@ export class InvoicePDFGenerator {
   }
 
   private addClientInfo(data: InvoiceData): void {
-    const startY = 80;
-    
+    const startY = 80,
     this.doc.setFontSize(12);
     this.doc.setFont('helvetica', 'bold');
     this.doc.text('Bill To:', 20, startY);
@@ -85,7 +80,7 @@ export class InvoicePDFGenerator {
   }
 
   private addInvoiceDetails(data: InvoiceData): void {
-    const startY = 80;
+    const startY = 80,
     const rightAlign = 150;
 
     this.doc.setFontSize(10);
@@ -95,8 +90,7 @@ export class InvoicePDFGenerator {
   }
 
   private addItemsTable(data: InvoiceData): void {
-    const startY = 120;
-
+    const startY = 120,
     const tableData = data.items.map(item => [
       item.description;
       item.quantity.toString();
@@ -105,29 +99,28 @@ export class InvoicePDFGenerator {
     ]);
 
     (this.doc as any).autoTable({
-      startY: startY;
+      startY: startY,
       head: [['Description', 'Quantity', 'Rate', 'Amount']],
-      body: tableData;
-      theme: 'grid';
+      body: tableData,
+      theme: 'grid',
       headStyles: {
         fillColor: [41, 128, 185],
-        textColor: 255;
+        textColor: 255,
         fontStyle: 'bold'
-      };
+      },
       styles: {
-        fontSize: 10;
+        fontSize: 10,
         cellPadding: 5
-      };
+      },
       columnStyles: {
-        1: { halign: 'center' };
-        2: { halign: 'right' };
+        1: { halign: 'center' },
+        2: { halign: 'right' },
         3: { halign: 'right' }
       }
-    });
-  }
+    })}
 
   private addTotals(data: InvoiceData): void {
-    const finalY = (this.doc as any).lastAutoTable.finalY + 20;
+    const finalY = (this.doc as any).lastAutoTable.finalY + 20,
     const rightAlign = 150;
 
     this.doc.setFontSize(10);
@@ -140,8 +133,7 @@ export class InvoicePDFGenerator {
 
   private addNotes(data: InvoiceData): void {
     if (data.notes) {
-      const finalY = (this.doc as any).lastAutoTable.finalY + 40;
-      
+      const finalY = (this.doc as any).lastAutoTable.finalY + 40,
       this.doc.setFontSize(10);
       this.doc.setFont('helvetica', 'normal');
       this.doc.text('Notes:', 20, finalY);
@@ -159,8 +151,7 @@ export class InvoicePDFGenerator {
   }
 
   save(filename: string = 'invoice.pdf'): void {
-    this.doc.save(filename);
-  }
+    this.doc.save(filename)}
 
   getBlob(): Blob {
     return this.doc.output('blob');
@@ -178,7 +169,7 @@ export function generateInvoicePDF(data: InvoiceData, filename?: string): void {
 }
 
 export function generateInvoiceBlob(data: InvoiceData): Blob {
-  const generator = new InvoicePDFGenerator();
+  const generator = new InvoicePDFGenerator(),
   generator.generateInvoice(data);
   return generator.getBlob();
 }

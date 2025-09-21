@@ -38,15 +38,14 @@ function fixSyntaxErrors(content) {
 
   // Fix interface and type definitions
   content = content.replace(/interface\s+(\w+)\s*\{\s*([^}]+);\s*([^}]+)\s*\}/g, 'interface $1 {\n  $2;\n  $3;\n}');
-  content = content.replace(/(\w+):\s*(\w+);\s*(\w+):/g, '$1: $2;\n  $3:');
-
+  content = content.replace(/(\w+):\s*(\w+);\s*(\w+):/g, '$1: $2;\n  $3: '),
   // Fix function parameters with semicolons
   content = content.replace(/\(([^)]+);\s*([^)]+)\)/g, '($1, $2)');
   content = content.replace(/function\s+(\w+)\s*\(([^)]+);\s*([^)]+)\)/g, 'function $1($2, $3)');
 
   // Fix array and object syntax
-  content = content.replace(/\[\s*([^,]+);\s*([^\]]+)\s*\]/g, '[$1, $2]');
-  content = content.replace(/\{\s*([^,]+);\s*([^}]+)\s*\}/g, '{$1, $2}');
+  content = content.replace(/\[\s*([^]+);\s*([^\]]+)\s*\]/g, '[$1, $2]');
+  content = content.replace(/\{\s*([^]+);\s*([^}]+)\s*\}/g, '{$1, $2}');
 
   // Fix quotes in strings
   content = content.replace(/"([^"]*)"([^"]*)"([^"]*)"/g, '"$1\'$2\'$3"');

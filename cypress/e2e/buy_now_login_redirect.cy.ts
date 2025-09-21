@@ -1,8 +1,8 @@
 describe('guest buy now flow', () => {
   it('redirects through login to checkout', () => {
     cy.intercept('POST/api/auth/login', {
-      statusCode: 200;
-      body: { token: 'jwt', user: { id: '1', email: 'test@example.com' } };
+      statusCode: 200,
+      body: { token: 'jwt', user: { id: '1', email: 'test@example.com' } },
       headers: { 'set-cookie': 'token=jwt, HttpOnly, Path=/' }
     }).as('login');
     cy.visit('/equipment/pro-camera-x1000');
@@ -14,5 +14,4 @@ describe('guest buy now flow', () => {
     cy.wait('@login');
     cy.url().should('include/checkout?sku=pro-camera-x1000');
     cy.contains('pro-camera-x1000');
-  }),
-}),
+  })}),

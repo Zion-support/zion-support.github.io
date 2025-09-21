@@ -6,35 +6,34 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
 // Categories data
 const categories = [
   {
-    id: 'it-services';
-    name: 'IT Services';
-    description: 'Comprehensive IT solutions for your business';
-    icon: '💻';
+    id: 'it-services',
+    name: 'IT Services',
+    description: 'Comprehensive IT solutions for your business',
+    icon: '💻',
     count: 12
-  };
+  },
   {
-    id: 'data-storage';
-    name: 'Data Storage';
-    description: 'Secure and scalable data storage solutions';
-    icon: '💾';
+    id: 'data-storage',
+    name: 'Data Storage',
+    description: 'Secure and scalable data storage solutions',
+    icon: '💾',
     count: 8
-  };
+  },
   {
-    id: 'ai-solutions';
-    name: 'AI Solutions';
-    description: 'Artificial intelligence and machine learning services';
-    icon: '🤖';
+    id: 'ai-solutions',
+    name: 'AI Solutions',
+    description: 'Artificial intelligence and machine learning services',
+    icon: '🤖',
     count: 15
-  };
+  },
   {
-    id: 'team-management';
-    name: 'Team Management';
-    description: 'Tools and services for team collaboration';
-    icon: '👥';
+    id: 'team-management',
+    name: 'Team Management',
+    description: 'Tools and services for team collaboration',
+    icon: '👥',
     count: 6
   }
-];
-
+],
 export default function AllCategoriesPage() {
   return (
     <div className='min-h-screen bg-zion-blue'>
@@ -45,7 +44,7 @@ export default function AllCategoriesPage() {
           className="text-center mb-12"
         />
         
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+        <div className='grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6'>
           {categories.map((category) => (
             <CategoryCard
               key={category.id}
@@ -55,5 +54,4 @@ export default function AllCategoriesPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

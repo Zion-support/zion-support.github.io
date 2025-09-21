@@ -8,5 +8,4 @@ describe('talent profile page', () => {
     cy.visit('/talent/t-001');
     cy.contains('Alexandra Chen');
     cy.contains('Machine Learning');
-  }),
-}),
+  })}),

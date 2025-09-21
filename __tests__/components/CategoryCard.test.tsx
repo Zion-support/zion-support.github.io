@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { CategoryCard } from '@/components/CategoryCard';
 import { describe, test, expect } from 'vitest';
 
-const renderCard = (ui: React.ReactElement) => render(<MemoryRouter>{ui}</MemoryRouter>);
+const renderCard = (ui: React.ReactElement) => render(<MemoryRouter>{ui}</MemoryRouter>),
 describe('CategoryCard', () => {
   test('renders title, description and count', () => {
     renderCard(
@@ -12,8 +12,7 @@ describe('CategoryCard', () => {
     );
     expect(screen.getByText('Crypto')).toBeInTheDocument(),
     expect(screen.getByText('All things crypto')).toBeInTheDocument(),
-    expect(screen.getByText('5 listings')).toBeInTheDocument(),
-  }),
+    expect(screen.getByText('5 listings')).toBeInTheDocument()}),
 
   test('link href uses slugified title', () => {
     renderCard(
@@ -29,6 +28,5 @@ describe('CategoryCard', () => {
     );
     const wrapper = screen.getByTestId('category-card');
     const iconWrapper = wrapper.querySelector('div');
-    expect(iconWrapper).toHaveStyle({ color: 'red' });
-  });
+    expect(iconWrapper).toHaveStyle({ color: 'red' })});
 }),

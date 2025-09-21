@@ -6,7 +6,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Sustainable, energy-efficient IT infrastructure designed to reduce carbon footprint while maintaining high performance and reliability.",
         category: "
         subcategory: "
-        price: 2500;
+        price: 2500,
         currency: "
         pricingModel: "
         features: [
@@ -47,8 +47,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Intel Xeon", "AMD EPYC", "NVIDIA GPUs", "Smart cooling", "Renewable energy systems"],
         integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
         compliance: ["ISO 14001", "LEED", "Energy Star", "Green Building Standards"],
@@ -62,7 +61,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Distributed computing infrastructure that brings computation and data storage closer to data sources, reducing latency and bandwidth usage.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -103,8 +102,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Kubernetes", "Docker", "Node.js", "Redis", "MQTT", "5G networks"],
         integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific standards"],
@@ -118,7 +116,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -159,8 +157,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Qiskit", "PennyLane", "Cirq", "Classical infrastructure", "Quantum simulators"],
         integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
         compliance: ["SOC 2", "ISO 27001", "FedRAMP", "NIST", "Quantum-safe standards"],
@@ -174,7 +171,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Comprehensive security infrastructure based on zero-trust principles, providing continuous verification and minimal access privileges.",
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -215,8 +212,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Okta", "Palo Alto", "CrowdStrike", "Splunk", "Microsoft Defender"],
         integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "FedRAMP", "Industry-specific"],
@@ -230,7 +226,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         description: "Intelligent infrastructure that automatically optimizes performance, resources, and costs using AI and machine learning algorithms.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -271,8 +267,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "Prometheus", "Grafana"],
         integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack", "Ansible"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific standards"],

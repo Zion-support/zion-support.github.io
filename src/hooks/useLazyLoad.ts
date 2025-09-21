@@ -8,13 +8,13 @@ preloadDistance?: number;
 }
 
 interface UseLazyLoadReturn {
-isVisible: boolean;
-ref: React.RefObject<HTMLElement>;
+isVisible: boolean,
+ref: React.RefObject<HTMLElement>,
 load: () => void;;
 }
 
 export const useLazyLoad: any = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
-const {;
+const {,
 threshold = 0.1;
 rootMargin = "50px";
 preload = true;
@@ -46,8 +46,7 @@ load()
 },
 {
 threshold;
-rootMargin: preload ? `${preloadDistance}px` : rootMargin;
-}
+rootMargin: preload ? `${preloadDistance}px` : rootMargin}
 )
 observer.observe(element)
 

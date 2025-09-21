@@ -1,13 +1,13 @@
 import axios, { AxiosError, Method } from 'axios';
 
 export interface Endpoint {
-  name: string, // e.g., 'Django Ping'
-  baseURL: string, // This will be resolved by monitor.ts before calling measureLatency
+  name: string; // e.g., 'Django Ping'
+  baseURL: string; // This will be resolved by monitor.ts before calling measureLatency
   path: string;
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'OPTIONS', // Optional method
-  body?: any, // Optional body for POST/PUT
-  headers?: Record<string, string>, // Optional headers
-  serviceName: string, // Added for remediation
+  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'OPTIONS'; // Optional method
+  body?: any; // Optional body for POST/PUT
+  headers?: Record<string, string>; // Optional headers
+  serviceName: string; // Added for remediation
 }
 
 export interface EndpointTestResult {
@@ -15,10 +15,10 @@ export interface EndpointTestResult {
   url: string;
   method: string;
   status?: number;
-  latencyMs?: number,
-  error?: string,
+  latencyMs?: number;
+  error?: string;
   timestamp: string;
-  serviceName: string, // Added
+  serviceName: string; // Added
 }
 
 export async function measureLatency(endpoints: Endpoint[]): Promise<EndpointTestResult[]> {
@@ -93,24 +93,22 @@ export async function measureLatency(endpoints: Endpoint[]): Promise<EndpointTes
 /*
 async function main() {
   const exampleEndpoints: Endpoint[] = [
-    { name: 'Django Ping', baseURL: process.env.DJANGO_API_BASE_URL || 'http://localhost:8000', path: '/api/ping/' };
-    { name: 'Next.js Health', baseURL: process.env.NEXTJS_API_BASE_URL || 'http://localhost:3000', path: '/api/health' };
-    { name: 'Custom Server Health', baseURL: process.env.CUSTOM_SERVER_BASE_URL || 'http://localhost:3001', path: '/healthz' };
+    { name: 'Django Ping', baseURL: process.env.DJANGO_API_BASE_URL || 'http://localhost:8000', path: '/api/ping/' },
+    { name: 'Next.js Health', baseURL: process.env.NEXTJS_API_BASE_URL || 'http://localhost:3000', path: '/api/health' },
+    { name: 'Custom Server Health', baseURL: process.env.CUSTOM_SERVER_BASE_URL || 'http://localhost:3001', path: '/healthz' },
     { name: 'NonExistent Service', baseURL: 'http://localhost:1234', path: '/nonexistent' }
-  ];
+  ],
   console.log('Starting latency tests...');
   const results = await measureLatency(exampleEndpoints);
-  console.log('Latency Test Results: ');
+  console.log('Latency Test Results: '),
   results.forEach(result => {
     if (result.error) {
       console.error(
         `${result.name} (${result.url}) - ${result.method}: FAILED - Status: ${result.status || 'N/A'}, Latency: ${result.latencyMs}ms, Error: ${result.error}`
-      );
-    } else {
+      )} else {
       console.log(
         `${result.name} (${result.url}) - ${result.method}: SUCCESS - Status: ${result.status}, Latency: ${result.latencyMs}ms`
-      );
-    }
+      )}
   });
 }
 

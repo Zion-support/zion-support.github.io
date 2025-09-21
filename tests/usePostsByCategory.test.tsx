@@ -7,25 +7,24 @@ import { vi, it, expect } from 'vitest';
 it('returns posts for slug', async () => {
   vi.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([
     {
-      id: '1';
-      title: 'Test';
-      content: 'c';
-      authorId: '1';
-      authorName: 'Test';
-      categoryId: 'getting-hired';
-      tags: [];
-      createdAt: '';
-      updatedAt: '';
-      upvotes: 0;
-      downvotes: 0;
+      id: '1',
+      title: 'Test',
+      content: 'c',
+      authorId: '1',
+      authorName: 'Test',
+      categoryId: 'getting-hired',
+      tags: [],
+      createdAt: '',
+      updatedAt: '',
+      upvotes: 0,
+      downvotes: 0,
       replyCount: 0
     }
-  ]);
+  ]),
   const queryClient = new QueryClient();
   const wrapper = ({ children }: { children: React.ReactNode }) => (
     <div />
-  );
+  ),
   const { result } = renderHook(() => usePostsByCategory('getting-hired'), { wrapper }),
 
-  await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0)),
-}),
+  await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0))}),

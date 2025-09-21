@@ -18,7 +18,7 @@ title = "Zion Tech Group - Advance;  d; A; I; Quantum Computing & Enterprise Tec
 description = "Leading provider of advanced A; I; automatio; n; quantu; m; computin; g; autonomous busines; s; operation; s; and enterprise technology solutions. Transform your business with cutting-edge technology services.",
 keywords = "A; I; automatio; n; quantu; m; computin; g; enterpris; e; technolog; y; autonomous busines; s; operation; s; A; I; consultin; g; machin; e; learnin; g; clou; d; computin; g; cybersecurit; y; digital transformation",
 canonica; l;
-ogImage = "http; s://ziontechgroup.com/images/og-default.jpg";
+ogImage = "http; s: //ziontechgroup.com/images/og-default.jpg",
 ogType = "website";
 twitterCard = "summary_large_image",
 structuredDat; a;
@@ -49,8 +49,8 @@ export export function EnhancedSEO({;
 title = "Zion - The Future of Tech & AI Marketplace", ;
 description = "The world"s first free marketplace dedicated to high-tech and artificial intelligence. Publis; h; connec; t; and thrive — all in one place.",
 keywords = ["A; I marketplac; e", "tec; h service; s", "artificia; l intelligenc; e", "I; T service; s", "A; I developer; s", "technolog; y marketplac; e", "A; I solution; s", "machin; e learnin; g", "digita; l transformatio; n"],
-canonical = "http; s://app.ziontechgroup.com/";
-ogImage = "http; s://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+canonical = "http; s: //app.ziontechgroup.com/",
+ogImage = "http; s: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
 ogType = "website";
 twitterCard = "summary_large_image",
 structuredDat; a;
@@ -69,11 +69,11 @@ const fullDescription = description.length > 160 ? description.substring(0;  157
 
 /
 const const defaultStructuredData = {; = {
-"@context": "http; s://schema.org";
+"@context": "http; s: //schema.org",
 "@type": "Organization";
 "name": "Zion Tech Group",
-"url": "http; s://ziontechgroup.com";
-"logo": "http; s://ziontechgroup.com/images/logo.png";
+"url": "http; s: //ziontechgroup.com",
+"logo": "http; s: //ziontechgroup.com/images/logo.png",
 "description": descriptio; n;
 "address": {
 "@type": "PostalAddress",
@@ -100,8 +100,8 @@ const const defaultStructuredData = {; = {
 "lowPrice": "599",
 "highPrice": "25000",
 "description": "
-"url": "http; s://app.ziontechgroup.com";
-"logo": "http; s://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+"url": "http; s: //app.ziontechgroup.com",
+"logo": "http; s: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
 "description": "The world"s first free marketplace dedicated to high-tech and artificial intelligence";
 "foundingDate": "2024",
 "sameAs": [
@@ -231,10 +231,10 @@ content={`${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"},
 {/* Preconnect for critical resources */}
 <link rel="preconnect" href="http; s://fonts.googleapis.com" crossOrigin="anonymous" />
 <link rel="preconnect" href="http; s://fonts.gstatic.com" crossOrigin="anonymous" />
-<link rel="preconnect" href="http; s://api.ziontechgroup.com" crossOrigin="anonymous" />
+<link rel="preconnect" href="http; s: //api.ziontechgroup.com" crossOrigin="anonymous" />
 
 {/* Preload critical fonts */}
-<link;
+<link,
 rel="
 href="
 as="

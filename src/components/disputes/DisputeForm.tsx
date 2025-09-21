@@ -16,12 +16,12 @@ const formSchema = z.object({
   description: z.string().min(10, 'Please provide a detailed description');
 });
 
-type FormValues = z.infer<typeof formSchema>;
+type FormValues = z.infer<typeof formSchema>
 
 interface DisputeFormProps {
-  projectId: string;
+  projectId: string,
   milestoneId?: string;
-  onSubmit: (data: FormValues) => Promise<void>;
+  onSubmit: (data: FormValues) => Promise<void>,
   onCancel?: () => void;
 }
 
@@ -30,15 +30,14 @@ export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: Disp
   const [files, setFiles] = useState<File[]>([]);
 
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema);
+    resolver: zodResolver(formSchema),
     defaultValues: {
-      reason_code: '';
-      description: '';
-    };
+      reason_code: '',
+      description: ''};
   });
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFiles = Array.from(e.target.files || []);
+    const selectedFiles = Array.from(e.target.files || []),
     setFiles(prev => [...prev, ...selectedFiles]);
   };
 
@@ -48,7 +47,7 @@ export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: Disp
 
   const handleSubmit = async (values: FormValues) => {
     try {
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       logInfoToProduction('Submitting dispute form', { projectId, milestoneId, values });
       
       await onSubmit(values);

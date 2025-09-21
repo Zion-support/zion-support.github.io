@@ -4,10 +4,9 @@ import React, { createContext, useContext, useState, ReactNode } from 'react'
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
-  showNetworkError: (retryAction?: () => void) => void;
-  showAuthError: (loginAction?: () => void) => void;
-  clearAllErrors: () => void;
-}
+  showNetworkError: (retryAction?: () => void) => void,
+  showAuthError: (loginAction?: () => void) => void,
+  clearAllErrors: () => void}
 
 const ErrorContext = createContext<ErrorContextType | undefined>(undefined);
 
@@ -20,14 +19,13 @@ export const useErrorHandler = () => {
 };
 
 interface ErrorProviderProps {
-  children: ReactNode;
-}
+  children: ReactNode}
 
 export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   const [errors, setErrors] = useState<Array<{
-    id: string;
-    type: 'error' | 'network' | 'auth';
-    message: string;
+    id: string,
+    type: 'error' | 'network' | 'auth',
+    message: string,
     retryAction?: () => void;
     loginAction?: () => void;
   }>>([]);
@@ -40,9 +38,9 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   const showRetryableError = (error: Error, retryAction?: () => void) => {
     const errorId = Date.now().toString();
     setErrors(prev => [...prev, {
-      id: errorId;
-      type: 'error';
-      message: error.message;
+      id: errorId,
+      type: 'error',
+      message: error.message,
       retryAction
     }]);
   };
@@ -50,9 +48,9 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   const showNetworkError = (retryAction?: () => void) => {
     const errorId = Date.now().toString();
     setErrors(prev => [...prev, {
-      id: errorId;
-      type: 'network';
-      message: 'Network connection failed. Please check your internet connection.';
+      id: errorId,
+      type: 'network',
+      message: 'Network connection failed. Please check your internet connection.',
       retryAction
     }]);
   };
@@ -60,9 +58,9 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   const showAuthError = (loginAction?: () => void) => {
     const errorId = Date.now().toString();
     setErrors(prev => [...prev, {
-      id: errorId;
-      type: 'auth';
-      message: 'Authentication required. Please log in to continue.';
+      id: errorId,
+      type: 'auth',
+      message: 'Authentication required. Please log in to continue.',
       loginAction
     }]);
   };
@@ -72,11 +70,10 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   };
 
   const dismissError = (errorId: string) => {
-    setErrors(prev => prev.filter(error => error.id !== errorId));
-  };
+    setErrors(prev => prev.filter(error => error.id !== errorId))};
 
   const value: ErrorContextType = {
-    reportError;
+    reportError,
     showRetryableError;
     showNetworkError,
     showAuthError,
@@ -110,7 +107,7 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
                         error.retryAction?.();
                         dismissError(error.id);
                       }}
-                      className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover:bg-red-200"
+                      className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover: bg-red-200"
                     >
                       <RefreshCw className="h-4 w-4 inline mr-1" />
                       Retry
@@ -119,10 +116,10 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
                   {error.loginAction && (
                     <button
                       onClick={() => {
-                        error.loginAction?.();
+                        error.loginAction?.(),
                         dismissError(error.id);
                       }}
-                      className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover:bg-red-200"
+                      className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover: bg-red-200"
                     >
                       Login
                     </button>
@@ -140,5 +137,4 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
         </div>
       ))}
     </ErrorContext.Provider>
-  );
-};
+  )};
