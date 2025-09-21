@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+
 export default function SEO({
   title = "Zion Tech Group - AI, IT & Micro SaaS Services",
   description = "Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support.",

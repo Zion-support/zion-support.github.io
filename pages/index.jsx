@@ -66,13 +66,13 @@ export default function Home() {
         "description": "Custom AI solutions, ML model development, and intelligent automation"
       },
       {
-        "@type": "Service", 
+        "@type": "Service",
         "name": "Enterprise IT Solutions",
         "description": "Cloud infrastructure, DevOps, security, and system integration"
       },
       {
         "@type": "Service",
-        "name": "Micro SaaS Development", 
+        "name": "Micro SaaS Development",
         "description": "Rapid prototyping, MVP development, and scalable SaaS platforms"
       }
     ]
@@ -113,16 +113,15 @@ export default function Home() {
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Transform Your Business with
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"> Advanced Technology</span>
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+              Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transforming businesses with{' '}
-              <TypewriterEffect 
+              <TypewriterEffect
                 texts={[
                   'cutting-edge AI solutions',
-                  'enterprise IT services', 
+                  'enterprise IT services',
                   'rapid micro SaaS development',
                   'innovative automation',
                   'scalable cloud architecture'
@@ -164,20 +163,21 @@ export default function Home() {
             </div>
           </section>
 
-        {/* Contact CTA */}
-        <section className="text-center mt-16">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/30">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 mb-6">Get in touch with our experts for a free consultation</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <GradientButton href="mailto:kleber@ziontechgroup.com" size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
-                Email Us
-              </GradientButton>
-              <GradientButton variant="outline" size="lg" href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709">
-                Visit Our Office
-              </GradientButton>
+          {/* Contact CTA */}
+          <section className="text-center mt-16">
+            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/30">
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+              <p className="text-gray-300 mb-6">Get in touch with our experts for a free consultation</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <GradientButton href="mailto:kleber@ziontechgroup.com" size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
+                  Email Us
+                </GradientButton>
+                <GradientButton variant="outline" size="lg" href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709">
+                  Visit Our Office
+                </GradientButton>
+              </div>
             </div>
-          </div>
+          </section>
         </section>
 
         {/* Footer */}
