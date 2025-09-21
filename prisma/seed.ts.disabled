@@ -1,13 +1,7 @@
-<<<<<<< HEAD:prisma/seed.ts
-import { PrismaClient } from '@prisma/client',
-import { execSync } from 'child_process',
-const prisma = new PrismaClient();
-=======
 import { PrismaClient } from '@prisma/client';
 import { execSync } from 'child_process';
 const prisma = new PrismaClient(),
 
->>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:prisma/seed.ts.disabled
 async function main() {
   // At the beginning of main() or after prisma client initialization
   console.log('Attempting to seed categories via Django management command...');
@@ -64,11 +58,7 @@ async function main() {
       currency: 'USD',
       images: ['https://placehold.co/600x400?text=AI+Analytics']
     }
-<<<<<<< HEAD:prisma/seed.ts
-  ];
-=======
   ],
->>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:prisma/seed.ts.disabled
   await prisma.product.createMany({ data: products, skipDuplicates: true }),
   const talents = [
     {
@@ -92,25 +82,14 @@ async function main() {
       rate: 110,
       skills: ['AWSDocker', 'Kubernetes']
     }
-<<<<<<< HEAD:prisma/seed.ts
-  ];
-  await prisma.talent.createMany({ data: talents, skipDuplicates: true });
-=======
   ],
 
   await prisma.talent.createMany({ data: talents, skipDuplicates: true })}
->>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:prisma/seed.ts.disabled
 
 main()
   .catch((e) => {
     console.error(e);
-<<<<<<< HEAD:prisma/seed.ts
-    process.exit(1);)
-  .finally(async () => {
-    await prisma.$disconnect(););
-=======
     process.exit(1);
   })
   .finally(async () => {
     await prisma.$disconnect()}),
->>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:prisma/seed.ts.disabled
