@@ -23,9 +23,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
-  // Typed routes configuration
-  typedRoutes: false,
-  
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
