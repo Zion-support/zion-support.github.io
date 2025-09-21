@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-
 export const LazyImage = ({
   src,
   alt,
@@ -10,7 +9,7 @@ export const LazyImage = ({
   onError
 }) => {
   const [imageSrc, setImageSrc] = useState(placeholder);
-  const [imageRef, setImageRef] = useState<HTMLImageElement | null>(null);
+  const [imageRef, setImageRef] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -34,7 +33,9 @@ export const LazyImage = ({
     }
     return () => {
       if (observer && observer.unobserve) {
-        observer.unobserve(imageRef!);
+        if (observer && observer.unobserve) {
+        observer.unobserve(imageRef);
+      }
       }
     };
   }, [imageRef, imageSrc, placeholder, src]);

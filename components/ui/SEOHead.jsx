@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-
 export const SEOHead = ({
   title,
   description,
