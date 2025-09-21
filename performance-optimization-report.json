@@ -26,7 +26,7 @@
   "recommendations": [],
   "summary": {
     "totalOptimizations": 4,
-    "criticalIssues": 1,
+    "criticalIssues": 2,
     "status": "good"
   }
 }

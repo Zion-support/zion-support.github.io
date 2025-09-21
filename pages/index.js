@@ -10,20 +10,77 @@ import SearchModal from '../components/SearchModal';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
-import FAQSection from '../components/FAQSection';
-import TestimonialsCarousel from '../components/TestimonialsCarousel';
-import { CookieConsent } from '../components/CookieConsent';
-import { NotificationSystem } from '../components/NotificationSystem';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import EnhancedAnalytics from '../components/EnhancedAnalytics';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import AnimatedCounter from '../components/ui/AnimatedCounter';
-import ParallaxSection from '../components/ui/ParallaxSection';
-import ScrollProgress from '../components/ui/ScrollProgress';
-import InteractiveCard from '../components/ui/InteractiveCard';
-import PerformanceMetrics from '../components/PerformanceMetrics';
-import NewsletterSignup from '../components/NewsletterSignup';
+import dynamic from 'next/dynamic';
+
+// Dynamic imports for better code splitting
+const FAQSection = dynamic(() => import('../components/FAQSection'), {
+  loading: () => <div>Loading FAQ...</div>,
+  ssr: true
+});
+
+const TestimonialsCarousel = dynamic(() => import('../components/TestimonialsCarousel'), {
+  loading: () => <div>Loading testimonials...</div>,
+  ssr: true
+});
+
+const CookieConsent = dynamic(() => import('../components/CookieConsent').then(mod => ({ default: mod.CookieConsent })), {
+  loading: () => null,
+  ssr: false
+});
+
+const NotificationSystem = dynamic(() => import('../components/NotificationSystem').then(mod => ({ default: mod.NotificationSystem })), {
+  loading: () => null,
+  ssr: false
+});
+
+const AccessibilityEnhancer = dynamic(() => import('../components/AccessibilityEnhancer'), {
+  loading: () => null,
+  ssr: false
+});
+
+const PerformanceOptimizer = dynamic(() => import('../components/PerformanceOptimizer'), {
+  loading: () => null,
+  ssr: false
+});
+
+const EnhancedAnalytics = dynamic(() => import('../components/EnhancedAnalytics'), {
+  loading: () => null,
+  ssr: false
+});
+
+const PerformanceMonitor = dynamic(() => import('../components/PerformanceMonitor'), {
+  loading: () => null,
+  ssr: false
+});
+const AnimatedCounter = dynamic(() => import('../components/ui/AnimatedCounter'), {
+  loading: () => <div>Loading counter...</div>,
+  ssr: true
+});
+
+const ParallaxSection = dynamic(() => import('../components/ui/ParallaxSection'), {
+  loading: () => <div>Loading section...</div>,
+  ssr: true
+});
+
+const ScrollProgress = dynamic(() => import('../components/ui/ScrollProgress'), {
+  loading: () => null,
+  ssr: false
+});
+
+const InteractiveCard = dynamic(() => import('../components/ui/InteractiveCard'), {
+  loading: () => <div>Loading card...</div>,
+  ssr: true
+});
+
+const PerformanceMetrics = dynamic(() => import('../components/PerformanceMetrics'), {
+  loading: () => null,
+  ssr: false
+});
+
+const NewsletterSignup = dynamic(() => import('../components/NewsletterSignup'), {
+  loading: () => <div>Loading newsletter...</div>,
+  ssr: true
+});
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
