@@ -1,5 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
+import PerformanceOptimizer from '../components/PerformanceOptimizer.jsx';
+import MobileOptimizer from '../components/MobileOptimizer.jsx';
+import EnhancedAnalytics from '../components/EnhancedAnalytics.jsx';
+import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }) {
@@ -14,7 +18,14 @@ export default function App({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
       
-      <Component {...pageProps} />
+      <ErrorBoundary>
+        <PerformanceOptimizer>
+          <MobileOptimizer>
+            <EnhancedAnalytics />
+            <Component {...pageProps} />
+          </MobileOptimizer>
+        </PerformanceOptimizer>
+      </ErrorBoundary>
     </>
   )
 }
