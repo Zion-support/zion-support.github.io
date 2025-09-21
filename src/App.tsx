@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import PerformanceMonitor from '@/components/PerformanceMonitor'
-import Analytics from '@/components/Analytics'
-import SEOOptimizer from '@/components/SEOOptimizer'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { PerformanceMonitor } from './components/PerformanceMonitor'
+// import Analytics from './components/Analytics'
+// import SEOOptimizer from './components/SEOOptimizer'
+import { Button } from '../components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
+import { Badge } from '../components/ui/badge'
 import { 
   Activity, 
   BarChart3, 
@@ -24,10 +24,10 @@ const Header = () => (
     <div className="max-w-7xl mx-auto flex items-center justify-between">
       <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
       <nav className="hidden md:flex space-x-6">
-        <Link href="/" className="text-gray-600 hover:text-gray-900">Home</Link>
-        <Link href="/about" className="text-gray-600 hover:text-gray-900">About</Link>
-        <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
-        <Link href="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
+        <Link href="/"><a className="text-gray-600 hover:text-gray-900">Home</a></Link>
+        <Link href="/about"><a className="text-gray-600 hover:text-gray-900">About</a></Link>
+        <Link href="/services"><a className="text-gray-600 hover:text-gray-900">Services</a></Link>
+        <Link href="/contact"><a className="text-gray-600 hover:text-gray-900">Contact</a></Link>
       </nav>
     </div>
   </header>
@@ -79,10 +79,10 @@ const Sidebar = () => (
   <aside className="hidden lg:block w-80 bg-gray-50 p-6">
     <nav>
       <ul className="space-y-2">
-        <li><Link href="/" className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">Home</Link></li>
-        <li><Link href="/about" className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">About</Link></li>
-        <li><Link href="/services" className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">Services</Link></li>
-        <li><Link href="/contact" className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">Contact</Link></li>
+        <li><Link href="/"><a className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">Home</a></Link></li>
+        <li><Link href="/about"><a className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">About</a></Link></li>
+        <li><Link href="/services"><a className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">Services</a></Link></li>
+        <li><Link href="/contact"><a className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">Contact</a></Link></li>
       </ul>
     </nav>
   </aside>
@@ -188,15 +188,15 @@ const HomePage = () => {
                     <div className="space-y-2">
                       <div className="flex justify-between">
                         <span className="text-sm">Uptime</span>
-                        <Badge variant="default">99.9%</Badge>
+                        <Badge variant="default" className="">99.9%</Badge>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-sm">Performance</span>
-                        <Badge variant="default">Excellent</Badge>
+                        <Badge variant="default" className="">Excellent</Badge>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-sm">Security</span>
-                        <Badge variant="default">Secure</Badge>
+                        <Badge variant="default" className="">Secure</Badge>
                       </div>
                     </div>
                   </CardContent>
