@@ -20,24 +20,32 @@ export default function Home() {
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            <Link href="/services" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Our Services</h3>
-              <p className="text-gray-600">Explore our comprehensive technology solutions</p>
+            <Link href="/services">
+              <a className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow block">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Our Services</h3>
+                <p className="text-gray-600">Explore our comprehensive technology solutions</p>
+              </a>
             </Link>
             
-            <Link href="/about" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">About Us</h3>
-              <p className="text-gray-600">Learn about our mission and expertise</p>
+            <Link href="/about">
+              <a className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow block">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">About Us</h3>
+                <p className="text-gray-600">Learn about our mission and expertise</p>
+              </a>
             </Link>
             
-            <Link href="/contact" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Contact</h3>
-              <p className="text-gray-600">Get in touch with our team</p>
+            <Link href="/contact">
+              <a className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow block">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Contact</h3>
+                <p className="text-gray-600">Get in touch with our team</p>
+              </a>
             </Link>
             
-            <Link href="/services-advertising" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Advertising</h3>
-              <p className="text-gray-600">Discover our advertising solutions</p>
+            <Link href="/services-advertising">
+              <a className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow block">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Advertising</h3>
+                <p className="text-gray-600">Discover our advertising solutions</p>
+              </a>
             </Link>
           </div>
         </div>
