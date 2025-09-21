@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 
-export function useCurrentUser() {
+export const useCurrentUser = () => {
   const { data, error, mutate } = useSWR('/api/user');
   
   return {
@@ -9,4 +9,4 @@ export function useCurrentUser() {
     error,
     mutate,
   };
-}
+};

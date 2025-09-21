@@ -8,9 +8,9 @@ const Slot = React.forwardRef<HTMLElement, React.HTMLAttributes<HTMLElement> & {
     if (React.isValidElement(children)) {
       return React.cloneElement(children, {
         ...props,
-        ref: ref,
+        ref,
         className: `${children.props.className || ''} ${props.className || ''}`.trim()
-      });
+      } as any);
     }
     return React.createElement('div', { ...props, ref }, children);
   }
