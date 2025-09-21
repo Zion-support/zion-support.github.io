@@ -4,11 +4,10 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
+  output: 'export',
+  trailingSlash: true,
   images: {
-    domains: ["localhost", "ziontechgroup.com"],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: true,
