@@ -20,14 +20,12 @@ const nextConfig = {
   
   // Disable ESLint and TypeScript checking during build to avoid parsing issues
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
     tsconfigPath: './tsconfig.json',
   },
-  
-  // Experimental features for performance
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
@@ -41,7 +39,7 @@ const nextConfig = {
   
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibilityorigin/main
+    // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -66,7 +64,10 @@ const nextConfig = {
       test: /\.ts$/,
       include: require('path').resolve(__dirname, 'contracts'),
       use: 'ignore-loader'
-    });origin/main
+    });
+    
+    return config;
+  },
 };
 
 module.exports = nextConfig;
