@@ -1,7 +1,7 @@
 // AppProps type removed for JavaScript compatibility
 import Header from '../components/Header'
 import { Footer } from '../components/Footer'
-import '../src/styles/globals.css'
+// import '../app/globals.css' // Temporarily disabled due to PostCSS issues
 
 export default function App({ Component, pageProps }) {
   return (
