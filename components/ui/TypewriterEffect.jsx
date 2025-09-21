@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-interface TypewriterEffectProps {
-  texts: string[];
-  speed?: number;
-  deleteSpeed?: number;
-  pauseTime?: number;
-  className?: string;
-}
-
-export const TypewriterEffect: React.FC<TypewriterEffectProps> = ({
+export const TypewriterEffect = ({
   texts,
   speed = 100,
   deleteSpeed = 50,

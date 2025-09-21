@@ -1,17 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-interface GradientButtonProps {
-  children: React.ReactNode;
-  href?: string;
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  disabled?: boolean;
-}
-
-export const GradientButton: React.FC<GradientButtonProps> = ({
+export const GradientButton = ({
   children,
   href,
   onClick,

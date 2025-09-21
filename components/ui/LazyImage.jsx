@@ -1,15 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-export const LazyImage: React.FC<LazyImageProps> = ({
+export const LazyImage = ({
   src,
   alt,
   className = '',
@@ -18,11 +9,11 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   onError
 }) => {
   const [imageSrc, setImageSrc] = useState(placeholder);
-  const [imageRef, setImageRef] = useState<HTMLImageElement | null>(null);
+  const [imageRef, setImageRef] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    let observer: IntersectionObserver;
+    let observer;
     if (imageRef && imageSrc === placeholder) {
       observer = new IntersectionObserver(
         entries => {
@@ -42,7 +33,9 @@ export const LazyImage: React.FC<LazyImageProps> = ({
     }
     return () => {
       if (observer && observer.unobserve) {
-        observer.unobserve(imageRef!);
+        if (observer && observer.unobserve) {
+        observer.unobserve(imageRef);
+      }
       }
     };
   }, [imageRef, imageSrc, placeholder, src]);

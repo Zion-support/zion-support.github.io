@@ -1,12 +1,6 @@
 import React from 'react';
 
-interface AnimatedCardProps {
-  children: React.ReactNode;
-  className?: string;
-  delay?: number;
-}
-
-export const AnimatedCard: React.FC<AnimatedCardProps> = ({ 
+export const AnimatedCard = ({ 
   children, 
   className = '', 
   delay = 0 

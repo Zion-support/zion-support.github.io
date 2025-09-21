@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const FloatingElements: React.FC = () => {
+export const FloatingElements = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       {/* Floating circles */}
