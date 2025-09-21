@@ -10,7 +10,7 @@ const nextConfig = {
   
   // Experimental features for performance
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false, // Disabled to avoid critters dependency issues
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
