@@ -1,13 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-export default function ClientPortal() {
+// Make this a client-side component
+const ClientPortalContent = dynamic(() => Promise.resolve(ClientPortalMain), {
+  ssr: false,
+  loading: () => <LoadingSpinner size="xl" text="Loading Client Portal..." />
+});
+
+function ClientPortalMain() {
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
+
+  useEffect(() => {
+    // Simulate loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const projectStats = {
     activeProjects: 12,
@@ -403,6 +418,14 @@ export default function ClientPortal() {
           </div>
         </footer>
       </div>
+    </ErrorBoundary>
+  );
+}
+
+export default function ClientPortal() {
+  return (
+    <ErrorBoundary>
+      <ClientPortalContent />
     </ErrorBoundary>
   );
 }
