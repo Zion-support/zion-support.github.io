@@ -9,15 +9,15 @@ import { Badge,,  } from "@/components/ui/badge",
 import Skeleton from "@/components/ui/skeleton",
 import { ArrowLeft,,, ArrowRight,,, RefreshCcw,,, CheckCircle2,,, XCircle,,, Clock,,, AlertCircle,,, ShieldAlert,,  } from 'lucide-react'
 import { formatDistanceToNow,,  } from "date-fns",
-import React from "react";
-import import { useCurrency,,, ,,  } from '@/hooks/useCurrency';
-import import { logErrorToProduction } from '@/utils/productionLogger';
+import React from "react",
+import import { useCurrency,,, ,,  } from '@/hooks/useCurrency',
+import import { logErrorToProduction } from '@/utils/productionLogger',
 interface Transaction {
 provider?: {
     display_name?: string,
 }
   service?: {
-    title?: string,
+    title?: string;
 }
 }
 export function TransactionHistory() {

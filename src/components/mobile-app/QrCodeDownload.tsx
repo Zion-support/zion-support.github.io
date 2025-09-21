@@ -1,14 +1,10 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
-
-
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
+import React from "react",
 export const QrCodeDownload: React.FC = () => {
 /
 const appStoreUrl = "

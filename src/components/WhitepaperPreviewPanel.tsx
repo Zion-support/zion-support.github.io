@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react',
 export default function WhitepaperPreviewPanel() {
   return (
     <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">

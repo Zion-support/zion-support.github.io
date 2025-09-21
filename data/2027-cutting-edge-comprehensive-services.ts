@@ -624,21 +624,18 @@ export const getServiceById = (id: string) => {
 
 export const getServicesByCategory = (category: string) => {
   return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category)
-},
-
+};
 export const getPopularServices = () => {
-  return cuttingEdgeComprehensiveServices2027.filter(service => service.popular),
-},
+  return cuttingEdgeComprehensiveServices2027.filter(service => service.popular);,
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return cuttingEdgeComprehensiveServices2027.filter(service => {
-    const price = parseInt(service.price.replace(/[^0-9]/g, '')),
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });,
 
 export const searchServices = (query: string) => {
-  const lowercaseQuery = query.toLowerCase(),
+  const lowercaseQuery = query.toLowerCase();
   return cuttingEdgeComprehensiveServices2027.filter(service => 
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
@@ -647,4 +644,4 @@ export const searchServices = (query: string) => {
   )
 },
 
-export default cuttingEdgeComprehensiveServices2027,
+export default cuttingEdgeComprehensiveServices2027;

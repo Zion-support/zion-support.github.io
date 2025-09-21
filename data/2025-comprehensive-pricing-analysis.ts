@@ -310,14 +310,14 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       website: 'https://ziontechgroup.com'
     }
   }
-];
+],
 export const getPricingAnalysisByService = (serviceId: string) => {
-  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId);
-};
+  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId)
+},
 export const getPricingAnalysisByCategory = (category: string) => {
-  if (!category || category === 'All') return comprehensivePricingAnalysis2025;
-  return comprehensivePricingAnalysis2025.filter(s => s.category === category);
-};
+  if (!category || category === 'All') return comprehensivePricingAnalysis2025,
+  return comprehensivePricingAnalysis2025.filter(s => s.category === category)
+},
 export const getMarketInsights = () => {
   const insights = {
     totalMarketSize: '$1.2T+',
@@ -327,9 +327,9 @@ export const getMarketInsights = () => {
     mostAffordableCategory: 'IoT & Edge Computing',
     highestROI: '1000% (Quantum Neural Network Platform)',
     fastestPayback: '2-4 months (DeFi Trading Platform)'
-  };
-  return insights;
-};
+  },
+  return insights,
+},
 export const getCompetitiveLandscape = () => {
   return {
     aiServices: ['IBM WatsonGoogle AI', 'Microsoft Azure AIAmazon SageMaker'],
@@ -337,5 +337,5 @@ export const getCompetitiveLandscape = () => {
     cybersecurity: ['CrowdStrikeSentinelOne', 'DarktracePalo Alto Networks'],
     manufacturing: ['SiemensRockwell Automation', 'ABBGE Digital'],
     blockchain: ['ChainalysisConsenSys', 'AlchemyInfura']
-  };
+  },
 };

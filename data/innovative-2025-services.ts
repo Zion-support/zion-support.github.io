@@ -37,4 +37,4 @@ export const innovative2025Services: Innovative2025Service[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+];

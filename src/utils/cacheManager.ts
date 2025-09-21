@@ -1,12 +1,10 @@
-import React from "react";
-
+import React from "react",
 interface CacheItem<T> {
-  data: T;
+  data: T,
   timestamp: number;
   expiresAt?: number;
-  accessCount: number;
-  lastAccessed: number;
-}
+  accessCount: number,
+  lastAccessed: number, }
 
 interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
@@ -15,25 +13,21 @@ interface CacheOptions {
 }
 
 class CacheManager {
-  private static instance: CacheManager;
+  private static instance: CacheManager,
   private cache: Map<string, CacheItem<any>> = new Map();
-  private options: CacheOptions;
-
+  private options: CacheOptions,
   private constructor(options: CacheOptions = {}) {
     this.options = {
       ttl: 5 * 60 * 1000, // 5 minutes default
       maxSize: 1000, // 1000 items default
       maxAge: 30 * 60 * 1000, // 30 minutes default
       ...options
-    };
-  }
+    }, }
 
   static getInstance(options?: CacheOptions): CacheManager {
     if (!CacheManager.instance) {
       CacheManager.instance = new CacheManager(options);
-    }
-    return CacheManager.instance;
-  }
+    return CacheManager.instance, }
 
   set<T>(key: string, data: T, ttl?: number): void {
     const now = Date.now();
@@ -42,7 +36,6 @@ class CacheManager {
     // Check if we need to evict items
     if (this.cache.size >= (this.options.maxSize || 1000)) {
       this.evictOldest();
-    }
 
     const cacheItem: CacheItem<T> = {
       data,
@@ -53,35 +46,30 @@ class CacheManager {
     };
 
     this.cache.set(key, cacheItem);
-  }
 
   get<T>(key: string): T | null {
     const item = this.cache.get(key);
     
     if (!item) {
-      return null;
-    }
+      return null, }
 
     const now = Date.now();
     
     // Check if expired
     if (item.expiresAt && now > item.expiresAt) {
       this.cache.delete(key);
-      return null;
-    }
+      return null, }
 
     // Check max age
     if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
       this.cache.delete(key);
-      return null;
-    }
+      return null, }
 
     // Update access info
     item.accessCount++;
     item.lastAccessed = now;
 
-    return item.data as T;
-  }
+    return item.data as T, }
 
   has(key: string): boolean {
     const item = this.cache.get(key);
@@ -92,65 +80,52 @@ class CacheManager {
     // Check if expired
     if (item.expiresAt && now > item.expiresAt) {
       this.cache.delete(key);
-      return false;
-    }
+      return false, }
 
     // Check max age
     if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
       this.cache.delete(key);
-      return false;
-    }
+      return false, }
 
-    return true;
-  }
+    return true, }
 
   delete(key: string): boolean {
     return this.cache.delete(key);
-  }
 
   clear(): void {
     this.cache.clear();
-  }
 
   size(): number {
-    return this.cache.size;
-  }
+    return this.cache.size, }
 
   keys(): string[] {
     return Array.from(this.cache.keys());
-  }
 
   private evictOldest(): void {
-    let oldestKey: string | null = null;
+    let oldestKey: string | null = null,
     let oldestTime = Date.now();
 
     for (const [key, item] of this.cache.entries()) {
       if (item.lastAccessed < oldestTime) {
         oldestTime = item.lastAccessed;
-        oldestKey = key;
-      }
+        oldestKey = key, }
     }
 
     if (oldestKey) {
       this.cache.delete(oldestKey);
-    }
   }
 
   // Clean up expired items
   cleanup(): void {
     const now = Date.now();
-    const keysToDelete: string[] = [];
-
+    const keysToDelete: string[] = [],
     for (const [key, item] of this.cache.entries()) {
       if (item.expiresAt && now > item.expiresAt) {
+        keysToDelete.push(key); else if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
         keysToDelete.push(key);
-      } else if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
-        keysToDelete.push(key);
-      }
     }
 
     keysToDelete.forEach(key => this.cache.delete(key));
-  }
 
   // Get cache statistics
   getStats() {
@@ -160,10 +135,8 @@ class CacheManager {
 
     for (const item of this.cache.values()) {
       if (item.expiresAt && now > item.expiresAt) {
-        expiredCount++;
-      }
-      totalAccessCount += item.accessCount;
-    }
+        expiredCount++, }
+      totalAccessCount += item.accessCount, }
 
     return {
       size: this.cache.size,
@@ -171,17 +144,15 @@ class CacheManager {
       expiredCount,
       totalAccessCount,
       averageAccessCount: this.cache.size > 0 ? totalAccessCount / this.cache.size : 0
-    };
-  }
+    }, }
 }
 
 // React hook for cache
 export function useCache<T>(key: string, fetcher: () => Promise<T>, options?: { ttl?: number }): {
-  data: T | null;
-  loading: boolean;
-  error: Error | null;
-  refetch: () => void;
-} {
+  data: T | null,
+  loading: boolean,
+  error: Error | null,
+  refetch: () => void, } {
   const [data, setData] = React.useState<T | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
@@ -193,8 +164,7 @@ export function useCache<T>(key: string, fetcher: () => Promise<T>, options?: { 
     const cached = cache.get<T>(key);
     if (cached) {
       setData(cached);
-      return;
-    }
+      return, }
 
     setLoading(true);
     setError(null);
@@ -202,25 +172,19 @@ export function useCache<T>(key: string, fetcher: () => Promise<T>, options?: { 
     try {
       const result = await fetcher();
       setData(result);
-      cache.set(key, result, options?.ttl);
-    } catch (err) {
-      setError(err as Error);
-    } finally {
+      cache.set(key, result, options?.ttl); catch (err) {
+      setError(err as Error); finally {
       setLoading(false);
-    }
   }, [key, fetcher, cache, options?.ttl]);
 
   React.useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    fetchData();, [fetchData]);
 
   const refetch = React.useCallback(() => {
     cache.delete(key);
-    fetchData();
-  }, [key, cache, fetchData]);
+    fetchData();, [key, cache, fetchData]);
 
-  return { data, loading, error, refetch };
-}
+  return { data, loading, error, refetch }, }
 
 export default CacheManager;
 export type { CacheItem, CacheOptions };

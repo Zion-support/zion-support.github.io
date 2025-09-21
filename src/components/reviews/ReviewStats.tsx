@@ -2,7 +2,7 @@ import { Star,,  } from 'lucide-react'
 import React from "react";
 interface ReviewStatsProps {
   averageRating: number;,
-totalReviews: number;
+totalReviews: number,
   ratingDistribution?: Record<number number>
 export function ReviewStats({
   averageRating,
@@ -58,7 +58,7 @@ value={getPercentage(ratingDistribution[rating] |0)}
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
               <Progress
-value = {getPercentage(ratingDistribution[rating] |0),}
+value = {getPercentage(ratingDistribution[rating] |0);
                 className="h-2"
               />
               <div className='w-8 text-xs text-muted-foreground'>                {ratingDistribution[rating] |0}              <div className="w-8 text-xs text-muted-foreground">

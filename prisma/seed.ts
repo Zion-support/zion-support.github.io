@@ -1,10 +1,9 @@
 import { PrismaClient } from '@prisma/client',
 import { execSync } from 'child_process',
-const prisma = new PrismaClient(),
-
+const prisma = new PrismaClient();
 async function main() {
   // At the beginning of main() or after prisma client initialization
-  console.log('Attempting to seed categories via Django management command...'),
+  console.log('Attempting to seed categories via Django management command...');
   try {
     // Adjust the path to manage.py and python executable if necessary based on your environment
     // Assuming prisma/seed.ts is run from the root of the project
@@ -12,7 +11,7 @@ async function main() {
     execSync(command, { stdio: 'inherit', cwd: process.cwd() }), // stdio: 'inherit' will show output from the command
     console.log('Django seed_categories command executed successfully.')
   } catch (error) {
-    console.error('Failed to execute Django seed_categories command:', error),
+    console.error('Failed to execute Django seed_categories command:', error);
     // Decide if you want to exit the process or continue with other seeding operations
     // process.exit(1), // Uncomment to exit if Django seeding fails
   }
@@ -58,10 +57,8 @@ async function main() {
       currency: 'USD',
       images: ['https://placehold.co/600x400?text=AI+Analytics']
     }
-  ],
-
+  ];
   await prisma.product.createMany({ data: products, skipDuplicates: true }),
-
   const talents = [
     {
       name: 'Alice Johnson',
@@ -84,17 +81,12 @@ async function main() {
       rate: 110,
       skills: ['AWSDocker', 'Kubernetes']
     }
-  ],
-
-  await prisma.talent.createMany({ data: talents, skipDuplicates: true }),
-
-}
+  ];
+  await prisma.talent.createMany({ data: talents, skipDuplicates: true });
 
 main()
   .catch((e) => {
-    console.error(e),
-    process.exit(1),
-  })
+    console.error(e);
+    process.exit(1);)
   .finally(async () => {
-    await prisma.$disconnect(),
-  }),
+    await prisma.$disconnect(););

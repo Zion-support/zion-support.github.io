@@ -364,4 +364,4 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     rating: 4.8,
     reviews: 89
   }
-],
+];

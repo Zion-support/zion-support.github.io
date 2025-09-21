@@ -1,31 +1,28 @@
-import React from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Eye, Edit, Archive, Trash2 } from 'lucide-react';
-import { formatCurrency } from '@/lib/utils';
-
+import React from 'react',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Checkbox } from '@/components/ui/checkbox',
+import { Eye, Edit, Archive, Trash2 } from 'lucide-react',
+import { formatCurrency } from '@/lib/utils',
 interface Quote {
-  id: string;
-  clientName: string;
-  projectTitle: string;
-  amount: number;
-  status: 'pending' | 'approved' | 'rejected' | 'expired';
-  createdAt: string;
-  validUntil: string;
-  isArchived: boolean;
-}
+  id: string,
+  clientName: string,
+  projectTitle: string,
+  amount: number,
+  status: 'pending' | 'approved' | 'rejected' | 'expired',
+  createdAt: string,
+  validUntil: string,
+  isArchived: boolean, }
 
 interface QuotesTableProps {
-  quotes: Quote[];
-  selectedQuotes: string[];
-  onSelectQuote: (id: string) => void;
-  onSelectAll: () => void;
-  onViewQuote: (id: string) => void;
-  onEditQuote: (id: string) => void;
-  onArchiveQuote: (id: string) => void;
-  onDeleteQuote: (id: string) => void;
-}
+  quotes: Quote[],
+  selectedQuotes: string[],
+  onSelectQuote: (id: string) => void,
+  onSelectAll: () => void,
+  onViewQuote: (id: string) => void,
+  onEditQuote: (id: string) => void,
+  onArchiveQuote: (id: string) => void,
+  onDeleteQuote: (id: string) => void, }
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes,
@@ -33,28 +30,26 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   onSelectQuote,
   onSelectAll,
   onViewQuote,
-  onEditQuote,
-  onArchiveQuote,
+  onEditQuote;
+  onArchiveQuote;
   onDeleteQuote
 }) => {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'approved':
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-100 text-green-800',
       case 'pending':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-yellow-100 text-yellow-800',
       case 'rejected':
-        return 'bg-red-100 text-red-800';
+        return 'bg-red-100 text-red-800',
       case 'expired':
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-100 text-gray-800',
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800', }
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString();
-  };
+    return new Date(dateString).toLocaleDateString();;
 
   const isAllSelected = quotes.length > 0 && selectedQuotes.length === quotes.length;
 
@@ -160,5 +155,4 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
         </table>
       </div>
     </div>
-  );
-};
+  );;

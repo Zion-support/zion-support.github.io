@@ -7,4 +7,4 @@ export const requireAdminAuth = () => {
 export const isAdmin = () => {
   // Placeholder implementation
   return true,
-},
+};

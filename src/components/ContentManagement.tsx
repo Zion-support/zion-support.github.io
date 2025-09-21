@@ -1,15 +1,13 @@
-import import React, { useState } from 'react';
-import import { motion } from 'framer-motion';
-
+import import React, { useState } from 'react',
+import import { motion } from 'framer-motion',
 interface ContentItem {
-  id: string;
-  title: string;
-  type: 'blog' | 'page' | 'product' | 'service';
-  status: 'published' | 'draft' | 'scheduled';
-  publishDate: string;
-  views: number;
-  author: string;
-}
+  id: string,
+  title: string,
+  type: 'blog' | 'page' | 'product' | 'service',
+  status: 'published' | 'draft' | 'scheduled',
+  publishDate: string,
+  views: number,
+  author: string, }
 
 export const ContentManagement: React.FC = () => {
   const [content, setContent] = useState<ContentItem[]>([
@@ -46,7 +44,7 @@ export const ContentManagement: React.FC = () => {
       type: 'service',
       status: 'scheduled',
       publishDate: '2024-01-17',
-      views: 0,
+      views: 0;
       author: 'Sarah Wilson'
     }
   ]);
@@ -57,26 +55,23 @@ export const ContentManagement: React.FC = () => {
   const filteredContent = content.filter(item => {
     const typeMatch = selectedType === 'all' || item.type === selectedType;
     const statusMatch = selectedStatus === 'all' || item.status === selectedStatus;
-    return typeMatch && statusMatch;
-  });
+    return typeMatch && statusMatch, });
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'published': return 'text-green-400 bg-green-900';
-      case 'draft': return 'text-yellow-400 bg-yellow-900';
-      case 'scheduled': return 'text-blue-400 bg-blue-900';
-      default: return 'text-gray-400 bg-gray-900';
-    }
+      case 'published': return 'text-green-400 bg-green-900',
+      case 'draft': return 'text-yellow-400 bg-yellow-900',
+      case 'scheduled': return 'text-blue-400 bg-blue-900',
+      default: return 'text-gray-400 bg-gray-900', }
   };
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'blog': return '📝';
-      case 'page': return '📄';
-      case 'product': return '🛍️';
-      case 'service': return '⚙️';
-      default: return '📄';
-    }
+      case 'blog': return '📝',
+      case 'page': return '📄',
+      case 'product': return '🛍️',
+      case 'service': return '⚙️',
+      default: return '📄', }
   };
 
   return (
@@ -204,7 +199,6 @@ export const ContentManagement: React.FC = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
+  );;
 
 export default ContentManagement;

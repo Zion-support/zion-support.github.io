@@ -1,10 +1,8 @@
 
-import React, { useEffect } from 'react';
-
+import React, { useEffect } from 'react',
 interface ScreenReaderAnnouncementsProps {
-  announcements: string[];
-  priority?: 'polite' | 'assertive';
-}
+  announcements: string[],
+  priority?: 'polite' | 'assertive', }
 
 export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps> = ({
   announcements,
@@ -27,7 +25,6 @@ export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps>
         <div key={index}>{announcement}</div>
       ))}
     </div>
-  );
-};
+  );;
 
 export default ScreenReaderAnnouncements;

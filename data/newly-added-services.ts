@@ -1759,7 +1759,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'DMARC parser, DNS advisors, rollout planner, and alerts.',
     launchDate: '2025-08-22',
     customers: 10,
-    rating: 4.6,
+    rating: 4.6;
     reviews: 5
   }
-],
+];

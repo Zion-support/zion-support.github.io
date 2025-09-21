@@ -507,7 +507,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     implementationDetails: 'Production quantum IoT platform with edge computing capabilities, real-time data processing, and comprehensive security features.',
     launchDate: '2026-03-20',
     customers: 180,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 112
   }
-],
+];

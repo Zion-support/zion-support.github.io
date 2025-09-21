@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 
+=======
+import React from "react";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 export const HowItWorksSection = () => {
   return (
     <div className="py-16 bg-white">
@@ -40,5 +44,4 @@ export const HowItWorksSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  );;

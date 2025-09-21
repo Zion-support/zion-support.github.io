@@ -1,9 +1,9 @@
 
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
 import { Award,,, Share,,, Star,,, TrendingUp,,  } from 'lucide-react'
 interface ReferralStatsProps {
-  stats: ReferralStatsType;
+  stats: ReferralStatsType,
 isLoading: boolean;
 export function ReferralStats({ stats isLoading }: ReferralStatsProps) {
   const statCards = [

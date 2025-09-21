@@ -1,31 +1,28 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
-// import { Calendar } from '@/components/ui/calendar';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { CalendarIcon, Save, X } from 'lucide-react';
-import { format } from 'date-fns';
-
+import React, { useState } from 'react',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Label } from '@/components/ui/label',
+// import { Calendar } from '@/components/ui/calendar',
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',
+import { CalendarIcon, Save, X } from 'lucide-react',
+import { format } from 'date-fns',
 interface QuoteFormData {
-  clientName: string;
-  projectTitle: string;
-  description: string;
-  amount: number;
-  status: 'pending' | 'approved' | 'rejected' | 'expired';
+  clientName: string,
+  projectTitle: string,
+  description: string,
+  amount: number,
+  status: 'pending' | 'approved' | 'rejected' | 'expired',
   validUntil: Date;
-  notes: string;
-}
+  notes: string, }
 
 interface QuotesFormProps {
   initialData?: Partial<QuoteFormData>;
-  onSave: (data: QuoteFormData) => void;
-  onCancel: () => void;
-  isEditing?: boolean;
-}
+  onSave: (data: QuoteFormData) => void,
+  onCancel: () => void,
+  isEditing?: boolean, }
 
 export const QuotesForm: React.FC<QuotesFormProps> = ({
   initialData,
@@ -49,34 +46,27 @@ export const QuotesForm: React.FC<QuotesFormProps> = ({
     const newErrors: Record<string, string> = {};
 
     if (!formData.clientName.trim()) {
-      newErrors.clientName = 'Client name is required';
-    }
+      newErrors.clientName = 'Client name is required', }
 
     if (!formData.projectTitle.trim()) {
-      newErrors.projectTitle = 'Project title is required';
-    }
+      newErrors.projectTitle = 'Project title is required', }
 
     if (!formData.description.trim()) {
-      newErrors.description = 'Description is required';
-    }
+      newErrors.description = 'Description is required', }
 
     if (formData.amount <= 0) {
-      newErrors.amount = 'Amount must be greater than 0';
-    }
+      newErrors.amount = 'Amount must be greater than 0', }
 
     if (formData.validUntil < new Date()) {
-      newErrors.validUntil = 'Valid until date must be in the future';
-    }
+      newErrors.validUntil = 'Valid until date must be in the future', }
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    return Object.keys(newErrors).length === 0, };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
       onSave(formData);
-    }
   };
 
   const handleInputChange = (field: keyof QuoteFormData, value: any) => {
@@ -84,7 +74,6 @@ export const QuotesForm: React.FC<QuotesFormProps> = ({
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: '' }));
-    }
   };
 
   return (
@@ -227,5 +216,4 @@ export const QuotesForm: React.FC<QuotesFormProps> = ({
         </form>
       </CardContent>
     </Card>
-  );
-};
+  );;

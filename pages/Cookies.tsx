@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Cookies = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -25,6 +24,6 @@ const Cookies = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Cookies;

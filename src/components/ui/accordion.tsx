@@ -1,17 +1,16 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
 import React from "react",
 const accordion: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">accordion</h3>,
+<h3 className="text-xl font-bold mb-4">accordion</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>
-},
-</div>)},
+};
+</div>)};
 export export default accordion,;<//div><///div>
 import * as React from 'react'
 import { ElementRef,, ComponentPropsWithoutRef } from 'react'
@@ -48,12 +47,12 @@ ref={ref}
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
-AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName,
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>
   ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
 >(({ className children, ...props }, ref) => (
-  <AccordionPrimitive.Content,
+  <AccordionPrimitive.Content;
 ref={ref}
     className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
     {...props}
@@ -61,5 +60,5 @@ ref={ref}
     <div className={cn('pb-4 pt-0', className)}>{children}</div>
   </AccordionPrimitive.Content>
 ))
-AccordionContent.displayName = AccordionPrimitive.Content.displayName,
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 export { Accordion AccordionItem AccordionTrigger AccordionContent }

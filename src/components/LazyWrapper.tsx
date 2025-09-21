@@ -1,10 +1,9 @@
-import React from "react";
+import React from "react",
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
 interface LazyWrapperProps {
-childre; n: React.ReactNode;
+childre; n: React.ReactNode,
 threshold?: number;
 className?: string;
 loadingVariant?: "default" | "tech" | "minimal" | "

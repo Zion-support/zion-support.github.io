@@ -1,26 +1,22 @@
-"use client";
-
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useRouter } from 'next/router';
-import { useToast } from '@/hooks/use-toast';
-
+"use client",
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react',
+import { useRouter } from 'next/router',
+import { useToast } from '@/hooks/use-toast',
 interface User {
-  id: string;
+  id: string,
   email: string;
   name?: string;
   avatar?: string;
-  verified: boolean;
-}
+  verified: boolean, }
 
 interface AuthContextType {
-  user: User | null;
-  isLoading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => void;
+  user: User | null,
+  isLoading: boolean,
+  login: (email: string, password: string) => Promise<void>,
+  logout: () => void,
   signup: (email: string, password: string, name?: string) => Promise<void>;
-  verifyEmail: (token: string) => Promise<void>;
-  resendVerification: (email: string) => Promise<void>;
-}
+  verifyEmail: (token: string) => Promise<void>,
+  resendVerification: (email: string) => Promise<void>, }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -28,13 +24,10 @@ export const useAuth = () => {
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
-};
+  return context, };
 
 interface AuthProviderProps {
-  children: ReactNode;
-}
+  children: ReactNode, }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -51,18 +44,14 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           // In a real app, validate token with backend
           const userData = JSON.parse(localStorage.getItem('user_data') || '{}');
           setUser(userData);
-        }
       } catch (error) {
         console.error('Auth check failed:', error);
         localStorage.removeItem('auth_token');
-        localStorage.removeItem('user_data');
-      } finally {
+        localStorage.removeItem('user_data'); finally {
         setIsLoading(false);
-      }
     };
 
-    checkAuth();
-  }, []);
+    checkAuth();, []);
 
   const login = async (email: string, password: string) => {
     try {
@@ -73,14 +62,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
+        };
+        body: JSON.stringify({ email, password }););
 
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message || 'Login failed');
-      }
 
       const data = await response.json();
       
@@ -94,17 +81,14 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         description: "Welcome back!",
       });
 
-      router.push('/dashboard');
-    } catch (error: any) {
+      router.push('/dashboard'); catch (error: any) {
       toast({
         title: "Login Failed",
         description: error.message || "Please check your credentials and try again.",
         variant: "destructive",
       });
-      throw error;
-    } finally {
+      throw error, } finally {
       setIsLoading(false);
-    }
   };
 
   const signup = async (email: string, password: string, name?: string) => {
@@ -116,14 +100,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password, name }),
-      });
+        };
+        body: JSON.stringify({ email, password, name }););
 
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message || 'Signup failed');
-      }
 
       const data = await response.json();
       
@@ -132,17 +114,14 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         description: "Please check your email to verify your account.",
       });
 
-      router.push('/verify-email');
-    } catch (error: any) {
+      router.push('/verify-email'); catch (error: any) {
       toast({
         title: "Signup Failed",
         description: error.message || "Please try again.",
         variant: "destructive",
       });
-      throw error;
-    } finally {
+      throw error, } finally {
       setIsLoading(false);
-    }
   };
 
   const logout = () => {
@@ -154,8 +133,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     toast({
       title: "Logged Out",
       description: "You have been successfully logged out.",
-    });
-  };
+    });;
 
   const verifyEmail = async (token: string) => {
     try {
@@ -165,14 +143,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ token }),
-      });
+        };
+        body: JSON.stringify({ token }););
 
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message || 'Verification failed');
-      }
 
       const data = await response.json();
       setUser(data.user);
@@ -182,17 +158,14 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         description: "Your email has been successfully verified.",
       });
 
-      router.push('/dashboard');
-    } catch (error: any) {
+      router.push('/dashboard'); catch (error: any) {
       toast({
         title: "Verification Failed",
         description: error.message || "Please try again.",
         variant: "destructive",
       });
-      throw error;
-    } finally {
+      throw error, } finally {
       setIsLoading(false);
-    }
   };
 
   const resendVerification = async (email: string) => {
@@ -203,29 +176,24 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+        };
+        body: JSON.stringify({ email }););
 
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message || 'Failed to resend verification');
-      }
 
       toast({
         title: "Verification Email Sent",
         description: "Please check your inbox for the verification email.",
-      });
-    } catch (error: any) {
+      }); catch (error: any) {
       toast({
         title: "Failed to Resend",
         description: error.message || "Please try again.",
         variant: "destructive",
       });
-      throw error;
-    } finally {
+      throw error, } finally {
       setIsLoading(false);
-    }
   };
 
   const value: AuthContextType = {
@@ -235,12 +203,10 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     logout,
     signup,
     verifyEmail,
-    resendVerification,
-  };
+    resendVerification, };
 
   return (
     <AuthContext.Provider value={value}>
       {children}
     </AuthContext.Provider>
-  );
-};
+  );;

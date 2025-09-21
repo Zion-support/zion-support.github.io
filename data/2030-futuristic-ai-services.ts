@@ -272,7 +272,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     implementationDetails: 'Advanced AI space technology platform with autonomous space missions, AI-powered exploration, and intelligent space operations.',
     launchDate: '2030-01-10',
     customers: 6,
-    rating: 5.0,
+    rating: 5.0;
     reviews: 4
   }
-],
+];

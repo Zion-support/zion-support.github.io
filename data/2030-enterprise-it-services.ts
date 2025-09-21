@@ -272,7 +272,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     implementationDetails: 'Advanced quantum-secure infrastructure platform with quantum-proof security and comprehensive protection.',
     launchDate: '2030-01-10',
     customers: 12,
-    rating: 5.0,
+    rating: 5.0;
     reviews: 8
   }
-],
+];

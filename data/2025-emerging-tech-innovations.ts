@@ -1,66 +1,64 @@
 export interface EmergingTechInnovationService {
 export interface EmergingTechService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  period: string;
-  features: string[];
-  category: string;
-  marketSize: string;
-  targetAudience: string[];
-  competitiveAdvantage: string;
-  useCases: string[];
-  integrations: string[];
-  compliance: string[];
-  website: string;
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  price: string,
+  period: string,
+  features: string[],
+  category: string,
+  marketSize: string,
+  targetAudience: string[],
+  competitiveAdvantage: string,
+  useCases: string[],
+  integrations: string[],
+  compliance: string[],
+  website: string,
   contact: {
-    phone: string;
-    email: string;
-    address: string;
-  };
-  trialDays: number;
-  setupTime: string;
-  competitors: string[];
-  roi: string;
-import { ServiceVariant } from '../types/service-variants';
-
+    phone: string,
+    email: string,
+    address: string, };
+  trialDays: number,
+  setupTime: string,
+  competitors: string[],
+  roi: string,
+import { ServiceVariant } from '../types/service-variants',
 export interface EmergingTechInnovationService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  technologyStack: string[];
-  innovationLevel: string;
-  futureProofing: string;
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  technologyStack: string[],
+  innovationLevel: string,
+  futureProofing: string,
   researchPartnerships: string[];
   popular?: boolean;
   icon?: string;
@@ -72,20 +70,18 @@ export interface EmergingTechInnovationService {
   growthRate?: string;
   variant?: string;
   contactInfo?: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string, };
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
   realImplementation?: boolean;
-  implementationDetails?: string;
-}
+  implementationDetails?: string, }
 
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
   // Quantum Computing Services
@@ -379,8 +375,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
   }
 ];
 
-export default emergingTechInnovations2025;
-}
+export default emergingTechInnovations2025, }
 
 export const emergingTechInnovationServices2025: EmergingTechInnovationService[] = [
   // Space Technology Innovation Platform

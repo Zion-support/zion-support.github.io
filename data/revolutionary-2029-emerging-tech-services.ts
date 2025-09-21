@@ -479,6 +479,5 @@ export const REVOLUTIONARY_2029_EMERGING_TECH_SERVICES: RevolutionaryEmergingTec
     rating: 4.8,
     reviews: 45
   }
-],
-
-export default REVOLUTIONARY_2029_EMERGING_TECH_SERVICES,
+];
+export default REVOLUTIONARY_2029_EMERGING_TECH_SERVICES;

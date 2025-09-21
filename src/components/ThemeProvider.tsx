@@ -1,10 +1,8 @@
-import React from 'react';
-
+import React from 'react',
 interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: string;
-  storageKey?: string;
-}
+  storageKey?: string, }
 
 export function ThemeProvider({ children, defaultTheme = 'light', storageKey = 'theme' }: ThemeProviderProps) {
   return (
@@ -12,4 +10,3 @@ export function ThemeProvider({ children, defaultTheme = 'light', storageKey = '
       {children}
     </div>
   );
-}

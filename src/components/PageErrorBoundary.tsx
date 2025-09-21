@@ -1,10 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-
+import React from 'react',
+import Link from 'next/link',
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary',
+import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -45,21 +44,17 @@ function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
       </Card>
     </div>
   );
-}
 
 interface PageErrorBoundaryProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode, }
 
 export function PageErrorBoundary({ children }: PageErrorBoundaryProps) {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
       onError={(error, errorInfo) => {
-        console.error('Page Error Boundary caught an error:', error, errorInfo);
-      }}
+        console.error('Page Error Boundary caught an error:', error, errorInfo);}
     >
       {children}
     </ErrorBoundary>
   );
-}

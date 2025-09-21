@@ -1,21 +1,19 @@
 export interface MatchResultItem {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  price: number;
-  rating: number;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  price: number,
+  rating: number,
   imageUrl?: string;
-  tags: string[];
-  matchScore: number;
+  tags: string[],
+  matchScore: number,
   provider: {
-    name: string;
+    name: string,
     avatar?: string;
-    verified: boolean;
-  };
-  createdAt: string;
-  updatedAt: string;
-}
+    verified: boolean, };
+  createdAt: string,
+  updatedAt: string, }
 
 export interface MatchmakingFilters {
   category?: string;
@@ -23,15 +21,13 @@ export interface MatchmakingFilters {
   maxPrice?: number;
   minRating?: number;
   tags?: string[];
-  location?: string;
-}
+  location?: string, }
 
 export interface MatchmakingResult {
-  items: MatchResultItem[];
-  totalCount: number;
-  hasMore: boolean;
-  nextCursor?: string;
-}
+  items: MatchResultItem[],
+  totalCount: number,
+  hasMore: boolean,
+  nextCursor?: string, }
 
 export const mockMatchResults: MatchResultItem[] = [
   {
@@ -100,19 +96,15 @@ export async function findMatches(filters: MatchmakingFilters): Promise<Matchmak
     filteredResults = filteredResults.filter(item => 
       item.category.toLowerCase().includes(filters.category!.toLowerCase())
     );
-  }
   
   if (filters.minPrice !== undefined) {
     filteredResults = filteredResults.filter(item => item.price >= filters.minPrice!);
-  }
   
   if (filters.maxPrice !== undefined) {
     filteredResults = filteredResults.filter(item => item.price <= filters.maxPrice!);
-  }
   
   if (filters.minRating !== undefined) {
     filteredResults = filteredResults.filter(item => item.rating >= filters.minRating!);
-  }
   
   if (filters.tags && filters.tags.length > 0) {
     filteredResults = filteredResults.filter(item =>
@@ -120,7 +112,6 @@ export async function findMatches(filters: MatchmakingFilters): Promise<Matchmak
         itemTag.toLowerCase().includes(tag.toLowerCase())
       ))
     );
-  }
   
   // Sort by match score
   filteredResults.sort((a, b) => b.matchScore - a.matchScore);
@@ -130,5 +121,4 @@ export async function findMatches(filters: MatchmakingFilters): Promise<Matchmak
     totalCount: filteredResults.length,
     hasMore: false,
     nextCursor: undefined
-  };
-}
+  }, }

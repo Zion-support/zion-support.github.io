@@ -507,7 +507,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     implementationDetails: 'Quantum AI research platform with quantum computing capabilities, AI training acceleration, and research collaboration tools.',
     launchDate: '2024-03-01',
     customers: 15,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 8
   }
-],
+];

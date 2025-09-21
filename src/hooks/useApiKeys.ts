@@ -1,14 +1,12 @@
-import { useState, useCallback } from 'react';
-
+import { useState, useCallback } from 'react',
 interface ApiLog {
-  id: string;
-  method: string;
-  endpoint: string;
+  id: string,
+  method: string,
+  endpoint: string,
   status_code: number;
   response_time_ms?: number;
   ip_address?: string;
-  created_at: string;
-}
+  created_at: string, }
 
 export function useApiKeys() {
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -48,16 +46,12 @@ export function useApiKeys() {
           response_time_ms: 120,
           ip_address: '192.168.1.2',
           created_at: '2024-01-20T14:20:00Z',
-        },
-      ];
+        }, ];
       
       setLogs(mockLogs);
-      setTotalLogs(mockLogs.length);
-    } catch (error) {
-      console.error('Failed to fetch API logs:', error);
-    } finally {
+      setTotalLogs(mockLogs.length); catch (error) {
+      console.error('Failed to fetch API logs:', error); finally {
       setLoading(false);
-    }
   }, []);
 
   return {
@@ -65,5 +59,4 @@ export function useApiKeys() {
     totalLogs,
     loading,
     fetchApiLogs,
-  };
-}
+  }, }

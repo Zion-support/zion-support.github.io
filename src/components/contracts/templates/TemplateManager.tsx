@@ -1,16 +1,14 @@
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { ContractFormValues } from "../components/ContractForm";
-
+import { useState } from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { ContractFormValues } from "../components/ContractForm",
 interface TemplateManagerProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onSelectTemplate: (template: ContractFormValues) => void;
-  currentValues?: ContractFormValues;
-}
+  isOpen: boolean,
+  onClose: () => void,
+  onSelectTemplate: (template: ContractFormValues) => void,
+  currentValues?: ContractFormValues, }
 
 const defaultTemplates: ContractFormValues[] = [
   {
@@ -42,8 +40,7 @@ const defaultTemplates: ContractFormValues[] = [
     paymentTerms: "100% on completion",
     startDate: "",
     endDate: "",
-  },
-];
+  }, ];
 
 export function TemplateManager({
   isOpen,
@@ -56,10 +53,9 @@ export function TemplateManager({
 
   const handleSaveCurrentAsTemplate = () => {
     if (currentValues && newTemplateName) {
-      const newTemplate = { ...currentValues, projectTitle: newTemplateName };
+      const newTemplate = { ...currentValues, projectTitle: newTemplateName },
       setTemplates([...templates, newTemplate]);
       setNewTemplateName("");
-    }
   };
 
   return (
@@ -100,8 +96,7 @@ export function TemplateManager({
                   size="sm"
                   onClick={() => {
                     onSelectTemplate(template);
-                    onClose();
-                  }}
+                    onClose();}
                 >
                   Use Template
                 </Button>
@@ -112,4 +107,3 @@ export function TemplateManager({
       </DialogContent>
     </Dialog>
   );
-}

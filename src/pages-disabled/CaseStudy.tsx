@@ -1,8 +1,7 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { CASE_STUDIES } from '@/data/case-studies';
-import { SEO } from '@/components/SEO';
-
+import Link from 'next/link',
+import { useRouter } from 'next/router',
+import { CASE_STUDIES } from '@/data/case-studies',
+import { SEO } from '@/components/SEO',
 export default function CaseStudy() {
   return (
     <div className="min-h-screen bg-zion-blue">

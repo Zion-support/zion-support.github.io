@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function ProfileLoadingState() {
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center">
@@ -9,4 +8,3 @@ export function ProfileLoadingState() {
       </div>
     </div>
   );
-}

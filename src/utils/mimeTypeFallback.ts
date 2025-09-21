@@ -1,6 +1,5 @@
 export class MimeTypeFallback {
-  private supportedTypes: Set<string>;
-
+  private supportedTypes: Set<string>,
   constructor() {
     this.supportedTypes = new Set([
       "text/html",
@@ -20,14 +19,12 @@ export class MimeTypeFallback {
       "application/font-woff",
       "application/font-woff2"
     ]);
-  }
 
   /**
    * Check if MIME type is supported
    */
   isSupported(type: string): boolean {
     return this.supportedTypes.has(type);
-  }
 
   /**
    * Get fallback MIME type for unsupported types
@@ -41,8 +38,7 @@ export class MimeTypeFallback {
       "application/x-shockwave-flash": "application/x-shockwave-flash"
     };
 
-    return typeMap[type] || "application/octet-stream";
-  }
+    return typeMap[type] || "application/octet-stream", }
 
   /**
    * Handle resource loading with fallback
@@ -55,13 +51,10 @@ export class MimeTypeFallback {
       if (!this.isSupported(contentType)) {
         const fallbackType = this.getFallbackType(contentType);
         console.warn(`Unsupported MIME type: ${contentType}, using fallback: ${fallbackType}`);
-      }
 
-      return response;
-    } catch (error) {
+      return response, } catch (error) {
       console.error(`Failed to load resource: ${url}`, error);
-      throw error;
-    }
+      throw error, }
   }
 
   /**
@@ -71,15 +64,13 @@ export class MimeTypeFallback {
     if (type === "script") {
       const script = document.createElement("script");
       script.src = url;
-      script.type = "text/javascript";
-      return script;
-    } else {
+      script.type = "text/javascript",
+      return script, } else {
       const link = document.createElement("link");
-      link.rel = "stylesheet";
+      link.rel = "stylesheet",
       link.href = url;
-      link.type = "text/css";
-      return link;
-    }
+      link.type = "text/css",
+      return link, }
   }
 
   /**
@@ -92,10 +83,7 @@ export class MimeTypeFallback {
       element.onload = () => resolve();
       element.onerror = () => {
         console.error(`Failed to load ${type}: ${url}`);
-        reject(new Error(`Failed to load ${type}: ${url}`));
-      };
+        reject(new Error(`Failed to load ${type}: ${url}`));;
 
-      document.head.appendChild(element);
-    });
-  }
+      document.head.appendChild(element););
 }

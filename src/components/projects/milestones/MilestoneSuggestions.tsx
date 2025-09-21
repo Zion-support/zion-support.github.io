@@ -1,31 +1,28 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Loader2, Sparkles, Check } from 'lucide-react';
-
+import React, { useState } from 'react',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Loader2, Sparkles, Check } from 'lucide-react',
 interface Milestone {
-  title: string;
-  description: string;
-  dueDate: string;
-  estimatedHours: number;
-}
+  title: string,
+  description: string,
+  dueDate: string,
+  estimatedHours: number, }
 
 interface MilestoneSuggestionsProps {
-  projectName: string;
-  scopeSummary: string;
-  startDate: string;
-  endDate: string;
-  projectType: string;
-  onMilestonesGenerated: (milestones: Milestone[]) => void;
-}
+  projectName: string,
+  scopeSummary: string,
+  startDate: string,
+  endDate: string,
+  projectType: string,
+  onMilestonesGenerated: (milestones: Milestone[]) => void, }
 
 export function MilestoneSuggestions({
   projectName,
   scopeSummary,
   startDate,
   endDate,
-  projectType,
+  projectType;
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -33,8 +30,7 @@ export function MilestoneSuggestions({
   const [generatedMilestones, setGeneratedMilestones] = useState<Milestone[]>([]);
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString();
-  };
+    return new Date(dateString).toLocaleDateString();;
 
   const handleGenerateMilestones = async () => {
     setIsGenerating(true);
@@ -65,9 +61,7 @@ export function MilestoneSuggestions({
       setGeneratedMilestones(mockMilestones);
       setShowSuggestions(true);
       setIsGenerating(false);
-      onMilestonesGenerated(mockMilestones);
-    }, 2000);
-  };
+      onMilestonesGenerated(mockMilestones);, 2000);;
 
   return (
     <div className="space-y-4">
@@ -133,4 +127,3 @@ export function MilestoneSuggestions({
       )}
     </div>
   );
-}

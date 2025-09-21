@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

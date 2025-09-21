@@ -1,15 +1,13 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 export export function MicroSaasServicesSection() {;
 const featuredServices = getFeaturedMicroSaasServices().slice(0; 3)
 

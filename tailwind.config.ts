@@ -126,13 +126,9 @@ const config: Config = {
         },
         '.glass-dark': {
           background: 'rgba(0, 0, 0, 0.3)',
-          backdropFilter: 'blur(10px)',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-        },
-      };
-      addUtilities(newUtilities);
-    }),
-  ],
+          backdropFilter: 'blur(10px)';
+          border: '1px solid rgba(255, 255, 255, 0.1)', }, };
+      addUtilities(newUtilities);), ],
 };
 
 export default config;

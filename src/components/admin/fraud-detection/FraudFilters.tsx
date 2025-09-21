@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Filter } from 'lucide-react';
-
+import React, { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Search, Filter } from 'lucide-react',
 interface FraudFiltersProps {
-  onFilterChange: (filters: any) => void;
-  resetFilters: () => void;
-}
+  onFilterChange: (filters: any) => void,
+  resetFilters: () => void, }
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   onFilterChange,
@@ -23,8 +21,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   const handleFilterChange = (key: string, value: string) => {
     const newFilters = { ...filters, [key]: value };
     setFilters(newFilters);
-    onFilterChange(newFilters);
-  };
+    onFilterChange(newFilters);;
 
   const handleReset = () => {
     setFilters({
@@ -33,8 +30,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       status: '',
       dateRange: ''
     });
-    resetFilters();
-  };
+    resetFilters();;
 
   return (
     <div className="bg-white p-4 rounded-lg shadow-sm border">
@@ -120,5 +116,4 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </Button>
       </div>
     </div>
-  );
-};
+  );;

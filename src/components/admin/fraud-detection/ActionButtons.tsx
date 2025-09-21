@@ -1,14 +1,12 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
-
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react',
 interface ActionButtonsProps {
   onView?: () => void;
   onInfo?: () => void;
   onFlag?: () => void;
   onBan?: () => void;
-  disabled?: boolean;
-}
+  disabled?: boolean, }
 
 export function ActionButtons({ onView, onInfo, onFlag, onBan, disabled = false }: ActionButtonsProps) {
   return (
@@ -63,4 +61,3 @@ export function ActionButtons({ onView, onInfo, onFlag, onBan, disabled = false 
       )}
     </div>
   );
-}

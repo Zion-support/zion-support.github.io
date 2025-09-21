@@ -1,6 +1,5 @@
-import React from "react";
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
-
+import React from "react",
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react',
 const features = [
   {
     title: "Advanced Team Management",
@@ -30,9 +29,8 @@ const features = [
   {
     title: "Global Reach",
     description: "Multi-language support and compliance with international hiring laws and regulations.",
-    icon: Globe,
-  },
-];
+    icon: Globe;
+  }, ];
 
 export function EnterpriseFeatures() {
   return (
@@ -63,4 +61,3 @@ export function EnterpriseFeatures() {
       </div>
     </section>
   );
-}

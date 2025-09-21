@@ -1,25 +1,24 @@
 interface Milestone {
   id: string;,
-title: string;
+title: string,
   dueDate: string;,
 status: "completed" | "in_progress" | "
   paymentStatus: "paid" | "pending" | ",
-amount: string;
+amount: string,
 interface ProjectViewProps {
   project: {,
-id: string;
+id: string,
     title: string;,
 client: {
-      name: string;
+      name: string,
       avatar?: string,
 },
-    startDate: string;
+    startDate: string,
     endDate?: string;
     status: string;,
-totalAmount: string;
+totalAmount: string,
     progress: number;,
-description: string;
-}
+description: string, }
   milestones: Milestone[]
 export function MobileProjectView({ project milestones }: ProjectViewProps) {
 return (

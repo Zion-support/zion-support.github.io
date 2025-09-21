@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 export function useMessaging() {
   const [messages, setMessages] = useState<any[]>([]);
   const [isConnected, setIsConnected] = useState(false);
@@ -12,12 +11,10 @@ export function useMessaging() {
       timestamp: new Date(),
       sender: "user"
     };
-    setMessages(prev => [...prev, newMessage]);
-  };
+    setMessages(prev => [...prev, newMessage]);;
 
   return {
     messages,
     isConnected,
     sendMessage
-  };
-}
+  }, }

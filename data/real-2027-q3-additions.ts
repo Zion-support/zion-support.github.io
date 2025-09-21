@@ -192,7 +192,7 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Capture pipeline, diarization, extraction, and integrations.',
 		launchDate: '2027-07-22',
 		customers: 900,
-		rating: 4.9,
+		rating: 4.9;
 		reviews: 2100
 	}
-],
+];

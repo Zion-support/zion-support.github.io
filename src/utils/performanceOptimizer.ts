@@ -1,29 +1,25 @@
-import React from "react";
+import React from "react",
 /**
  * Performance Optimization Utilities
  * Advanced performance monitoring and optimization tools
  */
-import { useState, useEffect } from "react";
-
+import { useState, useEffect } from "react",
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-}
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  bundleSize: number, }
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
     loadTime: 0,
     renderTime: 0,
-    memoryUsage: 0,
+    memoryUsage: 0;
     bundleSize: 0
   };
-  private observers: PerformanceObserver[] = [];
-
+  private observers: PerformanceObserver[] = [],
   constructor() {
     this.initializeObservers();
-  }
 
   private initializeObservers(): void {
     // Observe navigation timing
@@ -34,21 +30,16 @@ class PerformanceOptimizer {
           entries.forEach(entry => {
             if (entry.entryType === "navigation") {
               const navEntry = entry as PerformanceNavigationTiming;
-              this.metrics.loadTime = navEntry.loadEventEnd - navEntry.fetchStart;
-            }
-          });
-        });
-        navObserver.observe({ entryTypes: ["navigation"] });
-        this.observers.push(navObserver);
-      } catch (error) {
+              this.metrics.loadTime = navEntry.loadEventEnd - navEntry.fetchStart, }
+          }););
+        navObserver.observe({ entryTypes: ["navigation"] }),
+        this.observers.push(navObserver); catch (error) {
         console.warn("Navigation observer failed:", error);
-      }
     }
   }
 
   public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
-  }
+    return { ...this.metrics }, }
 
   public calculatePerformanceScore(): number {
     const { loadTime, renderTime, memoryUsage } = this.metrics;
@@ -66,53 +57,47 @@ class PerformanceOptimizer {
     else if (memoryUsage > 30) score -= 8;
     
     return Math.max(0, score);
-  }
 
   public preloadResources(urls: string[]): void {
     urls.forEach(url => {
       const link = document.createElement("link");
-      link.rel = "preload";
+      link.rel = "preload",
       link.href = url;
       link.as = this.getResourceType(url);
-      document.head.appendChild(link);
-    });
-  }
+      document.head.appendChild(link););
 
   private getResourceType(url: string): string {
     const extension = url.split('.').pop()?.toLowerCase();
     switch (extension) {
       case 'css':
-        return 'style';
+        return 'style',
       case 'js':
-        return 'script';
+        return 'script',
       case 'woff':
       case 'woff2':
       case 'ttf':
       case 'otf':
-        return 'font';
+        return 'font',
       case 'png':
       case 'jpg':
       case 'jpeg':
       case 'gif':
       case 'webp':
       case 'svg':
-        return 'image';
+        return 'image',
       default:
-        return 'fetch';
-    }
+        return 'fetch', }
   }
 
   private updateMemoryUsage(): void {
     if ('memory' in performance) {
       const memory = (performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize;
-    }
+      this.metrics.memoryUsage = memory.usedJSHeapSize, }
   }
 
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-  }
+    this.observers = [], }
 }
 
 // Initialize the optimizer
@@ -137,15 +122,12 @@ export const usePerformanceMonitor = () => {
       
       // Calculate performance score
       const score = calculatePerformanceScore(currentMetrics);
-      setScore(score);
-    };
+      setScore(score);;
 
     // Update metrics on load
     if (document.readyState === "complete") {
-      updateMetrics();
-    } else {
+      updateMetrics(); else {
       window.addEventListener("load", updateMetrics);
-    }
 
     // Update metrics periodically
     const interval = setInterval(updateMetrics, 5000);
@@ -153,12 +135,9 @@ export const usePerformanceMonitor = () => {
     return () => {
       clearInterval(interval);
       window.removeEventListener("load", updateMetrics);
-      optimizer.cleanup();
-    };
-  }, []);
+      optimizer.cleanup();, }, []);
 
-  return { metrics, score };
-};
+  return { metrics, score }, };
 
 const calculatePerformanceScore = (metrics: PerformanceMetrics): number => {
   let score = 100;
@@ -169,7 +148,6 @@ const calculatePerformanceScore = (metrics: PerformanceMetrics): number => {
   if (metrics.memoryUsage > 50 * 1024 * 1024) score -= 25; // 50MB
   if (metrics.bundleSize > 1000 * 1024) score -= 10; // 1MB
   
-  return Math.max(0, score);
-};
+  return Math.max(0, score);;
 
 export default PerformanceOptimizer;

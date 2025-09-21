@@ -1,5 +1,4 @@
-"use client";
-
+"use client",
 import { Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -23,12 +22,10 @@ export function ThemeToggle() {
     )
   }
 
-  const isDarkMode = theme === 'dark' || (theme === 'system' && typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-  const resolvedTheme = theme === 'system' ? (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
-
+  const isDarkMode = theme === 'dark' || (theme === 'system' && typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches),
+  const resolvedTheme = theme === 'system' ? (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme,
   const handleToggle = () => {
-    setTheme(isDarkMode ? 'light' : 'dark');
-  };
+    setTheme(isDarkMode ? 'light' : 'dark');;
 
   return (
     <TooltipProvider>

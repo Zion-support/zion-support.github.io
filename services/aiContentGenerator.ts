@@ -46,19 +46,15 @@ export class AIContentGeneratorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`),
-      }
+        throw new Error(`Content generation failed: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockContent(request),
-    }
+      return this.generateMockContent(request);
   }
 
   async getTemplates(): Promise<ContentTemplate[]> {
@@ -187,4 +183,4 @@ export const AI_CONTENT_PRICING = {
       'Custom integrationsSLA guarantee'
     ]
   }
-},
+};

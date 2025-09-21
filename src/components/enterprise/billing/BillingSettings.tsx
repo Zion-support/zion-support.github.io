@@ -1,11 +1,10 @@
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
-import { Bell, CreditCard, FileText, Settings } from "lucide-react";
-
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Separator } from "@/components/ui/separator",
+import { Bell, CreditCard, FileText, Settings } from "lucide-react",
 export function BillingSettings() {
   return (
     <div className="space-y-6">
@@ -97,4 +96,3 @@ export function BillingSettings() {
       </div>
     </div>
   );
-}

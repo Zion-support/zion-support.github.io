@@ -1,13 +1,11 @@
-import { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
+import { useState, useRef, useEffect } from 'react',
+import { MessageSquare, X } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+import { logErrorToProduction } from '@/utils/productionLogger',
 interface Msg {
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
-}
+  id: string,
+  role: 'user' | 'assistant',
+  message: string, }
 
 export function SupportChatbot() {
   const [open, setOpen] = useState(false);
@@ -24,8 +22,7 @@ export function SupportChatbot() {
   ];
 
   const getRandomFallback = () => {
-    return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
-  };
+    return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)], };
 
   const sendMessage = async (message: string) => {
     if (!message.trim()) return;
@@ -50,25 +47,21 @@ export function SupportChatbot() {
         message: getRandomFallback()
       };
 
-      setMessages(prev => [...prev, assistantMsg]);
-    } catch (err) {
-      logErrorToProduction('Chatbot error:', { data: err });
+      setMessages(prev => [...prev, assistantMsg]); catch (err) {
+      logErrorToProduction('Chatbot error:', { data: err }),
       const errorMsg: Msg = {
         id: Date.now().toString() + '-e',
         role: 'assistant',
         message: "I'm sorry, I'm having trouble right now. Please try again later or contact our support team."
       };
-      setMessages(prev => [...prev, errorMsg]);
-    } finally {
+      setMessages(prev => [...prev, errorMsg]); finally {
       setLoading(false);
       setTyping(false);
-    }
   };
 
   useEffect(() => {
     if (endRef.current) {
       endRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
   }, [messages]);
 
   if (!open) {
@@ -83,7 +76,6 @@ export function SupportChatbot() {
         <MessageSquare className='h-5 w-5' />
       </Button>
     );
-  }
 
   return (
     <div className='fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40'>
@@ -134,8 +126,7 @@ export function SupportChatbot() {
           const input = e.currentTarget.querySelector('input');
           if (input?.value) {
             sendMessage(input.value);
-            input.value = '';
-          }
+            input.value = '', }
         }}>
           <div className='flex gap-2'>
             <input
@@ -157,4 +148,3 @@ export function SupportChatbot() {
       </div>
     </div>
   );
-}

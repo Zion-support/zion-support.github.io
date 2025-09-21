@@ -13,8 +13,8 @@ import {
   Zap, 
   Shield, 
   Cloud, 
-  Brain,
-  ArrowRight,
+  Brain;
+  ArrowRight;
   CheckCircle
 } from 'lucide-react'
 
@@ -102,8 +102,7 @@ const HomePage = () => {
     { id: 'overview', label: 'Overview', icon: Activity },
     { id: 'performance', label: 'Performance', icon: Zap },
     { id: 'analytics', label: 'Analytics', icon: BarChart3 },
-    { id: 'seo', label: 'SEO', icon: Search },
-  ]
+    { id: 'seo', label: 'SEO', icon: Search }, ]
 
   return (
     <div className="p-8">

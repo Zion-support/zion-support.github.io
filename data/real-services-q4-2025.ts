@@ -198,7 +198,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Lightweight script & edge collection',
 		launchDate: '2025-12-05',
 		customers: 9,
-		rating: 4.5,
+		rating: 4.5;
 		reviews: 6
 	}
-],
+];

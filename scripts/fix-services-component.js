@@ -5,18 +5,18 @@
  * Creates a clean, working version of the Services component
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'fs',
+import path from 'path',
+import { fileURLToPath } from 'url',
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('🔧 Fixing Services Component...');
 
-const cleanServicesComponent = `import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+const cleanServicesComponent = `import React, { useState, useCallback } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Link } from 'react-router-dom',
 import {
   Brain,
   Cloud, 
@@ -68,10 +68,10 @@ import {
   Factory,
   Car,
   Settings
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030';
-import { COMPREHENSIVE_PRICING_GUIDE_2030 } from '../data/comprehensivePricingGuide2030';
+} from 'lucide-react',
+import { SEO } from '../components/SEO',
+import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030',
+import { COMPREHENSIVE_PRICING_GUIDE_2030 } from '../data/comprehensivePricingGuide2030',
 
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -446,3 +446,4 @@ fs.writeFileSync(servicesPath, cleanServicesComponent);
 console.log('✅ Fixed Services.tsx component');
 
 console.log('🎉 Services component fix completed!');
+}

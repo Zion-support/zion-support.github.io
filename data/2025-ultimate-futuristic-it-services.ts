@@ -460,7 +460,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     implementationDetails: 'Autonomous compliance platform with AI-powered monitoring, automated reporting, and regulatory intelligence.',
     launchDate: '2024-04-01',
     customers: 19,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 10
   }
-],
+];

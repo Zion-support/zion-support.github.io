@@ -1,17 +1,17 @@
 import React { useState useRef useEffect } from 'react',
-import import Image from 'next/image';
-import import { motion,,, AnimatePresence,,, ,,  } from 'framer-motion';
+import import Image from 'next/image',
+import import { motion,,, AnimatePresence,,, ,,  } from 'framer-motion',
 import { ImageIcon,,, AlertTriangle,,  } from 'lucide-react'
-import import { cn,,, ,,  } from '@/lib/utils';
-import import { imageOptimization,,, ,,  } from '@/utils/performance';
-import import { logWarn,,  } from '@/utils/productionLogger';
+import import { cn,,, ,,  } from '@/lib/utils',
+import import { imageOptimization,,, ,,  } from '@/utils/performance',
+import import { logWarn,,  } from '@/utils/productionLogger',
 interface OptimizedImageProps {
   src: string;,
-alt: string;
+alt: string,
   width?: number;
   height?: number;
   className?: string;
-  placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
+  placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty',
   placeholderColor?: string;
   priority?: boolean;
   quality?: number;
@@ -20,7 +20,7 @@ alt: string;
   onError?: () => void;
   fallbackSrc?: string;
   aspectRatio?: string;
-  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down',
   lazy?: boolean;
   retryCount?: number;
   showLoadingProgress?: boolean;
@@ -33,9 +33,8 @@ alt: string;
 
 interface ImageMetrics {
   loadTime: number;,
-fileSize: number;
+fileSize: number,
   format: string;,
-wasOptimized: boolean;
-}
+wasOptimized: boolean, }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({

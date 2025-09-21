@@ -1,28 +1,22 @@
-import { useState, useCallback } from 'react';
-
+import { useState, useCallback } from 'react',
 interface AIContentRequest {
-  prompt: string;
-  type: 'blog' | 'service' | 'product' | 'marketing';
-  tone: 'professional' | 'casual' | 'technical' | 'creative';
-  length: 'short' | 'medium' | 'long';
-}
+  prompt: string,
+  type: 'blog' | 'service' | 'product' | 'marketing',
+  tone: 'professional' | 'casual' | 'technical' | 'creative',
+  length: 'short' | 'medium' | 'long', }
 
 interface AIContentResponse {
-  content: string;
-  suggestions: string[];
+  content: string,
+  suggestions: string[],
   metadata: {
-    wordCount: number;
-    readabilityScore: number;
-    seoScore: number;
-  };
-}
+    wordCount: number,
+    readabilityScore: number,
+    seoScore: number, }, }
 
 export class AIContentGenerator {
   private apiKey: string;
-  
   constructor(apiKey: string) {
-    this.apiKey = apiKey;
-  }
+    this.apiKey = apiKey, }
   
   async generateContent(request: AIContentRequest): Promise<AIContentResponse> {
     const prompt = this.buildPrompt(request);
@@ -33,20 +27,16 @@ export class AIContentGenerator {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${this.apiKey}`,
-        },
-        body: JSON.stringify({ prompt }),
-      });
+        };
+        body: JSON.stringify({ prompt }););
       
       if (!response.ok) {
         throw new Error('Failed to generate content');
-      }
       
       const data = await response.json();
-      return this.processResponse(data, request);
-    } catch (error) {
+      return this.processResponse(data, request); catch (error) {
       console.error('AI Content Generation Error:', error);
-      throw error;
-    }
+      throw error, }
   }
   
   private buildPrompt(request: AIContentRequest): string {
@@ -56,8 +46,7 @@ export class AIContentGenerator {
       long: '800-1200 words'
     };
     
-    return `Generate ${request.type} content with a ${request.tone} tone, approximately ${lengthMap[request.length]} in length. Topic: ${request.prompt}`;
-  }
+    return `Generate ${request.type} content with a ${request.tone} tone, approximately ${lengthMap[request.length]} in length. Topic: ${request.prompt}`, }
   
   private processResponse(data: any, request: AIContentRequest): AIContentResponse {
     return {
@@ -66,10 +55,8 @@ export class AIContentGenerator {
       metadata: {
         wordCount: data.content?.split(' ').length || 0,
         readabilityScore: this.calculateReadability(data.content || ''),
-        seoScore: this.calculateSEOScore(data.content || ''),
-      }
-    };
-  }
+        seoScore: this.calculateSEOScore(data.content || '');
+    }, }
   
   private calculateReadability(text: string): number {
     // Simplified readability calculation
@@ -78,7 +65,6 @@ export class AIContentGenerator {
     const syllables = text.toLowerCase().replace(/[^a-z]/g, '').length;
     
     return Math.round((0.39 * (words / sentences)) + (11.8 * (syllables / words)) - 15.59);
-  }
   
   private calculateSEOScore(text: string): number {
     // Simplified SEO score calculation
@@ -98,7 +84,6 @@ export class AIContentGenerator {
     if (text.includes('[') && text.includes('](')) score += 10;
     
     return Math.min(score, 100);
-  }
 }
 
 // React Hook for AI Content Generation
@@ -113,14 +98,10 @@ export const useAIContentGenerator = (apiKey: string) => {
     try {
       const generator = new AIContentGenerator(apiKey);
       const result = await generator.generateContent(request);
-      return result;
-    } catch (err) {
+      return result, } catch (err) {
       setError(err instanceof Error ? err.message : 'Unknown error');
-      throw err;
-    } finally {
+      throw err, } finally {
       setIsGenerating(false);
-    }
   }, [apiKey]);
   
-  return { generateContent, isGenerating, error };
-};
+  return { generateContent, isGenerating, error }, };

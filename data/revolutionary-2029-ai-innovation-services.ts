@@ -479,23 +479,18 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     rating: 4.6,
     reviews: 23
   }
-],
-
+];
 export const getAIServicesByCategory = (category: string) => {
   return revolutionaryAIInnovationServices2029.filter(service => service.category === category)
-},
-
+};
 export const getPopularAIServices = () => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.isPopular),
-},
+  return revolutionaryAIInnovationServices2029.filter(service => service.isPopular);,
 
 export const getNewAIServices = () => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.isNew),
-},
+  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);,
 
 export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryAIInnovationServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(, '')),
+    const price = parseInt(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });;

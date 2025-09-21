@@ -23,11 +23,10 @@ interface DevopsautopilotProps  {// Add props here as needed,
 }
 export default function Devopsautopilot() {interface DevopsautopilotProps  {// Add props here as needed,
 export default function Devopsautopilot({}: DevopsautopilotProps) {,
-  return (,
+  return (
     <div>,
-      <h1>Devopsautopilot</h1>,
-      <p>This component is currently under development.</p>,
-    </div>),
-}
+      <h1>Devopsautopilot</h1>;
+      <p>This component is currently under development.</p>;
+    </div>);
 
 }}}}}}

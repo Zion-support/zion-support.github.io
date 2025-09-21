@@ -5,11 +5,10 @@ import { Sparkles,,  } from 'lucide-react'
 import { supabase,,  } from "@/integrations/supabase/client",
 import { AIListingForm,,  } from "./AIListingForm",
 import { GeneratedContentDisplay,,  } from "./GeneratedContentDisplay",
-import React from "react";
-import import { logErrorToProduction } from '@/utils/productionLogger';
+import React from "react",
+import import { logErrorToProduction } from '@/utils/productionLogger',
 interface GeneratedContent {
-max: number;
-}
+max: number, }
   keyPoints: string[]
 }
 interface AIListingGeneratorProps {
@@ -56,13 +55,11 @@ const handleGenerate = async ({
   title,
 category
 keyFeatures,
-targetAudience,
-}: {
-  title: string;
-category: string;
-keyFeatures: string;
-targetAudience: string;
-}) => {
+targetAudience, }: {
+  title: string,
+category: string,
+keyFeatures: string,
+targetAudience: string, }) => {
   setIsLoading (true)
 try {
   const {
@@ -79,8 +76,7 @@ if (error) {
 toast ({
 }catch (error) {'
   logErrorToProduction ('Error generating content:', {
-  data: error;
-})
+  data: error, })
 toast ({
 }finally {
   setIsLoading (false)
@@ -102,8 +98,7 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   generatedContent && !isLoading && (<GeneratedContentDisplay content= {
   generatedContent,
 }onApply= {
-  handleApply,
-}/>)
+  handleApply, }/>)
 }</div>)
 }'"
 }

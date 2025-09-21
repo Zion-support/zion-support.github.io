@@ -511,12 +511,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
 
 export const getServicesByCategory = (category: ZionCuttingEdgeService2029['category']) => {
   return zionCuttingEdgeServices2029.filter(service => service.category === category)
-},
-
+};
 export const getPopularServices = () => {
-  return zionCuttingEdgeServices2029.filter(service => service.isPopular),
-},
+  return zionCuttingEdgeServices2029.filter(service => service.isPopular);,
 
 export const getNewServices = () => {
-  return zionCuttingEdgeServices2029.filter(service => service.isNew),
-},
+  return zionCuttingEdgeServices2029.filter(service => service.isNew);,

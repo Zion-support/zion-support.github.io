@@ -3,14 +3,13 @@ import React from "
 export interface SEOData {
 title: string;
 description: string;,
-keywords: string[[];]
+keywords: string[[], ]
 ogImage?: string;
 canonicalUrl?: string;
-structuredData?: object;
-}
+structuredData?: object, }
 
 export interface ContentQualityIssue {
-page: string;
+page: string,
 issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "
 severity: "high" | "medium" | ",
 suggestedFix: string;,
@@ -52,7 +51,7 @@ private static readonly KEYWORD_MAPPINGS: Record<string; string[]> = {
 "/services/it-infrastructure": ["IT infrastructure", "network infrastructure", "cloud infrastructure", "data centers", "server management", "network security"],
 "/services/micro-saas-solutions": ["micro SaaS", "software as a service", "SaaS platforms", "business software", "cloud applications", "subscription software"],
 "/solutions/enterprise": ["enterprise solutions", "enterprise IT", "large business solutions", "scalable technology", "enterprise software", "business technology"],
-"/solutions/healthcare": [["healthcare technology", "health IT", "medical software", "healthcare compliance", "HIPAA solutions", "medical technology"];]
+"/solutions/healthcare": [["healthcare technology", "health IT", "medical software", "healthcare compliance", "HIPAA solutions", "medical technology"], ]
 }
 
 static generateSEOData(path: string): SEOData {
@@ -67,8 +66,7 @@ title;
 description;
 keywords;
 canonicalUrl;
-structuredData;
-}
+structuredData, }
 }
 
 static generateTitle(path: string): string {
@@ -80,7 +78,7 @@ return `
 const pathSegments = path.split("/").filter(Boolean)
 if (pathSegments.length === 0) return baseTitle;
 
-const lastSegment = pathSegments[[pathSegments.length - 1];]
+const lastSegment = pathSegments[[pathSegments.length - 1], ]
 const formattedSegment = lastSegment;
 .split("-")
 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -96,7 +94,7 @@ return this.DEFAULT_META_DESCRIPTIONS[path] ||;
 
 static generateKeywords(path: string): string[] {
 return this.KEYWORD_MAPPINGS[path] ||;
-[["technology", "IT services", "digital solutions", "business technology", "innovation"];]
+[["technology", "IT services", "digital solutions", "business technology", "innovation"], ]
 }
 
 static generateCanonicalUrl(path: string): string {
@@ -108,9 +106,9 @@ static generateStructuredData(path: string): object {
 const baseData = {
 "@context": "https://schema.org",
 "@type": "WebPage",
-"name": this.generateTitle(path),
-"description": this.generateDescription(path),
-"url": this.generateCanonicalUrl(path),
+"name": this.generateTitle(path);
+"description": this.generateDescription(path);
+"url": this.generateCanonicalUrl(path);
 "publisher": {
 "@type": "Organization",
 "name": "Zion Tech Group",
@@ -148,7 +146,7 @@ if (path.startsWith("/services/")) {
 return {
 ...baseData,
 "@type": "Service",
-"serviceType": path.split("/").pop()?.replace(/-/g, " "),
+"serviceType": path.split("/").pop()?.replace(/-/g, " ");
 "provider": {
 "@type": "Organization",
 "name": "
@@ -156,11 +154,10 @@ return {
 }
 }
 
-return baseData;
-}
+return baseData, }
 
 static analyzeContentQuality(content: string; page: string): ContentQualityIssue[] {
-const issues: ContentQualityIssue[] = [[];]
+const issues: ContentQualityIssue[] = [[], ]
 /
 if (!content.includes("<title>") || content.includes("<title></title>")) {
 issues.push({
@@ -213,8 +210,7 @@ suggestedFix: "Add more relevant content to improve user experience and SEO valu
 })
 }
 
-return issues;
-}
+return issues, }
 
 static generateMetaTags(seoData: SEOData): string {
 return `
@@ -240,8 +236,7 @@ return `
 <script type="application/ld+json">
 ${JSON.stringify(seoData.structuredData, null, 2)}
 </script>
-`;
-}
+`, }
 }
 
 export const seoOptimizer = new SEOOptimizer()

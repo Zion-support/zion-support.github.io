@@ -272,7 +272,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     implementationDetails: 'Enterprise-grade quantum internet platform with network infrastructure, security protocols, and comprehensive management tools. Includes custom quantum protocol development and network integration.',
     launchDate: '2025-02-15',
     customers: 35,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 24
   }
-],
+];

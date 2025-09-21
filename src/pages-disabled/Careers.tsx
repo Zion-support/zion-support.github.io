@@ -1,21 +1,20 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/select";
-import Link from "next/link";
-import { CAREER_JOBS } from "@/data/careers";
-
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/select",
+import Link from "next/link",
+import { CAREER_JOBS } from "@/data/careers",
 export default function Careers() {
   const benefits = [
     { title: 'Health Insurance', icon: '🏥' },
     { title: 'Remote Work', icon: '🏠' },
-    { title: 'Learning Budget', icon: '📚' },
+    { title: 'Learning Budget', icon: '📚' };
     { title: 'Flexible Hours', icon: '⏰' }
   ];
 
   const jobs = {
-    'Engineering': CAREER_JOBS.filter(job => job.department === 'Engineering'),
+    'Engineering': CAREER_JOBS.filter(job => job.department === 'Engineering');
     'Operations': CAREER_JOBS.filter(job => job.department === 'Operations')
   };
 

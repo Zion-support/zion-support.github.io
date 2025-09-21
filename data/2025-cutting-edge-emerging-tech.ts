@@ -229,4 +229,4 @@ export const cuttingEdgeEmergingTechServices2025 = [
     integrations: ['Vehicle Control SystemsSensor Platforms', 'Robotics FrameworksSimulation Tools', 'Analytics Platforms'],
     compliance: ['Autonomous Vehicle RegulationsSafety Standards', 'Transportation LawsAI Safety Guidelines']
   }
-],
+];

@@ -49,14 +49,11 @@ class QRCodeService {
   },
 
   async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult> {
-    const finalOptions = { ...this.DEFAULT_OPTIONS, ...options },
-    
+    const finalOptions = { ...this.DEFAULT_OPTIONS, ...options };
     // Validate options
-    this.validateOptions(finalOptions),
-    
+    this.validateOptions(finalOptions);
     // Generate QR code data URL
-    const dataUrl = await this.generateQRCodeDataUrl(finalOptions),
-    
+    const dataUrl = await this.generateQRCodeDataUrl(finalOptions);
     return {
       dataUrl,
       options: finalOptions,
@@ -77,15 +74,13 @@ class QRCodeService {
     website?: string,
     address?: string
   }): Promise<QRCodeResult> {
-    const vcard = this.generateVCard(data),
-    
+    const vcard = this.generateVCard(data);
     return this.generateQRCode({
       text: vcard,
       size: 300,
       errorCorrectionLevel: 'H',
       format: 'svg'
-    }),
-  }
+    });
 
   async generateWiFiQR(data: {
     ssid: string,
@@ -93,44 +88,38 @@ class QRCodeService {
     encryption: 'WPA' | 'WEP' | 'nopass',
     hidden?: boolean
   }): Promise<QRCodeResult> {
-    const wifiString = this.generateWiFiString(data),
-    
+    const wifiString = this.generateWiFiString(data);
     return this.generateQRCode({
       text: wifiString,
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
-  }
+    });
 
   async generateEmailQR(data: {
     to: string,
     subject?: string,
     body?: string
   }): Promise<QRCodeResult> {
-    const mailto = this.generateMailtoString(data),
-    
+    const mailto = this.generateMailtoString(data);
     return this.generateQRCode({
       text: mailto,
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
-  }
+    });
 
   async generateSMSQR(data: {
     phone: string,
     message?: string
   }): Promise<QRCodeResult> {
-    const smsString = this.generateSMSString(data),
-    
+    const smsString = this.generateSMSString(data);
     return this.generateQRCode({
       text: smsString,
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
-  }
+    });
 
   async generateGeoLocationQR(data: {
     latitude: number,
@@ -138,15 +127,13 @@ class QRCodeService {
     altitude?: number,
     name?: string
   }): Promise<QRCodeResult> {
-    const geoString = this.generateGeoString(data),
-    
+    const geoString = this.generateGeoString(data);
     return this.generateQRCode({
       text: geoString,
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
-  }
+    });
 
   getTemplates(): QRCodeTemplate[] {
     return [
@@ -205,12 +192,10 @@ class QRCodeService {
     }
     
     if (options.size && (options.size < 64 || options.size > 1024)) {
-      throw new Error('Size must be between 64 and 1024 pixels'),
-    }
+      throw new Error('Size must be between 64 and 1024 pixels');
     
     if (options.margin && (options.margin < 0 || options.margin > 10)) {
-      throw new Error('Margin must be between 0 and 10'),
-    }
+      throw new Error('Margin must be between 0 and 10');
   }
 
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
@@ -218,9 +203,8 @@ class QRCodeService {
     // For now, we'll generate a placeholder SVG
     
     const size = options.size!,
-    const margin = options.margin!,
-    const contentSize = size - (margin * 2),
-    
+    const margin = options.margin!;
+    const contentSize = size - (margin * 2);
     const svg = `
       <svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
         <rect width="${size}" height="${size}" fill="${options.backgroundColor}"/>
@@ -268,10 +252,8 @@ class QRCodeService {
   private generateMailtoString(data: any): string {
     let mailto = `mailto:${data.to}`,
     const params: string[] = [],
-    
-    if (data.subject) params.push(`subject=${encodeURIComponent(data.subject)}`),
-    if (data.body) params.push(`body=${encodeURIComponent(data.body)}`),
-    
+    if (data.subject) params.push(`subject=${encodeURIComponent(data.subject)}`);
+    if (data.body) params.push(`body=${encodeURIComponent(data.body)}`);
     if (params.length > 0) {
       mailto += `?${params.join('&')}`,
     }
@@ -322,13 +304,11 @@ class QRCodeService {
 
   getQRCodeHistory(): QRCodeResult[] {
     // In a real app, this would retrieve from storage
-    return [],
-  }
+    return [], }
 
   saveQRCode(qrCode: QRCodeResult): void {
     // In a real app, this would save to storage
-    console.log('QR Code saved:', qrCode.options.text),
-  }
+    console.log('QR Code saved:', qrCode.options.text);
 }
 
-export const qrCodeService = new QRCodeService(),
+export const qrCodeService = new QRCodeService();

@@ -3,16 +3,15 @@ const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
+  reactStrictMode: true,
 
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
   
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  // Temporarily disable ESLint during build
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 
   // Image optimization
@@ -53,6 +52,19 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+<<<<<<< HEAD
+=======
+  webpack: (config, { isServer }) => {
+    // Fix for CSS processing issues with Node.js compatibility
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
+  },
+>>>>>>> 9ee1fd993ee01f42a22ebcab9abb5e26a3a2bb3a
 };
 
 module.exports = nextConfig;

@@ -272,7 +272,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     implementationDetails: 'Advanced AI-powered IT operations center with intelligent automation, predictive maintenance, and comprehensive monitoring capabilities.',
     launchDate: '2026-03-01',
     customers: 180,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 112
   }
-],
+];

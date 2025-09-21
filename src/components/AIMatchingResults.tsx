@@ -9,8 +9,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { cn } from "@/lib/utils"
 
 interface AIMatchingResultsProps {
-  serviceType?: string;
-}
+  serviceType?: string, }
 
 const mockMatches: MatchResultItem[] = [
   {
@@ -46,7 +45,7 @@ const mockMatches: MatchResultItem[] = [
       avatar: '/avatars/cloud-experts.jpg',
       verified: true
     },
-    createdAt: '2024-01-10T09:00:00Z',
+    createdAt: '2024-01-10T09:00:00Z';
     updatedAt: '2024-01-18T16:45:00Z'
   }
 ];
@@ -60,8 +59,7 @@ const getCategoryIcon = (category: string) => {
     case 'security':
       return <BriefcaseIcon className="h-6 w-6" />;
     default:
-      return <User className="h-6 w-6" />;
-  }
+      return <User className="h-6 w-6" />, }
 };
 
 export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
@@ -79,8 +77,7 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
     if (tabValue === 'all') return matches;
     return matches.filter(match => 
       match.category.toLowerCase().includes(tabValue.toLowerCase())
-    );
-  };
+    );;
 
   return (
     <div className="space-y-6">
@@ -190,4 +187,3 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
       </Tabs>
     </div>
   );
-}

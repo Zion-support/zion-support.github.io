@@ -528,23 +528,18 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 20,
     isNew: true
   }
-],
-
+];
 export const getITInfrastructureServicesByCategory = (category: string) => {
   return revolutionaryITInfrastructureServices2029.filter(service => service.category === category)
-},
-
+};
 export const getPopularITInfrastructureServices = () => {
-  return revolutionaryITInfrastructureServices2029.filter(service => service.isPopular),
-},
+  return revolutionaryITInfrastructureServices2029.filter(service => service.isPopular);,
 
 export const getNewITInfrastructureServices = () => {
-  return revolutionaryITInfrastructureServices2029.filter(service => service.isNew),
-},
+  return revolutionaryITInfrastructureServices2029.filter(service => service.isNew);,
 
 export const getITInfrastructureServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryITInfrastructureServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(, '')),
+    const price = parseInt(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });;

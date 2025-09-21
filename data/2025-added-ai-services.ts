@@ -666,7 +666,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Templates + CI checks + registry + catalog',
     launchDate: '2025-06-23',
     customers: 10,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 6
   }
 ]

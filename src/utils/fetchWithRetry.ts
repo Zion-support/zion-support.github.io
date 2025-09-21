@@ -1,7 +1,6 @@
 interface FetchOptions extends RequestInit {
   retries?: number;
-  retryDelay?: number;
-}
+  retryDelay?: number, }
 
 export async function fetchWithRetry(
   url: string,
@@ -9,36 +8,29 @@ export async function fetchWithRetry(
 ): Promise<Response> {
   const { retries = 3, retryDelay = 1000, ...fetchOptions } = options;
   
-  let lastError: Error;
-  
+  let lastError: Error,
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const response = await fetch(url, fetchOptions);
       
       // If the response is ok, return it
       if (response.ok) {
-        return response;
-      }
+        return response, }
       
       // If it's the last attempt, return the response even if it's not ok
       if (attempt === retries) {
-        return response;
-      }
+        return response, }
       
       // For non-ok responses, throw an error to trigger retry
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-    } catch (error) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`); catch (error) {
       lastError = error as Error;
       
       // If it's the last attempt, throw the error
       if (attempt === retries) {
-        throw lastError;
-      }
+        throw lastError, }
       
       // Wait before retrying
       await new Promise(resolve => setTimeout(resolve, retryDelay * Math.pow(2, attempt)));
-    }
   }
   
-  throw lastError!;
-}
+  throw lastError!, }

@@ -275,4 +275,4 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       "Sentiment analysis"
     ]
   }
-],
+];

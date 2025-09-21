@@ -37,7 +37,7 @@ export class AutomatedTestingSuite {
   private configuration: TestConfiguration;
   private isRunning: boolean = false;
   private listeners: Array<(suites: TestSuite[]) => void> = [];
-  
+
   constructor(config: TestConfiguration) {
     this.configuration = config;
     this.initializeTestSuites();
@@ -60,27 +60,21 @@ export class AutomatedTestingSuite {
               ...test,
               timestamp: new Date(test.timestamp)
             }))
-          });
-        });
-      }
+          }););
       
-      this.notifyListeners();
-    } catch (error) {
+      this.notifyListeners(); catch (error) {
       console.error('Failed to initialize test suites:', error);
-    }
   }
   
   private startAutoTesting(): void {
     // Run tests on file changes
     if (this.configuration.runOnSave) {
       this.setupFileWatcher();
-    }
     
     // Run tests periodically
     setInterval(() => {
       if (!this.isRunning) {
         this.runAllTests();
-      }
     }, 60000); // Run every minute
   }
   
@@ -88,8 +82,7 @@ export class AutomatedTestingSuite {
     // This would typically use a file system watcher
     // For now, we'll simulate with a timer
     setInterval(() => {
-      this.checkForFileChanges();
-    }, 5000); // Check every 5 seconds
+      this.checkForFileChanges();, 5000); // Check every 5 seconds
   }
   
   private async checkForFileChanges(): Promise<void> {
@@ -99,11 +92,9 @@ export class AutomatedTestingSuite {
         const changes = await response.json();
         if (changes.length > 0) {
           this.runAffectedTests(changes);
-        }
       }
     } catch (error) {
       console.error('Failed to check for file changes:', error);
-    }
   }
   
   public async runAllTests(): Promise<void> {
@@ -115,22 +106,18 @@ export class AutomatedTestingSuite {
     try {
       for (const [suiteId, suite] of this.testSuites) {
         await this.runTestSuite(suiteId);
-      }
       
-      console.log('✅ All test suites completed');
-    } catch (error) {
-      console.error('❌ Test suite execution failed:', error);
-    } finally {
+      console.log('✅ All test suites completed'); catch (error) {
+      console.error('❌ Test suite execution failed:', error); finally {
       this.isRunning = false;
       this.notifyListeners();
-    }
   }
   
   public async runTestSuite(suiteId: string): Promise<void> {
     const suite = this.testSuites.get(suiteId);
     if (!suite) return;
     
-    suite.status = 'running';
+    suite.status = 'running',
     this.notifyListeners();
     
     try {
@@ -138,21 +125,17 @@ export class AutomatedTestingSuite {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ suiteId }),
-      });
+        };
+        body: JSON.stringify({ suiteId }););
       
       if (response.ok) {
         const result = await response.json();
         this.updateTestSuiteResults(suiteId, result);
-      }
     } catch (error) {
       console.error(`Failed to run test suite ${suiteId}:`, error);
-      suite.status = 'failed';
-    }
+      suite.status = 'failed', }
     
     this.notifyListeners();
-  }
   
   public async runTestCase(suiteId: string, testCaseId: string): Promise<void> {
     const suite = this.testSuites.get(suiteId);
@@ -161,7 +144,7 @@ export class AutomatedTestingSuite {
     const testCase = suite.testCases.find(tc => tc.id === testCaseId);
     if (!testCase) return;
     
-    testCase.status = 'running';
+    testCase.status = 'running',
     this.notifyListeners();
     
     try {
@@ -169,22 +152,24 @@ export class AutomatedTestingSuite {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ suiteId, testCaseId }),
-      });
+        };
+        body: JSON.stringify({ suiteId, testCaseId }););
       
       if (response.ok) {
         const result = await response.json();
         this.updateTestCaseResult(suiteId, testCaseId, result);
-      }
     } catch (error) {
       console.error(`Failed to run test case ${testCaseId}:`, error);
+<<<<<<< HEAD
       testCase.status = 'failed';
       testCase.error = error.message;
     }
+=======
+      testCase.status = 'failed',
+      testCase.error = error instanceof Error ? error.message : String(error);
+>>>>>>> 9ee1fd993ee01f42a22ebcab9abb5e26a3a2bb3a
     
     this.notifyListeners();
-  }
   
   private async runAffectedTests(changedFiles: string[]): Promise<void> {
     console.log('🔄 Running tests for affected files:', changedFiles);
@@ -192,14 +177,11 @@ export class AutomatedTestingSuite {
     // Determine which test suites are affected
     const affectedSuites = Array.from(this.testSuites.values()).filter(suite => {
       return suite.testCases.some(testCase => {
-        return changedFiles.some(file => testCase.name.includes(file));
-      });
-    });
+        return changedFiles.some(file => testCase.name.includes(file));););
     
     // Run affected test suites
     for (const suite of affectedSuites) {
       await this.runTestSuite(suite.id);
-    }
   }
   
   private updateTestSuiteResults(suiteId: string, results: any): void {
@@ -219,9 +201,7 @@ export class AutomatedTestingSuite {
         testCase.error = result.error;
         testCase.coverage = result.coverage;
         testCase.timestamp = new Date();
-      }
     });
-  }
   
   private updateTestCaseResult(suiteId: string, testCaseId: string, result: any): void {
     const suite = this.testSuites.get(suiteId);
@@ -234,24 +214,20 @@ export class AutomatedTestingSuite {
       testCase.error = result.error;
       testCase.coverage = result.coverage;
       testCase.timestamp = new Date();
-    }
   }
   
   public getTestSuites(): TestSuite[] {
     return Array.from(this.testSuites.values());
-  }
   
   public getTestSuite(suiteId: string): TestSuite | undefined {
     return this.testSuites.get(suiteId);
-  }
   
   public getTestResults(): {
-    total: number;
-    passed: number;
-    failed: number;
-    skipped: number;
-    coverage: number;
-  } {
+    total: number,
+    passed: number,
+    failed: number,
+    skipped: number,
+    coverage: number, } {
     let total = 0;
     let passed = 0;
     let failed = 0;
@@ -271,13 +247,11 @@ export class AutomatedTestingSuite {
             break;
           case 'skipped':
             skipped++;
-            break;
-        }
+            break, }
         
         if (testCase.coverage !== undefined) {
           totalCoverage += testCase.coverage;
-          coverageCount++;
-        }
+          coverageCount++, }
       }
     }
     
@@ -287,78 +261,64 @@ export class AutomatedTestingSuite {
       failed,
       skipped,
       coverage: coverageCount > 0 ? totalCoverage / coverageCount : 0
-    };
-  }
+    }, }
   
   public generateTestReport(): string {
     const results = this.getTestResults();
     const suites = this.getTestSuites();
     
-    let report = '# Test Report\n\n';
+    let report = '# Test Report\n\n',
     report += `## Summary\n`;
-    report += `- Total Tests: ${results.total}\n`;
-    report += `- Passed: ${results.passed}\n`;
-    report += `- Failed: ${results.failed}\n`;
-    report += `- Skipped: ${results.skipped}\n`;
-    report += `- Coverage: ${results.coverage.toFixed(2)}%\n\n`;
-    
+    report += `- Total Tests: ${results.total}\n`,
+    report += `- Passed: ${results.passed}\n`,
+    report += `- Failed: ${results.failed}\n`,
+    report += `- Skipped: ${results.skipped}\n`,
+    report += `- Coverage: ${results.coverage.toFixed(2)}%\n\n`,
     report += `## Test Suites\n\n`;
     for (const suite of suites) {
       report += `### ${suite.name}\n`;
-      report += `- Status: ${suite.status}\n`;
-      report += `- Duration: ${suite.totalDuration || 0}ms\n`;
-      report += `- Coverage: ${suite.coverage || 0}%\n\n`;
-      
+      report += `- Status: ${suite.status}\n`,
+      report += `- Duration: ${suite.totalDuration || 0}ms\n`,
+      report += `- Coverage: ${suite.coverage || 0}%\n\n`,
       for (const testCase of suite.testCases) {
         report += `- **${testCase.name}**: ${testCase.status}\n`;
         if (testCase.error) {
-          report += `  - Error: ${testCase.error}\n`;
-        }
+          report += `  - Error: ${testCase.error}\n`, }
       }
-      report += '\n';
-    }
+      report += '\n', }
     
-    return report;
-  }
+    return report, }
   
   public updateConfiguration(newConfig: Partial<TestConfiguration>): void {
     this.configuration = { ...this.configuration, ...newConfig };
     
     if (newConfig.autoRun !== undefined) {
       if (newConfig.autoRun) {
-        this.startAutoTesting();
-      } else {
+        this.startAutoTesting(); else {
         this.stopAutoTesting();
-      }
     }
   }
   
   private stopAutoTesting(): void {
     // Stop auto-testing functionality
     console.log('🛑 Auto-testing stopped');
-  }
   
   public addListener(listener: (suites: TestSuite[]) => void): void {
     this.listeners.push(listener);
-  }
   
   public removeListener(listener: (suites: TestSuite[]) => void): void {
     const index = this.listeners.indexOf(listener);
     if (index > -1) {
       this.listeners.splice(index, 1);
-    }
   }
   
   private notifyListeners(): void {
     const suites = this.getTestSuites();
     this.listeners.forEach(listener => {
       try {
-        listener(suites);
-      } catch (error) {
+        listener(suites); catch (error) {
         console.error('Error in testing suite listener:', error);
-      }
     });
-  }
 }
 
 // React Hook for Automated Testing Suite
@@ -372,8 +332,7 @@ export const useAutomatedTesting = (config: TestConfiguration) => {
     const updateSuites = (suites: TestSuite[]) => {
       setTestSuites(suites);
       setTestResults(testingSuite.getTestResults());
-      setIsRunning(suites.some(suite => suite.status === 'running'));
-    };
+      setIsRunning(suites.some(suite => suite.status === 'running'));;
     
     testingSuite.addListener(updateSuites);
     
@@ -381,29 +340,22 @@ export const useAutomatedTesting = (config: TestConfiguration) => {
     updateSuites(testingSuite.getTestSuites());
     
     return () => {
-      testingSuite.removeListener(updateSuites);
-    };
-  }, [testingSuite]);
+      testingSuite.removeListener(updateSuites);, }, [testingSuite]);
   
   const runAllTests = useCallback(async () => {
-    await testingSuite.runAllTests();
-  }, [testingSuite]);
+    await testingSuite.runAllTests();, [testingSuite]);
   
   const runTestSuite = useCallback(async (suiteId: string) => {
-    await testingSuite.runTestSuite(suiteId);
-  }, [testingSuite]);
+    await testingSuite.runTestSuite(suiteId);, [testingSuite]);
   
   const runTestCase = useCallback(async (suiteId: string, testCaseId: string) => {
-    await testingSuite.runTestCase(suiteId, testCaseId);
-  }, [testingSuite]);
+    await testingSuite.runTestCase(suiteId, testCaseId);, [testingSuite]);
   
   const generateTestReport = useCallback(() => {
-    return testingSuite.generateTestReport();
-  }, [testingSuite]);
+    return testingSuite.generateTestReport();, [testingSuite]);
   
   const updateConfiguration = useCallback((newConfig: Partial<TestConfiguration>) => {
-    testingSuite.updateConfiguration(newConfig);
-  }, [testingSuite]);
+    testingSuite.updateConfiguration(newConfig);, [testingSuite]);
   
   return {
     testingSuite,
@@ -415,5 +367,4 @@ export const useAutomatedTesting = (config: TestConfiguration) => {
     runTestCase,
     generateTestReport,
     updateConfiguration,
-  };
-};
+  }, };

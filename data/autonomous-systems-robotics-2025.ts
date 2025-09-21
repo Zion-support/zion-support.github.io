@@ -272,7 +272,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     implementationDetails: 'Comprehensive autonomous supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring. Includes custom optimization development and system integration services.',
     launchDate: '2025-02-10',
     customers: 95,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 62
   }
-],
+];
