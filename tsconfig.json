@@ -22,7 +22,8 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "**/*.ts",
@@ -41,6 +42,10 @@
     "cypress.config.ts",
     "deployment/**/*",
     "deployments/**/*",
-    "data/**/*"
+    "data/**/*",
+    "cartSlice.ts",
+    "components/services/**/*",
+    "pages/AITalentMatchingPage.tsx",
+    "pages/ApplicationStatusTracker.tsx"
   ]
 }

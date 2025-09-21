@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Button } from "./ui/button"
+// import { Button } from "./ui/button"
 
 export default function Header() {
   return (
@@ -34,9 +34,9 @@ export default function Header() {
             </Link>
           </nav>
         </div>
-        <Button className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3">
+        <button className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3">
           Get Started
-        </Button>
+        </button>
       </div>
     </header>
   )
