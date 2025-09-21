@@ -1,0 +1,10 @@
+module.exports = {
+<<<<<<< HEAD
+  plugins: {},
+=======
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-f56f
+};
