@@ -1,10 +1,5 @@
 import useSWR from 'swr';
 
-export const useCurrentUser = () => {
-  const { data, error, mutate } = useSWR('/api/user');
-  
-import useSWR from 'swr';
-
 export function useCurrentUser() {
   const { data, error, mutate } = useSWR('/api/user', async (url) => {
     const response = await fetch(url);
