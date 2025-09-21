@@ -22,10 +22,8 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": false
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "app/**/*.ts",
