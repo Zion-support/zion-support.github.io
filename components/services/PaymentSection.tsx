@@ -1,33 +1,43 @@
-import { MapPin,,  } from 'lucide-react'
-import { PaymentButton,,  } from "@/components/transactions/PaymentButton",
+import { MapPin } from 'lucide-react'
 import React from "react";
-import React from "react";
+
+interface CountryPricing {
+  country: string;
+  pricePerIncident: number;
+  currency: string;
+}
+
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
+}
+
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
-  // Handle successful payment,
-return (
-    <div className='text-center'>
-      <p className='text-zion-slate-light mb-2'>Selected Country</p>
-      <h4 className='text-xl font-bold text-white mb-2 flex items-center justify-center'>
-        <MapPin className='mr-2 h-5 w-5 text-zion-purple' />
-        {selectedCountry.country}
-      </h4>
-      <p className='text-2xl font-bold text-zion-cyan mb-6'>
-        ${selectedCountry.pricePerIncident.toFixed(2)}
-      </p>
-      <PaymentButton
-amount={selectedCountry.pricePerIncident}
-        serviceId='it-onsite-service'
-        providerId='zion-tech-group'
-        buttonText={`Pay for Service in ${selectedCountry.country}`}
-        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6'
-        redirectUrl='/it-onsite-services?success=true'
-        onPaymentInitiated={handlePaymentInitiated}      />
-      <p className='text-xs text-zion-slate-light mt-2'>
-        Price includes transportation and first hour onsite. Additional hours,
-billed separately.
-      </p>
+  return (
+    <div className="text-center">
+      <div className="bg-gray-800 rounded-lg border border-gray-700 p-8 mb-8">
+        <div className="flex items-center justify-center mb-4">
+          <MapPin className="h-6 w-6 text-blue-400 mr-2" />
+          <h3 className="text-xl font-semibold text-white">
+            Service Location: {selectedCountry.country}
+          </h3>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300 mb-4">
+            Base price for IT onsite service
+          </p>
+          <p className="text-4xl font-bold text-blue-400 mb-6">
+            ${selectedCountry.pricePerIncident.toFixed(2)}
+          </p>
+          <p className="text-sm text-gray-400 mb-8">
+            Includes transportation and first hour of service
+          </p>
+          
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
+            Proceed to Payment
+          </button>
+        </div>
+      </div>
     </div>
-  )
-}"}
+  );
+}

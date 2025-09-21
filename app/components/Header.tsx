@@ -11,26 +11,35 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-white">
-            Zion Tech Group
+          <Link href="/">
+            <a className="text-2xl font-bold text-white">
+              Zion Tech Group
+            </a>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-white transition-colors">
-              Home
+            <Link href="/">
+              <a className="text-gray-300 hover:text-white transition-colors">
+                Home
+              </a>
             </Link>
-            <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
-              Services
+            <Link href="/services">
+              <a className="text-gray-300 hover:text-white transition-colors">
+                Services
+              </a>
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact
+            <Link href="/contact">
+              <a className="text-gray-300 hover:text-white transition-colors">
+                Contact
+              </a>
             </Link>
             <Link 
-              href="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+              href="/contact"
             >
-              Get Started
+              <a className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                Get Started
+              </a>
             </Link>
           </nav>
 
@@ -50,20 +59,27 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-white/10">
             <nav className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-300 hover:text-white transition-colors">
-                Home
+              <Link href="/">
+                <a className="text-gray-300 hover:text-white transition-colors">
+                  Home
+                </a>
               </Link>
-              <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
-                Services
+              <Link href="/services">
+                <a className="text-gray-300 hover:text-white transition-colors">
+                  Services
+                </a>
               </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                Contact
+              <Link href="/contact">
+                <a className="text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </a>
               </Link>
               <Link 
-                href="/contact" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors text-center"
+                href="/contact"
               >
-                Get Started
+                <a className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors text-center">
+                  Get Started
+                </a>
               </Link>
             </nav>
           </div>
