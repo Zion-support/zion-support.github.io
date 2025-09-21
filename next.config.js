@@ -9,6 +9,8 @@ const nextConfig = {
   
   // Static export configuration
   output: 'export',
+  skipTrailingSlashRedirect: true,
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   // Image optimization
   images: {
