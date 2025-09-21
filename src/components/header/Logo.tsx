@@ -1,6 +1,9 @@
 interface Service {
 id: string,
-name: string, }
+name: string}
+
+import React from "react";
+import React from "react";
 
 import React from "react",
 import React from "react",
@@ -26,13 +29,13 @@ TECH GROUP;
 </div>
 </div>
 </div>
-<div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
+<div className="text-xs lg: text-sm text-gray-300 font-medium">Group</div>
 </Link>
 )
 }<//Link><///Link>
 import React from 'react',
-import import Link from 'next/link',
-import import { useWhitelabel } from '@/context/WhitelabelContext',
+import import Link from 'next/link';
+import import { useWhitelabel,} from '@/context/WhitelabelContext';
 interface LogoProps {
   customLogo?: string,
 export function Logo({ customLogo }: LogoProps) {

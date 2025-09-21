@@ -2,13 +2,13 @@ interface CacheConfig {
   maxSize: number,
   ttl: number,
   strategy: "lru" | "lfu" | "fifo" | "ttl",
-  persist: boolean, }
+  persist: boolean}
 
 interface CacheEntry<T> {
   value: T,
   timestamp: number,
   accessCount: number,
-  lastAccessed: number, }
+  lastAccessed: number}
 
 interface CacheStats {
   hits: number,
@@ -16,7 +16,7 @@ interface CacheStats {
   size: number,
   maxSize: number,
   hitRate: number,
-  memoryUsage: number, }
+  memoryUsage: number}
 
 class AdvancedCacheManager<T = any> {
   private cache: Map<string, CacheEntry<T>> = new Map();
@@ -39,8 +39,7 @@ class AdvancedCacheManager<T = any> {
       maxSize: this.config.maxSize,
       hitRate: 0,
       memoryUsage: 0
-    };
-
+    },
     // Initialize cleanup interval
     this.cleanupInterval = setInterval(() => {
       this.cleanup();, 60000); // Cleanup every minute
@@ -51,14 +50,13 @@ class AdvancedCacheManager<T = any> {
   }
 
   set(key: string, value: T): void {
-    const now = Date.now();
+    const now = Date.now(),
     const entry: CacheEntry<T> = {
       value,
       timestamp: now,
       accessCount: 0,
       lastAccessed: now
-    };
-
+    },
     // Check if we need to evict
     if (this.cache.size >= this.config.maxSize && !this.cache.has(key)) {
       this.evict();
@@ -72,8 +70,7 @@ class AdvancedCacheManager<T = any> {
   }
 
   get(key: string): T | null {
-    const entry = this.cache.get(key);
-    
+    const entry = this.cache.get(key),
     if (!entry) {
       this.stats.misses++;
       this.updateStats();
@@ -95,10 +92,10 @@ class AdvancedCacheManager<T = any> {
     return entry.value, }
 
   has(key: string): boolean {
-    return this.cache.has(key);
+    return this.cache.has(key)}
 
   delete(key: string): boolean {
-    const deleted = this.cache.delete(key);
+    const deleted = this.cache.delete(key),
     if (deleted) {
       this.updateStats();
       if (this.config.persist) {
@@ -115,8 +112,7 @@ class AdvancedCacheManager<T = any> {
       maxSize: this.config.maxSize,
       hitRate: 0,
       memoryUsage: 0
-    };
-    
+    },
     if (this.config.persist) {
       localStorage.removeItem('advanced_cache');
   }

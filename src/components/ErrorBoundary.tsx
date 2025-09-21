@@ -1,17 +1,18 @@
 import React, { Component, ReactNode } from 'react',
 interface Props {
   children: ReactNode,
-  fallback?: ReactNode, }
+  fallback?: ReactNode;
+}
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: React.ErrorInfo, }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false }, }
+    super(props),
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true; error }
@@ -23,7 +24,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
     // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
-      // Example: Sentry.captureException(error, { extra: errorInfo });
+      // Example: Sentry.captureException(error, { extra: errorInfo })}
   }
 
   render() {
@@ -41,7 +42,7 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+                className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
               >
                 Reload Page
               </button>
@@ -64,7 +65,7 @@ export class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      )}
 
     return this.props.children, }
 }

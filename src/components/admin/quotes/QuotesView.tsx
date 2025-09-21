@@ -14,7 +14,9 @@ interface Quote {
   status: 'pending' | 'approved' | 'rejected' | 'expired',
   createdAt: string,
   validUntil: string,
-  isArchived: boolean, }
+  isArchived: boolean}
+
+type QuoteStatus = 'pending' | 'approved' | 'rejected' | 'expired';
 
 type QuoteStatus = 'pending' | 'approved' | 'rejected' | 'expired',
 export const QuotesView: React.FC = () => {
@@ -60,8 +62,9 @@ export const QuotesView: React.FC = () => {
         validUntil: '2024-02-05',
         isArchived: false
       }
-    ];
-    setQuotes(mockQuotes);, []);
+    ],
+    setQuotes(mockQuotes);
+  }, []);
 
   // Filter quotes based on search and filters
   useEffect(() => {
@@ -132,10 +135,10 @@ export const QuotesView: React.FC = () => {
       prev.map(quote =>
         quote.id === id ? { ...quote, isArchived: !quote.isArchived } : quote
       )
-    );;
+    )};
 
   const handleDeleteQuote = (id: string) => {
-    setQuotes(prev => prev.filter(quote => quote.id !== id));;
+    setQuotes(prev => prev.filter(quote => quote.id !== id))};
 
   const handleArchiveSelected = () => {
     setQuotes(prev =>
@@ -144,8 +147,9 @@ export const QuotesView: React.FC = () => {
           ? { ...quote, isArchived: true }
           : quote
       )
-    );
-    setSelectedQuotes([]);;
+    ),
+    setSelectedQuotes([]);
+  };
 
   const handleDeleteSelected = () => {
     setQuotes(prev => prev.filter(quote => !selectedQuotes.includes(quote.id)));

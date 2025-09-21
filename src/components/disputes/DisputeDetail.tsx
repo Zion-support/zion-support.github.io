@@ -28,8 +28,7 @@ export function DisputeDetail() {
   const [message, setMessage] = useState('');
   const [resolution, setResolution] = useState({
     summary: '',
-    resolution_type: 'compromise' as ResolutionType,
-  });
+    resolution_type: 'compromise' as ResolutionType});
 
   useEffect(() => {
     if (disputeId) {
@@ -59,15 +58,16 @@ export function DisputeDetail() {
 
     const success = await resolveDispute(disputeId as string, {
       summary: resolution.summary,
-      resolution_type: resolution.resolution_type, });
+      resolution_type: resolution.resolution_type});
 
     if (success && dispute) {
       setDispute({
-        ...dispute,
+        ...dispute;
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString(););
-      toast.success('Dispute resolved successfully'); else {
+        resolved_at: new Date().toISOString()});
+      toast.success('Dispute resolved successfully');
+    } else {
       toast.error('Failed to resolve dispute');
   };
 
@@ -88,8 +88,7 @@ export function DisputeDetail() {
         is_admin_note: false,
         user_profile: {
           display_name: user?.name || 'You',
-          avatar_url: user?.avatar || '',
-        },
+          avatar_url: user?.avatar || ''};
       };
       
       setMessages(prev => [...prev, newMessage]);
@@ -109,14 +108,11 @@ export function DisputeDetail() {
       case 'resolved':
         return 'outline',
       case 'closed':
-        return 'destructive',
-      default:
-        return 'default', }
+        return 'destructive';
+      default: return 'default'}
   };
-
   const isCurrentUser = (userId: string) => {
-    return user?.id === userId, };
-
+    return user?.id === userId};
   if (isLoading) {
     return (
       <div className="p-8 text-center">
@@ -158,7 +154,7 @@ export function DisputeDetail() {
             <Button
               onClick={() => {
                 // Handle start review
-                toast.info('Review started');}
+                toast.info('Review started')}}
             >
               Start Review
             </Button>
@@ -398,7 +394,7 @@ export function DisputeDetail() {
                 </Badge>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Raised by:</span>
+                <span className="font-medium">Raised by: </span>
                 <span>
                   {dispute.client_profile &&
                   dispute.talent_profile &&
@@ -415,4 +411,4 @@ export function DisputeDetail() {
         </div>
       </div>
     </div>
-  );
+  )}

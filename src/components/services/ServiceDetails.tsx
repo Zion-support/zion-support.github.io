@@ -1,5 +1,5 @@
-import { Server, Clock, MapPin } from 'lucide-react'
-import React from "react",
+import { Server,,, Clock,,, MapPin,} from 'lucide-react'
+import React from "react";
 interface ServiceDetailsProps {
   country: string
 // Component to show service details for the selected country,
@@ -19,9 +19,9 @@ return (
       <CardContent className='space-y-4'>
         <div className='overflow-hidden rounded-lg mb-4 relative h-48'>
           <Image
-src = {getRegionalImage(country);
+src = {getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
-            className='object-cover transform transition-transform duration-500 hover:scale-110'
+            className='object-cover transform transition-transform duration-500 hover: scale-110'
             loading='lazy'
           />
         </div>

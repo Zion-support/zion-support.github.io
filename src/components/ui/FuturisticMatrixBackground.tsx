@@ -3,10 +3,11 @@ interface FuturisticMatrixBackgroundProps {
 intensity?: "low" | "medium" | "
 color?: string;
 speed?: number;
-className?: string, }
+className?: string;
+}
 export export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({,
 intensity = "
-color = "#00ff88",
+color = "#00ff88";
 speed = 2;
 className = ""
 }) => {
@@ -21,8 +22,9 @@ if (!ctx) return;
 
 /
 const resizeCanvas: any = () => {
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight, }
+canvas.width = window.innerWidth,
+canvas.height = window.innerHeight;
+}
 
 resizeCanvas()
 window.addEventListener("resize", resizeCanvas)
@@ -84,7 +86,7 @@ animationId = requestAnimationFrame(draw)
 }
 
 const drawFloatingParticles: any = (ctx: CanvasRenderingContext2D; frame: number) => {
-const particleCount = 20;
+const particleCount = 20,
 for (let i = 0; i < particleCount; i++) {
 const x: any = (Math.sin(frame * 0.01 + i) * canvas.width * 0.5) + canvas.width * 0.5,
 const y: any = (Math.cos(frame * 0.01 + i * 0.5) * canvas.height * 0.5) + canvas.height * 0.5,
@@ -124,7 +126,7 @@ className={`fixed inset-0 pointer-events-none z-0 ${className}`}
 style={{
 background: "
 }}
-/><//canvas;
+/><//canvas,
 ref={canvasRef}
 className={`fixed inset-0 pointer-events-none z-0 ${className}`}
 style={{

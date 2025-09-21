@@ -1,17 +1,17 @@
-import { NavigationItem, NavigationCategory, NavigationConfig } from '../types/navigation',
+import { NavigationItem, NavigationCategory, NavigationConfig } from '../types/navigation';
 
 export class NavigationGenerator {
   private services: NavigationItem[] = [],
   private categories: NavigationCategory[] = [],
-  private pages: NavigationItem[] = [];
+  private pages: NavigationItem[] = [],
   constructor() {
     this.initializeNavigation()
   }
 
   private async initializeNavigation() {
     await this.discoverServices();
-    await this.discoverPages();
-    await this.generateCategories();
+    await this.discoverPages(),
+    await this.generateCategories()}
 
   // Auto-discover services from data and generate navigation
   async discoverServices(): Promise<NavigationItem[]> {
@@ -188,7 +188,6 @@ export class NavigationGenerator {
         lastUpdated: '2025-01-15',
         priority: 10
       },
-
       // Cybersecurity Services
       {
         id: 'advanced-cybersecurity-suite',
@@ -241,7 +240,6 @@ export class NavigationGenerator {
         lastUpdated: '2025-01-15',
         priority: 13
       },
-
       // Infrastructure Services
       {
         id: 'advanced-it-infrastructure-services',
@@ -294,7 +292,6 @@ export class NavigationGenerator {
         lastUpdated: '2025-01-15',
         priority: 16
       },
-
       // Blockchain Services
       {
         id: 'ai-blockchain-analytics',
@@ -313,7 +310,6 @@ export class NavigationGenerator {
         lastUpdated: '2025-01-15',
         priority: 17
       },
-
       // Content & Marketing Services
       {
         id: 'ai-content-creation',
@@ -366,7 +362,6 @@ export class NavigationGenerator {
         lastUpdated: '2025-01-15',
         priority: 20
       },
-
       // Research & Development Services
       {
         id: 'advanced-research-automation',
@@ -402,7 +397,6 @@ export class NavigationGenerator {
         lastUpdated: '2025-01-15',
         priority: 22
       },
-
       // Specialized AI Services
       {
         id: 'ai-autonomous-creative-director',
@@ -456,8 +450,7 @@ export class NavigationGenerator {
         priority: 25
       }
     ],
-
-    return this.services,
+    return this.services;
   }
 
   // Discover and generate pages
@@ -596,8 +589,7 @@ export class NavigationGenerator {
         priority: 22
       }
     ],
-
-    return this.pages,
+    return this.pages;
   }
 
   // Generate categories from services
@@ -608,8 +600,11 @@ export class NavigationGenerator {
       if (service.category) {
         if (!categoryMap.has(service.category)) {
           categoryMap.set(service.category, []);
+        }
         categoryMap.get(service.category)!.push(service);
-    });
+      }
+    }),
+
     // Create category objects
     this.categories = Array.from(categoryMap.entries()).map(([name, services]) => ({
       id: name.toLowerCase().replace(/\s+/g, '-');
@@ -619,7 +614,7 @@ export class NavigationGenerator {
       serviceCount: services.length,
       services: services.map(s => s.id),
       priority: this.getCategoryPriority(name)
-    }));
+    })),
     // Add additional categories for pages
     this.categories.push(
       {
@@ -648,8 +643,8 @@ export class NavigationGenerator {
         services: [],
         priority: 3
       }
-    );
-    return this.categories,
+    ),
+    return this.categories;
   }
 
   // Get category icon
@@ -657,14 +652,14 @@ export class NavigationGenerator {
     const iconMap: { [key: string]: string } = {
       'AI & Machine Learning': '🤖Cybersecurity': '🔒Infrastructure': '🏗️Blockchain': '⛓️Content & Marketing': '📝Research & Development': '🔬Creative AI': '🎨Legal AI': '⚖️Healthcare AI': '🏥'
     },
-    return iconMap[categoryName] || '🚀',
+    return iconMap[categoryName] || '🚀';
   }
 
   // Get category priority
   private getCategoryPriority(categoryName: string): number {
     const priorityMap: { [key: string]: number } = {
       'AI & Machine Learning': 1,
-      'Cybersecurity': 2,
+      'Cybersecurity': 2;
       'Infrastructure': 3,
       'Blockchain': 4,
       'Content & Marketing': 5,
@@ -673,8 +668,7 @@ export class NavigationGenerator {
       'Legal AI': 8,
       'Healthcare AI': 9
     },
-    return priorityMap[categoryName] || 10,
-  }
+    return priorityMap[categoryName] || 10}
 
   // Generate header navigation
   generateHeaderNavigation(): NavigationItem[] {
@@ -721,8 +715,7 @@ export class NavigationGenerator {
         href: '/search',
         priority: 7
       }
-    ],
-  }
+    ]}
 
   // Generate footer navigation
   generateFooterNavigation(): NavigationItem[] {
@@ -769,7 +762,7 @@ export class NavigationGenerator {
         href: '/sitemap.xml',
         priority: 7
       }
-    ], }
+    ]}
 
   // Generate sidebar navigation based on context
   generateSidebarNavigation(context: any): NavigationItem[] {
@@ -779,16 +772,16 @@ export class NavigationGenerator {
       case 'category':
         return this.generateCategorySidebar(context.currentCategory);
       case 'dashboard':
-        return this.generateDashboardSidebar();
-      default:
-        return this.generateDefaultSidebar()
+        return this.generateDashboardSidebar(),
+      default: return this.generateDefaultSidebar()
     }
   }
 
   private generateServiceSidebar(serviceId?: string): NavigationItem[] {
-    if (!serviceId) return this.generateDefaultSidebar();
+    if (!serviceId) return this.generateDefaultSidebar(),
     const service = this.services.find(s => s.id === serviceId);
-    if (!service) return this.generateDefaultSidebar();
+    if (!service) return this.generateDefaultSidebar(),
+
     return [
       {
         id: 'service-overview',
@@ -815,13 +808,13 @@ export class NavigationGenerator {
         priority: 4,
         isExternal: true
       }
-    ],
-  }
+    ]}
 
   private generateCategorySidebar(categoryId?: string): NavigationItem[] {
     if (!categoryId) return this.generateDefaultSidebar();
     const category = this.categories.find(c => c.id === categoryId);
-    if (!category) return this.generateDefaultSidebar();
+    if (!category) return this.generateDefaultSidebar(),
+
     const categoryServices = this.services.filter(s => s.category === category.name);
     return [
       {
@@ -837,8 +830,7 @@ export class NavigationGenerator {
         status: service.status,
         priority: service.priority || 10
       }))
-    ],
-  }
+    ]}
 
   private generateDashboardSidebar(): NavigationItem[] {
     return [
@@ -866,8 +858,7 @@ export class NavigationGenerator {
         href: '/dashboard/settings',
         priority: 4
       }
-    ],
-  }
+    ]}
 
   private generateDefaultSidebar(): NavigationItem[] {
     return [
@@ -889,13 +880,12 @@ export class NavigationGenerator {
         href: '/explore',
         priority: 3
       }
-    ],
-  }
+    ]}
 
   // Auto-update navigation when new services are added
   async updateNavigation(): Promise<void> {
     await this.discoverServices();
-    await this.generateCategories();
+    await this.generateCategories()}
 
   // Get complete navigation configuration
   async getNavigationConfig(): Promise<NavigationConfig> {
@@ -922,5 +912,5 @@ export class NavigationGenerator {
           priority: 2
         }
       ]
-    }, }
+    }}
 }

@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next',
 export interface Service {
   id: string,
   name: string,
-  description: string;
+  description: string,
   price?: number;
   rating?: number, }
 
@@ -24,8 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         price: 200,
         rating: 4.9
       }
-    ];
-    
+    ],
     return res.json(services);
   
   res.setHeader('Allow', ['GET']);

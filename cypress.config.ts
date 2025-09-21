@@ -15,12 +15,10 @@ import { defineConfig } from 'cypress', export default defineConfig({ e2e: { bas
     responseTimeout: 10000,
     setupNodeEvents() {
       // implement node event listeners here
-    },
+    };
   },
   component: {
     devServer: {
       framework: 'react',
-      bundler: 'vite',
-    },
-  },
-});
+      bundler: 'vite'};
+  }});

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react',
 interface PerformanceMetrics {
   loadTime: number,
-  renderTime: number;
+  renderTime: number,
   memoryUsage?: number;
   networkLatency?: number, }
 
@@ -23,7 +23,7 @@ export function PerformanceMonitor() {
         renderTime,
         memoryUsage,
         networkLatency: navigation.responseStart - navigation.requestStart
-      });;
+      })};
 
     // Measure after page load
     if (document.readyState === 'complete') {
@@ -49,4 +49,4 @@ export function PerformanceMonitor() {
         <div>Network: {metrics.networkLatency.toFixed(2)}ms</div>
       )}
     </div>
-  );
+  )}

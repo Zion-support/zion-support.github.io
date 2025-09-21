@@ -7,7 +7,7 @@ export default function Partners() {
         <h1 className="text-4xl font-bold text-white text-center mb-12">
           Our Partners
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
             <CardHeader>
               <CardTitle className="text-white">Technology Partner</CardTitle>
@@ -22,5 +22,4 @@ export default function Partners() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

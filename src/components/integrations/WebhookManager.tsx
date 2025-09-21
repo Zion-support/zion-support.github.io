@@ -11,7 +11,7 @@ interface Webhook {
   name: string,
   url: string,
   event_types: WebhookEventType[],
-  is_active: boolean;
+  is_active: boolean,
   last_triggered_at?: string;
   secret?: string, }
 
@@ -20,7 +20,7 @@ interface NewWebhook {
   url: string,
   eventTypes: WebhookEventType[],
   selectedEvent: WebhookEventType,
-  secret: string, }
+  secret: string}
 
 const eventOptions = [
   { value: 'job_created', label: 'Job Created' },
@@ -28,7 +28,7 @@ const eventOptions = [
   { value: 'job_deleted', label: 'Job Deleted' },
   { value: 'application_created', label: 'Application Created' },
   { value: 'application_updated', label: 'Application Updated' },
-  { value: 'user_registered', label: 'User Registered' }, ];
+  { value: 'user_registered', label: 'User Registered' }];
 
 export function WebhookManager() {
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
@@ -40,8 +40,7 @@ export function WebhookManager() {
     url: '',
     eventTypes: [],
     selectedEvent: 'job_created',
-    secret: '',
-  });
+    secret: ''});
 
   useEffect(() => {
     loadWebhooks();, []);
@@ -60,13 +59,15 @@ export function WebhookManager() {
     if (newWebhook.selectedEvent && !newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       setNewWebhook({
         ...newWebhook,
-        eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent], });
+        eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent]});
+    }
   };
 
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
-      ...newWebhook;
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event););;
+      ...newWebhook,
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event)});
+  };
 
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
@@ -83,8 +84,7 @@ export function WebhookManager() {
         url: newWebhook.url,
         event_types: newWebhook.eventTypes,
         is_active: true,
-        secret: newWebhook.secret || undefined,
-      };
+        secret: newWebhook.secret || undefined};
 
       setWebhooks([...webhooks, webhook]);
       setNewWebhook({
@@ -92,9 +92,9 @@ export function WebhookManager() {
         url: '',
         eventTypes: [],
         selectedEvent: 'job_created',
-        secret: '',
-      });
-      setError(null); catch (err) {
+        secret: ''});
+      setError(null);
+    } catch (err) {
       setError('Failed to create webhook');
   };
 
@@ -105,7 +105,7 @@ export function WebhookManager() {
       
       setWebhooks(webhooks.map(w => 
         w.id === id ? { ...w, is_active: isActive } : w
-      )); catch (err) {
+      ))} catch (err) {
       setError('Failed to toggle webhook');
   };
 
@@ -126,13 +126,13 @@ export function WebhookManager() {
       setTestResult({
         status: 200,
         statusText: 'OK',
-        responseBody: 'Webhook test successful',
-      }); catch (err) {
+        responseBody: 'Webhook test successful'});
+    } catch (err) {
       setTestResult({
         status: 500,
         statusText: 'Internal Server Error',
-        responseBody: 'Webhook test failed',
-      });
+        responseBody: 'Webhook test failed'});
+    }
   };
 
   return (
@@ -323,7 +323,7 @@ export function WebhookManager() {
             <CardContent>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="font-medium">Status:</span>
+                  <span className="font-medium">Status: </span>
                   <span
                     className={
                       testResult.status >= 200 && testResult.status < 300
@@ -346,4 +346,4 @@ export function WebhookManager() {
         )}
       </div>
     </div>
-  );
+  )}

@@ -1,6 +1,6 @@
 interface Service {
 id: string,
-name: string, }
+name: string}
 
 import React from "react";
 const EnhancedPerformanceMonitor: React.FC = () => {

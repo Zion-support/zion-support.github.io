@@ -1,9 +1,9 @@
-import { render, screen } from '@testing-library/react',
-import { MemoryRouter, Route, Routes } from 'react-router-dom',
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query',
-import ForumCategoryPage from '@/pages/ForumCategoryPage',
-import * as forumService from '@/services/forumPostService',
-import { vi, it, expect } from 'vitest',
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import ForumCategoryPage from '@/pages/ForumCategoryPage';
+import * as forumService from '@/services/forumPostService';
+import { vi, it, expect } from 'vitest';
 
 it('loads posts for category', async () => {
   vi.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([
@@ -30,12 +30,11 @@ it('loads posts for category', async () => {
         </Routes>
       </MemoryRouter>
     </QueryClientProvider>
-  ),
-  expect(await screen.findByText(/getting hired/i)).toBeInTheDocument(),
-}),
+  );
+  expect(await screen.findByText(/getting hired/i)).toBeInTheDocument()}),
 
 it('shows message when no posts', async () => {
-  vi.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([]),
+  vi.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([]);
   render(
     <QueryClientProvider client={new QueryClient()}>
       <MemoryRouter initialEntries={['/community/category/project-help']}>
@@ -45,5 +44,4 @@ it('shows message when no posts', async () => {
       </MemoryRouter>
     </QueryClientProvider>
   ),
-  expect(await screen.findByText(/no posts yet/i)).toBeInTheDocument(),
-}),
+  expect(await screen.findByText(/no posts yet/i)).toBeInTheDocument()}),

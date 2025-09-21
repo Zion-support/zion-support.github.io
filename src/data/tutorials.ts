@@ -4,7 +4,7 @@ export interface Tutorial {
   description: string,
   duration: string,
   difficulty: 'beginner' | 'intermediate' | 'advanced',
-  category: string, }
+  category: string}
 
 export const TUTORIALS: Tutorial[] = [
   {

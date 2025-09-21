@@ -1,7 +1,7 @@
 import import * as React from &quot;react&quot;
 import import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
-import { Check, ChevronRight, Circle } from 'lucide-react'
-import import { cn} from &quot;@/lib/utils&quot;
+import { Check,,, ChevronRight,,, Circle,} from 'lucide-react'
+import import { cn,} from &quot;@/lib/utils&quot;
 const ContextMenu = ContextMenuPrimitive.Root,
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger,
 const ContextMenuGroup = ContextMenuPrimitive.Group,
@@ -26,7 +26,7 @@ className={cn(
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
   </ContextMenuPrimitive.SubTrigger>
 ))
-ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName,
+ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName;
 const ContextMenuSubContent = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubContent>
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>

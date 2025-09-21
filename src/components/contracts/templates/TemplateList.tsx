@@ -12,20 +12,19 @@ interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void, }
+  onEdit: (template: ContractTemplate) => void}
 
 export function TemplateList({
-  templates,
-  isLoading,
+  templates;
+  isLoading;
   onSelect,
-  onEdit;
-}: TemplateListProps) {
+  onEdit}: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
   const { user } = useAuth();
   const { deleteTemplate, toggleStar } = useContractTemplates();
 
   const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId);;
+    setTemplateToDelete(templateId)};
 
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
@@ -36,8 +35,9 @@ export function TemplateList({
   const handleSetDefault = async (templateId: string) => {
     if (!user) {
       // Redirect to login
-      return, }
-    await toggleStar(templateId);;
+      return}
+    await toggleStar(templateId);
+  };
 
   if (isLoading) {
     return (
@@ -147,4 +147,4 @@ export function TemplateList({
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  );
+  )}

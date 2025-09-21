@@ -1,7 +1,8 @@
 // Polyfill fetch and enable fetch mocks
 import 'whatwg-fetch',
 import fetchMock from 'jest-fetch-mock';
-fetchMock.enableMocks();
+fetchMock.enableMocks(),
+
 // Mock next/config
 jest.mock('next/config', () => () => ({
   publicRuntimeConfig: {
@@ -9,11 +10,11 @@ jest.mock('next/config', () => () => ({
     // Add other NEXT_PUBLIC_ variables your application might need during tests
     NEXT_PUBLIC_API_URL: 'http://localhost:3000/api',
     // ... other env vars
-  },
+  };
   serverRuntimeConfig: {
     // Add any server-side runtime configs if needed
   }
-}));
+})),
 jest.mock('@sentry/nextjs', () => ({
   init: jest.fn(),
   captureException: jest.fn(),
@@ -26,7 +27,8 @@ jest.mock('@sentry/nextjs', () => ({
 }));
 // Reset fetch mocks before each test to ensure isolation
 beforeEach(() => {
-  fetchMock.resetMocks(););
+  fetchMock.resetMocks()}),
+
 // Jest-DOM matchers
 import '@testing-library/jest-dom',
 
@@ -46,7 +48,7 @@ process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',
 // Polyfill URL.revokeObjectURL
 if (!URL.revokeObjectURL) {
   // @ts-ignore
-  URL.revokeObjectURL = jest.fn();
+  URL.revokeObjectURL = jest.fn()}
 
 // Polyfill BroadcastChannel
 if (!global.BroadcastChannel) {
@@ -58,15 +60,13 @@ if (!global.BroadcastChannel) {
       // @ts-ignore
       this.onmessage = null,
       // @ts-ignore
-      this.onmessageerror = null,
-    }
+      this.onmessageerror = null}
     postMessage(message) {}
     close() {}
     addEventListener(type, listener) {}
     removeEventListener(type, listener) {}
-    dispatchEvent(event) { return false, }
-  },
-}
+    dispatchEvent(event) { return false}
+  }}
 
 // Jest-axe matchers for accessibility
 import { toHaveNoViolations } from 'jest-axe';
@@ -84,7 +84,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
-});
+}),
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError
 // @ts-ignore
 // global.import = {
@@ -94,7 +94,7 @@ Object.defineProperty(window, 'matchMedia', {
 //       VITE_SUPABASE_URL: 'mock_supabase_url',
 //       VITE_SUPABASE_ANON_KEY: 'mock_supabase_anon_key',
 //       MODE: 'test',
-//     },
+//     };
 //   },
 // };
 // Mock the supabase client module to prevent import.meta.env parsing errors
@@ -105,7 +105,7 @@ jest.mock('@/integrations/supabase/client', () => ({
         data: { subscription: { unsubscribe: jest.fn() } }
       }));
       // Add any other specific methods from supabase.auth if they get called
-    },
+    };
     // Add other top-level Supabase client methods if they get called
     // e.g., from: jest.fn(), rpc: jest.fn(), etc.
     // For now, keeping it minimal.
@@ -135,12 +135,12 @@ jest.mock('firebase/firestore', () => {
       getDocs: jest.fn(() => Promise.resolve({ docs: [] })),
       addDoc: jest.fn(() => Promise.resolve({ id: 'mockedDocId' })),
       onSnapshot: jest.fn(() => jest.fn()), // Returns an unsubscribe function
-    },
-  });
+    }}),
+
   const mockDoc = jest.fn((firestoreInstanceOrCollectionRef, pathOrId, ...pathSegments) => {
     let basePath = '',
     if (typeof firestoreInstanceOrCollectionRef.path === 'string') {
-      basePath = firestoreInstanceOrCollectionRef.path, }
+      basePath = firestoreInstanceOrCollectionRef.path}
     const fullPath = [basePath, pathOrId, ...pathSegments].filter(Boolean).join('/');
     return {
       id: pathSegments.length > 0 ? pathSegments[pathSegments.length-1] : pathOrId,
@@ -150,8 +150,8 @@ jest.mock('firebase/firestore', () => {
       update: jest.fn(() => Promise.resolve()),
       delete: jest.fn(() => Promise.resolve()),
       onSnapshot: jest.fn(() => jest.fn()), // Returns an unsubscribe function
-    },
-  });
+    }}),
+
   return {
     getFirestore: jest.fn(() => ({
       // For v8 style: db.collection('path')
@@ -178,8 +178,9 @@ jest.mock('firebase/firestore', () => {
       fromDate: jest.fn((date) => ({ toDate: () => date }))
     },
     // Add other Firestore exports your code uses
-  },
-});
+  };
+}),
+
 jest.mock('firebase/auth', () => ({
   getAuth: jest.fn(() => ({
     // Mock Auth instance properties/methods if needed, e.g., currentUser
@@ -194,7 +195,7 @@ jest.mock('firebase/auth', () => ({
   // Add other Auth exports your code uses (e.g., GoogleAuthProvider, signInWithPopup, etc.)
   // For example: // GoogleAuthProvider: jest.fn(),
   // signInWithPopup: jest.fn(() => Promise.resolve({ user: { uid: 'mock-uid' } }))
-}));
+})),
 jest.mock('firebase/storage', () => ({
   getStorage: jest.fn(() => ({
     // Mock Storage instance properties/methods if needed
@@ -225,10 +226,11 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn()
-}));
+})),
 // Polyfill for URL.revokeObjectURL
 if (typeof URL.revokeObjectURL === 'undefined') {
   URL.revokeObjectURL = jest.fn();
+}
 
 // Polyfill for BroadcastChannel
 if (typeof BroadcastChannel === 'undefined') {
@@ -238,18 +240,17 @@ if (typeof BroadcastChannel === 'undefined') {
       // @ts-expect-error - Mock name property assignment
       this.name = name
     }
-    postMessage = jest.fn();
+    postMessage = jest.fn(),
     close = jest.fn();
     onmessage = null,
     onmessageerror = null,
-    addEventListener = jest.fn();
-    removeEventListener = jest.fn();
-    dispatchEvent = jest.fn();,
-}
+    addEventListener = jest.fn(),
+    removeEventListener = jest.fn(),
+    dispatchEvent = jest.fn()}}
 
 // Polyfill for window.scrollTo
 if (typeof window.scrollTo === 'undefined') {
-  window.scrollTo = jest.fn();
+  window.scrollTo = jest.fn()}
 
 // Mock axios.create to return axios itself
 import axios from 'axios';
@@ -284,7 +285,6 @@ jest.mock('vitest', () => {
       mockRejectedValue: <T = unknown>(value: T) => jest.fn().mockRejectedValue(value),
       restoreAllMocks: jest.restoreAllMocks
     },
-
     // Re-export common testing globals so that `import { expect, test } from 'vitest'`
     // continues to work inside the Jest environment.
     describe: global.describe,
@@ -295,8 +295,8 @@ jest.mock('vitest', () => {
     afterEach: global.afterEach,
     beforeAll: global.beforeAll,
     afterAll: global.afterAll
-  } as unknown as Record<string, unknown>;
-});
+  } as unknown as Record<string, unknown>}),
+
 // -----------------------------
 // Lightweight Context & Redux mocks to avoid provider runtime errors
 // -----------------------------
@@ -310,53 +310,60 @@ jest.mock('@/context/auth/AuthProvider', () => {
     login: jest.fn(),
     logout: jest.fn(),
     signUp: jest.fn()
-  });
-  const AuthProvider = ({ children }: any) => children,
-
+  }),
+  const AuthProvider = ({ children }: any) => children;
   return {
     __esModule: true,
-    AuthProvider,
+    AuthProvider;
     default: AuthProvider,
     useAuth
-  }, });
+  };
+}),
+
 // Analytics Context
 jest.mock('@/context/AnalyticsContext', () => {
   const useAnalytics = () => ({
     trackEvent: jest.fn(),
     trackPageView: jest.fn()
-  });
-  const AnalyticsProvider = ({ children }: any) => children,
+  }),
+  const AnalyticsProvider = ({ children }: any) => children;
   return {
     __esModule: true,
-    AnalyticsProvider,
+    AnalyticsProvider;
     default: AnalyticsProvider,
     useAnalytics
-  }, });
+  };
+}),
+
 // Whitelabel Context
 jest.mock('@/context/WhitelabelContext', () => {
   const useWhitelabel = () => ({
     brand: 'default',
     theme: 'light'
-  });
-  const WhitelabelProvider = ({ children }: any) => children,
+  }),
+  const WhitelabelProvider = ({ children }: any) => children;
   return {
     __esModule: true,
-    WhitelabelProvider,
+    WhitelabelProvider;
     default: WhitelabelProvider,
     useWhitelabel
-  }, });
+  };
+}),
+
 // Feedback Context
 jest.mock('@/context/FeedbackContext', () => {
   const useFeedback = () => ({
     open: jest.fn()
-  });
-  const FeedbackProvider = ({ children }: any) => children,
+  }),
+  const FeedbackProvider = ({ children }: any) => children;
   return {
     __esModule: true,
-    FeedbackProvider,
+    FeedbackProvider;
     default: FeedbackProvider,
     useFeedback
-  }, });
+  };
+}),
+
 // react-redux hooks
 jest.mock('react-redux', () => {
   const actualRedux = jest.requireActual('react-redux');
@@ -364,8 +371,7 @@ jest.mock('react-redux', () => {
     ...actualRedux,
     useDispatch: () => jest.fn(),
     useSelector: jest.fn(() => ({}))
-  },
-});
+  }});
 // Mock Sentry
 jest.mock('@sentry/nextjs', () => ({
   init: jest.fn(),
@@ -380,36 +386,35 @@ jest.mock('@supabase/ssr/dist/main/cookies', () => ({
   getAll: () => ({}),
   setItem: jest.fn(),
   getItem: jest.fn()
-}));
+})),
 // When a module imports '@/context' root index (e.g., useEnqueueSnackbar)
 jest.mock('@/context', () => {
-  const useEnqueueSnackbar = () => jest.fn();
-  return { __esModule: true, useEnqueueSnackbar },
-});
+  const useEnqueueSnackbar = () => jest.fn(),
+  return { __esModule: true, useEnqueueSnackbar }}),
+
 // Extend Vitest shim with restoreAllMocks for suites that call it
 // @ts-ignore - vi is added by the vitest mock above
 if (global.vi && !global.vi.restoreAllMocks) {
   // @ts-ignore
-  window.performance = {},
-}
+  window.performance = {}}
 if (typeof window !== 'undefined' && !window.performance.getEntriesByType) {
   window.performance.getEntriesByType = jest.fn().mockReturnValue([]);
+}
 if (typeof window !== 'undefined' && !window.performance.mark) {
-  window.performance.mark = jest.fn();
+  window.performance.mark = jest.fn()}
 if (typeof window !== 'undefined' && !window.performance.measure) {
-  window.performance.measure = jest.fn();
+  window.performance.measure = jest.fn()}
 
 // Mock @supabase/ssr createBrowserClient so components don't crash in tests
 jest.mock('@supabase/ssr', () => ({
   createBrowserClient: () => ({
     auth: { onAuthStateChange: jest.fn(), signInWithPassword: jest.fn(), signUp: jest.fn() }
   })
-}));
+})),
 // Ensure hooks/use-toast exports usable toast fn
 jest.mock('@/hooks/use-toast', () => {
-  const toastFn = jest.fn();
-  return { __esModule: true, toast: toastFn, useToast: () => ({ toast: toastFn }) },
-});
+  const toastFn = jest.fn(),
+  return { __esModule: true, toast: toastFn, useToast: () => ({ toast: toastFn }) }});
 // Minimal MSW mocks to satisfy tests without parsing ESM bundles
 jest.mock('msw', () => ({ rest: { get: jest.fn(), post: jest.fn(), put: jest.fn(), delete: jest.fn() } })),
 jest.mock('msw/node', () => ({ setupServer: () => ({ listen: jest.fn(), resetHandlers: jest.fn(), close: jest.fn() }) })),
@@ -424,3 +429,4 @@ if (global.vi) {
   if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest);
   // @ts-ignore
   if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest);
+}

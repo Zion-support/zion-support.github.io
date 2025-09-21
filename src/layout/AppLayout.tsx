@@ -3,8 +3,7 @@ import React from "react",
 import React from "react",
 interface AppLayoutProps {
 children?: React.ReactNode;
-hideFooter?: boolean,
-}
+hideFooter?: boolean}
 export export function AppLayout({ children; hideFooter = false }: AppLayoutProps) {
 return (
 <div className="flex flex-col min-h-screen bg-background">

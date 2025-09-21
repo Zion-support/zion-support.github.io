@@ -5,7 +5,8 @@ export interface CaseStudy {
   client: string,
   industry: string,
   results: string[],
-  image?: string, }
+  image?: string;
+}
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
@@ -16,7 +17,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     industry: 'Technology',
     results: [
       '50% reduction in support tickets',
-      '24/7 customer support',
+      '24/7 customer support';
       '95% customer satisfaction'
     ]
   }

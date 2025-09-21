@@ -1,0 +1,28 @@
+import React from "react",
+import { ErrorBoundary } from "./components/ErrorHandling/EnhancedErrorBoundary",
+import { PerformanceOptimizer } from "./components/Performance/PerformanceOptimizer",
+import { AccessibilityEnhancer } from "./components/Accessibility/AccessibilityEnhancer",
+interface AppWrapperProps {
+<<<<<<< HEAD:src/AppWrapper.tsx
+  children: React.ReactNode, }
+=======
+  children: React.ReactNode}
+>>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:src/AppWrapper.tsx.disabled
+
+const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
+  return (
+    <ErrorBoundary>
+      <PerformanceOptimizer>
+        <AccessibilityEnhancer>
+          {children}
+        </AccessibilityEnhancer>
+      </PerformanceOptimizer>
+    </ErrorBoundary>
+<<<<<<< HEAD:src/AppWrapper.tsx
+  );;
+
+export default AppWrapper;
+=======
+  )};
+export default AppWrapper;
+>>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:src/AppWrapper.tsx.disabled

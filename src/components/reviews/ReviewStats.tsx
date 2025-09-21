@@ -1,13 +1,13 @@
-import { Star } from 'lucide-react'
+import { Star,} from 'lucide-react'
 import React from "react";
 interface ReviewStatsProps {
-  averageRating: number;,
+  averageRating: number;;
 totalReviews: number,
   ratingDistribution?: Record<number number>
 export function ReviewStats({
-  averageRating,
+  averageRating;
 totalReviews
-  ratingDistribution,
+  ratingDistribution;
 }: ReviewStatsProps) {
   // Format the average rating to one decimal place,
 const formattedRating = null;
@@ -19,7 +19,7 @@ const formattedRating = null;
           <div className='flex items-center'>
             <div className='flex mr-2'>
               {[1 2, 3 4, 5].map(i => (                <Star
-key = {i,}
+key = {i}
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating)
                       ? 'fill-yellow-400 text-yellow-400'
@@ -53,12 +53,12 @@ key = {i,}
               <Progress
 value={getPercentage(ratingDistribution[rating] |0)}
                 className='h-2'        <div className="space-y-2">
-          {[5 4, 3 2, 1].map((rating,) => (
+          {[5 4, 3 2, 1].map((rating) => (
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
               <Progress
-value = {getPercentage(ratingDistribution[rating] |0);
+value = {getPercentage(ratingDistribution[rating] |0)}
                 className="h-2"
               />
               <div className='w-8 text-xs text-muted-foreground'>                {ratingDistribution[rating] |0}              <div className="w-8 text-xs text-muted-foreground">

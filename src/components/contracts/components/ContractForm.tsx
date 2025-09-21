@@ -12,22 +12,21 @@ export interface ContractFormValues {
   budget: number,
   paymentTerms: string,
   startDate: string,
-  endDate: string, }
+  endDate: string}
 
 interface ContractFormProps {
   talent: TalentProfile,
-  clientName: string;
+  clientName: string,
   initialValues?: ContractFormValues;
   onFormValuesChange: (values: ContractFormValues) => void,
-  onContractGenerated: (contract: string) => void, }
+  onContractGenerated: (contract: string) => void}
 
 export function ContractForm({
-  talent,
-  clientName,
+  talent;
+  clientName;
   initialValues,
   onFormValuesChange,
-  onContractGenerated,
-}: ContractFormProps) {
+  onContractGenerated}: ContractFormProps) {
   const [formData, setFormData] = useState<ContractFormValues>(
     initialValues || {
       projectTitle: "",
@@ -37,8 +36,7 @@ export function ContractForm({
       budget: 0,
       paymentTerms: "",
       startDate: "",
-      endDate: "",
-    }
+      endDate: ""}
   );
 
   const handleInputChange = (field: keyof ContractFormValues, value: string | number) => {
@@ -50,7 +48,7 @@ export function ContractForm({
     const contract = `
 # Contract Agreement
 
-**Project:** ${formData.projectTitle}
+**Project: ** ${formData.projectTitle}
 **Client:** ${clientName}
 **Talent:** ${talent.name}
 
@@ -80,9 +78,9 @@ ${formData.paymentTerms}
 **Client Signature:** _________________ Date: _________
 
 **Talent Signature:** _________________ Date: _________
-    `;
-    
-    onContractGenerated(contract);;
+    `,
+    onContractGenerated(contract);
+  };
 
   return (
     <div className="space-y-6">

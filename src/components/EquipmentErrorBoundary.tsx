@@ -4,16 +4,17 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
 interface Props {
-  children: React.ReactNode, }
+  children: React.ReactNode}
 
 interface State {
-  hasError: boolean;
-  error?: Error, }
+  hasError: boolean,
+  error?: Error;
+}
 
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false }, }
+    super(props),
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }, }
@@ -54,6 +55,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
             </CardContent>
           </Card>
         </div>
-      );
-    return this.props.children, }
+      )}
+    return this.props.children;
+  }
 }

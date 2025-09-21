@@ -1,10 +1,10 @@
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react',
 interface FraudTabContentProps {
-  tabValue: string, }
+  tabValue: string}
 
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({
-  tabValue, }) => {
+  tabValue}) => {
   switch (tabValue) {
     case 'pending':
       return (
@@ -23,7 +23,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
           </div>
         </div>
       );
-
     case 'reviewed':
       return (
         <div className="space-y-4">
@@ -41,7 +40,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
           </div>
         </div>
       );
-
     case 'resolved':
       return (
         <div className="space-y-4">
@@ -59,11 +57,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
           </div>
         </div>
       );
-
-    default:
-      return (
+    default: return (
         <div className="text-center py-8">
           <p className="text-gray-500">Select a tab to view content</p>
         </div>
-      );
+      )}
 };

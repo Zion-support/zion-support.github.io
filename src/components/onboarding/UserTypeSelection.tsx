@@ -1,17 +1,17 @@
 
-import React from "react",
-import { Briefcase, Star, User } from 'lucide-react'
-import React from "react",
+import React from "react";
+import { Briefcase,,, Star,,, User,} from 'lucide-react'
+import React from "react";
 interface UserTypeOption {
   id: "serviceProvider" | "talent" | ",
-name: string;
-  description: string;,
+name: string,
+  description: string;;
 icon: React.ElementType,
 interface UserTypeSelectionProps {
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;,
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;;
 selectedType: string | null,
 export function UserTypeSelection({
-  onSelect,
+  onSelect;
 selectedType}: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {

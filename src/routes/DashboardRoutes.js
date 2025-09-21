@@ -108,4 +108,3 @@ const DashboardRoutes = () => {
     </Routes>)
 }
 export export default DashboardRoutes;
-}

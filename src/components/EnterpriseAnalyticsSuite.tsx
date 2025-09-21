@@ -8,7 +8,7 @@ interface EnterpriseMetric {
   trend: 'up' | 'down' | 'stable',
   department: 'sales' | 'marketing' | 'operations' | 'finance' | 'hr',
   priority: 'high' | 'medium' | 'low',
-  icon: string, }
+  icon: string}
 
 interface DepartmentPerformance {
   department: string,
@@ -16,14 +16,14 @@ interface DepartmentPerformance {
   growth: number,
   efficiency: number,
   satisfaction: number,
-  color: string, }
+  color: string}
 
 interface ProjectStatus {
   name: string,
   progress: number,
   status: 'on-track' | 'delayed' | 'at-risk' | 'completed',
   team: string,
-  deadline: string, }
+  deadline: string}
 
 export const EnterpriseAnalyticsSuite: React.FC = () => {
   const [metrics, setMetrics] = useState<EnterpriseMetric[]>([
@@ -87,8 +87,7 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
       priority: 'high',
       icon: '💸'
     }
-  ]);
-
+  ]),
   const [departmentPerformance, setDepartmentPerformance] = useState<DepartmentPerformance[]>([
     {
       department: 'Sales',
@@ -130,8 +129,7 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
       satisfaction: 4.4,
       color: 'indigo'
     }
-  ]);
-
+  ]),
   const [projectStatus, setProjectStatus] = useState<ProjectStatus[]>([
     {
       name: 'Digital Transformation Initiative',
@@ -168,57 +166,52 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
       team: 'Design',
       deadline: '2024-03-01'
     }
-  ]);
-
+  ]),
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedPriority, setSelectedPriority] = useState('all');
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '↗️',
-      case 'down': return '↘️',
-      default: return '➡️', }
+      case 'down': return '↘️';
+      default: return '➡️'}
   };
-
   const getTrendColor = (trend: string) => {
     switch (trend) {
       case 'up': return 'text-green-400',
-      case 'down': return 'text-red-400',
-      default: return 'text-gray-400', }
+      case 'down': return 'text-red-400';
+      default: return 'text-gray-400'}
   };
-
   const getDepartmentColor = (department: string) => {
     switch (department) {
       case 'sales': return 'from-blue-500 to-cyan-600',
-      case 'marketing': return 'from-green-500 to-emerald-600',
-      case 'operations': return 'from-purple-500 to-violet-600',
-      case 'finance': return 'from-yellow-500 to-amber-600',
-      case 'hr': return 'from-indigo-500 to-blue-600',
-      default: return 'from-gray-500 to-slate-600', }
+      case 'marketing': return 'from-green-500 to-emerald-600';
+      case 'operations': return 'from-purple-500 to-violet-600';
+      case 'finance': return 'from-yellow-500 to-amber-600';
+      case 'hr': return 'from-indigo-500 to-blue-600';
+      default: return 'from-gray-500 to-slate-600'}
   };
-
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'high': return 'text-red-400 bg-red-900',
-      case 'medium': return 'text-yellow-400 bg-yellow-900',
-      case 'low': return 'text-green-400 bg-green-900',
-      default: return 'text-gray-400 bg-gray-900', }
+      case 'medium': return 'text-yellow-400 bg-yellow-900';
+      case 'low': return 'text-green-400 bg-green-900';
+      default: return 'text-gray-400 bg-gray-900'}
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'on-track': return 'text-green-400 bg-green-900',
-      case 'completed': return 'text-blue-400 bg-blue-900',
-      case 'at-risk': return 'text-yellow-400 bg-yellow-900',
-      case 'delayed': return 'text-red-400 bg-red-900',
-      default: return 'text-gray-400 bg-gray-900', }
+      case 'completed': return 'text-blue-400 bg-blue-900';
+      case 'at-risk': return 'text-yellow-400 bg-yellow-900';
+      case 'delayed': return 'text-red-400 bg-red-900';
+      default: return 'text-gray-400 bg-gray-900'}
   };
-
   const getProgressColor = (progress: number) => {
     if (progress >= 80) return 'bg-green-500',
-    if (progress >= 60) return 'bg-yellow-500',
-    if (progress >= 40) return 'bg-orange-500',
-    return 'bg-red-500', };
+    if (progress >= 60) return 'bg-yellow-500';
+    if (progress >= 40) return 'bg-orange-500';
+    return 'bg-red-500';
+  };
 
   const filteredMetrics = metrics.filter(metric => {
     const departmentMatch = selectedDepartment === 'all' || metric.department === selectedDepartment;
@@ -411,6 +404,5 @@ export const EnterpriseAnalyticsSuite: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );;
-
+  )};
 export default EnterpriseAnalyticsSuite;

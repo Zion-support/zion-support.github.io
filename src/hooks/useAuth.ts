@@ -4,4 +4,4 @@ export function useAuth() {
     user: null,
     login: () => {},
     logout: () => {}
-  }, }
+  }}

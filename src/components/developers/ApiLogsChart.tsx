@@ -3,13 +3,13 @@ interface ApiLog {
   id: string,
   method: string,
   endpoint: string,
-  status_code: number;
+  status_code: number,
   response_time_ms?: number;
   ip_address?: string;
-  created_at: string, }
+  created_at: string}
 
 interface ApiLogsChartProps {
-  logs: ApiLog[], }
+  logs: ApiLog[]}
 
 export function ApiLogsChart({ logs }: ApiLogsChartProps) {
   // Group logs by day
@@ -22,7 +22,7 @@ export function ApiLogsChart({ logs }: ApiLogsChartProps) {
 
   const chartData = Object.entries(logsByDay).map(([date, count]) => ({
     date,
-    requests: count, }));
+    requests: count}));
 
   return (
     <div className="h-64 w-full">
@@ -44,8 +44,7 @@ export function ApiLogsChart({ logs }: ApiLogsChartProps) {
               backgroundColor: '#1F2937',
               border: '1px solid #374151',
               borderRadius: '6px',
-              color: '#F9FAFB',
-            }}
+              color: '#F9FAFB'}}
           />
           <Bar 
             dataKey="requests" 

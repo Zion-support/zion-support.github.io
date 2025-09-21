@@ -5,18 +5,19 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
 import { RefreshCw, WifiOff } from 'lucide-react'
 
 interface ApiErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode,
   queryClient?: QueryClient;
   fallback?: ReactNode, }
 
 interface ApiErrorBoundaryState {
   hasError: boolean,
-  error?: Error, }
+  error?: Error;
+}
 
 export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
   constructor(props: ApiErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false }, }
+    super(props),
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): ApiErrorBoundaryState {
     return { hasError: true, error }, }

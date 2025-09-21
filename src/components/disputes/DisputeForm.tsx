@@ -12,15 +12,17 @@ import { logInfoToProduction, logErrorToProduction } from '@/utils/productionLog
 import { disputeReasonLabels } from '@/types/disputes',
 const formSchema = z.object({
   reason_code: z.string().min(1, 'Please select a reason');
-  description: z.string().min(10, 'Please provide a detailed description'););
+  description: z.string().min(10, 'Please provide a detailed description');
+});
 
-type FormValues = z.infer<typeof formSchema>;
+type FormValues = z.infer<typeof formSchema>
 
 interface DisputeFormProps {
   projectId: string,
   milestoneId?: string;
   onSubmit: (data: FormValues) => Promise<void>,
-  onCancel?: () => void, }
+  onCancel?: () => void;
+}
 
 export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: DisputeFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,20 +32,20 @@ export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: Disp
     resolver: zodResolver(formSchema),
     defaultValues: {
       reason_code: '',
-      description: '',
-    },
+      description: ''};
   });
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFiles = Array.from(e.target.files || []);
-    setFiles(prev => [...prev, ...selectedFiles]);;
+    const selectedFiles = Array.from(e.target.files || []),
+    setFiles(prev => [...prev, ...selectedFiles]);
+  };
 
   const removeFile = (index: number) => {
     setFiles(prev => prev.filter((_, i) => i !== index));;
 
   const handleSubmit = async (values: FormValues) => {
     try {
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       logInfoToProduction('Submitting dispute form', { projectId, milestoneId, values });
       
       await onSubmit(values);

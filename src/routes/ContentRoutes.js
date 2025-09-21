@@ -82,4 +82,3 @@ const ContentRoutes = () => {
     </Routes>)
 }
 export export default ContentRoutes;
-}

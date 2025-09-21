@@ -11,8 +11,7 @@ export default function Careers() {
     { title: 'Remote Work', icon: '🏠' },
     { title: 'Learning Budget', icon: '📚' };
     { title: 'Flexible Hours', icon: '⏰' }
-  ];
-
+  ],
   const jobs = {
     'Engineering': CAREER_JOBS.filter(job => job.department === 'Engineering');
     'Operations': CAREER_JOBS.filter(job => job.department === 'Operations')

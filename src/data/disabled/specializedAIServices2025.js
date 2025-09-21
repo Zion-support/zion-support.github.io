@@ -6,7 +6,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         description: "Advanced AI platform that generates, edits, and optimizes content across multiple formats including text, images, video, and audio using state-of-the-art multimodal models.",
         category: "
         subcategory: "
-        price: 800;
+        price: 800,
         currency: "
         pricingModel: "
         features: [
@@ -47,8 +47,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["GPT-4", "DALL-E 3", "Stable Diffusion", "Python", "TensorFlow"],
         integrations: ["Canva", "Adobe Creative Suite", "Shopify", "WordPress", "Social platforms"],
         compliance: ["GDPR", "SOC 2", "Content safety"],
@@ -56,8 +55,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Midjourney", "Runway ML", "Synthesia"],
         aiModel: "
         trainingData: "
-        accuracy: "95%+ content quality score",
-    }
+        accuracy: "95%+ content quality score"}
     /
     {
         id: "
@@ -65,7 +63,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         description: "Comprehensive healthcare analytics platform that uses AI to predict patient outcomes, optimize treatment plans, and improve healthcare delivery through advanced machine learning algorithms.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -106,8 +104,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "PyTorch", "Python", "Apache Spark", "Kubernetes"],
         integrations: ["Epic", "Cerner", "HL7 FHIR", "DICOM", "EMR systems"],
         compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
@@ -115,8 +112,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
         aiModel: "
         trainingData: "
-        accuracy: "92% prediction accuracy",
-    }
+        accuracy: "92% prediction accuracy"}
     /
     {
         id: "
@@ -124,7 +120,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         description: "Advanced AI-powered trading platform that autonomously analyzes market data, executes trades, and manages portfolios using sophisticated machine learning algorithms and real-time market intelligence.",
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -165,8 +161,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "PyTorch", "QuantLib", "Real-time APIs"],
         integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
         compliance: ["SEC", "FINRA", "SOX", "GDPR", "SOC 2"],
@@ -174,8 +169,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Quantopian", "Alpaca", "Interactive Brokers"],
         aiModel: "
         trainingData: "
-        accuracy: "87% prediction accuracy",
-    }
+        accuracy: "87% prediction accuracy"}
     /
     {
         id: "
@@ -183,7 +177,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         description: "Intelligent supply chain platform that uses AI to optimize logistics, predict demand, manage inventory, and reduce costs through advanced analytics and machine learning.",
         category: "
         subcategory: "
-        price: 1600;
+        price: 1600,
         currency: "
         pricingModel: "
         features: [
@@ -224,8 +218,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "Apache Spark", "Kubernetes", "IoT platforms"],
         integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems"],
         compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
@@ -233,8 +226,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Flexport", "FourKites", "Project44"],
         aiModel: "
         trainingData: "
-        accuracy: "89% optimization accuracy",
-    }
+        accuracy: "89% optimization accuracy"}
     /
     {
         id: "
@@ -242,7 +234,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         description: "Advanced AI platform that automates legal research, analyzes case law, generates legal documents, and provides intelligent legal insights using natural language processing and machine learning.",
         category: "
         subcategory: "
-        price: 1200;
+        price: 1200,
         currency: "
         pricingModel: "
         features: [
@@ -283,8 +275,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["GPT-4", "BERT", "Python", "NLP libraries", "Legal databases"],
         integrations: ["Westlaw", "LexisNexis", "Clio", "PracticePanther", "Legal databases"],
         compliance: ["GDPR", "SOC 2", "Legal ethics", "Data privacy"],
@@ -292,8 +283,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Casetext", "ROSS Intelligence", "Harvey AI"],
         aiModel: "
         trainingData: "
-        accuracy: "94% legal accuracy",
-    }
+        accuracy: "94% legal accuracy"}
     /
     {
         id: "
@@ -301,7 +291,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         description: "Intelligent education platform that personalizes learning experiences, adapts content to individual needs, and provides real-time feedback using advanced AI and machine learning algorithms.",
         category: "
         subcategory: "
-        price: 900;
+        price: 900,
         currency: "
         pricingModel: "
         features: [
@@ -342,8 +332,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "NLP", "Learning analytics", "Cloud platforms"],
         integrations: ["LMS systems", "Google Classroom", "Canvas", "Moodle", "Zoom"],
         compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
@@ -351,6 +340,5 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Knewton", "DreamBox", "Carnegie Learning"],
         aiModel: "
         trainingData: "
-        accuracy: "91% learning prediction accuracy",
-    }
+        accuracy: "91% learning prediction accuracy"}
 ];

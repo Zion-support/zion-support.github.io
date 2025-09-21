@@ -24,11 +24,11 @@ interface SEOAnalysis {
   issues: Array<{
     type: 'error' | 'warning' | 'info',
     message: string,
-    suggestion: string, }>;
+    suggestion: string}>;
   recommendations: Array<{
     category: string,
     priority: 'high' | 'medium' | 'low',
-    description: string, }>;
+    description: string}>;
   technical: {
     metaTags: boolean,
     structuredData: boolean,
@@ -36,7 +36,8 @@ interface SEOAnalysis {
     robotsTxt: boolean,
     ssl: boolean,
     mobileFriendly: boolean,
-    pageSpeed: number, }, }
+    pageSpeed: number};
+}
 
 const SEOOptimizer: React.FC = () => {
   const [analysis, setAnalysis] = useState<SEOAnalysis>({
@@ -53,8 +54,8 @@ const SEOOptimizer: React.FC = () => {
       robotsTxt: false,
       ssl: false,
       mobileFriendly: false,
-      pageSpeed: 0,
-    }, });
+      pageSpeed: 0};
+  });
 
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
@@ -116,38 +117,39 @@ const SEOOptimizer: React.FC = () => {
             ssl: true,
             mobileFriendly: true,
             pageSpeed: Math.floor(Math.random() * 30) + 70, // 70-100
-          },
-        });
-        setIsAnalyzing(false);, 2000);;
+          }});
+        setIsAnalyzing(false);
+      }, 2000);
+    };
 
     analyzeSEO();, []);
 
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-600',
-    if (score >= 70) return 'text-yellow-600',
-    return 'text-red-600', };
+    if (score >= 70) return 'text-yellow-600';
+    return 'text-red-600';
+  };
 
   const getScoreBadge = (score: number) => {
     if (score >= 90) return 'bg-green-100 text-green-800',
-    if (score >= 70) return 'bg-yellow-100 text-yellow-800',
-    return 'bg-red-100 text-red-800', };
+    if (score >= 70) return 'bg-yellow-100 text-yellow-800';
+    return 'bg-red-100 text-red-800';
+  };
 
   const getIssueIcon = (type: string) => {
     switch (type) {
-      case 'error': return <XCircle className="h-4 w-4 text-red-500" />;
-      case 'warning': return <AlertTriangle className="h-4 w-4 text-yellow-500" />;
-      case 'info': return <CheckCircle className="h-4 w-4 text-blue-500" />;
-      default: return <CheckCircle className="h-4 w-4 text-gray-500" />, }
+      case 'error': return <XCircle className="h-4 w-4 text-red-500" />,
+      case 'warning': return <AlertTriangle className="h-4 w-4 text-yellow-500" />
+      case 'info': return <CheckCircle className="h-4 w-4 text-blue-500" />
+      default: return <CheckCircle className="h-4 w-4 text-gray-500" />}
   };
-
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'high': return 'bg-red-100 text-red-800',
-      case 'medium': return 'bg-yellow-100 text-yellow-800',
-      case 'low': return 'bg-green-100 text-green-800',
-      default: return 'bg-gray-100 text-gray-800', }
+      case 'medium': return 'bg-yellow-100 text-yellow-800';
+      case 'low': return 'bg-green-100 text-green-800';
+      default: return 'bg-gray-100 text-gray-800'}
   };
-
   if (isAnalyzing) {
     return (
       <Card className="w-full max-w-4xl mx-auto mb-8">

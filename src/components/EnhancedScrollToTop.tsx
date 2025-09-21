@@ -1,6 +1,6 @@
 interface Service {
 id: string,
-name: string, }
+name: string}
 
 import React from "react",
 impor; t; Reac; t, { useStat; e; useEffect } from "
@@ -11,7 +11,7 @@ const [isVisib;  l; e; setIsVisib; l; e] = useState(false)
 
 useEffect(() => {
 const toggleVisibility: any = () => {
-if (if (window.pageYOffset > 300) {;) {
+if (if (window.pageYOffset > 300) {) {
 setIsVisible(true)
 } else {
 setIsVisible(false)
@@ -23,10 +23,9 @@ return () => window.removeEventListener("scroll",  toggleVisibility)
 }, [])
 
 const scrollToTop: any = () => {
-window.scrollTo({;
+window.scrollTo({,
 to;  p: 0,
-behavio; r: "smooth",
-})
+behavio; r: "smooth"})
 }
 
 return (<AnimatePresence>

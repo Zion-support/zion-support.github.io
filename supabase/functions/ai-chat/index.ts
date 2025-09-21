@@ -1,7 +1,8 @@
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { initSentry, captureSupabaseError, logStructured } from "../_shared/sentry.ts",
+import { initSentry, captureSupabaseError, logStructured } from "../_shared/sentry.ts";
+
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 const FUNCTION_NAME = "ai-chat",
 
@@ -23,9 +24,9 @@ serve(async (req) => {
 
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { headers: corsHeaders })}
 
-  const requestBody = await req.json() as RequestBody,
+  const requestBody = await req.json() as RequestBody;
   const userMessages = requestBody.messages,
   const lastUserMessage = userMessages.length > 0 ? userMessages[userMessages.length - 1].content : "N/A",
   logStructured("INFO", "Request received", { path: req.url, method: req.method, lastUserMessagePreview: lastUserMessage.substring(0, 50) }, FUNCTION_NAME);
@@ -46,17 +47,18 @@ serve(async (req) => {
       headers: {
         'Authorization': `Bearer ${openAIApiKey}`,
         'Content-Type': 'application/json'
-      },
+      };
       body: JSON.stringify({
         model: 'gpt-4o',
         messages: combinedMessages,
         temperature: 0.7,
         max_tokens: 500
       })
-    });
+    }),
     const data = await response.json();
     if (data.error) {
       throw new Error(data.error.message);
+    }
 
     const assistantMessage = data.choices[0].message.content,
 
@@ -66,7 +68,7 @@ serve(async (req) => {
     }, FUNCTION_NAME);
     return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }
-    }); catch (error) {
+    })} catch (error) {
     logStructured("ERROR", "Error in ai-chat function", {
       errorMessage: error.message,
       errorStack: error.stack,
@@ -81,5 +83,5 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }
-    });
-});
+    })}
+}),

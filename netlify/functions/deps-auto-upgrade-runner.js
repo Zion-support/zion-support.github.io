@@ -42,9 +42,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ deps-auto-upgrade-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ deps-auto-upgrade-runner failed:', error),
     return {
       statusCode: 500,
@@ -54,6 +52,5 @@ exports.handler = async function(event, context) {
         function: 'deps-auto-upgrade-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

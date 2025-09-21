@@ -5,8 +5,7 @@
 /**
  * Serverless Environment Polyfill
  *
- * This polyfill addresses common issues in serverless environments like Netlify:
- * - "self is not defined" errors
+ * This polyfill addresses common issues in serverless environments like Netlify: * - "self is not defined" errors
  * - Missing global objects
  * - Webpack chunk loading issues
  * - TypeScript helper function issues
@@ -23,11 +22,11 @@ declare global {
   var __assign: any,
   var __rest: any,
   var __decorate: any,
-  var __awaiter: any, }
+  var __awaiter: any}
 
 // CRITICAL: Self polyfill - must be first
 if (typeof self === 'undefined') {
-  (global as any).self = global, }
+  (global as any).self = global}
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {

@@ -6,7 +6,7 @@ export const DATA_ANALYTICS_SERVICES = [
         description: "High-performance real-time data streaming platform that processes, analyzes, and visualizes data streams for instant business insights and decision-making.",
         category: "
         subcategory: "
-        price: 3200;
+        price: 3200,
         currency: "
         pricingModel: "
         features: [
@@ -45,8 +45,7 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -55,7 +54,7 @@ export const DATA_ANALYTICS_SERVICES = [
         description: "Advanced predictive analytics platform that uses machine learning to forecast trends, identify patterns, and provide actionable business insights.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -94,8 +93,7 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -104,7 +102,7 @@ export const DATA_ANALYTICS_SERVICES = [
         description: "Comprehensive data governance platform that ensures data quality, compliance, and security while providing data lineage and cataloging capabilities.",
         category: "
         subcategory: "
-        price: 2500;
+        price: 2500,
         currency: "
         pricingModel: "
         features: [
@@ -143,8 +141,7 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -153,7 +150,7 @@ export const DATA_ANALYTICS_SERVICES = [
         description: "Comprehensive customer analytics platform that provides a complete view of customer behavior, preferences, and lifetime value for personalized marketing and service.",
         category: "
         subcategory: "
-        price: 2100;
+        price: 2100,
         currency: "
         pricingModel: "
         features: [
@@ -192,8 +189,7 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
     /
     {
@@ -202,7 +198,7 @@ export const DATA_ANALYTICS_SERVICES = [
         description: "Powerful business intelligence platform that transforms raw data into interactive dashboards, reports, and visualizations for data-driven decision making.",
         category: "
         subcategory: "
-        price: 1900;
+        price: 1900,
         currency: "
         pricingModel: "
         features: [
@@ -241,7 +237,6 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];

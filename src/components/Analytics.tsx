@@ -36,7 +36,7 @@ interface AnalyticsData {
   trafficSources: Array<{ source: string; percentage: number; color: string }>,
   deviceTypes: Array<{ device: string; percentage: number; color: string }>,
   hourlyData: Array<{ hour: string; views: number }>,
-  weeklyData: Array<{ day: string; views: number }>, }
+  weeklyData: Array<{ day: string; views: number }>}
 
 const Analytics: React.FC = () => {
   const [data, setData] = useState<AnalyticsData>({
@@ -48,7 +48,7 @@ const Analytics: React.FC = () => {
     trafficSources: [],
     deviceTypes: [],
     hourlyData: [],
-    weeklyData: [], });
+    weeklyData: []});
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -67,22 +67,19 @@ const Analytics: React.FC = () => {
             { page: '/services', views: Math.floor(Math.random() * 1500) + 800 },
             { page: '/about', views: Math.floor(Math.random() * 1000) + 500 },
             { page: '/contact', views: Math.floor(Math.random() * 800) + 300 },
-            { page: '/blog', views: Math.floor(Math.random() * 600) + 200 },
-          ],
+            { page: '/blog', views: Math.floor(Math.random() * 600) + 200 }];
           trafficSources: [
             { source: 'Direct', percentage: 45, color: '#8884d8' },
             { source: 'Search', percentage: 30, color: '#82ca9d' },
             { source: 'Social', percentage: 15, color: '#ffc658' },
-            { source: 'Referral', percentage: 10, color: '#ff7300' },
-          ],
+            { source: 'Referral', percentage: 10, color: '#ff7300' }];
           deviceTypes: [
             { device: 'Desktop', percentage: 60, color: '#8884d8' },
             { device: 'Mobile', percentage: 35, color: '#82ca9d' },
-            { device: 'Tablet', percentage: 5, color: '#ffc658' },
-          ],
+            { device: 'Tablet', percentage: 5, color: '#ffc658' }];
           hourlyData: Array.from({ length: 24 }, (_, i) => ({
             hour: `${i}:00`,
-            views: Math.floor(Math.random() * 100) + 20, }));
+            views: Math.floor(Math.random() * 100) + 20}));
           weeklyData: [
             { day: 'Mon', views: Math.floor(Math.random() * 500) + 200 },
             { day: 'Tue', views: Math.floor(Math.random() * 500) + 200 },
@@ -90,15 +87,14 @@ const Analytics: React.FC = () => {
             { day: 'Thu', views: Math.floor(Math.random() * 500) + 200 },
             { day: 'Fri', views: Math.floor(Math.random() * 500) + 200 },
             { day: 'Sat', views: Math.floor(Math.random() * 300) + 100 },
-            { day: 'Sun', views: Math.floor(Math.random() * 300) + 100 },
-          ],
+            { day: 'Sun', views: Math.floor(Math.random() * 300) + 100 }];
         });
         setIsLoading(false);, 1000);;
 
     loadAnalyticsData();, []);
 
   const formatDuration = (seconds: number) => {
-    const minutes = Math.floor(seconds / 60);
+    const minutes = Math.floor(seconds / 60),
     const remainingSeconds = Math.floor(seconds % 60);
     return `${minutes}m ${remainingSeconds}s`, };
 

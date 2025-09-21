@@ -6,7 +6,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         description: "Enterprise-grade quantum computing platform providing access to quantum processors, quantum algorithms, and hybrid classical-quantum computing solutions for complex optimization problems.",
         category: "
         subcategory: "
-        price: 25000;
+        price: 25000,
         currency: "
         pricingModel: "
         features: [
@@ -53,8 +53,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         technology: ["Quantum processors", "Qiskit", "Cirq", "PennyLane", "Python", "Quantum algorithms"],
         integrations: ["Research databases", "Scientific instruments", "Cloud platforms", "Data sources"],
         compliance: ["Research ethics", "Data privacy", "Intellectual property", "Export controls"],
@@ -65,13 +64,12 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         deploymentOptions: ["Cloud", "Hybrid", "On-premise"],
         scalability: "
         securityFeatures: ["Quantum encryption", "Secure quantum communication", "Privacy-preserving computation"],
-        apiAccess: true;
-        customDevelopment: true;
-        trainingIncluded: true;
-        maintenanceIncluded: true;
-        researchPartnerships: true;
-        pilotPrograms: true,
-    }
+        apiAccess: true,
+        customDevelopment: true,
+        trainingIncluded: true,
+        maintenanceIncluded: true,
+        researchPartnerships: true,
+        pilotPrograms: true}
     /
     {
         id: "
@@ -79,7 +77,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         description: "Next-generation autonomous systems platform that enables businesses to deploy AI-powered autonomous agents for complex decision-making, process automation, and operational optimization.",
         category: "
         subcategory: "
-        price: 8999;
+        price: 8999,
         currency: "
         pricingModel: "
         features: [
@@ -126,8 +124,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "NLP", "Computer Vision", "Python"],
         integrations: ["ERP systems", "CRM platforms", "IoT devices", "Cloud services", "Data sources"],
         compliance: ["SOC 2", "ISO 27001", "Industry-specific regulations"],
@@ -138,13 +135,12 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Edge"],
         scalability: "
         securityFeatures: ["AI safety measures", "Explainable AI", "Bias detection", "Secure decision-making"],
-        apiAccess: true;
-        customDevelopment: true;
-        trainingIncluded: true;
-        maintenanceIncluded: true;
-        researchPartnerships: true;
-        pilotPrograms: true,
-    }
+        apiAccess: true,
+        customDevelopment: true,
+        trainingIncluded: true,
+        maintenanceIncluded: true,
+        researchPartnerships: true,
+        pilotPrograms: true}
     /
     {
         id: "
@@ -152,7 +148,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         description: "Revolutionary supply chain platform leveraging blockchain technology for transparent, secure, and efficient supply chain management with real-time tracking and smart contracts.",
         category: "
         subcategory: "
-        price: 5999;
+        price: 5999,
         currency: "
         pricingModel: "
         features: [
@@ -199,8 +195,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         technology: ["Ethereum", "Polygon", "Hyperledger", "IPFS", "React", "Node.js", "Solidity"],
         integrations: ["ERP systems", "WMS", "TMS", "IoT sensors", "Payment processors"],
         compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2", "Industry standards"],
@@ -211,13 +206,12 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         deploymentOptions: ["Cloud", "Hybrid", "Private blockchain"],
         scalability: "
         securityFeatures: ["Blockchain security", "Cryptographic verification", "Immutable records", "Smart contract security"],
-        apiAccess: true;
-        customDevelopment: true;
-        trainingIncluded: true;
-        maintenanceIncluded: true;
-        researchPartnerships: true;
-        pilotPrograms: true,
-    }
+        apiAccess: true,
+        customDevelopment: true,
+        trainingIncluded: true,
+        maintenanceIncluded: true,
+        researchPartnerships: true,
+        pilotPrograms: true}
     /
     {
         id: "
@@ -225,7 +219,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         description: "Advanced edge computing platform that processes data at the source, enabling real-time analytics, autonomous decision-making, and reduced latency for IoT applications.",
         category: "
         subcategory: "
-        price: 3999;
+        price: 3999,
         currency: "
         pricingModel: "
         features: [
@@ -272,8 +266,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         technology: ["Kubernetes", "Docker", "TensorFlow Lite", "MQTT", "React", "Python", "Edge AI"],
         integrations: ["Cloud platforms", "IoT devices", "Data sources", "Analytics tools", "Security systems"],
         compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"],
@@ -284,13 +277,12 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         deploymentOptions: ["Edge", "Hybrid", "Multi-cloud"],
         scalability: "
         securityFeatures: ["Device authentication", "Data encryption", "Secure communication", "Threat detection"],
-        apiAccess: true;
-        customDevelopment: true;
-        trainingIncluded: true;
-        maintenanceIncluded: true;
-        researchPartnerships: true;
-        pilotPrograms: true,
-    }
+        apiAccess: true,
+        customDevelopment: true,
+        trainingIncluded: true,
+        maintenanceIncluded: true,
+        researchPartnerships: true,
+        pilotPrograms: true}
     /
     {
         id: "
@@ -298,7 +290,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         description: "Next-generation cybersecurity platform that uses artificial intelligence and machine learning to detect, prevent, and respond to cyber threats in real-time with autonomous defense capabilities.",
         category: "
         subcategory: "
-        price: 7999;
+        price: 7999,
         currency: "
         pricingModel: "
         features: [
@@ -345,8 +337,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         technology: ["Machine Learning", "Deep Learning", "NLP", "Python", "Elasticsearch", "Kafka", "Redis"],
         integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "PCI DSS", "HIPAA", "GDPR"],
@@ -357,13 +348,12 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Multi-cloud"],
         scalability: "
         securityFeatures: ["Zero-trust architecture", "AI safety measures", "Encryption", "Multi-factor authentication"],
-        apiAccess: true;
-        customDevelopment: true;
-        trainingIncluded: true;
-        maintenanceIncluded: true;
-        researchPartnerships: true;
-        pilotPrograms: true,
-    }
+        apiAccess: true,
+        customDevelopment: true,
+        trainingIncluded: true,
+        maintenanceIncluded: true,
+        researchPartnerships: true,
+        pilotPrograms: true}
     /
     {
         id: "
@@ -371,7 +361,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         description: "
         category: "
         subcategory: "
-        price: 12999;
+        price: 12999,
         currency: "
         pricingModel: "
         features: [
@@ -418,8 +408,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         technology: ["Post-quantum algorithms", "Lattice-based cryptography", "Code-based cryptography", "Hash-based signatures"],
         integrations: ["PKI systems", "TLS/SSL", "VPN solutions", "Identity providers", "Cloud platforms"],
         compliance: ["NIST standards", "FIPS", "SOC 2", "ISO 27001", "Industry regulations"],
@@ -430,13 +419,12 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Hardware security modules"],
         scalability: "
         securityFeatures: ["Quantum-resistant encryption", "Hybrid security", "Key management", "Secure communication"],
-        apiAccess: true;
-        customDevelopment: true;
-        trainingIncluded: true;
-        maintenanceIncluded: true;
-        researchPartnerships: true;
-        pilotPrograms: true,
-    }
+        apiAccess: true,
+        customDevelopment: true,
+        trainingIncluded: true,
+        maintenanceIncluded: true,
+        researchPartnerships: true,
+        pilotPrograms: true}
     /
     {
         id: "
@@ -444,7 +432,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         description: "Revolutionary drug discovery platform that uses artificial intelligence and machine learning to accelerate the identification, design, and optimization of new pharmaceutical compounds.",
         category: "
         subcategory: "
-        price: 19999;
+        price: 19999,
         currency: "
         pricingModel: "
         features: [
@@ -491,8 +479,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         technology: ["Deep Learning", "Molecular modeling", "Bioinformatics", "Python", "TensorFlow", "PyTorch"],
         integrations: ["Research databases", "Laboratory systems", "Clinical trial platforms", "Data sources"],
         compliance: ["FDA guidelines", "GxP", "HIPAA", "SOC 2", "Research ethics"],
@@ -503,13 +490,12 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Research cloud"],
         scalability: "
         securityFeatures: ["Data privacy", "Intellectual property protection", "Secure collaboration", "Audit logging"],
-        apiAccess: true;
-        customDevelopment: true;
-        trainingIncluded: true;
-        maintenanceIncluded: true;
-        researchPartnerships: true;
-        pilotPrograms: true,
-    }
+        apiAccess: true,
+        customDevelopment: true,
+        trainingIncluded: true,
+        maintenanceIncluded: true,
+        researchPartnerships: true,
+        pilotPrograms: true}
     /
     {
         id: "
@@ -517,7 +503,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         description: "Advanced autonomous vehicle technology platform that provides the software, sensors, and AI algorithms needed to develop and deploy autonomous vehicles for various applications.",
         category: "
         subcategory: "
-        price: 15999;
+        price: 15999,
         currency: "
         pricingModel: "
         features: [
@@ -564,8 +550,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         technology: ["Computer Vision", "Deep Learning", "Robotics", "Sensor fusion", "Python", "C++", "ROS"],
         integrations: ["Vehicle systems", "Cloud platforms", "Simulation tools", "Testing frameworks", "Data sources"],
         compliance: ["Automotive safety standards", "ISO 26262", "ASIL", "Regulatory requirements"],
@@ -576,11 +561,10 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
         deploymentOptions: ["On-vehicle", "Cloud", "Hybrid", "Edge computing"],
         scalability: "
         securityFeatures: ["Cybersecurity", "Safety systems", "Redundancy", "Fail-safe mechanisms"],
-        apiAccess: true;
-        customDevelopment: true;
-        trainingIncluded: true;
-        maintenanceIncluded: true;
-        researchPartnerships: true;
-        pilotPrograms: true,
-    }
+        apiAccess: true,
+        customDevelopment: true,
+        trainingIncluded: true,
+        maintenanceIncluded: true,
+        researchPartnerships: true,
+        pilotPrograms: true}
 ];

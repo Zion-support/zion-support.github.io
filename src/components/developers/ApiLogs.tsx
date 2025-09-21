@@ -11,10 +11,10 @@ interface ApiLog {
   id: string,
   method: string,
   endpoint: string,
-  status_code: number;
+  status_code: number,
   response_time_ms?: number;
   ip_address?: string;
-  created_at: string, }
+  created_at: string}
 
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
@@ -29,14 +29,16 @@ export function ApiLogs() {
     fetchApiLogs(pageSize, currentPage * pageSize);;
 
   const formatTimestamp = (timestamp: string) => {
-    return format(new Date(timestamp), 'MMM d, yyyy HH:mm:ss');;
-
+    return format(new Date(timestamp), 'MMM d, yyyy HH: mm:ss')};
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
-      return <Badge className="bg-green-700 text-white">Success</Badge>, } else if (statusCode >= 400 && statusCode < 500) {
-      return <Badge className="bg-yellow-700 text-white">Client Error</Badge>, } else if (statusCode >= 500) {
-      return <Badge className="bg-red-700 text-white">Server Error</Badge>, }
-    return <Badge className="bg-gray-700 text-white">Unknown</Badge>, };
+      return <Badge className="bg-green-700 text-white">Success</Badge>} else if (statusCode >= 400 && statusCode < 500) {
+      return <Badge className="bg-yellow-700 text-white">Client Error</Badge>
+    } else if (statusCode >= 500) {
+      return <Badge className="bg-red-700 text-white">Server Error</Badge>
+    }
+    return <Badge className="bg-gray-700 text-white">Unknown</Badge>
+  };
 
   const hasPrevPage = currentPage > 0;
   const hasNextPage = (currentPage + 1) * pageSize < totalLogs;

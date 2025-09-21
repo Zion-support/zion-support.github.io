@@ -10,8 +10,9 @@ export function useMessaging() {
       text: message,
       timestamp: new Date(),
       sender: "user"
-    };
-    setMessages(prev => [...prev, newMessage]);;
+    },
+    setMessages(prev => [...prev, newMessage]);
+  };
 
   return {
     messages,

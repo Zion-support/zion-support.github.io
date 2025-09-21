@@ -7,7 +7,7 @@ import { DollarSign, Star, Eye } from 'lucide-react',
 interface ProductListing {
   id: string,
   title: string,
-  description: string;
+  description: string,
   price?: number;
   rating?: number;
   category: string,
@@ -15,17 +15,19 @@ interface ProductListing {
   imageUrl?: string;
   provider: {
     name: string,
-    verified: boolean, }, }
+    verified: boolean};
+}
 
 interface ProductListingCardProps {
   listing: ProductListing,
-  view?: 'grid' | 'list',
+  view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void,
-  detailBasePath?: string, }
+  detailBasePath?: string;
+}
 
 export function ProductListingCard({ 
-  listing, 
-  view = 'grid', 
+  listing;
+  view = 'grid';
   onRequestQuote,
   detailBasePath = '/listings'
 }: ProductListingCardProps) {

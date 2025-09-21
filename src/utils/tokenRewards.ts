@@ -6,30 +6,30 @@ export async function rewardOnboarding(userId: string, action: string, amount: n
   });
 
 export async function earnTokensForPurchase(
-  userId: string, 
-  purchaseAmount: number, 
+  userId: string,
+  purchaseAmount: number,
   purchaseType: string
 ): Promise<void> {
   await apiClient("/functions/v1/token-manager/earn", {
     method: "POST",
     body: JSON.stringify({
-      userId, 
+      userId,
       action: "purchase",
       amount: purchaseAmount,
-      purchaseType,
+      purchaseType;
     })
   });
 
 export async function earnTokensForReferral(
-  userId: string, 
+  userId: string,
   referredUserId: string
 ): Promise<void> {
   await apiClient("/functions/v1/token-manager/earn", {
     method: "POST",
     body: JSON.stringify({
-      userId, 
+      userId,
       action: "referral",
-      referredUserId,
-      amount: 100;
-    })
+      referredUserId;
+      amount: 100})
   });
+}

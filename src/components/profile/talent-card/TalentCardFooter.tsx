@@ -1,12 +1,12 @@
-import React, { useState } from "react",
-import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { ExternalLink } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import React from "react",
-import React from "react",
-import import { useRouter } from 'next/router',
+import React, { useState } from "react";
+import { Star,} from 'lucide-react'
+import { Button,} from "@/components/ui/button";
+import { ExternalLink,} from 'lucide-react'
+import { TalentProfile,} from "@/types/talent";
+import { HireRequestModal,} from "@/components/profile/hire-request";
+import React from "react";
+import React from "react";
+import import { useRouter,} from 'next/router';
 interface TalentCardFooterProps {
 }
 export function TalentCardFooter({ profile onViewProfile onRequestHire }: TalentCardFooterProps) {
@@ -32,7 +32,7 @@ return (
           <Button
 variant="default"
             size="sm"
-            onClick = {handleRequestHire,}
+            onClick = {handleRequestHire}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
@@ -40,7 +40,7 @@ variant="default"
           <Button
 variant="outline"
             size="sm"
-            onClick = {handleViewProfile,}
+            onClick = {handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
@@ -50,10 +50,10 @@ variant="outline"
       </div>
       {/* Hire Request Modal */}
       <HireRequestModal
-talent = {profile,}
-        isOpen = {isHireModalOpen,}
-        onClose = {() => setIsHireModalOpen(false);
-        userDetails = {userProfile,}
+talent = {profile}
+        isOpen = {isHireModalOpen}
+        onClose = {() => setIsHireModalOpen(false)}
+        userDetails = {userProfile}
       />
     </>
   )

@@ -155,7 +155,7 @@ export, class, ContentOptimizer {
             .map(([word]) => word)}
     static generateContentTemplate(pagecontentType) {
         const templates = {
-            service: `;
+            service: `,
     <h1>Service Title</h1>
         <p>Comprehensive, description, of the, service, and its benefits.</p>
         <h2>What, We, Offer</h2>
@@ -207,7 +207,7 @@ export, class, ContentOptimizer {
         <h2>Support</h2>
         <p>Technical, support, and customer, service, information.</p>
       `;
-            blo,g: `;
+            blo,g: `,
     <h1>Blog, Post, Title</h1>
         <p>Engaging, introduction, that hooks, the, reader and, explains, the value.</p>
         <h2>Key, Points, Overview</h2>

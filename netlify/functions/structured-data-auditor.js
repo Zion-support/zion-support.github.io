@@ -6,17 +6,15 @@ exports.handler = async function () {
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
   const githubBranch = process.env.GIT_BRANCH || 'main',
 
-  function log(msg) { console.log(`[structured-data-auditor] ${msg}`), }
+  function log(msg) { console.log(`[structured-data-auditor] ${msg}`)}
 
   async function fetchText(url) {
     try {
       const r = await fetch(url, { redirect: 'follow' }),
       if (!r.ok) return { ok: false, status: r.status, text: '' },
       const text = await r.text(),
-      return { ok: true, status: r.status, text },
-    } catch (e) {
-      return { ok: false, status: 0, text: '', error: String(e) },
-    }
+      return { ok: true, status: r.status, text }} catch (e) {
+      return { ok: false, status: 0, text: '', error: String(e) }}
   }
 
   async function fetchSitemapUrls() {
@@ -29,11 +27,9 @@ exports.handler = async function () {
       for (const m of matches) {
         const u = m[1].trim(),
         if (u) urls.push(u),
-        if (urls.length >= 50) break,
-      }
+        if (urls.length >= 50) break}
     } catch {}
-    return urls.length ? urls : [baseUrl],
-  }
+    return urls.length ? urls : [baseUrl]}
 
   function extractJsonLd(html) {
     const scripts = [],
@@ -41,10 +37,8 @@ exports.handler = async function () {
     let m,
     while ((m = regex.exec(html)) !== null) {
       const content = m[1].trim(),
-      scripts.push(content),
-    }
-    return scripts,
-  }
+      scripts.push(content)}
+    return scripts}
 
   async function commitFile(path, content, message) {
     if (!githubToken) return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' },
@@ -58,8 +52,7 @@ exports.handler = async function () {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}?ref=${encodeURIComponent(githubBranch)}`, { headers }),
       if (getRes.ok) {
         const json = await getRes.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     } catch {}
     const body = {
       message,
@@ -72,15 +65,13 @@ exports.handler = async function () {
     const status = putRes.status,
     let error,
     if (!ok) {
-      try { error = await putRes.text(), } catch (e) { error = String(e), }
+      try { error = await putRes.text()} catch (e) { error = String(e)}
     }
-    return { ok, status, error },
-  }
+    return { ok, status, error }}
 
   try {
     if (!baseUrl) {
-      return { statusCode: 200, body: JSON.stringify({ ok: false, error: 'No base URL' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: false, error: 'No base URL' }) }}
 
     const urls = await fetchSitemapUrls(),
     const results = [],
@@ -90,19 +81,17 @@ exports.handler = async function () {
       const res = await fetchText(url),
       if (!res.ok) {
         results.push({ url, ok: false, status: res.status }),
-        continue,
-      }
+        continue}
       const blocks = extractJsonLd(res.text),
       const parsed = [],
       for (const block of blocks) {
-        try { parsed.push(JSON.parse(block)), } catch {
+        try { parsed.push(JSON.parse(block))} catch {
           // try array-wrapped recovery
-          try { parsed.push(JSON.parse(block.replace(/\u0000/g, ''))), } catch {}
+          try { parsed.push(JSON.parse(block.replace(/\u0000/g, '')))} catch {}
         }
       }
       if (parsed.length > 0) pagesWithJsonLd += 1,
-      results.push({ url, ok: true, status: res.status, jsonLdCount: parsed.length }),
-    }
+      results.push({ url, ok: true, status: res.status, jsonLdCount: parsed.length })}
 
     const summary = {
       auditedAt: new Date().toISOString(),
@@ -138,9 +127,7 @@ exports.handler = async function () {
       commitFile(mdPath, mdLines.join('\n'), msg)
     ]),
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, jsonRes, mdRes, totals: summary.totals }) },
-  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: true, jsonRes, mdRes, totals: summary.totals }) }} catch (e) {
     log(String(e)),
-    return { statusCode: 500, body: JSON.stringify({ ok: false, error: String(e) }) },
-  }
+    return { statusCode: 500, body: JSON.stringify({ ok: false, error: String(e) }) }}
 },

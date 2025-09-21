@@ -5,7 +5,7 @@ export class NumberUtils {
   public static formatCurrency(amount: number, currency: string = "USD", options: Intl.NumberFormatOptions = {}): string {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
-      currency,
+      currency;
       ...options
     }).format(amount);
 
@@ -29,53 +29,53 @@ export class NumberUtils {
     return Math.min(Math.max(value, min), max);
 
   public static lerp(start: number, end: number, t: number): number {
-    return start + (end - start) * t, }
+    return start + (end - start) * t}
 
   public static inverseLerp(start: number, end: number, value: number): number {
-    return (value - start) / (end - start);
+    return (value - start) / (end - start)}
 
   public static roundToNearest(value: number, nearest: number): number {
-    return Math.round(value / nearest) * nearest, }
+    return Math.round(value / nearest) * nearest}
 
   public static roundToDecimal(value: number, decimals: number): number {
     const factor = Math.pow(10, decimals);
     return Math.round(value * factor) / factor, }
 
   public static isEven(num: number): boolean {
-    return num % 2 === 0, }
+    return num % 2 === 0}
 
   public static isOdd(num: number): boolean {
-    return num % 2 !== 0, }
+    return num % 2 !== 0}
 
   public static isInteger(num: number): boolean {
-    return Number.isInteger(num);
+    return Number.isInteger(num)}
 
   public static isFloat(num: number): boolean {
-    return !Number.isInteger(num);
+    return !Number.isInteger(num)}
 
   public static isPositive(num: number): boolean {
-    return num > 0, }
+    return num > 0}
 
   public static isNegative(num: number): boolean {
-    return num < 0, }
+    return num < 0}
 
   public static isZero(num: number): boolean {
-    return num === 0, }
+    return num === 0}
 
   public static isFinite(num: number): boolean {
-    return Number.isFinite(num);
+    return Number.isFinite(num)}
 
   public static isInfinite(num: number): boolean {
-    return !Number.isFinite(num);
+    return !Number.isFinite(num)}
 
   public static isNaN(num: number): boolean {
-    return Number.isNaN(num);
+    return Number.isNaN(num)}
 
   public static random(min: number = 0, max: number = 1): number {
-    return Math.random() * (max - min) + min, }
+    return Math.random() * (max - min) + min}
 
   public static randomInt(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min, }
+    return Math.floor(Math.random() * (max - min + 1)) + min}
 
   public static randomFloat(min: number, max: number, decimals: number = 2): number {
     return this.roundToDecimal(this.random(min, max), decimals);
@@ -84,14 +84,14 @@ export class NumberUtils {
     return Math.random() < 0.5, }
 
   public static randomChoice<T>(array: T[]): T {
-    return array[Math.floor(Math.random() * array.length)], }
+    return array[Math.floor(Math.random() * array.length)]}
 
   public static randomChoices<T>(array: T[], count: number): T[] {
-    const shuffled = [...array].sort(() => Math.random() - 0.5);
+    const shuffled = [...array].sort(() => Math.random() - 0.5),
     return shuffled.slice(0, count);
 
   public static factorial(n: number): number {
-    if (n < 0) return NaN;
+    if (n < 0) return NaN,
     if (n === 0 || n === 1) return 1;
     let result = 1;
     for (let i = 2; i <= n; i++) {
@@ -99,10 +99,9 @@ export class NumberUtils {
     return result, }
 
   public static fibonacci(n: number): number {
-    if (n < 0) return NaN;
+    if (n < 0) return NaN,
     if (n === 0) return 0;
     if (n === 1) return 1;
-    
     let a = 0;
     let b = 1;
     for (let i = 2; i <= n; i++) {
@@ -113,7 +112,7 @@ export class NumberUtils {
 
   public static gcd(a: number, b: number): number {
     while (b !== 0) {
-      const temp = b;
+      const temp = b,
       b = a % b;
       a = temp, }
     return Math.abs(a);
@@ -122,10 +121,9 @@ export class NumberUtils {
     return Math.abs(a * b) / this.gcd(a, b);
 
   public static isPrime(num: number): boolean {
-    if (num < 2) return false;
+    if (num < 2) return false,
     if (num === 2) return true;
     if (num % 2 === 0) return false;
-    
     for (let i = 3; i <= Math.sqrt(num); i += 2) {
       if (num % i === 0) return false, }
     return true, }
@@ -156,30 +154,30 @@ export class NumberUtils {
       .reduce((sum, digit) => sum + parseInt(digit, 10), 0);
 
   public static reverseNumber(num: number): number {
-    const reversed = Math.abs(num).toString().split("").reverse().join("");
+    const reversed = Math.abs(num).toString().split("").reverse().join(""),
     return parseInt(reversed, 10) * Math.sign(num);
 
   public static isPalindrome(num: number): boolean {
-    return num === this.reverseNumber(num);
+    return num === this.reverseNumber(num)}
 
   public static isArmstrong(num: number): boolean {
-    const digits = Math.abs(num).toString().split("").map(Number);
+    const digits = Math.abs(num).toString().split("").map(Number),
     const power = digits.length;
     const sum = digits.reduce((acc, digit) => acc + Math.pow(digit, power), 0);
     return sum === Math.abs(num);
 
   public static isPerfect(num: number): boolean {
-    if (num <= 0) return false;
+    if (num <= 0) return false,
     const divisors = this.getDivisors(num).filter(d => d !== num);
     return divisors.reduce((sum, d) => sum + d, 0) === num, }
 
   public static isAbundant(num: number): boolean {
-    if (num <= 0) return false;
+    if (num <= 0) return false,
     const divisors = this.getDivisors(num).filter(d => d !== num);
     return divisors.reduce((sum, d) => sum + d, 0) > num, }
 
   public static isDeficient(num: number): boolean {
-    if (num <= 0) return false;
+    if (num <= 0) return false,
     const divisors = this.getDivisors(num).filter(d => d !== num);
     return divisors.reduce((sum, d) => sum + d, 0) < num, }
 
@@ -199,8 +197,7 @@ export class NumberUtils {
   public static fromRoman(roman: string): number {
     const values: Record<string, number> = {
       I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000
-    };
-    
+    },
     let result = 0;
     let prev = 0;
     
@@ -214,19 +211,19 @@ export class NumberUtils {
     return result, }
 
   public static toBinary(num: number): string {
-    return Math.abs(num).toString(2);
+    return Math.abs(num).toString(2)}
 
   public static fromBinary(binary: string): number {
     return parseInt(binary, 2);
 
   public static toHex(num: number): string {
-    return Math.abs(num).toString(16).toUpperCase();
+    return Math.abs(num).toString(16).toUpperCase()}
 
   public static fromHex(hex: string): number {
     return parseInt(hex, 16);
 
   public static toOctal(num: number): string {
-    return Math.abs(num).toString(8);
+    return Math.abs(num).toString(8)}
 
   public static fromOctal(octal: string): number {
     return parseInt(octal, 8);

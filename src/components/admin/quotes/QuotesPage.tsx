@@ -12,7 +12,9 @@ interface Quote {
   createdAt: string,
   validUntil: string,
   notes: string,
-  isArchived: boolean, }
+  isArchived: boolean}
+
+type ViewMode = 'list' | 'form' | 'modal';
 
 type ViewMode = 'list' | 'form' | 'modal',
 export const QuotesPage: React.FC = () => {
@@ -25,12 +27,14 @@ export const QuotesPage: React.FC = () => {
     setViewMode('form');;
 
   const handleEditQuote = (quote: Quote) => {
-    setEditingQuote(quote);
-    setViewMode('form');;
+    setEditingQuote(quote),
+    setViewMode('form');
+  };
 
   const handleViewQuote = (quote: Quote) => {
-    setSelectedQuote(quote);
-    setViewMode('modal');;
+    setSelectedQuote(quote),
+    setViewMode('modal');
+  };
 
   const handleSaveQuote = (formData: any) => {
     console.log('Saving quote:', formData);
@@ -97,4 +101,4 @@ export const QuotesPage: React.FC = () => {
         />
       )}
     </div>
-  );;
+  )};

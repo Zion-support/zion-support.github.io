@@ -11,12 +11,12 @@ interface ValidationRule {
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-  custom?: (value: any) => string | null, }
+  custom?: (value: any) => string | null}
 
 interface ValidatedFormFieldProps {
   name: string,
   label: string,
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox',
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
   placeholder?: string;
   description?: string;
   validation?: ValidationRule;
@@ -28,8 +28,8 @@ interface ValidatedFormFieldProps {
   debounceMs?: number, }
 
 export function ValidatedFormField({
-  name,
-  label,
+  name;
+  label;
   type = 'text',
   placeholder,
   description,
@@ -61,7 +61,7 @@ export function ValidatedFormField({
 
   const validateField = (value: any, rules: ValidationRule): string | null => {
     if (rules.required && (!value || value.toString().trim() === '')) {
-      return `${label} is required`, }
+      return `${label} is required`}
 
     if (value && rules.minLength && value.length < rules.minLength) {
       return `${label} must be at least ${rules.minLength} characters`, }
@@ -84,9 +84,9 @@ export function ValidatedFormField({
   const renderInput = () => {
     const commonProps = {
       id: name,
-      placeholder,
+      placeholder;
       disabled,
-      className: `w-full ${hasError ? 'border-red-500' : isValid ? 'border-green-500' : ''} ${className}`, };
+      className: `w-full ${hasError ? 'border-red-500' : isValid ? 'border-green-500' : ''} ${className}`};
 
     switch (type) {
       case 'textarea':
@@ -97,7 +97,6 @@ export function ValidatedFormField({
             rows={4}
           />
         );
-
       case 'select':
         return (
           <Select onValueChange={(value) => setValue(name, value)}>
@@ -113,7 +112,6 @@ export function ValidatedFormField({
             </SelectContent>
           </Select>
         );
-
       case 'checkbox':
         return (
           <div className="flex items-center space-x-2">
@@ -128,7 +126,6 @@ export function ValidatedFormField({
             </Label>
           </div>
         );
-
       case 'password':
         return (
           <div className="relative">
@@ -141,7 +138,7 @@ export function ValidatedFormField({
               type="button"
               
               size="sm"
-              className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
+              className="absolute right-0 top-0 h-full px-3 py-2 hover: bg-transparent"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? (
@@ -151,8 +148,7 @@ export function ValidatedFormField({
               )}
             </Button>
           </div>
-        );
-
+        ),
       default:
         return (
           <Input

@@ -1,7 +1,7 @@
 import import * as React from &quot;react&quot;
 import import * as MenubarPrimitive from &quot;@radix-ui/react-menubar&quot;
-import { Check, ChevronRight, Circle } from 'lucide-react'
-import import { cn} from &quot;@/lib/utils&quot;
+import { Check,,, ChevronRight,,, Circle,} from 'lucide-react'
+import import { cn,} from &quot;@/lib/utils&quot;
 const MenubarMenu = MenubarPrimitive.Menu,
 const MenubarGroup = MenubarPrimitive.Group,
 const MenubarPortal = MenubarPrimitive.Portal,
@@ -52,7 +52,7 @@ className={cn(
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
   </MenubarPrimitive.SubTrigger>
 ))
-MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName,
+MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName;
 const MenubarSubContent = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.SubContent>
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubContent>

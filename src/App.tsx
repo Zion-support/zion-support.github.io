@@ -24,26 +24,10 @@ const Header = () => (
     <div className="max-w-7xl mx-auto flex items-center justify-between">
       <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
       <nav className="hidden md:flex space-x-6">
-        <Link href="/" >
-              <span className="text-gray-600 hover:text-gray-900">
-                Home
-              </span>
-            </Link>
-        <Link href="/about" >
-              <span className="text-gray-600 hover:text-gray-900">
-                About
-              </span>
-            </Link>
-        <Link href="/services" >
-              <span className="text-gray-600 hover:text-gray-900">
-                Services
-              </span>
-            </Link>
-        <Link href="/contact" >
-              <span className="text-gray-600 hover:text-gray-900">
-                Contact
-              </span>
-            </Link>
+        <Link href="/"><a className="text-gray-600 hover:text-gray-900">Home</a></Link>
+        <Link href="/about"><a className="text-gray-600 hover:text-gray-900">About</a></Link>
+        <Link href="/services"><a className="text-gray-600 hover:text-gray-900">Services</a></Link>
+        <Link href="/contact"><a className="text-gray-600 hover:text-gray-900">Contact</a></Link>
       </nav>
     
       <RealTimePerformanceMonitor />
@@ -98,26 +82,10 @@ const Sidebar = () => (
   <aside className="hidden lg:block w-80 bg-gray-50 p-6">
     <nav>
       <ul className="space-y-2">
-        <li><Link href="/" >
-              <span className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">
-                Home
-              </span>
-            </Link></li>
-        <li><Link href="/about" >
-              <span className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">
-                About
-              </span>
-            </Link></li>
-        <li><Link href="/services" >
-              <span className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">
-                Services
-              </span>
-            </Link></li>
-        <li><Link href="/contact" >
-              <span className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">
-                Contact
-              </span>
-            </Link></li>
+        <li><Link href="/"><a className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">Home</a></Link></li>
+        <li><Link href="/about"><a className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">About</a></Link></li>
+        <li><Link href="/services"><a className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">Services</a></Link></li>
+        <li><Link href="/contact"><a className="block p-3 hover:bg-gray-200 rounded-lg transition-colors">Contact</a></Link></li>
       </ul>
     </nav>
   </aside>
@@ -134,7 +102,7 @@ const HomePage = () => {
     { id: 'overview', label: 'Overview', icon: Activity },
     { id: 'performance', label: 'Performance', icon: Zap },
     { id: 'analytics', label: 'Analytics', icon: BarChart3 },
-    { id: 'seo', label: 'SEO', icon: Search }, ]
+    { id: 'seo', label: 'SEO', icon: Search }]
 
   return (
     <div className="p-8">

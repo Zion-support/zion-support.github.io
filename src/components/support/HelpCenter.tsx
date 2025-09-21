@@ -1,12 +1,12 @@
-import React{ useState } from 'react'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { HelpCategoryList } from './HelpCategoryList'
-import { HelpArticleList } from './HelpArticleList'
-import { HelpArticleView } from './HelpArticleView'
-import { HELP_CATEGORIES } from './help-content'
-import { Search } from 'lucide-react'
+import React, { useState } from 'react'
+import { Input,} from '@/components/ui/input'
+import { Button,} from '@/components/ui/button'
+import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,} from '@/components/ui/tabs'
+import { HelpCategoryList,} from './HelpCategoryList'
+import { HelpArticleList,} from './HelpArticleList'
+import { HelpArticleView,} from './HelpArticleView'
+import { HELP_CATEGORIES,} from './help-content'
+import { Search,} from 'lucide-react'
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
@@ -89,7 +89,7 @@ variant='ghost'
                       How does the AI matching work?
                     </h3>
                     <p className='text-zion-slate-light'>
-                      Our AI matching algorithm analyzes your requirements and,
+                      Our AI matching algorithm analyzes your requirements and;
 preferences to match you with the most compatible talent,
 or services. The process takes into account skills,
 experience availability and past performance to ensure,
@@ -133,7 +133,7 @@ our team through the Contact tab.
               </div>
             </TabsContent>
             <TabsContent value='contact'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
                 <div className='bg-zion-blue-light/20 rounded-lg p-6'>
                   <h2 className='text-xl font-semibold mb-4'>
                     Contact Support
@@ -146,7 +146,7 @@ questions or issues.
                     <div className='flex items-center'>
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
                         <svg
-xmlns='http://www.w3.org/2000/svg'
+xmlns='http: //www.w3.org/2000/svg'
                           className='h-5 w-5 text-zion-purple'
                           viewBox='0 0 20 20'
                           fill='currentColor'

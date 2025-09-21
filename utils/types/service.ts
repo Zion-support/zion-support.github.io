@@ -6,8 +6,9 @@ export interface Service {
     id: string,
     name: string,
     avatar: string,
-    rating: number, };
+    rating: number};
   pricing: {
     from: number,
     currency: string,
-    type: "hourly" | "fixed" | "monthly", }, }
+    type: "hourly" | "fixed" | "monthly"};
+}

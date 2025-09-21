@@ -8,8 +8,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-  DropdownMenuLabel, } from '@/components/ui/dropdown-menu',
-import { User, Package, LogOut, Settings, CreditCard } from 'lucide-react',
+  DropdownMenuLabel} from '@/components/ui/dropdown-menu';
+import { User, Package, LogOut, Settings, CreditCard } from 'lucide-react';
+
 export const AvatarMenu: React.FC = () => {
   const { user, logout } = useAuth();
 
@@ -22,7 +23,7 @@ export const AvatarMenu: React.FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="flex items-center space-x-2 rounded-full p-1 hover:bg-gray-100 transition-colors">
+        <button className="flex items-center space-x-2 rounded-full p-1 hover: bg-gray-100 transition-colors">
           <Avatar className="h-8 w-8">
             <AvatarImage src={user.avatar} alt={user.name} />
             <AvatarFallback>
@@ -72,4 +73,4 @@ export const AvatarMenu: React.FC = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );;
+  )};

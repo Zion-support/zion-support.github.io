@@ -1,10 +1,10 @@
 
-import React from "react",
-import React from "react",
-import { CheckIcon } from 'lucide-react'
+import React from "react";
+import React from "react";
+import { CheckIcon,} from 'lucide-react'
 
 interface StepProps {
-className?: string, }
+className?: string}
 export function Step({
   status;
   label;

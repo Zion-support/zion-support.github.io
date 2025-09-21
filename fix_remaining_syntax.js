@@ -42,7 +42,7 @@ function processFile(filePath) {
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`),
       return true;
     }
     return false;

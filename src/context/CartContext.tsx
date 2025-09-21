@@ -3,17 +3,17 @@ interface CartItem {
   id: string,
   name: string,
   price: number,
-  quantity: number, }
+  quantity: number}
 
 interface CartState {
   items: CartItem[],
-  total: number, }
+  total: number}
 
 interface CartContextType {
   state: CartState,
   addItem: (item: CartItem) => void,
-  removeItem: (id: string) => void;
-  clearCart: () => void, }
+  removeItem: (id: string) => void,
+  clearCart: () => void}
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
@@ -24,19 +24,17 @@ const cartReducer = (state: CartState, action: any) => {
         ...state,
         items: [...state.items, action.payload];
         total: state.total + action.payload.price
-      };
+      },
     case 'REMOVE_ITEM':
       return {
-        ...state,
+        ...state;
         items: state.items.filter(item => item.id !== action.payload),
         total: state.items.reduce((sum, item) => sum + item.price, 0)
       };
     case 'CLEAR_CART':
       return { items: [], total: 0 },
-    default:
-      return state, }
+    default: return state}
 };
-
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, { items: [], total: 0 }),
   const addItem = (item: CartItem) => dispatch({ type: 'ADD_ITEM', payload: item }),

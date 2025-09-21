@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react',
 interface User {
   id: string,
   email: string,
@@ -13,7 +12,7 @@ export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     loading: true,
-    isAuthenticated: false;
+    isAuthenticated: false
   });
 
   useEffect(() => {
@@ -24,17 +23,18 @@ export function useAuth() {
       setAuthState({
         user: { id: '1', email: 'user@example.com' },
         loading: false,
-        isAuthenticated: true,
-      }); else {
+        isAuthenticated: true
+      });
+    } else {
       setAuthState({
         user: null,
         loading: false,
-        isAuthenticated: false,
+        isAuthenticated: false
       });
   }, []);
 
   const login = async (email: string, password: string) => {
-    setAuthState(prev => ({ ...prev, loading: true })),
+    setAuthState(prev => ({ ...prev, loading: true }));
     try {
       // In a real app, you'd make an API call here
       const mockUser = { id: '1', email };
@@ -43,12 +43,13 @@ export function useAuth() {
       setAuthState({
         user: mockUser,
         loading: false,
-        isAuthenticated: true,
+        isAuthenticated: true
       });
-      
-      return { success: true }, } catch (error) {
-      setAuthState(prev => ({ ...prev, loading: false })),
-      return { success: false, error: 'Login failed' }, }
+      return { success: true };
+    } catch (error) {
+      setAuthState(prev => ({ ...prev, loading: false }));
+      return { success: false, error: 'Login failed' };
+    }
   };
 
   const logout = () => {
@@ -56,11 +57,15 @@ export function useAuth() {
     setAuthState({
       user: null,
       loading: false,
-      isAuthenticated: false,
-    });;
+      isAuthenticated: false
+    });
+  };
 
   return {
     ...authState,
     login,
-    logout,
-  }, }
+    logout
+  };
+}
+// useAuth hook module
+export {};

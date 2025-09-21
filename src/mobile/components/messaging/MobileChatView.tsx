@@ -1,7 +1,7 @@
 interface Message {
-  id: string;,
+  id: string;;
 content: string,
-  timestamp: string;,
+  timestamp: string;;
 isMe: boolean,
   sender?: string;
   avatar?: string;
@@ -11,9 +11,9 @@ interface MobileChatViewProps {
 id: string,
     name: string,
     avatar?: string;
-    status?: string,
-},
-  messages: Message[[], ],
+    status?: string;
+};
+  messages: Message[[];];
 onBack: () => void,
   onSendMessage: (content: string) => void
                 {message.timestamp}

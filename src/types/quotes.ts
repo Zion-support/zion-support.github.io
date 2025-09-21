@@ -9,7 +9,8 @@ export interface ListingItem {
   tags: string[],
   provider: {
     name: string,
-    verified: boolean, }, }
+    verified: boolean};
+}
 
 export interface QuoteFormData {
   serviceType?: ServiceType;
@@ -17,9 +18,11 @@ export interface QuoteFormData {
   requirements?: string;
   budget?: {
     min: number,
-    max: number, };
+    max: number};
   timeline?: string;
   contactInfo?: {
     name: string,
     email: string,
-    phone?: string, }, }
+    phone?: string;
+  };
+}

@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, Filter } from 'lucide-react',
 interface FraudFiltersProps {
   onFilterChange: (filters: any) => void,
-  resetFilters: () => void, }
+  resetFilters: () => void}
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   onFilterChange,
@@ -16,8 +16,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
     riskLevel: '',
     status: '',
     dateRange: ''
-  });
-
+  }),
   const handleFilterChange = (key: string, value: string) => {
     const newFilters = { ...filters, [key]: value };
     setFilters(newFilters);
@@ -29,8 +28,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       riskLevel: '',
       status: '',
       dateRange: ''
-    });
-    resetFilters();;
+    }),
+    resetFilters();
+  };
 
   return (
     <div className="bg-white p-4 rounded-lg shadow-sm border">

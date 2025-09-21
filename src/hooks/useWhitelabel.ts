@@ -3,4 +3,4 @@ export function useWhitelabel() {
     isWhitelabel: false,
     brandName: 'Zion Tech Group',
     primaryColor: '#00ffff'
-  }, }
+  }}

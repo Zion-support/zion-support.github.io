@@ -1,6 +1,6 @@
 export class StringUtils {
   public static capitalize(str: string): string {
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()}
 
   public static capitalizeWords(str: string): string {
     return str.replace(/\w\S*/g, (txt) => 
@@ -30,8 +30,9 @@ export class StringUtils {
 
   public static truncate(str: string, length: number, suffix: string = "..."): string {
     if (str.length <= length) {
-      return str, }
-    return str.substring(0, length - suffix.length) + suffix, }
+      return str}
+    return str.substring(0, length - suffix.length) + suffix;
+  }
 
   public static slugify(str: string): string {
     return str
@@ -42,7 +43,7 @@ export class StringUtils {
       .replace(/^-+|-+$/g, "");
 
   public static stripHtml(html: string): string {
-    const div = document.createElement("div");
+    const div = document.createElement("div"),
     div.innerHTML = html;
     return div.textContent || div.innerText || "", }
 
@@ -50,7 +51,7 @@ export class StringUtils {
     return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
   public static unescapeHtml(html: string): string {
-    const div = document.createElement("div");
+    const div = document.createElement("div"),
     div.innerHTML = html;
     return div.textContent || div.innerText || "", }
 
@@ -58,20 +59,20 @@ export class StringUtils {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
   public static reverse(str: string): string {
-    return str.split("").reverse().join("");
+    return str.split("").reverse().join("")}
 
   public static isPalindrome(str: string): boolean {
     const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
     return cleaned === this.reverse(cleaned);
 
   public static countWords(str: string): number {
-    return str.trim().split(/\s+/).filter(word => word.length > 0).length, }
+    return str.trim().split(/\s+/).filter(word => word.length > 0).length}
 
   public static countCharacters(str: string): number {
-    return str.length, }
+    return str.length}
 
   public static countLines(str: string): number {
-    return str.split("\n").length, }
+    return str.split("\n").length}
 
   public static padStart(str: string, length: number, padString: string = " "): string {
     return str.padStart(length, padString);
@@ -95,18 +96,18 @@ export class StringUtils {
     return num.toLocaleString("en-US", {
       minimumFractionDigits: decimals,
       maximumFractionDigits: decimals
-    });
+    })}
 
   public static formatCurrency(amount: number, currency: string = "USD"): string {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: currency
-    }).format(amount);
+    }).format(amount)}
 
   public static formatPercentage(value: number, decimals: number = 0): string {
     return new Intl.NumberFormat("en-US", {
       style: "percent",
       minimumFractionDigits: decimals,
       maximumFractionDigits: decimals
-    }).format(value / 100);
+    }).format(value / 100)}
 }

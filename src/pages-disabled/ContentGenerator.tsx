@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 export default function ContentGenerator() {
   const [content, setContent] = useState('');
-
   return (
     <div className="min-h-screen bg-zion-blue">
       <Header />

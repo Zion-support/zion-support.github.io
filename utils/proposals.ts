@@ -6,4 +6,4 @@ export type ProposalIndexItem = {,
   regionalScope: string,
   type: string,
   status: ProposalStatus,
-  createdAt: string},
+  createdAt: string};

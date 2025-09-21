@@ -1,12 +1,11 @@
 import React from "react";
 export interface CartItem {
 id: string; name: string; price: number; quantity: number,
-image?: string,
+image?: string;
 }
 
 export interface CartContextType {
-items: CartItem[], dispatch: React.Dispatch<CartAction>,
-}
+items: CartItem[], dispatch: React.Dispatch<CartAction>}
 
 export type CartAction =
 | { type: "ADD_ITEM",

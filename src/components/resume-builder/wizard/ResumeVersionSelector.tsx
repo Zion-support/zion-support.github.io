@@ -1,8 +1,8 @@
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
-import import { Resume } from '@/types/resume',
-import import { useResume } from '@/hooks/useResume',
+import { Save,,, ChevronDown,,, Plus,,, Loader2,} from 'lucide-react'
+import import { Resume,,, ,} from '@/types/resume';
+import import { useResume,} from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
-  currentResume: Resume;,
+  currentResume: Resume;;
 onResumeChange: (resumeId: string) => void,
 return (
     <div className='flex items-center gap-2'>
@@ -68,14 +68,14 @@ onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() |isLoading}
               className='gap-2'
               value = {newResumeTitle}
-              onChange = {(e,) => setNewResumeTitle(e.target.value);
+              onChange = {(e) => setNewResumeTitle(e.target.value)}
               placeholder="Enter resume title (e.g. DevOps Resume)"
             />
           </div>
           <DialogFooter>
             <Button
 variant="outline"
-              onClick = {() => setSaveDialogOpen(false);
+              onClick = {() => setSaveDialogOpen(false)}
             >
               Cancel
             </Button>

@@ -1,14 +1,12 @@
 function extractMeta(html, name) {,
   const regex = new RegExp(`<meta[^>]+property=["']${name}["'][^>]*content=["']([^"']+)["'][^>]*>`, 'i'),
   const m = html.match(regex),
-  return m ? m[1] : null,
-}
+  return m ? m[1] : null}
 ,
 function extractNameMeta(html, name) {,
   const regex = new RegExp(`<meta[^>]+name=["']${name}["'][^>]*content=["']([^"']+)["'][^>]*>`, 'i'),
   const m = html.match(regex),
-  return m ? m[1] : null,
-}
+  return m ? m[1] : null}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -27,10 +25,8 @@ exports.handler = async function(event, context) {,
         const ogDesc = extractMeta(html, 'og: description'),
         const ogImage = extractMeta(html, 'og: image'),
         const twCard = extractNameMeta(html, 'twitter: card'),
-        results.push({ route, ok: true, ogTitle: !!ogTitle, ogDesc: !!ogDesc, ogImage: !!ogImage, twitterCard: !!twCard }),
-      } catch (e) {,
-        results.push({ route, ok: false, error: String(e) }),
-      }
+        results.push({ route, ok: true, ogTitle: !!ogTitle, ogDesc: !!ogDesc, ogImage: !!ogImage, twitterCard: !!twCard })} catch (e) {,
+        results.push({ route, ok: false, error: String(e) })}
     }
 ,
     const payload = { origin, generatedAt: new Date().toISOString(), results },
@@ -44,8 +40,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const b64 = Buffer.from(JSON.stringify(payload, null, 2), 'utf8').toString('base64'),
@@ -56,8 +51,6 @@ exports.handler = async function(event, context) {,
     }),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

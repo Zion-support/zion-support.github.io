@@ -12,14 +12,14 @@ export interface ContentQualityMetrics {
   overallScore: number,
   issues: ContentIssue[],
   recommendations: ContentRecommendation[],
-  analyzedAt: Date, }
+  analyzedAt: Date}
 
 export interface ContentIssue {
   type: "missing-title" | "short-content" | "no-headings" | "no-images" | "poor-seo" | "accessibility-issue",
   severity: "high" | "medium" | "low",
   description: string,
   impact: string,
-  fix: string, }
+  fix: string}
 
 export interface ContentRecommendation {
   type: "content-expansion" | "seo-improvement" | "accessibility-fix" | "performance-optimization",
@@ -27,7 +27,7 @@ export interface ContentRecommendation {
   title: string,
   description: string,
   implementation: string,
-  expectedImpact: string, }
+  expectedImpact: string}
 
 export class ContentQualityAnalyzer {
   private analyzedPages: Map<string, ContentQualityMetrics> = new Map();
@@ -45,7 +45,7 @@ export class ContentQualityAnalyzer {
     links: string[] = []
   ): ContentQualityMetrics {
     // Check if we already analyzed this page
-    const existing = this.analyzedPages.get(pageUrl);
+    const existing = this.analyzedPages.get(pageUrl),
     if (existing) {
       return existing, }
 
@@ -88,7 +88,7 @@ export class ContentQualityAnalyzer {
 
     const metrics: ContentQualityMetrics = {
       pageUrl,
-      title,
+      title;
       wordCount,
       headingCount,
       imageCount,
@@ -101,8 +101,7 @@ export class ContentQualityAnalyzer {
       issues,
       recommendations;
       analyzedAt: new Date()
-    };
-
+    },
     this.analyzedPages.set(pageUrl, metrics);
     return metrics, }
 
@@ -111,8 +110,9 @@ export class ContentQualityAnalyzer {
     return textContent.split(/\s+/).filter(word => word.length > 0).length, }
 
   private countHeadings(content: string): number {
-    const headingMatches = content.match(/<h[1-6][^>]*>/gi);
-    return headingMatches ? headingMatches.length : 0, }
+    const headingMatches = content.match(/<h[1-6][^>]*>/gi),
+    return headingMatches ? headingMatches.length : 0;
+  }
 
   private calculateReadabilityScore(content: string): number {
     const textContent = content.replace(/<[^>]*>/g, " ").trim();
@@ -120,7 +120,6 @@ export class ContentQualityAnalyzer {
     const words = textContent.split(/\s+/).filter(w => w.length > 0);
 
     if (sentences.length === 0 || words.length === 0) return 0;
-
     const avgWordsPerSentence = words.length / sentences.length;
     const avgSyllablesPerWord = this.calculateAverageSyllables(words);
 
@@ -129,8 +128,7 @@ export class ContentQualityAnalyzer {
     return Math.max(0, Math.min(100, score));
 
   private calculateAverageSyllables(words: string[]): number {
-    let totalSyllables = 0;
-    
+    let totalSyllables = 0,
     words.forEach(word => {
       totalSyllables += this.countSyllables(word););
 
@@ -139,13 +137,11 @@ export class ContentQualityAnalyzer {
   private countSyllables(word: string): number {
     const cleanWord = word.toLowerCase().replace(/[^a-z]/g, "");
     if (cleanWord.length <= 3) return 1;
-
     const vowelGroups = cleanWord.match(/[aeiouy]+/g);
     return vowelGroups ? vowelGroups.length : 1, }
 
   private calculateSEOScore(title: string, metaDescription: string, content: string): number {
-    let score = 100;
-
+    let score = 100,
     // Title checks
     if (!title || title.length < 30) score -= 20;
     if (title.length > 60) score -= 10;
@@ -167,8 +163,7 @@ export class ContentQualityAnalyzer {
     return Math.max(0, score);
 
   private calculateAccessibilityScore(content: string): number {
-    let score = 100;
-
+    let score = 100,
     // Check for alt text on images
     const images = content.match(/<img[^>]*>/gi) || [];
     const imagesWithAlt = images.filter(img => img.includes("alt="));
@@ -190,8 +185,7 @@ export class ContentQualityAnalyzer {
     return Math.max(0, score);
 
   private calculatePerformanceScore(content: string, images: string[]): number {
-    let score = 100;
-
+    let score = 100,
     // Check image count (too many images can slow down page)
     if (images.length > 20) score -= 20;
     else if (images.length > 10) score -= 10;
@@ -214,7 +208,7 @@ export class ContentQualityAnalyzer {
     imageCount: number,
     linkCount: number,
     metaDescription: string,
-    content: string, }): ContentIssue[] {
+    content: string}): ContentIssue[] {
     const issues: ContentIssue[] = [],
     // Title issues
     if (!data.title) {
@@ -224,14 +218,14 @@ export class ContentQualityAnalyzer {
         description: "Page is missing a title tag",
         impact: "Poor SEO and user experience",
         fix: "Add a descriptive title tag to the page"
-      }); else if (data.title.length < 30) {
+      })} else if (data.title.length < 30) {
       issues.push({
         type: "missing-title",
         severity: "medium",
         description: "Title is too short (less than 30 characters)",
         impact: "May not be descriptive enough for search engines",
         fix: "Expand the title to be more descriptive"
-      });
+      })}
 
     // Content length issues
     if (data.wordCount < this.MIN_WORD_COUNT) {
@@ -241,7 +235,7 @@ export class ContentQualityAnalyzer {
         description: `Content has only ${data.wordCount} words (minimum recommended: ${this.MIN_WORD_COUNT})`,
         impact: "Poor SEO and user engagement",
         fix: "Expand the content with more detailed information"
-      });
+      })}
 
     // Heading issues
     if (data.headingCount < this.MIN_HEADING_COUNT) {
@@ -251,7 +245,7 @@ export class ContentQualityAnalyzer {
         description: `Content has only ${data.headingCount} headings (minimum recommended: ${this.MIN_HEADING_COUNT})`,
         impact: "Poor content structure and SEO",
         fix: "Add more headings to structure the content"
-      });
+      })}
 
     // Image issues
     if (data.imageCount < this.MIN_IMAGE_COUNT) {
@@ -261,7 +255,7 @@ export class ContentQualityAnalyzer {
         description: "Content has no images",
         impact: "Reduced visual appeal and engagement",
         fix: "Add relevant images to enhance the content"
-      });
+      })}
 
     // SEO issues
     if (!data.metaDescription) {
@@ -271,7 +265,7 @@ export class ContentQualityAnalyzer {
         description: "Missing meta description",
         impact: "Poor search engine optimization",
         fix: "Add a compelling meta description"
-      });
+      })}
 
     return issues, }
 
@@ -283,7 +277,7 @@ export class ContentQualityAnalyzer {
     readabilityScore: number,
     seoScore: number,
     accessibilityScore: number,
-    performanceScore: number, }): ContentRecommendation[] {
+    performanceScore: number}): ContentRecommendation[] {
     const recommendations: ContentRecommendation[] = [],
     // Content expansion recommendations
     if (metrics.wordCount < this.MIN_WORD_COUNT) {
@@ -294,7 +288,7 @@ export class ContentQualityAnalyzer {
         description: "Add more detailed information to improve SEO and user engagement",
         implementation: "Write additional paragraphs, add case studies, or include more examples",
         expectedImpact: "Improved SEO ranking and user engagement"
-      });
+      })}
 
     // SEO improvement recommendations
     if (metrics.seoScore < 80) {
@@ -305,7 +299,7 @@ export class ContentQualityAnalyzer {
         description: "Optimize page elements for better search engine visibility",
         implementation: "Add meta descriptions, optimize headings, and improve keyword usage",
         expectedImpact: "Better search engine rankings and organic traffic"
-      });
+      })}
 
     // Accessibility recommendations
     if (metrics.accessibilityScore < 80) {
@@ -316,7 +310,7 @@ export class ContentQualityAnalyzer {
         description: "Make the content more accessible to users with disabilities",
         implementation: "Add alt text to images, improve heading structure, and ensure proper form labels",
         expectedImpact: "Better accessibility compliance and user experience"
-      });
+      })}
 
     // Performance recommendations
     if (metrics.performanceScore < 80) {
@@ -327,7 +321,7 @@ export class ContentQualityAnalyzer {
         description: "Improve page loading speed and performance",
         implementation: "Optimize images, reduce content size, and minimize inline styles",
         expectedImpact: "Faster page loading and better user experience"
-      });
+      })}
 
     return recommendations, }
 
@@ -335,14 +329,13 @@ export class ContentQualityAnalyzer {
     readabilityScore: number,
     seoScore: number,
     accessibilityScore: number,
-    performanceScore: number, }): number {
+    performanceScore: number}): number {
     const weights = {
       readability: 0.3,
       seo: 0.3,
       accessibility: 0.2,
       performance: 0.2
-    };
-
+    },
     return Math.round(
       scores.readabilityScore * weights.readability +
       scores.seoScore * weights.seo +
@@ -354,7 +347,7 @@ export class ContentQualityAnalyzer {
     return new Map(this.analyzedPages);
 
   getPageMetrics(pageUrl: string): ContentQualityMetrics | undefined {
-    return this.analyzedPages.get(pageUrl);
+    return this.analyzedPages.get(pageUrl)}
 
   clearCache(): void {
     this.analyzedPages.clear();

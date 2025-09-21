@@ -6,13 +6,13 @@ interface QuotesBulkActionsProps {
   onArchiveSelected: () => void,
   onDeleteSelected: () => void,
   onExportSelected: () => void,
-  onEmailSelected: () => void, }
+  onEmailSelected: () => void}
 
 export const QuotesBulkActions: React.FC<QuotesBulkActionsProps> = ({
   selectedCount,
-  onArchiveSelected,
-  onDeleteSelected;
-  onExportSelected;
+  onArchiveSelected;
+  onDeleteSelected,
+  onExportSelected,
   onEmailSelected
 }) => {
   if (selectedCount === 0) {

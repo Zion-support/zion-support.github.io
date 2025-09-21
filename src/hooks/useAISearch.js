@@ -34,7 +34,7 @@ export function useAISearch() {
             if (!filters.type || filters.type === "job" || filters.type === "all") {
                 JOB_POSTS.forEach((j) => {
                     if (!matchSkill(j.skills))
-                        return;
+                        return,
                     items.push({ id: j.id, type: "job", title: j.title, description: j.description })
      })
             }

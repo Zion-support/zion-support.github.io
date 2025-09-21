@@ -6,7 +6,7 @@ interface ErrorContextType {
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void,
   showAuthError: (loginAction?: () => void) => void,
-  clearAllErrors: () => void, }
+  clearAllErrors: () => void}
 
 const ErrorContext = createContext<ErrorContextType | undefined>(undefined);
 
@@ -17,7 +17,7 @@ export const useErrorHandler = () => {
   return context, };
 
 interface ErrorProviderProps {
-  children: ReactNode, }
+  children: ReactNode}
 
 export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
   const [errors, setErrors] = useState<Array<{
@@ -63,11 +63,11 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
     setErrors([]);;
 
   const dismissError = (errorId: string) => {
-    setErrors(prev => prev.filter(error => error.id !== errorId));;
+    setErrors(prev => prev.filter(error => error.id !== errorId))};
 
   const value: ErrorContextType = {
     reportError,
-    showRetryableError,
+    showRetryableError;
     showNetworkError,
     showAuthError;
     clearAllErrors
@@ -98,8 +98,9 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
                     <button
                       onClick={() => {
                         error.retryAction?.();
-                        dismissError(error.id);}
-                      className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover:bg-red-200"
+                        dismissError(error.id);
+                      }}
+                      className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover: bg-red-200"
                     >
                       <RefreshCw className="h-4 w-4 inline mr-1" />
                       Retry
@@ -108,9 +109,10 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
                   {error.loginAction && (
                     <button
                       onClick={() => {
-                        error.loginAction?.();
-                        dismissError(error.id);}
-                      className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover:bg-red-200"
+                        error.loginAction?.(),
+                        dismissError(error.id);
+                      }}
+                      className="text-sm bg-red-100 text-red-800 px-2 py-1 rounded hover: bg-red-200"
                     >
                       Login
                     </button>
@@ -128,4 +130,4 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({ children }) => {
         </div>
       ))}
     </ErrorContext.Provider>
-  );;
+  )};

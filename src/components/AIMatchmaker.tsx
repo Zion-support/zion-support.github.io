@@ -22,8 +22,7 @@ export function AIMatchmaker({ serviceType }: AIMatchmakerProps) {
       toast({
         title: "Empty Query",
         description: "Please describe what you're looking for.",
-        variant: "destructive",
-      })
+        variant: "destructive"})
       return
     }
 
@@ -43,14 +42,12 @@ export function AIMatchmaker({ serviceType }: AIMatchmakerProps) {
       
       toast({
         title: "Matches Found",
-        description: `Found ${results.items.length} potential matches for your needs.`,
-      })
+        description: `Found ${results.items.length} potential matches for your needs.`})
     } catch (error) {
       toast({
         title: "Search Failed",
         description: "Failed to find matches. Please try again.",
-        variant: "destructive",
-      })
+        variant: "destructive"})
     } finally {
       setIsMatchmaking(false)
     }
@@ -58,8 +55,8 @@ export function AIMatchmaker({ serviceType }: AIMatchmakerProps) {
 
   const handleItemSelect = (item: MatchResultItem) => {
     toast({
-      title: "Item Selected";
-      description: `You selected: ${item.title}`, })
+      title: "Item Selected",
+      description: `You selected: ${item.title}`})
   }
 
   return (

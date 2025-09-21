@@ -12,8 +12,7 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'headers_enforcer'
       })
-    },
-  } catch (error) {
+    }} catch (error) {
     console.error('❌ headers_enforcer function failed:', error),
     
     return {
@@ -23,6 +22,5 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    },
-  }
+    }}
 },

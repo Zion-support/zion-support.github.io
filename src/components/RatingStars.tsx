@@ -1,7 +1,7 @@
 import React from 'react',
 import { Star, StarHalf } from 'lucide-react',
 interface RatingStarsProps {
-  value: number;
+  value: number,
   total?: number;
   count?: number, }
 
@@ -26,7 +26,9 @@ export function RatingStars({ value, total = 5, count }: RatingStarsProps): JSX.
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
           );
-        return <Star key={i} className="h-4 w-4 text-zion-slate" />, })}
+        }
+        return <Star key={i} className="h-4 w-4 text-zion-slate" />
+      })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
       )}

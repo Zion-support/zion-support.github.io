@@ -12,7 +12,7 @@ interface Quote {
   status: 'pending' | 'approved' | 'rejected' | 'expired',
   createdAt: string,
   validUntil: string,
-  isArchived: boolean, }
+  isArchived: boolean}
 
 interface QuotesTableProps {
   quotes: Quote[],
@@ -22,11 +22,11 @@ interface QuotesTableProps {
   onViewQuote: (id: string) => void,
   onEditQuote: (id: string) => void,
   onArchiveQuote: (id: string) => void,
-  onDeleteQuote: (id: string) => void, }
+  onDeleteQuote: (id: string) => void}
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes,
-  selectedQuotes,
+  selectedQuotes;
   onSelectQuote,
   onSelectAll,
   onViewQuote,
@@ -43,14 +43,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
       case 'rejected':
         return 'bg-red-100 text-red-800',
       case 'expired':
-        return 'bg-gray-100 text-gray-800',
-      default:
-        return 'bg-gray-100 text-gray-800', }
+        return 'bg-gray-100 text-gray-800';
+      default: return 'bg-gray-100 text-gray-800'}
   };
-
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString();;
-
+    return new Date(dateString).toLocaleDateString()};
   const isAllSelected = quotes.length > 0 && selectedQuotes.length === quotes.length;
 
   return (
@@ -90,7 +87,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
           </thead>
           <tbody className="divide-y divide-gray-200">
             {quotes.map((quote) => (
-              <tr key={quote.id} className="hover:bg-gray-50">
+              <tr key={quote.id} className="hover: bg-gray-50">
                 <td className="px-4 py-3">
                   <Checkbox
                     checked={selectedQuotes.includes(quote.id)}
@@ -155,4 +152,4 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
         </table>
       </div>
     </div>
-  );;
+  )};

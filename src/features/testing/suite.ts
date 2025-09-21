@@ -1,45 +1,42 @@
 import { useState, useCallback, useEffect } from 'react';
 
 interface TestCase {
-  id: string;
-  name: string;
-  description: string;
-  type: 'unit' | 'integration' | 'e2e' | 'performance' | 'accessibility';
-  status: 'pending' | 'running' | 'passed' | 'failed' | 'skipped';
+  id: string,
+  name: string,
+  description: string,
+  type: 'unit' | 'integration' | 'e2e' | 'performance' | 'accessibility',
+  status: 'pending' | 'running' | 'passed' | 'failed' | 'skipped',
   duration?: number;
   error?: string;
   coverage?: number;
-  timestamp: Date;
-}
+  timestamp: Date}
 
 interface TestSuite {
-  id: string;
-  name: string;
-  description: string;
-  testCases: TestCase[];
-  status: 'pending' | 'running' | 'completed' | 'failed';
+  id: string,
+  name: string,
+  description: string,
+  testCases: TestCase[],
+  status: 'pending' | 'running' | 'completed' | 'failed',
   totalDuration?: number;
   coverage?: number;
 }
 
 interface TestConfiguration {
-  autoRun: boolean;
-  runOnSave: boolean;
-  runOnCommit: boolean;
-  coverageThreshold: number;
-  timeout: number;
-  parallel: boolean;
-  retries: number;
-}
+  autoRun: boolean,
+  runOnSave: boolean,
+  runOnCommit: boolean,
+  coverageThreshold: number,
+  timeout: number,
+  parallel: boolean,
+  retries: number}
 
 export class AutomatedTestingSuite {
   private testSuites: Map<string, TestSuite> = new Map();
-  private configuration: TestConfiguration;
-  private isRunning: boolean = false;
-  private listeners: Array<(suites: TestSuite[]) => void> = [];
-
+  private configuration: TestConfiguration,
+  private isRunning: boolean = false,
+  private listeners: Array<(suites: TestSuite[]) => void> = [],
   constructor(config: TestConfiguration) {
-    this.configuration = config;
+    this.configuration = config,
     this.initializeTestSuites();
     
     if (config.autoRun) {
@@ -60,7 +57,8 @@ export class AutomatedTestingSuite {
               ...test,
               timestamp: new Date(test.timestamp)
             }))
-          }););
+          })});
+      }
       
       this.notifyListeners(); catch (error) {
       console.error('Failed to initialize test suites:', error);
@@ -114,7 +112,7 @@ export class AutomatedTestingSuite {
   }
   
   public async runTestSuite(suiteId: string): Promise<void> {
-    const suite = this.testSuites.get(suiteId);
+    const suite = this.testSuites.get(suiteId),
     if (!suite) return;
     
     suite.status = 'running',
@@ -124,9 +122,8 @@ export class AutomatedTestingSuite {
       const response = await fetch('/api/testing/run-suite', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        };
-        body: JSON.stringify({ suiteId }););
+          'Content-Type': 'application/json'};
+        body: JSON.stringify({ suiteId })});
       
       if (response.ok) {
         const result = await response.json();
@@ -138,7 +135,7 @@ export class AutomatedTestingSuite {
     this.notifyListeners();
   
   public async runTestCase(suiteId: string, testCaseId: string): Promise<void> {
-    const suite = this.testSuites.get(suiteId);
+    const suite = this.testSuites.get(suiteId),
     if (!suite) return;
     
     const testCase = suite.testCases.find(tc => tc.id === testCaseId);
@@ -151,17 +148,18 @@ export class AutomatedTestingSuite {
       const response = await fetch('/api/testing/run-test', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        };
-        body: JSON.stringify({ suiteId, testCaseId }););
+          'Content-Type': 'application/json'};
+        body: JSON.stringify({ suiteId, testCaseId });
+      });
       
       if (response.ok) {
         const result = await response.json();
         this.updateTestCaseResult(suiteId, testCaseId, result);
     } catch (error) {
       console.error(`Failed to run test case ${testCaseId}:`, error);
-      testCase.status = 'failed',
-      testCase.error = error instanceof Error ? error.message : String(error);
+      testCase.status = 'failed';
+      testCase.error = error.message;
+    }
     
     this.notifyListeners();
   
@@ -179,7 +177,7 @@ export class AutomatedTestingSuite {
   }
   
   private updateTestSuiteResults(suiteId: string, results: any): void {
-    const suite = this.testSuites.get(suiteId);
+    const suite = this.testSuites.get(suiteId),
     if (!suite) return;
     
     suite.status = results.status;
@@ -188,7 +186,7 @@ export class AutomatedTestingSuite {
     
     // Update individual test cases
     results.testResults.forEach((result: any) => {
-      const testCase = suite.testCases.find(tc => tc.id === result.id);
+      const testCase = suite.testCases.find(tc => tc.id === result.id),
       if (testCase) {
         testCase.status = result.status;
         testCase.duration = result.duration;
@@ -198,7 +196,7 @@ export class AutomatedTestingSuite {
     });
   
   private updateTestCaseResult(suiteId: string, testCaseId: string, result: any): void {
-    const suite = this.testSuites.get(suiteId);
+    const suite = this.testSuites.get(suiteId),
     if (!suite) return;
     
     const testCase = suite.testCases.find(tc => tc.id === testCaseId);
@@ -214,14 +212,14 @@ export class AutomatedTestingSuite {
     return Array.from(this.testSuites.values());
   
   public getTestSuite(suiteId: string): TestSuite | undefined {
-    return this.testSuites.get(suiteId);
+    return this.testSuites.get(suiteId)}
   
   public getTestResults(): {
     total: number,
     passed: number,
     failed: number,
     skipped: number,
-    coverage: number, } {
+    coverage: number} {
     let total = 0;
     let passed = 0;
     let failed = 0;
@@ -250,12 +248,12 @@ export class AutomatedTestingSuite {
     }
     
     return {
-      total,
-      passed,
+      total;
+      passed;
       failed,
       skipped,
       coverage: coverageCount > 0 ? totalCoverage / coverageCount : 0
-    }, }
+    }}
   
   public generateTestReport(): string {
     const results = this.getTestResults();
@@ -277,7 +275,7 @@ export class AutomatedTestingSuite {
       for (const testCase of suite.testCases) {
         report += `- **${testCase.name}**: ${testCase.status}\n`;
         if (testCase.error) {
-          report += `  - Error: ${testCase.error}\n`, }
+          report += `  - Error: ${testCase.error}\n`}
       }
       report += '\n', }
     
@@ -298,10 +296,10 @@ export class AutomatedTestingSuite {
     console.log('🛑 Auto-testing stopped');
   
   public addListener(listener: (suites: TestSuite[]) => void): void {
-    this.listeners.push(listener);
+    this.listeners.push(listener)}
   
   public removeListener(listener: (suites: TestSuite[]) => void): void {
-    const index = this.listeners.indexOf(listener);
+    const index = this.listeners.indexOf(listener),
     if (index > -1) {
       this.listeners.splice(index, 1);
   }
@@ -317,14 +315,14 @@ export class AutomatedTestingSuite {
 
 // React Hook for Automated Testing Suite
 export const useAutomatedTesting = (config: TestConfiguration) => {
-  const [testingSuite] = useState(() => new AutomatedTestingSuite(config));
+  const [testingSuite] = useState(() => new AutomatedTestingSuite(config)),
   const [testSuites, setTestSuites] = useState<TestSuite[]>([]);
   const [testResults, setTestResults] = useState(testingSuite.getTestResults());
   const [isRunning, setIsRunning] = useState(false);
   
   useEffect(() => {
     const updateSuites = (suites: TestSuite[]) => {
-      setTestSuites(suites);
+      setTestSuites(suites),
       setTestResults(testingSuite.getTestResults());
       setIsRunning(suites.some(suite => suite.status === 'running'));;
     
@@ -340,7 +338,7 @@ export const useAutomatedTesting = (config: TestConfiguration) => {
     await testingSuite.runAllTests();, [testingSuite]);
   
   const runTestSuite = useCallback(async (suiteId: string) => {
-    await testingSuite.runTestSuite(suiteId);, [testingSuite]);
+    await testingSuite.runTestSuite(suiteId)}, [testingSuite]);
   
   const runTestCase = useCallback(async (suiteId: string, testCaseId: string) => {
     await testingSuite.runTestCase(suiteId, testCaseId);, [testingSuite]);
@@ -349,7 +347,7 @@ export const useAutomatedTesting = (config: TestConfiguration) => {
     return testingSuite.generateTestReport();, [testingSuite]);
   
   const updateConfiguration = useCallback((newConfig: Partial<TestConfiguration>) => {
-    testingSuite.updateConfiguration(newConfig);, [testingSuite]);
+    testingSuite.updateConfiguration(newConfig)}, [testingSuite]);
   
   return {
     testingSuite,
@@ -360,5 +358,5 @@ export const useAutomatedTesting = (config: TestConfiguration) => {
     runTestSuite,
     runTestCase,
     generateTestReport,
-    updateConfiguration,
-  }, };
+    updateConfiguration};
+};

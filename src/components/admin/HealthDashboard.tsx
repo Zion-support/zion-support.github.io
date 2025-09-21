@@ -1,33 +1,33 @@
 interface HealthData {
-  status: 'healthy' | 'warning' | 'critical';,
+  status: 'healthy' | 'warning' | 'critical';;
 timestamp: string,
-  uptime: number;,
+  uptime: number;;
 version: string,
-  environment: string;,
+  environment: string;;
 metrics: {
-    errorRate: number;,
+    errorRate: number;;
 criticalErrors: number,
-    responseTime: number;,
-memoryUsage: number, }
+    responseTime: number;;
+memoryUsage: number}
   health: {,
 status: string,
-    score: number;,
-issues: string[[], ]
+    score: number;;
+issues: string[[];]
     recommendations: string[]
   }
   errors: {,
 summary: {
-      total: number;,
+      total: number;;
 critical: number,
-      high: number;,
+      high: number;;
 medium: number,
-      low: number, }
+      low: number}
     topErrors: Array<{,
 patternId: string,
-      description: string;,
+      description: string;;
 occurrences: number,
       severity: string,
-      solution?: string,
+      solution?: string;
 }>
     byCategory: { [category: string]: number }
   }

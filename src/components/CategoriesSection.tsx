@@ -98,7 +98,7 @@ link: "/services - comparison"
   }
   return (
     <div className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Categories</h2>
           <p className="text-lg text-gray-600">Explore our comprehensive range of technology services</p>
@@ -122,53 +122,5 @@ link: "/services - comparison"
           </div>
         </div>
       </div>
-    </section>
-  )
-  switch (iconName) {
-}
-const getSpecialServices = (t: any) => [ {,
-title: t ('categories.it onsite services')
-link: "/it-onsite-services"
-}]
-interface CategoriesSectionProps {
-  showTitle?: boolean,
-className?: string,
-style?: React.CSSProperties,
-categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({
-  showTitle = true;
-className
-style;
-categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {
-  const {
-  t}= useTranslation ()
-const defaultCategories = getDefaultCategories (t)
-//Use fetchedCategories if provided otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
-  id: cat.id;",
-title: cat.name,  //Map name to title description: cat.description |"No description available.",
-icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
-  cat.id "
-}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color |"from-gray-500 to-gray-600"
-}) ) : defaultCategories.map (cat => ({
-  ...cat,
-title: cat.name,
-icon: getIcon (cat.iconName)
-}) )
-//If fetchedCategories is an empty array and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {
-}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {'
-  t ('home.no categories title') "
-}</h2> <p className="text-zion-slate-light text-lg mb-2" > {'
-  t ('home.no categories desc') "
-}</p> <p className="text-zion-slate-light text-md" > {'
-  t ('home.no categories support')
-}return (</p> </div>)
-}</div> </Link>) )
-}</div> > {
-  service.title}</Link>) ) "
-}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all"  >
-              <span className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors">
-                {'
-  t ('home.view all categories')
-}
-              </span>
-            </Link> </div> </div> </section>)
-}'"}
+    </div>
+  )};

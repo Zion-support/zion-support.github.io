@@ -15,7 +15,7 @@ export function ModeToggle() {
 
   if (!isClient) {
     return (
-      <Button  size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground">
+      <Button  size="icon" disabled aria-label="Loading theme toggle" className="focus-visible: ring-ring relative text-foreground">
         <div className="h-5 w-5 bg-muted rounded animate-pulse" />
         <span className="sr-only">Loading theme toggle</span>
       </Button>

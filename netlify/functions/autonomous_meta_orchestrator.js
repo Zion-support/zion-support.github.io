@@ -12,8 +12,7 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'autonomous_meta_orchestrator'
       })
-    },
-  } catch (error) {
+    }} catch (error) {
     console.error('❌ autonomous_meta_orchestrator function failed:', error),
     
     return {
@@ -23,6 +22,5 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    },
-  }
+    }}
 },

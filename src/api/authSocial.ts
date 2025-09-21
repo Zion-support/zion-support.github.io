@@ -33,4 +33,5 @@ export async function openAuthPopup(provider: 'google' | 'facebook' | 'twitter')
 
 export function getAuthUrl(provider: 'google' | 'facebook' | 'twitter'): string {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000',
-  return `${baseUrl}/api/auth/${provider}`, }
+  return `${baseUrl}/api/auth/${provider}`;
+}

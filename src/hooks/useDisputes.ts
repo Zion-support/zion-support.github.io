@@ -18,13 +18,12 @@ export function useDisputes() {
       client_profile: {
         id: 'client_123',
         display_name: 'John Doe',
-        avatar_url: 'https://via.placeholder.com/40/FF0000/FFFFFF?text=JD',
-      },
+        avatar_url: 'https://via.placeholder.com/40/FF0000/FFFFFF?text=JD'};
       talent_profile: {
         id: 'talent_456',
         display_name: 'Jane Smith',
-        avatar_url: 'https://via.placeholder.com/40/00FF00/FFFFFF?text=JS',
-      }, };
+        avatar_url: 'https://via.placeholder.com/40/00FF00/FFFFFF?text=JS'};
+    };
     
     return mockDispute, }, []);
 
@@ -42,8 +41,7 @@ export function useDisputes() {
         is_admin_note: false,
         user_profile: {
           display_name: 'John Doe',
-          avatar_url: 'https://via.placeholder.com/40/FF0000/FFFFFF?text=JD',
-        },
+          avatar_url: 'https://via.placeholder.com/40/FF0000/FFFFFF?text=JD'};
       },
       {
         id: '2',
@@ -54,15 +52,14 @@ export function useDisputes() {
         is_admin_note: false,
         user_profile: {
           display_name: 'Jane Smith',
-          avatar_url: 'https://via.placeholder.com/40/00FF00/FFFFFF?text=JS',
-        },
-      }, ];
+          avatar_url: 'https://via.placeholder.com/40/00FF00/FFFFFF?text=JS'};
+      }];
     
     return mockMessages, }, []);
 
   const resolveDispute = useCallback(async (disputeId: string, resolution: {
     summary: string,
-    resolution_type: string, }): Promise<boolean> => {
+    resolution_type: string}): Promise<boolean> => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -76,7 +73,7 @@ export function useDisputes() {
                 status: 'resolved',
                 resolution_summary: resolution.summary,
                 resolution_type: resolution.resolution_type as any,
-                resolved_at: new Date().toISOString();
+                resolved_at: new Date().toISOString()}
             : dispute
         )
       );
@@ -91,5 +88,5 @@ export function useDisputes() {
     loading,
     getDisputeById,
     getDisputeMessages,
-    resolveDispute,
-  }, }
+    resolveDispute};
+}

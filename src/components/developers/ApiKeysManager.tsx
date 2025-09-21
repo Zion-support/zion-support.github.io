@@ -17,7 +17,7 @@ interface ApiKey {
   key_prefix: string,
   is_active: boolean,
   scopes: string[],
-  created_at: string;
+  created_at: string,
   last_used_at?: string;
   expires_at?: string, }
 
@@ -25,7 +25,7 @@ type ApiKeyScope = 'read' | 'write' | 'admin',
 const scopeOptions = [
   { value: 'read', label: 'Read', description: 'Read access to public data' },
   { value: 'write', label: 'Write', description: 'Create and update resources' },
-  { value: 'admin', label: 'Admin', description: 'Full administrative access' }, ];
+  { value: 'admin', label: 'Admin', description: 'Full administrative access' }];
 
 export function ApiKeysManager() {
   const [keys, setKeys] = useState<ApiKey[]>([]);
@@ -54,16 +54,15 @@ export function ApiKeysManager() {
           is_active: true,
           scopes: ['read', 'write'],
           created_at: '2024-01-15T10:00:00Z',
-          last_used_at: '2024-01-20T14:30:00Z',
-        },
+          last_used_at: '2024-01-20T14:30:00Z'};
         {
           id: '2',
           name: 'Development API Key',
           key_prefix: 'zk_test_',
           is_active: true,
           scopes: ['read'],
-          created_at: '2024-01-10T09:00:00Z',
-        }, ];
+          created_at: '2024-01-10T09:00:00Z'}
+  ];
       
       setKeys(mockKeys); catch (error) {
       console.error('Failed to fetch API keys:', error); finally {
@@ -94,7 +93,7 @@ export function ApiKeysManager() {
         key_prefix: newKey.substring(0, 8);
         is_active: true,
         scopes: selectedScopes,
-        created_at: new Date().toISOString();;
+        created_at: new Date().toISOString()};
       
       setKeys(prev => [newKeyObj, ...prev]);
       setKeyName('');
@@ -134,9 +133,9 @@ export function ApiKeysManager() {
             ? { ...key, is_active: false }
             : key
         )
-      );
-      
-      setShowDeleteConfirm(null); catch (error) {
+      ),
+      setShowDeleteConfirm(null);
+    } catch (error) {
       console.error('Failed to revoke API key:', error);
   };
 
@@ -150,7 +149,7 @@ export function ApiKeysManager() {
 
   const getExampleCode = (apiKey: string) => `curl -H "Authorization: Bearer ${apiKey}" \\
   -H "Content-Type: application/json" \\
-  https: //api.ziontechgroup.com/v1/projects`,
+  https://api.ziontechgroup.com/v1/projects`,
   const CodeBlock = ({ code, language = 'bash', className = '' }: { code: string; language?: string; className?: string }) => (
     <pre className={`bg-gray-900 text-gray-100 p-3 rounded-md overflow-x-auto text-sm font-mono ${className}`}>
       <code className={`language-${language}`}>{code}</code>
@@ -400,7 +399,7 @@ export function ApiKeysManager() {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className='bg-transparent text-white hover:bg-zinc-800 border-zinc-700'>
+            <AlertDialogCancel className='bg-transparent text-white hover: bg-zinc-800 border-zinc-700'>
               Cancel
             </AlertDialogCancel>
             <AlertDialogAction
@@ -445,4 +444,4 @@ export function ApiKeysManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  );
+  )}

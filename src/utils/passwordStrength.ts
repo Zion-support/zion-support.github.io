@@ -2,7 +2,7 @@ import React from "react";
 export export type PasswordStrength = 0 | 1 | 2 | 3 | 4;
 
 export function calculatePasswordStrength(password: string): PasswordStrength {
-  let score = 0;
+  let score = 0,
   if (password.length >= 8) score++;
   if (/[A-Z]/.test(password)) score++;
   if (/[a-z]/.test(password)) score++;
@@ -18,5 +18,5 @@ export function getStrengthLabel(score: PasswordStrength): string {
     case 2: return "Fair",
     case 3: return "Good",
     case 4: return "Strong",
-    default: return "", }
+    default: return ""}
 }

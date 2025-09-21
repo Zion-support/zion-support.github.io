@@ -8,7 +8,7 @@ interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
-  bundleSize: number, }
+  bundleSize: number}
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
@@ -16,7 +16,7 @@ class PerformanceOptimizer {
     renderTime: 0,
     memoryUsage: 0;
     bundleSize: 0
-  };
+  },
   private observers: PerformanceObserver[] = [],
   constructor() {
     this.initializeObservers();
@@ -30,10 +30,13 @@ class PerformanceOptimizer {
           entries.forEach(entry => {
             if (entry.entryType === "navigation") {
               const navEntry = entry as PerformanceNavigationTiming;
-              this.metrics.loadTime = navEntry.loadEventEnd - navEntry.fetchStart, }
-          }););
+              this.metrics.loadTime = navEntry.loadEventEnd - navEntry.fetchStart;
+            }
+          });
+        });
         navObserver.observe({ entryTypes: ["navigation"] }),
-        this.observers.push(navObserver); catch (error) {
+        this.observers.push(navObserver);
+      } catch (error) {
         console.warn("Navigation observer failed:", error);
     }
   }
@@ -60,14 +63,14 @@ class PerformanceOptimizer {
 
   public preloadResources(urls: string[]): void {
     urls.forEach(url => {
-      const link = document.createElement("link");
-      link.rel = "preload",
+      const link = document.createElement("link"),
+      link.rel = "preload";
       link.href = url;
       link.as = this.getResourceType(url);
       document.head.appendChild(link););
 
   private getResourceType(url: string): string {
-    const extension = url.split('.').pop()?.toLowerCase();
+    const extension = url.split('.').pop()?.toLowerCase(),
     switch (extension) {
       case 'css':
         return 'style',
@@ -84,9 +87,8 @@ class PerformanceOptimizer {
       case 'gif':
       case 'webp':
       case 'svg':
-        return 'image',
-      default:
-        return 'fetch', }
+        return 'image';
+      default: return 'fetch'}
   }
 
   private updateMemoryUsage(): void {
@@ -110,7 +112,7 @@ export const usePerformanceMonitor = () => {
     renderTime: 0,
     memoryUsage: 0,
     bundleSize: 0
-  });
+  }),
   const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
@@ -140,8 +142,7 @@ export const usePerformanceMonitor = () => {
   return { metrics, score }, };
 
 const calculatePerformanceScore = (metrics: PerformanceMetrics): number => {
-  let score = 100;
-  
+  let score = 100,
   // Deduct points for poor performance
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.renderTime > 100) score -= 15;

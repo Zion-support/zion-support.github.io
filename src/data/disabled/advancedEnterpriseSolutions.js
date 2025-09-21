@@ -6,7 +6,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         description: "Next-generation enterprise OS that integrates AI, automation, and real-time analytics across all business operations.",
         category: "
         subcategory: "
-        price: 25000;
+        price: 25000,
         currency: "
         pricingModel: "
         features: [
@@ -47,16 +47,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["AI/ML", "Cloud Native", "Microservices", "Kubernetes", "TensorFlow"],
         integrations: ["SAP", "Oracle", "Salesforce", "Microsoft", "AWS"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"],
         roi: "
         competitors: ["Microsoft", "Oracle", "SAP", "IBM"],
         innovationLevel: "
-        marketTrend: "Rapidly Growing",
-    }
+        marketTrend: "Rapidly Growing"}
     /
     {
         id: "
@@ -64,7 +62,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         description: "Enterprise-grade quantum computing platform for complex problem-solving, optimization, and advanced simulations.",
         category: "
         subcategory: "
-        price: 50000;
+        price: 50000,
         currency: "
         pricingModel: "
         features: [
@@ -105,16 +103,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Quantum Algorithms", "Qiskit", "Cirq", "Hybrid Systems"],
         integrations: ["AWS Braket", "Azure Quantum", "IBM Quantum", "Google Quantum"],
         compliance: ["NIST", "ISO", "Enterprise Security"],
         roi: "
         competitors: ["IBM", "Google", "Microsoft", "Amazon"],
         innovationLevel: "
-        marketTrend: "Emerging",
-    }
+        marketTrend: "Emerging"}
     /
     {
         id: "
@@ -122,7 +118,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         description: "Self-learning BI platform that automatically discovers insights, generates reports, and provides actionable recommendations.",
         category: "
         subcategory: "
-        price: 15000;
+        price: 15000,
         currency: "
         pricingModel: "
         features: [
@@ -163,16 +159,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine Learning", "NLP", "Deep Learning", "AutoML"],
         integrations: ["Tableau", "Power BI", "Salesforce", "SAP", "Oracle"],
         compliance: ["GDPR", "SOC 2", "ISO 27001"],
         roi: "
         competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
         innovationLevel: "
-        marketTrend: "Growing",
-    }
+        marketTrend: "Growing"}
     /
     {
         id: "
@@ -180,7 +174,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         description: "AI-powered cybersecurity platform with autonomous threat detection, response, and prevention capabilities.",
         category: "
         subcategory: "
-        price: 20000;
+        price: 20000,
         currency: "
         pricingModel: "
         features: [
@@ -221,16 +215,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["AI/ML", "Behavioral Analytics", "Threat Intelligence", "SOAR"],
         integrations: ["SIEM", "EDR", "Firewall", "Identity Management"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
         roi: "
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto", "Cisco"],
         innovationLevel: "
-        marketTrend: "High Growth",
-    }
+        marketTrend: "High Growth"}
     /
     {
         id: "
@@ -238,7 +230,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         description: "Comprehensive digital twin platform for simulating, monitoring, and optimizing enterprise operations in real-time.",
         category: "
         subcategory: "
-        price: 30000;
+        price: 30000,
         currency: "
         pricingModel: "
         features: [
@@ -279,14 +271,12 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["IoT", "3D Modeling", "Real-time Analytics", "AI/ML"],
         integrations: ["Siemens", "GE", "SAP", "Azure", "AWS"],
         compliance: ["ISO 27001", "Industry Standards"],
         roi: "
         competitors: ["Siemens", "GE", "PTC", "Dassault"],
         innovationLevel: "
-        marketTrend: "Emerging",
-    }
+        marketTrend: "Emerging"}
 ];

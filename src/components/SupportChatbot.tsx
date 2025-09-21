@@ -5,7 +5,7 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 interface Msg {
   id: string,
   role: 'user' | 'assistant',
-  message: string, }
+  message: string}
 
 export function SupportChatbot() {
   const [open, setOpen] = useState(false);
@@ -25,14 +25,12 @@ export function SupportChatbot() {
     return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)], };
 
   const sendMessage = async (message: string) => {
-    if (!message.trim()) return;
-
+    if (!message.trim()) return,
     const userMsg: Msg = {
       id: Date.now().toString(),
       role: 'user',
       message: message.trim()
-    };
-
+    },
     setMessages(prev => [...prev, userMsg]);
     setLoading(true);
     setTyping(true);
@@ -45,9 +43,9 @@ export function SupportChatbot() {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
         message: getRandomFallback()
-      };
-
-      setMessages(prev => [...prev, assistantMsg]); catch (err) {
+      },
+      setMessages(prev => [...prev, assistantMsg]);
+    } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err }),
       const errorMsg: Msg = {
         id: Date.now().toString() + '-e',
@@ -61,7 +59,7 @@ export function SupportChatbot() {
 
   useEffect(() => {
     if (endRef.current) {
-      endRef.current.scrollIntoView({ behavior: 'smooth' });
+      endRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages]);
 
   if (!open) {
@@ -70,12 +68,12 @@ export function SupportChatbot() {
         onClick={() => setOpen(true)}
         size='icon'
         
-        className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
+        className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover: bg-zion-purple-light z-40'
         aria-label='Open help chat'
       >
         <MessageSquare className='h-5 w-5' />
       </Button>
-    );
+    )}
 
   return (
     <div className='fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40'>
@@ -122,7 +120,7 @@ export function SupportChatbot() {
       </div>
       <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>
         <form onSubmit={(e) => {
-          e.preventDefault();
+          e.preventDefault(),
           const input = e.currentTarget.querySelector('input');
           if (input?.value) {
             sendMessage(input.value);
@@ -132,7 +130,7 @@ export function SupportChatbot() {
             <input
               type='text'
               placeholder='Type your message...'
-              className='flex-1 px-3 py-2 bg-zion-blue border border-zion-purple/20 rounded text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-purple'
+              className='flex-1 px-3 py-2 bg-zion-blue border border-zion-purple/20 rounded text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-purple'
               disabled={loading}
             />
             <Button
@@ -147,4 +145,4 @@ export function SupportChatbot() {
         </form>
       </div>
     </div>
-  );
+  )}

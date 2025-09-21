@@ -9,12 +9,12 @@ interface HireConfirmationModalProps {
   isOpen: boolean,
   onClose: () => void,
   application: JobApplication,
-  onConfirm: () => void, }
+  onConfirm: () => void}
 
 export function HireConfirmationModal({ 
-  isOpen, 
-  onClose, 
-  application;
+  isOpen;
+  onClose;
+  application, 
   onConfirm 
 }: HireConfirmationModalProps) {
   const [offerAmount, setOfferAmount] = React.useState('');

@@ -37,8 +37,9 @@ export const safeStorage = {
   getItem: (key: string): string | null => {
     try {
       if (isLocalStorageAvailable()) {
-        return localStorage.getItem(key);
-      return inMemoryStore[key] || null, } catch (error) {
+        return localStorage.getItem(key)}
+      return inMemoryStore[key] || null;
+    } catch (error) {
       safeConsoleError("Failed to get item from storage", error);
       return inMemoryStore[key] || null, }
   },
@@ -56,8 +57,9 @@ export const safeStorage = {
   removeItem: (key: string): void => {
     try {
       if (isLocalStorageAvailable()) {
-        localStorage.removeItem(key); else {
-        delete inMemoryStore[key], }
+        localStorage.removeItem(key)} else {
+        delete inMemoryStore[key];
+      }
     } catch (error) {
       safeConsoleError("Failed to remove item from storage", error);
       delete inMemoryStore[key], }
@@ -66,7 +68,7 @@ export const safeStorage = {
   clear: (): void => {
     try {
       if (isLocalStorageAvailable()) {
-        localStorage.clear(); else {
+        localStorage.clear()} else {
         Object.keys(inMemoryStore).forEach(key => delete inMemoryStore[key]);
     } catch (error) {
       safeConsoleError("Failed to clear storage", error);
@@ -89,34 +91,39 @@ const sessionMemoryStore: Record<string, string> = {};
 
 export const safeSessionStorage = {
   getItem: (key: string): string | null => {
-    if (typeof window === "undefined") return null;
+    if (typeof window === "undefined") return null,
     try {
-      return sessionStorage.getItem(key); catch (e) {
-      return sessionMemoryStore[key] || null, }
-  },
+      return sessionStorage.getItem(key);
+    } catch (e) {
+      return sessionMemoryStore[key] || null;
+    }
+  };
   setItem: (key: string, value: string) => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined") return,
     try {
       sessionStorage.setItem(key, value); catch (e) {
       sessionMemoryStore[key] = value, }
   },
   removeItem: (key: string) => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined") return,
     try {
-      sessionStorage.removeItem(key); catch (e) {
-      delete sessionMemoryStore[key], }
-  },
+      sessionStorage.removeItem(key);
+    } catch (e) {
+      delete sessionMemoryStore[key];
+    }
+  };
   clear: () => {
     if (typeof window === "undefined") {
       for (const key in sessionMemoryStore) {
-        delete sessionMemoryStore[key], }
-      return, }
+        delete sessionMemoryStore[key]}
+      return;
+    }
     try {
       sessionStorage.clear(); catch {
       for (const key in sessionMemoryStore) {
         delete sessionMemoryStore[key], }
     }
-  },
+  };
   get isAvailable(): boolean {
     try {
       if (typeof window === "undefined") return false;

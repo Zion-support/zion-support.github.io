@@ -11,7 +11,8 @@ export default function TalentProfilePage() {
     setTimeout(() => setLoading(false), 1000);, []);
 
   if (loading) {
-    return <ProfileLoadingState />, }
+    return <ProfileLoadingState />
+  }
 
   return (
     <div className="min-h-screen bg-zion-blue">

@@ -7,7 +7,7 @@ export interface ContractTemplate {
   isDefault: boolean,
   isStarred: boolean,
   createdAt: string,
-  updatedAt: string, }
+  updatedAt: string}
 
 export interface Contract {
   id: string,

@@ -4,8 +4,8 @@ return (
 <div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
 <div className="container mx-auto px-4 s;  m:px-6 l; g:px-8">
 <div className="text-center mb-12">
-<h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
-Frequently Asked Questions;
+<h2 className="text-3xl m; d: text-4xl font-bold text-white mb-4">
+Frequently Asked Questions,
 </h2>
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
 Find answers to common questions about our services and solutions;
@@ -47,7 +47,7 @@ while complex enterprise solutions can take 3-6 months or more.;
 </div>
 )
 }<//div><///div>
-import { FileText } from 'lucide-react'
+import { FileText,} from 'lucide-react'
 const faqs = [
   {
     question: 'How do I publish my AI product or service?',
@@ -56,38 +56,31 @@ answer:
   }
   {
     question: 'What types of AI jobs can I find or post?',
-answer:
-      'You can hire or apply for roles such as machine learning engineer data scientist AI researcher computer vision expert and more.'
+answer: 'You can hire or apply for roles such as machine learning engineer data scientist AI researcher computer vision expert and more.'
   }
   {
     question: 'What IT equipment is available to rent or buy?',
-answer:
-      'Servers storage solutions networking gear power supplies and complete rack setups are offered with flexible purchase or rental options.'
+answer: 'Servers storage solutions networking gear power supplies and complete rack setups are offered with flexible purchase or rental options.'
   }
   {
     question: 'How does Zion ensure 24x7x365 availability?',
-answer:
-      'We use distributed data centers with automated failover and a global support team working in rotating shifts.'
+answer: 'We use distributed data centers with automated failover and a global support team working in rotating shifts.'
   }
   {
     question: "What is Zion's Green IT program?",
-answer:
-      'Obsolete hardware is recycled or reused in line with WEEE RoHS and e-Stewards standards and we provide disposal certificates when required.'
+answer: 'Obsolete hardware is recycled or reused in line with WEEE RoHS and e-Stewards standards and we provide disposal certificates when required.'
   }
   {
     question: 'Are there fees for listing my products or services?',
-answer:
-      'No. Listing products services jobs or CVs is free with optional paid promotion for extra visibility.'
+answer: 'No. Listing products services jobs or CVs is free with optional paid promotion for extra visibility.'
   }
   {
     question: 'How do I track my order status?',
-answer:
-      'Check the Orders page in your account or ask our chatbot with your order ID for a quick update.'
+answer: 'Check the Orders page in your account or ask our chatbot with your order ID for a quick update.'
   }
   {
-    question: 'How do I contact support?';
-answer:
-      'Reach us via the chat widget email support@ziontechgroup.com or call +1 302 464 0950 anytime.'
+    question: 'How do I contact support?',
+answer: 'Reach us via the chat widget email support@ziontechgroup.com or call +1 302 464 0950 anytime.'
   }
 ]
 export function FaqSection() {

@@ -7,7 +7,7 @@ interface Milestone {
   title: string,
   description: string,
   dueDate: string,
-  estimatedHours: number, }
+  estimatedHours: number}
 
 interface MilestoneSuggestionsProps {
   projectName: string,
@@ -15,11 +15,11 @@ interface MilestoneSuggestionsProps {
   startDate: string,
   endDate: string,
   projectType: string,
-  onMilestonesGenerated: (milestones: Milestone[]) => void, }
+  onMilestonesGenerated: (milestones: Milestone[]) => void}
 
 export function MilestoneSuggestions({
-  projectName,
-  scopeSummary,
+  projectName;
+  scopeSummary;
   startDate,
   endDate,
   projectType;
@@ -30,8 +30,7 @@ export function MilestoneSuggestions({
   const [generatedMilestones, setGeneratedMilestones] = useState<Milestone[]>([]);
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString();;
-
+    return new Date(dateString).toLocaleDateString()};
   const handleGenerateMilestones = async () => {
     setIsGenerating(true);
     
@@ -56,8 +55,7 @@ export function MilestoneSuggestions({
           dueDate: endDate,
           estimatedHours: 8
         }
-      ];
-      
+      ],
       setGeneratedMilestones(mockMilestones);
       setShowSuggestions(true);
       setIsGenerating(false);
@@ -126,4 +124,4 @@ export function MilestoneSuggestions({
         </Card>
       )}
     </div>
-  );
+  )}

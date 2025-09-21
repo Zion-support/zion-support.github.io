@@ -5,16 +5,15 @@ interface ContractPreviewProps {
   contractContent: string,
   talent: TalentProfile,
   onClose: () => void,
-  status: "ready" | "sending" | "sent", }
+  status: "ready" | "sending" | "sent"}
 
 export function ContractPreview({
-  contractContent,
-  talent,
+  contractContent;
+  talent;
   onClose,
-  status,
-}: ContractPreviewProps) {
+  status}: ContractPreviewProps) {
   const handleDownload = () => {
-    const blob = new Blob([contractContent], { type: "text/plain" });
+    const blob = new Blob([contractContent], { type: "text/plain" }),
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;

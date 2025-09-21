@@ -1,7 +1,8 @@
-import React from "react,
-import { SEO } from "@/components/SEO",
-export default function ChatAssistant(props: any) {return (
-<div className="min-h-screen bg-white">,
+import React from "react,,
+,
+import { SEO} from "@/components/SEO";
+export default function ChatAssistant(props: any) {return (,
+<div className="min-h-screen bg-white">
 <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />,
 <div className="container mx-auto px-4 py-20">,
 <h1 className="text-4xl font-bold text-white mb-8">ChatAssistant</h1>,
@@ -16,7 +17,8 @@ Professional ChatAssistant services to help your business grow.;
 const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return;
 import React {
-read?: boolean}
+read?: boolean;
+}
 export interface ChatAssistantProps {
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[]
@@ -74,12 +76,12 @@ className="flex-1 overflow-y-auto p-4 space-y-4"
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
-                  {starterQuestions.map((q idx,) => (
+                  {starterQuestions.map((q idx) => (
                     <Button
 key = {idx}
                       variant="outline"
                       className="text-xs"
-                      onClick = {(,) => handleSendMessage(q);
+                      onClick = {() => handleSendMessage(q)}
                     >
                       {q}
                     </Button>
@@ -88,7 +90,7 @@ key = {idx}
               )}
             </div>
           ) : (
-            currentMessages.map((msg,) => (
+            currentMessages.map((msg) => (
               <ChatMessage key={msg.id} role={msg.role} message={msg.message} />
             ))
           )}

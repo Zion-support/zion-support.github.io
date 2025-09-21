@@ -6,22 +6,20 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+    super(props),
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
@@ -49,15 +47,13 @@ export class ErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    };
-    
+    },
     // Send to error tracking service
     fetch('/api/errors', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(errorData)
-    }).catch(console.error);
-  }
+    }).catch(console.error)}
 
   render() {
     if (this.state.hasError) {

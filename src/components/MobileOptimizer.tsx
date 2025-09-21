@@ -14,7 +14,7 @@ interface MobileSettings {
   orientationLock: "auto" | "portrait" | "landscape",
   fontSize: "small" | "medium" | "large",
   contrast: "normal" | "high" | "inverted",
-  brightness: "auto" | "low" | "normal" | "high", }
+  brightness: "auto" | "low" | "normal" | "high"}
 
 interface MobileOptimizerProps {
   enabled?: boolean;
@@ -22,7 +22,7 @@ interface MobileOptimizerProps {
   autoDetect?: boolean, }
 
 export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ 
-  enabled = true, 
+  enabled = true,
   showPanel = false;
   autoDetect = true 
 }) => {
@@ -42,7 +42,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     fontSize: "medium",
     contrast: "normal",
     brightness: "auto"
-  });
+  }),
   const [deviceInfo, setDeviceInfo] = useState({
     isMobile: false,
     isTablet: false,
@@ -53,7 +53,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     touchSupport: false,
     batteryLevel: 0,
     connectionType: "unknown"
-  });
+  }),
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   const detectDevice = useCallback(() => {
@@ -72,7 +72,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       touchSupport: 'ontouchstart' in window,
       batteryLevel: 0, // Would need battery API
       connectionType: "unknown" // Would need connection API
-    });, []);
+    })}, []);
 
   useEffect(() => {
     if (autoDetect) {
@@ -95,7 +95,6 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     setIsOptimizing(false);;
 
   if (!enabled) return null;
-
   return (
     <>
       {showPanel && (
@@ -181,7 +180,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                 <button
                   onClick={optimizeForMobile}
                   disabled={isOptimizing}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 disabled:opacity-50"
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 disabled:opacity-50"
                 >
                   {isOptimizing ? 'Optimizing...' : 'Optimize for Mobile'}
                 </button>
@@ -191,4 +190,4 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         )}
       </AnimatePresence>
     </>
-  );;
+  )};

@@ -28,7 +28,8 @@ export interface Job {
   skills_required: string[],
   created_at: string,
   updated_at: string,
-  applications?: JobApplication[], }
+  applications?: JobApplication[];
+}
 
 export interface TalentProfile {
   id: string,
@@ -44,4 +45,4 @@ export interface TalentProfile {
   hourly_rate_max?: number;
   currency?: string;
   created_at: string,
-  updated_at: string, }
+  updated_at: string}

@@ -19,14 +19,14 @@ export interface Service {
   roi: string,
   contactInfo: {
     email: string,
-    website: string;
-    phone: string, };
+    website: string,
+    phone: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[], };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
   compliance?: string[], }
@@ -56,19 +56,17 @@ export function map2026ServicesToExistingStructure(): Service[] {
     contactInfo: {
       phone: service.contactInfo.mobile,
       email: service.contactInfo.email,
-      website: service.contactInfo.website,
-    },
+      website: service.contactInfo.website};
     technicalSpecs: {
       technology: service.technology,
       integrations: service.integrations,
       apiEndpoints: 200,
       uptime: service.uptime,
-      security: ["SOC 2", "ISO 27001", "Data encryption"],
-    },
+      security: ["SOC 2", "ISO 27001", "Data encryption"]},
     competitors: service.competitors,
     marketSize: service.marketSize,
     compliance: ["SOC 2", "ISO 27001"]
   }));
 
 export default {
-  map2026ServicesToExistingStructure, };
+  map2026ServicesToExistingStructure};

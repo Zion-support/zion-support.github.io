@@ -1,6 +1,6 @@
 import React from 'react',
 interface ThemeProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   defaultTheme?: string;
   storageKey?: string, }
 

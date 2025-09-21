@@ -44,8 +44,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   ']?.includes('text/html,"}),"}),
   ')) {,"}),"}),
           const links = this.extractLinks(response.data, url),"}),"}),
-          for (const link of links) {,"}),"}),
-          ),"}),
+          for (const link of links) {,"}),"})),"}),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
               await this && this.checkUrl(fullUrl, url),"}),"})
@@ -94,8 +93,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
     const commonRoutes = [,"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ],"}),"}),"}),"}),
-    for (const route of commonRoutes) {,"}),"}),
-    ),"}),
+    for (const route of commonRoutes) {,"}),"})),"}),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
       await this.checkUrl(`${this.baseUrl}${route}`),"}),"}),
       await this && this.checkUrl(`${this && this.baseUrl}${route}`),"}),"})
@@ -104,8 +102,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5,
     const serviceRoutes = [,"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ],"}),"}),"}),"}),
-    for (const serviceRoute of serviceRoutes) {,"}),"}),
-    ),"}),
+    for (const serviceRoute of serviceRoutes) {,"}),"})),"}),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`),"}),"}),
       await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`),"}),"})
@@ -114,16 +111,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5,
     const solutionRoutes = [,"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ],"}),"}),"}),"}),
-    for (const solutionRoute of solutionRoutes) {,"}),"}),
-    ),"}),
+    for (const solutionRoute of solutionRoutes) {,"}),"})),"}),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`),"}),"}),
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`),"}),"})
     }"}),"}),"}),"}),
     // Check about sub-routes,"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
-    for (const aboutRoute of aboutRoutes) {,"}),"}),
-    ),"}),
+    for (const aboutRoute of aboutRoutes) {,"}),"})),"}),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`),"}),"}),
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`),"}),"})
@@ -132,8 +127,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5,
     const resourceRoutes = [,"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ],"}),"}),"}),"}),
-    for (const resourceRoute of resourceRoutes) {,"}),"}),
-    ),"}),
+    for (const resourceRoute of resourceRoutes) {,"}),"})),"}),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`),"}),"}),
       await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`),"}),"})
@@ -188,8 +182,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ],"}),"}),"}),"}),
     const missingEssential = essentialPages && essentialPages.filter(,"}),"}),
-      page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)),"}),"}),
-    ),"}),"}),"}),"}),
+      page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)),"}),"})),"}),"}),"}),"}),
     if (missingEssential && missingEssential.length > 0) {,"}),"}),
       recommendations && recommendations.push({,"}),"}),
         type: 'critical,"}),"}),

@@ -13,7 +13,7 @@ interface Quote {
   status: 'pending' | 'approved' | 'rejected' | 'expired',
   createdAt: string,
   validUntil: string,
-  notes: string, }
+  notes: string}
 
 interface QuotesModalProps {
   quote: Quote | null,
@@ -21,18 +21,17 @@ interface QuotesModalProps {
   onClose: () => void,
   onEdit: () => void,
   onApprove: () => void,
-  onReject: () => void, }
+  onReject: () => void}
 
 export const QuotesModal: React.FC<QuotesModalProps> = ({
   quote,
-  isOpen,
+  isOpen;
   onClose,
   onEdit;
   onApprove;
   onReject
 }) => {
   if (!quote) return null;
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'approved':
@@ -42,18 +41,15 @@ export const QuotesModal: React.FC<QuotesModalProps> = ({
       case 'rejected':
         return 'bg-red-100 text-red-800',
       case 'expired':
-        return 'bg-gray-100 text-gray-800',
-      default:
-        return 'bg-gray-100 text-gray-800', }
+        return 'bg-gray-100 text-gray-800';
+      default: return 'bg-gray-100 text-gray-800'}
   };
-
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });;
-
+    })};
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl">
@@ -67,7 +63,7 @@ export const QuotesModal: React.FC<QuotesModalProps> = ({
         </DialogHeader>
 
         <div className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <User className="h-5 w-5 text-gray-500" />
@@ -152,4 +148,4 @@ export const QuotesModal: React.FC<QuotesModalProps> = ({
         </div>
       </DialogContent>
     </Dialog>
-  );;
+  )};

@@ -6,13 +6,13 @@ interface QuotesPaginationProps {
   totalPages: number,
   onPageChange: (page: number) => void,
   totalItems: number,
-  itemsPerPage: number, }
+  itemsPerPage: number}
 
 export const QuotesPagination: React.FC<QuotesPaginationProps> = ({
   currentPage,
-  totalPages,
-  onPageChange;
-  totalItems;
+  totalPages;
+  onPageChange,
+  totalItems,
   itemsPerPage
 }) => {
   const startItem = (currentPage - 1) * itemsPerPage + 1;

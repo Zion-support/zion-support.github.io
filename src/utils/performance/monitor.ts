@@ -4,7 +4,7 @@ interface PerformanceMetrics {
   firstContentfulPaint: number,
   largestContentfulPaint: number,
   firstInputDelay: number,
-  cumulativeLayoutShift: number, }
+  cumulativeLayoutShift: number}
 
 export class PerformanceMonitor {
   private metrics: PerformanceMetrics = {
@@ -12,8 +12,7 @@ export class PerformanceMonitor {
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     firstInputDelay: 0,
-    cumulativeLayoutShift: 0;
-  };
+    cumulativeLayoutShift: 0};
 
   constructor() {
     this.initializeMetrics();
@@ -36,22 +35,25 @@ export class PerformanceMonitor {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        this.metrics.largestContentfulPaint = lastEntry.startTime, });
+        this.metrics.largestContentfulPaint = lastEntry.startTime;
+      });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          this.metrics.firstInputDelay = entry.processingStart - entry.startTime, }););
+          this.metrics.firstInputDelay = entry.processingStart - entry.startTime});
+      });
       fidObserver.observe({ entryTypes: ['first-input'] }),
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            this.metrics.cumulativeLayoutShift += entry.value, }
-        }););
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+            this.metrics.cumulativeLayoutShift += entry.value}
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] })}
   }
 
   public getMetrics(): PerformanceMetrics {
@@ -70,11 +72,10 @@ export class PerformanceMonitor {
         value: Math.round(this.metrics.largestContentfulPaint),
         custom_map: {
           'load_time': this.metrics.loadTime,
-          'fcp': this.metrics.firstContentfulPaint,
+          'fcp': this.metrics.firstContentfulPaint;
           'lcp': this.metrics.largestContentfulPaint,
           'fid': this.metrics.firstInputDelay,
-          'cls': this.metrics.cumulativeLayoutShift,
-        }
+          'cls': this.metrics.cumulativeLayoutShift}
       });
   }
 }

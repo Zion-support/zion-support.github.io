@@ -1,8 +1,8 @@
 
-import { ApplicationStatus } from "@/types/jobs",
-import React from "react",
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
-import React from "react",
+import { ApplicationStatus,} from "@/types/jobs";
+import React from "react";
+import { CheckCircle2,,, Circle,,, CircleDot,} from 'lucide-react'
+import React from "react";
 interface ApplicationProgressProps {
 className?: string}
 export function ApplicationProgress({ status className }: ApplicationProgressProps) {

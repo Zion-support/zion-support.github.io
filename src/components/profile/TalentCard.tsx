@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { Button,} from '@/components/ui/button'
+import { Card,} from '@/components/ui/card'
+import { Star,,, MapPin,,, Clock,,, ArrowRight,,, CheckCircle2,} from 'lucide-react'
 isAuthenticated: boolean}
 export function TalentCard({
               {talent.profile_picture_url && !avatarError ? (
@@ -91,7 +91,7 @@ className={`h-5 w-5 ${isSaved ? 'fill-yellow-400 text-yellow-400' : ''}`}
 key={index}
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >          <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill index,) => (
+              {skills.map((skill index) => (
                 <span
 key = {index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"

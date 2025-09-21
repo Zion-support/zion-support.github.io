@@ -1,6 +1,6 @@
 interface Service {
   id: string,
-  name: string, }
+  name: string}
 
 // Performance optimization utilities
 export const optimizeImages = () => {
@@ -28,6 +28,6 @@ export const preloadCriticalResources = () => {
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
   const loadComponent = (componentName: string) => {
-    return import(`./components/${componentName}`);;
-  
-  return { loadComponent }, };
+    return import(`./components/${componentName}`)};
+  return { loadComponent };
+};

@@ -8,7 +8,7 @@ export function SEO({ title, description, keywords, ogImage, url }) {
       {keywords && <meta name="keywords" content={keywords} />}
       
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
+      <meta property="og: title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       {url && <meta property="og:url" content={url} />}
@@ -20,5 +20,4 @@ export function SEO({ title, description, keywords, ogImage, url }) {
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
     </>
-  );
-}
+  )}

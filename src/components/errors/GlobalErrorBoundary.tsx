@@ -13,10 +13,10 @@ interface ErrorBoundaryState {
   errorId: string | null,
   retryCount: number,
   userFeedback: string,
-  showDetails: boolean, }
+  showDetails: boolean}
 
 interface ErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void,
   enableRetry?: boolean;
@@ -36,22 +36,20 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       errorId: null,
       retryCount: 0,
       userFeedback: '',
-      showDetails: false,
-    }
+      showDetails: false}
   }
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    }
+      error;
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo;
     })
 
     // Log error to console in development
@@ -79,8 +77,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         hasError: false,
         error: null,
         errorInfo: null,
-        retryCount: prevState.retryCount + 1,
-      }))
+        retryCount: prevState.retryCount + 1}))
     }
   }
 
@@ -140,8 +137,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 <div className="space-y-4">
                   <div>
                     <label htmlFor="feedback" className="block text-sm font-medium text-gray-700 mb-2">
-                      Help us improve by sharing what you were doing when this error occurred:
-                    </label>
+                      Help us improve by sharing what you were doing when this error occurred: </label>
                     <textarea
                       id="feedback"
                       value={userFeedback}

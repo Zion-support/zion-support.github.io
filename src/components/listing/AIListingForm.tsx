@@ -1,14 +1,14 @@
 
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import React from "react",
-import React from "react",
-import { Sparkles } from 'lucide-react'
+import React, { useState } from "react";
+import { useToast,} from "@/hooks/use-toast";
+import { Button,} from "@/components/ui/button";
+import React from "react";
+import React from "react";
+import { Sparkles,} from 'lucide-react'
 interface AIListingFormProps {
   onSubmit: (formData: {,
-title: string;
-    category: string;,
+title: string,
+    category: string;;
 keyFeatures: string,
     targetAudience: string,
 return (
@@ -77,7 +77,7 @@ id='targetAudience'
       <Button
 onClick={handleSubmit}
         disabled={isLoading |!title |!category}
-        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'      >        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
+        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white mt-2'      >        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -138,8 +138,7 @@ onClick={handleSubmit}
 }: AIListingFormProps) {
   if (!title |!category) {
   toast ({
-  return,
-}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
+  return}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)
 }</Button> </div>)
 }'"

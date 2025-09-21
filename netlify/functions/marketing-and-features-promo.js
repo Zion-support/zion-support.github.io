@@ -42,9 +42,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ marketing-and-features-promo completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ marketing-and-features-promo failed:', error),
     return {
       statusCode: 500,
@@ -54,6 +52,5 @@ exports.handler = async function(event, context) {
         function: 'marketing-and-features-promo',
         status: 'error'
       })
-    },
-  }
+    }}
 },

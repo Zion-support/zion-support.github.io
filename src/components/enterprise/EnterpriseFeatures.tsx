@@ -4,37 +4,32 @@ const features = [
   {
     title: "Advanced Team Management",
     description: "Comprehensive tools for managing large teams, departments, and complex organizational structures.",
-    icon: Users,
-  },
+    icon: Users};
   {
     title: "Enterprise Security",
     description: "Bank-level security with SSO, RBAC, and compliance with industry standards like SOC 2 and GDPR.",
-    icon: Shield,
-  },
+    icon: Shield};
   {
     title: "Custom Workflows",
     description: "Tailored hiring processes that match your organization's unique requirements and approval chains.",
-    icon: Briefcase,
-  },
+    icon: Briefcase};
   {
     title: "Analytics & Reporting",
     description: "Advanced analytics dashboard with custom reports and insights for data-driven hiring decisions.",
-    icon: Award,
-  },
+    icon: Award};
   {
     title: "API Integration",
     description: "Seamless integration with your existing HR systems, ATS, and third-party tools via robust APIs.",
-    icon: Settings,
-  },
+    icon: Settings};
   {
     title: "Global Reach",
     description: "Multi-language support and compliance with international hiring laws and regulations.",
-    icon: Globe;
-  }, ];
+    icon: Globe}
+  ];
 
 export function EnterpriseFeatures() {
   return (
-    <section id="features" className="py-20 px-4 md:px-6 bg-muted/50">
+    <section id="features" className="py-20 px-4 md: px-6 bg-muted/50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -60,4 +55,4 @@ export function EnterpriseFeatures() {
         </div>
       </div>
     </section>
-  );
+  )}

@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react',
-import WalletPage from '@/pages/Wallet',
-import * as useWalletHook from '@/hooks/useWallet',
-import { vi, describe, it, expect } from 'vitest',
+import { render, screen } from '@testing-library/react';
+import WalletPage from '@/pages/Wallet';
+import * as useWalletHook from '@/hooks/useWallet';
+import { vi, describe, it, expect } from 'vitest';
 
 describe('WalletPage', () => {
   it('renders balance heading', () => {
@@ -14,10 +14,8 @@ describe('WalletPage', () => {
       earnTokens: vi.fn(),
       spendTokens: vi.fn()
     } as any),
-
-    render(<WalletPage />),
+    render(<WalletPage />);
     expect(
       screen.getByRole('heading', { name: /balance/i })
-    ).toBeInTheDocument(),
-  }),
+    ).toBeInTheDocument()});
 }),

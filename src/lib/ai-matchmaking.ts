@@ -11,9 +11,9 @@ export interface MatchResultItem {
   provider: {
     name: string,
     avatar?: string;
-    verified: boolean, };
+    verified: boolean};
   createdAt: string,
-  updatedAt: string, }
+  updatedAt: string}
 
 export interface MatchmakingFilters {
   category?: string;
@@ -27,7 +27,8 @@ export interface MatchmakingResult {
   items: MatchResultItem[],
   totalCount: number,
   hasMore: boolean,
-  nextCursor?: string, }
+  nextCursor?: string;
+}
 
 export const mockMatchResults: MatchResultItem[] = [
   {
@@ -84,8 +85,7 @@ export const mockMatchResults: MatchResultItem[] = [
     createdAt: '2024-01-12T11:00:00Z',
     updatedAt: '2024-01-19T13:20:00Z'
   }
-];
-
+],
 export async function findMatches(filters: MatchmakingFilters): Promise<MatchmakingResult> {
   // Simulate API call
   await new Promise(resolve => setTimeout(resolve, 1000));
@@ -121,4 +121,4 @@ export async function findMatches(filters: MatchmakingFilters): Promise<Matchmak
     totalCount: filteredResults.length,
     hasMore: false,
     nextCursor: undefined
-  }, }
+  }}

@@ -152,8 +152,7 @@ export default function Services() {
       icon: '🚀', 
       color: 'from-sky-500 to-blue-500' 
     }
-  ];
-
+  ],
   // Filter and sort services
   const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
@@ -170,11 +169,8 @@ export default function Services() {
         return (a.price || 0) - (b.price || 0);
       case 'name':
         return a.name.localeCompare(b.name);
-      default:
-        return 0;
-    }
+      default: return 0}
   });
-
   // Pagination
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -197,8 +193,7 @@ export default function Services() {
 
   const handlePageChange = useCallback((page) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+    window.scrollTo({ top: 0, behavior: 'smooth' })}, []);
 
   const getCategoryIcon = (categoryName) => {
     const iconMap = {
@@ -305,14 +300,14 @@ export default function Services() {
             <div className="mt-6">
               <div className="flex flex-wrap gap-3">
                 {categories.map((category) => {
-                  const IconComponent = getCategoryIcon(category.id);
+                  const IconComponent = getCategoryIcon(category.id),
                   return (
                     <button
                       key={category.id}
                       onClick={() => handleCategoryChange(category.id)}
                       className={\`flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all \${activeCategory === category.id 
                         ? 'border-blue-500 bg-blue-50 text-blue-700' 
-                        : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'\`}
+                        : 'border-gray-200 bg-white text-gray-700 hover: border-gray-300'\`}
                     >
                       <span className="text-lg">{category.icon}</span>
                       <span className="font-medium">{category.name}</span>
@@ -320,8 +315,7 @@ export default function Services() {
                         {category.count}
                       </span>
                     </button>
-                  );
-                })}
+                  )})}
               </div>
             </div>
           </div>
@@ -418,7 +412,7 @@ export default function Services() {
                     onClick={() => handlePageChange(i + 1)}
                     className={\`px-4 py-2 rounded-lg transition-colors \${currentPage === i + 1 
                       ? 'bg-blue-600 text-white' 
-                      : 'border border-gray-300 hover:bg-gray-50'\`}
+                      : 'border border-gray-300 hover: bg-gray-50'\`}
                   >
                     {i + 1}
                   </button>
@@ -437,10 +431,8 @@ export default function Services() {
         </div>
       </div>
     </>
-  );
-}
+  )}
 `;
-
 const servicesPath = path.join(process.cwd(), 'src/pages/Services.tsx');
 fs.writeFileSync(servicesPath, cleanServicesComponent);
 console.log('✅ Fixed Services.tsx component');

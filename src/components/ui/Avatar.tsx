@@ -1,6 +1,9 @@
 interface Service {
 id: string,
-name: string, }
+name: string}
+
+import React from "react";
+import React from "react";
 
 import React from "react",
 import React from "react",
@@ -38,8 +41,7 @@ React.HTMLAttributes<HTMLDivElement>
 ref={ref}
 className={cn(
 "flex h-full w-full items-center justify-center rounded-full bg-muted",
-className,
-)}
+className)}
 {...props}
 />
 ))
@@ -49,14 +51,12 @@ export export { Avatar; AvatarImage; AvatarFallback }</div;
 ref={ref}
 className={cn(
 "flex h-full w-full items-center justify-center rounded-full bg-muted",
-className,
-)}
+className)}
 {...props}
 /><//div;
 ref={ref}
 className={cn(
 "flex h-full w-full items-center justify-center rounded-full bg-muted",
-className,
-)}
+className)}
 {...props}
 />

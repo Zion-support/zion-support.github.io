@@ -1,18 +1,18 @@
 
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import React from "react",
-import { Download } from 'lucide-react'
-import React from "react",
+import React from 'react';
+import { Card,,, CardContent,} from "@/components/ui/card";
+import { Badge,} from "@/components/ui/badge";
+import React from "react";
+import { Download,} from 'lucide-react'
+import React from "react";
 interface ResumePreviewCardProps {
-  resume: Resume;,
+  resume: Resume;;
 onDownload: () => void,
   isLoading: boolean,
 export function ResumePreviewCard({
-  resume,
+  resume;
 onDownload
-  isLoading,
+  isLoading;
 }: ResumePreviewCardProps) {
   return (
     <Card className='mt-3 bg-zion-blue-dark/30 border-zion-purple/20'>
@@ -52,7 +52,7 @@ key={index}
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0 5).map((skill index) => (
               <Badge
-key = {index,}
+key = {index}
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
                 {skill.name}

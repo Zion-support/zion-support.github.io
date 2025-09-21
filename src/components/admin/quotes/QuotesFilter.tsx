@@ -5,8 +5,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Calendar, RefreshCw } from 'lucide-react',
 type QuoteStatus = 'pending' | 'approved' | 'rejected' | 'expired',
 type DateRange = {
-  from: Date;
-  to: Date, };
+  from: Date,
+  to: Date};
 
 interface QuotesFilterProps {
   searchQuery: string,
@@ -17,11 +17,11 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
   dateRange: DateRange | undefined,
   setDateRange: (range: DateRange | undefined) => void,
-  onReset: () => void, }
+  onReset: () => void}
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery,
-  setSearchQuery,
+  setSearchQuery;
   statusFilter,
   setStatusFilter,
   archiveFilter,
@@ -37,7 +37,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         <h3 className="text-lg font-semibold text-gray-900">Filter Quotes</h3>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Search
@@ -91,8 +91,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             type="date"
             value={dateRange?.from ? dateRange.from.toISOString().split('T')[0] : ''}
             onChange={(e) => {
-              const from = e.target.value ? new Date(e.target.value) : undefined;
-              setDateRange(from ? { from, to: dateRange?.to || new Date() } : undefined);}
+              const from = e.target.value ? new Date(e.target.value) : undefined,
+              setDateRange(from ? { from, to: dateRange?.to || new Date() } : undefined)}}
           />
         </div>
       </div>

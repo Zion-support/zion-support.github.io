@@ -9,7 +9,7 @@ export interface PageInfo {
   path: string,
   title: string,
   links: LinkInfo[],
-  exists: boolean, }
+  exists: boolean}
 
 export class LinkChecker {
   private baseUrl: string,
@@ -17,17 +17,17 @@ export class LinkChecker {
   private brokenLinks: LinkInfo[] = [],
   private missingPages: string[] = [],
   constructor(baseUrl: string = "https://ziontechgroup.com") {
-    this.baseUrl = baseUrl, }
+    this.baseUrl = baseUrl}
 
   isInternalLink(url: string): boolean {
     return url.startsWith("/") ||
            url.startsWith(this.baseUrl) ||
            url.startsWith("./") ||
-           url.startsWith("../");
+           url.startsWith("../")}
 
   normalizeUrl(url: string, basePage: string): string {
     if (url.startsWith("http")) {
-      return url, }
+      return url}
 
     if (url.startsWith("/")) {
       return `${this.baseUrl}${url}`, }
@@ -51,15 +51,17 @@ export class LinkChecker {
         status: "working",
         page: pagePath,
         anchor: url.startsWith("#") ? url : undefined
-      });
+      })}
 
     return links, }
 
   async checkPageExists(url: string): Promise<boolean> {
     try {
       const response = await fetch(url, { method: "HEAD" }),
-      return response.ok, } catch {
-      return false, }
+      return response.ok;
+    } catch {
+      return false;
+    }
   }
 
   async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {
@@ -80,11 +82,12 @@ export class LinkChecker {
       title: this.extractPageTitle(pageContent),
       links: checkedLinks,
       exists: true
-    }, }
+    }}
 
   private extractPageTitle(content: string): string {
-    const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
-    return titleMatch ? titleMatch[1].trim() : "Untitled", }
+    const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i),
+    return titleMatch ? titleMatch[1].trim() : "Untitled";
+  }
 
   getSummary() {
     return {
@@ -92,7 +95,7 @@ export class LinkChecker {
       brokenLinks: this.brokenLinks.length,
       missingPages: this.missingPages.length,
       externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length
-    }, }
+    }}
 
   getBrokenLinks(): LinkInfo[] {
     return this.brokenLinks, }

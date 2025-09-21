@@ -11,4 +11,4 @@ export interface TalentProfile {
   portfolio: string[],
   verified: boolean,
   rating: number,
-  completedProjects: number, }
+  completedProjects: number}

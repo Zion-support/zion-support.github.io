@@ -1,11 +1,11 @@
 
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import React from "react",
-import React from "react",
-import { import{, Sparkles } from 'lucide-react'
-import React from "react",
+import React from "react";
+import { Badge,} from "@/components/ui/badge";
+import { Button,} from "@/components/ui/button";
+import React from "react";
+import React from "react";
+import { import,, {,, Sparkles,} from 'lucide-react'
+import React from "react";
 export function UsageStats() {
 return (
     <div className='space-y-8'>
@@ -16,7 +16,7 @@ return (
 resources.
         </p>
       </div>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+      <div className='grid grid-cols-1 lg: grid-cols-2 gap-6'>
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>

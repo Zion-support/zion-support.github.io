@@ -3,14 +3,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button',
 interface ContractTypeCardsProps {
   onStandardClick: () => void,
-  onSmartClick: () => void, }
+  onSmartClick: () => void}
 
 export function ContractTypeCards({
-  onStandardClick,
+  onStandardClick;
   onSmartClick;
 }: ContractTypeCardsProps) {
   return (
-    <div className='grid md:grid-cols-2 gap-6 mb-10'>
+    <div className='grid md: grid-cols-2 gap-6 mb-10'>
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
@@ -70,4 +70,4 @@ export function ContractTypeCards({
         </CardFooter>
       </Card>
     </div>
-  );
+  )}

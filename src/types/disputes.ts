@@ -14,11 +14,14 @@ export interface Dispute {
   client_profile?: {
     id: string,
     display_name: string,
-    avatar_url?: string, };
+    avatar_url?: string;
+  };
   talent_profile?: {
     id: string,
     display_name: string,
-    avatar_url?: string, }, }
+    avatar_url?: string;
+  };
+}
 
 export interface DisputeMessage {
   id: string,
@@ -29,7 +32,9 @@ export interface DisputeMessage {
   is_admin_note: boolean,
   user_profile?: {
     display_name: string,
-    avatar_url?: string, }, }
+    avatar_url?: string;
+  };
+}
 
 export const disputeReasonLabels: Record<string, string> = {
   'payment_issue': 'Payment Issue',
@@ -37,4 +42,4 @@ export const disputeReasonLabels: Record<string, string> = {
   'communication_problem': 'Communication Problem',
   'scope_creep': 'Scope Creep',
   'deadline_missed': 'Deadline Missed',
-  'other': 'Other', };
+  'other': 'Other'};

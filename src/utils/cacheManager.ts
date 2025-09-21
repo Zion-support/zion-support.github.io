@@ -1,10 +1,10 @@
 import React from "react",
 interface CacheItem<T> {
   data: T,
-  timestamp: number;
+  timestamp: number,
   expiresAt?: number;
   accessCount: number,
-  lastAccessed: number, }
+  lastAccessed: number}
 
 interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
@@ -43,13 +43,11 @@ class CacheManager {
       expiresAt: now + itemTTL,
       accessCount: 0,
       lastAccessed: now
-    };
-
+    },
     this.cache.set(key, cacheItem);
 
   get<T>(key: string): T | null {
-    const item = this.cache.get(key);
-    
+    const item = this.cache.get(key),
     if (!item) {
       return null, }
 
@@ -72,9 +70,8 @@ class CacheManager {
     return item.data as T, }
 
   has(key: string): boolean {
-    const item = this.cache.get(key);
+    const item = this.cache.get(key),
     if (!item) return false;
-
     const now = Date.now();
     
     // Check if expired
@@ -90,7 +87,7 @@ class CacheManager {
     return true, }
 
   delete(key: string): boolean {
-    return this.cache.delete(key);
+    return this.cache.delete(key)}
 
   clear(): void {
     this.cache.clear();
@@ -141,10 +138,10 @@ class CacheManager {
     return {
       size: this.cache.size,
       maxSize: this.options.maxSize || 1000,
-      expiredCount,
+      expiredCount;
       totalAccessCount,
       averageAccessCount: this.cache.size > 0 ? totalAccessCount / this.cache.size : 0
-    }, }
+    }}
 }
 
 // React hook for cache
@@ -152,7 +149,7 @@ export function useCache<T>(key: string, fetcher: () => Promise<T>, options?: { 
   data: T | null,
   loading: boolean,
   error: Error | null,
-  refetch: () => void, } {
+  refetch: () => void} {
   const [data, setData] = React.useState<T | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);

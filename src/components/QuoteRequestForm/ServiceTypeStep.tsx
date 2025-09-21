@@ -9,8 +9,8 @@ import { useDebounce } from "@/hooks/useDebounce",
 import { useIsMounted } from "@/hooks/useIsMounted",
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
-  onUpdate: (data: Partial<QuoteFormData>) => void;
-  onNext: () => void, }
+  onUpdate: (data: Partial<QuoteFormData>) => void,
+  onNext: () => void}
 
 const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ formData, onUpdate, onNext }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -27,8 +27,8 @@ const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ formData, onUpdate, o
     setSelectedListing(null);;
 
   const handleListingSelect = (listing: ListingItem) => {
-    setSelectedListing(listing);
-    onUpdate({ selectedListing: listing });;
+    setSelectedListing(listing),
+    onUpdate({ selectedListing: listing })};
 
   useEffect(() => {
     if (!debouncedSearch || !formData.serviceType) {
@@ -69,17 +69,19 @@ const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ formData, onUpdate, o
               verified: true
             }
           }
-        ];
-        
-        setListings(mockListings); catch (error) {
-        console.error('Search error:', error); finally {
+        ],
+        setListings(mockListings);
+      } catch (error) {
+        console.error('Search error:', error);
+      } finally {
         setIsLoading(false);
     };
 
     searchListings();, [debouncedSearch, formData.serviceType]);
 
   if (!isMounted) {
-    return <Skeleton className="h-64 w-full" />, }
+    return <Skeleton className="h-64 w-full" />
+  }
 
   return (
     <div className="space-y-6">

@@ -7,12 +7,11 @@ import React from "react",
 import import { Tooltip;
 TooltipContent;
 TooltipProvider;
-TooltipTrigger } from "
+TooltipTrigger} from "
 import import { DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
-DropdownMenuTrigger,
-} from "
+DropdownMenuTrigger} from "
 
 export export function PointsBadge() {;
 const { user; signOut; logout } = useAuth()
@@ -20,23 +19,23 @@ const { ledger; balance } = usePoints()
 const [points; setPoints] = useState(balance)
 
 useEffect(() => {
-setPoints(balance);, [balance])
+setPoints(balance);
+}, [balance])
 
 if (!user) return null;
-
 const breakdown = ledger.reduce(;
 (acc; e) => {
 if (e.reason === "purchase") acc.purchase += e.delta;
 if (e.reason === "post") acc.post += e.delta;
 if (e.reason === "referral") acc.referral += e.delta;
-return acc,
-},
+return acc},
 { purchase: 0; post: 0; referral: 0 }
 )
 const handleLogout = async () => {
 if (signOut) {
-await signOut(); else if (logout) {
+await signOut()} else if (logout) {
 await logout();
+}
 }
 
 return (
@@ -75,8 +74,8 @@ className="flex items-center gap-1 text-xs text-muted-foreground"
 </DropdownMenuContent>
 </DropdownMenu>
 )
-import import React, { useState } from 'react',
-import { Gift, RefreshCw } from 'lucide-react'
+import import React, { useState } from 'react';
+import { Gift,,, RefreshCw,} from 'lucide-react'
 return (
     <TooltipProvider>
       <div className='flex items-center gap-1'>

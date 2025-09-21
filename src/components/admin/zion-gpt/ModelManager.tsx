@@ -11,11 +11,12 @@ interface ModelConfig {
   purpose: string,
   baseModel: string,
   active: boolean,
-  createdAt: string, }
+  createdAt: string}
 
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
-  errorMessage?: string, }
+  errorMessage?: string;
+}
 
 export function ModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]);
@@ -66,10 +67,11 @@ export function ModelManager() {
           trainingStatus: 'failed',
           errorMessage: 'Training data insufficient'
         }
-      ];
-      
-      setModels(mockModels); catch (error) {
-      logErrorToProduction('Failed to fetch models:', { error }); finally {
+      ],
+      setModels(mockModels);
+    } catch (error) {
+      logErrorToProduction('Failed to fetch models:', { error });
+    } finally {
       setIsLoading(false);
   };
 
@@ -83,8 +85,9 @@ export function ModelManager() {
         model.id === modelId 
           ? { ...model, trainingStatus: 'succeeded' as const }
           : model
-      )); catch (error) {
-      logErrorToProduction('Failed to check training status:', { error, modelId }); finally {
+      ))} catch (error) {
+      logErrorToProduction('Failed to check training status:', { error, modelId });
+    } finally {
       setActiveJobs(prev => ({ ...prev, [modelId]: false }));
   };
 
@@ -97,7 +100,7 @@ export function ModelManager() {
         model.id === modelId 
           ? { ...model, active: !currentActive }
           : model
-      )); catch (error) {
+      ))} catch (error) {
       logErrorToProduction('Failed to toggle model status:', { error, modelId });
   };
 

@@ -7,7 +7,7 @@ const Helpdesk = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Helpdesk</h1>
           <p className="text-xl text-gray-600">Get the support you need, when you need it.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Technical Support</h3>
             <p className="text-gray-600 mb-4">Get help with technical issues and troubleshooting.</p>
@@ -26,6 +26,5 @@ const Helpdesk = () => {
         </div>
       </div>
     </div>
-  );;
-
+  )};
 export default Helpdesk;

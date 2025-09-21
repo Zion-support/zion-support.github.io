@@ -19,18 +19,18 @@ const signupSchema = z.object({
     .regex(/[0-9]/, 'Password must contain at least one number')
     .regex(/[^A-Za-z0-9]/, 'Password must contain at least one special character');
   confirmPassword: z.string(),
-  terms: z.boolean().refine(val => val === true, 'You must accept the terms and conditions');).refine(data => data.password === data.confirmPassword, {
+  terms: z.boolean().refine(val => val === true, 'You must accept the terms and conditions');
+}).refine(data => data.password === data.confirmPassword, {
   message: "Passwords don't match",
-  path: ["confirmPassword"],
-});
+  path: ["confirmPassword"]});
 
-type SignupFormData = z.infer<typeof signupSchema>;
+type SignupFormData = z.infer<typeof signupSchema>
 
 interface PasswordStrength {
   strength: number,
   label: string,
   color: string,
-  percentage: number, }
+  percentage: number}
 
 export function SignupForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -42,20 +42,20 @@ export function SignupForm() {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
-  } = useForm<SignupFormData>({
-    resolver: zodResolver(signupSchema););
+    formState: { errors }} = useForm<SignupFormData>({
+    resolver: zodResolver(signupSchema)});
 
   const watchedFields = watch();
 
   const calculatePasswordStrength = (password: string): PasswordStrength => {
-    let strength = 0;
+    let strength = 0,
     const checks = [
       password.length >= 8;
       /[A-Z]/.test(password);
       /[a-z]/.test(password);
       /[0-9]/.test(password);
-      /[^A-Za-z0-9]/.test(password), ];
+      /[^A-Za-z0-9]/.test(password)
+  ];
     
     strength = checks.filter(Boolean).length;
     
@@ -65,38 +65,37 @@ export function SignupForm() {
       2: { label: 'Fair', color: 'bg-yellow-500', percentage: 60 },
       3: { label: 'Good', color: 'bg-blue-500', percentage: 80 },
       4: { label: 'Strong', color: 'bg-green-500', percentage: 100 },
-      5: { label: 'Very Strong', color: 'bg-green-600', percentage: 100 }, };
+      5: { label: 'Very Strong', color: 'bg-green-600', percentage: 100 }};
 
     return {
-      strength,
-      ...strengthMap[strength as keyof typeof strengthMap],
-    }, };
+      strength;
+      ...strengthMap[strength as keyof typeof strengthMap]};
+  };
 
   const passwordStrength = calculatePasswordStrength(watchedFields.password || '');
 
   const onSubmit = async (data: SignupFormData) => {
-    setIsLoading(true);
+    setIsLoading(true),
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       toast({
         title: "Account Created",
-        description: "Your account has been created successfully!",
-      });
+        description: "Your account has been created successfully!"});
       
       console.log('Signup data:', data); catch (error) {
       toast({
         title: "Signup Failed",
         description: "Failed to create account. Please try again.",
-        variant: "destructive",
-      }); finally {
+        variant: "destructive"});
+    } finally {
       setIsLoading(false);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
         <div>
           <Label htmlFor="firstName">First Name</Label>
           <Input
@@ -291,4 +290,4 @@ export function SignupForm() {
         )}
       </Button>
     </form>
-  );
+  )}

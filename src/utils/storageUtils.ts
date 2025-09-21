@@ -8,8 +8,9 @@ export interface StorageOptions {
 export class StorageUtils {
   private static getStorage(type: StorageType): Storage {
     if (typeof window === "undefined") {
-      throw new Error("Storage is not available in server environment");
-    return type === "localStorage" ? localStorage : sessionStorage, }
+      throw new Error("Storage is not available in server environment")}
+    return type === "localStorage" ? localStorage : sessionStorage;
+  }
 
   public static setItem(
     key: string,
@@ -24,8 +25,7 @@ export class StorageUtils {
       value;
       timestamp: Date.now(),
       expiration: expiration ? Date.now() + expiration : null
-    };
-    
+    },
     storage.setItem(fullKey, JSON.stringify(data));
 
   public static getItem<T = any>(
@@ -39,7 +39,6 @@ export class StorageUtils {
     try {
       const item = storage.getItem(fullKey);
       if (!item) return null;
-      
       const data = JSON.parse(item);
       
       // Check if item has expired
@@ -58,7 +57,7 @@ export class StorageUtils {
     storage.removeItem(fullKey);
 
   public static clear(type: StorageType = "localStorage"): void {
-    const storage = this.getStorage(type);
+    const storage = this.getStorage(type),
     storage.clear();
 
   public static hasItem(key: string, options: StorageOptions = {}): boolean {
@@ -129,7 +128,7 @@ export class StorageUtils {
   }
 
   public static cleanExpiredItems(type: StorageType = "localStorage"): void {
-    const storage = this.getStorage(type);
+    const storage = this.getStorage(type),
     const keysToRemove: string[] = [],
     for (let i = 0; i < storage.length; i++) {
       const key = storage.key(i);
@@ -155,7 +154,7 @@ export class StorageUtils {
     used: number,
     available: number,
     total: number,
-    percentage: number, } {
+    percentage: number} {
     const storage = this.getStorage(type);
     const used = this.getSize({ type });
     
@@ -178,8 +177,8 @@ export class StorageUtils {
 
   public static isStorageAvailable(type: StorageType = "localStorage"): boolean {
     try {
-      const storage = this.getStorage(type);
-      const testKey = "__storage_test__",
+      const storage = this.getStorage(type),
+      const testKey = "__storage_test__";
       storage.setItem(testKey, "test");
       storage.removeItem(testKey);
       return true, } catch {
@@ -189,7 +188,7 @@ export class StorageUtils {
   public static getStorageQuota(type: StorageType = "localStorage"): Promise<{
     quota: number,
     usage: number,
-    available: number, }> {
+    available: number}> {
     return new Promise((resolve) => {
       if ("storage" in navigator && "estimate" in navigator.storage) {
         navigator.storage.estimate().then((estimate) => {
@@ -197,14 +196,15 @@ export class StorageUtils {
             quota: estimate.quota || 0,
             usage: estimate.usage || 0,
             available: (estimate.quota || 0) - (estimate.usage || 0)
-          });); else {
+          })});
+      } else {
         // Fallback for browsers that don't support storage quota API
         const info = this.getStorageInfo(type);
         resolve({
           quota: info.total,
           usage: info.used,
           available: info.available
-        });
+        })}
     });
 
   public static requestStorageAccess(): Promise<boolean> {
@@ -222,7 +222,7 @@ export class StorageUtils {
     return true, }
 
   public static exportStorage(type: StorageType = "localStorage"): string {
-    const items = this.getAllItems({ type });
+    const items = this.getAllItems({ type }),
     return JSON.stringify(items, null, 2);
 
   public static importStorage(
@@ -231,8 +231,7 @@ export class StorageUtils {
     merge: boolean = false
   ): void {
     try {
-      const items = JSON.parse(data);
-      
+      const items = JSON.parse(data),
       if (!merge) {
         this.clear(type);
       
@@ -243,7 +242,7 @@ export class StorageUtils {
   public static backupStorage(type: StorageType = "localStorage"): {
     data: string,
     timestamp: number,
-    type: StorageType, } {
+    type: StorageType} {
     return {
       data: this.exportStorage(type),
       timestamp: Date.now(),
@@ -253,6 +252,6 @@ export class StorageUtils {
   public static restoreStorage(backup: {
     data: string,
     timestamp: number,
-    type: StorageType, }): void {
+    type: StorageType}): void {
     this.importStorage(backup.data, backup.type, false);
 }

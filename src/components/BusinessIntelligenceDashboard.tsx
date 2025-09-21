@@ -8,27 +8,27 @@ interface BusinessMetric {
   trend: 'up' | 'down' | 'stable',
   category: 'revenue' | 'growth' | 'efficiency' | 'customer',
   icon: string,
-  color: string, }
+  color: string}
 
 interface KPIData {
   metric: string,
   current: number,
   target: number,
   progress: number,
-  status: 'on-track' | 'at-risk' | 'behind', }
+  status: 'on-track' | 'at-risk' | 'behind'}
 
 interface RevenueData {
   month: string,
   revenue: number,
   growth: number,
-  profit: number, }
+  profit: number}
 
 interface CustomerInsight {
   segment: string,
   count: number,
   revenue: number,
   growth: number,
-  satisfaction: number, }
+  satisfaction: number}
 
 export const BusinessIntelligenceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<BusinessMetric[]>([
@@ -92,8 +92,7 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
       icon: '💸',
       color: 'red'
     }
-  ]);
-
+  ]),
   const [kpis, setKpis] = useState<KPIData[]>([
     {
       metric: 'Monthly Revenue Target',
@@ -123,8 +122,7 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
       progress: 93,
       status: 'on-track'
     }
-  ]);
-
+  ]),
   const [revenueData, setRevenueData] = useState<RevenueData[]>([
     { month: 'Jan', revenue: 950000, growth: 8.2, profit: 285000 },
     { month: 'Feb', revenue: 1100000, growth: 15.8, profit: 330000 },
@@ -132,8 +130,7 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
     { month: 'Apr', revenue: 1150000, growth: -4.2, profit: 345000 },
     { month: 'May', revenue: 1300000, growth: 13.0, profit: 390000 },
     { month: 'Jun', revenue: 1240000, growth: -4.6, profit: 372000 }
-  ]);
-
+  ]),
   const [customerInsights, setCustomerInsights] = useState<CustomerInsight[]>([
     {
       segment: 'Enterprise',
@@ -156,42 +153,37 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
       growth: 8.7,
       satisfaction: 4.3
     }
-  ]);
-
+  ]),
   const [selectedTimeframe, setSelectedTimeframe] = useState('6m');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '↗️',
-      case 'down': return '↘️',
-      default: return '➡️', }
+      case 'down': return '↘️';
+      default: return '➡️'}
   };
-
   const getTrendColor = (trend: string) => {
     switch (trend) {
       case 'up': return 'text-green-400',
-      case 'down': return 'text-red-400',
-      default: return 'text-gray-400', }
+      case 'down': return 'text-red-400';
+      default: return 'text-gray-400'}
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'revenue': return 'from-green-500 to-emerald-600',
-      case 'growth': return 'from-blue-500 to-cyan-600',
-      case 'efficiency': return 'from-purple-500 to-violet-600',
-      case 'customer': return 'from-yellow-500 to-amber-600',
-      default: return 'from-gray-500 to-slate-600', }
+      case 'growth': return 'from-blue-500 to-cyan-600';
+      case 'efficiency': return 'from-purple-500 to-violet-600';
+      case 'customer': return 'from-yellow-500 to-amber-600';
+      default: return 'from-gray-500 to-slate-600'}
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'on-track': return 'text-green-400 bg-green-900',
-      case 'at-risk': return 'text-yellow-400 bg-yellow-900',
-      case 'behind': return 'text-red-400 bg-red-900',
-      default: return 'text-gray-400 bg-gray-900', }
+      case 'at-risk': return 'text-yellow-400 bg-yellow-900';
+      case 'behind': return 'text-red-400 bg-red-900';
+      default: return 'text-gray-400 bg-gray-900'}
   };
-
   const filteredMetrics = selectedCategory === 'all' 
     ? metrics 
     : metrics.filter(metric => metric.category === selectedCategory);
@@ -410,6 +402,5 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );;
-
+  )};
 export default BusinessIntelligenceDashboard;

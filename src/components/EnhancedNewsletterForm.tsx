@@ -21,13 +21,12 @@ export function EnhancedNewsletterForm() {
       setIsSubmitted(true)
       toast({
         title: "Success!",
-        description: "You've been subscribed to our newsletter.",
-      })
+        description: "You've been subscribed to our newsletter."})
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to subscribe. Please try again.";
-        variant: "destructive", })
+        description: "Failed to subscribe. Please try again.",
+        variant: "destructive"})
     } finally {
       setIsSubmitting(false)
     }

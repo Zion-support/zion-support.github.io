@@ -6,11 +6,12 @@ describe('guest buy now flow', () => {
       headers: { 'set-cookie': 'token=jwt, HttpOnly, Path=/' }
     }).as('login');
     cy.visit('/equipment/pro-camera-x1000');
-    cy.contains('Buy Now').click();
+    cy.contains('Buy Now').click(),
     cy.url().should('include/login?next=%2Fcheckout%3Fsku%3Dpro-camera-x1000');
     cy.get('input[name="email"]').type('test@example.com');
     cy.get('input[name="password"]').type('Password123');
-    cy.contains('Login').click();
+    cy.contains('Login').click(),
     cy.wait('@login');
     cy.url().should('include/checkout?sku=pro-camera-x1000');
-    cy.contains('pro-camera-x1000');););
+    cy.contains('pro-camera-x1000');
+  })}),

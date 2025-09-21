@@ -22,8 +22,7 @@ export const useLazyLoad = (options = {}) => {
             })
         }, {
             threshold,
-            rootMargin: preload ? `${preloadDistance}px` : rootMargin;
-        })
+            rootMargin: preload ? `${preloadDistance}px` : rootMargin})
     observer.observe(element)
         return () => {
             observer.unobserve(element)

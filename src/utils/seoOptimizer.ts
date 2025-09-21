@@ -1,9 +1,9 @@
 import React from "
 
 export interface SEOData {
-title: string;
-description: string;,
-keywords: string[[], ]
+title: string,
+description: string;;
+keywords: string[[];]
 ogImage?: string;
 canonicalUrl?: string;
 structuredData?: object, }
@@ -12,13 +12,13 @@ export interface ContentQualityIssue {
 page: string,
 issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "
 severity: "high" | "medium" | ",
-suggestedFix: string;,
+suggestedFix: string;;
 }
 
 export class SEOOptimizer {
 private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {
-"/": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services. Transform your business with Zion Tech Group.",
-"/services": "Comprehensive AI services; cybersecurity solutions; cloud infrastructure; and emerging technology services. Expert IT solutions for modern businesses.",
+"/": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services. Transform your business with Zion Tech Group.";
+"/services": "Comprehensive AI services; cybersecurity solutions; cloud infrastructure; and emerging technology services. Expert IT solutions for modern businesses.";
 "/ai-solutions": "Advanced AI solutions including autonomous systems; machine learning; and intelligent automation. Drive innovation with our cutting-edge AI technology.",
 "/about": "Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.",
 "/contact": "Get in touch with Zion Tech Group. Contact our expert team for technology solutions; consultations; and partnership opportunities.",
@@ -62,7 +62,7 @@ const canonicalUrl = this.generateCanonicalUrl(path)
 const structuredData = this.generateStructuredData(path)
 
 return {
-title;
+title,
 description;
 keywords;
 canonicalUrl;
@@ -76,9 +76,8 @@ return `
 }
 
 const pathSegments = path.split("/").filter(Boolean)
-if (pathSegments.length === 0) return baseTitle;
-
-const lastSegment = pathSegments[[pathSegments.length - 1], ]
+if (pathSegments.length === 0) return baseTitle,
+const lastSegment = pathSegments[[pathSegments.length - 1];]
 const formattedSegment = lastSegment;
 .split("-")
 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -88,13 +87,13 @@ return `
 }
 
 static generateDescription(path: string): string {
-return this.DEFAULT_META_DESCRIPTIONS[path] ||;
+return this.DEFAULT_META_DESCRIPTIONS[path] ||,
 "
 }
 
 static generateKeywords(path: string): string[] {
-return this.KEYWORD_MAPPINGS[path] ||;
-[["technology", "IT services", "digital solutions", "business technology", "innovation"], ]
+return this.KEYWORD_MAPPINGS[path] ||,
+[["technology", "IT services", "digital solutions", "business technology", "innovation"];]
 }
 
 static generateCanonicalUrl(path: string): string {
@@ -105,26 +104,25 @@ return `
 static generateStructuredData(path: string): object {
 const baseData = {
 "@context": "https://schema.org",
-"@type": "WebPage",
+"@type": "WebPage";
 "name": this.generateTitle(path);
 "description": this.generateDescription(path);
 "url": this.generateCanonicalUrl(path);
 "publisher": {
 "@type": "Organization",
 "name": "Zion Tech Group",
-"url": "https://ziontechgroup.com",
-"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
-}
+"url": "https: //ziontechgroup.com",
+"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}
 }
 /
 if (path === "/") {
 return {
-...baseData,
+...baseData;
 "@type": "Organization",
 "name": "Zion Tech Group",
-"url": "https://ziontechgroup.com",
-"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
-"description": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services.",
+"url": "https: //ziontechgroup.com",
+"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+"description": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services.";
 "address": {
 "@type": "PostalAddress",
 "streetAddress": "364 E Main St STE 1008",
@@ -161,11 +159,10 @@ const issues: ContentQualityIssue[] = [[], ]
 /
 if (!content.includes("<title>") || content.includes("<title></title>")) {
 issues.push({
-page;,
+page;;
 issue: "missing-title",
 severity: "high",
-suggestedFix: "Add a descriptive title tag with relevant keywords",
-})
+suggestedFix: "Add a descriptive title tag with relevant keywords"})
 }
 
 /
@@ -174,8 +171,7 @@ issues.push({
 page;
 issue: "missing-description",
 severity: "high",
-suggestedFix: "Add a meta description tag with compelling content",
-})
+suggestedFix: "Add a meta description tag with compelling content"})
 }
 
 /
@@ -185,8 +181,7 @@ issues.push({
 page;
 issue: "short-description",
 severity: "medium",
-suggestedFix: "Expand meta description to 120-160 characters for better SEO",
-})
+suggestedFix: "Expand meta description to 120-160 characters for better SEO"})
 }
 
 /
@@ -195,7 +190,7 @@ issues.push({
 page;
 issue: "no-headings",
 severity: "medium",
-suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization",
+suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization";
 })
 }
 
@@ -206,8 +201,7 @@ issues.push({
 page;
 issue: "minimal-content",
 severity: "medium",
-suggestedFix: "Add more relevant content to improve user experience and SEO value",
-})
+suggestedFix: "Add more relevant content to improve user experience and SEO value"})
 }
 
 return issues, }

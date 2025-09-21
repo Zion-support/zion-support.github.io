@@ -9,7 +9,7 @@ export interface OperatorSession {,
   createdAt: Date,
   updatedAt: Date}
 ,
-export interface SupportEvent {,
+export interface SupportEvent {;
   type: string,
   sessionId: string,
   payload: any,

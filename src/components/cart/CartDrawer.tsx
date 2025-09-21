@@ -11,7 +11,7 @@ export function CartDrawer() {
   const count = useSelector((state: RootState) => state.cart.items.length),
   const handleClick = (e: React.MouseEvent) => {
     if (!user) {
-      e.preventDefault();
+      e.preventDefault(),
       setLoginOpen(true);
   };
 
@@ -23,7 +23,7 @@ export function CartDrawer() {
         className='relative p-1'
         onClick={handleClick}
       >
-        <ShoppingCart className='h-5 w-5 text-foreground hover:text-primary' />
+        <ShoppingCart className='h-5 w-5 text-foreground hover: text-primary' />
         {count > 0 && (
           <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center'>
             {count}
@@ -32,4 +32,4 @@ export function CartDrawer() {
       </Link>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  );
+  )}

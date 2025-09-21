@@ -11,7 +11,7 @@ export function CategoryCard({
   return (
     <a 
       href={href}
-      className={`block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden ${className}`}
+      className={`block bg-white rounded-lg shadow-md hover: shadow-lg transition-shadow duration-300 overflow-hidden ${className}`}
     >
       <div className="p-6">
         {image && (
@@ -41,5 +41,4 @@ export function CategoryCard({
         </p>
       </div>
     </a>
-  );
-}
+  )}

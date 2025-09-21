@@ -1,4 +1,4 @@
-import type { BookChapter } from './bookTypes',
+import type { BookChapter } from './bookTypes';
 export const defaultChapters: BookChapter[] = [,
   { title: 'Intro: Founder\'s Story', content: '' },
   { title: 'Chapter 1: Marketplace as OS', content: '' },

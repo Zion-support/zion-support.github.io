@@ -15,18 +15,19 @@ interface QuoteFormData {
   description: string,
   amount: number,
   status: 'pending' | 'approved' | 'rejected' | 'expired',
-  validUntil: Date;
-  notes: string, }
+  validUntil: Date,
+  notes: string}
 
 interface QuotesFormProps {
   initialData?: Partial<QuoteFormData>;
   onSave: (data: QuoteFormData) => void,
   onCancel: () => void,
-  isEditing?: boolean, }
+  isEditing?: boolean;
+}
 
 export const QuotesForm: React.FC<QuotesFormProps> = ({
   initialData,
-  onSave,
+  onSave;
   onCancel,
   isEditing = false
 }) => {
@@ -38,8 +39,7 @@ export const QuotesForm: React.FC<QuotesFormProps> = ({
     status: initialData?.status || 'pending',
     validUntil: initialData?.validUntil || new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
     notes: initialData?.notes || ''
-  });
-
+  }),
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validateForm = (): boolean => {
@@ -64,7 +64,7 @@ export const QuotesForm: React.FC<QuotesFormProps> = ({
     return Object.keys(newErrors).length === 0, };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (validateForm()) {
       onSave(formData);
   };

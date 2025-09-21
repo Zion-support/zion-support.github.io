@@ -5,8 +5,9 @@ interface BundleModule {
   name: string,
   size: number,
   gzipSize: number,
-  percentage: number;
-  children?: BundleModule[], }
+  percentage: number,
+  children?: BundleModule[];
+}
 
 export const BundleAnalyzer: React.FC = () => {
   const [modules, setModules] = useState<BundleModule[]>([]);
@@ -61,8 +62,7 @@ export const BundleAnalyzer: React.FC = () => {
             { name: 'custom', size: 139140, gzipSize: 18120, percentage: 35.1 }
           ]
         }
-      ];
-      
+      ],
       const total = mockModules.reduce((sum, module) => sum + module.size, 0);
       setModules(mockModules);
       setTotalSize(total); catch (error) {
@@ -82,13 +82,15 @@ export const BundleAnalyzer: React.FC = () => {
 
   const getSizeColor = (percentage: number) => {
     if (percentage > 50) return 'text-red-400',
-    if (percentage > 25) return 'text-yellow-400',
-    return 'text-green-400', };
+    if (percentage > 25) return 'text-yellow-400';
+    return 'text-green-400';
+  };
 
   const getSizeBg = (percentage: number) => {
     if (percentage > 50) return 'bg-red-500/20 border-red-500/30',
-    if (percentage > 25) return 'bg-yellow-500/20 border-yellow-500/30',
-    return 'bg-green-500/20 border-green-500/30', };
+    if (percentage > 25) return 'bg-yellow-500/20 border-yellow-500/30';
+    return 'bg-green-500/20 border-green-500/30';
+  };
 
   return (
     <div className="p-6 bg-gray-900 min-h-screen">

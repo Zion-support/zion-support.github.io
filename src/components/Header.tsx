@@ -11,10 +11,8 @@ export default function Header() {
               </span>
             </Link>
           <nav className="flex gap-6">
-            <Link href="/services" >
-              <span className="text-zion-cyan hover:text-white transition-colors">
-                Services
-              </span>
+            <Link href="/services" className="text-zion-cyan hover: text-white transition-colors">
+              Services
             </Link>
             <Link href="/about" >
               <span className="text-zion-cyan hover:text-white transition-colors">
@@ -30,5 +28,4 @@ export default function Header() {
         </div>
       </div>
     </header>
-  );
-}
+  )}

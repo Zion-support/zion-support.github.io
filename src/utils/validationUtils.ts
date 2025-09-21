@@ -3,15 +3,15 @@ export interface ValidationRule {
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-  custom?: (value: any) => boolean | string, }
+  custom?: (value: any) => boolean | string}
 
 export interface ValidationResult {
   isValid: boolean,
-  errors: string[], }
+  errors: string[]}
 
 export class ValidationUtils {
   public static validateEmail(email: string): boolean {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     return emailRegex.test(email);
 
   public static validatePhone(phone: string): boolean {
@@ -20,9 +20,11 @@ export class ValidationUtils {
 
   public static validateURL(url: string): boolean {
     try {
-      new URL(url);
-      return true, } catch {
-      return false, }
+      new URL(url),
+      return true;
+    } catch {
+      return false;
+    }
   }
 
   public static validatePassword(password: string): ValidationResult {
@@ -90,7 +92,7 @@ export class ValidationUtils {
       .trim();
 
   public static escapeHTML(input: string): string {
-    const div = document.createElement("div");
+    const div = document.createElement("div"),
     div.textContent = input;
     return div.innerHTML, }
 }

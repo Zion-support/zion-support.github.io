@@ -18,9 +18,11 @@ class PerformanceMonitor {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          this.logMetric("LCP", lastEntry.startTime););
+          this.logMetric("LCP", lastEntry.startTime);
+        });
         lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] }),
-        this.observers.push(lcpObserver); catch (error) {
+        this.observers.push(lcpObserver);
+      } catch (error) {
         console.warn("LCP observer failed:", error);
 
       // First Input Delay
@@ -28,9 +30,12 @@ class PerformanceMonitor {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach(entry => {
-            this.logMetric("FID", (entry as any).processingStart - entry.startTime);););
+            this.logMetric("FID", (entry as any).processingStart - entry.startTime);
+          });
+        });
         fidObserver.observe({ entryTypes: ["first-input"] }),
-        this.observers.push(fidObserver); catch (error) {
+        this.observers.push(fidObserver);
+      } catch (error) {
         console.warn("FID observer failed:", error);
       // Cumulative Layout Shift
       try {
@@ -45,7 +50,8 @@ class PerformanceMonitor {
             this.logMetric("CLS", clsValue);
         });
         clsObserver.observe({ entryTypes: ["layout-shift"] }),
-        this.observers.push(clsObserver); catch (error) {
+        this.observers.push(clsObserver);
+      } catch (error) {
         console.warn("CLS observer failed:", error);
     }
   }
@@ -54,13 +60,14 @@ class PerformanceMonitor {
     this.metrics.set(name, {
       name,
       startTime: performance.now()
-    });
+    })}
 
   endTiming(name: string): number {
-    const metric = this.metrics.get(name);
+    const metric = this.metrics.get(name),
     if (!metric) {
       console.warn(`No timing started for: ${name}`),
-      return 0, }
+      return 0;
+    }
 
     const endTime = performance.now();
     const duration = endTime - metric.startTime;
@@ -78,7 +85,7 @@ class PerformanceMonitor {
     func: T,
     ...args: Parameters<T>
   ): ReturnType<T> {
-    this.startTiming(name);
+    this.startTiming(name),
     try {
       const result = func(...args);
       this.endTiming(name);
@@ -93,7 +100,7 @@ class PerformanceMonitor {
         metric_name: name,
         metric_value: value,
         event_category: "Performance"
-      });
+      })}
     
     console.log(`Performance Metric - ${name}: ${value.toFixed(2)}ms`);
 
@@ -133,8 +140,7 @@ class PerformanceAnalyzer {
     CLS: 0.1,  // Good: < 0.1, Needs Improvement: 0.1-0.25, Poor: > 0.25
     FCP: 1800, // Good: < 1.8s, Needs Improvement: 1.8-3s, Poor: > 3s
     TTFB: 800  // Good: < 800ms, Needs Improvement: 800-1800ms, Poor: > 1800ms
-  };
-
+  },
   constructor() {
     this.initializeMetrics();
 
@@ -157,7 +163,7 @@ class PerformanceAnalyzer {
       CLS: this.getCLS(),
       FCP: this.getFCP(),
       TTFB: this.getTTFB()
-    }, }
+    }}
 
   public checkThresholds(): { [K in keyof PerformanceThresholds]: boolean } {
     const metrics = this.getMetrics();
@@ -170,7 +176,7 @@ class PerformanceAnalyzer {
       CLS: (metrics.CLS ?? Infinity) <= this.thresholds.CLS,
       FCP: (metrics.FCP ?? Infinity) <= this.thresholds.FCP,
       TTFB: (metrics.TTFB ?? Infinity) <= this.thresholds.TTFB
-    }, }
+    }}
 
   public getPerformanceScore(): number {
     const thresholds = this.checkThresholds();

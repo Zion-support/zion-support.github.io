@@ -5,13 +5,14 @@ import { Facebook, Github } from 'lucide-react'
 interface AuthButtonsProps {
   providers: string[],
   onSignIn: (provider: string) => void,
-  loadingProvider?: string | null, }
+  loadingProvider?: string | null;
+}
 
 export function AuthButtons({ providers, onSignIn, loadingProvider }: AuthButtonsProps) {
   const gridCols = providers.length === 1 ? 'grid-cols-1' : 
                    providers.length === 2 ? 'grid-cols-2' : 'grid-cols-2',
   const handleSignIn = (provider: string) => {
-    onSignIn(provider);;
+    onSignIn(provider)};
 
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
@@ -19,7 +20,7 @@ export function AuthButtons({ providers, onSignIn, loadingProvider }: AuthButton
         <Button
           type='button'
           
-          className='w-full border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
+          className='w-full border-gray-300 bg-white text-gray-700 hover: bg-gray-50'
           onClick={() => handleSignIn('google')}
           disabled={loadingProvider !== null}
         >
@@ -101,4 +102,4 @@ export function AuthButtons({ providers, onSignIn, loadingProvider }: AuthButton
         </Button>
       )}
     </div>
-  );
+  )}

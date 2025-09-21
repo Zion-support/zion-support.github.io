@@ -1,7 +1,7 @@
 import import * as React from &quot;react&quot;
-import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react'
-import import { cn} from &quot;@/lib/utils&quot;
-import import { ButtonProps, buttonVariants} from &quot;@/components/ui/button&quot;
+import { ChevronLeft,,, ChevronRight,,, MoreHorizontal,} from 'lucide-react'
+import import { cn,} from &quot;@/lib/utils&quot;
+import import { ButtonProps,,, buttonVariants,} from &quot;@/components/ui/button&quot;
 const Pagination = ({ className, ...props }: React.ComponentProps<&quot;nav&quot;>) => (
   <nav
 role=&quot;navigation&quot;
@@ -36,7 +36,8 @@ size?: ButtonProps[&quot;size&quot, ]
 interface PaginationButtonProps,
 extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number,
-isActive?: boolean}
+isActive?: boolean;
+}
 const PaginationLink = ({
   className;
 isActive
@@ -75,7 +76,8 @@ ref={ref}
 PaginationButton.displayName = 'PaginationButton'
 const PaginationPrevious = ({
   className
-  ...props}: Omit<PaginationLinkProps 'size'>) => (
+  ...props;
+}: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
 aria-label="Go to previous page&quot;
     size=&quot;default"

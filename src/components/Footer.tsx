@@ -14,21 +14,9 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services" >
-              <span className="text-zion-cyan hover:text-white text-sm">
-                All Services
-              </span>
-            </Link></li>
-              <li><Link href="/services/ai" >
-              <span className="text-zion-cyan hover:text-white text-sm">
-                AI Solutions
-              </span>
-            </Link></li>
-              <li><Link href="/services/cloud" >
-              <span className="text-zion-cyan hover:text-white text-sm">
-                Cloud Computing
-              </span>
-            </Link></li>
+              <li><Link href="/services" className="text-zion-cyan hover: text-white text-sm">All Services</Link></li>
+              <li><Link href="/services/ai" className="text-zion-cyan hover:text-white text-sm">AI Solutions</Link></li>
+              <li><Link href="/services/cloud" className="text-zion-cyan hover:text-white text-sm">Cloud Computing</Link></li>
             </ul>
           </div>
           <div>
@@ -74,4 +62,4 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )}

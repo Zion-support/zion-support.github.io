@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react',
 interface ImageOptimizerProps {
   src: string,
-  alt: string;
+  alt: string,
   width?: number;
   height?: number;
   quality?: number;
@@ -23,7 +23,7 @@ interface OptimizedImageProps {
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
-  alt,
+  alt;
   width,
   height,
   quality = 80,
@@ -44,7 +44,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const optimizedSrc = React.useMemo(() => {
     if (!src) return src;
-    
     // If it's already an optimized URL, return as is
     if (src.includes('w_') || src.includes('h_') || src.includes('q_')) {
       return src, }
@@ -95,11 +94,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         transition: 'opacity 0.3s ease-in-out'
       }}
     />
-  );;
-
+  )};
 export const LazyImage: React.FC<ImageOptimizerProps> = ({
   src,
-  alt,
+  alt;
   width,
   height,
   quality = 80,
@@ -128,8 +126,7 @@ export const LazyImage: React.FC<ImageOptimizerProps> = ({
         threshold: 0.1,
         rootMargin: '50px'
       }
-    );
-
+    ),
     if (imgRef.current) {
       observer.observe(imgRef.current);
 
@@ -166,7 +163,8 @@ export const LazyImage: React.FC<ImageOptimizerProps> = ({
 export const ImageGallery: React.FC<{
   images: string[],
   alt: string,
-  className?: string, }> = ({ images, alt, className }) => {
+  className?: string;
+}> = ({ images, alt, className }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = useCallback(() => {
@@ -176,7 +174,6 @@ export const ImageGallery: React.FC<{
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);, [images.length]);
 
   if (images.length === 0) return null;
-
   return (
     <div className={`image-gallery ${className || ''}`}>
       <div className="gallery-main">

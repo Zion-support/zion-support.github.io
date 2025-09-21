@@ -8,7 +8,7 @@ export const FooterNewsletter: React.FC = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (email) {
       setIsSubscribed(true);
       setEmail("");
@@ -32,7 +32,7 @@ export const FooterNewsletter: React.FC = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+            className="flex-1 bg-white/10 border-white/20 text-white placeholder: text-gray-400"
             required
           />
           <Button
@@ -45,4 +45,4 @@ export const FooterNewsletter: React.FC = () => {
         </form>
       )}
     </div>
-  );;
+  )};

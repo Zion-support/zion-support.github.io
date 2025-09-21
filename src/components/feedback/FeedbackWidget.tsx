@@ -11,7 +11,7 @@ export const FeedbackWidget: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (feedback.trim()) {
       setIsSubmitted(true);
       setFeedback("");
@@ -26,12 +26,12 @@ export const FeedbackWidget: React.FC = () => {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-50"
+        className="fixed bottom-6 left-6 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-50"
         aria-label="Open feedback widget"
       >
         <MessageSquare className="h-5 w-5" />
       </button>
-    );
+    )}
 
   return (
     <div className="fixed bottom-6 left-6 w-80 bg-white rounded-lg shadow-xl border z-50">
@@ -76,7 +76,7 @@ export const FeedbackWidget: React.FC = () => {
             
             <Button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+              className="w-full bg-blue-600 hover: bg-blue-700 text-white"
             >
               <Send className="h-4 w-4 mr-2" />
               Send Feedback
@@ -85,4 +85,4 @@ export const FeedbackWidget: React.FC = () => {
         )}
       </div>
     </div>
-  );;
+  )};

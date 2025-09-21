@@ -4,8 +4,8 @@ interface ApiClientConfig {
   timeout: number,
   retries: number,
   retryDelay: number,
-  cacheEnabled: boolean;
-  cacheTTL: number, }
+  cacheEnabled: boolean,
+  cacheTTL: number}
 
 interface RequestOptions {
   timeout?: number;
@@ -21,7 +21,8 @@ interface ApiResponse<T = any> {
   status: number,
   statusText: string,
   headers: Headers,
-  cached?: boolean, }
+  cached?: boolean;
+}
 
 class EnhancedApiClient {
   private config: ApiClientConfig,
@@ -44,16 +45,16 @@ class EnhancedApiClient {
       ttl: this.config.cacheTTL,
       strategy: "lru",
       persist: false
-    });
+    })}
 
   async get<T = any>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
     return this.request<T>(url, { 
-      method: 'GET', 
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         ...headers
-      },
+      };
       ...restOptions 
     });
 
@@ -65,7 +66,7 @@ class EnhancedApiClient {
       headers: {
         'Content-Type': 'application/json',
         ...headers
-      },
+      };
       ...restOptions
     });
 
@@ -77,18 +78,18 @@ class EnhancedApiClient {
       headers: {
         'Content-Type': 'application/json',
         ...headers
-      },
+      };
       ...restOptions
     });
 
   async delete<T = any>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
     return this.request<T>(url, { 
-      method: 'DELETE', 
+      method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
         ...headers
-      },
+      };
       ...restOptions 
     });
 
@@ -96,14 +97,14 @@ class EnhancedApiClient {
     url: string,
     options: RequestOptions & RequestInit = {}
   ): Promise<ApiResponse<T>> {
-    const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;
+    const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`,
     const cacheKey = options.cacheKey || `${options.method || 'GET'}:${fullUrl}`;
     
     // Check cache first
     if (this.config.cacheEnabled && (options.cache !== 'no-cache')) {
       const cached = this.cache.get(cacheKey);
       if (cached) {
-        return { ...cached, cached: true }, }
+        return { ...cached, cached: true }}
     }
 
     // Check if request is already in progress
@@ -114,10 +115,10 @@ class EnhancedApiClient {
     const requestPromise = this.executeRequest<T>(fullUrl, options, {
       timeout: options.timeout || this.config.timeout,
       retries: options.retries || this.config.retries,
-      cacheKey,
+      cacheKey;
       cache: options.cache === 'no-cache' ? false : true,
       cacheTTL: options.cacheTTL || this.config.cacheTTL
-    });
+    }),
     this.requestQueue.set(cacheKey, requestPromise);
 
     try {
@@ -149,8 +150,7 @@ class EnhancedApiClient {
         const response = await fetch(url, {
           ...fetchOptions;
           signal: controller.signal
-        });
-
+        }),
         clearTimeout(timeoutId);
 
         if (!response.ok) {
@@ -163,8 +163,7 @@ class EnhancedApiClient {
           statusText: response.statusText,
           headers: response.headers,
           cached: false
-        };
-
+        },
         // Cache the response if enabled
         if (this.config.cacheEnabled && cache) {
           this.cache.set(cacheKey, apiResponse);
@@ -196,7 +195,7 @@ class EnhancedApiClient {
    * Set base URL
    */
   setBaseURL(baseURL: string): void {
-    this.config.baseURL = baseURL, }
+    this.config.baseURL = baseURL}
 
   /**
    * Update configuration
@@ -211,8 +210,7 @@ const apiClient = new EnhancedApiClient({
   timeout: 10000,
   retries: 3,
   cacheEnabled: true
-});
-
+}),
 export default apiClient;
 export { EnhancedApiClient };
 export type { ApiClientConfig, RequestOptions, ApiResponse };

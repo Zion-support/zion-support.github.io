@@ -13,8 +13,7 @@ export interface APIDocumentation {
     coverage: number,
     languages: string[],
     frameworks: string[]
-  },
-}
+  }}
 
 export interface APIEndpoint {
   id: string,
@@ -23,11 +22,11 @@ export interface APIEndpoint {
   summary: string,
   description: string,
   parameters: APIParameter[],
-  requestBody?: APIRequestBody,
+  requestBody?: APIRequestBody;
   responses: APIResponse[],
   tags: string[],
   deprecated: boolean,
-  rateLimit?: RateLimit,
+  rateLimit?: RateLimit;
   authentication?: AuthenticationRequirement
 }
 
@@ -37,28 +36,25 @@ export interface APIParameter {
   required: boolean,
   schema: APISchema,
   description: string,
-  example?: any,
+  example?: any;
   deprecated?: boolean
 }
 
 export interface APIRequestBody {
   required: boolean,
   content: Record<string, APIContent>,
-  description?: string,
-}
+  description?: string}
 
 export interface APIContent {
   schema: APISchema,
-  example?: any,
-  examples?: Record<string, APIExample>,
-}
+  example?: any;
+  examples?: Record<string, APIExample>}
 
 export interface APIResponse {
   code: string,
   description: string,
   content?: Record<string, APIContent>,
-  headers?: Record<string, APIHeader>,
-}
+  headers?: Record<string, APIHeader>}
 
 export interface APIHeader {
   description: string,
@@ -68,7 +64,7 @@ export interface APIHeader {
 
 export interface APISchema {
   type?: string,
-  format?: string,
+  format?: string;
   description?: string,
   properties?: Record<string, APISchema>,
   items?: APISchema,
@@ -85,8 +81,7 @@ export interface APISchema {
   pattern?: string,
   default?: any,
   nullable?: boolean,
-  $ref?: string,
-}
+  $ref?: string}
 
 export interface APIExample {
   id: string,
@@ -102,8 +97,7 @@ export interface ExampleRequest {
   method: string,
   url: string,
   headers: Record<string, string>,
-  body?: any,
-}
+  body?: any}
 
 export interface ExampleResponse {
   status: number,
@@ -133,9 +127,7 @@ export interface DocumentationConfig {
   branding?: {
     logo?: string,
     primaryColor?: string,
-    companyName?: string,
-  },
-}
+    companyName?: string}}
 
 export class APIDocGeneratorService {
   private supportedFrameworks = [
@@ -167,7 +159,6 @@ export class APIDocGeneratorService {
         frameworks: []
       }
     },
-
     try {
       // Analyze source code
       const analysis = await this.analyzeSourceCode(sourcePath);
@@ -180,17 +171,17 @@ export class APIDocGeneratorService {
       // Generate examples if requested
       if (config.includeExamples) {
         documentation.examples = await this.generateExamples(documentation.endpoints);
+      }
 
       // Calculate coverage
-      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints); catch (error) {
+      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints);
+    } catch (error) {
       console.error('Error generating documentation:', error);
       // Fallback to basic documentation
-      documentation.endpoints = this.generateFallbackEndpoints();
-      documentation.metadata.totalEndpoints = documentation.endpoints.length,
-    }
+      documentation.endpoints = this.generateFallbackEndpoints(),
+      documentation.metadata.totalEndpoints = documentation.endpoints.length}
 
-    return documentation,
-  }
+    return documentation}
 
   private async analyzeSourceCode(sourcePath: string): Promise<{
     endpoints: APIEndpoint[],
@@ -209,13 +200,13 @@ export class APIDocGeneratorService {
       if (extension === 'js' || extension === 'ts') {
         languages.push('javascripttypescript');
         frameworks.push('expressfastify');
-        endpoints.push(...this.analyzeJavaScriptFile(file)); else if (extension === 'py') {
+        endpoints.push(...this.analyzeJavaScriptFile(file))} else if (extension === 'py') {
         languages.push('python');
         frameworks.push('djangoflask', 'fastapi');
-        endpoints.push(...this.analyzePythonFile(file)); else if (extension === 'java') {
+        endpoints.push(...this.analyzePythonFile(file))} else if (extension === 'java') {
         languages.push('java');
         frameworks.push('spring');
-        endpoints.push(...this.analyzeJavaFile(file));
+        endpoints.push(...this.analyzeJavaFile(file))}
     }
 
     // Remove duplicates
@@ -227,22 +218,19 @@ export class APIDocGeneratorService {
       schemas: this.generateSchemas(endpoints),
       languages: uniqueLanguages,
       frameworks: uniqueFrameworks
-    },
-  }
+    }}
 
   private async scanDirectory(path: string): Promise<string[]> {
     // Simulate directory scanning
     return [
       'src/routes/users.jssrc/routes/products.js',
-      'src/routes/orders.jssrc/models/User.js',
+      'src/routes/orders.jssrc/models/User.js';
       'src/models/Product.jssrc/middleware/auth.js',
       'src/config/database.js'
-    ],
-  }
+    ]}
 
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [],
-    
     // Simulate route analysis
     if (filePath.includes('users')) {
       endpoints.push(
@@ -337,14 +325,13 @@ export class APIDocGeneratorService {
           tags: ['Users'],
           deprecated: false
         }
-      );
+      )}
 
-    return endpoints,
+    return endpoints;
   }
 
   private analyzePythonFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [],
-    
     // Simulate FastAPI/Django route analysis
     if (filePath.includes('products')) {
       endpoints.push({
@@ -379,14 +366,13 @@ export class APIDocGeneratorService {
         ],
         tags: ['Products'],
         deprecated: false
-      });
+      })}
 
-    return endpoints,
+    return endpoints;
   }
 
   private analyzeJavaFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [],
-    
     // Simulate Spring Boot endpoint analysis
     if (filePath.includes('orders')) {
       endpoints.push({
@@ -421,9 +407,9 @@ export class APIDocGeneratorService {
         ],
         tags: ['Orders'],
         deprecated: false
-      });
+      })}
 
-    return endpoints,
+    return endpoints;
   }
 
   private generateSchemas(endpoints: APIEndpoint[]): APISchema[] {
@@ -487,13 +473,11 @@ export class APIDocGeneratorService {
         description: 'Pagination metadata schema'
       }
     ],
-
-    return schemas,
+    return schemas;
   }
 
   private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
     const examples: APIExample[] = [],
-
     for (const endpoint of endpoints.slice(0, 3)) { // Limit to first 3 endpoints
       examples.push({
         id: `example_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -516,9 +500,9 @@ export class APIDocGeneratorService {
           body: this.generateExampleResponse(endpoint.responses[0])
         },
         tags: endpoint.tags
-      });
+      })}
 
-    return examples,
+    return examples;
   }
 
   private generateExampleBody(requestBody: APIRequestBody): any {
@@ -527,8 +511,7 @@ export class APIDocGeneratorService {
       name: "Example Name",
       email: "user@example.com",
       description: "This is an example description"
-    },
-  }
+    }}
 
   private generateExampleResponse(response: APIResponse): any {
     // Generate example response based on schema
@@ -537,9 +520,8 @@ export class APIDocGeneratorService {
         id: "123e4567-e89b-12d3-a456-426614174000",
         name: "Example Item",
         createdAt: new Date().toISOString()
-      },
-    }
-    return null,
+      }}
+    return null;
   }
 
   private generateFallbackEndpoints(): APIEndpoint[] {
@@ -561,8 +543,7 @@ export class APIDocGeneratorService {
         tags: ['System'],
         deprecated: false
       }
-    ],
-  }
+    ]}
 
   private extractProjectName(sourcePath: string): string {
     // Extract project name from path
@@ -572,13 +553,11 @@ export class APIDocGeneratorService {
 
   private async extractVersion(sourcePath: string): Promise<string> {
     // Simulate version extraction from package.json, requirements.txt, etc.
-    return '1.0.0',
-  }
+    return '1.0.0'}
 
   private async extractDescription(sourcePath: string): Promise<string> {
     // Simulate description extraction from README, package.json, etc.
-    return 'Comprehensive API documentation automatically generated from source code',
-  }
+    return 'Comprehensive API documentation automatically generated from source code'}
 
   private async extractBaseUrl(sourcePath: string): Promise<string> {
     // Simulate base URL extraction from configuration files
@@ -588,7 +567,6 @@ export class APIDocGeneratorService {
   private calculateCoverage(endpoints: APIEndpoint[]): number {
     // Calculate documentation coverage based on endpoints
     if (endpoints.length === 0) return 0,
-    
     let documentedEndpoints = 0;
     for (const endpoint of endpoints) {
       if (endpoint.description && endpoint.description.length > 10) {
@@ -596,15 +574,15 @@ export class APIDocGeneratorService {
       }
     }
     
-    return Math.round((documentedEndpoints / endpoints.length) * 100);
+    return Math.round((documentedEndpoints / endpoints.length) * 100)}
 
   async exportDocumentation(
     documentation: APIDocumentation,
     format: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi'
   ): Promise<string> {
     // Simulate export functionality
-    const timestamp = new Date().toISOString();
-    return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`,
+    const timestamp = new Date().toISOString(),
+    return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`;
   }
 
   async updateDocumentation(
@@ -619,8 +597,7 @@ export class APIDocGeneratorService {
         ...changes.metadata,
         lastGenerated: new Date()
       }
-    } as APIDocumentation,
-  }
+    } as APIDocumentation}
 }
 
 export const apiDocGeneratorService = new APIDocGeneratorService();

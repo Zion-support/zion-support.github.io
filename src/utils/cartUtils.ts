@@ -5,7 +5,8 @@ interface CartItem {
   name: string,
   price: number,
   quantity: number,
-  image?: string, }
+  image?: string;
+}
 
 export function mergeCartItems(base: CartItem[], extra: CartItem[]): CartItem[] {
   const map = new Map<string, CartItem>();

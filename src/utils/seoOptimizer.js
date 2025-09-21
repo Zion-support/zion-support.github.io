@@ -73,7 +73,7 @@ export class SEOOptimizer {
             [['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];]
     }
     static generateCanonicalUrl(path) {
-        const baseUrl = 'https: //ziontechgroup.com';
+        const baseUrl = 'https: //ziontechgroup.com',
     return `
     }
     static generateStructuredData(path) {
@@ -87,8 +87,7 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "
-                "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
-            }
+                "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}
         }
     /
         if (path === '/') {
@@ -134,36 +133,33 @@ export class SEOOptimizer {
         if (!content.includes('<title>') || content.includes('<title></title>')) {
             issues.push({
                 page,
-                issue: 'missing-title';
-                severity: 'high';
-                suggestedFix: 'Add a descriptive title tag with relevant keywords',
-            })
+                issue: 'missing-title',
+                severity: 'high',
+                suggestedFix: 'Add a descriptive title tag with relevant keywords'})
      }
         /
         if (!content.includes('name="description"')) {
             issues.push({
                 page,
-                issue: 'missing-description';
-                severity: 'high';
-                suggestedFix: 'Add a meta description tag with compelling content',
-            })
+                issue: 'missing-description',
+                severity: 'high',
+                suggestedFix: 'Add a meta description tag with compelling content'})
      }
         /
         const descMatch = content.match(/name="description" content="([^"]+)"/)
         if (descMatch && descMatch[1].length < 120) {
             issues.push({
                 page,
-                issue: 'short-description';
-                severity: 'medium';
-                suggestedFix: 'Expand meta description to 120-160 characters for better SEO',
-            })
+                issue: 'short-description',
+                severity: 'medium',
+                suggestedFix: 'Expand meta description to 120-160 characters for better SEO'})
      }
         /
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
             issues.push({
                 page,
-                issue: 'no-headings';
-                severity: 'medium';
+                issue: 'no-headings',
+                severity: 'medium',
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
             })
         }
@@ -172,10 +168,9 @@ export class SEOOptimizer {
         if (textContent.length < 300) {
             issues.push({
                 page,
-                issue: 'minimal-content';
-                severity: 'medium';
-                suggestedFix: 'Add more relevant content to improve user experience and SEO value',
-            })
+                issue: 'minimal-content',
+                severity: 'medium',
+                suggestedFix: 'Add more relevant content to improve user experience and SEO value'})
      }
         return issues;
     }

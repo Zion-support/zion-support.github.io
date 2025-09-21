@@ -17,8 +17,7 @@ const Services: React.FC = () => {
       description: 'Enterprise security solutions',
       link: '/services/security'
     }
-  ];
-
+  ],
   return (
     <div className="min-h-screen bg-zion-blue">
       <div className="container mx-auto px-4 py-12">
@@ -30,8 +29,7 @@ const Services: React.FC = () => {
             <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-cyan mb-4">{service.description}</p>
-              <Link href={service.link} >
-              <span className="text-zion-cyan hover:text-white transition-colors">
+              <Link href={service.link} className="text-zion-cyan hover: text-white transition-colors">
                 Learn More →
               </span>
             </Link>
@@ -40,6 +38,5 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
-  );;
-
+  )};
 export default Services;

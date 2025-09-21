@@ -13,7 +13,7 @@ return (
 title={post.title}
         description={post.excerpt}
         keywords={post.tags.join(', ')}
-        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+        ogImage={post.featuredImage}        canonical={`https: //app.ziontechgroup.com/blog/${post.slug}`}
       />
       <JsonLd data={articleLd} />
       <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
@@ -153,8 +153,7 @@ key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
                         <ImageWithRetry
 src={relatedPost.featuredImage}
                           alt={
-                            relatedPost.featuredImageAlt |relatedPost.title,
-}
+                            relatedPost.featuredImageAlt |relatedPost.title}
                           className='object-cover w-full h-full'
                           fallbackSrc='/images/blog-placeholder.svg'                        />
                       </div>
@@ -192,7 +191,7 @@ src={relatedPost.featuredImage}
             <div className='flex justify-between items-center mt-12'>
               <Button
 variant='outline'
-                className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+                className='border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white'
                 asChild
               >
                 <Link href='/blog'>
@@ -211,25 +210,23 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
   getShareUrl ('facebook') "
 }target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>)
 }</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
-  post.content,
-}</ReactMarkdown> </div> <span key= {
+  post.content}</ReactMarkdown> </div> <span key= {
   tag "
 }className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
-  tag,
+  tag;
 }</span>) ) "
 }</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) )
 }</div> </div>) "
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
 }'"import React from 'react'
-import { SEO } from '@/components / SEO'
+import { SEO,} from '@/components / SEO'
 export default function Page() {
-    ],
-}
+    ]}
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {
       year: 'numeric',
 month: 'long'
-      day: 'numeric', })
+      day: 'numeric'})
 }
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: any } = {,
@@ -239,8 +236,8 @@ security: Shield,
 cloud: Cloud,
 business: TrendingUp,
 iot: Network,
-emerging: Zap, }
-    return categoryIcons[category] |BookOpen,
+emerging: Zap}
+    return categoryIcons[category] |BookOpen;
 }
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {,
@@ -250,8 +247,7 @@ security: 'Cybersecurity'
       cloud: 'Cloud & DevOps',
 business: 'Business Insights'
       iot: 'IoT & Edge',
-emerging: 'Emerging Tech',
-}
+emerging: 'Emerging Tech'}
     return categoryNames[category] |'Uncategorized'
 }
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
@@ -264,7 +260,7 @@ title={`${blogPost.title} - Zion Tech Group Blog`}
         <div className="container mx - auto px-4">
           <Link
 to="/blog"
-            className="inline - flex items - center space - x-2 text-cyan - 400 hover:text-cyan - 300 transition - colors duration -200">
+            className="inline - flex items - center space - x-2 text-cyan - 400 hover: text-cyan - 300 transition - colors duration -200">
             <ArrowLeft className="w-4 h-4" />
             <span > Back to Blog</span>
           </Link>
@@ -282,8 +278,7 @@ initial={{ opacity: 0 y: 20 }}
             <div className="flex items - center space - x-3 mb-6">
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
                 {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w-4 h-4',
-}) }
+                  className: 'w-4 h-4'}) }
                 <span>{getCategoryName(blogPost.category) }</span>
               </span>
               {blogPost.featured && (<span className="px-4 py-2 bg-yellow-500 / 20 text-yellow-400 text-sm rounded-full font -medium">
@@ -291,7 +286,7 @@ initial={{ opacity: 0 y: 20 }}
                 </span>) }
             </div>
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl font - bold text-white mb-6 leading -tight">
+            <h1 className="text-4xl md: text-5xl font - bold text-white mb-6 leading -tight">
               {blogPost.title}
             </h1>
             {/* Excerpt */}

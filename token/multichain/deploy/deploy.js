@@ -24,11 +24,8 @@ async function main() {,
     GovernanceExecutor: executor.address},
   fs.writeFileSync(,
     path.join(__dirname, "..", "deployment.json"),
-    JSON.stringify(output, null, 2),
-  ),
-}
+    JSON.stringify(output, null, 2))}
 ,
 main().catch((error) => {,
   console.error(error),
-  process.exitCode = 1,
-}),
+  process.exitCode = 1}),

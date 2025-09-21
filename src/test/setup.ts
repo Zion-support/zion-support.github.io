@@ -14,8 +14,7 @@ Object.defineProperty(window, "matchMedia", {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
-});
-
+}),
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -46,8 +45,7 @@ beforeAll(() => {
       typeof args[0] === "string" &&
       args[0].includes("Warning: ReactDOM.render is no longer supported")
     ) {
-      return;
-    }
+      return}
     originalError.call(console, ...args);
   };
 
@@ -56,8 +54,7 @@ beforeAll(() => {
       typeof args[0] === "string" &&
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
     ) {
-      return;
-    }
+      return}
     originalWarn.call(console, ...args);
   };
 });

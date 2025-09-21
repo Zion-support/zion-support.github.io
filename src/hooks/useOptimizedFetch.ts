@@ -3,7 +3,7 @@ interface UseFetchOptions {
 immediate?: boolean, }
 
 export export const useOptimizedFetch = <T>(;
-url: string;,
+url: string;;
 options: UseFetchOptions = {}
 ) => {
 const [data; setData] = useState<T | null>(null)

@@ -8,7 +8,7 @@ export interface SecurityConfig {
   enableXSS: boolean,
   enableSQLInjection: boolean,
   maxPasswordLength: number,
-  minPasswordLength: number, }
+  minPasswordLength: number}
 
 export class SecurityManager {
   private config: SecurityConfig = {
@@ -17,8 +17,7 @@ export class SecurityManager {
     enableSQLInjection: true,
     maxPasswordLength: 128,
     minPasswordLength: 8
-  };
-  
+  },
   validatePassword(password: string): { valid: boolean; errors: string[] } {
     const errors: string[] = [],
     if (password.length < this.config.minPasswordLength) {

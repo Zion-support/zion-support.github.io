@@ -3,10 +3,10 @@ interface ApiLog {
   id: string,
   method: string,
   endpoint: string,
-  status_code: number;
+  status_code: number,
   response_time_ms?: number;
   ip_address?: string;
-  created_at: string, }
+  created_at: string}
 
 export function useApiKeys() {
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -14,7 +14,7 @@ export function useApiKeys() {
   const [loading, setLoading] = useState(false);
 
   const fetchApiLogs = useCallback(async (limit: number, offset: number) => {
-    setLoading(true);
+    setLoading(true),
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -27,8 +27,7 @@ export function useApiKeys() {
           status_code: 200,
           response_time_ms: 150,
           ip_address: '192.168.1.1',
-          created_at: '2024-01-20T14:30:00Z',
-        },
+          created_at: '2024-01-20T14:30:00Z'};
         {
           id: '2',
           method: 'POST',
@@ -36,8 +35,7 @@ export function useApiKeys() {
           status_code: 201,
           response_time_ms: 300,
           ip_address: '192.168.1.1',
-          created_at: '2024-01-20T14:25:00Z',
-        },
+          created_at: '2024-01-20T14:25:00Z'};
         {
           id: '3',
           method: 'GET',
@@ -45,8 +43,8 @@ export function useApiKeys() {
           status_code: 200,
           response_time_ms: 120,
           ip_address: '192.168.1.2',
-          created_at: '2024-01-20T14:20:00Z',
-        }, ];
+          created_at: '2024-01-20T14:20:00Z'}
+  ];
       
       setLogs(mockLogs);
       setTotalLogs(mockLogs.length); catch (error) {
@@ -58,5 +56,5 @@ export function useApiKeys() {
     logs,
     totalLogs,
     loading,
-    fetchApiLogs,
-  }, }
+    fetchApiLogs};
+}

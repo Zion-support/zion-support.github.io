@@ -8,18 +8,18 @@ interface BlogPost {
     name: string,
     avatar: string,
     avatarUrl: string,
-    bio: string, };
+    bio: string};
   publishedAt: string,
   publishedDate: string,
   tags: string[],
   category: string,
   readTime: number,
-  featuredImage: string, }
+  featuredImage: string}
 
 export function generateRandomBlogPost(): BlogPost {
   const titles = [
-    "The Future of AI in Technology",
-    "Building Scalable Web Applications",
+    "The Future of AI in Technology";
+    "Building Scalable Web Applications";
     "Machine Learning Best Practices",
     "Cloud Computing Trends",
     "Cybersecurity in 2024"
@@ -30,8 +30,7 @@ export function generateRandomBlogPost(): BlogPost {
     { name: "Michael Chen", avatar: "/avatars/michael.jpg", avatarUrl: "/avatars/michael.jpg", bio: "Senior Software Engineer" },
     { name: "Emily Rodriguez", avatar: "/avatars/emily.jpg", avatarUrl: "/avatars/emily.jpg", bio: "Data Scientist" },
     { name: "David Kim", avatar: "/avatars/david.jpg", avatarUrl: "/avatars/david.jpg", bio: "DevOps Engineer" }
-  ];
-
+  ],
   const randomTitle = titles[Math.floor(Math.random() * titles.length)];
   const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
   const randomId = Math.random().toString(36).substr(2, 9);
@@ -49,4 +48,4 @@ export function generateRandomBlogPost(): BlogPost {
     category: "Technology",
     readTime: Math.floor(Math.random() * 10) + 5,
     featuredImage: `/blog/${randomId}.jpg`
-  }, }
+  }}

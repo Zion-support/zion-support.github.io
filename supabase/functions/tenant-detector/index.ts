@@ -1,6 +1,5 @@
 import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7',
-
 interface TenantInfo {
   id: string,
   brand_name: string,
@@ -20,6 +19,7 @@ const supabaseUrl = Deno.env.get('SUPABASE_URL');
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 if (!supabaseUrl || !supabaseServiceKey) {
   throw new Error('Required environment variables are not set');
+}
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
@@ -28,7 +28,7 @@ serve(async (req) => {
     return new Response(null, {
       status: 204,
       headers: corsHeaders
-    });
+    })}
 
   try {
     const url = new URL(req.url);
@@ -41,6 +41,7 @@ serve(async (req) => {
       url.hostname;
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided');
+    }
 
     // Extract tenant info
     let tenantInfo: TenantInfo | null = null,
@@ -54,9 +55,9 @@ serve(async (req) => {
         .single();
       if (error) {
         console.error('Database error:', error);
-        throw new Error(`Database error: ${error.message}`);
+        throw new Error(`Database error: ${error.message}`)}
 
-      tenantInfo = data as TenantInfo,
+      tenantInfo = data as TenantInfo;
     } else {
       // Try matching custom domain first
       const { data, error } = await supabase
@@ -76,12 +77,10 @@ serve(async (req) => {
             .eq('is_active', true)
             .single();
           if (!subdomainResult.error) {
-            tenantInfo = subdomainResult.data as TenantInfo,
-          }
+            tenantInfo = subdomainResult.data as TenantInfo}
         }
       } else if (data) {
-        tenantInfo = data as TenantInfo,
-      }
+        tenantInfo = data as TenantInfo}
     }
 
     // Return response with enhanced headers
@@ -95,8 +94,8 @@ serve(async (req) => {
           'Content-Type': 'application/json',
           ...corsHeaders
         }
-      },
-    ); catch (error) {
+      };
+    )} catch (error) {
     console.error('Tenant detector error:', error);
     // Enhanced error response
     return new Response(
@@ -112,6 +111,6 @@ serve(async (req) => {
           'Content-Type': 'application/json',
           ...corsHeaders
         }
-      },
-    );
-});
+      };
+    )}
+}),

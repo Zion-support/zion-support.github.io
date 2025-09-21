@@ -14,7 +14,7 @@ export interface SEOConfig {
 export class SEOManager {
   private config: SEOConfig,
   constructor(config: SEOConfig) {
-    this.config = config;
+    this.config = config,
     this.updateMetaTags();
   
   private updateMetaTags() {
@@ -45,7 +45,7 @@ export class SEOManager {
     this.updateMetaTag('robots', this.config.robots || 'index, follow');
   
   private updateMetaTag(name: string, content: string, attribute: string = 'name') {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement,
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
@@ -53,11 +53,11 @@ export class SEOManager {
     meta.content = content, }
   
   generateStructuredData(type: string, data: any) {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json',
+    const script = document.createElement('script'),
+    script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': type,
+      '@context': 'https: //schema.org',
+      '@type': type;
       ...data
     });
     document.head.appendChild(script);

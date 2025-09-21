@@ -1,9 +1,9 @@
 
-import import { Certification } from '@/types/resume',
-import import { Card, CardContent} from '@/components/ui/card',
-import import { Button } from '@/components/ui/button',
-import { Edit, Trash2 } from 'lucide-react'
-import import { format } from 'date-fns',
+import import { Certification,,, ,} from '@/types/resume';
+import import { Card,,, CardContent,,, ,} from '@/components/ui/card';
+import import { Button,,, ,} from '@/components/ui/button';
+import { Edit,,, Trash2,} from 'lucide-react'
+import import { format,} from 'date-fns';
 interface CertificationsListProps {
 onDelete: (id: string) => void}
 export function CertificationsList({ certifications onEdit onDelete }: CertificationsListProps) {
@@ -64,7 +64,7 @@ variant='ghost'
                   onClick={() => onEdit(cert)}
                   aria-label='Edit certification'                  variant="ghost"
                   size="icon"
-                  onClick = {() => onEdit(cert);
+                  onClick = {() => onEdit(cert)}
                   aria-label="Edit certification"
                 >
                   <Edit className='h-4 w-4' />

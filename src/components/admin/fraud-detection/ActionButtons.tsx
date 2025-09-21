@@ -41,7 +41,7 @@ export function ActionButtons({ onView, onInfo, onFlag, onBan, disabled = false 
           size="sm"
           onClick={onFlag}
           disabled={disabled}
-          className="flex items-center space-x-1 text-orange-600 hover:text-orange-700"
+          className="flex items-center space-x-1 text-orange-600 hover: text-orange-700"
         >
           <AlertTriangle className="h-4 w-4" />
           <span>Flag</span>
@@ -60,4 +60,4 @@ export function ActionButtons({ onView, onInfo, onFlag, onBan, disabled = false 
         </Button>
       )}
     </div>
-  );
+  )}
