@@ -17,7 +17,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
     esmExternals: false,
   },
