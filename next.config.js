@@ -8,7 +8,6 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-    tsconfigPath: false,
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -16,13 +15,6 @@ const nextConfig = {
   swcMinify: false,
   experimental: {
     esmExternals: false,
-  },
-  cssModules: false,
-  cssLoaderOptions: {
-    url: false,
-  },
-  postcssLoaderOptions: {
-    postcssOptions: false,
   },
   webpack: (config, { isServer }) => {
     // Minimal webpack configuration
@@ -37,4 +29,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
