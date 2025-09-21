@@ -1,2 +1,0 @@
-// Disabled instrumentation file
-export {};

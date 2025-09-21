@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import "./globals.css"; // Temporarily disabled due to PostCSS issues
+import "./globals.css";
 
 export default function RootLayout({
   children}: {

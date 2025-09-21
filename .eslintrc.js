@@ -1,15 +1,19 @@
 module.exports = {
   extends: [
-    "next/core-web-vitals"
+    'next/core-web-vitals',
+    'eslint:recommended',
+    '@typescript-eslint/recommended'
   ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   rules: {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "react/no-unescaped-entities": "off",
-    "react/jsx-no-undef": "off"
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'no-console': 'warn',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off'
   },
+<<<<<<< HEAD
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
@@ -23,3 +27,19 @@ module.exports = {
     node: true
   }
 },
+=======
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'dist/',
+    'build/',
+    'scripts/',
+    'automation/',
+    'public/reports/**',
+    'netlify/',
+    '**/*.cjs',
+    '**/*.mjs'
+  ]
+};
+>>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16

@@ -1,9 +1,26 @@
 import * as React from "react"
 
+<<<<<<< HEAD
 // Simple cn utility replacement
 const cn = (...classes) => {
   return classes.filter(Boolean).join(' ')
 }
+=======
+// Simple Slot replacement
+const Slot = React.forwardRef<HTMLElement, React.HTMLAttributes<HTMLElement> & { asChild?: boolean }>(
+  ({ children, ...props }, ref) => {
+    if (React.isValidElement(children)) {
+      return React.cloneElement(children, {
+        ...props,
+        ref,
+        className: `${children.props.className || ''} ${props.className || ''}`.trim()
+      } as any);
+    }
+    return React.createElement('div', { ...props, ref }, children);
+  }
+);
+Slot.displayName = "Slot";
+>>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
 
 const buttonVariants = (options) => {
   const { variant = "default", size = "default", className } = options || {}

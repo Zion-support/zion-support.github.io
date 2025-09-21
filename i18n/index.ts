@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Simple i18n implementation without external dependencies
 export const translations = {
   'en-US': {
@@ -26,3 +27,8 @@ export default {
   getTranslation,
   translations
 };
+=======
+// i18n configuration - disabled for build
+// TODO: Install i18next packages when needed
+export default {};
+>>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
