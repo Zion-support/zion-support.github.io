@@ -31,14 +31,14 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		marketSize: '$9B market',
 		growthRate: '15% CAGR',
 		variant: 'ai-futuristic',
-		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' },
+		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' }
 		realImplementation: true,
 		implementationDetails: 'MDM server with DEP/AE enrollment, policy engine, reporting, and admin console.',
 		launchDate: '2027-07-01',
 		customers: 120,
 		rating: 4.7,
 		reviews: 210
-	},
+	}
 	{
 		id: 'email-security-dmarc-bimi',
 		name: 'Email Security: DMARC, DKIM, SPF & BIMI',
@@ -70,14 +70,14 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		marketSize: '$1.2B market',
 		growthRate: '18% CAGR',
 		variant: 'ai-futuristic',
-		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' },
+		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' }
 		realImplementation: true,
 		implementationDetails: 'Policy engine, DNS verifiers, report parser, exec dashboard.',
 		launchDate: '2027-07-10',
 		customers: 300,
 		rating: 4.8,
 		reviews: 540
-	},
+	}
 	{
 		id: 'ai-governance-risk-compliance-grc',
 		name: 'AI Governance, Risk & Compliance (GRC)',
@@ -109,14 +109,14 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		marketSize: '$3.4B market',
 		growthRate: '22% CAGR',
 		variant: 'ai-futuristic',
-		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' },
+		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' }
 		realImplementation: true,
 		implementationDetails: 'Registry, policy engine, lineage graph, dashboards, and approvals.',
 		launchDate: '2027-07-14',
 		customers: 45,
 		rating: 4.6,
 		reviews: 88
-	},
+	}
 	{
 		id: 'observability-slo-error-budget',
 		name: 'Observability SLO & Error Budget Platform',
@@ -148,14 +148,14 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		marketSize: '$18B market',
 		growthRate: '12% CAGR',
 		variant: 'ai-futuristic',
-		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' },
+		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' }
 		realImplementation: true,
 		implementationDetails: 'SLO engine with OTel ingestion, burn calculations, and alerts.',
 		launchDate: '2027-07-18',
 		customers: 80,
 		rating: 4.7,
 		reviews: 130
-	},
+	}
 	{
 		id: 'ai-meeting-minutes-action-items',
 		name: 'AI Meeting Minutes & Action Items',
@@ -187,7 +187,7 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		marketSize: '$2.2B market',
 		growthRate: '19% CAGR',
 		variant: 'ai-futuristic',
-		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' },
+		contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com' }
 		realImplementation: true,
 		implementationDetails: 'Capture pipeline, diarization, extraction, and integrations.',
 		launchDate: '2027-07-22',

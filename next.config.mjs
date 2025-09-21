@@ -22,8 +22,7 @@ const nextConfig = {
       };
     }
     
-    // Add polyfill for globalThis
-    require('globalthis/shim');
+    // globalThis polyfill is imported at the top level
     
     // Disable PostCSS processing temporarily
     config.module.rules.forEach((rule) => {
@@ -42,4 +41,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

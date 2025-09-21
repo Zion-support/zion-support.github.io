@@ -4,7 +4,7 @@ const contact = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+}
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-redteam-evaluator',
@@ -40,7 +40,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		customers: 40,
 		rating: 4.7,
 		reviews: 18
-	},
+	}
 	{
 		id: 'finops-scheduler-optimizer',
 		name: 'FinOps Scheduler Optimizer',
@@ -75,7 +75,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		customers: 25,
 		rating: 4.6,
 		reviews: 12
-	},
+	}
 	{
 		id: 'db-index-advisor',
 		name: 'DB Index Advisor',

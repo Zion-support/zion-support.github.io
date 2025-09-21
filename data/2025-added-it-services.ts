@@ -668,5 +668,5 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 3,
     rating: 4.8,
     reviews: 2
-  }
-]
+  },
+],

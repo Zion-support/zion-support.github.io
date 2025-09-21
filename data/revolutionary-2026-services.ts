@@ -79,7 +79,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Full-stack SaaS platform with real-time data processing, AI model training pipeline, customizable dashboards, and enterprise SSO integration.',
     launchDate: '2026-01-15',
@@ -126,7 +126,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade legal automation platform with AI-powered document analysis, compliance monitoring, and secure document management.',
     launchDate: '2026-02-01',
@@ -173,7 +173,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'HIPAA-compliant healthcare AI platform with advanced medical imaging analysis, secure patient data handling, and clinical decision support.',
     launchDate: '2026-01-20',
@@ -220,7 +220,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Full-stack metaverse development platform with AI-powered tools, 3D rendering engine, and cross-platform deployment capabilities.',
     launchDate: '2026-02-15',
@@ -267,7 +267,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade quantum security platform with hardware integration, compliance certifications, and comprehensive security auditing.',
     launchDate: '2026-01-10',
@@ -314,7 +314,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade quantum trading platform with real-time market data, advanced analytics, and comprehensive compliance features.',
     launchDate: '2026-01-25',
@@ -361,7 +361,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Research-grade neuromorphic computing platform with hardware integration, development tools, and comprehensive documentation.',
     launchDate: '2026-02-01',
@@ -408,7 +408,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Research-grade DNA computing platform with laboratory integration, bioinformatics tools, and comprehensive research support.',
     launchDate: '2026-02-10',
@@ -455,7 +455,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade photonic computing platform with optical hardware integration, development tools, and performance optimization.',
     launchDate: '2026-02-20',
@@ -502,7 +502,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Full-stack holographic platform with 3D content creation tools, real-time rendering, and multi-device compatibility.',
     launchDate: '2026-02-25',
@@ -549,7 +549,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade supply chain platform with AI optimization, real-time monitoring, and comprehensive analytics.',
     launchDate: '2026-01-30',
@@ -596,7 +596,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Industrial-grade manufacturing AI platform with IoT integration, robotic automation, and comprehensive monitoring.',
     launchDate: '2026-02-05',
@@ -643,7 +643,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade swarm robotics platform with robot integration, simulation tools, and comprehensive coordination algorithms.',
     launchDate: '2026-02-15',
@@ -690,12 +690,12 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.',
     launchDate: '2026-03-01',
     customers: 45,
     rating: 4.8,
     reviews: 25
-  }
+  },
 ],

@@ -84,7 +84,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional neural quantum brain interface with direct neural signal processing and quantum AI cognitive enhancement. Includes neural support center and 24/7 monitoring.',
     launchDate: '2024-12-20',
@@ -137,7 +137,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI content factory with massive-scale content generation and multi-media creation capabilities. Includes content operations center and 24/7 support.',
     launchDate: '2024-11-20',
@@ -190,7 +190,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional AI autonomous research platform with breakthrough discovery capabilities and cross-domain knowledge synthesis. Includes research operations center and 24/7 autonomous research.',
     launchDate: '2024-12-10',
@@ -243,7 +243,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI video production studio with Hollywood-quality output and 100x faster production capabilities. Includes video production center and 24/7 support.',
     launchDate: '2024-11-25',
@@ -296,7 +296,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional AI quantum computing platform with accessible quantum computing and AI optimization capabilities. Includes quantum operations center and 24/7 support.',
     launchDate: '2024-12-05',
@@ -349,7 +349,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional neural network evolution platform with self-evolving capabilities and continuous improvement. Includes evolution monitoring center and 24/7 support.',
     launchDate: '2024-12-15',
@@ -402,7 +402,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI creativity engine with unlimited creative content generation and multi-domain capabilities. Includes creative operations center and 24/7 support.',
     launchDate: '2024-11-30',
@@ -455,7 +455,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced neural interface system with AI enhancement capabilities, real-time processing, and secure quantum encryption.',
     launchDate: '2024-12-01',
@@ -506,7 +506,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise quantum computing platform with AI optimization, hybrid computing capabilities, and comprehensive quantum development tools.',
     launchDate: '2024-11-15',
@@ -557,7 +557,7 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered space mission control system with autonomous decision-making, real-time optimization, and comprehensive mission management capabilities.',
     launchDate: '2024-10-01',
@@ -608,12 +608,12 @@ export const nextGenAIServices: NextGenAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Comprehensive AI biotech platform with drug discovery algorithms, genetic analysis tools, and clinical trial optimization capabilities.',
     launchDate: '2024-09-15',
     customers: 18,
     rating: 4.7,
     reviews: 9
-  }
+  },
 ];

@@ -15,25 +15,25 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 599, 
         period: 'month', 
         features: ['Basic space mining analysisStandard planning tools', 'Email support'] 
-      },
+      }
       professional: { 
         price: 1499, 
         period: 'month', 
         features: ['Advanced mining algorithmsCustom mission planning', 'Priority supportRisk assessment'] 
-      },
+      }
       enterprise: { 
         price: 3499, 
         period: 'month', 
         features: ['Full space mining platformCustom mission development', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'Space Technology',
     tags: ['Space MiningAsteroid Mining', 'Space ResourcesMining Technology', 'Space Logistics'],
     website: 'https://ziontechgroup.com/space-mining-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$3.8B',
     targetAudience: 'Space companies, mining corporations, government space agencies, research institutions, investment firms',
     competitiveAdvantage: 'First space mining platform, advanced resource analysis, comprehensive mission planning',
@@ -43,7 +43,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Environmental impact analysis'
     ],
     integrations: ['Space Agency APIsSatellite Data Systems', 'Mining SoftwareLogistics Platforms', 'Analytics Tools'],
-    compliance: ['Space Mining RegulationsEnvironmental Standards', 'International Space Law']
+    compliance: ['Space Mining RegulationsEnvironmental Standards', 'International Space Law'],
   },
   {
     id: 'quantum-bio-computing-platform',
@@ -61,25 +61,25 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 499, 
         period: 'month', 
         features: ['Basic bio-computing featuresStandard algorithms', 'Email support'] 
-      },
+      }
       professional: { 
         price: 1299, 
         period: 'month', 
         features: ['Advanced bio-computingQuantum algorithms', 'Priority supportCustom modeling'] 
-      },
+      }
       enterprise: { 
         price: 2999, 
         period: 'month', 
         features: ['Full bio-computing platformCustom algorithms', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'Quantum Biology',
     tags: ['Quantum ComputingBiology', 'Drug DiscoveryProtein Folding', 'Bioinformatics'],
     website: 'https://ziontechgroup.com/quantum-bio-computing-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$7.2B',
     targetAudience: 'Pharmaceutical companies, biotechnology firms, research institutions, healthcare organizations, academic institutions',
     competitiveAdvantage: 'First quantum-biological platform, advanced protein folding, drug discovery optimization',
@@ -89,7 +89,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Bioinformatics research'
     ],
     integrations: ['Molecular Modeling SoftwareBioinformatics Tools', 'Research DatabasesLaboratory Systems', 'Analytics Platforms'],
-    compliance: ['Biological Research StandardsDrug Development Regulations', 'Data Privacy Laws']
+    compliance: ['Biological Research StandardsDrug Development Regulations', 'Data Privacy Laws'],
   },
   {
     id: 'brain-computer-interface-platform',
@@ -107,25 +107,25 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 399, 
         period: 'month', 
         features: ['Basic BCI developmentStandard algorithms', 'Email support'] 
-      },
+      }
       professional: { 
         price: 999, 
         period: 'month', 
         features: ['Advanced BCI featuresCustom development', 'Priority supportMedical integration'] 
-      },
+      }
       enterprise: { 
         price: 2499, 
         period: 'month', 
         features: ['Full BCI platformCustom development', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'Neural Technology',
     tags: ['Brain-Computer InterfaceNeural Technology', 'Medical DevicesResearch', 'Neuroscience'],
     website: 'https://ziontechgroup.com/brain-computer-interface-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$2.1B',
     targetAudience: 'Medical device companies, research institutions, healthcare organizations, neuroscience researchers, rehabilitation centers',
     competitiveAdvantage: 'Advanced BCI platform, medical device integration, comprehensive development tools',
@@ -135,7 +135,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Cognitive enhancement research'
     ],
     integrations: ['Medical Device SystemsResearch Platforms', 'Neuroscience ToolsHealthcare Systems', 'Analytics Platforms'],
-    compliance: ['Medical Device RegulationsFDA Standards', 'Research Ethics GuidelinesPatient Safety Standards']
+    compliance: ['Medical Device RegulationsFDA Standards', 'Research Ethics GuidelinesPatient Safety Standards'],
   },
   {
     id: 'quantum-energy-platform',
@@ -153,25 +153,25 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 299, 
         period: 'month', 
         features: ['Basic energy optimizationStandard modeling', 'Email support'] 
-      },
+      }
       professional: { 
         price: 799, 
         period: 'month', 
         features: ['Advanced energy featuresQuantum algorithms', 'Priority supportCustom modeling'] 
-      },
+      }
       enterprise: { 
         price: 1999, 
         period: 'month', 
         features: ['Full energy platformCustom algorithms', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'Quantum Energy',
     tags: ['Quantum ComputingEnergy', 'Fusion PowerRenewable Energy', 'Grid Optimization'],
     website: 'https://ziontechgroup.com/quantum-energy-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$12.8B',
     targetAudience: 'Energy companies, utility providers, government agencies, research institutions, renewable energy companies',
     competitiveAdvantage: 'Quantum energy optimization, fusion power simulation, comprehensive energy modeling',
@@ -181,7 +181,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Sustainability planning'
     ],
     integrations: ['Energy Management SystemsGrid Control Systems', 'Renewable Energy PlatformsUtility Systems', 'Analytics Tools'],
-    compliance: ['Energy RegulationsEnvironmental Standards', 'Grid Safety ProtocolsRenewable Energy Standards']
+    compliance: ['Energy RegulationsEnvironmental Standards', 'Grid Safety ProtocolsRenewable Energy Standards'],
   },
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -199,25 +199,25 @@ export const cuttingEdgeEmergingTechServices2025 = [
         price: 499, 
         period: 'month', 
         features: ['Basic autonomous featuresStandard AI models', 'Email support'] 
-      },
+      }
       professional: { 
         price: 1299, 
         period: 'month', 
         features: ['Advanced autonomous featuresCustom AI models', 'Priority supportPerformance optimization'] 
-      },
+      }
       enterprise: { 
         price: 2999, 
         period: 'month', 
         features: ['Full autonomous platformCustom development', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'Autonomous Systems',
     tags: ['Autonomous VehiclesAI', 'Computer VisionRobotics', 'Self-Driving'],
     website: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$54.2B',
     targetAudience: 'Automotive companies, drone manufacturers, robotics companies, transportation companies, logistics providers',
     competitiveAdvantage: 'Advanced autonomous AI platform, comprehensive perception systems, real-time decision making',
@@ -227,6 +227,6 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Transportation optimization'
     ],
     integrations: ['Vehicle Control SystemsSensor Platforms', 'Robotics FrameworksSimulation Tools', 'Analytics Platforms'],
-    compliance: ['Autonomous Vehicle RegulationsSafety Standards', 'Transportation LawsAI Safety Guidelines']
-  }
+    compliance: ['Autonomous Vehicle RegulationsSafety Standards', 'Transportation LawsAI Safety Guidelines'],
+  },
 ],

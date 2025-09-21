@@ -151,7 +151,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     trialDays: 7,
     setupTime: '2-4 weeks',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'D-Wave', 'Rigetti', 'IonQ'],
@@ -163,7 +163,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     technologyStack: ['Quantum processors', 'Quantum algorithms', 'Hybrid computing', 'Error correction'],
     innovationLevel: 'Cutting-edge quantum technology with 5-10 year roadmap',
     futureProofing: 'Continuous quantum hardware upgrades and algorithm optimization',
-    researchPartnerships: ['MIT', 'Stanford', 'Caltech', 'NASA', 'DARPA']
+    researchPartnerships: ['MIT', 'Stanford', 'Caltech', 'NASA', 'DARPA'],
   },
 
   // Space Technology Solutions
@@ -204,7 +204,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     trialDays: 14,
     setupTime: '1-2 weeks',
     competitors: ['Planet Labs', 'Maxar', 'DigitalGlobe', 'Airbus Defence', 'ESA'],
@@ -216,7 +216,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     technologyStack: ['Satellite imagery', 'AI/ML processing', 'GIS integration', 'Cloud computing'],
     innovationLevel: 'Advanced space technology with continuous satellite constellation expansion',
     futureProofing: 'Next-generation satellite launches and AI algorithm improvements',
-    researchPartnerships: ['NASA', 'ESA', 'NOAA', 'USGS', 'Academic institutions']
+    researchPartnerships: ['NASA', 'ESA', 'NOAA', 'USGS', 'Academic institutions'],
   },
 
   // Advanced IoT & Edge Computing
@@ -257,7 +257,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     trialDays: 21,
     setupTime: '2-3 weeks',
     competitors: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT', 'Siemens'],
@@ -269,7 +269,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     technologyStack: ['Edge computing', 'IoT protocols', 'AI/ML', '5G networks', 'Blockchain'],
     innovationLevel: 'Advanced edge computing with continuous AI optimization',
     futureProofing: '5G integration and next-generation edge hardware',
-    researchPartnerships: ['Intel', 'NVIDIA', 'Qualcomm', 'Academic institutions']
+    researchPartnerships: ['Intel', 'NVIDIA', 'Qualcomm', 'Academic institutions'],
   },
 
   // Advanced Blockchain Solutions
@@ -310,7 +310,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     trialDays: 14,
     setupTime: '3-4 weeks',
     competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain', 'ConsenSys', 'R3 Corda'],
@@ -322,7 +322,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     technologyStack: ['Blockchain networks', 'Smart contracts', 'Cryptography', 'Distributed systems'],
     innovationLevel: 'Advanced blockchain technology with continuous protocol improvements',
     futureProofing: 'Layer 2 scaling solutions and cross-chain interoperability',
-    researchPartnerships: ['Ethereum Foundation', 'Hyperledger', 'Academic institutions']
+    researchPartnerships: ['Ethereum Foundation', 'Hyperledger', 'Academic institutions'],
   },
 
   // Advanced Robotics & Automation
@@ -363,7 +363,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     trialDays: 30,
     setupTime: '4-6 weeks',
     competitors: ['ABB', 'KUKA', 'FANUC', 'Universal Robots', 'Rethink Robotics'],
@@ -375,8 +375,8 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     technologyStack: ['Robotics', 'Computer vision', 'AI/ML', 'IoT sensors', '5G networks'],
     innovationLevel: 'Advanced robotics with continuous AI and safety improvements',
     futureProofing: 'Next-generation robotics hardware and AI algorithms',
-    researchPartnerships: ['MIT Robotics Lab', 'Stanford Robotics', 'Carnegie Mellon Robotics']
-  }
+    researchPartnerships: ['MIT Robotics Lab', 'Stanford Robotics', 'Carnegie Mellon Robotics'],
+  },
 ];
 
 export default emergingTechInnovations2025;
@@ -427,7 +427,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced space technology platform with AI-powered mission planning and satellite operations optimization.',
     launchDate: '2025-01-01',
@@ -480,7 +480,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced metaverse development platform with AI-powered content generation and business integration tools.',
     launchDate: '2024-12-01',
@@ -533,7 +533,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced sustainable energy management platform with AI-powered optimization and IoT integration.',
     launchDate: '2024-11-15',
@@ -586,7 +586,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced robotics automation platform with AI-powered control and computer vision capabilities.',
     launchDate: '2025-02-01',
@@ -639,7 +639,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum internet infrastructure with quantum key distribution and secure networking capabilities.',
     launchDate: '2025-03-15',
@@ -692,7 +692,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered climate change analytics platform with predictive modeling and risk assessment capabilities.',
     launchDate: '2024-12-15',
@@ -745,7 +745,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced autonomous vehicle fleet management platform with AI-powered optimization and safety monitoring.',
     launchDate: '2025-01-15',
@@ -798,7 +798,7 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced brain-computer interface platform with neural signal processing and medical applications.',
     launchDate: '2025-04-01',
@@ -851,14 +851,14 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced synthetic biology platform with AI-powered design and genetic engineering tools.',
     launchDate: '2025-02-15',
     customers: 23,
     rating: 4.8,
     reviews: 18
-  }
+  },
 ];
     trialDays: 30,
     setupTime: '2-4 weeks',
@@ -871,6 +871,6 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
     technologyStack: ['Qiskit', 'Cirq', 'Q#', 'PennyLane', 'Custom quantum algorithms'],
     innovationLevel: 'Breakthrough',
     futureProofing: 'Scalable to 1000+ qubits, quantum error correction, hybrid quantum-classical workflows',
-    researchPartnerships: ['MIT Quantum Engineering', 'Stanford Quantum Computing', 'Caltech Quantum Institute', 'National Quantum Initiative']
-  }
+    researchPartnerships: ['MIT Quantum Engineering', 'Stanford Quantum Computing', 'Caltech Quantum Institute', 'National Quantum Initiative'],
+  },
 ];

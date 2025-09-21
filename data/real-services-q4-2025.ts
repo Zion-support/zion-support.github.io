@@ -4,7 +4,7 @@ const contact = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+}
 export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-email-responder-pro',
@@ -44,7 +44,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		customers: 24,
 		rating: 4.8,
 		reviews: 17
-	},
+	}
 	{
 		id: 'affiliate-analytics-hub',
 		name: 'Affiliate Analytics Hub',
@@ -83,7 +83,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		customers: 35,
 		rating: 4.6,
 		reviews: 21
-	},
+	}
 	{
 		id: 'return-management-saas',
 		name: 'Return Management SaaS',
@@ -122,7 +122,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		customers: 12,
 		rating: 4.5,
 		reviews: 9
-	},
+	}
 	{
 		id: 'survey-studio-mobile',
 		name: 'Survey Studio Mobile',
@@ -161,7 +161,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		customers: 16,
 		rating: 4.6,
 		reviews: 10
-	},
+	}
 	{
 		id: 'website-analytics-lite',
 		name: 'Website Analytics Lite',

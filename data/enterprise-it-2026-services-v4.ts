@@ -79,7 +79,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Comprehensive zero-trust network architecture platform with continuous verification and micro-segmentation.',
     launchDate: '2026-03-01',
@@ -126,7 +126,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI-powered IT operations center with intelligent automation and predictive capabilities.',
     launchDate: '2026-02-15',
@@ -173,7 +173,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum-resistant cryptography platform with post-quantum algorithms and hybrid encryption.',
     launchDate: '2026-04-01',
@@ -220,7 +220,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Autonomous cloud migration platform with AI automation and zero-downtime capabilities.',
     launchDate: '2026-03-15',
@@ -267,7 +267,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced edge computing orchestration platform with global scale and real-time processing.',
     launchDate: '2026-04-15',
@@ -314,7 +314,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI-powered data governance platform with intelligent automation and comprehensive compliance.',
     launchDate: '2026-03-01',
@@ -361,7 +361,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully autonomous DevOps platform with AI-powered automation and zero human intervention.',
     launchDate: '2026-02-20',
@@ -408,12 +408,12 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01',
     customers: 40,
     rating: 4.9,
     reviews: 32
-  }
+  },
 ],

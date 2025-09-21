@@ -22,7 +22,7 @@ export const real2036ITServices = [
     useCases: [
       'Scientific research computingFinancial modeling',
       'Drug discoveryClimate simulation'
-    ]
+    ],
   },
   {
     id: 'ai-powered-devops-platform',
@@ -47,7 +47,7 @@ export const real2036ITServices = [
     useCases: [
       'Continuous deploymentInfrastructure automation',
       'Testing automationMonitoring and alerting'
-    ]
+    ],
   },
   {
     id: 'quantum-cybersecurity-platform',
@@ -72,7 +72,7 @@ export const real2036ITServices = [
     useCases: [
       'Government securityFinancial institutions',
       'Healthcare data protectionCritical infrastructure'
-    ]
+    ],
   },
   {
     id: 'edge-computing-orchestration-platform',
@@ -97,7 +97,7 @@ export const real2036ITServices = [
     useCases: [
       'IoT applicationsReal-time analytics',
       'Edge AI processingDistributed computing'
-    ]
+    ],
   },
   {
     id: 'quantum-database-platform',
@@ -122,7 +122,7 @@ export const real2036ITServices = [
     useCases: [
       'Big data analyticsReal-time search',
       'Data warehousingBusiness intelligence'
-    ]
+    ],
   },
   {
     id: 'ai-powered-network-security',
@@ -147,7 +147,7 @@ export const real2036ITServices = [
     useCases: [
       'Enterprise network securityCloud security',
       'IoT securityRemote work security'
-    ]
+    ],
   },
   {
     id: 'quantum-internet-protocols',
@@ -172,7 +172,7 @@ export const real2036ITServices = [
     useCases: [
       'Government communicationsFinancial networks',
       'Research networksQuantum internet backbone'
-    ]
+    ],
   },
   {
     id: 'ai-powered-infrastructure-monitoring',
@@ -197,7 +197,7 @@ export const real2036ITServices = [
     useCases: [
       'Server monitoringNetwork monitoring',
       'Application monitoringCloud infrastructure'
-    ]
+    ],
   },
   {
     id: 'quantum-storage-platform',
@@ -222,7 +222,7 @@ export const real2036ITServices = [
     useCases: [
       'Big data storageData archiving',
       'Cloud storageData backup'
-    ]
+    ],
   },
   {
     id: 'ai-powered-disaster-recovery',
@@ -247,6 +247,6 @@ export const real2036ITServices = [
     useCases: [
       'Data center recoveryCloud recovery',
       'Application recoveryBusiness continuity'
-    ]
-  }
+    ],
+  },
 ],

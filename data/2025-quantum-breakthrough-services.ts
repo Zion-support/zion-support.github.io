@@ -15,25 +15,25 @@ export const quantumBreakthroughServices2025 = [
         price: 12999, 
         period: 'month', 
         features: ['Basic quantum securityUp to 1000 secure connections', 'Standard monitoringEmail support'] 
-      },
+      }
       professional: { 
         price: 24999, 
         period: 'month', 
         features: ['Advanced quantum securityUnlimited connections', 'Custom protocolsPriority support', 'API access'] 
-      },
+      }
       enterprise: { 
         price: 49999, 
         period: 'month', 
         features: ['Full quantum platformWhite-label solution', 'Dedicated supportCustom development', '24/7 monitoring'] 
       }
-    },
+    }
     category: 'Quantum Internet & Security',
     tags: ['Quantum ComputingInternet Security', 'CryptographyNetwork Security', 'Government Compliance'],
     website: 'https://ziontechgroup.com/quantum-internet-security-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$150B',
     targetAudience: 'Government agencies, military organizations, financial institutions, healthcare providers, energy companies',
     competitiveAdvantage: 'First-to-market quantum internet security platform, quantum-level protection, government compliance',
@@ -43,7 +43,7 @@ export const quantumBreakthroughServices2025 = [
       'Critical infrastructure protection'
     ],
     integrations: ['Government systemsMilitary networks', 'Financial platformsHealthcare systems', 'Energy grids'],
-    compliance: ['FIPS 140-3NIST standards', 'SOC2ISO 27001', 'Government security standards']
+    compliance: ['FIPS 140-3NIST standards', 'SOC2ISO 27001', 'Government security standards'],
   },
   {
     id: 'quantum-bio-computing-platform',
@@ -61,25 +61,25 @@ export const quantumBreakthroughServices2025 = [
         price: 8999, 
         period: 'month', 
         features: ['Basic bio-computingUp to 100 simulations/month', 'Standard modelsEmail support'] 
-      },
+      }
       professional: { 
         price: 19999, 
         period: 'month', 
         features: ['Advanced bio-computingUnlimited simulations', 'Custom modelsPriority support', 'API access'] 
-      },
+      }
       enterprise: { 
         price: 39999, 
         period: 'month', 
         features: ['Full bio-computing platformWhite-label solution', 'Dedicated supportCustom development', '24/7 monitoring'] 
       }
-    },
+    }
     category: 'Quantum Biology',
     tags: ['Quantum ComputingBiology', 'Drug DiscoveryMedical Research', 'Protein Folding'],
     website: 'https://ziontechgroup.com/quantum-bio-computing-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$180B',
     targetAudience: 'Pharmaceutical companies, research institutions, medical device companies, biotechnology firms',
     competitiveAdvantage: 'First quantum bio-computing platform, quantum accuracy in molecular simulation, accelerated drug discovery',
@@ -89,7 +89,7 @@ export const quantumBreakthroughServices2025 = [
       'Biotechnology innovation'
     ],
     integrations: ['Medical databasesResearch platforms', 'Laboratory systemsClinical trial platforms', 'Genetic databases'],
-    compliance: ['HIPAAFDA regulations', 'SOC2ISO 27001', 'Medical research standards']
+    compliance: ['HIPAAFDA regulations', 'SOC2ISO 27001', 'Medical research standards'],
   },
   {
     id: 'brain-computer-interface-platform',
@@ -107,25 +107,25 @@ export const quantumBreakthroughServices2025 = [
         price: 15999, 
         period: 'month', 
         features: ['Basic neural interfaceUp to 10 users', 'Standard monitoringEmail support'] 
-      },
+      }
       professional: { 
         price: 29999, 
         period: 'month', 
         features: ['Advanced neural interfaceUp to 100 users', 'Custom developmentPriority support', 'API access'] 
-      },
+      }
       enterprise: { 
         price: 59999, 
         period: 'month', 
         features: ['Full neural platformWhite-label solution', 'Dedicated supportCustom development', '24/7 monitoring'] 
       }
-    },
+    }
     category: 'Neural Interfaces',
     tags: ['Brain-Computer InterfaceNeural Networks', 'AIMedical Technology', 'Human-AI Collaboration'],
     website: 'https://ziontechgroup.com/brain-computer-interface-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$5B',
     targetAudience: 'Research institutions, medical device companies, technology companies, government agencies',
     competitiveAdvantage: 'First comprehensive neural interface platform, advanced AI integration, safety-focused development',
@@ -135,7 +135,7 @@ export const quantumBreakthroughServices2025 = [
       'Next-generation computing interfaces'
     ],
     integrations: ['Medical systemsAI platforms', 'Research toolsMonitoring systems', 'Safety protocols'],
-    compliance: ['FDA regulationsMedical device standards', 'SOC2ISO 27001', 'Research ethics standards']
+    compliance: ['FDA regulationsMedical device standards', 'SOC2ISO 27001', 'Research ethics standards'],
   },
   {
     id: 'space-mining-platform',
@@ -153,25 +153,25 @@ export const quantumBreakthroughServices2025 = [
         price: 19999, 
         period: 'month', 
         features: ['Basic space miningUp to 5 mining missions', 'Standard monitoringEmail support'] 
-      },
+      }
       professional: { 
         price: 39999, 
         period: 'month', 
         features: ['Advanced space miningUnlimited missions', 'Custom planningPriority support', 'API access'] 
-      },
+      }
       enterprise: { 
         price: 79999, 
         period: 'month', 
         features: ['Full space mining platformWhite-label solution', 'Dedicated supportCustom development', '24/7 monitoring'] 
       }
-    },
+    }
     category: 'Space Technology',
     tags: ['Space MiningAutonomous Systems', 'AIRobotics', 'Resource Extraction'],
     website: 'https://ziontechgroup.com/space-mining-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$3.5T',
     targetAudience: 'Space agencies, mining companies, technology companies, government organizations',
     competitiveAdvantage: 'First autonomous space mining platform, AI-powered optimization, comprehensive mission control',
@@ -181,7 +181,7 @@ export const quantumBreakthroughServices2025 = [
       'Resource transportation logistics'
     ],
     integrations: ['Space agency systemsSatellite networks', 'Ground control systemsAI platforms', 'Robotic systems'],
-    compliance: ['Space regulationsInternational space law', 'SOC2ISO 27001', 'Space safety standards']
+    compliance: ['Space regulationsInternational space law', 'SOC2ISO 27001', 'Space safety standards'],
   },
   {
     id: 'quantum-energy-platform',
@@ -199,25 +199,25 @@ export const quantumBreakthroughServices2025 = [
         price: 7999, 
         period: 'month', 
         features: ['Basic energy optimizationUp to 1000 connections', 'Standard monitoringEmail support'] 
-      },
+      }
       professional: { 
         price: 15999, 
         period: 'month', 
         features: ['Advanced energy optimizationUnlimited connections', 'Custom modelsPriority support', 'API access'] 
-      },
+      }
       enterprise: { 
         price: 29999, 
         period: 'month', 
         features: ['Full energy platformWhite-label solution', 'Dedicated supportCustom development', '24/7 monitoring'] 
       }
-    },
+    }
     category: 'Quantum Energy',
     tags: ['Quantum ComputingEnergy Management', 'Smart GridRenewable Energy', 'Optimization'],
     website: 'https://ziontechgroup.com/quantum-energy-platform',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$2.5T',
     targetAudience: 'Utility companies, energy providers, government agencies, industrial companies',
     competitiveAdvantage: 'First quantum energy optimization platform, quantum accuracy in energy management, comprehensive grid optimization',
@@ -227,6 +227,6 @@ export const quantumBreakthroughServices2025 = [
       'Grid stability management'
     ],
     integrations: ['Energy management systemsSmart grid infrastructure', 'Renewable energy systemsUtility platforms', 'Monitoring systems'],
-    compliance: ['Energy regulationsGrid standards', 'SOC2ISO 27001', 'Energy safety standards']
-  }
+    compliance: ['Energy regulationsGrid standards', 'SOC2ISO 27001', 'Energy safety standards'],
+  },
 ],

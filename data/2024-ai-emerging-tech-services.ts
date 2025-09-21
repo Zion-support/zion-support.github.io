@@ -79,7 +79,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready AI video generation platform with state-of-the-art models, GPU acceleration, and comprehensive video editing tools. Includes mobile apps and API access.',
     launchDate: '2024-02-01',
@@ -126,7 +126,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum ML platform with hybrid classical-quantum algorithms, real-time quantum simulation, and comprehensive research tools. Includes educational resources and collaboration features.',
     launchDate: '2024-01-15',
@@ -173,7 +173,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready cybersecurity platform with advanced AI models, real-time threat detection, and automated response capabilities. Includes comprehensive reporting and compliance tools.',
     launchDate: '2024-01-20',
@@ -220,7 +220,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced robotics platform with AI-powered navigation, computer vision, and comprehensive fleet management. Includes development tools, safety monitoring, and cloud-based control.',
     launchDate: '2024-01-10',
@@ -267,7 +267,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain AI platform with decentralized computing, smart contract execution, and comprehensive AI tools. Includes marketplace, governance, and cross-chain capabilities.',
     launchDate: '2024-02-15',
@@ -314,7 +314,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced edge AI platform with optimized models, real-time processing, and comprehensive device management. Includes security features, cloud synchronization, and multi-device coordination.',
     launchDate: '2024-01-25',
@@ -361,7 +361,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced drug discovery platform with AI molecular modeling, comprehensive research tools, and collaboration features. Includes regulatory compliance, patent analysis, and research network.',
     launchDate: '2024-01-05',
@@ -408,12 +408,12 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced climate modeling platform with AI prediction models, comprehensive risk assessment, and adaptation planning tools. Includes real-time monitoring, scenario modeling, and policy recommendations.',
     launchDate: '2024-02-01',
     customers: 420,
     rating: 4.8,
     reviews: 280
-  }
+  },
 ];

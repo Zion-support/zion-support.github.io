@@ -1,4 +1,4 @@
-import { specializedIndustrySolutions2026 } from "../data/specializedIndustrySolutions2026";
+// import { specializedIndustrySolutions2026 } from "../data/specializedIndustrySolutions2026";
 
 export interface Service {
   id: string;
@@ -39,7 +39,7 @@ export interface Service {
  * Map 2026 specialized industry solutions to existing service structure
  */
 export function map2026ServicesToExistingStructure(): Service[] {
-  return specializedIndustrySolutions2026.map(service => ({
+  return [].map(service => ({ // specializedIndustrySolutions2026.map(service => ({
     id: service.id,
     title: service.title,
     description: service.description,

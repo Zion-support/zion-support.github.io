@@ -4,7 +4,7 @@ const contact = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+}
 export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-rfp-bid-writer',
@@ -44,7 +44,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 58,
 		rating: 4.7,
 		reviews: 21
-	},
+	}
 	{
 		id: 'cloud-sql-spend-optimizer',
 		name: 'Cloud SQL Spend Optimizer',
@@ -82,7 +82,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 73,
 		rating: 4.6,
 		reviews: 26
-	},
+	}
 	{
 		id: 'customer-interview-insights',
 		name: 'Customer Interview Insights',
@@ -120,7 +120,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 41,
 		rating: 4.6,
 		reviews: 18
-	},
+	}
 	{
 		id: 'it-asset-attack-surface',
 		name: 'IT Asset & Attack Surface Mapper',
@@ -158,7 +158,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 33,
 		rating: 4.5,
 		reviews: 12
-	},
+	}
 	{
 		id: 'warehouse-query-guard',
 		name: 'Warehouse Query Guard',
@@ -196,7 +196,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 27,
 		rating: 4.5,
 		reviews: 10
-	},
+	}
 	{
 		id: 'edge-ab-testing-kit',
 		name: 'Edge A/B Testing Kit',
@@ -234,7 +234,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 52,
 		rating: 4.6,
 		reviews: 19
-	},
+	}
 	{
 		id: 'sla-breach-predictor',
 		name: 'SLA Breach Predictor',
@@ -272,7 +272,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 39,
 		rating: 4.5,
 		reviews: 13
-	},
+	}
 	{
 		id: 'secure-doc-redaction-suite',
 		name: 'Secure Document Redaction Suite',
@@ -310,7 +310,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 24,
 		rating: 4.6,
 		reviews: 9
-	},
+	}
 	{
 		id: 'api-latency-slo-tracker-pro',
 		name: 'API Latency & SLO Tracker Pro',
@@ -348,7 +348,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 46,
 		rating: 4.5,
 		reviews: 16
-	},
+	}
 	{
 		id: 'browser-performance-optimizer',
 		name: 'Browser Performance Optimizer',
@@ -386,7 +386,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 61,
 		rating: 4.6,
 		reviews: 24
-	},
+	}
 	{
 		id: 'ai-contract-reviewer',
 		name: 'AI Contract Reviewer',
@@ -424,7 +424,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 37,
 		rating: 4.5,
 		reviews: 14
-	},
+	}
 	{
 		id: 'security-questionnaire-autofill',
 		name: 'Security Questionnaire AutoFill',
@@ -462,7 +462,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 29,
 		rating: 4.6,
 		reviews: 11
-	},
+	}
 	{
 		id: 'kubernetes-policy-auditor',
 		name: 'Kubernetes Policy Auditor',
@@ -500,7 +500,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 34,
 		rating: 4.5,
 		reviews: 12
-	},
+	}
 	{
 		id: 'email-deliverability-guardian',
 		name: 'Email Deliverability Guardian',
@@ -538,7 +538,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 57,
 		rating: 4.6,
 		reviews: 20
-	},
+	}
 	{
 		id: 'ml-experiment-tracker-lite',
 		name: 'ML Experiment Tracker Lite',
@@ -576,7 +576,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 22,
 		rating: 4.4,
 		reviews: 8
-	},
+	}
 	{
 		id: 'iam-permission-graph',
 		name: 'IAM Permission Graph',
@@ -614,7 +614,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 31,
 		rating: 4.6,
 		reviews: 11
-	},
+	}
 	{
 		id: 'etl-incident-copilot',
 		name: 'ETL Incident Copilot',
@@ -652,7 +652,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 25,
 		rating: 4.5,
 		reviews: 9
-	},
+	}
 	{
 		id: 'ai-email-responder-pro',
 		name: 'AI Email Responder Pro',
@@ -687,7 +687,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 112,
 		rating: 4.7,
 		reviews: 37
-	},
+	}
 	{
 		id: 'mobile-first-surveys',
 		name: 'Mobile-First Survey Studio',
@@ -722,7 +722,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 65,
 		rating: 4.6,
 		reviews: 22
-	},
+	}
 	{
 		id: 'it-helpdesk-lite',
 		name: 'IT Helpdesk Lite',
@@ -757,7 +757,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 44,
 		rating: 4.5,
 		reviews: 17
-	},
+	}
 	{
 		id: 'affiliate-tracking-studio',
 		name: 'Affiliate Tracking Studio',
@@ -792,7 +792,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 28,
 		rating: 4.5,
 		reviews: 12
-	},
+	}
 	{
 		id: 'podcast-transcriber-studio',
 		name: 'Podcast Transcriber Studio',

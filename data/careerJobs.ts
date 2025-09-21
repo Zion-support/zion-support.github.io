@@ -14,7 +14,7 @@ export const CAREER_JOBS = {
         'Experience with Next.js and modern build tools',
         'Strong understanding of responsive design',
         'Experience with state management libraries'
-      ]
+      ],
     },
     {
       id: 'backend-engineer',
@@ -30,7 +30,7 @@ export const CAREER_JOBS = {
         'Experience with databases (PostgreSQL preferred)',
         'Knowledge of cloud platforms (AWS, GCP, or Azure)',
         'Understanding of microservices architecture'
-      ]
+      ],
     },
     {
       id: 'ai-engineer',
@@ -46,8 +46,8 @@ export const CAREER_JOBS = {
         'Experience with TensorFlow or PyTorch',
         'Knowledge of ML deployment and MLOps',
         'Understanding of NLP and computer vision'
-      ]
-    }
+      ],
+    },
   ],
   Design: [
     {
@@ -64,7 +64,7 @@ export const CAREER_JOBS = {
         'Strong understanding of user-centered design',
         'Experience with user research and testing',
         'Knowledge of design systems'
-      ]
+      ],
     },
     {
       id: 'ux-researcher',
@@ -80,8 +80,8 @@ export const CAREER_JOBS = {
         'Proficiency in analytics tools',
         'Strong communication and presentation skills',
         'Understanding of quantitative and qualitative research'
-      ]
-    }
+      ],
+    },
   ],
   Operations: [
     {
@@ -98,7 +98,7 @@ export const CAREER_JOBS = {
         'Strong analytical and problem-solving skills',
         'Excellent communication and leadership abilities',
         'Understanding of AI/ML technologies'
-      ]
+      ],
     },
     {
       id: 'customer-success-manager',
@@ -114,7 +114,7 @@ export const CAREER_JOBS = {
         'Strong relationship-building skills',
         'Analytical mindset with attention to detail',
         'Experience with CRM tools'
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 };

@@ -4,7 +4,7 @@ const contact = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+}
 export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'affiliate-marketing-tracker-pro',
@@ -44,7 +44,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 24,
 		rating: 4.7,
 		reviews: 12
-	},
+	}
 	{
 		id: 'smb-privacy-web-analytics',
 		name: 'SMB Privacy Web Analytics',
@@ -83,7 +83,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 52,
 		rating: 4.6,
 		reviews: 21
-	},
+	}
 	{
 		id: 'msp-helpdesk-itsm',
 		name: 'MSP Helpdesk & ITSM',
@@ -122,7 +122,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 18,
 		rating: 4.6,
 		reviews: 9
-	},
+	}
 	{
 		id: 'ai-content-creation-studio',
 		name: 'AI Content Creation Studio',
@@ -161,7 +161,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 41,
 		rating: 4.5,
 		reviews: 19
-	},
+	}
 	{
 		id: 'ecommerce-returns-manager',
 		name: 'E-commerce Returns Manager',
@@ -200,7 +200,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 33,
 		rating: 4.6,
 		reviews: 14
-	},
+	}
 	{
 		id: 'automated-email-followups',
 		name: 'Automated Email Follow-ups',
@@ -239,7 +239,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 61,
 		rating: 4.5,
 		reviews: 23
-	},
+	}
 	{
 		id: 'podcast-transcription-pro',
 		name: 'Podcast Transcription Pro',
@@ -278,7 +278,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 27,
 		rating: 4.4,
 		reviews: 11
-	},
+	}
 	{
 		id: 'freelancer-portfolio-builder',
 		name: 'Freelancer Portfolio Builder',
@@ -317,7 +317,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 76,
 		rating: 4.6,
 		reviews: 29
-	},
+	}
 	{
 		id: 'micro-crm-local-business',
 		name: 'Micro CRM for Local Business',
@@ -356,7 +356,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 64,
 		rating: 4.5,
 		reviews: 26
-	},
+	}
 	{
 		id: 'ai-seo-content-optimizer',
 		name: 'AI SEO Content Optimizer',

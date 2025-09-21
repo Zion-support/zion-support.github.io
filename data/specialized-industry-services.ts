@@ -62,7 +62,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       enterprise: 7000,
       currency: 'USD',
       period: 'month'
-    },
+    }
     link: 'https://ziontechgroup.com/services/ai-legal-research-platform',
     icon: '⚖️',
     isNew: true,
@@ -109,7 +109,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       enterprise: 4500,
       currency: 'USD',
       period: 'month'
-    },
+    }
     link: 'https://ziontechgroup.com/services/ai-real-estate-analytics',
     icon: '🏠',
     marketPosition: 'Leading AI-powered real estate analytics platform',
@@ -155,7 +155,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       enterprise: 18000,
       currency: 'USD',
       period: 'month'
-    },
+    }
     link: 'https://ziontechgroup.com/services/smart-manufacturing-platform',
     icon: '🏭',
     isPopular: true,
@@ -202,7 +202,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       enterprise: 3000,
       currency: 'USD',
       period: 'month'
-    },
+    }
     link: 'https://ziontechgroup.com/services/precision-agriculture-platform',
     icon: '🌾',
     marketPosition: 'Leading AI-powered precision agriculture platform',
@@ -248,7 +248,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       enterprise: 8000,
       currency: 'USD',
       period: 'month'
-    },
+    }
     link: 'https://ziontechgroup.com/services/smart-energy-management',
     icon: '⚡',
     marketPosition: 'Leading AI-powered energy management platform',
@@ -294,7 +294,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       enterprise: 12000,
       currency: 'USD',
       period: 'month'
-    },
+    }
     link: 'https://ziontechgroup.com/services/intelligent-logistics-platform',
     icon: '🚚',
     marketPosition: 'Leading AI-powered logistics optimization platform',
@@ -340,7 +340,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       enterprise: 6000,
       currency: 'USD',
       period: 'month'
-    },
+    }
     link: 'https://ziontechgroup.com/services/ai-retail-optimization',
     icon: '🛍️',
     marketPosition: 'Leading AI-powered retail optimization platform',
@@ -386,7 +386,7 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       enterprise: 4500,
       currency: 'USD',
       period: 'month'
-    },
+    }
     link: 'https://ziontechgroup.com/services/smart-hospitality-platform',
     icon: '🏨',
     marketPosition: 'Leading AI-powered hospitality management platform',
@@ -405,21 +405,21 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  },
 ],
 
 export const getServicesByIndustry = (industry: string) => {
   return specializedIndustryServices.filter(service => service.industry === industry)
-},
+}
 
 export const getServicesByCategory = (category: string) => {
   return specializedIndustryServices.filter(service => service.category === category)
-},
+}
 
 export const getPopularServices = () => {
   return specializedIndustryServices.filter(service => service.isPopular),
-},
+}
 
 export const getNewServices = () => {
   return specializedIndustryServices.filter(service => service.isNew),
-},
+}

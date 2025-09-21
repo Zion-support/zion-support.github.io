@@ -82,7 +82,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI models, healthcare APIs, compliance framework',
     launchDate: '2025-01-05',
@@ -131,7 +131,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fintech infrastructure, compliance engine, API platform',
     launchDate: '2025-01-08',
@@ -180,7 +180,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI models, IoT platform, automation engine',
     launchDate: '2025-01-10',
@@ -228,7 +228,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Omnichannel platform, AI personalization, retail analytics',
     launchDate: '2025-01-12',
@@ -277,7 +277,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI learning engine, content platform, analytics dashboard',
     launchDate: '2025-01-15',
@@ -325,7 +325,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI research engine, document automation, legal platform',
     launchDate: '2025-01-18',
@@ -374,7 +374,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI valuation models, property analytics, transaction platform',
     launchDate: '2025-01-20',
@@ -422,7 +422,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI optimization engine, tracking platform, logistics analytics',
     launchDate: '2025-01-22',
@@ -471,7 +471,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI optimization engine, IoT platform, energy analytics',
     launchDate: '2025-01-25',
@@ -519,7 +519,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI monitoring engine, IoT platform, agriculture analytics',
     launchDate: '2025-01-28',
@@ -527,24 +527,24 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     rating: 4.7,
     reviews: 17,
     isNew: true
-  }
+  },
 ],
 
 export const getSpecializedIndustryServicesByCategory = (category: string) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.category === category)
-},
+}
 
 export const getPopularSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.isPopular),
-},
+}
 
 export const getNewSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew),
-},
+}
 
 export const getSpecializedIndustryServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(, '')),
     return price >= minPrice && price <= maxPrice,
   }),
-},
+}

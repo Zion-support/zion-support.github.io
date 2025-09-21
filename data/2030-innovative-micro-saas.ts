@@ -79,7 +79,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced AI business intelligence platform with real-time analytics, predictive insights, and autonomous decision-making.',
     launchDate: '2030-01-01',
@@ -126,7 +126,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum-secure communication platform with unbreakable encryption and secure communication channels.',
     launchDate: '2030-01-15',
@@ -173,7 +173,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced AI customer success automation platform with autonomous customer service and success optimization.',
     launchDate: '2030-02-01',
@@ -220,7 +220,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced blockchain supply chain transparency platform with end-to-end traceability and verification.',
     launchDate: '2030-02-15',
@@ -267,12 +267,12 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',
     launchDate: '2030-03-01',
     customers: 89,
     rating: 4.7,
     reviews: 52
-  }
+  },
 ],

@@ -90,7 +90,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		customers: 120,
 		rating: 4.7,
 		reviews: 48
-	},
+	}
 	{
 		id: 'podcast-transcription-studio',
 		name: 'Podcast Transcription Studio',
@@ -132,7 +132,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		customers: 60,
 		rating: 4.6,
 		reviews: 22
-	},
+	}
 	{
 		id: 'micro-crm-local-business',
 		name: 'Micro CRM for Local Business',
@@ -174,7 +174,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		customers: 210,
 		rating: 4.5,
 		reviews: 77
-	},
+	}
 	{
 		id: 'returns-automation-saas',
 		name: 'E‑commerce Returns Automation',
@@ -216,7 +216,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		customers: 95,
 		rating: 4.6,
 		reviews: 35
-	},
+	}
 	{
 		id: 'it-helpdesk-for-msps',
 		name: 'IT Helpdesk for MSPs',
@@ -686,5 +686,5 @@ export const real2025Q4Additions = [
     integrations: ['Vault', 'KMS', 'Kubernetes'],
     trialDays: 14,
     setupTime: '1-2 days'
-  }
+  },
 ];

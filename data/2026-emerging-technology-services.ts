@@ -42,7 +42,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+}
 export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
   {
     id: 'ai-powered-autonomous-vehicles-platform',
@@ -363,5 +363,5 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     customers: 56,
     rating: 4.7,
     reviews: 123
-  }
+  },
 ],

@@ -20,7 +20,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       trialDays: 30,
       setupTime: '2-3 weeks',
       enterprise: 'Custom pricing available'
-    },
+    }
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     features: [
       'Real-time risk monitoring',
@@ -133,5 +133,5 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.6,
     reviews: 41,
     contactInfo: contact
-  }
+  },
 ];

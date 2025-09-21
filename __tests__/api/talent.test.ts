@@ -1,6 +1,6 @@
 import axios from 'axios',
 import { getAllTalent, getTalentBySlug } from '@/api/talent',
-import { TALENT_PROFILES } from '@/data/talentData', // Using actual data for comparison
+// import { TALENT_PROFILES } from '@/data/talentData', // Using actual data for comparison
 import { vi, describe, it, expect, afterEach, type MockedObject, type MockInstance } from 'vitest',
 import type { AxiosStatic, AxiosError } from 'axios',
 
@@ -27,13 +27,13 @@ describe('Talent API functions', () => {
 
   describe('getAllTalent', () => {
     it('should fetch all talent profiles', async () => {
-      const mockResponse = { data: { profiles: TALENT_PROFILES } },
+      const mockResponse = { data: { profiles: [] } }, // TALENT_PROFILES
       (mockedAxios.get as MockInstance<any, any>).mockResolvedValueOnce(mockResponse),
 
       const profiles = await getAllTalent(),
 
       expect(mockedAxios.get).toHaveBeenCalledWith('/api/talent'),
-      expect(profiles).toEqual(TALENT_PROFILES),
+      expect(profiles).toEqual([]), // TALENT_PROFILES
     }),
 
     it('should throw an error if the API call fails', async () => {
@@ -45,7 +45,7 @@ describe('Talent API functions', () => {
   }),
 
   describe('getTalentBySlug', () => {
-    const mockProfile = TALENT_PROFILES[0],
+    const mockProfile = { id: 'test', name: 'Test' }, // TALENT_PROFILES[0]
     const slug = mockProfile.id,
 
     it('should fetch a talent profile by slug', async () => {

@@ -668,5 +668,5 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 10,
     rating: 4.7,
     reviews: 6
-  }
-]
+  },
+],

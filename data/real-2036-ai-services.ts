@@ -22,7 +22,7 @@ export const real2036AIServices = [
     useCases: [
       'Customer serviceMental health support',
       'Education technologyHuman resources'
-    ]
+    ],
   },
   {
     id: 'ai-creativity-orchestrator',
@@ -47,7 +47,7 @@ export const real2036AIServices = [
     useCases: [
       'Marketing campaignsProduct design',
       'Content creationResearch and development'
-    ]
+    ],
   },
   {
     id: 'ai-dream-interpreter-platform',
@@ -72,7 +72,7 @@ export const real2036AIServices = [
     useCases: [
       'Mental health supportPsychological research',
       'Personal developmentTherapeutic applications'
-    ]
+    ],
   },
   {
     id: 'ai-content-factory-pro',
@@ -97,7 +97,7 @@ export const real2036AIServices = [
     useCases: [
       'Marketing contentBlog writing',
       'Social media contentProduct descriptions'
-    ]
+    ],
   },
   {
     id: 'ai-customer-intelligence-platform',
@@ -122,7 +122,7 @@ export const real2036AIServices = [
     useCases: [
       'E-commerce optimizationCustomer service',
       'Marketing campaignsProduct development'
-    ]
+    ],
   },
   {
     id: 'ai-autonomous-marketing-platform',
@@ -147,7 +147,7 @@ export const real2036AIServices = [
     useCases: [
       'Digital advertisingEmail marketing',
       'Social media marketingContent marketing'
-    ]
+    ],
   },
   {
     id: 'ai-autonomous-research-assistant',
@@ -172,7 +172,7 @@ export const real2036AIServices = [
     useCases: [
       'Market researchAcademic research',
       'Business intelligenceCompetitive analysis'
-    ]
+    ],
   },
   {
     id: 'ai-autonomous-decision-engine',
@@ -197,7 +197,7 @@ export const real2036AIServices = [
     useCases: [
       'Financial decisionsOperational decisions',
       'Strategic planningRisk management'
-    ]
+    ],
   },
   {
     id: 'ai-autonomous-ecosystem-manager',
@@ -222,7 +222,7 @@ export const real2036AIServices = [
     useCases: [
       'Business partnershipsPlatform ecosystems',
       'Supply chain managementDigital transformation'
-    ]
+    ],
   },
   {
     id: 'ai-autonomous-vehicle-ai',
@@ -247,6 +247,6 @@ export const real2036AIServices = [
     useCases: [
       'Autonomous vehiclesFleet management',
       'Traffic optimizationSafety systems'
-    ]
-  }
+    ],
+  },
 ],

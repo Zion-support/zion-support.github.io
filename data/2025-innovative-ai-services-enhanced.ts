@@ -463,7 +463,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced multimodal AI platform with unified processing engine for text, image, audio, and video analysis.',
     launchDate: '2024-11-15',
@@ -516,7 +516,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Quantum-AI hybrid platform with seamless integration of quantum computing and classical AI algorithms.',
     launchDate: '2024-10-01',
@@ -569,7 +569,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI-powered mental health platform with emotional intelligence, CBT techniques, and personalized wellness guidance.',
     launchDate: '2024-09-15',
@@ -622,7 +622,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI-powered phone agent platform with natural voice conversation, intelligent routing, and CRM integration.',
     launchDate: '2024-08-01',
@@ -675,7 +675,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI-powered meeting transcription platform with real-time transcription, action item extraction, and meeting analytics.',
     launchDate: '2024-07-15',
@@ -728,7 +728,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI-powered IoT platform with edge computing capabilities, predictive maintenance, and intelligent automation.',
     launchDate: '2024-06-01',
@@ -781,12 +781,12 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI-powered market research platform with automated competitive analysis, trend identification, and market opportunity assessment.',
     launchDate: '2024-05-15',
     customers: 123,
     rating: 4.8,
     reviews: 62
-  }
+  },
 ];

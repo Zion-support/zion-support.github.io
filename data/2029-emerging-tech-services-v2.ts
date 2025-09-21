@@ -255,5 +255,5 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  },
 ],

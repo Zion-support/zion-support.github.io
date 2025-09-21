@@ -79,7 +79,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced autonomous DevOps platform with self-optimizing, self-healing, and self-improving operations.',
     launchDate: '2030-01-01',
@@ -126,7 +126,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced zero trust network architecture platform with continuous verification and comprehensive security.',
     launchDate: '2030-01-15',
@@ -173,7 +173,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced edge computing orchestration platform with intelligent distributed computing and real-time processing.',
     launchDate: '2030-02-01',
@@ -220,7 +220,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered IT operations platform with intelligent monitoring, automation, and optimization.',
     launchDate: '2030-02-15',
@@ -267,12 +267,12 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum-secure infrastructure platform with quantum-proof security and comprehensive protection.',
     launchDate: '2030-01-10',
     customers: 12,
     rating: 5.0,
     reviews: 8
-  }
+  },
 ],

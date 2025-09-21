@@ -768,5 +768,5 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     customers: 34,
     rating: 4.8,
     reviews: 26
-  }
+  },
 ];

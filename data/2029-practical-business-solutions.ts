@@ -12,8 +12,8 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     name: 'Practical Business Solution 2029 1',
     tagline: 'Practical 2029 business solution',
     price: '$1799',
-    features: ['Practical business features', '2029 solutions', 'Business optimization']
-  }
+    features: ['Practical business features', '2029 solutions', 'Business optimization'],
+  },
 ];
 ];
 export const practicalBusinessSolutionServices2029 = practicalBusiness2029Solutions;

@@ -47,7 +47,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+}
 
 export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureService[] = [
   // HYBRID CLOUD ORCHESTRATION
@@ -462,7 +462,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     patentStatus: 'Trade Secret',
     aiCapabilities: ['Autonomous OptimizationPerformance Prediction', 'Automatic RoutingTraffic Optimization'],
     marketDisruption: 'Revolutionizes network management with autonomous AI'
-  }
+  },
 ],
 
 export default enterpriseITInfrastructureServices2025,

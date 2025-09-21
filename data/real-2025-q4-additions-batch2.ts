@@ -34,7 +34,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['GitHubGitLab', 'BitbucketTerraform'],
 		trialDays: 14,
 		setupTime: 'Same day'
-	},
+	}
 	{
 		id: 'internal-linking-automation',
 		name: 'Internal Linking Automation',
@@ -52,7 +52,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['Next.jsWordPress', 'Webflow'],
 		trialDays: 7,
 		setupTime: '1 day'
-	},
+	}
 	{
 		id: 'ai-contract-redaction',
 		name: 'AI Contract Redaction',
@@ -68,7 +68,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['Google DriveSharePoint', 'Box'],
 		trialDays: 7,
 		setupTime: '1 day'
-	},
+	}
 	{
 		id: 'browser-performance-optimizer',
 		name: 'Browser Performance Optimizer',
@@ -84,7 +84,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['GitHubGitLab', 'VercelNetlify'],
 		trialDays: 7,
 		setupTime: 'Same day'
-	},
+	}
 	{
 		id: 'tenant-permissions-auditor',
 		name: 'Tenant Permissions Auditor',
@@ -100,7 +100,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['OktaAzure AD', 'Google Workspace'],
 		trialDays: 14,
 		setupTime: '2–3 days'
-	},
+	}
 	{
 		id: 'data-quality-guardrails',
 		name: 'Data Quality Guardrails',
@@ -116,7 +116,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['SnowflakeBigQuery', 'Redshiftdbt'],
 		trialDays: 14,
 		setupTime: '1–2 days'
-	},
+	}
 	{
 		id: 'release-notes-automation',
 		name: 'Release Notes Automation',
@@ -132,7 +132,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['GitHubLinear', 'Jira'],
 		trialDays: 7,
 		setupTime: 'Same day'
-	},
+	}
 	{
 		id: 'seo-schema-studio',
 		name: 'SEO Schema Studio',
@@ -148,7 +148,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['Next.jsGatsby', 'WordPress'],
 		trialDays: 7,
 		setupTime: 'Same day'
-	},
+	}
 	{
 		id: 'ai-rubric-evaluator',
 		name: 'AI Rubric Evaluator',
@@ -164,7 +164,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations: ['OpenAIAnthropic', 'GitHub Actions'],
 		trialDays: 7,
 		setupTime: '1 day'
-	},
+	}
 	{
 		id: 'api-deprecation-watcher',
 		name: 'API Deprecation Watcher',

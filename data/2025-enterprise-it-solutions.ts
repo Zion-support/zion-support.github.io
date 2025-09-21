@@ -51,7 +51,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 23,
 		rating: 4.8,
 		reviews: 18
-	},
+	}
 	{
 		id: 'enterprise-api-governance-platform',
 		name: 'Enterprise API Governance Platform',
@@ -95,7 +95,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 45,
 		rating: 4.7,
 		reviews: 32
-	},
+	}
 	{
 		id: 'enterprise-identity-access-management-suite',
 		name: 'Enterprise Identity & Access Management Suite',
@@ -139,7 +139,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 67,
 		rating: 4.8,
 		reviews: 45
-	},
+	}
 	{
 		id: 'enterprise-workflow-automation-platform',
 		name: 'Enterprise Workflow Automation Platform',
@@ -183,7 +183,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 34,
 		rating: 4.7,
 		reviews: 26
-	},
+	}
 	{
 		id: 'enterprise-monitoring-and-observability-suite',
 		name: 'Enterprise Monitoring & Observability Suite',
