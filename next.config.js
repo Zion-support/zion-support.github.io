@@ -2,46 +2,29 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  distDir: '.next',
   trailingSlash: true,
-  
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  swcMinify: true,
-  
-  // Image optimization
   images: {
-    unoptimized: true, // Required for static export
-    domains: ["localhost"],
+    unoptimized: true,
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
   },
-  
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
   typescript: {
     ignoreBuildErrors: true,
-    tsconfigPath: './tsconfig.json',
   },
-  
-  // Experimental features for performance
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
   experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
     esmExternals: false,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
   },
-  
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  
-  // Webpack configuration
-  webpack: (config, { dev, isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibilityorigin/main
+  webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -51,22 +34,33 @@ const nextConfig = {
         crypto: false,
       };
     }
-    
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, '.'),
-    };
-    
-    // Exclude problematic directories from compilation
-    config.module.rules.push({
-      test: /\.ts$/,
-      include: require('path').resolve(__dirname, 'contracts'),
-      use: 'ignore-loader'
-    });origin/main
+    return config;
+  },
+  headers: async () => {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
