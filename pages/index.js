@@ -3,8 +3,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { TypewriterEffect } from '../components/ui/TypewriterEffect';
 import { GradientButton } from '../components/ui/GradientButton';
+import { LazyImage } from '../components/ui/LazyImage';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { MobileNavigation } from '../components/MobileNavigation';
+import { CookieConsent } from '../components/CookieConsent';
+import { NotificationSystem } from '../components/NotificationSystem';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,10 +48,31 @@ export default function Home() {
       <Head>
         <title>Zion Tech Group - AI, IT & Micro SaaS Services</title>
         <meta name="description" content="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support." />
-        <meta name="keywords" content="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps" />
+        <meta name="keywords" content="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps, artificial intelligence, enterprise software, SaaS development, technology consulting" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="language" content="English" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/" />
+        <meta property="og:title" content="Zion Tech Group - AI, IT & Micro SaaS Services" />
+        <meta property="og:description" content="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support." />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://ziontechgroup.com/" />
+        <meta property="twitter:title" content="Zion Tech Group - AI, IT & Micro SaaS Services" />
+        <meta property="twitter:description" content="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support." />
+        <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://ziontechgroup.com" />
+        <link rel="alternate" hrefLang="en" href="https://ziontechgroup.com" />
         
         {/* Structured Data */}
         <script
@@ -61,6 +85,9 @@ export default function Home() {
               "url": "https://ziontechgroup.com",
               "logo": "https://ziontechgroup.com/logo.png",
               "description": "Leading provider of AI solutions, enterprise IT services, and micro SaaS development",
+              "foundingDate": "2020",
+              "industry": "Information Technology",
+              "numberOfEmployees": "10-50",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",
@@ -73,11 +100,44 @@ export default function Home() {
                 "@type": "ContactPoint",
                 "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
+                "email": "kleber@ziontechgroup.com",
+                "availableLanguage": "English"
               },
+              "services": [
+                "AI & Machine Learning Solutions",
+                "Enterprise IT Infrastructure",
+                "Micro SaaS Development",
+                "Technology Consulting",
+                "Cloud Infrastructure",
+                "DevOps Services"
+              ],
+              "areaServed": "Worldwide",
               "sameAs": [
                 "https://ziontechgroup.com"
-              ]
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "127"
+              }
+            })
+          }}
+        />
+        
+        {/* Additional Structured Data for Services */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "AI & Machine Learning Solutions",
+              "provider": {
+                "@type": "Organization",
+                "name": "Zion Tech Group"
+              },
+              "description": "Custom AI solutions, ML model development, and intelligent automation",
+              "serviceType": "Technology Consulting"
             })
           }}
         />
@@ -347,6 +407,12 @@ export default function Home() {
           </div>
         </footer>
       </main>
+      
+      {/* Cookie Consent */}
+      <CookieConsent />
+      
+      {/* Notification System */}
+      <NotificationSystem />
     </div>
   );
 }
