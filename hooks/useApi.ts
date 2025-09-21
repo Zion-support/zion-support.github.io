@@ -1,2 +1,0 @@
-// useApi hook module
-export {};
