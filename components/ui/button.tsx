@@ -1,4 +1,5 @@
 import * as React from "react"
+import { cn } from "../../lib/utils"
 
 // Simple Slot replacement
 const Slot = React.forwardRef<HTMLElement, React.HTMLAttributes<HTMLElement> & { asChild?: boolean }>(
@@ -7,7 +8,7 @@ const Slot = React.forwardRef<HTMLElement, React.HTMLAttributes<HTMLElement> & {
       return React.cloneElement(children as React.ReactElement<any>, {
         ...props,
         ref,
-        className: `${children.props.className || ''} ${props.className || ''}`.trim()
+        className: `${(children.props as any)?.className || ''} ${props.className || ''}`.trim()
       } as any);
     }
     return React.createElement('div', { ...props, ref }, children);

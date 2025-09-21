@@ -1,39 +1,17 @@
 import { useState, useEffect } from 'react'
 import { Globe } from 'lucide-react'
 
-}
-
-interface CountrySelectorProps {
-  selectedCountry: CountryPricing | null;
-  onCountrySelect: (country: CountryPricing) => void;
-}
-
-const onsiteServicePricing: CountryPricing[] = [
-  { country: 'United States', currency: 'USD', multiplier: 1.0, pricePerIncident: 150 },
-  { country: 'Canada', currency: 'CAD', multiplier: 1.2, pricePerIncident: 180 },
-  { country: 'United Kingdom', currency: 'GBP', multiplier: 1.3, pricePerIncident: 195 },
-  { country: 'Germany', currency: 'EUR', multiplier: 1.2, pricePerIncident: 180 },
-  { country: 'France', currency: 'EUR', multiplier: 1.2, pricePerIncident: 180 },
-  { country: 'Australia', currency: 'AUD', multiplier: 1.4, pricePerIncident: 210 },
-  { country: 'Japan', currency: 'JPY', multiplier: 1.1, pricePerIncident: 165 },
-  { country: 'Singapore', currency: 'SGD', multiplier: 1.3, pricePerIncident: 195 },
-  { country: 'Brazil', currency: 'BRL', multiplier: 0.8, pricePerIncident: 120 },
-  { country: 'India', currency: 'INR', multiplier: 0.6, pricePerIncident: 90 }
-];
-
-export default function CountrySelector({ selectedCountry, onCountrySelect }: CountrySelectorProps) {
-  const [topCountries] = useState(onsiteServicePricing.slice(0, 4));
-interface CountrySelectorProps {
-  selectedCountry: CountryPricing | null,
-  onCountrySelect: (country: CountryPricing) => void
-}
-
 interface CountryPricing {
   name: string;
   code: string;
   multiplier: number;
   country: string;
   pricePerIncident: number;
+}
+
+interface CountrySelectorProps {
+  selectedCountry: CountryPricing | null;
+  onCountrySelect: (country: CountryPricing) => void;
 }
 
 export default function CountrySelector({ selectedCountry, onCountrySelect }: CountrySelectorProps) {

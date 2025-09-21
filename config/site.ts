@@ -12,6 +12,7 @@ export const siteConfig = {
     baseUrl: 'https://ziontechgroup.com',
     trialDays: 14,
     supportEmail: 'support@ziontechgroup.com',
-    salesEmail: 'sales@ziontechgroup.com'}
-} as const,
+    salesEmail: 'sales@ziontechgroup.com'
+  }
+} as const;
 export type SiteConfig = typeof siteConfig;

@@ -1,10 +1,5 @@
 // i18n configuration - disabled for build
 // TODO: Install i18next packages when needed
-export default {};
-import React from 'react';
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Basic translations
 const resources = {
@@ -40,16 +35,11 @@ const resources = {
   },
 };
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    resources,
-    fallbackLng: 'en-US',
-    debug: false,
-    interpolation: {
-      escapeValue: false,
-    },
-  });
+// Simple i18n mock for build
+const i18n = {
+  t: (key: string) => (resources['en-US'].translation as any)[key] || key,
+  language: 'en-US',
+  changeLanguage: () => Promise.resolve(),
+};
 
 export default i18n;

@@ -14,7 +14,7 @@ export function GuestCheckoutModal({ isOpen, onClose, onCheckout }: GuestCheckou
 
   if (!isOpen) return null;
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     if (email) {
       onCheckout(email);
     }
@@ -35,8 +35,6 @@ export function GuestCheckoutModal({ isOpen, onClose, onCheckout }: GuestCheckou
               <Input
                 id="email"
                 type="email"
-                label="Email Address"
-                error=""
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
