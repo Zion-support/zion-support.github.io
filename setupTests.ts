@@ -1,2 +1,2 @@
-// Export empty object to make this a module
+// Test setup file
 export {};

@@ -1,6 +1,10 @@
 import { PrismaClient } from '@prisma/client';
+<<<<<<< HEAD:seed.ts
+const prisma = new PrismaClient();
+=======
 const prisma = new PrismaClient(),
 
+>>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:seed.ts.disabled
 async function main() {
   const products = [
     {
@@ -43,7 +47,11 @@ async function main() {
       currency: 'USD',
       images: ['https://placehold.co/600x400?text=AI+Analytics']
     }
+<<<<<<< HEAD:seed.ts
+  ];
+=======
   ],
+>>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:seed.ts.disabled
   await prisma.product.createMany({ data: products, skipDuplicates: true }),
   const talents = [
     {
@@ -67,8 +75,7 @@ async function main() {
       rate: 110,
       skills: ['AWSDocker', 'Kubernetes']
     }
-  ],
-
+  ];
   await prisma.talent.createMany({ data: talents, skipDuplicates: true }),
   const categories = [
     {
@@ -103,11 +110,15 @@ async function main() {
   await (prisma as any).category.createMany({
     data: categories,
     skipDuplicates: true
+<<<<<<< HEAD:seed.ts
+  });
+=======
   })}
+>>>>>>> cc0d21868188b9c53a0c112e24cd567ac1f67490:seed.ts.disabled
 
 main()
   .catch((e) => {
     console.error(e);
     process.exit(1)})
   .finally(async () => {
-    await prisma.$disconnect()}),
+    await prisma.$disconnect()});

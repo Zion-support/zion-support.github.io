@@ -1,0 +1,28 @@
+export type EnhancedRealMicroSaasService = {
+	id: string;
+	name: string;
+<<<<<<< HEAD:enhanced-real-micro-saas-services.ts.backup.1758436903
+	category?: string;
+	description?: string;
+=======
+	tagline?: string;
+	price?: string;
+	period?: string;
+	category?: string;
+	description?: string;
+	features?: string[];
+	popular?: boolean;
+	icon?: string;
+	color?: string;
+	textColor?: string;
+	link?: string;
+	marketPosition?: string;
+	reviews?: number;
+	[key: string]: any; // Allow additional properties
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-e331:data/enhanced-real-micro-saas-services.ts
+};
+
+export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [];
+export const serviceCategories: string[] = [];
+export const getServicesByCategory = (_cat: string) => [] as EnhancedRealMicroSaasService[];
+export const getPopularServices = () => [] as EnhancedRealMicroSaasService[];

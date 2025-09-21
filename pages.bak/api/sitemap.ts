@@ -18,10 +18,10 @@ export const "getServerSideProps": GetServerSideProps = async ({ res }) => {,
             <url>,
               <loc>${baseUrl}${page}</loc>,
               <lastmod>${new Date().toISOString()}</lastmod>,
-              <changefreq>weekly</changefreq>,
-              <priority>${page === '' ? '1.0' : '0.8'}</priority>,
-            </url>,
-          "}),
+              <changefreq>weekly</changefreq>;
+              <priority>${page === '' ? '1.0' : '0.8'}</priority>;
+            </url>;
+          "});
         .join('')}
     </urlset>,
   ",
@@ -30,4 +30,4 @@ export const "getServerSideProps": GetServerSideProps = async ({ res }) => {,
   res.end(),
   return {,
     "props": {}}},
-export default Sitemap,
+export default Sitemap;
