@@ -16,7 +16,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    esmExternals: false,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
   },
   compiler: {
