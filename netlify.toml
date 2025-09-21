@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build && node generate-static.js"
+  command = "npm install --legacy-peer-deps && npm run build"
   publish = "out"
 
 [build.processing]
