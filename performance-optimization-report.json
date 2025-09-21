@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-09-21T13:34:42.298Z",
+  "timestamp": "2025-09-21T13:33:13.525Z",
   "optimizations": [
     {
       "type": "bundle-analysis",
-      "current": 9862714,
+      "current": 22227288,
       "recommendation": "Bundle size is acceptable"
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "type": "code-quality",
-      "largeFiles": 31,
+      "largeFiles": 33,
       "recommendation": "Consider splitting large files into smaller modules"
     }
   ],
