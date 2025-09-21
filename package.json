@@ -148,16 +148,21 @@
     "@types/react-dom": "^17.0.26",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.32.0",
     "eslint-config-next": "^14.0.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
-    "node": "^10.9.2",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "lint-staged": "^15.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
-    "typescript": "^4.9.5"
+    "typescript": "^5.9.2",
+    "vite": "^5.4.10",
+    "web-vitals": "^3.0.0"
   }
 }
