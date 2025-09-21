@@ -3,75 +3,30 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  swcMinify: true,
   trailingSlash: true,
   distDir: 'out',
   
   // Static export configuration
   output: 'export',
-  skipTrailingSlashRedirect: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-  
-  // Security headers (for Netlify)
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-    ];
-  },
   
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
   },
   typescript: {
-    // Ignore TypeScript errors during build to avoid breaking static export
     ignoreBuildErrors: true,
   },
   eslint: {
-    // Ignore ESLint errors during build to avoid breaking static export
     ignoreDuringBuilds: true,
   },
   
   // Experimental features
   experimental: {
-    optimizeCss: false, // Disabled due to missing critters dependency
+    optimizeCss: false,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
-    gzipSize: true,
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-  },
-  
-  // Turbopack configuration (moved from experimental.turbo)
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'react', 'react-dom'],
+    esmExternals: false,
   },
   
   // Compiler optimizations
@@ -80,49 +35,10 @@ const nextConfig = {
     styledComponents: true,
   },
   
-  // Compression and performance
-  compress: true,
+  // Performance optimizations
   poweredByHeader: false,
+  compress: true,
   generateEtags: true,
-  
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains; preload',
-          },
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.supabase.co https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
-          },
-        ],
-      },
-    ];
-  },
   
   // Generate unique build ID for better caching
   generateBuildId: async () => {
@@ -130,7 +46,7 @@ const nextConfig = {
   },
   
   // Webpack configuration
-  webpack: (config, { isServer, dev }) => {
+  webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -144,29 +60,6 @@ const nextConfig = {
         util: false,
         buffer: require.resolve('buffer'),
         process: require.resolve('process/browser'),
-      };
-      
-      // Add compression support (disabled due to dependency conflicts)
-      // Compression will be handled by Netlify's built-in compression
-    }
-    
-    // Performance optimizations for production
-    if (!dev) {
-      config.optimization = {
-        ...config.optimization,
-        minimize: true,
-        sideEffects: false,
-        usedExports: true,
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all',
-            },
-          },
-        },
       };
     }
     

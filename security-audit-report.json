@@ -1,68 +1,80 @@
 {
-  "timestamp": "2025-09-21T14:16:24.086Z",
+  "timestamp": "2025-09-21T14:27:24.688Z",
   "score": 25,
   "issues": [
+    {
+      "category": "dependencies",
+      "severity": "high",
+      "message": "Vulnerable dependencies found",
+      "details": [
+        {
+          "error": "Could not run npm audit"
+        }
+      ],
+      "timestamp": "2025-09-21T14:27:23.371Z"
+    },
     {
       "category": "environment",
       "severity": "high",
       "message": "Hardcoded secret in .env: NEXT_PUBLIC_SUPABASE_ANON_KEY",
       "details": [],
-      "timestamp": "2025-09-21T14:16:24.082Z"
+      "timestamp": "2025-09-21T14:27:24.684Z"
     },
     {
       "category": "permissions",
       "severity": "medium",
       "message": "File package.json has overly permissive permissions",
       "details": [],
-      "timestamp": "2025-09-21T14:16:24.083Z"
+      "timestamp": "2025-09-21T14:27:24.684Z"
     },
     {
       "category": "permissions",
       "severity": "medium",
       "message": "File package-lock.json has overly permissive permissions",
       "details": [],
-      "timestamp": "2025-09-21T14:16:24.083Z"
+      "timestamp": "2025-09-21T14:27:24.685Z"
     },
     {
       "category": "permissions",
       "severity": "medium",
       "message": "File .env has overly permissive permissions",
       "details": [],
-      "timestamp": "2025-09-21T14:16:24.083Z"
+      "timestamp": "2025-09-21T14:27:24.685Z"
     },
     {
       "category": "permissions",
       "severity": "medium",
       "message": "File .env.production has overly permissive permissions",
       "details": [],
-      "timestamp": "2025-09-21T14:16:24.083Z"
+      "timestamp": "2025-09-21T14:27:24.685Z"
     },
     {
       "category": "headers",
       "severity": "medium",
       "message": "Missing security headers",
       "details": [
+        "X-Frame-Options",
+        "X-Content-Type-Options",
+        "X-XSS-Protection",
         "Strict-Transport-Security",
         "Content-Security-Policy"
       ],
-      "timestamp": "2025-09-21T14:16:24.083Z"
-    },
-    {
-      "category": "authentication",
-      "severity": "high",
-      "message": "No authentication system detected",
-      "details": [],
-      "timestamp": "2025-09-21T14:16:24.085Z"
+      "timestamp": "2025-09-21T14:27:24.685Z"
     },
     {
       "category": "network",
       "severity": "medium",
       "message": "HTTPS enforcement not configured",
       "details": [],
-      "timestamp": "2025-09-21T14:16:24.086Z"
+      "timestamp": "2025-09-21T14:27:24.688Z"
     }
   ],
   "recommendations": [
+    {
+      "priority": "high",
+      "action": "Update vulnerable dependencies",
+      "description": "Run npm audit fix to update vulnerable packages"
+    },
     {
       "priority": "high",
       "action": "Secure environment variables",
