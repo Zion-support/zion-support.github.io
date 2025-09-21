@@ -24,7 +24,7 @@ export interface EmergingTechService {
   setupTime: string;
   competitors: string[];
   roi: string;
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './service-variants';
 
 export interface EmergingTechInnovationService {
   id: string;

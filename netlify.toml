@@ -6,7 +6,7 @@
   base = "."
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   NODE_OPTIONS = "--max-old-space-size=8192 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
   NETLIFY_DISABLE_FRAMEWORK_DETECTION = "false"

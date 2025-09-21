@@ -766,5 +766,5 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     customers: 31,
     rating: 4.6,
     reviews: 14
-  },
-],
+  }
+]
