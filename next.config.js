@@ -85,6 +85,10 @@ const nextConfig = {
     
     return config;
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-6f8d
 };
 
 module.exports = nextConfig;
