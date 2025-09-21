@@ -1,8 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { usePerformanceMonitor } from '../hooks/usePerformanceMonitor';
 
 export default function Home() {
+  // Monitor performance metrics
+  usePerformanceMonitor();
+
   const services = [
     {
       title: "AI & Machine Learning",
@@ -39,6 +43,38 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://ziontechgroup.com" />
+        <meta property="og:title" content="Zion Tech Group - AI, IT & Micro SaaS Services" />
+        <meta property="og:description" content="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - AI, IT & Micro SaaS Services" />
+        <meta name="twitter:description" content="Leading provider of AI solutions, enterprise IT services, and micro SaaS development." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Leading provider of AI solutions, enterprise IT services, and micro SaaS development",
+              "url": "https://ziontechgroup.com",
+              "telephone": "+13024640950",
+              "email": "kleber@ziontechgroup.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "sameAs": [
+                "https://ziontechgroup.com"
+              ]
+            })
+          }}
+        />
       </Head>
 
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">

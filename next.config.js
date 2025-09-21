@@ -9,15 +9,17 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
   typescript: {
-    ignoreBuildErrors: true,
-    // tsconfigPath: './tsconfig.json',
+    ignoreBuildErrors: false,
+    tsconfigPath: './tsconfig.json',
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   experimental: {
     esmExternals: false,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-slot'],
+    optimizeCss: true,
+    scrollRestoration: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
