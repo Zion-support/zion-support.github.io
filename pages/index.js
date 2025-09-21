@@ -12,6 +12,12 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import FAQSection from '../components/FAQSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
+import AnimatedCounter from '../components/ui/AnimatedCounter';
+import ParallaxSection from '../components/ui/ParallaxSection';
+import ScrollProgress from '../components/ui/ScrollProgress';
+import InteractiveCard from '../components/ui/InteractiveCard';
+import PerformanceMetrics from '../components/PerformanceMetrics';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,6 +71,7 @@ export default function Home() {
   return (
     <ErrorBoundary>
       <div>
+        <ScrollProgress />
         <SEO 
           title="Zion Tech Group - AI, IT & Micro SaaS Services"
           description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
@@ -107,7 +114,7 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <ParallaxSection speed={0.3} className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className={`text-4xl md:text-6xl font-bold mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               Transform Your Business with
@@ -141,7 +148,7 @@ export default function Home() {
               </GradientButton>
             </div>
           </div>
-        </section>
+        </ParallaxSection>
 
         {/* Services Section */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
@@ -157,7 +164,12 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-500 delay-${index * 200} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <InteractiveCard 
+                  key={index} 
+                  className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 delay-${index * 200} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                  hoverScale={1.05}
+                  tiltIntensity={10}
+                >
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -167,7 +179,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </a>
-                </div>
+                </InteractiveCard>
               ))}
             </div>
           </div>
@@ -216,7 +228,9 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">1000%</div>
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  <AnimatedCounter end={1000} suffix="%" duration={2000} />
+                </div>
                 <div className="text-lg text-gray-300 mb-2">Average ROI</div>
                 <div className="text-sm text-gray-400">Measured across all projects</div>
               </div>
@@ -226,12 +240,16 @@ export default function Home() {
                 <div className="text-sm text-gray-400">Always available when you need us</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  <AnimatedCounter end={99.9} suffix="%" duration={2000} />
+                </div>
                 <div className="text-lg text-gray-300 mb-2">Uptime</div>
                 <div className="text-sm text-gray-400">Enterprise-grade reliability</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">500+</div>
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+                  <AnimatedCounter end={500} suffix="+" duration={2000} />
+                </div>
                 <div className="text-lg text-gray-300 mb-2">Projects</div>
                 <div className="text-sm text-gray-400">Successfully delivered worldwide</div>
               </div>
@@ -275,8 +293,14 @@ export default function Home() {
         {/* Enhanced Testimonials Carousel */}
         <TestimonialsCarousel />
 
+        {/* Performance Metrics Section */}
+        <PerformanceMetrics />
+
         {/* FAQ Section */}
         <FAQSection />
+
+        {/* Newsletter Signup */}
+        <NewsletterSignup />
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
