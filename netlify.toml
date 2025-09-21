@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --legacy-peer-deps && NODE_OPTIONS='--openssl-legacy-provider' npm run build && node scripts/post-build.js"
+  command = "npm install --legacy-peer-deps && NODE_OPTIONS='--openssl-legacy-provider' npm run build"
   publish = "out"
 
 [build.processing]
@@ -46,21 +46,7 @@
 #     Referrer-Policy = "origin-when-cross-origin"
 #     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Redirects for better SEO
-[[redirects]]
-  from = "/home"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/index"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Redirects are now handled by _redirects file
 
 [functions]
   node_bundler = "esbuild" 

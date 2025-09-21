@@ -56,10 +56,7 @@ const nextConfig = {
         fs: false,
         net: false,
         tls: false,
-        crypto: require.resolve('crypto-browserify'),
-        stream: require.resolve('stream-browserify'),
-        buffer: require.resolve('buffer'),
-        process: require.resolve('process/browser'),
+        crypto: false,
       };
     }
     
@@ -99,6 +96,33 @@ const nextConfig = {
     );
     
     return config;
+  },
+  
+  // Headers for better security and performance
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
+    ];
   },
 };
 
