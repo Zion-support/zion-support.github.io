@@ -1,11 +1,11 @@
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
-import type { BlogPost as BlogPostType } from "@/types/blog";
-import React from "react";
-import ReactMarkdown from 'react-markdown';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react',
+import type { BlogPost as BlogPostType } from "@/types/blog",
+import React from "react",
+import ReactMarkdown from 'react-markdown',
+import { logErrorToProduction } from '@/utils/productionLogger',
 // Importing the sample blog posts - in a real app you would fetch this from an API
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
-import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
+import { fetchWithRetry } from '@/utils/fetchWithRetry',
 export default function BlogPost() {
 return (
     <>
@@ -225,19 +225,17 @@ export default function Page() {
     return new Date(dateString) .toLocaleDateString('en - US', {
       year: 'numeric',
 month: 'long'
-      day: 'numeric',
-})
+      day: 'numeric', })
 }
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: any } = {,
-ai: Brain;
-quantum: Cpu;
-security: Shield;
-cloud: Cloud;
-business: TrendingUp;
-iot: Network;
-emerging: Zap;
-}
+ai: Brain,
+quantum: Cpu,
+security: Shield,
+cloud: Cloud,
+business: TrendingUp,
+iot: Network,
+emerging: Zap, }
     return categoryIcons[category] |BookOpen,
 }
   const getCategoryName = (category: string) => {
@@ -463,7 +461,7 @@ key={post.id}
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx - auto px-4">
-          <motion.div,
+          <motion.div;
 initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
@@ -472,7 +470,7 @@ initial={{ opacity: 0 y: 20 }}
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray - 300 mb-8">
-              Let's discuss how our AI - powered solutions can drive innovation,
+              Let's discuss how our AI - powered solutions can drive innovation;
 and growth for your organization.</p>
             <div className="flex flex - wrap justify - center gap-4">
               <Link

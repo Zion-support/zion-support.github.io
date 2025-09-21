@@ -1,25 +1,22 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Archive, Trash2, Download, Mail } from 'lucide-react';
-
+import React from 'react',
+import { Button } from '@/components/ui/button',
+import { Archive, Trash2, Download, Mail } from 'lucide-react',
 interface QuotesBulkActionsProps {
-  selectedCount: number;
-  onArchiveSelected: () => void;
-  onDeleteSelected: () => void;
-  onExportSelected: () => void;
-  onEmailSelected: () => void;
-}
+  selectedCount: number,
+  onArchiveSelected: () => void,
+  onDeleteSelected: () => void,
+  onExportSelected: () => void,
+  onEmailSelected: () => void, }
 
 export const QuotesBulkActions: React.FC<QuotesBulkActionsProps> = ({
   selectedCount,
   onArchiveSelected,
-  onDeleteSelected,
-  onExportSelected,
+  onDeleteSelected;
+  onExportSelected;
   onEmailSelected
 }) => {
   if (selectedCount === 0) {
-    return null;
-  }
+    return null, }
 
   return (
     <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
@@ -65,5 +62,4 @@ export const QuotesBulkActions: React.FC<QuotesBulkActionsProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  );;

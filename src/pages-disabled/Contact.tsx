@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-zion-blue">
@@ -12,7 +11,6 @@ const Contact: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
+  );;
 
 export default Contact;

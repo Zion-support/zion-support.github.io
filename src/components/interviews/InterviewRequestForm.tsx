@@ -1,10 +1,10 @@
 import { CalendarIcon,,  } from 'lucide-react'
-import React from "react";
-import React from "react";
-import import { logErrorToProduction } from '@/utils/productionLogger';
+import React from "react",
+import React from "react",
+import import { logErrorToProduction } from '@/utils/productionLogger',
 interface InterviewRequestFormProps {
   talent: TalentProfile;,
-onClose: () => void;
+onClose: () => void,
   userDetails?: UserProfile
                         {field.value ? (
                           format(field.value, 'PPP')
@@ -185,8 +185,7 @@ placeholder="Share what you'd like to discuss in this interview"
 }setIsSubmitting (true)
 }catch (error) {
   logErrorToProduction ('Failed to schedule interview:', {
-  data: error;
-})
+  data: error, })
 toast ({
 }finally {
   setIsSubmitting (false)

@@ -6,8 +6,8 @@ import { Badge,,  } from "@/components/ui/badge",
 import { Button,,  } from "@/components/ui/button",
 import { Loader2,,, MessageSquare,,, ExternalLink,,  } from 'lucide-react'
 import { formatDistanceToNow,,  } from "date-fns",
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
 export function MyApplications() {
 if (isLoading) {
     return (

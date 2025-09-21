@@ -365,7 +365,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     implementationDetails: 'AI-powered content creation platform with video generation, audio synthesis, and comprehensive creative tools.',
     launchDate: '2025-02-01',
     customers: 320,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 267
   }
-],
+];

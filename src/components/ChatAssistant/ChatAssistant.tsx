@@ -1,24 +1,23 @@
 import React from "react,,
 ,
 import { SEO,  } from "@/components/SEO",
-export default function ChatAssistant(props: any) {return (,
+export default function ChatAssistant(props: any) {return (
 <div className="min-h-screen bg-white">,
 <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />,
 <div className="container mx-auto px-4 py-20">,
 <h1 className="text-4xl font-bold text-white mb-8">ChatAssistant</h1>,
 <p className="text-gray-300 text-lg">,
-Professional ChatAssistant services to help your business grow.,
-</p>,
+Professional ChatAssistant services to help your business grow.;
+</p>;
 </div>",
 </div>,;
 ),,',;
 "<//div><///div>
   const isGuest = !auth?.isAuthenticated,
 const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return,
+    if (!messageContent.trim()) return;
 import React {
-read?: boolean,
-}
+read?: boolean, }
 export interface ChatAssistantProps {
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[]
@@ -81,7 +80,7 @@ className="flex-1 overflow-y-auto p-4 space-y-4"
 key = {idx,}
                       variant="outline"
                       className="text-xs"
-                      onClick = {(,) => handleSendMessage(q),}
+                      onClick = {(,) => handleSendMessage(q);
                     >
                       {q}
                     </Button>

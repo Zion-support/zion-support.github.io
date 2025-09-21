@@ -1,13 +1,12 @@
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 interface Service {
-category: stringico;n: React.ComponentType<{ className?: string }>,color: string; items: string[[];]
-description?: string;
-}interface ServicesOverviewProps {
-services: Service[[ ];]
+category: stringico;n: React.ComponentType<{ className?: string }>,color: string; items: string[[], ]
+description?: string, }interface ServicesOverviewProps {
+services: Service[[ ], ]
 const ServicesOvervie;w: React.FC<ServicesOverviewProps>  = ({ services }) => {
 return (
 <section className="py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">

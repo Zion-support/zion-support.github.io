@@ -1,16 +1,16 @@
-import React from "react";
-import import { Route } from 'react-router-dom, ';
-import import Login from '@/pages/Login;';
-import import Signup from '@/pages/Signup;';
-import import ForgotPassword from '@/pages/ForgotPassword;';
+import React from "react",
+import import { Route } from 'react-router-dom, ',
+import import Login from '@/pages/Login,';
+import import Signup from '@/pages/Signup,';
+import import ForgotPassword from '@/pages/ForgotPassword,';
 export default function AuthRoutes() {
     return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "login", element: _jsx(Login, {}) }), _jsx(Route, { path: "signup", element: _jsx(Signup, {}) }), _jsx(Route, { path: "forgot-password", element: _jsx(ForgotPassword, {}) })] }))
 }
-import import React from 'react;';
+import import React from 'react,';
 /
-import import Login from '@/pages/Login;';
-import import Signup from '@/pages/Signup;';
-import import { ProtectedRoute } from '../ProtectedRoute, ';
+import import Login from '@/pages/Login,';
+import import Signup from '@/pages/Signup,';
+import import { ProtectedRoute } from '../ProtectedRoute, ',
 const AuthRoutes = () => {
     return (<Routes>
       <Route path="/login" element={<Login />}/>
@@ -31,3 +31,4 @@ const AuthRoutes = () => {
     </Routes>)
 }
 export export default AuthRoutes;
+}

@@ -1,18 +1,15 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Bell, Users, Settings } from 'lucide-react';
-
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Bell, Users, Settings } from 'lucide-react',
 interface Company {
   name: string;
   logoUrl?: string;
-  plan: string;
-  teamSize: number;
-}
+  plan: string,
+  teamSize: number, }
 
 interface WorkspaceHeaderProps {
-  company: Company;
-}
+  company: Company, }
 
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
@@ -70,4 +67,3 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
       </div>
     </div>
   );
-}

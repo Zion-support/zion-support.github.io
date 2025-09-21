@@ -1,16 +1,14 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 import import { MICRO_SAAS_SERVICES;
-SERVICE_CATEGORIES;
-} from "
+SERVICE_CATEGORIES, } from "
 import import { Sparkles;
 Zap;
 TrendingUp;
@@ -18,13 +16,12 @@ ArrowRight;
 Star;
 CheckCircle;
 Globe;
-MessageCircle;
-} from "
+MessageCircle, } from "
 
 export export function NewServicesShowcase() {;
 /
 const featuredServices = SERVICE_CATEGORIES.map(category =>
-category.services[[0];]
+category.services[[0], ]
 ).filter(Boolean)
 
 return (

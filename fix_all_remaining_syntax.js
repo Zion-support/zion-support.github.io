@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
+const path = require('path'),
 
 // Function to fix all remaining syntax errors
 function fixAllSyntaxErrors(content) {
@@ -9,13 +9,13 @@ function fixAllSyntaxErrors(content) {
   
   // Fix extra commas in imports
   fixed = fixed.replace(/import\s+[^;]+,\s*;/g, (match) => {
-    return match.replace(/,\s*;/, ';');
+    return match.replace(/,\s*;/, ';'),
   });
   
   // Fix missing semicolons in imports
   fixed = fixed.replace(/import\s+[^;]+(?<!;)$/gm, (match) => {
     if (!match.trim().endsWith(';')) {
-      return match + ';';
+      return match + ',';
     }
     return match;
   });
@@ -34,12 +34,12 @@ function fixAllSyntaxErrors(content) {
   fixed = fixed.replace(/,(\s*[}\]])/g, '$1');
   
   // Fix missing quotes in JSX attributes
-  fixed = fixed.replace(/className=\s*{([^}]+)}/g, 'className={$1}');
+  fixed = fixed.replace(/className=\s*{([^}]+)}/g, 'className={$1}'),
   
   // Fix missing semicolons after variable declarations
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?<!;)$/gm, (match) => {
     if (!match.trim().endsWith(';')) {
-      return match + ';';
+      return match + ',';
     }
     return match;
   });
@@ -103,3 +103,4 @@ function processDirectory(dir) {
 console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('./src');
 console.log(`Fixed ${fixedCount} files`);
+}

@@ -462,4 +462,4 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.6,
     reviews: 78
   }
-],
+];

@@ -10,13 +10,10 @@ test('talent profile name visible', async ({ page }) => {
           id: '123',
           full_name: 'Playwright Talent',
           bio: '',
-          skills: [],
+          skills: [];
           hourly_rate: 100
         }
       })
-    }),
-  }),
-
-  await page.goto('/talent/123'),
-  await expect(page.getByTestId('profile-name')).toHaveText('Playwright Talent'),
-}),
+    }););
+  await page.goto('/talent/123');
+  await expect(page.getByTestId('profile-name')).toHaveText('Playwright Talent'););

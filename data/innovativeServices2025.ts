@@ -127,17 +127,13 @@ export const getServicesByCategory = (category: string) => {
 },
 
 export const getServicesByPriceRange = (priceRange: string) => {
-  if (priceRange === 'all') return INNOVATIVE_SERVICES_2025,
-  
-  const [min, max] = priceRange.split('-').map(Number),
+  if (priceRange === 'all') return INNOVATIVE_SERVICES_2025;
+  const [min, max] = priceRange.split('-').map(Number);
   if (priceRange === '3000+') {
-    return INNOVATIVE_SERVICES_2025.filter(service => service.price >= 3000),
-  }
-  return INNOVATIVE_SERVICES_2025.filter(service => service.price >= min && service.price <= max),
-},
+    return INNOVATIVE_SERVICES_2025.filter(service => service.price >= 3000);
+  return INNOVATIVE_SERVICES_2025.filter(service => service.price >= min && service.price <= max);,
 
 export const getTopRatedServices = (limit: number = 5) => {
   return [...INNOVATIVE_SERVICES_2025]
     .sort((a, b) => b.rating - a.rating)
-    .slice(0, limit),
-},
+    .slice(0, limit);,

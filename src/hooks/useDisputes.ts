@@ -1,6 +1,5 @@
-import { useState, useCallback } from 'react';
-import { Dispute, DisputeMessage } from '@/types/disputes';
-
+import { useState, useCallback } from 'react',
+import { Dispute, DisputeMessage } from '@/types/disputes',
 export function useDisputes() {
   const [disputes, setDisputes] = useState<Dispute[]>([]);
   const [loading, setLoading] = useState(false);
@@ -25,11 +24,9 @@ export function useDisputes() {
         id: 'talent_456',
         display_name: 'Jane Smith',
         avatar_url: 'https://via.placeholder.com/40/00FF00/FFFFFF?text=JS',
-      },
-    };
+      }, };
     
-    return mockDispute;
-  }, []);
+    return mockDispute, }, []);
 
   const getDisputeMessages = useCallback(async (disputeId: string): Promise<DisputeMessage[]> => {
     // Simulate API call
@@ -59,16 +56,13 @@ export function useDisputes() {
           display_name: 'Jane Smith',
           avatar_url: 'https://via.placeholder.com/40/00FF00/FFFFFF?text=JS',
         },
-      },
-    ];
+      }, ];
     
-    return mockMessages;
-  }, []);
+    return mockMessages, }, []);
 
   const resolveDispute = useCallback(async (disputeId: string, resolution: {
-    summary: string;
-    resolution_type: string;
-  }): Promise<boolean> => {
+    summary: string,
+    resolution_type: string, }): Promise<boolean> => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -82,17 +76,14 @@ export function useDisputes() {
                 status: 'resolved',
                 resolution_summary: resolution.summary,
                 resolution_type: resolution.resolution_type as any,
-                resolved_at: new Date().toISOString(),
-              }
+                resolved_at: new Date().toISOString();
             : dispute
         )
       );
       
-      return true;
-    } catch (error) {
+      return true, } catch (error) {
       console.error('Failed to resolve dispute:', error);
-      return false;
-    }
+      return false, }
   }, []);
 
   return {
@@ -101,5 +92,4 @@ export function useDisputes() {
     getDisputeById,
     getDisputeMessages,
     resolveDispute,
-  };
-}
+  }, }

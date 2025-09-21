@@ -1,17 +1,14 @@
 interface PerformanceMetric {
-  name: string;
-  startTime: number;
+  name: string,
+  startTime: number,
   endTime?: number;
-  duration?: number;
-}
+  duration?: number, }
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
-  private observers: PerformanceObserver[] = [];
-
+  private observers: PerformanceObserver[] = [],
   constructor() {
     this.initializeObservers();
-  }
 
   private initializeObservers(): void {
     // Monitor Core Web Vitals
@@ -21,27 +18,20 @@ class PerformanceMonitor {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          this.logMetric("LCP", lastEntry.startTime);
-        });
-        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
-        this.observers.push(lcpObserver);
-      } catch (error) {
+          this.logMetric("LCP", lastEntry.startTime););
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] }),
+        this.observers.push(lcpObserver); catch (error) {
         console.warn("LCP observer failed:", error);
-      }
 
       // First Input Delay
       try {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach(entry => {
-            this.logMetric("FID", (entry as any).processingStart - entry.startTime);
-          });
-        });
-        fidObserver.observe({ entryTypes: ["first-input"] });
-        this.observers.push(fidObserver);
-      } catch (error) {
+            this.logMetric("FID", (entry as any).processingStart - entry.startTime);););
+        fidObserver.observe({ entryTypes: ["first-input"] }),
+        this.observers.push(fidObserver); catch (error) {
         console.warn("FID observer failed:", error);
-      }
       // Cumulative Layout Shift
       try {
         const clsObserver = new PerformanceObserver((list) => {
@@ -49,18 +39,14 @@ class PerformanceMonitor {
           const entries = list.getEntries();
           entries.forEach(entry => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
+              clsValue += (entry as any).value, }
           });
           if (clsValue > 0) {
             this.logMetric("CLS", clsValue);
-          }
         });
-        clsObserver.observe({ entryTypes: ["layout-shift"] });
-        this.observers.push(clsObserver);
-      } catch (error) {
+        clsObserver.observe({ entryTypes: ["layout-shift"] }),
+        this.observers.push(clsObserver); catch (error) {
         console.warn("CLS observer failed:", error);
-      }
     }
   }
 
@@ -69,14 +55,12 @@ class PerformanceMonitor {
       name,
       startTime: performance.now()
     });
-  }
 
   endTiming(name: string): number {
     const metric = this.metrics.get(name);
     if (!metric) {
-      console.warn(`No timing started for: ${name}`);
-      return 0;
-    }
+      console.warn(`No timing started for: ${name}`),
+      return 0, }
 
     const endTime = performance.now();
     const duration = endTime - metric.startTime;
@@ -87,8 +71,7 @@ class PerformanceMonitor {
       duration
     });
 
-    return duration;
-  }
+    return duration, }
 
   measureFunction<T extends (...args: any[]) => any>(
     name: string,
@@ -99,11 +82,9 @@ class PerformanceMonitor {
     try {
       const result = func(...args);
       this.endTiming(name);
-      return result;
-    } catch (error) {
+      return result, } catch (error) {
       this.endTiming(name);
-      throw error;
-    }
+      throw error, }
   }
 
   private logMetric(name: string, value: number): void {
@@ -113,24 +94,19 @@ class PerformanceMonitor {
         metric_value: value,
         event_category: "Performance"
       });
-    }
     
     console.log(`Performance Metric - ${name}: ${value.toFixed(2)}ms`);
-  }
 
   getMetrics(): Record<string, PerformanceMetric> {
     const result: Record<string, PerformanceMetric> = {};
     this.metrics.forEach((metric, name) => {
-      result[name] = { ...metric };
-    });
-    return result;
-  }
+      result[name] = { ...metric }, });
+    return result, }
 
   cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.metrics.clear();
-  }
 }
 
 // Performance thresholds for monitoring
@@ -147,11 +123,10 @@ interface PerformanceMetrics {
   FID?: number;
   CLS?: number;
   FCP?: number;
-  TTFB?: number;
-}
+  TTFB?: number, }
 
 class PerformanceAnalyzer {
-  private metrics: PerformanceMetrics = {};
+  private metrics: PerformanceMetrics = {},
   private thresholds: PerformanceThresholds = {
     LCP: 2500, // Good: < 2.5s, Needs Improvement: 2.5-4s, Poor: > 4s
     FID: 100,  // Good: < 100ms, Needs Improvement: 100-300ms, Poor: > 300ms
@@ -162,22 +137,19 @@ class PerformanceAnalyzer {
 
   constructor() {
     this.initializeMetrics();
-  }
 
   private initializeMetrics(): void {
     if (typeof window !== "undefined" && window.performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         this.metrics.TTFB = navigation.responseStart - navigation.requestStart;
-        this.metrics.FCP = navigation.domContentLoadedEventStart - navigation.fetchStart;
-      }
+        this.metrics.FCP = navigation.domContentLoadedEventStart - navigation.fetchStart, }
     }
   }
 
   public getMetrics(): PerformanceMetrics | null {
     if (typeof window === "undefined" || !window.performance) {
-      return null;
-    }
+      return null, }
 
     return {
       LCP: this.getLCP(),
@@ -185,14 +157,12 @@ class PerformanceAnalyzer {
       CLS: this.getCLS(),
       FCP: this.getFCP(),
       TTFB: this.getTTFB()
-    };
-  }
+    }, }
 
   public checkThresholds(): { [K in keyof PerformanceThresholds]: boolean } {
     const metrics = this.getMetrics();
     if (!metrics) {
-      return {} as { [K in keyof PerformanceThresholds]: boolean };
-    }
+      return {} as { [K in keyof PerformanceThresholds]: boolean }, }
 
     return {
       LCP: (metrics.LCP ?? Infinity) <= this.thresholds.LCP,
@@ -200,47 +170,39 @@ class PerformanceAnalyzer {
       CLS: (metrics.CLS ?? Infinity) <= this.thresholds.CLS,
       FCP: (metrics.FCP ?? Infinity) <= this.thresholds.FCP,
       TTFB: (metrics.TTFB ?? Infinity) <= this.thresholds.TTFB
-    };
-  }
+    }, }
 
   public getPerformanceScore(): number {
     const thresholds = this.checkThresholds();
     const totalChecks = Object.keys(thresholds).length;
     const passedChecks = Object.values(thresholds).filter(Boolean).length;
     
-    return totalChecks > 0 ? Math.round((passedChecks / totalChecks) * 100) : 0;
-  }
+    return totalChecks > 0 ? Math.round((passedChecks / totalChecks) * 100) : 0, }
 
   public setThresholds(thresholds: Partial<PerformanceThresholds>): void {
-    this.thresholds = { ...this.thresholds, ...thresholds };
-  }
+    this.thresholds = { ...this.thresholds, ...thresholds }, }
 
   private getLCP(): number | undefined {
     const entries = performance.getEntriesByType("largest-contentful-paint");
-    return entries.length > 0 ? entries[entries.length - 1].startTime : undefined;
-  }
+    return entries.length > 0 ? entries[entries.length - 1].startTime : undefined, }
 
   private getFID(): number | undefined {
     const entries = performance.getEntriesByType("first-input");
-    return entries.length > 0 ? (entries[0] as any).processingStart - entries[0].startTime : undefined;
-  }
+    return entries.length > 0 ? (entries[0] as any).processingStart - entries[0].startTime : undefined, }
 
   private getCLS(): number | undefined {
     // CLS calculation would require more complex logic
     // This is a simplified version
-    return undefined;
-  }
+    return undefined, }
 
   private getFCP(): number | undefined {
     const entries = performance.getEntriesByType("paint");
     const fcpEntry = entries.find(entry => entry.name === "first-contentful-paint");
-    return fcpEntry ? fcpEntry.startTime : undefined;
-  }
+    return fcpEntry ? fcpEntry.startTime : undefined, }
 
   private getTTFB(): number | undefined {
     const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
-    return navigation ? navigation.responseStart - navigation.requestStart : undefined;
-  }
+    return navigation ? navigation.responseStart - navigation.requestStart : undefined, }
 }
 
 // Export instances

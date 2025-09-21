@@ -1,19 +1,17 @@
 // Define the types for our sitemap structure
 export type SitemapItem = {
-  path: string;
-  label: string;
+  path: string,
+  label: string,
   description?: string;
   priority?: number;
-  changeFreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+  changeFreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never",
   lastmod?: string;
   requiredAuth?: boolean;
   requiredRoles?: Array<"creator" | "jobSeeker" | "employer" | "buyer" | "admin">;
-  children?: SitemapItem[];
-};
+  children?: SitemapItem[], };
 
 // Current date for lastmod
-const currentDate = "2025-05-15";
-
+const currentDate = "2025-05-15",
 // Public Pages - Accessible to all users
 export const publicPages: SitemapItem[] = [
   {
@@ -46,8 +44,7 @@ export const publicPages: SitemapItem[] = [
     description: "Get in touch with our team",
     priority: 0.7,
     changeFreq: "monthly",
-    lastmod: currentDate,
-  }
+    lastmod: currentDate, }
 ];
 
 // Export all pages

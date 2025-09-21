@@ -229,4 +229,4 @@ export const quantumBreakthroughServices2025 = [
     integrations: ['Energy management systemsSmart grid infrastructure', 'Renewable energy systemsUtility platforms', 'Monitoring systems'],
     compliance: ['Energy regulationsGrid standards', 'SOC2ISO 27001', 'Energy safety standards']
   }
-],
+];

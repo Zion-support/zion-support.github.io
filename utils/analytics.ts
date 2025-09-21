@@ -7,8 +7,7 @@ export async function trackEvent(payload: TrackEventPayload) {,
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
-      keepalive: true as any}),
-  } catch (e) {,
+      keepalive: true as any}); catch (e) {,
     // swallow
   }
 }

@@ -1,20 +1,18 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-
+import React from 'react',
+import { Button } from '@/components/ui/button',
+import { ChevronLeft, ChevronRight } from 'lucide-react',
 interface QuotesPaginationProps {
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-  totalItems: number;
-  itemsPerPage: number;
-}
+  currentPage: number,
+  totalPages: number,
+  onPageChange: (page: number) => void,
+  totalItems: number,
+  itemsPerPage: number, }
 
 export const QuotesPagination: React.FC<QuotesPaginationProps> = ({
   currentPage,
   totalPages,
-  onPageChange,
-  totalItems,
+  onPageChange;
+  totalItems;
   itemsPerPage
 }) => {
   const startItem = (currentPage - 1) * itemsPerPage + 1;
@@ -27,28 +25,21 @@ export const QuotesPagination: React.FC<QuotesPaginationProps> = ({
 
     for (let i = Math.max(2, currentPage - delta); i <= Math.min(totalPages - 1, currentPage + delta); i++) {
       range.push(i);
-    }
 
     if (currentPage - delta > 2) {
-      rangeWithDots.push(1, '...');
-    } else {
+      rangeWithDots.push(1, '...'); else {
       rangeWithDots.push(1);
-    }
 
     rangeWithDots.push(...range);
 
     if (currentPage + delta < totalPages - 1) {
-      rangeWithDots.push('...', totalPages);
-    } else {
+      rangeWithDots.push('...', totalPages); else {
       rangeWithDots.push(totalPages);
-    }
 
-    return rangeWithDots;
-  };
+    return rangeWithDots, };
 
   if (totalPages <= 1) {
-    return null;
-  }
+    return null, }
 
   return (
     <div className="flex items-center justify-between px-4 py-3 bg-white border-t border-gray-200">
@@ -93,5 +84,4 @@ export const QuotesPagination: React.FC<QuotesPaginationProps> = ({
         </Button>
       </div>
     </div>
-  );
-};
+  );;

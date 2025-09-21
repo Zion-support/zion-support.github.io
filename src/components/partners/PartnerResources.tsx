@@ -1,10 +1,10 @@
 interface ResourceItem {
   id: string;,
-title: string;
+title: string,
   description: string;,
-type: 'image' | 'video' | 'document' | 'link';
+type: 'image' | 'video' | 'document' | 'link',
   icon: JSX.Element;,
-url: string;
+url: string,
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
@@ -95,7 +95,7 @@ team.
         <CardContent className='flex flex-col items-center text-center py-6'>
           <p className='text-zion-slate-light mb-4'>
             Our partner success team is available to help you maximize your,
-partnership with Zion AI Marketplace. Feel free to reach out if you,
+partnership with Zion AI Marketplace. Feel free to reach out if you;
 have questions about promotions resources or payment.
           </p>
           <Button className='bg-zion-purple hover:bg-zion-purple-dark'>

@@ -261,7 +261,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Subscriber engagement improvement',
       'Marketing ROI optimization'
     ],
-    integrations: ['CRM systems', 'E-commerce platforms', 'Analytics tools', 'Social media platforms', 'Marketing tools'],
+    integrations: ['CRM systems', 'E-commerce platforms', 'Analytics tools', 'Social media platforms', 'Marketing tools'];
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   }
 ];

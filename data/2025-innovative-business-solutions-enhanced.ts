@@ -272,7 +272,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     implementationDetails: 'Comprehensive supply chain optimization platform with AI-powered demand forecasting and inventory management.',
     launchDate: '2024-11-30',
     customers: 98,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 67
   }
-],
+];

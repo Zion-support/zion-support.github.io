@@ -23,10 +23,10 @@ const resources = {,
       contact: 'Contacto'}
   }
 },
-// Initialize i18next,
-i18n,
-  .use(LanguageDetector),
-  .use(initReactI18next),
+// Initialize i18next;
+i18n;
+  .use(LanguageDetector);
+  .use(initReactI18next);
   .init({,
     resources,
     fallbackLng: 'en-US',
@@ -38,5 +38,5 @@ i18n,
       lookupCookie: 'zion_language',
       lookupLocalStorage: 'zion_language',
       caches: ['cookie']}
-  }),
-export default i18n,
+  });
+export default i18n;

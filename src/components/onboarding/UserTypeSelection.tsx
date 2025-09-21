@@ -1,7 +1,7 @@
 
-import React from "react";
+import React from "react",
 import { Briefcase,,, Star,,, User,,  } from 'lucide-react'
-import React from "react";
+import React from "react",
 interface UserTypeOption {
   id: "serviceProvider" | "talent" | ",
 name: string;

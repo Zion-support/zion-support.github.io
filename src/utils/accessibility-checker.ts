@@ -1,5 +1,4 @@
 import React from "react";
-
 // Accessibility checker utilities
 export const checkAccessibility = () => {
   console.log("Checking accessibility...");

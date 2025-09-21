@@ -1,11 +1,10 @@
 export interface Tutorial {
-  id: string;
-  title: string;
-  description: string;
-  duration: string;
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
-  category: string;
-}
+  id: string,
+  title: string,
+  description: string,
+  duration: string,
+  difficulty: 'beginner' | 'intermediate' | 'advanced',
+  category: string, }
 
 export const TUTORIALS: Tutorial[] = [
   {

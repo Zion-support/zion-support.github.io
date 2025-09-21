@@ -414,12 +414,9 @@ export const getServicesByIndustry = (industry: string) => {
 
 export const getServicesByCategory = (category: string) => {
   return specializedIndustryServices.filter(service => service.category === category)
-},
-
+};
 export const getPopularServices = () => {
-  return specializedIndustryServices.filter(service => service.isPopular),
-},
+  return specializedIndustryServices.filter(service => service.isPopular);,
 
 export const getNewServices = () => {
-  return specializedIndustryServices.filter(service => service.isNew),
-},
+  return specializedIndustryServices.filter(service => service.isNew);,

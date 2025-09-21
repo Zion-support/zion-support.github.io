@@ -1,25 +1,24 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
 import React from "react",
 const ProfileRatings: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">ProfileRatings</h3>,
+<h3 className="text-xl font-bold mb-4">ProfileRatings</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>
-},
-</div>)},
+};
+</div>)};
 export export default ProfileRatings,;<//div><///div>
 import { useState,,, useEffect,,  } from 'react'
 import { Star,,  } from 'lucide-react'
 import { ReviewStats,,  } from "@/components/reviews/ReviewStats",
 import { ReviewsList,,  } from "@/components/reviews/ReviewsList",
 import { useReviews,,  } from "@/hooks/useReviews",
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
 interface ProfileRatingsProps {
 return (
     <div className="space-y-6">
@@ -107,6 +106,6 @@ reviews={reviews.filter((r) => r.rating < 4)}
 }isLoading= {
   isLoading,
 }onReportReview= {
-  reportReview,
+  reportReview;
 }/> </TabsContent> </Tabs> </div> </div> </div>)
 }"}

@@ -1,8 +1,8 @@
-import React from "react";
-import import { useRouter,,, ,,  } from 'next/router';
+import React from "react",
+import import { useRouter,,, ,,  } from 'next/router',
 import { ChevronLeft,,, Bell,,, Settings,,  } from 'lucide-react'
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
 interface MobileHeaderProps {
 className
     )}>
@@ -13,7 +13,7 @@ className
 variant="ghost"
               size="icon"
               className="mr-2"
-              onClick = {(,) => router.back(),}
+              onClick = {(,) => router.back();
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
@@ -43,7 +43,7 @@ showNotifications = false,
 showSettings = false,
 className
   onNotificationsClick,
-onSettingsClick,
+onSettingsClick;
 }: MobileHeaderProps) {
   const router = useRouter()
     >

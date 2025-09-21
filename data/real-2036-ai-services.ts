@@ -249,4 +249,4 @@ export const real2036AIServices = [
       'Traffic optimizationSafety systems'
     ]
   }
-],
+];

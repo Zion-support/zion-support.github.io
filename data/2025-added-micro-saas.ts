@@ -764,7 +764,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     implementationDetails: 'Metrics pullers + calculators + export templates',
     launchDate: '2025-06-22',
     customers: 31,
-    rating: 4.6,
+    rating: 4.6;
     reviews: 14
   }
 ]

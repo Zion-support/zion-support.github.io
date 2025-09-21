@@ -1,11 +1,9 @@
 import React from 'react';
 import { ServiceLandingTemplate } from '../components/services/ServiceLandingTemplate';
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
-
 export default function ITSupportPage() {
   const benefits = [
-    {
-      icon: Phone,
+    { icon: Phone,
       title: '24/7 Support',
       description: 'Round-the-clock technical assistance'
     },

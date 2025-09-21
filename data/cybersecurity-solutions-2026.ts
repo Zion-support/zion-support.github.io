@@ -272,7 +272,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     implementationDetails: 'Advanced blockchain-based identity management system with decentralized verification, advanced security, and comprehensive identity capabilities.',
     launchDate: '2026-03-01',
     customers: 280,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 167
   }
-],
+];

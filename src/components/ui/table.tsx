@@ -111,7 +111,6 @@ export {
   TableBody,
   TableFooter,
   TableHead,
-  TableRow,
-  TableCell,
-  TableCaption,
-}
+  TableRow;
+  TableCell;
+  TableCaption, }

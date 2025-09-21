@@ -481,6 +481,5 @@ export const REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES: RevolutionaryService2029[
     rating: 4.8,
     reviews: 45
   }
-],
-
-export default REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES,
+];
+export default REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES;

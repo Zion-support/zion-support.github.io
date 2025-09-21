@@ -1,30 +1,29 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
 import React from "react",
 const ConversationDetailView: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">ConversationDetailView</h3>,
+<h3 className="text-xl font-bold mb-4">ConversationDetailView</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>
-},
-</div>)},
+};
+</div>)};
 export export default ConversationDetailView,;<//div><///div>
-import import React { useState useEffect useRef } from 'react';
-import import { format,,, ,,  } from 'date-fns';
+import import React { useState useEffect useRef } from 'react',
+import import { format,,, ,,  } from 'date-fns',
 import { MessageSquare,,  } from 'lucide-react'
-import import { useMessaging,,, ,,  } from '@/context/MessagingContext';
-import import { Button,,, ,,  } from '@/components/ui/button';
-import import { Avatar,,, AvatarFallback,,, AvatarImage,,, ,,  } from '@/components/ui/avatar';
-import import { AspectRatio,,, ,,  } from '@/components/ui/aspect-ratio';
-import import { useAuth,,, ,,  } from '@/hooks/useAuth';
-import import { MessageBubble,,, ,,  } from './MessageBubble';
-import import { DateDivider,,  } from './DateDivider';
+import import { useMessaging,,, ,,  } from '@/context/MessagingContext',
+import import { Button,,, ,,  } from '@/components/ui/button',
+import import { Avatar,,, AvatarFallback,,, AvatarImage,,, ,,  } from '@/components/ui/avatar',
+import import { AspectRatio,,, ,,  } from '@/components/ui/aspect-ratio',
+import import { useAuth,,, ,,  } from '@/hooks/useAuth',
+import import { MessageBubble,,, ,,  } from './MessageBubble',
+import import { DateDivider,,  } from './DateDivider',
 export function ConversationDetailView() {
-loadMessages,
+loadMessages;
 } = useMessaging()
   const [messageText, setMessageText] = useState('')
   const messagesEndRef = null;
@@ -115,7 +114,7 @@ key = {message.id,}
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
 value = {messageText,}
-            onChange = {(e,) => setMessageText(e.target.value),}
+            onChange = {(e,) => setMessageText(e.target.value);
             onKeyDown = {handleKeyDown,}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"

@@ -272,7 +272,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     implementationDetails: 'Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.',
     launchDate: '2030-03-01',
     customers: 89,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 52
   }
-],
+];

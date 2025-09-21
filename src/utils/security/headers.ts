@@ -10,10 +10,8 @@ export const securityHeaders = {
 
 export const applySecurityHeaders = (response: Response): Response => {
   Object.entries(securityHeaders).forEach(([key, value]) => {
-    response.headers.set(key, value);
-  });
-  return response;
-};
+    response.headers.set(key, value););
+  return response, };
 
 // Input sanitization
 export const sanitizeInput = (input: string): string => {
@@ -21,8 +19,7 @@ export const sanitizeInput = (input: string): string => {
     .replace(/[<>]/g, '') // Remove potential HTML tags
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+=/gi, '') // Remove event handlers
-    .trim();
-};
+    .trim();;
 
 // XSS Protection
 export const escapeHtml = (text: string): string => {
@@ -33,15 +30,13 @@ export const escapeHtml = (text: string): string => {
     '"': '&quot;',
     "'": '&#039;'
   };
-  return text.replace(/[&<>"']/g, (m) => map[m]);
-};
+  return text.replace(/[&<>"']/g, (m) => map[m]);;
 
 // CSRF Token Generation
 export const generateCSRFToken = (): string => {
   const array = new Uint8Array(32);
   crypto.getRandomValues(array);
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-};
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');;
 
 // Rate Limiting
 export class RateLimiter {
@@ -60,11 +55,9 @@ export class RateLimiter {
     const validRequests = requests.filter(time => now - time < this.windowMs);
     
     if (validRequests.length >= this.maxRequests) {
-      return false;
-    }
+      return false, }
     
     validRequests.push(now);
     this.requests.set(identifier, validRequests);
-    return true;
-  }
+    return true, }
 }

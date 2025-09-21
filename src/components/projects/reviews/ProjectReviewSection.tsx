@@ -1,4 +1,4 @@
-import import { Project,,, ,,  } from '@/types/projects';
+import import { Project,,, ,,  } from '@/types/projects',
 import { useState,,  } from "react",
 import { Star,,  } from 'lucide-react'
 return (
@@ -9,7 +9,7 @@ return (
           Reviews
         </CardTitle>
         <CardDescription>
-          Reviews are visible once the project is completed and both parties,
+          Reviews are visible once the project is completed and both parties;
 submit feedback
         </CardDescription>
       </CardHeader>
@@ -62,7 +62,7 @@ reviews = {reviews,}
               Reviews will be available once the project is completed
             </h3>
             <p className='text-sm text-muted-foreground'>
-              After the project is marked as completed both parties will be,
+              After the project is marked as completed both parties will be;
 able to leave reviews
             </p>
           </div>
@@ -75,7 +75,7 @@ projectId = {project.id,}
           revieweeId = {revieweeId,}
           revieweeName = {revieweeName,}
           isOpen = {isReviewModalOpen,}
-          onClose = {(,) => setIsReviewModalOpen(false),}
+          onClose = {(,) => setIsReviewModalOpen(false);
         />
       )}
     </Card>

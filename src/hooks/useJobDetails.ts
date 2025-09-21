@@ -3,5 +3,4 @@ export default function useJobDetails(jobId: string) {
     job: null,
     loading: false,
     error: null
-  };
-}
+  }, }

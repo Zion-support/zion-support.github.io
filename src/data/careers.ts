@@ -1,14 +1,13 @@
 export interface CareerJob {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: 'full-time' | 'part-time' | 'contract';
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  postedAt: string;
-}
+  id: string,
+  title: string,
+  department: string,
+  location: string,
+  type: 'full-time' | 'part-time' | 'contract',
+  description: string,
+  requirements: string[],
+  benefits: string[],
+  postedAt: string, }
 
 export const CAREER_JOBS: CareerJob[] = [
   {
@@ -46,7 +45,7 @@ export const CAREER_JOBS: CareerJob[] = [
       'Competitive salary',
       'Stock options',
       'Professional development budget'
-    ],
+    ];
     postedAt: '2024-01-10'
   }
 ];

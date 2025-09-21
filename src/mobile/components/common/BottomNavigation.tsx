@@ -1,8 +1,8 @@
 import React from "react",
 import { useRouter,,  } from "next/router",
-import React from "react";
+import React from "react",
 import { Home,,, ShoppingBag,,, Users,,, User,,  } from 'lucide-react'
-import React from "react";
+import React from "react",
 export function BottomNavigation() {
 isActive ? "text-primary" : "text-muted-foreground"
             )}

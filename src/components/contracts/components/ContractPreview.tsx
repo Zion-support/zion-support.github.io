@@ -1,13 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Download, Send } from "lucide-react";
-import { TalentProfile } from "@/types/talent";
-
+import { Button } from "@/components/ui/button",
+import { Download, Send } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
 interface ContractPreviewProps {
-  contractContent: string;
-  talent: TalentProfile;
-  onClose: () => void;
-  status: "ready" | "sending" | "sent";
-}
+  contractContent: string,
+  talent: TalentProfile,
+  onClose: () => void,
+  status: "ready" | "sending" | "sent", }
 
 export function ContractPreview({
   contractContent,
@@ -24,14 +22,12 @@ export function ContractPreview({
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
+    URL.revokeObjectURL(url);;
 
   const handleSend = () => {
     // In a real app, this would send the contract via email
     console.log("Sending contract to:", talent.email);
-    console.log("Contract content:", contractContent);
-  };
+    console.log("Contract content:", contractContent);;
 
   return (
     <div className="space-y-4">
@@ -54,4 +50,3 @@ export function ContractPreview({
       </div>
     </div>
   );
-}

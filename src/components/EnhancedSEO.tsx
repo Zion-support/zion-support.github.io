@@ -1,6 +1,5 @@
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
 interface EnhancedSEOProps {
 title?: string;
 description?: string;
@@ -11,8 +10,7 @@ ogType?: string;
 twitterCard?: string;
 structuredData?: object;
 noindex?: boolean;
-nofollow?: boolean;
-}
+nofollow?: boolean, }
 export export default function EnhancedSEO({;
 title = "Zion Tech Group - Advance;  d; A; I; Quantum Computing & Enterprise Technology Solutions",
 description = "Leading provider of advanced A; I; automatio; n; quantu; m; computin; g; autonomous busines; s; operation; s; and enterprise technology solutions. Transform your business with cutting-edge technology services.",
@@ -23,13 +21,12 @@ ogType = "website",
 twitterCard = "summary_large_image",
 structuredDat; a;
 noindex = fals; e;
-nofollow = false;
-}: EnhancedSEOProps) {
+nofollow = false, }: EnhancedSEOProps) {
 const currentUrl = typeof window !== "undefined" ? window.location.href : canonical || "
 interface SEOProps {
 title?: string;
 description?: string;
-keywords?: string[[];]
+keywords?: string[[], ]
 canonical?: string;
 ogImage?: string;
 ogType?: "website" | "article" | "product" | "
@@ -43,7 +40,7 @@ author?: string;
 publishedTime?: string;
 modifiedTime?: string;
 section?: string;
-tags?: string[[];]
+tags?: string[[], ]
 }
 export export function EnhancedSEO({;
 title = "Zion - The Future of Tech & AI Marketplace", ;
@@ -62,7 +59,7 @@ author = "Zion Tech Group",
 publishedTim; e;
 modifiedTim; e;
 sectio; n;
-tags = [[];]
+tags = [[], ]
 }: SEOProps) {
 const fullTitle = title.includes("Zion") ? title : `
 const fullDescription = description.length > 160 ? description.substring(0;  157) + "..." : description;
@@ -113,7 +110,7 @@ const const defaultStructuredData = {; = {
 "@type": "ContactPoint",
 "contactType": "customer service",
 "email": "support@ziontechgroup.com",
-"availableLanguage": [["Englis; h"];]
+"availableLanguage": [["Englis; h"], ]
 },
 "address": {
 "@type": "PostalAddress",

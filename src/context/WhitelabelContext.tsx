@@ -1,14 +1,12 @@
-import React, { createContext, useContext, useState } from 'react';
-
+import React, { createContext, useContext, useState } from 'react',
 interface WhitelabelContextType {
-  isWhitelabel: boolean;
-  primaryColor: string;
-  setPrimaryColor: (color: string) => void;
-  brandName: string;
-  setBrandName: (name: string) => void;
+  isWhitelabel: boolean,
+  primaryColor: string,
+  setPrimaryColor: (color: string) => void,
+  brandName: string,
+  setBrandName: (name: string) => void,
   logo: string;
-  setLogo: (logo: string) => void;
-}
+  setLogo: (logo: string) => void, }
 
 const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
 
@@ -24,7 +22,7 @@ export function WhitelabelProvider({ children }: { children: React.ReactNode }) 
     setPrimaryColor,
     brandName,
     setBrandName,
-    logo,
+    logo;
     setLogo
   };
 
@@ -33,12 +31,9 @@ export function WhitelabelProvider({ children }: { children: React.ReactNode }) 
       {children}
     </WhitelabelContext.Provider>
   );
-}
 
 export function useWhitelabel() {
   const context = useContext(WhitelabelContext);
   if (context === undefined) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
-  }
-  return context;
-}
+  return context, }

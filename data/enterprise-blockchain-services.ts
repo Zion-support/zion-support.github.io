@@ -272,7 +272,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     implementationDetails: 'Full blockchain identity platform with self-sovereign identity, zero-knowledge proofs, and comprehensive security features.',
     launchDate: '2024-01-10',
     customers: 112,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 89
   }
-],
+];

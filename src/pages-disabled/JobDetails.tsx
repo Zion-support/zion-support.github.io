@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from '@/components/SEO';
-
+import React, { useState, useEffect } from 'react',
+import useJobDetails from '@/hooks/useJobDetails',
+import { ApplyToJobModal } from '@/components/messaging/job-application',
+import { SEO } from '@/components/SEO',
 export default function JobDetails() {
   return (
     <div className="min-h-screen bg-zion-blue">

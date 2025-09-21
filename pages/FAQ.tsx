@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FAQ = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,6 +27,6 @@ const FAQ = () => {
       </div>
     </div>
   );
-};
+}
 
 export default FAQ;

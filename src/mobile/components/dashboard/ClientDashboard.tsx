@@ -2,7 +2,7 @@
 import React from "react",
 import { Card,,, CardContent,,  } from "@/components/ui/card",
 import { Button,,  } from "@/components/ui/button",
-import React from "react";
+import React from "react",
 import { ChevronRight,,, Plus,,, UserCheck,,, FileText,,, Bell,,  } from 'lucide-react'
 export function ClientDashboard() {
   return (
@@ -170,7 +170,7 @@ for review
               </div>
               <div>
                 <p className='text-sm'>
-                  <strong>Mobile App Development:</strong> 3 new applicants for,
+                  <strong>Mobile App Development: </strong> 3 new applicants for;
 your job post
                 </p>
                 <p className='text-xs text-muted-foreground'>1 day ago</p>

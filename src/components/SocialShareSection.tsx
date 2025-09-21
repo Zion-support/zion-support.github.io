@@ -1,8 +1,7 @@
-import { Button } from './ui/button';
-import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
-import { toast } from "@/hooks/use-toast";
-import { useTranslation } from 'react-i18next';
-
+import { Button } from './ui/button',
+import { Twitter, Facebook, Linkedin, Link } from 'lucide-react',
+import { toast } from "@/hooks/use-toast",
+import { useTranslation } from 'react-i18next',
 export function SocialShareSection() {
   const { t } = useTranslation();
 
@@ -12,29 +11,26 @@ export function SocialShareSection() {
       icon: <Twitter className="h-4 w-4" />,
       color: 'bg-blue-500 hover:bg-blue-600',
       onClick: () => {
-        const url = typeof window !== 'undefined' ? window.location.href : '';
-        const text = 'Check out Zion - The future of AI & tech marketplace!';
+        const url = typeof window !== 'undefined' ? window.location.href : '',
+        const text = 'Check out Zion - The future of AI & tech marketplace!',
         window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
-      }
     },
     {
       name: 'Facebook',
       icon: <Facebook className="h-4 w-4" />,
       color: 'bg-blue-600 hover:bg-blue-700',
       onClick: () => {
-        const url = typeof window !== 'undefined' ? window.location.href : '';
+        const url = typeof window !== 'undefined' ? window.location.href : '',
         window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
-      }
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin className="h-4 w-4" />,
       color: 'bg-blue-700 hover:bg-blue-800',
       onClick: () => {
-        const url = typeof window !== 'undefined' ? window.location.href : '';
-        const text = 'Check out Zion - The future of AI & tech marketplace!';
+        const url = typeof window !== 'undefined' ? window.location.href : '',
+        const text = 'Check out Zion - The future of AI & tech marketplace!',
         window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`, '_blank');
-      }
     },
     {
       name: 'Copy Link',
@@ -46,15 +42,12 @@ export function SocialShareSection() {
             toast({
               title: "Link Copied",
               description: "The link has been copied to your clipboard.",
-            });
-          }).catch(() => {
+            });).catch(() => {
             toast({
               title: "Copy Failed",
               description: "Failed to copy the link. Please try again.",
               variant: "destructive",
-            });
-          });
-        }
+            }););
       }
     }
   ];
@@ -91,4 +84,3 @@ export function SocialShareSection() {
       </div>
     </section>
   );
-}

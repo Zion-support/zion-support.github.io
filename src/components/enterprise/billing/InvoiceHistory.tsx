@@ -1,12 +1,11 @@
 
-import React from "react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Download, FileText, Search } from 'lucide-react';
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
-
+import React from "react",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Download, FileText, Search } from 'lucide-react',
+import { Input } from "@/components/ui/input",
+import { useToast } from "@/hooks/use-toast",
 export function InvoiceHistory() {
   const { toast } = useToast();
   
@@ -31,9 +30,7 @@ export function InvoiceHistory() {
   const handleDownload = (invoiceId: string) => {
     toast({
       title: "Download Started",
-      description: `Downloading invoice ${invoiceId}`,
-    });
-  };
+      description: `Downloading invoice ${invoiceId}`, });;
 
   return (
     <div className="space-y-4">
@@ -81,4 +78,3 @@ export function InvoiceHistory() {
       </Table>
     </div>
   );
-}

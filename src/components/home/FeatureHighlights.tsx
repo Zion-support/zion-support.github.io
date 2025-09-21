@@ -1,6 +1,50 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export const FeatureHighlights = () => {
+=======
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Check } from 'lucide-react',
+import { cn } from "@/lib/utils",
+interface FeatureHighlightsProps {
+  className?: string;
+  style?: React.CSSProperties, }
+
+const features = [
+  { icon: "⚡",
+    title: "Lightning Fast Performance",
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
+  },
+  {
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "Bank-level security protocols and compliance standards to protect your valuable data"
+  },
+  {
+    icon: "🌐",
+    title: "Global Scalability",
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
+  },
+  {
+    icon: "🤖",
+    title: "AI-Powered Intelligence",
+    description: "Smart automation and predictive analytics that adapt to your business requirements"
+  },
+  {
+    icon: "📊",
+    title: "Real-Time Analytics",
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly"
+  },
+  {
+    icon: "🛡️",
+    title: "Enterprise Security",
+    description: "Bank-level security with comprehensive compliance"
+  }
+];
+
+export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
   return (
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,6 +76,11 @@ export const FeatureHighlights = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
 };
+=======
+    </section>
+  );
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54

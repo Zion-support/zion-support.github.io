@@ -272,7 +272,7 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     implementationDetails: 'Complete quantum internet infrastructure platform with quantum entanglement, cryptography, and networking capabilities.',
     launchDate: '2024-12-01',
     customers: 45,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 34
   }
-],
+];

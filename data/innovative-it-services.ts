@@ -315,4 +315,4 @@ export const innovativeITServices: InnovativeITService[] = [
     rating: 4.8,
     reviews: 234
   }
-],
+];

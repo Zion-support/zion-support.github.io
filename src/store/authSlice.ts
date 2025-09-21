@@ -1,12 +1,9 @@
-import React from "react";
-
+import React from "react",
 interface AuthState {
-isLoggedIn: boolean;
-}
+isLoggedIn: boolean, }
 
-const initialState: AuthState = {,
-isLoggedIn: false;
-}
+const initialState: AuthState = {;
+isLoggedIn: false, }
 
 const authSlice = createSlice({;
 name: "

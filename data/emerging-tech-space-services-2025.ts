@@ -271,7 +271,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     implementationDetails: 'Comprehensive space research automation platform with data collection, analysis, and collaboration tools. Includes custom research workflow development and integration services.',
     launchDate: '2025-02-25',
     customers: 35,
-    rating: 4.6,
+    rating: 4.6;
     reviews: 24
   }
-],
+];

@@ -272,7 +272,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     implementationDetails: 'Complete quantum blockchain platform with quantum security, smart contracts, and comprehensive infrastructure capabilities.',
     launchDate: '2024-12-01',
     customers: 123,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 89
   }
-],
+];

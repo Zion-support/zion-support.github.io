@@ -1,13 +1,12 @@
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CreditCard, DollarSign, FileText, TrendingUp } from "lucide-react";
-import { PaymentMethods } from "./PaymentMethods";
-import { InvoiceHistory } from "./InvoiceHistory";
-import { BillingSettings } from "./BillingSettings";
-
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CreditCard, DollarSign, FileText, TrendingUp } from "lucide-react",
+import { PaymentMethods } from "./PaymentMethods",
+import { InvoiceHistory } from "./InvoiceHistory",
+import { BillingSettings } from "./BillingSettings",
 export function BillingDashboard() {
   const currentPlan = {
     name: "Pro Plan",
@@ -136,4 +135,3 @@ export function BillingDashboard() {
       </Tabs>
     </div>
   );
-}

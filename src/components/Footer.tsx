@@ -1,6 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
-
+import React from 'react',
+import Link from 'next/link',
 export function Footer() {
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light">
@@ -44,4 +43,3 @@ export function Footer() {
       </div>
     </footer>
   );
-}

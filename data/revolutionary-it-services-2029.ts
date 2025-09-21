@@ -469,4 +469,4 @@ export const revolutionaryITServices2029: RevolutionaryITService[] = [
     rating: 4.9,
     reviews: 12
   }
-],
+];

@@ -413,7 +413,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01',
     customers: 40,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 32
   }
-],
+];

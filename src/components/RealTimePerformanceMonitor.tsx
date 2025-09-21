@@ -1,14 +1,12 @@
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
+import React, { useState, useEffect, useRef } from 'react',
+import { motion } from 'framer-motion',
 interface PerformanceMetrics {
-  timestamp: number;
-  memory: number;
-  cpu: number;
+  timestamp: number,
+  memory: number,
+  cpu: number,
   fps: number;
-  network: number;
-}
+  network: number, }
 
 export const RealTimePerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
@@ -37,35 +35,28 @@ export const RealTimePerformanceMonitor: React.FC = () => {
         network
       };
       
-      setMetrics(prev => [...prev.slice(-19), newMetric]);
-    };
+      setMetrics(prev => [...prev.slice(-19), newMetric]);;
 
     if (isVisible) {
-      intervalRef.current = setInterval(collectMetrics, 1000);
-    } else {
+      intervalRef.current = setInterval(collectMetrics, 1000); else {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
-      }
     }
 
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
-      }
-    };
-  }, [isVisible]);
+    }, }, [isVisible]);
 
   // Keyboard shortcut to toggle
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'M') {
         setIsVisible(!isVisible);
-      }
     };
 
     window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [isVisible]);
+    return () => window.removeEventListener('keydown', handleKeyPress);, [isVisible]);
 
   if (!isVisible) return null;
 
@@ -145,7 +136,6 @@ export const RealTimePerformanceMonitor: React.FC = () => {
         <span className="text-gray-500 text-xs">Press Ctrl+Shift+M to toggle</span>
       </div>
     </motion.div>
-  );
-};
+  );;
 
 export default RealTimePerformanceMonitor;

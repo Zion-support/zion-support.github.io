@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react';
-
 export function useIsMounted(): boolean {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    setIsMounted(true);, []);
 
-  return isMounted;
-}
+  return isMounted, }

@@ -1,13 +1,11 @@
 interface ReferralData {
-  refCode: string;
+  refCode: string,
   userId?: string;
   email?: string;
-  ipAddress?: string;
-}
+  ipAddress?: string, }
 
 interface ApiClient {
-  (url: string, options: RequestInit): Promise<Response>;
-}
+  (url: string, options: RequestInit): Promise<Response>, }
 
 // Simple functional approach for backward compatibility
 export const trackReferral = async (data: ReferralData): Promise<boolean> => {
@@ -29,36 +27,27 @@ export const trackReferral = async (data: ReferralData): Promise<boolean> => {
       // Clear the stored referral code
       if (typeof window !== "undefined") {
         localStorage.removeItem("referral_code");
-      }
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true, }
+    return false, } catch (error) {
     console.error("Failed to track referral:", error);
-    return false;
-  }
+    return false, }
 };
 
 export const getStoredReferralCode = (): string | null => {
   if (typeof window !== "undefined") {
     return localStorage.getItem("referral_code");
-  }
-  return null;
-};
+  return null, };
 
 export const storeReferralCode = (code: string): void => {
   if (typeof window !== "undefined") {
     localStorage.setItem("referral_code", code);
-  }
 };
 
 // Class-based approach for more advanced usage
 class ReferralTracker {
-  private apiClient: ApiClient;
-
+  private apiClient: ApiClient,
   constructor(apiClient: ApiClient) {
-    this.apiClient = apiClient;
-  }
+    this.apiClient = apiClient, }
 
   async trackReferral(data: ReferralData): Promise<boolean> {
     try {
@@ -79,42 +68,32 @@ class ReferralTracker {
         // Clear the stored referral code
         if (typeof window !== "undefined") {
           localStorage.removeItem("referral_code");
-        }
-        return true;
-      }
-      return false;
-    } catch (error) {
+        return true, }
+      return false, } catch (error) {
       console.error("Failed to track referral:", error);
-      return false;
-    }
+      return false, }
   }
 
   storeReferralCode(code: string): void {
     if (typeof window !== "undefined") {
       localStorage.setItem("referral_code", code);
-    }
   }
 
   getStoredReferralCode(): string | null {
     if (typeof window !== "undefined") {
       return localStorage.getItem("referral_code");
-    }
-    return null;
-  }
+    return null, }
 
   clearStoredReferralCode(): void {
     if (typeof window !== "undefined") {
       localStorage.removeItem("referral_code");
-    }
   }
 
   extractReferralFromUrl(url: string): string | null {
     try {
       const urlObj = new URL(url);
-      return urlObj.searchParams.get("ref") || urlObj.searchParams.get("referral");
-    } catch {
-      return null;
-    }
+      return urlObj.searchParams.get("ref") || urlObj.searchParams.get("referral"); catch {
+      return null, }
   }
 }
 

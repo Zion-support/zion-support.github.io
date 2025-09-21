@@ -1,16 +1,12 @@
 import React from "react";
-
 interface TenantAdminStatus {
-isAdmin: boolean; isLoading: boolean;
-}
+isAdmin: boolean; isLoading: boolean, }
 
 export const useTenantAdminStatus: any = (tenantId?: string): TenantAdminStatus => {
 const [_setStatus] = useState<{;
-isAdmin: boolean; isLoading: boolean;
-}>({
+isAdmin: boolean; isLoading: boolean, }>({
 isAdmin: false;,
-isLoading: true;
-})
+isLoading: true, })
 
 useEffect(() => {
 const checkTenantAdminStatus = async (_tenantId: string) => {
