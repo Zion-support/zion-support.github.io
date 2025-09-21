@@ -1,2 +1,2 @@
-// Security middleware configuration
+// Security middleware
 export {};

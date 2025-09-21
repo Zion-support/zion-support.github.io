@@ -1,2 +1,2 @@
-// Lint target configuration
+// Lint target file
 export {};

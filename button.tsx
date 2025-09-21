@@ -6,7 +6,7 @@ import { cn } from "../../lib/utils";
 const Slot = React.forwardRef<HTMLElement, React.HTMLAttributes<HTMLElement> & { asChild?: boolean }>(
   ({ children, ...props }, ref) => {
     if (React.isValidElement(children)) {
-      return React.cloneElement(children, {
+      return React.cloneElement(children as React.ReactElement<any>, {
         ...props,
         ref: ref as any,
         className: `${children.props.className || ''} ${props.className || ''}`.trim()

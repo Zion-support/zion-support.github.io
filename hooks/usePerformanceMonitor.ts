@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -8,71 +8,95 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
 }
 
-export function usePerformanceMonitor(): { metrics: PerformanceMetrics | null; isSupported: boolean } {
+export function usePerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
+    if (typeof window === 'undefined') return;
+    
+    // Check if Performance Observer is supported
+    if (!('PerformanceObserver' in window)) {
       setIsSupported(false);
       return;
     }
-
-    setIsSupported(true);
-
-    const measurePerformance = () => {
-      try {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-        
-        const metrics: PerformanceMetrics = {
-          loadTime: navigation ? navigation.loadEventEnd - navigation.fetchStart : 0,
-          firstContentfulPaint: 0,
-          largestContentfulPaint: 0,
-          firstInputDelay: 0,
-          cumulativeLayoutShift: 0,
-        };
-
-        // Get FCP
-        const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-          metrics.firstContentfulPaint = fcpEntry.startTime;
-        }
-
-        // Get LCP
-        const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-        if (lcpEntries.length > 0) {
-          metrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime;
-        }
-
-        // Get CLS
-        const clsEntries = performance.getEntriesByType('layout-shift');
-        if (clsEntries.length > 0) {
-          metrics.cumulativeLayoutShift = clsEntries.reduce((acc, entry) => {
-            return acc + (entry as any).value;
-          }, 0);
-        }
-
-        // Get FID
-        const fidEntries = performance.getEntriesByType('first-input');
-        if (fidEntries.length > 0) {
-          const fid = fidEntries[0] as PerformanceEventTiming;
-          metrics.firstInputDelay = fid.processingStart - fid.startTime;
-        }
-
-        setMetrics(metrics);
-      } catch (error) {
-        console.error('Error measuring performance:', error);
-      }
-    };
-
-    // Wait for all performance entries to be available
-    const timer = setTimeout(measurePerformance, 1000);
     
-    return () => clearTimeout(timer);
+    setIsSupported(true);
+    
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          setMetrics(prev => ({
+            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart,
+            firstContentfulPaint: prev?.firstContentfulPaint || 0,
+            largestContentfulPaint: prev?.largestContentfulPaint || 0,
+            firstInputDelay: prev?.firstInputDelay || 0,
+            cumulativeLayoutShift: prev?.cumulativeLayoutShift || 0
+          }));
+        }
+        
+        if (entry.entryType === 'paint') {
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
+              loadTime: prev?.loadTime || 0,
+              firstContentfulPaint: paintEntry.startTime,
+              largestContentfulPaint: prev?.largestContentfulPaint || 0,
+              firstInputDelay: prev?.firstInputDelay || 0,
+              cumulativeLayoutShift: prev?.cumulativeLayoutShift || 0
+            }));
+          }
+        }
+        
+        if (entry.entryType === 'largest-contentful-paint') {
+          const lcpEntry = entry as PerformanceEntry;
+          setMetrics(prev => ({
+            loadTime: prev?.loadTime || 0,
+            firstContentfulPaint: prev?.firstContentfulPaint || 0,
+            largestContentfulPaint: lcpEntry.startTime,
+            firstInputDelay: prev?.firstInputDelay || 0,
+            cumulativeLayoutShift: prev?.cumulativeLayoutShift || 0
+          }));
+        }
+        
+        if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({
+            loadTime: prev?.loadTime || 0,
+            firstContentfulPaint: prev?.firstContentfulPaint || 0,
+            largestContentfulPaint: prev?.largestContentfulPaint || 0,
+            firstInputDelay: fidEntry.processingStart - fidEntry.startTime,
+            cumulativeLayoutShift: prev?.cumulativeLayoutShift || 0
+          }));
+        }
+        
+        if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as PerformanceEntry & { value: number };
+          setMetrics(prev => ({
+            loadTime: prev?.loadTime || 0,
+            firstContentfulPaint: prev?.firstContentfulPaint || 0,
+            largestContentfulPaint: prev?.largestContentfulPaint || 0,
+            firstInputDelay: prev?.firstInputDelay || 0,
+            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry.value
+          }));
+        }
+      });
+    });
+
+    // Observe different performance entry types
+    try {
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (error) {
+      console.warn('Performance Observer not fully supported:', error);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return { metrics, isSupported };
 }
-
-export default usePerformanceMonitor;

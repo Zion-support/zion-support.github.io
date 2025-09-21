@@ -1,0 +1,16 @@
+import useSWR from 'swr';
+
+<<<<<<< HEAD
+export default function useCurrentUser() {
+=======
+export function useCurrentUser() {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7ca5
+  const { data, error, mutate } = useSWR('/api/user');
+  
+  return {
+    user: data?.user || null,
+    loading: !data && !error,
+    error,
+    mutate,
+  };
+}
