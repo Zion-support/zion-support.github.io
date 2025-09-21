@@ -23,7 +23,6 @@ const nextConfig = {
   // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
-    tsconfigPath: './tsconfig.json',
   },
   
   // ESLint configuration
