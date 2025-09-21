@@ -15,13 +15,12 @@ if [ -f "tsconfig.json" ]; then
     mv tsconfig.json tsconfig.json.netlify-backup
 fi
 
-# Run the build (includes static export)
-echo "Running Next.js build with static export..."
-npm run build
+# Run the build and export
+echo "Running Next.js build and export..."
+npm run export
 
-# Export is now handled by the build process with output: 'export'
-# Note: Static export is handled automatically by Next.js when output: 'export' is set in next.config.js
-echo "Static export completed during build process"32616daaeac3828e6fde88b4b76e
+# Static export completed
+echo "Static export completed successfully"
 # Restore tsconfig.json
 if [ -f "tsconfig.json.netlify-backup" ]; then
     echo "Restoring tsconfig.json..."

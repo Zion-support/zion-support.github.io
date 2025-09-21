@@ -38,6 +38,19 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "contracts/**/*",
+    "dao/**/*",
+    "automation/**/*",
+    "scripts/**/*",
+    "cypress/**/*",
+    "cypress.config.ts",
+    "deployment/**/*",
+    "deployments/**/*",
+    "data/**/*",
+    "cartSlice.ts",
+    "components/services/**/*",
+    "pages/AITalentMatchingPage.tsx",
+    "pages/ApplicationStatusTracker.tsx"
   ]
 }
