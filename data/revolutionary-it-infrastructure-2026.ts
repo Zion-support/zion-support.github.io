@@ -6,7 +6,7 @@ export interface RevolutionaryITInfrastructure2026 {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface RevolutionaryITInfrastructure2026 {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -59,7 +59,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
       'Zero-trust architectureAdvanced endpoint protection',
       'Quantum-safe certificate managementCompliance reporting (SOC2, ISO27001)',
       '24/7 security monitoringIncident response automation'
-    ],
+    ]
     popular: true,
     icon: '🔐⚛️',
     color: 'from-red-600 to-orange-700',
@@ -71,11 +71,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '2-4 weeks',
     category: 'Cybersecurity & Quantum',
     realService: true,
-    technology: ['Post-Quantum CryptographyRust', 'GoPython', 'KubernetesTerraform', 'AWS/GCP/Azure'],
-    integrations: ['Active DirectoryOkta', 'Ping IdentitySplunk', 'QRadarCustom SIEM'],
-    useCases: ['Data encryptionSecure communications', 'Identity managementCompliance adherence'],
+    technology: ['Post-Quantum CryptographyRust', 'GoPython', 'KubernetesTerraform', 'AWS/GCP/Azure']
+    integrations: ['Active DirectoryOkta', 'Ping IdentitySplunk', 'QRadarCustom SIEM']
+    useCases: ['Data encryptionSecure communications', 'Identity managementCompliance adherence']
     roi: 'Future-proof security investment with 50% reduction in long-term security upgrade costs.',
-    competitors: ['Palo Alto NetworksCrowdStrike', 'SentinelOneTraditional cybersecurity vendors'],
+    competitors: ['Palo Alto NetworksCrowdStrike', 'SentinelOneTraditional cybersecurity vendors']
     marketSize: '$45.2B cybersecurity market',
     growthRate: '130% annual growth',
     variant: 'quantum-futuristic',
@@ -100,7 +100,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
       'Automated scaling and optimizationEdge security and compliance',
       'Multi-cloud edge integrationEdge application deployment',
       'Edge analytics and insightsDisaster recovery automation'
-    ],
+    ]
     popular: true,
     icon: '🌐⚡',
     color: 'from-blue-600 to-cyan-700',
@@ -112,11 +112,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '2-3 weeks',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: ['KubernetesDocker', 'GoPython', 'Apache KafkaInfluxDB', 'Prometheus'],
-    integrations: ['AWS IoTAzure IoT', 'Google Cloud IoTKubernetes', 'Docker SwarmCustom edge devices'],
-    useCases: ['IoT data processing5G network optimization', 'Smart city managementIndustrial automation'],
+    technology: ['KubernetesDocker', 'GoPython', 'Apache KafkaInfluxDB', 'Prometheus']
+    integrations: ['AWS IoTAzure IoT', 'Google Cloud IoTKubernetes', 'Docker SwarmCustom edge devices']
+    useCases: ['IoT data processing5G network optimization', 'Smart city managementIndustrial automation']
     roi: 'Average 40% reduction in edge infrastructure costs and 60% improvement in edge application performance.',
-    competitors: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoT EdgeVMware Edge'],
+    competitors: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoT EdgeVMware Edge']
     marketSize: '$18.7B edge computing market',
     growthRate: '160% annual growth',
     variant: 'edge-futuristic',
@@ -141,7 +141,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
       'Automated rollback decisionsPerformance anomaly detection',
       'Security vulnerability scanningCost optimization recommendations',
       'Multi-environment managementComprehensive analytics dashboard'
-    ],
+    ]
     popular: false,
     icon: '🤖🔄',
     color: 'from-green-600 to-emerald-700',
@@ -153,11 +153,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '1-2 weeks',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['PythonTensorFlow', 'KubernetesDocker', 'JenkinsGitLab', 'GitHub Actions'],
-    integrations: ['GitHubGitLab', 'BitbucketJira', 'SlackTeams', 'PagerDuty'],
-    useCases: ['CI/CD optimizationInfrastructure automation', 'Deployment managementPerformance monitoring'],
+    technology: ['PythonTensorFlow', 'KubernetesDocker', 'JenkinsGitLab', 'GitHub Actions']
+    integrations: ['GitHubGitLab', 'BitbucketJira', 'SlackTeams', 'PagerDuty']
+    useCases: ['CI/CD optimizationInfrastructure automation', 'Deployment managementPerformance monitoring']
     roi: 'Average 50% reduction in deployment time and 30% decrease in production incidents.',
-    competitors: ['GitLab CI/CDGitHub Actions', 'JenkinsCircleCI', 'Travis CI'],
+    competitors: ['GitLab CI/CDGitHub Actions', 'JenkinsCircleCI', 'Travis CI']
     marketSize: '$7.8B DevOps market',
     growthRate: '140% annual growth',
     variant: 'ai-futuristic',
@@ -182,7 +182,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
       'Smart contract auditing toolsBlockchain analytics dashboard',
       'API for blockchain integrationMulti-signature wallet management',
       'Compliance and regulatory toolsEnterprise security features'
-    ],
+    ]
     popular: false,
     icon: '⛓️🔗',
     color: 'from-purple-600 to-indigo-700',
@@ -194,11 +194,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '2-3 weeks',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['EthereumPolygon', 'SolanaNode.js', 'PythonReact', 'PostgreSQL'],
-    integrations: ['MetaMaskWalletConnect', 'OpenZeppelinHardhat', 'TruffleCustom wallets'],
-    useCases: ['DeFi applicationsNFT marketplaces', 'Supply chain trackingDigital identity'],
+    technology: ['EthereumPolygon', 'SolanaNode.js', 'PythonReact', 'PostgreSQL']
+    integrations: ['MetaMaskWalletConnect', 'OpenZeppelinHardhat', 'TruffleCustom wallets']
+    useCases: ['DeFi applicationsNFT marketplaces', 'Supply chain trackingDigital identity']
     roi: 'Average 60% reduction in blockchain development time and 40% improvement in transaction efficiency.',
-    competitors: ['AlchemyInfura', 'QuickNodeMoralis', 'Chainstack'],
+    competitors: ['AlchemyInfura', 'QuickNodeMoralis', 'Chainstack']
     marketSize: '$19.9B blockchain market',
     growthRate: '170% annual growth',
     variant: 'blockchain-futuristic',
@@ -223,7 +223,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
       'Quantum resource schedulingClassical-quantum data synchronization',
       'Quantum error correctionHybrid application development',
       'Performance benchmarking toolsCost optimization analytics'
-    ],
+    ]
     popular: true,
     icon: '☁️⚛️',
     color: 'from-cyan-600 to-blue-700',
@@ -235,11 +235,11 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     setupTime: '4-6 weeks',
     category: 'Quantum Computing & Cloud',
     realService: true,
-    technology: ['QiskitCirq', 'PennyLanePython', 'KubernetesAWS Braket', 'Azure Quantum'],
-    integrations: ['IBM QuantumGoogle Quantum', 'Amazon BraketAzure Quantum', 'Custom quantum hardware'],
-    useCases: ['Drug discoveryFinancial modeling', 'Optimization problemsMachine learning', 'Cryptography'],
+    technology: ['QiskitCirq', 'PennyLanePython', 'KubernetesAWS Braket', 'Azure Quantum']
+    integrations: ['IBM QuantumGoogle Quantum', 'Amazon BraketAzure Quantum', 'Custom quantum hardware']
+    useCases: ['Drug discoveryFinancial modeling', 'Optimization problemsMachine learning', 'Cryptography']
     roi: 'Access to quantum computing capabilities with 70% cost reduction compared to building quantum infrastructure.',
-    competitors: ['IBM QuantumGoogle Quantum', 'Amazon BraketAzure Quantum', 'D-Wave'],
+    competitors: ['IBM QuantumGoogle Quantum', 'Amazon BraketAzure Quantum', 'D-Wave']
     marketSize: '$1.9B quantum computing market',
     growthRate: '200% annual growth',
     variant: 'quantum-futuristic',
@@ -251,4 +251,4 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     rating: 4.9,
     reviews: 34
   }
-],
+]

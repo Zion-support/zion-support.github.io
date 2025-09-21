@@ -4,7 +4,7 @@ export interface ServiceExpansion2025 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
       "Workflow analytics",
       "Integration capabilities",
       "Custom workflows"
-    ],
+    ]
     link: "/services/ai-workflow-automation",
     category: "Service Expansions 2025",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

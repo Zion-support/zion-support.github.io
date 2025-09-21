@@ -66,7 +66,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Custom monitoring models',
       'Multi-field support',
       'Compliance management'
-    ],
+    ]
     popular: true,
     icon: '🌾',
     color: 'from-green-600 to-emerald-700',
@@ -78,11 +78,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '2 weeks',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['AI/ML, Precision agriculture, Crop monitoring, IoT sensors, Machine learning'],
-    integrations: ['IoT devices, Weather stations, Soil sensors, Analytics platforms'],
-    useCases: ['Crop monitoring, Irrigation optimization, Yield prediction, Resource management'],
+    technology: ['AI/ML, Precision agriculture, Crop monitoring, IoT sensors, Machine learning']
+    integrations: ['IoT devices, Weather stations, Soil sensors, Analytics platforms']
+    useCases: ['Crop monitoring, Irrigation optimization, Yield prediction, Resource management']
     roi: 'Increase crop yields by 25% and reduce water usage by 30%',
-    competitors: ['John Deere, Trimble, Raven Industries, AGCO'],
+    competitors: ['John Deere, Trimble, Raven Industries, AGCO']
     marketSize: '$12.8B+ precision agriculture market',
     growthRate: '200% YoY',
     variant: 'ai-futuristic',
@@ -111,7 +111,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Efficiency analysis',
       'Regulatory compliance',
       'Multi-crop support'
-    ],
+    ]
     popular: false,
     icon: '⚡',
     color: 'from-blue-600 to-indigo-700',
@@ -123,11 +123,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '2 months',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python'],
-    integrations: ['Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms'],
-    useCases: ['Crop planning, Resource allocation, Efficiency optimization, Cost reduction'],
+    technology: ['Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python']
+    integrations: ['Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms']
+    useCases: ['Crop planning, Resource allocation, Efficiency optimization, Cost reduction']
     roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
-    competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
+    competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum']
     marketSize: '$9.8B+ quantum agriculture market',
     growthRate: '380% YoY',
     variant: 'quantum',
@@ -156,7 +156,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Custom monitoring rules',
       'Multi-facility support',
       'Compliance management'
-    ],
+    ]
     popular: true,
     icon: '🍎',
     color: 'from-red-600 to-pink-700',
@@ -168,11 +168,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '2 weeks',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['AI/ML, Food safety, Contamination detection, Quality monitoring, Machine learning'],
-    integrations: ['Food safety systems, Quality control tools, Compliance databases, Analytics platforms'],
-    useCases: ['Contamination detection, Quality monitoring, Safety compliance, Risk assessment'],
+    technology: ['AI/ML, Food safety, Contamination detection, Quality monitoring, Machine learning']
+    integrations: ['Food safety systems, Quality control tools, Compliance databases, Analytics platforms']
+    useCases: ['Contamination detection, Quality monitoring, Safety compliance, Risk assessment']
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
-    competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
+    competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield']
     marketSize: '$15.6B+ food safety market',
     growthRate: '220% YoY',
     variant: 'ai-futuristic',
@@ -201,7 +201,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Multi-party collaboration',
       'API integration',
       'Mobile app support'
-    ],
+    ]
     popular: false,
     icon: '🔗',
     color: 'from-purple-600 to-violet-700',
@@ -213,11 +213,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '2 weeks',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['Blockchain, Supply chain tracking, Product authentication, IoT, Web3'],
-    integrations: ['Supply chain systems, IoT devices, QR codes, Payment platforms'],
-    useCases: ['Food tracking, Supply chain transparency, Product authentication, Compliance management'],
+    technology: ['Blockchain, Supply chain tracking, Product authentication, IoT, Web3']
+    integrations: ['Supply chain systems, IoT devices, QR codes, Payment platforms']
+    useCases: ['Food tracking, Supply chain transparency, Product authentication, Compliance management']
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
-    competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
+    competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance']
     marketSize: '$18.4B+ food traceability market',
     growthRate: '320% YoY',
     variant: 'default',
@@ -246,7 +246,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Custom growing protocols',
       'Multi-tier support',
       'Compliance management'
-    ],
+    ]
     popular: true,
     icon: '🏗️',
     color: 'from-orange-600 to-red-700',
@@ -258,11 +258,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     setupTime: '1 month',
     category: 'Agriculture & Food Technology',
     realService: true,
-    technology: ['AI/ML, Vertical farming, Climate control, IoT sensors, Machine learning'],
-    integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms'],
-    useCases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization'],
+    technology: ['AI/ML, Vertical farming, Climate control, IoT sensors, Machine learning']
+    integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms']
+    useCases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization']
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
-    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
+    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens']
     marketSize: '$9.3B+ vertical farming market',
     growthRate: '280% YoY',
     variant: 'ai-futuristic',

@@ -4,7 +4,7 @@ export interface InnovativeMicroSaasV3 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
       "Ticket management",
       "Analytics dashboard",
       "CRM integration"
-    ],
+    ]
     link: "/services/ai-customer-support",
     category: "Customer Support",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

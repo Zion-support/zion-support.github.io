@@ -10,7 +10,7 @@ export const real2036ITServices = [
       'Quantum computing resourcesQuantum-classical hybrid computing',
       'Quantum resource managementQuantum networking',
       'Quantum security protocolsScalable quantum infrastructure'
-    ],
+    ]
     popular: true,
     category: 'Quantum Cloud',
     icon: '☁️⚛️',
@@ -18,7 +18,7 @@ export const real2036ITServices = [
     benefits: [
       'Access to quantum computing powerHybrid classical-quantum processing',
       'Future-proof cloud infrastructureQuantum advantage in the cloud'
-    ],
+    ]
     useCases: [
       'Scientific research computingFinancial modeling',
       'Drug discoveryClimate simulation'
@@ -35,7 +35,7 @@ export const real2036ITServices = [
       'AI-powered deployment automationIntelligent testing strategies',
       'Predictive infrastructure scalingAutomated incident response',
       'Smart resource optimizationContinuous learning algorithms'
-    ],
+    ]
     popular: true,
     category: 'DevOps & AI',
     icon: '🤖🔄',
@@ -43,7 +43,7 @@ export const real2036ITServices = [
     benefits: [
       '90% faster deployment cyclesIntelligent infrastructure management',
       'Predictive scalingAutomated incident resolution'
-    ],
+    ]
     useCases: [
       'Continuous deploymentInfrastructure automation',
       'Testing automationMonitoring and alerting'
@@ -60,7 +60,7 @@ export const real2036ITServices = [
       'Quantum-resistant algorithmsQuantum threat detection',
       'Quantum encryptionQuantum key distribution',
       'Future-proof securityReal-time threat analysis'
-    ],
+    ]
     popular: true,
     category: 'Quantum Security',
     icon: '🔒⚛️',
@@ -68,7 +68,7 @@ export const real2036ITServices = [
     benefits: [
       'Quantum-resistant securityFuture-proof protection',
       'Advanced threat detectionMilitary-grade security'
-    ],
+    ]
     useCases: [
       'Government securityFinancial institutions',
       'Healthcare data protectionCritical infrastructure'
@@ -85,7 +85,7 @@ export const real2036ITServices = [
       'Intelligent edge orchestrationDistributed computing optimization',
       'Edge AI processingLatency optimization',
       'Edge resource managementDistributed data processing'
-    ],
+    ]
     popular: true,
     category: 'Edge Computing',
     icon: '🌐⚡',
@@ -93,7 +93,7 @@ export const real2036ITServices = [
     benefits: [
       'Ultra-low latency processingDistributed computing power',
       'Edge AI capabilitiesScalable edge infrastructure'
-    ],
+    ]
     useCases: [
       'IoT applicationsReal-time analytics',
       'Edge AI processingDistributed computing'
@@ -110,7 +110,7 @@ export const real2036ITServices = [
       'Quantum-accelerated queriesQuantum data compression',
       'Quantum search algorithmsQuantum data indexing',
       'Quantum data analyticsHybrid quantum-classical storage'
-    ],
+    ]
     popular: true,
     category: 'Quantum Database',
     icon: '🗄️⚛️',
@@ -118,7 +118,7 @@ export const real2036ITServices = [
     benefits: [
       '1000x faster database queriesQuantum data compression',
       'Advanced search capabilitiesFuture-proof data management'
-    ],
+    ]
     useCases: [
       'Big data analyticsReal-time search',
       'Data warehousingBusiness intelligence'
@@ -135,7 +135,7 @@ export const real2036ITServices = [
       'AI threat detectionIntelligent firewall management',
       'Behavioral analysisAnomaly detection',
       'Automated threat responsePredictive security analytics'
-    ],
+    ]
     popular: true,
     category: 'Network Security',
     icon: '🛡️🤖',
@@ -143,7 +143,7 @@ export const real2036ITServices = [
     benefits: [
       'Proactive threat detectionAutomated security response',
       'Intelligent network protectionReduced false positives'
-    ],
+    ]
     useCases: [
       'Enterprise network securityCloud security',
       'IoT securityRemote work security'
@@ -160,7 +160,7 @@ export const real2036ITServices = [
       'Quantum communication protocolsQuantum routing algorithms',
       'Quantum entanglement distributionQuantum network optimization',
       'Quantum network securityQuantum internet standards'
-    ],
+    ]
     popular: false,
     category: 'Quantum Internet',
     icon: '🌐⚛️',
@@ -168,7 +168,7 @@ export const real2036ITServices = [
     benefits: [
       'Unbreakable quantum communicationQuantum network optimization',
       'Future internet protocolsQuantum internet infrastructure'
-    ],
+    ]
     useCases: [
       'Government communicationsFinancial networks',
       'Research networksQuantum internet backbone'
@@ -185,7 +185,7 @@ export const real2036ITServices = [
       'AI-powered monitoringPredictive maintenance',
       'Intelligent alertingPerformance optimization',
       'Automated monitoringResource optimization'
-    ],
+    ]
     popular: true,
     category: 'Infrastructure Monitoring',
     icon: '📊🤖',
@@ -193,7 +193,7 @@ export const real2036ITServices = [
     benefits: [
       'Proactive issue detectionAutomated monitoring',
       'Performance optimizationReduced downtime'
-    ],
+    ]
     useCases: [
       'Server monitoringNetwork monitoring',
       'Application monitoringCloud infrastructure'
@@ -210,7 +210,7 @@ export const real2036ITServices = [
       'Quantum data compressionQuantum data encoding',
       'Quantum storage algorithmsQuantum data optimization',
       'Hybrid quantum-classical storageQuantum storage security'
-    ],
+    ]
     popular: true,
     category: 'Quantum Storage',
     icon: '💾⚛️',
@@ -218,7 +218,7 @@ export const real2036ITServices = [
     benefits: [
       '100x data compressionQuantum data encoding',
       'Advanced storage optimizationFuture-proof storage technology'
-    ],
+    ]
     useCases: [
       'Big data storageData archiving',
       'Cloud storageData backup'
@@ -235,7 +235,7 @@ export const real2036ITServices = [
       'AI recovery strategiesIntelligent backup management',
       'Automated recovery proceduresPredictive recovery planning',
       'Automated testingBackup optimization'
-    ],
+    ]
     popular: true,
     category: 'Disaster Recovery',
     icon: '🔄🤖',
@@ -243,10 +243,10 @@ export const real2036ITServices = [
     benefits: [
       'Automated recovery proceduresIntelligent backup management',
       'Predictive recovery planningReduced recovery time'
-    ],
+    ]
     useCases: [
       'Data center recoveryCloud recovery',
       'Application recoveryBusiness continuity'
     ]
   }
-],
+]

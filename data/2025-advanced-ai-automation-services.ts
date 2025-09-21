@@ -61,7 +61,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       'Custom rule configuration',
       'Team collaboration tools',
       'Comprehensive reporting dashboard'
-    ],
+    ]
     popular: true,
     icon: '🔍',
     color: 'from-emerald-600 to-teal-600',
@@ -73,11 +73,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     setupTime: '1-2 days',
     category: 'AI Development Tools',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes'],
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack, Microsoft Teams, VS Code'],
-    useCases: ['Code review automation, Quality assurance, Security scanning, Performance optimization, Team collaboration'],
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes']
+    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack, Microsoft Teams, VS Code']
+    useCases: ['Code review automation, Quality assurance, Security scanning, Performance optimization, Team collaboration']
     roi: 'Development teams report 300% ROI through faster delivery and higher code quality.',
-    competitors: ['SonarQube, CodeClimate, DeepCode, Snyk'],
+    competitors: ['SonarQube, CodeClimate, DeepCode, Snyk']
     marketSize: '$2.8B code quality tools market',
     growthRate: '28% annual growth',
     variant: 'ai-automation-enterprise',
@@ -114,7 +114,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       'A/B testing automation',
       'Audience targeting optimization',
       'ROI tracking and reporting'
-    ],
+    ]
     popular: true,
     icon: '📝',
     color: 'from-purple-600 to-pink-600',
@@ -126,11 +126,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     setupTime: '1 week',
     category: 'AI Marketing Automation',
     realService: true,
-    technology: ['GPT-4, Claude, React, Node.js, MongoDB, Redis, AWS, Google Cloud'],
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Hootsuite, Buffer, Google Analytics'],
-    useCases: ['Content creation, Marketing automation, SEO optimization, Social media management, Email marketing'],
+    technology: ['GPT-4, Claude, React, Node.js, MongoDB, Redis, AWS, Google Cloud']
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Hootsuite, Buffer, Google Analytics']
+    useCases: ['Content creation, Marketing automation, SEO optimization, Social media management, Email marketing']
     roi: 'Marketing teams achieve 250% ROI through increased content output and improved performance.',
-    competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'],
+    competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign']
     marketSize: '$4.2B marketing automation market',
     growthRate: '32% annual growth',
     variant: 'ai-marketing-automation',
@@ -167,7 +167,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       'Custom workflow automation',
       '24/7 availability',
       'Seamless human handoff'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-blue-600 to-indigo-600',
@@ -179,11 +179,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     setupTime: '3-5 days',
     category: 'AI Customer Support',
     realService: true,
-    technology: ['GPT-4, BERT, React, Node.js, PostgreSQL, Redis, WebSocket, Docker'],
-    integrations: ['Zendesk, Intercom, Salesforce, HubSpot, Slack, Microsoft Teams, WhatsApp'],
-    useCases: ['Customer support automation, Ticket management, Knowledge base management, Chatbot deployment, Support analytics'],
+    technology: ['GPT-4, BERT, React, Node.js, PostgreSQL, Redis, WebSocket, Docker']
+    integrations: ['Zendesk, Intercom, Salesforce, HubSpot, Slack, Microsoft Teams, WhatsApp']
+    useCases: ['Customer support automation, Ticket management, Knowledge base management, Chatbot deployment, Support analytics']
     roi: 'Support teams achieve 400% ROI through reduced response times and increased customer satisfaction.',
-    competitors: ['Zendesk, Intercom, Freshdesk, Help Scout'],
+    competitors: ['Zendesk, Intercom, Freshdesk, Help Scout']
     marketSize: '$3.5B customer support software market',
     growthRate: '25% annual growth',
     variant: 'ai-support-automation',
@@ -220,7 +220,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       'Multi-asset class support',
       'Backtesting and simulation tools',
       'Advanced analytics dashboard'
-    ],
+    ]
     popular: false,
     icon: '📈',
     color: 'from-green-600 to-emerald-600',
@@ -232,11 +232,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     setupTime: '2-3 weeks',
     category: 'AI Financial Services',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, AWS, Azure'],
-    integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, MetaTrader'],
-    useCases: ['Financial analysis, Risk management, Automated trading, Portfolio optimization, Market research'],
+    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, AWS, Azure']
+    integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, MetaTrader']
+    useCases: ['Financial analysis, Risk management, Automated trading, Portfolio optimization, Market research']
     roi: 'Financial institutions report 500% ROI through improved trading performance and risk management.',
-    competitors: ['Bloomberg, Thomson Reuters, FactSet, Refinitiv'],
+    competitors: ['Bloomberg, Thomson Reuters, FactSet, Refinitiv']
     marketSize: '$8.5B financial analytics market',
     growthRate: '22% annual growth',
     variant: 'ai-financial-enterprise',
@@ -273,7 +273,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       'Integration with PACS and EHR systems',
       'Performance analytics and reporting',
       'Continuous learning and improvement'
-    ],
+    ]
     popular: false,
     icon: '🏥',
     color: 'from-red-600 to-pink-600',
@@ -285,11 +285,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     setupTime: '4-6 weeks',
     category: 'AI Healthcare',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['PACS systems, EHR systems, DICOM viewers, Hospital information systems'],
-    useCases: ['Medical imaging analysis, Diagnostic assistance, Workflow optimization, Patient care improvement, Research and development'],
+    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, Docker, AWS']
+    integrations: ['PACS systems, EHR systems, DICOM viewers, Hospital information systems']
+    useCases: ['Medical imaging analysis, Diagnostic assistance, Workflow optimization, Patient care improvement, Research and development']
     roi: 'Healthcare providers achieve 300% ROI through improved diagnostic accuracy and workflow efficiency.',
-    competitors: ['GE Healthcare, Siemens Healthineers, Philips Healthcare, IBM Watson Health'],
+    competitors: ['GE Healthcare, Siemens Healthineers, Philips Healthcare, IBM Watson Health']
     marketSize: '$12.5B AI healthcare market',
     growthRate: '45% annual growth',
     variant: 'ai-healthcare-enterprise',

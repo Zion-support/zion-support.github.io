@@ -4,7 +4,7 @@ export interface RealOperationalService {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const realOperationalServices: RealOperationalService[] = [
       "Operational insights",
       "Optimization recommendations",
       "Alert system"
-    ],
+    ]
     link: "/services/operational-intelligence",
     category: "Operational Services",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const realOperationalServices: RealOperationalService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

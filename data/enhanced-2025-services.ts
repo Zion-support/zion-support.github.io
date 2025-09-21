@@ -4,8 +4,8 @@ export interface EnhancedService {
   tagline: string,
   category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'Education' | 'Marketing',
   description: string,
-  features: string[],
-  benefits: string[],
+  features: string[]
+  benefits: string[]
   pricing: {
     starter: number,
     professional: number,
@@ -18,14 +18,14 @@ export interface EnhancedService {
   isPopular?: boolean,
   isNew?: boolean,
   marketPosition: string,
-  targetAudience: string[],
+  targetAudience: string[]
   trialDays: number,
   setupTime: string,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   contactInfo: {
@@ -48,12 +48,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Process Optimization AlgorithmsReal-time Analytics Dashboard',
       'Predictive MaintenanceResource Allocation Optimization',
       'Automated Workflow ManagementIntelligent Error Handling'
-    ],
+    ]
     benefits: [
       'Reduce operational costs by up to 40%Improve process efficiency by 60%',
       'Eliminate manual errors and delays24/7 automated operations',
       'Real-time decision makingScalable business processes'
-    ],
+    ]
     pricing: {
       starter: 2500,
       professional: 5000,
@@ -66,14 +66,14 @@ export const enhancedServices2025: EnhancedService[] = [
     isPopular: true,
     isNew: true,
     marketPosition: 'Leading autonomous operations platform with advanced AI decision-making',
-    targetAudience: ['EnterpriseOperations', 'ManufacturingLogistics'],
+    targetAudience: ['EnterpriseOperations', 'ManufacturingLogistics']
     trialDays: 30,
     setupTime: '2-4 weeks',
-    technology: ['Machine LearningProcess Automation', 'IoT IntegrationPredictive Analytics'],
-    integrations: ['ERP SystemsCRM Platforms', 'Supply Chain ToolsIoT Devices'],
-    useCases: ['Manufacturing OperationsSupply Chain Management', 'Customer ServiceFinancial Operations'],
+    technology: ['Machine LearningProcess Automation', 'IoT IntegrationPredictive Analytics']
+    integrations: ['ERP SystemsCRM Platforms', 'Supply Chain ToolsIoT Devices']
+    useCases: ['Manufacturing OperationsSupply Chain Management', 'Customer ServiceFinancial Operations']
     roi: 'Average 300% ROI within 12 months',
-    competitors: ['UiPathAutomation Anywhere', 'Blue Prism'],
+    competitors: ['UiPathAutomation Anywhere', 'Blue Prism']
     marketSize: '$15B autonomous operations market',
     growthRate: '25% CAGR',
     contactInfo: {
@@ -94,12 +94,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Advanced Behavioral AnalysisCompliance Ready',
       'Automated Incident ResponseThreat Intelligence Integration',
       'Zero-day Attack PreventionSecurity Posture Assessment'
-    ],
+    ]
     benefits: [
       '99.9% threat detection rateReduce response time by 90%',
       'Automated compliance reporting24/7 security monitoring',
       'Proactive threat preventionReduced false positives'
-    ],
+    ]
     pricing: {
       starter: 1800,
       professional: 3500,
@@ -111,14 +111,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '🛡️',
     isPopular: true,
     marketPosition: 'Advanced AI-driven cybersecurity with behavioral analysis',
-    targetAudience: ['Security TeamsIT Departments', 'Compliance OfficersRisk Managers'],
+    targetAudience: ['Security TeamsIT Departments', 'Compliance OfficersRisk Managers']
     trialDays: 14,
     setupTime: '1-2 weeks',
-    technology: ['Machine LearningBehavioral Analytics', 'Threat IntelligenceAutomation'],
-    integrations: ['SIEM SystemsEDR Solutions', 'FirewallsIdentity Management'],
-    useCases: ['Threat DetectionIncident Response', 'Compliance ManagementSecurity Monitoring'],
+    technology: ['Machine LearningBehavioral Analytics', 'Threat IntelligenceAutomation']
+    integrations: ['SIEM SystemsEDR Solutions', 'FirewallsIdentity Management']
+    useCases: ['Threat DetectionIncident Response', 'Compliance ManagementSecurity Monitoring']
     roi: 'Prevent 95% of potential security breaches',
-    competitors: ['CrowdStrikeSentinelOne', 'Darktrace'],
+    competitors: ['CrowdStrikeSentinelOne', 'Darktrace']
     marketSize: '$45B cybersecurity market',
     growthRate: '18% CAGR',
     contactInfo: {
@@ -139,12 +139,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'SEO OptimizationPerformance Analytics',
       'Brand Voice ConsistencyA/B Testing Automation',
       'Content Calendar ManagementSocial Media Automation'
-    ],
+    ]
     benefits: [
       '10x faster content creationImprove engagement by 45%',
       'Reduce marketing costs by 30%24/7 content optimization',
       'Consistent brand messagingData-driven content strategy'
-    ],
+    ]
     pricing: {
       starter: 800,
       professional: 1500,
@@ -155,14 +155,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/ai-content-marketing-suite',
     icon: '✍️',
     marketPosition: 'All-in-one AI content creation and marketing automation',
-    targetAudience: ['Marketing TeamsContent Creators', 'AgenciesSmall Businesses'],
+    targetAudience: ['Marketing TeamsContent Creators', 'AgenciesSmall Businesses']
     trialDays: 14,
     setupTime: '1 week',
-    technology: ['Natural Language ProcessingMachine Learning', 'SEO ToolsAnalytics'],
-    integrations: ['WordPressHubSpot', 'MailchimpSocial Media Platforms'],
-    useCases: ['Blog ContentSocial Media', 'Email MarketingSEO Content'],
+    technology: ['Natural Language ProcessingMachine Learning', 'SEO ToolsAnalytics']
+    integrations: ['WordPressHubSpot', 'MailchimpSocial Media Platforms']
+    useCases: ['Blog ContentSocial Media', 'Email MarketingSEO Content']
     roi: 'Increase content ROI by 200%',
-    competitors: ['JasperCopy.ai', 'Writesonic'],
+    competitors: ['JasperCopy.ai', 'Writesonic']
     marketSize: '$12B content marketing market',
     growthRate: '22% CAGR',
     contactInfo: {
@@ -184,12 +184,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Personalized Financial AdviceInvestment Portfolio Optimization',
       'Real-time Market AnalysisCompliance Automation',
       'Multi-currency SupportBlockchain Integration'
-    ],
+    ]
     benefits: [
       'Reduce fraud by 95%Improve investment returns by 25%',
       'Automate compliance processes24/7 financial monitoring',
       'Personalized financial insightsCost-effective financial services'
-    ],
+    ]
     pricing: {
       starter: 3000,
       professional: 6000,
@@ -201,14 +201,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '💰',
     isNew: true,
     marketPosition: 'Leading AI-driven fintech platform with blockchain integration',
-    targetAudience: ['BanksCredit Unions', 'Investment FirmsFintech Startups'],
+    targetAudience: ['BanksCredit Unions', 'Investment FirmsFintech Startups']
     trialDays: 30,
     setupTime: '4-6 weeks',
-    technology: ['Machine LearningBlockchain', 'API IntegrationCloud Computing'],
-    integrations: ['Core Banking SystemsPayment Processors', 'Trading PlatformsRegulatory Systems'],
-    useCases: ['Fraud DetectionRisk Management', 'Investment AdvisoryCompliance'],
+    technology: ['Machine LearningBlockchain', 'API IntegrationCloud Computing']
+    integrations: ['Core Banking SystemsPayment Processors', 'Trading PlatformsRegulatory Systems']
+    useCases: ['Fraud DetectionRisk Management', 'Investment AdvisoryCompliance']
     roi: 'Average 400% ROI within 18 months',
-    competitors: ['PlaidStripe', 'Square'],
+    competitors: ['PlaidStripe', 'Square']
     marketSize: '$180B fintech market',
     growthRate: '20% CAGR',
     contactInfo: {
@@ -229,12 +229,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Real-time TrackingCompliance Reporting',
       'Quality AssuranceSupplier Verification',
       'Inventory ManagementSustainability Tracking'
-    ],
+    ]
     benefits: [
       '100% supply chain transparencyReduce fraud and counterfeiting',
       'Improve compliance efficiencyReal-time inventory tracking',
       'Enhanced supplier relationshipsSustainable business practices'
-    ],
+    ]
     pricing: {
       starter: 2000,
       professional: 4500,
@@ -245,14 +245,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/blockchain-supply-chain-tracking',
     icon: '🔗',
     marketPosition: 'Leading blockchain supply chain solution with smart contracts',
-    targetAudience: ['ManufacturersRetailers', 'Logistics CompaniesFood & Beverage'],
+    targetAudience: ['ManufacturersRetailers', 'Logistics CompaniesFood & Beverage']
     trialDays: 21,
     setupTime: '3-5 weeks',
-    technology: ['BlockchainSmart Contracts', 'IoT IntegrationCloud Computing'],
-    integrations: ['ERP SystemsWMS Platforms', 'Logistics SoftwareRetail Systems'],
-    useCases: ['Product TraceabilityQuality Control', 'ComplianceSustainability'],
+    technology: ['BlockchainSmart Contracts', 'IoT IntegrationCloud Computing']
+    integrations: ['ERP SystemsWMS Platforms', 'Logistics SoftwareRetail Systems']
+    useCases: ['Product TraceabilityQuality Control', 'ComplianceSustainability']
     roi: 'Reduce supply chain costs by 30%',
-    competitors: ['IBM Food TrustVeChain', 'OriginTrail'],
+    competitors: ['IBM Food TrustVeChain', 'OriginTrail']
     marketSize: '$8B blockchain supply chain market',
     growthRate: '35% CAGR',
     contactInfo: {
@@ -274,12 +274,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Predictive HealthcarePatient Risk Assessment',
       'Treatment RecommendationsClinical Decision Support',
       'HIPAA ComplianceIntegration with EMR Systems'
-    ],
+    ]
     benefits: [
       'Improve diagnostic accuracy by 30%Reduce diagnosis time by 60%',
       'Early disease detectionPersonalized treatment plans',
       'Cost-effective healthcareBetter patient outcomes'
-    ],
+    ]
     pricing: {
       starter: 5000,
       professional: 12000,
@@ -291,14 +291,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '🏥',
     isNew: true,
     marketPosition: 'Leading AI healthcare diagnostics with FDA compliance',
-    targetAudience: ['HospitalsClinics', 'Radiology CentersResearch Institutions'],
+    targetAudience: ['HospitalsClinics', 'Radiology CentersResearch Institutions']
     trialDays: 60,
     setupTime: '6-8 weeks',
-    technology: ['Deep LearningComputer Vision', 'Natural Language ProcessingCloud Computing'],
-    integrations: ['EMR SystemsPACS Systems', 'Lab Information SystemsTelemedicine Platforms'],
-    useCases: ['Medical ImagingDiagnostics', 'Risk AssessmentTreatment Planning'],
+    technology: ['Deep LearningComputer Vision', 'Natural Language ProcessingCloud Computing']
+    integrations: ['EMR SystemsPACS Systems', 'Lab Information SystemsTelemedicine Platforms']
+    useCases: ['Medical ImagingDiagnostics', 'Risk AssessmentTreatment Planning']
     roi: 'Improve patient outcomes by 40%',
-    competitors: ['Butterfly NetworkZebra Medical', 'Aidoc'],
+    competitors: ['Butterfly NetworkZebra Medical', 'Aidoc']
     marketSize: '$45B AI healthcare market',
     growthRate: '28% CAGR',
     contactInfo: {
@@ -320,12 +320,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Progress TrackingPerformance Analytics',
       'Interactive AssessmentsMulti-modal Learning',
       'Collaborative LearningParent-Teacher Communication'
-    ],
+    ]
     benefits: [
       'Improve learning outcomes by 35%Personalized learning paths',
       'Real-time progress monitoringEngaging learning experiences',
       'Better student retentionData-driven insights'
-    ],
+    ]
     pricing: {
       starter: 500,
       professional: 1200,
@@ -336,14 +336,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/ai-personalized-learning-platform',
     icon: '🎓',
     marketPosition: 'Leading AI-powered personalized learning solution',
-    targetAudience: ['K-12 SchoolsUniversities', 'Corporate TrainingOnline Education'],
+    targetAudience: ['K-12 SchoolsUniversities', 'Corporate TrainingOnline Education']
     trialDays: 30,
     setupTime: '2-3 weeks',
-    technology: ['Machine LearningNatural Language Processing', 'AnalyticsCloud Computing'],
-    integrations: ['LMS PlatformsStudent Information Systems', 'Assessment ToolsCommunication Platforms'],
-    useCases: ['K-12 EducationHigher Education', 'Corporate TrainingSkill Development'],
+    technology: ['Machine LearningNatural Language Processing', 'AnalyticsCloud Computing']
+    integrations: ['LMS PlatformsStudent Information Systems', 'Assessment ToolsCommunication Platforms']
+    useCases: ['K-12 EducationHigher Education', 'Corporate TrainingSkill Development']
     roi: 'Improve student performance by 35%',
-    competitors: ['DuolingoKhan Academy', 'Coursera'],
+    competitors: ['DuolingoKhan Academy', 'Coursera']
     marketSize: '$25B AI education market',
     growthRate: '24% CAGR',
     contactInfo: {
@@ -365,12 +365,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Device ManagementPredictive Maintenance',
       'Security & EncryptionScalable Architecture',
       'API IntegrationCloud Synchronization'
-    ],
+    ]
     benefits: [
       'Reduce latency by 90%Lower bandwidth costs',
       'Real-time decision makingEnhanced security',
       'Scalable IoT solutionsImproved reliability'
-    ],
+    ]
     pricing: {
       starter: 1500,
       professional: 3500,
@@ -381,14 +381,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/iot-edge-computing-platform',
     icon: '🌐',
     marketPosition: 'Leading edge computing platform for IoT applications',
-    targetAudience: ['ManufacturingSmart Cities', 'HealthcareTransportation'],
+    targetAudience: ['ManufacturingSmart Cities', 'HealthcareTransportation']
     trialDays: 21,
     setupTime: '3-4 weeks',
-    technology: ['Edge ComputingIoT Protocols', 'Machine LearningCloud Computing'],
-    integrations: ['IoT DevicesCloud Platforms', 'Analytics ToolsEnterprise Systems'],
-    useCases: ['Smart ManufacturingConnected Cities', 'Healthcare MonitoringFleet Management'],
+    technology: ['Edge ComputingIoT Protocols', 'Machine LearningCloud Computing']
+    integrations: ['IoT DevicesCloud Platforms', 'Analytics ToolsEnterprise Systems']
+    useCases: ['Smart ManufacturingConnected Cities', 'Healthcare MonitoringFleet Management']
     roi: 'Reduce operational costs by 25%',
-    competitors: ['AWS IoT GreengrassAzure IoT Edge', 'Google Cloud IoT'],
+    competitors: ['AWS IoT GreengrassAzure IoT Edge', 'Google Cloud IoT']
     marketSize: '$18B edge computing market',
     growthRate: '32% CAGR',
     contactInfo: {
@@ -410,12 +410,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Research ToolsQuantum Simulators',
       'API AccessExpert Consultation',
       'Training ProgramsCustom Solutions'
-    ],
+    ]
     benefits: [
       'Solve complex problems exponentially fasterAdvanced optimization capabilities',
       'Research and development supportCompetitive advantage',
       'Future-proof technologyExpert quantum guidance'
-    ],
+    ]
     pricing: {
       starter: 10000,
       professional: 25000,
@@ -427,14 +427,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '⚛️',
     isNew: true,
     marketPosition: 'Leading quantum computing services provider',
-    targetAudience: ['Research InstitutionsPharmaceutical Companies', 'Financial ServicesGovernment'],
+    targetAudience: ['Research InstitutionsPharmaceutical Companies', 'Financial ServicesGovernment']
     trialDays: 90,
     setupTime: '8-12 weeks',
-    technology: ['Quantum ComputingQuantum Algorithms', 'OptimizationSimulation'],
-    integrations: ['Research PlatformsAnalytics Tools', 'Enterprise SystemsCloud Platforms'],
-    useCases: ['Drug DiscoveryFinancial Modeling', 'Logistics OptimizationCryptography'],
+    technology: ['Quantum ComputingQuantum Algorithms', 'OptimizationSimulation']
+    integrations: ['Research PlatformsAnalytics Tools', 'Enterprise SystemsCloud Platforms']
+    useCases: ['Drug DiscoveryFinancial Modeling', 'Logistics OptimizationCryptography']
     roi: 'Solve problems 1000x faster than classical computers',
-    competitors: ['IBM QuantumGoogle Quantum', 'Microsoft Azure Quantum'],
+    competitors: ['IBM QuantumGoogle Quantum', 'Microsoft Azure Quantum']
     marketSize: '$2B quantum computing market',
     growthRate: '45% CAGR',
     contactInfo: {
@@ -456,12 +456,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Space Weather MonitoringEarth Observation',
       'Navigation SystemsCommunication Solutions',
       'Research SupportCommercial Applications'
-    ],
+    ]
     benefits: [
       'Access to space data and insightsInnovative space solutions',
       'Research and development supportCommercial space applications',
       'Technology advancementGlobal connectivity'
-    ],
+    ]
     pricing: {
       starter: 8000,
       professional: 20000,
@@ -473,14 +473,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '🚀',
     isNew: true,
     marketPosition: 'Leading space technology innovation platform',
-    targetAudience: ['Space AgenciesSatellite Companies', 'Research InstitutionsCommercial Space'],
+    targetAudience: ['Space AgenciesSatellite Companies', 'Research InstitutionsCommercial Space']
     trialDays: 60,
     setupTime: '6-10 weeks',
-    technology: ['Satellite TechnologyData Analytics', 'AI/MLCloud Computing'],
-    integrations: ['Satellite SystemsGround Stations', 'Data CentersResearch Platforms'],
-    useCases: ['Earth ObservationSatellite Communications', 'Space ResearchCommercial Applications'],
+    technology: ['Satellite TechnologyData Analytics', 'AI/MLCloud Computing']
+    integrations: ['Satellite SystemsGround Stations', 'Data CentersResearch Platforms']
+    useCases: ['Earth ObservationSatellite Communications', 'Space ResearchCommercial Applications']
     roi: 'Access to $400B space economy',
-    competitors: ['SpaceXBlue Origin', 'Virgin Galactic'],
+    competitors: ['SpaceXBlue Origin', 'Virgin Galactic']
     marketSize: '$400B space economy',
     growthRate: '40% CAGR',
     contactInfo: {
@@ -502,12 +502,12 @@ export const enhancedServices2025: EnhancedService[] = [
       'Real-time DashboardsData Visualization',
       'Machine Learning IntegrationAutomated Reporting',
       'Data IntegrationCollaborative Analytics'
-    ],
+    ]
     benefits: [
       'Make data-driven decisionsPredict future trends',
       'Improve operational efficiencyReal-time insights',
       'Automated reportingBetter collaboration'
-    ],
+    ]
     pricing: {
       starter: 1200,
       professional: 2800,
@@ -518,14 +518,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/advanced-business-intelligence',
     icon: '📊',
     marketPosition: 'Leading AI-powered business intelligence platform',
-    targetAudience: ['Business AnalystsData Scientists', 'ExecutivesOperations Teams'],
+    targetAudience: ['Business AnalystsData Scientists', 'ExecutivesOperations Teams']
     trialDays: 21,
     setupTime: '2-3 weeks',
-    technology: ['Machine LearningData Analytics', 'VisualizationCloud Computing'],
-    integrations: ['Data SourcesCRM Systems', 'ERP PlatformsCloud Storage'],
-    useCases: ['Business AnalyticsPerformance Monitoring', 'Trend AnalysisDecision Support'],
+    technology: ['Machine LearningData Analytics', 'VisualizationCloud Computing']
+    integrations: ['Data SourcesCRM Systems', 'ERP PlatformsCloud Storage']
+    useCases: ['Business AnalyticsPerformance Monitoring', 'Trend AnalysisDecision Support']
     roi: 'Improve decision making by 60%',
-    competitors: ['TableauPower BI', 'Qlik'],
+    competitors: ['TableauPower BI', 'Qlik']
     marketSize: '$30B business intelligence market',
     growthRate: '26% CAGR',
     contactInfo: {
@@ -534,7 +534,7 @@ export const enhancedServices2025: EnhancedService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-],
+]
 
 export const getServicesByCategory = (category: EnhancedService['category']) => {
   return enhancedServices2025.filter(service => service.category === category)

@@ -4,7 +4,7 @@ export interface EmergingTech2026ServiceV2 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       "Improved platform",
       "Better features",
       "Enhanced support"
-    ],
+    ]
     link: "/services/2026-emerging-tech-v2",
     category: "Emerging Tech 2026 V2",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

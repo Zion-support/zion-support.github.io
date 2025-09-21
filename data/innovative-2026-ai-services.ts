@@ -61,7 +61,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       'Advanced machine learning models',
       'Collaborative workspace for teams',
       'Mobile app for on-the-go insights'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-blue-600 to-purple-700',
@@ -73,11 +73,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '2 hours',
     category: 'AI & Business Intelligence',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'Shopify', 'QuickBooks', 'Slack', 'Microsoft Teams'],
-    useCases: ['Sales performance analysis', 'Customer behavior insights', 'Market trend prediction', 'Operational efficiency optimization', 'Financial forecasting', 'Risk assessment'],
+    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker']
+    integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'Shopify', 'QuickBooks', 'Slack', 'Microsoft Teams']
+    useCases: ['Sales performance analysis', 'Customer behavior insights', 'Market trend prediction', 'Operational efficiency optimization', 'Financial forecasting', 'Risk assessment']
     roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.',
-    competitors: ['Tableau', 'Power BI', 'Looker', 'Qlik', 'Sisense'],
+    competitors: ['Tableau', 'Power BI', 'Looker', 'Qlik', 'Sisense']
     marketSize: '$29.9B market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
@@ -114,7 +114,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       'Personalized recommendations',
       'Automated customer support',
       'Customer lifetime value optimization'
-    ],
+    ]
     popular: true,
     icon: '🎯',
     color: 'from-green-500 to-teal-600',
@@ -126,11 +126,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '1 day',
     category: 'AI & Customer Experience',
     realService: true,
-    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS', 'Kubernetes'],
-    integrations: ['Shopify', 'WooCommerce', 'Magento', 'Salesforce', 'HubSpot', 'Zendesk', 'Intercom'],
-    useCases: ['Website personalization', 'Email marketing optimization', 'Product recommendations', 'Customer support automation', 'Loyalty program optimization', 'Cross-selling and upselling'],
+    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS', 'Kubernetes']
+    integrations: ['Shopify', 'WooCommerce', 'Magento', 'Salesforce', 'HubSpot', 'Zendesk', 'Intercom']
+    useCases: ['Website personalization', 'Email marketing optimization', 'Product recommendations', 'Customer support automation', 'Loyalty program optimization', 'Cross-selling and upselling']
     roi: 'Average customer sees 320% ROI within 4 months through increased conversion rates and customer lifetime value.',
-    competitors: ['Optimizely', 'Adobe Target', 'Dynamic Yield', 'Evergage', 'Maxymiser'],
+    competitors: ['Optimizely', 'Adobe Target', 'Dynamic Yield', 'Evergage', 'Maxymiser']
     marketSize: '$15.8B market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -167,7 +167,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       'Threat intelligence feeds',
       'Incident management dashboard',
       '24/7 security operations center'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-orange-600',
@@ -179,11 +179,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '1 week',
     category: 'AI & Cybersecurity',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'Elasticsearch', 'Kafka', 'AWS', 'Docker'],
-    integrations: ['Active Directory', 'Office 365', 'Slack', 'Jira', 'ServiceNow', 'Splunk', 'QRadar'],
-    useCases: ['Endpoint protection', 'Network security monitoring', 'Cloud security', 'Data loss prevention', 'Compliance management', 'Security awareness training'],
+    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'Elasticsearch', 'Kafka', 'AWS', 'Docker']
+    integrations: ['Active Directory', 'Office 365', 'Slack', 'Jira', 'ServiceNow', 'Splunk', 'QRadar']
+    useCases: ['Endpoint protection', 'Network security monitoring', 'Cloud security', 'Data loss prevention', 'Compliance management', 'Security awareness training']
     roi: 'Average customer saves $2.4M annually through prevented security incidents and reduced response times.',
-    competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'Carbon Black'],
+    competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'Carbon Black']
     marketSize: '$173.5B market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -220,7 +220,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       'Social media management',
       'Marketing attribution',
       'ROI tracking and optimization'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-purple-500 to-pink-600',
@@ -232,11 +232,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '3 days',
     category: 'AI & Marketing',
     realService: true,
-    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS', 'Kubernetes'],
-    integrations: ['Salesforce', 'HubSpot', 'Mailchimp', 'Facebook Ads', 'Google Ads', 'LinkedIn Ads', 'Shopify'],
-    useCases: ['Lead generation and nurturing', 'Email marketing campaigns', 'Social media marketing', 'Content marketing', 'Account-based marketing', 'Marketing analytics'],
+    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS', 'Kubernetes']
+    integrations: ['Salesforce', 'HubSpot', 'Mailchimp', 'Facebook Ads', 'Google Ads', 'LinkedIn Ads', 'Shopify']
+    useCases: ['Lead generation and nurturing', 'Email marketing campaigns', 'Social media marketing', 'Content marketing', 'Account-based marketing', 'Marketing analytics']
     roi: 'Average customer sees 280% ROI within 5 months through increased lead quality and conversion rates.',
-    competitors: ['HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign', 'ConvertKit'],
+    competitors: ['HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign', 'ConvertKit']
     marketSize: '$25.1B market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -273,7 +273,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       'Sales coaching recommendations',
       'Revenue optimization',
       'Integration with CRM systems'
-    ],
+    ]
     popular: true,
     icon: '💰',
     color: 'from-yellow-500 to-orange-600',
@@ -285,11 +285,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '2 days',
     category: 'AI & Sales',
     realService: true,
-    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS', 'Elasticsearch'],
-    integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics', 'Slack', 'Microsoft Teams'],
-    useCases: ['Lead generation', 'Prospect research', 'Sales forecasting', 'Pipeline management', 'Competitive analysis', 'Sales coaching'],
+    technology: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS', 'Elasticsearch']
+    integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics', 'Slack', 'Microsoft Teams']
+    useCases: ['Lead generation', 'Prospect research', 'Sales forecasting', 'Pipeline management', 'Competitive analysis', 'Sales coaching']
     roi: 'Average customer sees 350% ROI within 4 months through increased sales productivity and conversion rates.',
-    competitors: ['ZoomInfo', 'LinkedIn Sales Navigator', 'DiscoverOrg', 'Clearbit', 'RocketReach'],
+    competitors: ['ZoomInfo', 'LinkedIn Sales Navigator', 'DiscoverOrg', 'Clearbit', 'RocketReach']
     marketSize: '$18.2B market',
     growthRate: '190% annual growth',
     variant: 'ai-futuristic',

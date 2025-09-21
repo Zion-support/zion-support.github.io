@@ -6,7 +6,7 @@ export interface EnterpriseITService2030 {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface EnterpriseITService2030 {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'Self-improving processesAutonomous security',
       'Self-optimizing performanceAutonomous scaling',
       'Self-healing systemsAutonomous innovation'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
@@ -66,11 +66,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '2-4 weeks',
     category: 'Autonomous DevOps Platform 2030',
     realService: true,
-    technology: ['Advanced AI, DevOps Automation, Machine Learning, Infrastructure as Code'],
-    integrations: ['Cloud platforms, CI/CD tools, Monitoring systems, Security tools'],
-    useCases: ['DevOps automation, Infrastructure automation, Deployment optimization, Performance optimization'],
+    technology: ['Advanced AI, DevOps Automation, Machine Learning, Infrastructure as Code']
+    integrations: ['Cloud platforms, CI/CD tools, Monitoring systems, Security tools']
+    useCases: ['DevOps automation, Infrastructure automation, Deployment optimization, Performance optimization']
     roi: 'Revolutionary DevOps technology with potential for massive efficiency gains and operational excellence.',
-    competitors: ['Limited competition in autonomous DevOps'],
+    competitors: ['Limited competition in autonomous DevOps']
     marketSize: 'Growing market - $250B+ potential',
     growthRate: '1500%+ annual growth potential',
     variant: 'it-futuristic',
@@ -101,7 +101,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'Advanced threat detectionAutomated response',
       'Zero trust APIsSecurity automation',
       'Threat intelligenceAdvanced security protocols'
-    ],
+    ]
     popular: true,
     icon: '🔒',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
@@ -113,11 +113,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '3-6 weeks',
     category: 'Zero Trust Network Architecture 2030',
     realService: true,
-    technology: ['Zero Trust Security, Network Security, Identity Management, Threat Detection'],
-    integrations: ['Security platforms, Identity systems, Network tools, Monitoring systems'],
-    useCases: ['Network security, Identity verification, Threat detection, Security automation'],
+    technology: ['Zero Trust Security, Network Security, Identity Management, Threat Detection']
+    integrations: ['Security platforms, Identity systems, Network tools, Monitoring systems']
+    useCases: ['Network security, Identity verification, Threat detection, Security automation']
     roi: 'Revolutionary security technology with potential for complete network protection.',
-    competitors: ['Limited competition in zero trust security'],
+    competitors: ['Limited competition in zero trust security']
     marketSize: 'Growing market - $180B+ potential',
     growthRate: '1200%+ annual growth potential',
     variant: 'security-futuristic',
@@ -148,7 +148,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'Edge securityEdge monitoring',
       'Edge automationEdge scaling',
       'Edge networkingAdvanced edge computing'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-teal-600 via-emerald-600 to-green-600',
@@ -160,11 +160,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '2-4 weeks',
     category: 'Edge Computing Orchestration 2030',
     realService: true,
-    technology: ['Edge Computing, Distributed Systems, IoT, Real-time Processing'],
-    integrations: ['IoT platforms, Edge devices, Cloud systems, Monitoring tools'],
-    useCases: ['Edge computing, IoT processing, Real-time analytics, Distributed computing'],
+    technology: ['Edge Computing, Distributed Systems, IoT, Real-time Processing']
+    integrations: ['IoT platforms, Edge devices, Cloud systems, Monitoring tools']
+    useCases: ['Edge computing, IoT processing, Real-time analytics, Distributed computing']
     roi: 'Revolutionary edge computing technology with potential for massive performance improvements.',
-    competitors: ['Limited competition in edge orchestration'],
+    competitors: ['Limited competition in edge orchestration']
     marketSize: 'Growing market - $150B+ potential',
     growthRate: '1000%+ annual growth potential',
     variant: 'edge-futuristic',
@@ -195,7 +195,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'Autonomous operationsIntelligent optimization',
       'AI operations APIsReal-time intelligence',
       'Autonomous decision makingAdvanced IT intelligence'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-purple-600 via-pink-600 to-rose-600',
@@ -207,11 +207,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '3-6 weeks',
     category: 'AI-Powered IT Operations Center 2030',
     realService: true,
-    technology: ['Advanced AI, IT Operations, Machine Learning, Predictive Analytics'],
-    integrations: ['IT platforms, Monitoring systems, Automation tools, Analytics platforms'],
-    useCases: ['IT operations, Infrastructure monitoring, Predictive maintenance, Operations optimization'],
+    technology: ['Advanced AI, IT Operations, Machine Learning, Predictive Analytics']
+    integrations: ['IT platforms, Monitoring systems, Automation tools, Analytics platforms']
+    useCases: ['IT operations, Infrastructure monitoring, Predictive maintenance, Operations optimization']
     roi: 'Revolutionary IT technology with potential for massive efficiency gains and operational excellence.',
-    competitors: ['Limited competition in AI IT operations'],
+    competitors: ['Limited competition in AI IT operations']
     marketSize: 'Growing market - $200B+ potential',
     growthRate: '1300%+ annual growth potential',
     variant: 'ai-futuristic',
@@ -242,7 +242,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
       'Quantum security APIsReal-time quantum security',
       'Quantum security validationQuantum infrastructure networks',
       'Quantum security protocolsAdvanced quantum security'
-    ],
+    ]
     popular: true,
     icon: '⚛️',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
@@ -254,11 +254,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     setupTime: '2-3 months',
     category: 'Quantum-Secure Infrastructure 2030',
     realService: true,
-    technology: ['Quantum Computing, Quantum Security, Infrastructure Security, Quantum Encryption'],
-    integrations: ['Infrastructure platforms, Security systems, Quantum computers, Encryption tools'],
-    useCases: ['Infrastructure security, Quantum encryption, Critical systems protection, Security validation'],
+    technology: ['Quantum Computing, Quantum Security, Infrastructure Security, Quantum Encryption']
+    integrations: ['Infrastructure platforms, Security systems, Quantum computers, Encryption tools']
+    useCases: ['Infrastructure security, Quantum encryption, Critical systems protection, Security validation']
     roi: 'Revolutionary quantum security technology with potential for complete infrastructure protection.',
-    competitors: ['None - First to market'],
+    competitors: ['None - First to market']
     marketSize: 'Emerging market - $300B+ potential',
     growthRate: '2000%+ annual growth potential',
     variant: 'quantum-futuristic',
@@ -275,4 +275,4 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     rating: 5.0,
     reviews: 8
   }
-],
+]

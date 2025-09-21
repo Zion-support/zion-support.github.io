@@ -4,7 +4,7 @@ export interface FuturisticAiService2029 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [
       "Breakthrough algorithms",
       "Innovation platform",
       "Future-ready AI"
-    ],
+    ]
     link: "/services/2029-futuristic-ai",
     category: "Futuristic AI 2029",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

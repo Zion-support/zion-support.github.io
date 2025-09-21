@@ -6,7 +6,7 @@ export interface BlockchainInnovation2026 {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface BlockchainInnovation2026 {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       'API access & SDKsReal-time monitoring',
       'Custom blockchain networksIntegration marketplace',
       '24/7 supportExpert consultation'
-    ],
+    ]
     popular: true,
     icon: '⛓️',
     color: 'from-orange-600 to-yellow-600',
@@ -66,11 +66,11 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     setupTime: '2 weeks',
     category: 'Blockchain & Infrastructure',
     realService: true,
-    technology: ['EthereumPolygon', 'SolanaHyperledger Fabric', 'ReactNode.js', 'PostgreSQLRedis', 'AWS'],
-    integrations: ['SalesforceSAP', 'OracleMicrosoft Dynamics', 'SlackMicrosoft Teams', 'ZapierCustom APIs'],
-    useCases: ['Supply chain trackingDigital identity management', 'Financial transactionsAsset tokenization', 'Voting systemsData integrity'],
+    technology: ['EthereumPolygon', 'SolanaHyperledger Fabric', 'ReactNode.js', 'PostgreSQLRedis', 'AWS']
+    integrations: ['SalesforceSAP', 'OracleMicrosoft Dynamics', 'SlackMicrosoft Teams', 'ZapierCustom APIs']
+    useCases: ['Supply chain trackingDigital identity management', 'Financial transactionsAsset tokenization', 'Voting systemsData integrity']
     roi: 'Enterprise customers see 500% ROI within 18 months through improved transparency and operational efficiency.',
-    competitors: ['AlchemyInfura', 'QuickNodeChainstack', 'BlockdaemonConsenSys'],
+    competitors: ['AlchemyInfura', 'QuickNodeChainstack', 'BlockdaemonConsenSys']
     marketSize: '$19.9B market',
     growthRate: '280% annual growth',
     variant: 'blockchain-futuristic',
@@ -101,7 +101,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       'Real-time analyticsPortfolio tracking',
       'Tax reporting toolsMobile app access',
       'API integrationExpert support'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-green-600 to-emerald-600',
@@ -113,11 +113,11 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     setupTime: '24 hours',
     category: 'DeFi & Finance',
     realService: true,
-    technology: ['EthereumPolygon', 'SolanaMachine learning', 'ReactNode.js', 'PostgreSQLRedis', 'AWS'],
-    integrations: ['MetaMaskWalletConnect', 'Coinbase WalletTrezor', 'LedgerDeFi protocols', 'DEX aggregators'],
-    useCases: ['Yield farming optimizationPortfolio management', 'Risk managementTax optimization', 'DeFi strategy automationInvestment analysis'],
+    technology: ['EthereumPolygon', 'SolanaMachine learning', 'ReactNode.js', 'PostgreSQLRedis', 'AWS']
+    integrations: ['MetaMaskWalletConnect', 'Coinbase WalletTrezor', 'LedgerDeFi protocols', 'DEX aggregators']
+    useCases: ['Yield farming optimizationPortfolio management', 'Risk managementTax optimization', 'DeFi strategy automationInvestment analysis']
     roi: 'Users see 200-500% higher yields compared to manual DeFi strategies.',
-    competitors: ['Yearn FinanceHarvest Finance', 'Beefy FinancePickle Finance', 'Badger DAOConvex Finance'],
+    competitors: ['Yearn FinanceHarvest Finance', 'Beefy FinancePickle Finance', 'Badger DAOConvex Finance']
     marketSize: '$8.5B market',
     growthRate: '350% annual growth',
     variant: 'blockchain-futuristic',
@@ -148,7 +148,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       'Analytics & insightsMarketing tools',
       'Community featuresMobile app support',
       'API accessWhite-label solutions'
-    ],
+    ]
     popular: true,
     icon: '🎨',
     color: 'from-purple-600 to-pink-600',
@@ -160,11 +160,11 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     setupTime: '1 week',
     category: 'NFT & Digital Assets',
     realService: true,
-    technology: ['EthereumPolygon', 'SolanaIPFS', 'ReactNode.js', 'PostgreSQLRedis', 'AWS'],
-    integrations: ['MetaMaskWalletConnect', 'OpenSea APIDiscord', 'TwitterInstagram', 'ShopifyWordPress'],
-    useCases: ['Digital art salesGaming assets', 'Sports collectiblesMusic NFTs', 'Fashion NFTsVirtual real estate'],
+    technology: ['EthereumPolygon', 'SolanaIPFS', 'ReactNode.js', 'PostgreSQLRedis', 'AWS']
+    integrations: ['MetaMaskWalletConnect', 'OpenSea APIDiscord', 'TwitterInstagram', 'ShopifyWordPress']
+    useCases: ['Digital art salesGaming assets', 'Sports collectiblesMusic NFTs', 'Fashion NFTsVirtual real estate']
     roi: 'Creators see 300% ROI within 6 months through new revenue streams and increased engagement.',
-    competitors: ['OpenSeaRarible', 'FoundationSuperRare', 'Nifty GatewayMagic Eden'],
+    competitors: ['OpenSeaRarible', 'FoundationSuperRare', 'Nifty GatewayMagic Eden']
     marketSize: '$13.6B market',
     growthRate: '400% annual growth',
     variant: 'blockchain-futuristic',
@@ -195,7 +195,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       'Cross-platform compatibilityAPI access',
       'SDK integrationCompliance tools',
       'Analytics dashboardEnterprise support'
-    ],
+    ]
     popular: false,
     icon: '🆔',
     color: 'from-blue-600 to-cyan-600',
@@ -207,11 +207,11 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     setupTime: '1 week',
     category: 'Web3 & Identity',
     realService: true,
-    technology: ['EthereumPolygon', 'Zero-knowledge proofsDID standards', 'ReactNode.js', 'PostgreSQLRedis'],
-    integrations: ['MetaMaskWalletConnect', 'DiscordSlack', 'Microsoft TeamsCustom applications', 'Web3 wallets'],
-    useCases: ['User authenticationIdentity verification', 'KYC/AML complianceAccess control', 'Privacy protectionCross-platform identity'],
+    technology: ['EthereumPolygon', 'Zero-knowledge proofsDID standards', 'ReactNode.js', 'PostgreSQLRedis']
+    integrations: ['MetaMaskWalletConnect', 'DiscordSlack', 'Microsoft TeamsCustom applications', 'Web3 wallets']
+    useCases: ['User authenticationIdentity verification', 'KYC/AML complianceAccess control', 'Privacy protectionCross-platform identity']
     roi: 'Web3 applications see 400% ROI within 8 months through improved security and user experience.',
-    competitors: ['Auth0Okta', 'Microsoft Azure ADCognito', 'Firebase AuthSupabase Auth'],
+    competitors: ['Auth0Okta', 'Microsoft Azure ADCognito', 'Firebase AuthSupabase Auth']
     marketSize: '$15.8B market',
     growthRate: '220% annual growth',
     variant: 'blockchain-futuristic',
@@ -242,7 +242,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       'Compliance reportingAnalytics dashboard',
       'Mobile app accessAPI integration',
       'IoT device supportExpert consultation'
-    ],
+    ]
     popular: true,
     icon: '📦',
     color: 'from-indigo-600 to-purple-600',
@@ -254,11 +254,11 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     setupTime: '2 weeks',
     category: 'Blockchain & Supply Chain',
     realService: true,
-    technology: ['Hyperledger FabricEthereum', 'IoT integrationMachine learning', 'ReactNode.js', 'PostgreSQLRedis'],
-    integrations: ['SAPOracle', 'Microsoft DynamicsSalesforce', 'SlackMicrosoft Teams', 'IoT platformsERP systems'],
-    useCases: ['Product traceabilityQuality assurance', 'Compliance managementSupply chain optimization', 'Counterfeit preventionSustainability tracking'],
+    technology: ['Hyperledger FabricEthereum', 'IoT integrationMachine learning', 'ReactNode.js', 'PostgreSQLRedis']
+    integrations: ['SAPOracle', 'Microsoft DynamicsSalesforce', 'SlackMicrosoft Teams', 'IoT platformsERP systems']
+    useCases: ['Product traceabilityQuality assurance', 'Compliance managementSupply chain optimization', 'Counterfeit preventionSustainability tracking']
     roi: 'Manufacturing companies see 600% ROI within 12 months through improved transparency and operational efficiency.',
-    competitors: ['IBM Food TrustSAP Blockchain', 'Oracle BlockchainVeChain', 'Walmart BlockchainMaersk TradeLens'],
+    competitors: ['IBM Food TrustSAP Blockchain', 'Oracle BlockchainVeChain', 'Walmart BlockchainMaersk TradeLens']
     marketSize: '$9.8B market',
     growthRate: '250% annual growth',
     variant: 'blockchain-futuristic',
@@ -275,4 +275,4 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.8,
     reviews: 210
   }
-],
+]

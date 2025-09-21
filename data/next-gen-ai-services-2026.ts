@@ -6,7 +6,7 @@ export interface NextGenAIService2026 {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface NextGenAIService2026 {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Brand voice customizationMulti-format export',
       'Collaboration toolsAPI access',
       'Custom AI model trainingEnterprise security'
-    ],
+    ]
     popular: true,
     icon: '🎨',
     color: 'from-pink-600 to-purple-600',
@@ -66,11 +66,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1 week',
     category: 'AI & Creative',
     realService: true,
-    technology: ['OpenAI DALL-E 3Stable Diffusion', 'Midjourney APIReact', 'Node.jsPostgreSQL', 'RedisAWS'],
-    integrations: ['Adobe Creative SuiteCanva', 'FigmaSlack', 'Microsoft TeamsZapier', 'ShopifyWordPress'],
-    useCases: ['Marketing content creationSocial media graphics', 'Product photographyVideo production', 'Music compositionCopywriting'],
+    technology: ['OpenAI DALL-E 3Stable Diffusion', 'Midjourney APIReact', 'Node.jsPostgreSQL', 'RedisAWS']
+    integrations: ['Adobe Creative SuiteCanva', 'FigmaSlack', 'Microsoft TeamsZapier', 'ShopifyWordPress']
+    useCases: ['Marketing content creationSocial media graphics', 'Product photographyVideo production', 'Music compositionCopywriting']
     roi: 'Marketing agencies see 600% ROI within 3 months through reduced content creation costs and faster delivery.',
-    competitors: ['MidjourneyDALL-E 2', 'Runway MLStable Diffusion', 'Canva AIAdobe Firefly'],
+    competitors: ['MidjourneyDALL-E 2', 'Runway MLStable Diffusion', 'Canva AIAdobe Firefly']
     marketSize: '$15.3B market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -101,7 +101,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Financial management AISupply chain optimization',
       'Predictive analyticsReal-time monitoring',
       'Custom AI training24/7 operations'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-blue-600 to-indigo-600',
@@ -113,11 +113,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1 month',
     category: 'AI & Business Automation',
     realService: true,
-    technology: ['OpenAI GPT-4TensorFlow', 'ReactNode.js', 'PostgreSQLRedis', 'AWSMachine Learning'],
-    integrations: ['SalesforceHubSpot', 'Microsoft DynamicsSAP', 'OracleSlack', 'Microsoft TeamsZapier'],
-    useCases: ['Customer service automationSales process optimization', 'Marketing campaign managementOperational efficiency', 'Financial planningStrategic decision making'],
+    technology: ['OpenAI GPT-4TensorFlow', 'ReactNode.js', 'PostgreSQLRedis', 'AWSMachine Learning']
+    integrations: ['SalesforceHubSpot', 'Microsoft DynamicsSAP', 'OracleSlack', 'Microsoft TeamsZapier']
+    useCases: ['Customer service automationSales process optimization', 'Marketing campaign managementOperational efficiency', 'Financial planningStrategic decision making']
     roi: 'Enterprise customers see 800% ROI within 18 months through complete business automation and improved efficiency.',
-    competitors: ['Salesforce EinsteinHubSpot AI', 'Microsoft Dynamics 365SAP Leonardo', 'Oracle AIIBM Watson'],
+    competitors: ['Salesforce EinsteinHubSpot AI', 'Microsoft Dynamics 365SAP Leonardo', 'Oracle AIIBM Watson']
     marketSize: '$67.8B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -148,7 +148,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Mood tracking & analyticsPersonalized interactions',
       'Multi-language supportReal-time processing',
       'API accessPrivacy protection'
-    ],
+    ]
     popular: false,
     icon: '❤️',
     color: 'from-red-600 to-pink-600',
@@ -160,11 +160,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '2 weeks',
     category: 'AI & Psychology',
     realService: true,
-    technology: ['Computer visionNatural language processing', 'Machine learningReact', 'Node.jsPostgreSQL', 'RedisAWS'],
-    integrations: ['ZendeskIntercom', 'SlackMicrosoft Teams', 'ZoomWebRTC', 'Mobile appsWeb applications'],
-    useCases: ['Customer service enhancementMental health monitoring', 'Educational assessmentMarketing research', 'HR screeningTherapeutic support'],
+    technology: ['Computer visionNatural language processing', 'Machine learningReact', 'Node.jsPostgreSQL', 'RedisAWS']
+    integrations: ['ZendeskIntercom', 'SlackMicrosoft Teams', 'ZoomWebRTC', 'Mobile appsWeb applications']
+    useCases: ['Customer service enhancementMental health monitoring', 'Educational assessmentMarketing research', 'HR screeningTherapeutic support']
     roi: 'Customer service companies see 400% ROI within 6 months through improved customer satisfaction and emotional intelligence.',
-    competitors: ['AffectivaRealeyes', 'EmotientNoldus', 'iMotionsTobii'],
+    competitors: ['AffectivaRealeyes', 'EmotientNoldus', 'iMotionsTobii']
     marketSize: '$3.2B market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -195,7 +195,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Custom model trainingAPI access for all modalities',
       'Scalable infrastructureEnterprise security',
       'Multi-language supportExpert consultation'
-    ],
+    ]
     popular: false,
     icon: '🔗',
     color: 'from-green-600 to-blue-600',
@@ -207,11 +207,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '1 week',
     category: 'AI & Research',
     realService: true,
-    technology: ['OpenAI GPT-4VGoogle Gemini', 'Anthropic ClaudeCustom multimodal models', 'ReactNode.js', 'PostgreSQLRedis'],
-    integrations: ['TensorFlowPyTorch', 'JupyterGitHub', 'SlackMicrosoft Teams', 'Research toolsCloud platforms'],
-    useCases: ['Research & developmentAutonomous systems', 'Robotics controlContent analysis', 'Security monitoringMedical diagnosis'],
+    technology: ['OpenAI GPT-4VGoogle Gemini', 'Anthropic ClaudeCustom multimodal models', 'ReactNode.js', 'PostgreSQLRedis']
+    integrations: ['TensorFlowPyTorch', 'JupyterGitHub', 'SlackMicrosoft Teams', 'Research toolsCloud platforms']
+    useCases: ['Research & developmentAutonomous systems', 'Robotics controlContent analysis', 'Security monitoringMedical diagnosis']
     roi: 'Research institutions see 600% ROI through accelerated research and breakthrough discoveries.',
-    competitors: ['OpenAI GPT-4VGoogle Gemini', 'Anthropic ClaudeMicrosoft Azure AI', 'AWS AI services'],
+    competitors: ['OpenAI GPT-4VGoogle Gemini', 'Anthropic ClaudeMicrosoft Azure AI', 'AWS AI services']
     marketSize: '$12.5B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -242,7 +242,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Custom algorithm developmentPerformance analytics',
       'Expert consultationTraining & support',
       'API accessEnterprise security'
-    ],
+    ]
     popular: false,
     icon: '⚛️',
     color: 'from-purple-600 to-blue-600',
@@ -254,11 +254,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: '2 weeks',
     category: 'AI & Quantum Computing',
     realService: true,
-    technology: ['IBM QuantumGoogle Quantum AI', 'Amazon BraketCustom hybrid algorithms', 'PythonQiskit', 'CirqAWS'],
-    integrations: ['TensorFlowPyTorch', 'JupyterGitHub', 'SlackMicrosoft Teams', 'Research toolsCloud platforms'],
-    useCases: ['Drug discoveryFinancial modeling', 'Optimization problemsCryptography', 'Machine learningScientific research'],
+    technology: ['IBM QuantumGoogle Quantum AI', 'Amazon BraketCustom hybrid algorithms', 'PythonQiskit', 'CirqAWS']
+    integrations: ['TensorFlowPyTorch', 'JupyterGitHub', 'SlackMicrosoft Teams', 'Research toolsCloud platforms']
+    useCases: ['Drug discoveryFinancial modeling', 'Optimization problemsCryptography', 'Machine learningScientific research']
     roi: 'Research institutions see 1000% ROI through breakthrough discoveries and accelerated research.',
-    competitors: ['IBM QuantumGoogle Quantum AI', 'Amazon BraketMicrosoft Azure Quantum', 'Rigetti Computing'],
+    competitors: ['IBM QuantumGoogle Quantum AI', 'Amazon BraketMicrosoft Azure Quantum', 'Rigetti Computing']
     marketSize: '$6.8B market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -275,4 +275,4 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.9,
     reviews: 80
   }
-],
+]

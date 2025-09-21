@@ -8,14 +8,14 @@ export const advancedEmergingTechServices2025 = [
       'Space resource mappingAutomated mining systems',
       'Integration with space agenciesAdvanced analytics and reporting',
       'Custom mining strategies24/7 space operations monitoring'
-    ],
+    ]
     pricing: {
       starter: { price: 999, period: 'month', features: ['Basic space operationsResource mapping', 'Standard support'] },
       professional: { price: 2999, period: 'month', features: ['Advanced mining operationsCustom strategies', 'Priority supportDedicated operations team'] },
       enterprise: { price: 7999, period: 'month', features: ['Full mining operationsCustom space solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Space Technology',
-    tags: ['Space MiningAsteroid Mining', 'Lunar ResourcesSpace Operations'],
+    tags: ['Space MiningAsteroid Mining', 'Lunar ResourcesSpace Operations']
     website: 'https://ziontechgroup.com/space-mining-operations',
     contact: {
       phone: '+1 302 464 0950',
@@ -34,14 +34,14 @@ export const advancedEmergingTechServices2025 = [
       'Biological algorithm optimizationReal-time quantum bio analytics',
       'Integration with research platformsAdvanced analytics and reporting',
       'Custom quantum bio algorithms24/7 platform monitoring'
-    ],
+    ]
     pricing: {
       starter: { price: 599, period: 'month', features: ['Basic quantum bio featuresStandard processing', 'Email support'] },
       professional: { price: 1499, period: 'month', features: ['Advanced quantum bioCustom algorithms', 'Priority supportDedicated research team'] },
       enterprise: { price: 3999, period: 'month', features: ['Full quantum bio platformCustom solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Quantum Bio-Computing',
-    tags: ['Quantum ComputingBiological Computing', 'DNA ComputingHybrid Processing'],
+    tags: ['Quantum ComputingBiological Computing', 'DNA ComputingHybrid Processing']
     website: 'https://ziontechgroup.com/quantum-bio-computing',
     contact: {
       phone: '+1 302 464 0950',
@@ -60,14 +60,14 @@ export const advancedEmergingTechServices2025 = [
       'Brain-computer communicationReal-time neural analytics',
       'Integration with medical devicesAdvanced analytics and reporting',
       'Custom neural algorithms24/7 neural monitoring'
-    ],
+    ]
     pricing: {
       starter: { price: 799, period: 'month', features: ['Basic neural interfaceStandard processing', 'Email support'] },
       professional: { price: 1999, period: 'month', features: ['Advanced neural interfaceCustom algorithms', 'Priority supportDedicated research team'] },
       enterprise: { price: 4999, period: 'month', features: ['Full neural platformCustom solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Brain-Computer Interface',
-    tags: ['Neural InterfaceCognitive Enhancement', 'Neurological ResearchMedical Technology'],
+    tags: ['Neural InterfaceCognitive Enhancement', 'Neurological ResearchMedical Technology']
     website: 'https://ziontechgroup.com/brain-interface-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -86,14 +86,14 @@ export const advancedEmergingTechServices2025 = [
       'Real-time fusion monitoringEnergy efficiency analytics',
       'Integration with power gridsAdvanced analytics and reporting',
       'Custom fusion algorithms24/7 energy monitoring'
-    ],
+    ]
     pricing: {
       starter: { price: 1299, period: 'month', features: ['Basic fusion simulationStandard optimization', 'Email support'] },
       professional: { price: 3499, period: 'month', features: ['Advanced fusion platformCustom algorithms', 'Priority supportDedicated energy team'] },
       enterprise: { price: 8999, period: 'month', features: ['Full fusion platformCustom solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Quantum Energy',
-    tags: ['Fusion PowerQuantum Energy', 'Sustainable EnergyEnergy Optimization'],
+    tags: ['Fusion PowerQuantum Energy', 'Sustainable EnergyEnergy Optimization']
     website: 'https://ziontechgroup.com/quantum-energy-fusion',
     contact: {
       phone: '+1 302 464 0950',
@@ -112,14 +112,14 @@ export const advancedEmergingTechServices2025 = [
       'Fleet managementReal-time vehicle monitoring',
       'Integration with vehicle systemsAdvanced analytics and reporting',
       'Custom AI algorithms24/7 autonomous operations'
-    ],
+    ]
     pricing: {
       starter: { price: 399, period: 'month', features: ['Up to 10 vehiclesBasic AI navigation', 'Standard monitoring'] },
       professional: { price: 999, period: 'month', features: ['Up to 100 vehiclesAdvanced AI', 'Custom algorithmsPriority support'] },
       enterprise: { price: 2499, period: 'month', features: ['Unlimited vehiclesCustom AI training', 'White-label platformDedicated support team'] }
     },
     category: 'Autonomous Vehicles',
-    tags: ['Autonomous VehiclesAI Navigation', 'Fleet ManagementTransportation'],
+    tags: ['Autonomous VehiclesAI Navigation', 'Fleet ManagementTransportation']
     website: 'https://ziontechgroup.com/autonomous-vehicle-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -138,14 +138,14 @@ export const advancedEmergingTechServices2025 = [
       'Real-time material analysisAdvanced property prediction',
       'Integration with research platformsAdvanced analytics and reporting',
       'Custom discovery algorithms24/7 discovery operations'
-    ],
+    ]
     pricing: {
       starter: { price: 699, period: 'month', features: ['Basic materials simulationStandard discovery', 'Email support'] },
       professional: { price: 1799, period: 'month', features: ['Advanced materials platformCustom algorithms', 'Priority supportDedicated research team'] },
       enterprise: { price: 4499, period: 'month', features: ['Full materials platformCustom solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Quantum Materials',
-    tags: ['Quantum ComputingMaterials Science', 'AI DiscoveryResearch Platform'],
+    tags: ['Quantum ComputingMaterials Science', 'AI DiscoveryResearch Platform']
     website: 'https://ziontechgroup.com/quantum-materials-discovery',
     contact: {
       phone: '+1 302 464 0950',
@@ -164,14 +164,14 @@ export const advancedEmergingTechServices2025 = [
       'Real-time robotic controlAdvanced motion planning',
       'Integration with robotic systemsAdvanced analytics and reporting',
       'Custom robotic algorithms24/7 robotic operations'
-    ],
+    ]
     pricing: {
       starter: { price: 499, period: 'month', features: ['Up to 5 robotsBasic quantum features', 'Standard control'] },
       professional: { price: 1299, period: 'month', features: ['Up to 25 robotsAdvanced quantum features', 'Custom algorithmsPriority support'] },
       enterprise: { price: 3299, period: 'month', features: ['Unlimited robotsCustom quantum solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Quantum Robotics',
-    tags: ['Quantum ComputingRobotics', 'AutomationIntelligent Systems'],
+    tags: ['Quantum ComputingRobotics', 'AutomationIntelligent Systems']
     website: 'https://ziontechgroup.com/quantum-robotics-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -190,14 +190,14 @@ export const advancedEmergingTechServices2025 = [
       'Real-time security monitoringAdvanced threat detection',
       'Integration with internet infrastructureAdvanced analytics and reporting',
       'Custom security protocols24/7 quantum security operations'
-    ],
+    ]
     pricing: {
       starter: { price: 299, period: 'month', features: ['Basic quantum securityStandard encryption', 'Email support'] },
       professional: { price: 799, period: 'month', features: ['Advanced quantum securityCustom protocols', 'Priority supportDedicated security team'] },
       enterprise: { price: 1999, period: 'month', features: ['Full quantum securityCustom solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Quantum Internet Security',
-    tags: ['Quantum InternetCybersecurity', 'EncryptionSecure Communication'],
+    tags: ['Quantum InternetCybersecurity', 'EncryptionSecure Communication']
     website: 'https://ziontechgroup.com/quantum-internet-security',
     contact: {
       phone: '+1 302 464 0950',
@@ -216,14 +216,14 @@ export const advancedEmergingTechServices2025 = [
       'Real-time supply chain monitoringAdvanced optimization algorithms',
       'Integration with logistics systemsAdvanced analytics and reporting',
       'Custom optimization models24/7 logistics operations'
-    ],
+    ]
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 10 routesBasic optimization', 'Standard monitoring'] },
       professional: { price: 599, period: 'month', features: ['Up to 100 routesAdvanced quantum features', 'Custom modelsPriority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited routesCustom quantum solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Quantum Logistics',
-    tags: ['Quantum ComputingLogistics', 'Supply ChainRoute Optimization'],
+    tags: ['Quantum ComputingLogistics', 'Supply ChainRoute Optimization']
     website: 'https://ziontechgroup.com/quantum-logistics-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -242,14 +242,14 @@ export const advancedEmergingTechServices2025 = [
       'Real-time virtual renderingAdvanced user interaction',
       'Integration with VR/AR systemsAdvanced analytics and reporting',
       'Custom metaverse solutions24/7 platform monitoring'
-    ],
+    ]
     pricing: {
       starter: { price: 399, period: 'month', features: ['Basic metaverse featuresStandard graphics', 'Email support'] },
       professional: { price: 999, period: 'month', features: ['Advanced metaverse platformCustom solutions', 'Priority supportDedicated development team'] },
       enterprise: { price: 2499, period: 'month', features: ['Full metaverse platformCustom solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Quantum Metaverse',
-    tags: ['Quantum ComputingMetaverse', 'Virtual RealityAI Graphics'],
+    tags: ['Quantum ComputingMetaverse', 'Virtual RealityAI Graphics']
     website: 'https://ziontechgroup.com/quantum-metaverse-pro',
     contact: {
       phone: '+1 302 464 0950',

@@ -58,7 +58,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       'Advanced logging and analytics',
       'Integration with popular DevOps tools',
       'White-label solution for MSPs'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-blue-500 to-cyan-600',
@@ -70,11 +70,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '2 hours',
     category: 'DevOps & Infrastructure',
     realService: true,
-    technology: ['React, Node.js, Python, Kubernetes, Docker, AWS, Azure, GCP'],
-    integrations: ['GitHub, GitLab, Jenkins, CircleCI, AWS CodePipeline, Azure DevOps'],
-    useCases: ['Continuous integration and deployment, Infrastructure monitoring, Performance optimization, Security automation, Disaster recovery'],
+    technology: ['React, Node.js, Python, Kubernetes, Docker, AWS, Azure, GCP']
+    integrations: ['GitHub, GitLab, Jenkins, CircleCI, AWS CodePipeline, Azure DevOps']
+    useCases: ['Continuous integration and deployment, Infrastructure monitoring, Performance optimization, Security automation, Disaster recovery']
     roi: 'Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps']
     marketSize: '$8.2B market',
     growthRate: '20.1% annual growth',
     variant: 'ai-futuristic',
@@ -111,7 +111,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       'Integration with existing security tools',
       'White-label solution for security providers',
       '24/7 security monitoring and support'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-red-500 to-pink-600',
@@ -123,11 +123,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '4 hours',
     category: 'Cybersecurity & Network Security',
     realService: true,
-    technology: ['React, Node.js, Python, Zero Trust architecture, PostgreSQL, Redis, AWS'],
-    integrations: ['Active Directory, LDAP, SAML, OAuth, Okta, Azure AD, Google Workspace'],
-    useCases: ['Secure remote access, Network segmentation, Identity management, Compliance reporting, Threat detection, Access control'],
+    technology: ['React, Node.js, Python, Zero Trust architecture, PostgreSQL, Redis, AWS']
+    integrations: ['Active Directory, LDAP, SAML, OAuth, Okta, Azure AD, Google Workspace']
+    useCases: ['Secure remote access, Network segmentation, Identity management, Compliance reporting, Threat detection, Access control']
     roi: 'Average enterprise customer reduces security incidents by 85% and saves $100K+ annually on security compliance.',
-    competitors: ['Okta, Duo, CrowdStrike, Palo Alto Networks, Cisco'],
+    competitors: ['Okta, Duo, CrowdStrike, Palo Alto Networks, Cisco']
     marketSize: '$19.6B market',
     growthRate: '17.8% annual growth',
     variant: 'security-futuristic',
@@ -164,7 +164,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       'Integration with cloud platforms',
       'White-label solution for service providers',
       'Advanced analytics and reporting'
-    ],
+    ]
     popular: false,
     icon: '🌐',
     color: 'from-green-500 to-emerald-600',
@@ -176,11 +176,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '1 hour',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: ['React, Node.js, Python, Kubernetes, Docker, Edge computing, AWS, Azure'],
-    integrations: ['AWS, Azure, Google Cloud, IoT platforms, CDN services, Analytics tools'],
-    useCases: ['Content delivery optimization, IoT data processing, Real-time analytics, Gaming server distribution, Financial trading, Video streaming'],
+    technology: ['React, Node.js, Python, Kubernetes, Docker, Edge computing, AWS, Azure']
+    integrations: ['AWS, Azure, Google Cloud, IoT platforms, CDN services, Analytics tools']
+    useCases: ['Content delivery optimization, IoT data processing, Real-time analytics, Gaming server distribution, Financial trading, Video streaming']
     roi: 'Average customer reduces latency by 60% and improves application performance by 40% within 3 months.',
-    competitors: ['Cloudflare, AWS CloudFront, Azure CDN, Fastly, Akamai'],
+    competitors: ['Cloudflare, AWS CloudFront, Azure CDN, Fastly, Akamai']
     marketSize: '$15.7B market',
     growthRate: '23.4% annual growth',
     variant: 'edge-futuristic',
@@ -217,7 +217,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       'Mobile apps for on-the-go management',
       'White-label solution for MSPs',
       '24/7 AI-powered support'
-    ],
+    ]
     popular: true,
     icon: '🖥️',
     color: 'from-purple-500 to-indigo-600',
@@ -229,11 +229,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '3 hours',
     category: 'IT Operations & Management',
     realService: true,
-    technology: ['React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS'],
-    integrations: ['ServiceNow, BMC, SolarWinds, Nagios, Zabbix, Microsoft System Center'],
-    useCases: ['Infrastructure monitoring, Incident management, Capacity planning, Performance optimization, Compliance reporting, IT automation'],
+    technology: ['React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS']
+    integrations: ['ServiceNow, BMC, SolarWinds, Nagios, Zabbix, Microsoft System Center']
+    useCases: ['Infrastructure monitoring, Incident management, Capacity planning, Performance optimization, Compliance reporting, IT automation']
     roi: 'Average customer reduces IT incidents by 70% and improves system uptime by 25% within 6 months.',
-    competitors: ['ServiceNow, BMC Helix, SolarWinds, Nagios, Zabbix'],
+    competitors: ['ServiceNow, BMC Helix, SolarWinds, Nagios, Zabbix']
     marketSize: '$12.8B market',
     growthRate: '18.9% annual growth',
     variant: 'it-futuristic',
@@ -270,7 +270,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       'White-label solution for enterprises',
       'Advanced analytics and reporting',
       '24/7 security monitoring'
-    ],
+    ]
     popular: false,
     icon: '🗄️',
     color: 'from-indigo-500 to-blue-600',
@@ -282,11 +282,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '2 hours',
     category: 'Database & Data Management',
     realService: true,
-    technology: ['React, Node.js, Python, Post-quantum cryptography, Distributed databases, AWS'],
-    integrations: ['MongoDB, PostgreSQL, MySQL, Redis, Elasticsearch, Apache Kafka'],
-    useCases: ['Secure data storage, High-performance applications, Compliance requirements, Data analytics, Real-time processing, Multi-region deployment'],
+    technology: ['React, Node.js, Python, Post-quantum cryptography, Distributed databases, AWS']
+    integrations: ['MongoDB, PostgreSQL, MySQL, Redis, Elasticsearch, Apache Kafka']
+    useCases: ['Secure data storage, High-performance applications, Compliance requirements, Data analytics, Real-time processing, Multi-region deployment']
     roi: 'Average enterprise customer saves $50K+ annually on security compliance and improves data performance by 35%.',
-    competitors: ['MongoDB Atlas, AWS RDS, Azure SQL Database, Google Cloud SQL, Oracle Cloud'],
+    competitors: ['MongoDB Atlas, AWS RDS, Azure SQL Database, Google Cloud SQL, Oracle Cloud']
     marketSize: '$63.1B market',
     growthRate: '16.8% annual growth',
     variant: 'quantum-futuristic',
@@ -323,7 +323,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       'White-label solution for enterprises',
       'Advanced monitoring and alerting',
       'Custom automation workflows'
-    ],
+    ]
     popular: true,
     icon: '🔌',
     color: 'from-teal-500 to-emerald-600',
@@ -335,11 +335,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '1 hour',
     category: 'API Management & Development',
     realService: true,
-    technology: ['React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS'],
-    integrations: ['GitHub, GitLab, Postman, Swagger, AWS, Azure, Google Cloud'],
-    useCases: ['API lifecycle management, Performance optimization, Security and authentication, Analytics and monitoring, Developer experience, Traffic management'],
+    technology: ['React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS']
+    integrations: ['GitHub, GitLab, Postman, Swagger, AWS, Azure, Google Cloud']
+    useCases: ['API lifecycle management, Performance optimization, Security and authentication, Analytics and monitoring, Developer experience, Traffic management']
     roi: 'Average customer improves API performance by 45% and reduces development time by 30% within 3 months.',
-    competitors: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints, Tyk'],
+    competitors: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints, Tyk']
     marketSize: '$4.1B market',
     growthRate: '19.7% annual growth',
     variant: 'api-futuristic',
@@ -376,7 +376,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       'White-label solution for consultants',
       'Custom optimization rules',
       'ROI tracking and reporting'
-    ],
+    ]
     popular: true,
     icon: '💰',
     color: 'from-yellow-500 to-orange-600',
@@ -388,11 +388,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '30 minutes',
     category: 'Cloud Management & Optimization',
     realService: true,
-    technology: ['React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS, Azure, GCP'],
-    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker, Terraform, Ansible'],
-    useCases: ['Cloud cost optimization, Resource management, Budget tracking, Cost analysis, Automated optimization, Multi-cloud management'],
+    technology: ['React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS, Azure, GCP']
+    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker, Terraform, Ansible']
+    useCases: ['Cloud cost optimization, Resource management, Budget tracking, Cost analysis, Automated optimization, Multi-cloud management']
     roi: 'Average customer reduces cloud costs by 35% and saves $15K+ annually on cloud spending.',
-    competitors: ['CloudHealth, AWS Cost Explorer, Azure Cost Management, Google Cloud Billing, Flexera'],
+    competitors: ['CloudHealth, AWS Cost Explorer, Azure Cost Management, Google Cloud Billing, Flexera']
     marketSize: '$6.8B market',
     growthRate: '21.3% annual growth',
     variant: 'cloud-futuristic',
@@ -429,7 +429,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       'White-label solution for security providers',
       'Advanced analytics and insights',
       '24/7 security monitoring'
-    ],
+    ]
     popular: true,
     icon: '🔒',
     color: 'from-red-500 to-pink-600',
@@ -441,11 +441,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '3 hours',
     category: 'Network Security & Threat Protection',
     realService: true,
-    technology: ['React, Node.js, Python, Machine Learning, Network security, PostgreSQL, Redis'],
-    integrations: ['Palo Alto Networks, Cisco, Fortinet, Check Point, SonicWall, Security tools'],
-    useCases: ['Threat detection and prevention, Network monitoring, Incident response, Compliance reporting, Security analytics, Firewall management'],
+    technology: ['React, Node.js, Python, Machine Learning, Network security, PostgreSQL, Redis']
+    integrations: ['Palo Alto Networks, Cisco, Fortinet, Check Point, SonicWall, Security tools']
+    useCases: ['Threat detection and prevention, Network monitoring, Incident response, Compliance reporting, Security analytics, Firewall management']
     roi: 'Average enterprise customer reduces security incidents by 80% and saves $100K+ annually on security infrastructure.',
-    competitors: ['Palo Alto Networks, Cisco, Fortinet, Check Point, SonicWall'],
+    competitors: ['Palo Alto Networks, Cisco, Fortinet, Check Point, SonicWall']
     marketSize: '$22.4B market',
     growthRate: '18.7% annual growth',
     variant: 'security-futuristic',

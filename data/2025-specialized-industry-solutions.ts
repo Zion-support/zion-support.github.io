@@ -5,7 +5,7 @@ export interface SpecializedIndustrySolution {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface SpecializedIndustrySolution {
   category: string,
   industry: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   contactInfo: {
@@ -53,7 +53,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       'Supply chain integrationReal-time monitoring',
       'Performance analyticsEnergy optimization',
       'Waste reductionCompliance management'
-    ],
+    ]
     popular: true,
     icon: '🏭',
     color: 'from-gray-600 to-slate-700',
@@ -66,11 +66,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Manufacturing & Industrial',
     industry: 'Manufacturing',
     realService: true,
-    technology: ['AI/MLIoT Sensors', 'Predictive AnalyticsAutomation', 'Edge Computing'],
-    integrations: ['ERP SystemsMES Platforms', 'SCADA SystemsQuality Management', 'Supply Chain'],
-    useCases: ['Production optimizationQuality control', 'Maintenance predictionResource management'],
+    technology: ['AI/MLIoT Sensors', 'Predictive AnalyticsAutomation', 'Edge Computing']
+    integrations: ['ERP SystemsMES Platforms', 'SCADA SystemsQuality Management', 'Supply Chain']
+    useCases: ['Production optimizationQuality control', 'Maintenance predictionResource management']
     roi: '400% ROI with 30% production increase and 50% downtime reduction',
-    competitors: ['Traditional MES systemsManual optimization'],
+    competitors: ['Traditional MES systemsManual optimization']
     marketSize: '$200B manufacturing software market',
     growthRate: '180% annual growth',
     contactInfo: {
@@ -100,7 +100,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       'Clinical guideline complianceReal-time alerts',
       'Treatment optimizationRisk assessment',
       'Outcome predictionResearch integration'
-    ],
+    ]
     popular: true,
     icon: '🏥',
     color: 'from-blue-600 to-indigo-700',
@@ -113,11 +113,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Healthcare & Medical',
     industry: 'Healthcare',
     realService: true,
-    technology: ['AI/MLNatural Language Processing', 'Medical ImagingPredictive Analytics', 'Blockchain'],
-    integrations: ['EHR SystemsPACS Systems', 'Lab Information SystemsPharmacy Systems', 'Telemedicine'],
-    useCases: ['Clinical decision supportTreatment planning', 'Risk assessmentResearch analysis'],
+    technology: ['AI/MLNatural Language Processing', 'Medical ImagingPredictive Analytics', 'Blockchain']
+    integrations: ['EHR SystemsPACS Systems', 'Lab Information SystemsPharmacy Systems', 'Telemedicine']
+    useCases: ['Clinical decision supportTreatment planning', 'Risk assessmentResearch analysis']
     roi: '500% ROI with 40% improvement in treatment outcomes',
-    competitors: ['IBM Watson HealthGoogle Health AI', 'Traditional CDS systems'],
+    competitors: ['IBM Watson HealthGoogle Health AI', 'Traditional CDS systems']
     marketSize: '$45B clinical decision support market',
     growthRate: '220% annual growth',
     contactInfo: {
@@ -147,7 +147,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       'Automated risk mitigationRegulatory compliance',
       'Stress testingScenario analysis',
       'Portfolio optimizationPerformance tracking'
-    ],
+    ]
     popular: true,
     icon: '💰',
     color: 'from-green-600 to-emerald-700',
@@ -160,11 +160,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Financial Services',
     industry: 'Finance',
     realService: true,
-    technology: ['AI/MLMachine Learning', 'Predictive AnalyticsBlockchain', 'Quantum Computing'],
-    integrations: ['Trading PlatformsRisk Management Systems', 'Compliance ToolsData Feeds', 'Reporting Systems'],
-    useCases: ['Risk managementPortfolio optimization', 'Compliance monitoringPerformance analysis'],
+    technology: ['AI/MLMachine Learning', 'Predictive AnalyticsBlockchain', 'Quantum Computing']
+    integrations: ['Trading PlatformsRisk Management Systems', 'Compliance ToolsData Feeds', 'Reporting Systems']
+    useCases: ['Risk managementPortfolio optimization', 'Compliance monitoringPerformance analysis']
     roi: '600% ROI with 80% reduction in risk incidents',
-    competitors: ['Traditional risk managementManual monitoring systems'],
+    competitors: ['Traditional risk managementManual monitoring systems']
     marketSize: '$35B risk management market',
     growthRate: '250% annual growth',
     contactInfo: {
@@ -194,7 +194,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       'Dynamic pricingMarketing automation',
       'Supply chain optimizationPerformance analytics',
       'Multi-channel integrationCustomer insights'
-    ],
+    ]
     popular: true,
     icon: '🛍️',
     color: 'from-pink-600 to-rose-700',
@@ -207,11 +207,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Retail & E-commerce',
     industry: 'Retail',
     realService: true,
-    technology: ['AI/MLMachine Learning', 'Predictive AnalyticsBig Data', 'Cloud Computing'],
-    integrations: ['POS SystemsE-commerce Platforms', 'CRM SystemsInventory Management', 'Marketing Tools'],
-    useCases: ['Customer personalizationInventory optimization', 'Demand forecastingMarketing optimization'],
+    technology: ['AI/MLMachine Learning', 'Predictive AnalyticsBig Data', 'Cloud Computing']
+    integrations: ['POS SystemsE-commerce Platforms', 'CRM SystemsInventory Management', 'Marketing Tools']
+    useCases: ['Customer personalizationInventory optimization', 'Demand forecastingMarketing optimization']
     roi: '300% ROI with 35% increase in sales and 25% reduction in inventory costs',
-    competitors: ['Traditional retail systemsBasic analytics platforms'],
+    competitors: ['Traditional retail systemsBasic analytics platforms']
     marketSize: '$25B retail technology market',
     growthRate: '180% annual growth',
     contactInfo: {
@@ -241,7 +241,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       'Content optimizationStudent engagement',
       'Assessment automationLearning path optimization',
       'Real-time feedbackMulti-modal learning'
-    ],
+    ]
     popular: false,
     icon: '🎓',
     color: 'from-indigo-600 to-purple-700',
@@ -254,11 +254,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Education & Learning',
     industry: 'Education',
     realService: true,
-    technology: ['AI/MLNatural Language Processing', 'Predictive AnalyticsMachine Learning', 'Cloud Computing'],
-    integrations: ['LMS SystemsStudent Information Systems', 'Content ManagementAssessment Tools', 'Analytics Platforms'],
-    useCases: ['Personalized learningProgress tracking', 'Content optimizationPerformance analysis'],
+    technology: ['AI/MLNatural Language Processing', 'Predictive AnalyticsMachine Learning', 'Cloud Computing']
+    integrations: ['LMS SystemsStudent Information Systems', 'Content ManagementAssessment Tools', 'Analytics Platforms']
+    useCases: ['Personalized learningProgress tracking', 'Content optimizationPerformance analysis']
     roi: '250% ROI with 40% improvement in learning outcomes',
-    competitors: ['Traditional LMSBasic learning platforms'],
+    competitors: ['Traditional LMSBasic learning platforms']
     marketSize: '$15B adaptive learning market',
     growthRate: '200% annual growth',
     contactInfo: {
@@ -288,7 +288,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       'Real-time trackingPerformance monitoring',
       'Automated schedulingInventory management',
       'Compliance trackingSustainability optimization'
-    ],
+    ]
     popular: true,
     icon: '🚚',
     color: 'from-orange-600 to-red-700',
@@ -301,11 +301,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Transportation & Logistics',
     industry: 'Logistics',
     realService: true,
-    technology: ['AI/MLIoT Sensors', 'Predictive AnalyticsAutomation', 'Blockchain'],
-    integrations: ['TMS SystemsWMS Platforms', 'GPS TrackingInventory Systems', 'Financial Systems'],
-    useCases: ['Route optimizationSupply chain management', 'Cost reductionPerformance monitoring'],
+    technology: ['AI/MLIoT Sensors', 'Predictive AnalyticsAutomation', 'Blockchain']
+    integrations: ['TMS SystemsWMS Platforms', 'GPS TrackingInventory Systems', 'Financial Systems']
+    useCases: ['Route optimizationSupply chain management', 'Cost reductionPerformance monitoring']
     roi: '350% ROI with 30% cost reduction and 25% efficiency improvement',
-    competitors: ['Traditional TMSManual optimization'],
+    competitors: ['Traditional TMSManual optimization']
     marketSize: '$30B logistics technology market',
     growthRate: '160% annual growth',
     contactInfo: {
@@ -335,7 +335,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       'Real-time monitoringPerformance analytics',
       'Automated controlsSustainability tracking',
       'Compliance managementGrid optimization'
-    ],
+    ]
     popular: false,
     icon: '⚡',
     color: 'from-yellow-600 to-orange-700',
@@ -348,11 +348,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     category: 'Energy & Utilities',
     industry: 'Energy',
     realService: true,
-    technology: ['AI/MLIoT Sensors', 'Predictive AnalyticsAutomation', 'Smart Grid'],
-    integrations: ['SCADA SystemsEnergy Management', 'Building AutomationSmart Meters', 'Renewable Systems'],
-    useCases: ['Energy optimizationCost reduction', 'SustainabilityGrid management'],
+    technology: ['AI/MLIoT Sensors', 'Predictive AnalyticsAutomation', 'Smart Grid']
+    integrations: ['SCADA SystemsEnergy Management', 'Building AutomationSmart Meters', 'Renewable Systems']
+    useCases: ['Energy optimizationCost reduction', 'SustainabilityGrid management']
     roi: '300% ROI with 25% cost reduction and 20% efficiency improvement',
-    competitors: ['Traditional energy managementBasic monitoring systems'],
+    competitors: ['Traditional energy managementBasic monitoring systems']
     marketSize: '$20B energy management market',
     growthRate: '180% annual growth',
     contactInfo: {
@@ -368,7 +368,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     rating: 4.6,
     reviews: 42
   }
-],
+]
 export const industryCategories2025: string[] = Array.from(
   new Set(
     specializedIndustrySolutions2025

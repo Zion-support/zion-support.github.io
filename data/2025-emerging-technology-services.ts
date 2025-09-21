@@ -5,7 +5,7 @@ export interface EmergingTechnologyService {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -17,11 +17,11 @@ export interface EmergingTechnologyService {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   contactInfo: {
@@ -57,7 +57,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
       'VR/AR integrationMulti-user collaboration',
       'Custom branding optionsAnalytics and insights',
       'API integrationMobile accessibility'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-purple-600 to-pink-600',
@@ -69,11 +69,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     setupTime: '4-6 weeks',
     category: 'Metaverse & Virtual Reality',
     realService: true,
-    technology: ['Unity, Unreal Engine, WebGL, Three.js, WebXR, Blockchain'],
-    integrations: ['Zoom, Microsoft Teams, Slack, Salesforce, HubSpot, Custom APIs'],
-    useCases: ['Virtual offices, Digital twins, Virtual events, Training simulations, Customer experiences'],
+    technology: ['Unity, Unreal Engine, WebGL, Three.js, WebXR, Blockchain']
+    integrations: ['Zoom, Microsoft Teams, Slack, Salesforce, HubSpot, Custom APIs']
+    useCases: ['Virtual offices, Digital twins, Virtual events, Training simulations, Customer experiences']
     roi: 'Reduce travel costs by 80% and increase engagement by 300% in virtual environments',
-    competitors: ['Spatial, Virbela, AltspaceVR, VRChat, Rec Room'],
+    competitors: ['Spatial, Virbela, AltspaceVR, VRChat, Rec Room']
     marketSize: '$800M metaverse business market',
     growthRate: '400% annual growth',
     contactInfo: contact,
@@ -97,7 +97,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
       'Hybrid classical-quantum computingPerformance benchmarking',
       'API accessCustom algorithm development',
       'Integration capabilitiesExpert consultation'
-    ],
+    ]
     popular: false,
     icon: '⚛️',
     color: 'from-blue-600 to-cyan-600',
@@ -109,11 +109,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     setupTime: '8-12 weeks',
     category: 'Quantum Computing',
     realService: true,
-    technology: ['Quantum Computing, Qiskit, Cirq, TensorFlow Quantum, Python, C++'],
-    integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, Custom quantum hardware'],
-    useCases: ['Drug discovery, Financial modeling, Optimization problems, AI training, Research applications'],
+    technology: ['Quantum Computing, Qiskit, Cirq, TensorFlow Quantum, Python, C++']
+    integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, Custom quantum hardware']
+    useCases: ['Drug discovery, Financial modeling, Optimization problems, AI training, Research applications']
     roi: 'Research institutions report 1000%+ ROI for specific quantum advantage applications',
-    competitors: ['No direct competitors yetTraditional ML platforms'],
+    competitors: ['No direct competitors yetTraditional ML platforms']
     marketSize: '$1.2B quantum ML market',
     growthRate: '250% annual growth',
     contactInfo: contact,
@@ -137,7 +137,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
       'Safety monitoringPerformance analytics',
       'Remote operationIntegration capabilities',
       'Custom robot development24/7 support'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-gray-600 to-slate-600',
@@ -149,11 +149,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     setupTime: '6-8 weeks',
     category: 'Robotics & Automation',
     realService: true,
-    technology: ['ROS, Computer Vision, AI/ML, Python, C++, Embedded Systems'],
-    integrations: ['SAP, Oracle, WMS systems, PLC systems, Custom manufacturing systems'],
-    useCases: ['Manufacturing automation, Quality inspection, Warehouse operations, Autonomous delivery, Research applications'],
+    technology: ['ROS, Computer Vision, AI/ML, Python, C++, Embedded Systems']
+    integrations: ['SAP, Oracle, WMS systems, PLC systems, Custom manufacturing systems']
+    useCases: ['Manufacturing automation, Quality inspection, Warehouse operations, Autonomous delivery, Research applications']
     roi: 'Reduce operational costs by 40% and increase productivity by 60%',
-    competitors: ['Boston Dynamics, Universal Robots, ABB Robotics, KUKA, FANUC'],
+    competitors: ['Boston Dynamics, Universal Robots, ABB Robotics, KUKA, FANUC']
     marketSize: '$45B autonomous robotics market',
     growthRate: '120% annual growth',
     contactInfo: contact,
@@ -177,7 +177,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
       'Safety protocolsData analytics',
       'Integration capabilitiesCustom development',
       'Compliance featuresExpert consultation'
-    ],
+    ]
     popular: false,
     icon: '🧠',
     color: 'from-pink-600 to-red-600',
@@ -189,11 +189,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     setupTime: '12-16 weeks',
     category: 'Neural Technology',
     realService: true,
-    technology: ['Neural Engineering, Signal Processing, AI/ML, Python, C++, Embedded Systems'],
-    integrations: ['Medical devices, Research equipment, Data analysis tools, Custom applications'],
-    useCases: ['Medical research, Assistive technology, Neurological rehabilitation, Brain mapping, Communication aids'],
+    technology: ['Neural Engineering, Signal Processing, AI/ML, Python, C++, Embedded Systems']
+    integrations: ['Medical devices, Research equipment, Data analysis tools, Custom applications']
+    useCases: ['Medical research, Assistive technology, Neurological rehabilitation, Brain mapping, Communication aids']
     roi: 'Medical institutions report priceless value for breakthrough research and patient care',
-    competitors: ['Neuralink, CTRL-labs, Kernel, Paradromics'],
+    competitors: ['Neuralink, CTRL-labs, Kernel, Paradromics']
     marketSize: '$1.8B BCI market',
     growthRate: '300% annual growth',
     contactInfo: contact,
@@ -217,7 +217,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
       'Space weather monitoringLaunch coordination',
       'Mission planningData visualization',
       'API accessExpert consultation'
-    ],
+    ]
     popular: false,
     icon: '🚀',
     color: 'from-indigo-600 to-purple-600',
@@ -229,11 +229,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     setupTime: '8-12 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['Satellite Technology, Orbital Mechanics, Data Analytics, AI/ML, Python, C++'],
-    integrations: ['Ground stations, Satellite networks, Data providers, Research platforms'],
-    useCases: ['Satellite operations, Space data analysis, Climate monitoring, Agriculture, Telecommunications'],
+    technology: ['Satellite Technology, Orbital Mechanics, Data Analytics, AI/ML, Python, C++']
+    integrations: ['Ground stations, Satellite networks, Data providers, Research platforms']
+    useCases: ['Satellite operations, Space data analysis, Climate monitoring, Agriculture, Telecommunications']
     roi: 'Space companies report 500% ROI through improved satellite operations and data insights',
-    competitors: ['Maxar, Planet Labs, Spire, Airbus Defence and Space, Thales Alenia Space'],
+    competitors: ['Maxar, Planet Labs, Spire, Airbus Defence and Space, Thales Alenia Space']
     marketSize: '$4.5B commercial space market',
     growthRate: '180% annual growth',
     contactInfo: contact,
@@ -244,4 +244,4 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     rating: 4.8,
     reviews: 18
   }
-],
+]

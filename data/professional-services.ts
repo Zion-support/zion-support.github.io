@@ -4,7 +4,7 @@ export interface ProfessionalService {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const professionalServices: ProfessionalService[] = [
       "Implementation guidance",
       "Performance optimization",
       "Ongoing support"
-    ],
+    ]
     link: "/services/it-consulting",
     category: "Professional Services",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const professionalServices: ProfessionalService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

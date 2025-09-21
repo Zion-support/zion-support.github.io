@@ -5,7 +5,7 @@ export interface SpecializedAIService {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -17,11 +17,11 @@ export interface SpecializedAIService {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: string,
@@ -52,7 +52,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       'Contract optimizationReal-time collaboration',
       'Version controlIntegration APIs',
       'Analytics dashboard24/7 legal AI support'
-    ],
+    ]
     popular: true,
     icon: '⚖️',
     color: 'from-indigo-600 to-purple-700',
@@ -64,11 +64,11 @@ export const specializedAIServices: SpecializedAIService[] = [
     setupTime: '2 weeks',
     category: 'Legal AI',
     realService: true,
-    technology: ['Natural Language ProcessingMachine Learning', 'Legal AIDocument Analysis', 'Risk Assessment'],
-    integrations: ['DocuSignMicrosoft Word', 'Adobe AcrobatLegal databases', 'CRM systems'],
-    useCases: ['Contract reviewRisk assessment', 'Compliance checkingLegal research'],
+    technology: ['Natural Language ProcessingMachine Learning', 'Legal AIDocument Analysis', 'Risk Assessment']
+    integrations: ['DocuSignMicrosoft Word', 'Adobe AcrobatLegal databases', 'CRM systems']
+    useCases: ['Contract reviewRisk assessment', 'Compliance checkingLegal research']
     roi: '400% ROI within 6 months through time savings and risk reduction',
-    competitors: ['DocuSign ($25+/month)ContractPodAi ($500+/month)', 'Evisort'],
+    competitors: ['DocuSign ($25+/month)ContractPodAi ($500+/month)', 'Evisort']
     marketSize: '$15B legal tech market',
     growthRate: '200% annual growth',
     variant: 'legal-ai-futuristic',
@@ -98,7 +98,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       'Cultural fit analysisPerformance prediction',
       'Integration APIsHR analytics dashboard',
       'Mobile applications24/7 HR AI support'
-    ],
+    ]
     popular: true,
     icon: '👥',
     color: 'from-blue-600 to-cyan-700',
@@ -110,11 +110,11 @@ export const specializedAIServices: SpecializedAIService[] = [
     setupTime: '2 weeks',
     category: 'HR AI',
     realService: true,
-    technology: ['AI/MLNatural Language Processing', 'Predictive AnalyticsHR Management', 'Recruitment'],
-    integrations: ['WorkdayBambooHR', 'LinkedInJob boards', 'ATS systems'],
-    useCases: ['Candidate screeningHiring optimization', 'Performance predictionHR analytics'],
+    technology: ['AI/MLNatural Language Processing', 'Predictive AnalyticsHR Management', 'Recruitment']
+    integrations: ['WorkdayBambooHR', 'LinkedInJob boards', 'ATS systems']
+    useCases: ['Candidate screeningHiring optimization', 'Performance predictionHR analytics']
     roi: '350% ROI within 6 months through improved hiring quality and time savings',
-    competitors: ['Workday ($100+/month)BambooHR ($200+/month)', 'Greenhouse'],
+    competitors: ['Workday ($100+/month)BambooHR ($200+/month)', 'Greenhouse']
     marketSize: '$25B HR tech market',
     growthRate: '180% annual growth',
     variant: 'hr-ai-futuristic',
@@ -144,7 +144,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       'Market trend identificationData visualization',
       'Integration APIsResearch dashboard',
       'Mobile applications24/7 market AI support'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-green-600 to-emerald-700',
@@ -156,11 +156,11 @@ export const specializedAIServices: SpecializedAIService[] = [
     setupTime: '2 weeks',
     category: 'Market Research AI',
     realService: true,
-    technology: ['AI/MLData Analytics', 'Predictive ModelingMarket Intelligence', 'Big Data'],
-    integrations: ['Google AnalyticsSocial media platforms', 'CRM systemsBusiness intelligence tools'],
-    useCases: ['Market analysisCompetitive intelligence', 'Consumer insightsStrategy planning'],
+    technology: ['AI/MLData Analytics', 'Predictive ModelingMarket Intelligence', 'Big Data']
+    integrations: ['Google AnalyticsSocial media platforms', 'CRM systemsBusiness intelligence tools']
+    useCases: ['Market analysisCompetitive intelligence', 'Consumer insightsStrategy planning']
     roi: '450% ROI within 6 months through improved decision making and market insights',
-    competitors: ['Nielsen ($5000+/month)McKinsey ($10000+/month)', 'Forrester'],
+    competitors: ['Nielsen ($5000+/month)McKinsey ($10000+/month)', 'Forrester']
     marketSize: '$20B market research market',
     growthRate: '220% annual growth',
     variant: 'market-ai-futuristic',
@@ -190,7 +190,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       'Performance analyticsIntegration APIs',
       'Sales dashboardMobile applications',
       'CRM integration24/7 sales AI support'
-    ],
+    ]
     popular: true,
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',
@@ -202,11 +202,11 @@ export const specializedAIServices: SpecializedAIService[] = [
     setupTime: '2 weeks',
     category: 'Sales AI',
     realService: true,
-    technology: ['AI/MLPredictive Analytics', 'Sales AutomationCRM Integration', 'Lead Management'],
-    integrations: ['SalesforceHubSpot', 'PipedriveEmail platforms', 'Social media'],
-    useCases: ['Lead generationSales optimization', 'Performance trackingProcess automation'],
+    technology: ['AI/MLPredictive Analytics', 'Sales AutomationCRM Integration', 'Lead Management']
+    integrations: ['SalesforceHubSpot', 'PipedriveEmail platforms', 'Social media']
+    useCases: ['Lead generationSales optimization', 'Performance trackingProcess automation']
     roi: '500% ROI within 6 months through increased sales and process efficiency',
-    competitors: ['Salesforce ($25+/month)HubSpot ($45+/month)', 'Pipedrive'],
+    competitors: ['Salesforce ($25+/month)HubSpot ($45+/month)', 'Pipedrive']
     marketSize: '$30B sales automation market',
     growthRate: '200% annual growth',
     variant: 'sales-ai-futuristic',
@@ -236,7 +236,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       'Automated workflowsIntegration APIs',
       'Video dashboardMobile applications',
       'Cloud storage24/7 video AI support'
-    ],
+    ]
     popular: true,
     icon: '🎬',
     color: 'from-purple-600 to-pink-700',
@@ -248,11 +248,11 @@ export const specializedAIServices: SpecializedAIService[] = [
     setupTime: '1 week',
     category: 'Video AI',
     realService: true,
-    technology: ['Computer VisionAI/ML', 'Video ProcessingContent Analysis', 'Automation'],
-    integrations: ['Adobe Creative SuiteFinal Cut Pro', 'Social media platformsCloud storage'],
-    useCases: ['Video editingContent creation', 'Marketing videosSocial media content'],
+    technology: ['Computer VisionAI/ML', 'Video ProcessingContent Analysis', 'Automation']
+    integrations: ['Adobe Creative SuiteFinal Cut Pro', 'Social media platformsCloud storage']
+    useCases: ['Video editingContent creation', 'Marketing videosSocial media content']
     roi: '300% ROI within 6 months through time savings and content quality improvement',
-    competitors: ['Adobe Premiere ($20+/month)Final Cut Pro ($300)', 'DaVinci Resolve'],
+    competitors: ['Adobe Premiere ($20+/month)Final Cut Pro ($300)', 'DaVinci Resolve']
     marketSize: '$15B video editing market',
     growthRate: '180% annual growth',
     variant: 'video-ai-futuristic',
@@ -282,7 +282,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       'Conversion optimizationIntegration APIs',
       'Analytics dashboardMobile applications',
       'E-commerce integration24/7 personalization AI support'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-cyan-600 to-blue-700',
@@ -294,11 +294,11 @@ export const specializedAIServices: SpecializedAIService[] = [
     setupTime: '2 weeks',
     category: 'Website AI',
     realService: true,
-    technology: ['AI/MLPersonalization Engine', 'A/B TestingUser Analytics', 'Conversion Optimization'],
-    integrations: ['ShopifyWooCommerce', 'MagentoGoogle Analytics', 'Marketing platforms'],
-    useCases: ['Website optimizationConversion improvement', 'User experienceE-commerce optimization'],
+    technology: ['AI/MLPersonalization Engine', 'A/B TestingUser Analytics', 'Conversion Optimization']
+    integrations: ['ShopifyWooCommerce', 'MagentoGoogle Analytics', 'Marketing platforms']
+    useCases: ['Website optimizationConversion improvement', 'User experienceE-commerce optimization']
     roi: '400% ROI within 6 months through increased conversions and user engagement',
-    competitors: ['Optimizely ($1000+/month)VWO ($500+/month)', 'Google Optimize'],
+    competitors: ['Optimizely ($1000+/month)VWO ($500+/month)', 'Google Optimize']
     marketSize: '$12B personalization market',
     growthRate: '200% annual growth',
     variant: 'personalization-ai-futuristic',
@@ -328,7 +328,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       'Integration APIsService dashboard',
       'Mobile applicationsMulti-channel support',
       'Analytics and reporting24/7 customer AI support'
-    ],
+    ]
     popular: true,
     icon: '🎧',
     color: 'from-green-600 to-teal-700',
@@ -340,11 +340,11 @@ export const specializedAIServices: SpecializedAIService[] = [
     setupTime: '2 weeks',
     category: 'Customer Service AI',
     realService: true,
-    technology: ['AI/MLNatural Language Processing', 'Chatbot TechnologyPredictive Analytics', 'Customer Analytics'],
-    integrations: ['ZendeskIntercom', 'SlackEmail platforms', 'CRM systems'],
-    useCases: ['Customer supportTicket automation', 'Satisfaction optimizationService analytics'],
+    technology: ['AI/MLNatural Language Processing', 'Chatbot TechnologyPredictive Analytics', 'Customer Analytics']
+    integrations: ['ZendeskIntercom', 'SlackEmail platforms', 'CRM systems']
+    useCases: ['Customer supportTicket automation', 'Satisfaction optimizationService analytics']
     roi: '350% ROI within 6 months through improved customer satisfaction and support efficiency',
-    competitors: ['Zendesk ($25+/month)Intercom ($39+/month)', 'Freshdesk'],
+    competitors: ['Zendesk ($25+/month)Intercom ($39+/month)', 'Freshdesk']
     marketSize: '$18B customer service market',
     growthRate: '180% annual growth',
     variant: 'customer-service-ai-futuristic',
@@ -374,7 +374,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       'Integration APIsAnalytics dashboard',
       'Mobile applicationsReal-time monitoring',
       'Advanced algorithms24/7 analytics AI support'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-blue-600 to-indigo-700',
@@ -386,11 +386,11 @@ export const specializedAIServices: SpecializedAIService[] = [
     setupTime: '2 weeks',
     category: 'Data Analytics AI',
     realService: true,
-    technology: ['AI/MLPredictive Analytics', 'Data VisualizationBusiness Intelligence', 'Big Data'],
-    integrations: ['TableauPower BI', 'Google AnalyticsCRM systems', 'ERP systems'],
-    useCases: ['Business intelligencePredictive analytics', 'Data visualizationPerformance monitoring'],
+    technology: ['AI/MLPredictive Analytics', 'Data VisualizationBusiness Intelligence', 'Big Data']
+    integrations: ['TableauPower BI', 'Google AnalyticsCRM systems', 'ERP systems']
+    useCases: ['Business intelligencePredictive analytics', 'Data visualizationPerformance monitoring']
     roi: '500% ROI within 6 months through improved decision making and business insights',
-    competitors: ['Tableau ($70+/month)Power BI ($10+/month)', 'QlikView'],
+    competitors: ['Tableau ($70+/month)Power BI ($10+/month)', 'QlikView']
     marketSize: '$35B business intelligence market',
     growthRate: '200% annual growth',
     variant: 'analytics-ai-futuristic',
@@ -420,7 +420,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       'Performance trackingIntegration APIs',
       'SEO dashboardMobile applications',
       'Competitor analysis24/7 SEO AI support'
-    ],
+    ]
     popular: true,
     icon: '🔍',
     color: 'from-orange-600 to-red-700',
@@ -432,11 +432,11 @@ export const specializedAIServices: SpecializedAIService[] = [
     setupTime: '2 weeks',
     category: 'SEO AI',
     realService: true,
-    technology: ['AI/MLNatural Language Processing', 'SEO AnalysisContent Optimization', 'Search Analytics'],
-    integrations: ['Google Search ConsoleGoogle Analytics', 'WordPressShopify', 'Content platforms'],
-    useCases: ['Content optimizationSearch ranking improvement', 'Keyword researchPerformance tracking'],
+    technology: ['AI/MLNatural Language Processing', 'SEO AnalysisContent Optimization', 'Search Analytics']
+    integrations: ['Google Search ConsoleGoogle Analytics', 'WordPressShopify', 'Content platforms']
+    useCases: ['Content optimizationSearch ranking improvement', 'Keyword researchPerformance tracking']
     roi: '400% ROI within 6 months through improved search rankings and organic traffic',
-    competitors: ['Ahrefs ($99+/month)SEMrush ($119+/month)', 'Moz Pro'],
+    competitors: ['Ahrefs ($99+/month)SEMrush ($119+/month)', 'Moz Pro']
     marketSize: '$8B SEO market',
     growthRate: '180% annual growth',
     variant: 'seo-ai-futuristic',
@@ -453,4 +453,4 @@ export const specializedAIServices: SpecializedAIService[] = [
     rating: 4.6,
     reviews: 134
   }
-],
+]

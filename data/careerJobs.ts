@@ -7,7 +7,7 @@ export const CAREER_JOBS = {
       location: 'Remote',
       type: 'Full-time',
       department: 'Engineering',
-      tags: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
+      tags: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS']
       requirements: [
         '5+ years of frontend development experience',
         'Expert knowledge of React and TypeScript',
@@ -23,7 +23,7 @@ export const CAREER_JOBS = {
       location: 'Remote',
       type: 'Full-time',
       department: 'Engineering',
-      tags: ['Node.js', 'Python', 'PostgreSQL', 'AWS'],
+      tags: ['Node.js', 'Python', 'PostgreSQL', 'AWS']
       requirements: [
         '4+ years of backend development experience',
         'Proficiency in Node.js or Python',
@@ -39,7 +39,7 @@ export const CAREER_JOBS = {
       location: 'Remote',
       type: 'Full-time',
       department: 'Engineering',
-      tags: ['Python', 'TensorFlow', 'PyTorch', 'MLOps'],
+      tags: ['Python', 'TensorFlow', 'PyTorch', 'MLOps']
       requirements: [
         '3+ years of machine learning experience',
         'Strong Python programming skills',
@@ -48,7 +48,7 @@ export const CAREER_JOBS = {
         'Understanding of NLP and computer vision'
       ]
     }
-  ],
+  ]
   Design: [
     {
       id: 'product-designer',
@@ -57,7 +57,7 @@ export const CAREER_JOBS = {
       location: 'Remote',
       type: 'Full-time',
       department: 'Design',
-      tags: ['Figma', 'User Research', 'Prototyping', 'UI/UX'],
+      tags: ['Figma', 'User Research', 'Prototyping', 'UI/UX']
       requirements: [
         '3+ years of product design experience',
         'Proficiency in Figma and design tools',
@@ -73,7 +73,7 @@ export const CAREER_JOBS = {
       location: 'Remote',
       type: 'Full-time',
       department: 'Design',
-      tags: ['User Research', 'Analytics', 'A/B Testing', 'Usability'],
+      tags: ['User Research', 'Analytics', 'A/B Testing', 'Usability']
       requirements: [
         '2+ years of UX research experience',
         'Experience with user research methodologies',
@@ -82,7 +82,7 @@ export const CAREER_JOBS = {
         'Understanding of quantitative and qualitative research'
       ]
     }
-  ],
+  ]
   Operations: [
     {
       id: 'product-manager',
@@ -91,7 +91,7 @@ export const CAREER_JOBS = {
       location: 'Remote',
       type: 'Full-time',
       department: 'Operations',
-      tags: ['Product Strategy', 'Roadmapping', 'Analytics', 'Stakeholder Management'],
+      tags: ['Product Strategy', 'Roadmapping', 'Analytics', 'Stakeholder Management']
       requirements: [
         '4+ years of product management experience',
         'Experience with B2B SaaS products',
@@ -107,7 +107,7 @@ export const CAREER_JOBS = {
       location: 'Remote',
       type: 'Full-time',
       department: 'Operations',
-      tags: ['Customer Success', 'Account Management', 'Analytics', 'Communication'],
+      tags: ['Customer Success', 'Account Management', 'Analytics', 'Communication']
       requirements: [
         '3+ years of customer success experience',
         'Experience with B2B SaaS platforms',

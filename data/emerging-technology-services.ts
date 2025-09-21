@@ -4,7 +4,7 @@ export interface EmergingTechnologyService {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
       "Blockchain integration",
       "Security auditing",
       "Performance monitoring"
-    ],
+    ]
     link: "/services/blockchain-platform",
     category: "Emerging Tech",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

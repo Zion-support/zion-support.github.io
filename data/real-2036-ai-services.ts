@@ -10,7 +10,7 @@ export const real2036AIServices = [
       'Emotion recognitionSentiment analysis',
       'Emotional response generationEmotional intelligence training',
       'Multi-modal emotion detectionEmotional pattern analysis'
-    ],
+    ]
     popular: true,
     category: 'Emotional AI',
     icon: '😊🤖',
@@ -18,7 +18,7 @@ export const real2036AIServices = [
     benefits: [
       'Enhanced customer experienceBetter emotional understanding',
       'Improved human-AI interactionEmotional intelligence development'
-    ],
+    ]
     useCases: [
       'Customer serviceMental health support',
       'Education technologyHuman resources'
@@ -35,7 +35,7 @@ export const real2036AIServices = [
       'Creative idea generationWorkflow orchestration',
       'Artistic collaboration toolsCreative process optimization',
       'Innovation managementCreative analytics'
-    ],
+    ]
     popular: true,
     category: 'Creative AI',
     icon: '🎨🤖',
@@ -43,7 +43,7 @@ export const real2036AIServices = [
     benefits: [
       'Enhanced creativityFaster innovation cycles',
       'Better collaborationCreative process optimization'
-    ],
+    ]
     useCases: [
       'Marketing campaignsProduct design',
       'Content creationResearch and development'
@@ -60,7 +60,7 @@ export const real2036AIServices = [
       'Dream pattern analysisPsychological interpretation',
       'Symbolic analysisDream journaling',
       'Pattern recognitionPsychological insights'
-    ],
+    ]
     popular: false,
     category: 'Psychological AI',
     icon: '💭🤖',
@@ -68,7 +68,7 @@ export const real2036AIServices = [
     benefits: [
       'Dream understandingPsychological insights',
       'Self-reflection toolsMental health awareness'
-    ],
+    ]
     useCases: [
       'Mental health supportPsychological research',
       'Personal developmentTherapeutic applications'
@@ -85,7 +85,7 @@ export const real2036AIServices = [
       'Multi-format content creationBrand voice consistency',
       'Content optimizationSEO integration',
       'Content analyticsAutomated publishing'
-    ],
+    ]
     popular: true,
     category: 'Content AI',
     icon: '📝🤖',
@@ -93,7 +93,7 @@ export const real2036AIServices = [
     benefits: [
       '10x faster content creationConsistent brand voice',
       'SEO-optimized contentScalable content production'
-    ],
+    ]
     useCases: [
       'Marketing contentBlog writing',
       'Social media contentProduct descriptions'
@@ -110,7 +110,7 @@ export const real2036AIServices = [
       'Customer journey mappingPredictive analytics',
       'Personalized recommendationsBehavior analysis',
       'Customer segmentationPredictive modeling'
-    ],
+    ]
     popular: true,
     category: 'Customer AI',
     icon: '👥🤖',
@@ -118,7 +118,7 @@ export const real2036AIServices = [
     benefits: [
       'Deep customer insightsPredictive customer behavior',
       'Personalized experiencesImproved customer retention'
-    ],
+    ]
     useCases: [
       'E-commerce optimizationCustomer service',
       'Marketing campaignsProduct development'
@@ -135,7 +135,7 @@ export const real2036AIServices = [
       'Autonomous campaign managementReal-time optimization',
       'Predictive marketing strategiesPerformance maximization',
       'Automated A/B testingROI optimization'
-    ],
+    ]
     popular: true,
     category: 'Marketing AI',
     icon: '📈🤖',
@@ -143,7 +143,7 @@ export const real2036AIServices = [
     benefits: [
       'Autonomous marketing operationsMaximum ROI optimization',
       'Real-time performance improvementScalable marketing automation'
-    ],
+    ]
     useCases: [
       'Digital advertisingEmail marketing',
       'Social media marketingContent marketing'
@@ -160,7 +160,7 @@ export const real2036AIServices = [
       'Automated research workflowsData analysis',
       'Insight generationResearch automation',
       'Data synthesisReport generation'
-    ],
+    ]
     popular: true,
     category: 'Research AI',
     icon: '🔬🤖',
@@ -168,7 +168,7 @@ export const real2036AIServices = [
     benefits: [
       'Automated research processesFaster insight generation',
       'Comprehensive data analysisScalable research operations'
-    ],
+    ]
     useCases: [
       'Market researchAcademic research',
       'Business intelligenceCompetitive analysis'
@@ -185,7 +185,7 @@ export const real2036AIServices = [
       'Decision automationRisk assessment',
       'Outcome predictionBusiness rule engine',
       'Predictive modelingDecision analytics'
-    ],
+    ]
     popular: true,
     category: 'Decision AI',
     icon: '🎯🤖',
@@ -193,7 +193,7 @@ export const real2036AIServices = [
     benefits: [
       'Automated decision makingRisk reduction',
       'Faster decision cyclesData-driven decisions'
-    ],
+    ]
     useCases: [
       'Financial decisionsOperational decisions',
       'Strategic planningRisk management'
@@ -210,7 +210,7 @@ export const real2036AIServices = [
       'Ecosystem mappingRelationship management',
       'Autonomous optimizationPartnership orchestration',
       'Integration managementEcosystem analytics'
-    ],
+    ]
     popular: false,
     category: 'Ecosystem AI',
     icon: '🌐🤖',
@@ -218,7 +218,7 @@ export const real2036AIServices = [
     benefits: [
       'Ecosystem optimizationPartnership maximization',
       'Integration efficiencyScalable ecosystem management'
-    ],
+    ]
     useCases: [
       'Business partnershipsPlatform ecosystems',
       'Supply chain managementDigital transformation'
@@ -235,7 +235,7 @@ export const real2036AIServices = [
       'Autonomous navigationSafety monitoring',
       'Traffic managementVehicle optimization',
       'Predictive maintenanceSafety systems'
-    ],
+    ]
     popular: true,
     category: 'Vehicle AI',
     icon: '🚗🤖',
@@ -243,10 +243,10 @@ export const real2036AIServices = [
     benefits: [
       'Enhanced vehicle safetyAutonomous operation',
       'Traffic optimizationPredictive maintenance'
-    ],
+    ]
     useCases: [
       'Autonomous vehiclesFleet management',
       'Traffic optimizationSafety systems'
     ]
   }
-],
+]

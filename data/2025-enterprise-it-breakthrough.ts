@@ -9,7 +9,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Multi-cloud orchestration and managementAdvanced monitoring, analytics, and insights',
       'Automated scaling and optimization algorithmsQuantum-resistant security protocols and frameworks',
       'Enterprise-grade reliability and availabilityCustom infrastructure solutions and development'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 2999, 
@@ -28,7 +28,7 @@ export const enterpriseITBreakthroughServices2025 = [
       }
     },
     category: 'Cloud Infrastructure',
-    tags: ['Quantum ComputingCloud Infrastructure', 'SecurityScalability', 'Enterprise'],
+    tags: ['Quantum ComputingCloud Infrastructure', 'SecurityScalability', 'Enterprise']
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -41,8 +41,8 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise cloud computingHigh-performance computing',
       'Secure cloud infrastructureScalable cloud solutions',
       'Quantum computing research'
-    ],
-    integrations: ['AWSAzure', 'Google CloudKubernetes', 'DockerTerraform'],
+    ]
+    integrations: ['AWSAzure', 'Google CloudKubernetes', 'DockerTerraform']
     compliance: ['SOC2ISO 27001', 'FedRAMPGDPR', 'CCPA']
   },
   {
@@ -55,7 +55,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Automated edge deployment and scalingPerformance monitoring and analytics tools',
       'Edge workload optimization and managementMulti-edge coordination and synchronization',
       'Advanced edge analytics and insightsEnterprise edge solutions and customization'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 1999, 
@@ -74,7 +74,7 @@ export const enterpriseITBreakthroughServices2025 = [
       }
     },
     category: 'Edge Computing',
-    tags: ['Edge ComputingIoT', 'Real-time ProcessingPerformance Optimization', 'Enterprise'],
+    tags: ['Edge ComputingIoT', 'Real-time ProcessingPerformance Optimization', 'Enterprise']
     website: 'https://ziontechgroup.com/edge-computing-orchestrator-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -87,8 +87,8 @@ export const enterpriseITBreakthroughServices2025 = [
       'IoT device managementReal-time data processing',
       'Edge analytics and insightsPerformance optimization',
       'Edge security and monitoring'
-    ],
-    integrations: ['IoT platformsCloud services', 'Analytics toolsSecurity systems', 'Monitoring platforms'],
+    ]
+    integrations: ['IoT platformsCloud services', 'Analytics toolsSecurity systems', 'Monitoring platforms']
     compliance: ['SOC2ISO 27001', 'IoT security standardsGDPR', 'CCPA']
   },
   {
@@ -101,7 +101,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Real-time security analytics and insightsIntegration with existing security infrastructure',
       'Custom security policy developmentAdvanced threat intelligence and response',
       'Compliance monitoring and reportingAPI for security automation and integration'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 1499, 
@@ -120,7 +120,7 @@ export const enterpriseITBreakthroughServices2025 = [
       }
     },
     category: 'Cybersecurity',
-    tags: ['Zero TrustCybersecurity', 'Identity ManagementAccess Control', 'Enterprise Security'],
+    tags: ['Zero TrustCybersecurity', 'Identity ManagementAccess Control', 'Enterprise Security']
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -133,8 +133,8 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise security and complianceGovernment and military security',
       'Financial institution protectionHealthcare data security',
       'Critical infrastructure protection'
-    ],
-    integrations: ['Identity providersSecurity tools', 'Monitoring systemsCompliance platforms', 'Enterprise systems'],
+    ]
+    integrations: ['Identity providersSecurity tools', 'Monitoring systemsCompliance platforms', 'Enterprise systems']
     compliance: ['SOC2ISO 27001', 'FedRAMPGDPR', 'CCPANIST standards']
   },
   {
@@ -147,7 +147,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Security scanning and vulnerability managementIntegration with CI/CD pipelines',
       'Custom workflow automation and developmentAdvanced analytics and insights',
       'API for automation and integrationEnterprise-grade reliability and support'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 999, 
@@ -166,7 +166,7 @@ export const enterpriseITBreakthroughServices2025 = [
       }
     },
     category: 'DevOps & Automation',
-    tags: ['AIDevOps', 'AutomationCI/CD', 'Enterprise'],
+    tags: ['AIDevOps', 'AutomationCI/CD', 'Enterprise']
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -179,8 +179,8 @@ export const enterpriseITBreakthroughServices2025 = [
       'Application deployment and managementInfrastructure automation and optimization',
       'Quality assurance and testingPerformance monitoring and optimization',
       'Security and compliance automation'
-    ],
-    integrations: ['CI/CD toolsCloud platforms', 'Monitoring systemsSecurity tools', 'Development platforms'],
+    ]
+    integrations: ['CI/CD toolsCloud platforms', 'Monitoring systemsSecurity tools', 'Development platforms']
     compliance: ['SOC2ISO 27001', 'DevOps best practicesSecurity standards', 'Enterprise requirements']
   },
   {
@@ -193,7 +193,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Automated scaling and resource managementIntegration with existing infrastructure',
       'Custom quantum algorithm developmentAdvanced analytics and insights',
       'API for automation and integrationEnterprise-grade reliability and support'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 3999, 
@@ -212,7 +212,7 @@ export const enterpriseITBreakthroughServices2025 = [
       }
     },
     category: 'Data Center',
-    tags: ['Quantum ComputingData Center', 'Data ManagementEnterprise', 'Performance'],
+    tags: ['Quantum ComputingData Center', 'Data ManagementEnterprise', 'Performance']
     website: 'https://ziontechgroup.com/quantum-data-center-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -225,8 +225,8 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise data managementHigh-performance computing',
       'Data center optimizationQuantum computing research',
       'Enterprise infrastructure management'
-    ],
-    integrations: ['Data center infrastructureCloud platforms', 'Monitoring systemsSecurity tools', 'Enterprise systems'],
+    ]
+    integrations: ['Data center infrastructureCloud platforms', 'Monitoring systemsSecurity tools', 'Enterprise systems']
     compliance: ['SOC2ISO 27001', 'Data center standardsSecurity standards', 'Enterprise requirements']
   }
-],
+]

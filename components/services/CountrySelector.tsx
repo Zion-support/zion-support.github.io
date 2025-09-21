@@ -1,65 +1,59 @@
-import { useState,,, useEffect,,  } from 'react'
-import { Globe,,  } from 'lucide-react'
-selectedCountry: CountryPricing | null,
+import { useState, useEffect } from 'react'
+import { Globe } from 'lucide-react'
+
+interface CountryPricing {
+  name: string;
+  code: string;
+  price: number;
+  currency: string;
 }
-  // Set top/popular countries,
-useEffect(() => {
-return (
+
+interface CountrySelectorProps {
+  selectedCountry: CountryPricing | null;
+  onCountrySelect: (country: CountryPricing) => void;
+}
+
+export default function CountrySelector({ selectedCountry, onCountrySelect }: CountrySelectorProps) {
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
+
+  // Set top/popular countries
+  useEffect(() => {
+    setTopCountries([
+      { name: 'United States', code: 'US', price: 150, currency: 'USD' },
+      { name: 'United Kingdom', code: 'GB', price: 120, currency: 'GBP' },
+      { name: 'Canada', code: 'CA', price: 130, currency: 'CAD' },
+      { name: 'Australia', code: 'AU', price: 140, currency: 'AUD' },
+      { name: 'Germany', code: 'DE', price: 110, currency: 'EUR' },
+    ]);
+  }, []);
+
+  const handleCountryChange = (value: string) => {
+    const country = topCountries.find(c => c.name === value);
+    if (country) {
+      onCountrySelect(country);
+    }
+  };
+
+  return (
     <div className='mb-6'>
       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>
         <Globe className='mr-2 h-5 w-5 text-zion-cyan' />
         {selectedCountry
-          ? `IT Onsite Service in ${selectedCountry.country}`
+          ? `IT Onsite Service in ${selectedCountry.name}`
           : 'Select Country for IT Onsite Service'}
       </h3>
-      <Select
-onValueChange={handleCountryChange}
-        value={selectedCountry?.country}      >
-        <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
-          <SelectValue placeholder='Select a country' />
-        </SelectTrigger>
-        <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>
-          <div className='p-2 border-b border-zion-blue-light'>
-            <p className='text-sm text-zion-slate-light pb-1'>
-              Popular Countries
-            </p>
-            {topCountries.map(item => (
-              <SelectItem
-key={item.country}
-                value={item.country}
-                className='text-white'
-              >                {item.country} - ${item.pricePerIncident.toFixed(2)}
-              </SelectItem>
-            ))}
-          </div>        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
-          <div className="p-2 border-b border-zion-blue-light">
-            <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
-            {topCountries.map((item,) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">
-              </SelectItem>
-            ))}
-          </div>
-          <div className='p-2'>
-            <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>
-            {onsiteServicePricing
-              .sort((a b) => a.country.localeCompare(b.country))
-              .map(item => (
-                <SelectItem
-key={item.country}
-                  value={item.country}
-                  className='text-white'
-                >
-                  {item.country} - ${item.pricePerIncident.toFixed(2)}
-                </SelectItem>
-              ))}          </div>              .map((item) => (
-              .sort((a b,) => a.country.localeCompare(b.country))
-              .map((item,) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">
-                {item.country} - ${item.pricePerIncident.toFixed(2)}
-              </SelectItem>
-            ))}
-        </SelectContent>
-      </Select>
+      <select 
+        onChange={(e) => handleCountryChange(e.target.value)} 
+        value={selectedCountry?.name || ''}
+        className='w-full bg-zion-blue border border-zion-blue-light text-white rounded-md px-3 py-2'
+      >
+        <option value=''>Select a country</option>
+        {topCountries.map(item => (
+          <option key={item.name} value={item.name}>
+            {item.name} - ${item.price.toFixed(2)}
+          </option>
+        ))}
+      </select>
     </div>
   )
 }

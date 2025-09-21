@@ -5,7 +5,7 @@ export interface SpecializedITInfrastructureService {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -17,11 +17,11 @@ export interface SpecializedITInfrastructureService {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   contactInfo: {
@@ -57,7 +57,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
       'Edge location managementLoad balancing',
       'Real-time analyticsAutomated scaling',
       'Security managementCompliance monitoring'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-blue-600 to-indigo-600',
@@ -69,11 +69,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '3-4 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Kubernetes, Docker, Python, Go, Rust, Edge Computing'],
-    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker Swarm'],
-    useCases: ['IoT optimization, Content delivery, Real-time processing, Edge analytics, Distributed computing'],
+    technology: ['Kubernetes, Docker, Python, Go, Rust, Edge Computing']
+    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker Swarm']
+    useCases: ['IoT optimization, Content delivery, Real-time processing, Edge analytics, Distributed computing']
     roi: 'Reduce edge computing costs by 40% and improve performance by 60%',
-    competitors: ['AWS Outposts, Azure Stack Edge, Google Anthos, VMware Edge'],
+    competitors: ['AWS Outposts, Azure Stack Edge, Google Anthos, VMware Edge']
     marketSize: '$8.5B edge computing market',
     growthRate: '105% annual growth',
     contactInfo: contact,
@@ -97,7 +97,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
       'Security monitoringPerformance optimization',
       'Scalability managementCompliance features',
       'API integrationAnalytics dashboard'
-    ],
+    ]
     popular: false,
     icon: '🔮',
     color: 'from-purple-600 to-pink-600',
@@ -109,11 +109,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '6-8 weeks',
     category: 'Quantum Computing',
     realService: true,
-    technology: ['Quantum Cryptography, Post-Quantum Algorithms, SDN, NFV, Advanced Routing'],
-    integrations: ['Cisco, Juniper, Arista, VMware, OpenStack'],
-    useCases: ['Government networks, Financial networks, Healthcare networks, Research networks, Defense networks'],
+    technology: ['Quantum Cryptography, Post-Quantum Algorithms, SDN, NFV, Advanced Routing']
+    integrations: ['Cisco, Juniper, Arista, VMware, OpenStack']
+    useCases: ['Government networks, Financial networks, Healthcare networks, Research networks, Defense networks']
     roi: 'Critical infrastructure organizations report priceless value for future security',
-    competitors: ['No direct competitors yetTraditional network vendors'],
+    competitors: ['No direct competitors yetTraditional network vendors']
     marketSize: '$2.1B quantum networking market',
     growthRate: '200% annual growth',
     contactInfo: contact,
@@ -137,7 +137,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
       'Performance optimizationSecurity scanning',
       'Compliance automationCost optimization',
       'Real-time analyticsIntegration capabilities'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-green-600 to-emerald-600',
@@ -149,11 +149,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '2-3 weeks',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['Kubernetes, Docker, Terraform, Ansible, Python, Go'],
-    integrations: ['GitHub, GitLab, AWS, Azure, Google Cloud, Jenkins'],
-    useCases: ['CI/CD automation, Infrastructure management, Deployment automation, Monitoring, Security automation'],
+    technology: ['Kubernetes, Docker, Terraform, Ansible, Python, Go']
+    integrations: ['GitHub, GitLab, AWS, Azure, Google Cloud, Jenkins']
+    useCases: ['CI/CD automation, Infrastructure management, Deployment automation, Monitoring, Security automation']
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps']
     marketSize: '$7.8B DevOps market',
     growthRate: '95% annual growth',
     contactInfo: contact,
@@ -177,7 +177,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
       'Device trust scoringNetwork segmentation',
       'Behavioral analyticsCompliance reporting',
       'API securityIntegration capabilities'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-orange-600',
@@ -189,11 +189,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '4-6 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['AI/ML, Blockchain, Zero Trust Architecture, Identity Management, Threat Intelligence'],
-    integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'],
-    useCases: ['Enterprise security, Government security, Financial security, Healthcare security, Educational security'],
+    technology: ['AI/ML, Blockchain, Zero Trust Architecture, Identity Management, Threat Intelligence']
+    integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace']
+    useCases: ['Enterprise security, Government security, Financial security, Healthcare security, Educational security']
     roi: 'Reduce security incidents by 95% and compliance costs by 60%',
-    competitors: ['Okta, Palo Alto, CrowdStrike, Microsoft, Cisco'],
+    competitors: ['Okta, Palo Alto, CrowdStrike, Microsoft, Cisco']
     marketSize: '$22B zero trust security market',
     growthRate: '85% annual growth',
     contactInfo: contact,
@@ -217,7 +217,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
       'Energy efficiencyPerformance monitoring',
       'Predictive maintenanceCost analytics',
       'Compliance reportingIntegration capabilities'
-    ],
+    ]
     popular: false,
     icon: '🏢',
     color: 'from-gray-600 to-slate-600',
@@ -229,11 +229,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     setupTime: '5-7 weeks',
     category: 'Data Center Management',
     realService: true,
-    technology: ['AI/ML, IoT, Big Data, Cloud Computing, Energy Management'],
-    integrations: ['Schneider Electric, Eaton, Vertiv, AWS, Azure, Google Cloud'],
-    useCases: ['Data center optimization, Energy management, Performance monitoring, Capacity planning, Cost optimization'],
+    technology: ['AI/ML, IoT, Big Data, Cloud Computing, Energy Management']
+    integrations: ['Schneider Electric, Eaton, Vertiv, AWS, Azure, Google Cloud']
+    useCases: ['Data center optimization, Energy management, Performance monitoring, Capacity planning, Cost optimization']
     roi: 'Reduce data center energy costs by 35% and improve efficiency by 45%',
-    competitors: ['Schneider Electric, Eaton, Vertiv, IBM, Dell'],
+    competitors: ['Schneider Electric, Eaton, Vertiv, IBM, Dell']
     marketSize: '$12.5B data center management market',
     growthRate: '75% annual growth',
     contactInfo: contact,
@@ -244,4 +244,4 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     rating: 4.6,
     reviews: 34
   }
-],
+]

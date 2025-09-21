@@ -12,7 +12,7 @@ import { zionEmergingTechServices2029 } from './zion-2029-emerging-tech-services
 export const allZionServices = [
   ...zionCuttingEdgeServices2029,
   ...zionEmergingTechServices2029
-],
+]
 
 // Service categories
 export const serviceCategories = [

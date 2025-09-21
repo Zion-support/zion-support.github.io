@@ -4,7 +4,7 @@ export interface PracticalBusinessSolution2028 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
       "Real-world use cases",
       "Easy integration",
       "Affordable pricing"
-    ],
+    ]
     link: "/services/2028-practical-business-solution",
     category: "Practical Business Solutions 2028",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

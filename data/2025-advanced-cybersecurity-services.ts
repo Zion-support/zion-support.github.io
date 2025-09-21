@@ -66,23 +66,23 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Integration with SIEM systems',
       'Mobile threat detection',
       '24/7 security operations'
-    ],
+    ]
     popular: true,
     icon: '🕵️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-threat-hunting-platform',
     marketPosition: 'Leading AI-powered threat hunting platform. Our advantage: Proactive threat detection with 99.9% accuracy and automated response capabilities.',
-    targetAudience: ['Large enterprises', 'Financial institutions', 'Healthcare organizations', 'Government agencies', 'Critical infrastructure'],
+    targetAudience: ['Large enterprises', 'Financial institutions', 'Healthcare organizations', 'Government agencies', 'Critical infrastructure']
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI Cybersecurity & Threat Intelligence',
     realService: true,
-    technology: ['Machine Learning', 'Behavioral Analysis', 'Threat Intelligence', 'SIEM Integration', 'AI Security'],
-    integrations: ['Splunk', 'IBM QRadar', 'Microsoft Sentinel', 'Custom SIEM systems', 'EDR platforms'],
-    useCases: ['Advanced threat detection', 'Incident response', 'Security operations', 'Compliance monitoring', 'Risk assessment'],
+    technology: ['Machine Learning', 'Behavioral Analysis', 'Threat Intelligence', 'SIEM Integration', 'AI Security']
+    integrations: ['Splunk', 'IBM QRadar', 'Microsoft Sentinel', 'Custom SIEM systems', 'EDR platforms']
+    useCases: ['Advanced threat detection', 'Incident response', 'Security operations', 'Compliance monitoring', 'Risk assessment']
     roi: 'Organizations achieve 500% ROI with 90% reduction in threat response time and 95% fewer successful attacks.',
-    competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Microsoft Defender'],
+    competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Microsoft Defender']
     marketSize: '$45.2B threat detection market',
     growthRate: '42% annual growth',
     contactInfo: contact,
@@ -112,23 +112,23 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Hybrid TLS implementation',
       'API encryption services',
       'Compliance certifications'
-    ],
+    ]
     popular: false,
     icon: '🔐',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-resistant-encryption-suite',
     marketPosition: 'First comprehensive quantum-resistant encryption solution. Our advantage: Multiple post-quantum algorithms with hybrid approach for maximum security.',
-    targetAudience: ['Government agencies', 'Financial institutions', 'Healthcare organizations', 'Defense contractors', 'Critical infrastructure'],
+    targetAudience: ['Government agencies', 'Financial institutions', 'Healthcare organizations', 'Defense contractors', 'Critical infrastructure']
     trialDays: 45,
     setupTime: '4-6 weeks',
     category: 'Quantum-Safe Cryptography & Encryption',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Lattice-based Encryption', 'Code-based Cryptography', 'Quantum Key Distribution', 'Hybrid Encryption'],
-    integrations: ['TLS/SSL libraries', 'VPN solutions', 'Database encryption', 'File encryption', 'API security'],
-    useCases: ['Government communications', 'Financial transactions', 'Healthcare data protection', 'Military communications', 'Critical infrastructure security'],
+    technology: ['Post-Quantum Cryptography', 'Lattice-based Encryption', 'Code-based Cryptography', 'Quantum Key Distribution', 'Hybrid Encryption']
+    integrations: ['TLS/SSL libraries', 'VPN solutions', 'Database encryption', 'File encryption', 'API security']
+    useCases: ['Government communications', 'Financial transactions', 'Healthcare data protection', 'Military communications', 'Critical infrastructure security']
     roi: 'Organizations secure 100% future-proof encryption with compliance to emerging quantum-resistant standards.',
-    competitors: ['ISARA Corporation', 'PQShield', 'Cryptosense', 'Custom solutions'],
+    competitors: ['ISARA Corporation', 'PQShield', 'Cryptosense', 'Custom solutions']
     marketSize: '$8.7B quantum-resistant cryptography market',
     growthRate: '65% annual growth',
     contactInfo: contact,
@@ -158,23 +158,23 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Application security',
       'Data protection',
       'Compliance monitoring'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/zero-trust-security-framework',
     marketPosition: 'Comprehensive zero trust implementation platform. Our advantage: End-to-end zero trust with advanced identity verification and continuous monitoring.',
-    targetAudience: ['Large enterprises', 'Government agencies', 'Healthcare organizations', 'Financial services', 'Educational institutions'],
+    targetAudience: ['Large enterprises', 'Government agencies', 'Healthcare organizations', 'Financial services', 'Educational institutions']
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Zero Trust Security & Identity Management',
     realService: true,
-    technology: ['Identity Management', 'Network Segmentation', 'Multi-Factor Authentication', 'Continuous Monitoring', 'Zero Trust Architecture'],
-    integrations: ['Active Directory', 'Okta', 'Azure AD', 'Cisco', 'Palo Alto Networks', 'Custom systems'],
-    useCases: ['Enterprise security', 'Government security', 'Healthcare compliance', 'Financial security', 'Remote work security'],
+    technology: ['Identity Management', 'Network Segmentation', 'Multi-Factor Authentication', 'Continuous Monitoring', 'Zero Trust Architecture']
+    integrations: ['Active Directory', 'Okta', 'Azure AD', 'Cisco', 'Palo Alto Networks', 'Custom systems']
+    useCases: ['Enterprise security', 'Government security', 'Healthcare compliance', 'Financial security', 'Remote work security']
     roi: 'Organizations achieve 400% ROI with 85% reduction in security incidents and 90% improvement in compliance scores.',
-    competitors: ['Okta', 'Ping Identity', 'ForgeRock', 'Microsoft Zero Trust', 'Google BeyondCorp'],
+    competitors: ['Okta', 'Ping Identity', 'ForgeRock', 'Microsoft Zero Trust', 'Google BeyondCorp']
     marketSize: '$38.9B zero trust security market',
     growthRate: '38% annual growth',
     contactInfo: contact,
@@ -204,23 +204,23 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Compliance reporting',
       'Mobile SOC access',
       'Expert security team'
-    ],
+    ]
     popular: true,
     icon: '🏢',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-powered-security-operations-center',
     marketPosition: 'Leading AI-powered SOC solution. Our advantage: 24/7 intelligent monitoring with automated response and expert security team support.',
-    targetAudience: ['Large enterprises', 'Critical infrastructure', 'Government agencies', 'Healthcare systems', 'Financial institutions'],
+    targetAudience: ['Large enterprises', 'Critical infrastructure', 'Government agencies', 'Healthcare systems', 'Financial institutions']
     trialDays: 45,
     setupTime: '4-6 weeks',
     category: 'Security Operations & Incident Response',
     realService: true,
-    technology: ['AI/ML', 'Security Analytics', 'Threat Intelligence', 'Incident Response', 'Security Orchestration'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Firewall systems', 'Identity management', 'Custom security tools'],
-    useCases: ['24/7 security monitoring', 'Incident response', 'Threat hunting', 'Compliance monitoring', 'Security analytics'],
+    technology: ['AI/ML', 'Security Analytics', 'Threat Intelligence', 'Incident Response', 'Security Orchestration']
+    integrations: ['SIEM systems', 'EDR platforms', 'Firewall systems', 'Identity management', 'Custom security tools']
+    useCases: ['24/7 security monitoring', 'Incident response', 'Threat hunting', 'Compliance monitoring', 'Security analytics']
     roi: 'Organizations achieve 600% ROI with 95% reduction in incident response time and 90% fewer security breaches.',
-    competitors: ['IBM Security', 'Microsoft Security', 'Palo Alto Networks', 'CrowdStrike', 'Custom SOCs'],
+    competitors: ['IBM Security', 'Microsoft Security', 'Palo Alto Networks', 'CrowdStrike', 'Custom SOCs']
     marketSize: '$52.1B security operations market',
     growthRate: '45% annual growth',
     contactInfo: contact,
@@ -250,23 +250,23 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Continuous monitoring',
       'API security testing',
       'Penetration testing'
-    ],
+    ]
     popular: false,
     icon: '⛓️',
     color: 'from-yellow-600 to-orange-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/blockchain-security-auditor',
     marketPosition: 'Leading blockchain security auditing platform. Our advantage: Comprehensive smart contract analysis with automated and manual review capabilities.',
-    targetAudience: ['Blockchain companies', 'DeFi protocols', 'NFT platforms', 'Cryptocurrency exchanges', 'Web3 startups'],
+    targetAudience: ['Blockchain companies', 'DeFi protocols', 'NFT platforms', 'Cryptocurrency exchanges', 'Web3 startups']
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Blockchain Security & Smart Contract Auditing',
     realService: true,
-    technology: ['Smart Contract Analysis', 'Blockchain Security', 'Automated Testing', 'Code Review', 'Vulnerability Assessment'],
-    integrations: ['Ethereum', 'Solana', 'Polygon', 'Binance Smart Chain', 'Custom blockchains'],
-    useCases: ['Smart contract auditing', 'DeFi security', 'NFT platform security', 'Exchange security', 'Web3 application security'],
+    technology: ['Smart Contract Analysis', 'Blockchain Security', 'Automated Testing', 'Code Review', 'Vulnerability Assessment']
+    integrations: ['Ethereum', 'Solana', 'Polygon', 'Binance Smart Chain', 'Custom blockchains']
+    useCases: ['Smart contract auditing', 'DeFi security', 'NFT platform security', 'Exchange security', 'Web3 application security']
     roi: 'Companies achieve 300% ROI with 95% reduction in smart contract vulnerabilities and 100% compliance with security standards.',
-    competitors: ['Consensys Diligence', 'Trail of Bits', 'OpenZeppelin', 'Quantstamp', 'Certik'],
+    competitors: ['Consensys Diligence', 'Trail of Bits', 'OpenZeppelin', 'Quantstamp', 'Certik']
     marketSize: '$12.8B blockchain security market',
     growthRate: '55% annual growth',
     contactInfo: contact,
@@ -296,23 +296,23 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       'Real-time alerts',
       'Mobile app access',
       'API security'
-    ],
+    ]
     popular: false,
     icon: '📱',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/iot-security-orchestrator',
     marketPosition: 'Leading IoT security platform. Our advantage: Comprehensive device protection with behavioral monitoring and automated threat response.',
-    targetAudience: ['Manufacturing companies', 'Smart cities', 'Healthcare IoT', 'Connected homes', 'Industrial IoT'],
+    targetAudience: ['Manufacturing companies', 'Smart cities', 'Healthcare IoT', 'Connected homes', 'Industrial IoT']
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'IoT Security & Device Protection',
     realService: true,
-    technology: ['IoT Security', 'Device Authentication', 'Network Security', 'Behavioral Analysis', 'Threat Detection'],
-    integrations: ['IoT platforms', 'Network devices', 'Cloud services', 'Security tools', 'Custom systems'],
-    useCases: ['Smart manufacturing', 'Connected healthcare', 'Smart city security', 'Industrial IoT', 'Connected home security'],
+    technology: ['IoT Security', 'Device Authentication', 'Network Security', 'Behavioral Analysis', 'Threat Detection']
+    integrations: ['IoT platforms', 'Network devices', 'Cloud services', 'Security tools', 'Custom systems']
+    useCases: ['Smart manufacturing', 'Connected healthcare', 'Smart city security', 'Industrial IoT', 'Connected home security']
     roi: 'Organizations achieve 250% ROI with 80% reduction in IoT security incidents and 90% improvement in device compliance.',
-    competitors: ['Armis', 'Forescout', 'Palo Alto Networks IoT', 'Microsoft IoT Security', 'Custom solutions'],
+    competitors: ['Armis', 'Forescout', 'Palo Alto Networks IoT', 'Microsoft IoT Security', 'Custom solutions']
     marketSize: '$18.9B IoT security market',
     growthRate: '42% annual growth',
     contactInfo: contact,

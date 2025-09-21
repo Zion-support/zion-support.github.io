@@ -59,7 +59,7 @@ export const advancedITServices: AdvancedITService[] = [
       'Quantum API access',
       'Performance monitoring',
       '24/7 quantum support'
-    ],
+    ]
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-purple-700',
@@ -71,11 +71,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '1 month',
     category: 'Quantum Cloud Computing',
     realService: true,
-    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Algorithms', 'Machine Learning', 'Real-time Processing', 'Enterprise Security'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Enterprise systems', 'Research tools', 'Financial platforms'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Logistics optimization', 'AI training', 'Cryptography', 'Research simulation'],
+    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Algorithms', 'Machine Learning', 'Real-time Processing', 'Enterprise Security']
+    integrations: ['AWS', 'Azure', 'Google Cloud', 'Enterprise systems', 'Research tools', 'Financial platforms']
+    useCases: ['Drug discovery', 'Financial modeling', 'Logistics optimization', 'AI training', 'Cryptography', 'Research simulation']
     roi: '1500% ROI within 18 months. Solved complex problems in hours that would take classical computers years.',
-    competitors: ['IBM Quantum', 'AWS Braket', 'Google Quantum', 'Microsoft Azure Quantum'],
+    competitors: ['IBM Quantum', 'AWS Braket', 'Google Quantum', 'Microsoft Azure Quantum']
     marketSize: '$1.2B quantum computing market',
     growthRate: '500% annual growth',
     variant: 'quantum-holographic-advanced',
@@ -112,7 +112,7 @@ export const advancedITServices: AdvancedITService[] = [
       'Team collaboration',
       'Analytics dashboard',
       'API for integration'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-green-600 to-blue-700',
@@ -124,11 +124,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '1 week',
     category: 'DevOps & CI/CD',
     realService: true,
-    technology: ['Machine Learning', 'DevOps Automation', 'CI/CD Pipelines', 'Code Analysis', 'Testing Automation', 'Performance Monitoring'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'AWS', 'Azure', 'Google Cloud', 'Slack', 'Jira'],
-    useCases: ['Software development', 'Continuous integration', 'Automated testing', 'Deployment automation', 'Performance monitoring', 'Security scanning'],
+    technology: ['Machine Learning', 'DevOps Automation', 'CI/CD Pipelines', 'Code Analysis', 'Testing Automation', 'Performance Monitoring']
+    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'AWS', 'Azure', 'Google Cloud', 'Slack', 'Jira']
+    useCases: ['Software development', 'Continuous integration', 'Automated testing', 'Deployment automation', 'Performance monitoring', 'Security scanning']
     roi: '400% ROI within 6 months. Reduced deployment time by 80% and improved code quality by 60%.',
-    competitors: ['GitLab', 'GitHub', 'Jenkins', 'CircleCI'],
+    competitors: ['GitLab', 'GitHub', 'Jenkins', 'CircleCI']
     marketSize: '$8B DevOps market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -165,7 +165,7 @@ export const advancedITServices: AdvancedITService[] = [
       'Scalable infrastructure',
       'Performance monitoring',
       '24/7 support'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-purple-600 to-pink-700',
@@ -177,11 +177,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '2 weeks',
     category: 'Data Analytics & Business Intelligence',
     realService: true,
-    technology: ['Real-time Processing', 'Streaming Analytics', 'Machine Learning', 'Data Visualization', 'Predictive Modeling', 'Scalable Infrastructure'],
-    integrations: ['Databases', 'Data warehouses', 'Cloud platforms', 'Business tools', 'Analytics tools', 'Reporting systems'],
-    useCases: ['Real-time analytics', 'Business intelligence', 'Predictive modeling', 'Data visualization', 'Performance monitoring', 'Customer insights'],
+    technology: ['Real-time Processing', 'Streaming Analytics', 'Machine Learning', 'Data Visualization', 'Predictive Modeling', 'Scalable Infrastructure']
+    integrations: ['Databases', 'Data warehouses', 'Cloud platforms', 'Business tools', 'Analytics tools', 'Reporting systems']
+    useCases: ['Real-time analytics', 'Business intelligence', 'Predictive modeling', 'Data visualization', 'Performance monitoring', 'Customer insights']
     roi: '600% ROI within 12 months. Reduced data processing time by 90% and improved decision-making by 70%.',
-    competitors: ['Databricks', 'Snowflake', 'Tableau', 'Power BI'],
+    competitors: ['Databricks', 'Snowflake', 'Tableau', 'Power BI']
     marketSize: '$25B data analytics market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -218,7 +218,7 @@ export const advancedITServices: AdvancedITService[] = [
       'Real-time monitoring',
       'API for integration',
       '24/7 security support'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-orange-700',
@@ -230,11 +230,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '2 weeks',
     category: 'Cybersecurity & Threat Intelligence',
     realService: true,
-    technology: ['Machine Learning', 'Threat Intelligence', 'Predictive Analytics', 'Automated Response', 'Security Analytics', 'Real-time Monitoring'],
-    integrations: ['SIEM systems', 'Firewalls', 'Security tools', 'Compliance platforms', 'Incident response', 'Threat feeds'],
-    useCases: ['Threat detection', 'Incident response', 'Vulnerability assessment', 'Compliance automation', 'Security monitoring', 'Risk assessment'],
+    technology: ['Machine Learning', 'Threat Intelligence', 'Predictive Analytics', 'Automated Response', 'Security Analytics', 'Real-time Monitoring']
+    integrations: ['SIEM systems', 'Firewalls', 'Security tools', 'Compliance platforms', 'Incident response', 'Threat feeds']
+    useCases: ['Threat detection', 'Incident response', 'Vulnerability assessment', 'Compliance automation', 'Security monitoring', 'Risk assessment']
     roi: '800% ROI within 12 months. Prevented 99.5% of cyber attacks and reduced incident response time by 85%.',
-    competitors: ['CrowdStrike', 'SentinelOne', 'Palo Alto Networks', 'Fortinet'],
+    competitors: ['CrowdStrike', 'SentinelOne', 'Palo Alto Networks', 'Fortinet']
     marketSize: '$200B cybersecurity market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -271,7 +271,7 @@ export const advancedITServices: AdvancedITService[] = [
       'API for integration',
       'Performance analytics',
       '24/7 IoT support'
-    ],
+    ]
     popular: true,
     icon: '🔌',
     color: 'from-teal-600 to-cyan-700',
@@ -283,11 +283,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '1 month',
     category: 'Internet of Things & Smart Cities',
     realService: true,
-    technology: ['Internet of Things', 'Machine Learning', 'Data Analytics', 'Predictive Maintenance', 'Real-time Monitoring', 'Scalable Infrastructure'],
-    integrations: ['IoT devices', 'Sensors', 'Cloud platforms', 'Business systems', 'Analytics tools', 'Security systems'],
-    useCases: ['Smart manufacturing', 'Energy management', 'Transportation optimization', 'Smart city management', 'Healthcare monitoring', 'Retail analytics'],
+    technology: ['Internet of Things', 'Machine Learning', 'Data Analytics', 'Predictive Maintenance', 'Real-time Monitoring', 'Scalable Infrastructure']
+    integrations: ['IoT devices', 'Sensors', 'Cloud platforms', 'Business systems', 'Analytics tools', 'Security systems']
+    useCases: ['Smart manufacturing', 'Energy management', 'Transportation optimization', 'Smart city management', 'Healthcare monitoring', 'Retail analytics']
     roi: '700% ROI within 18 months. Reduced maintenance costs by 60% and improved operational efficiency by 80%.',
-    competitors: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT'],
+    competitors: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT']
     marketSize: '$1.5T IoT market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -324,7 +324,7 @@ export const advancedITServices: AdvancedITService[] = [
       'API for integration',
       'Developer tools',
       '24/7 blockchain support'
-    ],
+    ]
     popular: true,
     icon: '⛓️',
     color: 'from-yellow-600 to-orange-700',
@@ -336,11 +336,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '1 month',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['Blockchain', 'Smart Contracts', 'Decentralized Applications', 'Enterprise Security', 'Scalable Infrastructure', 'Performance Analytics'],
-    integrations: ['Enterprise systems', 'Cloud platforms', 'Financial systems', 'Supply chain tools', 'Healthcare systems', 'Government platforms'],
-    useCases: ['Supply chain management', 'Financial transactions', 'Healthcare records', 'Government services', 'Real estate transactions', 'Energy trading'],
+    technology: ['Blockchain', 'Smart Contracts', 'Decentralized Applications', 'Enterprise Security', 'Scalable Infrastructure', 'Performance Analytics']
+    integrations: ['Enterprise systems', 'Cloud platforms', 'Financial systems', 'Supply chain tools', 'Healthcare systems', 'Government platforms']
+    useCases: ['Supply chain management', 'Financial transactions', 'Healthcare records', 'Government services', 'Real estate transactions', 'Energy trading']
     roi: '900% ROI within 18 months. Reduced transaction costs by 80% and improved transparency by 100%.',
-    competitors: ['IBM Blockchain', 'AWS Managed Blockchain', 'Microsoft Azure Blockchain', 'Oracle Blockchain'],
+    competitors: ['IBM Blockchain', 'AWS Managed Blockchain', 'Microsoft Azure Blockchain', 'Oracle Blockchain']
     marketSize: '$19B blockchain market',
     growthRate: '400% annual growth',
     variant: 'quantum-cyberpunk',
@@ -377,7 +377,7 @@ export const advancedITServices: AdvancedITService[] = [
       'API for integration',
       'Compliance tools',
       '24/7 API support'
-    ],
+    ]
     popular: true,
     icon: '🔗',
     color: 'from-indigo-600 to-purple-700',
@@ -389,11 +389,11 @@ export const advancedITServices: AdvancedITService[] = [
     setupTime: '1 week',
     category: 'API Management & Integration',
     realService: true,
-    technology: ['API Management', 'Machine Learning', 'Performance Optimization', 'Security Automation', 'Intelligent Routing', 'Real-time Analytics'],
-    integrations: ['API gateways', 'Cloud platforms', 'Development tools', 'Monitoring systems', 'Security tools', 'Analytics platforms'],
-    useCases: ['API optimization', 'Performance monitoring', 'Security management', 'Traffic routing', 'Developer experience', 'Compliance automation'],
+    technology: ['API Management', 'Machine Learning', 'Performance Optimization', 'Security Automation', 'Intelligent Routing', 'Real-time Analytics']
+    integrations: ['API gateways', 'Cloud platforms', 'Development tools', 'Monitoring systems', 'Security tools', 'Analytics platforms']
+    useCases: ['API optimization', 'Performance monitoring', 'Security management', 'Traffic routing', 'Developer experience', 'Compliance automation']
     roi: '500% ROI within 12 months. Improved API performance by 70% and reduced security incidents by 90%.',
-    competitors: ['Kong', 'Apigee', 'AWS API Gateway', 'Azure API Management'],
+    competitors: ['Kong', 'Apigee', 'AWS API Gateway', 'Azure API Management']
     marketSize: '$4B API management market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',

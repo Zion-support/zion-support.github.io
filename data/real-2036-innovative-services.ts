@@ -10,7 +10,7 @@ export const real2036InnovativeServices = [
       'Autonomous workflow optimizationPredictive process analytics',
       'Self-healing automationIntelligent decision engine',
       'Continuous learning algorithmsReal-time performance monitoring'
-    ],
+    ]
     popular: true,
     category: 'AI & Automation',
     icon: '🤖',
@@ -18,7 +18,7 @@ export const real2036InnovativeServices = [
     benefits: [
       'Reduce manual work by 85%Improve process efficiency by 60%',
       '24/7 autonomous operationScalable across all departments'
-    ],
+    ]
     useCases: [
       'Customer service automationSupply chain optimization',
       'Financial process automationHR workflow management'
@@ -35,7 +35,7 @@ export const real2036InnovativeServices = [
       'Quantum-AI hybrid algorithmsQuantum machine learning',
       'Complex optimization solvingQuantum neural networks',
       'Real-time quantum simulationHybrid classical-quantum processing'
-    ],
+    ]
     popular: true,
     category: 'Quantum & AI',
     icon: '⚛️🧠',
@@ -43,7 +43,7 @@ export const real2036InnovativeServices = [
     benefits: [
       '1000x faster computation for complex problemsUnprecedented AI model training speed',
       'Breakthrough optimization capabilitiesFuture-proof quantum advantage'
-    ],
+    ]
     useCases: [
       'Drug discovery and molecular modelingFinancial portfolio optimization',
       'Climate change modelingAdvanced AI model training'
@@ -60,7 +60,7 @@ export const real2036InnovativeServices = [
       'Autonomous space navigationAI-powered resource detection',
       'Robotic mining operationsReal-time space analytics',
       'Resource optimization algorithmsSpace mission planning'
-    ],
+    ]
     popular: false,
     category: 'Space Technology',
     icon: '🚀⛏️',
@@ -68,7 +68,7 @@ export const real2036InnovativeServices = [
     benefits: [
       'Access to unlimited space resourcesRevolutionary resource extraction',
       'Space exploration advancementSustainable resource acquisition'
-    ],
+    ]
     useCases: [
       'Asteroid mining operationsLunar resource extraction',
       'Space station resource managementInterplanetary resource planning'
@@ -85,7 +85,7 @@ export const real2036InnovativeServices = [
       'AI-powered 3D content generationVirtual world creation tools',
       'Intelligent NPC developmentVirtual economy management',
       'Cross-platform compatibilityReal-time collaboration tools'
-    ],
+    ]
     popular: true,
     category: 'Metaverse & AI',
     icon: '🌐🎮',
@@ -93,7 +93,7 @@ export const real2036InnovativeServices = [
     benefits: [
       '10x faster metaverse developmentAI-generated immersive content',
       'Scalable virtual world creationProfessional-grade tools'
-    ],
+    ]
     useCases: [
       'Virtual event platformsEducational metaverses',
       'Virtual retail experiencesSocial virtual worlds'
@@ -110,7 +110,7 @@ export const real2036InnovativeServices = [
       'Non-invasive neural sensorsAI signal processing',
       'Real-time brain-computer communicationAccessibility applications',
       'Gaming integrationMedical research tools'
-    ],
+    ]
     popular: false,
     category: 'Neural Technology',
     icon: '🧠💻',
@@ -118,7 +118,7 @@ export const real2036InnovativeServices = [
     benefits: [
       'Revolutionary human-computer interactionAccessibility breakthrough',
       'Medical research advancementFuture of computing interface'
-    ],
+    ]
     useCases: [
       'Assistive technologyGaming and entertainment',
       'Medical researchHuman augmentation'
@@ -135,7 +135,7 @@ export const real2036InnovativeServices = [
       'Quantum bioinformatics algorithmsGenetic data processing',
       'Drug discovery optimizationBiological simulation tools',
       'Quantum genetic analysisBio-quantum hybrid computing'
-    ],
+    ]
     popular: true,
     category: 'Quantum & Biology',
     icon: '🧬⚛️',
@@ -143,7 +143,7 @@ export const real2036InnovativeServices = [
     benefits: [
       '100x faster genetic analysisRevolutionary drug discovery',
       'Advanced bioinformaticsQuantum advantage in biology'
-    ],
+    ]
     useCases: [
       'Pharmaceutical researchGenetic medicine',
       'Biological researchPersonalized medicine'
@@ -160,7 +160,7 @@ export const real2036InnovativeServices = [
       'Consciousness simulation engineEthical AI frameworks',
       'Consciousness evolution trackingAI personality development',
       'Ethical decision algorithmsConsciousness metrics'
-    ],
+    ]
     popular: false,
     category: 'AI Consciousness',
     icon: '🌟🤖',
@@ -168,7 +168,7 @@ export const real2036InnovativeServices = [
     benefits: [
       'Pioneering AI consciousness researchEthical AI development',
       'Breakthrough in AGIFuture of artificial intelligence'
-    ],
+    ]
     useCases: [
       'AI research and developmentEthical AI training',
       'Consciousness studiesAGI development'
@@ -185,7 +185,7 @@ export const real2036InnovativeServices = [
       'Quantum key distributionQuantum-resistant cryptography',
       'Quantum network securityUnbreakable encryption',
       'Quantum communication protocolsReal-time security monitoring'
-    ],
+    ]
     popular: true,
     category: 'Quantum Security',
     icon: '🔐⚛️',
@@ -193,7 +193,7 @@ export const real2036InnovativeServices = [
     benefits: [
       'Unbreakable securityFuture-proof cryptography',
       'Quantum network protectionMilitary-grade security'
-    ],
+    ]
     useCases: [
       'Government communicationsFinancial institutions',
       'Healthcare data protectionCritical infrastructure'
@@ -210,7 +210,7 @@ export const real2036InnovativeServices = [
       'AI-powered learning algorithmsComputer vision integration',
       'Natural language processingAutonomous navigation',
       'Task optimizationMulti-robot coordination'
-    ],
+    ]
     popular: true,
     category: 'AI & Robotics',
     icon: '🤖🦾',
@@ -218,7 +218,7 @@ export const real2036InnovativeServices = [
     benefits: [
       'Fully autonomous operationContinuous learning and improvement',
       'Scalable robotic workforce24/7 operational capability'
-    ],
+    ]
     useCases: [
       'Manufacturing automationWarehouse operations',
       'Service roboticsAgricultural automation'
@@ -235,7 +235,7 @@ export const real2036InnovativeServices = [
       'Quantum market analysisPortfolio optimization',
       'Risk assessment algorithmsReal-time trading signals',
       'Quantum risk managementHigh-frequency trading optimization'
-    ],
+    ]
     popular: true,
     category: 'Quantum Finance',
     icon: '💰⚛️',
@@ -243,10 +243,10 @@ export const real2036InnovativeServices = [
     benefits: [
       'Quantum advantage in tradingOptimal portfolio performance',
       'Advanced risk managementCompetitive trading edge'
-    ],
+    ]
     useCases: [
       'Hedge fund operationsInvestment banking',
       'Portfolio managementRisk assessment'
     ]
   }
-],
+]

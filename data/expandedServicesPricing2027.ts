@@ -11,9 +11,9 @@ export interface ExpandedServicePricing {
       price: number,
       currency: string,
       billingCycle: string,
-      features: string[],
-      limitations: string[],
-      bestFor: string[],
+      features: string[]
+      limitations: string[]
+      bestFor: string[]
       setupFee: number,
       contractTerm: string
     },
@@ -21,9 +21,9 @@ export interface ExpandedServicePricing {
       price: number,
       currency: string,
       billingCycle: string,
-      features: string[],
-      limitations: string[],
-      bestFor: string[],
+      features: string[]
+      limitations: string[]
+      bestFor: string[]
       setupFee: number,
       contractTerm: string
     },
@@ -31,9 +31,9 @@ export interface ExpandedServicePricing {
       price: number,
       currency: string,
       billingCycle: string,
-      features: string[],
-      limitations: string[],
-      bestFor: string[],
+      features: string[]
+      limitations: string[]
+      bestFor: string[]
       setupFee: number,
       contractTerm: string
     },
@@ -41,15 +41,15 @@ export interface ExpandedServicePricing {
       priceRange: string,
       currency: string,
       billingCycle: string,
-      features: string[],
-      limitations: string[],
-      bestFor: string[],
+      features: string[]
+      limitations: string[]
+      bestFor: string[]
       setupFee: number,
       contractTerm: string
     },
   },
   marketComparison: {
-    competitors: string[],
+    competitors: string[]
     marketPosition: 'leader' | 'challenger' | 'niche' | 'emerging',
     priceAdvantage: string,
     valueProposition: string
@@ -57,8 +57,8 @@ export interface ExpandedServicePricing {
   roiAnalysis: {
     paybackPeriod: string,
     annualROI: string,
-    costSavings: string[],
-    revenueImpact: string[],
+    costSavings: string[]
+    revenueImpact: string[]
     riskMitigation: string[]
   },
   implementation: {
@@ -92,15 +92,15 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Quantum-resistant encryptionReal-time threat detection',
           'Basic incident responseStandard compliance reporting',
           'Email supportUp to 100 endpoints'
-        ],
+        ]
         limitations: [
           'Limited threat intelligence feedsBasic analytics dashboard',
           'Standard response time (4 hours)Limited customization options'
-        ],
+        ]
         bestFor: [
           'Mid-size enterprisesFinancial institutions',
           'Healthcare organizationsGovernment agencies'
-        ],
+        ]
         setupFee: 5000,
         contractTerm: '12 months'
       },
@@ -113,15 +113,15 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Automated incident responseEnhanced compliance automation',
           'Priority support (2 hour response)Up to 1000 endpoints',
           'Custom threat intelligence feedsAdvanced analytics dashboard'
-        ],
+        ]
         limitations: [
           'Limited to single regionStandard SLA (99.9%)',
           'Basic API access'
-        ],
+        ]
         bestFor: [
           'Large enterprisesMulti-location businesses',
           'High-security environmentsCompliance-focused organizations'
-        ],
+        ]
         setupFee: 10000,
         contractTerm: '12 months'
       },
@@ -135,14 +135,14 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           '24/7 dedicated supportPremium SLA (99.99%)',
           'Full API accessCustom integrations',
           'White-label optionsDedicated security team'
-        ],
+        ]
         limitations: [
           'Requires enterprise infrastructureCustom implementation timeline'
-        ],
+        ]
         bestFor: [
           'Fortune 500 companiesGlobal enterprises',
           'Critical infrastructureDefense contractors'
-        ],
+        ]
         setupFee: 25000,
         contractTerm: '24 months'
       },
@@ -154,20 +154,20 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'All Enterprise featuresCustom development',
           'On-premise deploymentIndustry-specific compliance',
           'Dedicated account managerCustom SLA requirements'
-        ],
+        ]
         limitations: [
           'Requires custom developmentExtended implementation time'
-        ],
+        ]
         bestFor: [
           'Government agenciesMilitary organizations',
           'Highly regulated industriesCustom security requirements'
-        ],
+        ]
         setupFee: 50000,
         contractTerm: 'negotiable'
       }
     },
     marketComparison: {
-      competitors: ['CrowdStrikeSentinelOne', 'Palo Alto Networks'],
+      competitors: ['CrowdStrikeSentinelOne', 'Palo Alto Networks']
       marketPosition: 'leader',
       priceAdvantage: '20-30% more cost-effective than competitors',
       valueProposition: 'Quantum-resistant security with AI-powered threat detection'
@@ -178,11 +178,11 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
       costSavings: [
         'Reduced security incidents by 90%Automated compliance saves 40 hours/month',
         'Lower insurance premiums due to enhanced security'
-      ],
+      ]
       revenueImpact: [
         'Increased customer trust and retentionFaster security clearance for new business',
         'Reduced downtime from security incidents'
-      ],
+      ]
       riskMitigation: [
         'Prevents data breaches and associated costsEnsures regulatory compliance',
         'Protects brand reputation'
@@ -219,15 +219,15 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Multi-framework compliance monitoringBasic compliance reporting',
           'Policy enforcementRisk assessment',
           'Email supportUp to 50 users'
-        ],
+        ]
         limitations: [
           'Limited framework supportBasic automation',
           'Standard templates only'
-        ],
+        ]
         bestFor: [
           'Small to mid-size businessesStartups',
           'Basic compliance needs'
-        ],
+        ]
         setupFee: 2000,
         contractTerm: '12 months'
       },
@@ -240,14 +240,14 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Custom compliance workflowsReal-time monitoring',
           'Priority supportUp to 200 users',
           'Advanced reportingIntegration capabilities'
-        ],
+        ]
         limitations: [
           'Limited to major compliance frameworksStandard SLA'
-        ],
+        ]
         bestFor: [
           'Mid-size enterprisesHealthcare organizations',
           'Financial servicesGrowing businesses'
-        ],
+        ]
         setupFee: 5000,
         contractTerm: '12 months'
       },
@@ -260,14 +260,14 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'All compliance frameworksCustom automation',
           '24/7 supportPremium SLA',
           'White-label optionsCustom integrations'
-        ],
+        ]
         limitations: [
           'Requires enterprise setup'
-        ],
+        ]
         bestFor: [
           'Large enterprisesMulti-national companies',
           'Highly regulated industries'
-        ],
+        ]
         setupFee: 10000,
         contractTerm: '24 months'
       },
@@ -278,20 +278,20 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         features: [
           'All Enterprise featuresCustom development',
           'Industry-specific modulesOn-premise deployment'
-        ],
+        ]
         limitations: [
           'Custom development required'
-        ],
+        ]
         bestFor: [
           'Government agenciesMilitary organizations',
           'Custom compliance requirements'
-        ],
+        ]
         setupFee: 20000,
         contractTerm: 'negotiable'
       }
     },
     marketComparison: {
-      competitors: ['OneTrustTrustArc', 'LogicGate'],
+      competitors: ['OneTrustTrustArc', 'LogicGate']
       marketPosition: 'challenger',
       priceAdvantage: '15-25% more affordable than competitors',
       valueProposition: 'AI-powered compliance automation with comprehensive framework support'
@@ -302,11 +302,11 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
       costSavings: [
         '90% reduction in compliance costsAutomated reporting saves 60 hours/month',
         'Reduced audit preparation time'
-      ],
+      ]
       revenueImpact: [
         'Faster regulatory approvalIncreased customer confidence',
         'Reduced compliance-related delays'
-      ],
+      ]
       riskMitigation: [
         'Prevents compliance violationsAutomated regulatory updates',
         'Reduced audit risks'
@@ -329,7 +329,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-],
+]
 
 // 2. DATA ANALYTICS SERVICES PRICING
 export const dataAnalyticsPricing: ExpandedServicePricing[] = [
@@ -347,15 +347,15 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Basic predictive modelingStandard dashboards',
           'Data visualization toolsEmail support',
           'Up to 100GB data processingBasic API access'
-        ],
+        ]
         limitations: [
           'Limited model typesBasic algorithms only',
           'Standard response time'
-        ],
+        ]
         bestFor: [
           'Small businessesStartups',
           'Basic analytics needs'
-        ],
+        ]
         setupFee: 3000,
         contractTerm: '12 months'
       },
@@ -368,14 +368,14 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Custom dashboardsReal-time analytics',
           'Priority supportUp to 1TB data processing',
           'Advanced API accessCustom integrations'
-        ],
+        ]
         limitations: [
           'Limited to standard ML algorithmsStandard SLA'
-        ],
+        ]
         bestFor: [
           'Mid-size companiesE-commerce businesses',
           'Manufacturing firms'
-        ],
+        ]
         setupFee: 6000,
         contractTerm: '12 months'
       },
@@ -388,14 +388,14 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
           'Custom ML modelsAdvanced AI algorithms',
           '24/7 supportPremium SLA',
           'White-label optionsCustom development'
-        ],
+        ]
         limitations: [
           'Requires enterprise infrastructure'
-        ],
+        ]
         bestFor: [
           'Large enterprisesData-driven companies',
           'Research institutions'
-        ],
+        ]
         setupFee: 15000,
         contractTerm: '24 months'
       },
@@ -406,20 +406,20 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         features: [
           'All Enterprise featuresCustom AI development',
           'Industry-specific modelsOn-premise deployment'
-        ],
+        ]
         limitations: [
           'Custom development required'
-        ],
+        ]
         bestFor: [
           'Research organizationsGovernment agencies',
           'Custom AI requirements'
-        ],
+        ]
         setupFee: 30000,
         contractTerm: 'negotiable'
       }
     },
     marketComparison: {
-      competitors: ['TableauPower BI', 'QlikLooker'],
+      competitors: ['TableauPower BI', 'QlikLooker']
       marketPosition: 'challenger',
       priceAdvantage: '25-35% more cost-effective than competitors',
       valueProposition: 'AI-powered predictive analytics with advanced machine learning capabilities'
@@ -430,11 +430,11 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
       costSavings: [
         'Reduced manual analysis by 70%Faster decision making',
         'Optimized resource allocation'
-      ],
+      ]
       revenueImpact: [
         'Improved forecasting accuracyBetter customer insights',
         'Optimized pricing strategies'
-      ],
+      ]
       riskMitigation: [
         'Data-driven risk assessmentPredictive maintenance',
         'Proactive problem identification'
@@ -457,7 +457,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-],
+]
 
 // 3. CLOUD & DEVOPS SERVICES PRICING
 export const cloudDevOpsPricing: ExpandedServicePricing[] = [
@@ -475,15 +475,15 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Multi-cloud monitoringBasic cost optimization',
           'Standard dashboardsEmail support',
           'Up to 3 cloud providersBasic automation'
-        ],
+        ]
         limitations: [
           'Limited cloud providersBasic optimization',
           'Standard SLA'
-        ],
+        ]
         bestFor: [
           'Small to mid-size businessesMulti-cloud beginners',
           'Basic cloud management needs'
-        ],
+        ]
         setupFee: 4000,
         contractTerm: '12 months'
       },
@@ -496,14 +496,14 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Custom dashboardsPriority support',
           'Up to 5 cloud providersAdvanced automation',
           'Performance optimizationCustom integrations'
-        ],
+        ]
         limitations: [
           'Limited to major cloud providersStandard SLA'
-        ],
+        ]
         bestFor: [
           'Mid-size enterprisesGrowing cloud environments',
           'Cost optimization focus'
-        ],
+        ]
         setupFee: 8000,
         contractTerm: '12 months'
       },
@@ -516,14 +516,14 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
           'Advanced optimization24/7 support',
           'Premium SLACustom development',
           'White-label optionsDedicated team'
-        ],
+        ]
         limitations: [
           'Requires enterprise setup'
-        ],
+        ]
         bestFor: [
           'Large enterprisesGlobal cloud deployments',
           'Complex multi-cloud environments'
-        ],
+        ]
         setupFee: 20000,
         contractTerm: '24 months'
       },
@@ -534,20 +534,20 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         features: [
           'All Enterprise featuresCustom cloud integrations',
           'Industry-specific modulesOn-premise deployment'
-        ],
+        ]
         limitations: [
           'Custom development required'
-        ],
+        ]
         bestFor: [
           'Government agenciesMilitary organizations',
           'Custom cloud requirements'
-        ],
+        ]
         setupFee: 40000,
         contractTerm: 'negotiable'
       }
     },
     marketComparison: {
-      competitors: ['TerraformAnsible', 'HashiCorpAWS Systems Manager'],
+      competitors: ['TerraformAnsible', 'HashiCorpAWS Systems Manager']
       marketPosition: 'challenger',
       priceAdvantage: '30-40% more cost-effective than competitors',
       valueProposition: 'Intelligent multi-cloud orchestration with AI-powered optimization'
@@ -558,11 +558,11 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
       costSavings: [
         '30-50% reduction in cloud costsAutomated optimization saves 20 hours/month',
         'Reduced vendor lock-in'
-      ],
+      ]
       revenueImpact: [
         'Faster cloud deploymentsImproved performance',
         'Better resource utilization'
-      ],
+      ]
       riskMitigation: [
         'Reduced cloud costsImproved reliability',
         'Better disaster recovery'
@@ -585,7 +585,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-],
+]
 
 // 4. IOT & EDGE COMPUTING SERVICES PRICING
 export const iotEdgePricing: ExpandedServicePricing[] = [
@@ -603,15 +603,15 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Basic equipment monitoringStandard dashboards',
           'Email alertsEmail support',
           'Up to 100 devicesBasic analytics'
-        ],
+        ]
         limitations: [
           'Limited device typesBasic monitoring only',
           'Standard response time'
-        ],
+        ]
         bestFor: [
           'Small manufacturing facilitiesBasic monitoring needs',
           'Equipment tracking'
-        ],
+        ]
         setupFee: 5000,
         contractTerm: '12 months'
       },
@@ -624,14 +624,14 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Advanced analyticsPriority support',
           'Up to 500 devicesCustom dashboards',
           'Integration capabilitiesPerformance optimization'
-        ],
+        ]
         limitations: [
           'Limited to standard industrial protocolsStandard SLA'
-        ],
+        ]
         bestFor: [
           'Mid-size manufacturingIndustrial facilities',
           'Predictive maintenance focus'
-        ],
+        ]
         setupFee: 10000,
         contractTerm: '12 months'
       },
@@ -644,14 +644,14 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
           'Advanced AI models24/7 support',
           'Premium SLACustom development',
           'White-label optionsIndustry-specific modules'
-        ],
+        ]
         limitations: [
           'Requires enterprise infrastructure'
-        ],
+        ]
         bestFor: [
           'Large manufacturing facilitiesMulti-site operations',
           'Advanced IoT requirements'
-        ],
+        ]
         setupFee: 25000,
         contractTerm: '24 months'
       },
@@ -662,20 +662,20 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         features: [
           'All Enterprise featuresCustom IoT development',
           'Industry-specific protocolsOn-premise deployment'
-        ],
+        ]
         limitations: [
           'Custom development required'
-        ],
+        ]
         bestFor: [
           'Government facilitiesMilitary installations',
           'Custom IoT requirements'
-        ],
+        ]
         setupFee: 50000,
         contractTerm: 'negotiable'
       }
     },
     marketComparison: {
-      competitors: ['PTC ThingWorxSiemens Mindsphere', 'GE PredixIBM Watson IoT'],
+      competitors: ['PTC ThingWorxSiemens Mindsphere', 'GE PredixIBM Watson IoT']
       marketPosition: 'challenger',
       priceAdvantage: '25-35% more affordable than competitors',
       valueProposition: 'AI-powered industrial IoT with predictive maintenance and optimization'
@@ -686,11 +686,11 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
       costSavings: [
         '40-60% reduction in equipment downtime20-30% energy cost savings',
         'Reduced maintenance costs'
-      ],
+      ]
       revenueImpact: [
         'Improved operational efficiencyBetter product quality',
         'Faster production cycles'
-      ],
+      ]
       riskMitigation: [
         'Preventive maintenanceReduced equipment failures',
         'Improved safety monitoring'
@@ -713,7 +713,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-],
+]
 
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING
 export const finTechPricing: ExpandedServicePricing[] = [
@@ -731,15 +731,15 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Basic quantum modelsStandard financial tools',
           'Email supportUp to 100 calculations/month',
           'Basic API accessStandard compliance'
-        ],
+        ]
         limitations: [
           'Limited quantum algorithmsBasic financial models',
           'Standard response time'
-        ],
+        ]
         bestFor: [
           'Small investment firmsStartup fintech companies',
           'Basic quantum finance needs'
-        ],
+        ]
         setupFee: 15000,
         contractTerm: '12 months'
       },
@@ -752,14 +752,14 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Custom financial modelsPriority support',
           'Up to 1000 calculations/monthAdvanced API access',
           'Custom integrationsEnhanced compliance'
-        ],
+        ]
         limitations: [
           'Limited to standard financial modelsStandard SLA'
-        ],
+        ]
         bestFor: [
           'Mid-size investment firmsHedge funds',
           'Asset management companies'
-        ],
+        ]
         setupFee: 30000,
         contractTerm: '12 months'
       },
@@ -772,14 +772,14 @@ export const finTechPricing: ExpandedServicePricing[] = [
           'Custom quantum models24/7 support',
           'Premium SLACustom development',
           'White-label optionsDedicated quantum team'
-        ],
+        ]
         limitations: [
           'Requires enterprise infrastructure'
-        ],
+        ]
         bestFor: [
           'Large investment banksMajor hedge funds',
           'Research institutions'
-        ],
+        ]
         setupFee: 75000,
         contractTerm: '24 months'
       },
@@ -790,20 +790,20 @@ export const finTechPricing: ExpandedServicePricing[] = [
         features: [
           'All Enterprise featuresCustom quantum development',
           'Industry-specific modelsOn-premise deployment'
-        ],
+        ]
         limitations: [
           'Custom development required'
-        ],
+        ]
         bestFor: [
           'Government agenciesMilitary organizations',
           'Custom quantum requirements'
-        ],
+        ]
         setupFee: 150000,
         contractTerm: 'negotiable'
       }
     },
     marketComparison: {
-      competitors: ['Bloomberg TerminalThomson Reuters', 'FactSetRefinitiv'],
+      competitors: ['Bloomberg TerminalThomson Reuters', 'FactSetRefinitiv']
       marketPosition: 'emerging',
       priceAdvantage: '40-60% more cost-effective than competitors',
       valueProposition: 'Quantum-powered financial modeling with unprecedented speed and accuracy'
@@ -814,11 +814,11 @@ export const finTechPricing: ExpandedServicePricing[] = [
       costSavings: [
         '1000x faster calculationsReduced computational costs',
         'Superior risk assessment'
-      ],
+      ]
       revenueImpact: [
         'Better investment decisionsFaster portfolio optimization',
         'Competitive advantage'
-      ],
+      ]
       riskMitigation: [
         'Superior risk modelingEnhanced fraud detection',
         'Better regulatory compliance'
@@ -841,7 +841,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-],
+]
 
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING
 export const healthcarePricing: ExpandedServicePricing[] = [
@@ -859,15 +859,15 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Basic diagnostic toolsStandard medical models',
           'Email supportUp to 50 providers',
           'Basic integrationsStandard compliance'
-        ],
+        ]
         limitations: [
           'Limited diagnostic capabilitiesBasic AI models',
           'Standard response time'
-        ],
+        ]
         bestFor: [
           'Small clinicsPrivate practices',
           'Basic diagnostic needs'
-        ],
+        ]
         setupFee: 7000,
         contractTerm: '12 months'
       },
@@ -880,14 +880,14 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Custom AI modelsPriority support',
           'Up to 200 providersAdvanced integrations',
           'Enhanced complianceCustom workflows'
-        ],
+        ]
         limitations: [
           'Limited to standard medical specialtiesStandard SLA'
-        ],
+        ]
         bestFor: [
           'Mid-size hospitalsSpecialty clinics',
           'Diagnostic centers'
-        ],
+        ]
         setupFee: 15000,
         contractTerm: '12 months'
       },
@@ -900,14 +900,14 @@ export const healthcarePricing: ExpandedServicePricing[] = [
           'Custom AI development24/7 support',
           'Premium SLACustom integrations',
           'White-label optionsDedicated medical team'
-        ],
+        ]
         limitations: [
           'Requires enterprise setup'
-        ],
+        ]
         bestFor: [
           'Large hospital systemsAcademic medical centers',
           'Research institutions'
-        ],
+        ]
         setupFee: 35000,
         contractTerm: '24 months'
       },
@@ -918,20 +918,20 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         features: [
           'All Enterprise featuresCustom medical AI',
           'Industry-specific modulesOn-premise deployment'
-        ],
+        ]
         limitations: [
           'Custom development required'
-        ],
+        ]
         bestFor: [
           'Government agenciesMilitary medical facilities',
           'Custom medical requirements'
-        ],
+        ]
         setupFee: 70000,
         contractTerm: 'negotiable'
       }
     },
     marketComparison: {
-      competitors: ['IBM Watson HealthGoogle Health', 'Microsoft HealthcarePhilips Healthcare'],
+      competitors: ['IBM Watson HealthGoogle Health', 'Microsoft HealthcarePhilips Healthcare']
       marketPosition: 'challenger',
       priceAdvantage: '30-40% more affordable than competitors',
       valueProposition: 'AI-powered diagnostic assistance with advanced medical AI capabilities'
@@ -942,11 +942,11 @@ export const healthcarePricing: ExpandedServicePricing[] = [
       costSavings: [
         'Improved diagnostic accuracyReduced diagnostic time',
         'Lower medical errors'
-      ],
+      ]
       revenueImpact: [
         'Better patient outcomesIncreased provider efficiency',
         'Faster treatment planning'
-      ],
+      ]
       riskMitigation: [
         'Reduced diagnostic errorsBetter patient safety',
         'Enhanced compliance'
@@ -969,7 +969,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-],
+]
 
 // Export all pricing data
 export const ALL_EXPANDED_SERVICES_PRICING = [
@@ -979,7 +979,7 @@ export const ALL_EXPANDED_SERVICES_PRICING = [
   ...iotEdgePricing,
   ...finTechPricing,
   ...healthcarePricing
-],
+]
 
 // Helper functions
 export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined => {

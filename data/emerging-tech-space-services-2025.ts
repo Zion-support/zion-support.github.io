@@ -6,7 +6,7 @@ export interface EmergingTechSpaceService2025 {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface EmergingTechSpaceService2025 {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
       'Mining automation systemsSupply chain optimization',
       'Risk assessment algorithmsRegulatory compliance',
       'Environmental impact monitoringROI optimization tools'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-slate-800 to-slate-900',
@@ -66,11 +66,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '4-6 weeks',
     category: 'Space Technology & Mining',
     realService: true,
-    technology: ['Quantum ComputingAI & Machine Learning', 'Space TechnologyRobotics', 'Advanced SensorsSatellite Systems'],
-    integrations: ['Satellite NetworksGround Stations', 'Mining EquipmentSupply Chain Systems', 'Financial PlatformsRegulatory Systems'],
-    useCases: ['Asteroid miningLunar resource extraction', 'Space resource mappingMining optimization', 'Supply chain managementInvestment analysis'],
+    technology: ['Quantum ComputingAI & Machine Learning', 'Space TechnologyRobotics', 'Advanced SensorsSatellite Systems']
+    integrations: ['Satellite NetworksGround Stations', 'Mining EquipmentSupply Chain Systems', 'Financial PlatformsRegulatory Systems']
+    useCases: ['Asteroid miningLunar resource extraction', 'Space resource mappingMining optimization', 'Supply chain managementInvestment analysis']
     roi: 'Space mining companies report 2000% ROI through quantum-powered resource detection. Investment firms see 1500% ROI in space ventures.',
-    competitors: ['No direct competitorsSpace mining tools: $50,000+/month', 'Satellite services: $25,000+/month'],
+    competitors: ['No direct competitorsSpace mining tools: $50,000+/month', 'Satellite services: $25,000+/month']
     marketSize: '$3.8B space mining market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -100,7 +100,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
       'Satellite network integrationReal-time data transmission',
       'Quantum key distributionInterplanetary internet',
       'Space mission supportEmergency communication systems'
-    ],
+    ]
     popular: true,
     icon: '🛰️',
     color: 'from-blue-800 to-indigo-900',
@@ -112,11 +112,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '3-5 weeks',
     category: 'Space Communication',
     realService: true,
-    technology: ['Quantum ComputingQuantum Communication', 'Satellite TechnologyQuantum Encryption', 'Space NetworksQuantum Key Distribution'],
-    integrations: ['Satellite SystemsGround Stations', 'Space MissionsCommunication Networks', 'Security SystemsMonitoring Tools'],
-    useCases: ['Space mission communicationSatellite networks', 'Interplanetary communicationSecure data transmission', 'Emergency communicationsResearch collaboration'],
+    technology: ['Quantum ComputingQuantum Communication', 'Satellite TechnologyQuantum Encryption', 'Space NetworksQuantum Key Distribution']
+    integrations: ['Satellite SystemsGround Stations', 'Space MissionsCommunication Networks', 'Security SystemsMonitoring Tools']
+    useCases: ['Space mission communicationSatellite networks', 'Interplanetary communicationSecure data transmission', 'Emergency communicationsResearch collaboration']
     roi: 'Space agencies report 800% ROI through secure communication. Satellite companies see 600% ROI in network reliability.',
-    competitors: ['Traditional space communication: $30,000+/monthSatellite services: $25,000+/month', 'Quantum communication: $50,000+/month'],
+    competitors: ['Traditional space communication: $30,000+/monthSatellite services: $25,000+/month', 'Quantum communication: $50,000+/month']
     marketSize: '$12B space communication market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -147,7 +147,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
       'Robotic maintenance systemsEnvironmental control',
       'Food production automationWaste management systems',
       'Emergency response automationColony expansion planning'
-    ],
+    ]
     popular: false,
     icon: '🏠',
     color: 'from-emerald-700 to-teal-800',
@@ -159,11 +159,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '6-8 weeks',
     category: 'Space Colony Technology',
     realService: true,
-    technology: ['AI & Machine LearningRobotics', 'Automation SystemsLife Support Technology', 'Environmental ControlResource Management'],
-    integrations: ['Life Support SystemsRobotic Systems', 'Environmental ControlsMonitoring Systems', 'Communication NetworksData Analysis Platforms'],
-    useCases: ['Lunar base automationMars habitat management', 'Space station automationColony expansion', 'Research facility automationEmergency response'],
+    technology: ['AI & Machine LearningRobotics', 'Automation SystemsLife Support Technology', 'Environmental ControlResource Management']
+    integrations: ['Life Support SystemsRobotic Systems', 'Environmental ControlsMonitoring Systems', 'Communication NetworksData Analysis Platforms']
+    useCases: ['Lunar base automationMars habitat management', 'Space station automationColony expansion', 'Research facility automationEmergency response']
     roi: 'Space agencies report 1500% ROI through automation. Research institutions see 1000% ROI in colony efficiency.',
-    competitors: ['No direct competitorsIndustrial automation: $100,000+/month', 'Life support systems: $50,000+/month'],
+    competitors: ['No direct competitorsIndustrial automation: $100,000+/month', 'Life support systems: $50,000+/month']
     marketSize: '$2.5B space habitat market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -194,7 +194,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
       'Mission planning automationPropulsion system monitoring',
       'Energy management systemsSafety protocols',
       'Performance analyticsCustom propulsion design'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-yellow-600 to-orange-600',
@@ -206,11 +206,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '8-12 weeks',
     category: 'Space Propulsion Technology',
     realService: true,
-    technology: ['Quantum PhysicsPropulsion Engineering', 'Space TechnologyEnergy Systems', 'Quantum MechanicsAdvanced Materials'],
-    integrations: ['Spacecraft SystemsMission Control', 'Energy ManagementSafety Systems', 'Monitoring ToolsAnalytics Platforms'],
-    useCases: ['Deep space missionsInterplanetary travel', 'Space explorationSatellite propulsion', 'Space station propulsionResearch missions'],
+    technology: ['Quantum PhysicsPropulsion Engineering', 'Space TechnologyEnergy Systems', 'Quantum MechanicsAdvanced Materials']
+    integrations: ['Spacecraft SystemsMission Control', 'Energy ManagementSafety Systems', 'Monitoring ToolsAnalytics Platforms']
+    useCases: ['Deep space missionsInterplanetary travel', 'Space explorationSatellite propulsion', 'Space station propulsionResearch missions']
     roi: 'Space agencies report 2000% ROI through revolutionary propulsion. Aerospace companies see 1500% ROI in mission capabilities.',
-    competitors: ['Traditional propulsion: $100,000+/monthAdvanced propulsion: $75,000+/month', 'Research propulsion: $50,000+/month'],
+    competitors: ['Traditional propulsion: $100,000+/monthAdvanced propulsion: $75,000+/month', 'Research propulsion: $50,000+/month']
     marketSize: '$8B space propulsion market',
     growthRate: '250% annual growth',
     variant: 'quantum-futuristic',
@@ -241,7 +241,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
       'Real-time monitoringPredictive analytics',
       'Resource optimizationRisk assessment',
       'Compliance managementPublication assistance'
-    ],
+    ]
     popular: false,
     icon: '🔬',
     color: 'from-violet-600 to-purple-700',
@@ -253,11 +253,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     setupTime: '3-4 weeks',
     category: 'Space Research & Development',
     realService: true,
-    technology: ['AI & Machine LearningData Analysis', 'Automation SystemsResearch Tools', 'Collaboration PlatformsAnalytics Systems'],
-    integrations: ['Research DatabasesSatellite Systems', 'Ground StationsCollaboration Tools', 'Data SourcesPublication Platforms'],
-    useCases: ['Space researchMission planning', 'Data analysisCollaborative research', 'Publication assistanceResource optimization'],
+    technology: ['AI & Machine LearningData Analysis', 'Automation SystemsResearch Tools', 'Collaboration PlatformsAnalytics Systems']
+    integrations: ['Research DatabasesSatellite Systems', 'Ground StationsCollaboration Tools', 'Data SourcesPublication Platforms']
+    useCases: ['Space researchMission planning', 'Data analysisCollaborative research', 'Publication assistanceResource optimization']
     roi: 'Research institutions report 800% ROI through automation. Government agencies see 600% ROI in research efficiency.',
-    competitors: ['Traditional research tools: $20,000+/monthAI platforms: $10,000+/month', 'Research automation: $15,000+/month'],
+    competitors: ['Traditional research tools: $20,000+/monthAI platforms: $10,000+/month', 'Research automation: $15,000+/month']
     marketSize: '$5B space research market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -274,4 +274,4 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     rating: 4.6,
     reviews: 24
   }
-],
+]

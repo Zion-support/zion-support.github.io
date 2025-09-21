@@ -6,7 +6,7 @@ export interface AutonomousSystemsRobotics2025 {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface AutonomousSystemsRobotics2025 {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       'Real-time monitoringPerformance analytics',
       'Energy optimizationWaste reduction',
       'Custom manufacturing workflowsAPI for equipment integration'
-    ],
+    ]
     popular: true,
     icon: '🏭',
     color: 'from-gray-700 to-slate-800',
@@ -66,11 +66,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '4-6 weeks',
     category: 'Autonomous Manufacturing',
     realService: true,
-    technology: ['AI & Machine LearningIndustrial IoT', 'Predictive AnalyticsComputer Vision', 'RoboticsAutomation Systems'],
-    integrations: ['ERP SystemsMES Systems', 'SCADA SystemsEquipment APIs', 'Supply Chain PlatformsQuality Management Systems'],
-    useCases: ['Production automationQuality control', 'Predictive maintenanceSupply chain optimization', 'Energy managementWaste reduction'],
+    technology: ['AI & Machine LearningIndustrial IoT', 'Predictive AnalyticsComputer Vision', 'RoboticsAutomation Systems']
+    integrations: ['ERP SystemsMES Systems', 'SCADA SystemsEquipment APIs', 'Supply Chain PlatformsQuality Management Systems']
+    useCases: ['Production automationQuality control', 'Predictive maintenanceSupply chain optimization', 'Energy managementWaste reduction']
     roi: 'Manufacturing companies report 800% ROI through automation. Industrial organizations see 600% ROI in efficiency improvements.',
-    competitors: ['Traditional manufacturing systems: $25,000+/monthIndustrial AI: $15,000+/month', 'Automation platforms: $20,000+/month'],
+    competitors: ['Traditional manufacturing systems: $25,000+/monthIndustrial AI: $15,000+/month', 'Automation platforms: $20,000+/month']
     marketSize: '$18B autonomous manufacturing market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -101,7 +101,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       'Collision avoidance systemsScalable robot management',
       'Performance analyticsCustom robot programming',
       'Emergency response protocolsAPI for robot integration'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-blue-700 to-indigo-800',
@@ -113,11 +113,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '6-8 weeks',
     category: 'Swarm Robotics',
     realService: true,
-    technology: ['Swarm IntelligenceMulti-Agent Systems', 'RoboticsAI & Machine Learning', 'Computer VisionCommunication Systems'],
-    integrations: ['Robot APIsWarehouse Management Systems', 'Logistics PlatformsAgricultural Systems', 'Industrial EquipmentMonitoring Tools'],
-    useCases: ['Warehouse automationLogistics optimization', 'Agricultural automationSearch and rescue', 'Industrial automationResearch applications'],
+    technology: ['Swarm IntelligenceMulti-Agent Systems', 'RoboticsAI & Machine Learning', 'Computer VisionCommunication Systems']
+    integrations: ['Robot APIsWarehouse Management Systems', 'Logistics PlatformsAgricultural Systems', 'Industrial EquipmentMonitoring Tools']
+    useCases: ['Warehouse automationLogistics optimization', 'Agricultural automationSearch and rescue', 'Industrial automationResearch applications']
     roi: 'Warehouse companies report 1000% ROI through automation. Logistics companies see 800% ROI in efficiency improvements.',
-    competitors: ['Traditional robotics: $50,000+/monthMulti-robot systems: $30,000+/month', 'Automation platforms: $25,000+/month'],
+    competitors: ['Traditional robotics: $50,000+/monthMulti-robot systems: $30,000+/month', 'Automation platforms: $25,000+/month']
     marketSize: '$12B swarm robotics market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -148,7 +148,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       'Traffic predictionWeather adaptation',
       'Multi-vehicle coordinationSafety monitoring',
       'Performance analyticsCustom vehicle integration'
-    ],
+    ]
     popular: true,
     icon: '🚗',
     color: 'from-green-600 to-emerald-700',
@@ -160,11 +160,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '8-12 weeks',
     category: 'Autonomous Vehicles',
     realService: true,
-    technology: ['Computer VisionAI & Machine Learning', 'Sensor FusionPath Planning', 'Control SystemsSafety Systems'],
-    integrations: ['Vehicle SystemsSensor Networks', 'Traffic SystemsWeather Services', 'Navigation PlatformsSafety Systems'],
-    useCases: ['Autonomous carsSelf-driving trucks', 'Autonomous dronesIndustrial vehicles', 'Transportation systemsSafety systems'],
+    technology: ['Computer VisionAI & Machine Learning', 'Sensor FusionPath Planning', 'Control SystemsSafety Systems']
+    integrations: ['Vehicle SystemsSensor Networks', 'Traffic SystemsWeather Services', 'Navigation PlatformsSafety Systems']
+    useCases: ['Autonomous carsSelf-driving trucks', 'Autonomous dronesIndustrial vehicles', 'Transportation systemsSafety systems']
     roi: 'Automotive companies report 1200% ROI through autonomous capabilities. Trucking companies see 800% ROI in efficiency improvements.',
-    competitors: ['Traditional autonomous systems: $75,000+/monthVehicle AI: $40,000+/month', 'Safety systems: $30,000+/month'],
+    competitors: ['Traditional autonomous systems: $75,000+/monthVehicle AI: $40,000+/month', 'Safety systems: $30,000+/month']
     marketSize: '$25B autonomous vehicle market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -195,7 +195,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       'Safety protocolsPerformance optimization',
       'Custom robot programmingIntegration APIs',
       'Analytics and monitoringScalable architecture'
-    ],
+    ]
     popular: false,
     icon: '🦾',
     color: 'from-purple-600 to-violet-700',
@@ -207,11 +207,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '6-8 weeks',
     category: 'Advanced Robotics',
     realService: true,
-    technology: ['RoboticsAI & Machine Learning', 'Computer VisionControl Systems', 'Safety SystemsHuman-Robot Interaction'],
-    integrations: ['Robot APIsIndustrial Systems', 'Healthcare SystemsService Platforms', 'Monitoring ToolsAnalytics Systems'],
-    useCases: ['Industrial automationMedical robotics', 'Service roboticsResearch applications', 'Manufacturing automationSafety systems'],
+    technology: ['RoboticsAI & Machine Learning', 'Computer VisionControl Systems', 'Safety SystemsHuman-Robot Interaction']
+    integrations: ['Robot APIsIndustrial Systems', 'Healthcare SystemsService Platforms', 'Monitoring ToolsAnalytics Systems']
+    useCases: ['Industrial automationMedical robotics', 'Service roboticsResearch applications', 'Manufacturing automationSafety systems']
     roi: 'Industrial companies report 800% ROI through automation. Healthcare organizations see 600% ROI in robotic assistance.',
-    competitors: ['Traditional robotics: $40,000+/monthAdvanced robotics: $25,000+/month', 'Automation platforms: $20,000+/month'],
+    competitors: ['Traditional robotics: $40,000+/monthAdvanced robotics: $25,000+/month', 'Automation platforms: $20,000+/month']
     marketSize: '$15B advanced robotics market',
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
@@ -242,7 +242,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
       'Supplier managementRisk assessment',
       'Performance analyticsReal-time monitoring',
       'Custom optimization algorithmsAPI for system integration'
-    ],
+    ]
     popular: true,
     icon: '📦',
     color: 'from-orange-600 to-red-600',
@@ -254,11 +254,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     setupTime: '3-4 weeks',
     category: 'Autonomous Supply Chain',
     realService: true,
-    technology: ['AI & Machine LearningPredictive Analytics', 'Optimization AlgorithmsSupply Chain Management', 'Real-time AnalyticsRisk Management'],
-    integrations: ['ERP SystemsWMS Systems', 'TMS SystemsSupplier Platforms', 'Logistics SystemsAnalytics Platforms'],
-    useCases: ['Demand forecastingInventory optimization', 'Route optimizationSupplier management', 'Risk assessmentPerformance optimization'],
+    technology: ['AI & Machine LearningPredictive Analytics', 'Optimization AlgorithmsSupply Chain Management', 'Real-time AnalyticsRisk Management']
+    integrations: ['ERP SystemsWMS Systems', 'TMS SystemsSupplier Platforms', 'Logistics SystemsAnalytics Platforms']
+    useCases: ['Demand forecastingInventory optimization', 'Route optimizationSupplier management', 'Risk assessmentPerformance optimization']
     roi: 'Retail companies report 600% ROI through optimization. Manufacturing companies see 500% ROI in supply chain efficiency.',
-    competitors: ['Traditional supply chain systems: $20,000+/monthAI optimization: $15,000+/month', 'Supply chain platforms: $12,000+/month'],
+    competitors: ['Traditional supply chain systems: $20,000+/monthAI optimization: $15,000+/month', 'Supply chain platforms: $12,000+/month']
     marketSize: '$22B supply chain optimization market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -275,4 +275,4 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     rating: 4.7,
     reviews: 62
   }
-],
+]

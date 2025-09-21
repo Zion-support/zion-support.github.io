@@ -72,7 +72,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'API for institutional integration',
       '24/7 market monitoring',
       'Custom strategy development'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-purple-600 to-indigo-600',
@@ -89,21 +89,21 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     setupTime: '1-2 weeks',
     category: 'Financial Technology & AI',
     realService: true,
-    technology: ['Python, TensorFlow, Quantum Computing APIs, React, PostgreSQL, Redis, Docker'],
-    integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, MetaTrader'],
-    useCases: ['Algorithmic trading, Portfolio optimization, Risk management, Market analysis, Automated execution'],
+    technology: ['Python, TensorFlow, Quantum Computing APIs, React, PostgreSQL, Redis, Docker']
+    integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, MetaTrader']
+    useCases: ['Algorithmic trading, Portfolio optimization, Risk management, Market analysis, Automated execution']
     roi: 'Institutions report 500% ROI through improved trading performance and reduced manual overhead.',
-    competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
+    competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv']
     marketSize: '$45.2B financial technology market',
     growthRate: '22% annual growth',
     variant: 'ai-quantum-trading-enterprise',
     realService: true,
     realService: true,
-    technology: ['Python, TensorFlow, Quantum Computing APIs, React, PostgreSQL, Redis, Docker, Kubernetes'],
-    integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, MetaTrader, TradingView'],
-    useCases: ['Algorithmic trading, Portfolio management, Risk assessment, Market analysis, Automated trading strategies'],
+    technology: ['Python, TensorFlow, Quantum Computing APIs, React, PostgreSQL, Redis, Docker, Kubernetes']
+    integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, MetaTrader, TradingView']
+    useCases: ['Algorithmic trading, Portfolio management, Risk assessment, Market analysis, Automated trading strategies']
     roi: 'Financial institutions report 500% ROI through improved trading accuracy and reduced risk.',
-    competitors: ['Bloomberg Terminal, TradingView Pro, MetaTrader, Interactive Brokers'],
+    competitors: ['Bloomberg Terminal, TradingView Pro, MetaTrader, Interactive Brokers']
     marketSize: '$45.2B algorithmic trading market',
     growthRate: '22% annual growth',
     variant: 'ai-quantum-trading',
@@ -145,7 +145,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Clinical decision support',
       'Performance analytics',
       '24/7 AI monitoring'
-    ],
+    ]
     popular: true,
     icon: '🏥',
     color: 'from-green-600 to-emerald-600',
@@ -157,11 +157,11 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     setupTime: '1-2 days',
     category: 'Healthcare Technology & AI',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'PyTorch', 'React', 'PostgreSQL', 'Redis', 'Docker', 'AWS/Azure'],
-    integrations: ['Epic', 'Cerner', 'PACS systems', 'DICOM', 'HL7', 'FHIR', 'Electronic Health Records'],
-    useCases: ['Radiology diagnostics', 'Pathology analysis', 'Cardiology screening', 'Oncology detection', 'Preventive care'],
+    technology: ['Python', 'TensorFlow', 'PyTorch', 'React', 'PostgreSQL', 'Redis', 'Docker', 'AWS/Azure']
+    integrations: ['Epic', 'Cerner', 'PACS systems', 'DICOM', 'HL7', 'FHIR', 'Electronic Health Records']
+    useCases: ['Radiology diagnostics', 'Pathology analysis', 'Cardiology screening', 'Oncology detection', 'Preventive care']
     roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and reduced misdiagnosis.',
-    competitors: ['IBM Watson Health', 'Google Cloud Healthcare', 'Microsoft Azure Health', 'NVIDIA Clara'],
+    competitors: ['IBM Watson Health', 'Google Cloud Healthcare', 'Microsoft Azure Health', 'NVIDIA Clara']
     marketSize: '$67.8B AI healthcare market',
     growthRate: '28% annual growth',
     variant: 'ai-healthcare-diagnostics',
@@ -198,7 +198,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Performance analytics',
       'Predictive analytics',
       '24/7 autonomous operation'
-    ],
+    ]
     popular: true,
     icon: '🏭',
     color: 'bg-orange-500',
@@ -210,11 +210,11 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     setupTime: '3-4 weeks',
     category: 'Manufacturing AI',
     realService: true,
-    technology: ['AI/ML', 'IoT', 'Robotics', 'Cloud Computing'],
-    integrations: ['ERP Systems', 'MES Systems', 'SCADA Systems', 'PLC Systems'],
-    useCases: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Management'],
+    technology: ['AI/ML', 'IoT', 'Robotics', 'Cloud Computing']
+    integrations: ['ERP Systems', 'MES Systems', 'SCADA Systems', 'PLC Systems']
+    useCases: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Management']
     roi: '400% ROI in 18 months',
-    competitors: ['Siemens', 'GE Digital', 'PTC', 'Rockwell Automation'],
+    competitors: ['Siemens', 'GE Digital', 'PTC', 'Rockwell Automation']
     marketSize: '$25B manufacturing AI',
     growthRate: '35% YoY',
     variant: 'ai-autonomous',
@@ -236,11 +236,11 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     setupTime: '4-8 weeks',
     category: 'Industrial AI & Automation',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, InfluxDB, Docker, Kubernetes'],
-    integrations: ['Siemens, Rockwell, Allen-Bradley, SAP, Oracle, Microsoft Dynamics'],
-    useCases: ['Predictive maintenance, Quality control, Supply chain optimization, Energy management, Production planning'],
+    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, InfluxDB, Docker, Kubernetes']
+    integrations: ['Siemens, Rockwell, Allen-Bradley, SAP, Oracle, Microsoft Dynamics']
+    useCases: ['Predictive maintenance, Quality control, Supply chain optimization, Energy management, Production planning']
     roi: 'Manufacturers report 600% ROI through reduced downtime, improved quality, and operational efficiency.',
-    competitors: ['Siemens Mindsphere, GE Predix, PTC ThingWorx, Bosch IoT Suite'],
+    competitors: ['Siemens Mindsphere, GE Predix, PTC ThingWorx, Bosch IoT Suite']
     marketSize: '$67.8B industrial IoT market',
     growthRate: '25% annual growth',
     variant: 'ai-manufacturing-enterprise',
@@ -303,7 +303,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Custom security policies',
       'Integration with SIEM systems',
       '24/7 security monitoring'
-    ],
+    ]
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-pink-600',
@@ -315,11 +315,11 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     setupTime: '2-3 days',
     category: 'Cybersecurity & AI',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, Redis, Docker, Kubernetes'],
-    integrations: ['SIEM systems, Firewalls, IDS/IPS, EDR solutions, Vulnerability scanners, Threat feeds'],
-    useCases: ['Threat detection, Incident response, Vulnerability management, Compliance reporting, Security analytics'],
+    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, Redis, Docker, Kubernetes']
+    integrations: ['SIEM systems, Firewalls, IDS/IPS, EDR solutions, Vulnerability scanners, Threat feeds']
+    useCases: ['Threat detection, Incident response, Vulnerability management, Compliance reporting, Security analytics']
     roi: 'Organizations report 350% ROI through improved security posture and reduced incident response time.',
-    competitors: ['CrowdStrike, Palo Alto Networks, FireEye, Symantec, McAfee'],
+    competitors: ['CrowdStrike, Palo Alto Networks, FireEye, Symantec, McAfee']
     marketSize: '$156.5B cybersecurity market',
     growthRate: '18% annual growth',
     variant: 'ai-cybersecurity',
@@ -330,11 +330,11 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     setupTime: '2-3 weeks',
     category: 'Cybersecurity & AI',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, Elasticsearch, Docker, Kubernetes'],
-    integrations: ['Splunk, IBM QRadar, Microsoft Sentinel, Palo Alto, Cisco, Fortinet'],
-    useCases: ['Threat detection, Incident response, Vulnerability management, Compliance monitoring, Security analytics'],
+    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, Elasticsearch, Docker, Kubernetes']
+    integrations: ['Splunk, IBM QRadar, Microsoft Sentinel, Palo Alto, Cisco, Fortinet']
+    useCases: ['Threat detection, Incident response, Vulnerability management, Compliance monitoring, Security analytics']
     roi: 'Organizations report 450% ROI through reduced security incidents and automated threat response.',
-    competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance'],
+    competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance']
     marketSize: '$182.3B cybersecurity market',
     growthRate: '18% annual growth',
     variant: 'ai-cybersecurity-enterprise',
@@ -397,7 +397,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Parent and teacher dashboards',
       'Multi-language support',
       'Integration with LMS systems'
-    ],
+    ]
     popular: true,
     icon: '🎓',
     color: 'from-indigo-600 to-purple-600',
@@ -409,17 +409,17 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     setupTime: '1-2 weeks',
     category: 'Education Technology & AI',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams, Zoom'],
-    useCases: ['K-12 education, Higher education, Corporate training, Language learning, Skills development'],
+    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, Redis, Docker, AWS']
+    integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams, Zoom']
+    useCases: ['K-12 education, Higher education, Corporate training, Language learning, Skills development']
     roi: 'Educational institutions report 350% ROI through improved student outcomes and reduced administrative overhead.',
-    competitors: ['DreamBox, Carnegie Learning, Knewton, Duolingo'],
+    competitors: ['DreamBox, Carnegie Learning, Knewton, Duolingo']
     marketSize: '$89.1B education technology market',
     growthRate: '20% annual growth',
     variant: 'ai-education-enterprise',
-    ],
+    ]
     popular: true,
-    ],
+    ]
     popular: true,
     icon: '✍️',
     color: 'from-yellow-600 to-orange-600',
@@ -431,11 +431,11 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     setupTime: '1-2 hours',
     category: 'Content Creation & AI',
     realService: true,
-    technology: ['Python, GPT-4, Claude, React, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms, CMS systems'],
-    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions, Email campaigns'],
+    technology: ['Python, GPT-4, Claude, React, PostgreSQL, Redis, Docker, AWS']
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms, CMS systems']
+    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions, Email campaigns']
     roi: 'Businesses report 250% ROI through increased content production and improved engagement.',
-    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot, Rytr'],
+    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot, Rytr']
     marketSize: '$12.4B AI content creation market',
     growthRate: '35% annual growth',
     variant: 'ai-content-creation',

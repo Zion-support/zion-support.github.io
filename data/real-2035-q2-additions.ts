@@ -17,7 +17,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 			'Requirement extraction and mappingAnswer library with versioning',
 			'Compliance and exceptions trackerMulti-reviewer workflows and approvals',
 			'Privacy-safe local embeddings optionExport to DOCX/PDF with branding'
-		],
+		]
 		popular: true,
 		icon: '🧠',
 		color: 'from-cyan-600 to-blue-700',
@@ -29,11 +29,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 hours',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['OpenAI-compatibleVector DB', 'Next.js'],
-		integrations: ['SharePointGoogle Drive', 'JiraSalesforce'],
-		useCases: ['RFP responsesSecurity questionnaires', 'Vendor assessments'],
+		technology: ['OpenAI-compatibleVector DB', 'Next.js']
+		integrations: ['SharePointGoogle Drive', 'JiraSalesforce']
+		useCases: ['RFP responsesSecurity questionnaires', 'Vendor assessments']
 		roi: 'Reduce cycle time 30–60% and increase win rate via consistency.',
-		competitors: ['LoopioRFPIO'],
+		competitors: ['LoopioRFPIO']
 		marketSize: '$1B+ proposal automation',
 		growthRate: '18% CAGR',
 		variant: 'ai-futuristic',
@@ -55,7 +55,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Instance rightsizing and autoscaling guidanceIdle/unused instance detection',
 			'Backup retention and PITR cost tuningWeekly savings reports and anomaly alerts'
-		],
+		]
 		popular: true,
 		icon: '💾',
 		color: 'from-emerald-600 to-teal-700',
@@ -67,11 +67,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 hour',
 		category: 'Cloud & FinOps',
 		realService: true,
-		technology: ['PostgreSQLMySQL', 'BigQueryPrometheus'],
-		integrations: ['AWS RDSCloud SQL', 'Azure Database'],
-		useCases: ['DB rightsizingBackup cost control', 'Anomaly detection'],
+		technology: ['PostgreSQLMySQL', 'BigQueryPrometheus']
+		integrations: ['AWS RDSCloud SQL', 'Azure Database']
+		useCases: ['DB rightsizingBackup cost control', 'Anomaly detection']
 		roi: 'Save 10–35% on database costs.',
-		competitors: ['CloudHealthKubecost (DB add-ons)'],
+		competitors: ['CloudHealthKubecost (DB add-ons)']
 		marketSize: '$4B FinOps tooling',
 		growthRate: '19% CAGR',
 		variant: 'cloud-futuristic',
@@ -93,7 +93,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Transcription with diarizationTheme clustering and highlights',
 			'JTBD extraction and prioritizationAuto slide deck and PRD snippets'
-		],
+		]
 		popular: false,
 		icon: '🎙️',
 		color: 'from-purple-600 to-pink-700',
@@ -105,11 +105,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '20 minutes',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['WhisperEmbeddings', 'Next.js'],
-		integrations: ['ZoomGoogle Meet', 'Figma'],
-		useCases: ['Qual researchPortfolio insights', 'Voice of customer'],
+		technology: ['WhisperEmbeddings', 'Next.js']
+		integrations: ['ZoomGoogle Meet', 'Figma']
+		useCases: ['Qual researchPortfolio insights', 'Voice of customer']
 		roi: 'Reduce analysis time 60–80%.',
-		competitors: ['DovetailGrain'],
+		competitors: ['DovetailGrain']
 		marketSize: '$800M research tooling',
 		growthRate: '16% CAGR',
 		variant: 'ai-creative',
@@ -131,7 +131,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Agentless discovery (SSO, APIs)Exposure and configuration drift scoring',
 			'Owner assignment and notificationsRemediation playbooks and ticket sync'
-		],
+		]
 		popular: true,
 		icon: '🛰️',
 		color: 'from-amber-600 to-orange-700',
@@ -143,11 +143,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 day',
 		category: 'IT Services',
 		realService: true,
-		technology: ['SSOSaaS APIs', 'Cloud APIs'],
-		integrations: ['OktaAzure AD', 'Google WorkspaceAWS'],
-		useCases: ['Shadow IT discoveryEASM', 'Risk reduction'],
+		technology: ['SSOSaaS APIs', 'Cloud APIs']
+		integrations: ['OktaAzure AD', 'Google WorkspaceAWS']
+		useCases: ['Shadow IT discoveryEASM', 'Risk reduction']
 		roi: 'Reduce audit findings and breach exposure.',
-		competitors: ['AxoniusJupiterOne'],
+		competitors: ['AxoniusJupiterOne']
 		marketSize: '$4B ITAM/EASM',
 		growthRate: '14% CAGR',
 		variant: 'security-futuristic',
@@ -169,7 +169,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Query linting and rewrite suggestionsCost/latency impact estimates',
 			'Policy enforcement in CIWeekly reports and top offenders'
-		],
+		]
 		popular: false,
 		icon: '📊',
 		color: 'from-blue-600 to-indigo-700',
@@ -181,11 +181,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 hour',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['SQL parsersBigQuery', 'Snowflake'],
-		integrations: ['dbtGitHub', 'GitLab'],
-		useCases: ['Cost controlPerformance tuning', 'Standards enforcement'],
+		technology: ['SQL parsersBigQuery', 'Snowflake']
+		integrations: ['dbtGitHub', 'GitLab']
+		useCases: ['Cost controlPerformance tuning', 'Standards enforcement']
 		roi: 'Reduce spend 10–25% on warehouses.',
-		competitors: ['SELECTStarMetaplane'],
+		competitors: ['SELECTStarMetaplane']
 		marketSize: '$3B data tooling',
 		growthRate: '15% CAGR',
 		variant: 'data-futuristic',
@@ -207,7 +207,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Edge cookie/ID routingHoldouts and guardrail metrics',
 			'Exposure events and attributionClient and server SDKs'
-		],
+		]
 		popular: true,
 		icon: '🚀',
 		color: 'from-pink-600 to-rose-700',
@@ -219,11 +219,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 hours',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Cloudflare WorkersVercel Edge'],
-		integrations: ['VercelCloudflare', 'SegmentAmplitude'],
-		useCases: ['Pricing testsLanding page variants', 'Copy tests'],
+		technology: ['Cloudflare WorkersVercel Edge']
+		integrations: ['VercelCloudflare', 'SegmentAmplitude']
+		useCases: ['Pricing testsLanding page variants', 'Copy tests']
 		roi: 'Increase conversion and learning speed.',
-		competitors: ['OptimizelyVWO'],
+		competitors: ['OptimizelyVWO']
 		marketSize: '$6B experimentation',
 		growthRate: '12% CAGR',
 		variant: 'edge-futuristic',
@@ -245,7 +245,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Historical pattern modelingQueue impact and what-if analysis',
 			'Escalation workflows and alertsWeekly performance reports'
-		],
+		]
 		popular: false,
 		icon: '⏱️',
 		color: 'from-slate-600 to-gray-700',
@@ -257,11 +257,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '30 minutes',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['Time-series MLHelpdesk APIs'],
-		integrations: ['ZendeskFreshdesk', 'Jira Service Management'],
-		useCases: ['SLA complianceCustomer satisfaction', 'Capacity planning'],
+		technology: ['Time-series MLHelpdesk APIs']
+		integrations: ['ZendeskFreshdesk', 'Jira Service Management']
+		useCases: ['SLA complianceCustomer satisfaction', 'Capacity planning']
 		roi: 'Reduce breaches and escalations 20–40%.',
-		competitors: ['Zendesk add-ons'],
+		competitors: ['Zendesk add-ons']
 		marketSize: '$10B ITSM tooling',
 		growthRate: '10% CAGR',
 		variant: 'itsm-futuristic',
@@ -283,7 +283,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Document OCR and entity detectionTemplate and custom rules',
 			'Reversible redaction workflowsAudit logs and access controls'
-		],
+		]
 		popular: true,
 		icon: '🗄️',
 		color: 'from-red-600 to-rose-700',
@@ -295,11 +295,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 hours',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['OCRNLP', 'DLP'],
-		integrations: ['Google DriveSharePoint', 'S3'],
-		useCases: ['DSAR exportsLegal discovery', 'Vendor due diligence'],
+		technology: ['OCRNLP', 'DLP']
+		integrations: ['Google DriveSharePoint', 'S3']
+		useCases: ['DSAR exportsLegal discovery', 'Vendor due diligence']
 		roi: 'Reduce manual redaction time 80%+',
-		competitors: ['Very Good SecuritySkyflow'],
+		competitors: ['Very Good SecuritySkyflow']
 		marketSize: '$2B privacy tooling',
 		growthRate: '14% CAGR',
 		variant: 'security-futuristic',
@@ -321,7 +321,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'SDKs for Node/PythonError budget tracking',
 			'SLO policies and alertsService dependency view'
-		],
+		]
 		popular: false,
 		icon: '📈',
 		color: 'from-lime-600 to-green-700',
@@ -333,11 +333,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 hour',
 		category: 'Observability',
 		realService: true,
-		technology: ['OpenTelemetryPrometheus'],
-		integrations: ['GrafanaDatadog', 'New Relic'],
-		useCases: ['Latency budgetsAvailability SLOs', 'On-call alerts'],
+		technology: ['OpenTelemetryPrometheus']
+		integrations: ['GrafanaDatadog', 'New Relic']
+		useCases: ['Latency budgetsAvailability SLOs', 'On-call alerts']
 		roi: 'Reduce incidents and missed SLAs.',
-		competitors: ['Nobl9Datadog SLO'],
+		competitors: ['Nobl9Datadog SLO']
 		marketSize: '$18B observability',
 		growthRate: '20% CAGR',
 		variant: 'monitoring-futuristic',
@@ -359,7 +359,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'CWV testing and trendsActionable fix suggestions',
 			'Auto PRs to reposA/B compare after merge'
-		],
+		]
 		popular: true,
 		icon: '⚙️',
 		color: 'from-indigo-600 to-violet-700',
@@ -371,11 +371,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '45 minutes',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['LighthousePlaywright'],
-		integrations: ['GitHubVercel', 'Netlify'],
-		useCases: ['CWV improvementsSEO', 'Faster UX'],
+		technology: ['LighthousePlaywright']
+		integrations: ['GitHubVercel', 'Netlify']
+		useCases: ['CWV improvementsSEO', 'Faster UX']
 		roi: 'Lift conversion via faster pages.',
-		competitors: ['CalibreSpeedCurve'],
+		competitors: ['CalibreSpeedCurve']
 		marketSize: '$500M perf tooling',
 		growthRate: '12% CAGR',
 		variant: 'monitoring-futuristic',
@@ -397,7 +397,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Entity and clause extractionRisk scoring and redlines',
 			'Playbook mapping and suggestionsClean export and share links'
-		],
+		]
 		popular: false,
 		icon: '📄',
 		color: 'from-teal-600 to-green-700',
@@ -409,11 +409,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '30 minutes',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['NLPEmbeddings'],
-		integrations: ['DocuSignGoogle Drive', 'Salesforce'],
-		useCases: ['Contract reviewRisk mitigation', 'Faster cycles'],
+		technology: ['NLPEmbeddings']
+		integrations: ['DocuSignGoogle Drive', 'Salesforce']
+		useCases: ['Contract reviewRisk mitigation', 'Faster cycles']
 		roi: 'Shorten deal cycles by days.',
-		competitors: ['EvisortIronclad (AI features)'],
+		competitors: ['EvisortIronclad (AI features)']
 		marketSize: '$3B CLM tooling',
 		growthRate: '18% CAGR',
 		variant: 'legal-futuristic',
@@ -435,7 +435,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Policy/evidence librarySuggested answers with confidence',
 			'Reviewer workflow and change logsExport to XLSX/CSV/portal formats'
-		],
+		]
 		popular: true,
 		icon: '🔐',
 		color: 'from-red-600 to-rose-700',
@@ -447,11 +447,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 hour',
 		category: 'IT Services',
 		realService: true,
-		technology: ['RAGOCR'],
-		integrations: ['Google DriveConfluence', 'OneDrive'],
-		useCases: ['Vendor DDQsSecurity reviews', 'RFPs'],
+		technology: ['RAGOCR']
+		integrations: ['Google DriveConfluence', 'OneDrive']
+		useCases: ['Vendor DDQsSecurity reviews', 'RFPs']
 		roi: 'Cuts response time by 50–70%.',
-		competitors: ['ConveyorWhistic'],
+		competitors: ['ConveyorWhistic']
 		marketSize: '$2B GRC',
 		growthRate: '12% CAGR',
 		variant: 'enterprise-futuristic',
@@ -473,7 +473,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Policy packs and custom rulesLive drift detection',
 			'PRs with suggested fixesCompliance dashboards'
-		],
+		]
 		popular: false,
 		icon: '📜',
 		color: 'from-yellow-600 to-amber-700',
@@ -485,11 +485,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 hour',
 		category: 'Cloud & FinOps',
 		realService: true,
-		technology: ['OPARego', 'Argo CD'],
-		integrations: ['GitHubGitLab', 'Argo CD'],
-		useCases: ['Policy enforcementCompliance', 'Drift remediation'],
+		technology: ['OPARego', 'Argo CD']
+		integrations: ['GitHubGitLab', 'Argo CD']
+		useCases: ['Policy enforcementCompliance', 'Drift remediation']
 		roi: 'Reduce policy violations and audit time.',
-		competitors: ['Open Policy Agent ecosystem'],
+		competitors: ['Open Policy Agent ecosystem']
 		marketSize: '$3B platform tooling',
 		growthRate: '13% CAGR',
 		variant: 'devops-futuristic',
@@ -511,7 +511,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'DMARC/DKIM/SPF monitoringReputation and blocklist checks',
 			'Inbox placement testsFix PRs to DNS/IaC'
-		],
+		]
 		popular: true,
 		icon: '✉️',
 		color: 'from-sky-600 to-blue-700',
@@ -523,11 +523,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '30 minutes',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['DMARCDKIM', 'SPF'],
-		integrations: ['SendGridPostmark', 'SES'],
-		useCases: ['DeliverabilityCompliance', 'Inbox placement'],
+		technology: ['DMARCDKIM', 'SPF']
+		integrations: ['SendGridPostmark', 'SES']
+		useCases: ['DeliverabilityCompliance', 'Inbox placement']
 		roi: 'Improved inboxing and revenue from email.',
-		competitors: ['DMARCianValimail'],
+		competitors: ['DMARCianValimail']
 		marketSize: '$1B email tooling',
 		growthRate: '9% CAGR',
 		variant: 'marketing-futuristic',
@@ -549,7 +549,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Runs and metrics UIArtifact storage and lineage',
 			'Auto-generated model cardsGovernance export and webhooks'
-		],
+		]
 		popular: false,
 		icon: '🧪',
 		color: 'from-fuchsia-600 to-rose-700',
@@ -561,11 +561,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '20 minutes',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['PythonS3', 'PostgreSQL'],
-		integrations: ['GitHubWeights & Biases (import)'],
-		useCases: ['Experiment trackingGovernance', 'Reproducibility'],
+		technology: ['PythonS3', 'PostgreSQL']
+		integrations: ['GitHubWeights & Biases (import)']
+		useCases: ['Experiment trackingGovernance', 'Reproducibility']
 		roi: 'Better ML iteration speed and traceability.',
-		competitors: ['MLflow (self-managed)'],
+		competitors: ['MLflow (self-managed)']
 		marketSize: '$2B MLOps',
 		growthRate: '20% CAGR',
 		variant: 'ai-revolutionary',
@@ -587,7 +587,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Effective permission graphPrivilege creep detection',
 			'Least-privilege proposalsPRs for policy updates'
-		],
+		]
 		popular: true,
 		icon: '🧩',
 		color: 'from-green-600 to-emerald-700',
@@ -599,11 +599,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 hours',
 		category: 'IT Services',
 		realService: true,
-		technology: ['Graph DBCloud APIs'],
-		integrations: ['AWSGCP', 'Azure'],
-		useCases: ['Least privilegeAudit prep', 'Remediation PRs'],
+		technology: ['Graph DBCloud APIs']
+		integrations: ['AWSGCP', 'Azure']
+		useCases: ['Least privilegeAudit prep', 'Remediation PRs']
 		roi: 'Reduce risk and audit findings.',
-		competitors: ['SonraiJupiterOne'],
+		competitors: ['SonraiJupiterOne']
 		marketSize: '$5B cloud security',
 		growthRate: '15% CAGR',
 		variant: 'security-futuristic',
@@ -625,7 +625,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		features: [
 			'Job monitoring and anomaly detectionRoot-cause hints from logs',
 			'PR drafts for common fixesPost-incident summaries'
-		],
+		]
 		popular: false,
 		icon: '🛠️',
 		color: 'from-stone-600 to-neutral-700',
@@ -637,11 +637,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '45 minutes',
 		category: 'Observability',
 		realService: true,
-		technology: ['Airflowdbt', 'BigQuery'],
-		integrations: ['Airflowdbt Cloud', 'SnowflakeBQ'],
-		useCases: ['Reduce failuresFaster RCA', 'Stability'],
+		technology: ['Airflowdbt', 'BigQuery']
+		integrations: ['Airflowdbt Cloud', 'SnowflakeBQ']
+		useCases: ['Reduce failuresFaster RCA', 'Stability']
 		roi: 'Shorter downtime and fewer re-runs.',
-		competitors: ['Monte Carlo (alerts)'],
+		competitors: ['Monte Carlo (alerts)']
 		marketSize: '$3B data reliability',
 		growthRate: '16% CAGR',
 		variant: 'monitoring-futuristic',
@@ -660,7 +660,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Intelligent shared inbox that drafts replies, classifies intent, routes to owners, and escalates edge cases. Privacy controls and redaction included.',
-		features: ['Intent classificationTone-safe drafting', 'Auto-summarize threadsZendesk/HubSpot sync', 'PII redactionResponse SLAs'],
+		features: ['Intent classificationTone-safe drafting', 'Auto-summarize threadsZendesk/HubSpot sync', 'PII redactionResponse SLAs']
 		popular: true,
 		icon: '✉️',
 		color: 'from-blue-600 to-indigo-700',
@@ -672,11 +672,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '45 minutes',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['OpenAI-compatibleIMAP/Graph', 'Langfuse'],
-		integrations: ['GmailMicrosoft 365', 'ZendeskHubSpot'],
-		useCases: ['Lead repliesSupport L1', 'Internal triage'],
+		technology: ['OpenAI-compatibleIMAP/Graph', 'Langfuse']
+		integrations: ['GmailMicrosoft 365', 'ZendeskHubSpot']
+		useCases: ['Lead repliesSupport L1', 'Internal triage']
 		roi: 'Reduce first-response time 60%+ and deflect 30–50% L1 tickets.',
-		competitors: ['Gmail Help Me WriteHubSpot AI Inbox'],
+		competitors: ['Gmail Help Me WriteHubSpot AI Inbox']
 		marketSize: '$5B+ email automation',
 		growthRate: '22% CAGR',
 		variant: 'ai-futuristic',
@@ -695,7 +695,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$29',
 		period: '/month',
 		description: 'Create mobile-native, branching surveys with rich media, webhooks, and analytics. Export to CSV and sync to CRMs.',
-		features: ['Branching logicMedia questions', 'Webhook triggersA/B test questions', 'Theme editor'],
+		features: ['Branching logicMedia questions', 'Webhook triggersA/B test questions', 'Theme editor']
 		popular: false,
 		icon: '📱',
 		color: 'from-emerald-600 to-teal-700',
@@ -707,11 +707,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '15 minutes',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsPostgres', 'Tailwind'],
-		integrations: ['ZapierHubSpot', 'Segment'],
-		useCases: ['Lead captureProduct research', 'CSAT/NPS'],
+		technology: ['Next.jsPostgres', 'Tailwind']
+		integrations: ['ZapierHubSpot', 'Segment']
+		useCases: ['Lead captureProduct research', 'CSAT/NPS']
 		roi: 'Increase completion 20–40% on mobile audiences.',
-		competitors: ['TypeformTally'],
+		competitors: ['TypeformTally']
 		marketSize: '$1.2B survey tools',
 		growthRate: '14% CAGR',
 		variant: 'saas-futuristic',
@@ -730,7 +730,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$49',
 		period: '/month',
 		description: 'Simple helpdesk with SLAs, email-to-ticket, KB articles, and client portal. Great for small IT teams and MSPs.',
-		features: ['Email-to-ticketSLAs and priorities', 'KB with searchClient portal', 'CSAT surveys'],
+		features: ['Email-to-ticketSLAs and priorities', 'KB with searchClient portal', 'CSAT surveys']
 		popular: true,
 		icon: '🛠️',
 		color: 'from-amber-600 to-orange-700',
@@ -742,11 +742,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 hours',
 		category: 'IT Services',
 		realService: true,
-		technology: ['Next.jsSQLite/Postgres'],
-		integrations: ['EmailSlack'],
-		useCases: ['TicketingSelf-service', 'Client support'],
+		technology: ['Next.jsSQLite/Postgres']
+		integrations: ['EmailSlack']
+		useCases: ['TicketingSelf-service', 'Client support']
 		roi: 'Reduce time-to-resolution 25–40%.',
-		competitors: ['FreshdeskZoho Desk'],
+		competitors: ['FreshdeskZoho Desk']
 		marketSize: '$7B+ helpdesk',
 		growthRate: '12% CAGR',
 		variant: 'itsm-futuristic',
@@ -765,7 +765,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$39',
 		period: '/month',
 		description: 'Track affiliate performance, manage payouts, and embed widgets. Fraud controls and webhook exports included.',
-		features: ['Referral link generatorAttribution models', 'Commission rulesFraud checks', 'Embeddable widgets'],
+		features: ['Referral link generatorAttribution models', 'Commission rulesFraud checks', 'Embeddable widgets']
 		popular: false,
 		icon: '🔗',
 		color: 'from-purple-600 to-fuchsia-700',
@@ -777,11 +777,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 hour',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsPostgres'],
-		integrations: ['StripeShopify', 'Zapier'],
-		useCases: ['ReferralsPayouts', 'Attribution'],
+		technology: ['Next.jsPostgres']
+		integrations: ['StripeShopify', 'Zapier']
+		useCases: ['ReferralsPayouts', 'Attribution']
 		roi: 'Increase channel revenue 10–25%.',
-		competitors: ['TapfiliateFirstPromoter'],
+		competitors: ['TapfiliateFirstPromoter']
 		marketSize: '$2B affiliate software',
 		growthRate: '13% CAGR',
 		variant: 'saas-futuristic',
@@ -800,7 +800,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		price: '$19',
 		period: '/month',
 		description: 'Upload podcast audio, get transcripts, episode summaries, quotes, and SEO-ready blog posts. Export as Markdown.',
-		features: ['Multi-speaker diarizationChapter summaries', 'Quote extractionBlog draft', 'Markdown export'],
+		features: ['Multi-speaker diarizationChapter summaries', 'Quote extractionBlog draft', 'Markdown export']
 		popular: false,
 		icon: '🎧',
 		color: 'from-rose-600 to-pink-700',
@@ -812,11 +812,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '10 minutes',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['WhisperNext.js'],
-		integrations: ['RSSYouTube', 'WordPress'],
-		useCases: ['AccessibilitySEO', 'Content repurposing'],
+		technology: ['WhisperNext.js']
+		integrations: ['RSSYouTube', 'WordPress']
+		useCases: ['AccessibilitySEO', 'Content repurposing']
 		roi: 'Save 2–5 hours per episode.',
-		competitors: ['DescriptRiverside'],
+		competitors: ['DescriptRiverside']
 		marketSize: '$600M transcription tools',
 		growthRate: '15% CAGR',
 		variant: 'ai-creative',
@@ -828,4 +828,4 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.6,
 		reviews: 14
 	}
-],
+]

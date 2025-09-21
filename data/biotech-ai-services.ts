@@ -5,7 +5,7 @@ export interface BiotechAIService {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -17,11 +17,11 @@ export interface BiotechAIService {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: string,
@@ -52,7 +52,7 @@ export const biotechAIServices: BiotechAIService[] = [
       'Clinical trial optimizationRegulatory compliance tools',
       'Research collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'
-    ],
+    ]
     popular: true,
     icon: '🧬',
     color: 'from-emerald-600 to-teal-700',
@@ -64,11 +64,11 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '2 weeks',
     category: 'Biotech AI',
     realService: true,
-    technology: ['AI Drug DiscoveryMachine Learning', 'BioinformaticsReact', 'Node.jsPostgreSQL', 'Cloud Computing'],
-    integrations: ['Research databasesLaboratory systems', 'Clinical trial platformsRegulatory databases', 'Scientific literature'],
-    useCases: ['Drug discoveryTarget identification', 'Lead optimizationClinical trial design', 'Regulatory complianceResearch collaboration'],
+    technology: ['AI Drug DiscoveryMachine Learning', 'BioinformaticsReact', 'Node.jsPostgreSQL', 'Cloud Computing']
+    integrations: ['Research databasesLaboratory systems', 'Clinical trial platformsRegulatory databases', 'Scientific literature']
+    useCases: ['Drug discoveryTarget identification', 'Lead optimizationClinical trial design', 'Regulatory complianceResearch collaboration']
     roi: 'Accelerate drug development by 10x and reduce costs by 90%. ROI through faster time-to-market and cost savings.',
-    competitors: ['InsitroRecursion', 'Basic research tools'],
+    competitors: ['InsitroRecursion', 'Basic research tools']
     marketSize: '$150B AI in healthcare market',
     growthRate: '250% annual growth',
     variant: 'biotech-futuristic',
@@ -98,7 +98,7 @@ export const biotechAIServices: BiotechAIService[] = [
       'Metabolic pathway optimizationSafety assessment tools',
       'Regulatory complianceResearch collaboration',
       'Mobile appAPI for lab integration'
-    ],
+    ]
     popular: true,
     icon: '🔬',
     color: 'from-blue-600 to-indigo-700',
@@ -110,11 +110,11 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '2 weeks',
     category: 'Biotech AI',
     realService: true,
-    technology: ['AI Gene EditingSynthetic Biology', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Bioinformatics'],
-    integrations: ['Laboratory systemsDNA sequencing', 'Gene synthesisResearch databases', 'Regulatory platforms'],
-    useCases: ['Gene editingSynthetic biology', 'Genetic optimizationAgricultural improvement', 'Medical researchIndustrial biotechnology'],
+    technology: ['AI Gene EditingSynthetic Biology', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Bioinformatics']
+    integrations: ['Laboratory systemsDNA sequencing', 'Gene synthesisResearch databases', 'Regulatory platforms']
+    useCases: ['Gene editingSynthetic biology', 'Genetic optimizationAgricultural improvement', 'Medical researchIndustrial biotechnology']
     roi: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.',
-    competitors: ['Manual methodsBasic tools'],
+    competitors: ['Manual methodsBasic tools']
     marketSize: '$50B genetic engineering market',
     growthRate: '300% annual growth',
     variant: 'biotech-futuristic',
@@ -144,7 +144,7 @@ export const biotechAIServices: BiotechAIService[] = [
       'Expression optimizationDesign validation',
       'Collaboration toolsAnalytics dashboard',
       'Mobile appAPI for integration'
-    ],
+    ]
     popular: true,
     icon: '🧪',
     color: 'from-purple-600 to-pink-700',
@@ -156,11 +156,11 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '1 week',
     category: 'Biotech AI',
     realService: true,
-    technology: ['AI Protein DesignMachine Learning', 'BioinformaticsReact', 'Node.jsPostgreSQL', 'Cloud Computing'],
-    integrations: ['Laboratory systemsProtein databases', 'Expression systemsResearch platforms', 'Analytical tools'],
-    useCases: ['Therapeutic proteinsIndustrial enzymes', 'Research toolsFood proteins', 'BiomaterialsDrug delivery'],
+    technology: ['AI Protein DesignMachine Learning', 'BioinformaticsReact', 'Node.jsPostgreSQL', 'Cloud Computing']
+    integrations: ['Laboratory systemsProtein databases', 'Expression systemsResearch platforms', 'Analytical tools']
+    useCases: ['Therapeutic proteinsIndustrial enzymes', 'Research toolsFood proteins', 'BiomaterialsDrug delivery']
     roi: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.',
-    competitors: ['Basic toolsManual design'],
+    competitors: ['Basic toolsManual design']
     marketSize: '$30B protein engineering market',
     growthRate: '280% annual growth',
     variant: 'biotech-futuristic',
@@ -190,7 +190,7 @@ export const biotechAIServices: BiotechAIService[] = [
       'Compliance monitoringReal-time analytics',
       'Mobile appAPI for integration',
       'Regulatory toolsCollaboration platform'
-    ],
+    ]
     popular: true,
     icon: '🏥',
     color: 'from-green-600 to-emerald-700',
@@ -202,11 +202,11 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '2 weeks',
     category: 'Biotech AI',
     realService: true,
-    technology: ['AI OptimizationClinical Trials', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Analytics'],
-    integrations: ['Clinical trial systemsPatient databases', 'Regulatory platformsAnalytical tools', 'Healthcare systems'],
-    useCases: ['Trial optimizationPatient recruitment', 'Data analysisRisk management', 'Compliance monitoringPerformance tracking'],
+    technology: ['AI OptimizationClinical Trials', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Analytics']
+    integrations: ['Clinical trial systemsPatient databases', 'Regulatory platformsAnalytical tools', 'Healthcare systems']
+    useCases: ['Trial optimizationPatient recruitment', 'Data analysisRisk management', 'Compliance monitoringPerformance tracking']
     roi: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.',
-    competitors: ['Basic toolsManual management'],
+    competitors: ['Basic toolsManual management']
     marketSize: '$45B clinical trial market',
     growthRate: '220% annual growth',
     variant: 'biotech-futuristic',
@@ -236,7 +236,7 @@ export const biotechAIServices: BiotechAIService[] = [
       'Data visualizationCollaboration tools',
       'Mobile appAPI for integration',
       'Research databaseAnalytics dashboard'
-    ],
+    ]
     popular: true,
     icon: '🔍',
     color: 'from-cyan-600 to-blue-700',
@@ -248,11 +248,11 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '1 week',
     category: 'Biotech AI',
     realService: true,
-    technology: ['AI DiscoveryBiomarkers', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Bioinformatics'],
-    integrations: ['Laboratory systemsClinical databases', 'Research platformsAnalytical tools', 'Data sources'],
-    useCases: ['Disease diagnosisTreatment response', 'Prognosis predictionDrug development', 'Personalized medicineResearch discovery'],
+    technology: ['AI DiscoveryBiomarkers', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Bioinformatics']
+    integrations: ['Laboratory systemsClinical databases', 'Research platformsAnalytical tools', 'Data sources']
+    useCases: ['Disease diagnosisTreatment response', 'Prognosis predictionDrug development', 'Personalized medicineResearch discovery']
     roi: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.',
-    competitors: ['Manual methodsBasic tools'],
+    competitors: ['Manual methodsBasic tools']
     marketSize: '$25B biomarker market',
     growthRate: '240% annual growth',
     variant: 'biotech-futuristic',
@@ -282,7 +282,7 @@ export const biotechAIServices: BiotechAIService[] = [
       'Clinical decision supportPatient monitoring',
       'Mobile appAPI for integration',
       'Healthcare integrationAnalytics dashboard'
-    ],
+    ]
     popular: true,
     icon: '👤',
     color: 'from-indigo-600 to-purple-700',
@@ -294,11 +294,11 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '2 weeks',
     category: 'Biotech AI',
     realService: true,
-    technology: ['AI GenomicsPersonalized Medicine', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Healthcare'],
-    integrations: ['Healthcare systemsGenomic databases', 'Electronic health recordsLaboratory systems', 'Clinical platforms'],
-    useCases: ['Treatment optimizationDrug selection', 'Risk assessmentPreventive medicine', 'Clinical trialsHealthcare research'],
+    technology: ['AI GenomicsPersonalized Medicine', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Healthcare']
+    integrations: ['Healthcare systemsGenomic databases', 'Electronic health recordsLaboratory systems', 'Clinical platforms']
+    useCases: ['Treatment optimizationDrug selection', 'Risk assessmentPreventive medicine', 'Clinical trialsHealthcare research']
     roi: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.',
-    competitors: ['Basic analysisLimited tools'],
+    competitors: ['Basic analysisLimited tools']
     marketSize: '$60B personalized medicine market',
     growthRate: '260% annual growth',
     variant: 'biotech-futuristic',
@@ -328,7 +328,7 @@ export const biotechAIServices: BiotechAIService[] = [
       'Clinical correlationMarket analysis',
       'Collaboration toolsMobile app',
       'API for integrationAnalytics dashboard'
-    ],
+    ]
     popular: true,
     icon: '💊',
     color: 'from-orange-600 to-red-700',
@@ -340,11 +340,11 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '1 week',
     category: 'Biotech AI',
     realService: true,
-    technology: ['AI RepurposingDrug Discovery', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Bioinformatics'],
-    integrations: ['Drug databasesClinical databases', 'Research platformsAnalytical tools', 'Market data'],
-    useCases: ['New indicationsCombination therapy', 'Rare diseasesCost reduction', 'Faster approvalResearch discovery'],
+    technology: ['AI RepurposingDrug Discovery', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Bioinformatics']
+    integrations: ['Drug databasesClinical databases', 'Research platformsAnalytical tools', 'Market data']
+    useCases: ['New indicationsCombination therapy', 'Rare diseasesCost reduction', 'Faster approvalResearch discovery']
     roi: 'Accelerate drug development and reduce costs by 80%. ROI through faster time-to-market and cost savings.',
-    competitors: ['Manual researchBasic tools'],
+    competitors: ['Manual researchBasic tools']
     marketSize: '$20B drug repurposing market',
     growthRate: '200% annual growth',
     variant: 'biotech-futuristic',
@@ -374,7 +374,7 @@ export const biotechAIServices: BiotechAIService[] = [
       'Research collaborationMobile app',
       'API for integrationCloud computing',
       'Real-time analysisAdvanced algorithms'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-teal-600 to-cyan-700',
@@ -386,11 +386,11 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '1 week',
     category: 'Biotech AI',
     realService: true,
-    technology: ['AI BioinformaticsMulti-omics', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Cloud Computing'],
-    integrations: ['Laboratory systemsResearch databases', 'Analytical toolsCloud platforms', 'Data sources'],
-    useCases: ['Genomic analysisProteomic analysis', 'Metabolomic analysisResearch discovery', 'Data processingStatistical analysis'],
+    technology: ['AI BioinformaticsMulti-omics', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Cloud Computing']
+    integrations: ['Laboratory systemsResearch databases', 'Analytical toolsCloud platforms', 'Data sources']
+    useCases: ['Genomic analysisProteomic analysis', 'Metabolomic analysisResearch discovery', 'Data processingStatistical analysis']
     roi: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.',
-    competitors: ['Basic toolsManual analysis'],
+    competitors: ['Basic toolsManual analysis']
     marketSize: '$35B bioinformatics market',
     growthRate: '230% annual growth',
     variant: 'biotech-futuristic',
@@ -420,7 +420,7 @@ export const biotechAIServices: BiotechAIService[] = [
       'Real-time monitoringPredictive maintenance',
       'Mobile appAPI for integration',
       'Analytics dashboardAutomation tools'
-    ],
+    ]
     popular: true,
     icon: '🏭',
     color: 'from-gray-600 to-slate-700',
@@ -432,11 +432,11 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '2 weeks',
     category: 'Biotech AI',
     realService: true,
-    technology: ['AI OptimizationBiomanufacturing', 'Machine LearningReact', 'Node.jsPostgreSQL', 'IoT Integration'],
-    integrations: ['Manufacturing systemsLaboratory systems', 'Quality controlAutomation systems', 'Monitoring tools'],
-    useCases: ['Process optimizationYield improvement', 'Quality controlCost reduction', 'AutomationPerformance monitoring'],
+    technology: ['AI OptimizationBiomanufacturing', 'Machine LearningReact', 'Node.jsPostgreSQL', 'IoT Integration']
+    integrations: ['Manufacturing systemsLaboratory systems', 'Quality controlAutomation systems', 'Monitoring tools']
+    useCases: ['Process optimizationYield improvement', 'Quality controlCost reduction', 'AutomationPerformance monitoring']
     roi: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',
-    competitors: ['Basic optimizationManual processes'],
+    competitors: ['Basic optimizationManual processes']
     marketSize: '$40B biomanufacturing market',
     growthRate: '210% annual growth',
     variant: 'biotech-futuristic',
@@ -453,4 +453,4 @@ export const biotechAIServices: BiotechAIService[] = [
     rating: 4.9,
     reviews: 45
   }
-],
+]

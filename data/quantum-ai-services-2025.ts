@@ -4,7 +4,7 @@ export interface QuantumAiService2025 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
       "Advanced simulations",
       "Real-time optimization",
       "Enterprise support"
-    ],
+    ]
     link: "/services/quantum-ai-hybrid",
     category: "Quantum AI",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

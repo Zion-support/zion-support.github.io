@@ -9,7 +9,7 @@ export const cuttingEdgeITServices2025 = [
       'Advanced load balancing algorithmsPredictive scaling capabilities',
       'Multi-cloud quantum orchestrationReal-time performance monitoring',
       'Quantum-enhanced data processingAutomated infrastructure management'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 399, 
@@ -28,7 +28,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'Quantum IT',
-    tags: ['Quantum ComputingCloud Infrastructure', 'SecurityPerformance', 'Scalability'],
+    tags: ['Quantum ComputingCloud Infrastructure', 'SecurityPerformance', 'Scalability']
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -41,8 +41,8 @@ export const cuttingEdgeITServices2025 = [
       'High-security cloud deploymentsFinancial services infrastructure',
       'Government cloud systemsResearch computing platforms',
       'Enterprise cloud migration'
-    ],
-    integrations: ['AWSAzure', 'Google CloudKubernetes', 'DockerTerraform'],
+    ]
+    integrations: ['AWSAzure', 'Google CloudKubernetes', 'DockerTerraform']
     compliance: ['SOC2ISO 27001', 'FedRAMPQuantum Security Standards']
   },
   {
@@ -55,7 +55,7 @@ export const cuttingEdgeITServices2025 = [
       'Dynamic scaling and optimizationEdge security and compliance',
       'Real-time monitoring and analyticsAutomated edge deployment',
       'Edge-to-cloud synchronizationPerformance optimization algorithms'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 299, 
@@ -74,7 +74,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'Edge Computing',
-    tags: ['Edge ComputingOrchestration', 'Real-time ProcessingAI Deployment', 'Low Latency'],
+    tags: ['Edge ComputingOrchestration', 'Real-time ProcessingAI Deployment', 'Low Latency']
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -87,8 +87,8 @@ export const cuttingEdgeITServices2025 = [
       'IoT device managementSmart city infrastructure',
       'Manufacturing automationAutonomous vehicle systems',
       'Real-time analytics platforms'
-    ],
-    integrations: ['KubernetesDocker', 'IoT PlatformsAI Frameworks', 'Cloud Platforms'],
+    ]
+    integrations: ['KubernetesDocker', 'IoT PlatformsAI Frameworks', 'Cloud Platforms']
     compliance: ['IoT Security StandardsEdge Computing Protocols', 'Data Privacy Regulations']
   },
   {
@@ -101,7 +101,7 @@ export const cuttingEdgeITServices2025 = [
       'Threat detection and responseSecure access service edge (SASE)',
       'Micro-segmentationReal-time risk assessment',
       'Automated security responsesComprehensive audit logging'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 499, 
@@ -120,7 +120,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'Cybersecurity',
-    tags: ['Zero TrustSecurity', 'AuthenticationIAM', 'Threat Detection'],
+    tags: ['Zero TrustSecurity', 'AuthenticationIAM', 'Threat Detection']
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -133,8 +133,8 @@ export const cuttingEdgeITServices2025 = [
       'Enterprise security implementationGovernment security compliance',
       'Financial services securityHealthcare data protection',
       'Remote workforce security'
-    ],
-    integrations: ['Active DirectoryLDAP', 'SAMLOAuth', 'SIEM SystemsSecurity Tools'],
+    ]
+    integrations: ['Active DirectoryLDAP', 'SAMLOAuth', 'SIEM SystemsSecurity Tools']
     compliance: ['SOC2ISO 27001', 'FedRAMPHIPAA', 'PCI DSS']
   },
   {
@@ -147,7 +147,7 @@ export const cuttingEdgeITServices2025 = [
       'Integration with legacy systemsScalable blockchain architecture',
       'Security and compliance toolsReal-time transaction processing',
       'Multi-party workflow automationComprehensive reporting and analytics'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 599, 
@@ -166,7 +166,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'Blockchain',
-    tags: ['BlockchainSmart Contracts', 'Distributed LedgerEnterprise', 'Automation'],
+    tags: ['BlockchainSmart Contracts', 'Distributed LedgerEnterprise', 'Automation']
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -179,8 +179,8 @@ export const cuttingEdgeITServices2025 = [
       'Supply chain transparencyFinancial transaction processing',
       'Healthcare data managementGovernment record keeping',
       'Manufacturing process tracking'
-    ],
-    integrations: ['ERP SystemsCRM Platforms', 'Financial SystemsSupply Chain Tools', 'Legacy Systems'],
+    ]
+    integrations: ['ERP SystemsCRM Platforms', 'Financial SystemsSupply Chain Tools', 'Legacy Systems']
     compliance: ['Blockchain StandardsFinancial Regulations', 'Data Privacy Laws']
   },
   {
@@ -193,7 +193,7 @@ export const cuttingEdgeITServices2025 = [
       'Automated incident responseContinuous integration/continuous deployment (CI/CD)',
       'Infrastructure as code (IaC)Real-time performance optimization',
       'Automated security scanningComprehensive analytics and reporting'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 399, 
@@ -212,7 +212,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'DevOps',
-    tags: ['AI DevOpsAutomation', 'CI/CDMonitoring', 'Performance'],
+    tags: ['AI DevOpsAutomation', 'CI/CDMonitoring', 'Performance']
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -225,8 +225,8 @@ export const cuttingEdgeITServices2025 = [
       'Software development automationContinuous deployment pipelines',
       'Performance monitoring and optimizationIncident response automation',
       'Quality assurance automation'
-    ],
-    integrations: ['GitHubGitLab', 'JenkinsDocker', 'KubernetesAWS', 'AzureGoogle Cloud'],
+    ]
+    integrations: ['GitHubGitLab', 'JenkinsDocker', 'KubernetesAWS', 'AzureGoogle Cloud']
     compliance: ['DevOps Best PracticesSecurity Standards', 'Quality Assurance Protocols']
   }
-],
+]

@@ -10,7 +10,7 @@ export const real2029ServiceAdditions = [
       'Intent detection and auto-reply templatesPriority triage and SLA routing',
       'PII redaction and safety guardrailsCRM/helpdesk sync (HubSpot, Zendesk)',
       'Weekly insights and KPI dashboard'
-    ],
+    ]
     popular: true,
     icon: '📧',
     color: 'from-cyan-500 to-blue-600',
@@ -22,11 +22,11 @@ export const real2029ServiceAdditions = [
     setupTime: '20 minutes',
     category: 'AI & Data',
     realService: true,
-    technology: ['OpenAI/GroqGmail/Outlook APIs', 'Next.jsPostgreSQL'],
-    integrations: ['GmailOutlook', 'HubSpotZendesk', 'Slack'],
-    useCases: ['Customer support repliesLead responses', 'Internal triage'],
+    technology: ['OpenAI/GroqGmail/Outlook APIs', 'Next.jsPostgreSQL']
+    integrations: ['GmailOutlook', 'HubSpotZendesk', 'Slack']
+    useCases: ['Customer support repliesLead responses', 'Internal triage']
     roi: 'Reduce response time by 70%, automate 40–60% of volume.',
-    competitors: ['Superhuman AIFront', 'Zendesk macros'],
+    competitors: ['Superhuman AIFront', 'Zendesk macros']
     marketSize: '$5B+ email productivity',
     growthRate: '20% CAGR',
     variant: 'ai-futuristic',
@@ -54,7 +54,7 @@ export const real2029ServiceAdditions = [
       'Responsive builder and themesConditional logic and branching',
       'NPS/CSAT libraryWebhook and Zapier integrations',
       'Real-time analytics and CSV/BigQuery export'
-    ],
+    ]
     popular: false,
     icon: '📱',
     color: 'from-purple-500 to-pink-600',
@@ -66,11 +66,11 @@ export const real2029ServiceAdditions = [
     setupTime: '10 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.jsTailwind', 'PostgreSQL'],
-    integrations: ['ZapierMake', 'Google SheetsSlack'],
-    useCases: ['Product feedbackOnboarding', 'NPS campaigns'],
+    technology: ['Next.jsTailwind', 'PostgreSQL']
+    integrations: ['ZapierMake', 'Google SheetsSlack']
+    useCases: ['Product feedbackOnboarding', 'NPS campaigns']
     roi: 'Boost response rates by 20–40% vs. desktop-first forms.',
-    competitors: ['TypeformTally', 'SurveyMonkey'],
+    competitors: ['TypeformTally', 'SurveyMonkey']
     marketSize: '$3B+ surveys',
     growthRate: '15% CAGR',
     variant: 'ai-futuristic',
@@ -98,7 +98,7 @@ export const real2029ServiceAdditions = [
       'Custom referral links and couponsAttribution across devices',
       'Stripe/PayPal payoutsFraud detection heuristics',
       'Partner portal and reports'
-    ],
+    ]
     popular: true,
     icon: '🔗',
     color: 'from-emerald-500 to-teal-600',
@@ -110,11 +110,11 @@ export const real2029ServiceAdditions = [
     setupTime: '45 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.jsPostgreSQL', 'Stripe'],
-    integrations: ['StripePayPal', 'ShopifyWooCommerce'],
-    useCases: ['Affiliate programsAmbassador campaigns'],
+    technology: ['Next.jsPostgreSQL', 'Stripe']
+    integrations: ['StripePayPal', 'ShopifyWooCommerce']
+    useCases: ['Affiliate programsAmbassador campaigns']
     roi: 'Increase partner revenue by 10–25% with better attribution.',
-    competitors: ['PartnerStackImpact'],
+    competitors: ['PartnerStackImpact']
     marketSize: '$8B+ affiliate software',
     growthRate: '12% CAGR',
     variant: 'analytics-futuristic',
@@ -142,7 +142,7 @@ export const real2029ServiceAdditions = [
       'Pageviews and conversionsTop sources and campaigns',
       'Goals and funnelsEmail/Slack weekly report',
       'CSV export'
-    ],
+    ]
     popular: false,
     icon: '📈',
     color: 'from-blue-500 to-indigo-600',
@@ -154,11 +154,11 @@ export const real2029ServiceAdditions = [
     setupTime: '10 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.jsClickhouse/PostgreSQL'],
-    integrations: ['SlackGoogle Ads', 'Facebook Ads'],
-    useCases: ['Simple analyticsCampaign tracking', 'Landing page testing'],
+    technology: ['Next.jsClickhouse/PostgreSQL']
+    integrations: ['SlackGoogle Ads', 'Facebook Ads']
+    useCases: ['Simple analyticsCampaign tracking', 'Landing page testing']
     roi: 'Improve conversion rate 5–15% with insights.',
-    competitors: ['PlausibleSimple Analytics'],
+    competitors: ['PlausibleSimple Analytics']
     marketSize: '$2B+ web analytics',
     growthRate: '10% CAGR',
     variant: 'analytics-futuristic',
@@ -186,7 +186,7 @@ export const real2029ServiceAdditions = [
       'Email-to-ticket and auto-assignSLA policies and escalations',
       'Knowledge base and portalAsset links and comments',
       'Reports and exports'
-    ],
+    ]
     popular: true,
     icon: '🛠️',
     color: 'from-slate-500 to-gray-600',
@@ -198,11 +198,11 @@ export const real2029ServiceAdditions = [
     setupTime: '1 hour',
     category: 'Cloud & FinOps',
     realService: true,
-    technology: ['Next.jsNode', 'PostgreSQL'],
-    integrations: ['EmailSlack', 'Okta'],
-    useCases: ['IT supportSLA routing', 'Self-service'],
+    technology: ['Next.jsNode', 'PostgreSQL']
+    integrations: ['EmailSlack', 'Okta']
+    useCases: ['IT supportSLA routing', 'Self-service']
     roi: 'Reduce resolution time by 25–40% with routing and KB.',
-    competitors: ['FreshserviceJira Service Management'],
+    competitors: ['FreshserviceJira Service Management']
     marketSize: '$10B+ ITSM',
     growthRate: '12% CAGR',
     variant: 'monitoring-futuristic',
@@ -230,7 +230,7 @@ export const real2029ServiceAdditions = [
       'Return portal and labelsStatus emails and webhooks',
       'Rules and approvalsInventory sync',
       'Analytics and exports'
-    ],
+    ]
     popular: false,
     icon: '📦',
     color: 'from-rose-500 to-red-600',
@@ -242,11 +242,11 @@ export const real2029ServiceAdditions = [
     setupTime: '45 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.jsShopify/Woo APIs'],
-    integrations: ['ShopifyWooCommerce', 'Shippo'],
-    useCases: ['Reduce support costImprove CX'],
+    technology: ['Next.jsShopify/Woo APIs']
+    integrations: ['ShopifyWooCommerce', 'Shippo']
+    useCases: ['Reduce support costImprove CX']
     roi: 'Reduce return handling time 50%+ with automation.',
-    competitors: ['LoopReturnly'],
+    competitors: ['LoopReturnly']
     marketSize: '$1B+ returns software',
     growthRate: '14% CAGR',
     variant: 'ai-futuristic',
@@ -263,4 +263,4 @@ export const real2029ServiceAdditions = [
     rating: 4.5,
     reviews: 21
   }
-],
+]

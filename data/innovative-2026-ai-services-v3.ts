@@ -4,7 +4,7 @@ export interface Innovative2026AiServiceV3 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
       "Advanced features",
       "Improved performance",
       "Better integration"
-    ],
+    ]
     link: "/services/2026-innovative-ai-v3",
     category: "Innovative 2026 AI V3",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

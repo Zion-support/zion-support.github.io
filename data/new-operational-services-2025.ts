@@ -4,7 +4,7 @@ export interface NewOperationalService2025 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
       "Predictive analytics",
       "Automated workflows",
       "Performance insights"
-    ],
+    ]
     link: "/services/smart-operations-center",
     category: "New Operational Services 2025",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

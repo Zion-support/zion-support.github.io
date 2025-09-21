@@ -27,7 +27,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'API access for custom quantum applications',
       'Expert quantum computing consultation',
       'Training and educational resources'
-    ],
+    ]
     popular: true,
     icon: '⚛️',
     color: 'from-purple-600 to-pink-700',
@@ -39,11 +39,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '1-2 weeks',
     category: 'Quantum & Emerging Tech',
     realService: true,
-    technology: ['Qiskit, Cirq, PennyLane, Python, React, Node.js'],
-    integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum'],
-    useCases: ['Drug discovery, Financial modeling, Logistics optimization, Cryptography'],
+    technology: ['Qiskit, Cirq, PennyLane, Python, React, Node.js']
+    integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum']
+    useCases: ['Drug discovery, Financial modeling, Logistics optimization, Cryptography']
     roi: 'Solve previously intractable problems 1000x faster than classical computers',
-    competitors: ['IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum'],
+    competitors: ['IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum']
     marketSize: '$1.5B Quantum Computing market',
     growthRate: '45% CAGR',
     variant: 'quantum',
@@ -75,7 +75,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'Blockchain analytics and monitoring',
       'Mobile and web applications',
       'API and SDK for developers'
-    ],
+    ]
     popular: true,
     icon: '🔗',
     color: 'from-blue-600 to-cyan-700',
@@ -87,11 +87,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '2-4 weeks',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['Ethereum, Solana, Polkadot, Rust, Go, React, Node.js'],
-    integrations: ['AWS, Azure, GCP, Oracle, SAP, Salesforce'],
-    useCases: ['Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols'],
+    technology: ['Ethereum, Solana, Polkadot, Rust, Go, React, Node.js']
+    integrations: ['AWS, Azure, GCP, Oracle, SAP, Salesforce']
+    useCases: ['Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols']
     roi: 'Reduce transaction costs by 80% and increase transparency by 100%',
-    competitors: ['Hyperledger Fabric, R3 Corda, Ethereum Enterprise, Polygon'],
+    competitors: ['Hyperledger Fabric, R3 Corda, Ethereum Enterprise, Polygon']
     marketSize: '$19B Blockchain market',
     growthRate: '87% CAGR',
     variant: 'default',
@@ -123,7 +123,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'Space mission planning and optimization',
       'Real-time data streaming and alerts',
       'Custom analytics and reporting tools'
-    ],
+    ]
     popular: true,
     icon: '🛰️',
     color: 'from-indigo-600 to-purple-700',
@@ -135,11 +135,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '1-2 weeks',
     category: 'Space & Metaverse',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['NASA APIs, ESA data, commercial satellite providers, GIS systems'],
-    useCases: ['Precision agriculture, Environmental monitoring, Urban planning, Space operations'],
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis']
+    integrations: ['NASA APIs, ESA data, commercial satellite providers, GIS systems']
+    useCases: ['Precision agriculture, Environmental monitoring, Urban planning, Space operations']
     roi: 'Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%',
-    competitors: ['Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky'],
+    competitors: ['Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky']
     marketSize: '$4.5B Space Data market',
     growthRate: '35% CAGR',
     variant: 'ai-futuristic',
@@ -171,7 +171,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'Custom dashboard and reporting',
       'API access for third-party integrations',
       'Scalable cloud infrastructure'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-green-600 to-blue-700',
@@ -183,11 +183,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '1-3 weeks',
     category: 'IoT & Edge Computing',
     realService: true,
-    technology: ['Kubernetes, Docker, Python, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['AWS, Azure, GCP, industrial protocols, enterprise systems'],
-    useCases: ['Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance'],
+    technology: ['Kubernetes, Docker, Python, React, Node.js, PostgreSQL, Redis']
+    integrations: ['AWS, Azure, GCP, industrial protocols, enterprise systems']
+    useCases: ['Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance']
     roi: 'Reduce operational costs by 30% and improve efficiency by 40%',
-    competitors: ['AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx'],
+    competitors: ['AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx']
     marketSize: '$1.1T IoT market',
     growthRate: '25% CAGR',
     variant: 'default',
@@ -219,7 +219,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'Integration with enterprise systems',
       'Mobile and web applications',
       'Custom content development services'
-    ],
+    ]
     popular: true,
     icon: '🥽',
     color: 'from-pink-600 to-purple-700',
@@ -231,11 +231,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '2-4 weeks',
     category: 'AR/VR & Metaverse',
     realService: true,
-    technology: ['Unity, Unreal Engine, React, Node.js, Python, PostgreSQL'],
-    integrations: ['3D modeling software, enterprise systems, social platforms'],
-    useCases: ['Employee training, Product design, Customer engagement, Remote collaboration'],
+    technology: ['Unity, Unreal Engine, React, Node.js, Python, PostgreSQL']
+    integrations: ['3D modeling software, enterprise systems, social platforms']
+    useCases: ['Employee training, Product design, Customer engagement, Remote collaboration']
     roi: 'Reduce training costs by 50% and improve learning retention by 80%',
-    competitors: ['Unity, Unreal Engine, PTC Vuforia, Magic Leap'],
+    competitors: ['Unity, Unreal Engine, PTC Vuforia, Magic Leap']
     marketSize: '$45B AR/VR market',
     growthRate: '30% CAGR',
     variant: 'holographic',
@@ -267,7 +267,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'Integration with existing automation systems',
       'Custom robotics and drone development',
       'Training and simulation environments'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-gray-600 to-blue-700',
@@ -279,11 +279,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '2-6 weeks',
     category: 'Autonomous Systems',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, ROS, React, Node.js'],
-    integrations: ['Industrial robots, drones, autonomous vehicles, IoT sensors'],
-    useCases: ['Industrial automation, Autonomous logistics, Precision agriculture, Research and development'],
+    technology: ['Python, TensorFlow, PyTorch, ROS, React, Node.js']
+    integrations: ['Industrial robots, drones, autonomous vehicles, IoT sensors']
+    useCases: ['Industrial automation, Autonomous logistics, Precision agriculture, Research and development']
     roi: 'Increase operational efficiency by 200% and reduce human error by 90%',
-    competitors: ['NVIDIA DRIVE, ROS, ABB Robotics, KUKA Robotics'],
+    competitors: ['NVIDIA DRIVE, ROS, ABB Robotics, KUKA Robotics']
     marketSize: '$65B Autonomous Systems market',
     growthRate: '40% CAGR',
     variant: 'ai-futuristic',
@@ -315,7 +315,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'Laboratory information management system',
       'Research collaboration and data sharing',
       'Regulatory compliance and documentation'
-    ],
+    ]
     popular: true,
     icon: '🧬',
     color: 'from-green-600 to-blue-700',
@@ -327,11 +327,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '4-8 weeks',
     category: 'Healthcare & Biotech',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL'],
-    integrations: ['Laboratory equipment, DNA synthesis services, research databases'],
-    useCases: ['Drug discovery, Bioengineering, Agricultural biotechnology, Research automation'],
+    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL']
+    integrations: ['Laboratory equipment, DNA synthesis services, research databases']
+    useCases: ['Drug discovery, Bioengineering, Agricultural biotechnology, Research automation']
     roi: 'Accelerate drug discovery by 10x and reduce research costs by 70%',
-    competitors: ['Ginkgo Bioworks, Twist Bioscience, Zymergen, Benchling'],
+    competitors: ['Ginkgo Bioworks, Twist Bioscience, Zymergen, Benchling']
     marketSize: '$15B Synthetic Biology market',
     growthRate: '35% CAGR',
     variant: 'neural',
@@ -363,7 +363,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'Predictive maintenance for energy infrastructure',
       'Energy trading and market optimization',
       'Sustainability reporting and compliance'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-yellow-600 to-green-700',
@@ -375,11 +375,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '2-4 weeks',
     category: 'Energy & Sustainability',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT'],
-    integrations: ['Smart meters, renewable energy systems, grid infrastructure, IoT sensors'],
-    useCases: ['Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting'],
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT']
+    integrations: ['Smart meters, renewable energy systems, grid infrastructure, IoT sensors']
+    useCases: ['Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting']
     roi: 'Reduce energy costs by 25% and improve renewable energy utilization by 40%',
-    competitors: ['Schneider Electric, Siemens, GE Digital, ABB'],
+    competitors: ['Schneider Electric, Siemens, GE Digital, ABB']
     marketSize: '$75B Smart Energy market',
     growthRate: '20% CAGR',
     variant: 'default',
@@ -411,7 +411,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'Mobile applications for commuters',
       'Analytics and performance reporting',
       'API access for third-party applications'
-    ],
+    ]
     popular: true,
     icon: '🚗',
     color: 'from-blue-600 to-green-700',
@@ -423,11 +423,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '2-6 weeks',
     category: 'Transportation & Logistics',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT'],
-    integrations: ['Traffic signals, public transportation systems, IoT sensors, automotive systems'],
-    useCases: ['Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles'],
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT']
+    integrations: ['Traffic signals, public transportation systems, IoT sensors, automotive systems']
+    useCases: ['Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles']
     roi: 'Reduce traffic congestion by 30% and improve transportation efficiency by 40%',
-    competitors: ['Siemens Mobility, Cubic Corporation, Kapsch TrafficCom, TomTom'],
+    competitors: ['Siemens Mobility, Cubic Corporation, Kapsch TrafficCom, TomTom']
     marketSize: '$45B Intelligent Transportation market',
     growthRate: '18% CAGR',
     variant: 'default',
@@ -459,7 +459,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
       'Integration with existing security infrastructure',
       'Real-time security monitoring and alerts',
       'Expert cybersecurity consultation'
-    ],
+    ]
     popular: true,
     icon: '🔐',
     color: 'from-red-600 to-purple-700',
@@ -471,11 +471,11 @@ export const emergingTechServices2025: MicroSaasService[] = [
     setupTime: '2-4 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Python, Rust, Go, React, Node.js, PostgreSQL'],
-    integrations: ['Existing security infrastructure, identity management systems, communication platforms'],
-    useCases: ['Post-quantum cryptography, Quantum-resistant security, Advanced threat protection, Compliance'],
+    technology: ['Python, Rust, Go, React, Node.js, PostgreSQL']
+    integrations: ['Existing security infrastructure, identity management systems, communication platforms']
+    useCases: ['Post-quantum cryptography, Quantum-resistant security, Advanced threat protection, Compliance']
     roi: 'Future-proof security infrastructure and maintain compliance with emerging standards',
-    competitors: ['ISARA Corporation, PQShield, Crypto Quantique, Qrypt'],
+    competitors: ['ISARA Corporation, PQShield, Crypto Quantique, Qrypt']
     marketSize: '$8B Quantum Cybersecurity market',
     growthRate: '50% CAGR',
     variant: 'quantum',

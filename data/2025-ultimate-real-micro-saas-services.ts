@@ -61,7 +61,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Integration with CRM and support systems',
       'Custom success playbooks and automation',
       'Advanced reporting and ROI tracking'
-    ],
+    ]
     popular: true,
     icon: '🎯',
     color: 'from-emerald-600 to-teal-600',
@@ -73,11 +73,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '2-3 hours',
     category: 'Customer Success & Retention',
     realService: true,
-    technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['Salesforce, HubSpot, Zendesk, Intercom, Slack, Microsoft Teams'],
-    useCases: ['Customer churn prevention, Automated onboarding, Success playbook automation, Predictive analytics, Customer health monitoring'],
+    technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker, AWS']
+    integrations: ['Salesforce, HubSpot, Zendesk, Intercom, Slack, Microsoft Teams']
+    useCases: ['Customer churn prevention, Automated onboarding, Success playbook automation, Predictive analytics, Customer health monitoring']
     roi: 'Companies report 400% ROI through increased retention and reduced churn.',
-    competitors: ['Gainsight, Totango, ChurnZero, ClientSuccess'],
+    competitors: ['Gainsight, Totango, ChurnZero, ClientSuccess']
     marketSize: '$1.2B Customer Success market',
     growthRate: '25% annual growth',
     variant: 'ai-customer-success-enterprise',
@@ -114,7 +114,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Integration with ERP and WMS systems',
       'Custom dashboards and reporting',
       'Mobile app for field operations'
-    ],
+    ]
     popular: true,
     icon: '🚚',
     color: 'from-blue-600 to-indigo-600',
@@ -126,11 +126,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '1-2 weeks',
     category: 'Supply Chain & Logistics',
     realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, Docker'],
-    integrations: ['SAP, Oracle, NetSuite, Shopify, WooCommerce, QuickBooks'],
-    useCases: ['Inventory optimization, Demand forecasting, Supplier management, Route optimization, Cost reduction'],
+    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, Docker']
+    integrations: ['SAP, Oracle, NetSuite, Shopify, WooCommerce, QuickBooks']
+    useCases: ['Inventory optimization, Demand forecasting, Supplier management, Route optimization, Cost reduction']
     roi: 'Businesses report 300% ROI through cost savings and efficiency improvements.',
-    competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, JDA Software'],
+    competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, JDA Software']
     marketSize: '$15.8B Supply Chain Management market',
     growthRate: '18% annual growth',
     variant: 'supply-chain-enterprise',
@@ -167,7 +167,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Custom financial models and templates',
       'Collaborative planning workflows',
       'Advanced reporting and analytics'
-    ],
+    ]
     popular: true,
     icon: '💰',
     color: 'from-green-600 to-emerald-600',
@@ -179,11 +179,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '1-2 hours',
     category: 'Financial Planning & Analysis',
     realService: true,
-    technology: ['React, Python, Scikit-learn, PostgreSQL, Redis, Docker'],
-    integrations: ['QuickBooks, Xero, Sage, NetSuite, Excel, Google Sheets'],
-    useCases: ['Budget planning, Financial forecasting, Cash flow management, Scenario analysis, Financial reporting'],
+    technology: ['React, Python, Scikit-learn, PostgreSQL, Redis, Docker']
+    integrations: ['QuickBooks, Xero, Sage, NetSuite, Excel, Google Sheets']
+    useCases: ['Budget planning, Financial forecasting, Cash flow management, Scenario analysis, Financial reporting']
     roi: 'Companies report 250% ROI through improved financial planning and decision-making.',
-    competitors: ['Adaptive Insights, Anaplan, Planful, Vena Solutions'],
+    competitors: ['Adaptive Insights, Anaplan, Planful, Vena Solutions']
     marketSize: '$3.2B Financial Planning market',
     growthRate: '22% annual growth',
     variant: 'financial-planning-enterprise',
@@ -220,7 +220,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Custom HR dashboards and reports',
       'Predictive hiring recommendations',
       'Employee development tracking'
-    ],
+    ]
     popular: true,
     icon: '👥',
     color: 'from-purple-600 to-violet-600',
@@ -232,11 +232,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '2-3 hours',
     category: 'Human Resources & Analytics',
     realService: true,
-    technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker'],
-    integrations: ['Workday, BambooHR, Greenhouse, Lever, Slack, Microsoft Teams'],
-    useCases: ['Employee performance analysis, Retention optimization, Recruitment analytics, Workforce planning, Engagement monitoring'],
+    technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker']
+    integrations: ['Workday, BambooHR, Greenhouse, Lever, Slack, Microsoft Teams']
+    useCases: ['Employee performance analysis, Retention optimization, Recruitment analytics, Workforce planning, Engagement monitoring']
     roi: 'Organizations report 350% ROI through improved HR decision-making and employee retention.',
-    competitors: ['Visier, Tableau, Power BI, People Analytics'],
+    competitors: ['Visier, Tableau, Power BI, People Analytics']
     marketSize: '$2.8B HR Analytics market',
     growthRate: '20% annual growth',
     variant: 'hr-analytics-enterprise',
@@ -273,7 +273,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Custom sales dashboards and reports',
       'Mobile sales app for field teams',
       'Advanced sales analytics and insights'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-orange-600 to-red-600',
@@ -285,11 +285,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '1-2 hours',
     category: 'Sales Intelligence & Automation',
     realService: true,
-    technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker'],
-    integrations: ['Salesforce, HubSpot, Pipedrive, Zoho CRM, LinkedIn, ZoomInfo'],
-    useCases: ['Lead scoring and qualification, Prospect research, Sales automation, Pipeline analytics, Sales forecasting'],
+    technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker']
+    integrations: ['Salesforce, HubSpot, Pipedrive, Zoho CRM, LinkedIn, ZoomInfo']
+    useCases: ['Lead scoring and qualification, Prospect research, Sales automation, Pipeline analytics, Sales forecasting']
     roi: 'Sales teams report 400% ROI through increased productivity and conversion rates.',
-    competitors: ['ZoomInfo, LinkedIn Sales Navigator, DiscoverOrg, Clearbit'],
+    competitors: ['ZoomInfo, LinkedIn Sales Navigator, DiscoverOrg, Clearbit']
     marketSize: '$4.5B Sales Intelligence market',
     growthRate: '24% annual growth',
     variant: 'sales-intelligence-enterprise',
@@ -326,7 +326,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Advanced reporting and analytics',
       'Collaborative decision-making tools',
       'Mobile decision support app'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-indigo-600 to-purple-600',
@@ -338,11 +338,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '1-2 weeks',
     category: 'Business Intelligence & Decision Support',
     realService: true,
-    technology: ['React, Python, TensorFlow, PyTorch, PostgreSQL, Redis, Docker'],
-    integrations: ['Tableau, Power BI, SAP, Oracle, Salesforce, HubSpot'],
-    useCases: ['Strategic planning, Risk management, Performance optimization, Market analysis, Operational decisions'],
+    technology: ['React, Python, TensorFlow, PyTorch, PostgreSQL, Redis, Docker']
+    integrations: ['Tableau, Power BI, SAP, Oracle, Salesforce, HubSpot']
+    useCases: ['Strategic planning, Risk management, Performance optimization, Market analysis, Operational decisions']
     roi: 'Organizations report 500% ROI through improved decision-making and strategic planning.',
-    competitors: ['Palantir, SAS, IBM Watson, Microsoft Azure ML'],
+    competitors: ['Palantir, SAS, IBM Watson, Microsoft Azure ML']
     marketSize: '$8.9B Decision Intelligence market',
     growthRate: '28% annual growth',
     variant: 'decision-engine-enterprise',
@@ -379,7 +379,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Custom content templates and workflows',
       'Collaborative content creation tools',
       'Advanced content analytics and insights'
-    ],
+    ]
     popular: true,
     icon: '✍️',
     color: 'from-teal-600 to-cyan-600',
@@ -391,11 +391,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '1-2 hours',
     category: 'Content Marketing & Automation',
     realService: true,
-    technology: ['React, Python, GPT-4, TensorFlow, PostgreSQL, Redis, Docker'],
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Hootsuite, Buffer'],
-    useCases: ['Content generation, SEO optimization, Social media automation, Email marketing, Content analytics'],
+    technology: ['React, Python, GPT-4, TensorFlow, PostgreSQL, Redis, Docker']
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Hootsuite, Buffer']
+    useCases: ['Content generation, SEO optimization, Social media automation, Email marketing, Content analytics']
     roi: 'Marketing teams report 300% ROI through increased content efficiency and engagement.',
-    competitors: ['HubSpot, Marketo, Pardot, Contentful'],
+    competitors: ['HubSpot, Marketo, Pardot, Contentful']
     marketSize: '$6.2B Content Marketing market',
     growthRate: '26% annual growth',
     variant: 'content-automation-enterprise',
@@ -432,7 +432,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Custom dashboards and reporting',
       'Mobile CRM app for field teams',
       'Advanced analytics and insights'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-blue-600 to-cyan-600',
@@ -444,11 +444,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '2-3 hours',
     category: 'Customer Relationship Management',
     realService: true,
-    technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker'],
-    integrations: ['Salesforce, HubSpot, Pipedrive, Zoho CRM, Microsoft Dynamics'],
-    useCases: ['Lead management, Customer analytics, Sales automation, Pipeline optimization, Customer success'],
+    technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker']
+    integrations: ['Salesforce, HubSpot, Pipedrive, Zoho CRM, Microsoft Dynamics']
+    useCases: ['Lead management, Customer analytics, Sales automation, Pipeline optimization, Customer success']
     roi: 'Sales teams report 350% ROI through improved lead quality and conversion rates.',
-    competitors: ['Salesforce, HubSpot, Pipedrive, Zoho CRM'],
+    competitors: ['Salesforce, HubSpot, Pipedrive, Zoho CRM']
     marketSize: '$40.2B CRM market',
     growthRate: '15% annual growth',
     variant: 'crm-intelligence-enterprise',
@@ -485,7 +485,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Dashboards for executives and engineers',
       'Weekly performance reports',
       'Go-live in under 60 minutes'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-indigo-600 to-purple-600',
@@ -497,11 +497,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '1 hour',
     category: 'Observability & Monitoring',
     realService: true,
-    technology: ['OpenTelemetry, Node.js, Python, Go, Grafana, Prometheus'],
-    integrations: ['Datadog, New Relic, Honeycomb, Grafana, Slack, PagerDuty'],
-    useCases: ['API tracing, Error correlation, SLO tracking, Executive reporting'],
+    technology: ['OpenTelemetry, Node.js, Python, Go, Grafana, Prometheus']
+    integrations: ['Datadog, New Relic, Honeycomb, Grafana, Slack, PagerDuty']
+    useCases: ['API tracing, Error correlation, SLO tracking, Executive reporting']
     roi: 'Reduce MTTR by 40% and deploy with confidence using SLOs.',
-    competitors: ['Datadog APM', 'Honeycomb', 'New Relic'],
+    competitors: ['Datadog APM', 'Honeycomb', 'New Relic']
     marketSize: '$7.8B APM/Observability market',
     growthRate: '18% annual growth',
     variant: 'observability-starter',
@@ -538,7 +538,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Evidence reports for auditors',
       'Slack and email alerts',
       'API inventory and risk heatmaps'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-rose-600 to-red-700',
@@ -550,11 +550,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '90 minutes',
     category: 'Security & Compliance',
     realService: true,
-    technology: ['Node.js, Go, OWASP ZAP, OpenAPI, Postman'],
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack, Snyk'],
-    useCases: ['Shift-left API security, Compliance evidence, Risk remediation'],
+    technology: ['Node.js, Go, OWASP ZAP, OpenAPI, Postman']
+    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack, Snyk']
+    useCases: ['Shift-left API security, Compliance evidence, Risk remediation']
     roi: 'Prevent costly breaches and reduce audit effort by 50%.',
-    competitors: ['StackHawk', 'Snyk API', 'Salt Security'],
+    competitors: ['StackHawk', 'Snyk API', 'Salt Security']
     marketSize: '$3.5B API Security market',
     growthRate: '28% annual growth',
     variant: 'api-security',
@@ -591,7 +591,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Link blacklist checks',
       'SPF flattening helper',
       'Multi-domain support'
-    ],
+    ]
     popular: false,
     icon: '✉️',
     color: 'from-cyan-600 to-teal-600',
@@ -603,11 +603,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '45 minutes',
     category: 'Messaging & Email',
     realService: true,
-    technology: ['Node.js, DNS, Postfix, Cloudflare, PostgreSQL'],
-    integrations: ['Postmark, SendGrid, Mailgun, SES, Cloudflare'],
-    useCases: ['Deliverability monitoring, DNS policy compliance, Reputation tracking'],
+    technology: ['Node.js, DNS, Postfix, Cloudflare, PostgreSQL']
+    integrations: ['Postmark, SendGrid, Mailgun, SES, Cloudflare']
+    useCases: ['Deliverability monitoring, DNS policy compliance, Reputation tracking']
     roi: 'Improve inbox placement and reduce churn from missed emails.',
-    competitors: ['Postmark', 'SendGrid', 'Mailgun'],
+    competitors: ['Postmark', 'SendGrid', 'Mailgun']
     marketSize: '$1.1B Email Delivery market',
     growthRate: '12% annual growth',
     variant: 'email-deliverability',
@@ -644,7 +644,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'JSON export and audit logs',
       'Role-based access',
       'API access'
-    ],
+    ]
     popular: false,
     icon: '🌐',
     color: 'from-emerald-600 to-green-700',
@@ -656,11 +656,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '30 minutes',
     category: 'Monitoring & Reliability',
     realService: true,
-    technology: ['Node.js, DNS, Cloudflare, PostgreSQL'],
-    integrations: ['Cloudflare, Route53, Slack, PagerDuty'],
-    useCases: ['DNS change monitoring, Expiry management, DNSSEC compliance'],
+    technology: ['Node.js, DNS, Cloudflare, PostgreSQL']
+    integrations: ['Cloudflare, Route53, Slack, PagerDuty']
+    useCases: ['DNS change monitoring, Expiry management, DNSSEC compliance']
     roi: 'Prevent outages and loss of domains due to missed renewals or DNS issues.',
-    competitors: ['UptimeRobot', 'DNS monitoring tools'],
+    competitors: ['UptimeRobot', 'DNS monitoring tools']
     marketSize: '$0.5B DNS Monitoring market',
     growthRate: '10% annual growth',
     variant: 'dns-monitor',
@@ -697,7 +697,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Multi-cluster support',
       'Audit logs and approval workflow',
       'Executive risk summaries'
-    ],
+    ]
     popular: true,
     icon: '☸️',
     color: 'from-blue-700 to-sky-600',
@@ -709,11 +709,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '2 hours',
     category: 'Kubernetes & Platform',
     realService: true,
-    technology: ['Go, Kubernetes, OPA, Gatekeeper, Helm'],
-    integrations: ['EKS, GKE, AKS, ArgoCD, GitHub, Slack'],
-    useCases: ['RBAC review, Audit prep, Policy enforcement'],
+    technology: ['Go, Kubernetes, OPA, Gatekeeper, Helm']
+    integrations: ['EKS, GKE, AKS, ArgoCD, GitHub, Slack']
+    useCases: ['RBAC review, Audit prep, Policy enforcement']
     roi: 'Reduce cluster risk and audit time by 60%.',
-    competitors: ['ARMO', 'Fairwinds Polaris', 'Aqua'],
+    competitors: ['ARMO', 'Fairwinds Polaris', 'Aqua']
     marketSize: '$2.2B Kubernetes Security market',
     growthRate: '24% annual growth',
     variant: 'k8s-rbac',
@@ -750,7 +750,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Slack alerts and weekly recaps',
       'CSV/BI exports',
       'Guardrail policies'
-    ],
+    ]
     popular: true,
     icon: '💸',
     color: 'from-emerald-600 to-lime-600',
@@ -762,11 +762,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '1-2 days',
     category: 'Cloud & FinOps',
     realService: true,
-    technology: ['AWS, Azure, GCP, BigQuery, ClickHouse'],
-    integrations: ['AWS, Azure, GCP, Slack, Snowflake'],
-    useCases: ['Cost reduction, Budgeting, FinOps guardrails'],
+    technology: ['AWS, Azure, GCP, BigQuery, ClickHouse']
+    integrations: ['AWS, Azure, GCP, Slack, Snowflake']
+    useCases: ['Cost reduction, Budgeting, FinOps guardrails']
     roi: 'Typical savings 20–40% within first quarter.',
-    competitors: ['CloudZero', 'Kubecost', 'Apptio'],
+    competitors: ['CloudZero', 'Kubecost', 'Apptio']
     marketSize: '$2.7B FinOps market',
     growthRate: '30% annual growth',
     variant: 'finops-optimizer',
@@ -803,7 +803,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Comms templates',
       'Root cause tagging',
       'Executive summaries'
-    ],
+    ]
     popular: true,
     icon: '🚨',
     color: 'from-rose-600 to-pink-600',
@@ -815,11 +815,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '1 day',
     category: 'Reliability & Operations',
     realService: true,
-    technology: ['Node.js, Slack API, Jira API, Next.js'],
-    integrations: ['Slack, Jira, ServiceNow, PagerDuty'],
-    useCases: ['Incident response, Postmortems, On-call operations'],
+    technology: ['Node.js, Slack API, Jira API, Next.js']
+    integrations: ['Slack, Jira, ServiceNow, PagerDuty']
+    useCases: ['Incident response, Postmortems, On-call operations']
     roi: 'Reduce MTTR and coordination overhead by 35–50%.',
-    competitors: ['PagerDuty', 'FireHydrant', 'Rootly'],
+    competitors: ['PagerDuty', 'FireHydrant', 'Rootly']
     marketSize: '$4.2B Incident Management market',
     growthRate: '16% annual growth',
     variant: 'incident-automation',
@@ -856,7 +856,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'API keys and usage limits',
       'Team access controls',
       'Usage analytics'
-    ],
+    ]
     popular: false,
     icon: '📄',
     color: 'from-slate-700 to-gray-800',
@@ -868,11 +868,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '15 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Chromium, Node.js, Docker, S3 compatible'],
-    integrations: ['Zapier, Make, Webhooks'],
-    useCases: ['Invoices, Contracts, Reports, Tickets'],
+    technology: ['Chromium, Node.js, Docker, S3 compatible']
+    integrations: ['Zapier, Make, Webhooks']
+    useCases: ['Invoices, Contracts, Reports, Tickets']
     roi: 'Automate document workflows and save engineering time.',
-    competitors: ['DocRaptor', 'PDFMonkey', 'PDFreactor'],
+    competitors: ['DocRaptor', 'PDFMonkey', 'PDFreactor']
     marketSize: '$0.9B Document Generation market',
     growthRate: '14% annual growth',
     variant: 'pdf-render',
@@ -909,7 +909,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'CSV export and API access',
       'Dashboards and widgets',
       'Postmortem integrations'
-    ],
+    ]
     popular: false,
     icon: '⏱️',
     color: 'from-violet-600 to-fuchsia-600',
@@ -921,11 +921,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '45 minutes',
     category: 'Reliability & SLOs',
     realService: true,
-    technology: ['OpenTelemetry, Prometheus, Grafana, Next.js'],
-    integrations: ['Datadog, Prometheus, Grafana, Slack'],
-    useCases: ['Latency SLOs, Error budgets, Reliability reporting'],
+    technology: ['OpenTelemetry, Prometheus, Grafana, Next.js']
+    integrations: ['Datadog, Prometheus, Grafana, Slack']
+    useCases: ['Latency SLOs, Error budgets, Reliability reporting']
     roi: 'Keep reliability promises while moving fast; prevent alert fatigue.',
-    competitors: ['Nobl9', 'Datadog SLO', 'Lightstep'],
+    competitors: ['Nobl9', 'Datadog SLO', 'Lightstep']
     marketSize: '$1.2B SRE tooling market',
     growthRate: '20% annual growth',
     variant: 'slo-tracker',
@@ -962,7 +962,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
       'Session sampling',
       'Segment by cohort',
       'Export to BI tools'
-    ],
+    ]
     popular: false,
     icon: '🧪',
     color: 'from-cyan-700 to-blue-700',
@@ -974,11 +974,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     setupTime: '30 minutes',
     category: 'Performance & RUM',
     realService: true,
-    technology: ['JS SDK, Web Vitals, ClickHouse, Next.js'],
-    integrations: ['Vercel, Netlify, Cloudflare, Slack'],
-    useCases: ['Vitals monitoring, Performance regression alerts, UX analytics'],
+    technology: ['JS SDK, Web Vitals, ClickHouse, Next.js']
+    integrations: ['Vercel, Netlify, Cloudflare, Slack']
+    useCases: ['Vitals monitoring, Performance regression alerts, UX analytics']
     roi: 'Improve conversion by tracking and fixing performance regressions.',
-    competitors: ['SpeedCurve', 'Calibre', 'Sentry Performance'],
+    competitors: ['SpeedCurve', 'Calibre', 'Sentry Performance']
     marketSize: '$1.5B Web Performance market',
     growthRate: '19% annual growth',
     variant: 'rum-monitor',

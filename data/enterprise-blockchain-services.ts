@@ -6,7 +6,7 @@ export interface EnterpriseBlockchainService {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface EnterpriseBlockchainService {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       'Multi-chain interoperabilityPrivate and consortium networks',
       'Advanced consensus mechanismsReal-time monitoring',
       'API for integration24/7 support and maintenance'
-    ],
+    ]
     popular: true,
     icon: '⛓️',
     color: 'from-blue-600 to-indigo-700',
@@ -66,11 +66,11 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     setupTime: '4-8 weeks',
     category: 'Enterprise Blockchain',
     realService: true,
-    technology: ['Hyperledger FabricEthereum Enterprise', 'Smart ContractsReact', 'Node.jsPostgreSQL', 'RedisAWS'],
-    integrations: ['ERP systemsCRM platforms', 'Financial systemsSupply chain platforms', 'Custom applicationsIoT devices'],
-    useCases: ['Supply chain trackingFinancial transactions', 'Identity managementAsset tokenization', 'Smart contractsDecentralized applications'],
+    technology: ['Hyperledger FabricEthereum Enterprise', 'Smart ContractsReact', 'Node.jsPostgreSQL', 'RedisAWS']
+    integrations: ['ERP systemsCRM platforms', 'Financial systemsSupply chain platforms', 'Custom applicationsIoT devices']
+    useCases: ['Supply chain trackingFinancial transactions', 'Identity managementAsset tokenization', 'Smart contractsDecentralized applications']
     roi: 'Average customer sees 400% ROI within 12 months through operational efficiency and transparency.',
-    competitors: ['Hyperledger FabricCorda', 'Ethereum EnterpriseQuorum', 'Custom solutions'],
+    competitors: ['Hyperledger FabricCorda', 'Ethereum EnterpriseQuorum', 'Custom solutions']
     marketSize: '$67B blockchain market',
     growthRate: '300% annual growth',
     variant: 'quantum-cyberpunk',
@@ -101,7 +101,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       'Liquidity managementYield optimization',
       'Portfolio analyticsAutomated trading strategies',
       'Insurance and protection24/7 institutional support'
-    ],
+    ]
     popular: true,
     icon: '💰',
     color: 'from-green-600 to-emerald-600',
@@ -113,11 +113,11 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     setupTime: '3-6 weeks',
     category: 'Enterprise DeFi',
     realService: true,
-    technology: ['EthereumPolygon', 'SolanaSmart Contracts', 'ReactNode.js', 'PostgreSQLRedis'],
-    integrations: ['Trading platformsCustody solutions', 'Risk management systemsCompliance platforms', 'Financial APIsCustom applications'],
-    useCases: ['Liquidity provisionYield farming', 'Lending and borrowingAsset management', 'Trading automationPortfolio optimization'],
+    technology: ['EthereumPolygon', 'SolanaSmart Contracts', 'ReactNode.js', 'PostgreSQLRedis']
+    integrations: ['Trading platformsCustody solutions', 'Risk management systemsCompliance platforms', 'Financial APIsCustom applications']
+    useCases: ['Liquidity provisionYield farming', 'Lending and borrowingAsset management', 'Trading automationPortfolio optimization']
     roi: 'Average customer sees 300% ROI within 8 months through DeFi yield generation.',
-    competitors: ['Traditional DeFi protocolsCentralized finance platforms', 'Custom solutions'],
+    competitors: ['Traditional DeFi protocolsCentralized finance platforms', 'Custom solutions']
     marketSize: '$80B DeFi market',
     growthRate: '400% annual growth',
     variant: 'quantum-financial',
@@ -148,7 +148,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       'Analytics and insightsCustom smart contracts',
       'Brand protection toolsCompliance management',
       'API for integration24/7 enterprise support'
-    ],
+    ]
     popular: true,
     icon: '🎨',
     color: 'from-purple-600 to-pink-600',
@@ -160,11 +160,11 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     setupTime: '2-4 weeks',
     category: 'Enterprise NFTs',
     realService: true,
-    technology: ['EthereumPolygon', 'SolanaIPFS', 'ReactNode.js', 'PostgreSQLRedis'],
-    integrations: ['Gaming platformsE-commerce systems', 'Social mediaPayment gateways', 'Analytics platformsCustom applications'],
-    useCases: ['Digital collectiblesGaming assets', 'Digital artMusic NFTs', 'Sports memorabiliaVirtual real estate'],
+    technology: ['EthereumPolygon', 'SolanaIPFS', 'ReactNode.js', 'PostgreSQLRedis']
+    integrations: ['Gaming platformsE-commerce systems', 'Social mediaPayment gateways', 'Analytics platformsCustom applications']
+    useCases: ['Digital collectiblesGaming assets', 'Digital artMusic NFTs', 'Sports memorabiliaVirtual real estate']
     roi: 'Average customer sees 250% ROI within 6 months through NFT sales and engagement.',
-    competitors: ['OpenSea ProRarible', 'FoundationCustom solutions'],
+    competitors: ['OpenSea ProRarible', 'FoundationCustom solutions']
     marketSize: '$35B NFT market',
     growthRate: '500% annual growth',
     variant: 'holographic-advanced',
@@ -195,7 +195,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       'Compliance managementSupplier verification',
       'Inventory optimizationPayment automation',
       'Analytics dashboardAPI for integration'
-    ],
+    ]
     popular: true,
     icon: '📦',
     color: 'from-orange-600 to-red-600',
@@ -207,11 +207,11 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     setupTime: '6-12 weeks',
     category: 'Blockchain Supply Chain',
     realService: true,
-    technology: ['Hyperledger FabricEthereum', 'Smart ContractsIoT Integration', 'ReactNode.js', 'PostgreSQLAWS'],
-    integrations: ['ERP systemsWMS platforms', 'IoT devicesQuality management systems', 'Payment platformsCustom applications'],
-    useCases: ['Product traceabilityQuality assurance', 'Supplier managementCompliance tracking', 'Payment automationInventory management'],
+    technology: ['Hyperledger FabricEthereum', 'Smart ContractsIoT Integration', 'ReactNode.js', 'PostgreSQLAWS']
+    integrations: ['ERP systemsWMS platforms', 'IoT devicesQuality management systems', 'Payment platformsCustom applications']
+    useCases: ['Product traceabilityQuality assurance', 'Supplier managementCompliance tracking', 'Payment automationInventory management']
     roi: 'Average customer sees 350% ROI within 10 months through supply chain optimization.',
-    competitors: ['SAP SCMOracle SCM', 'IBM BlockchainCustom solutions'],
+    competitors: ['SAP SCMOracle SCM', 'IBM BlockchainCustom solutions']
     marketSize: '$28B supply chain market',
     growthRate: '280% annual growth',
     variant: 'quantum-cyberpunk',
@@ -242,7 +242,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       'Compliance managementIdentity verification',
       'Access controlAudit trails',
       'API for integration24/7 security support'
-    ],
+    ]
     popular: true,
     icon: '🆔',
     color: 'from-teal-600 to-cyan-600',
@@ -254,11 +254,11 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     setupTime: '3-6 weeks',
     category: 'Blockchain Identity',
     realService: true,
-    technology: ['EthereumZero-Knowledge Proofs', 'DID StandardsReact', 'Node.jsPostgreSQL', 'RedisAWS'],
-    integrations: ['SSO platformsIdentity providers', 'Access management systemsCompliance tools', 'Custom applicationsIoT devices'],
-    useCases: ['User authenticationIdentity verification', 'Access controlCompliance management', 'Privacy protectionDigital credentials'],
+    technology: ['EthereumZero-Knowledge Proofs', 'DID StandardsReact', 'Node.jsPostgreSQL', 'RedisAWS']
+    integrations: ['SSO platformsIdentity providers', 'Access management systemsCompliance tools', 'Custom applicationsIoT devices']
+    useCases: ['User authenticationIdentity verification', 'Access controlCompliance management', 'Privacy protectionDigital credentials']
     roi: 'Average customer sees 300% ROI within 8 months through enhanced security and compliance.',
-    competitors: ['OktaAuth0', 'Ping IdentityCustom solutions'],
+    competitors: ['OktaAuth0', 'Ping IdentityCustom solutions']
     marketSize: '$22B identity management market',
     growthRate: '250% annual growth',
     variant: 'quantum-cyberpunk',
@@ -275,4 +275,4 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.8,
     reviews: 89
   }
-],
+]

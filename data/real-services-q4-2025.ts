@@ -17,7 +17,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 			'LLM reply drafts with tone controlsIntent routing and SLA prediction',
 			'Smart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)',
 			'PII redaction and governanceDashboard with analytics and coaching'
-		],
+		]
 		popular: true,
 		icon: '📧',
 		color: 'from-cyan-600 to-blue-700',
@@ -29,11 +29,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 hours',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['Gmail/O365 APIsOpenAI/Groq', 'Next.js'],
-		integrations: ['GmailOutlook', 'SalesforceHubSpot', 'Zendesk'],
-		useCases: ['Inbound triageFollow-ups', 'NPS outreach'],
+		technology: ['Gmail/O365 APIsOpenAI/Groq', 'Next.js']
+		integrations: ['GmailOutlook', 'SalesforceHubSpot', 'Zendesk']
+		useCases: ['Inbound triageFollow-ups', 'NPS outreach']
 		roi: 'Reduce first response time by 60% and improve CSAT by 20%+',
-		competitors: ['Superhuman AIFront Workflows'],
+		competitors: ['Superhuman AIFront Workflows']
 		marketSize: '$10B+ communications AI',
 		growthRate: '25% CAGR',
 		variant: 'ai-futuristic',
@@ -56,7 +56,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 			'Link shortener and branded domainsUTM builder and traffic quality scoring',
 			'Multi-touch attribution and deduplicationAutomated payouts and tax forms',
 			'Fraud and bot detectionPartner portal and reports'
-		],
+		]
 		popular: true,
 		icon: '🔗',
 		color: 'from-emerald-600 to-teal-700',
@@ -68,11 +68,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsPostgreSQL', 'Workers/Edge'],
-		integrations: ['StripeShopify', 'WooCommerce'],
-		useCases: ['Partner programsInfluencer payouts'],
+		technology: ['Next.jsPostgreSQL', 'Workers/Edge']
+		integrations: ['StripeShopify', 'WooCommerce']
+		useCases: ['Partner programsInfluencer payouts']
 		roi: 'Grow partner-attributed revenue by 10–30%',
-		competitors: ['Impact.com (complex)Tune (enterprise)'],
+		competitors: ['Impact.com (complex)Tune (enterprise)']
 		marketSize: '$15B+ affiliate tech',
 		growthRate: '12% CAGR',
 		variant: 'network-futuristic',
@@ -95,7 +95,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 			'Portal and RMA workflowsLabel generation and tracking',
 			'Warehousing and disposition updatesRefunds and exchanges automation',
 			'Fraud checks and abuse controlsAnalytics and cohort reports'
-		],
+		]
 		popular: false,
 		icon: '📦',
 		color: 'from-orange-600 to-red-600',
@@ -107,11 +107,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsStripe', 'Shippo'],
-		integrations: ['ShopifyKlaviyo', 'Gorgias'],
-		useCases: ['Returns and exchangesWarehouse ops'],
+		technology: ['Next.jsStripe', 'Shippo']
+		integrations: ['ShopifyKlaviyo', 'Gorgias']
+		useCases: ['Returns and exchangesWarehouse ops']
 		roi: 'Cut support tickets by 35% and improve retention',
-		competitors: ['Loop ReturnsReturnly'],
+		competitors: ['Loop ReturnsReturnly']
 		marketSize: '$8B returns tech',
 		growthRate: '10% CAGR',
 		variant: 'ai-futuristic',
@@ -134,7 +134,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 			'Branching logic designerEmbeddable SDK and JS snippet',
 			'Real-time analytics and funnelsWebhook exports and CSV',
 			'Email/SMS invite campaignsConsent and PII redaction'
-		],
+		]
 		popular: false,
 		icon: '📱',
 		color: 'from-purple-600 to-pink-600',
@@ -146,11 +146,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 hour',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsTwilio', 'PostgreSQL'],
-		integrations: ['SegmentHubSpot', 'Slack'],
-		useCases: ['NPS/CSATIn-app feedback', 'Research studies'],
+		technology: ['Next.jsTwilio', 'PostgreSQL']
+		integrations: ['SegmentHubSpot', 'Slack']
+		useCases: ['NPS/CSATIn-app feedback', 'Research studies']
 		roi: 'Improve survey completion by 2-3x on mobile',
-		competitors: ['TypeformSurvicate'],
+		competitors: ['TypeformSurvicate']
 		marketSize: '$5B survey tech',
 		growthRate: '11% CAGR',
 		variant: 'network-futuristic',
@@ -173,7 +173,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 			'Pageviews, sessions, and cohortsEvents and conversions',
 			'Source/medium attributionFunnel and retention views',
 			'Custom dashboardsCSV and webhook export'
-		],
+		]
 		popular: false,
 		icon: '📊',
 		color: 'from-indigo-600 to-blue-700',
@@ -185,11 +185,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		setupTime: '30 minutes',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.jsPostgreSQL', 'ClickHouse (optional)'],
-		integrations: ['ShopifyWordPress', 'Webflow'],
-		useCases: ['Funnel analysisCampaign attribution'],
+		technology: ['Next.jsPostgreSQL', 'ClickHouse (optional)']
+		integrations: ['ShopifyWordPress', 'Webflow']
+		useCases: ['Funnel analysisCampaign attribution']
 		roi: 'Faster insights with low overhead',
-		competitors: ['PlausibleFathom'],
+		competitors: ['PlausibleFathom']
 		marketSize: '$3B lightweight analytics',
 		growthRate: '9% CAGR',
 		variant: 'ai-futuristic',
@@ -201,4 +201,4 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 6
 	}
-],
+]

@@ -4,7 +4,7 @@ export interface EnterpriseIt2026ServiceV2 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
       "Improved infrastructure",
       "Better security",
       "Enhanced support"
-    ],
+    ]
     link: "/services/2026-enterprise-it-v2",
     category: "Enterprise IT 2026 V2",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

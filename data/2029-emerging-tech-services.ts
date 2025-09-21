@@ -60,7 +60,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       'Energy-efficient AI training',
       'Real-time pattern recognition',
       'Scalable neural processing'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 via-violet-600 to-indigo-600',
@@ -72,11 +72,11 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     setupTime: '4-6 weeks',
     category: 'Neuromorphic Computing & AI',
     realService: true,
-    technology: ['Neuromorphic chips', 'Spiking neural networks', 'Brain-inspired algorithms', 'Low-power computing', 'Adaptive processing'],
-    integrations: ['AI frameworks', 'Research platforms', 'Cloud computing', 'Edge devices', 'IoT systems'],
-    useCases: ['AI research', 'Edge computing', 'IoT applications', 'Autonomous systems', 'Pattern recognition'],
+    technology: ['Neuromorphic chips', 'Spiking neural networks', 'Brain-inspired algorithms', 'Low-power computing', 'Adaptive processing']
+    integrations: ['AI frameworks', 'Research platforms', 'Cloud computing', 'Edge devices', 'IoT systems']
+    useCases: ['AI research', 'Edge computing', 'IoT applications', 'Autonomous systems', 'Pattern recognition']
     roi: '400%+ ROI through energy savings and improved AI performance.',
-    competitors: ['Traditional AI computing', 'Basic neural networks', 'GPU-based solutions'],
+    competitors: ['Traditional AI computing', 'Basic neural networks', 'GPU-based solutions']
     marketSize: '$25B neuromorphic computing market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -111,7 +111,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       'Quantum routing protocols',
       'Secure quantum channels',
       'Photon-based computing'
-    ],
+    ]
     popular: true,
     icon: '💡',
     color: 'from-yellow-600 via-orange-600 to-red-600',
@@ -123,11 +123,11 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     setupTime: '5-7 weeks',
     category: 'Quantum Photonics & Communication',
     realService: true,
-    technology: ['Quantum photonics', 'Single-photon detection', 'Quantum encryption', 'Photon entanglement', 'Quantum networking'],
-    integrations: ['Telecom networks', 'Fiber optic systems', 'Quantum computers', 'Security systems', 'Communication platforms'],
-    useCases: ['Secure communications', 'Quantum networking', 'Financial transactions', 'Government communications', 'Research applications'],
+    technology: ['Quantum photonics', 'Single-photon detection', 'Quantum encryption', 'Photon entanglement', 'Quantum networking']
+    integrations: ['Telecom networks', 'Fiber optic systems', 'Quantum computers', 'Security systems', 'Communication platforms']
+    useCases: ['Secure communications', 'Quantum networking', 'Financial transactions', 'Government communications', 'Research applications']
     roi: '600%+ ROI through secure communications and quantum networking capabilities.',
-    competitors: ['Traditional encryption', 'Basic quantum communication', 'Fiber optic networks'],
+    competitors: ['Traditional encryption', 'Basic quantum communication', 'Fiber optic networks']
     marketSize: '$40B quantum communication market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -162,7 +162,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       'Genetic optimization',
       'Biological safety protocols',
       'Synthetic biology workflows'
-    ],
+    ]
     popular: true,
     icon: '🧬',
     color: 'from-green-600 via-emerald-600 to-teal-600',
@@ -174,11 +174,11 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     setupTime: '3-5 weeks',
     category: 'Synthetic Biology & Automation',
     realService: true,
-    technology: ['DNA synthesis', 'Genetic engineering', 'Biological automation', 'CRISPR technology', 'Biological simulation'],
-    integrations: ['Laboratory systems', 'Research platforms', 'DNA databases', 'Biological tools', 'Analytics platforms'],
-    useCases: ['Genetic research', 'Drug discovery', 'Agricultural biotechnology', 'Environmental engineering', 'Medical research'],
+    technology: ['DNA synthesis', 'Genetic engineering', 'Biological automation', 'CRISPR technology', 'Biological simulation']
+    integrations: ['Laboratory systems', 'Research platforms', 'DNA databases', 'Biological tools', 'Analytics platforms']
+    useCases: ['Genetic research', 'Drug discovery', 'Agricultural biotechnology', 'Environmental engineering', 'Medical research']
     roi: '500%+ ROI through accelerated research and automated workflows.',
-    competitors: ['Manual genetic engineering', 'Basic lab automation', 'Traditional research methods'],
+    competitors: ['Manual genetic engineering', 'Basic lab automation', 'Traditional research methods']
     marketSize: '$35B synthetic biology market',
     growthRate: '300% annual growth',
     variant: 'biotech-futuristic',
@@ -213,7 +213,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       'Hybrid quantum-classical AI',
       'Quantum data processing',
       'Quantum model training'
-    ],
+    ]
     popular: true,
     icon: '⚛️',
     color: 'from-blue-600 via-indigo-600 to-purple-600',
@@ -225,11 +225,11 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     setupTime: '4-6 weeks',
     category: 'Quantum AI & Machine Learning',
     realService: true,
-    technology: ['Quantum computing', 'Machine learning', 'Quantum algorithms', 'Hybrid AI', 'Quantum optimization'],
-    integrations: ['AI frameworks', 'Quantum computers', 'Cloud platforms', 'Data platforms', 'Analytics tools'],
-    useCases: ['AI research', 'Financial modeling', 'Drug discovery', 'Optimization problems', 'Pattern recognition'],
+    technology: ['Quantum computing', 'Machine learning', 'Quantum algorithms', 'Hybrid AI', 'Quantum optimization']
+    integrations: ['AI frameworks', 'Quantum computers', 'Cloud platforms', 'Data platforms', 'Analytics tools']
+    useCases: ['AI research', 'Financial modeling', 'Drug discovery', 'Optimization problems', 'Pattern recognition']
     roi: '700%+ ROI through quantum speedup and improved AI capabilities.',
-    competitors: ['Traditional machine learning', 'Basic quantum computing', 'Classical AI platforms'],
+    competitors: ['Traditional machine learning', 'Basic quantum computing', 'Classical AI platforms']
     marketSize: '$50B quantum AI market',
     growthRate: '450% annual growth',
     variant: 'quantum-futuristic',
@@ -264,7 +264,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       'Brain-computer communication',
       'Neural training protocols',
       'Cognitive interface design'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-pink-600 via-rose-600 to-red-600',
@@ -276,11 +276,11 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     setupTime: '6-8 weeks',
     category: 'Neural Interface & BCI',
     realService: true,
-    technology: ['Neural signal processing', 'Brain monitoring', 'Machine learning', 'Neural interfaces', 'Cognitive computing'],
-    integrations: ['Medical devices', 'Research platforms', 'Computing systems', 'Analytics tools', 'Healthcare platforms'],
-    useCases: ['Medical research', 'Assistive technology', 'Cognitive enhancement', 'Neural rehabilitation', 'Human-computer interaction'],
+    technology: ['Neural signal processing', 'Brain monitoring', 'Machine learning', 'Neural interfaces', 'Cognitive computing']
+    integrations: ['Medical devices', 'Research platforms', 'Computing systems', 'Analytics tools', 'Healthcare platforms']
+    useCases: ['Medical research', 'Assistive technology', 'Cognitive enhancement', 'Neural rehabilitation', 'Human-computer interaction']
     roi: '800%+ ROI through medical applications and research breakthroughs.',
-    competitors: ['Basic EEG systems', 'Research prototypes', 'Medical monitoring devices'],
+    competitors: ['Basic EEG systems', 'Research prototypes', 'Medical monitoring devices']
     marketSize: '$30B brain-computer interface market',
     growthRate: '500% annual growth',
     variant: 'ai-futuristic',
@@ -315,7 +315,7 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
       'Quantum calibration',
       'Sensing networks',
       'Quantum data processing'
-    ],
+    ]
     popular: true,
     icon: '🔍',
     color: 'from-teal-600 via-cyan-600 to-blue-600',
@@ -327,11 +327,11 @@ export const emergingTech2029Services: EmergingTech2029Service[] = [
     setupTime: '4-6 weeks',
     category: 'Quantum Sensing & Metrology',
     realService: true,
-    technology: ['Quantum sensors', 'Quantum metrology', 'Precision measurement', 'Quantum algorithms', 'Sensing networks'],
-    integrations: ['Research platforms', 'Industrial systems', 'Monitoring tools', 'Analytics platforms', 'Data systems'],
-    useCases: ['Scientific research', 'Industrial monitoring', 'Environmental sensing', 'Medical imaging', 'Precision manufacturing'],
+    technology: ['Quantum sensors', 'Quantum metrology', 'Precision measurement', 'Quantum algorithms', 'Sensing networks']
+    integrations: ['Research platforms', 'Industrial systems', 'Monitoring tools', 'Analytics platforms', 'Data systems']
+    useCases: ['Scientific research', 'Industrial monitoring', 'Environmental sensing', 'Medical imaging', 'Precision manufacturing']
     roi: '600%+ ROI through improved measurement accuracy and research capabilities.',
-    competitors: ['Traditional sensors', 'Basic measurement tools', 'Conventional sensing'],
+    competitors: ['Traditional sensors', 'Basic measurement tools', 'Conventional sensing']
     marketSize: '$20B quantum sensing market',
     growthRate: '350% annual growth',
     variant: 'quantum-futuristic',

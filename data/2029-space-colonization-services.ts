@@ -6,7 +6,7 @@ export interface SpaceColonization2029Service {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface SpaceColonization2029Service {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Robotic workforce managementEnvironmental monitoring AI',
       'Supply chain automationEmergency response systems',
       'Colony health monitoringSustainable development AI'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-red-600 to-orange-600',
@@ -66,11 +66,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '6-12 months',
     category: 'Space Colonization & Mining',
     realService: true,
-    technology: ['AI & RoboticsSpace Technology', 'Autonomous Systems3D Printing', 'Life Support SystemsSatellite Communication'],
-    integrations: ['NASA systemsSpaceX platforms', 'Satellite networksGround control systems', 'Research databasesSpace monitoring tools'],
-    useCases: ['Mars colonizationSpace habitat construction', 'Resource extractionLife support management', 'Colony expansionSpace research'],
+    technology: ['AI & RoboticsSpace Technology', 'Autonomous Systems3D Printing', 'Life Support SystemsSatellite Communication']
+    integrations: ['NASA systemsSpaceX platforms', 'Satellite networksGround control systems', 'Research databasesSpace monitoring tools']
+    useCases: ['Mars colonizationSpace habitat construction', 'Resource extractionLife support management', 'Colony expansionSpace research']
     roi: 'Space agencies report 2000% ROI through successful colonization missions. Private companies see 1500% ROI in space infrastructure development.',
-    competitors: ['Space infrastructure platformsSpace research tools', 'Government space programs'],
+    competitors: ['Space infrastructure platformsSpace research tools', 'Government space programs']
     marketSize: '$100B space economy market',
     growthRate: '500% annual growth',
     variant: 'space-futuristic',
@@ -100,7 +100,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Satellite constellation controlCommunication security protocols',
       'Bandwidth optimizationNetwork redundancy systems',
       'Real-time monitoringEmergency communication channels'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-blue-600 to-cyan-600',
@@ -112,11 +112,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '4-8 months',
     category: 'Space Colonization & Mining',
     realService: true,
-    technology: ['Quantum CommunicationSatellite Technology', 'AI RoutingNetwork Management', 'Space CommunicationAdvanced Encryption'],
-    integrations: ['Satellite systemsGround stations', 'Spacecraft communicationResearch platforms', 'Government networksCommercial platforms'],
-    useCases: ['Interplanetary communicationSatellite network management', 'Space mission communicationResearch collaboration', 'Commercial space operationsEmergency communications'],
+    technology: ['Quantum CommunicationSatellite Technology', 'AI RoutingNetwork Management', 'Space CommunicationAdvanced Encryption']
+    integrations: ['Satellite systemsGround stations', 'Spacecraft communicationResearch platforms', 'Government networksCommercial platforms']
+    useCases: ['Interplanetary communicationSatellite network management', 'Space mission communicationResearch collaboration', 'Commercial space operationsEmergency communications']
     roi: 'Space agencies report 1200% ROI through improved mission communication. Commercial companies see 800% ROI in space operations efficiency.',
-    competitors: ['Satellite communication networksSpace communication platforms', 'Government space networks'],
+    competitors: ['Satellite communication networksSpace communication platforms', 'Government space networks']
     marketSize: '$80B satellite communication market',
     growthRate: '400% annual growth',
     variant: 'space-futuristic',
@@ -146,7 +146,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Supply chain managementQuality control systems',
       'Safety monitoring AIEnvironmental impact assessment',
       'Resource optimizationMining fleet management'
-    ],
+    ]
     popular: false,
     icon: '⛏️',
     color: 'from-yellow-600 to-orange-600',
@@ -158,11 +158,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '5-10 months',
     category: 'Space Colonization & Mining',
     realService: true,
-    technology: ['AI & RoboticsMining Technology', 'Space EquipmentResource Processing', 'Autonomous SystemsSatellite Technology'],
-    integrations: ['Mining equipmentSatellite systems', 'Processing facilitiesTransport systems', 'Research platformsAnalytics tools'],
-    useCases: ['Asteroid miningLunar resource extraction', 'Space resource processingMining fleet management', 'Resource optimizationSafety monitoring'],
+    technology: ['AI & RoboticsMining Technology', 'Space EquipmentResource Processing', 'Autonomous SystemsSatellite Technology']
+    integrations: ['Mining equipmentSatellite systems', 'Processing facilitiesTransport systems', 'Research platformsAnalytics tools']
+    useCases: ['Asteroid miningLunar resource extraction', 'Space resource processingMining fleet management', 'Resource optimizationSafety monitoring']
     roi: 'Mining companies report 1000% ROI through automated operations. Investment firms see 800% ROI in space resource development.',
-    competitors: ['Terrestrial mining platformsSpace research tools', 'Resource extraction platforms'],
+    competitors: ['Terrestrial mining platformsSpace research tools', 'Resource extraction platforms']
     marketSize: '$60B space mining market',
     growthRate: '600% annual growth',
     variant: 'space-futuristic',
@@ -193,7 +193,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Sustainable design systems3D modeling and visualization',
       'Structural analysis toolsResource efficiency optimization',
       'Modular design systemsHabitat expansion planning'
-    ],
+    ]
     popular: false,
     icon: '🏠',
     color: 'from-green-600 to-teal-600',
@@ -205,11 +205,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '3-6 months',
     category: 'Space Architecture & Energy',
     realService: true,
-    technology: ['AI Design3D Modeling', 'Environmental SimulationMaterial Science', 'Structural AnalysisSpace Technology'],
-    integrations: ['Design software3D modeling tools', 'Simulation platformsEngineering tools', 'Construction platformsResearch databases'],
-    useCases: ['Space habitat designPlanetary architecture', 'Environmental optimizationMaterial selection', 'Structural planningHabitat expansion'],
+    technology: ['AI Design3D Modeling', 'Environmental SimulationMaterial Science', 'Structural AnalysisSpace Technology']
+    integrations: ['Design software3D modeling tools', 'Simulation platformsEngineering tools', 'Construction platformsResearch databases']
+    useCases: ['Space habitat designPlanetary architecture', 'Environmental optimizationMaterial selection', 'Structural planningHabitat expansion']
     roi: 'Architecture firms report 600% ROI through space design projects. Engineering companies see 500% ROI in space construction planning.',
-    competitors: ['Architectural design platformsEngineering design tools', 'Space research platforms'],
+    competitors: ['Architectural design platformsEngineering design tools', 'Space research platforms']
     marketSize: '$45B architectural design market',
     growthRate: '300% annual growth',
     variant: 'space-futuristic',
@@ -239,7 +239,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Energy efficiency monitoringRenewable space energy',
       'Power grid managementEnergy demand forecasting',
       'Storage optimizationBackup power systems'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-purple-600 to-pink-600',
@@ -251,11 +251,11 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     setupTime: '4-8 months',
     category: 'Space Architecture & Energy',
     realService: true,
-    technology: ['Energy HarvestingSolar Technology', 'Energy StorageAI Optimization', 'Power SystemsSpace Technology'],
-    integrations: ['Solar panelsEnergy storage systems', 'Power distributionMonitoring systems', 'Research platformsAnalytics tools'],
-    useCases: ['Space power generationEnergy optimization', 'Power distributionEnergy storage', 'Grid managementBackup power systems'],
+    technology: ['Energy HarvestingSolar Technology', 'Energy StorageAI Optimization', 'Power SystemsSpace Technology']
+    integrations: ['Solar panelsEnergy storage systems', 'Power distributionMonitoring systems', 'Research platformsAnalytics tools']
+    useCases: ['Space power generationEnergy optimization', 'Power distributionEnergy storage', 'Grid managementBackup power systems']
     roi: 'Energy companies report 800% ROI through space energy harvesting. Space agencies see 600% ROI in mission power efficiency.',
-    competitors: ['Renewable energy platformsPower management systems', 'Space research platforms'],
+    competitors: ['Renewable energy platformsPower management systems', 'Space research platforms']
     marketSize: '$70B renewable energy market',
     growthRate: '350% annual growth',
     variant: 'space-futuristic',
@@ -272,4 +272,4 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     rating: 4.8,
     reviews: 52
   }
-],
+]

@@ -17,13 +17,13 @@ export interface PricingAnalysis {
     strategy: string,
     justification: string,
     priceElasticity: string,
-    bundlingOptions: string[],
+    bundlingOptions: string[]
     discountStructure: string[]
   },
   competitiveAnalysis: {
-    directCompetitors: string[],
-    indirectCompetitors: string[],
-    competitiveAdvantages: string[],
+    directCompetitors: string[]
+    indirectCompetitors: string[]
+    competitiveAdvantages: string[]
     differentiationFactors: string[]
   },
   roiAnalysis: {
@@ -63,19 +63,19 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       bundlingOptions: [
         'Enterprise package: $8,999/month (includes customization + support)Professional package: $4,999/month (includes training + integration)',
         'Starter package: $1,999/month (limited features)'
-      ],
+      ]
       discountStructure: [
         'Annual billing: 20% discountMulti-year contracts: 30% discount',
         'Enterprise volume: 40% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['No direct competitors'],
-      indirectCompetitors: ['Traditional consulting firms ($500-2,000/hour)ERP systems ($10,000-100,000/month)'],
+      directCompetitors: ['No direct competitors']
+      indirectCompetitors: ['Traditional consulting firms ($500-2,000/hour)ERP systems ($10,000-100,000/month)']
       competitiveAdvantages: [
         'First-to-market autonomous operations99.9% accuracy guarantee',
         '24/7 operational oversightZero human intervention required'
-      ],
+      ]
       differentiationFactors: [
         'Fully autonomous decision-makingReal-time market analysis',
         'Predictive business modelingMulti-department coordination'
@@ -117,19 +117,19 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       bundlingOptions: [
         'Research package: $15,999/month (includes collaboration tools)Enterprise package: $9,999/month (includes support + training)',
         'Academic package: $2,999/month (discounted for research)'
-      ],
+      ]
       discountStructure: [
         'Annual billing: 25% discountResearch collaboration: 40% discount',
         'Government contracts: 30% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['IBM Quantum ($1,000-10,000/month)Google Quantum AI ($5,000-25,000/month)'],
-      indirectCompetitors: ['Traditional HPC clusters ($50,000-500,000/month)Cloud computing services'],
+      directCompetitors: ['IBM Quantum ($1,000-10,000/month)Google Quantum AI ($5,000-25,000/month)']
+      indirectCompetitors: ['Traditional HPC clusters ($50,000-500,000/month)Cloud computing services']
       competitiveAdvantages: [
         '1000x performance improvementQuantum neural networks',
         'Hybrid classical-quantum computingAdvanced simulation capabilities'
-      ],
+      ]
       differentiationFactors: [
         'Quantum neural network processingQuantum machine learning algorithms',
         'Complex problem solvingResearch collaboration tools'
@@ -171,19 +171,19 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       bundlingOptions: [
         'Premium package: $2,999/month (includes advanced features)Professional package: $1,999/month (includes support)',
         'Basic package: $799/month (limited features)'
-      ],
+      ]
       discountStructure: [
         'Annual billing: 15% discountPerformance bonuses: 5-20% based on returns',
         'Volume discounts: 10-30% for large portfolios'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['Traditional DeFi platforms (free-2% fees)Manual trading services ($100-1,000/month)'],
-      indirectCompetitors: ['Traditional investment platformsHedge funds'],
+      directCompetitors: ['Traditional DeFi platforms (free-2% fees)Manual trading services ($100-1,000/month)']
+      indirectCompetitors: ['Traditional investment platformsHedge funds']
       competitiveAdvantages: [
         '200% average annual returns95% risk reduction',
         'Autonomous trading algorithmsMulti-chain DeFi integration'
-      ],
+      ]
       differentiationFactors: [
         'AI-powered autonomous tradingRisk management systems',
         'Portfolio optimizationRegulatory compliance'
@@ -225,19 +225,19 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       bundlingOptions: [
         'Enterprise package: $2,999/month (includes 24/7 support)Professional package: $1,499/month (includes training)',
         'Standard package: $899/month (basic features)'
-      ],
+      ]
       discountStructure: [
         'Annual billing: 20% discountMulti-year contracts: 30% discount',
         'Government/education: 25% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['CrowdStrike ($8-15/user/month)SentinelOne ($5-12/user/month)', 'Darktrace ($50-100/user/month)'],
-      indirectCompetitors: ['Traditional SIEM systemsManual security monitoring'],
+      directCompetitors: ['CrowdStrike ($8-15/user/month)SentinelOne ($5-12/user/month)', 'Darktrace ($50-100/user/month)']
+      indirectCompetitors: ['Traditional SIEM systemsManual security monitoring']
       competitiveAdvantages: [
         '99.99% threat detection rateAutonomous incident response',
         'Predictive threat intelligenceZero-day vulnerability detection'
-      ],
+      ]
       differentiationFactors: [
         'AI-powered autonomous huntingPredictive threat intelligence',
         'Behavioral analysisSecurity orchestration'
@@ -279,19 +279,19 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       bundlingOptions: [
         'Enterprise package: $8,999/month (includes customization)Professional package: $5,999/month (includes training)',
         'Standard package: $3,499/month (basic features)'
-      ],
+      ]
       discountStructure: [
         'Annual billing: 20% discountMulti-site deployment: 25% discount',
         'Manufacturing association: 15% discount'
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['Traditional MES systems ($10,000-100,000/month)Manual optimization services'],
-      indirectCompetitors: ['ERP systemsBasic monitoring tools'],
+      directCompetitors: ['Traditional MES systems ($10,000-100,000/month)Manual optimization services']
+      indirectCompetitors: ['ERP systemsBasic monitoring tools']
       competitiveAdvantages: [
         '99.9% uptime guarantee30% production increase',
         '50% downtime reductionAutonomous operation'
-      ],
+      ]
       differentiationFactors: [
         'AI-powered autonomous managementPredictive maintenance',
         'Quality control automationResource optimization'
@@ -332,10 +332,10 @@ export const getMarketInsights = () => {
 };
 export const getCompetitiveLandscape = () => {
   return {
-    aiServices: ['IBM WatsonGoogle AI', 'Microsoft Azure AIAmazon SageMaker'],
-    quantumComputing: ['IBM QuantumGoogle Quantum AI', 'Microsoft Azure QuantumD-Wave'],
-    cybersecurity: ['CrowdStrikeSentinelOne', 'DarktracePalo Alto Networks'],
-    manufacturing: ['SiemensRockwell Automation', 'ABBGE Digital'],
+    aiServices: ['IBM WatsonGoogle AI', 'Microsoft Azure AIAmazon SageMaker']
+    quantumComputing: ['IBM QuantumGoogle Quantum AI', 'Microsoft Azure QuantumD-Wave']
+    cybersecurity: ['CrowdStrikeSentinelOne', 'DarktracePalo Alto Networks']
+    manufacturing: ['SiemensRockwell Automation', 'ABBGE Digital']
     blockchain: ['ChainalysisConsenSys', 'AlchemyInfura']
   };
 };

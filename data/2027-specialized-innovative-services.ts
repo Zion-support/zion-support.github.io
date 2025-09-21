@@ -5,7 +5,7 @@ export interface SpecializedInnovativeService2027 {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -17,11 +17,11 @@ export interface SpecializedInnovativeService2027 {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   contactInfo: {
@@ -53,7 +53,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Disaster response coordinationClimate change analysis',
       'Infrastructure monitoringCustom alert systems',
       'Data visualizationAPI access for developers'
-    ],
+    ]
     popular: false,
     icon: '🛰️',
     color: 'from-indigo-600 to-purple-700',
@@ -65,11 +65,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '6-8 weeks',
     category: 'Space Technology & Earth Observation',
     realService: true,
-    technology: ['AI/MLSatellite Imagery', 'Computer VisionGeospatial Analysis', 'Cloud Computing'],
-    integrations: ['Satellite APIsGIS Systems', 'Weather ServicesAgricultural Platforms'],
-    useCases: ['Environmental monitoringPrecision agriculture', 'Urban planningDisaster response'],
+    technology: ['AI/MLSatellite Imagery', 'Computer VisionGeospatial Analysis', 'Cloud Computing']
+    integrations: ['Satellite APIsGIS Systems', 'Weather ServicesAgricultural Platforms']
+    useCases: ['Environmental monitoringPrecision agriculture', 'Urban planningDisaster response']
     roi: '500% ROI through improved decision-making and resource optimization',
-    competitors: ['Planet LabsMaxar Technologies', 'Airbus Defence and Space'],
+    competitors: ['Planet LabsMaxar Technologies', 'Airbus Defence and Space']
     marketSize: '$12B satellite monitoring market',
     growthRate: '35% annual growth',
     contactInfo: {
@@ -100,7 +100,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Multi-user environmentsAnalytics and reporting',
       'Device managementContent management system',
       'API integrationExpert consultation'
-    ],
+    ]
     popular: true,
     icon: '🥽',
     color: 'from-pink-600 to-rose-700',
@@ -112,11 +112,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '3-4 weeks',
     category: 'AR/VR & Immersive Technology',
     realService: true,
-    technology: ['AR/VRUnity3D', 'Unreal EngineComputer Vision', '3D Modeling'],
-    integrations: ['Enterprise SystemsCAD Software', 'Training PlatformsCommunication Tools'],
-    useCases: ['Employee trainingDesign collaboration', 'Remote assistanceCustomer engagement'],
+    technology: ['AR/VRUnity3D', 'Unreal EngineComputer Vision', '3D Modeling']
+    integrations: ['Enterprise SystemsCAD Software', 'Training PlatformsCommunication Tools']
+    useCases: ['Employee trainingDesign collaboration', 'Remote assistanceCustomer engagement']
     roi: '300% ROI through improved training efficiency and reduced travel costs',
-    competitors: ['Microsoft HoloLensMagic Leap', 'PTC Vuforia'],
+    competitors: ['Microsoft HoloLensMagic Leap', 'PTC Vuforia']
     marketSize: '$45B AR/VR market',
     growthRate: '28% annual growth',
     contactInfo: {
@@ -147,7 +147,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Inventory managementSafety monitoring',
       'Performance analyticsRemote operation',
       'Multi-robot coordinationExpert support'
-    ],
+    ]
     popular: false,
     icon: '🤖',
     color: 'from-gray-600 to-slate-700',
@@ -159,11 +159,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '8-12 weeks',
     category: 'Robotics & Automation',
     realService: true,
-    technology: ['AI/MLRobotics', 'Computer VisionIoT', 'Edge Computing'],
-    integrations: ['Robot ControllersManufacturing Systems', 'Warehouse ManagementQuality Control Systems'],
-    useCases: ['Manufacturing automationWarehouse optimization', 'Quality controlLogistics automation'],
+    technology: ['AI/MLRobotics', 'Computer VisionIoT', 'Edge Computing']
+    integrations: ['Robot ControllersManufacturing Systems', 'Warehouse ManagementQuality Control Systems']
+    useCases: ['Manufacturing automationWarehouse optimization', 'Quality controlLogistics automation']
     roi: '400% ROI through increased productivity and reduced operational costs',
-    competitors: ['ABB RoboticsKUKA Robotics', 'FANUC'],
+    competitors: ['ABB RoboticsKUKA Robotics', 'FANUC']
     marketSize: '$75B robotics market',
     growthRate: '20% annual growth',
     contactInfo: {
@@ -194,7 +194,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Predictive maintenanceDemand response optimization',
       'Sustainability reportingReal-time monitoring',
       'Mobile applicationsExpert consultation'
-    ],
+    ]
     popular: true,
     icon: '🌱',
     color: 'from-green-600 to-emerald-700',
@@ -206,11 +206,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '3-5 weeks',
     category: 'Green Technology & Sustainability',
     realService: true,
-    technology: ['AI/MLIoT', 'Energy ManagementPredictive Analytics', 'Cloud Computing'],
-    integrations: ['Energy Management SystemsSmart Meters', 'Building AutomationRenewable Energy Systems'],
-    useCases: ['Energy optimizationCarbon reduction', 'Cost savingsSustainability compliance'],
+    technology: ['AI/MLIoT', 'Energy ManagementPredictive Analytics', 'Cloud Computing']
+    integrations: ['Energy Management SystemsSmart Meters', 'Building AutomationRenewable Energy Systems']
+    useCases: ['Energy optimizationCarbon reduction', 'Cost savingsSustainability compliance']
     roi: '250% ROI through energy cost reduction and sustainability improvements',
-    competitors: ['Schneider ElectricSiemens', 'Honeywell'],
+    competitors: ['Schneider ElectricSiemens', 'Honeywell']
     marketSize: '$35B energy management market',
     growthRate: '18% annual growth',
     contactInfo: {
@@ -241,7 +241,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Cost optimizationReal-time tracking',
       'Performance analyticsCompliance management',
       'Mobile applicationsExpert support'
-    ],
+    ]
     popular: false,
     icon: '📦',
     color: 'from-blue-600 to-indigo-700',
@@ -253,11 +253,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '4-6 weeks',
     category: 'Supply Chain & Logistics',
     realService: true,
-    technology: ['AI/MLSupply Chain Analytics', 'Predictive ModelingIoT', 'Blockchain'],
-    integrations: ['ERP SystemsWMS Platforms', 'Transportation ManagementSupplier Portals'],
-    useCases: ['Demand forecastingInventory optimization', 'Cost reductionRisk management'],
+    technology: ['AI/MLSupply Chain Analytics', 'Predictive ModelingIoT', 'Blockchain']
+    integrations: ['ERP SystemsWMS Platforms', 'Transportation ManagementSupplier Portals']
+    useCases: ['Demand forecastingInventory optimization', 'Cost reductionRisk management']
     roi: '300% ROI through cost reduction and operational efficiency improvements',
-    competitors: ['SAP AribaOracle SCM', 'JDA Software'],
+    competitors: ['SAP AribaOracle SCM', 'JDA Software']
     marketSize: '$28B supply chain management market',
     growthRate: '16% annual growth',
     contactInfo: {
@@ -288,7 +288,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Skills gap analysisLearning path recommendations',
       'Diversity and inclusion trackingCompliance management',
       'Mobile applicationsExpert consultation'
-    ],
+    ]
     popular: true,
     icon: '👥',
     color: 'from-purple-600 to-violet-700',
@@ -300,11 +300,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '2-3 weeks',
     category: 'Human Resources & Talent Management',
     realService: true,
-    technology: ['AI/MLNatural Language Processing', 'Predictive AnalyticsMachine Learning'],
-    integrations: ['ATS SystemsHRIS Platforms', 'Learning Management SystemsCommunication Tools'],
-    useCases: ['Recruitment optimizationEmployee engagement', 'Performance managementWorkforce planning'],
+    technology: ['AI/MLNatural Language Processing', 'Predictive AnalyticsMachine Learning']
+    integrations: ['ATS SystemsHRIS Platforms', 'Learning Management SystemsCommunication Tools']
+    useCases: ['Recruitment optimizationEmployee engagement', 'Performance managementWorkforce planning']
     roi: '250% ROI through improved hiring efficiency and employee retention',
-    competitors: ['WorkdayBambooHR', 'Zenefits'],
+    competitors: ['WorkdayBambooHR', 'Zenefits']
     marketSize: '$22B HR technology market',
     growthRate: '12% annual growth',
     contactInfo: {
@@ -335,7 +335,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Document generationCase management',
       'Legal analyticsRegulatory updates',
       'Mobile applicationsExpert consultation'
-    ],
+    ]
     popular: false,
     icon: '⚖️',
     color: 'from-slate-600 to-gray-700',
@@ -347,11 +347,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '3-4 weeks',
     category: 'Legal Technology & Compliance',
     realService: true,
-    technology: ['AI/MLNatural Language Processing', 'Document AnalysisMachine Learning'],
-    integrations: ['Legal Research DatabasesDocument Management Systems', 'Case Management ToolsCompliance Platforms'],
-    useCases: ['Legal researchContract analysis', 'Compliance managementRisk assessment'],
+    technology: ['AI/MLNatural Language Processing', 'Document AnalysisMachine Learning']
+    integrations: ['Legal Research DatabasesDocument Management Systems', 'Case Management ToolsCompliance Platforms']
+    useCases: ['Legal researchContract analysis', 'Compliance managementRisk assessment']
     roi: '300% ROI through time savings and improved legal outcomes',
-    competitors: ['LexisNexisWestlaw', 'Thomson Reuters'],
+    competitors: ['LexisNexisWestlaw', 'Thomson Reuters']
     marketSize: '$18B legal technology market',
     growthRate: '15% annual growth',
     contactInfo: {
@@ -382,7 +382,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Energy optimizationSpace utilization analytics',
       'Market analysisInvestment insights',
       'Mobile applicationsExpert consultation'
-    ],
+    ]
     popular: false,
     icon: '🏢',
     color: 'from-amber-600 to-orange-700',
@@ -394,11 +394,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '3-4 weeks',
     category: 'Real Estate & Property Technology',
     realService: true,
-    technology: ['AI/MLIoT', 'Building AutomationPredictive Analytics', 'Cloud Computing'],
-    integrations: ['Property Management SystemsBuilding Automation', 'IoT DevicesFinancial Systems'],
-    useCases: ['Property managementTenant experience', 'Building optimizationInvestment analysis'],
+    technology: ['AI/MLIoT', 'Building AutomationPredictive Analytics', 'Cloud Computing']
+    integrations: ['Property Management SystemsBuilding Automation', 'IoT DevicesFinancial Systems']
+    useCases: ['Property managementTenant experience', 'Building optimizationInvestment analysis']
     roi: '250% ROI through increased property value and operational efficiency',
-    competitors: ['YardiRealPage', 'AppFolio'],
+    competitors: ['YardiRealPage', 'AppFolio']
     marketSize: '$25B PropTech market',
     growthRate: '20% annual growth',
     contactInfo: {
@@ -429,7 +429,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Fan engagement analyticsReal-time monitoring',
       'Predictive modelingVideo analysis',
       'Mobile applicationsExpert consultation'
-    ],
+    ]
     popular: false,
     icon: '⚽',
     color: 'from-green-600 to-blue-700',
@@ -441,11 +441,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '3-4 weeks',
     category: 'Sports Technology & Analytics',
     realService: true,
-    technology: ['AI/MLComputer Vision', 'Wearable TechnologyPredictive Analytics', 'IoT'],
-    integrations: ['Wearable DevicesVideo Systems', 'Training PlatformsPerformance Tracking Tools'],
-    useCases: ['Performance analysisTraining optimization', 'Injury preventionStrategy development'],
+    technology: ['AI/MLComputer Vision', 'Wearable TechnologyPredictive Analytics', 'IoT']
+    integrations: ['Wearable DevicesVideo Systems', 'Training PlatformsPerformance Tracking Tools']
+    useCases: ['Performance analysisTraining optimization', 'Injury preventionStrategy development']
     roi: '300% ROI through improved performance and reduced injuries',
-    competitors: ['Catapult SportsSTATS Perform', 'Second Spectrum'],
+    competitors: ['Catapult SportsSTATS Perform', 'Second Spectrum']
     marketSize: '$15B sports analytics market',
     growthRate: '25% annual growth',
     contactInfo: {
@@ -476,7 +476,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Trend predictionContent distribution',
       'Performance trackingMonetization optimization',
       'Mobile applicationsExpert consultation'
-    ],
+    ]
     popular: true,
     icon: '🎬',
     color: 'from-purple-600 to-pink-700',
@@ -488,11 +488,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     setupTime: '2-3 weeks',
     category: 'Entertainment & Media Technology',
     realService: true,
-    technology: ['AI/MLContent Analysis', 'Recommendation EnginesNatural Language Processing'],
-    integrations: ['Content Management SystemsStreaming Platforms', 'Social MediaAnalytics Tools'],
-    useCases: ['Content optimizationUser engagement', 'Content discoveryMonetization'],
+    technology: ['AI/MLContent Analysis', 'Recommendation EnginesNatural Language Processing']
+    integrations: ['Content Management SystemsStreaming Platforms', 'Social MediaAnalytics Tools']
+    useCases: ['Content optimizationUser engagement', 'Content discoveryMonetization']
     roi: '250% ROI through increased engagement and monetization',
-    competitors: ['NetflixSpotify', 'YouTube'],
+    competitors: ['NetflixSpotify', 'YouTube']
     marketSize: '$30B entertainment technology market',
     growthRate: '18% annual growth',
     contactInfo: {
@@ -508,7 +508,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.8,
     reviews: 167
   }
-],
+]
 
 // Helper functions for service management
 export const getSpecializedServiceById = (id: string) => {

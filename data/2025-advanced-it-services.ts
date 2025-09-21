@@ -8,14 +8,14 @@ export const advancedITServices2025 = [
       'Auto-scaling infrastructureGlobal edge computing network',
       'Integration with major cloud providersAdvanced monitoring and analytics',
       'Custom quantum algorithms24/7 technical support'
-    ],
+    ]
     pricing: {
       starter: { price: 299, period: 'month', features: ['Up to 100 vCPUsBasic quantum features', 'Standard support'] },
       professional: { price: 799, period: 'month', features: ['Up to 500 vCPUsAdvanced quantum features', 'Priority supportCustom algorithms'] },
       enterprise: { price: 1999, period: 'month', features: ['Unlimited resourcesCustom quantum solutions', 'White-label platformDedicated support team'] }
     },
     category: 'Cloud Infrastructure',
-    tags: ['Quantum ComputingCloud Infrastructure', 'SecurityScalability'],
+    tags: ['Quantum ComputingCloud Infrastructure', 'SecurityScalability']
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
     contact: {
       phone: '+1 302 464 0950',
@@ -34,14 +34,14 @@ export const advancedITServices2025 = [
       'Distributed computing orchestrationAdvanced load balancing',
       'Integration with IoT devicesAdvanced analytics and monitoring',
       'Custom edge algorithmsGlobal edge network management'
-    ],
+    ]
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 10 edge nodesBasic AI optimization', 'Standard monitoring'] },
       professional: { price: 599, period: 'month', features: ['Up to 100 edge nodesAdvanced AI', 'Custom algorithmsPriority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited edge nodesCustom AI training', 'White-label solutionDedicated support'] }
     },
     category: 'Edge Computing',
-    tags: ['AIEdge Computing', 'IoTDistributed Computing'],
+    tags: ['AIEdge Computing', 'IoTDistributed Computing']
     website: 'https://ziontechgroup.com/edge-computing-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -60,14 +60,14 @@ export const advancedITServices2025 = [
       'Advanced threat detectionReal-time security monitoring',
       'Integration with security toolsAdvanced analytics and reporting',
       'Custom security policies24/7 security operations center'
-    ],
+    ]
     pricing: {
       starter: { price: 149, period: 'month', features: ['Up to 100 usersBasic zero-trust', 'Standard monitoring'] },
       professional: { price: 399, period: 'month', features: ['Up to 1,000 usersAdvanced security', 'Custom policiesPriority support'] },
       enterprise: { price: 999, period: 'month', features: ['Unlimited usersCustom security rules', 'White-label solutionDedicated SOC team'] }
     },
     category: 'Cybersecurity',
-    tags: ['Zero TrustCybersecurity', 'Identity ManagementThreat Detection'],
+    tags: ['Zero TrustCybersecurity', 'Identity ManagementThreat Detection']
     website: 'https://ziontechgroup.com/zero-trust-security-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -86,14 +86,14 @@ export const advancedITServices2025 = [
       'Advanced consensus mechanismsRegulatory compliance tools',
       'Integration with business systemsAdvanced analytics and reporting',
       'Custom blockchain solutions24/7 platform support'
-    ],
+    ]
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 1,000 transactions/secBasic blockchain', 'Standard support'] },
       professional: { price: 599, period: 'month', features: ['Up to 10,000 transactions/secAdvanced features', 'Custom solutionsPriority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited transactionsCustom blockchain', 'White-label solutionDedicated support'] }
     },
     category: 'Blockchain',
-    tags: ['BlockchainSmart Contracts', 'EnterpriseCompliance'],
+    tags: ['BlockchainSmart Contracts', 'EnterpriseCompliance']
     website: 'https://ziontechgroup.com/enterprise-blockchain-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -112,14 +112,14 @@ export const advancedITServices2025 = [
       'Automated testing and quality assuranceReal-time performance monitoring',
       'Integration with development toolsAdvanced analytics and reporting',
       'Custom automation workflows24/7 platform monitoring'
-    ],
+    ]
     pricing: {
       starter: { price: 99, period: 'month', features: ['Up to 10 developersBasic AI automation', 'Standard CI/CD'] },
       professional: { price: 299, period: 'month', features: ['Up to 50 developersAdvanced AI', 'Custom workflowsPriority support'] },
       enterprise: { price: 799, period: 'month', features: ['Unlimited developersCustom AI training', 'White-label solutionDedicated support'] }
     },
     category: 'DevOps',
-    tags: ['AIDevOps', 'CI/CDAutomation'],
+    tags: ['AIDevOps', 'CI/CDAutomation']
     website: 'https://ziontechgroup.com/devops-ai-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -138,14 +138,14 @@ export const advancedITServices2025 = [
       'High-speed quantum networkingAdvanced routing algorithms',
       'Integration with existing networksAdvanced monitoring and analytics',
       'Custom quantum protocols24/7 network support'
-    ],
+    ]
     pricing: {
       starter: { price: 399, period: 'month', features: ['Up to 1GbpsBasic quantum features', 'Standard support'] },
       professional: { price: 999, period: 'month', features: ['Up to 10GbpsAdvanced quantum features', 'Custom protocolsPriority support'] },
       enterprise: { price: 2499, period: 'month', features: ['Unlimited bandwidthCustom quantum solutions', 'White-label platformDedicated support'] }
     },
     category: 'Quantum Networking',
-    tags: ['Quantum ComputingNetworking', 'SecurityHigh-Speed Communication'],
+    tags: ['Quantum ComputingNetworking', 'SecurityHigh-Speed Communication']
     website: 'https://ziontechgroup.com/quantum-net-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -164,14 +164,14 @@ export const advancedITServices2025 = [
       'Automated performance optimizationReal-time system monitoring',
       'Integration with IT toolsAdvanced analytics and reporting',
       'Custom automation rules24/7 autonomous operations'
-    ],
+    ]
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 100 serversBasic autonomy', 'Standard monitoring'] },
       professional: { price: 599, period: 'month', features: ['Up to 1,000 serversAdvanced AI', 'Custom automationPriority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited serversCustom AI training', 'White-label solutionDedicated support'] }
     },
     category: 'IT Operations',
-    tags: ['AIAutonomous Operations', 'Infrastructure ManagementAutomation'],
+    tags: ['AIAutonomous Operations', 'Infrastructure ManagementAutomation']
     website: 'https://ziontechgroup.com/autonomous-it-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -190,14 +190,14 @@ export const advancedITServices2025 = [
       'Ultra-secure quantum storageReal-time performance optimization',
       'Integration with cloud platformsAdvanced monitoring and analytics',
       'Custom quantum solutions24/7 data center support'
-    ],
+    ]
     pricing: {
       starter: { price: 499, period: 'month', features: ['Up to 100 racksBasic quantum features', 'Standard support'] },
       professional: { price: 1299, period: 'month', features: ['Up to 500 racksAdvanced quantum features', 'Custom solutionsPriority support'] },
       enterprise: { price: 2999, period: 'month', features: ['Unlimited racksCustom quantum solutions', 'White-label platformDedicated support'] }
     },
     category: 'Data Center',
-    tags: ['Quantum ComputingData Center', 'InfrastructureEnergy Efficiency'],
+    tags: ['Quantum ComputingData Center', 'InfrastructureEnergy Efficiency']
     website: 'https://ziontechgroup.com/quantum-data-center-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -216,14 +216,14 @@ export const advancedITServices2025 = [
       'Quantum key distributionReal-time security monitoring',
       'Integration with security toolsAdvanced analytics and reporting',
       'Custom security solutions24/7 quantum security operations'
-    ],
+    ]
     pricing: {
       starter: { price: 299, period: 'month', features: ['Up to 100 endpointsBasic quantum security', 'Standard monitoring'] },
       professional: { price: 799, period: 'month', features: ['Up to 1,000 endpointsAdvanced quantum features', 'Custom solutionsPriority support'] },
       enterprise: { price: 1999, period: 'month', features: ['Unlimited endpointsCustom quantum security', 'White-label solutionDedicated support'] }
     },
     category: 'Quantum Cybersecurity',
-    tags: ['Quantum ComputingCybersecurity', 'EncryptionThreat Detection'],
+    tags: ['Quantum ComputingCybersecurity', 'EncryptionThreat Detection']
     website: 'https://ziontechgroup.com/quantum-cyber-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -242,14 +242,14 @@ export const advancedITServices2025 = [
       'Zero-downtime migrationReal-time migration monitoring',
       'Integration with cloud platformsAdvanced analytics and reporting',
       'Custom migration strategies24/7 migration support'
-    ],
+    ]
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 100 workloadsBasic migration tools', 'Standard support'] },
       professional: { price: 599, period: 'month', features: ['Up to 1,000 workloadsAdvanced quantum features', 'Custom strategiesPriority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited workloadsCustom quantum solutions', 'White-label platformDedicated support'] }
     },
     category: 'Cloud Migration',
-    tags: ['Quantum ComputingCloud Migration', 'AIZero Downtime'],
+    tags: ['Quantum ComputingCloud Migration', 'AIZero Downtime']
     website: 'https://ziontechgroup.com/quantum-migration-pro',
     contact: {
       phone: '+1 302 464 0950',

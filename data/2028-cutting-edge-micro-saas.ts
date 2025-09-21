@@ -4,7 +4,7 @@ export interface CuttingEdgeMicroSaas2028 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
       "Advanced technology",
       "Innovation platform",
       "Future-ready solutions"
-    ],
+    ]
     link: "/services/2028-cutting-edge-micro-saas",
     category: "Cutting-Edge Micro SAAS 2028",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

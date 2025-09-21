@@ -18,7 +18,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Reply intent and objection detectionAuto A/B test with guardrails',
       'Compliance-aware sending windowsNative CRM sync',
       'Sequence ROI analytics'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-emerald-600 to-cyan-700',
@@ -30,11 +30,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Revenue Operations',
     realService: true,
-    technology: ['Next.jsPostgreSQL', 'OpenAI/Anthropic'],
-    integrations: ['HubSpotSalesforce', 'ApolloLinkedIn'],
-    useCases: ['Outbound sequencesReactivation campaigns', 'Event follow-ups'],
+    technology: ['Next.jsPostgreSQL', 'OpenAI/Anthropic']
+    integrations: ['HubSpotSalesforce', 'ApolloLinkedIn']
+    useCases: ['Outbound sequencesReactivation campaigns', 'Event follow-ups']
     roi: '2–5x meetings booked within 60 days',
-    competitors: ['OutreachSalesloft', 'Reply.io'],
+    competitors: ['OutreachSalesloft', 'Reply.io']
     marketSize: '$8B sales engagement market',
     growthRate: '20% YoY',
     contactInfo: contact,
@@ -56,7 +56,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'RFP requirement extractionPolicy/Compliance mapping',
       'Answer library with citationsReviewer workflows and redlining',
       'Auto formatting to client templateWin-loss analytics'
-    ],
+    ]
     popular: false,
     icon: '📄',
     color: 'from-indigo-600 to-purple-700',
@@ -68,11 +68,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '3 days',
     category: 'Proposal Automation',
     realService: true,
-    technology: ['Next.jsVector DB', 'LLM function calling'],
-    integrations: ['SharePointGoogle Drive', 'Confluence'],
-    useCases: ['Federal RFPsEnterprise vendor bids', 'MSA/SOW drafting'],
+    technology: ['Next.jsVector DB', 'LLM function calling']
+    integrations: ['SharePointGoogle Drive', 'Confluence']
+    useCases: ['Federal RFPsEnterprise vendor bids', 'MSA/SOW drafting']
     roi: 'Save 60–80% proposal hours',
-    competitors: ['LoopioRFPIO'],
+    competitors: ['LoopioRFPIO']
     marketSize: '$1.2B proposal software market',
     growthRate: '18% YoY',
     contactInfo: contact,
@@ -94,7 +94,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'GMB health scoringCitation discovery/fix',
       'Competitor gap analysisContent brief generation',
       'Lead tracking and call attribution'
-    ],
+    ]
     popular: true,
     icon: '📍',
     color: 'from-rose-600 to-orange-700',
@@ -106,11 +106,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '2 hours',
     category: 'SEO',
     realService: true,
-    technology: ['Next.jsPuppeteer', 'LLM summarization'],
-    integrations: ['Google Business ProfileGA4', 'Search Console'],
-    useCases: ['Local SEO auditsReview ops', 'Content planning'],
+    technology: ['Next.jsPuppeteer', 'LLM summarization']
+    integrations: ['Google Business ProfileGA4', 'Search Console']
+    useCases: ['Local SEO auditsReview ops', 'Content planning']
     roi: 'Lift local rankings 20–40% in 90 days',
-    competitors: ['BrightLocalSemrush'],
+    competitors: ['BrightLocalSemrush']
     marketSize: '$5B local SEO market',
     growthRate: '12% YoY',
     contactInfo: contact,
@@ -132,7 +132,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Auto region detection and languagesScanner for cookies/trackers',
       'Consent evidence logsIAB TCF support',
       'WCAG-compliant UI'
-    ],
+    ]
     popular: true,
     icon: '🍪',
     color: 'from-blue-600 to-sky-700',
@@ -144,11 +144,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 hour',
     category: 'Compliance',
     realService: true,
-    technology: ['Next.jsEdge middleware', 'Geo-IP'],
-    integrations: ['GTMGoogle Consent Mode v2'],
-    useCases: ['EU consentUK consent', 'CCPA opt-out'],
+    technology: ['Next.jsEdge middleware', 'Geo-IP']
+    integrations: ['GTMGoogle Consent Mode v2']
+    useCases: ['EU consentUK consent', 'CCPA opt-out']
     roi: 'Avoid fines, restore analytics accuracy compliantly',
-    competitors: ['CookiebotOneTrust'],
+    competitors: ['CookiebotOneTrust']
     marketSize: '$2B privacy tooling',
     growthRate: '14% YoY',
     contactInfo: contact,
@@ -170,7 +170,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Risk scoring and cohortsHealth dashboards',
       'Playbook automationRevenue impact tracking',
       'Alerting to Slack/Email'
-    ],
+    ]
     popular: false,
     icon: '📉',
     color: 'from-violet-600 to-purple-700',
@@ -182,11 +182,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Customer Success',
     realService: true,
-    technology: ['SegmentSnowflake', 'LLM scoring'],
-    integrations: ['StripeChargebee', 'SalesforceHubSpot'],
-    useCases: ['Renewal savesUpsell timing', 'Onboarding risk'],
+    technology: ['SegmentSnowflake', 'LLM scoring']
+    integrations: ['StripeChargebee', 'SalesforceHubSpot']
+    useCases: ['Renewal savesUpsell timing', 'Onboarding risk']
     roi: 'Reduce churn by 10–25%',
-    competitors: ['PocusGainsight (elements)'],
+    competitors: ['PocusGainsight (elements)']
     marketSize: '$4B customer success',
     growthRate: '18% YoY',
     contactInfo: contact,
@@ -208,7 +208,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Doc crawler and canonicalizationVersion-aware indexing',
       'Hallucination guardrailsFeedback and content gaps',
       'Embeddable widget'
-    ],
+    ]
     popular: true,
     icon: '📚',
     color: 'from-emerald-600 to-teal-700',
@@ -220,11 +220,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Knowledge Management',
     realService: true,
-    technology: ['Next.jsVector DB', 'LLM RAG'],
-    integrations: ['GitHubZendesk', 'ConfluenceNotion'],
-    useCases: ['Self-serve supportInternal KB', 'Partner portals'],
+    technology: ['Next.jsVector DB', 'LLM RAG']
+    integrations: ['GitHubZendesk', 'ConfluenceNotion']
+    useCases: ['Self-serve supportInternal KB', 'Partner portals']
     roi: 'Deflect 20–50% how-to tickets',
-    competitors: ['Document360Guru + custom bot'],
+    competitors: ['Document360Guru + custom bot']
     marketSize: '$3B knowledge management',
     growthRate: '16% YoY',
     contactInfo: contact,
@@ -246,7 +246,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Automated control checksCloud/config drift detection',
       'Access review workflowsEvidence vault and exports',
       ' auditor-friendly reports'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-teal-600 to-emerald-700',
@@ -258,11 +258,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Compliance',
     realService: true,
-    technology: ['Next.jsCloud APIs', 'Webhook listeners'],
-    integrations: ['AWSGCP', 'AzureGitHub', 'Okta'],
-    useCases: ['SOC 2 readinessISO 27001 evidence', 'Vendor security reviews'],
+    technology: ['Next.jsCloud APIs', 'Webhook listeners']
+    integrations: ['AWSGCP', 'AzureGitHub', 'Okta']
+    useCases: ['SOC 2 readinessISO 27001 evidence', 'Vendor security reviews']
     roi: 'Cut audit prep time by 60–80%',
-    competitors: ['Vanta (elements)Drata (lite)'],
+    competitors: ['Vanta (elements)Drata (lite)']
     marketSize: '$3B compliance automation',
     growthRate: '20% YoY',
     contactInfo: contact,
@@ -284,7 +284,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Table and line-item captureVendor normalization',
       'Tax and currency handlingGL account mapping',
       'Review and approval queue'
-    ],
+    ]
     popular: false,
     icon: '🧾',
     color: 'from-amber-600 to-orange-700',
@@ -296,11 +296,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '2 hours',
     category: 'Finance Ops',
     realService: true,
-    technology: ['LLM visionRegex validators', 'Embeddings'],
-    integrations: ['QuickBooksXero', 'NetSuite'],
-    useCases: ['AP automationExpense processing', 'Vendor bill intake'],
+    technology: ['LLM visionRegex validators', 'Embeddings']
+    integrations: ['QuickBooksXero', 'NetSuite']
+    useCases: ['AP automationExpense processing', 'Vendor bill intake']
     roi: 'Reduce manual data entry by 80%',
-    competitors: ['RossumVeryfi'],
+    competitors: ['RossumVeryfi']
     marketSize: '$4B AP automation',
     growthRate: '16% YoY',
     contactInfo: contact,
@@ -322,7 +322,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Deal registration and approvalsCo-marketing asset hub',
       'Training and certificationsAI Q&A with citations',
       'Role-based access and analytics'
-    ],
+    ]
     popular: true,
     icon: '🤝',
     color: 'from-indigo-600 to-violet-700',
@@ -334,11 +334,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1–2 days',
     category: 'Go-To-Market',
     realService: true,
-    technology: ['Next.jsRAG', 'Role-based auth'],
-    integrations: ['HubSpotSalesforce', 'Google Drive'],
-    useCases: ['Partner enablementChannel sales', 'Self-serve training'],
+    technology: ['Next.jsRAG', 'Role-based auth']
+    integrations: ['HubSpotSalesforce', 'Google Drive']
+    useCases: ['Partner enablementChannel sales', 'Self-serve training']
     roi: 'Accelerate partner revenue 10–25%',
-    competitors: ['Custom portalsPRM suites (lite)'],
+    competitors: ['Custom portalsPRM suites (lite)']
     marketSize: '$2B PRM tools',
     growthRate: '14% YoY',
     contactInfo: contact,
@@ -360,7 +360,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Clause/Risk extraction with citationsCompliance matrix generator',
       'Win themes and differentiatorsTimeline and task board sync',
       'Auto Q&A tracker'
-    ],
+    ]
     popular: false,
     icon: '📦',
     color: 'from-sky-600 to-blue-700',
@@ -372,11 +372,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Procurement',
     realService: true,
-    technology: ['LLM extractionVector DB', 'Task sync APIs'],
-    integrations: ['JiraAsana', 'SharePointGoogle Drive'],
-    useCases: ['RFP parsingRisk review', 'Bid planning'],
+    technology: ['LLM extractionVector DB', 'Task sync APIs']
+    integrations: ['JiraAsana', 'SharePointGoogle Drive']
+    useCases: ['RFP parsingRisk review', 'Bid planning']
     roi: 'Cut review time by 50–70%',
-    competitors: ['RFPIO (analysis)Loopio (lite)'],
+    competitors: ['RFPIO (analysis)Loopio (lite)']
     marketSize: '$1.2B proposal/RFP software',
     growthRate: '18% YoY',
     contactInfo: contact,
@@ -398,7 +398,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Jurisdiction-aware templatesChange-log and redlines',
       'DPA/ToS variants per productCookie/Consent policy sync',
       'Signed acceptance ledger'
-    ],
+    ]
     popular: true,
     icon: '📜',
     color: 'from-amber-600 to-yellow-700',
@@ -410,11 +410,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '2 hours',
     category: 'Compliance',
     realService: true,
-    technology: ['Template enginePolicy diffs', 'E-sign'],
-    integrations: ['GitHubWebflow', 'Notion'],
-    useCases: ['Privacy updatesDPA rollouts', 'ToS changes'],
+    technology: ['Template enginePolicy diffs', 'E-sign']
+    integrations: ['GitHubWebflow', 'Notion']
+    useCases: ['Privacy updatesDPA rollouts', 'ToS changes']
     roi: 'Reduce legal update cycles 70%',
-    competitors: ['OneTrust (policies)Termly'],
+    competitors: ['OneTrust (policies)Termly']
     marketSize: '$2B privacy/compliance',
     growthRate: '14% YoY',
     contactInfo: contact,
@@ -436,7 +436,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Answer library with tagsAuto-mapping to new forms',
       'Evidence links and approvalsExport to XLSX/portal formats',
       'Renewal reminders'
-    ],
+    ]
     popular: true,
     icon: '🧰',
     color: 'from-indigo-600 to-blue-800',
@@ -448,11 +448,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Security',
     realService: true,
-    technology: ['LLM retrievalForm mappers', 'Evidence vault'],
-    integrations: ['Google DriveSharePoint', 'Notion'],
-    useCases: ['SIG LiteCAIQ', 'Custom security forms'],
+    technology: ['LLM retrievalForm mappers', 'Evidence vault']
+    integrations: ['Google DriveSharePoint', 'Notion']
+    useCases: ['SIG LiteCAIQ', 'Custom security forms']
     roi: 'Reduce response time 50–80%',
-    competitors: ['Loopio (security)Spreadsheet workflows'],
+    competitors: ['Loopio (security)Spreadsheet workflows']
     marketSize: '$1B vendor security',
     growthRate: '20% YoY',
     contactInfo: contact,
@@ -474,7 +474,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Repo/PR parser and summarizerAudience segmentation',
       'Multi-channel publishingHelp center sync',
       'Impact analytics'
-    ],
+    ]
     popular: false,
     icon: '📣',
     color: 'from-rose-600 to-pink-700',
@@ -486,11 +486,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '2 hours',
     category: 'Product Ops',
     realService: true,
-    technology: ['Git APIsLLM summarization', 'Segmentation'],
-    integrations: ['GitHubHubSpot', 'MailchimpZendesk'],
-    useCases: ['ChangelogsDocs sync', 'In-app announcements'],
+    technology: ['Git APIsLLM summarization', 'Segmentation']
+    integrations: ['GitHubHubSpot', 'MailchimpZendesk']
+    useCases: ['ChangelogsDocs sync', 'In-app announcements']
     roi: 'Increase feature adoption 10–25%',
-    competitors: ['BeamerHeadway'],
+    competitors: ['BeamerHeadway']
     marketSize: '$800M product marketing tools',
     growthRate: '12% YoY',
     contactInfo: contact,
@@ -512,7 +512,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Clause detection and scoringPlaybook comparison',
       'Track-changes exportNegotiation notes',
       'Approval workflows'
-    ],
+    ]
     popular: true,
     icon: '✍️',
     color: 'from-violet-600 to-purple-700',
@@ -524,11 +524,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Legal Ops',
     realService: true,
-    technology: ['LLM legal extractionPolicy engine', 'Doc diff'],
-    integrations: ['DocuSignGoogle Drive', 'SharePoint'],
-    useCases: ['MSA reviewDPA redlines', 'Order forms'],
+    technology: ['LLM legal extractionPolicy engine', 'Doc diff']
+    integrations: ['DocuSignGoogle Drive', 'SharePoint']
+    useCases: ['MSA reviewDPA redlines', 'Order forms']
     roi: 'Shorten contract cycles 30–50%',
-    competitors: ['LawGeex (lite)SpotDraft (elements)'],
+    competitors: ['LawGeex (lite)SpotDraft (elements)']
     marketSize: '$3B contract tooling',
     growthRate: '16% YoY',
     contactInfo: contact,
@@ -550,7 +550,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'SIG/CAIQ template supportPolicy answer library with versioning',
       'Evidence links and doc redactionReviewer workflows and exports',
       'Audit-ready change history'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-blue-600 to-emerald-700',
@@ -562,11 +562,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Security Compliance',
     realService: true,
-    technology: ['Next.jsLLM function calling', 'Embeddings'],
-    integrations: ['ConfluenceGoogle Drive', 'Notion'],
-    useCases: ['SIG Lite responsesCustomer security forms', 'DDQ automation'],
+    technology: ['Next.jsLLM function calling', 'Embeddings']
+    integrations: ['ConfluenceGoogle Drive', 'Notion']
+    useCases: ['SIG Lite responsesCustomer security forms', 'DDQ automation']
     roi: 'Cuts questionnaire time by 70–90%',
-    competitors: ['WhisticVanta Q&A templates'],
+    competitors: ['WhisticVanta Q&A templates']
     marketSize: '$2B vendor security market',
     growthRate: '20% YoY',
     contactInfo: contact,
@@ -588,7 +588,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Clause classification and risk scoringPlaybook-driven suggestions',
       'Track changes exportsCounterparty-friendly language',
       'Approval workflows'
-    ],
+    ]
     popular: false,
     icon: '📜',
     color: 'from-amber-600 to-rose-700',
@@ -600,11 +600,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '4 hours',
     category: 'Legal Ops',
     realService: true,
-    technology: ['LLMVector DB', 'Docx parser'],
-    integrations: ['DocuSignIronclad', 'Google Docs'],
-    useCases: ['MSA reviewSOW checks', 'DPAs/GDPR addendums'],
+    technology: ['LLMVector DB', 'Docx parser']
+    integrations: ['DocuSignIronclad', 'Google Docs']
+    useCases: ['MSA reviewSOW checks', 'DPAs/GDPR addendums']
     roi: 'Shortens reviews by 50–70%',
-    competitors: ['SpellbookLuminance'],
+    competitors: ['SpellbookLuminance']
     marketSize: '$3B contract AI market',
     growthRate: '24% YoY',
     contactInfo: contact,
@@ -626,7 +626,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'UTM normalization and deduplicationFirst/last/multi-touch models',
       'Cohort and LTV reportsSpend ingestion and pacing alerts',
       'Attribution API for BI tools'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-violet-600 to-indigo-700',
@@ -638,11 +638,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Growth Analytics',
     realService: true,
-    technology: ['Next.jsPostgreSQL', 'ETL connectors'],
-    integrations: ['GA4Meta Ads', 'Google AdsHubSpot', 'Salesforce'],
-    useCases: ['Channel ROIBudget reallocation', 'Campaign diagnostics'],
+    technology: ['Next.jsPostgreSQL', 'ETL connectors']
+    integrations: ['GA4Meta Ads', 'Google AdsHubSpot', 'Salesforce']
+    useCases: ['Channel ROIBudget reallocation', 'Campaign diagnostics']
     roi: 'Increase ROAS 20–40% with reallocation',
-    competitors: ['Triple WhaleNorthbeam'],
+    competitors: ['Triple WhaleNorthbeam']
     marketSize: '$5B marketing analytics',
     growthRate: '21% YoY',
     contactInfo: contact,
@@ -664,7 +664,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Regulatory site monitoringChange detection and diffs',
       'Jurisdiction-aware updatesApproval workflow',
       'Export to PDF/HTML'
-    ],
+    ]
     popular: false,
     icon: '🕵️',
     color: 'from-slate-600 to-blue-700',
@@ -676,11 +676,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '2 hours',
     category: 'Compliance',
     realService: true,
-    technology: ['ScrapersRAG', 'Template engine'],
-    integrations: ['NotionConfluence', 'GitHub'],
-    useCases: ['Privacy updatesVendor policy tracking', 'Terms refresh'],
+    technology: ['ScrapersRAG', 'Template engine']
+    integrations: ['NotionConfluence', 'GitHub']
+    useCases: ['Privacy updatesVendor policy tracking', 'Terms refresh']
     roi: 'Reduce manual review time 70%',
-    competitors: ['OneTrust WatchersManual tracking'],
+    competitors: ['OneTrust WatchersManual tracking']
     marketSize: '$2B compliance ops',
     growthRate: '14% YoY',
     contactInfo: contact,
@@ -702,7 +702,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'Churn reason classifierOffer library and testing',
       'Multi-channel outreachAttribution to reactivations',
       'ROI reporting'
-    ],
+    ]
     popular: true,
     icon: '🔁',
     color: 'from-emerald-600 to-teal-700',
@@ -714,11 +714,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Growth',
     realService: true,
-    technology: ['Event ingestionLLM classification', 'Segmentation'],
-    integrations: ['StripeChargebee', 'HubSpotCustomer.io'],
-    useCases: ['Churn reactivationDowngrade prevention'],
+    technology: ['Event ingestionLLM classification', 'Segmentation']
+    integrations: ['StripeChargebee', 'HubSpotCustomer.io']
+    useCases: ['Churn reactivationDowngrade prevention']
     roi: 'Recover 5–15% churn within 60 days',
-    competitors: ['Lifecycle tools + manual ops'],
+    competitors: ['Lifecycle tools + manual ops']
     marketSize: '$5B lifecycle marketing',
     growthRate: '18% YoY',
     contactInfo: contact,
@@ -740,7 +740,7 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
       'SLA calculation engineIncident and anomaly narratives',
       'Branded PDF exportsCustomer portal access',
       'Audit trail and sign-off'
-    ],
+    ]
     popular: false,
     icon: '📈',
     color: 'from-indigo-600 to-violet-700',
@@ -752,11 +752,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
     setupTime: '2 hours',
     category: 'SRE',
     realService: true,
-    technology: ['Observability APIsTemplate engine', 'LLM summaries'],
-    integrations: ['DatadogNew Relic', 'GrafanaPagerDuty'],
-    useCases: ['Monthly SLA reportsQuarterly reviews'],
+    technology: ['Observability APIsTemplate engine', 'LLM summaries']
+    integrations: ['DatadogNew Relic', 'GrafanaPagerDuty']
+    useCases: ['Monthly SLA reportsQuarterly reviews']
     roi: 'Save 6–12 engineer hours per month',
-    competitors: ['Manual exportsCustom notebooks'],
+    competitors: ['Manual exportsCustom notebooks']
     marketSize: '$3B observability add-ons',
     growthRate: '15% YoY',
     contactInfo: contact,

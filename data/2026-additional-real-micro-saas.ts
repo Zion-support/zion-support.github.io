@@ -8,7 +8,7 @@ export const additionalRealMicroSaas2026 = [
 			'On-page SEO grade and content gap analysisOutline and brief generation by topic',
 			'Entity and FAQ extraction with schema hintsInternal link and anchor text suggestions',
 			'Competitor SERP snapshot and diff'
-		],
+		]
 		pricing: { starter: '$99/month' },
 		link: 'https://ziontechgroup.com/services/ai-seo-content-optimizer',
 		rating: 4.7,
@@ -23,7 +23,7 @@ export const additionalRealMicroSaas2026 = [
 			'Opportunity score and traffic potentialSERP volatility and seasonality hints',
 			'Question keywords and People Also AskCluster and pillar mapping',
 			'Export to CSV/Google Sheets'
-		],
+		]
 		pricing: { starter: '$59/month' },
 		link: 'https://ziontechgroup.com/services/low-competition-keyword-finder',
 		rating: 4.6,
@@ -38,7 +38,7 @@ export const additionalRealMicroSaas2026 = [
 			'Context-aware anchor suggestionsPer-page link caps and distribution rules',
 			'Broken link detection and fix proposalsCMS integrations (WordPress, Headless CMS)',
 			'A/B test link placements'
-		],
+		]
 		pricing: { starter: '$49/month' },
 		link: 'https://ziontechgroup.com/services/ai-internal-linking-assistant',
 		rating: 4.5,
@@ -53,7 +53,7 @@ export const additionalRealMicroSaas2026 = [
 			'Import from G2, Capterra, Google, TrustpilotWidgets: carousels, grids, popups, banners',
 			'Moderation, tagging, and UGC rightsA/B testing and conversion analytics',
 			'Webhook export and API access'
-		],
+		]
 		pricing: { starter: '$39/month' },
 		link: 'https://ziontechgroup.com/services/social-proof-hub',
 		rating: 4.5,
@@ -68,10 +68,10 @@ export const additionalRealMicroSaas2026 = [
 			'OpenAPI spec scaffolding and validatorOAuth/API key auth middleware',
 			'Quota, rate limits, and usage logsStaging and production environments',
 			'Examples for Node/Next.js, Python'
-		],
+		]
 		pricing: { starter: '$129/month' },
 		link: 'https://ziontechgroup.com/services/chatgpt-integration-plugin-starter',
 		rating: 4.6,
 		launchDate: '2025-11-10'
 	}
-],
+]

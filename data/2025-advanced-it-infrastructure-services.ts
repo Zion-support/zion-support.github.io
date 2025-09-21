@@ -61,7 +61,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       'Integration with existing DevOps tools',
       'Custom automation and orchestration',
       '24/7 cloud operations support'
-    ],
+    ]
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-cyan-600',
@@ -73,11 +73,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     setupTime: '2-3 weeks',
     category: 'Cloud Infrastructure',
     realService: true,
-    technology: ['Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes, Terraform'],
-    integrations: ['AWS, Azure, Google Cloud, VMware, OpenStack, Ansible, Jenkins'],
-    useCases: ['Multi-cloud management, Cost optimization, Workload migration, Disaster recovery, Compliance'],
+    technology: ['Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes, Terraform']
+    integrations: ['AWS, Azure, Google Cloud, VMware, OpenStack, Ansible, Jenkins']
+    useCases: ['Multi-cloud management, Cost optimization, Workload migration, Disaster recovery, Compliance']
     roi: 'Organizations report 400% ROI through reduced cloud costs and improved efficiency.',
-    competitors: ['HashiCorp, Terraform Cloud, CloudBolt, RightScale'],
+    competitors: ['HashiCorp, Terraform Cloud, CloudBolt, RightScale']
     marketSize: '$25B multi-cloud management market',
     growthRate: '35% annual growth',
     variant: 'multi-cloud-enterprise',
@@ -114,7 +114,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       'Integration with existing security tools',
       'Custom security policies and rules',
       '24/7 security monitoring and support'
-    ],
+    ]
     popular: false,
     icon: '🔒',
     color: 'from-red-600 to-pink-600',
@@ -126,11 +126,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     setupTime: '3-4 weeks',
     category: 'Network Security',
     realService: true,
-    technology: ['Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes'],
-    integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'],
-    useCases: ['Network security, Access control, Compliance, Threat protection, Audit reporting'],
+    technology: ['Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes']
+    integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls']
+    useCases: ['Network security, Access control, Compliance, Threat protection, Audit reporting']
     roi: 'Organizations report 350% ROI through improved security posture and reduced incidents.',
-    competitors: ['Traditional network security vendors, Zero-trust startups'],
+    competitors: ['Traditional network security vendors, Zero-trust startups']
     marketSize: '$40B network security market',
     growthRate: '30% annual growth in zero-trust segment',
     variant: 'zero-trust-enterprise',
@@ -167,7 +167,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       'Custom automation workflows',
       'Advanced analytics and reporting',
       '24/7 DevOps operations support'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-yellow-600 to-orange-600',
@@ -179,11 +179,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     setupTime: '1-2 weeks',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes'],
-    integrations: ['GitHub, GitLab, Bitbucket, Jenkins, CircleCI, Travis CI, AWS, Azure'],
-    useCases: ['CI/CD automation, Infrastructure management, Testing automation, Performance optimization, Incident management'],
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes']
+    integrations: ['GitHub, GitLab, Bitbucket, Jenkins, CircleCI, Travis CI, AWS, Azure']
+    useCases: ['CI/CD automation, Infrastructure management, Testing automation, Performance optimization, Incident management']
     roi: 'Teams report 300% ROI through reduced deployment time and improved reliability.',
-    competitors: ['GitLab, GitHub Actions, Jenkins, CircleCI, Travis CI'],
+    competitors: ['GitLab, GitHub Actions, Jenkins, CircleCI, Travis CI']
     marketSize: '$8B DevOps market',
     growthRate: '28% annual growth',
     variant: 'ai-devops-enterprise',
@@ -220,7 +220,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       'Performance optimization and monitoring',
       'Advanced security analytics',
       '24/7 data protection support'
-    ],
+    ]
     popular: false,
     icon: '💾',
     color: 'from-green-600 to-emerald-600',
@@ -232,11 +232,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     setupTime: '3-4 weeks',
     category: 'Data Storage & Security',
     realService: true,
-    technology: ['Post-quantum algorithms, Python, React, Node.js, PostgreSQL, Docker'],
-    integrations: ['AWS S3, Azure Blob, Google Cloud Storage, On-premise storage'],
-    useCases: ['Secure data storage, Compliance management, Disaster recovery, Data protection, Archive storage'],
+    technology: ['Post-quantum algorithms, Python, React, Node.js, PostgreSQL, Docker']
+    integrations: ['AWS S3, Azure Blob, Google Cloud Storage, On-premise storage']
+    useCases: ['Secure data storage, Compliance management, Disaster recovery, Data protection, Archive storage']
     roi: 'Organizations report 400% ROI through improved security and compliance benefits.',
-    competitors: ['Traditional storage vendors, Quantum-resistant startups'],
+    competitors: ['Traditional storage vendors, Quantum-resistant startups']
     marketSize: '$50B data storage market',
     growthRate: '40% annual growth in quantum-resistant segment',
     variant: 'quantum-storage-enterprise',
@@ -273,7 +273,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       'Custom optimization algorithms',
       'Advanced reporting and analytics',
       '24/7 monitoring and support'
-    ],
+    ]
     popular: true,
     icon: '🏢',
     color: 'from-indigo-600 to-purple-600',
@@ -285,11 +285,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     setupTime: '2-3 weeks',
     category: 'Data Center Management',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, IoT'],
-    integrations: ['IoT sensors, Building management systems, Power monitoring, Cooling systems'],
-    useCases: ['Energy optimization, Environmental monitoring, Predictive maintenance, Resource management, Cost reduction'],
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, IoT']
+    integrations: ['IoT sensors, Building management systems, Power monitoring, Cooling systems']
+    useCases: ['Energy optimization, Environmental monitoring, Predictive maintenance, Resource management, Cost reduction']
     roi: 'Data centers report 500% ROI through energy savings and improved efficiency.',
-    competitors: ['Schneider Electric, Siemens, Honeywell, Johnson Controls'],
+    competitors: ['Schneider Electric, Siemens, Honeywell, Johnson Controls']
     marketSize: '$12B data center management market',
     growthRate: '32% annual growth',
     variant: 'intelligent-datacenter-enterprise',
@@ -326,7 +326,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       'Compliance and audit support',
       'Expert consultation and training',
       '24/7 technical support'
-    ],
+    ]
     popular: false,
     icon: '🔒🤖',
     color: 'from-purple-600 to-pink-600',
@@ -338,11 +338,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     setupTime: '4-6 weeks',
     category: 'AI & Privacy',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Docker'],
-    integrations: ['AI frameworks, Data platforms, Cloud services, Edge devices'],
-    useCases: ['Privacy-preserving AI, Distributed learning, Healthcare AI, Financial AI, Research collaboration'],
+    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Docker']
+    integrations: ['AI frameworks, Data platforms, Cloud services, Edge devices']
+    useCases: ['Privacy-preserving AI, Distributed learning, Healthcare AI, Financial AI, Research collaboration']
     roi: 'Organizations report 600% ROI through improved AI capabilities while maintaining privacy.',
-    competitors: ['Traditional AI platforms, Federated learning startups'],
+    competitors: ['Traditional AI platforms, Federated learning startups']
     marketSize: '$3B federated learning market',
     growthRate: '50% annual growth',
     variant: 'federated-learning-enterprise',
@@ -379,7 +379,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       'Custom automation workflows',
       'Advanced analytics and reporting',
       '24/7 autonomous operations'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-cyan-600 to-blue-600',
@@ -391,11 +391,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     setupTime: '2-3 weeks',
     category: 'IT Operations',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes'],
-    integrations: ['ServiceNow, BMC, Jira, Zabbix, Nagios, AWS, Azure'],
-    useCases: ['IT operations automation, Incident management, Problem resolution, Infrastructure optimization, Service management'],
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes']
+    integrations: ['ServiceNow, BMC, Jira, Zabbix, Nagios, AWS, Azure']
+    useCases: ['IT operations automation, Incident management, Problem resolution, Infrastructure optimization, Service management']
     roi: 'Organizations report 400% ROI through reduced downtime and improved efficiency.',
-    competitors: ['ServiceNow, BMC Helix, Jira Service Management, Zendesk'],
+    competitors: ['ServiceNow, BMC Helix, Jira Service Management, Zendesk']
     marketSize: '$35B IT operations market',
     growthRate: '30% annual growth',
     variant: 'autonomous-itops-enterprise',
@@ -432,7 +432,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       'Expert consultation and support',
       'Research and development collaboration',
       '24/7 quantum network operations'
-    ],
+    ]
     popular: false,
     icon: '🌐🔮',
     color: 'from-violet-600 to-purple-600',
@@ -444,11 +444,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     setupTime: '6-8 weeks',
     category: 'Quantum Networking',
     realService: true,
-    technology: ['Quantum protocols, Python, React, Node.js, PostgreSQL, Docker'],
-    integrations: ['Classical networks, Quantum devices, Research platforms, Security systems'],
-    useCases: ['Ultra-secure communications, Quantum networking, Research collaboration, Defense applications, Critical infrastructure'],
+    technology: ['Quantum protocols, Python, React, Node.js, PostgreSQL, Docker']
+    integrations: ['Classical networks, Quantum devices, Research platforms, Security systems']
+    useCases: ['Ultra-secure communications, Quantum networking, Research collaboration, Defense applications, Critical infrastructure']
     roi: 'Government agencies report 800% ROI through enhanced security and capabilities.',
-    competitors: ['Traditional networking vendors, Quantum networking startups'],
+    competitors: ['Traditional networking vendors, Quantum networking startups']
     marketSize: '$1.2B quantum networking market',
     growthRate: '70% annual growth',
     variant: 'quantum-internet-enterprise',

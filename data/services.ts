@@ -3,8 +3,8 @@ export interface Service {
   name: string,
   category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'Education' | 'Marketing',
   description: string,
-  features: string[],
-  benefits: string[],
+  features: string[]
+  benefits: string[]
   pricing: {
     starter: number,
     professional: number,
@@ -33,11 +33,11 @@ export const services: Service[] = [
       'Advanced NLP with GPT-4 integrationMulti-language support (50+ languages)',
       'Custom training on your dataAnalytics and performance insights',
       'API integration and webhooks24/7 customer support'
-    ],
+    ]
     benefits: [
       'Reduce customer service costs by 60%Handle 1000+ conversations simultaneously',
       'Improve customer satisfaction by 40%24/7 availability without human intervention'
-    ],
+    ]
     pricing: {
       starter: 99,
       professional: 299,
@@ -58,11 +58,11 @@ export const services: Service[] = [
       'SEO-optimized content generationMultiple content types (blogs, social, ads)',
       'Plagiarism-free contentBrand voice customization',
       'Content calendar managementPerformance analytics'
-    ],
+    ]
     benefits: [
       'Save 80% of content creation timeImprove SEO rankings by 45%',
       'Generate 100+ articles per monthMaintain consistent brand voice'
-    ],
+    ]
     pricing: {
       starter: 49,
       professional: 149,
@@ -82,11 +82,11 @@ export const services: Service[] = [
       'Real-time data processingPredictive analytics models',
       'Custom dashboard creationAutomated reporting',
       'Data visualization toolsAPI integration capabilities'
-    ],
+    ]
     benefits: [
       'Increase data-driven decisions by 70%Reduce analysis time by 85%',
       'Predict trends with 90% accuracyAutomate routine reporting tasks'
-    ],
+    ]
     pricing: {
       starter: 199,
       professional: 499,
@@ -109,11 +109,11 @@ export const services: Service[] = [
       '24/7 network monitoringProactive issue resolution',
       'Security patch managementBackup and disaster recovery',
       'Help desk supportMonthly reporting and analytics'
-    ],
+    ]
     benefits: [
       'Reduce IT downtime by 95%Lower IT costs by 30%',
       'Improve system reliabilityFocus on core business activities'
-    ],
+    ]
     pricing: {
       starter: 299,
       professional: 599,
@@ -133,11 +133,11 @@ export const services: Service[] = [
       'Real-time threat detectionVulnerability scanning',
       'Penetration testingSecurity awareness training',
       'Incident response planningCompliance reporting'
-    ],
+    ]
     benefits: [
       'Protect against 99.9% of cyber threatsMeet industry compliance standards',
       'Reduce security breach risk by 80%24/7 security monitoring'
-    ],
+    ]
     pricing: {
       starter: 399,
       professional: 799,
@@ -158,11 +158,11 @@ export const services: Service[] = [
       'Migration strategy planningData migration tools',
       'Performance optimizationSecurity implementation',
       'Training and documentationPost-migration support'
-    ],
+    ]
     benefits: [
       'Reduce infrastructure costs by 40%Improve scalability and flexibility',
       'Enhanced disaster recoveryAccess to latest technologies'
-    ],
+    ]
     pricing: {
       starter: 2999,
       professional: 7999,
@@ -184,11 +184,11 @@ export const services: Service[] = [
       'Task and project trackingTeam collaboration tools',
       'Time tracking and reportingFile sharing and storage',
       'Mobile app accessIntegration with popular tools'
-    ],
+    ]
     benefits: [
       'Increase team productivity by 35%Reduce project delays by 50%',
       'Improve communication efficiencyCentralized project information'
-    ],
+    ]
     pricing: {
       starter: 29,
       professional: 79,
@@ -208,11 +208,11 @@ export const services: Service[] = [
       'Contact and lead managementSales pipeline tracking',
       'Email marketing automationCustomer support integration',
       'Analytics and reportingMobile app access'
-    ],
+    ]
     benefits: [
       'Increase sales by 30%Improve customer retention by 25%',
       'Streamline sales processesBetter customer insights'
-    ],
+    ]
     pricing: {
       starter: 39,
       professional: 99,
@@ -233,11 +233,11 @@ export const services: Service[] = [
       'Employee database managementPayroll processing',
       'Benefits administrationPerformance reviews',
       'Time and attendanceCompliance reporting'
-    ],
+    ]
     benefits: [
       'Reduce HR administrative tasks by 60%Improve employee satisfaction',
       'Ensure compliance with regulationsBetter workforce analytics'
-    ],
+    ]
     pricing: {
       starter: 49,
       professional: 129,
@@ -259,11 +259,11 @@ export const services: Service[] = [
       'Responsive web designE-commerce integration',
       'Custom functionalitySEO optimization',
       'Performance optimizationOngoing maintenance'
-    ],
+    ]
     benefits: [
       'Professional online presenceImproved user experience',
       'Better search engine rankingsScalable and maintainable code'
-    ],
+    ]
     pricing: {
       starter: 2999,
       professional: 7999,
@@ -283,11 +283,11 @@ export const services: Service[] = [
       'Native iOS and Android developmentCross-platform solutions',
       'UI/UX designApp store optimization',
       'Testing and quality assurancePost-launch support'
-    ],
+    ]
     benefits: [
       'Reach mobile users effectivelyImprove customer engagement',
       'Increase brand visibilityGenerate additional revenue streams'
-    ],
+    ]
     pricing: {
       starter: 4999,
       professional: 14999,
@@ -307,11 +307,11 @@ export const services: Service[] = [
       'RESTful API developmentGraphQL implementation',
       'Third-party integrationsAPI documentation',
       'Testing and monitoringPerformance optimization'
-    ],
+    ]
     benefits: [
       'Enable system interoperabilityImprove data flow efficiency',
       'Reduce development timeEnhance user experience'
-    ],
+    ]
     pricing: {
       starter: 1999,
       professional: 5999,
@@ -333,11 +333,11 @@ export const services: Service[] = [
       'Data warehousingInteractive dashboards',
       'Custom reportingData visualization',
       'Predictive analyticsReal-time monitoring'
-    ],
+    ]
     benefits: [
       'Make data-driven decisionsIdentify business opportunities',
       'Improve operational efficiencyGain competitive advantage'
-    ],
+    ]
     pricing: {
       starter: 399,
       professional: 899,
@@ -348,7 +348,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/business-intelligence',
     icon: '📈'
   }
-],
+]
 
 // Enhanced Services from 2025
 export const enhancedServices = enhancedServices2025,
@@ -361,7 +361,7 @@ export const allServices = [
   ...services,
   ...enhancedServices2025,
   ...specializedIndustryServices
-],
+]
 
 export const getServicesByCategory = (category: Service['category']) => {
   return allServices.filter(service => service.category === category)

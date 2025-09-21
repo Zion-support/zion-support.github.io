@@ -4,7 +4,7 @@ export interface Ultimate2026Service {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const ultimate2026Services: Ultimate2026Service[] = [
       "Maximum capabilities",
       "Premium features",
       "24/7 support"
-    ],
+    ]
     link: "/services/2026-ultimate-service",
     category: "Ultimate 2026 Services",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const ultimate2026Services: Ultimate2026Service[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

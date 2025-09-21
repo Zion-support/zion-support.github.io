@@ -64,7 +64,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Regulatory compliance',
       'International partnerships',
       '24/7 space operations'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-purple-600 to-pink-700',
@@ -76,11 +76,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '6-12 months',
     category: 'Space Technology & Mining',
     realService: true,
-    technology: ['Space robotics, AI/ML, Robotics, Python, React, Node.js, Space systems'],
-    integrations: ['NASA systems, SpaceX, Blue Origin, International space agencies, Mining equipment'],
-    useCases: ['Asteroid mining, Resource extraction, Space logistics, Resource processing, Space exploration'],
+    technology: ['Space robotics, AI/ML, Robotics, Python, React, Node.js, Space systems']
+    integrations: ['NASA systems, SpaceX, Blue Origin, International space agencies, Mining equipment']
+    useCases: ['Asteroid mining, Resource extraction, Space logistics, Resource processing, Space exploration']
     roi: 'Space mining operations report 2000% ROI through access to unlimited space resources.',
-    competitors: ['Traditional mining companies, Space agencies'],
+    competitors: ['Traditional mining companies, Space agencies']
     marketSize: '$3.8B space mining market',
     growthRate: '800% annual growth',
     variant: 'space-mining-enterprise',
@@ -117,7 +117,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Research tools',
       'Developer API',
       '24/7 neural monitoring'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-pink-600 to-rose-700',
@@ -129,11 +129,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-4 weeks',
     category: 'Neural Interface Technology',
     realService: true,
-    technology: ['Neural engineering, AI/ML, Signal processing, Python, React, Node.js, Neural hardware'],
-    integrations: ['Medical devices, Gaming systems, Accessibility tools, Research platforms, AI systems'],
-    useCases: ['Medical rehabilitation, Gaming control, Accessibility assistance, Research studies, Human-AI collaboration'],
+    technology: ['Neural engineering, AI/ML, Signal processing, Python, React, Node.js, Neural hardware']
+    integrations: ['Medical devices, Gaming systems, Accessibility tools, Research platforms, AI systems']
+    useCases: ['Medical rehabilitation, Gaming control, Accessibility assistance, Research studies, Human-AI collaboration']
     roi: 'Healthcare providers report 800% ROI through improved patient outcomes and new treatment capabilities.',
-    competitors: ['Medical BCI companies, Research institutions'],
+    competitors: ['Medical BCI companies, Research institutions']
     marketSize: '$2.1B BCI market',
     growthRate: '600% annual growth',
     variant: 'bci-enterprise',
@@ -170,7 +170,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Developer API',
       'Scalable infrastructure',
       '24/7 quantum bio support'
-    ],
+    ]
     popular: false,
     icon: '🧬',
     color: 'from-green-600 to-emerald-700',
@@ -182,11 +182,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '3-6 weeks',
     category: 'Quantum Biology & Computing',
     realService: true,
-    technology: ['Quantum computing, Biology, DNA computing, Python, React, Node.js, Quantum hardware'],
-    integrations: ['Quantum computers, Biological databases, Research platforms, Healthcare systems, Academic platforms'],
-    useCases: ['Drug discovery, DNA analysis, Protein folding, Biological simulation, Medical research'],
+    technology: ['Quantum computing, Biology, DNA computing, Python, React, Node.js, Quantum hardware']
+    integrations: ['Quantum computers, Biological databases, Research platforms, Healthcare systems, Academic platforms']
+    useCases: ['Drug discovery, DNA analysis, Protein folding, Biological simulation, Medical research']
     roi: 'Research institutions report 1500% ROI through breakthrough discoveries and accelerated research.',
-    competitors: ['Traditional computing, Quantum research labs'],
+    competitors: ['Traditional computing, Quantum research labs']
     marketSize: '$1.8B quantum bio market',
     growthRate: '700% annual growth',
     variant: 'quantum-bio-enterprise',
@@ -223,7 +223,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Regulatory compliance',
       'Multi-vehicle coordination',
       '24/7 autonomous operation'
-    ],
+    ]
     popular: true,
     icon: '🚗',
     color: 'from-blue-600 to-indigo-700',
@@ -235,11 +235,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-4 weeks',
     category: 'Autonomous Transportation',
     realService: true,
-    technology: ['AI/ML, Computer vision, Robotics, Python, React, Node.js, Autonomous systems'],
-    integrations: ['Vehicle systems, Traffic management, Fleet management, Insurance systems, Government databases'],
-    useCases: ['Autonomous driving, Fleet management, Traffic optimization, Safety monitoring, Transportation planning'],
+    technology: ['AI/ML, Computer vision, Robotics, Python, React, Node.js, Autonomous systems']
+    integrations: ['Vehicle systems, Traffic management, Fleet management, Insurance systems, Government databases']
+    useCases: ['Autonomous driving, Fleet management, Traffic optimization, Safety monitoring, Transportation planning']
     roi: 'Transportation companies report 500% ROI through reduced accidents and improved efficiency.',
-    competitors: ['Tesla, Waymo, Cruise, Aurora'],
+    competitors: ['Tesla, Waymo, Cruise, Aurora']
     marketSize: '$45.2B autonomous vehicle market',
     growthRate: '45% annual growth',
     variant: 'autonomous-vehicle-enterprise',
@@ -276,7 +276,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Developer tools',
       'Scalable infrastructure',
       '24/7 research support'
-    ],
+    ]
     popular: true,
     icon: '🔬',
     color: 'from-cyan-600 to-blue-700',
@@ -288,11 +288,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-4 weeks',
     category: 'Quantum Materials Science',
     realService: true,
-    technology: ['Quantum computing, Materials science, AI/ML, Python, React, Node.js, Quantum algorithms'],
-    integrations: ['Quantum computers, Materials databases, Research platforms, Patent databases, Academic platforms'],
-    useCases: ['Materials discovery, Property prediction, Research acceleration, Patent analysis, Market intelligence'],
+    technology: ['Quantum computing, Materials science, AI/ML, Python, React, Node.js, Quantum algorithms']
+    integrations: ['Quantum computers, Materials databases, Research platforms, Patent databases, Academic platforms']
+    useCases: ['Materials discovery, Property prediction, Research acceleration, Patent analysis, Market intelligence']
     roi: 'Research institutions report 1000% ROI through accelerated discoveries and breakthrough materials.',
-    competitors: ['Traditional research, Materials companies'],
+    competitors: ['Traditional research, Materials companies']
     marketSize: '$2.8B quantum materials market',
     growthRate: '500% annual growth',
     variant: 'quantum-materials-enterprise',
@@ -329,7 +329,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Developer tools and SDK',
       'Multi-platform support',
       '24/7 metaverse operation'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-violet-600 to-purple-700',
@@ -341,11 +341,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '1-2 weeks',
     category: 'Metaverse & Virtual Reality',
     realService: true,
-    technology: ['AI/ML, Virtual reality, 3D graphics, Python, React, Node.js, Game engines'],
-    integrations: ['VR headsets, Gaming platforms, Social media, Educational platforms, Entertainment systems'],
-    useCases: ['Virtual world creation, AI-powered gaming, Virtual education, Social interaction, Entertainment experiences'],
+    technology: ['AI/ML, Virtual reality, 3D graphics, Python, React, Node.js, Game engines']
+    integrations: ['VR headsets, Gaming platforms, Social media, Educational platforms, Entertainment systems']
+    useCases: ['Virtual world creation, AI-powered gaming, Virtual education, Social interaction, Entertainment experiences']
     roi: 'Metaverse developers report 400% ROI through faster development and enhanced user experiences.',
-    competitors: ['Roblox, Unity, Unreal Engine, Meta'],
+    competitors: ['Roblox, Unity, Unreal Engine, Meta']
     marketSize: '$38.5B metaverse market',
     growthRate: '52% annual growth',
     variant: 'metaverse-ai-enterprise',
@@ -382,7 +382,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Developer API',
       'Scalable infrastructure',
       '24/7 energy monitoring'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-yellow-600 to-orange-700',
@@ -394,11 +394,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '3-6 weeks',
     category: 'Quantum Energy & Sustainability',
     realService: true,
-    technology: ['Quantum computing, Energy systems, Fusion physics, Python, React, Node.js, Quantum algorithms'],
-    integrations: ['Energy grids, Research platforms, Climate databases, Academic platforms, Government systems'],
-    useCases: ['Energy optimization, Fusion simulation, Grid management, Renewable integration, Climate analysis'],
+    technology: ['Quantum computing, Energy systems, Fusion physics, Python, React, Node.js, Quantum algorithms']
+    integrations: ['Energy grids, Research platforms, Climate databases, Academic platforms, Government systems']
+    useCases: ['Energy optimization, Fusion simulation, Grid management, Renewable integration, Climate analysis']
     roi: 'Energy companies report 1200% ROI through optimized energy systems and breakthrough discoveries.',
-    competitors: ['Traditional energy, Research institutions'],
+    competitors: ['Traditional energy, Research institutions']
     marketSize: '$2.2B quantum energy market',
     growthRate: '600% annual growth',
     variant: 'quantum-energy-enterprise',
@@ -435,7 +435,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Developer tools',
       'Scalable infrastructure',
       '24/7 robotic operation'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-teal-600 to-cyan-700',
@@ -447,11 +447,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-4 weeks',
     category: 'Quantum Robotics & Automation',
     realService: true,
-    technology: ['Quantum computing, Robotics, AI/ML, Python, React, Node.js, Quantum sensors'],
-    integrations: ['Robotic systems, Manufacturing equipment, Healthcare devices, Research platforms, Academic systems'],
-    useCases: ['Manufacturing automation, Healthcare robotics, Research automation, Precision control, Multi-robot coordination'],
+    technology: ['Quantum computing, Robotics, AI/ML, Python, React, Node.js, Quantum sensors']
+    integrations: ['Robotic systems, Manufacturing equipment, Healthcare devices, Research platforms, Academic systems']
+    useCases: ['Manufacturing automation, Healthcare robotics, Research automation, Precision control, Multi-robot coordination']
     roi: 'Manufacturing companies report 600% ROI through improved precision and automation efficiency.',
-    competitors: ['Traditional robotics, Automation companies'],
+    competitors: ['Traditional robotics, Automation companies']
     marketSize: '$3.2B quantum robotics market',
     growthRate: '450% annual growth',
     variant: 'quantum-robotics-enterprise',
@@ -488,7 +488,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Developer tools',
       'Global quantum network',
       '24/7 security monitoring'
-    ],
+    ]
     popular: true,
     icon: '🔐',
     color: 'from-red-600 to-pink-700',
@@ -500,11 +500,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '3-6 weeks',
     category: 'Quantum Internet & Security',
     realService: true,
-    technology: ['Quantum protocols, Internet security, Cryptography, Python, React, Node.js, Quantum hardware'],
-    integrations: ['Internet infrastructure, Security systems, Government networks, Financial systems, Healthcare systems'],
-    useCases: ['Secure communication, Government networks, Financial security, Healthcare privacy, Defense communications'],
+    technology: ['Quantum protocols, Internet security, Cryptography, Python, React, Node.js, Quantum hardware']
+    integrations: ['Internet infrastructure, Security systems, Government networks, Financial systems, Healthcare systems']
+    useCases: ['Secure communication, Government networks, Financial security, Healthcare privacy, Defense communications']
     roi: 'Government agencies report 1500% ROI through unbreakable security and quantum advantage.',
-    competitors: ['Traditional security, Quantum research labs'],
+    competitors: ['Traditional security, Quantum research labs']
     marketSize: '$1.5B quantum internet market',
     growthRate: '700% annual growth',
     variant: 'quantum-internet-enterprise',
@@ -541,7 +541,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Sustainability analysis',
       'Developer tools',
       '24/7 logistics monitoring'
-    ],
+    ]
     popular: true,
     icon: '📦',
     color: 'from-orange-600 to-red-700',
@@ -553,11 +553,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-4 weeks',
     category: 'Quantum Logistics & Supply Chain',
     realService: true,
-    technology: ['Quantum computing, Logistics, Supply chain, Python, React, Node.js, Quantum algorithms'],
-    integrations: ['Logistics systems, Supply chain platforms, Transportation systems, E-commerce platforms, Manufacturing systems'],
-    useCases: ['Route optimization, Supply chain management, Logistics planning, Cost optimization, Sustainability analysis'],
+    technology: ['Quantum computing, Logistics, Supply chain, Python, React, Node.js, Quantum algorithms']
+    integrations: ['Logistics systems, Supply chain platforms, Transportation systems, E-commerce platforms, Manufacturing systems']
+    useCases: ['Route optimization, Supply chain management, Logistics planning, Cost optimization, Sustainability analysis']
     roi: 'Logistics companies report 400% ROI through optimized routes and reduced operational costs.',
-    competitors: ['Traditional logistics, Supply chain companies'],
+    competitors: ['Traditional logistics, Supply chain companies']
     marketSize: '$12.8B quantum logistics market',
     growthRate: '380% annual growth',
     variant: 'quantum-logistics-enterprise',
@@ -594,7 +594,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Expert consultation',
       'Custom algorithm development',
       'Research collaboration'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 to-indigo-600',
@@ -606,11 +606,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '4-6 weeks',
     category: 'Quantum Computing & AI',
     realService: true,
-    technology: ['Quantum algorithms, Python, Qiskit, Cirq, TensorFlow, PyTorch'],
-    integrations: ['IBM Quantum, Google Quantum AI, AWS Braket, Azure Quantum, Custom quantum hardware'],
-    useCases: ['Drug discovery, Financial modeling, Optimization problems, Machine learning acceleration, Research applications'],
+    technology: ['Quantum algorithms, Python, Qiskit, Cirq, TensorFlow, PyTorch']
+    integrations: ['IBM Quantum, Google Quantum AI, AWS Braket, Azure Quantum, Custom quantum hardware']
+    useCases: ['Drug discovery, Financial modeling, Optimization problems, Machine learning acceleration, Research applications']
     roi: 'Research institutions report 500% improvement in problem-solving speed and 300% reduction in computational time.',
-    competitors: ['IBM Quantum, Google Quantum AI, AWS Braket, Azure Quantum'],
+    competitors: ['IBM Quantum, Google Quantum AI, AWS Braket, Azure Quantum']
     marketSize: '$8.9B quantum computing market',
     growthRate: '45% annual growth',
     variant: 'quantum-ml-enterprise',
@@ -647,7 +647,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Research tools',
       'Custom network design',
       'Expert consultation'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-blue-600 to-cyan-600',
@@ -659,11 +659,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '3-4 weeks',
     category: 'Neuromorphic Computing & AI',
     realService: true,
-    technology: ['Spiking neural networks, Python, C++, Neuromorphic algorithms, Hardware interfaces'],
-    integrations: ['Intel Loihi, BrainChip, Custom neuromorphic hardware, Edge devices'],
-    useCases: ['Edge AI processing, Robotics control, IoT intelligence, Real-time learning, Low-power computing'],
+    technology: ['Spiking neural networks, Python, C++, Neuromorphic algorithms, Hardware interfaces']
+    integrations: ['Intel Loihi, BrainChip, Custom neuromorphic hardware, Edge devices']
+    useCases: ['Edge AI processing, Robotics control, IoT intelligence, Real-time learning, Low-power computing']
     roi: 'IoT companies report 400% improvement in processing efficiency and 300% reduction in power consumption.',
-    competitors: ['Intel Loihi, BrainChip, IBM TrueNorth, SpiNNaker'],
+    competitors: ['Intel Loihi, BrainChip, IBM TrueNorth, SpiNNaker']
     marketSize: '$6.8B neuromorphic computing market',
     growthRate: '38% annual growth',
     variant: 'neuromorphic-enterprise',
@@ -700,7 +700,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Research collaboration',
       'Custom design tools',
       'Expert consultation'
-    ],
+    ]
     popular: true,
     icon: '🧬',
     color: 'from-green-600 to-emerald-600',
@@ -712,11 +712,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '4-6 weeks',
     category: 'Synthetic Biology & Biotechnology',
     realService: true,
-    technology: ['Bioinformatics, Python, R, DNA design algorithms, Biological modeling'],
-    integrations: ['DNA synthesis companies, Laboratory equipment, Research databases, Analysis tools'],
-    useCases: ['Drug development, Agricultural biotechnology, Biofuel production, Medical research, Industrial biotechnology'],
+    technology: ['Bioinformatics, Python, R, DNA design algorithms, Biological modeling']
+    integrations: ['DNA synthesis companies, Laboratory equipment, Research databases, Analysis tools']
+    useCases: ['Drug development, Agricultural biotechnology, Biofuel production, Medical research, Industrial biotechnology']
     roi: 'Biotech companies report 300% improvement in design efficiency and 250% reduction in development time.',
-    competitors: ['Benchling, SnapGene, Geneious, Vector NTI'],
+    competitors: ['Benchling, SnapGene, Geneious, Vector NTI']
     marketSize: '$13.8B synthetic biology market',
     growthRate: '42% annual growth',
     variant: 'synthetic-biology-enterprise',
@@ -753,7 +753,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Technology development',
       'Research collaboration',
       'Expert consultation'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-orange-600 to-red-600',
@@ -765,11 +765,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '6-8 weeks',
     category: 'Space Technology & Mining',
     realService: true,
-    technology: ['Space robotics, Mining technology, Resource processing, Mission planning, AI/ML'],
-    integrations: ['Satellite systems, Spacecraft, Mining equipment, Processing facilities'],
-    useCases: ['Asteroid mining, Lunar resource extraction, Space manufacturing, Resource processing, Technology development'],
+    technology: ['Space robotics, Mining technology, Resource processing, Mission planning, AI/ML']
+    integrations: ['Satellite systems, Spacecraft, Mining equipment, Processing facilities']
+    useCases: ['Asteroid mining, Lunar resource extraction, Space manufacturing, Resource processing, Technology development']
     roi: 'Space companies report 400% improvement in mission planning and 300% reduction in development costs.',
-    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra'],
+    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra']
     marketSize: '$3.9B space mining market',
     growthRate: '50% annual growth',
     variant: 'space-mining-enterprise',
@@ -806,7 +806,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Technology development',
       'Research collaboration',
       'Expert consultation'
-    ],
+    ]
     popular: true,
     icon: '☀️',
     color: 'from-yellow-600 to-orange-600',
@@ -818,11 +818,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '8-12 weeks',
     category: 'Fusion Energy & Clean Technology',
     realService: true,
-    technology: ['Plasma physics, Fusion engineering, Magnetic confinement, Energy conversion, Safety systems'],
-    integrations: ['Fusion reactors, Plasma diagnostics, Energy systems, Safety equipment'],
-    useCases: ['Fusion power generation, Energy research, Technology development, Safety analysis, Economic modeling'],
+    technology: ['Plasma physics, Fusion engineering, Magnetic confinement, Energy conversion, Safety systems']
+    integrations: ['Fusion reactors, Plasma diagnostics, Energy systems, Safety equipment']
+    useCases: ['Fusion power generation, Energy research, Technology development, Safety analysis, Economic modeling']
     roi: 'Energy companies report 500% improvement in technology development and 400% reduction in research costs.',
-    competitors: ['ITER, Commonwealth Fusion, TAE Technologies, General Fusion'],
+    competitors: ['ITER, Commonwealth Fusion, TAE Technologies, General Fusion']
     marketSize: '$2.8B fusion energy market',
     growthRate: '55% annual growth',
     variant: 'fusion-energy-enterprise',
@@ -859,7 +859,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Performance monitoring',
       'Custom development',
       'Expert consultation'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-indigo-600 to-purple-600',
@@ -871,11 +871,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-3 weeks',
     category: 'Robotics & Automation',
     realService: true,
-    technology: ['ROS, Python, C++, Computer vision, AI/ML, Motion planning'],
-    integrations: ['Robot hardware, Sensors, Actuators, Simulation platforms, Cloud services'],
-    useCases: ['Industrial automation, Service robotics, Research robotics, Educational robotics, Custom applications'],
+    technology: ['ROS, Python, C++, Computer vision, AI/ML, Motion planning']
+    integrations: ['Robot hardware, Sensors, Actuators, Simulation platforms, Cloud services']
+    useCases: ['Industrial automation, Service robotics, Research robotics, Educational robotics, Custom applications']
     roi: 'Manufacturing companies report 300% improvement in automation efficiency and 200% reduction in operational costs.',
-    competitors: ['ROS, ABB Robotics, KUKA, FANUC, Universal Robots'],
+    competitors: ['ROS, ABB Robotics, KUKA, FANUC, Universal Robots']
     marketSize: '$22.8B robotics market',
     growthRate: '35% annual growth',
     variant: 'robotics-automation-enterprise',
@@ -912,7 +912,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Performance optimization',
       'Deployment tools',
       'Expert consultation'
-    ],
+    ]
     popular: true,
     icon: '⛓️',
     color: 'from-cyan-600 to-blue-600',
@@ -924,11 +924,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2 weeks',
     category: 'Metaverse',
     realService: true,
-    technology: ['AI/ML, VR/AR, 3D graphics, Python, React, Game engines'],
-    integrations: ['Unity, Unreal Engine, VR platforms, Social media, Gaming platforms'],
-    useCases: ['Virtual worlds, Gaming, Social interaction, Education, Training'],
+    technology: ['AI/ML, VR/AR, 3D graphics, Python, React, Game engines']
+    integrations: ['Unity, Unreal Engine, VR platforms, Social media, Gaming platforms']
+    useCases: ['Virtual worlds, Gaming, Social interaction, Education, Training']
     roi: 'Create engaging metaverse experiences and increase user engagement by 300%',
-    competitors: ['Roblox, Decentraland, Meta, VRChat'],
+    competitors: ['Roblox, Decentraland, Meta, VRChat']
     marketSize: '$50B metaverse market',
     growthRate: '200% YoY',
     contactInfo: contact,

@@ -25,29 +25,29 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
       "Custom dashboards",
       "API integration",
       "Automated reporting"
-    ],
+    ]
     benefits: [
       "Make data-driven decisions",
       "Identify market opportunities early",
       "Stay ahead of competitors",
       "Optimize pricing strategies",
       "Improve customer targeting"
-    ],
+    ]
     useCases: [
       "Market research",
       "Competitive analysis",
       "Product development",
       "Marketing strategy",
       "Sales optimization"
-    ],
+    ]
     targetAudience: [
       "Product managers",
       "Marketing teams",
       "Business analysts",
       "Strategy consultants",
       "Startup founders"
-    ],
-    tags: ["AI", "Market Intelligence", "Analytics", "Competitive Analysis", "Predictive Analytics"],
+    ]
+    tags: ["AI", "Market Intelligence", "Analytics", "Competitive Analysis", "Predictive Analytics"]
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$199 - $599/month",
@@ -56,11 +56,11 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["GPT-4", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
-    integrations: ["Salesforce", "HubSpot", "Google Analytics", "Facebook Ads", "LinkedIn Ads"],
-    compliance: ["GDPR", "CCPA", "SOC 2"],
+    technology: ["GPT-4", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"]
+    integrations: ["Salesforce", "HubSpot", "Google Analytics", "Facebook Ads", "LinkedIn Ads"]
+    compliance: ["GDPR", "CCPA", "SOC 2"]
     roi: "400% within 8 months",
-    competitors: ["Crayon", "Kompyte", "Brandwatch", "Mention"],
+    competitors: ["Crayon", "Kompyte", "Brandwatch", "Mention"]
     marketSize: "$2.1 billion",
     growthRate: "18.5% annually",
     fundingTrends: "Strong investor interest in AI-powered market intelligence"
@@ -83,29 +83,29 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
       "Automated insights",
       "Multi-cloud support",
       "Enterprise security"
-    ],
+    ]
     benefits: [
       "Process data 100x faster",
       "Handle massive datasets",
       "Real-time insights",
       "Future-proof technology",
       "Competitive advantage"
-    ],
+    ]
     useCases: [
       "Big data analytics",
       "Real-time monitoring",
       "Predictive maintenance",
       "Risk assessment",
       "Performance optimization"
-    ],
+    ]
     targetAudience: [
       "Data scientists",
       "Business analysts",
       "IT managers",
       "Research institutions",
       "Financial services"
-    ],
-    tags: ["Quantum Computing", "Big Data", "Analytics", "Real-time", "Predictive Modeling"],
+    ]
+    tags: ["Quantum Computing", "Big Data", "Analytics", "Real-time", "Predictive Modeling"]
     estimatedDelivery: "3-4 weeks",
     supportLevel: "enterprise",
     marketPrice: "$299 - $999/month",
@@ -114,11 +114,11 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Quantum algorithms", "Python", "TensorFlow", "Kubernetes", "Apache Kafka"],
-    integrations: ["AWS", "Azure", "Google Cloud", "Snowflake", "Databricks"],
-    compliance: ["ISO 27001", "SOC 2", "HIPAA", "GDPR"],
+    technology: ["Quantum algorithms", "Python", "TensorFlow", "Kubernetes", "Apache Kafka"]
+    integrations: ["AWS", "Azure", "Google Cloud", "Snowflake", "Databricks"]
+    compliance: ["ISO 27001", "SOC 2", "HIPAA", "GDPR"]
     roi: "500% within 12 months",
-    competitors: ["Palantir", "Databricks", "Snowflake", "Tableau"],
+    competitors: ["Palantir", "Databricks", "Snowflake", "Tableau"]
     marketSize: "$3.2 billion",
     growthRate: "22.8% annually",
     fundingTrends: "High interest in quantum computing applications"

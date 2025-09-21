@@ -5,7 +5,7 @@ export interface InnovativeITService {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -17,11 +17,11 @@ export interface InnovativeITService {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: string,
@@ -52,7 +52,7 @@ export const innovativeITServices: InnovativeITService[] = [
       'Performance optimizationSecurity automation',
       'Compliance managementResource forecasting',
       'API for integrationAdvanced analytics'
-    ],
+    ]
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-indigo-700',
@@ -64,11 +64,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '2 weeks',
     category: 'Quantum AI & Cloud Infrastructure',
     realService: true,
-    technology: ['Quantum ComputingAI/ML', 'Cloud OrchestrationInfrastructure as Code', 'Multi-cloud ManagementAutomation'],
-    integrations: ['AWSAzure', 'Google CloudKubernetes', 'DockerTerraform', 'AnsibleJenkins'],
-    useCases: ['Cloud optimizationCost reduction', 'Performance improvementSecurity enhancement', 'Compliance automationResource management'],
+    technology: ['Quantum ComputingAI/ML', 'Cloud OrchestrationInfrastructure as Code', 'Multi-cloud ManagementAutomation']
+    integrations: ['AWSAzure', 'Google CloudKubernetes', 'DockerTerraform', 'AnsibleJenkins']
+    useCases: ['Cloud optimizationCost reduction', 'Performance improvementSecurity enhancement', 'Compliance automationResource management']
     roi: 'Average customer sees 700% ROI within 12 months through cost optimization and operational efficiency.',
-    competitors: ['HashiCorpTerraform Cloud', 'AWS CloudFormationAzure Resource Manager', 'Google Cloud Deployment Manager'],
+    competitors: ['HashiCorpTerraform Cloud', 'AWS CloudFormationAzure Resource Manager', 'Google Cloud Deployment Manager']
     marketSize: '$500B cloud infrastructure market',
     growthRate: '200% annual growth',
     variant: 'quantum-cloud-advanced',
@@ -98,7 +98,7 @@ export const innovativeITServices: InnovativeITService[] = [
       'Security scanningPerformance testing',
       'Rollback automationTeam collaboration',
       'Analytics dashboardAPI integration'
-    ],
+    ]
     popular: true,
     icon: '⚡',
     color: 'from-green-600 to-emerald-700',
@@ -110,11 +110,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '1 week',
     category: 'AI & DevOps Automation',
     realService: true,
-    technology: ['AI/MLMachine Learning', 'CI/CDDevOps', 'AutomationContainer Orchestration'],
-    integrations: ['GitHubGitLab', 'BitbucketDocker', 'KubernetesAWS', 'AzureGoogle Cloud'],
-    useCases: ['Continuous integrationAutomated deployment', 'Quality assuranceSecurity testing', 'Performance optimizationTeam collaboration'],
+    technology: ['AI/MLMachine Learning', 'CI/CDDevOps', 'AutomationContainer Orchestration']
+    integrations: ['GitHubGitLab', 'BitbucketDocker', 'KubernetesAWS', 'AzureGoogle Cloud']
+    useCases: ['Continuous integrationAutomated deployment', 'Quality assuranceSecurity testing', 'Performance optimizationTeam collaboration']
     roi: 'Average customer sees 500% ROI within 9 months through deployment automation and issue prevention.',
-    competitors: ['GitLabJenkins', 'CircleCITravis CI', 'GitHub ActionsAzure DevOps'],
+    competitors: ['GitLabJenkins', 'CircleCITravis CI', 'GitHub ActionsAzure DevOps']
     marketSize: '$8B DevOps market',
     growthRate: '180% annual growth',
     variant: 'ai-devops-advanced',
@@ -144,7 +144,7 @@ export const innovativeITServices: InnovativeITService[] = [
       'Resource allocationPerformance optimization',
       'Security automationCompliance management',
       'Analytics dashboardAPI integration'
-    ],
+    ]
     popular: true,
     icon: '🏢',
     color: 'from-gray-600 to-slate-700',
@@ -156,11 +156,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '1 month',
     category: 'Quantum AI & Data Center Management',
     realService: true,
-    technology: ['Quantum ComputingAI/ML', 'Data Center ManagementEnergy Optimization', 'Predictive AnalyticsAutomation'],
-    integrations: ['VMwareNutanix', 'CiscoDell', 'HPIBM', 'Monitoring toolsEnergy management systems'],
-    useCases: ['Energy optimizationPerformance improvement', 'Cost reductionPredictive maintenance', 'Resource optimizationCompliance management'],
+    technology: ['Quantum ComputingAI/ML', 'Data Center ManagementEnergy Optimization', 'Predictive AnalyticsAutomation']
+    integrations: ['VMwareNutanix', 'CiscoDell', 'HPIBM', 'Monitoring toolsEnergy management systems']
+    useCases: ['Energy optimizationPerformance improvement', 'Cost reductionPredictive maintenance', 'Resource optimizationCompliance management']
     roi: 'Average customer sees 800% ROI within 18 months through energy savings and operational efficiency.',
-    competitors: ['VMwareNutanix', 'Cisco UCSDell PowerEdge', 'HP ProLiantIBM Power Systems'],
+    competitors: ['VMwareNutanix', 'Cisco UCSDell PowerEdge', 'HP ProLiantIBM Power Systems']
     marketSize: '$200B data center market',
     growthRate: '150% annual growth',
     variant: 'quantum-infrastructure-advanced',
@@ -190,7 +190,7 @@ export const innovativeITServices: InnovativeITService[] = [
       'Zero-day protectionCompliance automation',
       'Real-time alertsAnalytics dashboard',
       'API integrationMulti-site management'
-    ],
+    ]
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-pink-700',
@@ -202,11 +202,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '2 weeks',
     category: 'AI & Network Security',
     realService: true,
-    technology: ['AI/MLMachine Learning', 'Network SecurityThreat Intelligence', 'Behavioral AnalysisAutomation'],
-    integrations: ['FirewallsIDS/IPS', 'SIEM systemsNetwork devices', 'Security toolsCloud platforms'],
-    useCases: ['Threat detectionIncident response', 'Network monitoringCompliance management', 'Security automationRisk assessment'],
+    technology: ['AI/MLMachine Learning', 'Network SecurityThreat Intelligence', 'Behavioral AnalysisAutomation']
+    integrations: ['FirewallsIDS/IPS', 'SIEM systemsNetwork devices', 'Security toolsCloud platforms']
+    useCases: ['Threat detectionIncident response', 'Network monitoringCompliance management', 'Security automationRisk assessment']
     roi: 'Average customer sees 600% ROI within 12 months through threat prevention and security automation.',
-    competitors: ['Palo Alto NetworksFortinet', 'CiscoCheck Point', 'JuniperSonicWall'],
+    competitors: ['Palo Alto NetworksFortinet', 'CiscoCheck Point', 'JuniperSonicWall']
     marketSize: '$200B cybersecurity market',
     growthRate: '180% annual growth',
     variant: 'ai-security-advanced',
@@ -236,7 +236,7 @@ export const innovativeITServices: InnovativeITService[] = [
       'Performance optimizationCost reduction',
       'Compliance automationReal-time monitoring',
       'Analytics dashboardAPI integration'
-    ],
+    ]
     popular: true,
     icon: '💾',
     color: 'from-purple-600 to-indigo-700',
@@ -248,11 +248,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '2 weeks',
     category: 'Quantum AI & Storage Management',
     realService: true,
-    technology: ['Quantum ComputingAI/ML', 'Storage ManagementData Optimization', 'Predictive AnalyticsAutomation'],
-    integrations: ['NetAppPure Storage', 'Dell EMCIBM', 'HPECloud storage', 'Backup systems'],
-    useCases: ['Storage optimizationPerformance improvement', 'Cost reductionData tiering', 'Compliance managementCapacity planning'],
+    technology: ['Quantum ComputingAI/ML', 'Storage ManagementData Optimization', 'Predictive AnalyticsAutomation']
+    integrations: ['NetAppPure Storage', 'Dell EMCIBM', 'HPECloud storage', 'Backup systems']
+    useCases: ['Storage optimizationPerformance improvement', 'Cost reductionData tiering', 'Compliance managementCapacity planning']
     roi: 'Average customer sees 700% ROI within 15 months through storage optimization and cost reduction.',
-    competitors: ['NetAppPure Storage', 'Dell EMCIBM Storage', 'HPE StorageHitachi Vantara'],
+    competitors: ['NetAppPure Storage', 'Dell EMCIBM Storage', 'HPE StorageHitachi Vantara']
     marketSize: '$100B storage market',
     growthRate: '120% annual growth',
     variant: 'quantum-storage-advanced',
@@ -282,7 +282,7 @@ export const innovativeITServices: InnovativeITService[] = [
       'Compliance automationReal-time monitoring',
       'Testing automationAnalytics dashboard',
       'API integrationMulti-site recovery'
-    ],
+    ]
     popular: true,
     icon: '🔄',
     color: 'from-orange-600 to-red-700',
@@ -294,11 +294,11 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '2 weeks',
     category: 'AI & Disaster Recovery',
     realService: true,
-    technology: ['AI/MLMachine Learning', 'Disaster RecoveryBackup Management', 'Predictive AnalyticsAutomation'],
-    integrations: ['VeeamZerto', 'CommvaultBackup systems', 'Cloud platformsStorage systems'],
-    useCases: ['Backup automationDisaster recovery', 'Business continuityCompliance management', 'Testing automationRisk assessment'],
+    technology: ['AI/MLMachine Learning', 'Disaster RecoveryBackup Management', 'Predictive AnalyticsAutomation']
+    integrations: ['VeeamZerto', 'CommvaultBackup systems', 'Cloud platformsStorage systems']
+    useCases: ['Backup automationDisaster recovery', 'Business continuityCompliance management', 'Testing automationRisk assessment']
     roi: 'Average customer sees 500% ROI within 12 months through recovery automation and downtime prevention.',
-    competitors: ['VeeamZerto', 'CommvaultRubrik', 'CohesityDruva'],
+    competitors: ['VeeamZerto', 'CommvaultRubrik', 'CohesityDruva']
     marketSize: '$50B disaster recovery market',
     growthRate: '150% annual growth',
     variant: 'ai-recovery-advanced',
@@ -315,4 +315,4 @@ export const innovativeITServices: InnovativeITService[] = [
     rating: 4.8,
     reviews: 234
   }
-],
+]

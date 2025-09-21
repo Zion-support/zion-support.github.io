@@ -33,7 +33,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Reporting dashboard',
       'Integration capabilities',
       'Custom workflows'
-    ],
+    ]
     popular: true,
     icon: '⚠️',
     color: 'from-orange-600 via-red-600 to-pink-600',
@@ -42,11 +42,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     targetAudience: 'Fortune 500 companies, Financial institutions, Healthcare organizations, Government agencies',
     category: 'Enterprise AI',
     realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Risk Analytics', 'Compliance', 'Automation'],
-    integrations: ['ERP systems', 'GRC platforms', 'Compliance tools', 'Security systems', 'Business intelligence tools'],
-    useCases: ['Risk assessment', 'Compliance management', 'Incident response', 'Business continuity', 'Strategic planning'],
+    technology: ['AI/ML', 'Machine Learning', 'Risk Analytics', 'Compliance', 'Automation']
+    integrations: ['ERP systems', 'GRC platforms', 'Compliance tools', 'Security systems', 'Business intelligence tools']
+    useCases: ['Risk assessment', 'Compliance management', 'Incident response', 'Business continuity', 'Strategic planning']
     roi: 'Reduce risk exposure by 60%. Improve compliance by 85%. Cut risk management costs by 40%.',
-    competitors: ['MetricStream', 'ServiceNow', 'IBM OpenPages', 'RSA Archer', 'SAP GRC'],
+    competitors: ['MetricStream', 'ServiceNow', 'IBM OpenPages', 'RSA Archer', 'SAP GRC']
     marketSize: '$12.8B enterprise risk management market',
     growthRate: '25% annual growth',
     customers: 45,
@@ -72,7 +72,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Real-time analytics',
       'Custom workflows',
       'Reporting dashboard'
-    ],
+    ]
     popular: true,
     icon: '⚙️',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
@@ -82,11 +82,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     targetAudience: 'Large enterprises, Manufacturing companies, Service organizations, Government agencies',
     category: 'AI Automation',
     realService: true,
-    technology: ['AI/ML', 'Machine Learning', 'Process Mining', 'Automation', 'Workflow Management'],
-    integrations: ['ERP systems', 'CRM platforms', 'BPM tools', 'Workflow engines', 'Business intelligence tools'],
-    useCases: ['Process optimization', 'Workflow automation', 'Cost reduction', 'Efficiency improvement', 'Compliance'],
+    technology: ['AI/ML', 'Machine Learning', 'Process Mining', 'Automation', 'Workflow Management']
+    integrations: ['ERP systems', 'CRM platforms', 'BPM tools', 'Workflow engines', 'Business intelligence tools']
+    useCases: ['Process optimization', 'Workflow automation', 'Cost reduction', 'Efficiency improvement', 'Compliance']
     roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
-    competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Pega', 'Appian'],
+    competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Pega', 'Appian']
     marketSize: '$19.6B business process automation market',
     growthRate: '31% annual growth',
     customers: 38,
@@ -112,7 +112,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Analytics dashboard',
       'Integration capabilities',
       'Mobile access'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-purple-600 via-violet-600 to-indigo-600',
@@ -122,11 +122,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies',
     category: 'AI Automation',
     realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Knowledge Graphs', 'Machine Learning', 'Semantic Search'],
-    integrations: ['Document management systems', 'CRM platforms', 'ERP systems', 'Collaboration tools', 'Business intelligence tools'],
-    useCases: ['Knowledge discovery', 'Document management', 'Research collaboration', 'Decision support', 'Training and onboarding'],
+    technology: ['AI/ML', 'Natural Language Processing', 'Knowledge Graphs', 'Machine Learning', 'Semantic Search']
+    integrations: ['Document management systems', 'CRM platforms', 'ERP systems', 'Collaboration tools', 'Business intelligence tools']
+    useCases: ['Knowledge discovery', 'Document management', 'Research collaboration', 'Decision support', 'Training and onboarding']
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',
-    competitors: ['Microsoft SharePoint', 'Confluence', 'Notion', 'Slack', 'Box'],
+    competitors: ['Microsoft SharePoint', 'Confluence', 'Notion', 'Slack', 'Box']
     marketSize: '$15.2B enterprise content management market',
     growthRate: '28% annual growth',
     customers: 29,

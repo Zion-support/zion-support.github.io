@@ -64,7 +64,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Monitoring dashboard',
       'Mobile management',
       '24/7 support'
-    ],
+    ]
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-cyan-700',
@@ -76,11 +76,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2 weeks',
     category: 'Cloud Computing',
     realService: true,
-    technology: ['Quantum computing, Cloud infrastructure, Python, React, Quantum algorithms'],
-    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker'],
-    useCases: ['Research computing, AI training, Financial modeling, Scientific simulation'],
+    technology: ['Quantum computing, Cloud infrastructure, Python, React, Quantum algorithms']
+    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker']
+    useCases: ['Research computing, AI training, Financial modeling, Scientific simulation']
     roi: 'Improve computational performance by 1000x and reduce costs by 60%',
-    competitors: ['AWS, Azure, Google Cloud, IBM Cloud'],
+    competitors: ['AWS, Azure, Google Cloud, IBM Cloud']
     marketSize: '$500B cloud computing market',
     growthRate: '200% YoY',
     contactInfo: contact,
@@ -111,7 +111,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Mobile dashboard',
       'Analytics reporting',
       'Automated scaling'
-    ],
+    ]
     popular: false,
     icon: '🌐',
     color: 'from-green-600 to-emerald-700',
@@ -123,11 +123,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '1 week',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Edge computing, IoT, Python, React, Real-time systems'],
-    integrations: ['Kubernetes, Docker, IoT platforms, Cloud services'],
-    useCases: ['IoT management, Smart manufacturing, Edge AI, Distributed computing'],
+    technology: ['Edge computing, IoT, Python, React, Real-time systems']
+    integrations: ['Kubernetes, Docker, IoT platforms, Cloud services']
+    useCases: ['IoT management, Smart manufacturing, Edge AI, Distributed computing']
     roi: 'Reduce latency by 80% and improve reliability by 95%',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT'],
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT']
     marketSize: '$45B edge computing market',
     growthRate: '180% YoY',
     contactInfo: contact,
@@ -158,7 +158,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Mobile security',
       'API protection',
       '24/7 monitoring'
-    ],
+    ]
     popular: true,
     icon: '🔒',
     color: 'from-gray-600 to-slate-700',
@@ -170,11 +170,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Zero trust architecture, AI/ML, Python, React, Security frameworks'],
-    integrations: ['Active Directory, LDAP, SIEM systems, Firewalls'],
-    useCases: ['Network security, Access control, Threat prevention, Compliance'],
+    technology: ['Zero trust architecture, AI/ML, Python, React, Security frameworks']
+    integrations: ['Active Directory, LDAP, SIEM systems, Firewalls']
+    useCases: ['Network security, Access control, Threat prevention, Compliance']
     roi: 'Reduce security incidents by 90% and improve compliance by 95%',
-    competitors: ['CrowdStrike, Palo Alto Networks, Zscaler, Okta'],
+    competitors: ['CrowdStrike, Palo Alto Networks, Zscaler, Okta']
     marketSize: '$150B cybersecurity market',
     growthRate: '160% YoY',
     contactInfo: contact,
@@ -205,7 +205,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Mobile app',
       'Developer tools',
       '24/7 support'
-    ],
+    ]
     popular: false,
     icon: '⛓️',
     color: 'from-indigo-600 to-purple-700',
@@ -217,11 +217,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '3 weeks',
     category: 'Blockchain',
     realService: true,
-    technology: ['Blockchain, Smart contracts, Python, React, Distributed systems'],
-    integrations: ['ERP systems, Financial platforms, Supply chain systems, Cloud services'],
-    useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tracking'],
+    technology: ['Blockchain, Smart contracts, Python, React, Distributed systems']
+    integrations: ['ERP systems, Financial platforms, Supply chain systems, Cloud services']
+    useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tracking']
     roi: 'Reduce transaction costs by 70% and improve transparency by 100%',
-    competitors: ['IBM Blockchain, Hyperledger, Ethereum Enterprise, Corda'],
+    competitors: ['IBM Blockchain, Hyperledger, Ethereum Enterprise, Corda']
     marketSize: '$25B enterprise blockchain market',
     growthRate: '140% YoY',
     contactInfo: contact,
@@ -252,7 +252,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'API integrations',
       'Mobile app',
       'Team collaboration'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-orange-600 to-red-700',
@@ -264,11 +264,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '1 week',
     category: 'DevOps',
     realService: true,
-    technology: ['AI/ML, DevOps tools, Python, React, CI/CD pipelines'],
-    integrations: ['GitHub, GitLab, Jenkins, Docker, Kubernetes'],
-    useCases: ['CI/CD automation, Testing optimization, Deployment management, Performance monitoring'],
+    technology: ['AI/ML, DevOps tools, Python, React, CI/CD pipelines']
+    integrations: ['GitHub, GitLab, Jenkins, Docker, Kubernetes']
+    useCases: ['CI/CD automation, Testing optimization, Deployment management, Performance monitoring']
     roi: 'Reduce deployment time by 80% and improve reliability by 90%',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'],
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions']
     marketSize: '$35B DevOps market',
     growthRate: '120% YoY',
     contactInfo: contact,
@@ -299,7 +299,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'API access',
       'Mobile management',
       '24/7 support'
-    ],
+    ]
     popular: false,
     icon: '🌐',
     color: 'from-violet-600 to-purple-700',
@@ -311,11 +311,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '1 month',
     category: 'Quantum Networking',
     realService: true,
-    technology: ['Quantum networking, Quantum cryptography, Python, React, Quantum algorithms'],
-    integrations: ['Network infrastructure, Security systems, Communication platforms'],
-    useCases: ['Secure communications, Financial transactions, Government communications, Research networks'],
+    technology: ['Quantum networking, Quantum cryptography, Python, React, Quantum algorithms']
+    integrations: ['Network infrastructure, Security systems, Communication platforms']
+    useCases: ['Secure communications, Financial transactions, Government communications, Research networks']
     roi: 'Provide 100% secure communications and eliminate data breaches',
-    competitors: ['No direct competitors - innovative new category'],
+    competitors: ['No direct competitors - innovative new category']
     marketSize: '$8B quantum networking market',
     growthRate: '300% YoY',
     contactInfo: contact,
@@ -346,7 +346,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Mobile management',
       'API integrations',
       '24/7 operation'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-teal-600 to-cyan-700',
@@ -358,11 +358,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2 weeks',
     category: 'IT Operations',
     realService: true,
-    technology: ['AI/ML, Automation, Python, React, Infrastructure management'],
-    integrations: ['Monitoring tools, Infrastructure platforms, Cloud services'],
-    useCases: ['Infrastructure management, Automated operations, Predictive maintenance, Performance optimization'],
+    technology: ['AI/ML, Automation, Python, React, Infrastructure management']
+    integrations: ['Monitoring tools, Infrastructure platforms, Cloud services']
+    useCases: ['Infrastructure management, Automated operations, Predictive maintenance, Performance optimization']
     roi: 'Reduce IT operations costs by 70% and improve uptime by 99.9%',
-    competitors: ['ServiceNow, BMC, IBM Operations, Splunk'],
+    competitors: ['ServiceNow, BMC, IBM Operations, Splunk']
     marketSize: '$40B IT operations market',
     growthRate: '150% YoY',
     contactInfo: contact,
@@ -393,7 +393,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'API access',
       'Mobile management',
       '24/7 support'
-    ],
+    ]
     popular: false,
     icon: '🏢',
     color: 'from-blue-600 to-indigo-700',
@@ -405,11 +405,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2 months',
     category: 'Data Centers',
     realService: true,
-    technology: ['Quantum computing, Data center infrastructure, Python, React, Quantum algorithms'],
-    integrations: ['Cloud platforms, Infrastructure tools, Monitoring systems'],
-    useCases: ['Research computing, AI training, Financial modeling, Scientific simulation'],
+    technology: ['Quantum computing, Data center infrastructure, Python, React, Quantum algorithms']
+    integrations: ['Cloud platforms, Infrastructure tools, Monitoring systems']
+    useCases: ['Research computing, AI training, Financial modeling, Scientific simulation']
     roi: 'Improve computational performance by 1000x and reduce energy costs by 50%',
-    competitors: ['AWS, Google Cloud, Microsoft Azure, IBM Cloud'],
+    competitors: ['AWS, Google Cloud, Microsoft Azure, IBM Cloud']
     marketSize: '$200B data center market',
     growthRate: '180% YoY',
     contactInfo: contact,
@@ -440,7 +440,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Mobile security',
       'API protection',
       '24/7 monitoring'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
@@ -452,11 +452,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '3 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Quantum cryptography, AI/ML, Python, React, Security frameworks'],
-    integrations: ['Security tools, SIEM systems, Firewalls, Identity management'],
-    useCases: ['Data protection, Threat detection, Compliance, Incident response'],
+    technology: ['Quantum cryptography, AI/ML, Python, React, Security frameworks']
+    integrations: ['Security tools, SIEM systems, Firewalls, Identity management']
+    useCases: ['Data protection, Threat detection, Compliance, Incident response']
     roi: 'Provide 100% secure systems and eliminate cybersecurity risks',
-    competitors: ['CrowdStrike, Palo Alto Networks, Symantec, McAfee'],
+    competitors: ['CrowdStrike, Palo Alto Networks, Symantec, McAfee']
     marketSize: '$150B cybersecurity market',
     growthRate: '200% YoY',
     contactInfo: contact,
@@ -487,7 +487,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Mobile management',
       'API integrations',
       '24/7 support'
-    ],
+    ]
     popular: false,
     icon: '☁️',
     color: 'from-cyan-600 to-blue-700',
@@ -499,11 +499,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '1 month',
     category: 'Cloud Migration',
     realService: true,
-    technology: ['Migration tools, Quantum computing, Python, React, Cloud platforms'],
-    integrations: ['AWS, Azure, Google Cloud, On-premise systems'],
-    useCases: ['Cloud migration, Infrastructure modernization, Performance optimization'],
+    technology: ['Migration tools, Quantum computing, Python, React, Cloud platforms']
+    integrations: ['AWS, Azure, Google Cloud, On-premise systems']
+    useCases: ['Cloud migration, Infrastructure modernization, Performance optimization']
     roi: 'Reduce migration time by 60% and improve performance by 300%',
-    competitors: ['AWS Migration Hub, Azure Migrate, Google Cloud Migration'],
+    competitors: ['AWS Migration Hub, Azure Migrate, Google Cloud Migration']
     marketSize: '$15B cloud migration market',
     growthRate: '160% YoY',
     contactInfo: contact,
@@ -534,7 +534,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'API for integrations',
       'Custom workflows',
       'Expert consultation'
-    ],
+    ]
     popular: true,
     icon: '💻',
     color: 'from-violet-600 to-purple-600',
@@ -546,11 +546,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2-3 weeks',
     category: 'IT Asset Management',
     realService: true,
-    technology: ['Python, Network discovery, Asset tracking, Database management, Reporting tools'],
-    integrations: ['Active Directory, LDAP, CMDB systems, Procurement systems, Asset databases'],
-    useCases: ['Asset discovery, License management, Compliance reporting, Cost optimization, Lifecycle management'],
+    technology: ['Python, Network discovery, Asset tracking, Database management, Reporting tools']
+    integrations: ['Active Directory, LDAP, CMDB systems, Procurement systems, Asset databases']
+    useCases: ['Asset discovery, License management, Compliance reporting, Cost optimization, Lifecycle management']
     roi: 'IT teams report 300% improvement in asset visibility and 200% reduction in compliance risks.',
-    competitors: ['ServiceNow, BMC Helix, Ivanti, Cherwell'],
+    competitors: ['ServiceNow, BMC Helix, Ivanti, Cherwell']
     marketSize: '$12.5B IT asset management market',
     growthRate: '22% annual growth',
     variant: 'itam-enterprise',
@@ -587,7 +587,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Quantum development tools',
       'API for quantum applications',
       '24/7 quantum support'
-    ],
+    ]
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-indigo-700',
@@ -599,11 +599,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2-4 weeks',
     category: 'Quantum Cloud Computing',
     realService: true,
-    technology: ['Quantum computing, Cloud infrastructure, Python, React, Node.js, Quantum algorithms'],
-    integrations: ['AWS, Azure, Google Cloud, IBM Quantum, Quantum development tools'],
-    useCases: ['Drug discovery, Financial modeling, Climate simulation, Cryptography, AI optimization'],
+    technology: ['Quantum computing, Cloud infrastructure, Python, React, Node.js, Quantum algorithms']
+    integrations: ['AWS, Azure, Google Cloud, IBM Quantum, Quantum development tools']
+    useCases: ['Drug discovery, Financial modeling, Climate simulation, Cryptography, AI optimization']
     roi: 'Organizations report 800% ROI through quantum advantage and breakthrough discoveries.',
-    competitors: ['AWS, Azure, Google Cloud, IBM Quantum'],
+    competitors: ['AWS, Azure, Google Cloud, IBM Quantum']
     marketSize: '$2.1B quantum cloud market',
     growthRate: '500% annual growth',
     variant: 'quantum-cloud-enterprise',
@@ -640,7 +640,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Incident response',
       'Security automation',
       '24/7 security monitoring'
-    ],
+    ]
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-pink-700',
@@ -652,11 +652,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2-3 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Python, React, Node.js, PostgreSQL, Redis, Security protocols, AI/ML'],
-    integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, Security tools'],
-    useCases: ['Enterprise security, Access control, Threat detection, Compliance, Incident response'],
+    technology: ['Python, React, Node.js, PostgreSQL, Redis, Security protocols, AI/ML']
+    integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, Security tools']
+    useCases: ['Enterprise security, Access control, Threat detection, Compliance, Incident response']
     roi: 'Organizations report 400% ROI through reduced security breaches and improved compliance.',
-    competitors: ['Palo Alto Networks, CrowdStrike, Okta, Duo Security'],
+    competitors: ['Palo Alto Networks, CrowdStrike, Okta, Duo Security']
     marketSize: '$45.8B cybersecurity market',
     growthRate: '28% annual growth',
     variant: 'zero-trust-enterprise',
@@ -693,7 +693,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'API management',
       'Analytics and reporting',
       'Global edge network'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-green-600 to-emerald-700',
@@ -705,11 +705,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '1-2 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Python, React, Node.js, PostgreSQL, Redis, Edge computing, AI/ML'],
-    integrations: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, Kubernetes, Docker'],
-    useCases: ['IoT management, Edge computing, Performance optimization, Resource management, Smart cities'],
+    technology: ['Python, React, Node.js, PostgreSQL, Redis, Edge computing, AI/ML']
+    integrations: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, Kubernetes, Docker']
+    useCases: ['IoT management, Edge computing, Performance optimization, Resource management, Smart cities']
     roi: 'IoT companies report 300% improvement in processing speed and 200% reduction in latency.',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'],
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry']
     marketSize: '$18.7B edge computing market',
     growthRate: '35% annual growth',
     variant: 'edge-computing-enterprise',
@@ -746,7 +746,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Scalable infrastructure',
       'Enterprise integration',
       '24/7 blockchain support'
-    ],
+    ]
     popular: true,
     icon: '⛓️',
     color: 'from-purple-600 to-violet-700',
@@ -758,11 +758,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2-3 weeks',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['Ethereum, Solidity, Python, React, Node.js, PostgreSQL, Redis, Blockchain protocols'],
-    integrations: ['Ethereum, Polygon, Binance Smart Chain, Hyperledger, Enterprise systems'],
-    useCases: ['DeFi applications, Supply chain tracking, Digital identity, Smart contracts, DApp development'],
+    technology: ['Ethereum, Solidity, Python, React, Node.js, PostgreSQL, Redis, Blockchain protocols']
+    integrations: ['Ethereum, Polygon, Binance Smart Chain, Hyperledger, Enterprise systems']
+    useCases: ['DeFi applications, Supply chain tracking, Digital identity, Smart contracts, DApp development']
     roi: 'Blockchain implementations report 500% ROI through improved efficiency and transparency.',
-    competitors: ['ConsenSys, Alchemy, Infura, QuickNode'],
+    competitors: ['ConsenSys, Alchemy, Infura, QuickNode']
     marketSize: '$22.8B blockchain market',
     growthRate: '42% annual growth',
     variant: 'blockchain-enterprise',
@@ -799,7 +799,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Team collaboration tools',
       'Multi-cloud support',
       'API for integrations'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-orange-600 to-red-700',
@@ -811,11 +811,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '1-2 weeks',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['Python, React, Node.js, PostgreSQL, Redis, AI/ML, DevOps tools'],
-    integrations: ['GitHub, GitLab, Jenkins, Docker, Kubernetes, AWS, Azure, Google Cloud'],
-    useCases: ['CI/CD automation, Testing automation, Deployment optimization, Performance monitoring, Infrastructure management'],
+    technology: ['Python, React, Node.js, PostgreSQL, Redis, AI/ML, DevOps tools']
+    integrations: ['GitHub, GitLab, Jenkins, Docker, Kubernetes, AWS, Azure, Google Cloud']
+    useCases: ['CI/CD automation, Testing automation, Deployment optimization, Performance monitoring, Infrastructure management']
     roi: 'DevOps teams report 350% ROI through faster deployments and improved code quality.',
-    competitors: ['GitLab, GitHub Actions, Jenkins, CircleCI'],
+    competitors: ['GitLab, GitHub Actions, Jenkins, CircleCI']
     marketSize: '$16.4B DevOps market',
     growthRate: '24% annual growth',
     variant: 'ai-devops-enterprise',
@@ -852,7 +852,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Quantum development tools',
       'Enterprise integration',
       '24/7 quantum support'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-cyan-600 to-blue-700',
@@ -864,11 +864,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '4-6 weeks',
     category: 'Quantum Networking',
     realService: true,
-    technology: ['Quantum protocols, Python, React, Node.js, Quantum hardware, Network protocols'],
-    integrations: ['Traditional networks, Quantum devices, Security systems, Enterprise infrastructure'],
-    useCases: ['Secure communication, Quantum cryptography, Government networks, Financial networks, Research networks'],
+    technology: ['Quantum protocols, Python, React, Node.js, Quantum hardware, Network protocols']
+    integrations: ['Traditional networks, Quantum devices, Security systems, Enterprise infrastructure']
+    useCases: ['Secure communication, Quantum cryptography, Government networks, Financial networks, Research networks']
     roi: 'Quantum networking implementations report 1000% ROI through unbreakable security and quantum advantage.',
-    competitors: ['Traditional networking, Quantum research labs'],
+    competitors: ['Traditional networking, Quantum research labs']
     marketSize: '$1.2B quantum networking market',
     growthRate: '700% annual growth',
     variant: 'quantum-networking-enterprise',
@@ -905,7 +905,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Security automation',
       'Compliance management',
       '24/7 autonomous operation'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-indigo-600 to-purple-700',
@@ -917,11 +917,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '3-4 weeks',
     category: 'Autonomous IT Operations',
     realService: true,
-    technology: ['Python, AI/ML, React, Node.js, PostgreSQL, Redis, Infrastructure automation'],
-    integrations: ['AWS, Azure, Google Cloud, On-premises infrastructure, Monitoring tools'],
-    useCases: ['Infrastructure management, Issue resolution, Performance optimization, Security automation, Compliance management'],
+    technology: ['Python, AI/ML, React, Node.js, PostgreSQL, Redis, Infrastructure automation']
+    integrations: ['AWS, Azure, Google Cloud, On-premises infrastructure, Monitoring tools']
+    useCases: ['Infrastructure management, Issue resolution, Performance optimization, Security automation, Compliance management']
     roi: 'Autonomous IT operations report 600% ROI through reduced operational costs and improved uptime.',
-    competitors: ['Traditional IT operations, AIOps platforms'],
+    competitors: ['Traditional IT operations, AIOps platforms']
     marketSize: '$28.5B IT operations market',
     growthRate: '38% annual growth',
     variant: 'autonomous-it-enterprise',
@@ -958,7 +958,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Enterprise integration',
       'Global quantum network',
       '24/7 quantum support'
-    ],
+    ]
     popular: true,
     icon: '🏢',
     color: 'from-teal-600 to-cyan-700',
@@ -970,11 +970,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '6-8 weeks',
     category: 'Quantum Data Centers',
     realService: true,
-    technology: ['Quantum computing, Data center infrastructure, Python, React, Node.js, Quantum algorithms'],
-    integrations: ['Traditional data centers, Quantum hardware, Enterprise systems, Cloud platforms'],
-    useCases: ['High-performance computing, Quantum research, Financial modeling, Drug discovery, Climate simulation'],
+    technology: ['Quantum computing, Data center infrastructure, Python, React, Node.js, Quantum algorithms']
+    integrations: ['Traditional data centers, Quantum hardware, Enterprise systems, Cloud platforms']
+    useCases: ['High-performance computing, Quantum research, Financial modeling, Drug discovery, Climate simulation']
     roi: 'Quantum data centers report 1200% ROI through quantum advantage and breakthrough discoveries.',
-    competitors: ['Traditional data centers, Quantum research labs'],
+    competitors: ['Traditional data centers, Quantum research labs']
     marketSize: '$1.5B quantum data center market',
     growthRate: '600% annual growth',
     variant: 'quantum-datacenter-enterprise',
@@ -1011,7 +1011,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Migration analytics',
       'Enterprise integration',
       '24/7 migration support'
-    ],
+    ]
     popular: true,
     icon: '☁️',
     color: 'from-yellow-600 to-amber-700',
@@ -1023,11 +1023,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     setupTime: '2-4 weeks',
     category: 'Quantum Cloud Migration',
     realService: true,
-    technology: ['Quantum computing, Cloud migration, Python, React, Node.js, Migration tools'],
-    integrations: ['AWS, Azure, Google Cloud, On-premises infrastructure, Enterprise systems'],
-    useCases: ['Cloud migration, Performance optimization, Security migration, Compliance management, Infrastructure optimization'],
+    technology: ['Quantum computing, Cloud migration, Python, React, Node.js, Migration tools']
+    integrations: ['AWS, Azure, Google Cloud, On-premises infrastructure, Enterprise systems']
+    useCases: ['Cloud migration, Performance optimization, Security migration, Compliance management, Infrastructure optimization']
     roi: 'Quantum cloud migration projects report 500% ROI through reduced downtime and improved performance.',
-    competitors: ['Traditional cloud migration, Cloud consulting firms'],
+    competitors: ['Traditional cloud migration, Cloud consulting firms']
     marketSize: '$24.8B cloud migration market',
     growthRate: '32% annual growth',
     variant: 'quantum-migration-enterprise',

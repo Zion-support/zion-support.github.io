@@ -4,7 +4,7 @@ export interface NextGenAi2026Service {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       "Future-ready features",
       "Innovation platform",
       "Expert support"
-    ],
+    ]
     link: "/services/2026-next-gen-ai",
     category: "Next-Gen AI 2026",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

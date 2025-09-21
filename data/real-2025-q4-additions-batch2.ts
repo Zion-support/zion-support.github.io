@@ -5,14 +5,14 @@ export interface AdditionalQ42025Service {
 	price: string,
 	period: string,
 	description: string,
-	features: string[],
+	features: string[]
 	category: string,
 	link: string,
 	marketPosition?: string,
 	roi?: string,
-	competitors?: string[],
-	useCases?: string[],
-	integrations?: string[],
+	competitors?: string[]
+	useCases?: string[]
+	integrations?: string[]
 	trialDays?: number,
 	setupTime?: string
 }
@@ -24,14 +24,14 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$199',
 		period: '/month',
 		description: 'Continuously scans repos and pipelines for secrets, vulnerabilities, misconfigurations and IaC drift, enforces policy gates in CI/CD with auto-fix PRs.',
-		features: ['Secret scanningSBOM generation', 'IaC drift detectionCI policy gates', 'Auto-fix pull requests'],
+		features: ['Secret scanningSBOM generation', 'IaC drift detectionCI policy gates', 'Auto-fix pull requests']
 		category: 'Quality & Monitoring',
 		link: 'https://ziontechgroup.com/services/devsecops-copilot',
 		marketPosition: 'Lightweight, practical guardrails integrated with your CI/CD.',
 		roi: 'Reduce security incidents and review toil by 30–60%.',
-		competitors: ['SnykGitHub Advanced Security'],
-		useCases: ['Pipeline securityIaC policy', 'Compliance checks'],
-		integrations: ['GitHubGitLab', 'BitbucketTerraform'],
+		competitors: ['SnykGitHub Advanced Security']
+		useCases: ['Pipeline securityIaC policy', 'Compliance checks']
+		integrations: ['GitHubGitLab', 'BitbucketTerraform']
 		trialDays: 14,
 		setupTime: 'Same day'
 	},
@@ -42,14 +42,14 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$79',
 		period: '/month',
 		description: 'Analyzes site content and recommends or applies internal links that improve crawl efficiency and topic clusters without harming UX.',
-		features: ['Semantic link suggestionsAnchor optimization', 'Noindex/nofollow rulesPreview and approval flows'],
+		features: ['Semantic link suggestionsAnchor optimization', 'Noindex/nofollow rulesPreview and approval flows']
 		category: 'Developer Tools',
 		link: 'https://ziontechgroup.com/services/internal-linking-automation',
 		marketPosition: 'Operational SEO for content-heavy sites with safe automation.',
 		roi: 'Improve organic traffic 5–20% via better internal structure.',
-		competitors: ['SurferSEO (partial)ClearScope (advice)'],
-		useCases: ['SEO housekeepingTopic clustering', 'Content ops'],
-		integrations: ['Next.jsWordPress', 'Webflow'],
+		competitors: ['SurferSEO (partial)ClearScope (advice)']
+		useCases: ['SEO housekeepingTopic clustering', 'Content ops']
+		integrations: ['Next.jsWordPress', 'Webflow']
 		trialDays: 7,
 		setupTime: '1 day'
 	},
@@ -60,12 +60,12 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$129',
 		period: '/month',
 		description: 'Uploads contracts and auto-redacts sensitive entities with exportable logs, labels risky clauses for legal review.',
-		features: ['Entity/PII detectionAutomatic redaction', 'Clause labelingEvidence export'],
+		features: ['Entity/PII detectionAutomatic redaction', 'Clause labelingEvidence export']
 		category: 'AI & Data',
 		link: 'https://ziontechgroup.com/services/ai-contract-redaction',
-		competitors: ['Azure Form Recognizer (custom)OpenAI workflows (custom)'],
-		useCases: ['Vendor reviewsDSAR responses', 'Security questionnaires'],
-		integrations: ['Google DriveSharePoint', 'Box'],
+		competitors: ['Azure Form Recognizer (custom)OpenAI workflows (custom)']
+		useCases: ['Vendor reviewsDSAR responses', 'Security questionnaires']
+		integrations: ['Google DriveSharePoint', 'Box']
 		trialDays: 7,
 		setupTime: '1 day'
 	},
@@ -76,12 +76,12 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$69',
 		period: '/month',
 		description: 'Runs synthetic web-vitals audits, highlights costly components, and comments on PRs with actionable diffs and budgets.',
-		features: ['CLS/LCP/TTI trackingComponent cost analysis', 'PR annotationsBudgets and alerts'],
+		features: ['CLS/LCP/TTI trackingComponent cost analysis', 'PR annotationsBudgets and alerts']
 		category: 'Observability',
 		link: 'https://ziontechgroup.com/services/browser-performance-optimizer',
-		competitors: ['CalibreSpeedCurve'],
-		useCases: ['Web vitals SLOsPerf regressions', 'Release quality'],
-		integrations: ['GitHubGitLab', 'VercelNetlify'],
+		competitors: ['CalibreSpeedCurve']
+		useCases: ['Web vitals SLOsPerf regressions', 'Release quality']
+		integrations: ['GitHubGitLab', 'VercelNetlify']
 		trialDays: 7,
 		setupTime: 'Same day'
 	},
@@ -92,12 +92,12 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$149',
 		period: '/month',
 		description: 'Continuously inventories SaaS app permissions, flags stale roles and risky scopes, and generates review campaigns.',
-		features: ['OAuth/SCIM inventoryOver-privilege detection', 'Review campaignsExportable evidence'],
+		features: ['OAuth/SCIM inventoryOver-privilege detection', 'Review campaignsExportable evidence']
 		category: 'Enterprise IT',
 		link: 'https://ziontechgroup.com/services/tenant-permissions-auditor',
-		competitors: ['VezaSailPoint (IGA)'],
-		useCases: ['Least privilegeAudit support', 'User lifecycle'],
-		integrations: ['OktaAzure AD', 'Google Workspace'],
+		competitors: ['VezaSailPoint (IGA)']
+		useCases: ['Least privilegeAudit support', 'User lifecycle']
+		integrations: ['OktaAzure AD', 'Google Workspace']
 		trialDays: 14,
 		setupTime: '2–3 days'
 	},
@@ -108,12 +108,12 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$179',
 		period: '/month',
 		description: 'Monitors schemas, nulls, distribution drift and freshness, blocks bad loads and alerts owners with runbooks.',
-		features: ['Schema checksDrift alerts', 'Freshness SLAsOwner routing'],
+		features: ['Schema checksDrift alerts', 'Freshness SLAsOwner routing']
 		category: 'AI & Data',
 		link: 'https://ziontechgroup.com/services/data-quality-guardrails',
-		competitors: ['Monte CarloSoda'],
-		useCases: ['Warehouse reliabilityETL/ELT quality', 'Analytics trust'],
-		integrations: ['SnowflakeBigQuery', 'Redshiftdbt'],
+		competitors: ['Monte CarloSoda']
+		useCases: ['Warehouse reliabilityETL/ELT quality', 'Analytics trust']
+		integrations: ['SnowflakeBigQuery', 'Redshiftdbt']
 		trialDays: 14,
 		setupTime: '1–2 days'
 	},
@@ -124,12 +124,12 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$39',
 		period: '/month',
 		description: 'Aggregates changes across repos and crafts customer-facing notes with categories, links and approvals.',
-		features: ['Repo aggregationChange categorization', 'TemplatesApprovals & publish'],
+		features: ['Repo aggregationChange categorization', 'TemplatesApprovals & publish']
 		category: 'Developer Tools',
 		link: 'https://ziontechgroup.com/services/release-notes-automation',
-		competitors: ['Release Butler (custom)GitHub Changelog (manual)'],
-		useCases: ['SaaS releasesChange logs', 'Customer comms'],
-		integrations: ['GitHubLinear', 'Jira'],
+		competitors: ['Release Butler (custom)GitHub Changelog (manual)']
+		useCases: ['SaaS releasesChange logs', 'Customer comms']
+		integrations: ['GitHubLinear', 'Jira']
 		trialDays: 7,
 		setupTime: 'Same day'
 	},
@@ -140,12 +140,12 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Creates JSON-LD for products, articles, FAQs and events, validates and deploys safely with preview.',
-		features: ['JSON-LD templatesValidator', 'Preview & rollbacksChange tracking'],
+		features: ['JSON-LD templatesValidator', 'Preview & rollbacksChange tracking']
 		category: 'Developer Tools',
 		link: 'https://ziontechgroup.com/services/seo-schema-studio',
-		competitors: ['Merkle Schema Builder (tools)'],
-		useCases: ['Rich resultsContent SEO', 'Publishing'],
-		integrations: ['Next.jsGatsby', 'WordPress'],
+		competitors: ['Merkle Schema Builder (tools)']
+		useCases: ['Rich resultsContent SEO', 'Publishing']
+		integrations: ['Next.jsGatsby', 'WordPress']
 		trialDays: 7,
 		setupTime: 'Same day'
 	},
@@ -156,12 +156,12 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$99',
 		period: '/month',
 		description: 'Author rubrics and golden sets, run batch tests and track regression trends across model and prompt changes.',
-		features: ['Rubric authoringGolden datasets', 'Batch testsTrend dashboards'],
+		features: ['Rubric authoringGolden datasets', 'Batch testsTrend dashboards']
 		category: 'AI & Data',
 		link: 'https://ziontechgroup.com/services/ai-rubric-evaluator',
-		competitors: ['PromptfooHumanloop'],
-		useCases: ['RAG evalsPrompt quality gates', 'Model tuning'],
-		integrations: ['OpenAIAnthropic', 'GitHub Actions'],
+		competitors: ['PromptfooHumanloop']
+		useCases: ['RAG evalsPrompt quality gates', 'Model tuning']
+		integrations: ['OpenAIAnthropic', 'GitHub Actions']
 		trialDays: 7,
 		setupTime: '1 day'
 	},
@@ -172,13 +172,13 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		price: '$49',
 		period: '/month',
 		description: 'Monitors vendor changelogs and SDK versions, opens issues and PRs to migrate before deadlines.',
-		features: ['Vendor changelog crawlSDK version diff', 'Ticket/PR creationCalendar reminders'],
+		features: ['Vendor changelog crawlSDK version diff', 'Ticket/PR creationCalendar reminders']
 		category: 'Developer Tools',
 		link: 'https://ziontechgroup.com/services/api-deprecation-watcher',
-		competitors: ['Internal scripts'],
-		useCases: ['Migration planningDependency hygiene'],
-		integrations: ['GitHubJira', 'Linear'],
+		competitors: ['Internal scripts']
+		useCases: ['Migration planningDependency hygiene']
+		integrations: ['GitHubJira', 'Linear']
 		trialDays: 7,
 		setupTime: 'Same day'
 	}
-],
+]

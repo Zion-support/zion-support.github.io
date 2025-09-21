@@ -4,7 +4,7 @@ export interface EmergingTechService2025 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const emergingTechServices2025: EmergingTechService2025[] = [
       "Virtual commerce",
       "Social interactions",
       "Cross-platform support"
-    ],
+    ]
     link: "/services/metaverse-platform",
     category: "Emerging Tech 2025",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const emergingTechServices2025: EmergingTechService2025[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

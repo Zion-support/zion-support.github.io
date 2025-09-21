@@ -6,17 +6,17 @@ export interface RealAdditionService2025Q3 {
 	price: string,
 	period: string,
 	category: string,
-	features: string[],
+	features: string[]
 	popular?: boolean,
 	link: string,
 	trialDays?: number,
 	setupTime?: string,
 	realService: boolean,
-	technology?: string[],
-	integrations?: string[],
-	useCases?: string[],
+	technology?: string[]
+	integrations?: string[]
+	useCases?: string[]
 	roi?: string,
-	competitors?: string[],
+	competitors?: string[]
 	marketSize?: string,
 	growthRate?: string,
 	launchDate?: string,
@@ -37,17 +37,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Priority inbox and intent detectionPolicy-aware auto-drafting with approvals',
 			'CRM sync and follow-up remindersTone and brand voice controls',
 			'Analytics and SLA tracking'
-		],
+		]
 		popular: true,
 		link: 'https://ziontechgroup.com/ai-email-copilot',
 		trialDays: 14,
 		setupTime: '30 minutes',
 		realService: true,
-		technology: ['Next.jsOpenAI', 'PostgreSQL'],
-		integrations: ['GmailOutlook', 'HubSpotSalesforce'],
-		useCases: ['Shared inboxesLead response', 'Support triage'],
+		technology: ['Next.jsOpenAI', 'PostgreSQL']
+		integrations: ['GmailOutlook', 'HubSpotSalesforce']
+		useCases: ['Shared inboxesLead response', 'Support triage']
 		roi: 'Cut average first response by 60%',
-		competitors: ['Superhuman AIGmail HelpMeWrite'],
+		competitors: ['Superhuman AIGmail HelpMeWrite']
 		marketSize: '$10B+ email productivity',
 		growthRate: '20% CAGR',
 		launchDate: '2025-06-01',
@@ -67,17 +67,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Link generation and UTM taggingFraud and self-referral checks',
 			'Conversion webhooks and APIPayout ledger and exports',
 			'GDPR/CCPA friendly tracking'
-		],
+		]
 		popular: false,
 		link: 'https://ziontechgroup.com/affiliate-tracking-lite',
 		trialDays: 14,
 		setupTime: '20 minutes',
 		realService: true,
-		technology: ['Next.jsNode.js', 'PostgreSQL'],
-		integrations: ['ShopifyStripe', 'WooCommerce'],
-		useCases: ['Partner programsReferral campaigns'],
+		technology: ['Next.jsNode.js', 'PostgreSQL']
+		integrations: ['ShopifyStripe', 'WooCommerce']
+		useCases: ['Partner programsReferral campaigns']
 		roi: 'Grow referral revenue 10–25%',
-		competitors: ['RewardfulReferralCandy'],
+		competitors: ['RewardfulReferralCandy']
 		marketSize: '$1.5B affiliate tooling',
 		growthRate: '15% CAGR',
 		launchDate: '2025-06-02',
@@ -97,17 +97,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Prebuilt KPI templatesAI explanations for spikes and dips',
 			'Weekly email digestsGoal tracking and alerts',
 			'CSV and API export'
-		],
+		]
 		popular: true,
 		link: 'https://ziontechgroup.com/smb-analytics-starter',
 		trialDays: 14,
 		setupTime: '45 minutes',
 		realService: true,
-		technology: ['Next.jsDuckDB', 'PostgreSQL'],
-		integrations: ['StripeGA4', 'HubSpot'],
-		useCases: ['Founder dashboardsInvestor updates'],
+		technology: ['Next.jsDuckDB', 'PostgreSQL']
+		integrations: ['StripeGA4', 'HubSpot']
+		useCases: ['Founder dashboardsInvestor updates']
 		roi: 'Save 4–8 hrs/week on reporting',
-		competitors: ['GeckoboardDatabox'],
+		competitors: ['GeckoboardDatabox']
 		marketSize: '$30B+ BI',
 		growthRate: '14% CAGR',
 		launchDate: '2025-06-03',
@@ -127,17 +127,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Email-to-ticket with SLA timersAsset discovery (agentless + agent)',
 			'Knowledge base and macrosAI reply suggestions',
 			'Reports and CSAT'
-		],
+		]
 		popular: true,
 		link: 'https://ziontechgroup.com/it-helpdesk-suite',
 		trialDays: 14,
 		setupTime: '1 hour',
 		realService: true,
-		technology: ['Node.jsNext.js'],
-		integrations: ['OktaGoogle Workspace', 'Microsoft 365'],
-		useCases: ['MSPsInternal IT'],
+		technology: ['Node.jsNext.js']
+		integrations: ['OktaGoogle Workspace', 'Microsoft 365']
+		useCases: ['MSPsInternal IT']
 		roi: 'Reduce resolution time 25–40%',
-		competitors: ['FreshserviceZendesk'],
+		competitors: ['FreshserviceZendesk']
 		marketSize: '$10B ITSM',
 		growthRate: '12% CAGR',
 		launchDate: '2025-06-04',
@@ -157,17 +157,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Auto-join major meeting appsTopic segmentation and speakers',
 			'Action items with ownersEmail and Slack summaries',
 			'Templates (standups, reviews)'
-		],
+		]
 		popular: false,
 		link: 'https://ziontechgroup.com/meeting-minutes-ai',
 		trialDays: 7,
 		setupTime: '10 minutes',
 		realService: true,
-		technology: ['WhisperNext.js'],
-		integrations: ['ZoomMeet', 'TeamsSlack', 'Jira'],
-		useCases: ['StandupsClient calls', 'Hiring'],
+		technology: ['WhisperNext.js']
+		integrations: ['ZoomMeet', 'TeamsSlack', 'Jira']
+		useCases: ['StandupsClient calls', 'Hiring']
 		roi: 'Save 3–5 hrs/person/month',
-		competitors: ['GrainFathom'],
+		competitors: ['GrainFathom']
 		marketSize: '$5B+ meeting AI',
 		growthRate: '30% CAGR',
 		launchDate: '2025-06-05',
@@ -187,17 +187,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Freshness and volume checksAnomaly detection on KPIs',
 			'Schema drift alertsOwnership and runbooks',
 			'Insights and RCA templates'
-		],
+		]
 		popular: true,
 		link: 'https://ziontechgroup.com/data-quality-guard',
 		trialDays: 14,
 		setupTime: '45 minutes',
 		realService: true,
-		technology: ['Node.jsSQL', 'OpenAI'],
-		integrations: ['BigQuerySnowflake', 'RedshiftSlack'],
-		useCases: ['Prevent bad dashboardsCatch pipeline breaks'],
+		technology: ['Node.jsSQL', 'OpenAI']
+		integrations: ['BigQuerySnowflake', 'RedshiftSlack']
+		useCases: ['Prevent bad dashboardsCatch pipeline breaks']
 		roi: 'Reduce bad data incidents 50%',
-		competitors: ['Monte CarloBigeye'],
+		competitors: ['Monte CarloBigeye']
 		marketSize: '$3B data observability',
 		growthRate: '25% CAGR',
 		launchDate: '2025-06-06',
@@ -217,17 +217,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'On-brand AI text and imagesVisual editor and rollback',
 			'Holdout and sample sizingConsent-aware analytics',
 			'Insights and next-step recs'
-		],
+		]
 		popular: false,
 		link: 'https://ziontechgroup.com/landing-page-ai-tester',
 		trialDays: 14,
 		setupTime: '30 minutes',
 		realService: true,
-		technology: ['Next.jsTailwind', 'OpenAI'],
-		integrations: ['SegmentGA4', 'Vercel'],
-		useCases: ['Landing pagesPricing pages'],
+		technology: ['Next.jsTailwind', 'OpenAI']
+		integrations: ['SegmentGA4', 'Vercel']
+		useCases: ['Landing pagesPricing pages']
 		roi: 'Increase conversion 5–20%',
-		competitors: ['VWOOptimizely'],
+		competitors: ['VWOOptimizely']
 		marketSize: '$2B experimentation',
 		growthRate: '18% CAGR',
 		launchDate: '2025-06-07',
@@ -247,17 +247,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Brand policy linting for text and imagesInline suggestions and fixes',
 			'Asset library and approvalsOrg-wide policies and roles',
 			'Weekly compliance score'
-		],
+		]
 		popular: false,
 		link: 'https://ziontechgroup.com/ai-brand-copilot',
 		trialDays: 14,
 		setupTime: '25 minutes',
 		realService: true,
-		technology: ['OpenAINext.js'],
-		integrations: ['Google DocsNotion', 'Figma'],
-		useCases: ['Content opsAgency delivery'],
+		technology: ['OpenAINext.js']
+		integrations: ['Google DocsNotion', 'Figma']
+		useCases: ['Content opsAgency delivery']
 		roi: 'Reduce brand review cycles 50%',
-		competitors: ['WriterGrammarly Business'],
+		competitors: ['WriterGrammarly Business']
 		marketSize: '$2B brand management',
 		growthRate: '16% CAGR',
 		launchDate: '2025-06-08',
@@ -277,17 +277,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'SBOM generation and diffPR scanner for risky changes',
 			'Weekly security digestAuto-created fix tickets',
 			'Policy exceptions workflow'
-		],
+		]
 		popular: false,
 		link: 'https://ziontechgroup.com/security-changelog-bot',
 		trialDays: 7,
 		setupTime: '15 minutes',
 		realService: true,
-		technology: ['Node.jsCycloneDX'],
-		integrations: ['GitHubGitLab', 'JiraSlack'],
-		useCases: ['AppSec hygieneAudit support'],
+		technology: ['Node.jsCycloneDX']
+		integrations: ['GitHubGitLab', 'JiraSlack']
+		useCases: ['AppSec hygieneAudit support']
 		roi: 'Reduce vuln MTTR 30–50%',
-		competitors: ['SnykDependabot (partial)'],
+		competitors: ['SnykDependabot (partial)']
 		marketSize: '$6B AppSec',
 		growthRate: '20% CAGR',
 		launchDate: '2025-06-09',
@@ -307,17 +307,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Questionnaire templates (SOC2/ISO/NIST)Evidence upload and mapping',
 			'Automated reminders and tasksRisk scoring and approvals',
 			'Executive summary reports'
-		],
+		]
 		popular: true,
 		link: 'https://ziontechgroup.com/vendor-risk-lite',
 		trialDays: 14,
 		setupTime: '1 hour',
 		realService: true,
-		technology: ['Next.jsPostgreSQL'],
-		integrations: ['Google DriveOneDrive', 'Jira'],
-		useCases: ['Third-party riskAnnual reviews'],
+		technology: ['Next.jsPostgreSQL']
+		integrations: ['Google DriveOneDrive', 'Jira']
+		useCases: ['Third-party riskAnnual reviews']
 		roi: 'Shorten cycle time 40–70%',
-		competitors: ['OneTrustWhistic'],
+		competitors: ['OneTrustWhistic']
 		marketSize: '$4B vendor risk',
 		growthRate: '22% CAGR',
 		launchDate: '2025-06-10',
@@ -337,17 +337,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Channel orchestration (Slack/PagerDuty)Templates per severity',
 			'Timeline auto-build from eventsCustomer-ready summaries',
 			'Follow-up tracker'
-		],
+		]
 		popular: false,
 		link: 'https://ziontechgroup.com/incident-comms-assistant',
 		trialDays: 14,
 		setupTime: '20 minutes',
 		realService: true,
-		technology: ['OpenAINext.js'],
-		integrations: ['PagerDutyOpsgenie', 'SlackStatuspage'],
-		useCases: ['Major incidentsCompliance'],
+		technology: ['OpenAINext.js']
+		integrations: ['PagerDutyOpsgenie', 'SlackStatuspage']
+		useCases: ['Major incidentsCompliance']
 		roi: 'Cut comms toil 60%',
-		competitors: ['Rootly (partial)'],
+		competitors: ['Rootly (partial)']
 		marketSize: '$10B+ incident mgmt',
 		growthRate: '18% CAGR',
 		launchDate: '2025-06-11',
@@ -367,17 +367,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'Cookie and tracker inventoryRegional banners and consent logs',
 			'Policy generator with diffsWeekly audits and alerts',
 			'Exportable evidence packs'
-		],
+		]
 		popular: false,
 		link: 'https://ziontechgroup.com/policy-privacy-scanner',
 		trialDays: 14,
 		setupTime: '15 minutes',
 		realService: true,
-		technology: ['PuppeteerNode.js'],
-		integrations: ['WebflowShopify', 'WordPress'],
-		useCases: ['GDPR/CCPA complianceCookie audits'],
+		technology: ['PuppeteerNode.js']
+		integrations: ['WebflowShopify', 'WordPress']
+		useCases: ['GDPR/CCPA complianceCookie audits']
 		roi: 'Reduce legal risk and fines',
-		competitors: ['OneTrustCookiebot'],
+		competitors: ['OneTrustCookiebot']
 		marketSize: '$4B privacy tech',
 		growthRate: '22% CAGR',
 		launchDate: '2025-06-12',
@@ -397,17 +397,17 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 			'On-brand templates and stylesLibrary of scopes and clauses',
 			'Auto pricing table suggestionsE-sign and PDF export',
 			'Collaboration and approvals'
-		],
+		]
 		popular: true,
 		link: 'https://ziontechgroup.com/ai-proposal-writer',
 		trialDays: 7,
 		setupTime: '10 minutes',
 		realService: true,
-		technology: ['Next.jsOpenAI'],
-		integrations: ['DocuSignHubSpot', 'Stripe'],
-		useCases: ['AgenciesConsultancies'],
+		technology: ['Next.jsOpenAI']
+		integrations: ['DocuSignHubSpot', 'Stripe']
+		useCases: ['AgenciesConsultancies']
 		roi: 'Ship proposals 3x faster',
-		competitors: ['PandaDocProposify'],
+		competitors: ['PandaDocProposify']
 		marketSize: '$1B+ proposal tools',
 		growthRate: '12% CAGR',
 		launchDate: '2025-06-13',
@@ -415,4 +415,4 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		rating: 4.7,
 		reviews: 120
 	}
-],
+]

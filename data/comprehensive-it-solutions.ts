@@ -4,7 +4,7 @@ export interface ComprehensiveItSolution {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
       "Database design",
       "DevOps integration",
       "Testing & deployment"
-    ],
+    ]
     link: "/services/full-stack-development",
     category: "IT Solutions",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

@@ -24,7 +24,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 			'Data stewardship workflows',
 			'Real-time compliance reporting',
 			'Integration with enterprise systems'
-		],
+		]
 		popular: true,
 		icon: '🏛️',
 		color: 'from-blue-600 to-indigo-700',
@@ -36,11 +36,11 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		setupTime: '10-15 days',
 		category: 'Enterprise Data Management',
 		realService: true,
-		technology: ['Python, Apache Atlas, Apache Ranger, React, Node.js, PostgreSQL, Elasticsearch'],
-		integrations: ['SAP, Oracle, Salesforce, AWS, Azure, GCP, On-premise systems'],
-		useCases: ['Data governance, Compliance automation, Data quality management, Master data management'],
+		technology: ['Python, Apache Atlas, Apache Ranger, React, Node.js, PostgreSQL, Elasticsearch']
+		integrations: ['SAP, Oracle, Salesforce, AWS, Azure, GCP, On-premise systems']
+		useCases: ['Data governance, Compliance automation, Data quality management, Master data management']
 		roi: 'Reduce compliance costs by 40% and improve data quality by 60%',
-		competitors: ['Collibra, Informatica, Alation, IBM InfoSphere'],
+		competitors: ['Collibra, Informatica, Alation, IBM InfoSphere']
 		marketSize: '$12B data governance market',
 		growthRate: '25% CAGR',
 		variant: 'default',
@@ -68,7 +68,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 			'Developer portal and documentation',
 			'API versioning and deprecation',
 			'Integration with enterprise systems'
-		],
+		]
 		popular: true,
 		icon: '🔌',
 		color: 'from-green-600 to-emerald-700',
@@ -80,11 +80,11 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		setupTime: '7-10 days',
 		category: 'Enterprise API Management',
 		realService: true,
-		technology: ['Java, Spring Boot, React, Node.js, PostgreSQL, Redis, Kong'],
-		integrations: ['AWS API Gateway, Azure API Management, Google Cloud Endpoints, On-premise systems'],
-		useCases: ['API governance, Security management, Compliance automation, Developer experience'],
+		technology: ['Java, Spring Boot, React, Node.js, PostgreSQL, Redis, Kong']
+		integrations: ['AWS API Gateway, Azure API Management, Google Cloud Endpoints, On-premise systems']
+		useCases: ['API governance, Security management, Compliance automation, Developer experience']
 		roi: 'Improve API security by 80% and reduce governance overhead by 50%',
-		competitors: ['Kong, Apigee, AWS API Gateway, Azure API Management'],
+		competitors: ['Kong, Apigee, AWS API Gateway, Azure API Management']
 		marketSize: '$8B API management market',
 		growthRate: '30% CAGR',
 		variant: 'default',
@@ -112,7 +112,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 			'Automated provisioning and deprovisioning',
 			'Risk-based access controls',
 			'Integration with enterprise systems'
-		],
+		]
 		popular: true,
 		icon: '🆔',
 		color: 'from-purple-600 to-pink-700',
@@ -124,11 +124,11 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		setupTime: '10-15 days',
 		category: 'Enterprise Security',
 		realService: true,
-		technology: ['Java, Spring Security, React, Node.js, PostgreSQL, Redis, LDAP'],
-		integrations: ['Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems'],
-		useCases: ['Identity management, Access control, Security compliance, User provisioning'],
+		technology: ['Java, Spring Security, React, Node.js, PostgreSQL, Redis, LDAP']
+		integrations: ['Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems']
+		useCases: ['Identity management, Access control, Security compliance, User provisioning']
 		roi: 'Reduce security incidents by 60% and improve compliance by 80%',
-		competitors: ['Okta, Azure AD, AWS IAM, Ping Identity'],
+		competitors: ['Okta, Azure AD, AWS IAM, Ping Identity']
 		marketSize: '$15B IAM market',
 		growthRate: '28% CAGR',
 		variant: 'default',
@@ -156,7 +156,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 			'Multi-tenant architecture',
 			'Advanced workflow designer',
 			'Real-time monitoring and alerts'
-		],
+		]
 		popular: true,
 		icon: '⚙️',
 		color: 'from-orange-600 to-red-700',
@@ -168,11 +168,11 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		setupTime: '10-15 days',
 		category: 'Enterprise Automation',
 		realService: true,
-		technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Apache Airflow'],
-		integrations: ['SAP, Oracle, Salesforce, Workday, Custom enterprise systems'],
-		useCases: ['Process automation, Workflow optimization, Enterprise integration, Operational efficiency'],
+		technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Apache Airflow']
+		integrations: ['SAP, Oracle, Salesforce, Workday, Custom enterprise systems']
+		useCases: ['Process automation, Workflow optimization, Enterprise integration, Operational efficiency']
 		roi: 'Increase operational efficiency by 40% and reduce process costs by 30%',
-		competitors: ['UiPath, Automation Anywhere, Microsoft Power Automate, Pega'],
+		competitors: ['UiPath, Automation Anywhere, Microsoft Power Automate, Pega']
 		marketSize: '$25B workflow automation market',
 		growthRate: '35% CAGR',
 		variant: 'default',
@@ -200,7 +200,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 			'Distributed tracing',
 			'Log aggregation and analysis',
 			'Integration with enterprise systems'
-		],
+		]
 		popular: true,
 		icon: '📊',
 		color: 'from-cyan-600 to-blue-700',
@@ -212,11 +212,11 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		setupTime: '7-10 days',
 		category: 'Enterprise Monitoring',
 		realService: true,
-		technology: ['Go, Prometheus, Grafana, Elasticsearch, React, Node.js, PostgreSQL'],
-		integrations: ['AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems'],
-		useCases: ['Infrastructure monitoring, Application monitoring, Business intelligence, Incident response'],
+		technology: ['Go, Prometheus, Grafana, Elasticsearch, React, Node.js, PostgreSQL']
+		integrations: ['AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems']
+		useCases: ['Infrastructure monitoring, Application monitoring, Business intelligence, Incident response']
 		roi: 'Reduce downtime by 70% and improve incident response time by 80%',
-		competitors: ['Datadog, New Relic, Splunk, Dynatrace'],
+		competitors: ['Datadog, New Relic, Splunk, Dynatrace']
 		marketSize: '$18B monitoring and observability market',
 		growthRate: '32% CAGR',
 		variant: 'default',

@@ -1,73 +1,78 @@
-import { Globe,,, Server,,, Clock,,, MapPin,,, Check,,  } from 'lucide-react'
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
 import React from "react";
+
 interface CountryServiceCardProps {
-isPopular?: boolean,
+  country: {
+    name: string;
+    code: string;
+    price: number;
+    currency: string;
+  };
+  onSelect: () => void;
+  onQuote: () => void;
+  isPopular?: boolean;
 }
+
 export function CountryServiceCard({
   country,
-onSelect
+  onSelect,
   onQuote,
-isPopular,
+  isPopular = false
 }: CountryServiceCardProps) {
-  // Get region flag based on country name (for demo purposes)
-          </div>
-          {isPopular && (
-            <Badge className='bg-zion-purple text-white border-none'>
-              Popular
-            </Badge>
-          )}
+  return (
+    <div className={`relative bg-zion-blue border border-zion-blue-light rounded-lg p-6 transition-all duration-300 hover:border-zion-cyan hover:shadow-lg ${isPopular ? 'ring-2 ring-zion-cyan' : ''}`}>
+      {isPopular && (
+        <div className="absolute -top-3 left-4 bg-zion-cyan text-zion-blue px-3 py-1 rounded-full text-sm font-semibold">
+          Popular
         </div>
-      </CardHeader>
-      <CardContent className='pb-4'>
-        <p className='text-3xl font-bold text-zion-cyan mb-4'>
-          ${country.pricePerIncident.toFixed(2)}
-        </p>
-        <div className='space-y-2 text-zion-slate-light'>
-          <div className='flex items-start'>
-            <Clock className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>
-              Typical response time: {getResponseTime(country.country)}
-            </span>
-          </div>
-          <div className='flex items-start'>
-            <MapPin className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>Service available in major cities</span>
-          </div>
-          <div className='flex items-start'>
-            <Server className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>Hardware & network support</span>
-          </div>
-          <div className='flex items-start'>
-            <Check className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>First hour included</span>
-          </div>
+      )}
+      
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center">
+          <Globe className="h-5 w-5 text-zion-cyan mr-2" />
+          <h3 className="text-xl font-semibold text-white">{country.name}</h3>
         </div>
-      </CardContent>
-      <CardFooter className='flex flex-col space-y-2'>
-        <Button
-onClick = {() => onSelect(country),}
-          className={`w-full ${
-            isPopular
-              ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
-              : 'bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light'
-          }`}
+        <div className="text-right">
+          <div className="text-2xl font-bold text-zion-cyan">
+            {country.currency} {country.price}
+          </div>
+          <div className="text-sm text-zion-slate-light">per incident</div>
+        </div>
+      </div>
+
+      <div className="space-y-2 mb-6">
+        <div className="flex items-center text-zion-slate-light">
+          <Check className="h-4 w-4 text-zion-cyan mr-2" />
+          <span>On-site technical support</span>
+        </div>
+        <div className="flex items-center text-zion-slate-light">
+          <Check className="h-4 w-4 text-zion-cyan mr-2" />
+          <span>Hardware diagnostics & repair</span>
+        </div>
+        <div className="flex items-center text-zion-slate-light">
+          <Check className="h-4 w-4 text-zion-cyan mr-2" />
+          <span>Network troubleshooting</span>
+        </div>
+        <div className="flex items-center text-zion-slate-light">
+          <Check className="h-4 w-4 text-zion-cyan mr-2" />
+          <span>Software installation & updates</span>
+        </div>
+      </div>
+
+      <div className="flex gap-3">
+        <button
+          onClick={onSelect}
+          className="flex-1 bg-zion-cyan text-zion-blue px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
         >
-          Select Service
-        </Button>
-        <Button
-variant='outline'
-          className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-          onClick={() => onQuote?.(country)}        >
+          Select Country
+        </button>
+        <button
+          onClick={onQuote}
+          className="flex-1 border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-blue transition-colors"
+        >
           Get Quote
-        </Button>
-        <Button
-asChild
-          variant='ghost'
-          className='w-full text-zion-cyan hover:text-zion-purple'
-        >
-          <Link href='/contact'>Contact Sales</Link>
-        </Button>
-      </CardFooter>
-    </Card>
-  )
+        </button>
+      </div>
+    </div>
+  );
 }

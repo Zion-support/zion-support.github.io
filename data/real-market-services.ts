@@ -66,7 +66,7 @@ export const realMarketServices: RealMarketService[] = [
       'Audit logs and RBAC',
       'LangChain/LlamaIndex SDK support',
       'Export to data warehouse'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-cyan-600 to-blue-700',
@@ -78,11 +78,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'AI & Data',
     realService: true,
-    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
-    integrations: ['OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'],
-    useCases: ['Centralized LLM access, Governance and compliance, Cost optimization'],
+    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']
+    integrations: ['OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI']
+    useCases: ['Centralized LLM access, Governance and compliance, Cost optimization']
     roi: 'Reduce AI spend by 20–40% with routing and caps.',
-    competitors: ['OpenRouter, EdenAI, Helicone, PromptLayer'],
+    competitors: ['OpenRouter, EdenAI, Helicone, PromptLayer']
     marketSize: '$40B+ GenAI platform market',
     growthRate: '100% YoY',
     variant: 'ai-futuristic',
@@ -109,7 +109,7 @@ export const realMarketServices: RealMarketService[] = [
       'Grafana dashboards and alerts',
       'Latency heatmaps and p95/p99',
       'Service map and dependency view'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-emerald-600 to-teal-700',
@@ -121,11 +121,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'Observability',
     realService: true,
-    technology: ['OpenTelemetry, Grafana, Prometheus, Tempo, Loki'],
-    integrations: ['Datadog, Grafana Cloud, New Relic'],
-    useCases: ['Reduce MTTR, Reliability baselines, Capacity planning'],
+    technology: ['OpenTelemetry, Grafana, Prometheus, Tempo, Loki']
+    integrations: ['Datadog, Grafana Cloud, New Relic']
+    useCases: ['Reduce MTTR, Reliability baselines, Capacity planning']
     roi: 'Cut incident time by 30–60%.',
-    competitors: ['Datadog APM, New Relic APM, Grafana Cloud Traces'],
+    competitors: ['Datadog APM, New Relic APM, Grafana Cloud Traces']
     marketSize: '$18B observability',
     growthRate: '25% YoY',
     variant: 'monitoring-futuristic',
@@ -151,7 +151,7 @@ export const realMarketServices: RealMarketService[] = [
       'Blocklist and reputation monitoring',
       'BIMI and TLS validation',
       'Alerts to Slack/Email with remediation steps'
-    ],
+    ]
     popular: true,
     icon: '📧',
     color: 'from-cyan-600 to-blue-700',
@@ -163,11 +163,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '30 minutes',
     category: 'Quality & Monitoring',
     realService: true,
-    technology: ['Next.js, DNS, TLS'],
-    integrations: ['SendGrid, Mailgun, Postmark'],
-    useCases: ['Improve inbox placement, Maintain domain reputation, Accelerate pre-launch warmup'],
+    technology: ['Next.js, DNS, TLS']
+    integrations: ['SendGrid, Mailgun, Postmark']
+    useCases: ['Improve inbox placement, Maintain domain reputation, Accelerate pre-launch warmup']
     roi: 'Lift email open rate by 10–30% and reduce spam placement.',
-    competitors: ['SendForensics, Mailgun Deliverability, Folderly'],
+    competitors: ['SendForensics, Mailgun Deliverability, Folderly']
     marketSize: '$1B+ deliverability tooling',
     growthRate: '15% YoY',
     variant: 'monitoring-futuristic' as any,
@@ -198,7 +198,7 @@ export const realMarketServices: RealMarketService[] = [
       'Stripe/PayPal payout workflows',
       'Partner portal and analytics',
       'Webhooks and API access'
-    ],
+    ]
     popular: false,
     icon: '🤝',
     color: 'from-emerald-600 to-teal-700',
@@ -210,11 +210,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'Growth & Monetization',
     realService: true,
-    technology: ['Next.js, Stripe'],
-    integrations: ['Stripe, PayPal, Google Analytics'],
-    useCases: ['Affiliate growth, Partner analytics, Automated payouts'],
+    technology: ['Next.js, Stripe']
+    integrations: ['Stripe, PayPal, Google Analytics']
+    useCases: ['Affiliate growth, Partner analytics, Automated payouts']
     roi: 'Increase partner-sourced revenue by 10–25% with fraud reduction.',
-    competitors: ['PartnerStack, Impact.com, Everflow'],
+    competitors: ['PartnerStack, Impact.com, Everflow']
     marketSize: '$5B affiliate platforms',
     growthRate: '12% YoY',
     variant: 'growth-futuristic' as any,
@@ -245,7 +245,7 @@ export const realMarketServices: RealMarketService[] = [
       'Sentiment and CSAT analytics',
       'Zendesk/Intercom sync',
       'Escalation and SLA policies'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-purple-600 to-indigo-700',
@@ -257,11 +257,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'AI & Data',
     realService: true,
-    technology: ['Next.js, OpenAI, Vector DB'],
-    integrations: ['Zendesk, Intercom, Freshdesk'],
-    useCases: ['Faster resolution, Deflection via chat, Higher CSAT'],
+    technology: ['Next.js, OpenAI, Vector DB']
+    integrations: ['Zendesk, Intercom, Freshdesk']
+    useCases: ['Faster resolution, Deflection via chat, Higher CSAT']
     roi: 'Reduce handle time 20–40% and raise CSAT 10–20%.',
-    competitors: ['Forethought, Cohere Assist, Zendesk AI'],
+    competitors: ['Forethought, Cohere Assist, Zendesk AI']
     marketSize: '$10B+ AI support',
     growthRate: '30% YoY',
     variant: 'ai-futuristic' as any,
@@ -292,7 +292,7 @@ export const realMarketServices: RealMarketService[] = [
       'Email/Slack anomaly alerts',
       'CSV/BigQuery export',
       'GDPR-friendly, IP anonymization'
-    ],
+    ]
     popular: false,
     icon: '📊',
     color: 'from-amber-600 to-orange-700',
@@ -304,11 +304,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '15 minutes',
     category: 'Analytics',
     realService: true,
-    technology: ['Next.js, Edge analytics'],
-    integrations: ['Google Ads, Meta Ads'],
-    useCases: ['Track campaigns, Monitor conversions, Detect anomalies'],
+    technology: ['Next.js, Edge analytics']
+    integrations: ['Google Ads, Meta Ads']
+    useCases: ['Track campaigns, Monitor conversions, Detect anomalies']
     roi: 'Save setup time and make faster decisions; reduce tooling complexity.',
-    competitors: ['Plausible, Fathom, Simple Analytics'],
+    competitors: ['Plausible, Fathom, Simple Analytics']
     marketSize: '$1B SMB analytics',
     growthRate: '14% YoY',
     variant: 'analytics-futuristic' as any,
@@ -340,7 +340,7 @@ export const realMarketServices: RealMarketService[] = [
       'Weekly savings reports',
       'Auto-created tickets',
       'RBAC and multi-account'
-    ],
+    ]
     popular: true,
     icon: '💸',
     color: 'from-amber-600 to-orange-700',
@@ -352,11 +352,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '3 days',
     category: 'Cloud & FinOps',
     realService: true,
-    technology: ['AWS, GCP, Azure, BQ/Redshift'],
-    integrations: ['Jira, Slack, Datadog'],
-    useCases: ['Reduce spend, Budget governance, Chargeback/showback'],
+    technology: ['AWS, GCP, Azure, BQ/Redshift']
+    integrations: ['Jira, Slack, Datadog']
+    useCases: ['Reduce spend, Budget governance, Chargeback/showback']
     roi: 'Save 10–30% monthly cloud spend.',
-    competitors: ['CloudZero, ProsperOps, AWS Cost Explorer'],
+    competitors: ['CloudZero, ProsperOps, AWS Cost Explorer']
     marketSize: '$12B FinOps',
     growthRate: '30% YoY',
     variant: 'cloud-futuristic',
@@ -383,7 +383,7 @@ export const realMarketServices: RealMarketService[] = [
       'Risk register and ownership',
       'Change management checks',
       'Continuous monitoring'
-    ],
+    ]
     popular: true,
     icon: '🔐',
     color: 'from-violet-600 to-fuchsia-700',
@@ -395,11 +395,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–2 weeks',
     category: 'Security & Compliance',
     realService: true,
-    technology: ['AWS, Azure, GCP, Okta, GitHub, Jira'],
-    integrations: ['Okta, Google Workspace, GitHub, Jira, AWS'],
-    useCases: ['Audit readiness, Continuous control monitoring, Vendor assessments'],
+    technology: ['AWS, Azure, GCP, Okta, GitHub, Jira']
+    integrations: ['Okta, Google Workspace, GitHub, Jira, AWS']
+    useCases: ['Audit readiness, Continuous control monitoring, Vendor assessments']
     roi: 'Reduce audit time by 50–70%.',
-    competitors: ['Drata, Vanta, Secureframe'],
+    competitors: ['Drata, Vanta, Secureframe']
     marketSize: '$10B compliance automation',
     growthRate: '28% YoY',
     variant: 'security-futuristic',
@@ -425,7 +425,7 @@ export const realMarketServices: RealMarketService[] = [
       'Embeddings and chunking best practices',
       'Latency and cost tuning',
       'Sample RAG app integration'
-    ],
+    ]
     popular: false,
     icon: '🧭',
     color: 'from-sky-600 to-indigo-700',
@@ -437,11 +437,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–2 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['Pinecone, Weaviate, Elastic, OpenAI'],
-    integrations: ['Airbyte, Fivetran, Kafka'],
-    useCases: ['RAG prototypes, Semantic search, Personalization'],
+    technology: ['Pinecone, Weaviate, Elastic, OpenAI']
+    integrations: ['Airbyte, Fivetran, Kafka']
+    useCases: ['RAG prototypes, Semantic search, Personalization']
     roi: 'Ship POCs 3–5x faster.',
-    competitors: ['Native vendor setup, Consultants'],
+    competitors: ['Native vendor setup, Consultants']
     marketSize: '$5B vector DB',
     growthRate: '40% YoY',
     variant: 'data-futuristic',
@@ -466,7 +466,7 @@ export const realMarketServices: RealMarketService[] = [
       'Slack/Email alerts',
       'Public status pages',
       'Weekly compliance reports'
-    ],
+    ]
     popular: false,
     icon: '🔒',
     color: 'from-slate-600 to-slate-800',
@@ -478,11 +478,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '30 minutes',
     category: 'Quality & Monitoring',
     realService: true,
-    technology: ['Node.js, OpenSSL, Cron'],
-    integrations: ['Slack, Email'],
-    useCases: ['Prevent cert outages, Compliance reports'],
+    technology: ['Node.js, OpenSSL, Cron']
+    integrations: ['Slack, Email']
+    useCases: ['Prevent cert outages, Compliance reports']
     roi: 'Avoid downtime and SLA penalties.',
-    competitors: ['UptimeRobot, StatusCake'],
+    competitors: ['UptimeRobot, StatusCake']
     marketSize: '$2B monitoring',
     growthRate: '12% YoY',
     variant: 'monitoring-futuristic',
@@ -507,7 +507,7 @@ export const realMarketServices: RealMarketService[] = [
       'CIS/NIST hardening baselines',
       'Asset inventory and EOL alerts',
       'Zero-touch provisioning'
-    ],
+    ]
     popular: true,
     icon: '💻',
     color: 'from-blue-600 to-indigo-700',
@@ -519,11 +519,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–2 weeks',
     category: 'Enterprise IT',
     realService: true,
-    technology: ['Intune', 'Kandji', 'Jamf', 'Windows Update for Business'],
-    integrations: ['Azure AD', 'Okta', 'Google Workspace'],
-    useCases: ['Asset hygiene', 'Compliance', 'Security baselines'],
+    technology: ['Intune', 'Kandji', 'Jamf', 'Windows Update for Business']
+    integrations: ['Azure AD', 'Okta', 'Google Workspace']
+    useCases: ['Asset hygiene', 'Compliance', 'Security baselines']
     roi: 'Reduce IT overhead by 30–50% via automation.',
-    competitors: ['Microsoft Intune', 'Jamf', 'Kandji'],
+    competitors: ['Microsoft Intune', 'Jamf', 'Kandji']
     marketSize: '$20B endpoint management',
     growthRate: '15% YoY',
     variant: 'enterprise-futuristic',
@@ -553,7 +553,7 @@ export const realMarketServices: RealMarketService[] = [
       '24/7 triage and containment',
       'Weekly threat hunting',
       'Executive reporting'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-emerald-600 to-teal-700',
@@ -565,11 +565,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '2–4 weeks',
     category: 'Security & Compliance',
     realService: true,
-    technology: ['Splunk', 'Elastic', 'Sentinel', 'Falcon', 'Defender'],
-    integrations: ['Okta', 'AWS', 'GCP', 'Azure', 'M365'],
-    useCases: ['Threat detection', 'Response automation', 'Compliance'],
+    technology: ['Splunk', 'Elastic', 'Sentinel', 'Falcon', 'Defender']
+    integrations: ['Okta', 'AWS', 'GCP', 'Azure', 'M365']
+    useCases: ['Threat detection', 'Response automation', 'Compliance']
     roi: 'Reduce MTTD/MTTR by 40–60%.',
-    competitors: ['Arctic Wolf', 'CrowdStrike Falcon Complete', 'Palo Alto Unit 42'],
+    competitors: ['Arctic Wolf', 'CrowdStrike Falcon Complete', 'Palo Alto Unit 42']
     marketSize: '$30B MDR',
     growthRate: '20% YoY',
     variant: 'security-futuristic',
@@ -599,7 +599,7 @@ export const realMarketServices: RealMarketService[] = [
       'Detection rules library',
       'Dashboards and KPIs',
       'Cost-optimized storage tiers'
-    ],
+    ]
     popular: false,
     icon: '🧪',
     color: 'from-purple-600 to-fuchsia-700',
@@ -611,11 +611,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–2 weeks',
     category: 'Security & Compliance',
     realService: true,
-    technology: ['Elastic', 'Splunk', 'Sentinel', 'Kafka'],
-    integrations: ['Okta', 'AWS CloudTrail', 'M365', 'EDR'],
-    useCases: ['Compliance dashboards', 'Incident detection'],
+    technology: ['Elastic', 'Splunk', 'Sentinel', 'Kafka']
+    integrations: ['Okta', 'AWS CloudTrail', 'M365', 'EDR']
+    useCases: ['Compliance dashboards', 'Incident detection']
     roi: 'Cut build time by 70%.',
-    competitors: ['Vendor PS', 'Consultancies'],
+    competitors: ['Vendor PS', 'Consultancies']
     marketSize: '$17B SIEM',
     growthRate: '14% YoY',
     variant: 'security-futuristic',
@@ -645,7 +645,7 @@ export const realMarketServices: RealMarketService[] = [
       'Feature store bootstrapping',
       'CI/CD for models',
       'Drift and performance monitoring'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-cyan-600 to-blue-700',
@@ -657,11 +657,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '2–4 weeks',
     category: 'AI & Data',
     realService: true,
-    technology: ['MLflow', 'Weights & Biases', 'Feast', 'SageMaker'],
-    integrations: ['Airflow', 'Kubeflow', 'Ray'],
-    useCases: ['Governed ML', 'Faster iterations'],
+    technology: ['MLflow', 'Weights & Biases', 'Feast', 'SageMaker']
+    integrations: ['Airflow', 'Kubeflow', 'Ray']
+    useCases: ['Governed ML', 'Faster iterations']
     roi: 'Accelerate model delivery by 2–3x.',
-    competitors: ['Databricks PS', 'Vertex AI PS'],
+    competitors: ['Databricks PS', 'Vertex AI PS']
     marketSize: '$15B MLOps',
     growthRate: '25% YoY',
     variant: 'ai-futuristic',
@@ -690,7 +690,7 @@ export const realMarketServices: RealMarketService[] = [
       'Backfill jobs and validation',
       'Online serving stack',
       'Lineage and documentation'
-    ],
+    ]
     popular: false,
     icon: '📦',
     color: 'from-teal-600 to-emerald-700',
@@ -702,11 +702,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '2–3 weeks',
     category: 'AI & Data',
     realService: true,
-    technology: ['Feast', 'Redis', 'Kafka', 'BigQuery/Redshift'],
-    integrations: ['Airflow', 'dbt', 'Spark'],
-    useCases: ['Realtime inference', 'Governed features'],
+    technology: ['Feast', 'Redis', 'Kafka', 'BigQuery/Redshift']
+    integrations: ['Airflow', 'dbt', 'Spark']
+    useCases: ['Realtime inference', 'Governed features']
     roi: 'Reduce time-to-first-feature by 70%.',
-    competitors: ['Tecton', 'Feast PS'],
+    competitors: ['Tecton', 'Feast PS']
     marketSize: '$3B feature platforms',
     growthRate: '30% YoY',
     variant: 'data-futuristic',
@@ -735,7 +735,7 @@ export const realMarketServices: RealMarketService[] = [
       'Model cards and approvals',
       'Project templates and SDKs',
       'Dashboards and alerts'
-    ],
+    ]
     popular: false,
     icon: '📊',
     color: 'from-amber-600 to-orange-700',
@@ -747,11 +747,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '3–5 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['MLflow', 'W&B', 'PostgreSQL', 'S3/GCS'],
-    integrations: ['GitHub', 'Slack', 'Jira'],
-    useCases: ['Reproducibility', 'Governance'],
+    technology: ['MLflow', 'W&B', 'PostgreSQL', 'S3/GCS']
+    integrations: ['GitHub', 'Slack', 'Jira']
+    useCases: ['Reproducibility', 'Governance']
     roi: 'Reduce wasted experiments by 20–30%.',
-    competitors: ['Weights & Biases', 'MLflow'],
+    competitors: ['Weights & Biases', 'MLflow']
     marketSize: '$2B tooling',
     growthRate: '18% YoY',
     variant: 'ai-futuristic',
@@ -780,7 +780,7 @@ export const realMarketServices: RealMarketService[] = [
       'Safety and jailbreak tests',
       'PII redaction and filters',
       'Regression gates in CI/CD'
-    ],
+    ]
     popular: true,
     icon: '🧰',
     color: 'from-rose-600 to-pink-700',
@@ -792,11 +792,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–2 weeks',
     category: 'AI & Safety',
     realService: true,
-    technology: ['OpenAI Evals', 'Custom checkers', 'DLP', 'LangSmith'],
-    integrations: ['GitHub Actions', 'Jenkins', 'CircleCI'],
-    useCases: ['Policy gates', 'Risk reduction'],
+    technology: ['OpenAI Evals', 'Custom checkers', 'DLP', 'LangSmith']
+    integrations: ['GitHub Actions', 'Jenkins', 'CircleCI']
+    useCases: ['Policy gates', 'Risk reduction']
     roi: 'Cut prod incidents by 50% for AI features.',
-    competitors: ['Lakera', 'Guardrails.ai', 'LangSmith'],
+    competitors: ['Lakera', 'Guardrails.ai', 'LangSmith']
     marketSize: '$3B AI safety',
     growthRate: '35% YoY',
     variant: 'ai-futuristic',
@@ -825,7 +825,7 @@ export const realMarketServices: RealMarketService[] = [
       'Dashboards and anomaly alerts',
       'Pricing simulations',
       'Export to Finance'
-    ],
+    ]
     popular: false,
     icon: '📉',
     color: 'from-slate-600 to-slate-800',
@@ -837,11 +837,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–2 weeks',
     category: 'Cloud & FinOps',
     realService: true,
-    technology: ['BQ/Redshift', 'dbt', 'Looker/Grafana'],
-    integrations: ['AWS CUR', 'GCP Billing', 'Azure Cost'],
-    useCases: ['Pricing, margin analysis'],
+    technology: ['BQ/Redshift', 'dbt', 'Looker/Grafana']
+    integrations: ['AWS CUR', 'GCP Billing', 'Azure Cost']
+    useCases: ['Pricing, margin analysis']
     roi: 'Improve margins by 5–15% via pricing.',
-    competitors: ['CloudZero', 'Anodot'],
+    competitors: ['CloudZero', 'Anodot']
     marketSize: '$12B FinOps',
     growthRate: '20% YoY',
     variant: 'cloud-futuristic',
@@ -870,7 +870,7 @@ export const realMarketServices: RealMarketService[] = [
       'Network/IAM blueprints',
       'Observability and SLOs',
       'Rollback and DR runbooks'
-    ],
+    ]
     popular: true,
     icon: '☁️',
     color: 'from-sky-600 to-cyan-700',
@@ -882,11 +882,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '3–6 weeks',
     category: 'Cloud & Platform',
     realService: true,
-    technology: ['AWS', 'GCP', 'Azure', 'Terraform'],
-    integrations: ['Cloudflare', 'Datadog', 'Grafana'],
-    useCases: ['Data center exit', 'DX', 'Modernization'],
+    technology: ['AWS', 'GCP', 'Azure', 'Terraform']
+    integrations: ['Cloudflare', 'Datadog', 'Grafana']
+    useCases: ['Data center exit', 'DX', 'Modernization']
     roi: 'Reduce migration risk and timeline by 40%.',
-    competitors: ['Partner PS', 'Accenture'],
+    competitors: ['Partner PS', 'Accenture']
     marketSize: '$200B cloud services',
     growthRate: '17% YoY',
     variant: 'cloud-futuristic',
@@ -915,7 +915,7 @@ export const realMarketServices: RealMarketService[] = [
       'App bloat reduction',
       'Image/CDN optimization',
       'Theme and liquid tuning'
-    ],
+    ]
     popular: false,
     icon: '🛍️',
     color: 'from-pink-600 to-rose-700',
@@ -927,11 +927,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '2–3 weeks',
     category: 'Web Performance',
     realService: true,
-    technology: ['Shopify', 'Cloudflare', 'Lighthouse'],
-    integrations: ['GA4', 'Meta Pixel'],
-    useCases: ['Conversion lift', 'SEO', 'Ad ROAS'],
+    technology: ['Shopify', 'Cloudflare', 'Lighthouse']
+    integrations: ['GA4', 'Meta Pixel']
+    useCases: ['Conversion lift', 'SEO', 'Ad ROAS']
     roi: '2–10% conversion lift typical.',
-    competitors: ['Agencies', 'Theme vendors'],
+    competitors: ['Agencies', 'Theme vendors']
     marketSize: '$6B ecommerce services',
     growthRate: '12% YoY',
     variant: 'cloud-futuristic',
@@ -961,7 +961,7 @@ export const realMarketServices: RealMarketService[] = [
       'CI/CD and PR annotations',
       'SBOM and dependency risk',
       'Reports and Jira tickets'
-    ],
+    ]
     popular: false,
     icon: '🛡️',
     color: 'from-slate-600 to-gray-700',
@@ -973,11 +973,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–3 days',
     category: 'Security',
     realService: true,
-    technology: ['OWASP ZAP', 'SAST', 'SBOM'],
-    integrations: ['GitHub', 'GitLab', 'Jenkins'],
-    useCases: ['Shift-left security', 'Regulatory compliance', 'Audit readiness'],
+    technology: ['OWASP ZAP', 'SAST', 'SBOM']
+    integrations: ['GitHub', 'GitLab', 'Jenkins']
+    useCases: ['Shift-left security', 'Regulatory compliance', 'Audit readiness']
     roi: 'Reduce critical vuln exposure window by 40–60%',
-    competitors: ['Snyk', 'Burp Suite', '42Crunch'],
+    competitors: ['Snyk', 'Burp Suite', '42Crunch']
     marketSize: '$7B+ AppSec tooling',
     growthRate: '23% YoY',
     variant: 'security-futuristic',
@@ -1002,7 +1002,7 @@ export const realMarketServices: RealMarketService[] = [
       'IP/device fingerprinting',
       'Adaptive challenges',
       'Block/allow lists and webhooks'
-    ],
+    ]
     popular: false,
     icon: '🛡️',
     color: 'from-cyan-600 to-blue-700',
@@ -1014,11 +1014,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '30 minutes',
     category: 'Security & Compliance',
     realService: true,
-    technology: ['Cloudflare Workers, KV, Turnstile'],
-    integrations: ['Cloudflare, Next.js, Node proxies'],
-    useCases: ['Stop signup spam, Block credential stuffing'],
+    technology: ['Cloudflare Workers, KV, Turnstile']
+    integrations: ['Cloudflare, Next.js, Node proxies']
+    useCases: ['Stop signup spam, Block credential stuffing']
     roi: 'Reduce fake signups and abuse by 90%+',
-    competitors: ['hCaptcha Enterprise, PerimeterX'],
+    competitors: ['hCaptcha Enterprise, PerimeterX']
     marketSize: '$2B bot mitigation',
     growthRate: '16% YoY',
     variant: 'security-futuristic' as any,
@@ -1048,7 +1048,7 @@ export const realMarketServices: RealMarketService[] = [
       'Schedules and retries',
       'Dry-run and diffs',
       'Row-level filters'
-    ],
+    ]
     popular: true,
     icon: '🔄',
     color: 'from-emerald-600 to-teal-700',
@@ -1060,11 +1060,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 hour',
     category: 'Data & Analytics',
     realService: true,
-    technology: ['Node.js, Airflow/dbt optional, OAuth'],
-    integrations: ['Snowflake, BigQuery, Postgres, HubSpot, Salesforce'],
-    useCases: ['Activation, Lead scoring, Audiences'],
+    technology: ['Node.js, Airflow/dbt optional, OAuth']
+    integrations: ['Snowflake, BigQuery, Postgres, HubSpot, Salesforce']
+    useCases: ['Activation, Lead scoring, Audiences']
     roi: 'Ship activation in days; lift campaign ROI 10–20%',
-    competitors: ['Hightouch, Census'],
+    competitors: ['Hightouch, Census']
     marketSize: '$1B reverse ETL',
     growthRate: '30% YoY',
     variant: 'data-futuristic' as any,
@@ -1094,7 +1094,7 @@ export const realMarketServices: RealMarketService[] = [
       'Evidence citations',
       'Gap coverage tracking',
       'Word/PDF export'
-    ],
+    ]
     popular: true,
     icon: '📝',
     color: 'from-violet-600 to-fuchsia-700',
@@ -1106,11 +1106,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'AI & Data',
     realService: true,
-    technology: ['Embeddings, Vector DB, OpenAI-compatible'],
-    integrations: ['SharePoint, Google Drive, Confluence'],
-    useCases: ['Faster RFPs, Better consistency, Higher win rate'],
+    technology: ['Embeddings, Vector DB, OpenAI-compatible']
+    integrations: ['SharePoint, Google Drive, Confluence']
+    useCases: ['Faster RFPs, Better consistency, Higher win rate']
     roi: 'Cut response time 40–60%; improve win rates',
-    competitors: ['Loopio, RFPIO (assist modules)'],
+    competitors: ['Loopio, RFPIO (assist modules)']
     marketSize: '$1B RFP tooling',
     growthRate: '20% YoY',
     variant: 'ai-futuristic' as any,
@@ -1140,7 +1140,7 @@ export const realMarketServices: RealMarketService[] = [
       'Multi-model matrix',
       'Regression and drift alerts',
       'CI quality gates'
-    ],
+    ]
     popular: false,
     icon: '🧪',
     color: 'from-indigo-600 to-slate-700',
@@ -1152,11 +1152,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '2 hours',
     category: 'AI & Data',
     realService: true,
-    technology: ['OpenAI/Anthropic APIs, Vector DB'],
-    integrations: ['GitHub Actions, GitLab CI'],
-    useCases: ['Safety, quality, regression control'],
+    technology: ['OpenAI/Anthropic APIs, Vector DB']
+    integrations: ['GitHub Actions, GitLab CI']
+    useCases: ['Safety, quality, regression control']
     roi: 'Reduce unsafe/low-quality releases and rollbacks',
-    competitors: ['Humanloop, Arize Phoenix (evals)'],
+    competitors: ['Humanloop, Arize Phoenix (evals)']
     marketSize: '$1B eval tooling',
     growthRate: '35% YoY',
     variant: 'ai-futuristic' as any,
@@ -1186,7 +1186,7 @@ export const realMarketServices: RealMarketService[] = [
       'Auto-blocking for tags',
       'Policy page generator',
       'A/B banner tests'
-    ],
+    ]
     popular: true,
     icon: '🍪',
     color: 'from-amber-600 to-orange-700',
@@ -1198,11 +1198,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '30 minutes',
     category: 'Security & Compliance',
     realService: true,
-    technology: ['Edge middleware, IAB TCF v2'],
-    integrations: ['GTM, Segment, Google Tag'],
-    useCases: ['Consent management, Policy pages, Audit logs'],
+    technology: ['Edge middleware, IAB TCF v2']
+    integrations: ['GTM, Segment, Google Tag']
+    useCases: ['Consent management, Policy pages, Audit logs']
     roi: 'Accelerate compliance and reduce legal risk',
-    competitors: ['Cookiebot, OneTrust'],
+    competitors: ['Cookiebot, OneTrust']
     marketSize: '$2B privacy tooling',
     growthRate: '18% YoY',
     variant: 'security-futuristic' as any,
@@ -1232,7 +1232,7 @@ export const realMarketServices: RealMarketService[] = [
       'Robots/politeness guards',
       'Deduplication and diffs',
       'Warehouse exports'
-    ],
+    ]
     popular: false,
     icon: '🕸️',
     color: 'from-slate-600 to-slate-800',
@@ -1244,11 +1244,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '2 hours',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Playwright, Queues, Proxies'],
-    integrations: ['S3, BigQuery, Postgres'],
-    useCases: ['Competitive intel, Price tracking, Research datasets'],
+    technology: ['Playwright, Queues, Proxies']
+    integrations: ['S3, BigQuery, Postgres']
+    useCases: ['Competitive intel, Price tracking, Research datasets']
     roi: 'Automate scraping while reducing ban rate and toil',
-    competitors: ['ScraperAPI, Bright Data'],
+    competitors: ['ScraperAPI, Bright Data']
     marketSize: '$1.5B data collection',
     growthRate: '20% YoY',
     variant: 'data-futuristic' as any,
@@ -1279,7 +1279,7 @@ export const realMarketServices: RealMarketService[] = [
       'On-page score & AI suggestions',
       'Performance & Core Web Vitals checks',
       'CSV/JSON exports and Slack alerts'
-    ],
+    ]
     popular: true,
     icon: '🔎',
     color: 'from-indigo-600 to-purple-700',
@@ -1291,11 +1291,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 hour',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.js, Headless Chrome, Lighthouse'],
-    integrations: ['Google Search Console, Slack, BigQuery'],
-    useCases: ['SEO audits, Content optimization, Pre-release QA'],
+    technology: ['Next.js, Headless Chrome, Lighthouse']
+    integrations: ['Google Search Console, Slack, BigQuery']
+    useCases: ['SEO audits, Content optimization, Pre-release QA']
     roi: 'Lift organic traffic by 10–25% via continuous optimization.',
-    competitors: ['Ahrefs, Semrush site audit'],
+    competitors: ['Ahrefs, Semrush site audit']
     marketSize: '$5B+ SEO tooling',
     growthRate: '12% YoY',
     variant: 'ai-futuristic' as any,
@@ -1320,7 +1320,7 @@ export const realMarketServices: RealMarketService[] = [
       'Per-job timeouts and retries',
       'Run logs and structured events',
       'Slack/Email alerts and webhooks'
-    ],
+    ]
     popular: false,
     icon: '⏰',
     color: 'from-slate-600 to-slate-800',
@@ -1332,11 +1332,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '30 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Cloudflare/Workers, AWS Lambda, Queues'],
-    integrations: ['Slack, PagerDuty, Email'],
-    useCases: ['Nightly reports, Data syncs, Cleanups'],
+    technology: ['Cloudflare/Workers, AWS Lambda, Queues']
+    integrations: ['Slack, PagerDuty, Email']
+    useCases: ['Nightly reports, Data syncs, Cleanups']
     roi: 'Reduce failed jobs and on-call toil by 50%.',
-    competitors: ['EasyCron, GitHub Actions cron'],
+    competitors: ['EasyCron, GitHub Actions cron']
     marketSize: '$1B+ job orchestration',
     growthRate: '18% YoY',
     variant: 'data-futuristic' as any,
@@ -1361,7 +1361,7 @@ export const realMarketServices: RealMarketService[] = [
       'Backup and recovery evidence',
       'Alerting and incident logs',
       'Export to auditor-ready bundles'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-emerald-600 to-teal-700',
@@ -1373,11 +1373,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–3 days',
     category: 'Quality & Monitoring',
     realService: true,
-    technology: ['Node.js, APIs, Cloud logs'],
-    integrations: ['AWS, GCP, Azure, GitHub, Jira'],
-    useCases: ['SOC 2 preparation, Continuous compliance'],
+    technology: ['Node.js, APIs, Cloud logs']
+    integrations: ['AWS, GCP, Azure, GitHub, Jira']
+    useCases: ['SOC 2 preparation, Continuous compliance']
     roi: 'Save 40–80 hours per audit cycle.',
-    competitors: ['Vanta, Drata'],
+    competitors: ['Vanta, Drata']
     marketSize: '$3B compliance automation',
     growthRate: '20% YoY',
     variant: 'security-futuristic' as any,
@@ -1402,7 +1402,7 @@ export const realMarketServices: RealMarketService[] = [
       'Cloud and container posture checks',
       'Detailed remediation report',
       'Retest verification'
-    ],
+    ]
     popular: true,
     icon: '🔐',
     color: 'from-rose-600 to-red-700',
@@ -1414,11 +1414,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–2 weeks scheduling',
     category: 'Quality & Monitoring',
     realService: true,
-    technology: ['Burp, Nuclei, OpenVAS, Trivy'],
-    integrations: ['Jira, GitHub Issues, Notion'],
-    useCases: ['App hardening, Compliance readiness'],
+    technology: ['Burp, Nuclei, OpenVAS, Trivy']
+    integrations: ['Jira, GitHub Issues, Notion']
+    useCases: ['App hardening, Compliance readiness']
     roi: 'Reduce breach risk and speed up audits.',
-    competitors: ['Nessus, Professional pen test firms'],
+    competitors: ['Nessus, Professional pen test firms']
     marketSize: '$15B security testing',
     growthRate: '10% YoY',
     variant: 'security-futuristic' as any,
@@ -1443,7 +1443,7 @@ export const realMarketServices: RealMarketService[] = [
       'Auto-logging to CRM',
       'A/B testing and analytics',
       'Compliance guardrails'
-    ],
+    ]
     popular: false,
     icon: '🤖',
     color: 'from-cyan-600 to-blue-700',
@@ -1455,11 +1455,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 hour',
     category: 'AI & Data',
     realService: true,
-    technology: ['LLMs, Browser APIs, CRM SDKs'],
-    integrations: ['HubSpot, Salesforce'],
-    useCases: ['Outbound emails, Account research'],
+    technology: ['LLMs, Browser APIs, CRM SDKs']
+    integrations: ['HubSpot, Salesforce']
+    useCases: ['Outbound emails, Account research']
     roi: 'Increase reply rates and save rep time.',
-    competitors: ['Regie.ai, Lavender'],
+    competitors: ['Regie.ai, Lavender']
     marketSize: '$4B sales AI',
     growthRate: '22% YoY',
     variant: 'ai-futuristic' as any,
@@ -1484,7 +1484,7 @@ export const realMarketServices: RealMarketService[] = [
       'Next-best action suggestions',
       'Report builder and alerts',
       'Privacy-safe enrichment options'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-purple-600 to-fuchsia-700',
@@ -1496,11 +1496,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1–2 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['Python, Node.js, LLMs'],
-    integrations: ['HubSpot, Salesforce, Airtable'],
-    useCases: ['Lead scoring, Pipeline hygiene'],
+    technology: ['Python, Node.js, LLMs']
+    integrations: ['HubSpot, Salesforce, Airtable']
+    useCases: ['Lead scoring, Pipeline hygiene']
     roi: 'Improve conversion rates and pipeline accuracy.',
-    competitors: ['Clearbit, Apollo enrichment'],
+    competitors: ['Clearbit, Apollo enrichment']
     marketSize: '$6B sales intelligence',
     growthRate: '14% YoY',
     variant: 'ai-futuristic' as any,
@@ -1525,7 +1525,7 @@ export const realMarketServices: RealMarketService[] = [
       'mTLS endpoint checks',
       'Slack/Email/PagerDuty alerts',
       'CSV/JSON export'
-    ],
+    ]
     popular: false,
     icon: '🔒',
     color: 'from-blue-600 to-cyan-700',
@@ -1537,11 +1537,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '15 minutes',
     category: 'Observability',
     realService: true,
-    technology: ['Node.js, OpenSSL, Cron'],
-    integrations: ['Route53, Cloudflare, Slack'],
-    useCases: ['Prevent outages, Audit readiness'],
+    technology: ['Node.js, OpenSSL, Cron']
+    integrations: ['Route53, Cloudflare, Slack']
+    useCases: ['Prevent outages, Audit readiness']
     roi: 'Avoid downtime due to expired certs.',
-    competitors: ['CertifyTheWeb, ExpiredDomains'],
+    competitors: ['CertifyTheWeb, ExpiredDomains']
     marketSize: '$500M cert tooling',
     growthRate: '8% YoY',
     variant: 'monitoring-futuristic' as any,
@@ -1566,7 +1566,7 @@ export const realMarketServices: RealMarketService[] = [
       'Burn rate alerts',
       'Golden signals dashboards',
       'Incident export and status page'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-emerald-600 to-teal-700',
@@ -1578,11 +1578,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '1 hour',
     category: 'Observability',
     realService: true,
-    technology: ['OpenTelemetry, Prometheus, Grafana'],
-    integrations: ['Slack, PagerDuty, Email'],
-    useCases: ['SLO adoption, Incident reduction'],
+    technology: ['OpenTelemetry, Prometheus, Grafana']
+    integrations: ['Slack, PagerDuty, Email']
+    useCases: ['SLO adoption, Incident reduction']
     roi: 'Reduce alert fatigue and MTTR by 30–50%.',
-    competitors: ['UptimeRobot, BetterStack'],
+    competitors: ['UptimeRobot, BetterStack']
     marketSize: '$2B uptime monitoring',
     growthRate: '16% YoY',
     variant: 'monitoring-futuristic' as any,
@@ -1607,7 +1607,7 @@ export const realMarketServices: RealMarketService[] = [
       'Replay with exponential backoff',
       'Dead-letter queues and alerts',
       'Audit logs and exports'
-    ],
+    ]
     popular: false,
     icon: '🔁',
     color: 'from-slate-600 to-slate-800',
@@ -1619,11 +1619,11 @@ export const realMarketServices: RealMarketService[] = [
     setupTime: '30 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Queues, HMAC, Serverless'],
-    integrations: ['Stripe, GitHub, Shopify'],
-    useCases: ['Billing webhooks, Event processing'],
+    technology: ['Queues, HMAC, Serverless']
+    integrations: ['Stripe, GitHub, Shopify']
+    useCases: ['Billing webhooks, Event processing']
     roi: 'Reduce lost events and debugging time.',
-    competitors: ['Hookdeck, Svix'],
+    competitors: ['Hookdeck, Svix']
     marketSize: '$1B event infrastructure',
     growthRate: '20% YoY',
     variant: 'data-futuristic' as any,

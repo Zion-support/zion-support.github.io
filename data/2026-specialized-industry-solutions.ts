@@ -7,7 +7,7 @@ export const specializedIndustrySolutions2026 = [
       'Supply chain optimization',
       'Energy management',
       'Performance analytics'
-    ],
+    ]
     marketAdvantage: 'Superior AI capabilities for manufacturing optimization with comprehensive IoT integration compared to traditional manufacturing platforms.',
     averageMarketPrice: '$500-2000/month',
     featuresCapabilities: [
@@ -38,23 +38,23 @@ export const specializedIndustrySolutions2026 = [
       'Telemedicine integration',
       'HIPAA compliance',
       'Expert consultation'
-    ],
+    ]
     popular: true,
     icon: '🏥',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-powered-healthcare-diagnostics',
     marketPosition: 'Leading AI-powered healthcare diagnostics platform. Our advantage: Advanced medical AI with comprehensive diagnostic capabilities and regulatory compliance.',
-    targetAudience: ['Hospitals', 'Clinics', 'Medical practices', 'Pharmaceutical companies', 'Research institutions'],
+    targetAudience: ['Hospitals', 'Clinics', 'Medical practices', 'Pharmaceutical companies', 'Research institutions']
     trialDays: 45,
     setupTime: '4-6 weeks',
     category: 'Healthcare AI & Medical Diagnostics',
     realService: true,
-    technology: ['AI/ML', 'Medical Imaging', 'Predictive Analytics', 'Natural Language Processing', 'Clinical Decision Support'],
-    integrations: ['Electronic Health Records', 'Medical imaging systems', 'Laboratory systems', 'Telemedicine platforms', 'Custom medical systems'],
-    useCases: ['Medical diagnosis', 'Treatment planning', 'Patient monitoring', 'Drug discovery', 'Clinical research'],
+    technology: ['AI/ML', 'Medical Imaging', 'Predictive Analytics', 'Natural Language Processing', 'Clinical Decision Support']
+    integrations: ['Electronic Health Records', 'Medical imaging systems', 'Laboratory systems', 'Telemedicine platforms', 'Custom medical systems']
+    useCases: ['Medical diagnosis', 'Treatment planning', 'Patient monitoring', 'Drug discovery', 'Clinical research']
     roi: 'Healthcare organizations achieve 400% ROI with 90% improvement in diagnostic accuracy and 80% reduction in diagnostic time.',
-    competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Custom medical AI platforms'],
+    competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Custom medical AI platforms']
     marketSize: '$45.8B AI healthcare market',
     growthRate: '65% annual growth',
     contactInfo: {
@@ -89,23 +89,23 @@ export const specializedIndustrySolutions2026 = [
       'Workforce management',
       'Analytics dashboard',
       'Mobile app access'
-    ],
+    ]
     popular: true,
     icon: '🏭',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/smart-manufacturing-orchestrator',
     marketPosition: 'Leading smart manufacturing platform. Our advantage: Comprehensive AI and IoT integration with real-time optimization and predictive capabilities.',
-    targetAudience: ['Manufacturing companies', 'Industrial companies', 'Automotive manufacturers', 'Electronics companies', 'Chemical companies'],
+    targetAudience: ['Manufacturing companies', 'Industrial companies', 'Automotive manufacturers', 'Electronics companies', 'Chemical companies']
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Smart Manufacturing & Industry 4.0',
     realService: true,
-    technology: ['AI/ML', 'IoT Integration', 'Predictive Analytics', 'Automation', 'Real-time Processing', 'Manufacturing Execution Systems'],
-    integrations: ['ERP systems', 'MES systems', 'IoT platforms', 'Quality management systems', 'Custom manufacturing systems'],
-    useCases: ['Production optimization', 'Quality control', 'Predictive maintenance', 'Supply chain management', 'Energy optimization'],
+    technology: ['AI/ML', 'IoT Integration', 'Predictive Analytics', 'Automation', 'Real-time Processing', 'Manufacturing Execution Systems']
+    integrations: ['ERP systems', 'MES systems', 'IoT platforms', 'Quality management systems', 'Custom manufacturing systems']
+    useCases: ['Production optimization', 'Quality control', 'Predictive maintenance', 'Supply chain management', 'Energy optimization']
     roi: 'Manufacturing companies achieve 500% ROI with 90% improvement in production efficiency and 80% reduction in downtime.',
-    competitors: ['Siemens', 'GE Digital', 'Rockwell Automation', 'Custom smart manufacturing platforms'],
+    competitors: ['Siemens', 'GE Digital', 'Rockwell Automation', 'Custom smart manufacturing platforms']
     marketSize: '$38.9B smart manufacturing market',
     growthRate: '58% annual growth',
     contactInfo: {
@@ -140,23 +140,23 @@ export const specializedIndustrySolutions2026 = [
       'Market sentiment analysis',
       'Compliance monitoring',
       'Expert consultation'
-    ],
+    ]
     popular: false,
     icon: '💰',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/financial-ai-trading-platform',
     marketPosition: 'Leading AI-powered financial trading platform. Our advantage: Advanced AI algorithms with comprehensive risk management and compliance monitoring.',
-    targetAudience: ['Investment firms', 'Hedge funds', 'Banks', 'Trading companies', 'Financial institutions'],
+    targetAudience: ['Investment firms', 'Hedge funds', 'Banks', 'Trading companies', 'Financial institutions']
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Financial AI & Algorithmic Trading',
     realService: true,
-    technology: ['AI/ML', 'Algorithmic Trading', 'Predictive Analytics', 'Risk Management', 'Real-time Processing', 'Financial Modeling'],
-    integrations: ['Trading platforms', 'Market data feeds', 'Risk management systems', 'Compliance systems', 'Custom financial systems'],
-    useCases: ['Algorithmic trading', 'Portfolio management', 'Risk assessment', 'Market analysis', 'Compliance monitoring'],
+    technology: ['AI/ML', 'Algorithmic Trading', 'Predictive Analytics', 'Risk Management', 'Real-time Processing', 'Financial Modeling']
+    integrations: ['Trading platforms', 'Market data feeds', 'Risk management systems', 'Compliance systems', 'Custom financial systems']
+    useCases: ['Algorithmic trading', 'Portfolio management', 'Risk assessment', 'Market analysis', 'Compliance monitoring']
     roi: 'Financial institutions achieve 600% ROI with 90% improvement in trading performance and 80% reduction in risk exposure.',
-    competitors: ['Bloomberg', 'Thomson Reuters', 'Custom trading platforms', 'Quantitative trading firms'],
+    competitors: ['Bloomberg', 'Thomson Reuters', 'Custom trading platforms', 'Quantitative trading firms']
     marketSize: '$52.1B AI trading market',
     growthRate: '75% annual growth',
     contactInfo: {
@@ -191,23 +191,23 @@ export const specializedIndustrySolutions2026 = [
       'Marketing automation',
       'Analytics dashboard',
       'Mobile app access'
-    ],
+    ]
     popular: true,
     icon: '🛍️',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/retail-ai-optimization-platform',
     marketPosition: 'Leading retail AI optimization platform. Our advantage: Comprehensive AI-powered retail optimization with personalized customer experiences.',
-    targetAudience: ['Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers'],
+    targetAudience: ['Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers']
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Retail AI & Customer Experience',
     realService: true,
-    technology: ['AI/ML', 'Customer Analytics', 'Demand Forecasting', 'Dynamic Pricing', 'Marketing Automation', 'Retail Analytics'],
-    integrations: ['POS systems', 'E-commerce platforms', 'CRM systems', 'Marketing platforms', 'Custom retail systems'],
-    useCases: ['Inventory optimization', 'Customer personalization', 'Marketing automation', 'Supply chain management', 'Revenue optimization'],
+    technology: ['AI/ML', 'Customer Analytics', 'Demand Forecasting', 'Dynamic Pricing', 'Marketing Automation', 'Retail Analytics']
+    integrations: ['POS systems', 'E-commerce platforms', 'CRM systems', 'Marketing platforms', 'Custom retail systems']
+    useCases: ['Inventory optimization', 'Customer personalization', 'Marketing automation', 'Supply chain management', 'Revenue optimization']
     roi: 'Retail companies achieve 350% ROI with 90% improvement in inventory efficiency and 80% increase in customer satisfaction.',
-    competitors: ['Salesforce Commerce Cloud', 'Adobe Commerce', 'Shopify Plus', 'Custom retail platforms'],
+    competitors: ['Salesforce Commerce Cloud', 'Adobe Commerce', 'Shopify Plus', 'Custom retail platforms']
     marketSize: '$28.7B retail AI market',
     growthRate: '52% annual growth',
     contactInfo: {
@@ -242,23 +242,23 @@ export const specializedIndustrySolutions2026 = [
       'Cost optimization',
       'Analytics dashboard',
       'Mobile app access'
-    ],
+    ]
     popular: false,
     icon: '🚚',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/logistics-ai-orchestrator',
     marketPosition: 'Leading logistics AI platform. Our advantage: Comprehensive AI-powered logistics optimization with real-time tracking and cost optimization.',
-    targetAudience: ['Logistics companies', 'Transportation companies', 'E-commerce companies', 'Manufacturing companies', 'Retail chains'],
+    targetAudience: ['Logistics companies', 'Transportation companies', 'E-commerce companies', 'Manufacturing companies', 'Retail chains']
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Logistics AI & Supply Chain Optimization',
     realService: true,
-    technology: ['AI/ML', 'Route Optimization', 'Demand Forecasting', 'Real-time Tracking', 'Supply Chain Analytics', 'Fleet Management'],
-    integrations: ['TMS systems', 'WMS systems', 'GPS tracking', 'E-commerce platforms', 'Custom logistics systems'],
-    useCases: ['Route optimization', 'Warehouse management', 'Fleet optimization', 'Supply chain management', 'Cost optimization'],
+    technology: ['AI/ML', 'Route Optimization', 'Demand Forecasting', 'Real-time Tracking', 'Supply Chain Analytics', 'Fleet Management']
+    integrations: ['TMS systems', 'WMS systems', 'GPS tracking', 'E-commerce platforms', 'Custom logistics systems']
+    useCases: ['Route optimization', 'Warehouse management', 'Fleet optimization', 'Supply chain management', 'Cost optimization']
     roi: 'Logistics companies achieve 400% ROI with 90% improvement in delivery efficiency and 80% reduction in operational costs.',
-    competitors: ['Manhattan Associates', 'Oracle Transportation', 'SAP Transportation', 'Custom logistics platforms'],
+    competitors: ['Manhattan Associates', 'Oracle Transportation', 'SAP Transportation', 'Custom logistics platforms']
     marketSize: '$32.1B logistics AI market',
     growthRate: '58% annual growth',
     contactInfo: {

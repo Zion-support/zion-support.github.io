@@ -4,7 +4,7 @@ export interface Real2029Q2Service {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -34,7 +34,7 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
       "Threat intel and hunting",
       "Playbooks and incident reports",
       "Compliance mappings (SOC2/ISO)"
-    ],
+    ]
     link: "https://ziontechgroup.com/services/managed-soc-as-a-service",
     category: "Cybersecurity",
     realImplementation: true,
@@ -52,7 +52,7 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
       "Intent and fit scoring",
       "Webhook + batch exports",
       "GDPR-compliant processing"
-    ],
+    ]
     link: "https://ziontechgroup.com/services/ai-lead-enrichment-api",
     category: "Sales & Marketing",
     realImplementation: true,
@@ -70,7 +70,7 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
       "Grounding and attribution scores",
       "SARIF/CI outputs",
       "Dashboards and trends"
-    ],
+    ]
     link: "https://ziontechgroup.com/services/llm-eval-harness",
     category: "AI Quality",
     realImplementation: true,
@@ -88,7 +88,7 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
       "Drift and null spike alerts",
       "Consumer impact analysis",
       "Evidence reports for audits"
-    ],
+    ]
     link: "https://ziontechgroup.com/services/data-contracts-service",
     category: "Data & Analytics",
     realImplementation: true,
@@ -106,7 +106,7 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
       "MV/index recommendations",
       "Scheduler and what-if",
       "Savings tracking"
-    ],
+    ]
     link: "https://ziontechgroup.com/services/warehouse-query-optimizer",
     category: "Data & Analytics",
     realImplementation: true,
@@ -124,7 +124,7 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
       "Prompt templates and guardrails",
       "Relevance tuning and evals",
       "Dashboards and monitoring"
-    ],
+    ]
     link: "https://ziontechgroup.com/services/rag-knowledge-base-in-a-week",
     category: "AI & Machine Learning",
     realImplementation: true,
@@ -142,7 +142,7 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
       "Unit economics models",
       "Monthly executive reviews",
       "Automation hooks"
-    ],
+    ]
     link: "https://ziontechgroup.com/services/cloud-finops-advisory",
     category: "Cloud & Infrastructure",
     realImplementation: true,
@@ -160,11 +160,11 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
       "Auto-remediation playbooks",
       "Weekly drift reports",
       "Audit evidence exports"
-    ],
+    ]
     link: "https://ziontechgroup.com/services/managed-m365-hardening",
     category: "Security & IT",
     realImplementation: true,
     contactInfo: contact
   }
-],
+]
 

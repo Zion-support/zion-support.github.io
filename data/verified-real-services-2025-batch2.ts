@@ -4,7 +4,7 @@ export interface VerifiedRealService2025Batch2 {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
       "Performance monitoring",
       "Quality metrics",
       "Continuous integration"
-    ],
+    ]
     link: "/services/ai-quality-assurance",
     category: "Verified Services 2025",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

@@ -5,7 +5,7 @@ export interface SpaceTechService {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -17,11 +17,11 @@ export interface SpaceTechService {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: string,
@@ -52,7 +52,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Launch vehicle integrationGround station management',
       'Space debris trackingMission analytics dashboard',
       'Regulatory compliance toolsMulti-satellite operations'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-cyan-600 to-blue-700',
@@ -64,11 +64,11 @@ export const spaceTechServices: SpaceTechService[] = [
     setupTime: '2 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['Orbital MechanicsSatellite Tracking', 'Space WeatherReact', 'Node.jsPostgreSQL', 'Real-time Data'],
-    integrations: ['Satellite networksLaunch providers', 'Ground stationsWeather services', 'Regulatory databasesTracking systems'],
-    useCases: ['Mission planningSatellite operations', 'Launch coordinationSpace monitoring', 'Regulatory compliancePerformance optimization'],
+    technology: ['Orbital MechanicsSatellite Tracking', 'Space WeatherReact', 'Node.jsPostgreSQL', 'Real-time Data']
+    integrations: ['Satellite networksLaunch providers', 'Ground stationsWeather services', 'Regulatory databasesTracking systems']
+    useCases: ['Mission planningSatellite operations', 'Launch coordinationSpace monitoring', 'Regulatory compliancePerformance optimization']
     roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
-    competitors: ['SpaceX StarlinkOneWeb', 'Basic satellite services'],
+    competitors: ['SpaceX StarlinkOneWeb', 'Basic satellite services']
     marketSize: '$469B space economy',
     growthRate: '400% annual growth',
     variant: 'space-futuristic',
@@ -98,7 +98,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Traffic routingPerformance analytics',
       'Predictive maintenanceReal-time monitoring',
       'Mobile management appAPI for integration'
-    ],
+    ]
     popular: true,
     icon: '🛰️',
     color: 'from-blue-600 to-indigo-700',
@@ -110,11 +110,11 @@ export const spaceTechServices: SpaceTechService[] = [
     setupTime: '1 week',
     category: 'Space Technology',
     realService: true,
-    technology: ['AI OptimizationSatellite Networks', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Real-time Systems'],
-    integrations: ['Satellite networksGround stations', 'Internet infrastructureTelecom systems', 'Monitoring tools'],
-    useCases: ['Constellation managementCoverage optimization', 'Performance monitoringMaintenance planning', 'Traffic managementEfficiency optimization'],
+    technology: ['AI OptimizationSatellite Networks', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Real-time Systems']
+    integrations: ['Satellite networksGround stations', 'Internet infrastructureTelecom systems', 'Monitoring tools']
+    useCases: ['Constellation managementCoverage optimization', 'Performance monitoringMaintenance planning', 'Traffic managementEfficiency optimization']
     roi: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.',
-    competitors: ['Traditional satellite managementBasic monitoring tools'],
+    competitors: ['Traditional satellite managementBasic monitoring tools']
     marketSize: '$150B satellite services market',
     growthRate: '300% annual growth',
     variant: 'space-futuristic',
@@ -144,7 +144,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Risk analytics dashboardAlert system',
       'Historical tracking dataMobile monitoring app',
       'API for satellite integration24/7 monitoring service'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-green-600 to-emerald-700',
@@ -156,11 +156,11 @@ export const spaceTechServices: SpaceTechService[] = [
     setupTime: '1 week',
     category: 'Space Technology',
     realService: true,
-    technology: ['AI Risk AssessmentDebris Tracking', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Real-time Data'],
-    integrations: ['Satellite networksTracking systems', 'Launch providersInsurance platforms', 'Research databases'],
-    useCases: ['Debris monitoringCollision avoidance', 'Risk assessmentInsurance underwriting', 'Research analysisSafety planning'],
+    technology: ['AI Risk AssessmentDebris Tracking', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Real-time Data']
+    integrations: ['Satellite networksTracking systems', 'Launch providersInsurance platforms', 'Research databases']
+    useCases: ['Debris monitoringCollision avoidance', 'Risk assessmentInsurance underwriting', 'Research analysisSafety planning']
     roi: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.',
-    competitors: ['Basic debris trackingManual monitoring'],
+    competitors: ['Basic debris trackingManual monitoring']
     marketSize: '$50B space safety market',
     growthRate: '250% annual growth',
     variant: 'space-futuristic',
@@ -190,7 +190,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Historical weather dataReal-time monitoring',
       'Alert systemAnalytics dashboard',
       'Mobile appAPI for integration'
-    ],
+    ]
     popular: true,
     icon: '☀️',
     color: 'from-yellow-600 to-orange-700',
@@ -202,11 +202,11 @@ export const spaceTechServices: SpaceTechService[] = [
     setupTime: '1 week',
     category: 'Space Technology',
     realService: true,
-    technology: ['AI ForecastingSpace Weather', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Real-time Monitoring'],
-    integrations: ['Solar observatoriesSatellite networks', 'Power gridsTelecom systems', 'Aviation systems'],
-    useCases: ['Weather forecastingImpact assessment', 'Risk mitigationOperational planning', 'Research analysisSafety planning'],
+    technology: ['AI ForecastingSpace Weather', 'Machine LearningReact', 'Node.jsPostgreSQL', 'Real-time Monitoring']
+    integrations: ['Solar observatoriesSatellite networks', 'Power gridsTelecom systems', 'Aviation systems']
+    useCases: ['Weather forecastingImpact assessment', 'Risk mitigationOperational planning', 'Research analysisSafety planning']
     roi: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.',
-    competitors: ['Basic weather dataManual monitoring'],
+    competitors: ['Basic weather dataManual monitoring']
     marketSize: '$30B space weather market',
     growthRate: '200% annual growth',
     variant: 'space-futuristic',
@@ -236,7 +236,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Launch window analysisReal-time coordination',
       'Mission trackingAnalytics dashboard',
       'Mobile appAPI for integration'
-    ],
+    ]
     popular: true,
     icon: '🎯',
     color: 'from-red-600 to-pink-700',
@@ -248,11 +248,11 @@ export const spaceTechServices: SpaceTechService[] = [
     setupTime: '2 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['Launch CoordinationOrbital Mechanics', 'Precision TimingReact', 'Node.jsPostgreSQL', 'Real-time Systems'],
-    integrations: ['Launch vehiclesGround stations', 'Tracking systemsMission control', 'Satellite networks'],
-    useCases: ['Launch coordinationMission planning', 'Timing optimizationTrajectory planning', 'Mission trackingPerformance analysis'],
+    technology: ['Launch CoordinationOrbital Mechanics', 'Precision TimingReact', 'Node.jsPostgreSQL', 'Real-time Systems']
+    integrations: ['Launch vehiclesGround stations', 'Tracking systemsMission control', 'Satellite networks']
+    useCases: ['Launch coordinationMission planning', 'Timing optimizationTrajectory planning', 'Mission trackingPerformance analysis']
     roi: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.',
-    competitors: ['Basic coordinationManual planning'],
+    competitors: ['Basic coordinationManual planning']
     marketSize: '$20B launch services market',
     growthRate: '180% annual growth',
     variant: 'space-futuristic',
@@ -282,7 +282,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Maintenance schedulingReal-time analytics',
       'Mobile management appAPI for integration',
       '24/7 monitoringAutomated failover'
-    ],
+    ]
     popular: true,
     icon: '🌍',
     color: 'from-emerald-600 to-teal-700',
@@ -294,11 +294,11 @@ export const spaceTechServices: SpaceTechService[] = [
     setupTime: '1 week',
     category: 'Space Technology',
     realService: true,
-    technology: ['Network ManagementGlobal Coordination', 'AI OptimizationReact', 'Node.jsPostgreSQL', 'Real-time Systems'],
-    integrations: ['Ground stationsSatellite networks', 'Telecom systemsMonitoring tools', 'Control systems'],
-    useCases: ['Network managementTraffic optimization', 'Performance monitoringMaintenance planning', 'Failover managementGlobal coordination'],
+    technology: ['Network ManagementGlobal Coordination', 'AI OptimizationReact', 'Node.jsPostgreSQL', 'Real-time Systems']
+    integrations: ['Ground stationsSatellite networks', 'Telecom systemsMonitoring tools', 'Control systems']
+    useCases: ['Network managementTraffic optimization', 'Performance monitoringMaintenance planning', 'Failover managementGlobal coordination']
     roi: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.',
-    competitors: ['Basic managementManual coordination'],
+    competitors: ['Basic managementManual coordination']
     marketSize: '$25B ground station market',
     growthRate: '220% annual growth',
     variant: 'space-futuristic',
@@ -328,7 +328,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Data visualizationResearch collaboration',
       'Mobile appAPI for integration',
       'Real-time updatesAdvanced search'
-    ],
+    ]
     popular: true,
     icon: '🔬',
     color: 'from-purple-600 to-indigo-700',
@@ -340,11 +340,11 @@ export const spaceTechServices: SpaceTechService[] = [
     setupTime: '1 hour',
     category: 'Space Technology',
     realService: true,
-    technology: ['Data AnalyticsAI Analysis', 'Satellite DataReact', 'Node.jsPostgreSQL', 'Machine Learning'],
-    integrations: ['Satellite networksResearch databases', 'Educational platformsMedia systems', 'Government databases'],
-    useCases: ['Research analysisEducational content', 'Media reportingPolicy development', 'Scientific discoveryData exploration'],
+    technology: ['Data AnalyticsAI Analysis', 'Satellite DataReact', 'Node.jsPostgreSQL', 'Machine Learning']
+    integrations: ['Satellite networksResearch databases', 'Educational platformsMedia systems', 'Government databases']
+    useCases: ['Research analysisEducational content', 'Media reportingPolicy development', 'Scientific discoveryData exploration']
     roi: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.',
-    competitors: ['Basic data accessManual research'],
+    competitors: ['Basic data accessManual research']
     marketSize: '$15B space research market',
     growthRate: '180% annual growth',
     variant: 'space-futuristic',
@@ -374,7 +374,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Asset valuationTrading tools',
       'Mobile appAPI for integration',
       'Real-time tradingCompliance tools'
-    ],
+    ]
     popular: true,
     icon: '💎',
     color: 'from-violet-600 to-purple-700',
@@ -386,11 +386,11 @@ export const spaceTechServices: SpaceTechService[] = [
     setupTime: '1 week',
     category: 'Space Technology',
     realService: true,
-    technology: ['BlockchainSmart Contracts', 'Trading PlatformReact', 'Node.jsPostgreSQL', 'Security'],
-    integrations: ['Payment systemsBlockchain networks', 'Space servicesFinancial systems', 'Compliance platforms'],
-    useCases: ['Asset tradingService procurement', 'Capacity tradingInvestment trading', 'Insurance tradingMarket making'],
+    technology: ['BlockchainSmart Contracts', 'Trading PlatformReact', 'Node.jsPostgreSQL', 'Security']
+    integrations: ['Payment systemsBlockchain networks', 'Space servicesFinancial systems', 'Compliance platforms']
+    useCases: ['Asset tradingService procurement', 'Capacity tradingInvestment trading', 'Insurance tradingMarket making']
     roi: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.',
-    competitors: ['Manual contractsTraditional procurement'],
+    competitors: ['Manual contractsTraditional procurement']
     marketSize: '$100B space services market',
     growthRate: '300% annual growth',
     variant: 'space-futuristic',
@@ -420,7 +420,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Certification programsCareer guidance',
       'Mobile appProgress tracking',
       'Community forumsReal-time updates'
-    ],
+    ]
     popular: true,
     icon: '🎓',
     color: 'from-indigo-600 to-blue-700',
@@ -432,11 +432,11 @@ export const spaceTechServices: SpaceTechService[] = [
     setupTime: '1 hour',
     category: 'Space Technology',
     realService: true,
-    technology: ['Interactive LearningVirtual Reality', 'AI TutoringReact', 'Node.jsPostgreSQL', 'Simulation Engine'],
-    integrations: ['Educational platformsVR systems', 'Learning managementCareer platforms', 'Social networks'],
-    useCases: ['Space educationCareer training', 'Skill developmentProfessional certification', 'Academic learningPersonal development'],
+    technology: ['Interactive LearningVirtual Reality', 'AI TutoringReact', 'Node.jsPostgreSQL', 'Simulation Engine']
+    integrations: ['Educational platformsVR systems', 'Learning managementCareer platforms', 'Social networks']
+    useCases: ['Space educationCareer training', 'Skill developmentProfessional certification', 'Academic learningPersonal development']
     roi: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.',
-    competitors: ['Basic educationTraditional courses'],
+    competitors: ['Basic educationTraditional courses']
     marketSize: '$8B space education market',
     growthRate: '200% annual growth',
     variant: 'space-futuristic',
@@ -453,4 +453,4 @@ export const spaceTechServices: SpaceTechService[] = [
     rating: 4.9,
     reviews: 250
   }
-],
+]

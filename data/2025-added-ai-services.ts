@@ -17,7 +17,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Multi-channel ingestionAction tools and approvals',
       'Knowledge grounding with evalsConversation memory and handoff',
       'CSAT/NPS analyticsPII redaction and compliance'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-cyan-700 to-indigo-700',
@@ -29,11 +29,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '1–2 weeks',
     category: 'Customer Experience',
     realService: true,
-    technology: ['Function callingRAG', 'Speech-to-textObservability'],
-    integrations: ['ZendeskIntercom', 'FreshdeskGorgias'],
-    useCases: ['RefundsShipping issues', 'Account updates'],
+    technology: ['Function callingRAG', 'Speech-to-textObservability']
+    integrations: ['ZendeskIntercom', 'FreshdeskGorgias']
+    useCases: ['RefundsShipping issues', 'Account updates']
     roi: 'Deflect 40–70% tickets in 90 days',
-    competitors: ['ForethoughtCohere Bots'],
+    competitors: ['ForethoughtCohere Bots']
     marketSize: '$30B CX automation',
     growthRate: '22% YoY',
     variant: 'agents-managed',
@@ -56,7 +56,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Policy as codeAutomated evals and red-teams',
       'Bias/toxicity/PII testsIncident response playbooks',
       'Model cards and approvals'
-    ],
+    ]
     popular: false,
     icon: '⚖️',
     color: 'from-fuchsia-600 to-rose-700',
@@ -68,11 +68,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '3–5 weeks',
     category: 'AI Governance',
     realService: true,
-    technology: ['Vector DBPolicy engine', 'Eval harness'],
-    integrations: ['BigQuerySnowflake', 'DatabricksSIEMs'],
-    useCases: ['Model launchesVendor AI due diligence', 'Policy tracking'],
+    technology: ['Vector DBPolicy engine', 'Eval harness']
+    integrations: ['BigQuerySnowflake', 'DatabricksSIEMs']
+    useCases: ['Model launchesVendor AI due diligence', 'Policy tracking']
     roi: 'Avoid compliance incidents, speed approvals by 2–4x',
-    competitors: ['LakeraProtect AI'],
+    competitors: ['LakeraProtect AI']
     marketSize: '$5B AI security/gov',
     growthRate: '28% YoY',
     variant: 'governance-managed',
@@ -95,7 +95,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Brand style and tone controlsBriefs and outlines from keywords',
       'SEO scoring and interlinkingMulti-channel scheduler',
       'Performance analytics'
-    ],
+    ]
     popular: true,
     icon: '📝',
     color: 'from-pink-600 to-rose-700',
@@ -107,11 +107,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '3 days',
     category: 'Marketing',
     realService: true,
-    technology: ['LLM promptsRetrieval', 'Editorial workflows'],
-    integrations: ['WordPressWebflow', 'HubSpotBuffer'],
-    useCases: ['Blog postsEmail campaigns', 'Social calendars'],
+    technology: ['LLM promptsRetrieval', 'Editorial workflows']
+    integrations: ['WordPressWebflow', 'HubSpotBuffer']
+    useCases: ['Blog postsEmail campaigns', 'Social calendars']
     roi: 'Ship 3–5x more content with consistent quality',
-    competitors: ['JasperCopy.ai'],
+    competitors: ['JasperCopy.ai']
     marketSize: '$11B content marketing',
     growthRate: '17% YoY',
     variant: 'studio-managed',
@@ -134,7 +134,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Docs/RFC groundingCode and architecture snippets',
       'Sandboxed demo projectsSecurity/compliance answers with citations',
       'Handoff to human SE'
-    ],
+    ]
     popular: false,
     icon: '🧪',
     color: 'from-indigo-700 to-blue-800',
@@ -146,11 +146,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '1–2 weeks',
     category: 'Sales',
     realService: true,
-    technology: ['Tool useSandbox VMs', 'RAG'],
-    integrations: ['GitHubGitLab', 'NotionConfluence'],
-    useCases: ['RFP tech Q&ADemo scaffolds', 'Architecture reviews'],
+    technology: ['Tool useSandbox VMs', 'RAG']
+    integrations: ['GitHubGitLab', 'NotionConfluence']
+    useCases: ['RFP tech Q&ADemo scaffolds', 'Architecture reviews']
     roi: 'Shorten sales cycles by 15–30%',
-    competitors: ['Custom SE chatbots'],
+    competitors: ['Custom SE chatbots']
     marketSize: '$7B pre-sales tooling',
     growthRate: '15% YoY',
     variant: 'agent-se',
@@ -173,7 +173,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Feature store and embeddingsStreaming inference and alerts',
       'Case managementExplainability and scorecards',
       'Auto-remediation playbooks'
-    ],
+    ]
     popular: true,
     icon: '🕵️',
     color: 'from-rose-600 to-red-700',
@@ -185,11 +185,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '2–4 weeks',
     category: 'Risk',
     realService: true,
-    technology: ['StreamingVector DB', 'LLMs for triage'],
-    integrations: ['SnowflakeKafka', 'KinesisDatadog'],
-    useCases: ['Payment fraudAccount takeovers', 'Promo abuse'],
+    technology: ['StreamingVector DB', 'LLMs for triage']
+    integrations: ['SnowflakeKafka', 'KinesisDatadog']
+    useCases: ['Payment fraudAccount takeovers', 'Promo abuse']
     roi: 'Reduce fraud loss 15–40%',
-    competitors: ['Sift (lite)DIY ML + rules'],
+    competitors: ['Sift (lite)DIY ML + rules']
     marketSize: '$12B fraud detection',
     growthRate: '19% YoY',
     variant: 'risk-managed',
@@ -212,7 +212,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Idle/overprovision detectionSavings plan recommendations',
       'Change tickets and approvalsRollback and drift checks',
       'Savings dashboards'
-    ],
+    ]
     popular: true,
     icon: '💸',
     color: 'from-emerald-600 to-green-700',
@@ -224,11 +224,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '1–2 weeks',
     category: 'FinOps',
     realService: true,
-    technology: ['Cloud APIsPolicy engine', 'Approvals'],
-    integrations: ['AWSGCP', 'AzureJira'],
-    useCases: ['EC2/GKE/EKS/AKS rightsizingIdle resources cleanup'],
+    technology: ['Cloud APIsPolicy engine', 'Approvals']
+    integrations: ['AWSGCP', 'AzureJira']
+    useCases: ['EC2/GKE/EKS/AKS rightsizingIdle resources cleanup']
     roi: 'Save 10–30% cloud spend in 90 days',
-    competitors: ['CloudHealth (lite)Custom scripts'],
+    competitors: ['CloudHealth (lite)Custom scripts']
     marketSize: '$6B cloud cost',
     growthRate: '21% YoY',
     variant: 'finops-agent',
@@ -251,7 +251,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Repo-aware Q&A and snippetsRefactor and test scaffolding',
       'Incident-aware suggestionsSecurity policies and filters',
       'IDE and chat integrations'
-    ],
+    ]
     popular: false,
     icon: '🧰',
     color: 'from-indigo-700 to-slate-800',
@@ -263,11 +263,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '2–3 weeks',
     category: 'Developer Productivity',
     realService: true,
-    technology: ['RAGPolicies', 'Code actions'],
-    integrations: ['GitHubGitLab', 'JiraPagerDuty'],
-    useCases: ['RefactorsRunbooks', 'On-call help'],
+    technology: ['RAGPolicies', 'Code actions']
+    integrations: ['GitHubGitLab', 'JiraPagerDuty']
+    useCases: ['RefactorsRunbooks', 'On-call help']
     roi: 'Developer throughput up 20–40%',
-    competitors: ['GitHub Copilot (org tuned)'],
+    competitors: ['GitHub Copilot (org tuned)']
     marketSize: '$8B dev tooling',
     growthRate: '20% YoY',
     variant: 'dev-managed',
@@ -290,7 +290,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Multi-site sourcing and enrichmentStructured interviews with rubrics',
       'Bias checks and score explanationsAuto scheduling and reminders',
       'Offer letter drafting'
-    ],
+    ]
     popular: true,
     icon: '🧑‍💼',
     color: 'from-emerald-600 to-teal-700',
@@ -302,11 +302,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '1–2 weeks',
     category: 'HR Tech',
     realService: true,
-    technology: ['LLM agentsScheduling APIs', 'Policy filters'],
-    integrations: ['GreenhouseLever', 'Workday'],
-    useCases: ['SourcingScreening', 'Scheduling'],
+    technology: ['LLM agentsScheduling APIs', 'Policy filters']
+    integrations: ['GreenhouseLever', 'Workday']
+    useCases: ['SourcingScreening', 'Scheduling']
     roi: 'Time-to-hire down 20–40%',
-    competitors: ['Eightfold (lite)Hiretual'],
+    competitors: ['Eightfold (lite)Hiretual']
     marketSize: '$18B recruiting tech',
     growthRate: '16% YoY',
     variant: 'hr-agents',
@@ -329,7 +329,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Doc-to-runbook compilerGuardrails and approvers',
       'Rollback and blast-radius checksSLO/SLA awareness',
       'Post-incident summaries'
-    ],
+    ]
     popular: true,
     icon: '🛠️',
     color: 'from-indigo-700 to-slate-800',
@@ -341,11 +341,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '2–3 weeks',
     category: 'Operations',
     realService: true,
-    technology: ['LLM toolsPolicy engine', 'Observability'],
-    integrations: ['PagerDutyDatadog', 'GitHubJira'],
-    useCases: ['IncidentsDeploys', 'Maintenance'],
+    technology: ['LLM toolsPolicy engine', 'Observability']
+    integrations: ['PagerDutyDatadog', 'GitHubJira']
+    useCases: ['IncidentsDeploys', 'Maintenance']
     roi: 'MTTR down 20–35%',
-    competitors: ['Runbook tools + scripts'],
+    competitors: ['Runbook tools + scripts']
     marketSize: '$9B IT ops tools',
     growthRate: '14% YoY',
     variant: 'ops-agents',
@@ -368,7 +368,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Cohort-based forecastsScenario planner with drivers',
       'Explainability and deltasCSV/BI exports',
       'Approval workflows'
-    ],
+    ]
     popular: false,
     icon: '📈',
     color: 'from-cyan-700 to-indigo-700',
@@ -380,11 +380,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '2–4 weeks',
     category: 'Finance',
     realService: true,
-    technology: ['Time-series MLLLM explainers', 'BI connectors'],
-    integrations: ['SalesforceHubSpot', 'Snowflake'],
-    useCases: ['BookingsRetention', 'Cost planning'],
+    technology: ['Time-series MLLLM explainers', 'BI connectors']
+    integrations: ['SalesforceHubSpot', 'Snowflake']
+    useCases: ['BookingsRetention', 'Cost planning']
     roi: 'Forecast accuracy up 10–20%',
-    competitors: ['Pigment (lite)Anaplan (lite)'],
+    competitors: ['Pigment (lite)Anaplan (lite)']
     marketSize: '$5B FP&A tools',
     growthRate: '13% YoY',
     variant: 'rev-ml',
@@ -407,7 +407,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Demand and lead-time forecastsSupplier risk signals',
       'Route optimizationException detection',
       'Actionable alerts'
-    ],
+    ]
     popular: true,
     icon: '🚚',
     color: 'from-emerald-600 to-green-700',
@@ -419,11 +419,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '3–5 weeks',
     category: 'Operations',
     realService: true,
-    technology: ['Time-series MLOptimization', 'Agent tools'],
-    integrations: ['ERPWMS', 'TMSSnowflake'],
-    useCases: ['InventoryReplenishment', 'Logistics'],
+    technology: ['Time-series MLOptimization', 'Agent tools']
+    integrations: ['ERPWMS', 'TMSSnowflake']
+    useCases: ['InventoryReplenishment', 'Logistics']
     roi: 'Reduce stockouts and costs 10–25%',
-    competitors: ['Kinaxis (lite)o9 (lite)'],
+    competitors: ['Kinaxis (lite)o9 (lite)']
     marketSize: '$7B supply chain tech',
     growthRate: '15% YoY',
     variant: 'supply-agents',
@@ -446,7 +446,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Docs + code groundingDiagram generation',
       'Demo repo scaffoldingSlack/Email handoff',
       'Analytics and feedback loops'
-    ],
+    ]
     popular: true,
     icon: '🧩',
     color: 'from-indigo-700 to-sky-700',
@@ -458,11 +458,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '1–2 weeks',
     category: 'Revenue Acceleration',
     realService: true,
-    technology: ['Code parsersRAG', 'Tool useDiagrams'],
-    integrations: ['GitHubConfluence', 'Slack'],
-    useCases: ['POC buildsRFP Q&A', 'Architecture guidance'],
+    technology: ['Code parsersRAG', 'Tool useDiagrams']
+    integrations: ['GitHubConfluence', 'Slack']
+    useCases: ['POC buildsRFP Q&A', 'Architecture guidance']
     roi: 'Shortens presales cycles 20–40%',
-    competitors: ['CrestaVivun AI'],
+    competitors: ['CrestaVivun AI']
     marketSize: '$4B presales tooling',
     growthRate: '19% YoY',
     variant: 'ai-futuristic',
@@ -485,7 +485,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Brand voice tuningKeyword and SERP analysis',
       'Content calendar planningEditor approvals and versioning',
       'Performance analytics'
-    ],
+    ]
     popular: true,
     icon: '✍️',
     color: 'from-rose-600 to-violet-700',
@@ -497,11 +497,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '3–5 days',
     category: 'Marketing',
     realService: true,
-    technology: ['RAGLLM', 'SEO APIs'],
-    integrations: ['WordPressWebflow', 'HubSpot'],
-    useCases: ['Blog postsLanding pages', 'Email sequences'],
+    technology: ['RAGLLM', 'SEO APIs']
+    integrations: ['WordPressWebflow', 'HubSpot']
+    useCases: ['Blog postsLanding pages', 'Email sequences']
     roi: 'Cuts content cycle time 50–70%',
-    competitors: ['JasperWriter'],
+    competitors: ['JasperWriter']
     marketSize: '$10B genAI content',
     growthRate: '26% YoY',
     variant: 'marketing-futuristic',
@@ -524,7 +524,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Control mapping to NIST/ISO/EU AI ActAutomated eval runs and reports',
       'Evidence collection and storageFindings triage and assignments',
       'Audit pack generation'
-    ],
+    ]
     popular: false,
     icon: '🧭',
     color: 'from-emerald-700 to-slate-700',
@@ -536,11 +536,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '2–4 weeks',
     category: 'AI Governance',
     realService: true,
-    technology: ['Policy engineEval harness', 'Storage'],
-    integrations: ['JiraConfluence', 'SIEM'],
-    useCases: ['AI system inventoryControl testing', 'Audit prep'],
+    technology: ['Policy engineEval harness', 'Storage']
+    integrations: ['JiraConfluence', 'SIEM']
+    useCases: ['AI system inventoryControl testing', 'Audit prep']
     roi: 'Reduces audit prep hours by 60–80%',
-    competitors: ['MonitaurCalypso AI'],
+    competitors: ['MonitaurCalypso AI']
     marketSize: '$3B AI risk management',
     growthRate: '23% YoY',
     variant: 'security-futuristic',
@@ -563,7 +563,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'KPI tracker and deltasAnomaly detection and root-cause hints',
       'Segment drilldownsAction recommendations',
       'Email/Slack delivery with charts'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-violet-700 to-indigo-700',
@@ -575,11 +575,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '3 days',
     category: 'Analytics',
     realService: true,
-    technology: ['dbt/SQLLLM summaries', 'Warehouse connectors'],
-    integrations: ['SnowflakeBigQuery', 'RedshiftLooker'],
-    useCases: ['Weekly exec updatesAnomaly triage', 'Goal tracking'],
+    technology: ['dbt/SQLLLM summaries', 'Warehouse connectors']
+    integrations: ['SnowflakeBigQuery', 'RedshiftLooker']
+    useCases: ['Weekly exec updatesAnomaly triage', 'Goal tracking']
     roi: 'Saves 10+ analyst hours monthly, better, faster decisions',
-    competitors: ['Manual BI decksNarrative BI'],
+    competitors: ['Manual BI decksNarrative BI']
     marketSize: '$8B analytics add-ons',
     growthRate: '16% YoY',
     variant: 'briefs-managed',
@@ -602,7 +602,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Repo-aware reasoningTest scaffolding and refactors',
       'Flake detection and fixesCoverage insights on PRs',
       'CI integration'
-    ],
+    ]
     popular: false,
     icon: '🧪',
     color: 'from-emerald-700 to-teal-800',
@@ -614,11 +614,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '1–2 weeks',
     category: 'Developer Productivity',
     realService: true,
-    technology: ['Code parsersAST transforms', 'LLM planning'],
-    integrations: ['GitHubGitLab', 'JenkinsCircleCI'],
-    useCases: ['Improve coverageReduce flakiness', 'Speed reviews'],
+    technology: ['Code parsersAST transforms', 'LLM planning']
+    integrations: ['GitHubGitLab', 'JenkinsCircleCI']
+    useCases: ['Improve coverageReduce flakiness', 'Speed reviews']
     roi: 'Cut regressions and review time 20–40%',
-    competitors: ['Manual test writingCopilot (generic)'],
+    competitors: ['Manual test writingCopilot (generic)']
     marketSize: '$9B QA tooling',
     growthRate: '13% YoY',
     variant: 'qa-agent',
@@ -641,7 +641,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
       'Contract templates and registrySchema/SLI validation in CI',
       'Owner routing and SLAsBreaking change detection',
       'Catalog and lineage sync'
-    ],
+    ]
     popular: true,
     icon: '📜',
     color: 'from-amber-700 to-orange-700',
@@ -653,11 +653,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     setupTime: '2–3 weeks',
     category: 'Data Engineering',
     realService: true,
-    technology: ['Contracts DSLCI plugins', 'Catalog APIs'],
-    integrations: ['dbtAirflow/Dagster', 'Snowflake/BigQuery'],
-    useCases: ['Stable pipelinesSLA compliance', 'Change reviews'],
+    technology: ['Contracts DSLCI plugins', 'Catalog APIs']
+    integrations: ['dbtAirflow/Dagster', 'Snowflake/BigQuery']
+    useCases: ['Stable pipelinesSLA compliance', 'Change reviews']
     roi: 'Fewer incidents, faster safe changes',
-    competitors: ['DIY validations'],
+    competitors: ['DIY validations']
     marketSize: '$4B data quality',
     growthRate: '18% YoY',
     variant: 'contracts-assistant',

@@ -17,7 +17,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Model registry and lineageData/Concept drift detection',
       'Shadow and canary deploysFeature store and embedding store',
       'Guardrails and evalsRBAC and audit logs'
-    ],
+    ]
     popular: true,
     icon: '🛠️',
     color: 'from-slate-600 to-blue-700',
@@ -29,11 +29,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '3–6 weeks',
     category: 'MLOps',
     realService: true,
-    technology: ['KubernetesArgo', 'dbtFeast', 'Ray'],
-    integrations: ['AWSGCP', 'AzureDatabricks', 'Snowflake'],
-    useCases: ['LLM appsForecasting', 'Fraud detection'],
+    technology: ['KubernetesArgo', 'dbtFeast', 'Ray']
+    integrations: ['AWSGCP', 'AzureDatabricks', 'Snowflake']
+    useCases: ['LLM appsForecasting', 'Fraud detection']
     roi: 'Reduce infra toil 60%, faster cycle time 3–5x',
-    competitors: ['SageMakerVertex AI', 'MLflow-only setups'],
+    competitors: ['SageMakerVertex AI', 'MLflow-only setups']
     marketSize: '$15B+ ML tooling market',
     growthRate: '25% YoY',
     variant: 'enterprise-managed',
@@ -56,7 +56,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'mTLS and device posturePer-route policies',
       'Just-in-time accessSession recording',
       'SIEM integration'
-    ],
+    ]
     popular: true,
     icon: '🔐',
     color: 'from-amber-600 to-rose-700',
@@ -68,11 +68,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '2 weeks',
     category: 'Security',
     realService: true,
-    technology: ['Open Policy AgentEnvoy', 'OIDC'],
-    integrations: ['OktaAzure AD', 'Google WorkspaceSplunk'],
-    useCases: ['Admin accessPartner portals', 'Internal tools'],
+    technology: ['Open Policy AgentEnvoy', 'OIDC']
+    integrations: ['OktaAzure AD', 'Google WorkspaceSplunk']
+    useCases: ['Admin accessPartner portals', 'Internal tools']
     roi: 'Cuts VPN tickets and breaches risk significantly',
-    competitors: ['Cloudflare AccessTeleport'],
+    competitors: ['Cloudflare AccessTeleport']
     marketSize: '$20B zero-trust market',
     growthRate: '19% YoY',
     variant: 'managed',
@@ -95,7 +95,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'SLIs/SLOs and error budgetsIncident response and runbooks',
       'Auto-remediation playbooksObservability setup (logs, traces, metrics)',
       'Monthly reliability reviews'
-    ],
+    ]
     popular: true,
     icon: '🧭',
     color: 'from-slate-700 to-black',
@@ -107,11 +107,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '2–4 weeks',
     category: 'SRE',
     realService: true,
-    technology: ['PrometheusGrafana', 'OpenTelemetryPagerDuty'],
-    integrations: ['AWSGCP', 'AzureDatadog'],
-    useCases: ['Uptime SLAsLatency SLAs', 'Cost/Error trade-offs'],
+    technology: ['PrometheusGrafana', 'OpenTelemetryPagerDuty']
+    integrations: ['AWSGCP', 'AzureDatadog']
+    useCases: ['Uptime SLAsLatency SLAs', 'Cost/Error trade-offs']
     roi: 'Lower incidents 30–60%, faster MTTR',
-    competitors: ['Consultancies + DIY'],
+    competitors: ['Consultancies + DIY']
     marketSize: '$10B+ DevOps/SRE services',
     growthRate: '20% YoY',
     variant: 'managed',
@@ -134,7 +134,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Ingestion and CDC connectorsdbt transformations and tests',
       'Data catalog and lineageRow/column-level security',
       'Cost monitoring and quotas'
-    ],
+    ]
     popular: true,
     icon: '🗄️',
     color: 'from-cyan-700 to-blue-800',
@@ -146,11 +146,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '3–6 weeks',
     category: 'Data',
     realService: true,
-    technology: ['Fivetran/Airbytedbt', 'Dagster/AirflowSnowflake/BigQuery'],
-    integrations: ['LookerTableau', 'Power BI'],
-    useCases: ['Product analyticsFinance reporting', 'LLM feature pipelines'],
+    technology: ['Fivetran/Airbytedbt', 'Dagster/AirflowSnowflake/BigQuery']
+    integrations: ['LookerTableau', 'Power BI']
+    useCases: ['Product analyticsFinance reporting', 'LLM feature pipelines']
     roi: 'Cut build time and maintenance cost 2–4x',
-    competitors: ['ConsultanciesDIY cloud blueprints'],
+    competitors: ['ConsultanciesDIY cloud blueprints']
     marketSize: '$20B data services',
     growthRate: '18% YoY',
     variant: 'accelerator',
@@ -173,7 +173,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'GitOps and policy as codeCluster autoscaling and HPA/VPA',
       'Cost allocation and quotasMulti-env promotions',
       '24/7 monitoring and on-call'
-    ],
+    ]
     popular: true,
     icon: '☸️',
     color: 'from-blue-700 to-slate-800',
@@ -185,11 +185,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '3–6 weeks',
     category: 'Platform',
     realService: true,
-    technology: ['EKS/GKE/AKSArgoCD', 'Kyverno/OPAIstio'],
-    integrations: ['AWSGCP', 'AzureDatadog', 'Snyk'],
-    useCases: ['Multi-tenant SaaSInternal platforms', 'Batch and services'],
+    technology: ['EKS/GKE/AKSArgoCD', 'Kyverno/OPAIstio']
+    integrations: ['AWSGCP', 'AzureDatadog', 'Snyk']
+    useCases: ['Multi-tenant SaaSInternal platforms', 'Batch and services']
     roi: 'Cut infra toil 50%, faster deploys 3x',
-    competitors: ['DIY platform teamsPlatform vendors'],
+    competitors: ['DIY platform teamsPlatform vendors']
     marketSize: '$25B cloud-native platform',
     growthRate: '22% YoY',
     variant: 'managed',
@@ -212,7 +212,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Domain product templatesRow/column security and masking',
       'Lineage and catalogQuality checks and SLAs',
       'Self-serve access workflows'
-    ],
+    ]
     popular: false,
     icon: '🕸️',
     color: 'from-purple-700 to-fuchsia-800',
@@ -224,11 +224,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '6–10 weeks',
     category: 'Data',
     realService: true,
-    technology: ['SnowflakeBigQuery', 'Unity CatalogOpenLineage'],
-    integrations: ['dbtAirflow/Dagster', 'Looker/Tableau'],
-    useCases: ['Analytics productsML features', 'Data contracts'],
+    technology: ['SnowflakeBigQuery', 'Unity CatalogOpenLineage']
+    integrations: ['dbtAirflow/Dagster', 'Looker/Tableau']
+    useCases: ['Analytics productsML features', 'Data contracts']
     roi: 'Faster data delivery, better governance',
-    competitors: ['Traditional data warehousesConsultancies'],
+    competitors: ['Traditional data warehousesConsultancies']
     marketSize: '$30B data platforms',
     growthRate: '18% YoY',
     variant: 'enterprise-managed',
@@ -251,7 +251,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'SSO (SAML/OIDC) and SCIMRBAC/ABAC and group mapping',
       'Just-in-time accessDevice posture checks',
       'Audit logging and reports'
-    ],
+    ]
     popular: true,
     icon: '🔑',
     color: 'from-amber-700 to-orange-800',
@@ -263,11 +263,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '3–5 weeks',
     category: 'Security',
     realService: true,
-    technology: ['OktaAzure AD', 'Auth0OPA'],
-    integrations: ['AWSGCP', 'GitHubGitLab'],
-    useCases: ['Customer SSOWorkforce IAM', 'Admin access'],
+    technology: ['OktaAzure AD', 'Auth0OPA']
+    integrations: ['AWSGCP', 'GitHubGitLab']
+    useCases: ['Customer SSOWorkforce IAM', 'Admin access']
     roi: 'Reduce access incidents and support tickets',
-    competitors: ['DIY IAM projects'],
+    competitors: ['DIY IAM projects']
     marketSize: '$20B IAM services',
     growthRate: '15% YoY',
     variant: 'managed',
@@ -290,7 +290,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Cloud and endpoint scanningRisk-based scoring',
       'Ticketing integrationSLA tracking and reports',
       'Executive dashboards'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-rose-700',
@@ -302,11 +302,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '2–3 weeks',
     category: 'Security',
     realService: true,
-    technology: ['Cloud scannersEBPF agents', 'Risk engines'],
-    integrations: ['JiraServiceNow', 'Splunk'],
-    useCases: ['Patch cyclesCloud misconfig fixes', 'Compliance evidence'],
+    technology: ['Cloud scannersEBPF agents', 'Risk engines']
+    integrations: ['JiraServiceNow', 'Splunk']
+    useCases: ['Patch cyclesCloud misconfig fixes', 'Compliance evidence']
     roi: 'Reduce exploitable vulns 40–70%',
-    competitors: ['Qualys (managed)Tenable (managed)'],
+    competitors: ['Qualys (managed)Tenable (managed)']
     marketSize: '$15B vuln mgmt',
     growthRate: '12% YoY',
     variant: 'managed-security',
@@ -329,7 +329,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Identity-aware proxyDNS and web filtering',
       'Basic DLP policiesDevice posture checks',
       'Monthly security reviews'
-    ],
+    ]
     popular: false,
     icon: '🛰️',
     color: 'from-indigo-600 to-violet-700',
@@ -341,11 +341,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '3–5 weeks',
     category: 'Security',
     realService: true,
-    technology: ['IAPDNS firewall', 'CASB-lite'],
-    integrations: ['OktaAzure AD', 'Google Workspace'],
-    useCases: ['Secure remote accessWeb filtering', 'Basic DLP'],
+    technology: ['IAPDNS firewall', 'CASB-lite']
+    integrations: ['OktaAzure AD', 'Google Workspace']
+    useCases: ['Secure remote accessWeb filtering', 'Basic DLP']
     roi: 'Reduce breach risk and tickets',
-    competitors: ['Cloudflare One (managed)Zscaler (lite)'],
+    competitors: ['Cloudflare One (managed)Zscaler (lite)']
     marketSize: '$25B SASE',
     growthRate: '17% YoY',
     variant: 'managed',
@@ -368,7 +368,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Freshness and volume checksSchema drift detection',
       'Anomaly detectionOwner routing and SLAs',
       'Data incident postmortems'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-cyan-700 to-blue-800',
@@ -380,11 +380,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '2–4 weeks',
     category: 'Data',
     realService: true,
-    technology: ['OpenLineagedbt tests', 'Anomaly ML'],
-    integrations: ['SnowflakeBigQuery', 'Databricks'],
-    useCases: ['Pipeline healthData SLAs', 'Incident mgmt'],
+    technology: ['OpenLineagedbt tests', 'Anomaly ML']
+    integrations: ['SnowflakeBigQuery', 'Databricks']
+    useCases: ['Pipeline healthData SLAs', 'Incident mgmt']
     roi: 'Reduce data downtime 40–60%',
-    competitors: ['Monte Carlo (managed)Bigeye (lite)'],
+    competitors: ['Monte Carlo (managed)Bigeye (lite)']
     marketSize: '$2B data observability',
     growthRate: '20% YoY',
     variant: 'managed-data',
@@ -407,7 +407,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Policy-as-code packsQuotas and budgets',
       'Admission controlsGolden templates',
       'Drift detection'
-    ],
+    ]
     popular: true,
     icon: '☸️',
     color: 'from-slate-700 to-black',
@@ -419,11 +419,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '3–6 weeks',
     category: 'Platform',
     realService: true,
-    technology: ['Kyverno/OPAGatekeeper', 'Kubecost'],
-    integrations: ['EKS/GKE/AKSDatadog', 'Snyk'],
-    useCases: ['Multi-tenant safetyCost controls', 'Secure defaults'],
+    technology: ['Kyverno/OPAGatekeeper', 'Kubecost']
+    integrations: ['EKS/GKE/AKSDatadog', 'Snyk']
+    useCases: ['Multi-tenant safetyCost controls', 'Secure defaults']
     roi: 'Reduce misconfigs and waste 20–40%',
-    competitors: ['DIY policiesCustom platform builds'],
+    competitors: ['DIY policiesCustom platform builds']
     marketSize: '$6B platform eng services',
     growthRate: '18% YoY',
     variant: 'managed',
@@ -446,7 +446,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Ingestion connectors and CDCdbt transformations and tests',
       'Cost and performance tuningData contracts and lineage',
       'Observability and SLAs'
-    ],
+    ]
     popular: true,
     icon: '🗄️',
     color: 'from-slate-700 to-blue-700',
@@ -458,11 +458,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '4–10 weeks',
     category: 'Data Engineering',
     realService: true,
-    technology: ['SnowflakeBigQuery', 'Databricksdbt', 'Airbyte'],
-    integrations: ['AWSGCP', 'AzureFivetran'],
-    useCases: ['AnalyticsAI/ML', 'Finance/RevOps'],
+    technology: ['SnowflakeBigQuery', 'Databricksdbt', 'Airbyte']
+    integrations: ['AWSGCP', 'AzureFivetran']
+    useCases: ['AnalyticsAI/ML', 'Finance/RevOps']
     roi: '35–60% faster pipelines, 20–40% lower spend',
-    competitors: ['Consultancies with time-and-materials only'],
+    competitors: ['Consultancies with time-and-materials only']
     marketSize: '$20B data services',
     growthRate: '18% YoY',
     variant: 'project+managed',
@@ -485,7 +485,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'SLIs/SLOs and error budgetsOn-call rotations and tooling',
       'Incident response and postmortemsCapacity planning and load tests',
       'Cost/perf optimizations'
-    ],
+    ]
     popular: true,
     icon: '⚙️',
     color: 'from-emerald-700 to-slate-800',
@@ -497,11 +497,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '2–6 weeks',
     category: 'SRE',
     realService: true,
-    technology: ['KubernetesTerraform', 'Prometheus/GrafanaOpenTelemetry'],
-    integrations: ['PagerDutyDatadog', 'New RelicCloudWatch'],
-    useCases: ['Uptime SLAsPerformance tuning', 'Cost stability'],
+    technology: ['KubernetesTerraform', 'Prometheus/GrafanaOpenTelemetry']
+    integrations: ['PagerDutyDatadog', 'New RelicCloudWatch']
+    useCases: ['Uptime SLAsPerformance tuning', 'Cost stability']
     roi: 'Reduces incidents 30–50% within 90 days',
-    competitors: ['Traditional MSPs'],
+    competitors: ['Traditional MSPs']
     marketSize: '$12B reliability ops',
     growthRate: '16% YoY',
     variant: 'managed-service',
@@ -524,7 +524,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'DMARC/DKIM/SPF enforcementEDR deployment and baselines',
       'Phishing simulations and trainingSIEM integration and alerting',
       'Playbooks and tabletop drills'
-    ],
+    ]
     popular: false,
     icon: '🛡️',
     color: 'from-orange-600 to-rose-700',
@@ -536,11 +536,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '2–4 weeks',
     category: 'Security',
     realService: true,
-    technology: ['Okta/EntraGoogle Workspace', 'CrowdStrike/SentinelOneSIEM'],
-    integrations: ['OktaAzure AD', 'Google WorkspaceSplunk'],
-    useCases: ['Phish resiliencyDevice hygiene', 'Audit readiness'],
+    technology: ['Okta/EntraGoogle Workspace', 'CrowdStrike/SentinelOneSIEM']
+    integrations: ['OktaAzure AD', 'Google WorkspaceSplunk']
+    useCases: ['Phish resiliencyDevice hygiene', 'Audit readiness']
     roi: 'Reduces phishing risk by 60%+',
-    competitors: ['Security training-only vendors'],
+    competitors: ['Security training-only vendors']
     marketSize: '$8B email+endpoint security',
     growthRate: '15% YoY',
     variant: 'project+managed',
@@ -563,7 +563,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Unified telemetry pipelinesSLO dashboards and burn alerts',
       'Runbook-driven alertingCost optimization of telemetry',
       'Incident collaboration'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-indigo-700 to-blue-800',
@@ -575,11 +575,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '3–6 weeks',
     category: 'Observability',
     realService: true,
-    technology: ['OpenTelemetryGrafana', 'PrometheusTempo/Loki'],
-    integrations: ['DatadogNew Relic', 'CloudWatch'],
-    useCases: ['SLOs/SLAsIncident response', 'Perf/cost tuning'],
+    technology: ['OpenTelemetryGrafana', 'PrometheusTempo/Loki']
+    integrations: ['DatadogNew Relic', 'CloudWatch']
+    useCases: ['SLOs/SLAsIncident response', 'Perf/cost tuning']
     roi: 'Reduce alert noise 50–80%',
-    competitors: ['Tool-only vendors'],
+    competitors: ['Tool-only vendors']
     marketSize: '$15B observability',
     growthRate: '17% YoY',
     variant: 'managed',
@@ -602,7 +602,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'SD-WAN rolloutIdentity-aware segmentation',
       'Cloud interconnectsObservability and logs',
       'Playbooks and training'
-    ],
+    ]
     popular: false,
     icon: '🌐',
     color: 'from-cyan-700 to-blue-800',
@@ -614,11 +614,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '4–8 weeks',
     category: 'Networking',
     realService: true,
-    technology: ['SD-WANIAP', 'Cloud networking'],
-    integrations: ['AWSGCP', 'Azure'],
-    useCases: ['Branch to cloudPartner access', 'Secure hybrid'],
+    technology: ['SD-WANIAP', 'Cloud networking']
+    integrations: ['AWSGCP', 'Azure']
+    useCases: ['Branch to cloudPartner access', 'Secure hybrid']
     roi: 'Reduce downtime and MPLS costs',
-    competitors: ['Traditional network integrators'],
+    competitors: ['Traditional network integrators']
     marketSize: '$40B network services',
     growthRate: '12% YoY',
     variant: 'accelerator',
@@ -641,7 +641,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Data catalog and ownershipLineage and impact analysis',
       'RBAC/ABAC and maskingData contracts and SLAs',
       'Audit logs and reviews'
-    ],
+    ]
     popular: true,
     icon: '📚',
     color: 'from-emerald-700 to-teal-800',
@@ -653,11 +653,11 @@ export const addedITServices2025: AdvancedITService[] = [
     setupTime: '4–8 weeks',
     category: 'Data Governance',
     realService: true,
-    technology: ['OpenLineageUnity Catalog', 'OPA'],
-    integrations: ['SnowflakeBigQuery', 'Databricks'],
-    useCases: ['Access governanceChange impact', 'Data products'],
+    technology: ['OpenLineageUnity Catalog', 'OPA']
+    integrations: ['SnowflakeBigQuery', 'Databricks']
+    useCases: ['Access governanceChange impact', 'Data products']
     roi: 'Faster approvals and fewer incidents',
-    competitors: ['Large governance suites'],
+    competitors: ['Large governance suites']
     marketSize: '$6B governance',
     growthRate: '14% YoY',
     variant: 'foundation',

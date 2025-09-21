@@ -6,7 +6,7 @@ export interface AddedService {
   price: string | number,
   period?: string,
   category: string,
-  features: string[],
+  features: string[]
   icon?: string,
   link?: string,
   rating?: number,
@@ -21,7 +21,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $149',
     period: '/month',
     category: 'AI & Machine Learning',
-    features: ['RAG over docsSlack/Teams integration', 'Human handoffConversation analytics', 'Guardrails & policyAudit logs'],
+    features: ['RAG over docsSlack/Teams integration', 'Human handoffConversation analytics', 'Guardrails & policyAudit logs']
     icon: '🤖',
     link: 'https://ziontechgroup.com/ai-assistant',
     rating: 4.8,
@@ -35,7 +35,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $179',
     period: '/month',
     category: 'AI & Machine Learning',
-    features: ['Hybrid searchChunking + citations', 'Agent toolsEval harness', 'Latency/cost KPIsObservability'],
+    features: ['Hybrid searchChunking + citations', 'Agent toolsEval harness', 'Latency/cost KPIsObservability']
     icon: '🔗',
     link: 'https://ziontechgroup.com/agentic-rag',
     rating: 4.7,
@@ -49,7 +49,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $99',
     period: '/month',
     category: 'AI & Machine Learning',
-    features: ['Dataset/version mgmtGuardrail checks', 'Latency/cost KPIsPrompt diffing', 'Drift alertsReports'],
+    features: ['Dataset/version mgmtGuardrail checks', 'Latency/cost KPIsPrompt diffing', 'Drift alertsReports']
     icon: '🧪',
     link: 'https://ziontechgroup.com/ai-evals',
     rating: 4.6,
@@ -63,7 +63,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $199',
     period: '/month',
     category: 'AI & Machine Learning',
-    features: ['Policy engineJailbreak detection', 'PII/PHI redactionAudit trails', 'AlertsReviewer workflows'],
+    features: ['Policy engineJailbreak detection', 'PII/PHI redactionAudit trails', 'AlertsReviewer workflows']
     icon: '🛡️',
     link: 'https://ziontechgroup.com/ai-guardrails',
     rating: 4.7,
@@ -77,7 +77,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $59',
     period: '/month',
     category: 'Security & Compliance',
-    features: ['Auth/Z checksOWASP tests', 'CI gatesFix guidance', 'Dependency auditReports'],
+    features: ['Auth/Z checksOWASP tests', 'CI gatesFix guidance', 'Dependency auditReports']
     icon: '🔐',
     link: 'https://ziontechgroup.com/api-security-scanner',
     rating: 4.6,
@@ -91,7 +91,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $69',
     period: '/month',
     category: 'Observability',
-    features: ['OTel traces/metrics/logsSLOs & budgets', 'DashboardsAlerts', 'Incident exportAnomaly detection'],
+    features: ['OTel traces/metrics/logsSLOs & budgets', 'DashboardsAlerts', 'Incident exportAnomaly detection']
     icon: '📈',
     link: 'https://ziontechgroup.com/api-observability',
     rating: 4.5,
@@ -105,7 +105,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $79',
     period: '/month',
     category: 'Data & Databases',
-    features: ['Slow query rankingAI index advice', 'Pool tuningSLA dashboards', 'Capacity forecastsAlerts'],
+    features: ['Slow query rankingAI index advice', 'Pool tuningSLA dashboards', 'Capacity forecastsAlerts']
     icon: '🗄️',
     link: 'https://ziontechgroup.com/database-performance-monitor',
     rating: 4.6,
@@ -119,7 +119,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $99',
     period: '/month',
     category: 'FinOps',
-    features: ['Rightsizing & schedulesLifecycle policies', 'Anomaly alertsIaC outputs', 'K8s bin-packingReports'],
+    features: ['Rightsizing & schedulesLifecycle policies', 'Anomaly alertsIaC outputs', 'K8s bin-packingReports']
     icon: '💸',
     link: 'https://ziontechgroup.com/cloud-cost-optimizer',
     rating: 4.8,
@@ -133,7 +133,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $129',
     period: '/month',
     category: 'Marketing & Growth',
-    features: ['Segment targetingContext features', 'A/B experimentsPrivacy-first', 'No-code rulesAnalytics'],
+    features: ['Segment targetingContext features', 'A/B experimentsPrivacy-first', 'No-code rulesAnalytics']
     icon: '🎯',
     link: 'https://ziontechgroup.com/ai-website-personalization',
     rating: 4.5,
@@ -147,7 +147,7 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $29',
     period: '/month',
     category: 'Developer Tools',
-    features: ['Cron UIRetries + backoff', 'AlertsAudit logs', 'Multi-regionSecrets mgmt'],
+    features: ['Cron UIRetries + backoff', 'AlertsAudit logs', 'Multi-regionSecrets mgmt']
     icon: '⏰',
     link: 'https://ziontechgroup.com/serverless-cron-manager',
     rating: 4.4,
@@ -161,10 +161,10 @@ export const added2025Services: AddedService[] = [
     price: 'Starting at $39',
     period: '/month',
     category: 'Developer Tools',
-    features: ['Durable ingestionRetries & replay', 'DLQSignature checks', 'Delivery analyticsAlerts'],
+    features: ['Durable ingestionRetries & replay', 'DLQSignature checks', 'Delivery analyticsAlerts']
     icon: '🔁',
     link: 'https://ziontechgroup.com/webhook-relay-replay',
     rating: 4.6,
     customerCount: 640
   }
-],
+]

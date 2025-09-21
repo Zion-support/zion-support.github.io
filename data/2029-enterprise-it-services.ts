@@ -60,7 +60,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       'Self-optimizing performance',
       'Autonomous security management',
       'Intelligent resource allocation'
-    ],
+    ]
     popular: true,
     icon: '🏢',
     color: 'from-blue-600 via-indigo-600 to-purple-600',
@@ -72,11 +72,11 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     setupTime: '4-6 weeks',
     category: 'Autonomous IT Operations',
     realService: true,
-    technology: ['AI automation', 'Machine learning', 'IT automation', 'Infrastructure management', 'Intelligent monitoring'],
-    integrations: ['Cloud platforms', 'IT management tools', 'Monitoring systems', 'Security platforms', 'Network tools'],
-    useCases: ['IT infrastructure management', 'Data center operations', 'Cloud management', 'Network operations', 'Security operations'],
+    technology: ['AI automation', 'Machine learning', 'IT automation', 'Infrastructure management', 'Intelligent monitoring']
+    integrations: ['Cloud platforms', 'IT management tools', 'Monitoring systems', 'Security platforms', 'Network tools']
+    useCases: ['IT infrastructure management', 'Data center operations', 'Cloud management', 'Network operations', 'Security operations']
     roi: '600%+ ROI through reduced operational costs and improved reliability.',
-    competitors: ['Traditional IT management', 'Basic automation tools', 'Manual operations'],
+    competitors: ['Traditional IT management', 'Basic automation tools', 'Manual operations']
     marketSize: '$45B IT operations market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -111,7 +111,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       'Quantum performance monitoring',
       'Quantum cost optimization',
       'Quantum scalability management'
-    ],
+    ]
     popular: true,
     icon: '☁️',
     color: 'from-indigo-600 via-purple-600 to-pink-600',
@@ -123,11 +123,11 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     setupTime: '6-8 weeks',
     category: 'Quantum Cloud Infrastructure',
     realService: true,
-    technology: ['Quantum computing', 'Cloud infrastructure', 'Quantum algorithms', 'Hybrid systems', 'Quantum networking'],
-    integrations: ['Existing cloud platforms', 'Quantum computers', 'Classical systems', 'Network infrastructure', 'Security systems'],
-    useCases: ['High-performance computing', 'Quantum applications', 'Scientific computing', 'Financial modeling', 'AI training'],
+    technology: ['Quantum computing', 'Cloud infrastructure', 'Quantum algorithms', 'Hybrid systems', 'Quantum networking']
+    integrations: ['Existing cloud platforms', 'Quantum computers', 'Classical systems', 'Network infrastructure', 'Security systems']
+    useCases: ['High-performance computing', 'Quantum applications', 'Scientific computing', 'Financial modeling', 'AI training']
     roi: '800%+ ROI through quantum speedup and improved cloud performance.',
-    competitors: ['Traditional cloud providers', 'Basic quantum computing', 'Classical cloud infrastructure'],
+    competitors: ['Traditional cloud providers', 'Basic quantum computing', 'Classical cloud infrastructure']
     marketSize: '$60B quantum cloud market',
     growthRate: '500% annual growth',
     variant: 'quantum-futuristic',
@@ -162,7 +162,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       'Security automation',
       'Compliance management',
       'Real-time threat hunting'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 via-pink-600 to-purple-600',
@@ -174,11 +174,11 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     setupTime: '3-5 weeks',
     category: 'AI Enterprise Security',
     realService: true,
-    technology: ['AI security', 'Machine learning', 'Threat detection', 'Behavioral analysis', 'Zero-trust security'],
-    integrations: ['Security tools', 'SIEM systems', 'Network monitoring', 'Identity management', 'Compliance platforms'],
-    useCases: ['Threat detection', 'Incident response', 'Compliance management', 'Security monitoring', 'Risk assessment'],
+    technology: ['AI security', 'Machine learning', 'Threat detection', 'Behavioral analysis', 'Zero-trust security']
+    integrations: ['Security tools', 'SIEM systems', 'Network monitoring', 'Identity management', 'Compliance platforms']
+    useCases: ['Threat detection', 'Incident response', 'Compliance management', 'Security monitoring', 'Risk assessment']
     roi: '500%+ ROI through improved security and reduced breach costs.',
-    competitors: ['Traditional security tools', 'Basic AI security', 'Manual security operations'],
+    competitors: ['Traditional security tools', 'Basic AI security', 'Manual security operations']
     marketSize: '$40B AI security market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -213,7 +213,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       'Edge data processing',
       'Edge networking optimization',
       'Edge cost management'
-    ],
+    ]
     popular: true,
     icon: '🌐',
     color: 'from-green-600 via-emerald-600 to-teal-600',
@@ -225,11 +225,11 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     setupTime: '3-4 weeks',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: ['Edge computing', 'IoT management', 'Distributed systems', 'Edge optimization', 'Edge security'],
-    integrations: ['IoT devices', 'Edge servers', 'Cloud platforms', 'Network infrastructure', 'Security systems'],
-    useCases: ['IoT management', 'Edge application deployment', 'Distributed computing', 'Smart city infrastructure', 'Industrial IoT'],
+    technology: ['Edge computing', 'IoT management', 'Distributed systems', 'Edge optimization', 'Edge security']
+    integrations: ['IoT devices', 'Edge servers', 'Cloud platforms', 'Network infrastructure', 'Security systems']
+    useCases: ['IoT management', 'Edge application deployment', 'Distributed computing', 'Smart city infrastructure', 'Industrial IoT']
     roi: '400%+ ROI through improved edge performance and reduced latency.',
-    competitors: ['Basic edge management', 'Traditional IoT platforms', 'Manual edge operations'],
+    competitors: ['Basic edge management', 'Traditional IoT platforms', 'Manual edge operations']
     marketSize: '$30B edge computing market',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -264,7 +264,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       'Threat detection',
       'Compliance management',
       'Security automation'
-    ],
+    ]
     popular: true,
     icon: '🔒',
     color: 'from-orange-600 via-red-600 to-pink-600',
@@ -276,11 +276,11 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     setupTime: '4-6 weeks',
     category: 'Zero Trust Security',
     realService: true,
-    technology: ['Zero-trust security', 'Network security', 'Identity management', 'Threat detection', 'Security automation'],
-    integrations: ['Network infrastructure', 'Identity systems', 'Security tools', 'Compliance platforms', 'Monitoring systems'],
-    useCases: ['Network security', 'Identity verification', 'Threat prevention', 'Compliance management', 'Security automation'],
+    technology: ['Zero-trust security', 'Network security', 'Identity management', 'Threat detection', 'Security automation']
+    integrations: ['Network infrastructure', 'Identity systems', 'Security tools', 'Compliance platforms', 'Monitoring systems']
+    useCases: ['Network security', 'Identity verification', 'Threat prevention', 'Compliance management', 'Security automation']
     roi: '600%+ ROI through improved security and reduced breach risks.',
-    competitors: ['Traditional network security', 'Basic zero-trust tools', 'Manual security management'],
+    competitors: ['Traditional network security', 'Basic zero-trust tools', 'Manual security management']
     marketSize: '$35B zero-trust market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
@@ -315,7 +315,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       'Interoperability tools',
       'Compliance management',
       'Blockchain analytics'
-    ],
+    ]
     popular: true,
     icon: '⛓️',
     color: 'from-yellow-600 via-orange-600 to-red-600',
@@ -327,11 +327,11 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     setupTime: '3-5 weeks',
     category: 'Blockchain & DLT',
     realService: true,
-    technology: ['Blockchain technology', 'Smart contracts', 'Decentralized applications', 'Consensus mechanisms', 'Blockchain security'],
-    integrations: ['Existing systems', 'Cloud platforms', 'Financial systems', 'Supply chain platforms', 'Identity systems'],
-    useCases: ['Financial services', 'Supply chain management', 'Healthcare records', 'Government services', 'Digital identity'],
+    technology: ['Blockchain technology', 'Smart contracts', 'Decentralized applications', 'Consensus mechanisms', 'Blockchain security']
+    integrations: ['Existing systems', 'Cloud platforms', 'Financial systems', 'Supply chain platforms', 'Identity systems']
+    useCases: ['Financial services', 'Supply chain management', 'Healthcare records', 'Government services', 'Digital identity']
     roi: '500%+ ROI through blockchain efficiency and new business models.',
-    competitors: ['Basic blockchain tools', 'Traditional systems', 'Manual blockchain management'],
+    competitors: ['Basic blockchain tools', 'Traditional systems', 'Manual blockchain management']
     marketSize: '$25B enterprise blockchain market',
     growthRate: '250% annual growth',
     variant: 'blockchain-futuristic',
@@ -366,7 +366,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       'Network monitoring',
       'Compliance management',
       '5G analytics'
-    ],
+    ]
     popular: true,
     icon: '📡',
     color: 'from-cyan-600 via-blue-600 to-indigo-600',
@@ -378,11 +378,11 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     setupTime: '6-8 weeks',
     category: '5G & Telecommunications',
     realService: true,
-    technology: ['5G technology', 'Network infrastructure', 'Network slicing', 'Edge computing', '5G security'],
-    integrations: ['Existing networks', 'IoT devices', 'Edge computing', 'Cloud platforms', 'Security systems'],
-    useCases: ['Manufacturing automation', 'Healthcare connectivity', 'Transportation systems', 'Smart city infrastructure', 'Industrial IoT'],
+    technology: ['5G technology', 'Network infrastructure', 'Network slicing', 'Edge computing', '5G security']
+    integrations: ['Existing networks', 'IoT devices', 'Edge computing', 'Cloud platforms', 'Security systems']
+    useCases: ['Manufacturing automation', 'Healthcare connectivity', 'Transportation systems', 'Smart city infrastructure', 'Industrial IoT']
     roi: '700%+ ROI through improved connectivity and new business capabilities.',
-    competitors: ['Traditional networks', 'Basic 5G solutions', 'Manual network management'],
+    competitors: ['Traditional networks', 'Basic 5G solutions', 'Manual network management']
     marketSize: '$40B 5G private network market',
     growthRate: '400% annual growth',
     variant: 'telecom-futuristic',

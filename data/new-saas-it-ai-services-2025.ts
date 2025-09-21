@@ -17,7 +17,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'Cross-device attribution and UTM stitchingFraud heuristics and anomaly detection',
 			'Tiered commissions and coupon attributionAutomated payouts and tax forms',
 			'Shopify/WooCommerce checkout pluginsWebhooks, API, and GDPR controls'
-		],
+		]
 		popular: true,
 		icon: '🤝',
 		color: 'from-emerald-600 to-teal-700',
@@ -29,11 +29,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 hours',
 		category: 'Micro SAAS',
 		realService: true,
-		technology: ['Next.jsPostgreSQL', 'StripeWebhook Workers'],
-		integrations: ['ShopifyWooCommerce', 'StripeHubSpot', 'Pipedrive'],
-		useCases: ['Launch affiliate programsReduce fraud', 'Automate payouts'],
+		technology: ['Next.jsPostgreSQL', 'StripeWebhook Workers']
+		integrations: ['ShopifyWooCommerce', 'StripeHubSpot', 'Pipedrive']
+		useCases: ['Launch affiliate programsReduce fraud', 'Automate payouts']
 		roi: 'Increase referral revenue 10–25%',
-		competitors: ['RefersionLeadDyno', 'Post Affiliate Pro'],
+		competitors: ['RefersionLeadDyno', 'Post Affiliate Pro']
 		marketSize: '$2B+ affiliate software',
 		growthRate: '12% CAGR',
 		variant: 'holographic-advanced',
@@ -56,7 +56,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'Cookie-less tracking and EU hostingGoals, funnels, and UTM reports',
 			'Click-to-call/email events out of the boxWeekly insights digest',
 			'Embeddable public dashboardsCSV/JSON export'
-		],
+		]
 		popular: false,
 		icon: '📊',
 		color: 'from-cyan-600 to-blue-700',
@@ -68,11 +68,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '15 minutes',
 		category: 'Analytics',
 		realService: true,
-		technology: ['Next.jsEdge Workers', 'PostgreSQL'],
-		integrations: ['WordPressWebflow', 'WixSquarespace'],
-		useCases: ['Track leadsMeasure campaigns', 'Share public stats'],
+		technology: ['Next.jsEdge Workers', 'PostgreSQL']
+		integrations: ['WordPressWebflow', 'WixSquarespace']
+		useCases: ['Track leadsMeasure campaigns', 'Share public stats']
 		roi: 'Clarity on ROI with < 5 min setup',
-		competitors: ['PlausibleFathom'],
+		competitors: ['PlausibleFathom']
 		marketSize: '$1B+ SMB tooling',
 		growthRate: '18% CAGR',
 		variant: 'quantum',
@@ -95,7 +95,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'Email-to-ticket and rules-based routingSLA timers and breach alerts',
 			'Knowledge base and runbooksClient portal with reports and billing summaries',
 			'RMM webhooks and remote access shortcutsIntake forms and approvals'
-		],
+		]
 		popular: true,
 		icon: '🛠️',
 		color: 'from-indigo-600 to-purple-700',
@@ -107,11 +107,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 day',
 		category: 'IT Services',
 		realService: true,
-		technology: ['Next.jsPostgreSQL', 'IMAP/SMTP'],
-		integrations: ['RMM toolsSlack', 'Email'],
-		useCases: ['Manage ticketsMeet SLAs', 'Share reports'],
+		technology: ['Next.jsPostgreSQL', 'IMAP/SMTP']
+		integrations: ['RMM toolsSlack', 'Email']
+		useCases: ['Manage ticketsMeet SLAs', 'Share reports']
 		roi: 'Reduce resolution time 20–35%',
-		competitors: ['FreshdeskZendesk'],
+		competitors: ['FreshdeskZendesk']
 		marketSize: '$10B ITSM',
 		growthRate: '14% CAGR',
 		variant: 'holographic-matrix',
@@ -134,7 +134,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'Templates for blog, social, emailTone and style controls',
 			'SEO keywords and outline suggestionsPlagiarism and fact checks',
 			'Brand voice and snippet libraryOne-click CMS export'
-		],
+		]
 		popular: false,
 		icon: '🧠',
 		color: 'from-pink-600 to-rose-700',
@@ -146,11 +146,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: 'Instant',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['LLMsNext.js'],
-		integrations: ['WordPressWebflow', 'Notion'],
-		useCases: ['Blog productionEmail campaigns', 'Social media'],
+		technology: ['LLMsNext.js']
+		integrations: ['WordPressWebflow', 'Notion']
+		useCases: ['Blog productionEmail campaigns', 'Social media']
 		roi: 'Reduce content time by 60–80%',
-		competitors: ['JasperCopy.ai'],
+		competitors: ['JasperCopy.ai']
 		marketSize: '$7B+ by 2029',
 		growthRate: '22% CAGR',
 		variant: 'quantum-holographic',
@@ -173,7 +173,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'RMA flows and label generationReturn status notifications',
 			'Warehouse and carrier integrationsExchange/store credit flows',
 			'Fraud heuristics and abuse controlsReasons analytics and policy rules'
-		],
+		]
 		popular: true,
 		icon: '📦',
 		color: 'from-amber-600 to-orange-700',
@@ -185,11 +185,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '3 hours',
 		category: 'Micro SAAS',
 		realService: true,
-		technology: ['Next.jsCarrier APIs', 'Stripe'],
-		integrations: ['ShopifyWooCommerce', 'Shippo'],
-		useCases: ['Reduce returns frictionRecover revenue', 'Track costs'],
+		technology: ['Next.jsCarrier APIs', 'Stripe']
+		integrations: ['ShopifyWooCommerce', 'Shippo']
+		useCases: ['Reduce returns frictionRecover revenue', 'Track costs']
 		roi: 'Cut return handling time 40–60%',
-		competitors: ['Loop ReturnsReturnly'],
+		competitors: ['Loop ReturnsReturnly']
 		marketSize: '$5B returns SaaS',
 		growthRate: '20% CAGR',
 		variant: 'holographic-advanced',
@@ -212,7 +212,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'Drag-and-drop sequence builderSend windows and throttling',
 			'Intent classification and auto-stopCRM field mapping and sync',
 			'A/B tests and analyticsCustom tracking domains'
-		],
+		]
 		popular: false,
 		icon: '📧',
 		color: 'from-sky-600 to-indigo-700',
@@ -224,11 +224,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '30 minutes',
 		category: 'Sales & Marketing',
 		realService: true,
-		technology: ['IMAP/SMTPNext.js'],
-		integrations: ['HubSpotPipedrive', 'Zoho'],
-		useCases: ['Nurture leadsReopen opportunities', 'Auto follow-ups'],
+		technology: ['IMAP/SMTPNext.js']
+		integrations: ['HubSpotPipedrive', 'Zoho']
+		useCases: ['Nurture leadsReopen opportunities', 'Auto follow-ups']
 		roi: 'Lift conversion 10–20%',
-		competitors: ['Reply.ioMixmax'],
+		competitors: ['Reply.ioMixmax']
 		marketSize: '$8B sales tools',
 		growthRate: '10% CAGR',
 		variant: 'quantum',
@@ -251,7 +251,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'Speaker diarizationWord-level timestamps',
 			'Highlight extractionGlossaries and style rules',
 			'Podcast host integrationsPublic transcript pages'
-		],
+		]
 		popular: false,
 		icon: '🎙️',
 		color: 'from-violet-600 to-fuchsia-700',
@@ -263,11 +263,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: 'Instant',
 		category: 'Media',
 		realService: true,
-		technology: ['Speech-to-textNext.js'],
-		integrations: ['BuzzsproutAnchor', 'YouTube'],
-		useCases: ['AccessibilitySEO', 'Clip creation'],
+		technology: ['Speech-to-textNext.js']
+		integrations: ['BuzzsproutAnchor', 'YouTube']
+		useCases: ['AccessibilitySEO', 'Clip creation']
 		roi: 'Grow organic traffic 5–15%',
-		competitors: ['RevDescript'],
+		competitors: ['RevDescript']
 		marketSize: '$1B transcription',
 		growthRate: '9% CAGR',
 		variant: 'holographic-advanced',
@@ -290,7 +290,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'Templates for design, dev, photo, and moreDrag-and-drop sections',
 			'Client testimonials and logosBlog and case study layouts',
 			'Custom domains and SSLAnalytics and SEO basics'
-		],
+		]
 		popular: false,
 		icon: '🖼️',
 		color: 'from-slate-600 to-gray-700',
@@ -302,11 +302,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '10 minutes',
 		category: 'Micro SAAS',
 		realService: true,
-		technology: ['Next.jsEdge hosting'],
-		integrations: ['FathomPlausible', 'Forms'],
-		useCases: ['Launch portfolioShowcase work', 'Capture leads'],
+		technology: ['Next.jsEdge hosting']
+		integrations: ['FathomPlausible', 'Forms']
+		useCases: ['Launch portfolioShowcase work', 'Capture leads']
 		roi: 'Faster client acquisition',
-		competitors: ['CarrdWebflow'],
+		competitors: ['CarrdWebflow']
 		marketSize: '$3B+ creators',
 		growthRate: '11% CAGR',
 		variant: 'saas-futuristic',
@@ -329,7 +329,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'Contacts with tags and notesCalendar and appointment reminders',
 			'Simple pipeline with stagesGmail/Outlook sync',
 			'SMS/email remindersImport/export CSV'
-		],
+		]
 		popular: false,
 		icon: '📇',
 		color: 'from-teal-600 to-emerald-700',
@@ -341,11 +341,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: '30 minutes',
 		category: 'CRM',
 		realService: true,
-		technology: ['Next.jsCalendar APIs'],
-		integrations: ['Google CalendarOutlook', 'Twilio'],
-		useCases: ['Track customersBook appointments', 'Close deals'],
+		technology: ['Next.jsCalendar APIs']
+		integrations: ['Google CalendarOutlook', 'Twilio']
+		useCases: ['Track customersBook appointments', 'Close deals']
 		roi: 'Improved follow-through and show-up rate',
-		competitors: ['HubSpot StarterZoho Bigin'],
+		competitors: ['HubSpot StarterZoho Bigin']
 		marketSize: '$50B CRM',
 		growthRate: '12% CAGR',
 		variant: 'quantum',
@@ -368,7 +368,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 			'Keyword and intent mappingOutline and heading suggestions',
 			'Schema and internal link hintsCompetitor gap analysis',
 			'Readability and tone scoresCMS plugins'
-		],
+		]
 		popular: true,
 		icon: '🔎',
 		color: 'from-cyan-600 to-emerald-700',
@@ -380,11 +380,11 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		setupTime: 'Instant',
 		category: 'SEO',
 		realService: true,
-		technology: ['LLMsCrawler'],
-		integrations: ['WordPressWebflow', 'Notion'],
-		useCases: ['On-page optimizationBriefs', 'Content refresh'],
+		technology: ['LLMsCrawler']
+		integrations: ['WordPressWebflow', 'Notion']
+		useCases: ['On-page optimizationBriefs', 'Content refresh']
 		roi: 'Lift organic traffic 15–35%',
-		competitors: ['Surfer SEOClearscope'],
+		competitors: ['Surfer SEOClearscope']
 		marketSize: '$2B SEO tools',
 		growthRate: '13% CAGR',
 		variant: 'holographic-advanced',
@@ -396,4 +396,4 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		rating: 4.5,
 		reviews: 17
 	}
-],
+]

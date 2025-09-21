@@ -4,7 +4,7 @@ export interface QuantumSpaceService {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
       "API access",
       "Documentation",
       "Support services"
-    ],
+    ]
     link: "/services/quantum-computing-platform",
     category: "Quantum Computing",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

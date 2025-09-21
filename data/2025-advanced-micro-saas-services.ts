@@ -8,14 +8,14 @@ export const advancedMicroSaasServices2025 = [
       'Real-time health score monitoringPersonalized success playbooks',
       'Integration with 50+ CRM and support toolsAdvanced analytics and reporting dashboard',
       'Automated check-in schedulingCustomer sentiment analysis'
-    ],
+    ]
     pricing: {
       starter: { price: 89, period: 'month', features: ['Up to 500 customersBasic AI insights', 'Email automation'] },
       professional: { price: 199, period: 'month', features: ['Up to 2,000 customersAdvanced AI models', 'Full automation suiteCustom integrations'] },
       enterprise: { price: 499, period: 'month', features: ['Unlimited customersCustom AI training', 'White-label solutionDedicated success manager'] }
     },
     category: 'Customer Success',
-    tags: ['AICustomer Success', 'AutomationAnalytics'],
+    tags: ['AICustomer Success', 'AutomationAnalytics']
     website: 'https://ziontechgroup.com/customer-success-ai-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -34,14 +34,14 @@ export const advancedMicroSaasServices2025 = [
       'Multi-location inventory trackingSupplier performance analytics',
       'Real-time stock level monitoringIntegration with major e-commerce platforms',
       'Advanced reporting and analyticsMobile app for warehouse management'
-    ],
+    ]
     pricing: {
       starter: { price: 79, period: 'month', features: ['Up to 1,000 SKUsBasic forecasting', 'Email alerts'] },
       professional: { price: 179, period: 'month', features: ['Up to 10,000 SKUsAdvanced AI models', 'Full automationMulti-location support'] },
       enterprise: { price: 399, period: 'month', features: ['Unlimited SKUsCustom AI training', 'API accessDedicated support'] }
     },
     category: 'Inventory Management',
-    tags: ['AIInventory', 'Supply ChainAutomation'],
+    tags: ['AIInventory', 'Supply ChainAutomation']
     website: 'https://ziontechgroup.com/smart-inventory-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -60,14 +60,14 @@ export const advancedMicroSaasServices2025 = [
       'Compliance audit trailEmployee handbook builder',
       'Training completion trackingIntegration with major HRIS platforms',
       'Advanced reporting and analyticsLegal document generation'
-    ],
+    ]
     pricing: {
       starter: { price: 99, period: 'month', features: ['Up to 100 employeesBasic compliance tools', 'Policy templates'] },
       professional: { price: 249, period: 'month', features: ['Up to 500 employeesAdvanced automation', 'Custom policiesFull compliance suite'] },
       enterprise: { price: 599, period: 'month', features: ['Unlimited employeesCustom compliance rules', 'White-label solutionLegal consultation'] }
     },
     category: 'HR & Compliance',
-    tags: ['HRCompliance', 'AutomationLegal'],
+    tags: ['HRCompliance', 'AutomationLegal']
     website: 'https://ziontechgroup.com/hr-compliance-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -86,14 +86,14 @@ export const advancedMicroSaasServices2025 = [
       'Policy compliance enforcementReal-time spending analytics',
       'Mobile app for receipt captureIntegration with accounting software',
       'Advanced reporting and dashboardsAutomated approval workflows'
-    ],
+    ]
     pricing: {
       starter: { price: 59, period: 'month', features: ['Up to 50 usersBasic OCR', 'Expense tracking'] },
       professional: { price: 149, period: 'month', features: ['Up to 200 usersAdvanced AI', 'Full automationCustom policies'] },
       enterprise: { price: 349, period: 'month', features: ['Unlimited usersCustom AI training', 'API accessDedicated support'] }
     },
     category: 'Expense Management',
-    tags: ['AIExpense Management', 'OCRAutomation'],
+    tags: ['AIExpense Management', 'OCRAutomation']
     website: 'https://ziontechgroup.com/expense-ai-manager',
     contact: {
       phone: '+1 302 464 0950',
@@ -112,14 +112,14 @@ export const advancedMicroSaasServices2025 = [
       'Contract lifecycle trackingRisk assessment and scoring',
       'Integration with e-signature platformsAdvanced analytics and reporting',
       'Custom workflow automationLegal compliance monitoring'
-    ],
+    ]
     pricing: {
       starter: { price: 129, period: 'month', features: ['Up to 100 contractsBasic AI analysis', 'Template library'] },
       professional: { price: 299, period: 'month', features: ['Up to 1,000 contractsAdvanced AI', 'Full automationCustom workflows'] },
       enterprise: { price: 699, period: 'month', features: ['Unlimited contractsCustom AI training', 'White-label solutionLegal consultation'] }
     },
     category: 'Contract Management',
-    tags: ['AIContract Management', 'Legal TechAutomation'],
+    tags: ['AIContract Management', 'Legal TechAutomation']
     website: 'https://ziontechgroup.com/contract-flow-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -138,14 +138,14 @@ export const advancedMicroSaasServices2025 = [
       'Contract compliance monitoringSpend analysis and optimization',
       'Integration with ERP systemsAdvanced analytics and reporting',
       'Risk assessment and mitigationSupplier diversity tracking'
-    ],
+    ]
     pricing: {
       starter: { price: 89, period: 'month', features: ['Up to 50 vendorsBasic performance tracking', 'Procurement tools'] },
       professional: { price: 199, period: 'month', features: ['Up to 200 vendorsAdvanced AI', 'Full automationCustom workflows'] },
       enterprise: { price: 449, period: 'month', features: ['Unlimited vendorsCustom AI training', 'API accessDedicated support'] }
     },
     category: 'Vendor Management',
-    tags: ['AIVendor Management', 'ProcurementAutomation'],
+    tags: ['AIVendor Management', 'ProcurementAutomation']
     website: 'https://ziontechgroup.com/vendor-iq-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -164,14 +164,14 @@ export const advancedMicroSaasServices2025 = [
       'Automated task assignmentReal-time project analytics',
       'Integration with development toolsAdvanced reporting and dashboards',
       'Custom workflow automationTeam collaboration tools'
-    ],
+    ]
     pricing: {
       starter: { price: 69, period: 'month', features: ['Up to 10 projectsBasic AI insights', 'Task management'] },
       professional: { price: 169, period: 'month', features: ['Up to 50 projectsAdvanced AI', 'Full automationCustom workflows'] },
       enterprise: { price: 399, period: 'month', features: ['Unlimited projectsCustom AI training', 'API accessDedicated support'] }
     },
     category: 'Project Management',
-    tags: ['AIProject Management', 'AutomationAnalytics'],
+    tags: ['AIProject Management', 'AutomationAnalytics']
     website: 'https://ziontechgroup.com/project-ai-manager',
     contact: {
       phone: '+1 302 464 0950',
@@ -190,14 +190,14 @@ export const advancedMicroSaasServices2025 = [
       'Automated process optimizationReal-time performance monitoring',
       'Integration with 100+ business toolsAdvanced analytics and reporting',
       'Custom automation rulesProcess mining and analysis'
-    ],
+    ]
     pricing: {
       starter: { price: 79, period: 'month', features: ['Up to 10 workflowsBasic automation', 'Process templates'] },
       professional: { price: 199, period: 'month', features: ['Up to 100 workflowsAdvanced AI', 'Full automationCustom rules'] },
       enterprise: { price: 499, period: 'month', features: ['Unlimited workflowsCustom AI training', 'White-label solutionDedicated support'] }
     },
     category: 'Workflow Automation',
-    tags: ['AIWorkflow Automation', 'Process MiningIntegration'],
+    tags: ['AIWorkflow Automation', 'Process MiningIntegration']
     website: 'https://ziontechgroup.com/workflow-ai-studio',
     contact: {
       phone: '+1 302 464 0950',
@@ -216,14 +216,14 @@ export const advancedMicroSaasServices2025 = [
       'Real-time data lineage trackingPrivacy impact assessment',
       'Integration with data warehousesAdvanced analytics and reporting',
       'Custom governance rulesData catalog management'
-    ],
+    ]
     pricing: {
       starter: { price: 149, period: 'month', features: ['Up to 1TB dataBasic quality monitoring', 'Compliance templates'] },
       professional: { price: 349, period: 'month', features: ['Up to 10TB dataAdvanced AI', 'Full automationCustom rules'] },
       enterprise: { price: 799, period: 'month', features: ['Unlimited dataCustom AI training', 'White-label solutionDedicated support'] }
     },
     category: 'Data Governance',
-    tags: ['AIData Governance', 'ComplianceData Quality'],
+    tags: ['AIData Governance', 'ComplianceData Quality']
     website: 'https://ziontechgroup.com/data-guardian-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -242,14 +242,14 @@ export const advancedMicroSaasServices2025 = [
       'Intelligent rate limitingReal-time API analytics',
       'Integration with major cloud platformsAdvanced reporting and dashboards',
       'Custom security policiesAPI versioning and lifecycle management'
-    ],
+    ]
     pricing: {
       starter: { price: 99, period: 'month', features: ['Up to 100 API calls/minBasic monitoring', 'Security alerts'] },
       professional: { price: 249, period: 'month', features: ['Up to 1,000 API calls/minAdvanced AI', 'Full automationCustom policies'] },
       enterprise: { price: 599, period: 'month', features: ['Unlimited API callsCustom AI training', 'White-label solutionDedicated support'] }
     },
     category: 'API Management',
-    tags: ['AIAPI Management', 'SecurityMonitoring'],
+    tags: ['AIAPI Management', 'SecurityMonitoring']
     website: 'https://ziontechgroup.com/api-guardian-pro',
     contact: {
       phone: '+1 302 464 0950',

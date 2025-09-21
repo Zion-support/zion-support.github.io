@@ -4,7 +4,7 @@ export interface Innovative2025Service {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const innovative2025Services: Innovative2025Service[] = [
       "Collaboration platform",
       "Research database",
       "Expert support"
-    ],
+    ]
     link: "/services/ai-innovation-hub",
     category: "Innovative 2025 Services",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const innovative2025Services: Innovative2025Service[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

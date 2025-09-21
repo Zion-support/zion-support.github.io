@@ -9,7 +9,7 @@ export const quantumBreakthroughServices2025 = [
       'Multi-node quantum network architectureQuantum-resistant encryption and VPN tunnels',
       'Government compliance (FIPS 140-3, NIST standards)Quantum network monitoring and analytics',
       'API for enterprise integration and automation24/7 quantum security operations center'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 12999, 
@@ -28,7 +28,7 @@ export const quantumBreakthroughServices2025 = [
       }
     },
     category: 'Quantum Internet & Security',
-    tags: ['Quantum ComputingInternet Security', 'CryptographyNetwork Security', 'Government Compliance'],
+    tags: ['Quantum ComputingInternet Security', 'CryptographyNetwork Security', 'Government Compliance']
     website: 'https://ziontechgroup.com/quantum-internet-security-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -41,8 +41,8 @@ export const quantumBreakthroughServices2025 = [
       'Secure government communicationsMilitary command systems',
       'Financial transactions and bankingHealthcare data exchange',
       'Critical infrastructure protection'
-    ],
-    integrations: ['Government systemsMilitary networks', 'Financial platformsHealthcare systems', 'Energy grids'],
+    ]
+    integrations: ['Government systemsMilitary networks', 'Financial platformsHealthcare systems', 'Energy grids']
     compliance: ['FIPS 140-3NIST standards', 'SOC2ISO 27001', 'Government security standards']
   },
   {
@@ -55,7 +55,7 @@ export const quantumBreakthroughServices2025 = [
       'Clinical trial optimization and predictionQuantum-enhanced genetic analysis',
       'Real-time molecular dynamics simulationIntegration with medical research databases',
       'Custom quantum bio-algorithmsAPI access for research institutions'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 8999, 
@@ -74,7 +74,7 @@ export const quantumBreakthroughServices2025 = [
       }
     },
     category: 'Quantum Biology',
-    tags: ['Quantum ComputingBiology', 'Drug DiscoveryMedical Research', 'Protein Folding'],
+    tags: ['Quantum ComputingBiology', 'Drug DiscoveryMedical Research', 'Protein Folding']
     website: 'https://ziontechgroup.com/quantum-bio-computing-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -87,8 +87,8 @@ export const quantumBreakthroughServices2025 = [
       'Drug discovery and developmentProtein structure prediction',
       'Medical research and clinical trialsGenetic analysis and personalized medicine',
       'Biotechnology innovation'
-    ],
-    integrations: ['Medical databasesResearch platforms', 'Laboratory systemsClinical trial platforms', 'Genetic databases'],
+    ]
+    integrations: ['Medical databasesResearch platforms', 'Laboratory systemsClinical trial platforms', 'Genetic databases']
     compliance: ['HIPAAFDA regulations', 'SOC2ISO 27001', 'Medical research standards']
   },
   {
@@ -101,7 +101,7 @@ export const quantumBreakthroughServices2025 = [
       'Safety protocols and risk managementCustom neural interface development',
       'Integration with AI systems and platformsAdvanced neural analytics and insights',
       'Research and development toolsAPI for custom applications'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 15999, 
@@ -120,7 +120,7 @@ export const quantumBreakthroughServices2025 = [
       }
     },
     category: 'Neural Interfaces',
-    tags: ['Brain-Computer InterfaceNeural Networks', 'AIMedical Technology', 'Human-AI Collaboration'],
+    tags: ['Brain-Computer InterfaceNeural Networks', 'AIMedical Technology', 'Human-AI Collaboration']
     website: 'https://ziontechgroup.com/brain-computer-interface-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -133,8 +133,8 @@ export const quantumBreakthroughServices2025 = [
       'Medical research and treatmentHuman-AI collaboration',
       'Assistive technology developmentNeuroscience research',
       'Next-generation computing interfaces'
-    ],
-    integrations: ['Medical systemsAI platforms', 'Research toolsMonitoring systems', 'Safety protocols'],
+    ]
+    integrations: ['Medical systemsAI platforms', 'Research toolsMonitoring systems', 'Safety protocols']
     compliance: ['FDA regulationsMedical device standards', 'SOC2ISO 27001', 'Research ethics standards']
   },
   {
@@ -147,7 +147,7 @@ export const quantumBreakthroughServices2025 = [
       'Space logistics and transportationEnvironmental impact monitoring',
       'Real-time mission control and monitoringIntegration with space agencies',
       'Custom mining mission planningAPI for space operations'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 19999, 
@@ -166,7 +166,7 @@ export const quantumBreakthroughServices2025 = [
       }
     },
     category: 'Space Technology',
-    tags: ['Space MiningAutonomous Systems', 'AIRobotics', 'Resource Extraction'],
+    tags: ['Space MiningAutonomous Systems', 'AIRobotics', 'Resource Extraction']
     website: 'https://ziontechgroup.com/space-mining-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -179,8 +179,8 @@ export const quantumBreakthroughServices2025 = [
       'Asteroid mining operationsLunar resource extraction',
       'Space resource managementAutonomous space operations',
       'Resource transportation logistics'
-    ],
-    integrations: ['Space agency systemsSatellite networks', 'Ground control systemsAI platforms', 'Robotic systems'],
+    ]
+    integrations: ['Space agency systemsSatellite networks', 'Ground control systemsAI platforms', 'Robotic systems']
     compliance: ['Space regulationsInternational space law', 'SOC2ISO 27001', 'Space safety standards']
   },
   {
@@ -193,7 +193,7 @@ export const quantumBreakthroughServices2025 = [
       'Real-time energy demand predictionQuantum-enhanced energy analytics',
       'Grid stability and reliability managementIntegration with energy infrastructure',
       'Custom energy optimization modelsAPI for energy management systems'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 7999, 
@@ -212,7 +212,7 @@ export const quantumBreakthroughServices2025 = [
       }
     },
     category: 'Quantum Energy',
-    tags: ['Quantum ComputingEnergy Management', 'Smart GridRenewable Energy', 'Optimization'],
+    tags: ['Quantum ComputingEnergy Management', 'Smart GridRenewable Energy', 'Optimization']
     website: 'https://ziontechgroup.com/quantum-energy-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -225,8 +225,8 @@ export const quantumBreakthroughServices2025 = [
       'Smart grid optimizationRenewable energy integration',
       'Energy storage managementDemand response optimization',
       'Grid stability management'
-    ],
-    integrations: ['Energy management systemsSmart grid infrastructure', 'Renewable energy systemsUtility platforms', 'Monitoring systems'],
+    ]
+    integrations: ['Energy management systemsSmart grid infrastructure', 'Renewable energy systemsUtility platforms', 'Monitoring systems']
     compliance: ['Energy regulationsGrid standards', 'SOC2ISO 27001', 'Energy safety standards']
   }
-],
+]

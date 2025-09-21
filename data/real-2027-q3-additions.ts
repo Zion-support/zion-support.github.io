@@ -11,7 +11,7 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 			'Zero-touch enrollment (ABM/ASM, Android Enterprise)Policy, VPN, Wi‑Fi, and certificate management',
 			'BYOD and COPE privacy controlsGeo-fencing, location, and remote wipe/lock',
 			'App distribution with version pinning and rollbackCompliance dashboard and automated remediation'
-		],
+		]
 		popular: true,
 		icon: '📱',
 		color: 'from-cyan-500 to-blue-600',
@@ -23,11 +23,11 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 day',
 		category: 'Cloud & FinOps',
 		realService: true,
-		technology: ['ABM/ASMAndroid Enterprise', 'Push MDMPKI'],
-		integrations: ['OktaEntra ID', 'Google WorkspaceSlack', 'Jira'],
-		useCases: ['Corporate fleetBYOD', 'Regulated industriesRetail kiosks'],
+		technology: ['ABM/ASMAndroid Enterprise', 'Push MDMPKI']
+		integrations: ['OktaEntra ID', 'Google WorkspaceSlack', 'Jira']
+		useCases: ['Corporate fleetBYOD', 'Regulated industriesRetail kiosks']
 		roi: 'Reduce device onboarding time by 80% and policy drift by 90%.',
-		competitors: ['KandjiJamf', 'Microsoft IntuneVMware Workspace ONE'],
+		competitors: ['KandjiJamf', 'Microsoft IntuneVMware Workspace ONE']
 		marketSize: '$9B market',
 		growthRate: '15% CAGR',
 		variant: 'ai-futuristic',
@@ -50,7 +50,7 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 			'DMARC policy wizard (monitor → quarantine → reject)SPF flattening and alignment checks',
 			'DKIM key rotation and multi-ESP supportForensic reports and threat insights',
 			'BIMI SVG validation and hostingExecutive deliverability dashboard'
-		],
+		]
 		popular: false,
 		icon: '✉️',
 		color: 'from-indigo-500 to-purple-600',
@@ -62,11 +62,11 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 week',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['DNSDMARC', 'SPFDKIM', 'BIMI'],
-		integrations: ['Google WorkspaceMicrosoft 365', 'SendGridMailgun'],
-		useCases: ['Phishing mitigationDeliverability', 'Brand trust'],
+		technology: ['DNSDMARC', 'SPFDKIM', 'BIMI']
+		integrations: ['Google WorkspaceMicrosoft 365', 'SendGridMailgun']
+		useCases: ['Phishing mitigationDeliverability', 'Brand trust']
 		roi: 'Reduce spoofing by 95% and increase inbox placement by 8–15%.',
-		competitors: ['Valimaildmarcian', 'OnDMARC'],
+		competitors: ['Valimaildmarcian', 'OnDMARC']
 		marketSize: '$1.2B market',
 		growthRate: '18% CAGR',
 		variant: 'ai-futuristic',
@@ -89,7 +89,7 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 			'Model registry and cardsPII/PHI detection & guardrails',
 			'Risk scoring and bias dashboardsHuman review and approvals',
 			'Audit logs and incident workflowPolicy-as-code with CI gates'
-		],
+		]
 		popular: true,
 		icon: '🛡️',
 		color: 'from-purple-500 to-pink-600',
@@ -101,11 +101,11 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '2 weeks',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['OpenAIVector DB', 'KFP/Weights & Biases'],
-		integrations: ['GitHubGitLab', 'JiraServiceNow', 'Datadog'],
-		useCases: ['Policy enforcementRisk & bias monitoring', 'Audit readiness'],
+		technology: ['OpenAIVector DB', 'KFP/Weights & Biases']
+		integrations: ['GitHubGitLab', 'JiraServiceNow', 'Datadog']
+		useCases: ['Policy enforcementRisk & bias monitoring', 'Audit readiness']
 		roi: 'Cut AI audit prep time by 70% and violations by 90%.',
-		competitors: ['LakeraCredo AI', 'Arthur AI'],
+		competitors: ['LakeraCredo AI', 'Arthur AI']
 		marketSize: '$3.4B market',
 		growthRate: '22% CAGR',
 		variant: 'ai-futuristic',
@@ -128,7 +128,7 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 			'SLO templates (latency, availability, quality)Error budget policy and burn rate alerts',
 			'Golden signals dashboardsIncident integration with postmortems',
 			'Client & edge SLOsExecutive reliability scorecards'
-		],
+		]
 		popular: false,
 		icon: '📈',
 		color: 'from-emerald-500 to-teal-600',
@@ -140,11 +140,11 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '3 days',
 		category: 'Observability',
 		realService: true,
-		technology: ['OpenTelemetryPrometheus', 'ClickHouse'],
-		integrations: ['DatadogGrafana', 'PagerDutyOpsgenie', 'Slack'],
-		useCases: ['Reliability targetsSLO reporting', 'Roadmap alignment'],
+		technology: ['OpenTelemetryPrometheus', 'ClickHouse']
+		integrations: ['DatadogGrafana', 'PagerDutyOpsgenie', 'Slack']
+		useCases: ['Reliability targetsSLO reporting', 'Roadmap alignment']
 		roi: 'Reduce incidents by 30% and wasted work by 20%.',
-		competitors: ['Nobl9Datadog', 'New Relic'],
+		competitors: ['Nobl9Datadog', 'New Relic']
 		marketSize: '$18B market',
 		growthRate: '12% CAGR',
 		variant: 'ai-futuristic',
@@ -167,7 +167,7 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 			'99% speech-to-text with diarizationAction item and decision extraction',
 			'Auto-sync to Jira/Asana/HubSpotFollow-up emails and summaries',
 			'Templates for standups, QBRs, interviewsSecurity & privacy controls'
-		],
+		]
 		popular: true,
 		icon: '🎙️',
 		color: 'from-pink-500 to-rose-600',
@@ -179,11 +179,11 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '30 minutes',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['WhisperLLM', 'OAuthWebhooks'],
-		integrations: ['Google MeetZoom', 'TeamsJira', 'AsanaHubSpot'],
-		useCases: ['Customer callsStandups', 'InterviewsBoard meetings'],
+		technology: ['WhisperLLM', 'OAuthWebhooks']
+		integrations: ['Google MeetZoom', 'TeamsJira', 'AsanaHubSpot']
+		useCases: ['Customer callsStandups', 'InterviewsBoard meetings']
 		roi: 'Save 3–5 hours/week per user and reduce missed actions by 70%.',
-		competitors: ['OtterFireflies', 'Avoma'],
+		competitors: ['OtterFireflies', 'Avoma']
 		marketSize: '$2.2B market',
 		growthRate: '19% CAGR',
 		variant: 'ai-futuristic',
@@ -195,4 +195,4 @@ export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.9,
 		reviews: 2100
 	}
-],
+]

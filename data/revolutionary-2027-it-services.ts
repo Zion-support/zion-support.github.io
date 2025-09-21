@@ -4,7 +4,7 @@ export interface Revolutionary2027ItService {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
       "Advanced capabilities",
       "Innovation platform",
       "Future-ready solutions"
-    ],
+    ]
     link: "/services/2027-revolutionary-it",
     category: "Revolutionary 2027 IT",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

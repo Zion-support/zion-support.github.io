@@ -6,7 +6,7 @@ export interface CybersecuritySolutions2026 {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface CybersecuritySolutions2026 {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       'Threat hunting toolsCustom threat models',
       'Integration APIsAdvanced analytics',
       'Compliance reporting24/7 security monitoring'
-    ],
+    ]
     popular: true,
     icon: '🔍',
     color: 'from-red-500 to-pink-600',
@@ -66,11 +66,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '3-4 weeks',
     category: 'Cybersecurity & Threat Intelligence',
     realService: true,
-    technology: ['Advanced AIThreat Detection', 'Machine LearningReal-time Analysis', 'Automated ResponseThreat Hunting'],
-    integrations: ['Security platformsGovernment systems', 'Financial systemsHealthcare platforms', 'Tech infrastructureDefense systems'],
-    useCases: ['Threat detectionSecurity monitoring', 'Incident responseThreat hunting', 'Compliance managementSecurity analytics'],
+    technology: ['Advanced AIThreat Detection', 'Machine LearningReal-time Analysis', 'Automated ResponseThreat Hunting']
+    integrations: ['Security platformsGovernment systems', 'Financial systemsHealthcare platforms', 'Tech infrastructureDefense systems']
+    useCases: ['Threat detectionSecurity monitoring', 'Incident responseThreat hunting', 'Compliance managementSecurity analytics']
     roi: 'Large enterprises see 600% ROI through improved threat detection and reduced security incidents.',
-    competitors: ['Specialized security toolsCustom threat intelligence', 'Traditional security solutions'],
+    competitors: ['Specialized security toolsCustom threat intelligence', 'Traditional security solutions']
     marketSize: '$35B market',
     growthRate: '350% annual growth',
     variant: 'security-futuristic',
@@ -101,7 +101,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       'Integration APIsCustom encryption models',
       'Advanced security featuresReal-time monitoring',
       'Performance optimization24/7 technical support'
-    ],
+    ]
     popular: true,
     icon: '🔐',
     color: 'from-purple-500 to-indigo-600',
@@ -113,11 +113,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '4-5 weeks',
     category: 'Cybersecurity & Quantum Cryptography',
     realService: true,
-    technology: ['Quantum-Resistant CryptographyAdvanced Encryption', 'Key ManagementSecurity Protocols', 'Compliance SystemsPerformance Optimization'],
-    integrations: ['Government systemsFinancial platforms', 'Healthcare systemsTech infrastructure', 'Defense systemsResearch platforms'],
-    useCases: ['Data encryptionSecure communications', 'Key managementCompliance management', 'Performance optimizationSecurity monitoring'],
+    technology: ['Quantum-Resistant CryptographyAdvanced Encryption', 'Key ManagementSecurity Protocols', 'Compliance SystemsPerformance Optimization']
+    integrations: ['Government systemsFinancial platforms', 'Healthcare systemsTech infrastructure', 'Defense systemsResearch platforms']
+    useCases: ['Data encryptionSecure communications', 'Key managementCompliance management', 'Performance optimizationSecurity monitoring']
     roi: 'Government agencies see 700% ROI through future-proof security and reduced breach risks.',
-    competitors: ['Traditional encryptionCustom cryptography solutions', 'Government research projects'],
+    competitors: ['Traditional encryptionCustom cryptography solutions', 'Government research projects']
     marketSize: '$25B market',
     growthRate: '400% annual growth',
     variant: 'quantum-futuristic',
@@ -148,7 +148,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       'Real-time monitoringAdvanced reporting',
       'Integration capabilitiesCompliance management',
       'Performance optimization24/7 AI support'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-cyan-500 to-blue-600',
@@ -160,11 +160,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '5-6 weeks',
     category: 'Cybersecurity & AI Operations',
     realService: true,
-    technology: ['Advanced AISecurity Operations', 'Threat ResponseIntelligent Analytics', 'Real-time MonitoringAutomation Systems'],
-    integrations: ['Security platformsGovernment systems', 'Financial systemsHealthcare platforms', 'Tech infrastructureDefense systems'],
-    useCases: ['Security monitoringThreat response', 'Security analyticsCompliance management', 'Performance optimizationIncident management'],
+    technology: ['Advanced AISecurity Operations', 'Threat ResponseIntelligent Analytics', 'Real-time MonitoringAutomation Systems']
+    integrations: ['Security platformsGovernment systems', 'Financial systemsHealthcare platforms', 'Tech infrastructureDefense systems']
+    useCases: ['Security monitoringThreat response', 'Security analyticsCompliance management', 'Performance optimizationIncident management']
     roi: 'Large enterprises see 800% ROI through automated security operations and improved threat response.',
-    competitors: ['Traditional SOC solutionsCustom security automation', 'Basic monitoring tools'],
+    competitors: ['Traditional SOC solutionsCustom security automation', 'Basic monitoring tools']
     marketSize: '$45B market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
@@ -195,7 +195,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       'Real-time monitoringAdvanced analytics',
       'Integration APIsCompliance reporting',
       'Performance optimization24/7 security support'
-    ],
+    ]
     popular: true,
     icon: '⚠️',
     color: 'from-orange-500 to-red-600',
@@ -207,11 +207,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '3-4 weeks',
     category: 'Cybersecurity & Vulnerability Detection',
     realService: true,
-    technology: ['Advanced AIVulnerability Detection', 'Machine LearningProactive Security', 'Real-time AnalysisCustom Models'],
-    integrations: ['Security platformsTech systems', 'Government platformsFinancial systems', 'Healthcare platformsDefense systems'],
-    useCases: ['Vulnerability detectionProactive security', 'Security monitoringCompliance management', 'Risk assessmentSecurity analytics'],
+    technology: ['Advanced AIVulnerability Detection', 'Machine LearningProactive Security', 'Real-time AnalysisCustom Models']
+    integrations: ['Security platformsTech systems', 'Government platformsFinancial systems', 'Healthcare platformsDefense systems']
+    useCases: ['Vulnerability detectionProactive security', 'Security monitoringCompliance management', 'Risk assessmentSecurity analytics']
     roi: 'Tech companies see 500% ROI through proactive vulnerability detection and reduced security risks.',
-    competitors: ['Traditional vulnerability scannersCustom detection solutions', 'Basic security tools'],
+    competitors: ['Traditional vulnerability scannersCustom detection solutions', 'Basic security tools']
     marketSize: '$30B market',
     growthRate: '320% annual growth',
     variant: 'security-futuristic',
@@ -242,7 +242,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       'Real-time verificationIntegration APIs',
       'Advanced analyticsCompliance features',
       'Performance optimization24/7 technical support'
-    ],
+    ]
     popular: true,
     icon: '🆔',
     color: 'from-green-500 to-emerald-600',
@@ -254,11 +254,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     setupTime: '3-4 weeks',
     category: 'Cybersecurity & Identity Management',
     realService: true,
-    technology: ['Blockchain TechnologyIdentity Management', 'Decentralized SystemsAdvanced Security', 'Real-time VerificationCustom Models'],
-    integrations: ['Financial platformsGovernment systems', 'Healthcare platformsTech systems', 'Educational platformsResearch systems'],
-    useCases: ['Identity verificationAccess control', 'Secure authenticationCompliance management', 'Risk assessmentIdentity analytics'],
+    technology: ['Blockchain TechnologyIdentity Management', 'Decentralized SystemsAdvanced Security', 'Real-time VerificationCustom Models']
+    integrations: ['Financial platformsGovernment systems', 'Healthcare platformsTech systems', 'Educational platformsResearch systems']
+    useCases: ['Identity verificationAccess control', 'Secure authenticationCompliance management', 'Risk assessmentIdentity analytics']
     roi: 'Financial institutions see 600% ROI through improved security and reduced fraud risks.',
-    competitors: ['Traditional identity systemsCustom blockchain solutions', 'Basic authentication tools'],
+    competitors: ['Traditional identity systemsCustom blockchain solutions', 'Basic authentication tools']
     marketSize: '$35B market',
     growthRate: '380% annual growth',
     variant: 'blockchain-futuristic',
@@ -275,4 +275,4 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
     rating: 4.8,
     reviews: 167
   }
-],
+]

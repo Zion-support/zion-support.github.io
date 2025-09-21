@@ -9,7 +9,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Regulatory compliance managementReal-time mission monitoring',
       'Resource processing algorithmsSpace transportation planning',
       'Risk assessment and mitigationComprehensive mission analytics'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 599, 
@@ -28,7 +28,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       }
     },
     category: 'Space Technology',
-    tags: ['Space MiningAsteroid Mining', 'Space ResourcesMining Technology', 'Space Logistics'],
+    tags: ['Space MiningAsteroid Mining', 'Space ResourcesMining Technology', 'Space Logistics']
     website: 'https://ziontechgroup.com/space-mining-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -41,8 +41,8 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Asteroid resource assessmentSpace mining mission planning',
       'Resource extraction optimizationSpace logistics planning',
       'Environmental impact analysis'
-    ],
-    integrations: ['Space Agency APIsSatellite Data Systems', 'Mining SoftwareLogistics Platforms', 'Analytics Tools'],
+    ]
+    integrations: ['Space Agency APIsSatellite Data Systems', 'Mining SoftwareLogistics Platforms', 'Analytics Tools']
     compliance: ['Space Mining RegulationsEnvironmental Standards', 'International Space Law']
   },
   {
@@ -55,7 +55,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Quantum-enhanced bioinformaticsReal-time molecular dynamics',
       'Custom biological algorithmsPerformance optimization tools',
       'Comprehensive bio-analyticsIntegration with research tools'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 499, 
@@ -74,7 +74,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       }
     },
     category: 'Quantum Biology',
-    tags: ['Quantum ComputingBiology', 'Drug DiscoveryProtein Folding', 'Bioinformatics'],
+    tags: ['Quantum ComputingBiology', 'Drug DiscoveryProtein Folding', 'Bioinformatics']
     website: 'https://ziontechgroup.com/quantum-bio-computing-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -87,8 +87,8 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Drug discovery and developmentProtein structure prediction',
       'Biological systems modelingMolecular dynamics simulation',
       'Bioinformatics research'
-    ],
-    integrations: ['Molecular Modeling SoftwareBioinformatics Tools', 'Research DatabasesLaboratory Systems', 'Analytics Platforms'],
+    ]
+    integrations: ['Molecular Modeling SoftwareBioinformatics Tools', 'Research DatabasesLaboratory Systems', 'Analytics Platforms']
     compliance: ['Biological Research StandardsDrug Development Regulations', 'Data Privacy Laws']
   },
   {
@@ -101,7 +101,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Research data analyticsSafety and compliance monitoring',
       'Performance optimization toolsUser interface customization',
       'Comprehensive training systemsIntegration with medical devices'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 399, 
@@ -120,7 +120,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       }
     },
     category: 'Neural Technology',
-    tags: ['Brain-Computer InterfaceNeural Technology', 'Medical DevicesResearch', 'Neuroscience'],
+    tags: ['Brain-Computer InterfaceNeural Technology', 'Medical DevicesResearch', 'Neuroscience']
     website: 'https://ziontechgroup.com/brain-computer-interface-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -133,8 +133,8 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Medical device developmentNeuroscience research',
       'Rehabilitation technologyAssistive technology',
       'Cognitive enhancement research'
-    ],
-    integrations: ['Medical Device SystemsResearch Platforms', 'Neuroscience ToolsHealthcare Systems', 'Analytics Platforms'],
+    ]
+    integrations: ['Medical Device SystemsResearch Platforms', 'Neuroscience ToolsHealthcare Systems', 'Analytics Platforms']
     compliance: ['Medical Device RegulationsFDA Standards', 'Research Ethics GuidelinesPatient Safety Standards']
   },
   {
@@ -147,7 +147,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Energy storage optimizationReal-time energy monitoring',
       'Predictive energy analyticsSustainability impact analysis',
       'Custom energy algorithmsComprehensive energy reporting'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 299, 
@@ -166,7 +166,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       }
     },
     category: 'Quantum Energy',
-    tags: ['Quantum ComputingEnergy', 'Fusion PowerRenewable Energy', 'Grid Optimization'],
+    tags: ['Quantum ComputingEnergy', 'Fusion PowerRenewable Energy', 'Grid Optimization']
     website: 'https://ziontechgroup.com/quantum-energy-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -179,8 +179,8 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Energy grid optimizationFusion power development',
       'Renewable energy planningEnergy storage optimization',
       'Sustainability planning'
-    ],
-    integrations: ['Energy Management SystemsGrid Control Systems', 'Renewable Energy PlatformsUtility Systems', 'Analytics Tools'],
+    ]
+    integrations: ['Energy Management SystemsGrid Control Systems', 'Renewable Energy PlatformsUtility Systems', 'Analytics Tools']
     compliance: ['Energy RegulationsEnvironmental Standards', 'Grid Safety ProtocolsRenewable Energy Standards']
   },
   {
@@ -193,7 +193,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Safety and compliance monitoringPerformance optimization tools',
       'Custom AI model developmentSimulation and testing tools',
       'Real-time monitoring and analyticsIntegration with vehicle systems'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 499, 
@@ -212,7 +212,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       }
     },
     category: 'Autonomous Systems',
-    tags: ['Autonomous VehiclesAI', 'Computer VisionRobotics', 'Self-Driving'],
+    tags: ['Autonomous VehiclesAI', 'Computer VisionRobotics', 'Self-Driving']
     website: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -225,8 +225,8 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Self-driving car developmentDrone automation',
       'Robotic system developmentLogistics automation',
       'Transportation optimization'
-    ],
-    integrations: ['Vehicle Control SystemsSensor Platforms', 'Robotics FrameworksSimulation Tools', 'Analytics Platforms'],
+    ]
+    integrations: ['Vehicle Control SystemsSensor Platforms', 'Robotics FrameworksSimulation Tools', 'Analytics Platforms']
     compliance: ['Autonomous Vehicle RegulationsSafety Standards', 'Transportation LawsAI Safety Guidelines']
   }
-],
+]

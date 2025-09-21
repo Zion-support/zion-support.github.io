@@ -14,7 +14,7 @@ export const innovativeAIAutomationServices2025 = [
       'Regulatory compliance monitoring and reporting',
       'Stakeholder relationship management',
       'Performance analytics and continuous improvement'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 299, 
@@ -33,7 +33,7 @@ export const innovativeAIAutomationServices2025 = [
       }
     },
     category: 'AI & Automation',
-    tags: ['AI', 'Autonomous Systems', 'Business Intelligence', 'Process Automation', 'Strategic Planning'],
+    tags: ['AI', 'Autonomous Systems', 'Business Intelligence', 'Process Automation', 'Strategic Planning']
     website: 'https://ziontechgroup.com/ai-autonomous-business-manager',
     contact: {
       phone: '+1 302 464 0950',
@@ -48,8 +48,8 @@ export const innovativeAIAutomationServices2025 = [
       'Resource and budget management',
       'Risk assessment and mitigation',
       'Performance monitoring and improvement'
-    ],
-    integrations: ['ERP systems', 'CRM platforms', 'Accounting software', 'Project management tools', 'Communication platforms'],
+    ]
+    integrations: ['ERP systems', 'CRM platforms', 'Accounting software', 'Project management tools', 'Communication platforms']
     compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001', 'SOX']
   },
   {
@@ -67,7 +67,7 @@ export const innovativeAIAutomationServices2025 = [
       'Emotional data analytics and insights',
       'Privacy-preserving emotion processing',
       'Custom emotional intelligence models'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 149, 
@@ -86,7 +86,7 @@ export const innovativeAIAutomationServices2025 = [
       }
     },
     category: 'AI & Consciousness',
-    tags: ['AI', 'Emotional Intelligence', 'Human-AI Collaboration', 'Customer Experience', 'Mental Health'],
+    tags: ['AI', 'Emotional Intelligence', 'Human-AI Collaboration', 'Customer Experience', 'Mental Health']
     website: 'https://ziontechgroup.com/ai-emotional-intelligence-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -101,8 +101,8 @@ export const innovativeAIAutomationServices2025 = [
       'HR and employee wellness',
       'Education and training',
       'Therapeutic applications'
-    ],
-    integrations: ['CRM systems', 'Healthcare platforms', 'HR software', 'Communication tools', 'Analytics platforms'],
+    ]
+    integrations: ['CRM systems', 'Healthcare platforms', 'HR software', 'Communication tools', 'Analytics platforms']
     compliance: ['HIPAA', 'GDPR', 'CCPA', 'SOC2', 'ISO 27001']
   },
   {
@@ -120,7 +120,7 @@ export const innovativeAIAutomationServices2025 = [
       'Creative analytics and trend prediction',
       'Custom artistic style training',
       'API access for creative applications'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 99, 
@@ -139,7 +139,7 @@ export const innovativeAIAutomationServices2025 = [
       }
     },
     category: 'AI & Creativity',
-    tags: ['AI', 'Quantum Computing', 'Creative Content', 'Artistic Intelligence', 'Design Automation'],
+    tags: ['AI', 'Quantum Computing', 'Creative Content', 'Artistic Intelligence', 'Design Automation']
     website: 'https://ziontechgroup.com/ai-quantum-creativity-studio',
     contact: {
       phone: '+1 302 464 0950',
@@ -154,8 +154,8 @@ export const innovativeAIAutomationServices2025 = [
       'Product visualization',
       'Entertainment content',
       'Educational materials'
-    ],
-    integrations: ['Design tools', 'Marketing platforms', 'Content management systems', 'Social media platforms', 'E-commerce platforms'],
+    ]
+    integrations: ['Design tools', 'Marketing platforms', 'Content management systems', 'Social media platforms', 'E-commerce platforms']
     compliance: ['Copyright protection', 'Intellectual property rights', 'Creative commons licensing', 'Commercial usage rights']
   },
   {
@@ -173,7 +173,7 @@ export const innovativeAIAutomationServices2025 = [
       'Clinical decision support system',
       'Telemedicine integration',
       'HIPAA-compliant data security'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 199, 
@@ -192,7 +192,7 @@ export const innovativeAIAutomationServices2025 = [
       }
     },
     category: 'AI & Healthcare',
-    tags: ['AI', 'Healthcare', 'Predictive Analytics', 'Medical Diagnostics', 'Preventive Medicine'],
+    tags: ['AI', 'Healthcare', 'Predictive Analytics', 'Medical Diagnostics', 'Preventive Medicine']
     website: 'https://ziontechgroup.com/ai-predictive-healthcare-diagnostics',
     contact: {
       phone: '+1 302 464 0950',
@@ -207,8 +207,8 @@ export const innovativeAIAutomationServices2025 = [
       'Population health management',
       'Clinical research and trials',
       'Healthcare cost optimization'
-    ],
-    integrations: ['Electronic Health Records', 'Medical imaging systems', 'Laboratory systems', 'Pharmacy systems', 'Insurance platforms'],
+    ]
+    integrations: ['Electronic Health Records', 'Medical imaging systems', 'Laboratory systems', 'Pharmacy systems', 'Insurance platforms']
     compliance: ['HIPAA', 'FDA', 'SOC2', 'ISO 27001', 'HITECH']
   },
   {
@@ -226,7 +226,7 @@ export const innovativeAIAutomationServices2025 = [
       'Multi-currency and international investing',
       'ESG and sustainable investing options',
       '24/7 autonomous operation'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 79, 
@@ -245,7 +245,7 @@ export const innovativeAIAutomationServices2025 = [
       }
     },
     category: 'AI & Finance',
-    tags: ['AI', 'Financial Planning', 'Investment Management', 'Wealth Management', 'Portfolio Optimization'],
+    tags: ['AI', 'Financial Planning', 'Investment Management', 'Wealth Management', 'Portfolio Optimization']
     website: 'https://ziontechgroup.com/ai-autonomous-financial-advisor',
     contact: {
       phone: '+1 302 464 0950',
@@ -260,8 +260,8 @@ export const innovativeAIAutomationServices2025 = [
       'Retirement planning',
       'Tax optimization',
       'Wealth preservation and growth'
-    ],
-    integrations: ['Brokerage platforms', 'Banking systems', 'Tax software', 'Insurance platforms', 'Real estate platforms'],
+    ]
+    integrations: ['Brokerage platforms', 'Banking systems', 'Tax software', 'Insurance platforms', 'Real estate platforms']
     compliance: ['SEC', 'FINRA', 'SOC2', 'ISO 27001', 'Financial regulations']
   }
 ];

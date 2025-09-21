@@ -14,7 +14,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Integration with CRM and support systems',
       'Multi-language support',
       'API access for custom integrations'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 49, 
@@ -33,7 +33,7 @@ export const innovativeMicroSaasSolutions2025 = [
       }
     },
     category: 'Customer Experience',
-    tags: ['AI', 'Customer Feedback', 'Sentiment Analysis', 'Customer Experience', 'Business Intelligence'],
+    tags: ['AI', 'Customer Feedback', 'Sentiment Analysis', 'Customer Experience', 'Business Intelligence']
     website: 'https://ziontechgroup.com/ai-powered-customer-feedback-analyzer',
     contact: {
       phone: '+1 302 464 0950',
@@ -48,8 +48,8 @@ export const innovativeMicroSaasSolutions2025 = [
       'Service quality assessment',
       'Competitive analysis',
       'Customer experience optimization'
-    ],
-    integrations: ['CRM systems', 'Support platforms', 'Social media', 'Survey tools', 'Analytics platforms'],
+    ]
+    integrations: ['CRM systems', 'Support platforms', 'Social media', 'Survey tools', 'Analytics platforms']
     compliance: ['GDPR', 'CCPA', 'SOC2', 'Data privacy regulations']
   },
   {
@@ -67,7 +67,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Integration with ERP and e-commerce systems',
       'Mobile app for on-the-go management',
       'Advanced reporting and analytics'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 79, 
@@ -86,7 +86,7 @@ export const innovativeMicroSaasSolutions2025 = [
       }
     },
     category: 'Supply Chain',
-    tags: ['Inventory Management', 'AI', 'Demand Forecasting', 'Supply Chain', 'Cost Optimization'],
+    tags: ['Inventory Management', 'AI', 'Demand Forecasting', 'Supply Chain', 'Cost Optimization']
     website: 'https://ziontechgroup.com/intelligent-inventory-optimization',
     contact: {
       phone: '+1 302 464 0950',
@@ -101,8 +101,8 @@ export const innovativeMicroSaasSolutions2025 = [
       'Manufacturing inventory control',
       'Distribution center optimization',
       'Multi-location inventory coordination'
-    ],
-    integrations: ['ERP systems', 'E-commerce platforms', 'Accounting software', 'Shipping platforms', 'Supplier systems'],
+    ]
+    integrations: ['ERP systems', 'E-commerce platforms', 'Accounting software', 'Shipping platforms', 'Supplier systems']
     compliance: ['SOC2', 'ISO 27001', 'Industry-specific regulations']
   },
   {
@@ -120,7 +120,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Mobile app for expense submission',
       'Advanced analytics and reporting',
       'Custom policy and rule configuration'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 39, 
@@ -139,7 +139,7 @@ export const innovativeMicroSaasSolutions2025 = [
       }
     },
     category: 'Financial Management',
-    tags: ['Expense Management', 'AI Automation', 'Financial Reporting', 'Workflow Automation', 'Compliance'],
+    tags: ['Expense Management', 'AI Automation', 'Financial Reporting', 'Workflow Automation', 'Compliance']
     website: 'https://ziontechgroup.com/smart-expense-management-automation',
     contact: {
       phone: '+1 302 464 0950',
@@ -154,8 +154,8 @@ export const innovativeMicroSaasSolutions2025 = [
       'Policy compliance monitoring',
       'Financial reporting automation',
       'Cost control and optimization'
-    ],
-    integrations: ['Accounting software', 'ERP systems', 'Banking platforms', 'Travel booking systems', 'HR platforms'],
+    ]
+    integrations: ['Accounting software', 'ERP systems', 'Banking platforms', 'Travel booking systems', 'HR platforms']
     compliance: ['SOC2', 'ISO 27001', 'Financial regulations', 'Tax compliance']
   },
   {
@@ -173,7 +173,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Performance tracking and reporting',
       'Integration with design and content tools',
       'API access for custom integrations'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 29, 
@@ -192,7 +192,7 @@ export const innovativeMicroSaasSolutions2025 = [
       }
     },
     category: 'Marketing & Social Media',
-    tags: ['Social Media', 'AI', 'Content Marketing', 'Social Media Management', 'Engagement Optimization'],
+    tags: ['Social Media', 'AI', 'Content Marketing', 'Social Media Management', 'Engagement Optimization']
     website: 'https://ziontechgroup.com/ai-powered-social-media-scheduler',
     contact: {
       phone: '+1 302 464 0950',
@@ -207,8 +207,8 @@ export const innovativeMicroSaasSolutions2025 = [
       'Content strategy development',
       'Multi-platform management',
       'Performance analytics and reporting'
-    ],
-    integrations: ['Social media platforms', 'Design tools', 'Content management systems', 'Analytics platforms', 'CRM systems'],
+    ]
+    integrations: ['Social media platforms', 'Design tools', 'Content management systems', 'Analytics platforms', 'CRM systems']
     compliance: ['Social media platform policies', 'Data privacy regulations', 'Content guidelines']
   },
   {
@@ -226,7 +226,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Comprehensive email deliverability tools',
       'Advanced reporting and analytics',
       'Custom automation workflows'
-    ],
+    ]
     pricing: {
       starter: { 
         price: 59, 
@@ -245,7 +245,7 @@ export const innovativeMicroSaasSolutions2025 = [
       }
     },
     category: 'Marketing & Email',
-    tags: ['Email Marketing', 'AI', 'Marketing Automation', 'Personalization', 'Conversion Optimization'],
+    tags: ['Email Marketing', 'AI', 'Marketing Automation', 'Personalization', 'Conversion Optimization']
     website: 'https://ziontechgroup.com/intelligent-email-marketing-automation',
     contact: {
       phone: '+1 302 464 0950',
@@ -260,8 +260,8 @@ export const innovativeMicroSaasSolutions2025 = [
       'Conversion rate optimization',
       'Subscriber engagement improvement',
       'Marketing ROI optimization'
-    ],
-    integrations: ['CRM systems', 'E-commerce platforms', 'Analytics tools', 'Social media platforms', 'Marketing tools'],
+    ]
+    integrations: ['CRM systems', 'E-commerce platforms', 'Analytics tools', 'Social media platforms', 'Marketing tools']
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   }
 ];

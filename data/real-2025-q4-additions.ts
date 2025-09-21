@@ -63,7 +63,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 			'Automated payouts and tax form collection',
 			'Shareable links, coupons, and influencer codes',
 			'Partner portal and real-time analytics'
-		],
+		]
 		popular: true,
 		icon: '🔗',
 		color: 'from-violet-600 to-fuchsia-700',
@@ -75,11 +75,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '1 day',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis'],
-		integrations: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
-		useCases: ['Affiliate programs', 'Influencer tracking', 'Partnership analytics'],
+		technology: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis']
+		integrations: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal']
+		useCases: ['Affiliate programs', 'Influencer tracking', 'Partnership analytics']
 		roi: 'Increase attributed sales 10–25% with optimized partnerships.',
-		competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
+		competitors: ['Refersion', 'LeadDyno', 'Tapfiliate']
 		marketSize: '$1.5B affiliate software',
 		growthRate: '15% YoY',
 		variant: 'ai-futuristic',
@@ -105,7 +105,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 			'Embeddings and semantic search',
 			'Export to SRT, VTT, DOCX',
 			'Podcast platform integrations'
-		],
+		]
 		popular: false,
 		icon: '🎧',
 		color: 'from-cyan-600 to-blue-700',
@@ -117,11 +117,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '10 minutes',
 		category: 'AI & Data',
 		realService: true,
-		technology: ['Whisper Large v3', 'Next.js', 'Node.js'],
-		integrations: ['Spotify', 'Apple Podcasts', 'YouTube'],
-		useCases: ['Transcripts', 'SEO summaries', 'Episode search'],
+		technology: ['Whisper Large v3', 'Next.js', 'Node.js']
+		integrations: ['Spotify', 'Apple Podcasts', 'YouTube']
+		useCases: ['Transcripts', 'SEO summaries', 'Episode search']
 		roi: 'Save 4–8 hours per episode and improve SEO traffic.',
-		competitors: ['Otter', 'Descript', 'Rev'],
+		competitors: ['Otter', 'Descript', 'Rev']
 		marketSize: '$500M transcription tools',
 		growthRate: '20% YoY',
 		variant: 'ai-futuristic',
@@ -147,7 +147,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 			'Import/export CSV and simple API',
 			'Mobile-friendly PWA',
 			'Basic reporting'
-		],
+		]
 		popular: true,
 		icon: '📇',
 		color: 'from-emerald-600 to-teal-700',
@@ -159,11 +159,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '15 minutes',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'SQLite/Postgres', 'Twilio'],
-		integrations: ['Gmail', 'Outlook', 'Stripe'],
-		useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
+		technology: ['Next.js', 'SQLite/Postgres', 'Twilio']
+		integrations: ['Gmail', 'Outlook', 'Stripe']
+		useCases: ['Leads', 'Follow-ups', 'Deal tracking']
 		roi: 'Increase follow-through and close rates 10–20% via reminders.',
-		competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
+		competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive']
 		marketSize: '$5B SMB CRM',
 		growthRate: '12% YoY',
 		variant: 'ai-futuristic',
@@ -189,7 +189,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 			'Inventory and refund sync',
 			'Email/SMS notifications',
 			'Analytics on reasons and cost'
-		],
+		]
 		popular: false,
 		icon: '📦',
 		color: 'from-amber-600 to-orange-700',
@@ -201,11 +201,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '2 hours',
 		category: 'Developer Tools',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
-		integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
-		useCases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
+		technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo']
+		integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe']
+		useCases: ['Returns portal', 'Exchange workflows', 'Refund automation']
 		roi: 'Reduce support tickets ~30% and speed refunds.',
-		competitors: ['Loop Returns', 'Returnly'],
+		competitors: ['Loop Returns', 'Returnly']
 		marketSize: '$800M returns software',
 		growthRate: '18% YoY',
 		variant: 'ai-futuristic',
@@ -231,7 +231,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 			'Client portal with reports',
 			'RMM and network tool integrations',
 			'Billing export and time tracking'
-		],
+		]
 		popular: true,
 		icon: '🛠️',
 		color: 'from-blue-600 to-indigo-700',
@@ -243,11 +243,11 @@ export const realQ4Services2025: RealQ4Service[] = [
 		setupTime: '1 day',
 		category: 'Quality & Monitoring',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'PostgreSQL'],
-		integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
-		useCases: ['IT support', 'SLA management', 'Client reporting'],
+		technology: ['Next.js', 'Node.js', 'PostgreSQL']
+		integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana']
+		useCases: ['IT support', 'SLA management', 'Client reporting']
 		roi: 'Faster resolution, less toil; better client satisfaction.',
-		competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
+		competitors: ['Zendesk', 'Freshdesk', 'HaloPSA']
 		marketSize: '$10B helpdesk software',
 		growthRate: '10% YoY',
 		variant: 'ai-futuristic',
@@ -274,14 +274,14 @@ export const real2025Q4Additions = [
       'Prompt/response versioning and approvals',
       'Usage analytics, spend caps and routing rules',
       'Warehouse export (BigQuery, Snowflake, Redshift)'
-    ],
+    ]
     category: 'AI & Data',
     link: 'https://ziontechgroup.com/services/ai-governance-control-center',
     marketPosition: 'Complements Langfuse and internal policy frameworks with centralized, audit-friendly workflows.',
     roi: 'Reduce AI-related incidents and audit prep time by 50–70%.',
-    competitors: ['Langfuse', 'PromptLayer', 'OpenRouter governance'],
-    useCases: ['AI policy enforcement', 'Audit compliance', 'Spend control'],
-    integrations: ['OpenAI', 'Anthropic', 'Google AI', 'Azure OpenAI', 'Snowflake', 'BigQuery'],
+    competitors: ['Langfuse', 'PromptLayer', 'OpenRouter governance']
+    useCases: ['AI policy enforcement', 'Audit compliance', 'Spend control']
+    integrations: ['OpenAI', 'Anthropic', 'Google AI', 'Azure OpenAI', 'Snowflake', 'BigQuery']
     trialDays: 14,
     setupTime: '1-2 days'
   },
@@ -298,14 +298,14 @@ export const real2025Q4Additions = [
       'Automated tagging and policy checks',
       'Rightsizing recommendations',
       'Team showback/chargeback reports'
-    ],
+    ]
     category: 'Cloud & FinOps',
     link: 'https://ziontechgroup.com/services/cloud-cost-governance-suite',
     marketPosition: 'Bridges gaps between in-house FinOps scripts and premium suites with pragmatic automation.',
     roi: 'Cut cloud spend by 10–30% within the first 60 days.',
-    competitors: ['CloudHealth', 'AWS Cost Explorer', 'Finout'],
-    useCases: ['Budget enforcement', 'Anomaly response', 'Rightsizing'],
-    integrations: ['AWS', 'Azure', 'GCP', 'Datadog', 'PagerDuty'],
+    competitors: ['CloudHealth', 'AWS Cost Explorer', 'Finout']
+    useCases: ['Budget enforcement', 'Anomaly response', 'Rightsizing']
+    integrations: ['AWS', 'Azure', 'GCP', 'Datadog', 'PagerDuty']
     trialDays: 14,
     setupTime: '2-3 days'
   },
@@ -322,14 +322,14 @@ export const real2025Q4Additions = [
       'Team routing and SLAs',
       'Trend dashboards and alerts',
       'Exports to Jira/Linear/Slack'
-    ],
+    ]
     category: 'Developer Tools',
     link: 'https://ziontechgroup.com/services/customer-feedback-intelligence',
     marketPosition: 'Combines feedback aggregation with practical, low-friction product workflows.',
     roi: 'Increase roadmap alignment and reduce churn by 5–15%.',
-    competitors: ['Dovetail', 'Usersnap', 'Productboard'],
-    useCases: ['Voice of customer', 'Product insights', 'Churn reduction'],
-    integrations: ['Zendesk', 'Intercom', 'Jira', 'Linear', 'Slack'],
+    competitors: ['Dovetail', 'Usersnap', 'Productboard']
+    useCases: ['Voice of customer', 'Product insights', 'Churn reduction']
+    integrations: ['Zendesk', 'Intercom', 'Jira', 'Linear', 'Slack']
     trialDays: 7,
     setupTime: '1 day'
   },
@@ -346,14 +346,14 @@ export const real2025Q4Additions = [
       'OWASP API Top 10 heuristics',
       'PII classification and masking',
       'SLA/SLO and error budget integration'
-    ],
+    ]
     category: 'Quality & Monitoring',
     link: 'https://ziontechgroup.com/services/api-security-posture-monitor',
     marketPosition: 'Lightweight alternative that leverages existing logs and traces.',
     roi: 'Reduce security incidents and audit risk; faster remediation cycles.',
-    competitors: ['Salt', 'Noname Security', '42Crunch'],
-    useCases: ['Shadow API control', 'PII exposure audits', 'Compliance'],
-    integrations: ['OpenTelemetry', 'Datadog', 'Grafana Tempo/Loki', 'SIEM'],
+    competitors: ['Salt', 'Noname Security', '42Crunch']
+    useCases: ['Shadow API control', 'PII exposure audits', 'Compliance']
+    integrations: ['OpenTelemetry', 'Datadog', 'Grafana Tempo/Loki', 'SIEM']
     trialDays: 7,
     setupTime: '1-2 days'
   },
@@ -370,14 +370,14 @@ export const real2025Q4Additions = [
       'Role-based checklists',
       'Postmortem drafts and follow-ups',
       'KPI tracking and learning'
-    ],
+    ]
     category: 'Observability',
     link: 'https://ziontechgroup.com/services/incident-copilot-automation',
     marketPosition: 'Operationalizes incident response with AI assist tied to SRE practices.',
     roi: 'Cut MTTR by 20–40% and improve learnings across incidents.',
-    competitors: ['Rootly', 'FireHydrant', 'PagerDuty AIOps'],
-    useCases: ['Major incident response', 'Postmortem quality', 'Runbook evolution'],
-    integrations: ['PagerDuty', 'Opsgenie', 'Slack', 'Jira', 'Datadog'],
+    competitors: ['Rootly', 'FireHydrant', 'PagerDuty AIOps']
+    useCases: ['Major incident response', 'Postmortem quality', 'Runbook evolution']
+    integrations: ['PagerDuty', 'Opsgenie', 'Slack', 'Jira', 'Datadog']
     trialDays: 14,
     setupTime: '1 day'
   },
@@ -394,14 +394,14 @@ export const real2025Q4Additions = [
       'Golden datasets and drift checks',
       'Model/prompt comparison and rollbacks',
       'CI/CD gates and reports'
-    ],
+    ]
     category: 'AI & Data',
     link: 'https://ziontechgroup.com/services/llm-eval-and-regression-lab',
     marketPosition: 'Practical eval tooling for product teams without heavy infra.',
     roi: 'Reduce bad releases; improve answer quality and reliability.',
-    competitors: ['Promptfoo', 'Humanloop', 'Weights & Biases Evals'],
-    useCases: ['RAG validation', 'Prompt quality gates', 'Model drift'],
-    integrations: ['GitHub Actions', 'Vercel', 'OpenAI', 'Anthropic'],
+    competitors: ['Promptfoo', 'Humanloop', 'Weights & Biases Evals']
+    useCases: ['RAG validation', 'Prompt quality gates', 'Model drift']
+    integrations: ['GitHub Actions', 'Vercel', 'OpenAI', 'Anthropic']
     trialDays: 7,
     setupTime: '1 day'
   },
@@ -418,14 +418,14 @@ export const real2025Q4Additions = [
       'Experiment toggles and metrics',
       'SDKs for web/node/mobile',
       'Kill-switch API and audit logs'
-    ],
+    ]
     category: 'Developer Tools',
     link: 'https://ziontechgroup.com/services/managed-feature-flags-edge',
     marketPosition: 'Simple, fast alternative for teams that need flags without heavy platform work.',
     roi: 'Ship faster with safer releases and targeted rollouts.',
-    competitors: ['LaunchDarkly', 'GrowthBook', 'Split'],
-    useCases: ['Progressive delivery', 'A/B tests', 'Risk mitigation'],
-    integrations: ['Vercel', 'Cloudflare Workers', 'Next.js', 'Segment'],
+    competitors: ['LaunchDarkly', 'GrowthBook', 'Split']
+    useCases: ['Progressive delivery', 'A/B tests', 'Risk mitigation']
+    integrations: ['Vercel', 'Cloudflare Workers', 'Next.js', 'Segment']
     trialDays: 14,
     setupTime: 'Same day'
   },
@@ -442,14 +442,14 @@ export const real2025Q4Additions = [
       'Reply classification and intent scoring',
       'CRM sync (companies/contacts/deals)',
       'Analytics & A/B testing'
-    ],
+    ]
     category: 'AI & Data',
     link: 'https://ziontechgroup.com/services/ai-sales-assistant-outreach',
     marketPosition: 'Balances AI autonomy with human-in-the-loop guardrails.',
     roi: 'Increase SDR throughput and conversion; reduce manual data entry.',
-    competitors: ['Apollo', 'Clay', 'Outreach'],
-    useCases: ['Outbound sequences', 'Meeting booking', 'CRM hygiene'],
-    integrations: ['HubSpot', 'Salesforce', 'Gmail', 'Outlook'],
+    competitors: ['Apollo', 'Clay', 'Outreach']
+    useCases: ['Outbound sequences', 'Meeting booking', 'CRM hygiene']
+    integrations: ['HubSpot', 'Salesforce', 'Gmail', 'Outlook']
     trialDays: 7,
     setupTime: '1 day'
   },
@@ -466,14 +466,14 @@ export const real2025Q4Additions = [
       'Access review campaigns and attestations',
       'Audit evidence exports',
       'Directory sync'
-    ],
+    ]
     category: 'Enterprise IT',
     link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
     marketPosition: 'Lightweight alternative to full IGA for modern SaaS stacks.',
     roi: 'Reduce access risk and save IT hours on user lifecycle.',
-    competitors: ['Okta Workflows', 'SailPoint (IGA)', 'Rippling'],
-    useCases: ['Joiner/mover/leaver', 'Quarterly reviews', 'Audit prep'],
-    integrations: ['Okta', 'Azure AD', 'Google Workspace', 'SCIM'],
+    competitors: ['Okta Workflows', 'SailPoint (IGA)', 'Rippling']
+    useCases: ['Joiner/mover/leaver', 'Quarterly reviews', 'Audit prep']
+    integrations: ['Okta', 'Azure AD', 'Google Workspace', 'SCIM']
     trialDays: 14,
     setupTime: '2-3 days'
   },
@@ -490,14 +490,14 @@ export const real2025Q4Additions = [
       'Approval workflows and history',
       'Performance analytics',
       'CMS/CRM integrations'
-    ],
+    ]
     category: 'Developer Tools',
     link: 'https://ziontechgroup.com/services/ai-marketing-content-studio',
     marketPosition: 'Brings content ops discipline to AI generation for teams.',
     roi: 'Accelerate content velocity by 3–5x while staying on-brand.',
-    competitors: ['Jasper', 'Copy.ai', 'HubSpot Content'],
-    useCases: ['Blog/email/social', 'Campaign assets', 'Landing pages'],
-    integrations: ['HubSpot', 'Webflow', 'WordPress', 'Marketo'],
+    competitors: ['Jasper', 'Copy.ai', 'HubSpot Content']
+    useCases: ['Blog/email/social', 'Campaign assets', 'Landing pages']
+    integrations: ['HubSpot', 'Webflow', 'WordPress', 'Marketo']
     trialDays: 7,
     setupTime: 'Same day'
   },
@@ -514,14 +514,14 @@ export const real2025Q4Additions = [
 		'SDK scaffolds for JS/TS/Python',
 		'Changelog RSS and webhooks',
 		'Docs site updates'
-	],
+	]
 	category: 'Developer Tools',
 	link: 'https://ziontechgroup.com/services/api-changelog-sdk-publisher',
 	marketPosition: 'Bridges the gap between manual release notes and full API platforms.',
 	roi: 'Reduce API release toil; fewer integration regressions.',
-	competitors: ['ReadMe', 'Stoplight', 'Postman'],
-	useCases: ['API versioning', 'SDK release automation', 'DevRel updates'],
-	integrations: ['GitHub', 'OpenAPI', 'npm', 'PyPI'],
+	competitors: ['ReadMe', 'Stoplight', 'Postman']
+	useCases: ['API versioning', 'SDK release automation', 'DevRel updates']
+	integrations: ['GitHub', 'OpenAPI', 'npm', 'PyPI']
 	trialDays: 7,
 	setupTime: 'Same day'
   },
@@ -538,14 +538,14 @@ export const real2025Q4Additions = [
 		'CLS/LCP/INP regression alerts',
 		'Lighthouse CI and GitHub PR checks',
 		'Auto-generated remediation suggestions'
-	],
+	]
 	category: 'Quality & Monitoring',
 	link: 'https://ziontechgroup.com/services/browser-performance-optimizer',
 	marketPosition: 'Simpler than SpeedCurve; focused on quick wins for teams.',
 	roi: 'Improve conversion rates by reducing load time.',
-	competitors: ['SpeedCurve', 'Calibre'],
-	useCases: ['E-commerce performance', 'Landing page optimization'],
-	integrations: ['Lighthouse', 'GitHub', 'Datadog'],
+	competitors: ['SpeedCurve', 'Calibre']
+	useCases: ['E-commerce performance', 'Landing page optimization']
+	integrations: ['Lighthouse', 'GitHub', 'Datadog']
 	trialDays: 7,
 	setupTime: 'Same day'
   },
@@ -561,14 +561,14 @@ export const real2025Q4Additions = [
       'Semantic release notes from commits',
       'Docs website and search index',
       'Diffs between versions and deprecation notices'
-    ],
+    ]
     category: 'Developer Tools',
     link: 'https://ziontechgroup.com/services/api-changelog-sdk-publisher',
     marketPosition: 'Lightweight alternative to ReadMe.io and Stoplight.',
     roi: 'Reduce support time; speed developer onboarding.',
-    competitors: ['ReadMe', 'Stoplight', 'SwaggerHub'],
-    useCases: ['Public APIs', 'Partner integrations'],
-    integrations: ['GitHub', 'npm', 'PyPI'],
+    competitors: ['ReadMe', 'Stoplight', 'SwaggerHub']
+    useCases: ['Public APIs', 'Partner integrations']
+    integrations: ['GitHub', 'npm', 'PyPI']
     trialDays: 14,
     setupTime: '1 day'
   },
@@ -584,14 +584,14 @@ export const real2025Q4Additions = [
       'SLO templates and recommended alerts',
       'Error budget policy automation',
       'PagerDuty and Slack notifications'
-    ],
+    ]
     category: 'Observability',
     link: 'https://ziontechgroup.com/services/slo-burn-rate-coach',
     marketPosition: 'Opinionated SLO tooling that works with your APM.',
     roi: 'Cut alert fatigue while catching true outages.',
-    competitors: ['Nobl9', 'Datadog SLO'],
-    useCases: ['SRE alerting', 'Reliability management'],
-    integrations: ['Datadog', 'New Relic', 'Grafana'],
+    competitors: ['Nobl9', 'Datadog SLO']
+    useCases: ['SRE alerting', 'Reliability management']
+    integrations: ['Datadog', 'New Relic', 'Grafana']
     trialDays: 14,
     setupTime: '1 day'
   },
@@ -607,14 +607,14 @@ export const real2025Q4Additions = [
       'Failed charge and dunning alerts',
       'Churn risk signals and workflows',
       'Cohort and plan segmentation'
-    ],
+    ]
     category: 'Analytics & Business Intelligence',
     link: 'https://ziontechgroup.com/services/saas-billing-anomaly-guard',
     marketPosition: 'Focuses on anomaly alerts; complements full BI stacks.',
     roi: 'Save revenue by early intervention on at-risk accounts.',
-    competitors: ['ChartMogul', 'ProfitWell'],
-    useCases: ['SaaS finance ops', 'RevOps', 'Growth'],
-    integrations: ['Stripe', 'Chargebee', 'Zuora'],
+    competitors: ['ChartMogul', 'ProfitWell']
+    useCases: ['SaaS finance ops', 'RevOps', 'Growth']
+    integrations: ['Stripe', 'Chargebee', 'Zuora']
     trialDays: 14,
     setupTime: '2 days'
   },
@@ -630,14 +630,14 @@ export const real2025Q4Additions = [
       'Batch and online store sync',
       'Backfills and drift checks',
       'SDKs and notebooks'
-    ],
+    ]
     category: 'AI & Data',
     link: 'https://ziontechgroup.com/services/ml-feature-store-starter',
     marketPosition: 'Fast start without a full enterprise platform.',
     roi: 'Reduce model bugs and speed delivery.',
-    competitors: ['Feast', 'Hopsworks'],
-    useCases: ['Personalization', 'Risk modeling'],
-    integrations: ['dbt', 'Snowflake', 'Redis'],
+    competitors: ['Feast', 'Hopsworks']
+    useCases: ['Personalization', 'Risk modeling']
+    integrations: ['dbt', 'Snowflake', 'Redis']
     trialDays: 7,
     setupTime: '1 week'
   },
@@ -653,14 +653,14 @@ export const real2025Q4Additions = [
       'Retries, backoff, and DLQ',
       'Execution logs and metrics',
       'Slack/PagerDuty alerts'
-    ],
+    ]
     category: 'Cloud & Infrastructure',
     link: 'https://ziontechgroup.com/services/edge-cron-orchestrator',
     marketPosition: 'Easier than DIY Workers/Functions scheduling.',
     roi: 'Reduce ops toil for small scheduled workloads.',
-    competitors: ['Cloudflare Cron Triggers', 'Vercel Cron'],
-    useCases: ['Cache warmers', 'Data sync', 'Webhooks'],
-    integrations: ['Cloudflare', 'AWS Lambda', 'Netlify'],
+    competitors: ['Cloudflare Cron Triggers', 'Vercel Cron']
+    useCases: ['Cache warmers', 'Data sync', 'Webhooks']
+    integrations: ['Cloudflare', 'AWS Lambda', 'Netlify']
     trialDays: 14,
     setupTime: 'Same day'
   },
@@ -676,14 +676,14 @@ export const real2025Q4Additions = [
       'Health checks and staged rollout',
       'Audit logs and approvals',
       'SDKs and CLI'
-    ],
+    ]
     category: 'Security',
     link: 'https://ziontechgroup.com/services/secret-rotation-orchestrator',
     marketPosition: 'Operationalizes rotation best practices.',
     roi: 'Reduce breach risk and manual overhead.',
-    competitors: ['HashiCorp Vault', 'AWS Secrets Manager'],
-    useCases: ['PCI compliance', 'Least privilege ops'],
-    integrations: ['Vault', 'KMS', 'Kubernetes'],
+    competitors: ['HashiCorp Vault', 'AWS Secrets Manager']
+    useCases: ['PCI compliance', 'Least privilege ops']
+    integrations: ['Vault', 'KMS', 'Kubernetes']
     trialDays: 14,
     setupTime: '1-2 days'
   }

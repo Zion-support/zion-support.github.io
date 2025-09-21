@@ -6,7 +6,7 @@ export interface EnterpriseIT2026ServiceV4 {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface EnterpriseIT2026ServiceV4 {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Behavioral analyticsAPI security',
       'Cloud-native architectureCompliance reporting',
       'Integration APIs24/7 monitoring'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-blue-600 to-indigo-600',
@@ -66,11 +66,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '1 month',
     category: 'Enterprise Security',
     realService: true,
-    technology: ['Zero-Trust ArchitectureAI/ML', 'MicroservicesReact', 'PythonPostgreSQL', 'AWSKubernetes'],
-    integrations: ['Active DirectorySAML', 'OAuthSIEM systems', 'FirewallsVPNs'],
-    useCases: ['Network securityAccess control', 'Threat preventionCompliance', 'Cloud security'],
+    technology: ['Zero-Trust ArchitectureAI/ML', 'MicroservicesReact', 'PythonPostgreSQL', 'AWSKubernetes']
+    integrations: ['Active DirectorySAML', 'OAuthSIEM systems', 'FirewallsVPNs']
+    useCases: ['Network securityAccess control', 'Threat preventionCompliance', 'Cloud security']
     roi: 'Reduce security incidents by 90%, improve compliance by 95%, lower security costs by 40%',
-    competitors: ['CiscoPalo Alto Networks', 'VMware'],
+    competitors: ['CiscoPalo Alto Networks', 'VMware']
     marketSize: '$60B cybersecurity market',
     growthRate: '50% annual growth',
     variant: 'enterprise-futuristic',
@@ -101,7 +101,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Intelligent monitoringRoot cause analysis',
       'Capacity planningCost optimization',
       'Compliance automationReal-time dashboards'
-    ],
+    ]
     popular: true,
     icon: '⚙️',
     color: 'from-green-600 to-emerald-600',
@@ -113,11 +113,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'AI IT Operations',
     realService: true,
-    technology: ['AI/MLMachine Learning', 'AutomationReact', 'PythonPostgreSQL', 'AWSKubernetes'],
-    integrations: ['ServiceNowJira', 'SlackTeams', 'Monitoring toolsTicketing systems'],
-    useCases: ['IT operations automationIncident management', 'Performance monitoringCost optimization', 'Compliance'],
+    technology: ['AI/MLMachine Learning', 'AutomationReact', 'PythonPostgreSQL', 'AWSKubernetes']
+    integrations: ['ServiceNowJira', 'SlackTeams', 'Monitoring toolsTicketing systems']
+    useCases: ['IT operations automationIncident management', 'Performance monitoringCost optimization', 'Compliance']
     roi: 'Reduce incident response time by 80%, improve system uptime by 99.9%, lower IT costs by 30%',
-    competitors: ['ServiceNowBMC', 'BMC Helix'],
+    competitors: ['ServiceNowBMC', 'BMC Helix']
     marketSize: '$35B IT operations market',
     growthRate: '40% annual growth',
     variant: 'ai-futuristic',
@@ -148,7 +148,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Compliance validationMigration tools',
       'API integrationSecurity auditing',
       'Expert consultationFuture-proofing'
-    ],
+    ]
     popular: false,
     icon: '🔒',
     color: 'from-purple-600 to-violet-600',
@@ -160,11 +160,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '1 month',
     category: 'Quantum Security',
     realService: true,
-    technology: ['Post-Quantum CryptographyHybrid Encryption', 'ReactPython', 'PostgreSQLAWS', 'Cryptography'],
-    integrations: ['PKI systemsHSMs', 'Cloud platformsSecurity tools', 'Compliance systems'],
-    useCases: ['Data protectionSecure communications', 'ComplianceFuture-proofing', 'Migration'],
+    technology: ['Post-Quantum CryptographyHybrid Encryption', 'ReactPython', 'PostgreSQLAWS', 'Cryptography']
+    integrations: ['PKI systemsHSMs', 'Cloud platformsSecurity tools', 'Compliance systems']
+    useCases: ['Data protectionSecure communications', 'ComplianceFuture-proofing', 'Migration']
     roi: 'Ensure long-term security, maintain compliance, protect against future threats',
-    competitors: ['EntrustDigiCert', 'GlobalSign'],
+    competitors: ['EntrustDigiCert', 'GlobalSign']
     marketSize: '$15B cryptography market',
     growthRate: '70% annual growth',
     variant: 'quantum-futuristic',
@@ -195,7 +195,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Automated testingRollback capabilities',
       'Compliance validationMulti-cloud support',
       'Migration analyticsExpert support'
-    ],
+    ]
     popular: true,
     icon: '☁️',
     color: 'from-sky-600 to-blue-600',
@@ -207,11 +207,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '1 month',
     category: 'Cloud Migration',
     realService: true,
-    technology: ['AI/MLCloud Computing', 'AutomationReact', 'PythonPostgreSQL', 'AWSMulti-cloud'],
-    integrations: ['AWSAzure', 'GCPOn-premise systems', 'Monitoring toolsCI/CD pipelines'],
-    useCases: ['Cloud migrationMulti-cloud management', 'Cost optimizationPerformance improvement', 'Compliance'],
+    technology: ['AI/MLCloud Computing', 'AutomationReact', 'PythonPostgreSQL', 'AWSMulti-cloud']
+    integrations: ['AWSAzure', 'GCPOn-premise systems', 'Monitoring toolsCI/CD pipelines']
+    useCases: ['Cloud migrationMulti-cloud management', 'Cost optimizationPerformance improvement', 'Compliance']
     roi: 'Reduce migration time by 70%, eliminate downtime, optimize cloud costs by 40%',
-    competitors: ['AWS Migration HubAzure Migrate', 'Google Cloud Migrate'],
+    competitors: ['AWS Migration HubAzure Migrate', 'Google Cloud Migrate']
     marketSize: '$50B cloud migration market',
     growthRate: '60% annual growth',
     variant: 'ai-autonomous',
@@ -242,7 +242,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'AI model deploymentPerformance monitoring',
       'Security managementCompliance automation',
       'API gatewayAnalytics dashboard'
-    ],
+    ]
     popular: false,
     icon: '🌐',
     color: 'from-orange-600 to-red-600',
@@ -254,11 +254,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Edge ComputingIoT', 'AI/MLReact', 'PythonPostgreSQL', 'AWSKubernetes'],
-    integrations: ['IoT devicesCloud platforms', 'AI modelsMonitoring tools', 'Security systems'],
-    useCases: ['IoT managementReal-time processing', 'AI deploymentEdge analytics', 'Low-latency applications'],
+    technology: ['Edge ComputingIoT', 'AI/MLReact', 'PythonPostgreSQL', 'AWSKubernetes']
+    integrations: ['IoT devicesCloud platforms', 'AI modelsMonitoring tools', 'Security systems']
+    useCases: ['IoT managementReal-time processing', 'AI deploymentEdge analytics', 'Low-latency applications']
     roi: 'Reduce latency by 90%, improve performance by 300%, lower bandwidth costs by 60%',
-    competitors: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoT'],
+    competitors: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoT']
     marketSize: '$40B edge computing market',
     growthRate: '80% annual growth',
     variant: 'edge-futuristic',
@@ -289,7 +289,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Lineage trackingAccess control',
       'Audit loggingCompliance reporting',
       'Integration APIsReal-time monitoring'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-teal-600 to-cyan-600',
@@ -301,11 +301,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'Data Governance',
     realService: true,
-    technology: ['AI/MLData Governance', 'PrivacyReact', 'PythonPostgreSQL', 'AWSBig Data'],
-    integrations: ['Data warehousesDatabases', 'Cloud platformsBI tools', 'Compliance systems'],
-    useCases: ['Data governancePrivacy compliance', 'Data qualityAudit trails', 'Regulatory compliance'],
+    technology: ['AI/MLData Governance', 'PrivacyReact', 'PythonPostgreSQL', 'AWSBig Data']
+    integrations: ['Data warehousesDatabases', 'Cloud platformsBI tools', 'Compliance systems']
+    useCases: ['Data governancePrivacy compliance', 'Data qualityAudit trails', 'Regulatory compliance']
     roi: 'Improve data quality by 80%, reduce compliance risks by 90%, automate governance by 70%',
-    competitors: ['CollibraInformatica', 'Alation'],
+    competitors: ['CollibraInformatica', 'Alation']
     marketSize: '$25B data governance market',
     growthRate: '45% annual growth',
     variant: 'ai-futuristic',
@@ -336,7 +336,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Security scanningDeployment automation',
       'Monitoring automationIncident response',
       'Cost optimizationCompliance automation'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-pink-600 to-rose-600',
@@ -348,11 +348,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '1 week',
     category: 'Autonomous DevOps',
     realService: true,
-    technology: ['AI/MLDevOps', 'AutomationReact', 'PythonPostgreSQL', 'AWSKubernetes'],
-    integrations: ['GitHubGitLab', 'JenkinsDocker', 'KubernetesCloud platforms'],
-    useCases: ['CI/CD automationInfrastructure management', 'Testing automationDeployment automation', 'Monitoring'],
+    technology: ['AI/MLDevOps', 'AutomationReact', 'PythonPostgreSQL', 'AWSKubernetes']
+    integrations: ['GitHubGitLab', 'JenkinsDocker', 'KubernetesCloud platforms']
+    useCases: ['CI/CD automationInfrastructure management', 'Testing automationDeployment automation', 'Monitoring']
     roi: 'Reduce deployment time by 90%, eliminate human errors, improve reliability by 99.9%',
-    competitors: ['GitLabJenkins', 'CircleCI'],
+    competitors: ['GitLabJenkins', 'CircleCI']
     marketSize: '$20B DevOps market',
     growthRate: '55% annual growth',
     variant: 'ai-autonomous',
@@ -383,7 +383,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Compliance automationPerformance optimization',
       'Disaster recoveryData sovereignty',
       'API accessExpert consultation'
-    ],
+    ]
     popular: false,
     icon: '💾',
     color: 'from-indigo-600 to-purple-600',
@@ -395,11 +395,11 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'Quantum Storage',
     realService: true,
-    technology: ['Quantum-Resistant EncryptionDistributed Storage', 'AI/MLReact', 'PythonPostgreSQL', 'AWS'],
-    integrations: ['Cloud platformsStorage systems', 'Security toolsCompliance systems', 'Backup solutions'],
-    useCases: ['Secure data storageCompliance', 'Disaster recoveryData sovereignty', 'Future-proofing'],
+    technology: ['Quantum-Resistant EncryptionDistributed Storage', 'AI/MLReact', 'PythonPostgreSQL', 'AWS']
+    integrations: ['Cloud platformsStorage systems', 'Security toolsCompliance systems', 'Backup solutions']
+    useCases: ['Secure data storageCompliance', 'Disaster recoveryData sovereignty', 'Future-proofing']
     roi: 'Ensure long-term data security, maintain compliance, protect against quantum threats',
-    competitors: ['AWS S3Azure Blob', 'Google Cloud Storage'],
+    competitors: ['AWS S3Azure Blob', 'Google Cloud Storage']
     marketSize: '$80B cloud storage market',
     growthRate: '65% annual growth',
     variant: 'quantum-futuristic',
@@ -416,4 +416,4 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     rating: 4.9,
     reviews: 32
   }
-],
+]

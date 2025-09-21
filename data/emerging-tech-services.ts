@@ -6,7 +6,7 @@ export interface EmergingTechService {
   price: string,
   period: string,
   description: string,
-  features: string[],
+  features: string[]
   popular: boolean,
   icon: string,
   color: string,
@@ -18,11 +18,11 @@ export interface EmergingTechService {
   setupTime: string,
   category: string,
   realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
   roi: string,
-  competitors: string[],
+  competitors: string[]
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
@@ -54,7 +54,7 @@ export const emergingTechServices: EmergingTechService[] = [
       'Zero-trust architectureQuantum random number generation',
       'Multi-layer security protocolsCompliance with NIST standards',
       'Quantum network monitoringFuture-proof security infrastructure'
-    ],
+    ]
     popular: true,
     icon: '🔐',
     color: 'from-indigo-600 to-purple-700',
@@ -66,11 +66,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '8-16 weeks',
     category: 'Quantum & Cybersecurity',
     realService: true,
-    technology: ['Quantum Key DistributionPost-Quantum Cryptography', 'ReactNode.js', 'PostgreSQLQuantum Computing APIs'],
-    integrations: ['Custom security protocolsGovernment standards', 'Enterprise security systemsQuantum networks', 'Blockchain platforms'],
-    useCases: ['Government communicationsFinancial transactions', 'Healthcare data protectionDefense communications', 'Critical infrastructure security'],
+    technology: ['Quantum Key DistributionPost-Quantum Cryptography', 'ReactNode.js', 'PostgreSQLQuantum Computing APIs']
+    integrations: ['Custom security protocolsGovernment standards', 'Enterprise security systemsQuantum networks', 'Blockchain platforms']
+    useCases: ['Government communicationsFinancial transactions', 'Healthcare data protectionDefense communications', 'Critical infrastructure security']
     roi: 'Average customer sees 500% ROI within 18 months through enhanced security and compliance benefits.',
-    competitors: ['No direct competitorsTraditional encryption vendors', 'Custom solutions'],
+    competitors: ['No direct competitorsTraditional encryption vendors', 'Custom solutions']
     marketSize: '$15B quantum security market',
     growthRate: '800% annual growth',
     variant: 'quantum-advanced',
@@ -101,7 +101,7 @@ export const emergingTechServices: EmergingTechService[] = [
       'Medical device complianceGaming integration tools',
       'Productivity enhancement APIsNeural data visualization',
       'Custom algorithm developmentMulti-platform support'
-    ],
+    ]
     popular: true,
     icon: '🧠',
     color: 'from-pink-600 to-rose-600',
@@ -113,11 +113,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '4-8 weeks',
     category: 'Neural & Brain-Computer Interface',
     realService: true,
-    technology: ['TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'EEG ProcessingML Algorithms'],
-    integrations: ['UnityUnreal Engine', 'Medical devicesResearch platforms', 'Custom applicationsIoT devices'],
-    useCases: ['Medical diagnosticsGaming control', 'Productivity enhancementAssistive technology', 'Research applicationsEntertainment'],
+    technology: ['TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'EEG ProcessingML Algorithms']
+    integrations: ['UnityUnreal Engine', 'Medical devicesResearch platforms', 'Custom applicationsIoT devices']
+    useCases: ['Medical diagnosticsGaming control', 'Productivity enhancementAssistive technology', 'Research applicationsEntertainment']
     roi: 'Average customer sees 400% ROI within 12 months through innovative product development.',
-    competitors: ['NeuralinkCTRL-labs', 'OpenBCICustom solutions'],
+    competitors: ['NeuralinkCTRL-labs', 'OpenBCICustom solutions']
     marketSize: '$8B neural interface market',
     growthRate: '600% annual growth',
     variant: 'neural-quantum',
@@ -148,7 +148,7 @@ export const emergingTechServices: EmergingTechService[] = [
       'Real-time decision makingSimulation and testing tools',
       'Regulatory complianceFleet management system',
       'Custom algorithm developmentMulti-vehicle coordination'
-    ],
+    ]
     popular: true,
     icon: '🚗',
     color: 'from-blue-600 to-cyan-600',
@@ -160,11 +160,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '12-24 weeks',
     category: 'Autonomous & Transportation',
     realService: true,
-    technology: ['TensorFlowPyTorch', 'Computer VisionLIDAR Processing', 'ReactNode.js', 'PostgreSQLAWS'],
-    integrations: ['Vehicle control systemsSensor arrays', 'Mapping platformsTraffic systems', 'Custom hardwareSimulation environments'],
-    useCases: ['Passenger vehiclesDelivery vehicles', 'Logistics automationPublic transportation', 'Research and developmentMilitary applications'],
+    technology: ['TensorFlowPyTorch', 'Computer VisionLIDAR Processing', 'ReactNode.js', 'PostgreSQLAWS']
+    integrations: ['Vehicle control systemsSensor arrays', 'Mapping platformsTraffic systems', 'Custom hardwareSimulation environments']
+    useCases: ['Passenger vehiclesDelivery vehicles', 'Logistics automationPublic transportation', 'Research and developmentMilitary applications']
     roi: 'Average customer sees 300% ROI within 24 months through autonomous vehicle deployment.',
-    competitors: ['WaymoCruise', 'Tesla AutopilotCustom solutions'],
+    competitors: ['WaymoCruise', 'Tesla AutopilotCustom solutions']
     marketSize: '$65B autonomous vehicle market',
     growthRate: '450% annual growth',
     variant: 'neural-cyberpunk',
@@ -195,7 +195,7 @@ export const emergingTechServices: EmergingTechService[] = [
       'Space weather monitoringOrbital mechanics calculations',
       'Launch vehicle integrationGround station management',
       'Space debris trackingRegulatory compliance tools'
-    ],
+    ]
     popular: true,
     icon: '🚀',
     color: 'from-purple-600 to-indigo-700',
@@ -207,11 +207,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '16-32 weeks',
     category: 'Space & Aerospace',
     realService: true,
-    technology: ['AI/ML AlgorithmsMaterials Science', 'Orbital MechanicsReact', 'Node.jsPostgreSQL', 'AWSCustom APIs'],
-    integrations: ['Launch vehiclesGround stations', 'Satellite systemsSpace weather data', 'Regulatory databasesCustom hardware'],
-    useCases: ['Satellite deploymentSpace exploration', 'Earth observationCommunications infrastructure', 'Research missionsCommercial space'],
+    technology: ['AI/ML AlgorithmsMaterials Science', 'Orbital MechanicsReact', 'Node.jsPostgreSQL', 'AWSCustom APIs']
+    integrations: ['Launch vehiclesGround stations', 'Satellite systemsSpace weather data', 'Regulatory databasesCustom hardware']
+    useCases: ['Satellite deploymentSpace exploration', 'Earth observationCommunications infrastructure', 'Research missionsCommercial space']
     roi: 'Average customer sees 600% ROI within 36 months through space technology deployment.',
-    competitors: ['SpaceXBlue Origin', 'Rocket LabCustom solutions'],
+    competitors: ['SpaceXBlue Origin', 'Rocket LabCustom solutions']
     marketSize: '$450B space economy',
     growthRate: '700% annual growth',
     variant: 'quantum-space',
@@ -242,7 +242,7 @@ export const emergingTechServices: EmergingTechService[] = [
       'Clinical trial optimizationBiomarker identification',
       'Drug repurposing toolsRegulatory compliance',
       'Research collaboration toolsCustom model development'
-    ],
+    ]
     popular: true,
     icon: '🧬',
     color: 'from-green-600 to-emerald-600',
@@ -254,11 +254,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '8-16 weeks',
     category: 'Biotechnology & Healthcare',
     realService: true,
-    technology: ['TensorFlowPyTorch', 'Computational BiologyMolecular Dynamics', 'ReactNode.js', 'PostgreSQLAWS'],
-    integrations: ['Lab equipmentResearch databases', 'Clinical systemsRegulatory platforms', 'Custom applicationsCollaboration tools'],
-    useCases: ['Drug discoveryProtein engineering', 'Genetic researchClinical trials', 'Biomarker researchPersonalized medicine'],
+    technology: ['TensorFlowPyTorch', 'Computational BiologyMolecular Dynamics', 'ReactNode.js', 'PostgreSQLAWS']
+    integrations: ['Lab equipmentResearch databases', 'Clinical systemsRegulatory platforms', 'Custom applicationsCollaboration tools']
+    useCases: ['Drug discoveryProtein engineering', 'Genetic researchClinical trials', 'Biomarker researchPersonalized medicine']
     roi: 'Average customer sees 400% ROI within 18 months through accelerated research and development.',
-    competitors: ['InsitroRecursion', 'AtomwiseCustom solutions'],
+    competitors: ['InsitroRecursion', 'AtomwiseCustom solutions']
     marketSize: '$95B biotech market',
     growthRate: '350% annual growth',
     variant: 'neural-quantum',
@@ -275,4 +275,4 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.9,
     reviews: 20
   }
-],
+]

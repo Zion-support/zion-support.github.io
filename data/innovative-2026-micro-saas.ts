@@ -4,7 +4,7 @@ export interface Innovative2026MicroSaas {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
       "Scalable platform",
       "Integration capabilities",
       "Future-ready architecture"
-    ],
+    ]
     link: "/services/2026-micro-saas",
     category: "Innovative 2026 Micro SAAS",
     realImplementation: true,
@@ -37,4 +37,4 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

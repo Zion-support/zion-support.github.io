@@ -4,7 +4,7 @@ export interface ExtraService {
   tagline: string,
   price: string,
   description: string,
-  features: string[],
+  features: string[]
   link: string,
   category: string,
   realImplementation: boolean,
@@ -27,7 +27,7 @@ export const extraServices: ExtraService[] = [
       "Cost analysis",
       "Security implementation",
       "24/7 support"
-    ],
+    ]
     link: "/services/cloud-migration-expert",
     category: "Cloud Services",
     realImplementation: true,
@@ -49,7 +49,7 @@ export const extraServices: ExtraService[] = [
       "Security policy review",
       "Compliance audit",
       "Remediation guidance"
-    ],
+    ]
     link: "/services/cybersecurity-audit",
     category: "Security",
     realImplementation: true,
@@ -59,4 +59,4 @@ export const extraServices: ExtraService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+]

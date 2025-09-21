@@ -66,23 +66,23 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'Mobile app access',
       'API for developers',
       'Advanced security features'
-    ],
+    ]
     popular: true,
     icon: '💰',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-powered-defi-protocol',
     marketPosition: 'First AI-powered DeFi protocol. Our advantage: Machine learning optimization with comprehensive risk management and cross-chain capabilities.',
-    targetAudience: ['DeFi protocols', 'Cryptocurrency investors', 'Financial institutions', 'Hedge funds', 'Retail investors'],
+    targetAudience: ['DeFi protocols', 'Cryptocurrency investors', 'Financial institutions', 'Hedge funds', 'Retail investors']
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI DeFi & Blockchain Finance',
     realService: true,
-    technology: ['Blockchain', 'Smart Contracts', 'Machine Learning', 'DeFi Protocols', 'Cross-chain Technology'],
-    integrations: ['Ethereum', 'Solana', 'Polygon', 'Binance Smart Chain', 'Avalanche', 'Custom blockchains'],
-    useCases: ['Yield farming', 'Portfolio management', 'Risk assessment', 'Trading strategies', 'Liquidity provision'],
+    technology: ['Blockchain', 'Smart Contracts', 'Machine Learning', 'DeFi Protocols', 'Cross-chain Technology']
+    integrations: ['Ethereum', 'Solana', 'Polygon', 'Binance Smart Chain', 'Avalanche', 'Custom blockchains']
+    useCases: ['Yield farming', 'Portfolio management', 'Risk assessment', 'Trading strategies', 'Liquidity provision']
     roi: 'Users achieve 200-500% APY with AI-optimized strategies and reduced risk exposure.',
-    competitors: ['Compound', 'Aave', 'Uniswap', 'Curve Finance', 'Custom DeFi protocols'],
+    competitors: ['Compound', 'Aave', 'Uniswap', 'Curve Finance', 'Custom DeFi protocols']
     marketSize: '$89.2B DeFi market',
     growthRate: '85% annual growth',
     contactInfo: contact,
@@ -112,23 +112,23 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'NFT marketplace',
       'Developer tools',
       'Enterprise solutions'
-    ],
+    ]
     popular: false,
     icon: '⚛️',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-resistant-blockchain',
     marketPosition: 'First quantum-resistant blockchain platform. Our advantage: Post-quantum cryptography with comprehensive security and enterprise-grade features.',
-    targetAudience: ['Government agencies', 'Financial institutions', 'Defense contractors', 'Healthcare organizations', 'Critical infrastructure'],
+    targetAudience: ['Government agencies', 'Financial institutions', 'Defense contractors', 'Healthcare organizations', 'Critical infrastructure']
     trialDays: 60,
     setupTime: '6-8 weeks',
     category: 'Quantum-Safe Blockchain & Security',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Blockchain Technology', 'Quantum-Safe Consensus', 'Smart Contracts', 'Cross-chain Technology'],
-    integrations: ['Quantum computers', 'Traditional blockchains', 'Enterprise systems', 'Government networks', 'Custom platforms'],
-    useCases: ['Government records', 'Financial transactions', 'Military communications', 'Healthcare data', 'Critical infrastructure'],
+    technology: ['Post-Quantum Cryptography', 'Blockchain Technology', 'Quantum-Safe Consensus', 'Smart Contracts', 'Cross-chain Technology']
+    integrations: ['Quantum computers', 'Traditional blockchains', 'Enterprise systems', 'Government networks', 'Custom platforms']
+    useCases: ['Government records', 'Financial transactions', 'Military communications', 'Healthcare data', 'Critical infrastructure']
     roi: 'Organizations secure 100% future-proof blockchain infrastructure with compliance to emerging quantum-resistant standards.',
-    competitors: ['IOTA', 'Hedera', 'Custom quantum-resistant solutions'],
+    competitors: ['IOTA', 'Hedera', 'Custom quantum-resistant solutions']
     marketSize: '$12.8B quantum-resistant blockchain market',
     growthRate: '95% annual growth',
     contactInfo: contact,
@@ -158,23 +158,23 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'Enterprise features',
       'Compliance tools',
       'Developer SDK'
-    ],
+    ]
     popular: true,
     icon: '🆔',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/web3-identity-platform',
     marketPosition: 'Leading Web3 identity platform. Our advantage: Comprehensive decentralized identity with privacy-preserving features and enterprise integration.',
-    targetAudience: ['Web3 applications', 'Enterprises', 'Government agencies', 'Healthcare organizations', 'Financial services'],
+    targetAudience: ['Web3 applications', 'Enterprises', 'Government agencies', 'Healthcare organizations', 'Financial services']
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Web3 Identity & Authentication',
     realService: true,
-    technology: ['Decentralized Identity', 'Verifiable Credentials', 'Zero-Knowledge Proofs', 'Blockchain', 'Cryptography'],
-    integrations: ['Ethereum', 'Polygon', 'Solana', 'Enterprise systems', 'Web3 applications', 'Custom platforms'],
-    useCases: ['User authentication', 'Credential verification', 'Privacy protection', 'Compliance management', 'Cross-platform identity'],
+    technology: ['Decentralized Identity', 'Verifiable Credentials', 'Zero-Knowledge Proofs', 'Blockchain', 'Cryptography']
+    integrations: ['Ethereum', 'Polygon', 'Solana', 'Enterprise systems', 'Web3 applications', 'Custom platforms']
+    useCases: ['User authentication', 'Credential verification', 'Privacy protection', 'Compliance management', 'Cross-platform identity']
     roi: 'Organizations achieve 300% ROI with 90% reduction in identity management costs and 100% privacy compliance.',
-    competitors: ['Microsoft ION', 'Sovrin', 'uPort', '3Box', 'Custom solutions'],
+    competitors: ['Microsoft ION', 'Sovrin', 'uPort', '3Box', 'Custom solutions']
     marketSize: '$18.9B decentralized identity market',
     growthRate: '65% annual growth',
     contactInfo: contact,
@@ -204,23 +204,23 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'Social features',
       'Creator tools',
       'Analytics dashboard'
-    ],
+    ]
     popular: false,
     icon: '🎨',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-nft-marketplace',
     marketPosition: 'Leading AI-powered NFT marketplace. Our advantage: Intelligent trading with AI insights and automated portfolio management.',
-    targetAudience: ['NFT creators', 'Collectors', 'Investors', 'Artists', 'Gaming companies'],
+    targetAudience: ['NFT creators', 'Collectors', 'Investors', 'Artists', 'Gaming companies']
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'AI NFT & Digital Art',
     realService: true,
-    technology: ['AI/ML', 'Blockchain', 'NFT Standards', 'Predictive Analytics', 'Computer Vision'],
-    integrations: ['Ethereum', 'Polygon', 'Solana', 'IPFS', 'Custom NFT standards', 'Social platforms'],
-    useCases: ['NFT trading', 'Portfolio management', 'Content creation', 'Market analysis', 'Social trading'],
+    technology: ['AI/ML', 'Blockchain', 'NFT Standards', 'Predictive Analytics', 'Computer Vision']
+    integrations: ['Ethereum', 'Polygon', 'Solana', 'IPFS', 'Custom NFT standards', 'Social platforms']
+    useCases: ['NFT trading', 'Portfolio management', 'Content creation', 'Market analysis', 'Social trading']
     roi: 'Users achieve 150-300% ROI with AI-powered insights and automated portfolio optimization.',
-    competitors: ['OpenSea', 'Rarible', 'Foundation', 'SuperRare', 'Custom marketplaces'],
+    competitors: ['OpenSea', 'Rarible', 'Foundation', 'SuperRare', 'Custom marketplaces']
     marketSize: '$32.1B NFT market',
     growthRate: '75% annual growth',
     contactInfo: contact,
@@ -250,23 +250,23 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'Supplier management',
       'Analytics dashboard',
       'API integration'
-    ],
+    ]
     popular: true,
     icon: '📦',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/blockchain-supply-chain-orchestrator',
     marketPosition: 'Leading blockchain supply chain solution. Our advantage: Comprehensive traceability with IoT integration and smart contract automation.',
-    targetAudience: ['Manufacturing companies', 'Logistics firms', 'Retail chains', 'Food companies', 'Pharmaceutical companies'],
+    targetAudience: ['Manufacturing companies', 'Logistics firms', 'Retail chains', 'Food companies', 'Pharmaceutical companies']
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Blockchain Supply Chain & Logistics',
     realService: true,
-    technology: ['Blockchain', 'Smart Contracts', 'IoT Integration', 'Supply Chain Management', 'Real-time Analytics'],
-    integrations: ['ERP systems', 'IoT platforms', 'Logistics software', 'Quality management systems', 'Custom platforms'],
-    useCases: ['Product traceability', 'Quality assurance', 'Compliance management', 'Inventory optimization', 'Supplier verification'],
+    technology: ['Blockchain', 'Smart Contracts', 'IoT Integration', 'Supply Chain Management', 'Real-time Analytics']
+    integrations: ['ERP systems', 'IoT platforms', 'Logistics software', 'Quality management systems', 'Custom platforms']
+    useCases: ['Product traceability', 'Quality assurance', 'Compliance management', 'Inventory optimization', 'Supplier verification']
     roi: 'Organizations achieve 400% ROI with 90% improvement in traceability and 80% reduction in compliance costs.',
-    competitors: ['IBM Food Trust', 'VeChain', 'Walmart Blockchain', 'Custom solutions'],
+    competitors: ['IBM Food Trust', 'VeChain', 'Walmart Blockchain', 'Custom solutions']
     marketSize: '$28.7B blockchain supply chain market',
     growthRate: '58% annual growth',
     contactInfo: contact,
@@ -296,23 +296,23 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       'Analytics dashboard',
       'Developer SDK',
       'Marketplace integration'
-    ],
+    ]
     popular: true,
     icon: '🌍',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/metaverse-development-platform',
     marketPosition: 'Leading metaverse development platform. Our advantage: AI-powered content generation with blockchain ownership and comprehensive development tools.',
-    targetAudience: ['Game developers', 'Content creators', 'Entertainment companies', 'Educational institutions', 'Brands and marketers'],
+    targetAudience: ['Game developers', 'Content creators', 'Entertainment companies', 'Educational institutions', 'Brands and marketers']
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Metaverse & Virtual Reality',
     realService: true,
-    technology: ['3D Graphics', 'AI/ML', 'Blockchain', 'VR/AR', 'Game Development', 'Cloud Computing'],
-    integrations: ['Unity', 'Unreal Engine', 'VR headsets', 'Blockchain networks', 'Social platforms', 'Custom systems'],
-    useCases: ['Virtual worlds', 'Gaming experiences', 'Virtual events', 'Educational simulations', 'Brand experiences'],
+    technology: ['3D Graphics', 'AI/ML', 'Blockchain', 'VR/AR', 'Game Development', 'Cloud Computing']
+    integrations: ['Unity', 'Unreal Engine', 'VR headsets', 'Blockchain networks', 'Social platforms', 'Custom systems']
+    useCases: ['Virtual worlds', 'Gaming experiences', 'Virtual events', 'Educational simulations', 'Brand experiences']
     roi: 'Creators achieve 300-600% ROI with AI-powered content generation and blockchain monetization.',
-    competitors: ['Roblox', 'Decentraland', 'The Sandbox', 'Meta Horizon Worlds', 'Custom platforms'],
+    competitors: ['Roblox', 'Decentraland', 'The Sandbox', 'Meta Horizon Worlds', 'Custom platforms']
     marketSize: '$45.8B metaverse market',
     growthRate: '95% annual growth',
     contactInfo: contact,
