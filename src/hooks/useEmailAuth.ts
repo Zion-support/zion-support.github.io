@@ -1,1 +1,0 @@
-import type { AuthError, User } from '@supabase/supabase-js'; 
