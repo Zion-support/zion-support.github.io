@@ -4,6 +4,9 @@ import { ThemeProvider } from '../components/ThemeProvider.jsx';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import Analytics from '../components/Analytics.jsx';
 import ScrollToTop from '../components/ScrollToTop.jsx';
+import { NotificationProvider } from '../components/NotificationSystem.jsx';
+import CookieConsent from '../components/CookieConsent.jsx';
+import PerformanceOptimizer from '../components/PerformanceOptimizer.jsx';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -35,11 +38,16 @@ export default function App({ Component, pageProps }) {
       </Head>
       
       <ErrorBoundary>
-        <ThemeProvider>
-          <Component {...pageProps} />
-          <ScrollToTop />
-          <Analytics />
-        </ThemeProvider>
+        <PerformanceOptimizer>
+          <NotificationProvider>
+            <ThemeProvider>
+              <Component {...pageProps} />
+              <ScrollToTop />
+              <Analytics />
+              <CookieConsent />
+            </ThemeProvider>
+          </NotificationProvider>
+        </PerformanceOptimizer>
       </ErrorBoundary>
     </>
   );

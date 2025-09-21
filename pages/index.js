@@ -5,9 +5,11 @@ import { TypewriterEffect } from '../components/ui/TypewriterEffect';
 import { GradientButton } from '../components/ui/GradientButton';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { MobileNavigation } from '../components/MobileNavigation';
+import SearchModal from '../components/SearchModal';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -99,6 +101,15 @@ export default function Home() {
                 <ThemeToggle />
               </div>
               <div className="flex items-center space-x-4">
+                <button
+                  onClick={() => setIsSearchOpen(true)}
+                  className="p-2 text-gray-300 hover:text-white transition-colors"
+                  aria-label="Search"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
                 <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                   Call Now
                 </a>
@@ -241,6 +252,39 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Technology Stack Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Cutting-Edge Technology Stack
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We leverage the latest technologies and frameworks to deliver exceptional results.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+              {[
+                { name: 'React', icon: '⚛️', description: 'Modern UI Framework' },
+                { name: 'Node.js', icon: '🟢', description: 'Server-Side Runtime' },
+                { name: 'AI/ML', icon: '🧠', description: 'Machine Learning' },
+                { name: 'Cloud', icon: '☁️', description: 'Cloud Infrastructure' },
+                { name: 'DevOps', icon: '🔧', description: 'Automation & CI/CD' },
+                { name: 'Security', icon: '🔒', description: 'Enterprise Security' },
+              ].map((tech, index) => (
+                <div key={index} className="text-center group">
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {tech.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-1">{tech.name}</h3>
+                  <p className="text-sm text-gray-400">{tech.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -347,6 +391,9 @@ export default function Home() {
           </div>
         </footer>
       </main>
+
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </div>
   );
 }
