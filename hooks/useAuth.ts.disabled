@@ -34,6 +34,7 @@ export function useAuth() {
         loading: false,
         isAuthenticated: false
       });
+    }
   }, []);
 
   const login = async (email: string, password: string) => {
@@ -44,26 +45,30 @@ export function useAuth() {
       localStorage.setItem('authToken', 'mock-token');
       
       setAuthState({
-        user: mockUser;
-        loading: false;
-        isAuthenticated: true;
+        user: mockUser,
+        loading: false,
+        isAuthenticated: true
       });
       
-      return { success: true }, } catch (error) {
+      return { success: true };
+    } catch (error) {
       setAuthState(prev => ({ ...prev, loading: false }));
-      return { success: false, error: 'Login failed' }, }
+      return { success: false, error: 'Login failed' };
+    }
   };
 
   const logout = () => {
     localStorage.removeItem('authToken');
     setAuthState({
-      user: null;
-      loading: false;
-      isAuthenticated: false;
-    });;
+      user: null,
+      loading: false,
+      isAuthenticated: false
+    });
+  };
 
   return {
-    ...authState;
-    login;
-    logout;
-  }, }
+    ...authState,
+    login,
+    logout
+  };
+}
