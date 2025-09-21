@@ -82,6 +82,8 @@ export default function Home() {
                 <Link href="/" className="text-white font-semibold">Home</Link>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
                 <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
+                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
+                <Link href="/client-portal" className="text-gray-300 hover:text-white transition-colors">Client Portal</Link>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
                 <ThemeToggle />
               </div>
