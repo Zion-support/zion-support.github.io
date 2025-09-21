@@ -15,8 +15,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  swcMinify: true,
   experimental: {
+    scrollRestoration: true,
     esmExternals: false,
   },
   webpack: (config, { isServer }) => {

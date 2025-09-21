@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -9,39 +9,22 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true
+    "incremental": true
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
     "next-env.d.ts",
-    "out/types/**/*.ts"
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "exclude": [
-    "node_modules",
-    "contracts/**/*",
-    "dao/**/*",
-    "automation/**/*",
-    "scripts/**/*",
-    "cypress/**/*",
-    "cypress.config.ts",
-    "deployment/**/*",
-    "deployments/**/*",
-    "data/**/*"
+    "node_modules"
   ]
 }

@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-// Security middleware configuration
-=======
-// Security middleware
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7ca5
-export {};
