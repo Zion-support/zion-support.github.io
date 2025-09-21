@@ -34,12 +34,10 @@
   "exclude": [
     "node_modules",
     "contracts/**/*",
-    "scripts/**/*",
-    "automation/**/*",
     "dao/**/*",
-    "deployment/**/*",
-    "deployments/**/*",
+    "automation/**/*",
+    "scripts/**/*",
     "cypress/**/*",
-    "cypress.config.ts"
+    "data/**/*"
   ]
 }
