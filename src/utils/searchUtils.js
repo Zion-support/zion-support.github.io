@@ -21,36 +21,34 @@ export const matchesSearchTerm = (text, searchTerm) => {
  */
 export const calculateRelevanceScore = (result, searchTerm) => {
     let score = 0;
-    const term = searchTerm.toLowerCase()
-    const title = result.title.toLowerCase()
-    const description = result.description.toLowerCase()
-    /
+    const term = searchTerm.toLowerCase();
+    const title = result.title.toLowerCase();
+    const description = result.description.toLowerCase();
+    
     if (title === term)
         score += 100;
-    /
     else if (title.startsWith(term))
         score += 80;
-    /
     else if (title.includes(term))
         score += 60;
-    /
+    
     if (description.includes(term))
         score += 30;
-    /
+    
     if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
         score += 20;
     }
-    /
+    
     if (result.category?.toLowerCase().includes(term)) {
         score += 15;
     }
-    /
+    
     if (result.rating) {
         score += result.rating * 2;
     }
-    /
+    
     if (result.date) {
-        const dateScore = Math.max(0, 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30))
+        const dateScore = Math.max(0, 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
         score += dateScore;
     }
     return score;
@@ -89,24 +87,24 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
  */
 export const filterSearchResults = (results, filters) => {
     let filteredResults = [...results];
-    /
+    
     if (filters.types.length > 0) {
-        filteredResults = filteredResults.filter(result => filters.types.includes(result.type))
+        filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
     }
-    /
+    
     if (filters.category) {
-        filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase())
+        filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
     }
-    /
+    
     if (filters.minPrice > 0 || filters.maxPrice < 10000) {
         filteredResults = filteredResults.filter(result => {
             const price = result.price ?? 0;
             return price >= filters.minPrice && price <= filters.maxPrice;
-        })
+        });
     }
-    /
+    
     if (filters.minRating > 0) {
-        filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating)
+        filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating);
     }
     return filteredResults;
 }
@@ -115,48 +113,48 @@ export const filterSearchResults = (results, filters) => {
  */
 export const generateDynamicSuggestions = (query, recentSearches = [], availableCategories = [], availableTags = []) => {
     const suggestions = [];
-    const lowerQuery = query.toLowerCase()
-    /
+    const lowerQuery = query.toLowerCase();
+    
     if (query.trim()) {
         suggestions.push({
             text: query,
             type: 'recent',
             id: `query-${query}`
-        })
-     }
-    /
-    availableCategories;
+        });
+    }
+    
+    availableCategories
         .filter(category => category.toLowerCase().includes(lowerQuery))
         .slice(0, 3)
         .forEach(category => {
-        suggestions.push({
-            text: category,
-            type: 'category',
-            id: `category-${category}`
-        })
-     })
-    /
-    availableTags;
+            suggestions.push({
+                text: category,
+                type: 'category',
+                id: `category-${category}`
+            });
+        });
+    
+    availableTags
         .filter(tag => tag.toLowerCase().includes(lowerQuery))
         .slice(0, 3)
         .forEach(tag => {
-        suggestions.push({
-            text: tag,
-            type: 'tag',
-            id: `tag-${tag}`
-        })
-     })
-    /
-    recentSearches;
+            suggestions.push({
+                text: tag,
+                type: 'tag',
+                id: `tag-${tag}`
+            });
+        });
+    
+    recentSearches
         .filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
         .slice(0, 3)
         .forEach(search => {
-        suggestions.push({
-            text: search,
-            type: 'recent',
-            id: `recent-${search}`
-        })
-     })
+            suggestions.push({
+                text: search,
+                type: 'recent',
+                id: `recent-${search}`
+            });
+        });
     return suggestions.slice(0, 8); // Limit to 8 suggestions
 }
 /**
@@ -164,24 +162,24 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
  */
 export const calculateSearchMetrics = (results, searchTime) => {
     const totalResults = results.length;
-    /
-    const categoryCount = new Map()
+    
+    const categoryCount = new Map();
     results.forEach(result => {
         if (result.category) {
-            categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1)
+            categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
         }
-    })
+    });
     const topCategories = Array.from(categoryCount.entries())
         .map(([category, count]) => ({ category, count }))
         .sort((a, b) => b.count - a.count)
-        .slice(0, 5)
-    /
-    const pricesResults = results.filter(r => r.price && r.price > 0)
+        .slice(0, 5);
+    
+    const pricesResults = results.filter(r => r.price && r.price > 0);
     const averagePrice = pricesResults.length > 0
         ? pricesResults.reduce((sum, r) => sum + (r.price || 0), 0) / pricesResults.length
         : 0;
-    /
-    const ratedResults = results.filter(r => r.rating && r.rating > 0)
+    
+    const ratedResults = results.filter(r => r.rating && r.rating > 0);
     const averageRating = ratedResults.length > 0
         ? ratedResults.reduce((sum, r) => sum + (r.rating || 0), 0) / ratedResults.length
         : 0;
@@ -207,17 +205,17 @@ export const debounce = (func, wait) => {
  * Extract keywords from search query for better matching;
  */
 export const extractKeywords = (query) => {
-    return query;
+    return query
         .toLowerCase()
         .split(/[\s,.-]+/)
         .filter(word => word.length > 2)
-        .filter(word => !['and', 'or', 'the', 'for', 'with', 'from'].includes(word))
+        .filter(word => !['and', 'or', 'the', 'for', 'with', 'from'].includes(word));
 }
 /**
  * Format search query for display;
  */
 export const formatSearchQuery = (query) => {
-    return query.trim().replace(/\s+/g, ' ')
+    return query.trim().replace(/\s+/g, ' ');
 }
 /**
  * Check if filters are active (not default values)
@@ -257,8 +255,9 @@ export const getDefaultFilters = () => ({
     maxPrice: 10000,
     minRating: 0,
     sort: 'relevance'
-})
-    export default {
+});
+
+export default {
     highlightSearchTerms,
     matchesSearchTerm,
     calculateRelevanceScore,

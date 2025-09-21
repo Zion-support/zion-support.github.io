@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function ServicesAdvertisingPage() {
   const contact = {
@@ -26,7 +27,25 @@ export default function ServicesAdvertisingPage() {
         <link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
       </Head>
 
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+        {/* Navigation */}
+        <nav className="fixed top-0 left-0 right-0 bg-black/50 backdrop-blur-sm border-b border-white/10 z-50">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex justify-between items-center">
+              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                Zion Tech Group
+              </Link>
+              <div className="hidden md:flex space-x-8">
+                <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+              </div>
+              <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                Call Now
+              </a>
+            </div>
+          </div>
+        </nav>
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">

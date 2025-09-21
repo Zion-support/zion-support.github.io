@@ -9,8 +9,7 @@ const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds
 
 let isLoggingError = false;
 function isLocalStorageAvailable() {
-    const now = Date.now()
-    /
+    const now = Date.now();
     if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
         return localStorageAvailable;
     }
@@ -33,7 +32,6 @@ function isLocalStorageAvailable() {
 }
 function safeConsoleError(message, error) {
     const env = globalThis.process?.env?.NODE_ENV ?? 'production';
-    /
     if (isLoggingError || env === 'production')
         return;
     isLoggingError = true;
@@ -43,7 +41,7 @@ function safeConsoleError(message, error) {
         }
     }
     catch {
-        /
+        // Silent catch
     }
     finally {
         isLoggingError = false;
@@ -53,8 +51,7 @@ export const safeStorage = {
     getItem: (key) => {
         if (typeof window === 'undefined')
             return null;
-    /
-        const isVerboseKey = key.includes('sb-') || key.includes('supabase')
+        const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
             return localStorage.getItem(key)
         }
@@ -82,7 +79,7 @@ export const safeStorage = {
     removeItem: (key) => {
         if (typeof window === 'undefined')
             return;
-    const isVerboseKey = key.includes('sb-') || key.includes('supabase')
+        const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
             localStorage.removeItem(key)
         }
@@ -97,7 +94,7 @@ export const safeStorage = {
         if (typeof window === 'undefined') {
             for (const key in inMemoryStore) {
                 delete inMemoryStore[key];
-     }
+            }
             return;
         }
         try {
@@ -114,16 +111,15 @@ export const safeStorage = {
         return isLocalStorageAvailable()
     }
 }
-/
-const sessionMemoryStore = {}
+const sessionMemoryStore = {};
 export const safeSessionStorage = {
     getItem: (key) => {
         if (typeof window === 'undefined')
             return null;
-    try {
-            return sessionStorage.getItem(key)
+        try {
+            return sessionStorage.getItem(key);
         }
-        catch (e) {
+        catch {
             return sessionMemoryStore[key] || null;
         }
     },
@@ -133,17 +129,17 @@ export const safeSessionStorage = {
         try {
             sessionStorage.setItem(key, value)
         }
-        catch (e) {
+        catch {
             sessionMemoryStore[key] = value;
         }
     },
     removeItem: (key) => {
         if (typeof window === 'undefined')
             return;
-    try {
-            sessionStorage.removeItem(key)
+        try {
+            sessionStorage.removeItem(key);
         }
-        catch (e) {
+        catch {
             delete sessionMemoryStore[key];
         }
     },
@@ -151,7 +147,7 @@ export const safeSessionStorage = {
         if (typeof window === 'undefined') {
             for (const key in sessionMemoryStore) {
                 delete sessionMemoryStore[key];
-     }
+            }
             return;
         }
         try {
