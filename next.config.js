@@ -17,6 +17,7 @@ const nextConfig = {
   },
   experimental: {
     scrollRestoration: true,
+    esmExternals: false,
   },
   webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility

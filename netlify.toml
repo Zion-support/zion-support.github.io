@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build"
+  command = "pnpm install && pnpm run build"
   publish = ".next"
 
 [build.processing]
@@ -15,7 +15,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  NPM_FLAGS = "--legacy-peer-deps"
+  PNPM_VERSION = "10"
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
