@@ -1,10 +1,8 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
-
+import React from "react",
 export const CategoriesSection: any = () => {
 return (
 <div className="py-16 bg-white">
@@ -33,8 +31,7 @@ return (
 </div>
 </div>
 </div>
-),;
-}
+),, }
 <//div><///div>
 iconName?: string, // Example field if categories have icons,
 itemCount?: number, // Example field for number of items in a category
@@ -170,9 +167,9 @@ className?: string,
 style?: React.CSSProperties,
 categories?: CategoryType[], //Accept categories as a prop,
 }export function CategoriesSection ({
-  showTitle = true,
+  showTitle = true;
 className
-style,
+style;
 categories: fetchedCategories; //Rename prop for clarity,
 }: CategoriesSectionProps) {
   const {

@@ -14,8 +14,8 @@ return (
 src={application.talent_profile.profile_picture_url}
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-                height={36} // Corresponds to h-9 w-9,
-className='rounded-full object-cover' // Ensure rounded and object-cover,
+                height={36} // Corresponds to h-9 w-9;
+className='rounded-full object-cover' // Ensure rounded and object-cover;
 onError={() => setAvatarError(true)}
                 priority={false}              />
             ) : (
@@ -35,8 +35,7 @@ onError={() => setAvatarError(true)}
           <Calendar className='h-4 w-4 text-muted-foreground' />
           <span>
             {formatDistanceToNow(new Date(application.created_at), {
-              addSuffix: true;
-})}
+              addSuffix: true, })}
           </span>
         </div>
       </TableCell>

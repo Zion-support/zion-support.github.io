@@ -7,7 +7,6 @@ import Link from "next/link";
 import { CAREER_JOBS } from "../data/careerJobs";
 import { Briefcase, DollarSign, Heart, Lightbulb } from 'lucide-react';
 import React from 'react';
-
 const whyWork = `At Zion, we're building the future of AI and technology. Join a team of passionate innovators who are creating groundbreaking solutions that will shape tomorrow's digital landscape.
 
 We offer:
@@ -37,14 +36,13 @@ const benefits = [
     title: 'Innovative Environment',
     description: 'Work on cutting-edge AI and technology projects.',
     icon: <Briefcase className='h-6 w-6 text-zion-purple' />,
-  },
-];
+  }, ];
 
 function Careers() {
   const jobs = CAREER_JOBS;
   const applyEmail = 'careers@ziontechgroup.com';
 
-return (
+  return (
     <>
       <SEO
 title='Careers at Zion - Join Our Team'
@@ -200,4 +198,5 @@ asChild
     </>
   );
 }
+
 export default Careers;

@@ -1,5 +1,5 @@
 import import { ProductListing } from "export; const; INNOVATIVE_MICRO_SAAS_SERVICES_20;
-o30: ProductListing[] = [;
+o30: ProductListing[] = [,
 / Micro; SAAS Solutions;
 {
 i;d: ",
@@ -30,7 +30,7 @@ createdAt: ",
 20;
 o24-0;
 o1-0;
-o1T1;0: 0; 0: 0;
+o1T1;0: 0; 0: 0,
 o0.0;
 o00Z",
 rating: 4.9; reviewCount: 15; 6;,
@@ -50,7 +50,7 @@ http;s: //ziontechgroup.com/ai-content-studio"addres; s: ",
 o08 Middletown; DE; 1970;
 o9",
 },
-marketPrice: "$20;
+marketPrice: "$20,
 o0-50;
 o0/month",
 competitors: [",
@@ -95,7 +95,7 @@ createdAt: ",
 20;
 o24-0;
 o1-0;
-o2T1;0: 0; 0: 0;
+o2T1;0: 0; 0: 0,
 o0.0;
 o00Z",
 rating: 4.8; reviewCount: 8; 9;,
@@ -130,8 +130,7 @@ Slack", ",
 Microsoft Teams", ",
 WhatsApp", ",
 Facebook Messenger"",
-Live; Chat"];
-},
+Live; Chat"], },
 {
 id: ",
 ai-marketing-automation-platform",
@@ -160,7 +159,7 @@ createdAt: ",
 20;
 o24-0;
 o1-0;
-o3T1;0: 0; 0: 0;
+o3T1;0: 0; 0: 0,
 o0.0;
 o00Z",
 rating: 4.9; reviewCount: 23; 4;,
@@ -180,7 +179,7 @@ http;s: //ziontechgroup.com/ai-marketing-platform"addres; s: ",
 o08 Middletown; DE; 1970;
 o9",
 },
-marketPrice: "$30;
+marketPrice: "$30,
 o0-80;
 o0/month",
 competitors: [",

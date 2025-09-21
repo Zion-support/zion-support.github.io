@@ -475,9 +475,8 @@ export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasS
     implementationDetails: 'Full-stack autonomous content creation platform with AI generation engine, marketing automation, campaign management, and enterprise marketing tools.',
     launchDate: '2026-02-05',
     customers: 3200,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 1450
   }
-],
-
-export default zion2026CuttingEdgeMicroSaasServices,
+];
+export default zion2026CuttingEdgeMicroSaasServices;

@@ -13,4 +13,4 @@ export const siteConfig = {,
     supportEmail: 'support@ziontechgroup.com',
     salesEmail: 'sales@ziontechgroup.com'}
 } as const,
-export type SiteConfig = typeof siteConfig,
+export type SiteConfig = typeof siteConfig;

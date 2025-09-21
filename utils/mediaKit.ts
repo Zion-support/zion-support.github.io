@@ -18,5 +18,4 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {,
       path: '',
       filename: 'legal / jurisdictional - disclosures.md',
       type: 'text',
-      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`},
-}]
+      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`}, }]

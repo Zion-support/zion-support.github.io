@@ -167,4 +167,4 @@ export const added2025Services: AddedService[] = [
     rating: 4.6,
     customerCount: 640
   }
-],
+];

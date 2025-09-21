@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Helpdesk = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -27,7 +26,6 @@ const Helpdesk = () => {
         </div>
       </div>
     </div>
-  );
-};
+  );;
 
 export default Helpdesk;

@@ -7,22 +7,17 @@ export function fireEvent(eventName: string, properties?: Record<string, any>) {
   // Example integration with Google Analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', eventName, properties);
-  }
   
   // Example integration with Mixpanel
   if (typeof window !== 'undefined' && (window as any).mixpanel) {
     (window as any).mixpanel.track(eventName, properties);
-  }
 }
 
 export function trackPageView(pageName: string, properties?: Record<string, any>) {
   fireEvent('page_view', { page: pageName, ...properties });
-}
 
 export function trackUserAction(action: string, properties?: Record<string, any>) {
   fireEvent('user_action', { action, ...properties });
-}
 
 export function trackError(error: string, properties?: Record<string, any>) {
   fireEvent('error', { error, ...properties });
-}

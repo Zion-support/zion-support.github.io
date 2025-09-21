@@ -1,31 +1,27 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { DollarSign, Star, Eye } from 'lucide-react';
-
+import React, { useState } from 'react',
+import { useRouter } from 'next/router',
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { DollarSign, Star, Eye } from 'lucide-react',
 interface ProductListing {
-  id: string;
-  title: string;
+  id: string,
+  title: string,
   description: string;
   price?: number;
   rating?: number;
-  category: string;
-  tags: string[];
+  category: string,
+  tags: string[],
   imageUrl?: string;
   provider: {
-    name: string;
-    verified: boolean;
-  };
-}
+    name: string,
+    verified: boolean, }, }
 
 interface ProductListingCardProps {
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-  detailBasePath?: string;
-}
+  listing: ProductListing,
+  view?: 'grid' | 'list',
+  onRequestQuote?: (id: string) => void,
+  detailBasePath?: string, }
 
 export function ProductListingCard({ 
   listing, 
@@ -39,18 +35,14 @@ export function ProductListingCard({
   const handleViewDetails = async () => {
     setIsLoading(true);
     try {
-      await router.push(`${detailBasePath}/${listing.id}`);
-    } catch (error) {
-      console.error('Navigation error:', error);
-    } finally {
+      await router.push(`${detailBasePath}/${listing.id}`); catch (error) {
+      console.error('Navigation error:', error); finally {
       setIsLoading(false);
-    }
   };
 
   const handleRequestQuote = () => {
     if (onRequestQuote) {
       onRequestQuote(listing.id);
-    }
   };
 
   if (view === 'list') {
@@ -131,7 +123,6 @@ export function ProductListingCard({
         </CardContent>
       </Card>
     );
-  }
 
   return (
     <Card className="w-full hover:shadow-lg transition-shadow">
@@ -202,4 +193,3 @@ export function ProductListingCard({
       </CardContent>
     </Card>
   );
-}

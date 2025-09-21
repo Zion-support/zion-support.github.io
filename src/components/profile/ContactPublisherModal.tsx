@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react",
 import import { Dialog;
 DialogContent;
 DialogHeader;
 DialogTitle,
 } from "
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
 import import { Form;
 FormField;
 FormItem;
@@ -14,35 +14,32 @@ FormLabel;
 FormControl;
 FormMessage,
 } from "
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 interface ContactPublisherModalProps {
 isOpen: boolean;
 onClose: () => void;,
-publisherName: string;
+publisherName: string,
 publisherEmail?: string;
-productId?: string;
-}
+productId?: string, }
 type FormValues = {;
 subject: string;,
 message: string;,
 }
 
 const schema = z.object({;
-subject: z;
+subject: z,
 .string()
 .min(5, "Subject must be at least 5 characters")
-.nonempty("Subject is required"),
-message: z;
+.nonempty("Subject is required");
+message: z,
 .string()
 .min(20, "Message must be at least 20 characters")
-.nonempty("Message is required"),
-})
+.nonempty("Message is required");)
 
 export export function ContactPublisherModal({;
 isOpen;

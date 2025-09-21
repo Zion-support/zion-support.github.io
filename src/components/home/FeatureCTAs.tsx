@@ -1,10 +1,8 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
 import React from "react";
-
 export const FeatureCTAs: any = () => {
 return (
 <div className="py-16 bg-gray-50">
@@ -32,8 +30,7 @@ return (
 </div>
 </div>
 </div>
-),;
-}<//div><///div>
+),, }<//div><///div>
 interface FeatureCTAsProps {
   className?: string;
   style?: React.CSSProperties,

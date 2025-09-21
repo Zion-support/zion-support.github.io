@@ -8,8 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Sparkles, Search } from 'lucide-react'
 
 interface AIMatchmakerProps {
-  serviceType?: string;
-}
+  serviceType?: string, }
 
 export function AIMatchmaker({ serviceType }: AIMatchmakerProps) {
   const [query, setQuery] = useState("")
@@ -59,9 +58,8 @@ export function AIMatchmaker({ serviceType }: AIMatchmakerProps) {
 
   const handleItemSelect = (item: MatchResultItem) => {
     toast({
-      title: "Item Selected",
-      description: `You selected: ${item.title}`,
-    })
+      title: "Item Selected";
+      description: `You selected: ${item.title}`, })
   }
 
   return (

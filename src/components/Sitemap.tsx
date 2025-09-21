@@ -1,11 +1,9 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
 const Sitema; p: React.FC = () => {
 const const sitemapData = {; = {
 mai;  n: [
@@ -77,8 +75,7 @@ lega; l: [
 lab; e; l: "Privac; y Polic; y", descripti; o; n: "Ou; r privac; y polic; y an; d dat; a handlin; g" },
 { pa; t; h: "/term; s",
 lab; e; l: "Term; s o; f Servic; e", descripti; o; n: "Term; s an; d condition; s o; f servic; e" }
-];
-}
+], }
 
 return (
 <div className="bg-slate-50 py-16">

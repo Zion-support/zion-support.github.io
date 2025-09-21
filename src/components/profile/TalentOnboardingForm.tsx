@@ -1,9 +1,9 @@
 import React, { useState } from "react",
 import { useForm,,, useFieldArray,,  } from "react-hook-form",
 import { zodResolver,,  } from "@hookform/resolvers/zod",
-import React from "react";
-import import { useRouter,,, ,,  } from 'next/router';
-import import { logErrorToProduction,,  } from '@/utils/productionLogger';
+import React from "react",
+import import { useRouter,,, ,,  } from 'next/router',
+import import { logErrorToProduction,,  } from '@/utils/productionLogger',
 import { Form,
 FormControl
 ,, ,, FormField,
@@ -54,8 +54,8 @@ import { Separator,,  } from "@/components/ui/separator"
 import { toast,,  } from "@/components/ui/use-toast"
 import { User,,, Briefcase,,, Star,,, Calendar,,, Globe,,, DollarSign,,, FileText,,, Link,,, Upload,,, ArrowRight,,, ArrowLeft,,, Trash2,,, Plus,,, CheckCircle2,,  } from 'lucide-react'
 import { useAuth,,  } from "@/hooks/useAuth",
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
 // Define the form schema with validation
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
@@ -69,8 +69,7 @@ type TalentFormValues = z.infer<typeof talentSchema>
 const form = useForm<TalentFormValues> ({
   resolver: zodResolver (talentSchema), defaultValues: {,
 basicInfo: {
-  cv: undefined;
-}
+  cv: undefined, }
 //Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
   const file = e.target.files?.[0]
 if (!file) return
@@ -83,7 +82,6 @@ reader.readAsDataURL (file)
   data: {
   publicUrl,
 }= supabase.storage.from ('resumes') .getPublicUrl (fileName)
-return publicUrl,
+return publicUrl;
 }
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null,
-}'}
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null, }'}

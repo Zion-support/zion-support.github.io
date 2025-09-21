@@ -229,4 +229,4 @@ export const innovativeMicroSaasBreakthrough2025 = [
     integrations: ['Electronic health recordsMedical imaging systems', 'Laboratory systemsPatient monitoring devices', 'Healthcare platforms'],
     compliance: ['HIPAAFDA regulations', 'Medical device standardsSOC2', 'ISO 27001Healthcare compliance standards']
   }
-],
+];

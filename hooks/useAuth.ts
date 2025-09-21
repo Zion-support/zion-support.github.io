@@ -1,22 +1,19 @@
-import { useState, useEffect } from 'react';
-
+import { useState, useEffect } from 'react',
 interface User {
-  id: string;
-  email: string;
-  name?: string;
-}
+  id: string,
+  email: string,
+  name?: string, }
 
 interface AuthState {
-  user: User | null;
-  loading: boolean;
-  isAuthenticated: boolean;
-}
+  user: User | null,
+  loading: boolean,
+  isAuthenticated: boolean, }
 
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     loading: true,
-    isAuthenticated: false,
+    isAuthenticated: false;
   });
 
   useEffect(() => {
@@ -28,19 +25,16 @@ export function useAuth() {
         user: { id: '1', email: 'user@example.com' },
         loading: false,
         isAuthenticated: true,
-      });
-    } else {
+      }); else {
       setAuthState({
         user: null,
         loading: false,
         isAuthenticated: false,
       });
-    }
   }, []);
 
   const login = async (email: string, password: string) => {
-    setAuthState(prev => ({ ...prev, loading: true }));
-    
+    setAuthState(prev => ({ ...prev, loading: true })),
     try {
       // In a real app, you'd make an API call here
       const mockUser = { id: '1', email };
@@ -52,11 +46,9 @@ export function useAuth() {
         isAuthenticated: true,
       });
       
-      return { success: true };
-    } catch (error) {
-      setAuthState(prev => ({ ...prev, loading: false }));
-      return { success: false, error: 'Login failed' };
-    }
+      return { success: true }, } catch (error) {
+      setAuthState(prev => ({ ...prev, loading: false })),
+      return { success: false, error: 'Login failed' }, }
   };
 
   const logout = () => {
@@ -65,12 +57,10 @@ export function useAuth() {
       user: null,
       loading: false,
       isAuthenticated: false,
-    });
-  };
+    });;
 
   return {
     ...authState,
     login,
     logout,
-  };
-}
+  }, }

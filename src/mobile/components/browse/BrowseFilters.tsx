@@ -5,10 +5,9 @@ import { Switch,,  } from '@/components/ui/switch'
 import { Input,,  } from '@/components/ui/input'
 import { Select,
 SelectContent
-,, ,, SelectItem,
+,, ,, SelectItem;
 SelectTrigger
-,, ,, SelectValue,
- } from '@/components/ui/select'
+,, ,, SelectValue, } from '@/components/ui/select'
 import { X,,, Filter,,  } from 'lucide-react'
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents'

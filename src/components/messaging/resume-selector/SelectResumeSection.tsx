@@ -1,15 +1,15 @@
 
-import import React from 'react';
+import import React from 'react',
 import { FileText,,  } from 'lucide-react'
-import import { ResumeOption,,, ,,  } from '../resume-selector/types';
-import import { ResumePreviewCard,,, ,,  } from './ResumePreviewCard';
-import import { Resume,,  } from '@/types/resume';
+import import { ResumeOption,,, ,,  } from '../resume-selector/types',
+import import { ResumePreviewCard,,, ,,  } from './ResumePreviewCard',
+import import { Resume,,  } from '@/types/resume',
 interface SelectResumeSectionProps {
-  resumeOptions: ResumeOption[[];],
+  resumeOptions: ResumeOption[[], ],
 selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;,
-handleDownloadResume: () => void;
-  isLoading: boolean;
+handleDownloadResume: () => void,
+  isLoading: boolean,
 export function SelectResumeSection({
 isLoading,
 }: SelectResumeSectionProps) {
@@ -26,7 +26,7 @@ key = {option.id,}
                   ? 'bg-zion-purple/20 border border-zion-purple'
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
-              onClick = {(,) => handleResumeSelect(option.id),}
+              onClick = {(,) => handleResumeSelect(option.id);
             >
               <div className='flex items-center'>
                 <FileText className='h-4 w-4 mr-2 text-zion-cyan' />

@@ -1,42 +1,37 @@
-import { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
-import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
-import { format } from "date-fns";
-import { toast } from "@/hooks/use-toast";
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-
-type ReviewStatus = 'pending' | 'approved' | 'rejected';
-
+import { useState } from 'react',
+import { useMutation } from '@tanstack/react-query',
+import { Check, X, User, Star, MoreHorizontal } from 'lucide-react',
+import { format } from "date-fns",
+import { toast } from "@/hooks/use-toast",
+import { Button } from '@/components/ui/button',
+import { Badge } from '@/components/ui/badge',
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table',
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu',
+type ReviewStatus = 'pending' | 'approved' | 'rejected',
 interface Review {
-  id: string;
-  rating: number;
-  review_text: string;
-  status: ReviewStatus;
-  created_at: string;
-  is_anonymous: boolean;
-  report_count: number;
+  id: string,
+  rating: number,
+  review_text: string,
+  status: ReviewStatus,
+  created_at: string,
+  is_anonymous: boolean,
+  report_count: number,
   reviewer_profile?: {
     display_name: string;
-    avatar_url?: string;
-  };
+    avatar_url?: string, };
   communication_rating?: number;
   quality_rating?: number;
   timeliness_rating?: number;
-  would_work_again?: boolean;
-}
+  would_work_again?: boolean, }
 
 interface ReviewsModerationTableProps {
-  reviews: Review[];
-  isLoading?: boolean;
-}
+  reviews: Review[],
+  isLoading?: boolean, }
 
 export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
-  reviews,
+  reviews;
   isLoading = false
 }) => {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
@@ -46,40 +41,33 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
     mutationFn: async ({ reviewId, status }: { reviewId: string; status: ReviewStatus }) => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      return { reviewId, status };
-    },
+      return { reviewId, status }, },
     onSuccess: () => {
       toast({
         title: "Status Updated",
         description: "Review status has been updated successfully.",
       });
-      setViewDetailsOpen(false);
-    },
+      setViewDetailsOpen(false);,
     onError: (error: Error) => {
       toast({
         title: "Update Failed",
         description: "Failed to update review status. Please try again.",
         variant: "destructive",
       });
-    }
   });
 
   const handleApprove = (reviewId: string) => {
-    updateReviewStatus.mutate({ reviewId, status: 'approved' });
-  };
+    updateReviewStatus.mutate({ reviewId, status: 'approved' });;
 
   const handleReject = (reviewId: string) => {
-    updateReviewStatus.mutate({ reviewId, status: 'rejected' });
-  };
+    updateReviewStatus.mutate({ reviewId, status: 'rejected' });;
 
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review);
-    setViewDetailsOpen(true);
-  };
+    setViewDetailsOpen(true);;
 
   const getInitials = (name: string) => {
-    return name.split(' ').map(n => n[0]).join('').toUpperCase();
-  };
+    return name.split(' ').map(n => n[0]).join('').toUpperCase();;
 
   const renderStars = (rating: number) => {
     return (
@@ -93,8 +81,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
           />
         ))}
       </div>
-    );
-  };
+    );;
 
   if (isLoading) {
     return (
@@ -105,7 +92,6 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
       </div>
     );
-  }
 
   if (reviews.length === 0) {
     return (
@@ -116,7 +102,6 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
         </p>
       </div>
     );
-  }
 
   return (
     <>
@@ -378,5 +363,4 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
         </Dialog>
       )}
     </>
-  );
-};
+  );;

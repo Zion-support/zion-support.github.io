@@ -1,7 +1,6 @@
 import { Search } from 'lucide-react';
 import { fetchWithRetry } from '../utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '../utils/productionLogger';
-
 // Categories for filtering
 const CATEGORIES = [
   'All',

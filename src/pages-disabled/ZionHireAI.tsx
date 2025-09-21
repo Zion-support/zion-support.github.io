@@ -1,8 +1,8 @@
 export default function ZionHireAI() {
   // Mock data for static build
   const isWhitelabel = false;
-  const brandName = 'Zion Tech Group';
-  const primaryColor = '#00ffff';
+  const brandName = 'Zion Tech Group',
+  const primaryColor = '#00ffff',
   const isAuthenticated = false;
   
   return (

@@ -1,32 +1,29 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Smartphone, Tablet, Monitor, Settings, X, CheckCircle, AlertTriangle, Info } from "lucide-react";
-
+import React, { useState, useEffect, useCallback, useRef } from "react",
+import { motion, AnimatePresence } from "framer-motion",
+import { Smartphone, Tablet, Monitor, Settings, X, CheckCircle, AlertTriangle, Info } from "lucide-react",
 interface MobileSettings {
-  touchOptimization: boolean;
-  gestureSupport: boolean;
-  pinchZoom: boolean;
-  rotationSupport: boolean;
-  hapticFeedback: boolean;
-  adaptiveLayout: boolean;
-  mobileNavigation: boolean;
-  touchTargets: boolean;
-  swipeGestures: boolean;
-  orientationLock: "auto" | "portrait" | "landscape";
-  fontSize: "small" | "medium" | "large";
-  contrast: "normal" | "high" | "inverted";
-  brightness: "auto" | "low" | "normal" | "high";
-}
+  touchOptimization: boolean,
+  gestureSupport: boolean,
+  pinchZoom: boolean,
+  rotationSupport: boolean,
+  hapticFeedback: boolean,
+  adaptiveLayout: boolean,
+  mobileNavigation: boolean,
+  touchTargets: boolean,
+  swipeGestures: boolean,
+  orientationLock: "auto" | "portrait" | "landscape",
+  fontSize: "small" | "medium" | "large",
+  contrast: "normal" | "high" | "inverted",
+  brightness: "auto" | "low" | "normal" | "high", }
 
 interface MobileOptimizerProps {
   enabled?: boolean;
   showPanel?: boolean;
-  autoDetect?: boolean;
-}
+  autoDetect?: boolean, }
 
 export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ 
   enabled = true, 
-  showPanel = false, 
+  showPanel = false;
   autoDetect = true 
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,8 +72,7 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       touchSupport: 'ontouchstart' in window,
       batteryLevel: 0, // Would need battery API
       connectionType: "unknown" // Would need connection API
-    });
-  }, []);
+    });, []);
 
   useEffect(() => {
     if (autoDetect) {
@@ -86,21 +82,17 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       
       return () => {
         window.removeEventListener('resize', detectDevice);
-        window.removeEventListener('orientationchange', detectDevice);
-      };
-    }
+        window.removeEventListener('orientationchange', detectDevice);, }
   }, [autoDetect, detectDevice]);
 
   const handleSettingChange = (key: keyof MobileSettings, value: any) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
-  };
+    setSettings(prev => ({ ...prev, [key]: value }));;
 
   const optimizeForMobile = async () => {
     setIsOptimizing(true);
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsOptimizing(false);
-  };
+    setIsOptimizing(false);;
 
   if (!enabled) return null;
 
@@ -199,5 +191,4 @@ export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         )}
       </AnimatePresence>
     </>
-  );
-};
+  );;

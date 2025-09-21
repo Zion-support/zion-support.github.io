@@ -1,6 +1,5 @@
-import { PrismaClient } from '@prisma/client',
-const prisma = new PrismaClient(),
-
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
 async function main() {
   const products = [
     {
@@ -43,10 +42,8 @@ async function main() {
       currency: 'USD',
       images: ['https://placehold.co/600x400?text=AI+Analytics']
     }
-  ],
-
+  ];
   await prisma.product.createMany({ data: products, skipDuplicates: true }),
-
   const talents = [
     {
       name: 'Alice Johnson',
@@ -69,10 +66,8 @@ async function main() {
       rate: 110,
       skills: ['AWSDocker', 'Kubernetes']
     }
-  ],
-
+  ];
   await prisma.talent.createMany({ data: talents, skipDuplicates: true }),
-
   const categories = [
     {
       id: 'services',
@@ -107,12 +102,11 @@ async function main() {
   await (prisma as any).category.createMany({
     data: categories,
     skipDuplicates: true
-  }),
-}
+  });
 
 main()
   .catch((e) => {
-    console.error(e),
+    console.error(e);
     process.exit(1)})
   .finally(async () => {
-    await prisma.$disconnect()}),
+    await prisma.$disconnect()});

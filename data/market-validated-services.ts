@@ -403,4 +403,4 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		setupTime: '2 hours',
 		contactInfo
 	}
-],
+];

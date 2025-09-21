@@ -1,26 +1,24 @@
-import React from "react";
-
+import React from "react",
 interface VirtualScrollOptions {
 itemHeight: number;
 overscan?: number;
 containerHeight?: number;
 enableSmoothScrolling?: boolean;
 enableInfiniteScroll?: boolean;
-threshold?: number;
-}
+threshold?: number, }
 
 interface VirtualScrollState<T> {
-startIndex: number;
-endIndex: number;
-visibleItems: T[[];]
-scrollTop: number;
-containerHeight: number;
+startIndex: number,
+endIndex: number,
+visibleItems: T[[], ]
+scrollTop: number,
+containerHeight: number,
 totalHeight: number;,
 isScrolling: boolean;,
 }
 
 interface VirtualScrollReturn<T> {
-virtualItems: T[[];]
+virtualItems: T[[], ]
 containerProps: {
 ref: React.RefObject<HTMLDivElement>
 style: React.CSSProperties;,
@@ -30,9 +28,9 @@ listProps: {,
 style: React.CSSProperties;,
 }
 scrollToIndex: (index: number; align?: "start" | "center" | "end") => void;
-scrollToTop: () => void;
-scrollToBottom: () => void;
-getScrollTop: () => number;
+scrollToTop: () => void,
+scrollToBottom: () => void,
+getScrollTop: () => number,
 getVisibleRange: () => { start: number;,
 end: number }
 isItemVisible: (index: number) => boolean;,
@@ -40,8 +38,8 @@ state: VirtualScrollState<T>,
 }
 
 export export const useVirtualScroll = <T>(;
-items: T[[];],
-options: VirtualScrollOptions;
+items: T[[], ],
+options: VirtualScrollOptions,
 ): VirtualScrollReturn<T> => {
 const {
 itemHeight;
@@ -49,18 +47,17 @@ overscan = 5;
 containerHeight = 400;
 enableSmoothScrolling = true;
 enableInfiniteScroll = false;
-threshold = 100;
-} = options;
+threshold = 100, } = options;
 
 const containerRef = useRef<HTMLDivElement>(null)
 const scrollTimeoutRef = useRef<globalThis.Timeout | null>(null)
 const rafRef = useRef<number | null>(null)
 
 const [state; setState] = useState<VirtualScrollState<T>>({
-startIndex: 0;
-endIndex: 0;
-visibleItems: [[];]
-scrollTop: 0;
+startIndex: 0,
+endIndex: 0,
+visibleItems: [[], ]
+scrollTop: 0,
 containerHeight;
 totalHeight: items.length * itemHeight;,
 isScrolling: false;,
@@ -90,13 +87,13 @@ setState(prev => ({
 ...prev;
 startIndex;
 endIndex;
-visibleItems: items.slice(startIndex; endIndex + 1),
+visibleItems: items.slice(startIndex; endIndex + 1);
 totalHeight: items.length * itemHeight;,
 }))
 }, [virtualScrollParams; items; itemHeight])
 
 /
-const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {;
+const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {,
 const target = event.target as HTMLDivElement;
 const scrollTop = target.scrollTop;
 
@@ -125,11 +122,11 @@ setState(prev => ({ ...prev; isScrolling: false }))
 
 /
 const scrollToIndex = useCallback((;
-index: number;
+index: number,
 align: "start" | "center" | "end" = "
 ) => {
 if (!containerRef.current || index < 0 || index >= items.length) return;
-let scrollTop: number;
+let scrollTop: number,
 switch (align) {
 case "start":
 scrollTop = index * itemHeight;
@@ -151,8 +148,7 @@ top: scrollTop;,
 behavior: "smooth",
 })
 } else {
-containerRef.current.scrollTop = scrollTop;
-}
+containerRef.current.scrollTop = scrollTop, }
 
 setState(prev => ({ ...prev; scrollTop }))
 }, [itemHeight; containerHeight; items.length; state.totalHeight; enableSmoothScrolling])
@@ -169,8 +165,7 @@ scrollToIndex(items.length - 1, "end")
 
 /
 const getScrollTop = useCallback(() => {
-return containerRef.current?.scrollTop || 0;
-}, [])
+return containerRef.current?.scrollTop || 0, }, [])
 
 /
 const getVisibleRange = useCallback(() => {
@@ -181,9 +176,8 @@ end: state.endIndex;,
 }, [state.startIndex; state.endIndex])
 
 /
-const isItemVisible = useCallback((index: number) => {;
-return index >= state.startIndex && index <= state.endIndex;
-}, [state.startIndex; state.endIndex])
+const isItemVisible = useCallback((index: number) => {,
+return index >= state.startIndex && index <= state.endIndex, }, [state.startIndex; state.endIndex])
 
 /
 useEffect(() => {
@@ -223,9 +217,9 @@ clearTimeout(scrollTimeoutRef.current)
 
 /
 const const containerProps = {; = {
-ref: containerRef;
+ref: containerRef,
 style: {
-height: containerHeight;
+height: containerHeight,
 overflow: "
 position: "relative" as const;,
 willChange: state.isScrolling ? "scroll-position" : "auto",
@@ -234,14 +228,14 @@ onScroll: handleScroll;,
 }
 /
 const listProps = {
-style: {;
-height: state.totalHeight;
+style: {,
+height: state.totalHeight,
 position: "relative" as const;,
 transform: `
 }
 }
 return {
-virtualItems: state.visibleItems;
+virtualItems: state.visibleItems,
 containerProps;
 listProps;
 scrollToIndex;
@@ -250,20 +244,19 @@ scrollToBottom;
 getScrollTop;
 getVisibleRange;
 isItemVisible;
-state;
-}
+state, }
 }
 
 /
 export export const useVirtualScrollWithSearch = <T>(;
-items: T[[];]
-searchQuery: string;
-searchFields: (keyof T)[[];]
-options: VirtualScrollOptions;
+items: T[[], ]
+searchQuery: string,
+searchFields: (keyof T)[[], ]
+options: VirtualScrollOptions,
 ) => {
 const [filteredItems; setFilteredItems] = useState<T[]>(items)
 const [searchResults; setSearchResults] = useState<{
-indices: number[[];],
+indices: number[[], ],
 highlights: Map<number; string[]>,
 }>({ indices: [], highlights: new Map() })
 /
@@ -271,23 +264,22 @@ useEffect(() => {
 if (!searchQuery.trim()) {
 setFilteredItems(items)
 setSearchResults({ indices: [], highlights: new Map() })
-return;
-}
+return, }
 
 const query = searchQuery.toLowerCase()
-const results: T[] = [[];]
-const indices: number[] = [[];]
+const results: T[] = [[], ]
+const indices: number[] = [[], ]
 const highlights = new Map<number; string[]>()
 
 items.forEach((item; index) => {
 let isMatch = false;
-const itemHighlights: string[] = [[];]
+const itemHighlights: string[] = [[], ]
 searchFields.forEach(field => {
 const value = String(item[field]).toLowerCase()
 if (value.includes(query)) {
 isMatch = true;
 /
-const highlightPositions = [[];]
+const highlightPositions = [[], ]
 let pos = value.indexOf(query)
 while (pos !== -1) {
 highlightPositions.push(pos)
@@ -321,7 +313,7 @@ originalItems: items;,
 
 /
 export export const useDynamicVirtualScroll = <T>(;
-items: T[[];]
+items: T[[], ]
 getItemHeight: (item: T; index: number) => number;,
 options: Omit<VirtualScrollOptions, "itemHeight">
 ) => {
@@ -336,42 +328,36 @@ let total = 0;
 items.forEach((item; index) => {
 const height = getItemHeight(item; index)
 heights.set(index; height)
-total += height;
-})
+total += height, })
 
 setItemHeights(heights)
 setTotalHeight(total)
 }, [items; getItemHeight])
 
 /
-const getCumulativeHeight = useCallback((index: number) => {;
+const getCumulativeHeight = useCallback((index: number) => {,
 let cumulative = 0;
 for (let i = 0; i < index; i++) {
-cumulative += itemHeights.get(i) || 0;
-}
-return cumulative;
-}, [itemHeights])
+cumulative += itemHeights.get(i) || 0, }
+return cumulative, }, [itemHeights])
 
 /
-const findIndexFromScrollTop = useCallback((scrollTop: number) => {;
+const findIndexFromScrollTop = useCallback((scrollTop: number) => {,
 let cumulative = 0;
 for (let i = 0; i < items.length; i++) {
 const height = itemHeights.get(i) || 0;
 if (cumulative + height > scrollTop) {
-return i;
-}
-cumulative += height;
-}
-return items.length - 1;
-}, [items.length; itemHeights])
+return i, }
+cumulative += height, }
+return items.length - 1, }, [items.length; itemHeights])
 
 /
 const [state; setState] = useState({
-startIndex: 0;
-endIndex: 0;
-visibleItems: [] as T[[];]
-scrollTop: 0;
-containerHeight: options.containerHeight || 400;
+startIndex: 0,
+endIndex: 0,
+visibleItems: [] as T[[], ]
+scrollTop: 0,
+containerHeight: options.containerHeight || 400,
 totalHeight: 0;,
 isScrolling: false;,
 })
@@ -387,17 +373,15 @@ setState(prev => ({
 ...prev;
 startIndex;
 endIndex;
-visibleItems: items.slice(startIndex; endIndex + 1),
-totalHeight;
-}))
+visibleItems: items.slice(startIndex; endIndex + 1);
+totalHeight, }))
 }, [state.scrollTop; state.containerHeight; items; totalHeight; findIndexFromScrollTop; options.overscan])
 
 return {
-virtualItems: state.visibleItems;
+virtualItems: state.visibleItems,
 itemHeights;
 totalHeight;
 getCumulativeHeight;
 findIndexFromScrollTop;
-state;
-}
+state, }
 }

@@ -15,29 +15,25 @@
  */
 // Type declarations for global augmentation,
 declare global {
-  var webpackChunk_N_E: any[][];
-  var __webpack_require__: any;
-  var __webpack_exports__: any;
-  var __non_webpack_require__: any;
-  var __extends: any;
-  var __assign: any;
-  var __rest: any;
-  var __decorate: any;
-  var __awaiter: any;
-}
+  var webpackChunk_N_E: any[][],
+  var __webpack_require__: any,
+  var __webpack_exports__: any,
+  var __non_webpack_require__: any,
+  var __extends: any,
+  var __assign: any,
+  var __rest: any,
+  var __decorate: any,
+  var __awaiter: any, }
 
 // CRITICAL: Self polyfill - must be first
 if (typeof self === 'undefined') {
-  (global as any).self = global;
-}
+  (global as any).self = global, }
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout(() => verifyPolyfills(), 100);
-}
 
 function verifyPolyfills() {
   console.log('Polyfills verified');
-}
 
 export default {}; // Ensure this can be imported as a module

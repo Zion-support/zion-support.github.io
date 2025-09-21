@@ -1,5 +1,4 @@
 import React from "react";
-
 export const BenefitsSection = () => {
   return (
     <div className="py-16 bg-gray-50">
@@ -40,5 +39,4 @@ export const BenefitsSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  );;

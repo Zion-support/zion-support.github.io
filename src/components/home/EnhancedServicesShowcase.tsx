@@ -1,8 +1,8 @@
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 import import { Brain;
 Cloud;
 Shield;
@@ -15,10 +15,8 @@ DollarSign;
 Link as LinkIcon;
 ArrowRight;
 Star;
-CheckCircle;
-} from "
-import React from "react";
-
+CheckCircle, } from "
+import React from "react",
 const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0; 6)
 
 const serviceIcons = {
@@ -30,9 +28,8 @@ const serviceIcons = {
 "Developer Tools": Code,
 "Digital Transformation": Zap,
 "Healthcare Technology": Heart,
-"Financial Technology": DollarSign,
-"Blockchain": LinkIcon,;
-}
+"Financial Technology": DollarSign;
+"Blockchain": LinkIcon,, }
 
 export function EnhancedServicesShowcase() {
 return (

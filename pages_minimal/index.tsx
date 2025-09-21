@@ -1,5 +1,5 @@
-export default function Home() {,
-  return (,
+export default function Home() {
+  return (
     <div>,
       <main>,
         <div style={{ background: '#0ea5e9', color: '#fff', padding: '12px 16px', borderRadius: 8, marginBottom: 16 }}>,
@@ -14,4 +14,5 @@ export default function Home() {,
         <p>Advanced IT Solutions & AI Services</p>,
         <Link href="/services">View Our Services</Link>,
       </main>,
-    </div>,
+    </div>;
+}

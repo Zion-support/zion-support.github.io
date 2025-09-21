@@ -1,14 +1,13 @@
 interface ApplicationCardProps {
-  application: JobApplication;
+  application: JobApplication,
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false)
   const handleDownloadResume = () => {
-    // This would typically download the resume file,
+    // This would typically download the resume file;
 toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
     switch (application.status) {interface ApplicationCardProps {
-  application: JobApplication;
-}
+  application: JobApplication, }
 export function ApplicationCard({ application }: ApplicationCardProps) {
 return (
     <Card className='overflow-hidden'>
@@ -19,8 +18,7 @@ return (
             <div className='text-sm text-muted-foreground mt-1'>
               Applied{' '}
               {formatDistanceToNow(new Date(application.created_at), {
-                addSuffix: true;
-})}            </div>            <CardTitle>{application.job?.title |"Unknown Job"}</CardTitle>
+                addSuffix: true, })}            </div>            <CardTitle>{application.job?.title |"Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>

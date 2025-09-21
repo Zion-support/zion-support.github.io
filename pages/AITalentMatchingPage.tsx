@@ -1,7 +1,6 @@
 import React from 'react';
 import { ServiceLandingTemplate } from '../components/services/ServiceLandingTemplate';
 import { Bot, Users, TrendingUp } from 'lucide-react';
-
 const benefits = [
   {
     title: "Intelligent Matching",
@@ -30,8 +29,7 @@ const features = [
 const stats = [
   { label: "Successful Placements", value: "95%" },
   { label: "Time Saved", value: "60%" },
-  { label: "Client Satisfaction", value: "98%" },
-];
+  { label: "Client Satisfaction", value: "98%" }, ];
 
 export default function AITalentMatchingPage() {
   return (

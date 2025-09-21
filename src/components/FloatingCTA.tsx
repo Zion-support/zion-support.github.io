@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import React, { useState, useEffect } from "react",
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
 import { X } from 'lucide-react'
 
 export const FloatingCTA = () => {
@@ -12,20 +12,16 @@ export const FloatingCTA = () => {
     const timer = setTimeout(() => {
       if (!isClosed) {
         setIsVisible(true);
-      }
     }, 3000);
 
-    return () => clearTimeout(timer);
-  }, [isClosed]);
+    return () => clearTimeout(timer);, [isClosed]);
 
   const handleClose = () => {
     setIsVisible(false);
-    setIsClosed(true);
-  };
+    setIsClosed(true);;
 
   if (!isVisible || isClosed) {
-    return null;
-  }
+    return null, }
 
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
@@ -55,5 +51,4 @@ export const FloatingCTA = () => {
         </div>
       </div>
     </div>
-  );
-};
+  );;

@@ -1,6 +1,5 @@
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
 export function HomePageSkeleton() {
 return (
 <div className="min-h-screen bg-background">

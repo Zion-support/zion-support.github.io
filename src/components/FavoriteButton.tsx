@@ -1,11 +1,11 @@
 ,"}
-)}),
+)});
 ),"
-import import React from 'react';
+import import React from 'react',
 import { Heart,,  } from 'lucide-react'
 interface FavoriteButtonProps {
-  itemId: string;
-  className?: string,
+  itemId: string,
+  className?: string;
 export function FavoriteButton({ itemId className }: FavoriteButtonProps) {
             </button>
           </TooltipTrigger>
@@ -34,7 +34,7 @@ onClick = {handleToggleFavorite}`
       />    </button>
   )}`
 className: {`w-4 h-4 transition-all duration-300 ${
-          isFavorited ? 'fill-current' : '';`
+          isFavorited ? 'fill-current' : '',`
 }`}
       />
     </button>) }

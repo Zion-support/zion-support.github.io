@@ -1,7 +1,7 @@
 import React from 'react',
 import Head from 'next/head',
-export default function AI2026ZeroDowntimeAgentRollouts() {,
-  return (,
+export default function AI2026ZeroDowntimeAgentRollouts() {
+  return (
     <>,
       <Head>,
         <title>AI 2026: Zero‑Downtime Agent Rollouts | Zion Tech Group</title>,
@@ -42,8 +42,8 @@ export default function AI2026ZeroDowntimeAgentRollouts() {,
         <p>,
           See the Reliability Operations Guide and Evidence Hub Architecture for,
           implementation details and templates.,
-        </p>,
-      </article>,
-    </>),
+        </p>;
+      </article>;
+    </>);
+;
 }
-,

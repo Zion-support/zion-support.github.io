@@ -1,15 +1,13 @@
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Star, Check } from 'lucide-react';
-import { ListingItem } from '@/types/quotes';
-
+import React from 'react',
+import { Card, CardContent } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Star, Check } from 'lucide-react',
+import { ListingItem } from '@/types/quotes',
 interface ListingScoreCardProps {
   listing: ListingItem;
   isSelected?: boolean;
-  onSelect?: () => void;
-}
+  onSelect?: () => void, }
 
 export function ListingScoreCard({ listing, isSelected = false, onSelect }: ListingScoreCardProps) {
   return (
@@ -71,8 +69,7 @@ export function ListingScoreCard({ listing, isSelected = false, onSelect }: List
               className="mt-2"
               onClick={(e) => {
                 e.stopPropagation();
-                onSelect?.();
-              }}
+                onSelect?.();}
             >
               {isSelected ? 'Selected' : 'Select'}
             </Button>
@@ -81,4 +78,3 @@ export function ListingScoreCard({ listing, isSelected = false, onSelect }: List
       </CardContent>
     </Card>
   );
-}

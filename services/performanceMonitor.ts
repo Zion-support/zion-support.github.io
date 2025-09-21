@@ -60,19 +60,15 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ url })
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Performance monitoring failed: ${response.statusText}`),
-      }
+        throw new Error(`Performance monitoring failed: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockMetrics(url),
-    }
+      return this.generateMockMetrics(url);
   }
 
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
@@ -81,17 +77,13 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to fetch historical data: ${response.statusText}`),
-      }
+        throw new Error(`Failed to fetch historical data: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Generate mock historical data
-      return this.generateMockHistoricalData(url, days),
-    }
+      return this.generateMockHistoricalData(url, days);
   }
 
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
@@ -101,15 +93,13 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(config)
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to set monitoring config: ${response.statusText}`),
-      }
+        throw new Error(`Failed to set monitoring config: ${response.statusText}`);
     } catch (error) {
-      console.error('Failed to set monitoring config:', error),
+      console.error('Failed to set monitoring config:', error);
       throw error,
     }
   }
@@ -121,17 +111,13 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to fetch alerts: ${response.statusText}`),
-      }
+        throw new Error(`Failed to fetch alerts: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Generate mock alerts
-      return this.generateMockAlerts(url),
-    }
+      return this.generateMockAlerts(url);
   }
 
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
@@ -148,12 +134,10 @@ export class PerformanceMonitorService {
     },
     recommendations: string[]
   }> {
-    const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30),
-    
-    const loadTimes = historicalData.map(d => d.loadTime),
-    const performanceScores = historicalData.map(d => d.performanceScore),
-    const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0]),
-
+    const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
+    const loadTimes = historicalData.map(d => d.loadTime);
+    const performanceScores = historicalData.map(d => d.performanceScore);
+    const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0]);
     return {
       summary: {
         averageLoadTime: loadTimes.reduce((a, b) => a + b, 0) / loadTimes.length,
@@ -195,12 +179,10 @@ export class PerformanceMonitorService {
 
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
     const data: PerformanceMetrics[] = [],
-    const now = new Date(),
-
+    const now = new Date();
     for (let i = days - 1, i >= 0, i--) {
-      const date = new Date(now),
-      date.setDate(date.getDate() - i),
-      
+      const date = new Date(now);
+      date.setDate(date.getDate() - i);
       data.push({
         url,
         timestamp: date,
@@ -216,8 +198,7 @@ export class PerformanceMonitorService {
         accessibilityScore: Math.floor(Math.random() * 20) + 80,
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,
         seoScore: Math.floor(Math.random() * 20) + 80
-      }),
-    }
+      });
 
     return data,
   }
@@ -287,4 +268,4 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'SLA guarantee'
     ]
   }
-},
+};

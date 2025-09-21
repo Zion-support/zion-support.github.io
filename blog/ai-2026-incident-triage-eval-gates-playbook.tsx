@@ -1,6 +1,6 @@
 import Head from 'next/head',
-export default function AI2026IncidentTriageEvalGatesPlaybook() {,
-  return (,
+export default function AI2026IncidentTriageEvalGatesPlaybook() {
+  return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50 to-blue-100">,
       <Head>,
         <title>Incident Triage Playbook — Evaluation Gates (2026) | Zion Tech Group</title>,
@@ -36,7 +36,8 @@ export default function AI2026IncidentTriageEvalGatesPlaybook() {,
         <footer className="mt-12 pt-6 border-t border-gray-200 text-sm text-gray-600">,
           <a href="/blog" className="text-blue-600 hover: text-blue-700">← Back to Blog</a>,
         </footer>,
-      </article>,
-    </main>,
+      </article>;
+    </main>;
   )}
-,
+;
+}

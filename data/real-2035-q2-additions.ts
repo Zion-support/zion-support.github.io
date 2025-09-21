@@ -825,7 +825,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Batch upload, queue, summaries, export.',
 		launchDate: '2035-05-10',
 		customers: 36,
-		rating: 4.6,
+		rating: 4.6;
 		reviews: 14
 	}
-],
+];

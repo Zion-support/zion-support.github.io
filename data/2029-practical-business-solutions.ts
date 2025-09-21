@@ -1,10 +1,9 @@
 export interface PracticalBusinessSolution2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
-}
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  features: string[], }
 
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [
   {
@@ -14,6 +13,5 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     price: '$1799',
     features: ['Practical business features', '2029 solutions', 'Business optimization']
   }
-];
-];
+], ];
 export const practicalBusinessSolutionServices2029 = practicalBusiness2029Solutions;

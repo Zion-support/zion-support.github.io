@@ -166,5 +166,4 @@ export const real2029Q2Additions: Real2029Q2Service[] = [
     realImplementation: true,
     contactInfo: contact
   }
-],
-
+];

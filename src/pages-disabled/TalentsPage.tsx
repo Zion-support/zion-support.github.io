@@ -1,8 +1,7 @@
-import { useRouter } from 'next/router';
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react';
-
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react',
 export default function TalentsPage() {
   const router = useRouter();
   const [talents, setTalents] = useState([]);
@@ -10,8 +9,7 @@ export default function TalentsPage() {
 
   useEffect(() => {
     // Simulate loading
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
+    setTimeout(() => setLoading(false), 1000);, []);
 
   return (
     <div className="min-h-screen bg-zion-blue">

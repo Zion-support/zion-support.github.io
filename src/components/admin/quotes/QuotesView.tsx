@@ -1,25 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { QuotesStats } from './QuotesStats';
-import { QuotesFilter } from './QuotesFilter';
-import { QuotesBulkActions } from './QuotesBulkActions';
-import { QuotesTable } from './QuotesTable';
-import { QuotesPagination } from './QuotesPagination';
-import { Button } from '@/components/ui/button';
-import { Plus } from 'lucide-react';
-
+import React, { useState, useEffect } from 'react',
+import { QuotesStats } from './QuotesStats',
+import { QuotesFilter } from './QuotesFilter',
+import { QuotesBulkActions } from './QuotesBulkActions',
+import { QuotesTable } from './QuotesTable',
+import { QuotesPagination } from './QuotesPagination',
+import { Button } from '@/components/ui/button',
+import { Plus } from 'lucide-react',
 interface Quote {
-  id: string;
-  clientName: string;
-  projectTitle: string;
-  amount: number;
-  status: 'pending' | 'approved' | 'rejected' | 'expired';
-  createdAt: string;
-  validUntil: string;
-  isArchived: boolean;
-}
+  id: string,
+  clientName: string,
+  projectTitle: string,
+  amount: number,
+  status: 'pending' | 'approved' | 'rejected' | 'expired',
+  createdAt: string,
+  validUntil: string,
+  isArchived: boolean, }
 
-type QuoteStatus = 'pending' | 'approved' | 'rejected' | 'expired';
-
+type QuoteStatus = 'pending' | 'approved' | 'rejected' | 'expired',
 export const QuotesView: React.FC = () => {
   const [quotes, setQuotes] = useState<Quote[]>([]);
   const [filteredQuotes, setFilteredQuotes] = useState<Quote[]>([]);
@@ -64,8 +61,7 @@ export const QuotesView: React.FC = () => {
         isArchived: false
       }
     ];
-    setQuotes(mockQuotes);
-  }, []);
+    setQuotes(mockQuotes);, []);
 
   // Filter quotes based on search and filters
   useEffect(() => {
@@ -77,19 +73,16 @@ export const QuotesView: React.FC = () => {
         quote.clientName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         quote.projectTitle.toLowerCase().includes(searchQuery.toLowerCase())
       );
-    }
 
     // Status filter
     if (statusFilter !== 'all') {
       filtered = filtered.filter(quote => quote.status === statusFilter);
-    }
 
     // Archive filter
     if (archiveFilter !== 'all') {
       filtered = filtered.filter(quote => 
         archiveFilter === 'archived' ? quote.isArchived : !quote.isArchived
       );
-    }
 
     setFilteredQuotes(filtered);
     setCurrentPage(1); // Reset to first page when filters change
@@ -115,42 +108,34 @@ export const QuotesView: React.FC = () => {
       prev.includes(id)
         ? prev.filter(quoteId => quoteId !== id)
         : [...prev, id]
-    );
-  };
+    );;
 
   const handleSelectAll = () => {
     if (selectedQuotes.length === currentQuotes.length) {
-      setSelectedQuotes([]);
-    } else {
+      setSelectedQuotes([]); else {
       setSelectedQuotes(currentQuotes.map(quote => quote.id));
-    }
   };
 
   const handleResetFilters = () => {
     setSearchQuery('');
     setStatusFilter('all');
-    setArchiveFilter('active');
-  };
+    setArchiveFilter('active');;
 
   const handleViewQuote = (id: string) => {
-    console.log('View quote:', id);
-  };
+    console.log('View quote:', id);;
 
   const handleEditQuote = (id: string) => {
-    console.log('Edit quote:', id);
-  };
+    console.log('Edit quote:', id);;
 
   const handleArchiveQuote = (id: string) => {
     setQuotes(prev =>
       prev.map(quote =>
         quote.id === id ? { ...quote, isArchived: !quote.isArchived } : quote
       )
-    );
-  };
+    );;
 
   const handleDeleteQuote = (id: string) => {
-    setQuotes(prev => prev.filter(quote => quote.id !== id));
-  };
+    setQuotes(prev => prev.filter(quote => quote.id !== id));;
 
   const handleArchiveSelected = () => {
     setQuotes(prev =>
@@ -160,21 +145,17 @@ export const QuotesView: React.FC = () => {
           : quote
       )
     );
-    setSelectedQuotes([]);
-  };
+    setSelectedQuotes([]);;
 
   const handleDeleteSelected = () => {
     setQuotes(prev => prev.filter(quote => !selectedQuotes.includes(quote.id)));
-    setSelectedQuotes([]);
-  };
+    setSelectedQuotes([]);;
 
   const handleExportSelected = () => {
-    console.log('Export selected quotes:', selectedQuotes);
-  };
+    console.log('Export selected quotes:', selectedQuotes);;
 
   const handleEmailSelected = () => {
-    console.log('Email selected quotes:', selectedQuotes);
-  };
+    console.log('Email selected quotes:', selectedQuotes);;
 
   return (
     <div className="space-y-6">
@@ -234,5 +215,4 @@ export const QuotesView: React.FC = () => {
         itemsPerPage={itemsPerPage}
       />
     </div>
-  );
-};
+  );;

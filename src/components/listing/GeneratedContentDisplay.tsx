@@ -1,13 +1,12 @@
 
 import React from "react",
 import { Button,,  } from "@/components/ui/button",
-import React from "react";
+import React from "react",
 import { ArrowRight,,  } from 'lucide-react'
 onApply: () => void,
 export function GeneratedContentDisplay({
-  content,
-onApply,
-}: GeneratedContentDisplayProps) {
+  content;
+onApply, }: GeneratedContentDisplayProps) {
   return (
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>
       <CardHeader>

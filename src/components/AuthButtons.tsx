@@ -1,21 +1,17 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react',
+import { Button } from '@/components/ui/button',
 import { Facebook, Github } from 'lucide-react'
 
 interface AuthButtonsProps {
-  providers: string[];
-  onSignIn: (provider: string) => void;
-  loadingProvider?: string | null;
-}
+  providers: string[],
+  onSignIn: (provider: string) => void,
+  loadingProvider?: string | null, }
 
 export function AuthButtons({ providers, onSignIn, loadingProvider }: AuthButtonsProps) {
   const gridCols = providers.length === 1 ? 'grid-cols-1' : 
-                   providers.length === 2 ? 'grid-cols-2' : 
-                   'grid-cols-2';
-
+                   providers.length === 2 ? 'grid-cols-2' : 'grid-cols-2',
   const handleSignIn = (provider: string) => {
-    onSignIn(provider);
-  };
+    onSignIn(provider);;
 
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
@@ -106,4 +102,3 @@ export function AuthButtons({ providers, onSignIn, loadingProvider }: AuthButton
       )}
     </div>
   );
-}

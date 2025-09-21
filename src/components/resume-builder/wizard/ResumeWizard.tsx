@@ -1,22 +1,22 @@
 
-import import { useState,,, useEffect,,, ,,  } from 'react';
-import import { useAuth,,, ,,  } from '@/hooks/useAuth';
-import import { useResume,,, ,,  } from '@/hooks/useResume';
-import import { Tabs,,, ,,  } from '@/components/ui/tabs';
-import import { Card,,, CardContent,,, ,,  } from '@/components/ui/card';
-import import { Alert,,, AlertDescription,,, AlertTitle,,, ,,  } from '@/components/ui/alert';
+import import { useState,,, useEffect,,, ,,  } from 'react',
+import import { useAuth,,, ,,  } from '@/hooks/useAuth',
+import import { useResume,,, ,,  } from '@/hooks/useResume',
+import import { Tabs,,, ,,  } from '@/components/ui/tabs',
+import import { Card,,, CardContent,,, ,,  } from '@/components/ui/card',
+import import { Alert,,, AlertDescription,,, AlertTitle,,, ,,  } from '@/components/ui/alert',
 import { AlertCircle,,, FilePlus,,, Loader2,,  } from 'lucide-react'
-import import { Button,,, ,,  } from '@/components/ui/button';
-import import { Resume,,, ,,  } from '@/types/resume';
+import import { Button,,, ,,  } from '@/components/ui/button',
+import import { Resume,,, ,,  } from '@/types/resume',
 // Import components,
-import import { ResumeProgress,,, ,,  } from './ResumeProgress';
-import import { EmptyResumeState,,, ,,  } from './EmptyResumeState';
-import import { CreateResumeForm,,, ,,  } from './CreateResumeForm';
-import import { ResumeSteps,,, ,,  } from './ResumeSteps';
-import import { ResumeStepContent,,, ,,  } from './ResumeStepContent';
-import import { useResumeProgress,,, ,,  } from './useResumeProgress';
-import import { ResumeVersionSelector,,, ,,  } from './ResumeVersionSelector';
-import import { RESUME_STEPS,,  } from './constants';
+import import { ResumeProgress,,, ,,  } from './ResumeProgress',
+import import { EmptyResumeState,,, ,,  } from './EmptyResumeState',
+import import { CreateResumeForm,,, ,,  } from './CreateResumeForm',
+import import { ResumeSteps,,, ,,  } from './ResumeSteps',
+import import { ResumeStepContent,,, ,,  } from './ResumeStepContent',
+import import { useResumeProgress,,, ,,  } from './useResumeProgress',
+import import { ResumeVersionSelector,,, ,,  } from './ResumeVersionSelector',
+import import { RESUME_STEPS,,  } from './constants',
 export function ResumeWizard() {
 createResume,
 } = useResume()
@@ -46,7 +46,7 @@ if (isLoading) {
     return (
       <CreateResumeForm
 onCreateResume = {handleCreateNewResume,}
-        onCancel = {(,) => setShowNewResumeForm(false),}
+        onCancel = {(,) => setShowNewResumeForm(false);
         isLoading = {isLoading,}
       />
     )
@@ -58,7 +58,7 @@ onCreateResume = {handleCreateNewResume,}
         <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button
-onClick = {(,) => setShowNewResumeForm(true),}
+onClick = {(,) => setShowNewResumeForm(true);
             variant="outline"
             size="sm"
             className="gap-2"
@@ -121,7 +121,7 @@ activeTab = {activeTab,}
 }onNextStep= {
   nextStep,
 }onPrevStep= {
-  prevStep,
+  prevStep;
 }/>)
 }</Tabs> </CardContent> </Card> </div>)
 }'"}

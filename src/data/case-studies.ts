@@ -1,12 +1,11 @@
 export interface CaseStudy {
-  id: string;
-  title: string;
-  description: string;
-  client: string;
-  industry: string;
-  results: string[];
-  image?: string;
-}
+  id: string,
+  title: string,
+  description: string,
+  client: string,
+  industry: string,
+  results: string[],
+  image?: string, }
 
 export const CASE_STUDIES: CaseStudy[] = [
   {

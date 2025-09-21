@@ -453,4 +453,4 @@ export const specializedAIServices: SpecializedAIService[] = [
     rating: 4.6,
     reviews: 134
   }
-],
+];

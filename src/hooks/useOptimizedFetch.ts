@@ -1,8 +1,6 @@
 import React from "react";
-
 interface UseFetchOptions {
-immediate?: boolean;
-}
+immediate?: boolean, }
 
 export export const useOptimizedFetch = <T>(;
 url: string;,

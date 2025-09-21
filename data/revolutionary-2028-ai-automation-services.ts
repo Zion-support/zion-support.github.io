@@ -272,7 +272,7 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     implementationDetails: 'AI-powered autonomous energy management platform with power optimization, grid management, and comprehensive sustainability tracking.',
     launchDate: '2028-06-20',
     customers: 420,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 320
   }
-],
+];

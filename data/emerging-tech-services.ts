@@ -272,7 +272,7 @@ export const emergingTechServices: EmergingTechService[] = [
     implementationDetails: 'Full biotech AI platform with advanced algorithms, computational biology tools, research collaboration, and regulatory compliance.',
     launchDate: '2024-02-01',
     customers: 25,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 20
   }
-],
+];

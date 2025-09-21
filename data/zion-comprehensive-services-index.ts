@@ -28,36 +28,30 @@ export const serviceCategories = [
   'QuantumNanotech',
   'GreenTechSmartCities',
   'DigitalTwinMetaverse'
-] as const,
-
+] as const;
 // Utility functions
 export const getServicesByCategory = (category: string) => {
   return allZionServices.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
   )
-},
-
+};
 export const getPopularServices = () => {
-  return allZionServices.filter(service => service.isPopular),
-},
+  return allZionServices.filter(service => service.isPopular);,
 
 export const getNewServices = () => {
-  return allZionServices.filter(service => service.isNew),
-},
+  return allZionServices.filter(service => service.isNew);,
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return allZionServices.filter(service => {
-    const price = parseFloat(service.price.replace('$', '').replace(, '')),
+    const price = parseFloat(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });,
 
 export const getServicesByRating = (minRating: number) => {
   return allZionServices.filter(service => service.rating >= minRating)
-},
-
+};
 export const searchServices = (query: string) => {
-  const searchTerm = query.toLowerCase(),
+  const searchTerm = query.toLowerCase();
   return allZionServices.filter(service =>
     service.name.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
@@ -72,11 +66,10 @@ export const searchServices = (query: string) => {
 export const getServiceStats = () => {
   const totalServices = allZionServices.length,
   const popularServices = getPopularServices().length,
-  const newServices = getNewServices().length,
-  const totalCustomers = allZionServices.reduce((sum, service) => sum + service.customers, 0),
-  const averageRating = allZionServices.reduce((sum, service) => sum + service.rating, 0) / totalServices,
-  const totalReviews = allZionServices.reduce((sum, service) => sum + service.reviews, 0),
-
+  const newServices = getNewServices().length;
+  const totalCustomers = allZionServices.reduce((sum, service) => sum + service.customers, 0);
+  const averageRating = allZionServices.reduce((sum, service) => sum + service.rating, 0) / totalServices;
+  const totalReviews = allZionServices.reduce((sum, service) => sum + service.reviews, 0);
   return {
     totalServices,
     popularServices,
@@ -93,40 +86,32 @@ export const getMarketInsights = () => {
     category: service.category,
     marketSize: service.marketSize,
     growthRate: service.growthRate
-  })),
-
+  }));
   const uniqueMarkets = marketSizes.filter((market, index, self) => 
     index === self.findIndex(m => m.category === market.category)
-  ),
-
+  );
   return uniqueMarkets,
 },
 
 // Technology stack overview
 export const getTechnologyStack = () => {
-  const allTechnologies = allZionServices.flatMap(service => service.technology),
+  const allTechnologies = allZionServices.flatMap(service => service.technology);
   const technologyCount = allTechnologies.reduce((acc, tech) => {
     acc[tech] = (acc[tech] || 0) + 1,
-    return acc,
-  }, {} as Record<string, number>),
-
+    return acc, }, {} as Record<string, number>);
   return Object.entries(technologyCount)
     .sort(([,a], [,b]) => b - a)
-    .map(([tech, count]) => ({ technology: tech, usageCount: count })),
-},
+    .map(([tech, count]) => ({ technology: tech, usageCount: count }));,
 
 // Integration overview
 export const getIntegrationOverview = () => {
-  const allIntegrations = allZionServices.flatMap(service => service.integrations),
+  const allIntegrations = allZionServices.flatMap(service => service.integrations);
   const integrationCount = allIntegrations.reduce((acc, integration) => {
     acc[integration] = (acc[integration] || 0) + 1,
-    return acc,
-  }, {} as Record<string, number>),
-
+    return acc, }, {} as Record<string, number>);
   return Object.entries(integrationCount)
     .sort(([,a], [,b]) => b - a)
-    .map(([integration, count]) => ({ integration, usageCount: count })),
-},
+    .map(([integration, count]) => ({ integration, usageCount: count }));,
 
 // ROI insights
 export const getROIInsights = () => {
@@ -136,8 +121,7 @@ export const getROIInsights = () => {
     roi: service.roi,
     price: service.price,
     rating: service.rating
-  })),
-},
+  }));,
 
 // Export default for easy importing
 export default {
@@ -152,6 +136,6 @@ export default {
   getServiceStats,
   getMarketInsights,
   getTechnologyStack,
-  getIntegrationOverview,
+  getIntegrationOverview;
   getROIInsights
-},
+};

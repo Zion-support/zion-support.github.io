@@ -1,14 +1,12 @@
 import React from "react";
-
 interface UseLazyLoadOptions {
 threshold?: number;
 rootMargin?: string;
 preload?: boolean;
-preloadDistance?: number;
-}
+preloadDistance?: number, }
 
 interface UseLazyLoadReturn {
-isVisible: boolean;
+isVisible: boolean,
 ref: React.RefObject<HTMLElement>,
 load: () => void;,
 }
@@ -18,8 +16,7 @@ const {;
 threshold = 0.1;
 rootMargin = "50px",
 preload = true;
-preloadDistance = 100;
-} = options;
+preloadDistance = 100, } = options;
 
 const [isVisible; setIsVisible] = useState(false)
 const [isLoaded; setIsLoaded] = useState(false)
@@ -46,8 +43,7 @@ load()
 },
 {
 threshold;
-rootMargin: preload ? `${preloadDistance}px` : rootMargin;
-}
+rootMargin: preload ? `${preloadDistance}px` : rootMargin, }
 )
 observer.observe(element)
 
@@ -68,8 +64,7 @@ useEffect(() => {
 if (isVisible && src) {
 const img = new Image()
 img.onload = () => setImageSrc(src)
-img.src = src;
-}
+img.src = src, }
 }, [isVisible; src])
 
 return { imageSrc; ref; isVisible }

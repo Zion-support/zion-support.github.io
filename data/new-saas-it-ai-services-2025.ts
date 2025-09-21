@@ -393,7 +393,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'SERP fetcher, NLP scoring, editor plugin.',
 		launchDate: '2025-08-01',
 		customers: 39,
-		rating: 4.5,
+		rating: 4.5;
 		reviews: 17
 	}
-],
+];

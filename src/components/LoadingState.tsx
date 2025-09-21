@@ -1,13 +1,11 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
-
+import React from 'react',
+import { motion } from 'framer-motion',
 interface LoadingStateProps {
-  type?: 'spinner' | 'skeleton' | 'pulse' | 'dots';
-  size?: 'sm' | 'md' | 'lg';
+  type?: 'spinner' | 'skeleton' | 'pulse' | 'dots',
+  size?: 'sm' | 'md' | 'lg',
   color?: string;
-  text?: string;
-}
+  text?: string, }
 
 export const LoadingState: React.FC<LoadingStateProps> = ({
   type = 'spinner',
@@ -75,8 +73,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
         );
       
       default:
-        return null;
-    }
+        return null, }
   };
 
   return (
@@ -92,7 +89,6 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
         </motion.p>
       )}
     </div>
-  );
-};
+  );;
 
 export default LoadingState;

@@ -272,7 +272,7 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     implementationDetails: 'AI-powered supply chain optimization platform with demand forecasting, inventory optimization, and comprehensive logistics management.',
     launchDate: '2027-06-20',
     customers: 850,
-    rating: 4.6,
+    rating: 4.6;
     reviews: 520
   }
-],
+];

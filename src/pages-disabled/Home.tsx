@@ -1,6 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
-
+import React from 'react',
+import Link from 'next/link',
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-zion-blue">
@@ -18,7 +17,6 @@ const Home: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  );;
 
 export default Home;

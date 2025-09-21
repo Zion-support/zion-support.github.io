@@ -272,7 +272,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     implementationDetails: 'DeFi lending and borrowing platform with AI risk management, smart contracts, and comprehensive DeFi solutions.',
     launchDate: '2028-06-20',
     customers: 850,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 620
   }
-],
+];

@@ -272,7 +272,7 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     implementationDetails: 'Complete neural interface development platform with AI assistance, testing environments, and compliance frameworks.',
     launchDate: '2024-12-01',
     customers: 234,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 123
   }
-],
+];

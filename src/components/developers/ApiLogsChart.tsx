@@ -1,34 +1,28 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts',
 interface ApiLog {
-  id: string;
-  method: string;
-  endpoint: string;
+  id: string,
+  method: string,
+  endpoint: string,
   status_code: number;
   response_time_ms?: number;
   ip_address?: string;
-  created_at: string;
-}
+  created_at: string, }
 
 interface ApiLogsChartProps {
-  logs: ApiLog[];
-}
+  logs: ApiLog[], }
 
 export function ApiLogsChart({ logs }: ApiLogsChartProps) {
   // Group logs by day
   const logsByDay = logs.reduce((acc, log) => {
     const date = new Date(log.created_at).toLocaleDateString();
     if (!acc[date]) {
-      acc[date] = 0;
-    }
+      acc[date] = 0, }
     acc[date]++;
-    return acc;
-  }, {} as Record<string, number>);
+    return acc, }, {} as Record<string, number>);
 
   const chartData = Object.entries(logsByDay).map(([date, count]) => ({
     date,
-    requests: count,
-  }));
+    requests: count, }));
 
   return (
     <div className="h-64 w-full">
@@ -62,4 +56,3 @@ export function ApiLogsChart({ logs }: ApiLogsChartProps) {
       </ResponsiveContainer>
     </div>
   );
-}

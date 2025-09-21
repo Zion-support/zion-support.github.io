@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { TalentProfile } from "@/components/profile/TalentProfile";
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
-
+import React, { useState, useEffect } from 'react',
+import { useRouter } from 'next/router',
+import { TalentProfile } from "@/components/profile/TalentProfile",
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
 export default function TalentProfilePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simulate loading
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
+    setTimeout(() => setLoading(false), 1000);, []);
 
   if (loading) {
-    return <ProfileLoadingState />;
-  }
+    return <ProfileLoadingState />, }
 
   return (
     <div className="min-h-screen bg-zion-blue">

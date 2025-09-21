@@ -1,6 +1,5 @@
 
 import import React from 'react';
-
 interface StructuredDataProps {
 type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';,
 data: any;,
@@ -10,11 +9,9 @@ const getStructuredData: any = () => {
 const baseStructure = {
 '@context': 'https://schema.org',;
 '@type': type,;
-...data;
-}
+...data, }
 
-return baseStructure;
-}
+return baseStructure, }
 
 return (
 <script;
@@ -49,9 +46,7 @@ email: 'kleber@ziontechgroup.com',
 sameAs: [
 'https://twitter.com/ziontechgroup',
 'https://linkedin.com/company/ziontechgroup',;
-'https://github.com/ziontechgroup';
-];
-}
+'https://github.com/ziontechgroup', ], }
 
 export const WebSiteSchema = {
 name: 'Zion Tech Group',
@@ -61,10 +56,8 @@ potentialAction: {
 '@type': 'SearchAction',
 target: {
 '@type': 'EntryPoint',
-urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}';
-},;
-'query-input': 'required name=search_term_string';
-}
+urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}', },;
+'query-input': 'required name=search_term_string', }
 }
 
 export export default StructuredData;

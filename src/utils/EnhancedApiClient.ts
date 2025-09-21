@@ -1,13 +1,11 @@
-import AdvancedCacheManager from "./AdvancedCacheManager";
-
+import AdvancedCacheManager from "./AdvancedCacheManager",
 interface ApiClientConfig {
-  baseURL: string;
-  timeout: number;
-  retries: number;
-  retryDelay: number;
+  baseURL: string,
+  timeout: number,
+  retries: number,
+  retryDelay: number,
   cacheEnabled: boolean;
-  cacheTTL: number;
-}
+  cacheTTL: number, }
 
 interface RequestOptions {
   timeout?: number;
@@ -16,20 +14,18 @@ interface RequestOptions {
   cache?: RequestCache;
   cacheTTL?: number;
   tags?: string[];
-  headers?: Record<string, string>;
-}
+  headers?: Record<string, string>, }
 
 interface ApiResponse<T = any> {
-  data: T;
-  status: number;
-  statusText: string;
-  headers: Headers;
-  cached?: boolean;
-}
+  data: T,
+  status: number,
+  statusText: string,
+  headers: Headers,
+  cached?: boolean, }
 
 class EnhancedApiClient {
-  private config: ApiClientConfig;
-  private cache: AdvancedCacheManager<ApiResponse>;
+  private config: ApiClientConfig,
+  private cache: AdvancedCacheManager<ApiResponse>,
   private requestQueue: Map<string, Promise<ApiResponse>> = new Map();
 
   constructor(config: Partial<ApiClientConfig> = {}) {
@@ -49,7 +45,6 @@ class EnhancedApiClient {
       strategy: "lru",
       persist: false
     });
-  }
 
   async get<T = any>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
@@ -61,7 +56,6 @@ class EnhancedApiClient {
       },
       ...restOptions 
     });
-  }
 
   async post<T = any>(url: string, data?: any, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
@@ -74,7 +68,6 @@ class EnhancedApiClient {
       },
       ...restOptions
     });
-  }
 
   async put<T = any>(url: string, data?: any, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
@@ -87,7 +80,6 @@ class EnhancedApiClient {
       },
       ...restOptions
     });
-  }
 
   async delete<T = any>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const { headers, ...restOptions } = options;
@@ -99,7 +91,6 @@ class EnhancedApiClient {
       },
       ...restOptions 
     });
-  }
 
   private async request<T = any>(
     url: string,
@@ -112,14 +103,12 @@ class EnhancedApiClient {
     if (this.config.cacheEnabled && (options.cache !== 'no-cache')) {
       const cached = this.cache.get(cacheKey);
       if (cached) {
-        return { ...cached, cached: true };
-      }
+        return { ...cached, cached: true }, }
     }
 
     // Check if request is already in progress
     if (this.requestQueue.has(cacheKey)) {
-      return this.requestQueue.get(cacheKey)!;
-    }
+      return this.requestQueue.get(cacheKey)!, }
 
     // Create new request promise
     const requestPromise = this.executeRequest<T>(fullUrl, options, {
@@ -133,10 +122,8 @@ class EnhancedApiClient {
 
     try {
       const response = await requestPromise;
-      return response;
-    } finally {
+      return response, } finally {
       this.requestQueue.delete(cacheKey);
-    }
   }
 
   /**
@@ -146,23 +133,21 @@ class EnhancedApiClient {
     url: string,
     fetchOptions: RequestInit,
     options: {
-      timeout: number;
-      retries: number;
-      cacheKey: string;
+      timeout: number,
+      retries: number,
+      cacheKey: string,
       cache?: boolean;
-      cacheTTL?: number;
-    }
+      cacheTTL?: number, }
   ): Promise<ApiResponse<T>> {
     const { timeout, retries, cacheKey, cache = true, cacheTTL } = options;
-    let lastError: Error | null = null;
-
+    let lastError: Error | null = null,
     for (let attempt = 0; attempt <= retries; attempt++) {
       try {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), timeout);
 
         const response = await fetch(url, {
-          ...fetchOptions,
+          ...fetchOptions;
           signal: controller.signal
         });
 
@@ -170,7 +155,6 @@ class EnhancedApiClient {
 
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
 
         const data = await response.json();
         const apiResponse: ApiResponse<T> = {
@@ -184,49 +168,41 @@ class EnhancedApiClient {
         // Cache the response if enabled
         if (this.config.cacheEnabled && cache) {
           this.cache.set(cacheKey, apiResponse);
-        }
 
-        return apiResponse;
-      } catch (error) {
+        return apiResponse, } catch (error) {
         lastError = error as Error;
         
         if (attempt < retries) {
           const delay = this.config.retryDelay * Math.pow(2, attempt);
           await new Promise(resolve => setTimeout(resolve, delay));
-        }
       }
     }
 
     throw lastError || new Error('Request failed after all retries');
-  }
 
   /**
    * Clear cache
    */
   clearCache(): void {
     this.cache.clear();
-  }
 
   /**
    * Get cache statistics
    */
   getCacheStats() {
     return this.cache.getStats();
-  }
 
   /**
    * Set base URL
    */
   setBaseURL(baseURL: string): void {
-    this.config.baseURL = baseURL;
-  }
+    this.config.baseURL = baseURL, }
 
   /**
    * Update configuration
    */
   updateConfig(newConfig: Partial<ApiClientConfig>): void {
-    this.config = { ...this.config, ...newConfig };
-  }
+    this.config = { ...this.config, ...newConfig }, }
 }
 
 // Create a default instance

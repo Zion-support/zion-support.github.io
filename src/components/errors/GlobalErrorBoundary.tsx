@@ -7,24 +7,22 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
 interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-  retryCount: number;
-  userFeedback: string;
-  showDetails: boolean;
-}
+  hasError: boolean,
+  error: Error | null,
+  errorInfo: ErrorInfo | null,
+  errorId: string | null,
+  retryCount: number,
+  userFeedback: string,
+  showDetails: boolean, }
 
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void,
   enableRetry?: boolean;
   maxRetries?: number;
   showReportButton?: boolean;
-  context?: string;
-}
+  context?: string, }
 
 export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   private retryTimeouts: NodeJS.Timeout[] = []

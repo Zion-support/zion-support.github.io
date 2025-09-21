@@ -1,30 +1,27 @@
 interface AnalyticsEvent {
-  event: string;
-  category: string;
-  action: string;
+  event: string,
+  category: string,
+  action: string,
   label?: string;
   value?: number;
-  custom_parameters?: Record<string, any>;
-}
+  custom_parameters?: Record<string, any>, }
 
 interface UserJourney {
-  userId: string;
-  sessionId: string;
-  events: AnalyticsEvent[];
-  startTime: Date;
-  lastActivity: Date;
-}
+  userId: string,
+  sessionId: string,
+  events: AnalyticsEvent[],
+  startTime: Date,
+  lastActivity: Date, }
 
 export class EnhancedAnalytics {
-  private userJourney: UserJourney | null = null;
-  private eventQueue: AnalyticsEvent[] = [];
+  private userJourney: UserJourney | null = null,
+  private eventQueue: AnalyticsEvent[] = [],
   private batchSize = 10;
   private flushInterval = 30000; // 30 seconds
   
   constructor() {
     this.initializeTracking();
     this.startBatchFlush();
-  }
   
   private initializeTracking(): void {
     // Initialize user journey
@@ -33,8 +30,7 @@ export class EnhancedAnalytics {
       sessionId: this.getSessionId(),
       events: [],
       startTime: new Date(),
-      lastActivity: new Date(),
-    };
+      lastActivity: new Date();;
     
     // Track page view
     this.trackEvent({
@@ -48,31 +44,26 @@ export class EnhancedAnalytics {
         screenResolution: `${screen.width}x${screen.height}`,
       }
     });
-  }
   
   private getUserId(): string {
     let userId = localStorage.getItem('analytics_user_id');
     if (!userId) {
       userId = 'user_' + Math.random().toString(36).substr(2, 9);
       localStorage.setItem('analytics_user_id', userId);
-    }
-    return userId;
-  }
+    return userId, }
   
   private getSessionId(): string {
     let sessionId = sessionStorage.getItem('analytics_session_id');
     if (!sessionId) {
       sessionId = 'session_' + Date.now().toString(36);
       sessionStorage.setItem('analytics_session_id', sessionId);
-    }
-    return sessionId;
-  }
+    return sessionId, }
   
   public trackEvent(event: AnalyticsEvent): void {
     if (!this.userJourney) return;
     
     const enrichedEvent = {
-      ...event,
+      ...event;
       timestamp: new Date().toISOString(),
       sessionId: this.userJourney.sessionId,
       userId: this.userJourney.userId,
@@ -90,12 +81,10 @@ export class EnhancedAnalytics {
         value: event.value,
         custom_map: event.custom_parameters,
       });
-    }
     
     // Flush if batch is full
     if (this.eventQueue.length >= this.batchSize) {
       this.flushEvents();
-    }
   }
   
   public trackUserEngagement(element: string, action: string): void {
@@ -106,10 +95,8 @@ export class EnhancedAnalytics {
       label: element,
       custom_parameters: {
         elementType: this.getElementType(element),
-        timeOnPage: this.getTimeOnPage(),
-      }
+        timeOnPage: this.getTimeOnPage();
     });
-  }
   
   public trackConversion(conversionType: string, value?: number): void {
     this.trackEvent({
@@ -119,35 +106,28 @@ export class EnhancedAnalytics {
       label: conversionType,
       value: value,
     });
-  }
   
   private getElementType(element: string): string {
     const elementObj = document.querySelector(element);
-    if (!elementObj) return 'unknown';
-    
+    if (!elementObj) return 'unknown',
     const tagName = elementObj.tagName.toLowerCase();
     const className = elementObj.className;
     
-    if (tagName === 'button') return 'button';
-    if (tagName === 'a') return 'link';
-    if (className.includes('card')) return 'card';
-    if (className.includes('modal')) return 'modal';
-    
-    return tagName;
-  }
+    if (tagName === 'button') return 'button',
+    if (tagName === 'a') return 'link',
+    if (className.includes('card')) return 'card',
+    if (className.includes('modal')) return 'modal',
+    return tagName, }
   
   private getTimeOnPage(): number {
     if (!this.userJourney) return 0;
     return Date.now() - this.userJourney.startTime.getTime();
-  }
   
   private startBatchFlush(): void {
     setInterval(() => {
       if (this.eventQueue.length > 0) {
         this.flushEvents();
-      }
     }, this.flushInterval);
-  }
   
   private async flushEvents(): Promise<void> {
     if (this.eventQueue.length === 0) return;
@@ -164,13 +144,10 @@ export class EnhancedAnalytics {
         body: JSON.stringify({
           events: eventsToFlush,
           userJourney: this.userJourney,
-        }),
-      });
-    } catch (error) {
+        });); catch (error) {
       console.error('Failed to flush analytics events:', error);
       // Re-add events to queue for retry
       this.eventQueue.unshift(...eventsToFlush);
-    }
   }
   
   public getSessionSummary(): any {
@@ -184,8 +161,7 @@ export class EnhancedAnalytics {
       pageViews: this.userJourney.events.filter(e => e.event === 'page_view').length,
       conversions: this.userJourney.events.filter(e => e.event === 'conversion').length,
       lastActivity: this.userJourney.lastActivity,
-    };
-  }
+    }, }
 }
 
 // Global analytics instance
@@ -194,16 +170,12 @@ export const analytics = new EnhancedAnalytics();
 // React Hook for Analytics
 export const useAnalytics = () => {
   const trackEvent = (event: AnalyticsEvent) => {
-    analytics.trackEvent(event);
-  };
+    analytics.trackEvent(event);;
   
   const trackEngagement = (element: string, action: string) => {
-    analytics.trackUserEngagement(element, action);
-  };
+    analytics.trackUserEngagement(element, action);;
   
   const trackConversion = (conversionType: string, value?: number) => {
-    analytics.trackConversion(conversionType, value);
-  };
+    analytics.trackConversion(conversionType, value);;
   
-  return { trackEvent, trackEngagement, trackConversion };
-};
+  return { trackEvent, trackEngagement, trackConversion }, };

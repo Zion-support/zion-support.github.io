@@ -1,8 +1,7 @@
 import { Button,,  } from '@/components/ui/button'
 import { Card,,  } from '@/components/ui/card'
 import { Star,,, MapPin,,, Clock,,, ArrowRight,,, CheckCircle2,,  } from 'lucide-react'
-isAuthenticated: boolean;
-}
+isAuthenticated: boolean, }
 export function TalentCard({
               {talent.profile_picture_url && !avatarError ? (
                 <Image
@@ -22,7 +21,7 @@ onError={() => setAvatarError(true)}
                   alt={talent.full_name |'Talent Avatar'}
                   fill={true}
                   style={{ objectFit: 'cover' }}
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container,
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;
 onError={() => setAvatarError(true)}
                   priority={false}
                 />

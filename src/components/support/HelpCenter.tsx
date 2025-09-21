@@ -124,8 +124,8 @@ approved ensuring security for both clients and talent.
                     </h3>
                     <p className='text-zion-slate-light'>
                       You can reach our support team through the chat widget at,
-the bottom right of any page by emailing,
-support@ziontechgroup.com or by scheduling a call with,
+the bottom right of any page by emailing;
+support@ziontechgroup.com or by scheduling a call with;
 our team through the Contact tab.
                     </p>
                   </div>
@@ -139,7 +139,7 @@ our team through the Contact tab.
                     Contact Support
                   </h2>
                   <p className='text-zion-slate-light mb-4'>
-                    Our support team is available 24/7 to assist you with any,
+                    Our support team is available 24/7 to assist you with any;
 questions or issues.
                   </p>
                   <div className='space-y-4'>
@@ -187,7 +187,7 @@ xmlns='http://www.w3.org/2000/svg'
                     Feedback & Suggestions
                   </h2>
                   <p className='text-zion-slate-light mb-4'>
-                    We value your input and are constantly looking to improve,
+                    We value your input and are constantly looking to improve;
 our platform.
                   </p>
                   <form className='space-y-4'>

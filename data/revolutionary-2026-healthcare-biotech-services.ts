@@ -272,7 +272,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     implementationDetails: 'Complete biotech AI research platform with genetic analysis, protein prediction, and personalized medicine capabilities.',
     launchDate: '2024-12-01',
     customers: 234,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 123
   }
-],
+];

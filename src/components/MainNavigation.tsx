@@ -1,14 +1,12 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
+import React from "react",
 impor; t; Reac; t, { useStat; e; useEffect } from "
-import React from "react";
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
+import React from "react",
 export export function MainNavigation() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false)
 const [isScroll; e; d; setIsScroll; e; d] = useState(false)
@@ -39,8 +37,7 @@ hr; e; f: "/service; s/clou; d" },
 hr; e; f: "/service; s/consultin; g" },
 { na; m; e: "Digita; l Transformatio; n",
 hr; e; f: "/service; s/digita; l-transformatio; n" }
-];
-},
+], },
 {
 nam; e: "
 hre; f: "
@@ -55,8 +52,7 @@ hr; e; f: "/solution; s/autonomou; s" },
 hr; e; f: "/solution; s/blockchai; n" },
 { na; m; e: "Io; T Platfor; m",
 hr; e; f: "/solution; s/io; t" }
-];
-},
+], },
 {
 nam; e: "
 hre; f: "
@@ -71,8 +67,7 @@ hr; e; f: "/industrie; s/manufacturin; g" },
 hr; e; f: "/industrie; s/retai; l" },
 { na; m; e: "Educatio; n",
 hr; e; f: "/industrie; s/educatio; n" }
-];
-},
+], },
 {
 nam; e: "
 hre; f: "
@@ -87,8 +82,7 @@ hr; e; f: "/whit; e-paper; s" },
 hr; e; f: "/webinar; s" },
 { na; m; e: "Documentatio; n",
 hr; e; f: "/doc; s" }
-];
-},
+], },
 {
 nam; e: "
 hre; f: "
@@ -103,8 +97,7 @@ hr; e; f: "/career; s" },
 hr; e; f: "/new; s" },
 { na; m; e: "Contac; t",
 hr; e; f: "/contac; t" }
-];
-}
+], }
 ];
 
 const isActive: any = (pat;  h: string) => {

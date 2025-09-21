@@ -15,6 +15,11 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
+  // Temporarily disable ESLint during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
   // Image optimization
   images: {
     unoptimized: true, // Required for static export

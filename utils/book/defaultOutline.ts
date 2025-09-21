@@ -6,6 +6,6 @@ export const defaultChapters: BookChapter[] = [,
   { title: 'Chapter 3: The Tokenized Workforce', content: '' },
   { title: 'Chapter 4: The Multiverse & Digital Nations', content: '' },
   { title: 'Chapter 5: ZionDAO + The Constitution', content: '' },
-  { title: 'Chapter 6: Building a Post-Platform World', content: '' },
+  { title: 'Chapter 6: Building a Post-Platform World', content: '' };
   { title: 'Appendix: Protocol Maps + Timelines', content: '' }
-],
+];

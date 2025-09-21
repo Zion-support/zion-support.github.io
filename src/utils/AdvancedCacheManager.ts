@@ -1,32 +1,28 @@
 interface CacheConfig {
-  maxSize: number;
-  ttl: number;
-  strategy: "lru" | "lfu" | "fifo" | "ttl";
-  persist: boolean;
-}
+  maxSize: number,
+  ttl: number,
+  strategy: "lru" | "lfu" | "fifo" | "ttl",
+  persist: boolean, }
 
 interface CacheEntry<T> {
-  value: T;
-  timestamp: number;
-  accessCount: number;
-  lastAccessed: number;
-}
+  value: T,
+  timestamp: number,
+  accessCount: number,
+  lastAccessed: number, }
 
 interface CacheStats {
-  hits: number;
-  misses: number;
-  size: number;
-  maxSize: number;
-  hitRate: number;
-  memoryUsage: number;
-}
+  hits: number,
+  misses: number,
+  size: number,
+  maxSize: number,
+  hitRate: number,
+  memoryUsage: number, }
 
 class AdvancedCacheManager<T = any> {
   private cache: Map<string, CacheEntry<T>> = new Map();
-  private config: CacheConfig;
-  private stats: CacheStats;
-  private cleanupInterval: NodeJS.Timeout;
-
+  private config: CacheConfig,
+  private stats: CacheStats,
+  private cleanupInterval: NodeJS.Timeout,
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
       maxSize: 1000,
@@ -47,13 +43,11 @@ class AdvancedCacheManager<T = any> {
 
     // Initialize cleanup interval
     this.cleanupInterval = setInterval(() => {
-      this.cleanup();
-    }, 60000); // Cleanup every minute
+      this.cleanup();, 60000); // Cleanup every minute
 
     // Load from localStorage if persistence is enabled
     if (this.config.persist) {
       this.loadFromStorage();
-    }
   }
 
   set(key: string, value: T): void {
@@ -68,7 +62,6 @@ class AdvancedCacheManager<T = any> {
     // Check if we need to evict
     if (this.cache.size >= this.config.maxSize && !this.cache.has(key)) {
       this.evict();
-    }
 
     this.cache.set(key, entry);
     this.updateStats();
@@ -76,7 +69,6 @@ class AdvancedCacheManager<T = any> {
     // Persist to localStorage if enabled
     if (this.config.persist) {
       this.saveToStorage();
-    }
   }
 
   get(key: string): T | null {
@@ -85,16 +77,14 @@ class AdvancedCacheManager<T = any> {
     if (!entry) {
       this.stats.misses++;
       this.updateStats();
-      return null;
-    }
+      return null, }
 
     // Check if expired
     if (this.config.strategy === "ttl" && Date.now() - entry.timestamp > this.config.ttl) {
       this.cache.delete(key);
       this.stats.misses++;
       this.updateStats();
-      return null;
-    }
+      return null, }
 
     // Update access info
     entry.accessCount++;
@@ -102,12 +92,10 @@ class AdvancedCacheManager<T = any> {
     this.stats.hits++;
     this.updateStats();
 
-    return entry.value;
-  }
+    return entry.value, }
 
   has(key: string): boolean {
     return this.cache.has(key);
-  }
 
   delete(key: string): boolean {
     const deleted = this.cache.delete(key);
@@ -115,10 +103,8 @@ class AdvancedCacheManager<T = any> {
       this.updateStats();
       if (this.config.persist) {
         this.saveToStorage();
-      }
     }
-    return deleted;
-  }
+    return deleted, }
 
   clear(): void {
     this.cache.clear();
@@ -133,14 +119,12 @@ class AdvancedCacheManager<T = any> {
     
     if (this.config.persist) {
       localStorage.removeItem('advanced_cache');
-    }
   }
 
   private evict(): void {
     if (this.cache.size === 0) return;
 
-    let keyToEvict: string | null = null;
-
+    let keyToEvict: string | null = null,
     switch (this.config.strategy) {
       case "lru":
         keyToEvict = this.findLRUKey();
@@ -153,82 +137,69 @@ class AdvancedCacheManager<T = any> {
         break;
       case "ttl":
         keyToEvict = this.findExpiredKey();
-        break;
-    }
+        break, }
 
     if (keyToEvict) {
       this.cache.delete(keyToEvict);
-    }
   }
 
   private findLRUKey(): string | null {
-    let oldestKey: string | null = null;
+    let oldestKey: string | null = null,
     let oldestTime = Date.now();
 
     for (const [key, entry] of this.cache.entries()) {
       if (entry.lastAccessed < oldestTime) {
         oldestTime = entry.lastAccessed;
-        oldestKey = key;
-      }
+        oldestKey = key, }
     }
 
-    return oldestKey;
-  }
+    return oldestKey, }
 
   private findLFUKey(): string | null {
-    let leastUsedKey: string | null = null;
+    let leastUsedKey: string | null = null,
     let leastUsedCount = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
       if (entry.accessCount < leastUsedCount) {
         leastUsedCount = entry.accessCount;
-        leastUsedKey = key;
-      }
+        leastUsedKey = key, }
     }
 
-    return leastUsedKey;
-  }
+    return leastUsedKey, }
 
   private findFIFOKey(): string | null {
-    let oldestKey: string | null = null;
+    let oldestKey: string | null = null,
     let oldestTime = Date.now();
 
     for (const [key, entry] of this.cache.entries()) {
       if (entry.timestamp < oldestTime) {
         oldestTime = entry.timestamp;
-        oldestKey = key;
-      }
+        oldestKey = key, }
     }
 
-    return oldestKey;
-  }
+    return oldestKey, }
 
   private findExpiredKey(): string | null {
     const now = Date.now();
     
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.timestamp > this.config.ttl) {
-        return key;
-      }
+        return key, }
     }
 
-    return null;
-  }
+    return null, }
 
   private cleanup(): void {
     if (this.config.strategy === "ttl") {
       const now = Date.now();
-      const keysToDelete: string[] = [];
-
+      const keysToDelete: string[] = [],
       for (const [key, entry] of this.cache.entries()) {
         if (now - entry.timestamp > this.config.ttl) {
           keysToDelete.push(key);
-        }
       }
 
       keysToDelete.forEach(key => this.cache.delete(key));
       this.updateStats();
-    }
   }
 
   private updateStats(): void {
@@ -244,10 +215,8 @@ class AdvancedCacheManager<T = any> {
   private saveToStorage(): void {
     try {
       const data = Array.from(this.cache.entries());
-      localStorage.setItem('advanced_cache', JSON.stringify(data));
-    } catch (error) {
+      localStorage.setItem('advanced_cache', JSON.stringify(data)); catch (error) {
       console.warn('Failed to save cache to localStorage:', error);
-    }
   }
 
   private loadFromStorage(): void {
@@ -257,30 +226,23 @@ class AdvancedCacheManager<T = any> {
         const entries = JSON.parse(data);
         this.cache = new Map(entries);
         this.updateStats();
-      }
     } catch (error) {
       console.warn('Failed to load cache from localStorage:', error);
-    }
   }
 
   getStats(): CacheStats {
-    return { ...this.stats };
-  }
+    return { ...this.stats }, }
 
   getKeys(): string[] {
     return Array.from(this.cache.keys());
-  }
 
   getSize(): number {
-    return this.cache.size;
-  }
+    return this.cache.size, }
 
   destroy(): void {
     if (this.cleanupInterval) {
       clearInterval(this.cleanupInterval);
-    }
     this.clear();
-  }
 }
 
 export default AdvancedCacheManager;

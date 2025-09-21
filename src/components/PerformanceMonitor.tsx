@@ -1,6 +1,5 @@
 
 import { useEffect } from 'react';
-
 export const PerformanceMonitor = () => {
   useEffect(() => {
     // Web Vitals monitoring
@@ -10,10 +9,7 @@ export const PerformanceMonitor = () => {
         getFID(console.log);
         getFCP(console.log);
         getLCP(console.log);
-        getTTFB(console.log);
-      });
-    }
+        getTTFB(console.log););
   }, []);
 
-  return null;
-};
+  return null, };

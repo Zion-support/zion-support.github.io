@@ -38,18 +38,17 @@ const allServiceArrays: ServiceRecord[][] = [
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	for (const arr of allServiceArrays) {
 		const hit = arr.find((s: any) => {
-			if (!s) return false,
-			if (s.id && s.id === slug) return true,
+			if (!s) return false;
+			if (s.id && s.id === slug) return true;
 			if (s.link && typeof s.link === 'string') {
 				try {
-					const url = new URL(s.link),
+					const url = new URL(s.link);
 					return url.pathname.replace(/^\/+|\/+$/g, '') === slug,
 				} catch {
-					return s.link.endsWith('/' + slug),
-				}
+					return s.link.endsWith('/' + slug);
 			}
 			return false,
-		}),
+		});
 		if (hit) return hit,
 	}
 	return undefined,
@@ -64,11 +63,10 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		}
 	}
 	// Deduplicate by id or link
-	const seen = new Set<string>(),
+	const seen = new Set<string>();
 	return results.filter((s) => {
 		const key = s.id || s.link || s.name,
-		if (seen.has(key)) return false,
-		seen.add(key),
+		if (seen.has(key)) return false;
+		seen.add(key);
 		return true,
-	}),
-}
+	});

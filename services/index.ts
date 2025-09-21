@@ -156,4 +156,4 @@ export const getServiceStats = () => {
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
   },
-},
+};

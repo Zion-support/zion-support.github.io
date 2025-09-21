@@ -37,4 +37,4 @@ export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+];

@@ -1,13 +1,13 @@
 
 import React, { useState } from "react",
 import { Button,,  } from "@/components/ui/button",
-import React from "react";
+import React from "react",
 import { Moon,,, Sun,,, Check,,  } from 'lucide-react'
-import React from "react";
+import React from "react",
 interface Language {
   code: string;,
-name: string;
-  flag: string;
+name: string,
+  flag: string,
 const languages: Language[] = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
 { code: 'es', name: 'Español', flag: '🇪🇸' }
@@ -17,8 +17,7 @@ const languages: Language[] = [
 ]
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme()
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
-
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
   return (
     <div className='space-y-8 px-4'>
       <div className='space-y-2'>
@@ -40,7 +39,7 @@ key = {language.code,}
                   ? 'border-primary bg-primary/5'
                   : 'border-border hover:border-primary/40'
               }`}
-              onClick = {(,) => setSelectedLanguage(language.code),}
+              onClick = {(,) => setSelectedLanguage(language.code);
             >
               <CardContent className='p-3 flex items-center justify-between'>
                 <div className='flex items-center'>
@@ -82,7 +81,7 @@ theme === 'light'
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
             }`}
-            onClick = {() => setTheme('light'),}
+            onClick = {() => setTheme('light');
           >
             <CardContent className='p-3 flex flex-col items-center justify-center'>
               <Sun className='h-8 w-8 mb-2' />
@@ -98,7 +97,7 @@ className={`flex-1 cursor-pointer transition-all ${
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
             }`}
-            onClick = {() => setTheme('dark'),}
+            onClick = {() => setTheme('dark');
           >
             <CardContent className='p-3 flex flex-col items-center justify-center'>
               <Moon className='h-8 w-8 mb-2' />

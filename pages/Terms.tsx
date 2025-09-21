@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Terms = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -24,7 +23,6 @@ const Terms = () => {
         </div>
       </div>
     </div>
-  );
-};
+  );;
 
 export default Terms;

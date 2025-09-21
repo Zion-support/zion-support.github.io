@@ -1,6 +1,6 @@
 import React from 'react',
-export default function BlogPost() {,
-  return (,
+export default function BlogPost() {
+  return (
     <article className="prose prose-invert max-w-3xl mx-auto px-4 py-16">,
       <h1>Governed Real‑Time Observability for Agentic Systems (2026)</h1>,
       <p>,
@@ -31,8 +31,8 @@ export default function BlogPost() {,
       <p>,
         With governed, real‑time observability, teams ship faster while staying safe and,
         auditable.,
-      </p>,
-    </article>,
-  ),
+      </p>;
+    </article>;
+  );
+;
 }
-,

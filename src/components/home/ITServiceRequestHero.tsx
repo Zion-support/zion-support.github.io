@@ -1,10 +1,8 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
 import React from "react";
-
 export const ITServiceRequestHero: any = () => {
 return (
 <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900">
@@ -28,8 +26,7 @@ View Services,
 </div>
 </div>
 </div>
-),
-}<//div><///div>
+);<//div><///div>
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { GradientHeading,,  } from '@/components/GradientHeading'
@@ -162,12 +159,11 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }onChange= {
   (e) => setCompany (e.target.value) "
 }className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Input value= {
-  location,
+  location;
 }onChange= {
   (e) => setLocation (e.target.value) "
 }className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <Textarea value= {
-  details,
-}onChange= {
+  details, }onChange= {
   (e) => setDetails (e.target.value) "
 }className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]" /> <Button type="submit" disabled= {
   isSubmitting "

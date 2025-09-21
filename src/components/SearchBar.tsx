@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
-import { Search, X } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { useDebounce } from '@/hooks/useDebounce';
-
+import React, { useState, useEffect, useRef } from 'react',
+import { useRouter } from 'next/router',
+import { Search, X } from 'lucide-react',
+import { Input } from '@/components/ui/input',
+import { useDebounce } from '@/hooks/useDebounce',
 interface SearchBarProps {
-  value: string;
+  value: string,
   onChange: (value: string) => void;
-  placeholder?: string;
-}
+  placeholder?: string, }
 
 export function SearchBar({ value, onChange, placeholder = "Search..." }: SearchBarProps) {
   const router = useRouter();
@@ -30,36 +28,29 @@ export function SearchBar({ value, onChange, placeholder = "Search..." }: Search
       ].filter(item => 
         item.toLowerCase().includes(debouncedValue.toLowerCase())
       );
-      setSuggestions(mockSuggestions);
-    } else {
+      setSuggestions(mockSuggestions); else {
       setSuggestions([]);
-    }
   }, [debouncedValue]);
 
   const handleSelect = (suggestion: string) => {
     onChange(suggestion);
     setFocused(false);
-    setHighlightedIndex(-1);
-  };
+    setHighlightedIndex(-1);;
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       setHighlightedIndex(prev => 
         prev < suggestions.length - 1 ? prev + 1 : prev
-      );
-    } else if (e.key === 'ArrowUp') {
+      ); else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      setHighlightedIndex(prev => prev > 0 ? prev - 1 : -1);
-    } else if (e.key === 'Enter') {
+      setHighlightedIndex(prev => prev > 0 ? prev - 1 : -1); else if (e.key === 'Enter') {
       e.preventDefault();
       if (highlightedIndex >= 0 && suggestions[highlightedIndex]) {
         handleSelect(suggestions[highlightedIndex]);
-      }
     } else if (e.key === 'Escape') {
       setFocused(false);
       setHighlightedIndex(-1);
-    }
   };
 
   return (
@@ -105,4 +96,3 @@ export function SearchBar({ value, onChange, placeholder = "Search..." }: Search
       )}
     </div>
   );
-}

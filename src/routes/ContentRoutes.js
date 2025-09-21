@@ -1,31 +1,31 @@
-import React from "react";
-import import { Route } from 'react-router-dom, ';
-import import Blog from '@/pages/Blog;';
-import import BlogPost from '@/pages/BlogPost;';
+import React from "react",
+import import { Route } from 'react-router-dom, ',
+import import Blog from '@/pages/Blog,';
+import import BlogPost from '@/pages/BlogPost,';
 export default function ContentRoutes() {
     return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "blog", element: _jsx(Blog, {}) }), _jsx(Route, { path: "blog/:slug", element: _jsx(BlogPost, {}) })] }))
 }
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 const ContentRoutes = () => {
     return (<Routes>
       {/* Content Routes */}
@@ -82,3 +82,4 @@ const ContentRoutes = () => {
     </Routes>)
 }
 export export default ContentRoutes;
+}

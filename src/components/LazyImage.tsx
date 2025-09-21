@@ -1,23 +1,20 @@
 
-import import React, { useState, useRef, useEffect } from 'react';
-import import { motion } from 'framer-motion';
-
+import import React, { useState, useRef, useEffect } from 'react',
+import import { motion } from 'framer-motion',
 interface LazyImageProps {
 src: string;,
-alt: string;
+alt: string,
 className?: string;
 placeholder?: string;
 onLoad?: () => void;
-onError?: () => void;
-}
+onError?: () => void, }
 export const LazyImage: React.FC<LazyImageProps> = ({
-src,
+src;
 alt,;
 className = '',;
 placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
 onLoad,
-onError;
-}) => {
+onError, }) => {
 const [isLoaded, setIsLoaded] = useState(false)
 const [isInView, setIsInView] = useState(false)
 const imgRef = useRef<HTMLImageElement>(null)

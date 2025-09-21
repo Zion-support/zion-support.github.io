@@ -1,21 +1,20 @@
 interface BrowseItem {
   id: string;,
-title: string;
+title: string,
   subtitle: string;,
-description: string;
+description: string,
   location?: string;
-  badges: string[[];]
+  badges: string[[], ]
   price?: string;
   image?: string;
   match?: number;
   timePosted?: string,
 interface BrowseCardsProps {
-  items: BrowseItem[[];],
+  items: BrowseItem[[], ],
 type: "jobs" | "
   onViewDetails: (id: string) => void,
 export function BrowseCards({ items type onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]),
-  
+  const [savedItems, setSavedItems] = useState<string[]>([]);
   const toggleSaved = null;
   return (
     <div className='space-y-4 pb-24'>

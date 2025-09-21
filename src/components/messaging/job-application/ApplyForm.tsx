@@ -9,8 +9,8 @@ import { toast,,  } from "@/hooks/use-toast",
 import { ResumeSelector,,, ResumeOption,,  } from "../resume-selector",
 import { MessageTab,,  } from "./MessageTab",
 import { ResumeTab,,  } from "./ResumeTab",
-import React from "react";
-import import { logErrorToProduction } from '@/utils/productionLogger';
+import React from "react",
+import import { logErrorToProduction } from '@/utils/productionLogger',
 interface ApplyFormProps {
 }
 export function ApplyForm({ job onClose onApplySuccess }: ApplyFormProps) {
@@ -91,9 +91,8 @@ description: job.description,
 attachedResume: selectedResume ? {,
 id: selectedResume.id,
 title: selectedResume.title,
-type: selectedResume.type,
-}: null,
-}
+type: selectedResume.type;
+}: null, }
 fullMessage;'
 'job'
 job.id,
@@ -101,8 +100,7 @@ contextData)
 //Call onApplySuccess to update job status in the UI onClose ()
 }catch (error) {'
   logErrorToProduction ('Failed to send application:', {
-  data: error;
-})
+  data: error, })
 toast ({
 }finally {
   setIsSubmitting (false)

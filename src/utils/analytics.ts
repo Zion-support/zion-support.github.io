@@ -1,18 +1,15 @@
 // Analytics utility for tracking user interactions and performance
 export interface AnalyticsEvent {
-  name: string;
+  name: string,
   properties?: Record<string, any>;
-  timestamp?: number;
-}
+  timestamp?: number, }
 
 class Analytics {
-  private isEnabled: boolean = false;
-  private events: AnalyticsEvent[] = [];
-
+  private isEnabled: boolean = false,
+  private events: AnalyticsEvent[] = [],
   constructor() {
     // Only enable in production
-    this.isEnabled = process.env.NODE_ENV === 'production';
-  }
+    this.isEnabled = process.env.NODE_ENV === 'production', }
 
   // Track page views
   trackPageView(path: string, title?: string) {
@@ -23,26 +20,22 @@ class Analytics {
       user_agent: navigator.userAgent,
       timestamp: Date.now()
     });
-  }
 
   // Track user interactions
   trackEvent(name: string, properties?: Record<string, any>) {
     this.track(name, properties);
-  }
 
   // Track performance metrics
   trackPerformance(metrics: {
     loadTime?: number;
     renderTime?: number;
     memoryUsage?: number;
-    networkLatency?: number;
-  }) {
+    networkLatency?: number, }) {
     this.track('performance', {
       ...metrics,
       url: window.location.href,
       timestamp: Date.now()
     });
-  }
 
   // Track errors
   trackError(error: Error, context?: Record<string, any>) {
@@ -53,18 +46,16 @@ class Analytics {
       ...context,
       timestamp: Date.now()
     });
-  }
 
   // Internal tracking method
   private track(name: string, properties?: Record<string, any>) {
     if (!this.isEnabled) {
       console.log('[Analytics]', name, properties);
-      return;
-    }
+      return, }
 
     const event: AnalyticsEvent = {
       name,
-      properties,
+      properties;
       timestamp: Date.now()
     };
 
@@ -72,31 +63,26 @@ class Analytics {
 
     // Send to analytics service (example implementations)
     this.sendToAnalyticsService(event);
-  }
 
   // Send to external analytics service
   private sendToAnalyticsService(event: AnalyticsEvent) {
     // Example: Google Analytics 4
     if (typeof gtag !== 'undefined') {
       gtag('event', event.name, event.properties);
-    }
 
     // Example: Custom analytics endpoint
     if (navigator.sendBeacon) {
       const data = JSON.stringify(event);
       navigator.sendBeacon('/api/analytics', data);
-    }
   }
 
   // Get stored events (for debugging)
   getEvents(): AnalyticsEvent[] {
-    return [...this.events];
-  }
+    return [...this.events], }
 
   // Clear stored events
   clearEvents() {
-    this.events = [];
-  }
+    this.events = [], }
 }
 
 // Create singleton instance
@@ -113,8 +99,7 @@ export const trackPerformance = (metrics: {
   loadTime?: number;
   renderTime?: number;
   memoryUsage?: number;
-  networkLatency?: number;
-}) => analytics.trackPerformance(metrics);
+  networkLatency?: number, }) => analytics.trackPerformance(metrics);
 
 export const trackError = (error: Error, context?: Record<string, any>) => 
   analytics.trackError(error, context);
@@ -130,20 +115,14 @@ export const usePageTracking = () => {
     history.pushState = function(...args) {
       originalPushState.apply(history, args);
       setTimeout(() => {
-        trackPageView(window.location.pathname, document.title);
-      }, 0);
-    };
+        trackPageView(window.location.pathname, document.title);, 0);;
 
     const originalReplaceState = history.replaceState;
     history.replaceState = function(...args) {
       originalReplaceState.apply(history, args);
       setTimeout(() => {
-        trackPageView(window.location.pathname, document.title);
-      }, 0);
-    };
-  }
+        trackPageView(window.location.pathname, document.title);, 0);, }
 };
 
 declare global {
-  function gtag(...args: any[]): void;
-}
+  function gtag(...args: any[]): void, }

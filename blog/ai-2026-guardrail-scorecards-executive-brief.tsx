@@ -1,7 +1,7 @@
 import React from 'react',
 import Head from 'next/head',
-export default function AI2026GuardrailScorecardsExecutiveBrief() {,
-  return (,
+export default function AI2026GuardrailScorecardsExecutiveBrief() {
+  return (
     <>,
       <Head>,
         <title>Guardrail Scorecards — Executive Brief (2026) | Zion Tech Group</title>,
@@ -47,7 +47,8 @@ export default function AI2026GuardrailScorecardsExecutiveBrief() {,
           See also: Policy-as-Code Starter Kit and Evidence Hub Architecture linked on the,
           homepage promos.,
         </p>,
-      </article>,
-    </>,
+      </article>;
+    </>;
   )}
-,
+;
+}

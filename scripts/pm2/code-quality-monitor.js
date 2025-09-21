@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 }}, async analyzeFile(filePath) {try {, const content = fs.readFileSync(filePath, 'utf8'), const stats = fs.statSync(filePath), const analysis = {, file: filePath, size: stats.size, lines: content.split('\n').length,
     issues: []}, // Check for common code quality issues, const lines = content.split('\n'), lines.forEach((line, index) = > {const lineNum = index + 1, // Trailing spaces, if (line.match(/[ \t]+$/)) {, analysis.issues.push({, line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found',
     severity: 'low'})}, // Long lines (over 120 characters), if (line.length > 120) {analysis.issues.push({, line: lineNum, type: 'long-line', message: `Line is ${line.length} characters long (max: 120)`,

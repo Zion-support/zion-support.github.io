@@ -248,7 +248,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     implementationDetails: 'Revolutionary hybrid platform with seamless quantum-classical integration, comprehensive development tools, and advanced optimization capabilities.',
     launchDate: '2025-09-01',
     customers: 12,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 34
   }
-],
+];
