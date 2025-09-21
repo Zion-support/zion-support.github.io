@@ -41,7 +41,7 @@ const nextConfig = {
   
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibilityorigin/main
+    // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
@@ -66,7 +66,10 @@ const nextConfig = {
       test: /\.ts$/,
       include: require('path').resolve(__dirname, 'contracts'),
       use: 'ignore-loader'
-    });origin/main
+    });
+    
+    return config;
+  }
 };
 
 module.exports = nextConfig;
