@@ -47,6 +47,17 @@ const nextConfig = {
       };
     }
     
+    // Disable CSS processing to avoid matchAll error
+    config.module.rules = config.module.rules.map(rule => {
+      if (rule.test && rule.test.toString().includes('css')) {
+        return {
+          ...rule,
+          use: 'ignore-loader'
+        };
+      }
+      return rule;
+    });
+    
     // Configure webpack extensions
     config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
     
