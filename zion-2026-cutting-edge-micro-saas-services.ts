@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../s./service-variants',
+import { ServiceVariant } from '../service-variants';
 
 export interface Zion2026CuttingEdgeMicroSaasService {
   id: string,
@@ -480,4 +480,4 @@ export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasS
   },
 ],
 
-export default zion2026CuttingEdgeMicroSaasServices,
+export default zion2026CuttingEdgeMicroSaasServices;

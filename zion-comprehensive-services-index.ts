@@ -1,18 +1,18 @@
 // Zion Tech Group Comprehensive Services Index
 // This file provides easy access to all our cutting-edge services
 
-export { zionCuttingEdgeServices2029 } from './zion-2029-cutting-edge-services',
-export { zionEmergingTechServices2029 } from './zion-2029-emerging-tech-services',
+export { zionCuttingEdgeServices2029 } from './zion-2029-cutting-edge-services';
+export { zionEmergingTechServices2029 } from './zion-2029-emerging-tech-services';
 
 // Import all service types for easy access
-import { zionCuttingEdgeServices2029 } from './zion-2029-cutting-edge-services',
-import { zionEmergingTechServices2029 } from './zion-2029-emerging-tech-services',
+import { zionCuttingEdgeServices2029 } from './zion-2029-cutting-edge-services';
+import { zionEmergingTechServices2029 } from './zion-2029-emerging-tech-services';
 
 // Combined services array
 export const allZionServices = [
   ...zionCuttingEdgeServices2029,
   ...zionEmergingTechServices2029
-],
+];
 
 // Service categories
 export const serviceCategories = [
@@ -38,23 +38,23 @@ export const getServicesByCategory = (category: string) => {
 }
 
 export const getPopularServices = () => {
-  return allZionServices.filter(service => service.isPopular),
-}
+  return allZionServices.filter(service => service.isPopular);
+};
 
 export const getNewServices = () => {
-  return allZionServices.filter(service => service.isNew),
-}
+  return allZionServices.filter(service => service.isNew);
+};
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return allZionServices.filter(service => {
-    const price = parseFloat(service.price.replace('$', '').replace(, '')),
-    return price >= minPrice && price <= maxPrice,
-  }),
-}
+    const price = parseFloat(service.price.replace('$', '').replace(',', ''));
+    return price >= minPrice && price <= maxPrice;
+  });
+};
 
 export const getServicesByRating = (minRating: number) => {
-  return allZionServices.filter(service => service.rating >= minRating)
-}
+  return allZionServices.filter(service => service.rating >= minRating);
+};
 
 export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase(),
@@ -99,34 +99,34 @@ export const getMarketInsights = () => {
     index === self.findIndex(m => m.category === market.category)
   ),
 
-  return uniqueMarkets,
-}
+  return uniqueMarkets;
+};
 
 // Technology stack overview
 export const getTechnologyStack = () => {
-  const allTechnologies = allZionServices.flatMap(service => service.technology),
+  const allTechnologies = allZionServices.flatMap(service => service.technology);
   const technologyCount = allTechnologies.reduce((acc, tech) => {
-    acc[tech] = (acc[tech] || 0) + 1,
-    return acc,
-  }, {} as Record<string, number>),
+    acc[tech] = (acc[tech] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
 
   return Object.entries(technologyCount)
     .sort(([,a], [,b]) => b - a)
-    .map(([tech, count]) => ({ technology: tech, usageCount: count })),
-}
+    .map(([tech, count]) => ({ technology: tech, usageCount: count }));
+};
 
 // Integration overview
 export const getIntegrationOverview = () => {
-  const allIntegrations = allZionServices.flatMap(service => service.integrations),
+  const allIntegrations = allZionServices.flatMap(service => service.integrations);
   const integrationCount = allIntegrations.reduce((acc, integration) => {
-    acc[integration] = (acc[integration] || 0) + 1,
-    return acc,
-  }, {} as Record<string, number>),
+    acc[integration] = (acc[integration] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
 
   return Object.entries(integrationCount)
     .sort(([,a], [,b]) => b - a)
-    .map(([integration, count]) => ({ integration, usageCount: count })),
-}
+    .map(([integration, count]) => ({ integration, usageCount: count }));
+};
 
 // ROI insights
 export const getROIInsights = () => {
