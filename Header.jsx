@@ -5,29 +5,28 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
-          <Link className="mr-6 flex items-center space-x-2" href="/">
-            <span className="hidden font-bold sm:inline-block">
-              Zion Tech Group
+          <Link href="/">
+            <span className="mr-6 flex items-center space-x-2 cursor-pointer">
+              <span className="hidden font-bold sm:inline-block">
+                Zion Tech Group
+              </span>
             </span>
           </Link>
           <nav className="flex items-center gap-6 text-sm font-medium">
-            <Link
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-              href="/about"
-            >
-              About
+            <Link href="/about">
+              <span className="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer">
+                About
+              </span>
             </Link>
-            <Link
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-              href="/services"
-            >
-              Services
+            <Link href="/services">
+              <span className="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer">
+                Services
+              </span>
             </Link>
-            <Link
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-              href="/contact"
-            >
-              Contact
+            <Link href="/contact">
+              <span className="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer">
+                Contact
+              </span>
             </Link>
           </nav>
         </div>
