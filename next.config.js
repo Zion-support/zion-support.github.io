@@ -26,7 +26,7 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-    tsconfigPath: './tsconfig.json',
+    // tsconfigPath: './tsconfig.json',
   },
   
   // Experimental features for performance
