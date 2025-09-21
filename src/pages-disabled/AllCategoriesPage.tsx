@@ -11,13 +11,13 @@ export default function AllCategoriesPage() {
         <div className='text-center mb-12'>
           <GradientHeading
             level='h1'
-            className='text-4xl md:text-5xl font-bold mb-4'
+            className='text-4xl md: text-5xl font-bold mb-4'
           >
             All Categories
           </GradientHeading>
           <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
             Explore our extensive range of AI services and products. Find,
-exactly what you're looking for to enhance your business or personal,
+exactly what you're looking for to enhance your business or personal;
 projects.          </p>
         </div>
         <ErrorBoundary>
@@ -41,12 +41,12 @@ key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
-            {categories.map((category,) => (
+            {categories.map((category) => (
               <CategoryCard
-key = {category.title,}
-                title = {category.title,}
-                description = {category.description,}
-                icon = {category.icon,}
+key = {category.title}
+                title = {category.title}
+                description = {category.description}
+                icon = {category.icon}
                 // The CategoryCard itself is a Link to its specific category page
                 // So we don't pass the category.link to a 'to' prop here directly
                 // The 'link' in the categories array above is used by CategoryCard's internal Link

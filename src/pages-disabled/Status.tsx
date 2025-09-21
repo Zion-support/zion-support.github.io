@@ -8,8 +8,7 @@ export default function Status() {
     { name: 'API', status: 'operational', uptime: '99.9%' },
     { name: 'Website', status: 'operational', uptime: '99.8%' },
     { name: 'Database', status: 'operational', uptime: '99.9%' }
-  ]);
-
+  ]),
   return (
     <div className="min-h-screen bg-zion-blue">
       <SEO title="System Status" description="Real-time system status and uptime" />
@@ -30,5 +29,4 @@ export default function Status() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

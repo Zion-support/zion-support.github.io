@@ -1,17 +1,17 @@
 
 import import React from 'react';
-import import { Button,,, ,,  } from '@/components/ui/button';
+import import { Button,,, ,} from '@/components/ui/button';
 import import Link from 'next/link';
-import { ShieldAlert,,  } from 'lucide-react'
-import import { RaiseDisputeButton,,  } from '@/components/disputes/RaiseDisputeButton';
+import { ShieldAlert,} from 'lucide-react'
+import import { RaiseDisputeButton,} from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
-  projectId: string;,
-isUnderDispute: boolean;
+  projectId: string;;
+isUnderDispute: boolean,
   disputeId?: string;
-  isTalent: boolean;,
+  isTalent: boolean;;
 onAddMilestone: () => void,
 export function ProjectActions({
-onAddMilestone,
+onAddMilestone;
 }: ProjectActionsProps) {
   return (
     <div className='flex gap-2'>

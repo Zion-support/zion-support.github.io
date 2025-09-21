@@ -1,4 +1,5 @@
 // @playwright/test package is not installed, commenting out to avoid build errors
+export {};
 /*
 import { defineConfig, devices } from '@playwright/test',
 
@@ -60,3 +61,6 @@ browserName: 'webkit'
   ]
 }),
 */
+
+// Make this file a module to avoid TypeScript isolatedModules error
+export {};

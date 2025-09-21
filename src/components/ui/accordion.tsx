@@ -1,12 +1,11 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string}
 
-import React from "react",
+import React from "react";
 const accordion: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">accordion</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>
@@ -38,7 +37,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger,
 ref={ref}
       className={cn(
-        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180'
+        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover: underline [&[data-state=open]>svg]:rotate-180'
         className
       )}
     </AccordionPrimitive>  {...props}

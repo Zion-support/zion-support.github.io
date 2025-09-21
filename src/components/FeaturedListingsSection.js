@@ -179,8 +179,7 @@ export function FeaturedListingsSection() {
             opacit, y: 1,
     transitio, n: {
                 staggerChildre, n: 0.1, 5,
-    delayChildre, n: 0.1,
-            }
+    delayChildre, n: 0.1}
         }
     }
     ;
@@ -194,8 +193,7 @@ export function FeaturedListingsSection() {
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
             backgroundImag,  e: `radial-gradient(circle at 75% 25%, currentColo, r, 1p, x, transparent 1p, x)`,
-            backgroundSiz, e: '60px 60px',
-        }}/>
+            backgroundSiz, e: '60px 60px'}}/>
       </div>
 
       {/* Floating decorative elements */}
@@ -226,7 +224,7 @@ export function FeaturedListingsSection() {
     y: 20 }} whileInView={{ opacit, y: 1,
     y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
     dela, y: 0.2 }}>
-          {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${selectedCategory === category;
+          {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${selectedCategory === category,
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
                 : 'bg-zion-blue-dark/40 text-zion-slate-light hove,  r:bg-zion-blue-dark/60 hove, r:text-white border border-zion-blue-light/3, 0'}`}>
               {category}
@@ -235,12 +233,12 @@ export function FeaturedListingsSection() {
         
         <motion.div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-8 mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ onc, e: true }}>
           {filteredListings.map((listing) => (<motion.div key={listing.id} variants={itemVariants} onHoverStart={() => setHoveredListing(listing.id)} onHoverEnd={() => setHoveredListing(null)}>
-              <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-blue-light/30 hove,  r:border-zion-cyan/50 transition-all duration-500 hove, r:transform hove, r:scale-[1.0, 2] hove, r:shadow-2xl hove, r:shadow-zion-cyan/20 h-full">
+              <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-blue-light/30 hove,  r:border-zion-cyan/50 transition-all duration-500 hove, r:transform hove, r:scale-[1.0, 2] hove, r:shadow-2xl hove, r: shadow-zion-cyan/20 h-full">
                 {/* Featured badge */}
                 {listing.featured && (<div className="absolute top-4 left-4 z-10">
                     <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
                       <Award className="w-3 h-3 inline mr-1"/>
-                      Featured;
+                      Featured,
                     </div>
                   </div>)}
 
@@ -317,8 +315,8 @@ export function FeaturedListingsSection() {
                     <span className="text-2xl font-bold text-zion-cyan">
                       {listing.price}
                     </span>
-                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hove,  r:from-zion-purple-light hove, r:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hove, r:scale-105">
-                      View Details;
+                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hove,  r:from-zion-purple-light hove, r:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hove, r: scale-105">
+                      View Details,
                       <ArrowRight className="w-4 h-4"/>
                     </button>
                   </div>
@@ -353,8 +351,8 @@ export function FeaturedListingsSection() {
               </div>
               
               <div className="px-6 pb-6">
-                <Link to={service.link} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hove, r:bg-blue-700 transition-colors duration-300 text-center block group-hove, r:shadow-lg">
-                  Get Started;
+                <Link to={service.link} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hove, r:bg-blue-700 transition-colors duration-300 text-center block group-hove, r: shadow-lg">
+                  Get Started,
                 </Link>
               </div>
             </div>))}
@@ -370,8 +368,8 @@ export function FeaturedListingsSection() {
               <p className="text-white text-lg mb-4">
                 Ready to start your next project?
               </p>
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-dark hove, r:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-zion-cyan/25">
-                View All Projects;
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-dark hove, r:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r: shadow-zion-cyan/25">
+                View All Projects,
                 <ArrowRight className="w-5 h-5"/>
               </button>
             </div>

@@ -6,7 +6,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and automated wealth management using advanced AI algorithms.",
         category: "
         subcategory: "
-        price: 2999;
+        price: 2999,
         currency: "
         pricingModel: "
         features: [
@@ -47,8 +47,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning Models", "Real-time Data Processing", "API Integration", "Cloud Infrastructure"],
         integrations: ["Bloomberg", "Reuters", "Yahoo Finance", "Trading Platforms", "Banking APIs"],
@@ -61,7 +60,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Advanced healthcare platform that uses AI to assist in medical diagnosis, patient monitoring, and treatment planning while ensuring HIPAA compliance and medical accuracy.",
         category: "
         subcategory: "
-        price: 4500;
+        price: 4500,
         currency: "
         pricingModel: "
         features: [
@@ -102,8 +101,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Deep Learning Models", "Medical Image Processing", "Natural Language Processing", "Real-time Analytics"],
         integrations: ["Epic", "Cerner", "PACS Systems", "Lab Information Systems", "Pharmacy Systems"],
@@ -116,7 +114,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent legal research platform that uses AI to analyze legal documents, conduct case research, and provide legal insights to streamline legal workflows.",
         category: "
         subcategory: "
-        price: 1899;
+        price: 1899,
         currency: "
         pricingModel: "
         features: [
@@ -157,8 +155,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Natural Language Processing", "Machine Learning", "Document OCR", "Semantic Search"],
         integrations: ["Westlaw", "LexisNexis", "Clio", "Practice Management Systems", "Document Management"],
@@ -171,7 +168,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Comprehensive marketing automation platform that uses AI to optimize customer journeys, personalize content, and maximize marketing ROI across all channels.",
         category: "
         subcategory: "
-        price: 1299;
+        price: 1299,
         currency: "
         pricingModel: "
         features: [
@@ -212,8 +209,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
         integrations: ["Shopify", "WooCommerce", "HubSpot", "Salesforce", "Google Analytics", "Facebook Ads"],
@@ -226,7 +222,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent supply chain platform that uses AI to optimize inventory management, predict demand, and streamline logistics operations for maximum efficiency.",
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -267,8 +263,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "Predictive Analytics", "IoT Integration", "Real-time Monitoring"],
         integrations: ["ERP Systems", "WMS", "TMS", "E-commerce Platforms", "Supplier Portals"],
@@ -281,7 +276,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Comprehensive HR platform that uses AI to streamline recruitment, optimize talent management, and enhance employee engagement through intelligent insights.",
         category: "
         subcategory: "
-        price: 899;
+        price: 899,
         currency: "
         pricingModel: "
         features: [
@@ -322,8 +317,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "API Integration"],
         integrations: ["ATS Systems", "HRIS", "LinkedIn", "Job Boards", "Background Check Services"],
@@ -336,7 +330,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent real estate platform that uses AI to analyze market trends, evaluate properties, and provide investment insights for real estate professionals and investors.",
         category: "
         subcategory: "
-        price: 1599;
+        price: 1599,
         currency: "
         pricingModel: "
         features: [
@@ -377,8 +371,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "Predictive Analytics", "Geospatial Analysis", "Real-time Data Processing"],
         integrations: ["MLS Systems", "Property Databases", "Financial Data Sources", "Market Data APIs"],
@@ -391,7 +384,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent education platform that uses AI to personalize learning experiences, track student progress, and optimize educational outcomes through adaptive learning.",
         category: "
         subcategory: "
-        price: 799;
+        price: 799,
         currency: "
         pricingModel: "
         features: [
@@ -432,8 +425,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "Natural Language Processing", "Learning Analytics", "Content Management"],
         integrations: ["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools"],
@@ -446,7 +438,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent manufacturing platform that uses AI to optimize production processes, predict equipment failures, and maximize manufacturing efficiency through IoT and machine learning.",
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -487,8 +479,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Monitoring"],
         integrations: ["MES Systems", "SCADA", "ERP Systems", "IoT Devices", "Quality Control Systems"],
@@ -501,7 +492,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and manage smart grid operations for maximum efficiency and sustainability.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -542,8 +533,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Processing"],
         integrations: ["SCADA Systems", "Smart Meters", "Renewable Energy Systems", "Energy Trading Platforms"],
@@ -556,7 +546,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent transportation platform that uses AI to optimize routes, manage fleets, and streamline logistics operations for maximum efficiency and cost savings.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -597,8 +587,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "GPS Integration", "Real-time Analytics", "IoT Connectivity"],
         integrations: ["GPS Systems", "Fleet Management Software", "TMS", "Fuel Cards", "Maintenance Systems"],
@@ -611,7 +600,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent retail platform that uses AI to optimize inventory, personalize customer experiences, and maximize sales through predictive analytics and automation.",
         category: "
         subcategory: "
-        price: 1100;
+        price: 1100,
         currency: "
         pricingModel: "
         features: [
@@ -652,8 +641,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
         integrations: ["POS Systems", "E-commerce Platforms", "Inventory Management", "Customer Databases", "Payment Systems"],
@@ -666,7 +654,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Advanced AI platform that analyzes real estate markets, identifies investment opportunities, and optimizes property portfolios using machine learning and predictive analytics.",
         category: "
         subcategory: "
-        price: 1899;
+        price: 1899,
         currency: "
         pricingModel: "
         features: [
@@ -707,8 +695,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -717,8 +704,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["MLS Systems", "Property Databases", "Financial Platforms", "Tax Software", "CRM Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -726,7 +712,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent educational platform that personalizes learning experiences, tracks student progress, and provides insights to educators using AI and machine learning.",
         category: "
         subcategory: "
-        price: 899;
+        price: 899,
         currency: "
         pricingModel: "
         features: [
@@ -767,8 +753,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -777,8 +762,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["LMS Systems", "Student Information Systems", "Assessment Tools", "Content Management", "Communication Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -786,7 +770,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent energy management platform that optimizes energy consumption, reduces costs, and improves sustainability using AI and IoT sensors.",
         category: "
         subcategory: "
-        price: 1499;
+        price: 1499,
         currency: "
         pricingModel: "
         features: [
@@ -827,8 +811,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -837,8 +820,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Building Management Systems", "IoT Sensors", "Utility Meters", "Renewable Energy Systems", "SCADA Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -846,7 +828,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Advanced agricultural platform that uses AI, drones, and IoT sensors to optimize crop yields, reduce resource usage, and improve farming efficiency.",
         category: "
         subcategory: "
-        price: 1299;
+        price: 1299,
         currency: "
         pricingModel: "
         features: [
@@ -887,8 +869,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -897,8 +878,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["IoT Sensors", "Drone Systems", "Weather APIs", "Soil Testing Equipment", "Irrigation Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -906,7 +886,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent construction management platform that uses AI to optimize project timelines, improve safety, and reduce costs through predictive analytics and automation.",
         category: "
         subcategory: "
-        price: 1699;
+        price: 1699,
         currency: "
         pricingModel: "
         features: [
@@ -947,8 +927,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -957,8 +936,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Project Management Software", "Safety Systems", "IoT Sensors", "Financial Systems", "Communication Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -966,7 +944,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent hospitality platform that personalizes guest experiences, optimizes operations, and increases revenue through AI-powered automation and analytics.",
         category: "
         subcategory: "
-        price: 999;
+        price: 999,
         currency: "
         pricingModel: "
         features: [
@@ -1007,8 +985,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1017,8 +994,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["PMS Systems", "Booking Engines", "Payment Gateways", "CRM Systems", "Communication Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -1026,7 +1002,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Advanced insurance platform that uses AI to assess risks, process claims, and optimize underwriting through machine learning and predictive analytics.",
         category: "
         subcategory: "
-        price: 2199;
+        price: 2199,
         currency: "
         pricingModel: "
         features: [
@@ -1067,8 +1043,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1077,8 +1052,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Policy Management Systems", "Claims Systems", "CRM Platforms", "Financial Systems", "Third-party Data"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -1086,7 +1060,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent legal research platform that uses AI to analyze legal documents, research case law, and provide insights to legal professionals.",
         category: "
         subcategory: "
-        price: 1599;
+        price: 1599,
         currency: "
         pricingModel: "
         features: [
@@ -1127,8 +1101,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1137,8 +1110,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Legal Research Databases", "Document Management Systems", "Case Management Software", "Legal Libraries", "Court Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -1146,7 +1118,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Advanced media platform that uses AI to automate content creation, optimize production workflows, and enhance audience engagement.",
         category: "
         subcategory: "
-        price: 1299;
+        price: 1299,
         currency: "
         pricingModel: "
         features: [
@@ -1187,8 +1159,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1197,8 +1168,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Video Editing Software", "Audio Processing Tools", "Content Management Systems", "Social Media Platforms", "Analytics Tools"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -1206,7 +1176,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent gaming platform that uses AI to analyze player behavior, optimize game mechanics, and enhance user engagement through data-driven insights.",
         category: "
         subcategory: "
-        price: 1199;
+        price: 1199,
         currency: "
         pricingModel: "
         features: [
@@ -1247,8 +1217,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1257,8 +1226,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Game Engines", "Analytics Platforms", "Payment Systems", "Social Platforms", "Advertising Networks"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -1266,7 +1234,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Advanced cybersecurity platform that uses AI to detect threats, analyze security incidents, and provide automated response capabilities.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -1307,8 +1275,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1317,8 +1284,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["SIEM Systems", "EDR Platforms", "Firewalls", "Identity Management", "Security Tools"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.99%",
-    }
+        uptime: "99.99%"}
     /
     {
         id: "
@@ -1326,7 +1292,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent supply chain platform that optimizes logistics, reduces costs, and improves efficiency using AI and predictive analytics.",
         category: "
         subcategory: "
-        price: 1799;
+        price: 1799,
         currency: "
         pricingModel: "
         features: [
@@ -1367,8 +1333,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1377,8 +1342,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["ERP Systems", "WMS Platforms", "TMS Solutions", "Supplier Portals", "Financial Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -1386,7 +1350,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent customer experience platform that personalizes interactions, automates support, and improves customer satisfaction using AI.",
         category: "
         subcategory: "
-        price: 1399;
+        price: 1399,
         currency: "
         pricingModel: "
         features: [
@@ -1427,8 +1391,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1437,8 +1400,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["CRM Systems", "Help Desk Platforms", "Communication Tools", "Analytics Platforms", "Social Media"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -1446,7 +1408,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent HR platform that automates recruitment, optimizes talent management, and improves employee engagement using AI.",
         category: "
         subcategory: "
-        price: 1199;
+        price: 1199,
         currency: "
         pricingModel: "
         features: [
@@ -1487,8 +1449,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1497,8 +1458,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["ATS Systems", "HRIS Platforms", "Job Boards", "Background Check Services", "Assessment Tools"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.95%",
-    }
+        uptime: "99.95%"}
     /
     {
         id: "
@@ -1506,7 +1466,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         description: "Intelligent data governance platform that ensures compliance, protects privacy, and manages data quality using AI and automation.",
         category: "
         subcategory: "
-        price: 1899;
+        price: 1899,
         currency: "
         pricingModel: "
         features: [
@@ -1547,8 +1507,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         demoUrl: "
         documentationUrl: "
@@ -1557,8 +1516,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Data Warehouses", "CRM Systems", "ERP Platforms", "Security Tools", "Analytics Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "
-        uptime: "99.99%",
-    }
+        uptime: "99.99%"}
 ];
     export const getInnovativeServiceByCategory = (category) => {
     return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.category === category)

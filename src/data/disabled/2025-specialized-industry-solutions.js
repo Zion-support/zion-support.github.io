@@ -1,13 +1,13 @@
 export const specializedIndustrySolutions2025 = [
     /
     {
-        id: 1;
+        id: 1,
         name: "
         category: "
         industry: "
         description: "Comprehensive AI-powered medical technology platform for diagnostics, drug discovery, and personalized medicine with FDA compliance",
         pricing: "
-        price: 899;
+        price: 899,
         pricingModel: "
         userLimit: "
         features: [
@@ -34,14 +34,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
         roi: "
         setupTime: "
         integrations: ["EPIC", "Cerner", "PACS systems", "Lab equipment", "Wearable devices"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
         technology: ["AI/ML", "Computer Vision", "Natural Language Processing", "Cloud Computing"],
         compliance: ["FDA", "HIPAA", "SOC 2", "ISO 27001", "GDPR"],
@@ -49,13 +48,13 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["DICOM", "HL7", "FHIR", "CDISC"]
     },
     {
-        id: 2;
+        id: 2,
         name: "
         category: "
         industry: "
         description: "Comprehensive financial technology compliance platform with AI-powered risk assessment, regulatory reporting, and fraud detection",
         pricing: "
-        price: 599;
+        price: 599,
         pricingModel: "
         userLimit: "
         features: [
@@ -82,14 +81,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["Thomson Reuters", "LexisNexis", "Refinitiv"],
         roi: "
         setupTime: "
         integrations: ["Core banking systems", "CRM platforms", "Regulatory databases", "Payment processors"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
         technology: ["AI/ML", "Blockchain", "Cloud Computing", "API Integration"],
         compliance: ["SOX", "GLBA", "PCI DSS", "GDPR", "CCPA"],
@@ -98,13 +96,13 @@ export const specializedIndustrySolutions2025 = [
     },
     /
     {
-        id: 3;
+        id: 3,
         name: "
         category: "
         industry: "
         description: "Intelligent manufacturing platform with IoT sensors, predictive maintenance, and AI-powered quality control for Industry 4.0 transformation",
         pricing: "
-        price: 0.10;
+        price: 0.10,
         pricingModel: "
         userLimit: "
         features: [
@@ -131,14 +129,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx"],
         roi: "
         setupTime: "
         integrations: ["PLC systems", "SCADA", "ERP systems", "MES platforms", "Cloud platforms"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["IoT", "Edge Computing", "AI/ML", "Predictive Analytics", "Cloud Computing"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
@@ -147,13 +144,13 @@ export const specializedIndustrySolutions2025 = [
     },
     /
     {
-        id: 4;
+        id: 4,
         name: "
         category: "
         industry: "
         description: "AI-powered omnichannel retail platform with personalized recommendations, inventory optimization, and seamless customer experience across all channels",
         pricing: "
-        price: 2.5;
+        price: 2.5,
         pricingModel: "
         userLimit: "
         features: [
@@ -180,14 +177,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce"],
         roi: "
         setupTime: "
         integrations: ["POS systems", "E-commerce platforms", "CRM systems", "Payment gateways", "Social media"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["AI/ML", "Big Data", "Cloud Computing", "API Integration", "Mobile Apps"],
         compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"],
@@ -196,13 +192,13 @@ export const specializedIndustrySolutions2025 = [
     },
     /
     {
-        id: 5;
+        id: 5,
         name: "
         category: "
         industry: "
         description: "AI-powered adaptive learning platform with personalized curriculum, real-time assessment, and intelligent tutoring for K-12 and higher education",
         pricing: "
-        price: 15;
+        price: 15,
         pricingModel: "
         userLimit: "
         features: [
@@ -229,14 +225,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["DreamBox", "Knewton", "Carnegie Learning"],
         roi: "
         setupTime: "
         integrations: ["LMS platforms", "Student information systems", "Assessment tools", "Content providers"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["AI/ML", "Natural Language Processing", "Adaptive Algorithms", "Cloud Computing"],
         compliance: ["COPPA", "FERPA", "GDPR", "Accessibility standards"],
@@ -245,13 +240,13 @@ export const specializedIndustrySolutions2025 = [
     },
     /
     {
-        id: 6;
+        id: 6,
         name: "
         category: "
         industry: "
         description: "Intelligent logistics platform with route optimization, demand forecasting, and real-time tracking for supply chain and transportation management",
         pricing: "
-        price: 399;
+        price: 399,
         pricingModel: "
         userLimit: "
         features: [
@@ -278,14 +273,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["Flexport", "Project44", "FourKites"],
         roi: "
         setupTime: "
         integrations: ["TMS systems", "WMS platforms", "ERP systems", "GPS tracking", "E-commerce platforms"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["AI/ML", "Optimization Algorithms", "Real-time Tracking", "Cloud Computing"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry regulations"],
@@ -294,13 +288,13 @@ export const specializedIndustrySolutions2025 = [
     },
     /
     {
-        id: 7;
+        id: 7,
         name: "
         category: "
         industry: "
         description: "AI-powered energy management platform for renewable energy optimization, grid management, and sustainability monitoring",
         pricing: "
-        price: 0.02;
+        price: 0.02,
         pricingModel: "
         userLimit: "
         features: [
@@ -327,14 +321,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["GE Digital", "Siemens Energy", "Schneider Electric"],
         roi: "
         setupTime: "
         integrations: ["SCADA systems", "Smart meters", "Energy storage", "Weather APIs", "Grid APIs"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["AI/ML", "IoT", "Predictive Analytics", "Cloud Computing", "Real-time Systems"],
         compliance: ["ISO 50001", "ISO 14001", "Grid regulations", "Environmental standards"],
@@ -343,13 +336,13 @@ export const specializedIndustrySolutions2025 = [
     },
     /
     {
-        id: 8;
+        id: 8,
         name: "
         category: "
         industry: "
         description: "Comprehensive property technology platform with AI-powered market analysis, property valuation, and investment insights",
         pricing: "
-        price: 299;
+        price: 299,
         pricingModel: "
         userLimit: "
         features: [
@@ -376,14 +369,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["CoStar", "Real Capital Analytics", "Yardi"],
         roi: "
         setupTime: "
         integrations: ["MLS systems", "Property databases", "Financial platforms", "CRM systems"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["AI/ML", "Big Data", "Predictive Analytics", "Cloud Computing"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Real estate regulations"],
@@ -392,13 +384,13 @@ export const specializedIndustrySolutions2025 = [
     },
     /
     {
-        id: 9;
+        id: 9,
         name: "
         category: "
         industry: "
         description: "AI-powered legal technology platform with contract analysis, legal research automation, and compliance monitoring for law firms and legal departments",
         pricing: "
-        price: 199;
+        price: 199,
         pricingModel: "
         userLimit: "
         features: [
@@ -425,14 +417,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["DoNotPay", "Harvey AI", "Casetext"],
         roi: "
         setupTime: "
         integrations: ["Practice management systems", "Document management", "Billing systems", "Court databases"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["AI/ML", "Natural Language Processing", "Document Analysis", "Cloud Computing"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Legal industry standards"],
@@ -441,13 +432,13 @@ export const specializedIndustrySolutions2025 = [
     },
     /
     {
-        id: 10;
+        id: 10,
         name: "
         category: "
         industry: "
         description: "Intelligent precision agriculture platform with drone monitoring, crop analysis, and AI-powered farming recommendations",
         pricing: "
-        price: 2.50;
+        price: 2.50,
         pricingModel: "
         userLimit: "
         features: [
@@ -474,14 +465,13 @@ export const specializedIndustrySolutions2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "
         competitors: ["John Deere", "Climate FieldView", "Granular"],
         roi: "
         setupTime: "
         integrations: ["Farm equipment", "Weather stations", "Soil sensors", "Irrigation systems"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
         technology: ["AI/ML", "IoT", "Drone Technology", "Satellite Imagery", "Cloud Computing"],
         compliance: ["Organic standards", "Food safety", "Environmental regulations"],

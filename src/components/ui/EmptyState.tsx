@@ -1,13 +1,12 @@
-import { Package,,, RefreshCw,,  } from 'lucide-react'
-import import { Button,,  } from './button';
+import { Package,,, RefreshCw,} from 'lucide-react'
+import import { Button,} from './button';
 interface EmptyStateProps {
   text?: string;
   description?: string;
   onRetry?: () => void;
   showRetry?: boolean;
   icon?: React.ReactNode,
-icon,
-}: EmptyStateProps) {
+icon}: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
       <div className="mb-4 text-gray-400">
@@ -19,8 +18,7 @@ icon,
       {description && (
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
   showRetry = false,
-icon,
-}: EmptyStateProps) {
+icon}: EmptyStateProps) {
   return (
     <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>
       <div className='mb-4 text-gray-400'>

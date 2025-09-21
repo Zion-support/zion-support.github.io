@@ -15,8 +15,7 @@ class PM2Dashboard {,
       input: process.stdin,
       output: process.stdout}),
     this.isRunning = false,
-    this.updateInterval = null,
-  }
+    this.updateInterval = null}
 ,
   async start() {,
     console.log('🚀 Starting PM2 Automation Dashboard...'),
@@ -30,27 +29,21 @@ class PM2Dashboard {,
       // Handle user input,
       this.handleUserInput(),
       console.log('✅ Dashboard started successfully'),
-      console.log('Press "q" to quit, "r" to refresh, "h" for help'),
-    } catch (error) {,
+      console.log('Press "q" to quit, "r" to refresh, "h" for help')} catch (error) {,
       console.error('❌ Failed to start dashboard:', error),
-      process.exit(1),
-    }
+      process.exit(1)}
   }
 ,
   async connectToPM2() {,
     return new Promise((resolve, reject) => {,
       pm2.connect((err) => {,
         if (err) reject(err),
-        else resolve(),
-      }),
-    }),
-  }
+        else resolve()})})}
 ,
   startRealTimeUpdates() {,
     this.updateInterval = setInterval(async () => {,
       if (this.isRunning) {,
-        await this.updateDashboard(),
-      }
+        await this.updateDashboard()}
     }, 5000), // Update every 5 seconds
   }
 ,
@@ -59,8 +52,7 @@ class PM2Dashboard {,
     console.log('╔══════════════════════════════════════════════════════════════════════════════╗'),
     console.log('║                           PM2 AUTOMATION DASHBOARD                           ║'),
     console.log('╚══════════════════════════════════════════════════════════════════════════════╝'),
-    await this.updateDashboard(),
-  }
+    await this.updateDashboard()}
 ,
   async updateDashboard() {,
     try {,
@@ -75,10 +67,8 @@ class PM2Dashboard {,
       // Display process status,
       this.displayProcessStatus(status),
       // Display footer,
-      this.displayFooter(),
-    } catch (error) {,
-      console.error('Failed to update dashboard:', error),
-    }
+      this.displayFooter()} catch (error) {,
+      console.error('Failed to update dashboard:', error)}
   }
 ,
   displayHeader() {,
@@ -86,8 +76,7 @@ class PM2Dashboard {,
     console.log('╔══════════════════════════════════════════════════════════════════════════════╗'),
     console.log(`║                           PM2 AUTOMATION DASHBOARD                           ║`),
     console.log(`║                                ${now.padEnd(50)} ║`),
-    console.log('╚══════════════════════════════════════════════════════════════════════════════╝'),
-  }
+    console.log('╚══════════════════════════════════════════════════════════════════════════════╝')}
 ,
   displaySystemInfo(systemInfo) {,
     console.log('╔══════════════════════════════════════════════════════════════════════════════╗'),
@@ -95,8 +84,7 @@ class PM2Dashboard {,
     console.log('╠══════════════════════════════════════════════════════════════════════════════╣'),
     console.log(`║ CPU Usage: ${systemInfo.cpuUsage.padEnd(10)} │ Memory: ${systemInfo.memoryUsage.padEnd(10)} │ Uptime: ${systemInfo.uptime.padEnd(15)} ║`),
     console.log(`║ Platform: ${systemInfo.platform.padEnd(10)} │ Arch: ${systemInfo.arch.padEnd(10)} │ Load: ${systemInfo.loadAvg.padEnd(15)} ║`),
-    console.log('╚══════════════════════════════════════════════════════════════════════════════╝'),
-  }
+    console.log('╚══════════════════════════════════════════════════════════════════════════════╝')}
 ,
   displayProcessStatus(status) {,
     console.log('╔══════════════════════════════════════════════════════════════════════════════╗'),
@@ -110,20 +98,16 @@ class PM2Dashboard {,
     const stopped = status.filter(p => p.pm2_env.status === 'stopped'),
     // Display online processes first,
     online.forEach(process => {,
-      this.displayProcessRow(process),
-    }),
+      this.displayProcessRow(process)}),
     // Display errored processes,
     errored.forEach(process => {,
-      this.displayProcessRow(process),
-    }),
+      this.displayProcessRow(process)}),
     // Display stopped processes,
     stopped.forEach(process => {,
-      this.displayProcessRow(process),
-    }),
+      this.displayProcessRow(process)}),
     console.log('╠══════════════════════════════════════════════════════════════════════════════╣'),
     console.log(`║ Total: ${status.length.toString().padEnd(3)} │ Online: ${online.length.toString().padEnd(3)} │ Error: ${errored.length.toString().padEnd(3)} │ Stopped: ${stopped.length.toString().padEnd(3)} │         ║`),
-    console.log('╚══════════════════════════════════════════════════════════════════════════════╝'),
-  }
+    console.log('╚══════════════════════════════════════════════════════════════════════════════╝')}
 ,
   displayProcessRow(process) {,
     const name = (process.name || 'unknown').padEnd(24),
@@ -132,8 +116,7 @@ class PM2Dashboard {,
     const memory = this.formatBytes(process.monit?.memory || 0).padEnd(8),
     const uptime = this.formatUptime(process.pm2_env.pm_uptime).padEnd(9),
     const restarts = (process.pm2_env.restart_time || 0).toString().padEnd(9),
-    console.log(`║ ${name} │ ${status} │ ${cpu} │ ${memory} │ ${uptime} │ ${restarts} ║`),
-  }
+    console.log(`║ ${name} │ ${status} │ ${cpu} │ ${memory} │ ${uptime} │ ${restarts} ║`)}
 ,
   getStatusIcon(status) {,
     switch (status) {,
@@ -148,8 +131,7 @@ class PM2Dashboard {,
     const k = 1024,
     const sizes = ['BKBMBGB'],
     const i = Math.floor(Math.log(bytes) / Math.log(k)),
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i],
-  }
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]}
 ,
   formatUptime(uptime) {,
     if (!uptime) return '0s',
@@ -162,8 +144,7 @@ class PM2Dashboard {,
     if (days > 0) return `${days}d`,
     if (hours > 0) return `${hours}h`,
     if (minutes > 0) return `${minutes}m`,
-    return `${seconds}s`,
-  }
+    return `${seconds}s`}
 ,
   displayFooter() {,
     console.log('╔══════════════════════════════════════════════════════════════════════════════╗'),
@@ -182,8 +163,7 @@ class PM2Dashboard {,
       uptime: this.formatSystemUptime(os.uptime()),
       platform: os.platform(),
       arch: os.arch(),
-      loadAvg: os.loadavg().map(l => l.toFixed(2)).join(' ')},
-  }
+      loadAvg: os.loadavg().map(l => l.toFixed(2)).join(' ')}}
 ,
   formatSystemUptime(seconds) {,
     const days = Math.floor(seconds / 86400),
@@ -191,17 +171,13 @@ class PM2Dashboard {,
     const minutes = Math.floor((seconds % 3600) / 60),
     if (days > 0) return `${days}d ${hours}h`,
     if (hours > 0) return `${hours}h ${minutes}m`,
-    return `${minutes}m`,
-  }
+    return `${minutes}m`}
 ,
   async getPM2Status() {,
     return new Promise((resolve, reject) => {,
       pm2.list((err, list) => {,
         if (err) reject(err),
-        else resolve(list || []),
-      }),
-    }),
-  }
+        else resolve(list || [])})})}
 ,
   handleUserInput() {,
     this.rl.on('line', async (input) => {,
@@ -233,10 +209,8 @@ class PM2Dashboard {,
           await this.restartAllProcesses(),
           break,
         default:  ,
-          console.log(`Unknown command: ${command}. Type 'h' for help.`),
-      }
-    }),
-  }
+          console.log(`Unknown command: ${command}. Type 'h' for help.`)}
+    })}
 ,
   showHelp() {,
     console.log('\n📖 Dashboard Commands: '),
@@ -246,8 +220,7 @@ class PM2Dashboard {,
     console.log('  s, start       - Start all stopped processes'),
     console.log('  x, stop        - Stop all running processes'),
     console.log('  R, restart     - Restart all processes'),
-    console.log('\nPress Enter to continue...'),
-  }
+    console.log('\nPress Enter to continue...')}
 ,
   async startAllProcesses() {,
     try {,
@@ -255,10 +228,8 @@ class PM2Dashboard {,
       await execAsync('pm2 start ecosystem.config.cjs'),
       console.log('✅ All processes started'),
       await this.sleep(1000),
-      await this.updateDashboard(),
-    } catch (error) {,
-      console.error('❌ Failed to start processes:', error.message),
-    }
+      await this.updateDashboard()} catch (error) {,
+      console.error('❌ Failed to start processes:', error.message)}
   }
 ,
   async stopAllProcesses() {,
@@ -267,10 +238,8 @@ class PM2Dashboard {,
       await execAsync('pm2 stop all'),
       console.log('✅ All processes stopped'),
       await this.sleep(1000),
-      await this.updateDashboard(),
-    } catch (error) {,
-      console.error('❌ Failed to stop processes:', error.message),
-    }
+      await this.updateDashboard()} catch (error) {,
+      console.error('❌ Failed to stop processes:', error.message)}
   }
 ,
   async restartAllProcesses() {,
@@ -279,38 +248,31 @@ class PM2Dashboard {,
       await execAsync('pm2 restart all'),
       console.log('✅ All processes restarted'),
       await this.sleep(1000),
-      await this.updateDashboard(),
-    } catch (error) {,
-      console.error('❌ Failed to restart processes:', error.message),
-    }
+      await this.updateDashboard()} catch (error) {,
+      console.error('❌ Failed to restart processes:', error.message)}
   }
 ,
   sleep(ms) {,
-    return new Promise(resolve => setTimeout(resolve, ms)),
-  }
+    return new Promise(resolve => setTimeout(resolve, ms))}
 ,
   async shutdown() {,
     console.log('🛑 Shutting down dashboard...'),
     this.isRunning = false,
     if (this.updateInterval) {,
-      clearInterval(this.updateInterval),
-    }
+      clearInterval(this.updateInterval)}
 ,
     this.rl.close(),
     pm2.disconnect(),
     console.log('✅ Dashboard shutdown complete'),
-    process.exit(0),
-  }
+    process.exit(0)}
 }
 ,
 // Handle graceful shutdown,
 process.on('SIGINT', async () => {,
   const dashboard = global.currentDashboard,
   if (dashboard) {,
-    await dashboard.shutdown(),
-  }
-  process.exit(0),
-}),
+    await dashboard.shutdown()}
+  process.exit(0)}),
 // Run the dashboard,
 if (require.main === module) {,
   const dashboard = new PM2Dashboard(),
@@ -318,8 +280,6 @@ if (require.main === module) {,
   dashboard.start().catch(async (error) => {,
     console.error('Fatal error:', error),
     await dashboard.shutdown(),
-    process.exit(1),
-  }),
-}
+    process.exit(1)})}
 ,
-module.exports = PM2Dashboard,]]
+module.exports = PM2Dashboard]]

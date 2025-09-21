@@ -16,10 +16,8 @@ exports.handler = async function(event, context) {
     // Simulate indexing process
     for (let i = 0, i < indexingResults.totalDocs, i++) {
       if (Math.random() > 0.05) { // 95% success rate
-        indexingResults.indexedDocs++,
-      } else {
-        indexingResults.failedDocs++,
-      }
+        indexingResults.indexedDocs++} else {
+        indexingResults.failedDocs++}
     }
     
     // Calculate metrics
@@ -67,9 +65,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ docs-index-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ docs-index-runner failed:', error),
     return {
       statusCode: 500,
@@ -79,6 +75,5 @@ exports.handler = async function(event, context) {
         function: 'docs-index-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

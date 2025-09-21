@@ -96,7 +96,7 @@ const main = () => {console.log('Starting comprehensive syntax fixes...');
     console.log('\n📝 Adding fixed files...');
     try {
       const { execSync } = await import('child_process');
-      execSync('git add .', { stdio: 'inherit' });
+      execSync('git add .', { stdio: 'inherit' }),
       console.log('✅ Files added to staging area');
     } catch (error) {
       console.error('❌ Error adding files:', error.message);

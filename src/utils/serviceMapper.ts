@@ -1,35 +1,33 @@
 import { specializedIndustrySolutions2026 } from "../data/specializedIndustrySolutions2026";
 
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory: string,
+  price: number,
+  currency: string,
+  pricingModel: string,
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  targetAudience: string[],
+  tags: string[],
+  estimatedDelivery: string,
+  supportLevel: string,
+  marketPrice: string,
+  roi: string,
   contactInfo: {
-    email: string;
-    website: string;
-    phone: string;
-  };
+    email: string,
+    website: string,
+    phone: string};
   technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    technology: string[],
+    integrations: string[],
+    apiEndpoints: number,
+    uptime: string,
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
   compliance?: string[];
@@ -60,15 +58,13 @@ export function map2026ServicesToExistingStructure(): Service[] {
     contactInfo: {
       phone: service.contactInfo.mobile,
       email: service.contactInfo.email,
-      website: service.contactInfo.website,
-    },
+      website: service.contactInfo.website};
     technicalSpecs: {
       technology: service.technology,
       integrations: service.integrations,
       apiEndpoints: 200,
       uptime: service.uptime,
-      security: ["SOC 2", "ISO 27001", "Data encryption"],
-    },
+      security: ["SOC 2", "ISO 27001", "Data encryption"]},
     competitors: service.competitors,
     marketSize: service.marketSize,
     compliance: ["SOC 2", "ISO 27001"]
@@ -76,5 +72,4 @@ export function map2026ServicesToExistingStructure(): Service[] {
 }
 
 export default {
-  map2026ServicesToExistingStructure,
-};
+  map2026ServicesToExistingStructure};

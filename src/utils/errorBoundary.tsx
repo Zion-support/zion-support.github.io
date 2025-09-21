@@ -2,33 +2,30 @@ import React, { Component, ErrorInfo, ReactNode } from "react";
 import { motion } from "framer-motion";
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
-  retryCount: number;
-}
+  retryCount: number}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props),
     this.state = {
       hasError: false,
       retryCount: 0
-    };
-  }
+    }}
 
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
-      error,
+      error;
       retryCount: 0
-    };
-  }
+    }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error("ErrorBoundary caught an error:", error, errorInfo);
@@ -38,8 +35,7 @@ class ErrorBoundary extends Component<Props, State> {
       (window as any).gtag("event", "exception", {
         description: error.message,
         fatal: false
-      });
-    }
+      })}
   }
 
   handleRetry = () => {
@@ -48,8 +44,7 @@ class ErrorBoundary extends Component<Props, State> {
       error: undefined,
       errorInfo: undefined,
       retryCount: prevState.retryCount + 1
-    }));
-  };
+    }))};
 
   handleReload = () => {
     window.location.reload();
@@ -116,7 +111,7 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="flex space-x-3">
               <button
                 onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
               >
                 Try Again
               </button>
@@ -136,8 +131,7 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </motion.div>
-      );
-    }
+      )}
 
     return this.props.children;
   }

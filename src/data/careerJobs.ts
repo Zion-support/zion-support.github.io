@@ -10,7 +10,7 @@ export const CAREER_JOBS = {
       tags: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
       requirements: [
         '5+ years of frontend development experience',
-        'Expert knowledge of React and TypeScript',
+        'Expert knowledge of React and TypeScript';
         'Experience with Next.js and modern build tools',
         'Strong understanding of responsive design',
         'Experience with state management libraries'
@@ -26,7 +26,7 @@ export const CAREER_JOBS = {
       tags: ['Node.js', 'Python', 'PostgreSQL', 'AWS'],
       requirements: [
         '4+ years of backend development experience',
-        'Proficiency in Node.js or Python',
+        'Proficiency in Node.js or Python';
         'Experience with databases (PostgreSQL preferred)',
         'Knowledge of cloud platforms (AWS, GCP, or Azure)',
         'Understanding of microservices architecture'
@@ -42,7 +42,7 @@ export const CAREER_JOBS = {
       tags: ['Python', 'TensorFlow', 'PyTorch', 'MLOps'],
       requirements: [
         '3+ years of machine learning experience',
-        'Strong Python programming skills',
+        'Strong Python programming skills';
         'Experience with TensorFlow or PyTorch',
         'Knowledge of ML deployment and MLOps',
         'Understanding of NLP and computer vision'
@@ -60,7 +60,7 @@ export const CAREER_JOBS = {
       tags: ['Figma', 'User Research', 'Prototyping', 'UI/UX'],
       requirements: [
         '3+ years of product design experience',
-        'Proficiency in Figma and design tools',
+        'Proficiency in Figma and design tools';
         'Strong understanding of user-centered design',
         'Experience with user research and testing',
         'Knowledge of design systems'
@@ -76,7 +76,7 @@ export const CAREER_JOBS = {
       tags: ['User Research', 'Analytics', 'A/B Testing', 'Usability'],
       requirements: [
         '2+ years of UX research experience',
-        'Experience with user research methodologies',
+        'Experience with user research methodologies';
         'Proficiency in analytics tools',
         'Strong communication and presentation skills',
         'Understanding of quantitative and qualitative research'
@@ -94,7 +94,7 @@ export const CAREER_JOBS = {
       tags: ['Product Strategy', 'Roadmapping', 'Analytics', 'Stakeholder Management'],
       requirements: [
         '4+ years of product management experience',
-        'Experience with B2B SaaS products',
+        'Experience with B2B SaaS products';
         'Strong analytical and problem-solving skills',
         'Excellent communication and leadership abilities',
         'Understanding of AI/ML technologies'
@@ -110,7 +110,7 @@ export const CAREER_JOBS = {
       tags: ['Customer Success', 'Account Management', 'Analytics', 'Communication'],
       requirements: [
         '3+ years of customer success experience',
-        'Experience with B2B SaaS platforms',
+        'Experience with B2B SaaS platforms';
         'Strong relationship-building skills',
         'Analytical mindset with attention to detail',
         'Experience with CRM tools'

@@ -4,11 +4,10 @@
  */
 
 export interface AccessibilityConfig {
-  enableKeyboardNavigation: boolean;
-  enableScreenReader: boolean;
-  enableHighContrast: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-}
+  enableKeyboardNavigation: boolean,
+  enableScreenReader: boolean,
+  enableHighContrast: boolean,
+  fontSize: 'small' | 'medium' | 'large'}
 
 export class AccessibilityManager {
   private config: AccessibilityConfig = {
@@ -16,8 +15,7 @@ export class AccessibilityManager {
     enableScreenReader: true,
     enableHighContrast: false,
     fontSize: 'medium'
-  };
-  
+  },
   initialize() {
     this.setupKeyboardNavigation();
     this.setupScreenReaderSupport();
@@ -62,7 +60,7 @@ export class AccessibilityManager {
   private setupHighContrastMode() {
     if (!this.config.enableHighContrast) return;
     
-    const highContrastQuery = '(prefers-contrast: high)';
+    const highContrastQuery = '(prefers-contrast: high)',
     const mediaQuery = window.matchMedia(highContrastQuery);
     
     const updateHighContrast = (matches: boolean) => {
@@ -78,13 +76,12 @@ export class AccessibilityManager {
       small: '14px',
       medium: '16px',
       large: '18px'
-    };
-    
+    },
     document.documentElement.style.fontSize = fontSizes[this.config.fontSize];
   }
   
   announce(message: string) {
-    const liveRegion = document.getElementById('live-region');
+    const liveRegion = document.getElementById('live-region'),
     if (liveRegion) {
       liveRegion.textContent = message;
     }

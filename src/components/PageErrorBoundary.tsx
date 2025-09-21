@@ -48,8 +48,7 @@ function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
 }
 
 interface PageErrorBoundaryProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode}
 
 export function PageErrorBoundary({ children }: PageErrorBoundaryProps) {
   return (

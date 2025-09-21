@@ -6,7 +6,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent financial compliance automation that continuously monitors regulatory changes, automates reporting, and ensures real-time compliance across all financial operations.",
         category: "
         subcategory: "
-        price: 8500;
+        price: 8500,
         currency: "
         pricingModel: "
         features: [
@@ -52,8 +52,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["GPT-5", "Claude 3.5 Sonnet", "Regulatory APIs", "Machine Learning", "Blockchain"],
         complianceStandards: ["SOX", "Basel III", "Dodd-Frank", "GDPR", "PCI DSS", "SOC2"],
@@ -68,7 +67,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "Next-generation digital identity platform using quantum-resistant cryptography and blockchain technology for secure, decentralized identity management and verification.",
         category: "
         subcategory: "
-        price: 6500;
+        price: 6500,
         currency: "
         pricingModel: "
         features: [
@@ -114,8 +113,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Quantum-Resistant Algorithms", "Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts"],
         complianceStandards: ["eIDAS", "GDPR", "SOC2", "ISO 27001", "NIST", "W3C DID"],
@@ -130,7 +128,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and improve supply chain resilience.",
         category: "
         subcategory: "
-        price: 7500;
+        price: 7500,
         currency: "
         pricingModel: "
         features: [
@@ -176,8 +174,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "Predictive Analytics", "IoT Sensors", "Cloud Computing", "Big Data Analytics"],
         complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "SOC2", "ISO 9001"],
@@ -192,7 +189,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "Distributed AI platform that brings machine learning capabilities to edge devices, enabling real-time AI processing without cloud dependency.",
         category: "
         subcategory: "
-        price: 5500;
+        price: 5500,
         currency: "
         pricingModel: "
         features: [
@@ -238,8 +235,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["TensorFlow Lite", "ONNX Runtime", "Edge ML Frameworks", "Container Technology", "Kubernetes"],
         complianceStandards: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "NIST"],
@@ -254,7 +250,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent legal document analysis platform that uses AI to review contracts, identify risks, extract key terms, and provide legal insights.",
         category: "
         subcategory: "
-        price: 4500;
+        price: 4500,
         currency: "
         pricingModel: "
         features: [
@@ -300,8 +296,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Natural Language Processing", "Machine Learning", "Document AI", "Legal Databases", "Cloud Computing"],
         complianceStandards: ["GDPR", "SOC2", "ISO 27001", "Legal Industry Standards", "Data Privacy"],
@@ -316,7 +311,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "
         category: "
         subcategory: "
-        price: 15000;
+        price: 15000,
         currency: "
         pricingModel: "
         features: [
@@ -362,8 +357,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Quantum Computing", "Qiskit", "Cirq", "PennyLane", "Classical ML Frameworks"],
         complianceStandards: ["ISO 27001", "SOC2", "Research Standards", "Data Security", "Intellectual Property"],
@@ -378,7 +372,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "Advanced AI-powered healthcare diagnostics platform that provides accurate disease detection, treatment recommendations, and patient monitoring.",
         category: "
         subcategory: "
-        price: 9500;
+        price: 9500,
         currency: "
         pricingModel: "
         features: [
@@ -424,8 +418,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Deep Learning", "Computer Vision", "Natural Language Processing", "Medical AI Models", "Cloud Computing"],
         complianceStandards: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC2", "GDPR"],
@@ -440,7 +433,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "Fully autonomous cybersecurity operations platform that continuously monitors, detects, and responds to threats without human intervention.",
         category: "
         subcategory: "
-        price: 12000;
+        price: 12000,
         currency: "
         pricingModel: "
         features: [
@@ -486,8 +479,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["AI/ML", "Threat Intelligence", "Security Orchestration", "Behavioral Analytics", "Cloud Security"],
         complianceStandards: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
@@ -502,7 +494,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, and maximize marketing ROI.",
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -548,8 +540,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "Predictive Analytics", "Marketing APIs", "CRM Integration", "Data Analytics"],
         complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Marketing Compliance"],
@@ -564,7 +555,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         description: "
         category: "
         subcategory: "
-        price: 8000;
+        price: 8000,
         currency: "
         pricingModel: "
         features: [
@@ -610,8 +601,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Quantum Key Distribution", "Post-Quantum Algorithms", "Encryption", "Secure Protocols", "Quantum Hardware"],
         complianceStandards: ["FIPS 140-2", "Common Criteria", "SOC2", "ISO 27001", "Government Standards"],

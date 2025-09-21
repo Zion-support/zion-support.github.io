@@ -3,17 +3,15 @@ export interface ValidationRule {
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-  custom?: (value: any) => boolean | string;
-}
+  custom?: (value: any) => boolean | string}
 
 export interface ValidationResult {
-  isValid: boolean;
-  errors: string[];
-}
+  isValid: boolean,
+  errors: string[]}
 
 export class ValidationUtils {
   public static validateEmail(email: string): boolean {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     return emailRegex.test(email);
   }
 
@@ -24,7 +22,7 @@ export class ValidationUtils {
 
   public static validateURL(url: string): boolean {
     try {
-      new URL(url);
+      new URL(url),
       return true;
     } catch {
       return false;
@@ -32,8 +30,7 @@ export class ValidationUtils {
   }
 
   public static validatePassword(password: string): ValidationResult {
-    const errors: string[] = [];
-
+    const errors: string[] = [],
     if (password.length < 8) {
       errors.push("Password must be at least 8 characters long");
     }
@@ -61,8 +58,7 @@ export class ValidationUtils {
   }
 
   public static validateField(value: any, rules: ValidationRule): ValidationResult {
-    const errors: string[] = [];
-
+    const errors: string[] = [],
     if (rules.required && (value === undefined || value === null || value === "")) {
       errors.push("This field is required");
     }
@@ -113,7 +109,7 @@ export class ValidationUtils {
   }
 
   public static escapeHTML(input: string): string {
-    const div = document.createElement("div");
+    const div = document.createElement("div"),
     div.textContent = input;
     return div.innerHTML;
   }

@@ -10,11 +10,10 @@ describe('custom axios auth token handling', () => {'  beforeEach(() => {,
     jest.clearAllMocks(),
     document.cookie =   }),
   it('adds Authorization header from safeStorage zion_token', async () => {'    (safeStorage.getItem as jest.Mock).mockImplementation((_key: string) => {,
-      return key === zion_token' ? jwt123' : null    }),
+      return key === zion_token' ? jwt123' : null    });
     fetchMock.mockResolvedValueOnce(new Response('{}, { status: 200 })),
-    await axios.get('/secure'),
+    await axios.get('/secure');
     const [, options] = fetchMock.mock.calls[0],
     expect(options?.headers).toEqual(,
-      expect.objectContaining({ Authorization: Bearer jwt123' })    ),
-  }),
+      expect.objectContaining({ Authorization: Bearer jwt123' })    )});
 }),

@@ -12,24 +12,19 @@ const colors = {,
   reset: '\x1b[0m',
   bold: '\x1b[1m'},
 function log(message, color = 'reset') {,
-  console.log(`${colors[color]}${message}${colors.reset}`),
-}
+  console.log(`${colors[color]}${message}${colors.reset}`)}
 ,
 function logStep(step, message) {,
-  log(`\n${step}. ${message}`, 'blue'),
-}
+  log(`\n${step}. ${message}`, 'blue')}
 ,
 function logSuccess(message) {,
-  log(`✅ ${message}`, 'green'),
-}
+  log(`✅ ${message}`, 'green')}
 ,
 function logWarning(message) {,
-  log(`⚠️  ${message}`, 'yellow'),
-}
+  log(`⚠️  ${message}`, 'yellow')}
 ,
 function logError(message) {,
-  log(`❌ ${message}`, 'red'),
-}
+  log(`❌ ${message}`, 'red')}
 ,
 // Enhancement steps,
 const enhancements = [,
@@ -73,8 +68,7 @@ function updatePackageJson() {,
     'enhance: all': 'node scripts/enhance-application.jsenhance:performance': 'node scripts/enhance-performance.jsenhance:seo': 'node scripts/enhance-seo.jsenhance:ux': 'node scripts/enhance-ux.jsenhance:security': 'node scripts/enhance-security.jsanalyze:bundle': 'npm run build && npx @next/bundle-analyzertest:accessibility': 'npx jest --testPathPatterns=accessibilitytest:performance': 'npx jest --testPathPatterns=performanceaudit:performance': 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.htmlaudit:security': 'npm audit && npm run security:scanoptimize:images': 'node scripts/optimize-images.jsgenerate:sitemap': 'node scripts/generate-sitemap.jsgenerate:manifest': 'node scripts/generate-manifest.js'},
   packageJson.scripts = { ...packageJson.scripts, ...newScripts },
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2)),
-  logSuccess('Updated package.json with enhancement scripts'),
-}
+  logSuccess('Updated package.json with enhancement scripts')}
 ,
 // Function to create enhancement configuration,
 function createEnhancementConfig() {,
@@ -119,10 +113,8 @@ function createEnhancementConfig() {,
   },
   fs.writeFileSync(,
     path.join(process.cwd(), 'enhancement.config.json'),
-    JSON.stringify(config, null, 2),
-  ),
-  logSuccess('Created enhancement configuration'),
-}
+    JSON.stringify(config, null, 2)),
+  logSuccess('Created enhancement configuration')}
 ,
 // Function to create performance enhancement script,
 function createPerformanceScript() {,
@@ -157,11 +149,9 @@ console.log('✅ Performance enhancement complete!'),
 `,
   fs.writeFileSync(,
     path.join(process.cwd(), 'scriptsenhance-performance.js'),
-    script,
-  ),
+    script),
   fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-performance.js'), '755'),
-  logSuccess('Created performance enhancement script'),
-}
+  logSuccess('Created performance enhancement script')}
 ,
 // Function to create SEO enhancement script,
 function createSEOScript() {,
@@ -196,11 +186,9 @@ console.log('✅ SEO enhancement complete!'),
 `,
   fs.writeFileSync(,
     path.join(process.cwd(), 'scriptsenhance-seo.js'),
-    script,
-  ),
+    script),
   fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-seo.js'), '755'),
-  logSuccess('Created SEO enhancement script'),
-}
+  logSuccess('Created SEO enhancement script')}
 ,
 // Function to create UX enhancement script,
 function createUXScript() {,
@@ -235,11 +223,9 @@ console.log('✅ UX enhancement complete!'),
 `,
   fs.writeFileSync(,
     path.join(process.cwd(), 'scriptsenhance-ux.js'),
-    script,
-  ),
+    script),
   fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-ux.js'), '755'),
-  logSuccess('Created UX enhancement script'),
-}
+  logSuccess('Created UX enhancement script')}
 ,
 // Function to create security enhancement script,
 function createSecurityScript() {,
@@ -274,11 +260,9 @@ console.log('✅ Security enhancement complete!'),
 `,
   fs.writeFileSync(,
     path.join(process.cwd(), 'scriptsenhance-security.js'),
-    script,
-  ),
+    script),
   fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-security.js'), '755'),
-  logSuccess('Created security enhancement script'),
-}
+  logSuccess('Created security enhancement script')}
 ,
 // Function to create Next.js configuration enhancements,
 function enhanceNextConfig() {,
@@ -293,8 +277,7 @@ function enhanceNextConfig() {,
         `module.exports = {,
   experimental: {,
     optimizeCss: true,
-    optimizePackageImports: ['framer-motionlucide-react']},`),
-    }
+    optimizePackageImports: ['framer-motionlucide-react']},`)}
 ,
     // Add security headers,
     if (!config.includes('async headers()')) {,
@@ -317,16 +300,11 @@ function enhanceNextConfig() {,
             value: 'origin-when-cross-origin'}
         ]
       }
-    ],
-  },`,
-      ),
-    }
+    ]},`)}
 ,
     fs.writeFileSync(nextConfigPath, config),
-    logSuccess('Enhanced Next.js configuration'),
-  } else {,
-    logWarning('Next.js config file not found'),
-  }
+    logSuccess('Enhanced Next.js configuration')} else {,
+    logWarning('Next.js config file not found')}
 }
 ,
 // Function to create performance monitoring setup,
@@ -344,8 +322,7 @@ function sendToAnalytics(metric) {,
       event_category: 'Web Vitals',
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       event_label: metric.id,
-      non_interaction: true}),
-  }
+      non_interaction: true})}
 }
 ,
 getCLS(sendToAnalytics),
@@ -356,18 +333,14 @@ getTTFB(sendToAnalytics),
 \`,
   fs.writeFileSync(,
     path.join(process.cwd(), 'libanalytics.js'),
-    webVitalsScript,
-  ),
-  logSuccess('Performance monitoring setup complete'),
-}
+    webVitalsScript),
+  logSuccess('Performance monitoring setup complete')}
 ,
   fs.writeFileSync(,
     path.join(process.cwd(), 'scriptssetup-monitoring.js'),
-    monitoringScript,
-  ),
+    monitoringScript),
   fs.chmodSync(path.join(process.cwd(), 'scriptssetup-monitoring.js'), '755'),
-  logSuccess('Created performance monitoring setup'),
-}
+  logSuccess('Created performance monitoring setup')}
 ,
 // Main execution,
 async function main() {,
@@ -377,14 +350,12 @@ async function main() {,
     // Ensure scripts directory exists,
     const scriptsDir = path.join(process.cwd(), 'scripts'),
     if (!fs.existsSync(scriptsDir)) {,
-      fs.mkdirSync(scriptsDir, { recursive: true }),
-    }
+      fs.mkdirSync(scriptsDir, { recursive: true })}
 ,
     // Ensure lib directory exists,
     const libDir = path.join(process.cwd(), 'lib'),
     if (!fs.existsSync(libDir)) {,
-      fs.mkdirSync(libDir, { recursive: true }),
-    }
+      fs.mkdirSync(libDir, { recursive: true })}
 ,
     // Run all enhancement steps,
     updatePackageJson(),
@@ -400,9 +371,7 @@ async function main() {,
     enhancements.forEach((enhancement, index) => {,
       log(`\n${index + 1}. ${enhancement.name}:`, 'green'),
       enhancement.steps.forEach(step => {,
-        log(`   • ${step}`, 'reset'),
-      }),
-    }),
+        log(`   • ${step}`, 'reset')})}),
     log('\n📋 Next Steps: yellow'),
     log('1. Run "npm run enhance: performance" for performance optimizations'),
     log('2. Run "npm run enhance:seo" for SEO improvements'),
@@ -414,8 +383,7 @@ async function main() {,
     log('\n✨ Your application is now enhanced with modern best practices!green')
   } catch (error) {,
     logError(\`Enhancement failed: \${error.message}\`),
-    process.exit(1),
-  }
+    process.exit(1)}
 }
 ,
 // Run the enhancement process,
@@ -423,8 +391,7 @@ main(),
 `,
 fs.writeFileSync(,
   path.join(process.cwd(), 'scriptsenhance-application.js'),
-  script,
-),
+  script),
 fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-application.js'), '755'),
 logSuccess('Created comprehensive enhancement script'),
 // Update todos,

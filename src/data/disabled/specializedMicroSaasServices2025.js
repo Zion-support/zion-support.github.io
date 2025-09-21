@@ -6,7 +6,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "Comprehensive AI-powered content creation platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.",
         category: "
         subcategory: "
-        price: 299;
+        price: 299,
         currency: "
         pricingModel: "
         features: [
@@ -47,8 +47,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],
         complianceStandards: ["GDPR", "Data Privacy"],
@@ -65,7 +64,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent invoice processing and management platform that automates billing, payment tracking, and financial reporting using AI and OCR technology.",
         category: "
         subcategory: "
-        price: 199;
+        price: 199,
         currency: "
         pricingModel: "
         features: [
@@ -106,8 +105,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],
         complianceStandards: ["GDPR", "Financial Regulations", "Data Security"],
@@ -124,7 +122,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent customer support system that uses AI to provide instant responses, route tickets, and automate support workflows for improved customer satisfaction.",
         category: "
         subcategory: "
-        price: 399;
+        price: 399,
         currency: "
         pricingModel: "
         features: [
@@ -165,8 +163,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "WebSocket"],
         complianceStandards: ["GDPR", "Data Privacy", "Security Standards"],
@@ -183,7 +180,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "AI-enhanced project management platform that automates task allocation, tracks progress, and provides intelligent insights for better project outcomes.",
         category: "
         subcategory: "
-        price: 249;
+        price: 249,
         currency: "
         pricingModel: "
         features: [
@@ -224,8 +221,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["AI/ML", "React", "Node.js", "Real-time Analytics", "Cloud Computing"],
         complianceStandards: ["GDPR", "Data Security"],
@@ -242,7 +238,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent email marketing platform that uses AI to optimize send times, personalize content, and improve campaign performance for maximum engagement.",
         category: "
         subcategory: "
-        price: 179;
+        price: 179,
         currency: "
         pricingModel: "
         features: [
@@ -283,8 +279,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Email APIs"],
         complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
@@ -301,7 +296,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "AI-powered inventory management platform that predicts demand, optimizes stock levels, and automates reordering for efficient inventory control.",
         category: "
         subcategory: "
-        price: 349;
+        price: 349,
         currency: "
         pricingModel: "
         features: [
@@ -342,8 +337,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "Predictive Analytics", "React", "Node.js", "IoT Integration"],
         complianceStandards: ["GDPR", "Data Security", "Industry Standards"],
@@ -360,7 +354,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent social media management platform that automates posting, generates content, and optimizes engagement across multiple social media channels.",
         category: "
         subcategory: "
-        price: 199;
+        price: 199,
         currency: "
         pricingModel: "
         features: [
@@ -401,8 +395,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "Social Media APIs"],
         complianceStandards: ["GDPR", "Data Privacy", "Platform Policies"],
@@ -419,7 +412,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "AI-enhanced time tracking platform that automatically categorizes activities, generates insights, and optimizes productivity for individuals and teams.",
         category: "
         subcategory: "
-        price: 129;
+        price: 129,
         currency: "
         pricingModel: "
         features: [
@@ -460,8 +453,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "Computer Vision", "React", "Node.js", "Mobile Apps"],
         complianceStandards: ["GDPR", "Data Privacy"],
@@ -478,7 +470,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "Intelligent lead generation platform that uses AI to identify, qualify, and nurture prospects for improved sales conversion and business growth.",
         category: "
         subcategory: "
-        price: 449;
+        price: 449,
         currency: "
         pricingModel: "
         features: [
@@ -519,8 +511,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Data Analytics"],
         complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
@@ -537,7 +528,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         description: "AI-powered document management platform that automatically categorizes, searches, and organizes documents for improved workflow efficiency and collaboration.",
         category: "
         subcategory: "
-        price: 279;
+        price: 279,
         currency: "
         pricingModel: "
         features: [
@@ -578,8 +569,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["OCR", "Machine Learning", "React", "Node.js", "Cloud Storage"],
         complianceStandards: ["GDPR", "SOC2", "Data Security", "Industry Standards"],

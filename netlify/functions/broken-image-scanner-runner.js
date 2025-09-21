@@ -33,9 +33,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ broken-image-scanner-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ broken-image-scanner-runner failed:', error),
     return {
       statusCode: 500,
@@ -45,6 +43,5 @@ exports.handler = async function(event, context) {
         function: 'broken-image-scanner-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

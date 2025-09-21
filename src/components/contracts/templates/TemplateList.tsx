@@ -10,25 +10,22 @@ import { useAuth } from "@/hooks/useAuth";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 
 interface TemplateListProps {
-  templates: ContractTemplate[];
-  isLoading: boolean;
-  onSelect: (template: ContractTemplate) => void;
-  onEdit: (template: ContractTemplate) => void;
-}
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate) => void,
+  onEdit: (template: ContractTemplate) => void}
 
 export function TemplateList({
-  templates,
-  isLoading,
+  templates;
+  isLoading;
   onSelect,
-  onEdit,
-}: TemplateListProps) {
+  onEdit}: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
   const { user } = useAuth();
   const { deleteTemplate, toggleStar } = useContractTemplates();
 
   const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId);
-  };
+    setTemplateToDelete(templateId)};
 
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
@@ -40,8 +37,7 @@ export function TemplateList({
   const handleSetDefault = async (templateId: string) => {
     if (!user) {
       // Redirect to login
-      return;
-    }
+      return}
     await toggleStar(templateId);
   };
 
@@ -155,5 +151,4 @@ export function TemplateList({
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  );
-}
+  )}

@@ -6,7 +6,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         description: "Fully autonomous customer service platform that handles customer inquiries, resolves issues, and provides personalized support without human intervention.",
         category: "
         subcategory: "
-        price: 6800;
+        price: 6800,
         currency: "
         pricingModel: "
         features: [
@@ -52,8 +52,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["GPT-5", "Claude 3.5", "Natural Language Processing", "Machine Learning", "API Integration"],
         complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Data Privacy"],
@@ -68,7 +67,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         description: "Intelligent predictive maintenance platform that uses AI to predict equipment failures, optimize maintenance schedules, and reduce downtime.",
         category: "
         subcategory: "
-        price: 7200;
+        price: 7200,
         currency: "
         pricingModel: "
         features: [
@@ -114,8 +113,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "IoT Sensors", "Data Analytics", "Cloud Computing", "Edge Computing"],
         complianceStandards: ["ISO 27001", "SOC2", "Industry Standards", "Data Security"],
@@ -130,7 +128,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         description: "Comprehensive AI-powered content creation platform that generates high-quality text, images, videos, and multimedia content for marketing and communication.",
         category: "
         subcategory: "
-        price: 4200;
+        price: 4200,
         currency: "
         pricingModel: "
         features: [
@@ -176,8 +174,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["GPT-5", "DALL-E 3", "Stable Diffusion", "Natural Language Processing", "Computer Vision"],
         complianceStandards: ["Copyright Compliance", "Content Guidelines", "Data Privacy", "Brand Safety"],
@@ -192,7 +189,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         description: "Advanced AI-powered financial trading platform that provides automated trading, risk management, and market analysis for institutional and retail investors.",
         category: "
         subcategory: "
-        price: 15000;
+        price: 15000,
         currency: "
         pricingModel: "
         features: [
@@ -238,8 +235,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "Deep Learning", "Financial APIs", "Real-time Data", "Cloud Computing"],
         complianceStandards: ["SEC", "FINRA", "SOX", "GDPR", "Financial Regulations"],
@@ -254,7 +250,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         description: "Comprehensive AI platform for healthcare research, drug discovery, clinical trial optimization, and medical literature analysis.",
         category: "
         subcategory: "
-        price: 18000;
+        price: 18000,
         currency: "
         pricingModel: "
         features: [
@@ -300,8 +296,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Deep Learning", "Natural Language Processing", "Bioinformatics", "Cloud Computing", "Data Analytics"],
         complianceStandards: ["HIPAA", "FDA", "GCP", "ISO 27001", "Research Ethics"],
@@ -316,7 +311,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         description: "Intelligent energy optimization platform that uses AI to optimize energy consumption, reduce costs, and improve sustainability across various industries.",
         category: "
         subcategory: "
-        price: 8500;
+        price: 8500,
         currency: "
         pricingModel: "
         features: [
@@ -362,8 +357,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "IoT Sensors", "Energy Management", "Cloud Computing", "Data Analytics"],
         complianceStandards: ["Energy Regulations", "Environmental Standards", "ISO 50001", "Data Security"],
@@ -378,7 +372,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         description: "Intelligent supply chain risk management platform that identifies, assesses, and mitigates risks across global supply chains using AI and predictive analytics.",
         category: "
         subcategory: "
-        price: 7800;
+        price: 7800,
         currency: "
         pricingModel: "
         features: [
@@ -424,8 +418,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Machine Learning", "Predictive Analytics", "Risk Modeling", "Data Analytics", "Cloud Computing"],
         complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "Industry Standards", "Risk Management"],
@@ -440,7 +433,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         description: "Advanced AI platform for legal research, case analysis, contract review, and legal document generation with comprehensive legal knowledge base.",
         category: "
         subcategory: "
-        price: 5500;
+        price: 5500,
         currency: "
         pricingModel: "
         features: [
@@ -486,8 +479,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Document AI", "Cloud Computing"],
         complianceStandards: ["Legal Standards", "Data Privacy", "Confidentiality", "Professional Ethics"],
@@ -502,7 +494,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         description: "Revolutionary AI-powered creative design platform that generates logos, graphics, websites, and creative content with human-like creativity and style.",
         category: "
         subcategory: "
-        price: 3800;
+        price: 3800,
         currency: "
         pricingModel: "
         features: [
@@ -548,8 +540,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["Generative AI", "Computer Vision", "Design Algorithms", "Creative AI", "Cloud Computing"],
         complianceStandards: ["Copyright Compliance", "Design Standards", "Brand Guidelines", "Quality Assurance"],

@@ -1,36 +1,33 @@
 interface ListingData {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  category: string;
-  location: string;
-  images: string[];
-  features: string[];
+  id: string,
+  title: string,
+  description: string,
+  price: number,
+  category: string,
+  location: string,
+  images: string[],
+  features: string[],
   specifications: Record<string, string>;
   contact: {
-    name: string;
-    email: string;
-    phone: string;
-  };
-  createdAt: Date;
-  updatedAt: Date;
-}
+    name: string,
+    email: string,
+    phone: string};
+  createdAt: Date,
+  updatedAt: Date}
 
 interface ListingOptions {
   category?: string;
   priceRange?: {
-    min: number;
-    max: number;
-  };
+    min: number,
+    max: number};
   location?: string;
   features?: string[];
 }
 
 export class RandomListingGenerator {
   private categories = [
-    'Technology',
-    'Real Estate',
+    'Technology';
+    'Real Estate';
     'Automotive',
     'Fashion',
     'Home & Garden',
@@ -68,7 +65,7 @@ export class RandomListingGenerator {
   ];
 
   generateListing(options: ListingOptions = {}): ListingData {
-    const category = options.category || this.getRandomItem(this.categories);
+    const category = options.category || this.getRandomItem(this.categories),
     const title = this.generateTitle(category);
     const description = this.generateDescription(title, category);
     const price = this.generatePrice(options.priceRange);
@@ -80,7 +77,7 @@ export class RandomListingGenerator {
 
     return {
       id: this.generateId(),
-      title,
+      title;
       description,
       price,
       category,
@@ -91,12 +88,10 @@ export class RandomListingGenerator {
       contact,
       createdAt: new Date(),
       updatedAt: new Date()
-    };
-  }
+    }}
 
   generateMultipleListings(count: number, options: ListingOptions = {}): ListingData[] {
-    const listings: ListingData[] = [];
-    
+    const listings: ListingData[] = [],
     for (let i = 0; i < count; i++) {
       listings.push(this.generateListing(options));
     }
@@ -131,8 +126,7 @@ export class RandomListingGenerator {
 
   private generatePrice(priceRange?: { min: number; max: number }): number {
     if (priceRange) {
-      return Math.floor(Math.random() * (priceRange.max - priceRange.min + 1)) + priceRange.min;
-    }
+      return Math.floor(Math.random() * (priceRange.max - priceRange.min + 1)) + priceRange.min}
 
     const ranges = [
       { min: 50, max: 500 },
@@ -140,19 +134,16 @@ export class RandomListingGenerator {
       { min: 500, max: 5000 },
       { min: 1000, max: 10000 },
       { min: 5000, max: 50000 }
-    ];
-
+    ],
     const range = this.getRandomItem(ranges);
     return Math.floor(Math.random() * (range.max - range.min + 1)) + range.min;
   }
 
   private generateImages(category: string): string[] {
-    const imageCount = Math.floor(Math.random() * 5) + 1;
-    const images: string[] = [];
-
+    const imageCount = Math.floor(Math.random() * 5) + 1,
+    const images: string[] = [],
     for (let i = 0; i < imageCount; i++) {
-      images.push(`https://picsum.photos/400/300?random=${Math.random()}`);
-    }
+      images.push(`https: //picsum.photos/400/300?random=${Math.random()}`)}
 
     return images;
   }
@@ -160,8 +151,7 @@ export class RandomListingGenerator {
   private generateFeatures(customFeatures?: string[]): string[] {
     const availableFeatures = customFeatures || this.features;
     const featureCount = Math.floor(Math.random() * 3) + 1;
-    const selectedFeatures: string[] = [];
-
+    const selectedFeatures: string[] = [],
     for (let i = 0; i < featureCount; i++) {
       const feature = this.getRandomItem(availableFeatures);
       if (!selectedFeatures.includes(feature)) {
@@ -194,8 +184,7 @@ export class RandomListingGenerator {
         specs['Transmission'] = this.getRandomItem(['Automatic', 'Manual', 'CVT']);
         specs['Fuel Type'] = this.getRandomItem(['Gasoline', 'Electric', 'Hybrid', 'Diesel']);
         break;
-      default:
-        specs['Brand'] = 'Generic';
+      default: specs['Brand'] = 'Generic',
         specs['Model'] = 'Standard';
         specs['Condition'] = 'Good';
     }
@@ -211,16 +200,14 @@ export class RandomListingGenerator {
       name: `${this.getRandomItem(firstNames)} ${this.getRandomItem(lastNames)}`,
       email: `contact${Math.floor(Math.random() * 1000)}@example.com`,
       phone: `(${Math.floor(Math.random() * 900) + 100}) ${Math.floor(Math.random() * 900) + 100}-${Math.floor(Math.random() * 9000) + 1000}`
-    };
-  }
+    }}
 
   private generateId(): string {
     return `listing_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
   }
 
   private getRandomItem<T>(array: T[]): T {
-    return array[Math.floor(Math.random() * array.length)];
-  }
+    return array[Math.floor(Math.random() * array.length)]}
 }
 
 export function generateRandomListing(options?: ListingOptions): ListingData {

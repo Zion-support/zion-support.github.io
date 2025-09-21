@@ -1,10 +1,10 @@
 // AppProps type removed for JavaScript compatibility
 import { ThemeProvider } from '../components/ThemeProvider'
-import { Toaster } from '../components/ui/toaster'
-import { Toaster as SonnerToaster } from '../components/ui/sonner'
+// import { Toaster } from '../components/ui/toaster'
+// import { Toaster as SonnerToaster } from '../components/ui/sonner'
 import Header from '../components/Header'
 import { Footer } from '../components/Footer'
-import '../src/styles/globals.css'
+// import '../src/styles/globals.css' // Temporarily disabled for build
 
 export default function App({ Component, pageProps }) {
   return (
@@ -16,8 +16,8 @@ export default function App({ Component, pageProps }) {
         </main>
         <Footer />
       </div>
-      <Toaster />
-      <SonnerToaster />
+      {/* <Toaster />
+      <SonnerToaster /> */}
     </ThemeProvider>
   )
 }

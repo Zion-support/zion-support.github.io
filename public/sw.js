@@ -112,8 +112,7 @@ async function sendAnalytics(data) {
   return fetch('/api/analytics', {
     method: 'POST',
     body: JSON.stringify(data)
-  });
-}
+  })}
 
 async function clearStoredAnalytics() {
   // Clear sent analytics data

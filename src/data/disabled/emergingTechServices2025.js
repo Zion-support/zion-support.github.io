@@ -1,12 +1,12 @@
 export const emergingTechServices2025 = [
     {
-        id: 1;
+        id: 1,
         name: "
         category: "
         subcategory: "
         description: "Comprehensive space technology platform for satellite communications, Earth observation, and space data analytics",
         pricing: "
-        price: 50000;
+        price: 50000,
         pricingModel: "
         features: [
             "
@@ -39,16 +39,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$50,000/month (Industry average: $100,000/month)",
         competitors: ["SpaceX Starlink", "OneWeb", "Amazon Project Kuiper", "Telesat"],
         roi: "
         setupTime: "
         integrations: ["AWS Ground Station", "Azure Orbital", "GCP Space", "Custom APIs"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
-        innovationScore: 99;
+        innovationScore: 99,
         useCases: [
             "
             "Earth observation and monitoring",
@@ -63,13 +62,13 @@ export const emergingTechServices2025 = [
         futurePotential: "Mars colonization support, deep space exploration"
     },
     {
-        id: 2;
+        id: 2,
         name: "
         category: "
         subcategory: "
         description: "Advanced biotechnology platform combining AI with genetic engineering, drug discovery, and synthetic biology",
         pricing: "
-        price: 35000;
+        price: 35000,
         pricingModel: "
         features: [
             "
@@ -102,16 +101,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$35,000/month (Industry average: $70,000/month)",
         competitors: ["Insitro", "Atomwise", "BenevolentAI", "Recursion Pharmaceuticals"],
         roi: "
         setupTime: "
         integrations: ["Lab management systems", "DNA sequencers", "Protein analyzers", "Cloud platforms"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
-        innovationScore: 97;
+        innovationScore: 97,
         useCases: [
             "
             "Genetic disease treatment",
@@ -126,13 +124,13 @@ export const emergingTechServices2025 = [
         futurePotential: "Human augmentation, synthetic life forms, bio-computing"
     },
     {
-        id: 3;
+        id: 3,
         name: "
         category: "
         subcategory: "
         description: "Revolutionary nanotechnology platform for atomic-scale manufacturing, materials science, and quantum materials",
         pricing: "
-        price: 40000;
+        price: 40000,
         pricingModel: "
         features: [
             "
@@ -165,16 +163,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$40,000/month (Industry average: $80,000/month)",
         competitors: ["Nano Dimension", "Nanofabrica", "Carbon", "Desktop Metal"],
         roi: "
         setupTime: "
         integrations: ["CAD software", "3D printers", "Microscopes", "Analytical instruments"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
-        innovationScore: 98;
+        innovationScore: 98,
         useCases: [
             "
             "Advanced electronics",
@@ -189,13 +186,13 @@ export const emergingTechServices2025 = [
         futurePotential: "Molecular machines, quantum computers, space elevators"
     },
     {
-        id: 4;
+        id: 4,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 30000;
+        price: 30000,
         pricingModel: "
         features: [
             "
@@ -228,16 +225,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$30,000/month (Industry average: $60,000/month)",
         competitors: ["Quantum Xchange", "ID Quantique", "Toshiba Quantum", "NTT Quantum"],
         roi: "
         setupTime: "
         integrations: ["Quantum computers", "Fiber optic networks", "Quantum sensors", "Cloud platforms"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
-        innovationScore: 99;
+        innovationScore: 99,
         useCases: [
             "
             "Financial transactions",
@@ -252,13 +248,13 @@ export const emergingTechServices2025 = [
         futurePotential: "Quantum teleportation, quantum AI networks, interplanetary quantum communication"
     },
     {
-        id: 5;
+        id: 5,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 25000;
+        price: 25000,
         pricingModel: "
         features: [
             "
@@ -291,16 +287,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$25,000/month (Industry average: $50,000/month)",
         competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
         roi: "
         setupTime: "
         integrations: ["EEG devices", "fMRI machines", "AI systems", "Medical devices"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
-        innovationScore: 96;
+        innovationScore: 96,
         useCases: [
             "
             "Prosthetic control",
@@ -315,13 +310,13 @@ export const emergingTechServices2025 = [
         futurePotential: "Human consciousness upload, collective intelligence, telepathic communication"
     },
     {
-        id: 6;
+        id: 6,
         name: "
         category: "
         subcategory: "
         description: "Revolutionary fusion energy platform for clean, unlimited energy production using advanced plasma physics",
         pricing: "
-        price: 100000;
+        price: 100000,
         pricingModel: "
         features: [
             "
@@ -354,16 +349,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$100,000/month (Industry average: $200,000/month)",
         competitors: ["ITER", "Commonwealth Fusion", "General Fusion", "Helion Energy"],
         roi: "
         setupTime: "
         integrations: ["Power grids", "Energy storage", "Industrial systems", "Research facilities"],
-        freeTier: false;
+        freeTier: false,
         trialPeriod: "
-        innovationScore: 100;
+        innovationScore: 100,
         useCases: [
             "
             "Industrial power",
@@ -378,13 +372,13 @@ export const emergingTechServices2025 = [
         futurePotential: "Interstellar travel, space colonization, unlimited energy civilization"
     },
     {
-        id: 7;
+        id: 7,
         name: "
         category: "
         subcategory: "
         description: "Comprehensive digital twin platform for creating virtual replicas of physical systems, processes, and environments",
         pricing: "
-        price: 15000;
+        price: 15000,
         pricingModel: "
         features: [
             "
@@ -417,16 +411,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$15,000/month (Industry average: $30,000/month)",
         competitors: ["Siemens Digital Twin", "GE Digital Twin", "Microsoft Azure Digital Twins", "IBM Digital Twin"],
         roi: "
         setupTime: "
         integrations: ["IoT platforms", "CAD software", "PLM systems", "Cloud platforms"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
-        innovationScore: 94;
+        innovationScore: 94,
         useCases: [
             "
             "Infrastructure monitoring",
@@ -441,13 +434,13 @@ export const emergingTechServices2025 = [
         futurePotential: "Metaverse integration, consciousness simulation, parallel universe modeling"
     },
     {
-        id: 8;
+        id: 8,
         name: "
         category: "
         subcategory: "
         description: "Advanced holographic display platform for immersive 3D visualization, telepresence, and augmented reality",
         pricing: "
-        price: 20000;
+        price: 20000,
         pricingModel: "
         features: [
             "
@@ -480,16 +473,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$20,000/month (Industry average: $40,000/month)",
         competitors: ["Looking Glass", "Light Field Lab", "RealView Imaging", "Leia Inc"],
         roi: "
         setupTime: "
         integrations: ["3D modeling software", "VR platforms", "AR frameworks", "Display systems"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
-        innovationScore: 95;
+        innovationScore: 95,
         useCases: [
             "
             "Remote collaboration",
@@ -504,13 +496,13 @@ export const emergingTechServices2025 = [
         futurePotential: "Star Wars-style communication, virtual reality replacement, 3D internet"
     },
     {
-        id: 9;
+        id: 9,
         name: "
         category: "
         subcategory: "
         description: "
         pricing: "
-        price: 18000;
+        price: 18000,
         pricingModel: "
         features: [
             "
@@ -543,16 +535,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$18,000/month (Industry average: $35,000/month)",
         competitors: ["Q-CTRL", "Quantum Machines", "Rigetti", "D-Wave"],
         roi: "
         setupTime: "
         integrations: ["Laboratory equipment", "Research platforms", "Data analysis tools", "Cloud systems"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
-        innovationScore: 97;
+        innovationScore: 97,
         useCases: [
             "
             "Medical imaging",
@@ -567,13 +558,13 @@ export const emergingTechServices2025 = [
         futurePotential: "Quantum internet, quantum computers, quantum communication networks"
     },
     {
-        id: 10;
+        id: 10,
         name: "
         category: "
         subcategory: "
         description: "Comprehensive autonomous systems platform for robotics, drones, vehicles, and intelligent automation",
         pricing: "
-        price: 25000;
+        price: 25000,
         pricingModel: "
         features: [
             "
@@ -606,16 +597,15 @@ export const emergingTechServices2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         marketPrice: "$25,000/month (Industry average: $50,000/month)",
         competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC"],
         roi: "
         setupTime: "
         integrations: ["ROS", "Industrial systems", "Cloud platforms", "IoT networks"],
-        freeTier: true;
+        freeTier: true,
         trialPeriod: "
-        innovationScore: 96;
+        innovationScore: 96,
         useCases: [
             "
             "Warehouse operations",

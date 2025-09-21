@@ -1,73 +1,172 @@
-import { Globe,,, Server,,, Clock,,, MapPin,,, Check,,  } from 'lucide-react'
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
 import React from "react";
-interface CountryServiceCardProps {
-isPopular?: boolean,
+
+<<<<<<< HEAD
+interface CountryPricing {
+  country: string;
+  pricePerIncident: number;
+  currency: string;
 }
+
+interface CountryServiceCardProps {
+  country: CountryPricing;
+  onSelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+  isPopular?: boolean;
+}
+
+=======
+interface CountryServiceCardProps {
+  country: {
+    name: string;
+    code: string;
+    pricePerIncident: number;
+    responseTime: string;
+    coverage: string;
+  };
+  onSelect: () => void;
+  onQuote: () => void;
+  isPopular?: boolean;
+}
+
+>>>>>>> pr-22753
 export function CountryServiceCard({
   country,
-onSelect
+  onSelect,
   onQuote,
-isPopular,
+  isPopular,
 }: CountryServiceCardProps) {
-  // Get region flag based on country name (for demo purposes)
-          </div>
-          {isPopular && (
-            <Badge className='bg-zion-purple text-white border-none'>
-              Popular
-            </Badge>
-          )}
+<<<<<<< HEAD
+  const getResponseTime = (countryName: string) => {
+    // Mock response times based on country
+    const responseTimes: { [key: string]: string } = {
+      'United States': '2-4 hours',
+      'Canada': '4-6 hours',
+      'United Kingdom': '6-8 hours',
+      'Germany': '8-12 hours',
+      'Australia': '12-24 hours',
+    };
+    return responseTimes[countryName] || '24-48 hours';
+  };
+
+  return (
+    <div className={`bg-slate-800 rounded-xl p-6 border-2 transition-all duration-300 hover:border-blue-400 ${isPopular ? 'border-purple-500' : 'border-slate-700'}`}>
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center space-x-3">
+          <Globe className="h-6 w-6 text-blue-400" />
+          <h3 className="text-xl font-semibold text-white">{country.country}</h3>
         </div>
-      </CardHeader>
-      <CardContent className='pb-4'>
-        <p className='text-3xl font-bold text-zion-cyan mb-4'>
+        {isPopular && (
+          <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+=======
+  return (
+    <div className={`relative bg-gradient-to-br from-zion-blue to-zion-blue-dark border border-zion-blue-light rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 ${isPopular ? 'ring-2 ring-zion-cyan' : ''}`}>
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center space-x-3">
+          <Globe className="h-6 w-6 text-zion-cyan" />
+          <h3 className="text-xl font-semibold text-white">{country.name}</h3>
+        </div>
+        {isPopular && (
+          <span className="bg-zion-purple text-white px-3 py-1 rounded-full text-sm font-medium">
+>>>>>>> pr-22753
+            Popular
+          </span>
+        )}
+      </div>
+<<<<<<< HEAD
+      
+      <div className='mb-4'>
+        <p className='text-3xl font-bold text-blue-400 mb-4'>
           ${country.pricePerIncident.toFixed(2)}
         </p>
-        <div className='space-y-2 text-zion-slate-light'>
+        
+        <div className='space-y-2 text-gray-300'>
           <div className='flex items-start'>
-            <Clock className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>
-              Typical response time: {getResponseTime(country.country)}
-            </span>
+            <Clock className='h-4 w-4 mr-2 text-purple-500 mt-1' />
+            <span>Typical response time: {getResponseTime(country.country)}</span>
           </div>
           <div className='flex items-start'>
-            <MapPin className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>Service available in major cities</span>
+            <Server className='h-4 w-4 mr-2 text-green-500 mt-1' />
+            <span>Onsite IT Support</span>
           </div>
           <div className='flex items-start'>
-            <Server className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>Hardware & network support</span>
+            <MapPin className='h-4 w-4 mr-2 text-blue-500 mt-1' />
+            <span>Local technicians available</span>
           </div>
           <div className='flex items-start'>
-            <Check className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>First hour included</span>
+            <Check className='h-4 w-4 mr-2 text-green-500 mt-1' />
+            <span>24/7 Emergency support</span>
           </div>
         </div>
-      </CardContent>
-      <CardFooter className='flex flex-col space-y-2'>
-        <Button
-onClick = {() => onSelect(country),}
-          className={`w-full ${
-            isPopular
-              ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
-              : 'bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light'
-          }`}
+      </div>
+      
+      <div className="flex space-x-3">
+        <button
+          onClick={() => onSelect(country)}
+          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
         >
-          Select Service
-        </Button>
-        <Button
-variant='outline'
-          className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-          onClick={() => onQuote?.(country)}        >
+          Select
+        </button>
+        {onQuote && (
+          <button
+            onClick={() => onQuote(country)}
+            className="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition-colors"
+          >
+            Get Quote
+          </button>
+        )}
+=======
+
+      <div className="space-y-3 mb-6">
+        <div className="flex items-center space-x-3">
+          <Server className="h-5 w-5 text-zion-cyan" />
+          <span className="text-zion-slate-light">Starting at</span>
+          <span className="text-white font-semibold">${country.pricePerIncident.toFixed(2)}/incident</span>
+        </div>
+        
+        <div className="flex items-center space-x-3">
+          <Clock className="h-5 w-5 text-zion-cyan" />
+          <span className="text-zion-slate-light">Response Time:</span>
+          <span className="text-white">{country.responseTime}</span>
+        </div>
+        
+        <div className="flex items-center space-x-3">
+          <MapPin className="h-5 w-5 text-zion-cyan" />
+          <span className="text-zion-slate-light">Coverage:</span>
+          <span className="text-white">{country.coverage}</span>
+        </div>
+      </div>
+
+      <div className="space-y-2 mb-6">
+        <div className="flex items-center space-x-2">
+          <Check className="h-4 w-4 text-green-400" />
+          <span className="text-zion-slate-light text-sm">On-site technical support</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Check className="h-4 w-4 text-green-400" />
+          <span className="text-zion-slate-light text-sm">Hardware diagnostics & repair</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Check className="h-4 w-4 text-green-400" />
+          <span className="text-zion-slate-light text-sm">Network troubleshooting</span>
+        </div>
+      </div>
+
+      <div className="flex space-x-3">
+        <button
+          onClick={onSelect}
+          className="flex-1 bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg transition-colors font-medium"
+        >
+          Select
+        </button>
+        <button
+          onClick={onQuote}
+          className="flex-1 bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-4 py-2 rounded-lg transition-colors font-medium"
+        >
           Get Quote
-        </Button>
-        <Button
-asChild
-          variant='ghost'
-          className='w-full text-zion-cyan hover:text-zion-purple'
-        >
-          <Link href='/contact'>Contact Sales</Link>
-        </Button>
-      </CardFooter>
-    </Card>
-  )
+        </button>
+>>>>>>> pr-22753
+      </div>
+    </div>
+  );
 }

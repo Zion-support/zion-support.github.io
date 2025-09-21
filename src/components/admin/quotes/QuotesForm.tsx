@@ -11,25 +11,24 @@ import { CalendarIcon, Save, X } from 'lucide-react';
 import { format } from 'date-fns';
 
 interface QuoteFormData {
-  clientName: string;
-  projectTitle: string;
-  description: string;
-  amount: number;
-  status: 'pending' | 'approved' | 'rejected' | 'expired';
-  validUntil: Date;
-  notes: string;
-}
+  clientName: string,
+  projectTitle: string,
+  description: string,
+  amount: number,
+  status: 'pending' | 'approved' | 'rejected' | 'expired',
+  validUntil: Date,
+  notes: string}
 
 interface QuotesFormProps {
   initialData?: Partial<QuoteFormData>;
-  onSave: (data: QuoteFormData) => void;
-  onCancel: () => void;
+  onSave: (data: QuoteFormData) => void,
+  onCancel: () => void,
   isEditing?: boolean;
 }
 
 export const QuotesForm: React.FC<QuotesFormProps> = ({
   initialData,
-  onSave,
+  onSave;
   onCancel,
   isEditing = false
 }) => {
@@ -41,8 +40,7 @@ export const QuotesForm: React.FC<QuotesFormProps> = ({
     status: initialData?.status || 'pending',
     validUntil: initialData?.validUntil || new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
     notes: initialData?.notes || ''
-  });
-
+  }),
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validateForm = (): boolean => {
@@ -73,7 +71,7 @@ export const QuotesForm: React.FC<QuotesFormProps> = ({
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (validateForm()) {
       onSave(formData);
     }

@@ -169,8 +169,8 @@ export function ServicesShowcase() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl m,  d:text-5xl font-bold text-white mb-6">
-            Comprehensive Micro SAAS Solutions;
+          <h2 className="text-4xl m,  d: text-5xl font-bold text-white mb-6">
+            Comprehensive Micro SAAS Solutions,
           </h2>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
             Transform your business with our enterprise-grade micro SAAS services. 
@@ -178,15 +178,15 @@ export function ServicesShowcase() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/micro-saas-services">
-              <Button size="lg" className="bg-white text-zion-blue hove, r:bg-gray-100">
+              <Button size="lg" className="bg-white text-zion-blue hove, r: bg-gray-100">
                 <Brain className="h-5 w-5 mr-2"/>
-                Explore All Services;
+                Explore All Services,
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hove, r:bg-white hove, r:text-zion-blue">
+              <Button size="lg" variant="outline" className="border-white text-white hove, r:bg-white hove, r: text-zion-blue">
                 <Phone className="h-5 w-5 mr-2"/>
-                Get Consultation;
+                Get Consultation,
               </Button>
             </Link>
           </div>
@@ -248,8 +248,8 @@ export function ServicesShowcase() {
                       ${service.price}
                       <span className="text-sm text-zion-slate-light">/month</span>
                     </div>
-                    <Button size="sm" className="bg-zion-purple hove, r:bg-zion-purple-dark">
-                      Learn More;
+                    <Button size="sm" className="bg-zion-purple hove, r: bg-zion-purple-dark">
+                      Learn More,
                     </Button>
                   </div>
                 </CardContent>
@@ -293,13 +293,13 @@ export function ServicesShowcase() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-white rounded-2xl p-8 m,  d:p-12">
+        <div className="bg-white rounded-2xl p-8 m,  d: p-12">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-zion-blue mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Get in touch with our team to discuss your needs and discover how our micro SAAS solutions can drive your success;
+              Get in touch with our team to discuss your needs and discover how our micro SAAS solutions can drive your success,
             </p>
           </div>
           
@@ -344,18 +344,18 @@ export function ServicesShowcase() {
               <h4 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h4>
               <div className="space-y-4">
                 <Link to="/request-quote">
-                  <Button className="w-full bg-zion-purple hove, r:bg-zion-purple-dark">
-                    Request Custom Quote;
+                  <Button className="w-full bg-zion-purple hove, r: bg-zion-purple-dark">
+                    Request Custom Quote,
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button variant="outline" className="w-full border-zion-purple text-zion-purple hove, r:bg-zion-purple hove, r:text-white">
-                    Schedule Consultation;
+                  <Button variant="outline" className="w-full border-zion-purple text-zion-purple hove, r:bg-zion-purple hove, r: text-white">
+                    Schedule Consultation,
                   </Button>
                 </Link>
                 <Link to="/micro-saas-services">
-                  <Button variant="outline" className="w-full border-zion-blue text-zion-blue hove, r:bg-zion-blue hove, r:text-white">
-                    View All Services;
+                  <Button variant="outline" className="w-full border-zion-blue text-zion-blue hove, r:bg-zion-blue hove, r: text-white">
+                    View All Services,
                   </Button>
                 </Link>
               </div>
@@ -376,8 +376,8 @@ export function ServicesShowcase() {
           
           <div className="text-center mt-12">
             <Link to="/micro-saas-services">
-              <Button size="lg" className="bg-zion-purple hove, r:bg-zion-purple-dark">
-                Explore All Micro SAAS Services;
+              <Button size="lg" className="bg-zion-purple hove, r: bg-zion-purple-dark">
+                Explore All Micro SAAS Services,
                 <ArrowRight className="h-5 w-5 ml-2"/>
               </Button>
             </Link>

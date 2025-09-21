@@ -3,12 +3,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface PerformanceMetrics {
-  timestamp: number;
-  memory: number;
-  cpu: number;
-  fps: number;
-  network: number;
-}
+  timestamp: number,
+  memory: number,
+  cpu: number,
+  fps: number,
+  network: number}
 
 export const RealTimePerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
@@ -31,7 +30,7 @@ export const RealTimePerformanceMonitor: React.FC = () => {
       
       const newMetric: PerformanceMetrics = {
         timestamp: Date.now(),
-        memory,
+        memory;
         cpu,
         fps,
         network
@@ -59,8 +58,7 @@ export const RealTimePerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'M') {
-        setIsVisible(!isVisible);
-      }
+        setIsVisible(!isVisible)}
     };
 
     window.addEventListener('keydown', handleKeyPress);
@@ -68,10 +66,8 @@ export const RealTimePerformanceMonitor: React.FC = () => {
   }, [isVisible]);
 
   if (!isVisible) return null;
-
   const currentMetric = metrics[metrics.length - 1];
   if (!currentMetric) return null;
-
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -145,7 +141,5 @@ export const RealTimePerformanceMonitor: React.FC = () => {
         <span className="text-gray-500 text-xs">Press Ctrl+Shift+M to toggle</span>
       </div>
     </motion.div>
-  );
-};
-
+  )};
 export default RealTimePerformanceMonitor;

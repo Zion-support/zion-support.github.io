@@ -5,7 +5,7 @@ import '@testing - library / jest - dom';
 export class TestingSystem {
   static async testUserInteraction(element: HTMLElementaction: 'click' | 'type' | 'hover') {
     switch (action) {
-      case 'click': ;
+      case 'click': ,
         element.click();
         break;
       case 'type': /  / Handle typing;

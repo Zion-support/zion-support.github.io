@@ -1,15 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
+  output: 'export',
+  trailingSlash: true,
   images: {
-    domains: ["localhost"],
+    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: true,
+    tsconfigPath: false,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
+  swcMinify: false,
   experimental: {
     esmExternals: false,
   },
@@ -21,13 +25,14 @@ const nextConfig = {
     postcssOptions: false,
   },
   webpack: (config, { isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibility
+    // Minimal webpack configuration
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
       };
     }
+    
     return config;
   },
 };

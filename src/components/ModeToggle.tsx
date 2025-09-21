@@ -16,16 +16,15 @@ export function ModeToggle() {
 
   if (!isClient) {
     return (
-      <Button  size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground">
+      <Button  size="icon" disabled aria-label="Loading theme toggle" className="focus-visible: ring-ring relative text-foreground">
         <div className="h-5 w-5 bg-muted rounded animate-pulse" />
         <span className="sr-only">Loading theme toggle</span>
       </Button>
     )
   }
 
-  const isDarkMode = theme === 'dark' || (theme === 'system' && typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-  const resolvedTheme = theme === 'system' ? (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
-
+  const isDarkMode = theme === 'dark' || (theme === 'system' && typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches),
+  const resolvedTheme = theme === 'system' ? (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme,
   const handleToggle = () => {
     setTheme(isDarkMode ? 'light' : 'dark');
   };
