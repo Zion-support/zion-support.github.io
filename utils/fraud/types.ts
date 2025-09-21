@@ -2,7 +2,7 @@
   id: string,
   case_id: string,
   type: AdminActionType,
-export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review',
+export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS',
 export interface FraudEvent {,
   id: string,
@@ -19,7 +19,7 @@ export interface HeuristicEvaluation {,
   reasons: string[],
   severity: 'low' | 'medium' | 'high'}
 ,
-export interface GptClassification {,
+export interface GptClassification {;
   label: GptClassificationLabel,
   reason: string,
   confidence: number, // 0..1
@@ -28,11 +28,11 @@ export interface GptClassification {,
 export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED',
 export interface StoredFraudRecord extends FraudEvent {,
   heuristic: HeuristicEvaluation,
-  gpt?: GptClassification,
+  gpt?: GptClassification;
   autoHidden: boolean,
   status: FraudReviewStatus}
 ,
-export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE',
+export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE';
 export interface AdminActionRecord {,
   id: string,
   fraudId: string,
@@ -52,8 +52,7 @@ export interface ListFilters {,
   source?: MonitoredSource,
   userId?: string,
   label?: GptClassificationLabel,
-  status?: FraudReviewStatus,
-}
+  status?: FraudReviewStatus}
 ,
 export interface MonthlyReport {,
   month: string, // YYYY-MM,
@@ -64,6 +63,5 @@ export interface MonthlyReport {,
     dangerous: number},
   bySource: Record<MonitoredSourcenumber>,
   falsePositives: number, // count of IGNORED actions,
-  topReasons: Array<{ reason: string, count: number }>,
-}
+  topReasons: Array<{ reason: string, count: number }>}
 ,

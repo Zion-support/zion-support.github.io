@@ -6,17 +6,15 @@ exports.handler = async function () {
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
   const githubBranch = process.env.GIT_BRANCH || 'main',
 
-  function log(msg) { console.log(`[content-freshness] ${msg}`), }
+  function log(msg) { console.log(`[content-freshness] ${msg}`)}
 
   async function fetchText(url) {
     try {
       const r = await fetch(url, { redirect: 'follow' }),
       if (!r.ok) return { ok: false, status: r.status, text: '' },
       const text = await r.text(),
-      return { ok: true, status: r.status, text },
-    } catch (e) {
-      return { ok: false, status: 0, text: '', error: String(e) },
-    }
+      return { ok: true, status: r.status, text }} catch (e) {
+      return { ok: false, status: 0, text: '', error: String(e) }}
   }
 
   function parseSitemap(xml) {
@@ -27,10 +25,8 @@ exports.handler = async function () {
       const loc = (block.match(/<loc>(.*?)<\/loc>/) || [])[1],
       const lastmod = (block.match(/<lastmod>(.*?)<\/lastmod>/) || [])[1],
       if (loc) entries.push({ loc: loc.trim(), lastmod: lastmod ? lastmod.trim() : null }),
-      if (entries.length >= 1000) break,
-    }
-    return entries,
-  }
+      if (entries.length >= 1000) break}
+    return entries}
 
   async function commitFile(path, content, message) {
     if (!githubToken) return { ok: false, status: 0, error: 'No GITHUB_TOKEN provided' },
@@ -41,14 +37,13 @@ exports.handler = async function () {
     let sha,
     try {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}?ref=${encodeURIComponent(githubBranch)}`, { headers }),
-      if (getRes.ok) { const json = await getRes.json(), sha = json.sha, }
+      if (getRes.ok) { const json = await getRes.json(), sha = json.sha}
     } catch {}
     const body = { message, content: Buffer.from(content).toString('base64'), branch: githubBranch, sha },
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path)}`, { method: 'PUT', headers, body: JSON.stringify(body) }),
     const ok = putRes.ok, const status = putRes.status, let error,
-    if (!ok) { try { error = await putRes.text(), } catch (e) { error = String(e), } }
-    return { ok, status, error },
-  }
+    if (!ok) { try { error = await putRes.text()} catch (e) { error = String(e)} }
+    return { ok, status, error }}
 
   try {
     if (!baseUrl) return { statusCode: 200, body: JSON.stringify({ ok: false, error: 'No base URL' }) },
@@ -60,10 +55,8 @@ exports.handler = async function () {
       let daysOld = null,
       if (it.lastmod) {
         const t = Date.parse(it.lastmod),
-        if (!Number.isNaN(t)) daysOld = Math.round((now - t) / (1000 * 60 * 60 * 24)),
-      }
-      return { url: it.loc, lastmod: it.lastmod, daysOld },
-    }),
+        if (!Number.isNaN(t)) daysOld = Math.round((now - t) / (1000 * 60 * 60 * 24))}
+      return { url: it.loc, lastmod: it.lastmod, daysOld }}),
     analyzed.sort((a, b) => (b.daysOld || 0) - (a.daysOld || 0)),
 
     const summary = {
@@ -93,9 +86,7 @@ exports.handler = async function () {
       commitFile(mdPath, mdLines.join('\n'), msg)
     ]),
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, totals: summary.totals, jsonRes, mdRes }) },
-  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: true, totals: summary.totals, jsonRes, mdRes }) }} catch (e) {
     log(String(e)),
-    return { statusCode: 500, body: JSON.stringify({ ok: false, error: String(e) }) },
-  }
+    return { statusCode: 500, body: JSON.stringify({ ok: false, error: String(e) }) }}
 },

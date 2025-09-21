@@ -24,9 +24,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
+      '@': path.resolve(__dirname, './src')}},
   build: {
     target: 'es2020',
     minify: 'terser',
@@ -61,8 +59,7 @@ export const CategoriesSection = () => {
     { name: 'Cloud Solutions', icon: '☁️', color: 'from-blue-500 to-cyan-500' },
     { name: 'Cybersecurity', icon: '🔒', color: 'from-red-500 to-orange-500' },
     { name: 'Data Analytics', icon: '📊', color: 'from-green-500 to-teal-500' }
-  ];
-
+  ],
   return (
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,8 +83,7 @@ export const CategoriesSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 `,
     
     'src/components/BenefitsSection.tsx': `import React from 'react';
@@ -116,8 +112,7 @@ export const BenefitsSection = () => {
       title: 'Quality Assurance',
       description: 'Rigorous testing and quality control processes'
     }
-  ];
-
+  ],
   return (
     <div className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,8 +137,7 @@ export const BenefitsSection = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
       </div>
     </div>
@@ -177,8 +171,7 @@ export const HowItWorksSection = () => {
       title: 'Support',
       description: 'Ongoing maintenance and continuous optimization'
     }
-  ];
-
+  ],
   return (
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -212,8 +205,7 @@ export const HowItWorksSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 `,
     
     'src/components/FeaturedListingsSection.tsx': `import React from 'react';
@@ -246,8 +238,7 @@ export const FeaturedListingsSection = () => {
       price: 2500,
       category: 'Security'
     }
-  ];
-
+  ],
   return (
     <div className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -287,8 +278,7 @@ export const FeaturedListingsSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 `,
     
     'src/components/HeroSection.tsx': `import React from 'react';
@@ -336,16 +326,15 @@ export const HeroSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 `,
     
     'src/components/SEO.tsx': `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   canonical?: string;
   url?: string;
   image?: string;
@@ -357,7 +346,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical || url} />
-      <meta property="og:title" content={title} />
+      <meta property="og: title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image || '/og-image.jpg'} />
@@ -365,8 +354,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </Helmet>
-  );
-};
+  )};
 `
   };
   
@@ -375,12 +363,10 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
     const dir = path.dirname(fullPath);
     
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+      fs.mkdirSync(dir, { recursive: true })}
     
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created component: ${filePath}`);
-  });
+    console.log(`✅ Created component: ${filePath}`)});
 };
 
 // 3. Create missing data files
@@ -476,12 +462,10 @@ const createMissingData = () => {
     const dir = path.dirname(fullPath);
     
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+      fs.mkdirSync(dir, { recursive: true })}
     
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created data file: ${filePath}`);
-  });
+    console.log(`✅ Created data file: ${filePath}`)});
 };
 
 // 4. Create missing home components
@@ -498,8 +482,7 @@ export const QuickAccess = () => {
     { name: 'Team', icon: Users, href: '/team', color: 'from-blue-500 to-cyan-500' },
     { name: 'Security', icon: Shield, href: '/security', color: 'from-green-500 to-teal-500' },
     { name: 'Cloud', icon: Cloud, href: '/services?category=cloud', color: 'from-orange-500 to-red-500' }
-  ];
-
+  ],
   return (
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -526,8 +509,7 @@ export const QuickAccess = () => {
                   <ArrowRight className="h-5 w-5 mx-auto" />
                 </Link>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
       </div>
     </div>
@@ -562,8 +544,7 @@ export const FeatureCTAs = () => {
       href: '/contact',
       color: 'bg-purple-600 hover:bg-purple-700'
     }
-  ];
-
+  ],
   return (
     <div className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -591,8 +572,7 @@ export const FeatureCTAs = () => {
                   <ArrowRight className="h-5 w-5 mx-auto" />
                 </Link>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
       </div>
     </div>
@@ -635,8 +615,7 @@ export const FeatureHighlights = () => {
       title: 'Proven Results',
       description: 'Track record of successful project deliveries'
     }
-  ];
-
+  ],
   return (
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -661,8 +640,7 @@ export const FeatureHighlights = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
       </div>
     </div>
@@ -712,8 +690,7 @@ export const ITServiceRequestHero = () => {
         </div>
       </div>
     </div>
-  );
-};`
+  )};`
   };
   
   Object.entries(homeComponents).forEach(([filePath, content]) => {
@@ -721,12 +698,10 @@ export const ITServiceRequestHero = () => {
     const dir = path.dirname(fullPath);
     
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+      fs.mkdirSync(dir, { recursive: true })}
     
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created home component: ${filePath}`);
-  });
+    console.log(`✅ Created home component: ${filePath}`)});
 };
 
 // 5. Create other missing components
@@ -740,7 +715,6 @@ export const FloatingCTA = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -772,8 +746,7 @@ export const FloatingCTA = () => {
         </div>
       </motion.div>
     </AnimatePresence>
-  );
-};`,
+  )};`,
     
     'src/components/ServicesShowcase.tsx': `import React from 'react';
 import { motion } from 'framer-motion';
@@ -799,8 +772,7 @@ export const ServicesShowcase = () => {
       rating: 4.7,
       price: 8000
     }
-  ];
-
+  ],
   return (
     <div className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -835,8 +807,7 @@ export const ServicesShowcase = () => {
         </div>
       </div>
     </div>
-  );
-};`
+  )};`
   };
   
   Object.entries(otherComponents).forEach(([filePath, content]) => {
@@ -844,12 +815,10 @@ export const ServicesShowcase = () => {
     const dir = path.dirname(fullPath);
     
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+      fs.mkdirSync(dir, { recursive: true })}
     
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created component: ${filePath}`);
-  });
+    console.log(`✅ Created component: ${filePath}`)});
 };
 
 // 6. Install missing dependencies
@@ -878,7 +847,7 @@ createOtherComponents();
 installDependencies();
 
 console.log('🎉 Comprehensive improvements completed!');
-console.log('📊 Next steps:');
+console.log('📊 Next steps: '),
 console.log('1. Run "npm install" to install dependencies');
 console.log('2. Run "npm run build" to test the build');
 console.log('3. Run "npm run dev" to start development server');

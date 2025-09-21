@@ -1,8 +1,35 @@
 {
-  "timestamp": "2025-07-02T20:24:05.790Z",
-  "totalSize": 0,
-  "targetSize": 8388608,
-  "status": "optimal",
-  "chunks": [],
-  "recommendations": []
+  "timestamp": "2025-09-20T19:15:21.636Z",
+  "optimizations": [
+    "Removed 2 console.log statements from 117-3ed7199cb755fa5e.js",
+    "Removed 7 console.error statements from 117-3ed7199cb755fa5e.js",
+    "Removed 1 console.warn statements from 605-7325823434d7a0f1.js",
+    "Removed 4 console.error statements from 605-7325823434d7a0f1.js",
+    "Removed 2 console.error statements from fd9d1056-9e191f0896c1d560.js",
+    "Removed 4 console.error statements from framework-f66176bb897dc684.js",
+    "Removed 1 console.log statements from main-8ebd10a6e19334b1.js",
+    "Removed 1 console.warn statements from main-8ebd10a6e19334b1.js",
+    "Removed 9 console.error statements from main-8ebd10a6e19334b1.js",
+    "Removed 2 console.error statements from polyfills-42372ed130431b0a.js",
+    "Removed 1 console.log statements from security-headers.js",
+    "Removed 5 console.log statements from sw-dev.js",
+    "Removed 2 console.warn statements from sw-dev.js",
+    "Removed 1 console.error statements from sw-dev.js",
+    "Removed 1 console.log statements from sw.js",
+    "Minified whitespace in main-8ebd10a6e19334b1.js",
+    "Minified whitespace in polyfills-42372ed130431b0a.js",
+    "Minified whitespace in security-headers.js",
+    "Minified whitespace in service-worker.js",
+    "Minified whitespace in sw-dev.js",
+    "Minified whitespace in sw.js",
+    "Removed 1 CSS comments from 6822f19eaf07a8f1.css"
+  ],
+  "summary": {
+    "totalOptimizations": 22,
+    "consoleLogRemovals": 5,
+    "consoleWarnRemovals": 3,
+    "consoleErrorRemovals": 7,
+    "whitespaceOptimizations": 6,
+    "commentRemovals": 1
+  }
 }

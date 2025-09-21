@@ -15,9 +15,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ homepage_advertiser completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ homepage_advertiser failed:', error),
     return {
       statusCode: 500,
@@ -27,6 +25,5 @@ exports.handler = async function(event, context) {
         function: 'homepage_advertiser',
         status: 'error'
       })
-    },
-  }
+    }}
 },

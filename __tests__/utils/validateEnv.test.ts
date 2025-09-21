@@ -1,12 +1,11 @@
 // __tests__/utils/validateEnv.test.ts
-import { vi, describe, it, expect, beforeEach, afterEach, type SpyInstance } from 'vitest',
+import { vi, describe, it, expect, beforeEach, afterEach, type SpyInstance } from 'vitest';
 
 // NOTE: DO NOT add a static import for checkEssentialEnvVars here.
 // It needs to be dynamically imported within each test after mocks are applied.
 
 // Store original process.env
 const ORIGINAL_ENV = { ...process.env },
-
 // Helper to set and reset process.env for Vitest tests
 const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>) => {
   process.env = { ...ORIGINAL_ENV }, // Start with a fresh copy of original env
@@ -19,13 +18,12 @@ const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>)
 
   const newMetaEnv: Record<string, any> = {},
   if (globalThis.import?.meta?.env) {
-    Object.assign(newMetaEnv, globalThis.import.meta.env),
+    Object.assign(newMetaEnv, globalThis.import.meta.env);
   }
 
   let devToSet = true,
   if (typeof envValues.DEV === 'boolean') {
-    devToSet = envValues.DEV,
-  }
+    devToSet = envValues.DEV}
   const otherEnvValues = { ...envValues },
   delete otherEnvValues.DEV,
 
@@ -38,9 +36,7 @@ const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>)
   newMetaEnv.DEV = devToSet,
 
   // @ts-ignore
-  globalThis.import = { meta: { env: newMetaEnv } },
-},
-
+  globalThis.import = { meta: { env: newMetaEnv } }};
 describe('checkEssentialEnvVars', () => {
   const originalEnv = { ...process.env },
 
@@ -60,9 +56,8 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key'
     }),
-    const module = await import('@/utils/validateEnv'),
-    expect(() => module.checkEssentialEnvVars()).not.toThrow(),
-  }),
+    const module = await import('@/utils/validateEnv');
+    expect(() => module.checkEssentialEnvVars()).not.toThrow()}),
 
   it('should throw an error if NEXT_PUBLIC_REOWN_PROJECT_ID is missing', async () => {
     mockProcessEnv({
@@ -70,8 +65,8 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key'
     }),
-    const module = await import('@/utils/validateEnv'),
-    expect(() => module.checkEssentialEnvVars()).toThrowError(/NEXT_PUBLIC_REOWN_PROJECT_ID is not defined or is empty/),
+    const module = await import('@/utils/validateEnv');
+    expect(() => module.checkEssentialEnvVars()).toThrowError(/NEXT_PUBLIC_REOWN_PROJECT_ID is not defined or is empty/);
   }),
 
   it('should throw an error if NEXT_PUBLIC_SUPABASE_URL is empty', async () => {
@@ -81,8 +76,8 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_URL: '',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key'
     }),
-    const module = await import('@/utils/validateEnv'),
-    expect(() => module.checkEssentialEnvVars()).toThrowError(/NEXT_PUBLIC_SUPABASE_URL is not defined or is empty/),
+    const module = await import('@/utils/validateEnv');
+    expect(() => module.checkEssentialEnvVars()).toThrowError(/NEXT_PUBLIC_SUPABASE_URL is not defined or is empty/);
   }),
 
   it('should throw an error if NEXT_PUBLIC_SUPABASE_ANON_KEY is a placeholder value', async () => {
@@ -92,10 +87,9 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'your_supabase_anon_key_here'
     }),
-    const module = await import('@/utils/validateEnv'),
+    const module = await import('@/utils/validateEnv');
     expect(() => module.checkEssentialEnvVars()).toThrowError(/NEXT_PUBLIC_SUPABASE_ANON_KEY is set to a placeholder value: "your_supabase_anon_key_here"/)
   }),
-
   it('should throw an error if NEXT_PUBLIC_REOWN_PROJECT_ID is a placeholder value', async () => {
     mockProcessEnv({
       NODE_ENV: 'development',
@@ -103,10 +97,9 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key'
     }),
-    const module = await import('@/utils/validateEnv'),
+    const module = await import('@/utils/validateEnv');
     expect(() => module.checkEssentialEnvVars()).toThrowError(/NEXT_PUBLIC_REOWN_PROJECT_ID is set to a placeholder value: "YOUR_PROJECT_ID"/)
   }),
-
   it('should throw an error listing multiple missing or invalid variables', async () => {
     mockProcessEnv({
       NODE_ENV: 'development',
@@ -114,18 +107,17 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_URL: 'your_supabase_url_here',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: undefined
     }),
-    const module = await import('@/utils/validateEnv'),
+    const module = await import('@/utils/validateEnv');
     try {
       module.checkEssentialEnvVars(),
-      throw new Error("checkEssentialEnvVars did not throw an error as expected"),
+      throw new Error("checkEssentialEnvVars did not throw an error as expected");
     } catch (error: any) {
       const errorMessage = error.message,
-      expect(errorMessage).toMatch(/NEXT_PUBLIC_REOWN_PROJECT_ID is not defined or is empty/),
+      expect(errorMessage).toMatch(/NEXT_PUBLIC_REOWN_PROJECT_ID is not defined or is empty/);
       expect(errorMessage).toMatch(/NEXT_PUBLIC_SUPABASE_URL is set to a placeholder value: "your_supabase_url_here"/),
       expect(errorMessage).toMatch(/NEXT_PUBLIC_SUPABASE_ANON_KEY is not defined or is empty/)
     }
-  }),
-
+  });
   it('should log success message in DEV mode when variables are valid', async () => {
     mockProcessEnv({
       NODE_ENV: 'development',
@@ -133,14 +125,13 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key',
       DEV: true, // Explicitly set DEV true
-    }),
+    });
     // For import.meta.env.DEV, Vitest usually sets this based on mode.
     // Assuming 'development' mode implies import.meta.env.DEV = true
-    const consoleLogSpy = vi.spyOn(console, 'log'),
-    const module = await import('@/utils/validateEnv'),
+    const consoleLogSpy = vi.spyOn(console, 'log');
+    const module = await import('@/utils/validateEnv');
     module.checkEssentialEnvVars(),
-    expect(consoleLogSpy).toHaveBeenCalled(),
-  }),
+    expect(consoleLogSpy).toHaveBeenCalled()}),
 
   it('should not log success message when not in DEV mode even if variables are valid', async () => {
     mockProcessEnv({
@@ -149,25 +140,22 @@ describe('checkEssentialEnvVars', () => {
       NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key',
       DEV: false, // Explicitly set DEV false
-    }),
+    });
      // For import.meta.env.DEV, Vitest usually sets this based on mode.
     // Assuming 'production' mode implies import.meta.env.DEV = false
-    const consoleLogSpy = vi.spyOn(console, 'log'),
-    const module = await import('@/utils/validateEnv'),
+    const consoleLogSpy = vi.spyOn(console, 'log');
+    const module = await import('@/utils/validateEnv');
     module.checkEssentialEnvVars(),
-    expect(consoleLogSpy).not.toHaveBeenCalledWith('Essential environment variables validated successfully.'),
-  }),
-}),
+    expect(consoleLogSpy).not.toHaveBeenCalledWith('Essential environment variables validated successfully.');
+  })}),
 
 describe('validateProductionEnvironment', () => {
   beforeEach(() => {
-    vi.resetModules(),
-  }),
+    vi.resetModules()}),
 
   afterEach(() => {
     process.env = ORIGINAL_ENV,
-    vi.restoreAllMocks(),
-  }),
+    vi.restoreAllMocks()}),
 
   it('should not throw an error in development even if INTERNAL_AUTH_SERVICE_URL is missing, and should log a warning', async () => {
     mockProcessEnv({
@@ -176,12 +164,10 @@ describe('validateProductionEnvironment', () => {
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_anon_key',
       INTERNAL_AUTH_SERVICE_URL: undefined
     }),
-
-    const consoleWarnSpy = vi.spyOn(console, 'warn'),
-    const configModule = await import('@/utils/environmentConfig'),
+    const consoleWarnSpy = vi.spyOn(console, 'warn');
+    const configModule = await import('@/utils/environmentConfig');
     expect(() => configModule.validateProductionEnvironment()).not.toThrow(),
-    expect(consoleWarnSpy).toHaveBeenCalledWith(expect.stringContaining('Internal auth service URL is not configured - using fallback. Signup might be affected.')),
-  }),
+    expect(consoleWarnSpy).toHaveBeenCalledWith(expect.stringContaining('Internal auth service URL is not configured - using fallback. Signup might be affected.'))}),
 
   it('should throw an error in production if INTERNAL_AUTH_SERVICE_URL is missing', async () => {
     mockProcessEnv({
@@ -191,8 +177,8 @@ describe('validateProductionEnvironment', () => {
         NEXT_PUBLIC_SENTRY_DSN: 'https://sentry.io/123',
         INTERNAL_AUTH_SERVICE_URL: undefined
     }),
-    const configModule = await import('@/utils/environmentConfig'),
-    expect(() => configModule.validateProductionEnvironment()).toThrowError(/INTERNAL_AUTH_SERVICE_URL must be configured in production for user signup/),
+    const configModule = await import('@/utils/environmentConfig');
+    expect(() => configModule.validateProductionEnvironment()).toThrowError(/INTERNAL_AUTH_SERVICE_URL must be configured in production for user signup/);
   }),
 
   it('should not throw an error in production if INTERNAL_AUTH_SERVICE_URL is set', async () => {
@@ -203,9 +189,8 @@ describe('validateProductionEnvironment', () => {
         NEXT_PUBLIC_SENTRY_DSN: 'https://sentry.io/123',
         INTERNAL_AUTH_SERVICE_URL: 'https://my-auth-service.com'
     }),
-    const configModule = await import('@/utils/environmentConfig'),
-    expect(() => configModule.validateProductionEnvironment()).not.toThrow(),
-  }),
+    const configModule = await import('@/utils/environmentConfig');
+    expect(() => configModule.validateProductionEnvironment()).not.toThrow()}),
 
   it('should throw an error in production if Supabase URL is a placeholder', async () => {
     mockProcessEnv({
@@ -215,8 +200,8 @@ describe('validateProductionEnvironment', () => {
         NEXT_PUBLIC_SENTRY_DSN: 'https://sentry.io/123',
         INTERNAL_AUTH_SERVICE_URL: 'https://my-auth.example.com'
     }),
-    const configModule = await import('@/utils/environmentConfig'),
-    expect(() => configModule.validateProductionEnvironment()).toThrowError(/NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY must be configured in production/),
+    const configModule = await import('@/utils/environmentConfig');
+    expect(() => configModule.validateProductionEnvironment()).toThrowError(/NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY must be configured in production/);
   }),
 
   it('should throw an error in production if Sentry DSN is missing', async () => {
@@ -227,7 +212,6 @@ describe('validateProductionEnvironment', () => {
         NEXT_PUBLIC_SENTRY_DSN: undefined,
         INTERNAL_AUTH_SERVICE_URL: 'https://my-auth.example.com'
     }),
-    const configModule = await import('@/utils/environmentConfig'),
-    expect(() => configModule.validateProductionEnvironment()).toThrowError(/NEXT_PUBLIC_SENTRY_DSN must be configured in production for error monitoring/),
-  }),
-}),
+    const configModule = await import('@/utils/environmentConfig');
+    expect(() => configModule.validateProductionEnvironment()).toThrowError(/NEXT_PUBLIC_SENTRY_DSN must be configured in production for error monitoring/);
+  })}),

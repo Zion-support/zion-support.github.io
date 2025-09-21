@@ -16,10 +16,8 @@ exports.handler = async function(event, context) {
     // Simulate operation execution
     for (let i = 0, i < continuousResults.totalOperations, i++) {
       if (Math.random() > 0.05) { // 95% success rate
-        continuousResults.successfulOperations++,
-      } else {
-        continuousResults.failedOperations++,
-      }
+        continuousResults.successfulOperations++} else {
+        continuousResults.failedOperations++}
     }
     
     // Calculate metrics
@@ -79,9 +77,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ continuous-front-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ continuous-front-runner failed:', error),
     return {
       statusCode: 500,
@@ -91,6 +87,5 @@ exports.handler = async function(event, context) {
         function: 'continuous-front-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

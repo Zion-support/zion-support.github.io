@@ -1,120 +1,151 @@
-import axios, { AxiosError, Method } from 'axios',
+import axios, { AxiosRequestConfig } from 'axios';
+
+// Stub logger
+const logger = {
+  error: (message: string, error?: any) => console.error(message, error),
+  info: (message: string) => console.log(message),
+};
 
 export interface Endpoint {
-  name: string, // e.g., 'Django Ping'
-  baseURL: string, // This will be resolved by monitor.ts before calling measureLatency
-  path: string,
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'OPTIONS', // Optional method
-  body?: any, // Optional body for POST/PUT
-  headers?: Record<string, string>, // Optional headers
-  serviceName: string, // Added for remediation
+  name: string;
+  url: string;
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE';
+  headers?: Record<string, string>;
+  body?: any;
 }
 
 export interface EndpointTestResult {
-  name: string,
-  url: string,
-  method: string,
-  status?: number,
-  latencyMs?: number,
-  error?: string,
-  timestamp: string,
-  serviceName: string, // Added
+  responseTime: number;
+  statusCode: number | null;
+  success: boolean;
+  error?: string;
 }
 
-export async function measureLatency(endpoints: Endpoint[]): Promise<EndpointTestResult[]> {
-  const results: EndpointTestResult[] = [],
+// Function to measure latency of an endpoint
+export async function measureLatency(endpoint: Endpoint): Promise<EndpointTestResult> {
+  const startTime = Date.now();
+  
+  try {
+    const config: AxiosRequestConfig = {
+      method: endpoint.method,
+      url: endpoint.url,
+      headers: {
+        'User-Agent': 'Monitoring-Bot/1.0',
+        ...endpoint.headers
+      },
+      timeout: 10000, // 10 second timeout
+      validateStatus: (status) => status < 500, // Don't throw for 4xx errors
+    };
+    
+    if (endpoint.body && (endpoint.method === 'POST' || endpoint.method === 'PUT')) {
+      config.data = endpoint.body;
+    }
+    
+    const response = await axios(config);
+    const endTime = Date.now();
+    const responseTime = endTime - startTime;
+    
+    return {
+      responseTime,
+      statusCode: response.status,
+      success: response.status < 400
+    };
+    
+  } catch (error) {
+    const endTime = Date.now();
+    const responseTime = endTime - startTime;
+    
+    let statusCode: number | null = null;
+    let errorMessage = 'Unknown error';
+    
+    if (axios.isAxiosError(error)) {
+      statusCode = error.response ? error.response.status : null;
+      errorMessage = error.message;
+    } else if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+    
+    logger.error(`Error testing endpoint ${endpoint.name}:`, errorMessage);
+    
+    return {
+      responseTime,
+      statusCode,
+      success: false,
+      error: errorMessage
+    };
+  }
+}
 
+// Function to test multiple endpoints
+export async function testEndpoints(endpoints: Endpoint[]): Promise<EndpointTestResult[]> {
+  const results: EndpointTestResult[] = [];
+  
   for (const endpoint of endpoints) {
-    const url = `${endpoint.baseURL}${endpoint.path}`,
-    // Ensure method is a valid Axios Method or default to 'GET'
-    const method: Method = (endpoint.method?.toUpperCase() as Method) || 'GET',
-    const startTime = Date.now(),
-    const timestamp = new Date().toISOString(),
-
     try {
-      const response = await axios({
-        method: method,
-        url: url,
-        data: endpoint.body, // Add body to request if provided
-        headers: endpoint.headers, // Add headers to request if provided
-        timeout: 10000, // 10 second timeout
-      }),
-      const endTime = Date.now(),
-      results.push({
-        name: endpoint.name,
-        url: url,
-        method: method,
-        status: response.status,
-        latencyMs: endTime - startTime,
-        timestamp: timestamp,
-        serviceName: endpoint.serviceName, // Pass serviceName
-      }),
+      const result = await measureLatency(endpoint);
+      results.push(result);
     } catch (error) {
-      const endTime = Date.now(),
-      const latencyMs = endTime - startTime,
-      if (axios.isAxiosError(error)) {
-        const axiosError = error as AxiosError,
-        results.push({
-          name: endpoint.name,
-          url: url,
-          method: method,
-          status: axiosError.response?.status,
-          latencyMs: latencyMs,
-          error: axiosError.message,
-          timestamp: timestamp,
-          serviceName: endpoint.serviceName, // Pass serviceName
-        }),
-      } else if (error instanceof Error) {
-        results.push({
-          name: endpoint.name,
-          url: url,
-          method: method,
-          latencyMs: latencyMs,
-          error: error.message,
-          timestamp: timestamp,
-          serviceName: endpoint.serviceName, // Pass serviceName
-        }),
-      } else {
-        results.push({
-          name: endpoint.name,
-          url: url,
-          method: method,
-          latencyMs: latencyMs,
-          error: 'Unknown error',
-          timestamp: timestamp,
-          serviceName: endpoint.serviceName, // Pass serviceName
-        }),
-      }
+      logger.error(`Unexpected error testing endpoint ${endpoint.name}:`, error);
+      results.push({
+        responseTime: 0,
+        statusCode: null,
+        success: false,
+        error: error instanceof Error ? error.message : 'Unknown error'
+      });
     }
   }
-  return results,
+  
+  return results;
 }
 
-// Example usage (will be moved to the main cron script later)
-/*
-async function main() {
-  const exampleEndpoints: Endpoint[] = [
-    { name: 'Django Ping', baseURL: process.env.DJANGO_API_BASE_URL || 'http://localhost:8000', path: '/api/ping/' },
-    { name: 'Next.js Health', baseURL: process.env.NEXTJS_API_BASE_URL || 'http://localhost:3000', path: '/api/health' },
-    { name: 'Custom Server Health', baseURL: process.env.CUSTOM_SERVER_BASE_URL || 'http://localhost:3001', path: '/healthz' },
-    { name: 'NonExistent Service', baseURL: 'http://localhost:1234', path: '/nonexistent' }
-  ],
+// Function to get average response time
+export function getAverageResponseTime(results: EndpointTestResult[]): number {
+  if (results.length === 0) return 0;
+  
+  const totalTime = results.reduce((sum, result) => sum + result.responseTime, 0);
+  return totalTime / results.length;
+}
 
-  console.log('Starting latency tests...'),
-  const results = await measureLatency(exampleEndpoints),
-  console.log('Latency Test Results: '),
-  results.forEach(result => {
-    if (result.error) {
-      console.error(
-        `${result.name} (${result.url}) - ${result.method}: FAILED - Status: ${result.status || 'N/A'}, Latency: ${result.latencyMs}ms, Error: ${result.error}`
-      ),
-    } else {
-      console.log(
-        `${result.name} (${result.url}) - ${result.method}: SUCCESS - Status: ${result.status}, Latency: ${result.latencyMs}ms`
-      ),
+// Function to get success rate
+export function getSuccessRate(results: EndpointTestResult[]): number {
+  if (results.length === 0) return 0;
+  
+  const successfulResults = results.filter(result => result.success);
+  return (successfulResults.length / results.length) * 100;
+}
+
+// Function to get slowest endpoint
+export function getSlowestEndpoint(results: EndpointTestResult[], endpoints: Endpoint[]): { endpoint: Endpoint, result: EndpointTestResult } | null {
+  if (results.length === 0) return null;
+  
+  let slowestIndex = 0;
+  let slowestTime = results[0].responseTime;
+  
+  for (let i = 1; i < results.length; i++) {
+    if (results[i].responseTime > slowestTime) {
+      slowestTime = results[i].responseTime;
+      slowestIndex = i;
     }
-  }),
+  }
+  
+  return {
+    endpoint: endpoints[slowestIndex],
+    result: results[slowestIndex]
+  };
 }
 
-main().catch(console.error),
-*/
+// Function to get failed endpoints
+export function getFailedEndpoints(results: EndpointTestResult[], endpoints: Endpoint[]): { endpoint: Endpoint, result: EndpointTestResult }[] {
+  const failed: { endpoint: Endpoint, result: EndpointTestResult }[] = [];
+  
+  for (let i = 0; i < results.length; i++) {
+    if (!results[i].success) {
+      failed.push({
+        endpoint: endpoints[i],
+        result: results[i]
+      });
+    }
+  }
+  
+  return failed;
+}

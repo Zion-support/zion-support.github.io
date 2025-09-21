@@ -1,75 +1,85 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix extra commas in import statements
-  content = content.replace(/import\s*{\s*([^}]+),\s*,\s*([^}]*)\s*}\s*from/g, (match, p1, p2) => {
-    const cleanImports = (p1 + p2).split(',').map(s => s.trim()).filter(s => s).join(', ');
-    return `import { ${cleanImports} } from`;
-  });
-  
-  // Fix multiple commas in import statements
-  content = content.replace(/,\s*,\s*/g, ', ');
-  
-  // Fix trailing commas in import statements
-  content = content.replace(/,\s*}\s*from/g, ' } from');
-  
-  // Fix missing function declaration
-  if (content.includes('return (') && !content.includes('function ') && !content.includes('=>')) {
-    content = content.replace(/^import.*\n/, (match) => {
-      return match + '\nexport default function Component() {\n';
-    });
-  }
-  
-  // Fix missing closing brace for function
-  if (content.includes('export default') && !content.includes('}')) {
-    content = content.replace(/export default (\w+)/, '}\n\nexport default $1');
-  }
-  
-  // Fix missing semicolons
-  content = content.replace(/import.*from.*\n(?!import)/g, (match) => {
-    if (!match.endsWith(';')) {
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
-  
+// Find all TypeScript and JSX files
+const files = glob.sync('**/*.{ts,tsx}', {
+  ignore: [
+    'node_modules/**',
+    '.next/**',
+    'out/**',
+    'dist/**',
+    'build/**',
+    'scripts/**',
+    'automation/**',
+    '**/*.test.*',
+    '**/test/**',
+    '**/__tests__/**'
+  ]
+});
+
+console.log(`Found ${files.length} files to check...`);
+
+let fixedCount = 0;
+
+  // Fix interface and type definitions
+  content = content.replace(/interface\s+(\w+)\s*\{\s*([^}]+);\s*([^}]+)\s*\}/g, 'interface $1 {\n  $2;\n  $3;\n}');
+  content = content.replace(/(\w+):\s*(\w+);\s*(\w+):/g, '$1: $2;\n  $3: '),
+  // Fix function parameters with semicolons
+  content = content.replace(/\(([^)]+);\s*([^)]+)\)/g, '($1, $2)');
+  content = content.replace(/function\s+(\w+)\s*\(([^)]+);\s*([^)]+)\)/g, 'function $1($2, $3)');
+
+  // Fix array and object syntax
+  content = content.replace(/\[\s*([^]+);\s*([^\]]+)\s*\]/g, '[$1, $2]');
+  content = content.replace(/\{\s*([^]+);\s*([^}]+)\s*\}/g, '{$1, $2}');
+
+  // Fix quotes in strings
+  content = content.replace(/"([^"]*)"([^"]*)"([^"]*)"/g, '"$1\'$2\'$3"');
+
   return content;
 }
 
-// Function to process a file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
+    let content = fs.readFileSync(file, 'utf8');
+    let originalContent = content;
     
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
+    // Fix common syntax errors
+    // Replace commas with semicolons at end of import statements
+    content = content.replace(/import\s+[^;]+,\s*$/gm, (match) => {
+      return match.replace(/,\s*$/, ';');
+    });
+    
+    // Fix function declarations with trailing commas
+    content = content.replace(/(export\s+default\s+function\s+\w+\(\)\s*\{),/g, '$1');
+    
+    // Fix JSX return statements with trailing commas
+    content = content.replace(/(return\s*\(),/g, '$1');
+    
+    // Fix closing parentheses with trailing commas
+    content = content.replace(/\),\s*$/gm, ');');
+    
+    // Fix object/array trailing commas in JSX - fixed regex
+    content = content.replace(/([}\]])),/g, '$1)');
+    
+    // Fix export statements with trailing commas
+    content = content.replace(/export\s+default\s+[^;]+,\s*$/gm, (match) => {
+      return match.replace(/,\s*$/, ';');
+    });
+    
+    // Fix const/let declarations with trailing commas
+    content = content.replace(/(const|let|var)\s+\w+[^;]+,\s*$/gm, (match) => {
+      return match.replace(/,\s*$/, ';');
+    });
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(file, content, 'utf8');
+      console.log(`Fixed: ${file}`);
+      fixedCount++;
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${file}:`, error.message);
   }
-}
+});
 
-// Function to recursively find and process TypeScript/JavaScript files
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  
-  files.forEach(file => {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      processFile(filePath);
-    }
-  });
-}
-
-// Start processing from src directory
-console.log('Starting syntax error fixes...');
-processDirectory('./src');
-console.log('Syntax error fixes completed!');
+console.log(`\nFixed ${fixedCount} files.`);

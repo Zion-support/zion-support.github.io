@@ -4,8 +4,7 @@ exports.handler = async function(event, context) {,
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     if (!token) {,
-      return { statusCode: 500, body: JSON.stringify({ error: 'Missing GITHUB_TOKEN' }) },
-    }
+      return { statusCode: 500, body: JSON.stringify({ error: 'Missing GITHUB_TOKEN' }) }}
 ,
     const now = new Date().toISOString().replace(/[:.]/g, '-'),
     const path = `pages/auto/auto-update-${now.toLowerCase()}.tsx`,
@@ -25,11 +24,8 @@ exports.handler = async function(event, context) {,
     }),
     const json = await res.json(),
     if (!res.ok) {,
-      return { statusCode: res.status, body: JSON.stringify({ error: json, hint: 'Ensure GITHUB_TOKEN has repo scope and branch exists' }) },
-    }
+      return { statusCode: res.status, body: JSON.stringify({ error: json, hint: 'Ensure GITHUB_TOKEN has repo scope and branch exists' }) }}
 ,
-    return { statusCode: 200, body: JSON.stringify({ ok: true, path, commit: json.commit && json.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, path, commit: json.commit && json.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

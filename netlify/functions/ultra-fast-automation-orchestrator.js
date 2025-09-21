@@ -16,24 +16,18 @@ exports.handler = async function(event, context) {
           path: automationPath,
           timestamp: new Date().toISOString()
         })
-      },
-    }
+      }}
 
     // Import and run the automation
     const automation = require(automationPath),
     
     let result,
     if (typeof automation === 'function') {
-      result = await automation(),
-    } else if (automation && typeof automation.run === 'function') {
-      result = await automation.run(),
-    } else if (automation && typeof automation.start === 'function') {
-      result = await automation.start(),
-    } else if (automation && typeof automation.ultraFast === 'function') {
-      result = await automation.ultraFast(),
-    } else {
-      result = { status: 'automation script loaded but no run method found' },
-    }
+      result = await automation()} else if (automation && typeof automation.run === 'function') {
+      result = await automation.run()} else if (automation && typeof automation.start === 'function') {
+      result = await automation.start()} else if (automation && typeof automation.ultraFast === 'function') {
+      result = await automation.ultraFast()} else {
+      result = { status: 'automation script loaded but no run method found' }}
 
     return {
       statusCode: 200,
@@ -45,9 +39,7 @@ exports.handler = async function(event, context) {
         functionName: 'ultra-fast-automation-orchestrator',
         schedule: 'every 5 minutes'
       })
-    },
-
-  } catch (error) {
+    }} catch (error) {
     console.error('Ultra-fast automation orchestrator function error:', error),
     
     return {
@@ -60,6 +52,5 @@ exports.handler = async function(event, context) {
         timestamp: new Date().toISOString(),
         functionName: 'ultra-fast-automation-orchestrator'
       })
-    },
-  }
+    }}
 },

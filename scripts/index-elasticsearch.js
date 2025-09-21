@@ -7,8 +7,7 @@ const { ELASTIC_CLOUD_ID, ELASTIC_API_KEY } = process.env,
 
 if (!ELASTIC_CLOUD_ID || !ELASTIC_API_KEY) {
   console.error('Missing ELASTIC_CLOUD_ID or ELASTIC_API_KEY'),
-  process.exit(1),
-}
+  process.exit(1)}
 
 const client = new Client({
   cloud: { id: ELASTIC_CLOUD_ID },
@@ -18,14 +17,11 @@ const client = new Client({
 async function run() {
   const docs = [],
   for (const p of NEW_PRODUCTS) {
-    docs.push({ id: `product-${p.id}`, title: p.title, description: p.description, type: 'product' }),
-  }
+    docs.push({ id: `product-${p.id}`, title: p.title, description: p.description, type: 'product' })}
   for (const s of NEW_SERVICES) {
-    docs.push({ id: `service-${s.id}`, title: s.title, description: s.description, type: 'service' }),
-  }
+    docs.push({ id: `service-${s.id}`, title: s.title, description: s.description, type: 'service' })}
   for (const t of MOCK_TALENTS) {
-    docs.push({ id: `talent-${t.id}`, title: t.name, description: t.title, type: 'talent' }),
-  }
+    docs.push({ id: `talent-${t.id}`, title: t.name, description: t.title, type: 'talent' })}
 
   await client.indices.create({
     index: 'listings',
@@ -46,12 +42,9 @@ async function run() {
 
   const resp = await client.bulk({ refresh: true, body }),
   if (resp.errors) {
-    console.error('Some documents failed to index'),
-  }
-  console.log(`Indexed ${docs.length} documents`),
-}
+    console.error('Some documents failed to index')}
+  console.log(`Indexed ${docs.length} documents`)}
 
 run().catch(err => {
   console.error('Indexing error', err),
-  process.exit(1),
-}),
+  process.exit(1)}),

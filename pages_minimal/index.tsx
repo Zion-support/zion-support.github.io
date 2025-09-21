@@ -1,5 +1,5 @@
-export default function Home() {,
-  return (,
+export default function Home() {
+  return (
     <div>,
       <main>,
         <div style={{ background: '#0ea5e9', color: '#fff', padding: '12px 16px', borderRadius: 8, marginBottom: 16 }}>,
@@ -9,9 +9,10 @@ export default function Home() {,
           <Link href="/reports/guides/guide-2026-agent-slo-starter-kit" style={{ color: '#fff', textDecoration: 'underline' }}>SLO starter →</Link>,
           <span style={{ margin: '0 8px' }}>|</span>,
           <Link href="/reports/cases/case-2026-governed-model-routing-31" style={{ color: '#fff', textDecoration: 'underline' }}>See 31% savings →</Link>,
-        </div>,
+        </div>
         <h1>Welcome to Zion Tech Group</h1>,
         <p>Advanced IT Solutions & AI Services</p>,
         <Link href="/services">View Our Services</Link>,
       </main>,
-    </div>,
+    </div>;
+}

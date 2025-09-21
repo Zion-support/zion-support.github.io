@@ -1,7 +1,7 @@
 #!/usr/bin/env node,
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "fs",
+import path from "path",
+import { fileURLToPath } from "url",
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 function createValidReactComponent(filePath) {
@@ -11,7 +11,7 @@ function createValidReactComponent(filePath) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("")
     .replace(/[^a-zA-Z0-9]/g, "");
-  return `import React from "react";
+  return `import React from "react",
 export default function ${componentName}() {
   return (
     <div>
@@ -29,7 +29,7 @@ if (filePath.endsWith(".jsx") |filePath.endsWith(".tsx")) {
       // If file is empty or has syntax errors, create a valid component,
 const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
-        console.log(`Fixed: ${filePath}`);
+        console.log(`Fixed: ${filePath}`),
         return 1;
       }
     }
@@ -64,3 +64,4 @@ function processDirectory(dirPath) {
 console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path.join(__dirname, "src"));
 console.log(`Fixed ${fixedCount} files`);
+}

@@ -26,8 +26,7 @@ export class HealthChecker {
         results[name] = { status: 'unhealthy', error: error.message }
       }
     }
-    this.results = results;
-  }
+    this.results = results}
 }
 export const healthChecker = new HealthChecker();`
     'monitoring/performance-monitor.js': `// Performance monitoring system,
@@ -50,7 +49,7 @@ this.observeLCP();
       const lastEntry = entries[entries.length - 1];
       this.metrics.set('lcp', lastEntry.startTime);
     });
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    observer.observe({ entryTypes: ['largest-contentful-paint'] }),
     this.observers.push(observer);
   }
   observeFID() {
@@ -59,7 +58,7 @@ this.observeLCP();
         this.metrics.set('fid', entry.processingStart - entry.startTime);
       });
     });
-    observer.observe({ entryTypes: ['first-input'] });
+    observer.observe({ entryTypes: ['first-input'] }),
     this.observers.push(observer);
   }
   observeCLS() {
@@ -72,7 +71,7 @@ this.observeLCP();
       });
       this.metrics.set('cls', clsValue);
     });
-    observer.observe({ entryTypes: ['layout-shift'] });
+    observer.observe({ entryTypes: ['layout-shift'] }),
     this.observers.push(observer);
   }
   observeFCP() {
@@ -83,7 +82,7 @@ this.observeLCP();
         }
       });
     });
-    observer.observe({ entryTypes: ['paint'] });
+    observer.observe({ entryTypes: ['paint'] }),
     this.observers.push(observer);
   }
   getMetrics() {
@@ -104,7 +103,7 @@ export class ErrorTracker {
     const errorInfo = {
 url: typeof window !== 'undefined' ? window.location.href : 'unknown'
     }
-    this.errors.push(errorInfo);
+    this.errors.push(errorInfo),
     // Track error frequency,
 const errorKey = error.message;
     this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) |0) + 1);
@@ -124,14 +123,12 @@ export const errorTracker = new ErrorTracker();
 // Global error handler,
 if (=> {
     errorTracker.trackError(event.error, {
-colno: event.colno,
-});
+colno: event.colno});
   });
   window.addEventListener('unhandledrejection', (event) => {
     errorTracker.trackError(new Error(event.reason), {
       type: 'unhandledrejection'
-    });
-  });
+    })});
 }`
     'monitoring/analytics.js': `// Analytics tracking system,
 export class AnalyticsTracker {
@@ -201,8 +198,7 @@ getPoolStatus() {
       total: this.connections.length,
 available: this.availableConnections.length,
 used: this.usedConnections.size,
-max: this.maxConnections,
-}
+max: this.maxConnections}
   }
 export const connectionPool = new ConnectionPool();`
 fs.writeFileSync(fullPath, content);
@@ -218,8 +214,8 @@ createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
     console.log('\n✅ Advanced app improvements completed successfully!');
-    console.log('\n📋 Summary:');
-    console.log('  - Advanced monitoring system created');
+    console.log('\n📋 Summary: ');,
+  console.log('  - Advanced monitoring system created');
     console.log('  - Performance optimization utilities added');
     console.log('  - Accessibility improvements implemented');
     console.log('\n🚀 Your app is now enhanced with advanced features!');

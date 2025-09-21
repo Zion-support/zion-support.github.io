@@ -1,8 +1,7 @@
-import { HardhatUserConfig } from 'hardhat/config';
-import '@nomicfoundation/hardhat-toolbox';
-import 'hardhat-etherscan';
-import * as dotenv from 'dotenv';
-
+import { HardhatUserConfig } from 'hardhat/config',
+import '@nomicfoundation/hardhat-toolbox',
+import 'hardhat-etherscan',
+import * as dotenv from 'dotenv',
 dotenv.config();
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY || '';
@@ -16,35 +15,31 @@ const config: HardhatUserConfig = {
   solidity: {
     version: '0.8.24',
     settings: {
-      optimizer: { enabled: true, runs: 200 },
-    },
+      optimizer: { enabled: true, runs: 200 }};
   },
   networks: {
     polygon_amoy: {
       url: AMOY_RPC_URL,
       chainId: 80002,
-      accounts,
-      type: 'http',
-    },
+      accounts;
+      type: 'http'};
     polygon_mumbai: {
       url: MUMBAI_RPC_URL,
       chainId: 80001,
-      accounts,
-      type: 'http',
-    },
+      accounts;
+      type: 'http'};
   },
   // etherscan: {
   //   apiKey: {
   //     polygonAmoy: POLYGONSCAN_API_KEY,
   //     polygonMumbai: POLYGONSCAN_API_KEY,
-  //   } as any,
+  //   } as any;
   // },
   paths: {
     sources: './contracts',
     tests: './test',
     cache: './cache',
-    artifacts: './artifacts',
-  },
+    artifacts: './artifacts'};
 };
 
 export default config;

@@ -42,9 +42,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ content-freshness-score-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ content-freshness-score-runner failed:', error),
     return {
       statusCode: 500,
@@ -54,6 +52,5 @@ exports.handler = async function(event, context) {
         function: 'content-freshness-score-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

@@ -3,7 +3,7 @@ export interface ContentGenerationRequest {
   topic: string,
   tone: 'professional' | 'casual' | 'friendly' | 'formal',
   length: 'short' | 'medium' | 'long',
-  keywords?: string[],
+  keywords?: string[];
   targetAudience?: string
 }
 
@@ -17,8 +17,7 @@ export interface ContentGenerationResponse {
     title: string,
     description: string,
     tags: string[]
-  },
-}
+  }}
 
 export interface ContentTemplate {
   id: string,
@@ -32,7 +31,6 @@ export interface ContentTemplate {
 export class AIContentGeneratorService {
   private apiKey: string,
   private baseUrl: string,
-
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey,
     this.baseUrl = baseUrl
@@ -46,18 +44,16 @@ export class AIContentGeneratorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
       }),
-
       if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`),
-      }
+        throw new Error(`Content generation failed: ${response.statusText}`)}
 
-      return await response.json(),
+      return await response.json();
     } catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockContent(request),
+      return this.generateMockContent(request);
     }
   }
 
@@ -95,8 +91,7 @@ export class AIContentGeneratorService {
         preview: 'Turn visitors into customers with compelling copy...',
         price: 59
       }
-    ],
-  }
+    ]}
 
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
@@ -112,7 +107,6 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 ## Conclusion
 
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,
-
     return {
       content: mockContent,
       wordCount: mockContent.split(' ').length,
@@ -121,21 +115,19 @@ ${request.topic} represents a significant opportunity for organizations looking 
       suggestions: [
         'Add more specific examplesInclude relevant statistics',
         'Optimize for target keywords'
-      ],
+      ];
       metadata: {
         title: `${request.topic} - Complete Guide`,
         description: `Learn everything about ${request.topic} and how to implement it effectively.`,
         tags: [request.topic, request.type, 'guidetutorial']
       }
-    },
-  }
+    }}
 
   async analyzeContent(content: string): Promise<{
     seoScore: number,
     readabilityScore: number,
     suggestions: string[],
-    keywordDensity: Record<string, number>,
-  }> {
+    keywordDensity: Record<string, number>}> {
     // Mock content analysis
     return {
       seoScore: Math.floor(Math.random() * 30) + 70,
@@ -143,14 +135,13 @@ ${request.topic} represents a significant opportunity for organizations looking 
       suggestions: [
         'Add more headings for better structureInclude internal links to related content',
         'Optimize meta description'
-      ],
+      ];
       keywordDensity: {
         'content': 2.1,
-        'seo': 1.8,
+        'seo': 1.8;
         'marketing': 1.5
       }
-    },
-  }
+    }}
 }
 
 // Pricing tiers for the AI Content Generator
@@ -161,7 +152,7 @@ export const AI_CONTENT_PRICING = {
     period: '/month',
     features: [
       '100 content generations per monthBasic templates',
-      'SEO analysisEmail support',
+      'SEO analysisEmail support';
       'Standard quality'
     ]
   },
@@ -171,7 +162,7 @@ export const AI_CONTENT_PRICING = {
     period: '/month',
     features: [
       '500 content generations per monthPremium templates',
-      'Advanced SEO analysisPriority support',
+      'Advanced SEO analysisPriority support';
       'High quality outputCustom branding',
       'API access'
     ]
@@ -182,9 +173,9 @@ export const AI_CONTENT_PRICING = {
     period: '/month',
     features: [
       'Unlimited content generationsCustom templates',
-      'Advanced analyticsDedicated support',
+      'Advanced analyticsDedicated support';
       'Highest qualityWhite-label options',
       'Custom integrationsSLA guarantee'
     ]
   }
-},
+};

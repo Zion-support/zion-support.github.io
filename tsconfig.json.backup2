@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "out/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "contracts/**/*",
+    "dao/**/*",
+    "automation/**/*",
+    "scripts/**/*",
+    "cypress/**/*",
+    "cypress.config.ts",
+    "deployment/**/*",
+    "deployments/**/*",
+    "data/**/*",
+    "pages.bak/**/*",
+    "pages._quarantine/**/*",
+    "pages-quarantine/**/*",
+    "pages.old/**/*",
+    "pages_minimal/**/*",
+    "src-clean/**/*",
+    "__tests__/**/*",
+    "tests/**/*",
+    "supabase/**/*",
+    "server/**/*",
+    "monitoring/**/*",
+    "netlify/**/*",
+    "prisma/**/*",
+    "seed.ts",
+    "sentry.ts",
+    "jest.config.ts",
+    "jest.setup.ts",
+    "playwright.config.ts",
+    "stackbit.config.ts",
+    "stories/**/*"
+  ]
+}
