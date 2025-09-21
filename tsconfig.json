@@ -38,9 +38,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-<<<<<<< HEAD
-    "node_modules"
-=======
     "node_modules",
     "contracts/**/*",
     "dao/**/*",
@@ -55,6 +52,5 @@
     "components/services/**/*",
     "pages/AITalentMatchingPage.tsx",
     "pages/ApplicationStatusTracker.tsx"
->>>>>>> origin/working-build-1758422960
   ]
 }
