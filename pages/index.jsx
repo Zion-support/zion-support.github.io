@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { AnimatedCard } from '../components/ui/AnimatedCard';
-import { GradientButton } from '../components/ui/GradientButton';
-import { FloatingElements } from '../components/ui/FloatingElements';
-import { TypewriterEffect } from '../components/ui/TypewriterEffect';
-import { SEOHead } from '../components/ui/SEOHead';
+import { AnimatedCard } from '../components/ui/AnimatedCard.tsx';
+import { GradientButton } from '../components/ui/GradientButton.tsx';
+import { FloatingElements } from '../components/ui/FloatingElements.tsx';
+import { TypewriterEffect } from '../components/ui/TypewriterEffect.tsx';
+import { SEOHead } from '../components/ui/SEOHead.tsx';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
