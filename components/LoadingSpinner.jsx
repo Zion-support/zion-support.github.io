@@ -1,52 +1,58 @@
 import React from 'react';
 
-export const LoadingSpinner = ({ size = 'md', className = '' }) => {
+const LoadingSpinner = ({ 
+  size = 'medium', 
+  color = 'primary', 
+  text = 'Loading...',
+  showText = true,
+  className = ''
+}) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
+    small: 'w-4 h-4',
+    medium: 'w-8 h-8',
+    large: 'w-12 h-12',
     xl: 'w-16 h-16'
   };
 
-  return (
-    <div className={`flex justify-center items-center ${className}`}>
-      <div 
-        className={`${sizeClasses[size]} border-4 border-gray-200 border-t-cyan-500 rounded-full animate-spin`}
-        role="status"
-        aria-label="Loading"
-      >
-        <span className="sr-only">Loading...</span>
-      </div>
-    </div>
-  );
-};
+  const colorClasses = {
+    primary: 'text-blue-600',
+    secondary: 'text-gray-600',
+    white: 'text-white',
+    green: 'text-green-600',
+    red: 'text-red-600'
+  };
 
-export const LoadingPage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="text-center">
-        <LoadingSpinner size="xl" className="mb-4" />
-        <p className="text-white text-lg">Loading Zion Tech Group...</p>
+    <div className={`flex flex-col items-center justify-center space-y-2 ${className}`}>
+      <div className="relative">
+        {/* Outer ring */}
+        <div 
+          className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full animate-spin`}
+          style={{
+            borderTopColor: 'transparent',
+            borderRightColor: 'transparent',
+            borderBottomColor: 'transparent'
+          }}
+        />
+        
+        {/* Inner ring */}
+        <div 
+          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-transparent rounded-full animate-spin`}
+          style={{
+            borderTopColor: 'currentColor',
+            animationDirection: 'reverse',
+            animationDuration: '0.75s'
+          }}
+        />
       </div>
-    </div>
-  );
-};
-
-export const LoadingButton = ({ children, loading, ...props }) => {
-  return (
-    <button 
-      {...props} 
-      disabled={loading || props.disabled}
-      className={`${props.className || ''} ${loading ? 'opacity-75 cursor-not-allowed' : ''}`}
-    >
-      {loading ? (
-        <div className="flex items-center justify-center">
-          <LoadingSpinner size="sm" className="mr-2" />
-          Loading...
-        </div>
-      ) : (
-        children
+      
+      {showText && (
+        <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
+          {text}
+        </p>
       )}
-    </button>
+    </div>
   );
 };
+
+export default LoadingSpinner;

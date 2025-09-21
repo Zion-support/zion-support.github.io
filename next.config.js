@@ -7,18 +7,13 @@ if (typeof globalThis === 'undefined') {
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
   output: 'export',
   trailingSlash: true,
   distDir: 'out',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
-    domains: ["localhost"],
-    formats: ['image/webp', 'image/avif'],
   },
   
   // TypeScript configuration
@@ -31,11 +26,12 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   
-  // Experimental features for performance
+  // Experimental features
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    esmExternals: false,
   },
   
   // Compiler optimizations
@@ -49,7 +45,7 @@ const nextConfig = {
   },
   
   // Webpack configuration
-  webpack: (config, { dev, isServer }) => {
+  webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -63,22 +59,6 @@ const nextConfig = {
         process: require.resolve('process/browser'),
       };
     }
-    
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, '.'),
-    };
-    
-    // Exclude problematic directories from compilation
-    config.module.rules.push({
-      test: /\.ts$/,
-      include: require('path').resolve(__dirname, 'contracts'),
-      use: 'ignore-loader'
-    });
     
     return config;
   },

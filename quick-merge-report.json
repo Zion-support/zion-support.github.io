@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "successfullyMerged": 1,
+    "failedBranches": 0,
+    "timestamp": "2025-09-21T12:12:11.825Z"
+  },
+  "mergedBranches": [
+    "cursor/fix-netlify-build-and-merge-to-main-a40a"
+  ],
+  "failedBranches": []
+}

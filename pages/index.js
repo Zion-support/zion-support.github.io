@@ -5,12 +5,26 @@ import { TypewriterEffect } from '../components/ui/TypewriterEffect';
 import { GradientButton } from '../components/ui/GradientButton';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { MobileNavigation } from '../components/MobileNavigation';
+import SearchModal from '../components/SearchModal';
+import SEO from '../components/SEO';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import FAQSection from '../components/FAQSection';
+import TestimonialsCarousel from '../components/TestimonialsCarousel';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsVisible(true);
+    // Simulate loading for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   const services = [
@@ -40,50 +54,23 @@ export default function Home() {
     "Proven Architectures"
   ];
 
-  return (
-    <div>
-      <Head>
-        <title>Zion Tech Group - AI, IT & Micro SaaS Services</title>
-        <meta name="description" content="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support." />
-        <meta name="keywords" content="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Leading provider of AI solutions, enterprise IT services, and micro SaaS development",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
-              "sameAs": [
-                "https://ziontechgroup.com"
-              ]
-            })
-          }}
-        />
-      </Head>
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+        <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
+      </div>
+    );
+  }
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+  return (
+    <ErrorBoundary>
+      <div>
+        <SEO 
+          title="Zion Tech Group - AI, IT & Micro SaaS Services"
+          description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
+          keywords="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps"
+        />
+        <main id="main-content" role="main" className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 bg-black/50 backdrop-blur-sm border-b border-white/10 z-50">
           <div className="container mx-auto px-4 py-4">
@@ -99,6 +86,15 @@ export default function Home() {
                 <ThemeToggle />
               </div>
               <div className="flex items-center space-x-4">
+                <button
+                  onClick={() => setIsSearchOpen(true)}
+                  className="p-2 text-gray-300 hover:text-white transition-colors"
+                  aria-label="Search"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
                 <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                   Call Now
                 </a>
@@ -241,51 +237,44 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        {/* Technology Stack Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                What Our Clients Say
+                Cutting-Edge Technology Stack
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it - hear from businesses we've transformed.
+                We leverage the latest technologies and frameworks to deliver exceptional results.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <div className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+              {[
+                { name: 'React', icon: '⚛️', description: 'Modern UI Framework' },
+                { name: 'Node.js', icon: '🟢', description: 'Server-Side Runtime' },
+                { name: 'AI/ML', icon: '🧠', description: 'Machine Learning' },
+                { name: 'Cloud', icon: '☁️', description: 'Cloud Infrastructure' },
+                { name: 'DevOps', icon: '🔧', description: 'Automation & CI/CD' },
+                { name: 'Security', icon: '🔒', description: 'Enterprise Security' },
+              ].map((tech, index) => (
+                <div key={index} className="text-center group">
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {tech.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-1">{tech.name}</h3>
+                  <p className="text-sm text-gray-400">{tech.description}</p>
                 </div>
-                <p className="text-gray-300 mb-4">
-                  "Zion Tech Group transformed our business with their AI solutions. We saw a 300% increase in efficiency within the first month."
-                </p>
-                <div className="text-cyan-400 font-semibold">- Sarah Johnson, CEO TechCorp</div>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <div className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  "Their micro SaaS development service helped us launch our product 50% faster than expected. Exceptional team!"
-                </p>
-                <div className="text-cyan-400 font-semibold">- Michael Chen, Founder StartupXYZ</div>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="flex items-center mb-4">
-                  <div className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  "24/7 support and enterprise-grade security. Zion Tech Group is our trusted technology partner."
-                </p>
-                <div className="text-cyan-400 font-semibold">- Emily Rodriguez, CTO EnterpriseCo</div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
+
+        {/* Enhanced Testimonials Carousel */}
+        <TestimonialsCarousel />
+
+        {/* FAQ Section */}
+        <FAQSection />
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
@@ -346,7 +335,14 @@ export default function Home() {
             </div>
           </div>
         </footer>
-      </main>
-    </div>
+        </main>
+
+        {/* Search Modal */}
+        <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+        
+        {/* Accessibility Enhancer */}
+        <AccessibilityEnhancer />
+      </div>
+    </ErrorBoundary>
   );
 }

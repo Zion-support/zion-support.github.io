@@ -1,31 +1,61 @@
 import React, { useEffect, useState } from 'react';
 
-const PerformanceMonitor = () => {
+export default function PerformanceMonitor() {
   const [metrics, setMetrics] = useState({
     loadTime: 0,
     renderTime: 0,
-    memoryUsage: 0
+    memoryUsage: 0,
+    isVisible: false
   });
 
   useEffect(() => {
-    // Measure page load time
-    const loadTime = performance.now();
+    // Monitor page load time
+    const startTime = performance.now();
     
-    // Measure memory usage if available
-    const memoryUsage = performance.memory ? 
-      Math.round(performance.memory.usedJSHeapSize / 1024 / 1024) : 0;
+    const handleLoad = () => {
+      const loadTime = performance.now() - startTime;
+      setMetrics(prev => ({ ...prev, loadTime: Math.round(loadTime) }));
+    };
 
-    // Measure render time
-    const renderStart = performance.now();
-    
-    requestAnimationFrame(() => {
-      const renderEnd = performance.now();
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(renderEnd - renderStart),
-        memoryUsage
+    // Monitor render performance
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'measure') {
+          setMetrics(prev => ({ 
+            ...prev, 
+            renderTime: Math.round(entry.duration) 
+          }));
+        }
       });
     });
+
+    observer.observe({ entryTypes: ['measure'] });
+
+    // Monitor memory usage (if available)
+    if ('memory' in performance) {
+      const updateMemory = () => {
+        setMetrics(prev => ({ 
+          ...prev, 
+          memoryUsage: Math.round(performance.memory.usedJSHeapSize / 1024 / 1024) 
+        }));
+      };
+      
+      updateMemory();
+      const interval = setInterval(updateMemory, 5000);
+      
+      return () => {
+        clearInterval(interval);
+        observer.disconnect();
+      };
+    }
+
+    window.addEventListener('load', handleLoad);
+    
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      observer.disconnect();
+    };
   }, []);
 
   // Only show in development
@@ -34,14 +64,15 @@ const PerformanceMonitor = () => {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white text-xs p-2 rounded-lg backdrop-blur-sm z-50">
-      <div className="font-mono">
+    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 text-xs text-white border border-white/20 z-50">
+      <div className="font-semibold mb-2 text-cyan-400">Performance</div>
+      <div className="space-y-1">
         <div>Load: {metrics.loadTime}ms</div>
         <div>Render: {metrics.renderTime}ms</div>
-        <div>Memory: {metrics.memoryUsage}MB</div>
+        {metrics.memoryUsage > 0 && (
+          <div>Memory: {metrics.memoryUsage}MB</div>
+        )}
       </div>
     </div>
   );
-};
-
-export default PerformanceMonitor;
+}
