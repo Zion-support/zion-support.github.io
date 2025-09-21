@@ -1,18 +1,32 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import MobileOptimizer from '../components/MobileOptimizer';
+import EnhancedAnalytics from '../components/EnhancedAnalytics';
+import ErrorBoundary from '../components/ErrorBoundary';
+import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="min-h-screen bg-white">
-      <header className="bg-slate-900 text-white p-4">
-        <h1 className="text-xl font-bold">Zion Tech Group</h1>
-      </header>
-      <main className="flex-1">
-        <Component {...pageProps} />
-      </main>
-      <footer className="bg-slate-900 text-white p-4 text-center">
-        <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-      </footer>
-    </div>
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      </Head>
+      
+      <ErrorBoundary>
+        <PerformanceOptimizer>
+          <MobileOptimizer>
+            <EnhancedAnalytics />
+            <Component {...pageProps} />
+          </MobileOptimizer>
+        </PerformanceOptimizer>
+      </ErrorBoundary>
+    </>
   )
 }
