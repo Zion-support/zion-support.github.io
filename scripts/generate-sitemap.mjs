@@ -1,74 +1,91 @@
 import fs from 'fs';
 import path from 'path';
 
-/**
- * Recursively collect route paths from the provided directory. The function
- * converts Next.js style dynamic segments like `[id]` to `:id` so they appear
- * consistently in the generated sitemap. Files inside `api/` or directories
- * starting with an underscore are ignored.
- */
-function collectRoutes(dir, base = '') {
-  if (!fs.existsSync(dir)) return [];
-
-  const entries = fs.readdirSync(dir);
-  const routes = [];
-
-  for (const entry of entries) {
-    if (entry.startsWith('_') || entry === 'api') continue;
-    const full = path.join(dir, entry);
-    const stat = fs.statSync(full);
-
-    if (stat.isDirectory()) {
-      routes.push(...collectRoutes(full, `${base}/${entry}`));
-      continue;
-    }
-
-    if (!/\.(?:js|jsx|ts|tsx)$/.test(entry)) continue;
-
-    let route = base;
-    const name = entry.replace(/\.(?:js|jsx|ts|tsx)$/, '');
-
-    if (name !== 'index') {
-      route += `/${name}`;
-    }
-
-    route = route
-      .replace(/\[\.\.\.(.+?)\]/g, ':$1*')
-      .replace(/\[(.+?)\]/g, ':$1');
-
-    route = route.replace(/\/+/g, '/');
-    if (route === '') route = '/';
-
-    routes.push(route);
-  }
-
-  return routes;
-}
-
-// Gather routes from the Next.js pages directories
-let routes = [
-  ...collectRoutes(path.join(process.cwd(), 'pages')),
-  ...collectRoutes(path.join(process.cwd(), 'src', 'pages')),
+const baseUrl = 'https://zion.app';
+const pages = [
+  '',
+  '/about',
+  '/services',
+  '/services-advertising',
+  '/blog',
+  '/client-portal',
+  '/contact'
 ];
 
-// Remove duplicates and sort for a stable sitemap
-routes = [...new Set(routes)].sort();
+const generateSitemap = () => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+${pages.map(page => {
+  const url = `${baseUrl}${page}`;
+  const priority = page === '' ? '1.0' : page === '/services' ? '0.9' : '0.8';
+  const changefreq = page === '' ? 'daily' : page === '/blog' ? 'weekly' : 'monthly';
+  
+  return `  <url>
+    <loc>${url}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+}).join('\n')}
+</urlset>`;
 
-const baseUrl =
-  process.env.NEXT_PUBLIC_APP_URL || 'https://app.ziontechgroup.com';
-const lastmod = new Date().toISOString().split('T')[0];
-let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-for (const route of routes) {
-  xml += '  <url>\n';
-  xml += `    <loc>${baseUrl}${route}</loc>\n`;
-  xml += `    <lastmod>${lastmod}</lastmod>\n`;
-  xml += '  </url>\n';
-}
-xml += '</urlset>\n';
-fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), xml);
+  // Ensure out directory exists
+  const outDir = path.join(process.cwd(), 'out');
+  if (!fs.existsSync(outDir)) {
+    fs.mkdirSync(outDir, { recursive: true });
+  }
 
-const robots = `User-agent: *\nAllow: /\n\nSitemap: ${baseUrl}/sitemap.xml\n`;
-fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robots);
+  // Write sitemap
+  fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemap);
+  console.log('✅ Sitemap generated successfully');
+};
 
-console.log(`Generated ${routes.length} routes to sitemap.xml and robots.txt`);
+// Generate robots.txt
+const generateRobotsTxt = () => {
+  const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${baseUrl}/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /client-portal/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /blog
+Allow: /contact`;
+
+  const outDir = path.join(process.cwd(), 'out');
+  fs.writeFileSync(path.join(outDir, 'robots.txt'), robots);
+  console.log('✅ Robots.txt generated successfully');
+};
+
+// Generate sitemap index
+const generateSitemapIndex = () => {
+  const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${baseUrl}/sitemap.xml</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+  </sitemap>
+</sitemapindex>`;
+
+  const outDir = path.join(process.cwd(), 'out');
+  fs.writeFileSync(path.join(outDir, 'sitemap-index.xml'), sitemapIndex);
+  console.log('✅ Sitemap index generated successfully');
+};
+
+// Run all generators
+generateSitemap();
+generateRobotsTxt();
+generateSitemapIndex();
