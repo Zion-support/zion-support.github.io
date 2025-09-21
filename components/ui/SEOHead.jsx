@@ -1,17 +1,6 @@
 import Head from 'next/head';
 
-interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-}
-
-export const SEOHead: React.FC<SEOHeadProps> = ({
+export const SEOHead = ({
   title,
   description,
   keywords = '',
