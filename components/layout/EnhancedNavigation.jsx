@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const EnhancedNavigation: React.FC = () => {
+const EnhancedNavigation = () => {
   return (
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
