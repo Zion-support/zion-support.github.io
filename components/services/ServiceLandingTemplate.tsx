@@ -1,5 +1,5 @@
 import React from "react";
-import { GradientHeading } from "../../src/components/GradientHeading";
+import { GradientHeading } from "../../components/GradientHeading";
 import { Button } from "../../src/components/ui/button";
 import { Card, CardContent, CardFooter } from "../../src/components/ui/card";
 import Image from "next/image";
