@@ -1,53 +1,5 @@
 [
   {
-    "timestamp": "2025-09-21T12:57:42.019Z",
-    "buildTime": 0,
-    "bundleSize": "16M",
-    "pageCount": 7,
-    "performance": {
-      "buildTime": 12,
-      "timestamp": "2025-09-21T12:57:42.030Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": false,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
-    "timestamp": "2025-09-21T12:58:03.557Z",
-    "buildTime": 0,
-    "bundleSize": "17M",
-    "pageCount": 7,
-    "performance": {
-      "buildTime": 8,
-      "timestamp": "2025-09-21T12:58:03.564Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": false,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
-    "timestamp": "2025-09-21T13:00:45.659Z",
-    "buildTime": 0,
-    "bundleSize": "18M",
-    "pageCount": 7,
-    "performance": {
-      "buildTime": 8,
-      "timestamp": "2025-09-21T13:00:45.666Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": false,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
     "timestamp": "2025-09-21T13:01:06.667Z",
     "buildTime": 0,
     "bundleSize": "16M",
@@ -167,6 +119,38 @@
     "performance": {
       "buildTime": 12,
       "timestamp": "2025-09-21T13:04:30.234Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:21:10.503Z",
+    "buildTime": 0,
+    "bundleSize": "21M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 7,
+      "timestamp": "2025-09-21T13:21:10.509Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:22:56.507Z",
+    "buildTime": 0,
+    "bundleSize": "32M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 9,
+      "timestamp": "2025-09-21T13:22:56.514Z",
       "optimizations": {
         "cssOptimization": false,
         "compression": false,

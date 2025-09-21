@@ -16,6 +16,8 @@ import { CookieConsent } from '../components/CookieConsent';
 import { NotificationSystem } from '../components/NotificationSystem';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import EnhancedAnalytics from '../components/EnhancedAnalytics';
+import PerformanceMonitor from '../components/PerformanceMonitor';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import ParallaxSection from '../components/ui/ParallaxSection';
 import ScrollProgress from '../components/ui/ScrollProgress';
@@ -385,6 +387,12 @@ export default function Home() {
         
         {/* Accessibility Enhancer */}
         <AccessibilityEnhancer />
+        
+        {/* Enhanced Analytics */}
+        <EnhancedAnalytics />
+        
+        {/* Performance Monitor */}
+        <PerformanceMonitor />
         </div>
       </PerformanceOptimizer>
     </ErrorBoundary>
