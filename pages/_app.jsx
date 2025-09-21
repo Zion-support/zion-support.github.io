@@ -1,10 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import { ThemeProvider } from '../components/ThemeProvider.jsx';
 import ErrorBoundary from '../components/ErrorBoundary.jsx';
-import Analytics from '../components/Analytics.jsx';
-import ScrollToTop from '../components/ScrollToTop.jsx';
-import PerformanceMonitor from '../components/PerformanceMonitor.jsx';
+
+// Make these components client-side only
+const Analytics = dynamic(() => import('../components/Analytics.jsx'), { ssr: false });
+const ScrollToTop = dynamic(() => import('../components/ScrollToTop.jsx'), { ssr: false });
+const PerformanceMonitor = dynamic(() => import('../components/PerformanceMonitor.jsx'), { ssr: false });
 
 export default function App({ Component, pageProps }) {
   return (
