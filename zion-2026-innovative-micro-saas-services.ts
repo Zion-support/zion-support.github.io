@@ -120,7 +120,7 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     competitors: ['CrowdStrikeSentinelOne', 'Carbon BlackCylance', 'Sophos'],
     marketSize: '$173.5B market',
     growthRate: '250% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     competitors: ['SAP AribaOracle Procurement', 'CoupaJaggaer', 'Basware'],
     marketSize: '$15.8B market',
     growthRate: '220% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     competitors: ['AWS IoT GreengrassAzure IoT Edge', 'Google Cloud IoT EdgeIBM Edge Application Manager', 'VMware Edge'],
     marketSize: '$8.9B market',
     growthRate: '240% annual growth',
-    variant: 'iot-futuristic',
+    variant: 'iot',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     competitors: ['IBM WatsonGoogle AI Platform', 'AWS SageMakerAzure Machine Learning', 'DataRobot'],
     marketSize: '$21.5B market',
     growthRate: '320% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -496,7 +496,7 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     competitors: ['MaxarPlanet Labs', 'SpireBlackSky', 'Capella Space'],
     marketSize: '$4.7B market',
     growthRate: '280% annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

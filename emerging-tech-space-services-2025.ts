@@ -73,7 +73,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     competitors: ['No direct competitorsSpace mining tools: $50,000+/month', 'Satellite services: $25,000+/month'],
     marketSize: '$3.8B space mining market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -119,7 +119,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     competitors: ['Traditional space communication: $30,000+/monthSatellite services: $25,000+/month', 'Quantum communication: $50,000+/month'],
     marketSize: '$12B space communication market',
     growthRate: '280% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -213,7 +213,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     competitors: ['Traditional propulsion: $100,000+/monthAdvanced propulsion: $75,000+/month', 'Research propulsion: $50,000+/month'],
     marketSize: '$8B space propulsion market',
     growthRate: '250% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

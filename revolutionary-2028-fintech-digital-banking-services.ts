@@ -73,7 +73,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     competitors: ['ChimeRevolut', 'N26Monzo', 'Starling Bank'],
     marketSize: '$45.8B market',
     growthRate: '310% annual growth',
-    variant: 'fintech-futuristic',
+    variant: 'fintech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     competitors: ['BettermentWealthfront', 'RobinhoodAcorns', 'Stash'],
     marketSize: '$38.7B market',
     growthRate: '285% annual growth',
-    variant: 'fintech-futuristic',
+    variant: 'fintech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     competitors: ['RippleStellar', 'CircleCoinbase', 'Binance'],
     marketSize: '$32.5B market',
     growthRate: '320% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     competitors: ['AaveCompound', 'MakerDAOdYdX', 'Synthetix'],
     marketSize: '$18.7B market',
     growthRate: '350% annual growth',
-    variant: 'defi-futuristic',
+    variant: 'fintech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

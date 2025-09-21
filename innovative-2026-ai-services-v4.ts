@@ -80,7 +80,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     competitors: ['Basic AI models', 'Research AI platforms', 'Custom consciousness solutions'],
     marketSize: '$8B AI research market',
     growthRate: '300% annual growth',
-    variant: 'ai-consciousness',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -186,7 +186,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     competitors: ['Basic health apps', 'Fitness trackers', 'Custom health solutions'],
     marketSize: '$18B digital health market',
     growthRate: '200% annual growth',
-    variant: 'ai-healthcare',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -239,7 +239,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     competitors: ['Basic AI writers', 'Content creation tools', 'Custom AI solutions'],
     marketSize: '$15B content creation market',
     growthRate: '220% annual growth',
-    variant: 'ai-creative',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -292,7 +292,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     competitors: ['Basic sentiment analysis', 'Emotion detection tools', 'Custom emotional AI'],
     marketSize: '$10B emotional AI market',
     growthRate: '280% annual growth',
-    variant: 'ai-emotional',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

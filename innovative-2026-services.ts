@@ -120,7 +120,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     competitors: ['SignalWickr', 'TelegramWhatsApp Business', 'Microsoft Teams'],
     marketSize: '$15.2B market',
     growthRate: '300% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     competitors: ['AlpacaInteractive Brokers', 'TD AmeritradeE*TRADE', 'Robinhood Pro'],
     marketSize: '$45.2B market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     competitors: ['CrowdStrikePalo Alto Networks', 'FortinetCisco', 'Symantec'],
     marketSize: '$182.3B market',
     growthRate: '280% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     competitors: ['EthereumSolana', 'PolygonCardano', 'Polkadot'],
     marketSize: '$19.9B market',
     growthRate: '350% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -496,7 +496,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     competitors: ['AWS IoTMicrosoft Azure IoT', 'Google Cloud IoTIBM Watson IoT', 'Siemens Mindsphere'],
     marketSize: '$384.7B market',
     growthRate: '320% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

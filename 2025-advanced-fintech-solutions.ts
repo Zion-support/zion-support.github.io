@@ -130,7 +130,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     competitors: ['Ripple, Stellar, Circle, Coinbase, Binance'],
     marketSize: '$28B blockchain payments market',
     growthRate: '55% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -181,7 +181,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],
     marketSize: '$8B quantum computing market',
     growthRate: '65% annual growth',
-    variant: 'quantum-financial',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

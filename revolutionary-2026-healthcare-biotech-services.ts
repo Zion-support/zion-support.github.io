@@ -73,7 +73,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     competitors: ['AtomwiseInsilico Medicine', 'BenevolentAIExscientia', 'Recursion Pharmaceuticals'],
     marketSize: '$45.6B market',
     growthRate: '28.9% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     competitors: ['IBM Watson HealthGoogle Health', 'Microsoft HealthcareAmazon Comprehend Medical', 'Cerner'],
     marketSize: '$67.4B market',
     growthRate: '25.3% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     competitors: ['IBM QuantumGoogle Quantum', 'Microsoft QuantumAmazon Braket', 'Rigetti'],
     marketSize: '$78.9B market',
     growthRate: '31.2% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     competitors: ['WestlawLexisNexis', 'Bloomberg LawCasetext', 'Ravel Law'],
     marketSize: '$23.7B market',
     growthRate: '19.8% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     competitors: ['BenchlingLabArchives', 'LabguruQuartzy', 'LabCollector'],
     marketSize: '$34.8B market',
     growthRate: '26.4% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

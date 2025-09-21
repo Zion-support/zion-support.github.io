@@ -130,7 +130,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     competitors: ['Traditional cloud providers', 'Basic quantum computing', 'Classical cloud infrastructure'],
     marketSize: '$60B quantum cloud market',
     growthRate: '500% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -334,7 +334,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     competitors: ['Basic blockchain tools', 'Traditional systems', 'Manual blockchain management'],
     marketSize: '$25B enterprise blockchain market',
     growthRate: '250% annual growth',
-    variant: 'blockchain-futuristic',
+    variant: 'blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -385,7 +385,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     competitors: ['Traditional networks', 'Basic 5G solutions', 'Manual network management'],
     marketSize: '$40B 5G private network market',
     growthRate: '400% annual growth',
-    variant: 'telecom-futuristic',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

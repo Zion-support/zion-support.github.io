@@ -261,7 +261,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     competitors: ['Quantum XchangeID Quantique', 'Toshiba QuantumQrypt', 'Quantum Machines'],
     marketSize: '$12.8B market',
     growthRate: '280% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     competitors: ['Bloomberg TerminalThomson Reuters Eikon', 'Interactive Brokers ProAlpaca', 'QuantConnect'],
     marketSize: '$28.9B market',
     growthRate: '320% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -684,7 +684,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     competitors: ['Planetary ResourcesDeep Space Industries', 'AstroscaleiSpace', 'Moon Express'],
     marketSize: '$3.8B market',
     growthRate: '450% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

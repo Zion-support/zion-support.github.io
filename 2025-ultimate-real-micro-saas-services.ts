@@ -80,7 +80,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['Gainsight, Totango, ChurnZero, ClientSuccess'],
     marketSize: '$1.2B Customer Success market',
     growthRate: '25% annual growth',
-    variant: 'ai-customer-success-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -133,7 +133,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, JDA Software'],
     marketSize: '$15.8B Supply Chain Management market',
     growthRate: '18% annual growth',
-    variant: 'supply-chain-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -186,7 +186,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['Adaptive Insights, Anaplan, Planful, Vena Solutions'],
     marketSize: '$3.2B Financial Planning market',
     growthRate: '22% annual growth',
-    variant: 'financial-planning-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -239,7 +239,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['Visier, Tableau, Power BI, People Analytics'],
     marketSize: '$2.8B HR Analytics market',
     growthRate: '20% annual growth',
-    variant: 'hr-analytics-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -292,7 +292,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['ZoomInfo, LinkedIn Sales Navigator, DiscoverOrg, Clearbit'],
     marketSize: '$4.5B Sales Intelligence market',
     growthRate: '24% annual growth',
-    variant: 'sales-intelligence-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -345,7 +345,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['Palantir, SAS, IBM Watson, Microsoft Azure ML'],
     marketSize: '$8.9B Decision Intelligence market',
     growthRate: '28% annual growth',
-    variant: 'decision-engine-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -398,7 +398,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['HubSpot, Marketo, Pardot, Contentful'],
     marketSize: '$6.2B Content Marketing market',
     growthRate: '26% annual growth',
-    variant: 'content-automation-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -451,7 +451,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['Salesforce, HubSpot, Pipedrive, Zoho CRM'],
     marketSize: '$40.2B CRM market',
     growthRate: '15% annual growth',
-    variant: 'crm-intelligence-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -504,7 +504,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['Datadog APM', 'Honeycomb', 'New Relic'],
     marketSize: '$7.8B APM/Observability market',
     growthRate: '18% annual growth',
-    variant: 'observability-starter',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -557,7 +557,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['StackHawk', 'Snyk API', 'Salt Security'],
     marketSize: '$3.5B API Security market',
     growthRate: '28% annual growth',
-    variant: 'api-security',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -610,7 +610,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['Postmark', 'SendGrid', 'Mailgun'],
     marketSize: '$1.1B Email Delivery market',
     growthRate: '12% annual growth',
-    variant: 'email-deliverability',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -663,7 +663,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['UptimeRobot', 'DNS monitoring tools'],
     marketSize: '$0.5B DNS Monitoring market',
     growthRate: '10% annual growth',
-    variant: 'dns-monitor',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -716,7 +716,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['ARMO', 'Fairwinds Polaris', 'Aqua'],
     marketSize: '$2.2B Kubernetes Security market',
     growthRate: '24% annual growth',
-    variant: 'k8s-rbac',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -769,7 +769,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['CloudZero', 'Kubecost', 'Apptio'],
     marketSize: '$2.7B FinOps market',
     growthRate: '30% annual growth',
-    variant: 'finops-optimizer',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -822,7 +822,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['PagerDuty', 'FireHydrant', 'Rootly'],
     marketSize: '$4.2B Incident Management market',
     growthRate: '16% annual growth',
-    variant: 'incident-automation',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -875,7 +875,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['DocRaptor', 'PDFMonkey', 'PDFreactor'],
     marketSize: '$0.9B Document Generation market',
     growthRate: '14% annual growth',
-    variant: 'pdf-render',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -928,7 +928,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['Nobl9', 'Datadog SLO', 'Lightstep'],
     marketSize: '$1.2B SRE tooling market',
     growthRate: '20% annual growth',
-    variant: 'slo-tracker',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -981,7 +981,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     competitors: ['SpeedCurve', 'Calibre', 'Sentry Performance'],
     marketSize: '$1.5B Web Performance market',
     growthRate: '19% annual growth',
-    variant: 'rum-monitor',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

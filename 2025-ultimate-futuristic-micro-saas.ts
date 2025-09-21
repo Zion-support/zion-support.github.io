@@ -73,7 +73,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['SAP, Oracle, Microsoft Dynamics, NetSuite'],
     marketSize: '$45B ERP market',
     growthRate: '25% annual growth',
-    variant: 'ai-autonomous-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['Signal, Telegram, WhatsApp, Microsoft Teams'],
     marketSize: '$15B secure communication market',
     growthRate: '30% annual growth',
-    variant: 'quantum-communication-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['Epic, Cerner, Allscripts, Athenahealth'],
     marketSize: '$28B healthcare AI market',
     growthRate: '40% annual growth',
-    variant: 'ai-healthcare-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -214,7 +214,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['Bloomberg Terminal, Reuters, Interactive Brokers'],
     marketSize: '$35B algorithmic trading market',
     growthRate: '35% annual growth',
-    variant: 'ai-trading-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['IBM Quantum, AWS Braket, Google Quantum AI, Microsoft Azure Quantum'],
     marketSize: '$8B quantum computing market',
     growthRate: '50% annual growth',
-    variant: 'quantum-computing-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['Jasper, Copy.ai, ChatGPT Plus, Grammarly'],
     marketSize: '$12B AI content creation market',
     growthRate: '45% annual growth',
-    variant: 'ai-content-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -355,7 +355,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['Intercom, Zendesk, Freshdesk, Help Scout'],
     marketSize: '$18B customer service software market',
     growthRate: '20% annual growth',
-    variant: 'ai-customer-service-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'],
     marketSize: '$480B cloud computing market',
     growthRate: '25% annual growth',
-    variant: 'quantum-cloud-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -449,7 +449,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'],
     marketSize: '$25B marketing automation market',
     growthRate: '30% annual growth',
-    variant: 'ai-marketing-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -496,7 +496,7 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     competitors: ['Traditional research tools, Academic platforms, Research databases'],
     marketSize: '$15B research tools market',
     growthRate: '35% annual growth',
-    variant: 'quantum-ai-research-enterprise',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

@@ -119,7 +119,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     competitors: ['Traditional bioinformaticsResearch platforms', 'Laboratory software'],
     marketSize: '$9.2B market',
     growthRate: '320% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -166,7 +166,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     competitors: ['Traditional AI platformsPrivacy tools', 'Encryption solutions'],
     marketSize: '$7.5B market',
     growthRate: '250% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -213,7 +213,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     competitors: ['Traditional energy managementGrid optimization tools', 'Sustainability platforms'],
     marketSize: '$12.8B market',
     growthRate: '300% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -307,7 +307,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     competitors: ['Traditional education platformsOnline learning tools', 'Technology training platforms'],
     marketSize: '$5.2B market',
     growthRate: '220% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

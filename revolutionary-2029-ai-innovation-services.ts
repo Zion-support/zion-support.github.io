@@ -77,7 +77,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     competitors: ['SonarQubeCodeClimate', 'DeepCode'],
     marketSize: '$8B Code Quality Tools',
     growthRate: '20% CAGR',
-    variant: 'ai-development',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -126,7 +126,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     competitors: ['JasperCopy.ai', 'Writesonic'],
     marketSize: '$15B Content Marketing',
     growthRate: '18% CAGR',
-    variant: 'ai-content',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -175,7 +175,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     competitors: ['AsanaMonday.com', 'ClickUp'],
     marketSize: '$12B Project Management',
     growthRate: '16% CAGR',
-    variant: 'ai-project-management',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -224,7 +224,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     competitors: ['AhrefsSEMrush', 'Moz'],
     marketSize: '$20B SEO Tools',
     growthRate: '22% CAGR',
-    variant: 'ai-seo',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -272,7 +272,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     competitors: ['HubSpotMarketo', 'Pardot'],
     marketSize: '$25B Marketing Automation',
     growthRate: '20% CAGR',
-    variant: 'ai-marketing',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -320,7 +320,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     competitors: ['IntercomZendesk', 'Freshdesk'],
     marketSize: '$18B Customer Support',
     growthRate: '16% CAGR',
-    variant: 'ai-support',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -369,7 +369,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     competitors: ['BloombergReuters', 'FactSet'],
     marketSize: '$35B Financial Analytics',
     growthRate: '18% CAGR',
-    variant: 'ai-finance',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -418,7 +418,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     competitors: ['DocuSignAdobe Sign', 'ContractPodAi'],
     marketSize: '$12B Legal Tech',
     growthRate: '25% CAGR',
-    variant: 'ai-legal',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -466,7 +466,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     competitors: ['HireVuePymetrics', 'HackerRank'],
     marketSize: '$8B HR Tech',
     growthRate: '20% CAGR',
-    variant: 'ai-hr',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

@@ -119,7 +119,7 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
     competitors: ['IBM Quantum: $50,000+/monthGoogle Quantum: $40,000+/month', 'Microsoft Quantum: $45,000+/month'],
     marketSize: '$8.6B quantum computing market',
     growthRate: '300% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

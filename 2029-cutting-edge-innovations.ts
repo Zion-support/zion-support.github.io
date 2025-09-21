@@ -212,7 +212,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     competitors: ['NeuralinkKernel', 'ParadromicsAdvanced BCI companies'],
     marketSize: '$8B BCI market',
     growthRate: '350% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -258,7 +258,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     competitors: ['Advanced quantum research platformsTemporal physics research', 'Government research labs'],
     marketSize: '$12B quantum research market',
     growthRate: '400% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

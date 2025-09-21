@@ -80,7 +80,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'],
     marketSize: '$3B+ BCI market',
     growthRate: '600%+ annual growth',
-    variant: 'neural-revolutionary',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -133,7 +133,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     competitors: ['ID Quantique, Toshiba Quantum, Quantum Xchange, Qrypt'],
     marketSize: '$12B+ quantum security market',
     growthRate: '500%+ annual growth',
-    variant: 'quantum-security',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -186,7 +186,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     competitors: ['Planetary Resources, Deep Space Industries, Asteroid Mining Corporation'],
     marketSize: '$2B+ space mining market',
     growthRate: '800%+ annual growth',
-    variant: 'space-futuristic',
+    variant: 'space-tech',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -239,7 +239,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     competitors: ['Boston Dynamics, ABB Robotics, FANUC, KUKA'],
     marketSize: '$28B+ robotics market',
     growthRate: '350%+ annual growth',
-    variant: 'quantum-iot-revolutionary',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -292,7 +292,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     competitors: ['Waymo, Tesla, Cruise, Aurora, Argo AI'],
     marketSize: '$65B+ autonomous vehicle market',
     growthRate: '400%+ annual growth',
-    variant: 'autonomous-futuristic',
+    variant: 'autonomous-systems',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -345,7 +345,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     competitors: ['IBM Quantum, Google Quantum, Microsoft Quantum, D-Wave'],
     marketSize: '$15B+ quantum computing market',
     growthRate: '600%+ annual growth',
-    variant: 'quantum-ai-revolutionary',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -398,7 +398,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     competitors: ['Roblox, Decentraland, The Sandbox, Meta, Unity'],
     marketSize: '$18B+ metaverse market',
     growthRate: '350%+ annual growth',
-    variant: 'metaverse-futuristic',
+    variant: 'metaverse',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

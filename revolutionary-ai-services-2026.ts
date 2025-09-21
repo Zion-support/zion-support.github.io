@@ -261,7 +261,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     competitors: ['Traditional logistics softwareCustom optimization solutions', 'Basic route planning tools'],
     marketSize: '$35B market',
     growthRate: '300% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

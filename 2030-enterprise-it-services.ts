@@ -73,7 +73,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     competitors: ['Limited competition in autonomous DevOps'],
     marketSize: 'Growing market - $250B+ potential',
     growthRate: '1500%+ annual growth potential',
-    variant: 'it-futuristic',
+    variant: 'it-infrastructure',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -120,7 +120,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     competitors: ['Limited competition in zero trust security'],
     marketSize: 'Growing market - $180B+ potential',
     growthRate: '1200%+ annual growth potential',
-    variant: 'security-futuristic',
+    variant: 'cybersecurity',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -167,7 +167,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     competitors: ['Limited competition in edge orchestration'],
     marketSize: 'Growing market - $150B+ potential',
     growthRate: '1000%+ annual growth potential',
-    variant: 'edge-futuristic',
+    variant: 'edge-computing',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -261,7 +261,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [
     competitors: ['None - First to market'],
     marketSize: 'Emerging market - $300B+ potential',
     growthRate: '2000%+ annual growth potential',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

@@ -120,7 +120,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['No direct competitorsTraditional AI research platforms'],
     marketSize: '$500M market (emerging)',
     growthRate: '800% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -308,7 +308,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Schneider ElectricSiemens Energy', 'GE DigitalABB', 'Honeywell'],
     marketSize: '$125.3B market',
     growthRate: '280% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -402,7 +402,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['SAP Supply ChainOracle SCM', 'Manhattan AssociatesJDA Software', 'Infor'],
     marketSize: '$15.5B market',
     growthRate: '250% annual growth',
-    variant: 'quantum-futuristic',
+    variant: 'quantum',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

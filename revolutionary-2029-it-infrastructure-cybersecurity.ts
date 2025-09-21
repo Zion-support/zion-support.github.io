@@ -77,7 +77,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['ZscalerCloudflare', 'Palo Alto Networks'],
     marketSize: '$30B Zero Trust Security',
     growthRate: '25% CAGR',
-    variant: 'security-zero-trust',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -126,7 +126,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['CloudHealthCloudCheckr', 'Apptio'],
     marketSize: '$15B Cloud Management',
     growthRate: '20% CAGR',
-    variant: 'cloud-finops',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -175,7 +175,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['MetricStreamSAP GRC', 'IBM OpenPages'],
     marketSize: '$25B GRC Market',
     growthRate: '18% CAGR',
-    variant: 'compliance-ai',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -224,7 +224,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['Recorded FutureThreatConnect', 'Anomali'],
     marketSize: '$20B Threat Intelligence',
     growthRate: '22% CAGR',
-    variant: 'threat-intelligence',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -272,7 +272,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['IBM QuantumGoogle Quantum', 'Microsoft Quantum'],
     marketSize: '$50B Quantum Computing',
     growthRate: '35% CAGR',
-    variant: 'quantum-infrastructure',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -321,7 +321,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['Palo Alto NetworksFortinet', 'Check Point'],
     marketSize: '$40B Edge Computing',
     growthRate: '30% CAGR',
-    variant: 'edge-security',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -369,7 +369,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['SolarWindsPRTG', 'Nagios'],
     marketSize: '$18B Network Monitoring',
     growthRate: '16% CAGR',
-    variant: 'network-ai',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -417,7 +417,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['SnykVeracode', 'Checkmarx'],
     marketSize: '$12B DevSecOps',
     growthRate: '24% CAGR',
-    variant: 'devsecops',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -466,7 +466,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['OneTrustTrustArc', 'BigID'],
     marketSize: '$20B Data Privacy',
     growthRate: '20% CAGR',
-    variant: 'privacy-governance',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -514,7 +514,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     competitors: ['VMwareRed Hat', 'HashiCorp'],
     marketSize: '$35B Cloud Management',
     growthRate: '18% CAGR',
-    variant: 'hybrid-cloud',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
