@@ -1,86 +1,66 @@
-import { Server,,, Clock,,, MapPin,,  } from 'lucide-react'
+import { Server, Clock, MapPin } from 'lucide-react'
 import React from "react";
+
 interface ServiceDetailsProps {
-  country: string
-// Component to show service details for the selected country,
+  country: string;
+}
+
+// Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
-return (
-    <Card className='bg-zion-blue-dark border-zion-blue-light'>
-      <CardHeader>
-        <CardTitle className='text-white flex items-center'>
+  return (
+    <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6'>
+      <div className='mb-6'>
+        <h3 className='text-xl font-semibold text-white flex items-center mb-2'>
           <Server className='mr-2 h-5 w-5 text-zion-cyan' />
           IT Onsite Service in {country}
-        </CardTitle>
-        <CardDescription className='text-zion-slate-light'>
+        </h3>
+        <p className='text-zion-slate-light'>
           Details about our service locations and capabilities in {country}
-        </CardDescription>
-      </CardHeader>
-      <CardContent className='space-y-4'>
-        <div className='overflow-hidden rounded-lg mb-4 relative h-48'>
-          <Image
-src = {getRegionalImage(country),}
-            alt={`Datacenter in ${country}`}
-            className='object-cover transform transition-transform duration-500 hover:scale-110'
-            loading='lazy'
-          />
-        </div>
-        <div className='space-y-4'>
-          <div>
-            <h4 className='text-lg font-medium text-white mb-2 flex items-center'>
-              <MapPin className='mr-2 h-4 w-4 text-zion-purple' />
-              Service Locations
-            </h4>
-            <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>
-              {datacenters.map((dc idx) => (
-                <div
-key={idx}
-                  className='bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light'                >
-                  {dc}
-                </div>
-              ))}
-            </div>
+        </p>
+      </div>
+      
+      <div className='space-y-4'>
+        <div className='overflow-hidden rounded-lg mb-4 relative h-48 bg-zion-blue-light'>
+          <div className='absolute inset-0 flex items-center justify-center'>
+            <span className='text-zion-slate-light'>Service Coverage Map</span>
           </div>
-          <div>
-            <h4 className='text-lg font-medium text-white mb-2 flex items-center'>
-              <Clock className='mr-2 h-4 w-4 text-zion-purple' />
-              Service Instructions
-            </h4>
-            <p className='text-zion-slate-light'>
-              {getRegionalInstructions(country)}
+        </div>
+        
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='bg-zion-blue-light p-4 rounded-lg'>
+            <div className='flex items-center mb-2'>
+              <Clock className='h-5 w-5 text-zion-cyan mr-2' />
+              <h4 className='text-white font-medium'>Response Time</h4>
+            </div>
+            <p className='text-zion-slate-light text-sm'>
+              Average response time: 2-4 hours in major cities
             </p>
           </div>
-          <div className='bg-zion-blue rounded-lg p-4 border border-zion-blue-light'>
-            <h4 className='text-lg font-medium text-white mb-2'>
-              What's Included
-            </h4>
-            <ul className='list-disc list-inside text-zion-slate-light space-y-1'>
-              <li>Transportation to your site</li>
-              <li>First hour of onsite technical support</li>
-              <li>Basic hardware diagnosis</li>
-              <li>Network connectivity troubleshooting</li>
-              <li>Equipment installation assistance</li>
-            </ul>
+          
+          <div className='bg-zion-blue-light p-4 rounded-lg'>
+            <div className='flex items-center mb-2'>
+              <MapPin className='h-5 w-5 text-zion-cyan mr-2' />
+              <h4 className='text-white font-medium'>Coverage Area</h4>
+            </div>
+            <p className='text-zion-slate-light text-sm'>
+              Nationwide coverage with local technicians
+            </p>
           </div>
         </div>
-      </CardContent>
-      <CardFooter className='border-t border-zion-blue-light pt-4'>
-        <p className='text-sm text-zion-slate-light'>
-          For custom enterprise needs or multi-site services in {country}
-          please contact our enterprise team for tailored pricing.
-        </p>
-      </CardFooter>
-    </Card>
+        
+        <div className='bg-zion-blue-light p-4 rounded-lg'>
+          <h4 className='text-white font-medium mb-3'>Service Capabilities</h4>
+          <ul className='space-y-2 text-zion-slate-light text-sm'>
+            <li>• Hardware diagnostics and repair</li>
+            <li>• Network troubleshooting</li>
+            <li>• Software installation and configuration</li>
+            <li>• Data recovery services</li>
+            <li>• System optimization</li>
+            <li>• Preventive maintenance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   )
 }
-}operate during business hours (8AM-6PM $ {
-  timezone,
-}) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations additional travel fees may apply.`
-}"
-return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {
-  idx "
-}className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light" > {
-  dc,
-}</div>) ) "
-}</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>)
-}'"}

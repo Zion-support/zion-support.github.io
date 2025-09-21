@@ -60,3 +60,6 @@ browserName: 'webkit'
   ]
 }),
 */
+
+// Make this file a module to avoid TypeScript isolatedModules error
+export {};
