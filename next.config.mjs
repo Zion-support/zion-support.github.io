@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -23,6 +22,8 @@ const nextConfig = {
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    formats: ['image/webp', 'image/avif'],
   },
   
   // Exclude certain directories from compilation
@@ -90,29 +91,9 @@ const nextConfig = {
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
-  
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
-  },
-};
-
-export default nextConfig;
-=======
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-  },
-  images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif'],
-  },
-  compress: true,
-  poweredByHeader: false,
   generateEtags: false,
+  
+  // Security headers
   async headers() {
     return [
       {
@@ -134,11 +115,12 @@ const nextConfig = {
       },
     ]
   },
-}
+  
+  // Experimental features for performance
+  experimental: {
+    optimizeCss: false,
+    scrollRestoration: true,
+  },
+};
 
-<<<<<<<< HEAD:next.config.js
-module.exports = nextConfig
-========
 export default nextConfig;
->>>>>>>> pr-22753:next.config.mjs
->>>>>>> pr-22753
