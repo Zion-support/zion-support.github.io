@@ -12,6 +12,9 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import FAQSection from '../components/FAQSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import EnhancedAnalytics from '../components/EnhancedAnalytics';
+import EnhancedServiceCard from '../components/EnhancedServiceCard';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -56,8 +59,14 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-        <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="text-center">
+          <LoadingSpinner size="xl" color="gradient" text="Loading Zion Tech Group..." />
+          <div className="mt-8 space-y-2">
+            <div className="text-white text-lg font-semibold">Preparing your experience...</div>
+            <div className="text-gray-300 text-sm">Loading cutting-edge technology solutions</div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -155,17 +164,15 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-500 delay-${index * 200} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  <a href="/services" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                    Learn More
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </div>
+                <EnhancedServiceCard
+                  key={index}
+                  service={service}
+                  index={index}
+                  isVisible={isVisible}
+                  onHover={(hoveredIndex) => {
+                    // Optional: Add hover effects for other cards
+                  }}
+                />
               ))}
             </div>
           </div>
@@ -339,6 +346,12 @@ export default function Home() {
 
         {/* Search Modal */}
         <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+        
+        {/* Performance Monitor (Development Only) */}
+        <PerformanceMonitor />
+        
+        {/* Enhanced Analytics */}
+        <EnhancedAnalytics />
       </div>
     </ErrorBoundary>
   );

@@ -25,14 +25,20 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'react', 'react-dom'],
     esmExternals: false,
   },
   
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
   },
+  
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  generateEtags: true,
   
   // Generate unique build ID for better caching
   generateBuildId: async () => {
