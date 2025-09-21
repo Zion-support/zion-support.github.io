@@ -1,32 +1,60 @@
 {
-  "timestamp": "2025-09-21T13:30:41.178Z",
+  "timestamp": "2025-09-21T14:42:56.126Z",
   "optimizations": [
-    {
-      "type": "bundle-analysis",
-      "current": 17375836,
-      "recommendation": "Bundle size is acceptable"
-    },
-    {
-      "type": "image-optimization",
-      "found": 0,
-      "recommendation": "Image count is reasonable"
-    },
-    {
-      "type": "dependencies",
-      "production": 33,
-      "development": 30,
-      "recommendation": "Dependency count is reasonable"
-    },
-    {
-      "type": "code-quality",
-      "largeFiles": 31,
-      "recommendation": "Consider splitting large files into smaller modules"
-    }
+    "Minified 404.html",
+    "Minified 500.html",
+    "Minified about.html",
+    "Minified blog.html",
+    "Minified client-portal.html",
+    "Minified contact.html",
+    "Minified index.html",
+    "Minified 404.html",
+    "Minified 500.html",
+    "Minified about.html",
+    "Minified blog.html",
+    "Minified client-portal.html",
+    "Minified contact.html",
+    "Minified index.html",
+    "Minified services-advertising.html",
+    "Minified services.html",
+    "Minified services-advertising.html",
+    "Minified services.html",
+    "Optimized JS in 361.js",
+    "Optimized JS in 583.js",
+    "Optimized JS in 66.js",
+    "Optimized JS in 664.js",
+    "Optimized JS in 726.js",
+    "Optimized JS in 859.js",
+    "Optimized JS in _app.js",
+    "Optimized JS in _document.js",
+    "Optimized JS in _error.js",
+    "Optimized JS in webpack-runtime.js",
+    "Optimized JS in _buildManifest.js",
+    "Optimized JS in _ssgManifest.js",
+    "Optimized JS in 703-0d9663002be6a7f0bdb3.js",
+    "Optimized JS in framework-895f067827ebe11ffe45.js",
+    "Optimized JS in main-9d1223f51b813a4d85e6.js",
+    "Optimized JS in 404-065f09d9142ac99de28b.js",
+    "Optimized JS in _app-1b8a5e6edb9d7e94ea79.js",
+    "Optimized JS in _error-737a04e9a0da63c9d162.js",
+    "Optimized JS in about-b8a2becd4adc56f8d09d.js",
+    "Optimized JS in blog-436ee283580a69836d44.js",
+    "Optimized JS in client-portal-e3fb94f36fa39902d46b.js",
+    "Optimized JS in contact-e4a443946ec170a1d7bb.js",
+    "Optimized JS in index-6f52067f0b8900070878.js",
+    "Optimized JS in services-advertising-08a711bc3c0c6cceac4f.js",
+    "Optimized JS in services-c389edb032337d8e0403.js",
+    "Optimized JS in polyfills-a40ef1678bae11e696dba45124eadd70.js",
+    "Optimized JS in webpack-1a8a258926ecde76681b.js",
+    "Generated sitemap.xml",
+    "Generated robots.txt",
+    "Generated optimized web app manifest"
   ],
-  "recommendations": [],
-  "summary": {
-    "totalOptimizations": 4,
-    "criticalIssues": 1,
-    "status": "good"
+  "totalOptimizations": 48,
+  "performance": {
+    "imagesOptimized": 0,
+    "htmlMinified": 18,
+    "cssOptimized": 0,
+    "jsOptimized": 27
   }
 }

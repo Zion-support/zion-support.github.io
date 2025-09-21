@@ -1,144 +1,92 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const PerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
+  });
+
   useEffect(() => {
-    // Web Vitals monitoring
-    const reportWebVitals = (metric) => {
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
-      }
-      
-      // Send to analytics in production
-      if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
-        // Send to Google Analytics or other analytics service
-        if (window.gtag) {
-          window.gtag('event', metric.name, {
-            event_category: 'Web Vitals',
-            event_label: metric.id,
-            value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-            non_interaction: true,
-          });
-        }
-      }
-    };
+    if (typeof window === 'undefined') return;
 
-    // Monitor Core Web Vitals
+    // Web Vitals measurement
     const measureWebVitals = () => {
-      // First Contentful Paint (FCP)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
-              reportWebVitals({
-                name: 'FCP',
-                value: entry.startTime,
-                id: 'fcp'
-              });
-            }
+      // First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: Math.round(entry.startTime) }));
           }
-        });
-        observer.observe({ entryTypes: ['paint'] });
-      }
-
-      // Largest Contentful Paint (LCP)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          reportWebVitals({
-            name: 'LCP',
-            value: lastEntry.startTime,
-            id: 'lcp'
-          });
-        });
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      }
-
-      // First Input Delay (FID)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            reportWebVitals({
-              name: 'FID',
-              value: entry.processingStart - entry.startTime,
-              id: 'fid'
-            });
-          }
-        });
-        observer.observe({ entryTypes: ['first-input'] });
-      }
-
-      // Cumulative Layout Shift (CLS)
-      if ('PerformanceObserver' in window) {
-        let clsValue = 0;
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          }
-          reportWebVitals({
-            name: 'CLS',
-            value: clsValue,
-            id: 'cls'
-          });
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-      }
-    };
-
-    // Monitor resource loading performance
-    const monitorResourcePerformance = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'resource') {
-              const loadTime = entry.responseEnd - entry.startTime;
-              if (loadTime > 1000) { // Log resources taking more than 1 second
-                console.warn('Slow resource detected:', {
-                  name: entry.name,
-                  duration: loadTime,
-                  size: entry.transferSize
-                });
-              }
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['resource'] });
-      }
-    };
-
-    // Monitor memory usage
-    const monitorMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = performance.memory;
-        const memoryUsage = {
-          used: Math.round(memory.usedJSHeapSize / 1048576), // MB
-          total: Math.round(memory.totalJSHeapSize / 1048576), // MB
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
-        };
-        
-        if (memoryUsage.used > memoryUsage.limit * 0.8) {
-          console.warn('High memory usage detected:', memoryUsage);
         }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }));
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          setMetrics(prev => ({ ...prev, fid: Math.round(entry.processingStart - entry.startTime) }));
+        }
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }));
+          }
+        }
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0];
+      if (navigationEntry) {
+        setMetrics(prev => ({ 
+          ...prev, 
+          ttfb: Math.round(navigationEntry.responseStart - navigationEntry.requestStart) 
+        }));
       }
     };
 
-    // Initialize monitoring
-    measureWebVitals();
-    monitorResourcePerformance();
-    
-    // Monitor memory usage every 30 seconds
-    const memoryInterval = setInterval(monitorMemoryUsage, 30000);
-    
-    // Cleanup
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measureWebVitals();
+    } else {
+      window.addEventListener('load', measureWebVitals);
+    }
+
     return () => {
-      clearInterval(memoryInterval);
+      window.removeEventListener('load', measureWebVitals);
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') return null;
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <div className="font-bold mb-2">Performance Metrics</div>
+      <div>FCP: {metrics.fcp}ms</div>
+      <div>LCP: {metrics.lcp}ms</div>
+      <div>FID: {metrics.fid}ms</div>
+      <div>CLS: {metrics.cls}</div>
+      <div>TTFB: {metrics.ttfb}ms</div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

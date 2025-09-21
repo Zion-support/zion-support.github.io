@@ -1,31 +1,26 @@
 {
-  "timestamp": "2025-09-21T13:30:37.930Z",
-  "securityIssues": [
+  "timestamp": "2025-09-21T14:15:03.976Z",
+  "score": 85,
+  "issues": [
     {
-      "type": "configuration",
-      "severity": "medium",
-      "issue": "TypeScript build errors are ignored",
-      "recommendation": "Enable TypeScript error checking in production"
-    },
-    {
-      "type": "configuration",
-      "severity": "medium",
-      "issue": "ESLint errors are ignored during builds",
-      "recommendation": "Enable ESLint error checking in production"
+      "category": "environment",
+      "severity": "high",
+      "message": "Hardcoded secret in .env: NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "details": [],
+      "timestamp": "2025-09-21T14:15:03.972Z"
     }
   ],
-  "recommendations": [],
-  "checks": [
+  "recommendations": [
     {
-      "type": "dependencies",
-      "status": "checked",
-      "recommendation": "Run npm audit regularly and update dependencies"
+      "priority": "high",
+      "action": "Secure environment variables",
+      "description": "Move secrets to environment variables and use proper secret management"
     }
   ],
   "summary": {
-    "totalIssues": 2,
-    "criticalIssues": 0,
-    "highIssues": 0,
-    "status": "excellent"
+    "totalIssues": 1,
+    "criticalIssues": 1,
+    "mediumIssues": 0,
+    "lowIssues": 0
   }
 }

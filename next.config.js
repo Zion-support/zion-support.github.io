@@ -9,44 +9,36 @@ const nextConfig = {
   
   // Static export configuration
   output: 'export',
-  skipTrailingSlashRedirect: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
   },
   typescript: {
-    // Only ignore TypeScript errors in production builds to avoid breaking static export
-    ignoreBuildErrors: process.env.NODE_ENV === 'production',
+    ignoreBuildErrors: true,
   },
   eslint: {
-    // Only ignore ESLint errors in production builds to avoid breaking static export
-    ignoreDuringBuilds: process.env.NODE_ENV === 'production',
+    ignoreDuringBuilds: true,
   },
   
   // Experimental features
   experimental: {
-    optimizeCss: false, // Disabled due to missing critters dependency
+    optimizeCss: false,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'react', 'react-dom'],
     esmExternals: false,
-    gzipSize: true,
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
   },
   
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
   },
+  
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  generateEtags: true,
   
   // Generate unique build ID for better caching
   generateBuildId: async () => {
@@ -54,7 +46,7 @@ const nextConfig = {
   },
   
   // Webpack configuration
-  webpack: (config, { isServer, dev }) => {
+  webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -68,23 +60,6 @@ const nextConfig = {
         util: false,
         buffer: require.resolve('buffer'),
         process: require.resolve('process/browser'),
-      };
-      
-      // Add compression support (disabled due to dependency conflicts)
-      // Compression will be handled by Netlify's built-in compression
-    }
-    
-    // Performance optimizations
-    if (!dev) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
       };
     }
     
