@@ -48,6 +48,13 @@ const nextConfig = {
         },
       };
     }
+    
+    // Fix for OpenSSL legacy provider issue
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      crypto: require.resolve('crypto-browserify'),
+    };
+    
     // Skip PostCSS processing modifications for now
     return config;
   },
