@@ -1,5 +1,5 @@
 import React from 'react';
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
+import { ServiceLandingTemplate } from '../components/services/ServiceLandingTemplate';
 import { Bot, Users, TrendingUp } from 'lucide-react';
 
 const benefits = [

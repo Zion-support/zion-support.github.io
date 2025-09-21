@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from '@/components/SEO';
+import useJobDetails from '../hooks/useJobDetails';
+import { ApplyToJobModal } from '../components/messaging/job-application';
+import { SEO } from '../components/SEO';
 
 export default function JobDetails() {
   const [job, setJob] = useState(null);

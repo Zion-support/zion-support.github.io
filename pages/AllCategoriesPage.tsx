@@ -1,6 +1,6 @@
-import { CategoryCard } from '@/components/CategoryCard';
-import { GradientHeading } from '@/components/GradientHeading';
-// import ErrorBoundary from "@/components/GlobalErrorBoundary";
+import { CategoryCard } from '../components/CategoryCard';
+import { GradientHeading } from '../components/GradientHeading';
+// import ErrorBoundary from "../components/GlobalErrorBoundary";
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
 
 // Categories data
