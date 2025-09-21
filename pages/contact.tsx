@@ -54,6 +54,7 @@ export default function Contact() {
               <div className="hidden md:flex space-x-8">
                 <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
+                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
                 <Link href="/contact" className="text-white font-semibold">Contact</Link>
               </div>
               <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
