@@ -178,7 +178,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-        </section>
 
         {/* Footer */}
         <footer className="bg-black/50 py-12 px-4 sm:px-6 lg:px-8">

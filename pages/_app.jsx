@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-import PerformanceOptimizer from '../components/PerformanceOptimizer.tsx';
-import MobileOptimizer from '../components/MobileOptimizer.tsx';
-import EnhancedAnalytics from '../components/EnhancedAnalytics.tsx';
-import ErrorBoundary from '../components/ErrorBoundary.tsx';
+import PerformanceOptimizer from '../components/PerformanceOptimizer.jsx';
+import MobileOptimizer from '../components/MobileOptimizer.jsx';
+import EnhancedAnalytics from '../components/EnhancedAnalytics.jsx';
+import ErrorBoundary from '../components/ErrorBoundary.jsx';
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }) {
