@@ -27,7 +27,7 @@ serve(async (req) => {
       const orderId = session.metadata?.orderId;
       if (orderId) {
         await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
-    }
+    },
 
     return new Response(JSON.stringify({ received: true }), { status: 200 })}
 

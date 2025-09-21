@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface CuttingEdge2029Service {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Fully functional AI consciousness development platform with advanced neural networks, consciousness algorithms, and real-time monitoring capabilities.',
     launchDate: '2025-01-15',
@@ -125,7 +125,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready emotional intelligence platform with real-time emotion detection, analysis, and response generation.',
     launchDate: '2024-08-01',
@@ -172,7 +172,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production quantum security gateway with quantum key distribution and post-quantum cryptography capabilities.',
     launchDate: '2024-10-01',
@@ -219,7 +219,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced space mining automation platform with AI robotics, automated prospecting, and resource extraction capabilities.',
     launchDate: '2025-03-01',
@@ -266,7 +266,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production metaverse platform with AI-powered world generation, realistic physics, and cross-platform compatibility.',
     launchDate: '2024-09-01',
@@ -313,7 +313,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced autonomous business management system with AI-powered decision making and process optimization.',
     launchDate: '2025-02-01',
@@ -360,7 +360,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced DNA computing platform with biological computation, molecular algorithms, and DNA-based data processing.',
     launchDate: '2025-04-01',
@@ -407,7 +407,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production quantum financial trading platform with quantum algorithms, real-time analysis, and automated trading capabilities.',
     launchDate: '2024-11-01',
@@ -454,7 +454,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced AI creativity platform with multi-model orchestration, creative idea generation, and innovation management.',
     launchDate: '2024-12-01',

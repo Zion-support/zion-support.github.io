@@ -38,7 +38,7 @@ export function useCompanyWorkspace() {
         console.error('Failed to load company data:', error);
       } finally {
         setLoading(false);
-      }
+      },
     };
 
     loadCompany();

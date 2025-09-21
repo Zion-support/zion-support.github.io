@@ -39,14 +39,14 @@ export class AIContentGenerator {
       
       if (!response.ok) {
         throw new Error('Failed to generate content');
-      }
+      },
       
       const data = await response.json();
       return this.processResponse(data, request);
     } catch (error) {
       console.error('AI Content Generation Error:', error);
       throw error;
-    }
+    },
   }
   
   private buildPrompt(request: AIContentRequest): string {
@@ -67,7 +67,7 @@ export class AIContentGenerator {
         wordCount: data.content?.split(' ').length || 0,
         readabilityScore: this.calculateReadability(data.content || ''),
         seoScore: this.calculateSEOScore(data.content || ''),
-      }
+      },
     };
   }
   
@@ -119,7 +119,7 @@ export const useAIContentGenerator = (apiKey: string) => {
       throw err;
     } finally {
       setIsGenerating(false);
-    }
+    },
   }, [apiKey]);
   
   return { generateContent, isGenerating, error };

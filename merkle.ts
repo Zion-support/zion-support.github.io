@@ -36,7 +36,7 @@ export function generateProofs(leavesHex: string[], levels: string[][]): Record<
       const sibling = level[siblingIndex] || level[pos],
       path.push(sibling);
       pos = Math.floor(pos / 2)
-    }
+    },
     proofs[leaf] = path}
   return proofs}
 

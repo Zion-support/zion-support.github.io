@@ -18,12 +18,12 @@ export async function fetchWithRetry(
       // If the response is ok, return it
       if (response.ok) {
         return response;
-      }
+      },
       
       // If it's the last attempt, return the response even if it's not ok
       if (attempt === retries) {
         return response;
-      }
+      },
       
       // For non-ok responses, throw an error to trigger retry
       throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -33,11 +33,11 @@ export async function fetchWithRetry(
       // If it's the last attempt, throw the error
       if (attempt === retries) {
         throw lastError;
-      }
+      },
       
       // Wait before retrying
       await new Promise(resolve => setTimeout(resolve, retryDelay * Math.pow(2, attempt)));
-    }
+    },
   }
   
   throw lastError!;

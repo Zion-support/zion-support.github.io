@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 
 export interface RevolutionaryITInfrastructureService2029 {
   id: string,
@@ -82,7 +82,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Zero trust engine, identity verification, access control',
     launchDate: '2025-01-05',
@@ -131,7 +131,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, cost analytics, optimization engine',
     launchDate: '2025-01-08',
@@ -180,7 +180,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, compliance engine, risk assessment',
     launchDate: '2025-01-10',
@@ -229,7 +229,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, threat feeds, intelligence engine',
     launchDate: '2025-01-12',
@@ -277,7 +277,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum algorithms, hybrid systems, migration tools',
     launchDate: '2025-01-15',
@@ -326,7 +326,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Edge security agents, monitoring platform, threat detection',
     launchDate: '2025-01-18',
@@ -374,7 +374,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, network agents, monitoring platform',
     launchDate: '2025-01-20',
@@ -422,7 +422,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Security scanning, CI/CD integration, automation engine',
     launchDate: '2025-01-22',
@@ -471,7 +471,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI models, privacy engine, governance platform',
     launchDate: '2025-01-25',
@@ -519,7 +519,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Multi-cloud platform, orchestration engine, management console',
     launchDate: '2025-01-28',

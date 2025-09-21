@@ -46,7 +46,7 @@ export class EnhancedAnalytics {
         referrer: document.referrer,
         userAgent: navigator.userAgent,
         screenResolution: `${screen.width}x${screen.height}`,
-      }
+      },
     });
   }
   
@@ -55,7 +55,7 @@ export class EnhancedAnalytics {
     if (!userId) {
       userId = 'user_' + Math.random().toString(36).substr(2, 9);
       localStorage.setItem('analytics_user_id', userId);
-    }
+    },
     return userId;
   }
   
@@ -64,7 +64,7 @@ export class EnhancedAnalytics {
     if (!sessionId) {
       sessionId = 'session_' + Date.now().toString(36);
       sessionStorage.setItem('analytics_session_id', sessionId);
-    }
+    },
     return sessionId;
   }
   
@@ -90,12 +90,12 @@ export class EnhancedAnalytics {
         value: event.value,
         custom_map: event.custom_parameters,
       });
-    }
+    },
     
     // Flush if batch is full
     if (this.eventQueue.length >= this.batchSize) {
       this.flushEvents();
-    }
+    },
   }
   
   public trackUserEngagement(element: string, action: string): void {
@@ -107,7 +107,7 @@ export class EnhancedAnalytics {
       custom_parameters: {
         elementType: this.getElementType(element),
         timeOnPage: this.getTimeOnPage(),
-      }
+      },
     });
   }
   
@@ -145,7 +145,7 @@ export class EnhancedAnalytics {
     setInterval(() => {
       if (this.eventQueue.length > 0) {
         this.flushEvents();
-      }
+      },
     }, this.flushInterval);
   }
   
@@ -170,7 +170,7 @@ export class EnhancedAnalytics {
       console.error('Failed to flush analytics events:', error);
       // Re-add events to queue for retry
       this.eventQueue.unshift(...eventsToFlush);
-    }
+    },
   }
   
   public getSessionSummary(): any {

@@ -15,7 +15,7 @@ export function usePerformanceMetrics() {
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return;
-    }
+    },
 
     setIsSupported(true);
 
@@ -39,7 +39,7 @@ export function usePerformanceMetrics() {
         });
       } catch (error) {
         console.error('Error measuring performance:', error);
-      }
+      },
     };
 
     // Wait for all performance entries to be available

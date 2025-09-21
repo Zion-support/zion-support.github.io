@@ -77,7 +77,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Satellite data integration, AI model training, and monitoring system setup',
     launchDate: '2027-02-15',
@@ -124,7 +124,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Hardware setup, content development, and user training',
     launchDate: '2027-01-28',
@@ -171,7 +171,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Robot integration, AI model deployment, and workflow optimization',
     launchDate: '2027-02-05',
@@ -218,7 +218,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Energy audit, system integration, and optimization strategy development',
     launchDate: '2027-01-18',
@@ -265,7 +265,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Supply chain assessment, system integration, and optimization strategy development',
     launchDate: '2027-02-10',
@@ -312,7 +312,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'HR process assessment, system integration, and user training',
     launchDate: '2027-01-25',
@@ -359,7 +359,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Legal process assessment, system integration, and user training',
     launchDate: '2027-02-20',
@@ -406,7 +406,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Property assessment, system integration, and optimization strategy development',
     launchDate: '2027-02-25',
@@ -453,7 +453,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'System setup, data integration, and performance optimization',
     launchDate: '2027-03-01',
@@ -500,7 +500,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Content analysis, recommendation engine setup, and performance optimization',
     launchDate: '2027-02-28',

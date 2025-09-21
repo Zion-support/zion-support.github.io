@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './src/types/service-variants';
 
 export interface EnterpriseIT2029Service {
   id: string;
@@ -85,7 +85,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready autonomous IT operations center with AI-powered automation, self-healing capabilities, and comprehensive infrastructure management. Includes deployment and training support.',
     launchDate: '2029-02-01',
@@ -136,7 +136,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced quantum cloud infrastructure with quantum-enhanced computing, hybrid systems, and comprehensive cloud management. Includes quantum computing access and training.',
     launchDate: '2029-01-20',
@@ -187,7 +187,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready AI-powered enterprise security platform with intelligent threat detection, automated response, and comprehensive security management. Includes deployment and training support.',
     launchDate: '2029-02-05',
@@ -238,7 +238,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Functional edge computing orchestration platform with intelligent workload distribution, edge optimization, and comprehensive edge management. Includes deployment and training support.',
     launchDate: '2029-01-25',
@@ -289,7 +289,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced zero-trust network architecture platform with comprehensive security implementation, continuous verification, and automated security management. Includes deployment and training support.',
     launchDate: '2029-02-10',
@@ -340,7 +340,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Functional blockchain infrastructure platform with enterprise-grade blockchain solutions, smart contract management, and comprehensive blockchain tools. Includes deployment and training support.',
     launchDate: '2029-01-30',
@@ -391,7 +391,7 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Advanced 5G private network solutions platform with enterprise-grade 5G infrastructure, network management, and comprehensive 5G tools. Includes deployment and training support.',
     launchDate: '2029-02-15',

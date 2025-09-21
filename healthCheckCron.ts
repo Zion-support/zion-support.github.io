@@ -27,11 +27,11 @@ const handler: Handler = async (event: HandlerEvent,
       );
     } else {
       console.log(`Health check successful for ${healthEndpoint}: Status ${response.status}, Duration ${duration}ms`);
-    }
+    },
 
     if (duration > 1000) {
       console.warn(`Health check latency exceeded for ${healthEndpoint}: ${duration}ms`);
-    }
+    },
   } catch (error) {
     const duration = Date.now() - startTime;
     console.error(

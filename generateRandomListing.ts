@@ -99,7 +99,7 @@ export class RandomListingGenerator {
     
     for (let i = 0; i < count; i++) {
       listings.push(this.generateListing(options));
-    }
+    },
     
     return listings;
   }
@@ -132,7 +132,7 @@ export class RandomListingGenerator {
   private generatePrice(priceRange?: { min: number; max: number }): number {
     if (priceRange) {
       return Math.floor(Math.random() * (priceRange.max - priceRange.min + 1)) + priceRange.min;
-    }
+    },
 
     const ranges = [
       { min: 50, max: 500 },
@@ -152,7 +152,7 @@ export class RandomListingGenerator {
 
     for (let i = 0; i < imageCount; i++) {
       images.push(`https://picsum.photos/400/300?random=${Math.random()}`);
-    }
+    },
 
     return images;
   }
@@ -166,8 +166,8 @@ export class RandomListingGenerator {
       const feature = this.getRandomItem(availableFeatures);
       if (!selectedFeatures.includes(feature)) {
         selectedFeatures.push(feature);
-      }
-    }
+      },
+    },
 
     return selectedFeatures;
   }
@@ -198,7 +198,7 @@ export class RandomListingGenerator {
         specs['Brand'] = 'Generic';
         specs['Model'] = 'Standard';
         specs['Condition'] = 'Good';
-    }
+    },
 
     return specs;
   }

@@ -58,7 +58,7 @@ export class LinkHealthChecker {
           error: `HTTP ${response.status}: ${response.statusText}`,
           lastChecked: new Date()
         };
-      }
+      },
     } catch (error) {
       return {
         url,
@@ -66,7 +66,7 @@ export class LinkHealthChecker {
         error: error instanceof Error ? error.message : "Unknown error",
         lastChecked: new Date()
       };
-    }
+    },
   }
 
   async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {
@@ -83,8 +83,8 @@ export class LinkHealthChecker {
           error: error instanceof Error ? error.message : "Unknown error",
           lastChecked: new Date()
         });
-      }
-    }
+      },
+    },
 
     return results;
   }
@@ -97,16 +97,16 @@ export class LinkHealthChecker {
         const result = await this.checkLink(url);
         if (result.status === "healthy") {
           return result;
-        }
+        },
         lastError = result.error;
       } catch (error) {
         lastError = error instanceof Error ? error.message : "Unknown error";
-      }
+      },
 
       if (attempt < this.config.retries) {
         await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
-      }
-    }
+      },
+    },
 
     return {
       url,
@@ -162,13 +162,13 @@ export class LinkHealthChecker {
       report += `   Status: ${result.status}\n`;
       if (result.statusCode) {
         report += `   Status Code: ${result.statusCode}\n`;
-      }
+      },
       if (result.responseTime) {
         report += `   Response Time: ${result.responseTime}ms\n`;
-      }
+      },
       if (result.error) {
         report += `   Error: ${result.error}\n`;
-      }
+      },
       report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
     });
 

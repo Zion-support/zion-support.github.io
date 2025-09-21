@@ -10,7 +10,7 @@ export class StorageUtils {
   private static getStorage(type: StorageType): Storage {
     if (typeof window === "undefined") {
       throw new Error("Storage is not available in server environment");
-    }
+    },
     return type === "localStorage" ? localStorage : sessionStorage;
   }
 
@@ -50,12 +50,12 @@ export class StorageUtils {
       if (data.expiration && Date.now() > data.expiration) {
         storage.removeItem(fullKey);
         return null;
-      }
+      },
       
       return data.value;
     } catch {
       return null;
-    }
+    },
   }
 
   public static removeItem(key: string, options: StorageOptions = {}): void {
@@ -86,8 +86,8 @@ export class StorageUtils {
       const key = storage.key(i);
       if (key && key.startsWith(prefix)) {
         keys.push(key.substring(prefix.length));
-      }
-    }
+      },
+    },
     
     return keys;
   }
@@ -103,9 +103,9 @@ export class StorageUtils {
         const value = storage.getItem(key);
         if (value) {
           size += key.length + value.length;
-        }
-      }
-    }
+        },
+      },
+    },
     
     return size;
   }
@@ -122,9 +122,9 @@ export class StorageUtils {
         const value = this.getItem<T>(shortKey, options);
         if (value !== null) {
           items[shortKey] = value;
-        }
-      }
-    }
+        },
+      },
+    },
     
     return items;
   }
@@ -135,7 +135,7 @@ export class StorageUtils {
   ): void {
     for (const [key, value] of Object.entries(items)) {
       this.setItem(key, value, options);
-    }
+    },
   }
 
   public static removeMultipleItems(
@@ -144,7 +144,7 @@ export class StorageUtils {
   ): void {
     for (const key of keys) {
       this.removeItem(key, options);
-    }
+    },
   }
 
   public static cleanExpiredItems(type: StorageType = "localStorage"): void {
@@ -160,18 +160,18 @@ export class StorageUtils {
             const data = JSON.parse(item);
             if (data.expiration && Date.now() > data.expiration) {
               keysToRemove.push(key);
-            }
-          }
+            },
+          },
         } catch {
           // Invalid JSON, remove it
           keysToRemove.push(key);
-        }
-      }
-    }
+        },
+      },
+    },
     
     for (const key of keysToRemove) {
       storage.removeItem(key);
-    }
+    },
   }
 
   public static getStorageInfo(type: StorageType = "localStorage"): {
@@ -194,7 +194,7 @@ export class StorageUtils {
       storage.removeItem(testKey);
     } catch {
       // Storage is full or not available
-    }
+    },
     
     const total = used + available;
     const percentage = total > 0 ? (used / total) * 100 : 0;
@@ -211,7 +211,7 @@ export class StorageUtils {
       return true;
     } catch {
       return false;
-    }
+    },
   }
 
   public static getStorageQuota(type: StorageType = "localStorage"): Promise<{
@@ -236,7 +236,7 @@ export class StorageUtils {
           usage: info.used,
           available: info.available
         });
-      }
+      },
     });
   }
 
@@ -250,14 +250,14 @@ export class StorageUtils {
         });
       } else {
         resolve(true);
-      }
+      },
     });
   }
 
   public static hasStorageAccess(): boolean {
     if ("hasStorageAccess" in document) {
       return (document as any).hasStorageAccess();
-    }
+    },
     return true;
   }
 
@@ -276,12 +276,12 @@ export class StorageUtils {
       
       if (!merge) {
         this.clear(type);
-      }
+      },
       
       this.setMultipleItems(items, { type });
     } catch (error) {
       throw new Error("Invalid storage data format");
-    }
+    },
   }
 
   public static backupStorage(type: StorageType = "localStorage"): {

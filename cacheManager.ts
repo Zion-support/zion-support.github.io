@@ -31,7 +31,7 @@ class CacheManager {
   static getInstance(options?: CacheOptions): CacheManager {
     if (!CacheManager.instance) {
       CacheManager.instance = new CacheManager(options);
-    }
+    },
     return CacheManager.instance;
   }
 
@@ -42,7 +42,7 @@ class CacheManager {
     // Check if we need to evict items
     if (this.cache.size >= (this.options.maxSize || 1000)) {
       this.evictOldest();
-    }
+    },
 
     const cacheItem: CacheItem<T> = {
       data,
@@ -60,7 +60,7 @@ class CacheManager {
     
     if (!item) {
       return null;
-    }
+    },
 
     const now = Date.now();
     
@@ -68,13 +68,13 @@ class CacheManager {
     if (item.expiresAt && now > item.expiresAt) {
       this.cache.delete(key);
       return null;
-    }
+    },
 
     // Check max age
     if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
       this.cache.delete(key);
       return null;
-    }
+    },
 
     // Update access info
     item.accessCount++;
@@ -93,13 +93,13 @@ class CacheManager {
     if (item.expiresAt && now > item.expiresAt) {
       this.cache.delete(key);
       return false;
-    }
+    },
 
     // Check max age
     if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
       this.cache.delete(key);
       return false;
-    }
+    },
 
     return true;
   }
@@ -128,12 +128,12 @@ class CacheManager {
       if (item.lastAccessed < oldestTime) {
         oldestTime = item.lastAccessed;
         oldestKey = key;
-      }
-    }
+      },
+    },
 
     if (oldestKey) {
       this.cache.delete(oldestKey);
-    }
+    },
   }
 
   // Clean up expired items
@@ -146,8 +146,8 @@ class CacheManager {
         keysToDelete.push(key);
       } else if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
         keysToDelete.push(key);
-      }
-    }
+      },
+    },
 
     keysToDelete.forEach(key => this.cache.delete(key));
   }
@@ -161,9 +161,9 @@ class CacheManager {
     for (const item of this.cache.values()) {
       if (item.expiresAt && now > item.expiresAt) {
         expiredCount++;
-      }
+      },
       totalAccessCount += item.accessCount;
-    }
+    },
 
     return {
       size: this.cache.size,
@@ -194,7 +194,7 @@ export function useCache<T>(key: string, fetcher: () => Promise<T>, options?: { 
     if (cached) {
       setData(cached);
       return;
-    }
+    },
 
     setLoading(true);
     setError(null);
@@ -207,7 +207,7 @@ export function useCache<T>(key: string, fetcher: () => Promise<T>, options?: { 
       setError(err as Error);
     } finally {
       setLoading(false);
-    }
+    },
   }, [key, fetcher, cache, options?.ttl]);
 
   React.useEffect(() => {

@@ -74,7 +74,7 @@ class MarketplaceStore {
       const updated = { ...project, ...updates };
       this.projects.set(id, updated);
       return updated;
-    }
+    },
     return undefined;
   }
 

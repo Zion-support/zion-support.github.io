@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './src/types/service-variants';
 
 export interface AdvancedITInfrastructureService {
   id: string;
@@ -86,7 +86,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Multi-cloud orchestration platform providing unified management across multiple cloud providers with intelligent optimization.',
     launchDate: '2025-01-20',
@@ -139,7 +139,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Zero-trust network security platform implementing comprehensive security architecture with continuous authentication.',
     launchDate: '2025-02-01',
@@ -192,7 +192,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered DevOps automation platform with intelligent CI/CD optimization and comprehensive automation capabilities.',
     launchDate: '2025-01-15',
@@ -245,7 +245,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum-resistant data storage platform implementing advanced encryption for future-proof data protection.',
     launchDate: '2025-02-05',
@@ -298,7 +298,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Intelligent data center management platform with AI-powered optimization and comprehensive monitoring capabilities.',
     launchDate: '2025-01-25',
@@ -351,7 +351,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Federated learning infrastructure platform enabling privacy-preserving AI training across distributed data sources.',
     launchDate: '2025-02-10',
@@ -404,7 +404,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Autonomous IT operations platform with AI-powered automation and self-healing infrastructure capabilities.',
     launchDate: '2025-01-18',
@@ -457,7 +457,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Quantum internet infrastructure platform enabling ultra-secure quantum communications and networking.',
     launchDate: '2025-02-15',

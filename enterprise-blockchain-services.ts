@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface EnterpriseBlockchainService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full enterprise blockchain platform with high performance, security, compliance, and comprehensive development tools.',
     launchDate: '2024-01-15',
@@ -126,7 +126,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full enterprise DeFi platform with institutional security, compliance tools, and comprehensive risk management.',
     launchDate: '2024-02-01',
@@ -173,7 +173,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full enterprise NFT platform with multi-chain support, advanced features, and comprehensive management tools.',
     launchDate: '2024-01-20',
@@ -220,7 +220,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full blockchain supply chain platform with traceability, automation, and comprehensive management tools.',
     launchDate: '2024-02-15',
@@ -267,7 +267,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Full blockchain identity platform with self-sovereign identity, zero-knowledge proofs, and comprehensive security features.',
     launchDate: '2024-01-10',

@@ -14,7 +14,7 @@ vi.mock('axios', async () => {
     // Provide a type-safe mock for isAxiosError
     isAxiosError: (payload: any): payload is AxiosError => {
       return actualAxios.isAxiosError(payload)
-    }
+    },
   }});
 const mockedAxios = axios as MockedObject<AxiosStatic>,
 

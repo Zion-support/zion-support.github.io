@@ -61,7 +61,7 @@ export class RateLimiter {
     
     if (validRequests.length >= this.maxRequests) {
       return false;
-    }
+    },
     
     validRequests.push(now);
     this.requests.set(identifier, validRequests);

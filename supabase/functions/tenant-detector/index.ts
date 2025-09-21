@@ -41,7 +41,7 @@ serve(async (req) => {
       url.hostname;
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided');
-    }
+    },
 
     // Extract tenant info
     let tenantInfo: TenantInfo | null = null,
@@ -78,10 +78,10 @@ serve(async (req) => {
             .single();
           if (!subdomainResult.error) {
             tenantInfo = subdomainResult.data as TenantInfo}
-        }
+        },
       } else if (data) {
         tenantInfo = data as TenantInfo}
-    }
+    },
 
     // Return response with enhanced headers
     return new Response(
@@ -93,7 +93,7 @@ serve(async (req) => {
         headers: {
           'Content-Type': 'application/json',
           ...corsHeaders
-        }
+        },
       };
     )} catch (error) {
     console.error('Tenant detector error:', error);
@@ -110,7 +110,7 @@ serve(async (req) => {
         headers: {
           'Content-Type': 'application/json',
           ...corsHeaders
-        }
+        },
       };
     )}
 }),

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from './src/types/service-variants',
 export interface Revolutionary2028IoTEdgeComputingService {
   id: string,
   name: string,
@@ -79,7 +79,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered smart city platform with IoT sensors, edge computing, and comprehensive urban optimization.',
     launchDate: '2028-01-10',
@@ -126,7 +126,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Industrial IoT edge computing platform with real-time processing, predictive maintenance, and comprehensive optimization.',
     launchDate: '2028-03-25',
@@ -173,7 +173,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'AI-powered healthcare IoT platform with remote monitoring, predictive analytics, and comprehensive healthcare optimization.',
     launchDate: '2028-02-15',
@@ -220,7 +220,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Smart agriculture IoT platform with soil monitoring, precision irrigation, and comprehensive crop management.',
     launchDate: '2028-05-20',
@@ -267,7 +267,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Edge AI computing infrastructure with distributed computing, AI optimization, and comprehensive edge capabilities.',
     launchDate: '2028-07-30',

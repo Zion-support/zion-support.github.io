@@ -20,7 +20,7 @@ export class ThemeUtils {
   public static getTheme(): Theme {
     if (typeof window === "undefined") {
       return this.config.defaultTheme;
-    }
+    },
 
     const stored = localStorage.getItem(this.config.storageKey) as Theme;
     return stored || this.config.defaultTheme;
@@ -29,7 +29,7 @@ export class ThemeUtils {
   public static setTheme(theme: Theme): void {
     if (typeof window === "undefined") {
       return;
-    }
+    },
 
     localStorage.setItem(this.config.storageKey, theme);
     this.applyTheme(theme);
@@ -38,7 +38,7 @@ export class ThemeUtils {
   public static applyTheme(theme: Theme): void {
     if (typeof window === "undefined") {
       return;
-    }
+    },
 
     const root = document.documentElement;
     
@@ -47,13 +47,13 @@ export class ThemeUtils {
       root.setAttribute("data-theme", systemTheme);
     } else {
       root.setAttribute("data-theme", theme);
-    }
+    },
   }
 
   public static getSystemTheme(): Theme {
     if (typeof window === "undefined") {
       return "light";
-    }
+    },
 
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
@@ -61,7 +61,7 @@ export class ThemeUtils {
   public static watchSystemTheme(callback: (theme: Theme) => void): () => void {
     if (typeof window === "undefined") {
       return () => {};
-    }
+    },
 
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handler = (e: MediaQueryListEvent) => {

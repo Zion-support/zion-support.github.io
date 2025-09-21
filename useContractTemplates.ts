@@ -41,7 +41,7 @@ export function useContractTemplates() {
         setError('Failed to load templates');
       } finally {
         setIsLoading(false);
-      }
+      },
     };
 
     loadTemplates();

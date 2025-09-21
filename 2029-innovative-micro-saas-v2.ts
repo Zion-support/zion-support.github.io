@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from './src/types/service-variants';
 
 export interface Innovative2029MicroSaasServiceV2 {
   id: string;
@@ -86,7 +86,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Fully operational AI prediction platform with quantum computing integration, real-time data processing, and enterprise-grade security. Includes custom model training and deployment.',
     launchDate: '2025-01-15',
@@ -139,7 +139,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production-ready quantum-secure platform with hardware integration, enterprise deployment capabilities, and compliance certifications. Includes custom deployment and training.',
     launchDate: '2025-02-01',
@@ -192,7 +192,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'FDA-cleared AI diagnostic platform with clinical validation, enterprise deployment, and ongoing model improvement. Includes clinical training and support.',
     launchDate: '2025-01-01',
@@ -245,7 +245,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production trading platform with regulatory compliance, risk management, and institutional-grade security. Includes custom strategy development and deployment.',
     launchDate: '2025-01-01',
@@ -298,7 +298,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production quantum computing platform with enterprise deployment, custom algorithm development, and ongoing support. Includes quantum computing training and certification.',
     launchDate: '2025-01-01',
@@ -351,7 +351,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production legal AI platform with enterprise deployment, custom training, and ongoing support. Includes legal compliance and security certifications.',
     launchDate: '2025-01-15',
@@ -404,7 +404,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production supply chain platform with enterprise deployment, custom optimization, and ongoing support. Includes supply chain consulting and training.',
     launchDate: '2025-01-01',
@@ -457,7 +457,7 @@ export const innovative2029MicroSaasServicesV2: Innovative2029MicroSaasServiceV2
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    },
     realImplementation: true,
     implementationDetails: 'Production cybersecurity platform with enterprise deployment, custom policies, and ongoing support. Includes security training and incident response planning.',
     launchDate: '2025-01-01',

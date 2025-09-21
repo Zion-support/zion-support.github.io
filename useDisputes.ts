@@ -83,7 +83,7 @@ export function useDisputes() {
                 resolution_summary: resolution.summary,
                 resolution_type: resolution.resolution_type as any,
                 resolved_at: new Date().toISOString(),
-              }
+              },
             : dispute
         )
       );
@@ -92,7 +92,7 @@ export function useDisputes() {
     } catch (error) {
       console.error('Failed to resolve dispute:', error);
       return false;
-    }
+    },
   }, []);
 
   return {

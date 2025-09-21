@@ -124,7 +124,7 @@ export class AICustomerServiceService {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`Get ticket API error: ${response.statusText}`)}
@@ -198,7 +198,7 @@ export class AICustomerServiceService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`AI response API error: ${response.statusText}`)}
@@ -217,7 +217,7 @@ export class AICustomerServiceService {
       const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`Get customer profile API error: ${response.statusText}`)}
@@ -236,7 +236,7 @@ export class AICustomerServiceService {
       const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`Get metrics API error: ${response.statusText}`)}
@@ -253,7 +253,7 @@ export class AICustomerServiceService {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`Search tickets API error: ${response.statusText}`)}
@@ -279,7 +279,7 @@ export class AICustomerServiceService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
-        }
+        },
       }),
       if (!response.ok) {
         throw new Error(`Auto assign tickets API error: ${response.statusText}`)}

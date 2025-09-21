@@ -33,7 +33,7 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
       setLoading(false);
       setError(undefined);
       return;
-    }
+    },
     
     setLoading(true);
     setError(undefined);
@@ -56,7 +56,7 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
         setError(err instanceof Error ? err.message : 'Translation failed');
       } finally {
         setLoading(false);
-      }
+      },
     }, debounceMs);
 
     return () => {
@@ -89,7 +89,7 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
       } catch (err) {
         console.error(`Translation failed for ${target}:`, err);
         return { target, translation: text };
-      }
+      },
     });
 
     Promise.all(translatePromises).then((results) => {

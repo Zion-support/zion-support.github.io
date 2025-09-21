@@ -95,7 +95,7 @@ export async function runMonitoring() {
       logger.error('Endpoint test failed:', result);
     } else {
       // logger.debug('Endpoint test succeeded:', result);
-    }
+    },
   });
 
   logger.info('API latency monitoring run finished.');
