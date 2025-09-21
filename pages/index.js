@@ -84,14 +84,16 @@ export default function Home() {
         <nav className="fixed top-0 left-0 right-0 bg-black/50 backdrop-blur-sm border-b border-white/10 z-50">
           <div className="container mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
-              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Zion Tech Group
+              <Link href="/">
+                <a className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </a>
               </Link>
               <div className="hidden md:flex space-x-8">
-                <Link href="/" className="text-white font-semibold">Home</Link>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+                <Link href="/"><a className="text-white font-semibold">Home</a></Link>
+                <Link href="/about"><a className="text-gray-300 hover:text-white transition-colors">About</a></Link>
+                <Link href="/services"><a className="text-gray-300 hover:text-white transition-colors">Services</a></Link>
+                <Link href="/contact"><a className="text-gray-300 hover:text-white transition-colors">Contact</a></Link>
               </div>
               <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Call Now
@@ -252,8 +254,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
-                <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                  Zion Tech Group
+                <Link href="/">
+                  <a className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </a>
                 </Link>
                 <p className="text-gray-300 mt-4 max-w-md">
                   Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 
@@ -264,10 +268,10 @@ export default function Home() {
               <div>
                 <h3 className="text-lg font-semibold mb-4">Services</h3>
                 <ul className="space-y-2">
-                  <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI & ML Solutions</Link></li>
-                  <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Enterprise IT</Link></li>
-                  <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Micro SaaS Development</Link></li>
-                  <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Technology Consulting</Link></li>
+                  <li><Link href="/services"><a className="text-gray-300 hover:text-white transition-colors">AI & ML Solutions</a></Link></li>
+                  <li><Link href="/services"><a className="text-gray-300 hover:text-white transition-colors">Enterprise IT</a></Link></li>
+                  <li><Link href="/services"><a className="text-gray-300 hover:text-white transition-colors">Micro SaaS Development</a></Link></li>
+                  <li><Link href="/services"><a className="text-gray-300 hover:text-white transition-colors">Technology Consulting</a></Link></li>
                 </ul>
               </div>
               

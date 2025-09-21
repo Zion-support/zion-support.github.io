@@ -1,13 +1,8 @@
 import React from 'react';
-import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import MobileOptimizer from '../components/MobileOptimizer';
-import EnhancedAnalytics from '../components/EnhancedAnalytics';
-import ErrorBoundary from '../components/ErrorBoundary';
 import '../styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -19,14 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
       
-      <ErrorBoundary>
-        <PerformanceOptimizer>
-          <MobileOptimizer>
-            <EnhancedAnalytics />
-            <Component {...pageProps} />
-          </MobileOptimizer>
-        </PerformanceOptimizer>
-      </ErrorBoundary>
+      <Component {...pageProps} />
     </>
   )
 }

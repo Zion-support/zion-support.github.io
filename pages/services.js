@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import Modal from '../components/Modal';
 import Link from 'next/link';
 
-interface Service {
-  name: string;
-  description: string;
-  features: string[];
-  pricing: string;
-}
-
 export default function ServicesPage() {
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [selectedService, setSelectedService] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const serviceCategories = [
@@ -145,7 +136,7 @@ export default function ServicesPage() {
     }
   ];
 
-  const handleServiceClick = (service: any) => {
+  const handleServiceClick = (service) => {
     setSelectedService(service);
     setIsModalOpen(true);
   };
@@ -157,26 +148,22 @@ export default function ServicesPage() {
 
   return (
     <div>
-      <SEO
-        title="Our Services - AI, IT & Micro SaaS Solutions"
-        description="Comprehensive AI solutions, enterprise IT services, micro SaaS development, and technology consulting. Expert solutions for your business needs."
-        keywords="AI services, IT solutions, micro SaaS, technology consulting, machine learning, cloud infrastructure, DevOps"
-        canonical="https://ziontechgroup.com/services"
-      />
 
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 bg-black/50 backdrop-blur-sm border-b border-white/10 z-50">
           <div className="container mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
-              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Zion Tech Group
+              <Link href="/">
+                <a className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </a>
               </Link>
               <div className="hidden md:flex space-x-8">
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-                <Link href="/services" className="text-white font-semibold">Services</Link>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+                <Link href="/"><a className="text-gray-300 hover:text-white transition-colors">Home</a></Link>
+                <Link href="/about"><a className="text-gray-300 hover:text-white transition-colors">About</a></Link>
+                <Link href="/services"><a className="text-white font-semibold">Services</a></Link>
+                <Link href="/contact"><a className="text-gray-300 hover:text-white transition-colors">Contact</a></Link>
               </div>
               <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Call Now
@@ -265,55 +252,6 @@ export default function ServicesPage() {
         </section>
       </main>
 
-      {/* Service Details Modal */}
-      <Modal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        title={selectedService?.name}
-        size="lg"
-      >
-        {selectedService && (
-          <div>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              {selectedService.description}
-            </p>
-            
-            <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Features:</h4>
-              <ul className="space-y-2">
-                {selectedService.features.map((feature: string, index: number) => (
-                  <li key={index} className="flex items-center text-gray-600 dark:text-gray-400">
-                    <span className="text-green-500 mr-2">✓</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Pricing:</h4>
-              <p className="text-lg text-cyan-600 dark:text-cyan-400 font-semibold">
-                {selectedService.pricing}
-              </p>
-            </div>
-
-            <div className="flex gap-4">
-              <a
-                href="/contact"
-                className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Get Quote
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="flex-1 border-2 border-cyan-500 text-cyan-500 px-6 py-3 rounded-lg text-center font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                Call Now
-              </a>
-            </div>
-          </div>
-        )}
-      </Modal>
     </div>
   );
 }
