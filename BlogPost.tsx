@@ -1,9 +1,9 @@
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
-import type { BlogPost as BlogPostType } from "../types/blog";
+import type { BlogPost as BlogPostType } from "../src/types/blog";
 import { Separator } from "../components/ui/separator";
 import ReactMarkdown from 'react-markdown';
-import { logErrorToProduction } from '../utils/productionLogger';
+import { logErrorToProduction } from '../src/utils/productionLogger';
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-zion-blue">
