@@ -16,10 +16,8 @@ function createPageTemplate(pageName, filePath) {
   
   if (isApi) {
     return `import type { NextApiRequest, NextApiResponse } from 'next';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint working' });
-}`;
+  res.status(200).json({ message: 'API endpoint working' })}`;
   }
   
   return `import type { NextPage } from 'next';
@@ -58,7 +56,7 @@ function fixEmptyFiles(dir) {
       const content = fs.readFileSync(filePath, 'utf8').trim();
       
       if (!content) {
-        console.log(`Fixing empty file: ${filePath}`);
+        console.log(`Fixing empty file: ${filePath}`),
         const fileName = path.basename(file, path.extname(file));
         const pageTemplate = createPageTemplate(fileName, filePath);
         fs.writeFileSync(filePath, pageTemplate);

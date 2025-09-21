@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -16,7 +15,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md: flex items-center space-x-8">
             <Link href="/">
               <span className="text-gray-300 hover:text-white transition-colors">
                 Home
@@ -79,5 +78,4 @@ export default function Header() {
         )}
       </div>
     </header>
-  );
-}
+  )}

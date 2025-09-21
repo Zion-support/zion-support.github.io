@@ -6,7 +6,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud, optimize cloud performance, and manage multi-cloud environments for improved scalability and cost efficiency.",
         category: "
         subcategory: "
-        price: 2499;
+        price: 2499,
         currency: "
         pricingModel: "
         features: [
@@ -50,8 +50,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
         integrations: ["On-premises systems", "Legacy applications", "Database systems", "Security platforms", "Monitoring tools"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Industry-specific regulations"],
@@ -63,8 +62,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Retail"],
         scalability: "
         customizationLevel: "
-        serviceLevel: "24/7 managed cloud services",
-    }
+        serviceLevel: "24/7 managed cloud services"}
     /
     {
         id: "
@@ -72,7 +70,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         description: "Advanced cybersecurity and information security services that provide comprehensive protection against cyber threats, implement security frameworks, and ensure compliance with industry regulations and standards.",
         category: "
         subcategory: "
-        price: 1899;
+        price: 1899,
         currency: "
         pricingModel: "
         features: [
@@ -115,8 +113,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["SIEM platforms", "EDR solutions", "Firewall systems", "Identity management", "Security frameworks"],
         integrations: ["Security tools", "Monitoring systems", "Compliance platforms", "Incident response systems", "Training platforms"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry-specific regulations"],
@@ -128,8 +125,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         industryFocus: ["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
         scalability: "
         customizationLevel: "
-        serviceLevel: "24/7 security monitoring and response",
-    }
+        serviceLevel: "24/7 security monitoring and response"}
     /
     {
         id: "
@@ -137,7 +133,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         description: "Comprehensive DevOps and CI/CD pipeline services that automate software development processes, improve deployment efficiency, and enable continuous delivery for faster time-to-market and higher quality software.",
         category: "
         subcategory: "
-        price: 1599;
+        price: 1599,
         currency: "
         pricingModel: "
         features: [
@@ -180,8 +176,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform"],
         integrations: ["Version control systems", "Testing frameworks", "Monitoring tools", "Cloud platforms", "Security tools"],
         compliance: ["Security best practices", "Quality standards", "Development standards"],
@@ -193,8 +188,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         industryFocus: ["Technology", "Finance", "Healthcare", "E-commerce", "SaaS"],
         scalability: "
         customizationLevel: "
-        serviceLevel: "24/7 DevOps support and monitoring",
-    }
+        serviceLevel: "24/7 DevOps support and monitoring"}
     /
     {
         id: "
@@ -202,7 +196,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         description: "Comprehensive data management and analytics services that help businesses collect, process, analyze, and visualize data to make informed decisions, optimize operations, and gain competitive advantages.",
         category: "
         subcategory: "
-        price: 1299;
+        price: 1299,
         currency: "
         pricingModel: "
         features: [
@@ -245,8 +239,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],
         integrations: ["Data sources", "Business systems", "Cloud platforms", "Analytics tools", "Reporting systems"],
         compliance: ["GDPR", "CCPA", "Data privacy", "Industry regulations"],
@@ -258,8 +251,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         industryFocus: ["Retail", "Manufacturing", "Finance", "Healthcare", "Technology"],
         scalability: "
         customizationLevel: "
-        serviceLevel: "24/7 data monitoring and support",
-    }
+        serviceLevel: "24/7 data monitoring and support"}
     /
     {
         id: "
@@ -267,7 +259,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         description: "Comprehensive network infrastructure and management services that design, implement, and maintain reliable, secure, and high-performance network solutions for businesses of all sizes.",
         category: "
         subcategory: "
-        price: 999;
+        price: 999,
         currency: "
         pricingModel: "
         features: [
@@ -310,8 +302,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Cisco", "Juniper", "Aruba", "Network monitoring tools", "Security appliances"],
         integrations: ["Network devices", "Security systems", "Monitoring tools", "Cloud platforms", "Business systems"],
         compliance: ["Network security standards", "Industry regulations", "Best practices"],
@@ -323,8 +314,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Education"],
         scalability: "
         customizationLevel: "
-        serviceLevel: "24/7 network monitoring and support",
-    }
+        serviceLevel: "24/7 network monitoring and support"}
     /
     {
         id: "
@@ -332,7 +322,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         description: "Strategic IT consulting and planning services that help businesses align technology with business objectives, optimize IT investments, and create roadmaps for digital transformation and technology innovation.",
         category: "
         subcategory: "
-        price: 299;
+        price: 299,
         currency: "
         pricingModel: "
         features: [
@@ -375,8 +365,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Strategic frameworks", "Planning tools", "Analytics platforms", "Governance frameworks"],
         integrations: ["Business systems", "Technology platforms", "Analytics tools", "Governance systems"],
         compliance: ["Industry best practices", "Governance standards", "Regulatory requirements"],
@@ -388,8 +377,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
         scalability: "
         customizationLevel: "
-        serviceLevel: "Flexible consulting engagement models",
-    }
+        serviceLevel: "Flexible consulting engagement models"}
     /
     {
         id: "
@@ -397,7 +385,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         description: "Comprehensive IT support and help desk services that provide reliable technical assistance, problem resolution, and ongoing support for businesses to ensure smooth technology operations and user productivity.",
         category: "
         subcategory: "
-        price: 799;
+        price: 799,
         currency: "
         pricingModel: "
         features: [
@@ -440,8 +428,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
         integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
         compliance: ["Service level agreements", "Support standards", "User privacy"],
@@ -453,8 +440,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Education"],
         scalability: "
         customizationLevel: "
-        serviceLevel: "24/7 technical support and monitoring",
-    }
+        serviceLevel: "24/7 technical support and monitoring"}
     /
     {
         id: "
@@ -462,7 +448,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         description: "Comprehensive software development and custom solution services that create tailored applications, integrate existing systems, and develop innovative technology solutions to meet specific business needs and objectives.",
         category: "
         subcategory: "
-        price: 1999;
+        price: 1999,
         currency: "
         pricingModel: "
         features: [
@@ -505,8 +491,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
         integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
         compliance: ["Security standards", "Quality standards", "Industry regulations"],
@@ -518,8 +503,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         industryFocus: ["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
         scalability: "
         customizationLevel: "
-        serviceLevel: "Comprehensive development and ongoing support",
-    }
+        serviceLevel: "Comprehensive development and ongoing support"}
     /
     {
         id: "
@@ -527,7 +511,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         description: "Professional IT project management and implementation services that ensure successful delivery of technology projects, manage resources effectively, and deliver projects on time and within budget.",
         category: "
         subcategory: "
-        price: 1499;
+        price: 1499,
         currency: "
         pricingModel: "
         features: [
@@ -570,8 +554,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
         integrations: ["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
         compliance: ["Project standards", "Quality standards", "Industry best practices"],
@@ -583,7 +566,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
         scalability: "
         customizationLevel: "
-        serviceLevel: "Comprehensive project management and support",
-    }
+        serviceLevel: "Comprehensive project management and support"}
 ];
     export export default COMPREHENSIVE_IT_SERVICES_2025;

@@ -6,7 +6,7 @@ export const SPECIALIZED_AI_SERVICES = [
         description: "Custom enterprise LLM platform that enables organizations to build, train, and deploy domain-specific language models with full data privacy and control.",
         category: "
         subcategory: "
-        price: 15000;
+        price: 15000,
         currency: "
         pricingModel: "
         features: [
@@ -47,8 +47,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["PyTorch", "TensorFlow", "Hugging Face", "Transformers", "CUDA", "Distributed Training"],
         integrations: ["Data Lakes", "MLOps Platforms", "API Gateways", "Monitoring Tools", "Security Systems"],
         compliance: ["GDPR", "HIPAA", "SOC 2", "Industry-specific Standards", "Data Privacy"],
@@ -66,7 +65,7 @@ export const SPECIALIZED_AI_SERVICES = [
         description: "Comprehensive computer vision platform that provides real-time object detection, facial recognition, and image analysis for various industries.",
         category: "
         subcategory: "
-        price: 4200;
+        price: 4200,
         currency: "
         pricingModel: "
         features: [
@@ -107,8 +106,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["OpenCV", "TensorFlow", "PyTorch", "CUDA", "Edge TPU", "Computer Vision Models"],
         integrations: ["Cameras", "IoT Devices", "Cloud Platforms", "Analytics Tools", "Security Systems"],
         compliance: ["GDPR", "Privacy Laws", "Industry Standards", "Security Standards"],
@@ -126,7 +124,7 @@ export const SPECIALIZED_AI_SERVICES = [
         description: "Advanced AI-driven cybersecurity platform that uses machine learning to detect, analyze, and respond to cyber threats in real-time.",
         category: "
         subcategory: "
-        price: 6800;
+        price: 6800,
         currency: "
         pricingModel: "
         features: [
@@ -167,8 +165,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "PyTorch", "Scikit-learn", "Deep Learning", "NLP", "Graph Analytics"],
         integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Providers", "Monitoring Tools"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
@@ -186,7 +183,7 @@ export const SPECIALIZED_AI_SERVICES = [
         description: "Advanced predictive analytics platform that uses machine learning to forecast trends, identify patterns, and provide actionable insights.",
         category: "
         subcategory: "
-        price: 3500;
+        price: 3500,
         currency: "
         pricingModel: "
         features: [
@@ -227,8 +224,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "R", "TensorFlow", "Scikit-learn", "Prophet", "Time Series Models"],
         integrations: ["Data Warehouses", "BI Tools", "ERP Systems", "CRM Systems", "Analytics Platforms"],
         compliance: ["GDPR", "Data Privacy", "Industry Standards", "Security Standards"],
@@ -246,7 +242,7 @@ export const SPECIALIZED_AI_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -287,8 +283,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "UiPath", "Automation Anywhere", "Blue Prism", "Machine Learning", "NLP"],
         integrations: ["ERP Systems", "CRM Systems", "Document Management", "Email Systems", "Databases"],
         compliance: ["GDPR", "Industry Standards", "Security Standards", "Process Standards"],
@@ -306,7 +301,7 @@ export const SPECIALIZED_AI_SERVICES = [
         description: "Comprehensive customer intelligence platform that uses AI to analyze customer behavior, predict needs, and personalize experiences.",
         category: "
         subcategory: "
-        price: 3800;
+        price: 3800,
         currency: "
         pricingModel: "
         features: [
@@ -347,8 +342,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "Scikit-learn", "NLP", "Recommendation Systems", "Deep Learning"],
         integrations: ["CRM Systems", "Marketing Platforms", "E-commerce Platforms", "Analytics Tools", "Data Sources"],
         compliance: ["GDPR", "CCPA", "Privacy Laws", "Industry Standards"],
@@ -366,7 +360,7 @@ export const SPECIALIZED_AI_SERVICES = [
         description: "Intelligent supply chain platform that uses AI to optimize inventory, predict demand, and streamline logistics operations.",
         category: "
         subcategory: "
-        price: 5200;
+        price: 5200,
         currency: "
         pricingModel: "
         features: [
@@ -407,8 +401,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "Scikit-learn", "Optimization Algorithms", "Time Series Models", "Graph Analytics"],
         integrations: ["ERP Systems", "WMS", "TMS", "Supplier Systems", "Analytics Platforms"],
         compliance: ["Industry Standards", "Quality Standards", "Safety Standards", "Regulatory Compliance"],
@@ -426,7 +419,7 @@ export const SPECIALIZED_AI_SERVICES = [
         description: "Intelligent QA platform that uses AI to automate testing, detect defects, and ensure software quality across development cycles.",
         category: "
         subcategory: "
-        price: 3200;
+        price: 3200,
         currency: "
         pricingModel: "
         features: [
@@ -467,8 +460,7 @@ export const SPECIALIZED_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Selenium", "Appium", "JUnit", "TestNG", "Machine Learning", "NLP", "Computer Vision"],
         integrations: ["CI/CD Pipelines", "Test Management Tools", "Bug Tracking Systems", "Monitoring Tools", "Reporting Tools"],
         compliance: ["Quality Standards", "Testing Standards", "Industry Standards", "Security Standards"],

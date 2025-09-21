@@ -5,7 +5,7 @@ export const SPECIALIZED_IT_SERVICES_2025 = [
         description: "Comprehensive 5G enterprise networking solution that provides ultra-fast, low-latency connectivity with advanced network slicing, security, and management capabilities.",
         category: "
         subcategory: "
-        price: 6500;
+        price: 6500,
         currency: "
         pricingModel: "
         features: [
@@ -44,8 +44,7 @@ export const SPECIALIZED_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["5G Core", "Network Slicing", "SDN", "NFV", "OpenStack", "Kubernetes"],
         roiMetrics: ["90% reduction in network latency", "40% infrastructure cost savings", "99.9% network reliability"]
@@ -56,7 +55,7 @@ export const SPECIALIZED_IT_SERVICES_2025 = [
         description: "Distributed edge computing platform that brings AI processing closer to data sources, enabling real-time AI applications with minimal latency and bandwidth requirements.",
         category: "
         subcategory: "
-        price: 4200;
+        price: 4200,
         currency: "
         pricingModel: "
         features: [
@@ -95,8 +94,7 @@ export const SPECIALIZED_IT_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         technologyStack: ["TensorRT", "ONNX", "Docker", "Kubernetes", "Edge Devices", "5G Networks"],
         roiMetrics: ["95% latency reduction", "80% bandwidth cost savings", "Millions of edge devices supported"]

@@ -13,11 +13,14 @@ export default function NotFound() {
           Sorry, the page you're looking for doesn't exist or has been moved.
         </p>
         <Link href="/">
+<<<<<<< HEAD
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover: from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-2xl inline-block cursor-pointer">
+=======
           <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-2xl inline-block">
+>>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
             Go Back Home
           </span>
         </Link>
       </div>
     </div>
-  );
-}
+  )}

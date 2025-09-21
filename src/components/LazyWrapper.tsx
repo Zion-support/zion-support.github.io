@@ -4,7 +4,7 @@ import React from "react";
 import React from "react";
 
 interface LazyWrapperProps {
-childre; n: React.ReactNode;
+childre; n: React.ReactNode,
 threshold?: number;
 className?: string;
 loadingVariant?: "default" | "tech" | "minimal" | "
@@ -14,8 +14,8 @@ loadingSize?: "sm" | "md" | "lg" | "
 const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
 childre;  n;
 threshold = 0.1;
-className = "",
-loadingVariant = "default",
+className = "";
+loadingVariant = "default";
 loadingText = "Loading...",
 loadingSize = "
 }) => {
@@ -59,9 +59,9 @@ size={loadingSize}
 }
 
 return (<motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;;
 y: 0 }}
 transition={{ duratio; n: 0.6 }}
 className={className}

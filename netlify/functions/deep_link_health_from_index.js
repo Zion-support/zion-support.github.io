@@ -5,8 +5,7 @@ exports.handler = async function(event, context) {,
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) }}
 ,
     // Fetch site index from repo,
     const resIdx = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent('data/site-index.json')}?ref=${branch}`, {,
@@ -17,8 +16,7 @@ exports.handler = async function(event, context) {,
     const paths = new Set(['/']),
     for (const page of Object.keys(index.pages||{})) {,
       paths.add(page),
-      for (const ln of (index.pages[page].links||[])) paths.add(ln),
-    }
+      for (const ln of (index.pages[page].links||[])) paths.add(ln)}
 ,
     // Limit to avoid very long runs,
     const LIMIT = parseInt(process.env.DEEP_LINK_LIMIT || '200', 10),
@@ -28,10 +26,8 @@ exports.handler = async function(event, context) {,
       const url = origin + p,
       try {,
         const res = await fetch(url, { method: 'HEAD' }),
-        results.push({ path: p, status: res.status, ok: res.ok }),
-      } catch (e) {,
-        results.push({ path: p, status: 0, ok: false, error: String(e) }),
-      }
+        results.push({ path: p, status: res.status, ok: res.ok })} catch (e) {,
+        results.push({ path: p, status: 0, ok: false, error: String(e) })}
     }
 ,
     const failing = results.filter(r => !r.ok),
@@ -46,8 +42,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const b64 = Buffer.from(JSON.stringify(payload, null, 2), 'utf8').toString('base64'),
@@ -74,18 +69,14 @@ exports.handler = async function(event, context) {,
           method: 'POST',
           headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' },
           body: JSON.stringify({ body })
-        }),
-      } else {,
+        })} else {,
         await fetch(`https: //api.github.com/repos/${repo}/issues`, {,
           method: 'POST',
           headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' },
           body: JSON.stringify({ title, body, labels: ['automationlink-health'] })
-        }),
-      }
+        })}
     }
 ,
-    return { statusCode: 200, body: JSON.stringify({ ok: true, report: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, report: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

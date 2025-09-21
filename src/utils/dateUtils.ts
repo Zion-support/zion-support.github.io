@@ -10,8 +10,7 @@ export interface DateFormatOptions {
 
 export class DateUtils {
   public static formatDate(date: Date | string, options: DateFormatOptions = {}): string {
-    const dateObj = typeof date === "string" ? new Date(date) : date;
-    
+    const dateObj = typeof date === "string" ? new Date(date) : date,
     const defaultOptions: DateFormatOptions = {
       year: "numeric",
       month: "long",
@@ -23,8 +22,7 @@ export class DateUtils {
   }
 
   public static formatDateTime(date: Date | string, options: DateFormatOptions = {}): string {
-    const dateObj = typeof date === "string" ? new Date(date) : date;
-    
+    const dateObj = typeof date === "string" ? new Date(date) : date,
     const defaultOptions: DateFormatOptions = {
       year: "numeric",
       month: "long",
@@ -38,8 +36,7 @@ export class DateUtils {
   }
 
   public static formatTime(date: Date | string, options: DateFormatOptions = {}): string {
-    const dateObj = typeof date === "string" ? new Date(date) : date;
-    
+    const dateObj = typeof date === "string" ? new Date(date) : date,
     const defaultOptions: DateFormatOptions = {
       hour: "numeric",
       minute: "2-digit",
@@ -50,7 +47,7 @@ export class DateUtils {
   }
 
   public static getRelativeTime(date: Date | string): string {
-    const dateObj = typeof date === "string" ? new Date(date) : date;
+    const dateObj = typeof date === "string" ? new Date(date) : date,
     const now = new Date();
     const diffInSeconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000);
 
@@ -88,7 +85,7 @@ export class DateUtils {
   }
 
   public static isToday(date: Date | string): boolean {
-    const dateObj = typeof date === "string" ? new Date(date) : date;
+    const dateObj = typeof date === "string" ? new Date(date) : date,
     const today = new Date();
     
     return dateObj.getDate() === today.getDate() &&
@@ -97,7 +94,7 @@ export class DateUtils {
   }
 
   public static isYesterday(date: Date | string): boolean {
-    const dateObj = typeof date === "string" ? new Date(date) : date;
+    const dateObj = typeof date === "string" ? new Date(date) : date,
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     
@@ -107,28 +104,28 @@ export class DateUtils {
   }
 
   public static addDays(date: Date | string, days: number): Date {
-    const dateObj = typeof date === "string" ? new Date(date) : date;
+    const dateObj = typeof date === "string" ? new Date(date) : date,
     const result = new Date(dateObj);
     result.setDate(result.getDate() + days);
     return result;
   }
 
   public static addMonths(date: Date | string, months: number): Date {
-    const dateObj = typeof date === "string" ? new Date(date) : date;
+    const dateObj = typeof date === "string" ? new Date(date) : date,
     const result = new Date(dateObj);
     result.setMonth(result.getMonth() + months);
     return result;
   }
 
   public static addYears(date: Date | string, years: number): Date {
-    const dateObj = typeof date === "string" ? new Date(date) : date;
+    const dateObj = typeof date === "string" ? new Date(date) : date,
     const result = new Date(dateObj);
     result.setFullYear(result.getFullYear() + years);
     return result;
   }
 
   public static getDaysBetween(startDate: Date | string, endDate: Date | string): number {
-    const start = typeof startDate === "string" ? new Date(startDate) : startDate;
+    const start = typeof startDate === "string" ? new Date(startDate) : startDate,
     const end = typeof endDate === "string" ? new Date(endDate) : endDate;
     
     const diffInTime = end.getTime() - start.getTime();
@@ -136,11 +133,10 @@ export class DateUtils {
   }
 
   public static isValidDate(date: any): boolean {
-    return date instanceof Date && !isNaN(date.getTime());
-  }
+    return date instanceof Date && !isNaN(date.getTime())}
 
   public static parseDate(dateString: string): Date | null {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return this.isValidDate(date) ? date : null;
   }
 }

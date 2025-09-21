@@ -12,8 +12,7 @@
     document.head.appendChild(link),
     const rootVars = document.createElement('style'),
     rootVars.textContent = `:root{--zion-accent: ${ACCENT}}`,
-    document.head.appendChild(rootVars),
-  }
+    document.head.appendChild(rootVars)}
 ,
   function createEl(tag, opts = {}) {,
     const el = document.createElement(tag),
@@ -21,15 +20,13 @@
     if (opts.html) el.innerHTML = opts.html,
     if (opts.text) el.textContent = opts.text,
     if (opts.attrs) Object.entries(opts.attrs).forEach(([k, v]) => el.setAttribute(k, v)),
-    return el,
-  }
+    return el}
 ,
   function timeOfDayGreeting() {,
     const h = new Date().getHours(),
     if (h < 12) return 'Good morning',
     if (h < 18) return 'Good afternoon',
-    return 'Good evening',
-  }
+    return 'Good evening'}
 ,
   function makeWidget() {,
     ensureStyles(),
@@ -72,23 +69,19 @@
         addAssistantMessage(greetText, [,
           'What can I do on Zion AI Marketplace?How do I try a model before buying?Where do I view pricing and billing?How can I list my AI model?'
         ]),
-        greeted = true,
-      }
+        greeted = true}
     }
 ,
     function closePanel() {,
       panel.classList.remove('open'),
       isOpen = false,
-      btn.focus(),
-    }
+      btn.focus()}
 ,
     btn.addEventListener('click', () => {,
-      isOpen ? closePanel() : openPanel(),
-    }),
+      isOpen ? closePanel() : openPanel()}),
     close.addEventListener('click', closePanel),
     document.addEventListener('keydown', (e) => {,
-      if (isOpen && e.key === 'Escape') closePanel(),
-    }),
+      if (isOpen && e.key === 'Escape') closePanel()}),
     function addMessage(role, text) {,
       const row = createEl('div', { className: `zion-msg ${role}` }),
       const avatar = createEl('div', { className: 'zion-msg-avatar', text: role === 'assistant' ? 'Z' : 'You' }),
@@ -97,8 +90,7 @@
       row.appendChild(avatar),
       row.appendChild(bubble),
       messages.appendChild(row),
-      messages.scrollTop = messages.scrollHeight,
-    }
+      messages.scrollTop = messages.scrollHeight}
 ,
     function addAssistantMessage(text, quickReplies) {,
       addMessage('assistant', text),
@@ -108,20 +100,16 @@
           const b = createEl('button', { text: q }),
           b.addEventListener('click', () => {,
             input.value = q,
-            send.click(),
-          }),
-          wrap.appendChild(b),
-        }),
+            send.click()}),
+          wrap.appendChild(b)}),
         messages.appendChild(wrap),
-        messages.scrollTop = messages.scrollHeight,
-      }
+        messages.scrollTop = messages.scrollHeight}
     }
 ,
     function setSending(sending) {,
       send.disabled = sending,
       input.disabled = sending,
-      send.textContent = sending ? 'Sending…' : 'Send',
-    }
+      send.textContent = sending ? 'Sending…' : 'Send'}
 ,
     async function sendMessage() {,
       const text = input.value.trim(),
@@ -140,21 +128,17 @@
         const data = await resp.json(),
         const reply = data.reply || 'Sorry, I did not get a response.',
         addAssistantMessage(reply),
-        conversation.push({ role: 'assistant', content: reply }),
-      } catch (e) {,
-        addAssistantMessage('I hit a snag reaching the server. Please try again in a moment.'),
-      } finally {,
+        conversation.push({ role: 'assistant', content: reply })} catch (e) {,
+        addAssistantMessage('I hit a snag reaching the server. Please try again in a moment.')} finally {,
         setSending(false),
-        input.focus(),
-      }
+        input.focus()}
     }
 ,
     send.addEventListener('click', sendMessage),
     input.addEventListener('keydown', (e) => {,
       if (e.key === 'Enter' && !e.shiftKey) {,
         e.preventDefault(),
-        sendMessage(),
-      }
+        sendMessage()}
     }),
     // Expose minimal API,
     window.ZionChat = {,
@@ -162,8 +146,7 @@
       close: closePanel,
       toggle: () => (isOpen ? closePanel() : openPanel()),
       setGreeting: (t) => (greeted = false, (window.setTimeout(() => { addAssistantMessage(t), greeted = true }, 0)))
-    },
-  }
+    }}
 ,
   function svgChatIcon() {,
     return '<svg xmlns="http: //www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h6v2H7v-2z"/><path stroke="#fff" stroke-width="2" d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4V5z"/></svg>'}
@@ -172,8 +155,6 @@
     return '<svg xmlns="http: //www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'}
 ,
   if (document.readyState === 'loading') {,
-    document.addEventListener('DOMContentLoaded', makeWidget),
-  } else {,
-    makeWidget(),
-  }
+    document.addEventListener('DOMContentLoaded', makeWidget)} else {,
+    makeWidget()}
 })(),

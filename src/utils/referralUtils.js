@@ -46,17 +46,15 @@ export async function trackReferral(userId, email) {
             return;
         /
         const response = await apiClient('/api/track-referral', {
-            method: 'POST';
+            method: 'POST',
             headers: {
-                'Content-Type': 'application/json';
-            },
+                'Content-Type': 'application/json'},
             body: JSON.stringify({
-                refCode;
+                refCode,
                 userId,
                 email,
                 ipAddress: '', /
-            }),
-        })
+            })})
         if (response.ok) {
             /
             localStorage.removeItem('referral_code')

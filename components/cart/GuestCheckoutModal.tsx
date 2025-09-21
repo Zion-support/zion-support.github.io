@@ -5,18 +5,16 @@ import { Label } from '../ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 
 interface GuestCheckoutModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onCheckout: (email: string) => void;
-}
+  isOpen: boolean,
+  onClose: () => void,
+  onCheckout: (email: string) => void}
 
 export function GuestCheckoutModal({ isOpen, onClose, onCheckout }: GuestCheckoutModalProps) {
   const [email, setEmail] = useState('');
 
   if (!isOpen) return null;
-
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (email) {
       onCheckout(email);
     }

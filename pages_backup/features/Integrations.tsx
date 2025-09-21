@@ -7,7 +7,6 @@ export default function Integrations() {
   useEffect(() => {
     // Initialize integrations
   }, []);
-
   return (
     <div className="min-h-screen bg-zion-blue">
       <div className="container mx-auto px-4 py-12">

@@ -1,5 +1,5 @@
-import { getPreferredTheme } from '@/utils/themeUtils',
-import { vi, describe, it, expect, type MockInstance } from 'vitest',
+import { getPreferredTheme } from '@/utils/themeUtils';
+import { vi, describe, it, expect, type MockInstance } from 'vitest';
 
 describe('getPreferredTheme', () => {
   it('returns dark when system prefers dark', () => {
@@ -13,7 +13,7 @@ describe('getPreferredTheme', () => {
       removeEventListener: vi.fn(),
       dispatchEvent: vi.fn()
     }),
-    expect(getPreferredTheme()).toBe('dark'),
+    expect(getPreferredTheme()).toBe('dark');
   }),
 
   it('returns light when system prefers light', () => {
@@ -27,6 +27,5 @@ describe('getPreferredTheme', () => {
       removeEventListener: vi.fn(),
       dispatchEvent: vi.fn()
     }),
-    expect(getPreferredTheme()).toBe('light'),
-  }),
-}),
+    expect(getPreferredTheme()).toBe('light');
+  })}),

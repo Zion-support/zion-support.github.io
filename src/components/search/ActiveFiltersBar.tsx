@@ -1,15 +1,14 @@
-import React from "react",
-import import { X,  } from "lucide-react", interface Filter { key: "string; value: string;" } label: "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { filters: Filte r[], onRemoveFilter: (key: string) => void; onClearAll: () => void} className="text-sm text-zion-slate-light hover: tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )}
-import React from "react",
-import { X } from "lucide-react", interface Filter { "key": "string, "value": "string," "} "label": "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { "filters": "Filte r[], "onRemoveFilter": ("key": string) => void, "onClearAll": () => void"} className="text-sm text-zion-slate-light "hover": "tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )", }
+import React from "react";
+import import { X} from "lucide-react"; interface Filter { key: "string; value: string;" } label: "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { filters: Filte r[], onRemoveFilter: (key: string) => void; onClearAll: () => void} className="text-sm text-zion-slate-light hover: tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )}
+import React from "react";
+import { X } from "lucide-react"; interface Filter { "key": "string, "value": "string," "} "label": "string"} interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> { "filters": "Filte r[], "onRemoveFilter": ("key": string) => void, "onClearAll": () => void"} className="text-sm text-zion-slate-light "hover": "tex t-zion-cyan transition-colors underline", > Clear all, ></div> ></div> )"}
 ;<//div><///div>
-import { X,,  } from 'lucide-react'
-import import { Button,,, ,,  } from '@/components/ui/button';
-import import { Badge,,  } from '@/components/ui/badge';
+import { X,} from 'lucide-react'
+import import { Button,,, ,} from '@/components/ui/button';
+import import { Badge,} from '@/components/ui/badge';
 interface SearchFilters {
-sort: string;
-}
+sort: string}
 interface ActiveFiltersBarProps {
-className?: string,
+className?: string;
 }
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({

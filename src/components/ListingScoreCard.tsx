@@ -6,7 +6,7 @@ import { Star, Check } from 'lucide-react';
 import { ListingItem } from '@/types/quotes';
 
 interface ListingScoreCardProps {
-  listing: ListingItem;
+  listing: ListingItem,
   isSelected?: boolean;
   onSelect?: () => void;
 }

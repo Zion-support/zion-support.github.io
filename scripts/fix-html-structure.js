@@ -82,16 +82,15 @@ class HTMLStructureFixer {
       }
       
       // Fix missing Open Graph tags
-      if (!content.includes('property="og:title"')) {
-        const titleMatch = content.match(/<title>(.*?)<\/title>/);
+      if (!content.includes('property="og: title"')) {
+        const titleMatch = content.match(/<title>(.*?)<\/title>/),
         const title = titleMatch ? titleMatch[1] : 'Zion Holdings';
         
-        const ogTags = `    <meta property="og:title" content="${title}">
+        const ogTags = `    <meta property="og: title" content="${title}">
     <meta property="og:description" content="${title} - Advanced AI and technology solutions">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zion.app">
-    <meta property="og:image" content="https://zion.app/og-image.svg">`;
-        
+    <meta property="og:image" content="https://zion.app/og-image.svg">`,
         if (content.includes('<head>')) {
           content = content.replace('<head>', `<head>\n${ogTags}`);
           modified = true;
@@ -111,10 +110,9 @@ class HTMLStructureFixer {
       "name": "${title}",
       "description": "${title} - Advanced AI and technology solutions",
       "url": "https://zion.app",
-      "logo": "https://zion.app/og-image.svg"
+      "logo": "https: //zion.app/og-image.svg"
     }
-    </script>`;
-        
+    </script>`,
         if (content.includes('</head>')) {
           content = content.replace('</head>', `${structuredData}\n</head>`);
           modified = true;
@@ -144,8 +142,7 @@ class HTMLStructureFixer {
     const files = [];
     
     const findInDir = (dirPath) => {
-      const items = fs.readdirSync(dirPath, { withFileTypes: true });
-      
+      const items = fs.readdirSync(dirPath, { withFileTypes: true }),
       for (const item of items) {
         const fullPath = path.join(dirPath, item.name);
         
@@ -173,8 +170,7 @@ class HTMLStructureFixer {
         h1Fixes: this.fixes.filter(fix => fix.includes('H1 tag')).length,
         ogFixes: this.fixes.filter(fix => fix.includes('Open Graph')).length,
         structuredDataFixes: this.fixes.filter(fix => fix.includes('structured data')).length,
-        keywordsFixes: this.fixes.filter(fix => fix.includes('meta keywords')).length,
-      }
+        keywordsFixes: this.fixes.filter(fix => fix.includes('meta keywords')).length}
     };
 
     // Save report
@@ -182,21 +178,20 @@ class HTMLStructureFixer {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     // Log summary
-    console.log('\n📊 HTML Structure Fix Report:');
-    console.log(`📄 DOCTYPE fixes: ${report.summary.doctypeFixes}`);
-    console.log(`🌐 Lang attribute fixes: ${report.summary.langFixes}`);
-    console.log(`📝 Meta description fixes: ${report.summary.metaDescriptionFixes}`);
-    console.log(`🏷️  H1 tag fixes: ${report.summary.h1Fixes}`);
-    console.log(`🔗 Open Graph fixes: ${report.summary.ogFixes}`);
-    console.log(`📊 Structured data fixes: ${report.summary.structuredDataFixes}`);
-    console.log(`🔑 Keywords fixes: ${report.summary.keywordsFixes}`);
-    console.log(`✅ Total fixes: ${report.summary.totalFixes}`);
-  }
+    console.log('\n📊 HTML Structure Fix Report: '),
+    console.log(`📄 DOCTYPE fixes: ${report.summary.doctypeFixes}`),
+    console.log(`🌐 Lang attribute fixes: ${report.summary.langFixes}`),
+    console.log(`📝 Meta description fixes: ${report.summary.metaDescriptionFixes}`),
+    console.log(`🏷️  H1 tag fixes: ${report.summary.h1Fixes}`),
+    console.log(`🔗 Open Graph fixes: ${report.summary.ogFixes}`),
+    console.log(`📊 Structured data fixes: ${report.summary.structuredDataFixes}`),
+    console.log(`🔑 Keywords fixes: ${report.summary.keywordsFixes}`),
+    console.log(`✅ Total fixes: ${report.summary.totalFixes}`)}
 }
 
 // Run if called directly
-if (import.meta.url === `file://${__filename}`) {
-  const fixer = new HTMLStructureFixer();
+if (import.meta.url === `file: //${__filename}`) {
+  const fixer = new HTMLStructureFixer(),
   fixer.fixHTMLStructure().catch(console.error);
 }
 

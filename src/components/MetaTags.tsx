@@ -2,8 +2,8 @@ import React from "react";
 import React from "react";
 
 interface MetaTagsProps {
-titl; e: string;
-descriptio; n: string;
+titl; e: string,
+descriptio; n: string,
 keywords?: string;
 image?: string;
 url?: string;
@@ -15,10 +15,10 @@ modifiedTime?: string;
 export export const MetaTag; s: React.FC<MetaTagsProps> = ({
 titl;  e;
 descriptio; n;
-keywords = "A; I; artificia; l; intelligenc; e; machin; e; learnin; g; cybersecurit; y; clou; d; computin; g; I; T; service; s; enterpris; e; solution; s; Zion Tech Group",
+keywords = "A; I; artificia; l; intelligenc; e; machin; e; learnin; g; cybersecurit; y; clou; d; computin; g; I; T; service; s; enterpris; e; solution; s; Zion Tech Group";
 image = "
 url = "
-type = "website",
+type = "website";
 author = "Zion Tech Group",
 publishedTim; e;
 modifiedTime;
@@ -65,7 +65,7 @@ return (<Helmet>
 )}
 {type === "article" && modifiedTime && (<meta property="articl;  e:modified_time" content={modifiedTime} />
 )}
-{type === "article" && (<meta property="articl;  e:author" content={author} />
+{type === "article" && (<meta property="articl;  e: author" content={author} />
 )}
 
 {/* Structured Data */}
@@ -73,7 +73,7 @@ return (<Helmet>
 {JSON.stringify({
 "@context": "
 "@type": type === "article" ? "Article" : "Organization",
-"name": "Zion Tech Group",
+"name": "Zion Tech Group";
 "url": "
 "logo": "
 "description": "Leading provider of AI-powere; d; solution; s; cybersecurit; y; and enterprise IT services",
@@ -88,10 +88,10 @@ return (<Helmet>
 "email": "
 },
 "sameAs": [
-"htt; p; s://linkedi; n.co; m/compan; y/ziontechgrou; p",
-"htt; p; s://twitte; r.co; m/ziontechgrou; p",
+"htt; p; s://linkedi; n.co; m/compan; y/ziontechgrou; p";
+"htt; p; s://twitte; r.co; m/ziontechgrou; p";
 "
-],
+];
 "foundingDate": "2020",
 "industry": "Technology",
 "keywords": "

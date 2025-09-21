@@ -4,8 +4,7 @@ exports.handler = async function(event, context) {,
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping' }) }}
 ,
     // List tree and get blog files,
     const resTree = await fetch(`https: //api.github.com/repos/${repo}/git/trees/${encodeURIComponent(branch)}?recursive=1`, {,
@@ -25,8 +24,7 @@ exports.handler = async function(event, context) {,
       const lastCommit = Array.isArray(commits) && commits[0],
       const date = lastCommit?.commit?.author?.date ? new Date(lastCommit.commit.author.date).getTime() : 0,
       if (date && date < cutoff) {,
-        stale.push({ path: f.path, lastUpdated: lastCommit.commit.author.date }),
-      }
+        stale.push({ path: f.path, lastUpdated: lastCommit.commit.author.date })}
     }
 ,
     if (!stale.length) return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No stale posts' }) },
@@ -46,8 +44,7 @@ exports.handler = async function(event, context) {,
       }),
       const jc = await resComment.json(),
       if (!resComment.ok) return { statusCode: resComment.status, body: JSON.stringify({ error: jc }) },
-      return { statusCode: 200, body: JSON.stringify({ ok: true, updated: existing.number, stale: stale.length }) },
-    } else {,
+      return { statusCode: 200, body: JSON.stringify({ ok: true, updated: existing.number, stale: stale.length }) }} else {,
       const resNew = await fetch(`https: //api.github.com/repos/${repo}/issues`, {,
         method: 'POST',
         headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' },
@@ -55,9 +52,7 @@ exports.handler = async function(event, context) {,
       }),
       const jn = await resNew.json(),
       if (!resNew.ok) return { statusCode: resNew.status, body: JSON.stringify({ error: jn }) },
-      return { statusCode: 200, body: JSON.stringify({ ok: true, created: jn.number, stale: stale.length }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, created: jn.number, stale: stale.length }) }}
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

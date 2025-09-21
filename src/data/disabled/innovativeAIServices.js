@@ -6,7 +6,7 @@ export const INNOVATIVE_AI_SERVICES = [
         description: "Comprehensive AI-powered content creation platform that generates high-quality marketing materials, social media posts, and SEO-optimized content.",
         category: "
         subcategory: "
-        price: 399;
+        price: 399,
         currency: "
         pricingModel: "
         features: [
@@ -47,8 +47,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB"],
         integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Hootsuite"],
         compliance: ["GDPR", "CCPA", "SOC 2"],
@@ -56,8 +55,7 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
         aiCapabilities: ["Natural Language Generation", "Sentiment Analysis", "SEO Optimization", "Content Personalization"],
         trainingData: "
-        accuracy: "95% human-like quality",
-    }
+        accuracy: "95% human-like quality"}
     /
     {
         id: "
@@ -65,7 +63,7 @@ export const INNOVATIVE_AI_SERVICES = [
         description: "Advanced video analysis platform that uses computer vision to extract insights, detect objects, and analyze customer behavior in retail and security applications.",
         category: "
         subcategory: "
-        price: 599;
+        price: 599,
         currency: "
         pricingModel: "
         features: [
@@ -106,8 +104,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "OpenCV", "Python", "React", "PostgreSQL"],
         integrations: ["CCTV systems", "IP cameras", "Cloud storage", "Analytics platforms"],
         compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
@@ -115,8 +112,7 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["Vintra", "BriefCam", "Avigilon", "Milestone"],
         aiCapabilities: ["Object Detection", "Behavior Analysis", "Pattern Recognition", "Real-time Processing"],
         trainingData: "
-        accuracy: "98% detection accuracy",
-    }
+        accuracy: "98% detection accuracy"}
     /
     {
         id: "
@@ -124,7 +120,7 @@ export const INNOVATIVE_AI_SERVICES = [
         description: "Intelligent trading platform that uses machine learning to analyze market trends, predict price movements, and provide automated trading recommendations.",
         category: "
         subcategory: "
-        price: 799;
+        price: 799,
         currency: "
         pricingModel: "
         features: [
@@ -165,8 +161,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "Python", "React", "PostgreSQL", "Redis"],
         integrations: ["Bloomberg", "Reuters", "Trading platforms", "Broker APIs"],
         compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
@@ -174,8 +169,7 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["Alpaca", "QuantConnect", "Zerodha", "Interactive Brokers"],
         aiCapabilities: ["Price Prediction", "Risk Assessment", "Portfolio Optimization", "Market Sentiment Analysis"],
         trainingData: "
-        accuracy: "78% prediction accuracy",
-    }
+        accuracy: "78% prediction accuracy"}
     /
     {
         id: "
@@ -183,7 +177,7 @@ export const INNOVATIVE_AI_SERVICES = [
         description: "
         category: "
         subcategory: "
-        price: 1299;
+        price: 1299,
         currency: "
         pricingModel: "
         features: [
@@ -224,8 +218,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["TensorFlow", "PyTorch", "Python", "React", "PostgreSQL"],
         integrations: ["PACS systems", "EHR platforms", "DICOM viewers", "Hospital systems"],
         compliance: ["HIPAA", "FDA", "SOC 2", "ISO 13485"],
@@ -233,8 +226,7 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["Aidoc", "Zebra Medical", "Butterfly Network", "GE Healthcare"],
         aiCapabilities: ["Image Recognition", "Disease Detection", "Pattern Analysis", "Clinical Decision Support"],
         trainingData: "
-        accuracy: "94% diagnostic accuracy",
-    }
+        accuracy: "94% diagnostic accuracy"}
     /
     {
         id: "
@@ -242,7 +234,7 @@ export const INNOVATIVE_AI_SERVICES = [
         description: "Intelligent supply chain management system that uses AI to predict demand, optimize inventory, and streamline logistics operations.",
         category: "
         subcategory: "
-        price: 699;
+        price: 699,
         currency: "
         pricingModel: "
         features: [
@@ -283,8 +275,7 @@ export const INNOVATIVE_AI_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Python", "TensorFlow", "React", "PostgreSQL", "Redis"],
         integrations: ["ERP systems", "WMS platforms", "Shipping carriers", "Supplier portals"],
         compliance: ["ISO 9001", "SOC 2", "GDPR"],
@@ -292,6 +283,5 @@ export const INNOVATIVE_AI_SERVICES = [
         competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
         aiCapabilities: ["Demand Forecasting", "Route Optimization", "Inventory Planning", "Risk Assessment"],
         trainingData: "
-        accuracy: "92% forecast accuracy",
-    }
+        accuracy: "92% forecast accuracy"}
 ];

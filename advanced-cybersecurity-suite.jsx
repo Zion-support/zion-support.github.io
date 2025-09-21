@@ -1,5 +1,5 @@
 import React from 'react',
-const advanced-cybersecurity-suite: React.FC = () => {,
+const advanced-cybersecuritysuite: React.FC = () => {,
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
       <h3 className="text-xl font-bold mb-4">advanced-cybersecurity-suite</h3>,

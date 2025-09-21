@@ -3,10 +3,8 @@ function pickRandom(arr, n) {,
   const sel = [],
   while (sel.length < n && copy.length) {,
     const idx = Math.floor(Math.random() * copy.length),
-    sel.push(copy.splice(idx, 1)[0]),
-  }
-  return sel,
-}
+    sel.push(copy.splice(idx, 1)[0])}
+  return sel}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -23,8 +21,7 @@ exports.handler = async function(event, context) {,
     const promos = pickRandom(candidates, 3),
     const payload = { generatedAt: new Date().toISOString(), promos },
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, promos, note: 'No GITHUB_TOKEN set, skipping commit' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, promos, note: 'No GITHUB_TOKEN set, skipping commit' }) }}
 ,
     const path = 'data/homepage-promos.json',
     // Fetch existing sha if present,
@@ -35,8 +32,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const b64 = Buffer.from(JSON.stringify(payload, null, 2), 'utf8').toString('base64'),
@@ -55,11 +51,8 @@ exports.handler = async function(event, context) {,
     }),
     const json = await res.json(),
     if (!res.ok) {,
-      return { statusCode: res.status, body: JSON.stringify({ error: json }) },
-    }
+      return { statusCode: res.status, body: JSON.stringify({ error: json }) }}
 ,
-    return { statusCode: 200, body: JSON.stringify({ ok: true, promos, commit: json.commit && json.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, promos, commit: json.commit && json.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

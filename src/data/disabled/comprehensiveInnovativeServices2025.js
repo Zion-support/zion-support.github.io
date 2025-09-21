@@ -6,7 +6,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         description: "Revolutionary platform that enables fully autonomous business operations through AI agents, automated decision-making, and intelligent process orchestration without human intervention.",
         category: "
         subcategory: "
-        price: 25000;
+        price: 25000,
         currency: "
         pricingModel: "
         features: [
@@ -50,8 +50,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "Natural Language Processing", "Computer Vision"],
         integrations: ["ERP Systems", "CRM Platforms", "Supply Chain Systems", "Financial Systems", "IoT Platforms"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],
@@ -61,10 +60,10 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
             "Supply chain reduced costs by 70% through automation",
             "Financial services firm improved efficiency by 400%"
         ],
-        aiScore: 99;
-        rating: 4.9;
-        reviewCount: 156;
-        featured: true;
+        aiScore: 99,
+        rating: 4.9,
+        reviewCount: 156,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -72,8 +71,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "
         deployment: "
         marketTrend: "
-        competitiveAdvantage: "Only platform enabling fully autonomous business operations",
-    }
+        competitiveAdvantage: "Only platform enabling fully autonomous business operations"}
     /
     {
         id: "
@@ -81,7 +79,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         description: "
         category: "
         subcategory: "
-        price: 35000;
+        price: 35000,
         currency: "
         pricingModel: "
         features: [
@@ -125,8 +123,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Qiskit", "Cirq", "PennyLane", "TensorFlow", "PyTorch", "Quantum Algorithms"],
         integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket", "Research Tools"],
         compliance: ["Research ethics", "Data privacy", "Export controls", "Academic standards"],
@@ -136,10 +133,10 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
             "Financial firm optimized portfolios with quantum advantage",
             "Research institution achieved breakthrough in material science"
         ],
-        aiScore: 98;
-        rating: 4.8;
-        reviewCount: 89;
-        featured: true;
+        aiScore: 98,
+        rating: 4.8,
+        reviewCount: 89,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -147,8 +144,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "
         deployment: "
         marketTrend: "
-        competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities",
-    }
+        competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities"}
     /
     {
         id: "
@@ -156,7 +152,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         description: "Advanced space technology platform for managing satellite operations, analyzing space data, optimizing satellite communications, and enabling space-based business applications.",
         category: "
         subcategory: "
-        price: 45000;
+        price: 45000,
         currency: "
         pricingModel: "
         features: [
@@ -200,8 +196,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["AI/ML", "Satellite Communications", "Big Data Analytics", "Cloud Computing", "IoT", "Space Protocols"],
         integrations: ["Ground stations", "Satellite control systems", "Data processing centers", "Communication networks"],
         compliance: ["ITAR", "Space regulations", "International treaties", "Security clearances"],
@@ -211,10 +206,10 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
             "Space agency reduced mission costs by 30%",
             "Telecom company enhanced global coverage by 60%"
         ],
-        aiScore: 95;
-        rating: 4.7;
-        reviewCount: 67;
-        featured: true;
+        aiScore: 95,
+        rating: 4.7,
+        reviewCount: 67,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -222,8 +217,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "
         deployment: "
         marketTrend: "
-        competitiveAdvantage: "Most comprehensive space operations platform with AI integration",
-    }
+        competitiveAdvantage: "Most comprehensive space operations platform with AI integration"}
     /
     {
         id: "
@@ -231,7 +225,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         description: "Revolutionary biotechnology platform that uses AI to accelerate drug discovery, optimize clinical trials, and advance medical research across multiple domains.",
         category: "
         subcategory: "
-        price: 40000;
+        price: 40000,
         currency: "
         pricingModel: "
         features: [
@@ -275,8 +269,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Machine Learning", "Deep Learning", "Bioinformatics", "Molecular Modeling", "Data Analytics"],
         integrations: ["Lab management systems", "Clinical trial platforms", "Regulatory databases", "Research tools"],
         compliance: ["FDA", "HIPAA", "GCP", "Research ethics", "Data privacy"],
@@ -286,10 +279,10 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
             "Biotech startup accelerated clinical trials by 60%",
             "Research institution achieved breakthrough in personalized medicine"
         ],
-        aiScore: 97;
-        rating: 4.9;
-        reviewCount: 134;
-        featured: true;
+        aiScore: 97,
+        rating: 4.9,
+        reviewCount: 134,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -297,8 +290,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "
         deployment: "
         marketTrend: "
-        competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery",
-    }
+        competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery"}
     /
     {
         id: "
@@ -306,7 +298,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         description: "Complete autonomous vehicle solution with AI navigation, safety systems, fleet management capabilities, and regulatory compliance for various transportation applications.",
         category: "
         subcategory: "
-        price: 30000;
+        price: 30000,
         currency: "
         pricingModel: "
         features: [
@@ -350,8 +342,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "5G Networks", "Edge Computing"],
         integrations: ["Fleet management systems", "GPS and mapping", "Weather services", "Regulatory databases"],
         compliance: ["Vehicle safety standards", "Transportation regulations", "Industry-specific compliance"],
@@ -361,10 +352,10 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
             "Mining operation improved safety by 80%",
             "Warehouse increased efficiency by 60%"
         ],
-        aiScore: 94;
-        rating: 4.6;
-        reviewCount: 89;
-        featured: true;
+        aiScore: 94,
+        rating: 4.6,
+        reviewCount: 89,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -372,8 +363,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "
         deployment: "
         marketTrend: "
-        competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems",
-    }
+        competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems"}
     /
     {
         id: "
@@ -381,7 +371,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         description: "Intelligent robotics solutions with AI-powered automation for manufacturing, logistics, industrial processes, and service applications with advanced safety and learning capabilities.",
         category: "
         subcategory: "
-        price: 22000;
+        price: 22000,
         currency: "
         pricingModel: "
         features: [
@@ -425,8 +415,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "Edge Computing", "Safety Systems"],
         integrations: ["Manufacturing systems", "Quality control platforms", "Safety monitoring", "Industrial protocols"],
         compliance: ["Industrial safety standards", "Quality regulations", "Industry-specific compliance"],
@@ -436,10 +425,10 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
             "Warehouse improved efficiency by 80%",
             "Quality control achieved 99.9% accuracy"
         ],
-        aiScore: 93;
-        rating: 4.5;
-        reviewCount: 156;
-        featured: true;
+        aiScore: 93,
+        rating: 4.5,
+        reviewCount: 156,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -447,8 +436,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "
         deployment: "
         marketTrend: "
-        competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features",
-    }
+        competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features"}
     /
     {
         id: "
@@ -456,7 +444,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         description: "Comprehensive smart city platform that integrates IoT, AI, and data analytics to optimize urban infrastructure, improve citizen services, and enhance sustainability across all city operations.",
         category: "
         subcategory: "
-        price: 28000;
+        price: 28000,
         currency: "
         pricingModel: "
         features: [
@@ -500,8 +488,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["IoT", "AI/ML", "Big Data Analytics", "Cloud Computing", "Edge Computing", "5G Networks"],
         integrations: ["City management systems", "Utility platforms", "Transportation systems", "Public safety networks"],
         compliance: ["Government standards", "Data privacy", "Security requirements", "Urban regulations"],
@@ -511,10 +498,10 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
             "Municipality improved traffic flow by 45%",
             "Urban area enhanced citizen services by 60%"
         ],
-        aiScore: 92;
-        rating: 4.4;
-        reviewCount: 78;
-        featured: true;
+        aiScore: 92,
+        rating: 4.4,
+        reviewCount: 78,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -522,8 +509,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "
         deployment: "
         marketTrend: "
-        competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization",
-    }
+        competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization"}
     /
     {
         id: "
@@ -531,7 +517,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         description: "Next-generation cybersecurity platform that implements zero-trust architecture, AI-powered threat detection, and advanced security orchestration for comprehensive enterprise protection.",
         category: "
         subcategory: "
-        price: 18000;
+        price: 18000,
         currency: "
         pricingModel: "
         features: [
@@ -575,8 +561,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         technology: ["Zero-Trust Architecture", "AI/ML", "Behavioral Analytics", "Threat Intelligence", "Security Orchestration"],
         integrations: ["Identity management", "Network security", "Endpoint protection", "Cloud security", "SIEM systems"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
@@ -586,10 +571,10 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
             "Financial institution prevented $50M breach",
             "Healthcare provider achieved 100% compliance"
         ],
-        aiScore: 96;
-        rating: 4.8;
-        reviewCount: 234;
-        featured: true;
+        aiScore: 96,
+        rating: 4.8,
+        reviewCount: 234,
+        featured: true,
         location: "
         availability: "
         demoUrl: "
@@ -597,8 +582,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         scalability: "Protects 100,000+ endpoints",
         deployment: "
         marketTrend: "
-        competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration",
-    }
+        competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration"}
 ];
     export const COMPREHENSIVE_INNOVATIVE_CATEGORIES_2025 = [
     "AI & Automation",

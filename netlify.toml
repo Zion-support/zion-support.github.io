@@ -1,10 +1,10 @@
 [build]
-  command = "npm install --legacy-peer-deps --ignore-scripts && npm run build"
-  publish = ".next"
+  command = "npm install --ignore-scripts --legacy-peer-deps && npm run export"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "22"
-  NPM_FLAGS = "--legacy-peer-deps --ignore-scripts"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test',
+import { test, expect } from '@playwright/test';
 
 test('talent profile name visible', async ({ page }) => {
   await page.route('**/talent/123', async route => {
@@ -14,9 +14,7 @@ test('talent profile name visible', async ({ page }) => {
           hourly_rate: 100
         }
       })
-    }),
-  }),
-
-  await page.goto('/talent/123'),
-  await expect(page.getByTestId('profile-name')).toHaveText('Playwright Talent'),
+    })});
+  await page.goto('/talent/123');
+  await expect(page.getByTestId('profile-name')).toHaveText('Playwright Talent');
 }),

@@ -12,8 +12,7 @@ function extractExternalLinks(html, origin) {,
         set.add(u.toString())}
     } catch {}
   }
-  return Array.from(set),
-}
+  return Array.from(set)}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -22,8 +21,7 @@ exports.handler = async function(event, context) {,
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) }}
 ,
     // Seed routes to fetch for external links,
     const routes = ['//blog/services'],
@@ -32,8 +30,7 @@ exports.handler = async function(event, context) {,
       try {,
         const res = await fetch(origin + route),
         const html = await res.text(),
-        for (const l of extractExternalLinks(html, origin)) links.add(l),
-      } catch {}
+        for (const l of extractExternalLinks(html, origin)) links.add(l)} catch {}
     }
 ,
     const LIMIT = parseInt(process.env.EXTERNAL_LINK_LIMIT || '100', 10),
@@ -42,10 +39,8 @@ exports.handler = async function(event, context) {,
     for (const url of toCheck) {,
       try {,
         const res = await fetch(url, { method: 'HEAD' }),
-        results.push({ url, status: res.status, ok: res.ok }),
-      } catch (e) {,
-        results.push({ url, status: 0, ok: false, error: String(e) }),
-      }
+        results.push({ url, status: res.status, ok: res.ok })} catch (e) {,
+        results.push({ url, status: 0, ok: false, error: String(e) })}
     }
 ,
     const failing = results.filter(r => !r.ok),
@@ -78,14 +73,10 @@ exports.handler = async function(event, context) {,
       const issues = await resIssues.json(),
       const existing = Array.isArray(issues) ? issues.find(i => i.title.startsWith('External Link Failures')) : null,
       if (existing) {,
-        await fetch(existing.comments_url, { method: 'POST', headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' }, body: JSON.stringify({ body }) }),
-      } else {,
-        await fetch(`https: //api.github.com/repos/${repo}/issues`, { method: 'POST', headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' }, body: JSON.stringify({ title, body, labels: ['automationexternal-links'] }) }),
-      }
+        await fetch(existing.comments_url, { method: 'POST', headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' }, body: JSON.stringify({ body }) })} else {,
+        await fetch(`https: //api.github.com/repos/${repo}/issues`, { method: 'POST', headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' }, body: JSON.stringify({ title, body, labels: ['automationexternal-links'] }) })}
     }
 ,
-    return { statusCode: 200, body: JSON.stringify({ ok: true, report: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, report: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

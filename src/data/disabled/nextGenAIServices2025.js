@@ -6,7 +6,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
         description: "Revolutionary AI platform that simulates human-like consciousness for advanced decision-making, emotional intelligence, and creative problem-solving in enterprise environments.",
         category: "
         subcategory: "
-        price: 25000;
+        price: 25000,
         currency: "
         pricingModel: "
         features: [
@@ -52,8 +52,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -61,7 +60,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
         description: "Cutting-edge quantum computing integration with AI for exponentially faster optimization, complex modeling, and breakthrough problem-solving capabilities.",
         category: "
         subcategory: "
-        price: 35000;
+        price: 35000,
         currency: "
         pricingModel: "
         features: [
@@ -107,8 +106,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -116,7 +114,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
         description: "Self-evolving AI system that automatically designs, tests, and optimizes neural network architectures for specific business problems without human intervention.",
         category: "
         subcategory: "
-        price: 18000;
+        price: 18000,
         currency: "
         pricingModel: "
         features: [
@@ -162,8 +160,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -171,7 +168,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
         description: "Advanced AI platform that seamlessly processes text, images, audio, video, and sensor data simultaneously for comprehensive understanding and intelligent responses.",
         category: "
         subcategory: "
-        price: 22000;
+        price: 22000,
         currency: "
         pricingModel: "
         features: [
@@ -217,8 +214,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
     {
         id: "
@@ -226,7 +222,7 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
         description: "Revolutionary platform that creates intelligent digital twins of physical systems, processes, and organizations using AI for predictive maintenance, optimization, and simulation.",
         category: "
         subcategory: "
-        price: 28000;
+        price: 28000,
         currency: "
         pricingModel: "
         features: [
@@ -272,7 +268,6 @@ export const NEXT_GEN_AI_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
     }
 ];

@@ -36,7 +36,7 @@ id='email'
                 </Label>
                 <select
 id='role'
-                  className='col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50'
+                  className='col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50'
                 >
                   <option value='admin'>Admin</option>
                   <option value='recruiter'>Recruiter</option>
@@ -133,9 +133,8 @@ variant='ghost'
   member.id "
 }> <TableCell> .join ("")
 }</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
-  member.role,
-}</TableCell> <TableCell> <Badge > {
-  member.status,
+  member.role}</TableCell> <TableCell> <Badge > {
+  member.status;
 }</Badge> </TableCell> <TableCell> {
   member.lastActive "
 }</TableCell> <TableCell className="text-right"> onClick={

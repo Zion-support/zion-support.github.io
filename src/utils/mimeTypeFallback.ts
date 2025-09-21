@@ -1,10 +1,9 @@
 export class MimeTypeFallback {
-  private supportedTypes: Set<string>;
-
+  private supportedTypes: Set<string>,
   constructor() {
     this.supportedTypes = new Set([
-      "text/html",
-      "text/css",
+      "text/html";
+      "text/css";
       "text/javascript",
       "application/javascript",
       "application/json",
@@ -26,8 +25,7 @@ export class MimeTypeFallback {
    * Check if MIME type is supported
    */
   isSupported(type: string): boolean {
-    return this.supportedTypes.has(type);
-  }
+    return this.supportedTypes.has(type)}
 
   /**
    * Get fallback MIME type for unsupported types
@@ -40,7 +38,6 @@ export class MimeTypeFallback {
       "text/xml": "text/xml",
       "application/x-shockwave-flash": "application/x-shockwave-flash"
     };
-
     return typeMap[type] || "application/octet-stream";
   }
 
@@ -49,13 +46,12 @@ export class MimeTypeFallback {
    */
   async loadResource(url: string, type: string): Promise<any> {
     try {
-      const response = await fetch(url);
+      const response = await fetch(url),
       const contentType = response.headers.get("content-type") || type;
 
       if (!this.isSupported(contentType)) {
         const fallbackType = this.getFallbackType(contentType);
-        console.warn(`Unsupported MIME type: ${contentType}, using fallback: ${fallbackType}`);
-      }
+        console.warn(`Unsupported MIME type: ${contentType}, using fallback: ${fallbackType}`)}
 
       return response;
     } catch (error) {
@@ -69,7 +65,7 @@ export class MimeTypeFallback {
    */
   createResourceElement(url: string, type: "script" | "stylesheet"): HTMLElement {
     if (type === "script") {
-      const script = document.createElement("script");
+      const script = document.createElement("script"),
       script.src = url;
       script.type = "text/javascript";
       return script;
@@ -88,7 +84,6 @@ export class MimeTypeFallback {
   injectResource(url: string, type: "script" | "stylesheet"): Promise<void> {
     return new Promise((resolve, reject) => {
       const element = this.createResourceElement(url, type);
-      
       element.onload = () => resolve();
       element.onerror = () => {
         console.error(`Failed to load ${type}: ${url}`);

@@ -1,12 +1,12 @@
-import { render, screen, fireEvent } from '@testing-library/react',
-import { axe, toHaveNoViolations } from 'jest-axe',
-import userEvent from '@testing-library/user-event',
-import React from 'react',
-import { vi, describe, test, expect } from 'vitest',
+import { render, screen, fireEvent } from '@testing-library/react';
+import { axe, toHaveNoViolations } from 'jest-axe';
+import userEvent from '@testing-library/user-event';
+import React from 'react';
+import { vi, describe, test, expect } from 'vitest';
 
 // Components to test for Issue #17 fixes
-import UserProfileDropdown from '@/components/header/UserProfileDropdown',
-import { ServiceQuoteModal } from '@/components/ServiceQuoteModal',
+import UserProfileDropdown from '@/components/header/UserProfileDropdown';
+import { ServiceQuoteModal } from '@/components/ServiceQuoteModal';
 
 // Mock the useAuth hook
 vi.mock('@/hooks/useAuth', () => ({
@@ -19,54 +19,42 @@ vi.mock('@/hooks/useAuth', () => ({
     logout: vi.fn()
   })
 })),
-
-expect.extend(toHaveNoViolations),
-
+expect.extend(toHaveNoViolations);
 describe('Accessibility Fixes for Issue #17', () => {
   
   test('UserProfileDropdown: Menu items are Tab-focusable', async () => {
     const user = userEvent.setup(),
-    render(<UserProfileDropdown />),
-    
+    render(<UserProfileDropdown />);
     const triggerButton = screen.getByRole('button', { name: /user profile/i }),
-    await user.click(triggerButton),
-    
+    await user.click(triggerButton);
     const profileLink = screen.getByRole('menuitem', { name: /profile/i }),
     const ordersLink = screen.getByRole('menuitem', { name: /orders/i }),
     const settingsLink = screen.getByRole('menuitem', { name: /settings/i }),
     const logoutButton = screen.getByRole('menuitem', { name: /logout/i }),
-    
-    expect(profileLink).not.toHaveAttribute('tabindex-1'),
-    expect(ordersLink).not.toHaveAttribute('tabindex-1'),
-    expect(settingsLink).not.toHaveAttribute('tabindex-1'),
-    expect(logoutButton).not.toHaveAttribute('tabindex-1'),
-    
-    await user.keyboard('{ArrowDown}'),
+    expect(profileLink).not.toHaveAttribute('tabindex-1');
+    expect(ordersLink).not.toHaveAttribute('tabindex-1');
+    expect(settingsLink).not.toHaveAttribute('tabindex-1');
+    expect(logoutButton).not.toHaveAttribute('tabindex-1');
+    await user.keyboard('{ArrowDown}');
     expect(profileLink).toHaveFocus(),
     
-    await user.keyboard('{ArrowDown}'),
+    await user.keyboard('{ArrowDown}');
     expect(ordersLink).toHaveFocus(),
     
-    await user.keyboard('{Escape}'),
-    expect(triggerButton).toHaveFocus(),
-  }),
+    await user.keyboard('{Escape}');
+    expect(triggerButton).toHaveFocus()}),
   
   test('UserProfileDropdown: Proper ARIA attributes', async () => {
     const user = userEvent.setup(),
-    render(<UserProfileDropdown />),
-    
+    render(<UserProfileDropdown />);
     const triggerButton = screen.getByRole('button', { name: /user profile/i }),
-    
-    expect(triggerButton).toHaveAttribute('aria-haspopuptrue'),
-    expect(triggerButton).toHaveAttribute('aria-expandedfalse'),
-    expect(triggerButton).toHaveAttribute('aria-labelUser profile'),
-    
-    await user.click(triggerButton),
-    expect(triggerButton).toHaveAttribute('aria-expandedtrue'),
-    
-    const menu = screen.getByRole('menu'),
-    expect(menu).toBeInTheDocument(),
-  }),
+    expect(triggerButton).toHaveAttribute('aria-haspopuptrue');
+    expect(triggerButton).toHaveAttribute('aria-expandedfalse');
+    expect(triggerButton).toHaveAttribute('aria-labelUser profile');
+    await user.click(triggerButton);
+    expect(triggerButton).toHaveAttribute('aria-expandedtrue');
+    const menu = screen.getByRole('menu');
+    expect(menu).toBeInTheDocument()}),
   
   test('ServiceQuoteModal: Calendar icons have aria-hidden', () => {
     const mockService = {
@@ -74,26 +62,22 @@ describe('Accessibility Fixes for Issue #17', () => {
       title: 'Test Service',
       category: 'Test Category'
     },
-    
     render(
       <ServiceQuoteModal 
         open={true} 
         onOpenChange={() => {}} 
         service={mockService}
       />
-    ),
-    
-    const calendarIcons = document.querySelectorAll('svg[data-lucide="calendar"]'),
+    );
+    const calendarIcons = document.querySelectorAll('svg[data-lucide="calendar"]');
     calendarIcons.forEach(icon => {
-      expect(icon).toHaveAttribute('aria-hiddentrue'),
-    }),
-  }),
+      expect(icon).toHaveAttribute('aria-hiddentrue');
+    })}),
   
   test('Navigation components have no accessibility violations', async () => {
-    const { container } = render(<UserProfileDropdown />),
-    const results = await axe(container),
-    expect(results).toHaveNoViolations(),
-  }),
+    const { container } = render(<UserProfileDropdown />);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations()}),
   
   test('Modal components have no accessibility violations', async () => {
     const mockService = {
@@ -101,57 +85,44 @@ describe('Accessibility Fixes for Issue #17', () => {
       title: 'Test Service',
       category: 'Test Category'
     },
-    
     const { container } = render(
       <ServiceQuoteModal 
         open={true} 
         onOpenChange={() => {}} 
         service={mockService}
       />
-    ),
-    
-    const results = await axe(container),
-    expect(results).toHaveNoViolations(),
-  }),
+    );
+    const results = await axe(container);
+    expect(results).toHaveNoViolations()}),
   
   test('Focus management works correctly', async () => {
     const user = userEvent.setup(),
-    render(<UserProfileDropdown />),
-    
+    render(<UserProfileDropdown />);
     const triggerButton = screen.getByRole('button', { name: /user profile/i }),
-    
-    triggerButton.focus(),
-    await user.keyboard('{Enter}'),
-    
+    triggerButton.focus();
+    await user.keyboard('{Enter}');
     const profileLink = screen.getByRole('menuitem', { name: /profile/i }),
-    expect(profileLink).toHaveFocus(),
-    
-    await user.keyboard('{Escape}'),
-    expect(triggerButton).toHaveFocus(),
-  }),
+    expect(profileLink).toHaveFocus();
+    await user.keyboard('{Escape}');
+    expect(triggerButton).toHaveFocus()}),
   
   test('Keyboard navigation follows accessibility standards', async () => {
     const user = userEvent.setup(),
-    render(<UserProfileDropdown />),
-    
+    render(<UserProfileDropdown />);
     const triggerButton = screen.getByRole('button', { name: /user profile/i }),
-    await user.click(triggerButton),
-    
-    const menuItems = screen.getAllByRole('menuitem'),
-    
-    await user.keyboard('{ArrowDown}'),
+    await user.click(triggerButton);
+    const menuItems = screen.getAllByRole('menuitem');
+    await user.keyboard('{ArrowDown}');
     expect(menuItems[0]).toHaveFocus(),
     
-    await user.keyboard('{ArrowDown}'),
+    await user.keyboard('{ArrowDown}');
     expect(menuItems[1]).toHaveFocus(),
     
-    await user.keyboard('{ArrowUp}'),
+    await user.keyboard('{ArrowUp}');
     expect(menuItems[0]).toHaveFocus(),
     
-    await user.keyboard('{ArrowUp}'),
-    expect(menuItems[menuItems.length - 1]).toHaveFocus(),
-  }),
-}),
+    await user.keyboard('{ArrowUp}');
+    expect(menuItems[menuItems.length - 1]).toHaveFocus()})}),
 
 // Additional validation for common icon accessibility patterns
 describe('Icon Accessibility Patterns', () => {
@@ -166,9 +137,9 @@ describe('Icon Accessibility Patterns', () => {
       </button>
     ),
     
-    render(<TestComponent />),
-    const icon = document.querySelector('svg'),
-    expect(icon).toHaveAttribute('aria-hiddentrue'),
+    render(<TestComponent />);
+    const icon = document.querySelector('svg');
+    expect(icon).toHaveAttribute('aria-hiddentrue');
   }),
   
   test('Meaningful standalone icons have aria-label', () => {
@@ -180,8 +151,7 @@ describe('Icon Accessibility Patterns', () => {
       </button>
     ),
     
-    render(<TestComponent />),
+    render(<TestComponent />);
     const button = screen.getByRole('button', { name: /search/i }),
-    expect(button).toHaveAttribute('aria-labelSearch'),
-  }),
-}), 
+    expect(button).toHaveAttribute('aria-labelSearch');
+  })}), 

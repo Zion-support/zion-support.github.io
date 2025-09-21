@@ -27,9 +27,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ image-optimizer-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ image-optimizer-runner failed:', error),
     return {
       statusCode: 500,
@@ -39,6 +37,5 @@ exports.handler = async function(event, context) {
         function: 'image-optimizer-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

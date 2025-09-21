@@ -6,7 +6,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Revolutionary AI-powered brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, accessibility, and human augmentation.",
-        price: 5000;
+        price: 5000,
         pricingModel: "
         userLimit: "
         features: [
@@ -46,16 +46,14 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 7;
+        freeTrial: true,
+        freeTrialDays: 7,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "1000% annual growth expected",
-    }
+        growthPotential: "1000% annual growth expected"}
     /
     {
         id: "
@@ -63,7 +61,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Advanced AI-powered space technology platform for satellite operations, space debris tracking, and autonomous space mission management with real-time monitoring and predictive analytics.",
-        price: 3500;
+        price: 3500,
         pricingModel: "
         userLimit: "
         features: [
@@ -103,16 +101,14 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 7;
+        freeTrial: true,
+        freeTrialDays: 7,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "700% annual growth expected",
-    }
+        growthPotential: "700% annual growth expected"}
     /
     {
         id: "
@@ -120,7 +116,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Next-generation AI-powered quantum internet platform that enables ultra-secure communication, quantum key distribution, and quantum network optimization for enterprise and government applications.",
-        price: 4000;
+        price: 4000,
         pricingModel: "
         userLimit: "
         features: [
@@ -160,16 +156,14 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 7;
+        freeTrial: true,
+        freeTrialDays: 7,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "1200% annual growth expected",
-    }
+        growthPotential: "1200% annual growth expected"}
     /
     {
         id: "
@@ -177,7 +171,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Revolutionary AI-powered autonomous vehicle fleet management platform that optimizes routes, manages maintenance, and ensures safety for autonomous vehicle operations at scale.",
-        price: 2800;
+        price: 2800,
         pricingModel: "
         userLimit: "
         features: [
@@ -217,16 +211,14 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 14;
+        freeTrial: true,
+        freeTrialDays: 14,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "600% annual growth expected",
-    }
+        growthPotential: "600% annual growth expected"}
     /
     {
         id: "
@@ -234,7 +226,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         category: "
         subcategory: "
         description: "Advanced AI-powered climate prediction and adaptation platform that helps organizations prepare for climate change impacts, optimize resource allocation, and implement sustainable practices.",
-        price: 2200;
+        price: 2200,
         pricingModel: "
         userLimit: "
         features: [
@@ -274,14 +266,12 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "
             email: "
             website: "
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        }
+            address: "364 E Main St STE 1008 Middletown DE 19709"}
         demoUrl: "
         documentationUrl: "
-        freeTrial: true;
-        freeTrialDays: 14;
+        freeTrial: true,
+        freeTrialDays: 14,
         uniqueValueProposition: "
         marketSize: "
-        growthPotential: "800% annual growth expected",
-    }
+        growthPotential: "800% annual growth expected"}
 ];

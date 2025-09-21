@@ -6,7 +6,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         description: "Comprehensive AI-powered diagnostic platform designed specifically for healthcare providers, offering medical image analysis, patient data analytics, and clinical decision support.",
         category: "
         subcategory: "
-        price: 4200;
+        price: 4200,
         currency: "
         pricingModel: "
         features: [
@@ -49,8 +49,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         industryStandards: ["DICOM", "HL7 FHIR", "IHE", "SNOMED CT", "LOINC"],
         complianceFrameworks: ["HIPAA", "HITECH", "FDA", "SOC2", "ISO 27001"],
@@ -64,7 +63,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         description: "Advanced AI-powered risk management platform designed for financial institutions, offering real-time risk assessment, fraud detection, and regulatory compliance monitoring.",
         category: "
         subcategory: "
-        price: 3800;
+        price: 3800,
         currency: "
         pricingModel: "
         features: [
@@ -107,8 +106,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         industryStandards: ["Basel III", "Solvency II", "IFRS 9", "CCAR", "Dodd-Frank"],
         complianceFrameworks: ["SOX", "GLBA", "PCI DSS", "SOC2", "ISO 27001"],
@@ -122,7 +120,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         description: "Intelligent manufacturing optimization platform that uses AI to improve production efficiency, quality control, and predictive maintenance for manufacturing operations.",
         category: "
         subcategory: "
-        price: 2800;
+        price: 2800,
         currency: "
         pricingModel: "
         features: [
@@ -165,8 +163,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         industryStandards: ["ISO 9001", "ISO 14001", "ISO 45001", "Six Sigma", "Lean Manufacturing"],
         complianceFrameworks: ["FDA", "EPA", "OSHA", "SOC2", "ISO 27001"],
@@ -180,7 +177,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         description: "Comprehensive AI-powered customer intelligence platform designed for retail businesses, offering personalized marketing, inventory optimization, and customer behavior analytics.",
         category: "
         subcategory: "
-        price: 1800;
+        price: 1800,
         currency: "
         pricingModel: "
         features: [
@@ -223,8 +220,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         industryStandards: ["PCI DSS", "GDPR", "CCPA", "SOC2", "ISO 27001"],
         complianceFrameworks: ["Retail Security", "Data Privacy", "Payment Security", "Customer Protection"],
@@ -238,7 +234,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         description: "Intelligent AI-powered learning platform designed for educational institutions, offering personalized learning experiences, adaptive assessments, and student performance analytics.",
         category: "
         subcategory: "
-        price: 2200;
+        price: 2200,
         currency: "
         pricingModel: "
         features: [
@@ -281,8 +277,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         industryStandards: ["SCORM", "xAPI", "LTI", "Common Core", "FERPA"],
         complianceFrameworks: ["FERPA", "COPPA", "GDPR", "SOC2", "ISO 27001"],
@@ -296,7 +291,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         description: "Advanced AI-powered logistics optimization platform designed for transportation and logistics companies, offering route optimization, fleet management, and supply chain analytics.",
         category: "
         subcategory: "
-        price: 3200;
+        price: 3200,
         currency: "
         pricingModel: "
         features: [
@@ -339,8 +334,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         industryStandards: ["ISO 28000", "C-TPAT", "HACCP", "DOT", "FMCSA"],
         complianceFrameworks: ["Transportation Security", "Safety Standards", "Environmental Compliance", "SOC2"],
@@ -354,7 +348,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         description: "Intelligent AI-powered energy grid optimization platform designed for utility companies, offering smart grid management, renewable energy integration, and demand response optimization.",
         category: "
         subcategory: "
-        price: 4500;
+        price: 4500,
         currency: "
         pricingModel: "
         features: [
@@ -397,8 +391,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         industryStandards: ["IEEE", "IEC", "NERC", "FERC", "ISO 50001"],
         complianceFrameworks: ["Grid Security", "Environmental Compliance", "Safety Standards", "SOC2"],
@@ -412,7 +405,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         description: "Advanced AI-powered market intelligence platform designed for real estate professionals, offering market analysis, property valuation, and investment opportunity identification.",
         category: "
         subcategory: "
-        price: 1600;
+        price: 1600,
         currency: "
         pricingModel: "
         features: [
@@ -455,8 +448,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         industryStandards: ["RICS", "CREA", "NAR", "REIT", "MLS"],
         complianceFrameworks: ["Real Estate Regulations", "Data Privacy", "Financial Compliance", "SOC2"],
@@ -470,7 +462,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         description: "Intelligent AI-powered precision farming platform designed for agricultural operations, offering crop monitoring, yield optimization, and sustainable farming practices.",
         category: "
         subcategory: "
-        price: 2400;
+        price: 2400,
         currency: "
         pricingModel: "
         features: [
@@ -513,8 +505,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "
             email: "
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
         websiteUrl: "
         industryStandards: ["ISO 14001", "Global GAP", "Organic Certification", "Precision Agriculture", "Sustainable Farming"],
         complianceFrameworks: ["Environmental Compliance", "Food Safety", "Organic Standards", "SOC2"],
