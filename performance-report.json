@@ -1,53 +1,5 @@
 [
   {
-    "timestamp": "2025-09-21T12:37:01.200Z",
-    "buildTime": 0,
-    "bundleSize": "27M",
-    "pageCount": 7,
-    "performance": {
-      "buildTime": 13,
-      "timestamp": "2025-09-21T12:37:01.211Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": true,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
-    "timestamp": "2025-09-21T12:55:52.626Z",
-    "buildTime": 0,
-    "bundleSize": "27M",
-    "pageCount": 7,
-    "performance": {
-      "buildTime": 12,
-      "timestamp": "2025-09-21T12:55:52.636Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": false,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
-    "timestamp": "2025-09-21T12:57:42.019Z",
-    "buildTime": 0,
-    "bundleSize": "16M",
-    "pageCount": 7,
-    "performance": {
-      "buildTime": 12,
-      "timestamp": "2025-09-21T12:57:42.030Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": false,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
     "timestamp": "2025-09-21T12:58:03.557Z",
     "buildTime": 0,
     "bundleSize": "17M",
@@ -103,6 +55,118 @@
     "performance": {
       "buildTime": 10,
       "timestamp": "2025-09-21T13:03:39.293Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:07:58.415Z",
+    "buildTime": 0,
+    "bundleSize": "16M",
+    "pageCount": 7,
+    "performance": {
+      "buildTime": 11,
+      "timestamp": "2025-09-21T13:07:58.425Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:11:47.258Z",
+    "buildTime": 0,
+    "bundleSize": "27M",
+    "pageCount": 7,
+    "performance": {
+      "buildTime": 14,
+      "timestamp": "2025-09-21T13:11:47.270Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:13:05.833Z",
+    "buildTime": 0,
+    "bundleSize": "25M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 9,
+      "timestamp": "2025-09-21T13:13:05.841Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:14:05.943Z",
+    "buildTime": 0,
+    "bundleSize": "21M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 10,
+      "timestamp": "2025-09-21T13:14:05.951Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:15:42.455Z",
+    "buildTime": 0,
+    "bundleSize": "23M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 8,
+      "timestamp": "2025-09-21T13:15:42.461Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:18:28.895Z",
+    "buildTime": 0,
+    "bundleSize": "19M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 9,
+      "timestamp": "2025-09-21T13:18:28.903Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": false,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:21:04.761Z",
+    "buildTime": 0,
+    "bundleSize": "19M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 11,
+      "timestamp": "2025-09-21T13:21:04.771Z",
       "optimizations": {
         "cssOptimization": false,
         "compression": false,
