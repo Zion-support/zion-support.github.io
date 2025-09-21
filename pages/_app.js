@@ -1,7 +1,7 @@
-// Minimal App component for working build
+// Minimal working App component
 export default function App({ Component, pageProps }) {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       <Component {...pageProps} />
     </div>
   )
