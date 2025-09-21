@@ -1,9 +1,9 @@
 [build]
-  command = "npm ci --legacy-peer-deps && npm run build"
-  publish = "out"
+  command = "npm ci --legacy-peer-deps --ignore-scripts && npm run build"
+  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
 
 [[plugins]]
