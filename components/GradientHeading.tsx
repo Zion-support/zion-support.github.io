@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface GradientHeadingProps {
   children?: React.ReactNode;
   title?: string;
@@ -32,5 +31,6 @@ export function GradientHeading({
           {subtitle}
         </p>
       )}
-    </div>  );
+    </div>
+  );
 }

@@ -1,13 +1,13 @@
 
-import import { useState,,, ,,  } from 'react';
-import import { Button,,, ,,  } from '@/components/ui/button';
+import import { useState,,, ,,  } from 'react',
+import import { Button,,, ,,  } from '@/components/ui/button',
 import { Sparkles,,, Loader2,,  } from 'lucide-react'
-import import { useResumeEnhancer,,  } from '@/hooks/useResumeEnhancer';
+import import { useResumeEnhancer,,  } from '@/hooks/useResumeEnhancer',
 interface AIEnhancementButtonProps {
   currentContent: string;,
-enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
+enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',
   context?: string;
-  onEnhanced: (enhancedContent: string) => void;
+  onEnhanced: (enhancedContent: string) => void,
   buttonText?: string;
   className?: string,
 export function AIEnhancementButton({

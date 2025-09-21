@@ -389,9 +389,8 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     implementationDetails: 'Full-stack autonomous transportation platform with AI logistics engine, route optimization, fleet management, and enterprise transportation integration.',
     launchDate: '2026-02-10',
     customers: 1400,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 720
   }
-],
-
-export default zion2026AdvancedAIAutomationServices,
+];
+export default zion2026AdvancedAIAutomationServices;

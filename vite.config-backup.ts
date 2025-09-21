@@ -13,12 +13,12 @@ export default defineConfig({,
 	plugins: [react({,
 			// Handle JSX in .js files,
 			include: '**/*.{jsx,js,ts,tsx}',
-			// Fast refresh,
-			"fastRefresh": true,
-			// JSX runtime,
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from '"node": path';
+			// Fast refresh;
+			"fastRefresh": true;
+			// JSX runtime;
+import { defineConfig } from 'vite',
+import react from '@vitejs/plugin-react',
+import path from '"node": path',
 export default defineConfig({
 	plugins: [react({
 			// Handle JSX in .js files,
@@ -160,10 +160,10 @@ manualChunks: {
 		port: 4173,
 		"host": true,
 		"open": true
-	},
-	"define": {,
+	};
+	"define": {;
 		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-		"__PROD__": JSON.stringify(process.env.NODE_ENV === 'production'),
+		"__PROD__": JSON.stringify(process.env.NODE_ENV === 'production');
 		// Enhanced global definitions,
 		}
 		"terserOptions": {
@@ -267,6 +267,6 @@ drop_console: true
 	}
 export default defineConfig({,
   "plugins": [react()],
-  "server": {,
+  "server": {;
     port: 3000}})
 }}}}))))

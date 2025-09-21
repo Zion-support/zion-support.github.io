@@ -1,5 +1,5 @@
 import { Globe,,, Server,,, Clock,,, MapPin,,, Check,,  } from 'lucide-react'
-import React from "react";
+import React from "react",
 interface CountryServiceCardProps {
 isPopular?: boolean,
 }
@@ -7,7 +7,7 @@ export function CountryServiceCard({
   country,
 onSelect
   onQuote,
-isPopular,
+isPopular;
 }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
           </div>
@@ -45,7 +45,7 @@ isPopular,
       </CardContent>
       <CardFooter className='flex flex-col space-y-2'>
         <Button
-onClick = {() => onSelect(country),}
+onClick = {() => onSelect(country);
           className={`w-full ${
             isPopular
               ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'

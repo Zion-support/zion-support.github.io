@@ -1,4 +1,5 @@
 export interface InnovativeITService2024 {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -38,6 +39,16 @@ export interface InnovativeITService2024 {
   rating: number;
   reviews: number;
 }
+=======
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  variant: string,
+  features: string[],
+  rating: number,
+  customers: string, }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {

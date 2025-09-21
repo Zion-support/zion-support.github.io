@@ -1,11 +1,9 @@
-"use client";
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { MessageSquare, X, Send } from "lucide-react";
-
+"use client",
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input",
+import { MessageSquare, X, Send } from "lucide-react",
 export const FeedbackWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [feedback, setFeedback] = useState("");
@@ -21,9 +19,7 @@ export const FeedbackWidget: React.FC = () => {
       // Here you would typically send the feedback to your backend
       setTimeout(() => {
         setIsSubmitted(false);
-        setIsOpen(false);
-      }, 2000);
-    }
+        setIsOpen(false);, 2000);
   };
 
   if (!isOpen) {
@@ -36,7 +32,6 @@ export const FeedbackWidget: React.FC = () => {
         <MessageSquare className="h-5 w-5" />
       </button>
     );
-  }
 
   return (
     <div className="fixed bottom-6 left-6 w-80 bg-white rounded-lg shadow-xl border z-50">
@@ -90,5 +85,4 @@ export const FeedbackWidget: React.FC = () => {
         )}
       </div>
     </div>
-  );
-};
+  );;

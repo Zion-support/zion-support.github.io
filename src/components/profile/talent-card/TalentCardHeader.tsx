@@ -1,13 +1,13 @@
 import React from 'react'
 import { BadgeCheck,,  } from 'lucide-react'
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
 interface TalentCardHeaderProps {
   fullName: string;,
-professionalTitle: string;
+professionalTitle: string,
   profilePicture?: string;
   availabilityType: string;,
-yearsExperience: number;
+yearsExperience: number,
 yearsExperience,
 }: TalentCardHeaderProps) {
   return (

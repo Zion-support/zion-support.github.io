@@ -1,34 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
-
+import React, { useState, useEffect } from 'react',
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Label } from '@/components/ui/label',
+import { Textarea } from '@/components/ui/textarea',
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
+import { Checkbox } from '@/components/ui/checkbox',
 interface ValidationRule {
   required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-  custom?: (value: any) => string | null;
-}
+  custom?: (value: any) => string | null, }
 
 interface ValidatedFormFieldProps {
-  name: string;
-  label: string;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
+  name: string,
+  label: string,
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox',
   placeholder?: string;
   description?: string;
   validation?: ValidationRule;
-  options?: { value: string; label: string }[];
+  options?: { value: string; label: string }[],
   form: any; // React Hook Form control
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
-  debounceMs?: number;
-}
+  debounceMs?: number, }
 
 export function ValidatedFormField({
   name,
@@ -58,35 +55,27 @@ export function ValidatedFormField({
       setIsValidating(true);
       const error = validateField(value, validation);
       setValidationMessage(error);
-      setIsValidating(false);
-    }, debounceMs);
+      setIsValidating(false);, debounceMs);
 
-    return () => clearTimeout(timeoutId);
-  }, [value, validation, debounceMs]);
+    return () => clearTimeout(timeoutId);, [value, validation, debounceMs]);
 
   const validateField = (value: any, rules: ValidationRule): string | null => {
     if (rules.required && (!value || value.toString().trim() === '')) {
-      return `${label} is required`;
-    }
+      return `${label} is required`, }
 
     if (value && rules.minLength && value.length < rules.minLength) {
-      return `${label} must be at least ${rules.minLength} characters`;
-    }
+      return `${label} must be at least ${rules.minLength} characters`, }
 
     if (value && rules.maxLength && value.length > rules.maxLength) {
-      return `${label} must be no more than ${rules.maxLength} characters`;
-    }
+      return `${label} must be no more than ${rules.maxLength} characters`, }
 
     if (value && rules.pattern && !rules.pattern.test(value)) {
-      return `${label} format is invalid`;
-    }
+      return `${label} format is invalid`, }
 
     if (value && rules.custom) {
       return rules.custom(value);
-    }
 
-    return null;
-  };
+    return null, };
 
   const hasError = errors[name];
   const isValid = !hasError && value && !validationMessage;
@@ -97,8 +86,7 @@ export function ValidatedFormField({
       id: name,
       placeholder,
       disabled,
-      className: `w-full ${hasError ? 'border-red-500' : isValid ? 'border-green-500' : ''} ${className}`,
-    };
+      className: `w-full ${hasError ? 'border-red-500' : isValid ? 'border-green-500' : ''} ${className}`, };
 
     switch (type) {
       case 'textarea':
@@ -173,7 +161,6 @@ export function ValidatedFormField({
             type={type}
           />
         );
-    }
   };
 
   if (type === 'checkbox') {
@@ -191,7 +178,6 @@ export function ValidatedFormField({
         )}
       </div>
     );
-  }
 
   return (
     <div className="space-y-2">
@@ -233,4 +219,3 @@ export function ValidatedFormField({
       )}
     </div>
   );
-}

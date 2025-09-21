@@ -272,7 +272,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     implementationDetails: 'Enterprise-grade space technology platform with comprehensive satellite management and space data analytics capabilities.',
     launchDate: '2024-10-01',
     customers: 34,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 23
   }
-],
+];

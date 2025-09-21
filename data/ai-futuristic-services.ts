@@ -509,4 +509,4 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.8,
     reviews: 102
   }
-],
+];

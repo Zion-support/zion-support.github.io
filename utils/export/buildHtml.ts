@@ -1,14 +1,12 @@
 
 ,
-    .replace(/&/g, '&amp,'),
-    .replace(/</g, '<'),
-    .replace(/>/g, '>'),
-    .replace(/"/g, '"'),
-    .replace(/'/g, '&#039,'),
-  } catch (error) {,
-    console.error("Error:", error),
-    return res.status(500).json({ error: "Internal server error" }),
-  }
+    .replace(/&/g, '&amp,');
+    .replace(/</g, '<');
+    .replace(/>/g, '>');
+    .replace(/"/g, '"');
+    .replace(/'/g, '&#039,'); catch (error) {,
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
 }
 
@@ -16,10 +14,10 @@
 ,
 import type { BookProject } from '../book/bookTypes',
 export function buildPrintableHtml(project: BookProject): string {,
-  const { metachaptersvisuals } = project,
-  const quotesHtml = visuals.quoteCallouts,
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`),
-    .join('\n'),
+  const { metachaptersvisuals } = project;
+  const quotesHtml = visuals.quoteCallouts;
+    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+    .join('\n');
   const chapterHtml = chapters,
     .map(,
       (c) => `,
@@ -27,16 +25,16 @@ export function buildPrintableHtml(project: BookProject): string {,
         <h2>${escapeHtml(c.title)}</h2>,
         <div class="content">${paragraphize(c.content)}</div>,
       </section>,
-    `,
-    ),
-    .join('\n\n'),
+    `;
+    );
+    .join('\n\n');
   const visualsHtml = [,
     ...visuals.timelineImages,
     ...visuals.daoVoteCharts,
     ...visuals.uiScreens
   ],
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok,
-    .join('\n'),
+    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join('\n');
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '',
   return `<!doctype html>,
 <html>,
@@ -111,6 +109,5 @@ export function buildPrintableHtml(project: BookProject): string {,
   ${visualsHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
 </body>,
-</html>`,
-}
-,
+</html>`, }
+;

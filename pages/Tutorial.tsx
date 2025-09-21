@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { TUTORIALS } from '../data/tutorials';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/button';
-
 export default function Tutorial() {
   const router = useRouter();
 

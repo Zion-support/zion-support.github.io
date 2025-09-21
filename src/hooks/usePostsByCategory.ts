@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 export function usePostsByCategory(category: string) {
   const [posts, setPosts] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -11,8 +10,6 @@ export function usePostsByCategory(category: string) {
       { id: 2, title: "Post 2", category, content: "Content 2" }
     ];
     setPosts(mockPosts);
-    setIsLoading(false);
-  }, [category]);
+    setIsLoading(false);, [category]);
 
-  return { posts, isLoading };
-}
+  return { posts, isLoading }, }

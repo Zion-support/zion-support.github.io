@@ -491,23 +491,18 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     reviews: 89,
     popular: true
   }
-],
-
+];
 export const getServicesByCategory = (category: string) => {
   return revolutionaryServices2029.filter(service => service.category === category)
-},
-
+};
 export const getPopularServices = () => {
-  return revolutionaryServices2029.filter(service => service.isPopular),
-},
+  return revolutionaryServices2029.filter(service => service.isPopular);,
 
 export const getNewServices = () => {
-  return revolutionaryServices2029.filter(service => service.isNew),
-},
+  return revolutionaryServices2029.filter(service => service.isNew);,
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(, '')),
+    const price = parseInt(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });;

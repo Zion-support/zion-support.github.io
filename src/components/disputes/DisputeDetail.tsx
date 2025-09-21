@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
-import { useDisputes } from "@/hooks/useDisputes";
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType } from '@/types/disputes';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { format, formatDistanceToNow } from 'date-fns';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
-import { useAuth } from "@/hooks/useAuth";
-import { toast } from "sonner";
-
+import React, { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { useDisputes } from "@/hooks/useDisputes",
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType } from '@/types/disputes',
+import { Button } from '@/components/ui/button',
+import { Textarea } from '@/components/ui/textarea',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Separator } from '@/components/ui/separator',
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
+import { format, formatDistanceToNow } from 'date-fns',
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
+import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react',
+import { useAuth } from "@/hooks/useAuth",
+import { toast } from "sonner",
 export function DisputeDetail() {
   const router = useRouter();
   const { disputeId } = router.query;
@@ -35,7 +34,6 @@ export function DisputeDetail() {
   useEffect(() => {
     if (disputeId) {
       loadDispute();
-    }
   }, [disputeId, getDisputeById, getDisputeMessages, router]);
 
   const loadDispute = async () => {
@@ -47,38 +45,30 @@ export function DisputeDetail() {
       const messagesData = await getDisputeMessages(disputeId as string);
       
       setDispute(disputeData);
-      setMessages(messagesData);
-    } catch (error) {
+      setMessages(messagesData); catch (error) {
       logErrorToProduction('Error loading dispute:', { error, disputeId });
-      toast.error('Failed to load dispute details');
-    } finally {
+      toast.error('Failed to load dispute details'); finally {
       setIsLoading(false);
-    }
   };
 
   const handleResolveDispute = async () => {
     if (!disputeId) return;
     if (!resolution.summary) {
       toast.error('Please enter a resolution summary');
-      return;
-    }
+      return, }
 
     const success = await resolveDispute(disputeId as string, {
       summary: resolution.summary,
-      resolution_type: resolution.resolution_type,
-    });
+      resolution_type: resolution.resolution_type, });
 
     if (success && dispute) {
       setDispute({
         ...dispute,
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString(),
-      });
-      toast.success('Dispute resolved successfully');
-    } else {
+        resolved_at: new Date().toISOString(););
+      toast.success('Dispute resolved successfully'); else {
       toast.error('Failed to resolve dispute');
-    }
   };
 
   const handleSendMessage = async () => {
@@ -104,33 +94,28 @@ export function DisputeDetail() {
       
       setMessages(prev => [...prev, newMessage]);
       setMessage('');
-      toast.success('Message sent');
-    } catch (error) {
+      toast.success('Message sent'); catch (error) {
       logErrorToProduction('Error sending message:', { error, disputeId });
-      toast.error('Failed to send message');
-    } finally {
+      toast.error('Failed to send message'); finally {
       setIsSending(false);
-    }
   };
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case 'open':
-        return 'default';
+        return 'default',
       case 'under_review':
-        return 'secondary';
+        return 'secondary',
       case 'resolved':
-        return 'outline';
+        return 'outline',
       case 'closed':
-        return 'destructive';
+        return 'destructive',
       default:
-        return 'default';
-    }
+        return 'default', }
   };
 
   const isCurrentUser = (userId: string) => {
-    return user?.id === userId;
-  };
+    return user?.id === userId, };
 
   if (isLoading) {
     return (
@@ -139,7 +124,6 @@ export function DisputeDetail() {
         <p>Loading dispute details...</p>
       </div>
     );
-  }
 
   if (!dispute) {
     return (
@@ -153,7 +137,6 @@ export function DisputeDetail() {
         </Button>
       </div>
     );
-  }
 
   return (
     <div className="container mx-auto p-4 space-y-6">
@@ -175,8 +158,7 @@ export function DisputeDetail() {
             <Button
               onClick={() => {
                 // Handle start review
-                toast.info('Review started');
-              }}
+                toast.info('Review started');}
             >
               Start Review
             </Button>
@@ -434,4 +416,3 @@ export function DisputeDetail() {
       </div>
     </div>
   );
-}

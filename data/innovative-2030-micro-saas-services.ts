@@ -366,7 +366,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     implementationDetails: 'Enterprise-grade edge computing platform with Kubernetes-based orchestration, comprehensive monitoring tools, and seamless cloud integration. Deployed on secure infrastructure with global edge locations.',
     launchDate: '2024-02-20',
     customers: 600,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 340
   }
-],
+];

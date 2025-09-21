@@ -421,8 +421,8 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     implementationDetails: 'AI-powered autonomous testing platform with test generation, execution, and optimization automation.',
     launchDate: '2025-02-01',
     customers: 480,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 267
   }
-],
-export default revolutionary2025SpecializedITAIServices,
+];
+export default revolutionary2025SpecializedITAIServices;

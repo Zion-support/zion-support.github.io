@@ -175,16 +175,14 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.portfolio,
     } catch (error) {
-      console.error('Error analyzing portfolio:', error),
+      console.error('Error analyzing portfolio:', error);
       throw error,
     }
   }
@@ -196,18 +194,16 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ userId, riskTolerance, investmentHorizon })
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.recommendations || [],
     } catch (error) {
-      console.error('Error getting investment recommendations:', error),
+      console.error('Error getting investment recommendations:', error);
       throw error,
     }
   }
@@ -219,18 +215,16 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(request)
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.plan,
     } catch (error) {
-      console.error('Error creating financial plan:', error),
+      console.error('Error creating financial plan:', error);
       throw error,
     }
   }
@@ -241,16 +235,14 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.goals || [],
     } catch (error) {
-      console.error('Error tracking financial goals:', error),
+      console.error('Error tracking financial goals:', error);
       throw error,
     }
   }
@@ -261,16 +253,14 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.analysis,
     } catch (error) {
-      console.error('Error getting market analysis:', error),
+      console.error('Error getting market analysis:', error);
       throw error,
     }
   }
@@ -293,18 +283,16 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ targetAllocation })
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.rebalancing,
     } catch (error) {
-      console.error('Error rebalancing portfolio:', error),
+      console.error('Error rebalancing portfolio:', error);
       throw error,
     }
   }
@@ -322,18 +310,16 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ userId, targetAge, desiredIncome })
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.calculation,
     } catch (error) {
-      console.error('Error calculating retirement needs:', error),
+      console.error('Error calculating retirement needs:', error);
       throw error,
     }
   }
@@ -351,18 +337,16 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ userId, taxYear })
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.optimization,
     } catch (error) {
-      console.error('Error getting tax optimization strategies:', error),
+      console.error('Error getting tax optimization strategies:', error);
       throw error,
     }
   }
@@ -381,21 +365,19 @@ export class AIFinancialAdvisorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ userId, reportType })
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
+        throw new Error(`HTTP error! status: ${response.status}`);
 
-      const data = await response.json(),
+      const data = await response.json();
       return data.report,
     } catch (error) {
-      console.error('Error generating financial report:', error),
+      console.error('Error generating financial report:', error);
       throw error,
     }
   }
 }
 
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key'),
+export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');

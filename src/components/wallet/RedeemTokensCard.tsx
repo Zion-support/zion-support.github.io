@@ -1,9 +1,9 @@
 
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 import import { Dialog;
 DialogContent;
 DialogDescription;
@@ -13,9 +13,9 @@ DialogTrigger,
 } from "
 
 type RewardOption = {;
-id: string;
-title: string;
-description: string;
+id: string,
+title: string,
+description: string,
 cost: number;,
 type: "credit" | "feature" | ",
 }
@@ -47,7 +47,7 @@ export export function RedeemTokensCard() {;
 const { wallet; spendTokens } = useWallet()
 const [open; setOpen] = useState(false)
 
-const handleRedeem = async (option: RewardOption) => {;
+const handleRedeem = async (option: RewardOption) => {,
 if (!wallet || wallet.balance < option.cost) return;
 await spendTokens(option.cost, `Redeemed: ${option.title}`)
 setOpen(false)
@@ -109,8 +109,8 @@ Learn More <ExternalLink aria-hidden="true" className="ml-1 h-3 w-3" />
 <//Card><///Card>
 import React, { useState } from "react",
 import { useWallet,,  } from "@/hooks/useWallet",
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
 import { Gift,,, ArrowRight,,, ExternalLink,,  } from 'lucide-react'
 import {
 return (

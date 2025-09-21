@@ -1,18 +1,16 @@
 export interface LinkValidationResult {
-  url: string;
-  status: "valid" | "broken" | "external" | "protocol";
+  url: string,
+  status: "valid" | "broken" | "external" | "protocol",
   parentPage?: string;
   suggestedFix?: string;
   httpStatus?: number;
-  error?: string;
-}
+  error?: string, }
 
 export interface LinkFix {
-  originalUrl: string;
-  newUrl: string;
-  type: "redirect" | "update" | "remove" | "external";
-  reason: string;
-}
+  originalUrl: string,
+  newUrl: string,
+  type: "redirect" | "update" | "remove" | "external",
+  reason: string, }
 
 export class LinkValidator {
   private BROKEN_LINK_MAPPINGS: Record<string, string> = {
@@ -29,8 +27,7 @@ export class LinkValidator {
         status: "protocol",
         parentPage,
         error: "Invalid protocol or relative path"
-      };
-    }
+      }, }
 
     // Check for external links
     if (url.startsWith("http") && !url.includes("ziontechgroup.com")) {
@@ -38,8 +35,7 @@ export class LinkValidator {
         url,
         status: "external",
         parentPage
-      };
-    }
+      }, }
 
     // Check for broken internal links that have mappings
     if (this.BROKEN_LINK_MAPPINGS[url]) {
@@ -49,8 +45,7 @@ export class LinkValidator {
         parentPage,
         suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`,
         error: "Broken internal link with available redirect"
-      };
-    }
+      }, }
 
     // For now, assume internal links are valid
     // In a real implementation, you'd check against actual routes
@@ -58,16 +53,13 @@ export class LinkValidator {
       url,
       status: "valid",
       parentPage
-    };
-  }
+    }, }
 
   static isExternalLink(url: string): boolean {
     try {
       const urlObj = new URL(url);
-      return !urlObj.hostname.includes("ziontechgroup.com");
-    } catch {
-      return false;
-    }
+      return !urlObj.hostname.includes("ziontechgroup.com"); catch {
+      return false, }
   }
 
   static generateRedirectRules(): string {
@@ -78,7 +70,6 @@ export class LinkValidator {
       "RewriteRule ^deprecated/?$ /current [R=301,L]"
     ];
     return rules.join("\n");
-  }
 
   static generateSitemapExclusions(): string[] {
     return [
@@ -88,23 +79,19 @@ export class LinkValidator {
       "/test",
       "/dev",
       "/staging"
-    ];
-  }
+    ], }
 
   generateFixes(results: LinkValidationResult[]): LinkFix[] {
-    const fixes: LinkFix[] = [];
-    
+    const fixes: LinkFix[] = [],
     for (const result of results) {
       if (result.status === "broken" && result.suggestedFix) {
         fixes.push({
           originalUrl: result.url,
-          newUrl: result.suggestedFix.replace("Redirect to: ", ""),
+          newUrl: result.suggestedFix.replace("Redirect to: ", "");
           type: "redirect",
           reason: result.error || "Broken link detected"
         });
-      }
     }
     
-    return fixes;
-  }
+    return fixes, }
 }

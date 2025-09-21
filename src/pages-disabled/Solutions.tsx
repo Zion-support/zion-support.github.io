@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Solutions = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -36,7 +35,6 @@ const Solutions = () => {
         </div>
       </div>
     </div>
-  );
-};
+  );;
 
 export default Solutions;

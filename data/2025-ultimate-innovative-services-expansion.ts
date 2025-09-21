@@ -509,6 +509,5 @@ export const ultimateInnovativeServices2025: UltimateInnovativeService[] = [
     aiCapabilities: ['Personalized RecommendationsDynamic Pricing', 'Customer Behavior AnalysisSales Forecasting'],
     marketDisruption: 'Revolutionizes retail with AI personalization'
   }
-],
-
-export default ultimateInnovativeServices2025,
+];
+export default ultimateInnovativeServices2025;

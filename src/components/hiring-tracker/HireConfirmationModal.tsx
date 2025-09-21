@@ -1,22 +1,20 @@
-import React from 'react';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { JobApplication } from '@/types/jobs';
-
+import React from 'react',
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Label } from '@/components/ui/label',
+import { Textarea } from '@/components/ui/textarea',
+import { JobApplication } from '@/types/jobs',
 interface HireConfirmationModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  application: JobApplication;
-  onConfirm: () => void;
-}
+  isOpen: boolean,
+  onClose: () => void,
+  application: JobApplication,
+  onConfirm: () => void, }
 
 export function HireConfirmationModal({ 
   isOpen, 
   onClose, 
-  application, 
+  application;
   onConfirm 
 }: HireConfirmationModalProps) {
   const [offerAmount, setOfferAmount] = React.useState('');
@@ -26,11 +24,9 @@ export function HireConfirmationModal({
   const handleConfirm = () => {
     // Here you would typically send the offer to the backend
     onConfirm();
-    onClose();
-  };
+    onClose();;
 
-  const candidateName = application.talent_profile?.full_name || 'Candidate';
-
+  const candidateName = application.talent_profile?.full_name || 'Candidate',
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
@@ -94,4 +90,3 @@ export function HireConfirmationModal({
       </DialogContent>
     </Dialog>
   );
-}

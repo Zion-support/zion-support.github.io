@@ -1,15 +1,13 @@
-import { FileText, ShieldCheck } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-
+import { FileText, ShieldCheck } from 'lucide-react',
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
 interface ContractTypeCardsProps {
-  onStandardClick: () => void;
-  onSmartClick: () => void;
-}
+  onStandardClick: () => void,
+  onSmartClick: () => void, }
 
 export function ContractTypeCards({
   onStandardClick,
-  onSmartClick,
+  onSmartClick;
 }: ContractTypeCardsProps) {
   return (
     <div className='grid md:grid-cols-2 gap-6 mb-10'>
@@ -73,4 +71,3 @@ export function ContractTypeCards({
       </Card>
     </div>
   );
-}

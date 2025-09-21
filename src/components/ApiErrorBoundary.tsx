@@ -1,46 +1,39 @@
-import React, { Component, ReactNode } from 'react';
-import { QueryClient } from '@tanstack/react-query';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import React, { Component, ReactNode } from 'react',
+import { QueryClient } from '@tanstack/react-query',
+import { Button } from '@/components/ui/button',
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
 import { RefreshCw, WifiOff } from 'lucide-react'
 
 interface ApiErrorBoundaryProps {
   children: ReactNode;
   queryClient?: QueryClient;
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode, }
 
 interface ApiErrorBoundaryState {
-  hasError: boolean;
-  error?: Error;
-}
+  hasError: boolean,
+  error?: Error, }
 
 export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
   constructor(props: ApiErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
-  }
+    this.state = { hasError: false }, }
 
   static getDerivedStateFromError(error: Error): ApiErrorBoundaryState {
-    return { hasError: true, error };
-  }
+    return { hasError: true, error }, }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('API Error Boundary caught an error:', error, errorInfo);
-  }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false, error: undefined }),
     if (this.props.queryClient) {
       this.props.queryClient.invalidateQueries();
-    }
   };
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback, }
 
       return (
         <Alert className="m-4">
@@ -55,8 +48,6 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
           </Button>
         </Alert>
       );
-    }
 
-    return this.props.children;
-  }
+    return this.props.children, }
 }

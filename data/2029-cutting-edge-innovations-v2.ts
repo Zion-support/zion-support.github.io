@@ -459,19 +459,17 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     implementationDetails: 'Advanced AI creativity platform with multi-model orchestration, creative idea generation, and innovation management.',
     launchDate: '2024-12-01',
     customers: 78,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 134
   }
-],
+];
 export const getPopularCuttingEdge2029Services = () => {
-  return cuttingEdge2029Services.filter(service => service.popular),
-},
+  return cuttingEdge2029Services.filter(service => service.popular);,
 export const getCuttingEdge2029ServicesByCategory = (category: string) => {
   return cuttingEdge2029Services.filter(service => service.category === category)
-},
+};
 export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return cuttingEdge2029Services.filter(service => {
-    const price = parseInt(service.price.replace(/[^0-9]/g, '')),
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });;

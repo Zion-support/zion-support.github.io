@@ -244,4 +244,4 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     rating: 4.8,
     reviews: 18
   }
-],
+];

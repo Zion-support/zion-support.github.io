@@ -1,22 +1,18 @@
 interface SitemapUrl {
-  url: string;
+  url: string,
   lastmod?: string;
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority?: number;
-}
+  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never",
+  priority?: number, }
 
 interface SitemapConfig {
-  baseUrl: string;
-  urls: SitemapUrl[];
-  outputPath?: string;
-}
+  baseUrl: string,
+  urls: SitemapUrl[],
+  outputPath?: string, }
 
 class SitemapGenerator {
-  private config: SitemapConfig;
-
+  private config: SitemapConfig,
   constructor(config: SitemapConfig) {
-    this.config = config;
-  }
+    this.config = config, }
 
   /**
    * Generate XML sitemap content
@@ -25,21 +21,19 @@ class SitemapGenerator {
     const { baseUrl, urls } = this.config;
     const xmlUrls = urls.map(url => {
       const lastmod = url.lastmod || new Date().toISOString().split("T")[0];
-      const changefreq = url.changefreq || "weekly";
+      const changefreq = url.changefreq || "weekly",
       const priority = url.priority || 0.5;
       return `  <url>
     <loc>${baseUrl}${url.url}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
-  </url>`;
-    }).join("\n");
+  </url>`, }).join("\n");
 
     return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${xmlUrls}
-</urlset>`;
-  }
+</urlset>`, }
 
   /**
    * Generate robots.txt content
@@ -50,8 +44,7 @@ ${xmlUrls}
 Allow: /
 
 Sitemap: ${baseUrl}/sitemap.xml
-Sitemap: ${baseUrl}/sitemap-index.xml`;
-  }
+Sitemap: ${baseUrl}/sitemap-index.xml`, }
 
   /**
    * Save sitemap to file
@@ -63,7 +56,6 @@ Sitemap: ${baseUrl}/sitemap-index.xml`;
     // In a real implementation, you would write to files here
     console.log("Sitemap XML:", xmlContent);
     console.log("Robots.txt:", robotsContent);
-  }
 }
 
 // Default sitemap configuration
@@ -90,7 +82,6 @@ const defaultSitemapConfig: SitemapConfig = {
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config);
   return generator.generateXML();
-}
 
 /**
  * Generate robots.txt
@@ -98,7 +89,6 @@ export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): s
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config);
   return generator.generateRobotsTxt();
-}
 
 /**
  * Save sitemap files
@@ -106,7 +96,6 @@ export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig):
 export async function saveSitemapFiles(config: SitemapConfig = defaultSitemapConfig): Promise<void> {
   const generator = new SitemapGenerator(config);
   return generator.saveToFile();
-}
 
 export { SitemapGenerator };
 export type { SitemapUrl, SitemapConfig };

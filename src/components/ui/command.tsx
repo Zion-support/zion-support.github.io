@@ -124,9 +124,8 @@ export {
 CommandDialog
   CommandInput,
 CommandList
-  CommandEmpty,
+  CommandEmpty;
 CommandGroup
-  CommandItem,
+  CommandItem;
 CommandShortcut
-  CommandSeparator,
-}
+  CommandSeparator, }

@@ -4,21 +4,18 @@
  */
 
 export interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string[];
+  title: string,
+  description: string,
+  keywords: string[],
   ogImage?: string;
   canonicalUrl?: string;
-  robots?: string;
-}
+  robots?: string, }
 
 export class SEOManager {
-  private config: SEOConfig;
-  
+  private config: SEOConfig,
   constructor(config: SEOConfig) {
     this.config = config;
     this.updateMetaTags();
-  }
   
   private updateMetaTags() {
     // Update title
@@ -40,15 +37,12 @@ export class SEOManager {
       let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
       if (!canonical) {
         canonical = document.createElement('link');
-        canonical.rel = 'canonical';
+        canonical.rel = 'canonical',
         document.head.appendChild(canonical);
-      }
-      canonical.href = this.config.canonicalUrl;
-    }
+      canonical.href = this.config.canonicalUrl, }
     
     // Update robots
     this.updateMetaTag('robots', this.config.robots || 'index, follow');
-  }
   
   private updateMetaTag(name: string, content: string, attribute: string = 'name') {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
@@ -56,25 +50,21 @@ export class SEOManager {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
-    }
-    meta.content = content;
-  }
+    meta.content = content, }
   
   generateStructuredData(type: string, data: any) {
     const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    script.type = 'application/ld+json',
     script.textContent = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': type,
       ...data
     });
     document.head.appendChild(script);
-  }
   
   updateConfig(newConfig: Partial<SEOConfig>) {
     this.config = { ...this.config, ...newConfig };
     this.updateMetaTags();
-  }
 }
 
-export const createSEOManager = (config: SEOConfig) => new SEOManager(config);
+export const createSEOManager = (config: SEOConfig) => new SEOManager(config),

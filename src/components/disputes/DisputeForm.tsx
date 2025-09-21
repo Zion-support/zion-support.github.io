@@ -1,29 +1,26 @@
-import React, { useState } from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { FileText } from "lucide-react";
-import { logInfoToProduction, logErrorToProduction } from '@/utils/productionLogger';
-import { disputeReasonLabels } from '@/types/disputes';
-
+import React, { useState } from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { FileText } from "lucide-react",
+import { logInfoToProduction, logErrorToProduction } from '@/utils/productionLogger',
+import { disputeReasonLabels } from '@/types/disputes',
 const formSchema = z.object({
-  reason_code: z.string().min(1, 'Please select a reason'),
-  description: z.string().min(10, 'Please provide a detailed description'),
-});
+  reason_code: z.string().min(1, 'Please select a reason');
+  description: z.string().min(10, 'Please provide a detailed description'););
 
 type FormValues = z.infer<typeof formSchema>;
 
 interface DisputeFormProps {
-  projectId: string;
+  projectId: string,
   milestoneId?: string;
-  onSubmit: (data: FormValues) => Promise<void>;
-  onCancel?: () => void;
-}
+  onSubmit: (data: FormValues) => Promise<void>,
+  onCancel?: () => void, }
 
 export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: DisputeFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -39,12 +36,10 @@ export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: Disp
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFiles = Array.from(e.target.files || []);
-    setFiles(prev => [...prev, ...selectedFiles]);
-  };
+    setFiles(prev => [...prev, ...selectedFiles]);;
 
   const removeFile = (index: number) => {
-    setFiles(prev => prev.filter((_, i) => i !== index));
-  };
+    setFiles(prev => prev.filter((_, i) => i !== index));;
 
   const handleSubmit = async (values: FormValues) => {
     try {
@@ -57,12 +52,9 @@ export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: Disp
       // For now we just log the files that would be uploaded
       if (files.length > 0) {
         logInfoToProduction('Files would be uploaded:', files.map(f => f.name));
-      }
     } catch (error) {
-      logErrorToProduction('Error submitting dispute form', { error, projectId, milestoneId });
-    } finally {
+      logErrorToProduction('Error submitting dispute form', { error, projectId, milestoneId }); finally {
       setIsSubmitting(false);
-    }
   };
 
   return (
@@ -158,4 +150,3 @@ export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: Disp
       </form>
     </div>
   );
-}

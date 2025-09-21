@@ -1,10 +1,8 @@
-"use client";
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Mail } from "lucide-react";
-
+"use client",
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Mail } from "lucide-react",
 export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -16,7 +14,6 @@ export const FooterNewsletter: React.FC = () => {
       setEmail("");
       // Here you would typically send the email to your backend
       setTimeout(() => setIsSubscribed(false), 3000);
-    }
   };
 
   return (
@@ -48,5 +45,4 @@ export const FooterNewsletter: React.FC = () => {
         </form>
       )}
     </div>
-  );
-};
+  );;

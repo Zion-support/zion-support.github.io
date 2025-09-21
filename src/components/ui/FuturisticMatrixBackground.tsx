@@ -1,12 +1,10 @@
 import React from "react";
-
 interface FuturisticMatrixBackgroundProps {
 intensity?: "low" | "medium" | "
 color?: string;
 speed?: number;
-className?: string;
-}
-export export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({;
+className?: string, }
+export export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({,
 intensity = "
 color = "#00ff88",
 speed = 2;
@@ -24,8 +22,7 @@ if (!ctx) return;
 /
 const resizeCanvas: any = () => {
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-}
+canvas.height = window.innerHeight, }
 
 resizeCanvas()
 window.addEventListener("resize", resizeCanvas)
@@ -36,14 +33,13 @@ const matrixArray = matrix.split("")
 
 const fontSize = intensity === "high" ? 14 : intensity === "medium" ? 12 : 10;
 const columns = canvas.width / fontSize;
-const drops: number[] = [[];]
+const drops: number[] = [[], ]
 /
 for (let i = 0; i < columns; i++) {
-drops[i] = 1;
-}
+drops[i] = 1, }
 
 /
-let animationId: number;
+let animationId: number,
 let frameCount = 0;
 
 const draw: any = () => {
@@ -57,7 +53,7 @@ ctx.font = `
 
 /
 for (let i = 0; i < drops.length; i++) {
-const text = matrixArray[[Math.floor(Math.random() * matrixArray.length)];]
+const text = matrixArray[[Math.floor(Math.random() * matrixArray.length)], ]
 const x = i * fontSize;
 const y = drops[i] * fontSize;
 
@@ -73,12 +69,10 @@ ctx.shadowBlur = 0;
 
 /
 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-drops[i] = 0;
-}
+drops[i] = 0, }
 
 /
-drops[i]++;
-}
+drops[i]++, }
 
 /
 if (intensity === "high") {
@@ -92,8 +86,8 @@ animationId = requestAnimationFrame(draw)
 const drawFloatingParticles: any = (ctx: CanvasRenderingContext2D; frame: number) => {
 const particleCount = 20;
 for (let i = 0; i < particleCount; i++) {
-const x: any = (Math.sin(frame * 0.01 + i) * canvas.width * 0.5) + canvas.width * 0.5;
-const y: any = (Math.cos(frame * 0.01 + i * 0.5) * canvas.height * 0.5) + canvas.height * 0.5;
+const x: any = (Math.sin(frame * 0.01 + i) * canvas.width * 0.5) + canvas.width * 0.5,
+const y: any = (Math.cos(frame * 0.01 + i * 0.5) * canvas.height * 0.5) + canvas.height * 0.5,
 const size = Math.sin(frame * 0.02 + i) * 3 + 2;
 
 ctx.beginPath()

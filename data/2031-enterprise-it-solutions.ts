@@ -287,4 +287,4 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     aiCapabilities: ['Autonomous SystemsSelf-Healing', 'Intelligent OptimizationPredictive Maintenance', 'Resource Management'],
     marketDisruption: 'Revolutionizes infrastructure management by enabling truly autonomous systems, eliminating manual operations and optimizing performance automatically.'
   }
-],
+];

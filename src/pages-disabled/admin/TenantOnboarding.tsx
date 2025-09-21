@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Header from "@/components/Header";
-import { SEO } from "@/components/SEO";
+import React, { useState } from "react",
+import Header from "@/components/Header",
+import { SEO } from "@/components/SEO",
 export default function TenantOnboarding() {
   return (
     <div className="min-h-screen bg-zion-blue">

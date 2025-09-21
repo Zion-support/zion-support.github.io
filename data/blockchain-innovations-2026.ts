@@ -272,7 +272,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     implementationDetails: 'Complete blockchain supply chain platform with traceability, automation, monitoring, and analytics. Includes IoT integration and enterprise features.',
     launchDate: '2026-03-01',
     customers: 420,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 210
   }
-],
+];

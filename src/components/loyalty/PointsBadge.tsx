@@ -1,9 +1,9 @@
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 import import { Tooltip;
 TooltipContent;
 TooltipProvider;
@@ -21,8 +21,7 @@ const { ledger; balance } = usePoints()
 const [points; setPoints] = useState(balance)
 
 useEffect(() => {
-setPoints(balance),
-}, [balance])
+setPoints(balance);, [balance])
 
 if (!user) return null;
 
@@ -37,10 +36,8 @@ return acc,
 )
 const handleLogout = async () => {
 if (signOut) {
-await signOut(),
-} else if (logout) {
-await logout(),
-}
+await signOut(); else if (logout) {
+await logout();
 }
 
 return (
@@ -79,7 +76,7 @@ className="flex items-center gap-1 text-xs text-muted-foreground"
 </DropdownMenuContent>
 </DropdownMenu>
 )
-import import React, { useState } from 'react';
+import import React, { useState } from 'react',
 import { Gift,,, RefreshCw,,  } from 'lucide-react'
 return (
     <TooltipProvider>

@@ -1,44 +1,13 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface RealMicroSaasService2024 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  variant: string,
+  features: string[],
+  rating: number,
+  customers: string, }
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   {
@@ -513,7 +482,7 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     implementationDetails: 'Production-ready project management platform with AI-powered optimization, comprehensive project tools, and team collaboration features.',
     launchDate: '2024-02-05',
     customers: 1900,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 1050
   }
 ];

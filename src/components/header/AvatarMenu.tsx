@@ -1,27 +1,23 @@
-import React from 'react';
-import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import React from 'react',
+import Link from 'next/link',
+import { useAuth } from '@/hooks/useAuth',
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-  DropdownMenuLabel,
-} from '@/components/ui/dropdown-menu';
-import { User, Package, LogOut, Settings, CreditCard } from 'lucide-react';
-
+  DropdownMenuLabel, } from '@/components/ui/dropdown-menu',
+import { User, Package, LogOut, Settings, CreditCard } from 'lucide-react',
 export const AvatarMenu: React.FC = () => {
   const { user, logout } = useAuth();
 
   if (!user) {
-    return null;
-  }
+    return null, }
 
   const handleLogout = () => {
-    logout();
-  };
+    logout();;
 
   return (
     <DropdownMenu>
@@ -76,5 +72,4 @@ export const AvatarMenu: React.FC = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
-};
+  );;

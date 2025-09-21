@@ -1,14 +1,12 @@
 export interface PDFOptions {
   filename?: string;
-  format?: "A4" | "A3" | "Letter";
-  orientation?: "portrait" | "landscape";
+  format?: "A4" | "A3" | "Letter",
+  orientation?: "portrait" | "landscape",
   margin?: {
     top?: number;
     right?: number;
     bottom?: number;
-    left?: number;
-  };
-}
+    left?: number, }, }
 
 export class PDFGenerator {
   static async generateFromHTML(htmlContent: string, options: PDFOptions = {}): Promise<Blob> {
@@ -78,12 +76,10 @@ startxref
 %%EOF`;
 
     return new Blob([pdfContent], { type: "application/pdf" });
-  }
 
   static async generateFromElement(element: HTMLElement, options: PDFOptions = {}): Promise<Blob> {
     const htmlContent = element.outerHTML;
     return this.generateFromHTML(htmlContent, options);
-  }
 
   static downloadPDF(blob: Blob, filename: string = "document.pdf"): void {
     const url = URL.createObjectURL(blob);
@@ -94,5 +90,4 @@ startxref
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
-  }
 }

@@ -1,7 +1,6 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from 'lucide-react';
-
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Calendar, ArrowRight } from 'lucide-react',
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md:px-6">
@@ -72,4 +71,3 @@ export function EnterpriseCTA() {
       </div>
     </section>
   );
-}

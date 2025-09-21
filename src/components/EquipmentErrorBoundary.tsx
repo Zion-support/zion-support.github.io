@@ -1,30 +1,25 @@
-import React from 'react';
+import React from 'react',
 import { AlertTriangle, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
 interface Props {
-  children: React.ReactNode;
-}
+  children: React.ReactNode, }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-}
+  error?: Error, }
 
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
-  }
+    this.state = { hasError: false }, }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
+    return { hasError: true, error }, }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Equipment page error:', error, errorInfo);
-  }
 
   render() {
     if (this.state.hasError) {
@@ -60,7 +55,5 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
           </Card>
         </div>
       );
-    }
-    return this.props.children;
-  }
+    return this.props.children, }
 }

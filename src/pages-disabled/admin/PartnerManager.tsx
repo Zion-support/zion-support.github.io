@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-
+import { useState, useEffect } from "react",
+import { Button } from "@/components/ui/button",
 export default function PartnerManager() {
   return (
     <div className="min-h-screen bg-zion-blue">

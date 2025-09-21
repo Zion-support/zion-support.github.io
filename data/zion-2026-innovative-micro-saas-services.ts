@@ -507,7 +507,7 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     implementationDetails: 'Space technology platform with satellite management, space data analytics, orbital optimization, and comprehensive space industry integration.',
     launchDate: '2026-04-01',
     customers: 150,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 90
   }
-],
+];

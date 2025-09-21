@@ -463,8 +463,8 @@ export const revolutionary2025AdvancedMicroSaasServices: Revolutionary2025Advanc
     implementationDetails: 'Quantum-enhanced climate platform with AI prediction, modeling, and risk assessment capabilities.',
     launchDate: '2025-02-15',
     customers: 180,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 98
   }
-],
-export default revolutionary2025AdvancedMicroSaasServices,
+];
+export default revolutionary2025AdvancedMicroSaasServices;

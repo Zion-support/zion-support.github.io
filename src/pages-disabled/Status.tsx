@@ -1,12 +1,11 @@
-import { SEO } from "@/components/SEO";
-import { useState, useEffect } from "react";
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-
+import { SEO } from "@/components/SEO",
+import { useState, useEffect } from "react",
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react',
+import { Button } from "@/components/ui/button",
 export default function Status() {
   const [services, setServices] = useState([
     { name: 'API', status: 'operational', uptime: '99.9%' },
-    { name: 'Website', status: 'operational', uptime: '99.8%' },
+    { name: 'Website', status: 'operational', uptime: '99.8%' };
     { name: 'Database', status: 'operational', uptime: '99.9%' }
   ]);
 

@@ -272,7 +272,7 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     implementationDetails: 'AI-powered DevOps automation platform with intelligent code review, automated testing, and comprehensive deployment automation.',
     launchDate: '2027-05-30',
     customers: 2200,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 1600
   }
-],
+];

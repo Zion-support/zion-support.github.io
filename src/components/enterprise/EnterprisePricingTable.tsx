@@ -1,9 +1,8 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Check, X } from 'lucide-react';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Check, X } from 'lucide-react',
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
 const plans = [
   {
     name: "Starter",
@@ -51,9 +50,8 @@ const plans = [
       { name: "API access", included: true },
       { name: "Custom workflows", included: true },
       { name: "Advanced security", included: true },
-    ],
-  },
-];
+    ];
+  }, ];
 
 export function EnterprisePricingTable() {
   return (
@@ -131,4 +129,3 @@ export function EnterprisePricingTable() {
       </div>
     </section>
   );
-}

@@ -1,6 +1,5 @@
-import React from "react";
-import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
-
+import React from "react",
+import { Shield, Lock, Award, CheckCircle } from 'lucide-react',
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md:px-6 border-t border-b border-border">
@@ -34,4 +33,3 @@ export function EnterpriseTrustBadges() {
       </div>
     </section>
   );
-}

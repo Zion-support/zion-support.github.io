@@ -272,7 +272,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     implementationDetails: 'Complete AI-quantum hybrid platform with access to multiple quantum computers, custom algorithm development, and comprehensive support services.',
     launchDate: '2026-03-10',
     customers: 120,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 80
   }
-],
+];

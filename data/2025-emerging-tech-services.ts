@@ -1,5 +1,4 @@
-import { MicroSaasService } from './enhanced-real-micro-saas-services';
-
+import { MicroSaasService } from './enhanced-real-micro-saas-services',
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -490,16 +489,12 @@ export const emergingTechServices2025: MicroSaasService[] = [
 ];
 
 export const getPopularEmergingTechServices = () => {
-  return emergingTechServices2025.filter(service => service.popular);
-};
+  return emergingTechServices2025.filter(service => service.popular);;
 
 export const getEmergingTechServicesByCategory = (category: string) => {
-  return emergingTechServices2025.filter(service => service.category === category);
-};
+  return emergingTechServices2025.filter(service => service.category === category);;
 
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')) || 0;
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    return price >= minPrice && price <= maxPrice, });;

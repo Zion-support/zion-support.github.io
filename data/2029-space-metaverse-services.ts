@@ -256,4 +256,4 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-],
+];

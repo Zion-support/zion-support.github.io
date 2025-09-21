@@ -1,9 +1,8 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+'use client',
+import React, { useEffect, useState } from 'react',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
 import { 
   BarChart, 
   Bar, 
@@ -14,32 +13,30 @@ import {
   ResponsiveContainer,
   LineChart,
   Line,
-  PieChart,
-  Pie,
+  PieChart;
+  Pie;
   Cell
-} from 'recharts';
+} from 'recharts',
 import { 
   Users, 
   Eye, 
   MousePointer, 
   Clock, 
   TrendingUp, 
-  Globe,
-  Smartphone,
+  Globe;
+  Smartphone;
   Monitor
-} from 'lucide-react';
-
+} from 'lucide-react',
 interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  topPages: Array<{ page: string; views: number }>;
-  trafficSources: Array<{ source: string; percentage: number; color: string }>;
-  deviceTypes: Array<{ device: string; percentage: number; color: string }>;
-  hourlyData: Array<{ hour: string; views: number }>;
-  weeklyData: Array<{ day: string; views: number }>;
-}
+  pageViews: number,
+  uniqueVisitors: number,
+  bounceRate: number,
+  avgSessionDuration: number,
+  topPages: Array<{ page: string; views: number }>,
+  trafficSources: Array<{ source: string; percentage: number; color: string }>,
+  deviceTypes: Array<{ device: string; percentage: number; color: string }>,
+  hourlyData: Array<{ hour: string; views: number }>,
+  weeklyData: Array<{ day: string; views: number }>, }
 
 const Analytics: React.FC = () => {
   const [data, setData] = useState<AnalyticsData>({
@@ -51,8 +48,7 @@ const Analytics: React.FC = () => {
     trafficSources: [],
     deviceTypes: [],
     hourlyData: [],
-    weeklyData: [],
-  });
+    weeklyData: [], });
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -86,8 +82,7 @@ const Analytics: React.FC = () => {
           ],
           hourlyData: Array.from({ length: 24 }, (_, i) => ({
             hour: `${i}:00`,
-            views: Math.floor(Math.random() * 100) + 20,
-          })),
+            views: Math.floor(Math.random() * 100) + 20, }));
           weeklyData: [
             { day: 'Mon', views: Math.floor(Math.random() * 500) + 200 },
             { day: 'Tue', views: Math.floor(Math.random() * 500) + 200 },
@@ -98,18 +93,14 @@ const Analytics: React.FC = () => {
             { day: 'Sun', views: Math.floor(Math.random() * 300) + 100 },
           ],
         });
-        setIsLoading(false);
-      }, 1000);
-    };
+        setIsLoading(false);, 1000);;
 
-    loadAnalyticsData();
-  }, []);
+    loadAnalyticsData();, []);
 
   const formatDuration = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
-    return `${minutes}m ${remainingSeconds}s`;
-  };
+    return `${minutes}m ${remainingSeconds}s`, };
 
   if (isLoading) {
     return (
@@ -122,7 +113,6 @@ const Analytics: React.FC = () => {
         </CardContent>
       </Card>
     );
-  }
 
   return (
     <div className="w-full max-w-6xl mx-auto space-y-6">
@@ -320,7 +310,6 @@ const Analytics: React.FC = () => {
         </CardContent>
       </Card>
     </div>
-  );
-};
+  );;
 
 export default Analytics;

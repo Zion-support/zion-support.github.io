@@ -361,26 +361,21 @@ export const allServices = [
   ...services,
   ...enhancedServices2025,
   ...specializedIndustryServices
-],
-
+];
 export const getServicesByCategory = (category: Service['category']) => {
   return allServices.filter(service => service.category === category)
-},
-
+};
 export const getPopularServices = () => {
-  return allServices.filter(service => service.isPopular),
-},
+  return allServices.filter(service => service.isPopular);,
 
 export const getNewServices = () => {
-  return allServices.filter(service => service.isNew),
-},
+  return allServices.filter(service => service.isNew);,
 
 export const getServicesByIndustry = (industry: string) => {
   return specializedIndustryServices.filter(service => service.industry === industry)
-},
-
+};
 export const getServicesByAudience = (audience: string) => {
   return enhancedServices2025.filter(service => 
     service.targetAudience.includes(audience)
   )
-},
+};

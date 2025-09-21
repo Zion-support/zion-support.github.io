@@ -1,8 +1,6 @@
-import React from "react";
-
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
+import React from "react",
 interface AppLayoutProps {
 children?: React.ReactNode;
 hideFooter?: boolean,
