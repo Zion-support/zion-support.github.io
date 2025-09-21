@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../s./service-variants',
+import { ServiceVariant } from '../service-variants';
 
 export interface Zion2026EmergingTechnologyService {
   id: string,
@@ -394,4 +394,4 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
   },
 ],
 
-export default zion2026EmergingTechnologyServices,
+export default zion2026EmergingTechnologyServices;
