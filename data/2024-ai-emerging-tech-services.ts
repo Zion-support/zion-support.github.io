@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
 export interface AIEmergingTechService {
   id: string,
   name: string,
@@ -416,4 +416,4 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     rating: 4.8,
     reviews: 280
   }
-],
+];

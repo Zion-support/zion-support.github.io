@@ -1,7 +1,7 @@
 import React from "react";
-import { GradientHeading } from "../../components/GradientHeading";
-import { Button } from "../../components/ui/button";
-import { Card, CardContent, CardFooter } from "../../components/ui/card";
+import { GradientHeading } from "../../src/components/GradientHeading";
+import { Button } from "../../src/components/ui/button";
+import { Card, CardContent, CardFooter } from "../../src/components/ui/card";
 import Image from "next/image";
 
 export interface Benefit {
