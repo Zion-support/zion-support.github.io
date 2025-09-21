@@ -1,6 +1,6 @@
 [build]
-  command = "pnpm install && pnpm run build"
-  publish = ".next"
+  command = "npm install --ignore-scripts --legacy-peer-deps && npm install --save-dev @types/react @types/react-dom @types/node typescript --legacy-peer-deps --ignore-scripts && NODE_OPTIONS='--openssl-legacy-provider' npm run build"
+  publish = "out"
 
 [build.processing]
   skip_processing = false
@@ -14,17 +14,53 @@
   minify = true
 
 [build.environment]
-  NODE_VERSION = "20"
-  PNPM_VERSION = "10"
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NODE_OPTIONS = "--openssl-legacy-provider"
 
+# Performance optimizations
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Image optimization
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
-# Next.js routing - remove the catch-all redirect that conflicts with Next.js
-# [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 200
+# Cache optimization
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Redirects for better SEO
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/index"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [functions]
   node_bundler = "esbuild" 
