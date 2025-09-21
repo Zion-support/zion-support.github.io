@@ -52,8 +52,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-<<<<<<< HEAD
-=======
+
   webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
@@ -64,7 +63,6 @@ const nextConfig = {
     }
     return config;
   },
->>>>>>> 9ee1fd993ee01f42a22ebcab9abb5e26a3a2bb3a
 };
 
 module.exports = nextConfig;
