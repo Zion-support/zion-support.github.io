@@ -20,13 +20,15 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     setMounted(true);
-    // Get theme from localStorage or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
+    // Only access localStorage on client side
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      setTheme(savedTheme);
+    }
   }, []);
 
   useEffect(() => {
-    if (mounted) {
+    if (mounted && typeof window !== 'undefined') {
       localStorage.setItem('theme', theme);
       // Apply theme to document
       if (theme === 'dark') {
@@ -43,6 +45,7 @@ export const ThemeProvider = ({ children }) => {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   };
 
+  // Always render children with dark theme during SSR
   if (!mounted) {
     return <div className="dark">{children}</div>;
   }
