@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,9 +22,7 @@
         "name": "next"
       }
     ],
-    "target": "ES2017",
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true
+    "strictNullChecks": true
   },
   "include": [
     "**/*.ts",
@@ -35,11 +34,13 @@
   "exclude": [
     "node_modules",
     "contracts/**/*",
+    "dao/**/*",
+    "automation/**/*",
+    "scripts/**/*",
     "cypress/**/*",
-    "data/**/*",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "cypress.config.ts",
+    "deployment/**/*",
+    "deployments/**/*",
+    "data/**/*"
   ]
 }
