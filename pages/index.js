@@ -5,12 +5,22 @@ import { TypewriterEffect } from '../components/ui/TypewriterEffect';
 import { GradientButton } from '../components/ui/GradientButton';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { MobileNavigation } from '../components/MobileNavigation';
+import SEO from '../components/SEO';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsVisible(true);
+    // Simulate loading for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   const services = [
@@ -40,50 +50,23 @@ export default function Home() {
     "Proven Architectures"
   ];
 
-  return (
-    <div>
-      <Head>
-        <title>Zion Tech Group - AI, IT & Micro SaaS Services</title>
-        <meta name="description" content="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support." />
-        <meta name="keywords" content="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Leading provider of AI solutions, enterprise IT services, and micro SaaS development",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
-              "sameAs": [
-                "https://ziontechgroup.com"
-              ]
-            })
-          }}
-        />
-      </Head>
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+        <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
+      </div>
+    );
+  }
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+  return (
+    <ErrorBoundary>
+      <div>
+        <SEO 
+          title="Zion Tech Group - AI, IT & Micro SaaS Services"
+          description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
+          keywords="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps"
+        />
+        <main id="main-content" role="main" className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 bg-black/50 backdrop-blur-sm border-b border-white/10 z-50">
           <div className="container mx-auto px-4 py-4">
@@ -346,7 +329,11 @@ export default function Home() {
             </div>
           </div>
         </footer>
-      </main>
-    </div>
+        </main>
+        
+        {/* Accessibility Enhancer */}
+        <AccessibilityEnhancer />
+      </div>
+    </ErrorBoundary>
   );
 }
