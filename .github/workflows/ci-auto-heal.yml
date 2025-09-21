@@ -1,57 +1,48 @@
-<<<<<<< HEAD
 name: ci-auto-heal
-on:
+'on':
   workflow_dispatch: {}
   schedule:
-  - cron: '0 2 * * *'
-permissions:
-  contents: read
-  actions: read
-  
+  - cron: '*/30 * * * *'
 concurrency:
-  group: ci-auto-heal-\${{ github.ref }}
-  cancel-in-progress: false
-jobs:
-  main:
-    name: Ci Auto Heal Job
-=======
-name: Ci Auto Heal
-
-on:
-  workflow_dispatch: {}
-  schedule:
-    - cron: '*/10 * * * *'
+  group: workflow-workflow_name_placeholder-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
   actions: read
-
 jobs:
   main:
     name: Main Job
->>>>>>> origin/auto/autonomy-17186719616
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Checkout repository
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: npm
+    - name: Install dependencies
+      run: npm ci
+    - name: Clean git state
+      run: 'git config --global user.name "github-actions[bot]"
+
+  auto-heal:
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-<<<<<<< HEAD
-          cache: npm
-=======
+          node-version: 20"
           cache: 'npm'
-
->>>>>>> origin/auto/autonomy-17186719616
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Run workflow
-        run: echo "Workflow completed successfully"
+        run: "npm ci
+      - name: Run CI healers
+        run: |
+          echo "Workflow completed successfully"
+          

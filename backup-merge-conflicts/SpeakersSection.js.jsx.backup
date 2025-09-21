@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
-<<<<<<< HEAD:backup-merge-conflicts/SpeakersSection.js.jsx.backup
-=======
-const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
->>>>>>> main
-=======
-const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/summit/SpeakersSection.js.jsx
