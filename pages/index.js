@@ -12,6 +12,10 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import FAQSection from '../components/FAQSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
+import { CookieConsent } from '../components/CookieConsent';
+import { NotificationSystem } from '../components/NotificationSystem';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,12 +68,13 @@ export default function Home() {
 
   return (
     <ErrorBoundary>
-      <div>
-        <SEO 
-          title="Zion Tech Group - AI, IT & Micro SaaS Services"
-          description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
-          keywords="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps"
-        />
+      <PerformanceOptimizer>
+        <div>
+          <SEO 
+            title="Zion Tech Group - AI, IT & Micro SaaS Services"
+            description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
+            keywords="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps"
+          />
         <main id="main-content" role="main" className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 bg-black/50 backdrop-blur-sm border-b border-white/10 z-50">
@@ -157,13 +162,22 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-500 delay-${index * 200} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <div 
+                  key={index} 
+                  className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-500 delay-${index * 200} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                  role="article"
+                  aria-labelledby={`service-${index}-title`}
+                >
+                  <div className="text-4xl mb-4" aria-hidden="true">{service.icon}</div>
+                  <h3 id={`service-${index}-title`} className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  <a href="/services" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <a 
+                    href="/services" 
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                    aria-label={`Learn more about ${service.title}`}
+                  >
                     Learn More
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </a>
@@ -187,9 +201,9 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-4">
+                <div key={index} className="flex items-center space-x-4" role="listitem">
                   <div className="flex-shrink-0">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center" aria-hidden="true">
                       <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -214,24 +228,24 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">1000%</div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8" role="list">
+              <div className="text-center" role="listitem">
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2" aria-label="1000 percent">1000%</div>
                 <div className="text-lg text-gray-300 mb-2">Average ROI</div>
                 <div className="text-sm text-gray-400">Measured across all projects</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-center" role="listitem">
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2" aria-label="24/7">24/7</div>
                 <div className="text-lg text-gray-300 mb-2">Support</div>
                 <div className="text-sm text-gray-400">Always available when you need us</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-center" role="listitem">
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2" aria-label="99.9 percent">99.9%</div>
                 <div className="text-lg text-gray-300 mb-2">Uptime</div>
                 <div className="text-sm text-gray-400">Enterprise-grade reliability</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">500+</div>
+              <div className="text-center" role="listitem">
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2" aria-label="500 plus">500+</div>
                 <div className="text-lg text-gray-300 mb-2">Projects</div>
                 <div className="text-sm text-gray-400">Successfully delivered worldwide</div>
               </div>
@@ -251,7 +265,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8" role="list">
               {[
                 { name: 'React', icon: '⚛️', description: 'Modern UI Framework' },
                 { name: 'Node.js', icon: '🟢', description: 'Server-Side Runtime' },
@@ -260,8 +274,8 @@ export default function Home() {
                 { name: 'DevOps', icon: '🔧', description: 'Automation & CI/CD' },
                 { name: 'Security', icon: '🔒', description: 'Enterprise Security' },
               ].map((tech, index) => (
-                <div key={index} className="text-center group">
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div key={index} className="text-center group" role="listitem">
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
                     {tech.icon}
                   </div>
                   <h3 className="text-lg font-semibold mb-1">{tech.name}</h3>
@@ -341,7 +355,17 @@ export default function Home() {
 
         {/* Search Modal */}
         <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-      </div>
+        
+        {/* Cookie Consent */}
+        <CookieConsent />
+        
+        {/* Notification System */}
+        <NotificationSystem />
+        
+        {/* Accessibility Enhancer */}
+        <AccessibilityEnhancer />
+        </div>
+      </PerformanceOptimizer>
     </ErrorBoundary>
   );
 }
