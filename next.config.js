@@ -18,8 +18,25 @@ const nextConfig = {
         fs: false,
       };
     }
+    
+    // Add polyfill for globalThis
+    require('globalthis/shim');
+    
+    // Disable PostCSS processing temporarily
+    config.module.rules.forEach((rule) => {
+      if (rule.test && rule.test.toString().includes('css')) {
+        rule.use = rule.use || [];
+        rule.use = rule.use.map((use) => {
+          if (typeof use === 'string' && use.includes('postcss')) {
+            return 'css-loader';
+          }
+          return use;
+        });
+      }
+    });
+    
     return config;
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
