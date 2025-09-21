@@ -16,22 +16,6 @@
     }
   },
   {
-    "timestamp": "2025-09-21T13:26:25.573Z",
-    "buildTime": 0,
-    "bundleSize": "19M",
-    "pageCount": 9,
-    "performance": {
-      "buildTime": 10,
-      "timestamp": "2025-09-21T13:26:25.582Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": false,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
     "timestamp": "2025-09-21T13:28:31.582Z",
     "buildTime": 0,
     "bundleSize": "19M",
@@ -96,45 +80,13 @@
     }
   },
   {
-    "timestamp": "2025-09-21T13:32:45.177Z",
+    "timestamp": "2025-09-21T13:33:09.531Z",
     "buildTime": 0,
-    "bundleSize": "19M",
-    "pageCount": 9,
-    "performance": {
-      "buildTime": 13,
-      "timestamp": "2025-09-21T13:32:45.188Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": false,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
-    "timestamp": "2025-09-21T13:36:55.259Z",
-    "buildTime": 0,
-    "bundleSize": "19M",
-    "pageCount": 9,
-    "performance": {
-      "buildTime": 11,
-      "timestamp": "2025-09-21T13:36:55.269Z",
-      "optimizations": {
-        "cssOptimization": false,
-        "compression": false,
-        "minification": true,
-        "staticExport": true
-      }
-    }
-  },
-  {
-    "timestamp": "2025-09-21T13:36:02.355Z",
-    "buildTime": 0,
-    "bundleSize": "20M",
+    "bundleSize": "22M",
     "pageCount": 9,
     "performance": {
       "buildTime": 8,
-      "timestamp": "2025-09-21T13:36:02.362Z",
+      "timestamp": "2025-09-21T13:33:09.538Z",
       "optimizations": {
         "cssOptimization": false,
         "compression": false,
@@ -158,5 +110,70 @@
         "staticExport": true
       }
     }
+  },
+  {
+    "timestamp": "2025-09-21T13:54:55.644Z",
+    "buildTime": 0,
+    "bundleSize": "55M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 11,
+      "timestamp": "2025-09-21T13:54:55.654Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": true,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:56:55.203Z",
+    "buildTime": 0,
+    "bundleSize": "41M",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 9,
+      "timestamp": "2025-09-21T13:56:55.211Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": true,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:58:10.340Z",
+    "buildTime": 0,
+    "bundleSize": "740K",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 8,
+      "timestamp": "2025-09-21T13:58:10.347Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": true,
+        "minification": true,
+        "staticExport": true
+      }
+    }
+  },
+  {
+    "timestamp": "2025-09-21T13:58:40.039Z",
+    "buildTime": 0,
+    "bundleSize": "740K",
+    "pageCount": 9,
+    "performance": {
+      "buildTime": 8,
+      "timestamp": "2025-09-21T13:58:40.045Z",
+      "optimizations": {
+        "cssOptimization": false,
+        "compression": true,
+        "minification": false,
+        "staticExport": true
+      }
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1bf
   }
 ]
