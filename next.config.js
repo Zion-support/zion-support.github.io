@@ -1,25 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Enable static export for Netlify
-  output: 'export',
-  trailingSlash: true,
-  
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
-  eslint: {
-    ignoreDuringBuilds: true,
+  images: {
+    domains: ["localhost"],
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  
-  // Image optimization
-  images: {
-    unoptimized: true, // Required for static export
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-  
-  // Exclude certain directories from compilation
-  webpack: (config, { dev, isServer }) => {
+  webpack: (config, { isServer }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -28,60 +19,23 @@ const nextConfig = {
       };
     }
     
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
+    // Add polyfill for globalThis
+    require('globalthis/shim');
     
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, '.'),
-    };
-    
-    // Exclude contracts directory from compilation
-    config.module.rules.push({
-      test: /\.ts$/,
-      include: require('path').resolve(__dirname, 'contracts'),
-      use: 'ignore-loader'
-    });
-    
-    if (!dev && !isServer) {
-      // Optimize bundle size
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[/]node_modules[/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    
-    // Disable PostCSS processing to avoid matchAll issues
+    // Disable PostCSS processing temporarily
     config.module.rules.forEach((rule) => {
-      if (rule.oneOf) {
-        rule.oneOf.forEach((oneOf) => {
-          if (oneOf.use && Array.isArray(oneOf.use)) {
-            oneOf.use = oneOf.use.filter((use) => {
-              return !use.loader || !use.loader.includes('postcss-loader');
-            });
+      if (rule.test && rule.test.toString().includes('css')) {
+        rule.use = rule.use || [];
+        rule.use = rule.use.map((use) => {
+          if (typeof use === 'string' && use.includes('postcss')) {
+            return 'css-loader';
           }
+          return use;
         });
       }
     });
     
     return config;
-  },
-  
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
   },
 };
 
