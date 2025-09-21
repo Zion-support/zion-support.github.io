@@ -70,14 +70,13 @@ class AdvancedSourceFixer {
 timestamp: new Date().toISOString(),
 fixes: this.getAppliedFixes(content, fixedContent)
         });
-        this.log(`Fixed: ${filePath}`);
-      }
+        this.log(`Fixed: ${filePath}`)}
     } catch (error) {
       this.errors.push({
         file: filePath,
 error: error.message,
 timestamp: new Date().toISOString()
-      });
+      }),
       this.log(`Error fixing ${filePath}: ${error.message}`, "ERROR");
     }
   }
@@ -190,14 +189,12 @@ fixed = fixed.replace(/\{\s*,\s*\}/g, "{}");
 totalFilesFixed: this.fixes.length,
 totalErrors: this.errors.length,
 fixes: this.fixes,
-errors: this.errors,
-}
+errors: this.errors}
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report generated: ${this.reportFile}`);
-  }
+    this.log(`Report generated: ${this.reportFile}`)}
 }
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const fixer = new AdvancedSourceFixer();
+if (import.meta.url === `file: //${process.argv[1]}`) {
+  const fixer = new AdvancedSourceFixer(),
   fixer.fixAllSourceFiles().catch(console.error);
 }
 export default AdvancedSourceFixer;

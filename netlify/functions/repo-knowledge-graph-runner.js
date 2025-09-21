@@ -37,9 +37,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ repo-knowledge-graph-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ repo-knowledge-graph-runner failed:', error),
     return {
       statusCode: 500,
@@ -49,6 +47,5 @@ exports.handler = async function(event, context) {
         function: 'repo-knowledge-graph-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

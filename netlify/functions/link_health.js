@@ -13,16 +13,13 @@ exports.handler = async function(event, context) {,
       const url = origin.replace(/\/$/, '') + route,
       try {,
         const res = await fetch(url, { method: 'HEAD' }),
-        results.push({ route, status: res.status, ok: res.ok }),
-      } catch (e) {,
-        results.push({ route, status: 0, ok: false, error: String(e) }),
-      }
+        results.push({ route, status: res.status, ok: res.ok })} catch (e) {,
+        results.push({ route, status: 0, ok: false, error: String(e) })}
     }
 ,
     // Commit report to repo,
     if (!token) {,
-      return { statusCode: 200, body: JSON.stringify({ ok: true, results, note: 'No GITHUB_TOKEN set, skipping commit' }) },
-    }
+      return { statusCode: 200, body: JSON.stringify({ ok: true, results, note: 'No GITHUB_TOKEN set, skipping commit' }) }}
 ,
     const path = 'data/link-health.json',
     const content = JSON.stringify({,
@@ -38,8 +35,7 @@ exports.handler = async function(event, context) {,
       }),
       if (check.ok) {,
         const json = await check.json(),
-        sha = json.sha,
-      }
+        sha = json.sha}
     }
 ,
     const b64 = Buffer.from(content, 'utf8').toString('base64'),
@@ -58,11 +54,8 @@ exports.handler = async function(event, context) {,
     }),
     const commitJson = await resCommit.json(),
     if (!resCommit.ok) {,
-      return { statusCode: resCommit.status, body: JSON.stringify({ error: commitJson }) },
-    }
+      return { statusCode: resCommit.status, body: JSON.stringify({ error: commitJson }) }}
 ,
-    return { statusCode: 200, body: JSON.stringify({ ok: true, results, commit: commitJson.commit && commitJson.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, results, commit: commitJson.commit && commitJson.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

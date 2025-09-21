@@ -11,8 +11,6 @@ exports.handler = async () => {
     run('git add -A'),
     run('git commit -m "chore(automation): innovation scout refresh AI trends and homepage [skip ci]" || true'),
     run('git push origin main || true'),
-    return { statusCode: 200, body: JSON.stringify({ ok: true, tool: 'innovation-scout' }) },
-  } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, tool: 'innovation-scout' }) }} catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) }}
 },

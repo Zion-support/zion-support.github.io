@@ -1,11 +1,11 @@
-import '@testing-library/jest-dom',
-// Jest setup file for testing environment,
 import '@testing-library/jest-dom';
+// Jest setup file for testing environment;
+import '@testing-library/jest-dom',
 // Mock global objects that might not be available in test environment,
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
+  observe: jest.fn();
 unobserve: jest.fn()
-  disconnect: jest.fn(),}));}));
+  disconnect: jest.fn();));));
 // Mock window.matchMedia,
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -35,21 +35,16 @@ beforeAll(() => {
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {
-      return;
-    }
+      return, }
     originalConsoleError.call(console, ...args);
-  }
   console.warn = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {
-      return;
-    }
+      return, }
     originalConsoleWarn.call(console, ...args);
-  }
 });
 afterAll(() => {
   console.error = originalConsoleError;
-  console.warn = originalConsoleWarn;
-});
+  console.warn = originalConsoleWarn, });

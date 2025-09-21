@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react',
-import TalentProfilePage from '../pages/talent/[id]',
+import type { Meta, StoryObj } from '@storybook/react';
+import TalentProfilePage from '../pages/talent/[id]';
 
 const sampleTalent = {
   id: 't-001',
@@ -9,7 +9,6 @@ const sampleTalent = {
   skills: ['ReactTypeScript'],
   availability_type: 'full_time'
 },
-
 const meta: Meta<typeof TalentProfilePage> = {
   title: 'Pages/TalentProfilePage',
   component: TalentProfilePage,
@@ -18,12 +17,11 @@ const meta: Meta<typeof TalentProfilePage> = {
       router: {
         query: { id: 't-001' }
       }
-    },
+    };
     mockData: {
       profile: sampleTalent
     }
   }
 },
-
-export default meta,
-export const Default: StoryObj<typeof TalentProfilePage> = {},
+export default meta;
+export const Default: StoryObj<typeof TalentProfilePage> = {};

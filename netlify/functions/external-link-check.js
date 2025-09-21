@@ -19,9 +19,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ external-link-check completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ external-link-check failed:', error),
     return {
       statusCode: 500,
@@ -30,6 +28,5 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    },
-  }
+    }}
 },

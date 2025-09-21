@@ -1,10 +1,10 @@
 export const getCartKey = (userId?: string | null) => `cart_${userId || "guest"}`;
 
 interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
+  id: string,
+  name: string,
+  price: number,
+  quantity: number,
   image?: string;
 }
 

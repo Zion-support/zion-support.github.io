@@ -6,10 +6,8 @@ const PROD_DOMAIN = 'app.ziontechgroup.com',
 function isProdDomain() {
   const url = process.env.URL || '',
   try {
-    return new URL(url).hostname === PROD_DOMAIN,
-  } catch {
-    return false,
-  }
+    return new URL(url).hostname === PROD_DOMAIN} catch {
+    return false}
 }
 
 async function handler(req, res) {
@@ -17,23 +15,20 @@ async function handler(req, res) {
     res.statusCode = 405,
     res.setHeader('AllowPOST'),
     res.end('Method Not Allowed'),
-    return,
-  }
+    return}
 
   const { amount } = req.body || {},
   if (typeof amount !== 'number') {
     res.statusCode = 400,
     res.json({ error: 'Invalid amount' }),
-    return,
-  }
+    return}
 
   try {
     const liveKey = process.env.STRIPE_SECRET_KEY || '',
     const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey,
 
     if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {
-      throw new Error('Refusing to use live Stripe key on non-production domain'),
-    }
+      throw new Error('Refusing to use live Stripe key on non-production domain')}
 
     const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
       apiVersion: '2023-10-16'
@@ -44,12 +39,10 @@ async function handler(req, res) {
       automatic_payment_methods: { enabled: true }
     }),
     res.statusCode = 200,
-    res.json({ clientSecret: intent.client_secret, id: intent.id }),
-  } catch (err) {
+    res.json({ clientSecret: intent.client_secret, id: intent.id })} catch (err) {
     console.error('Create payment intent error:', err),
     res.statusCode = 500,
-    res.json({ error: err.message }),
-  }
+    res.json({ error: err.message })}
 }
 
 export default withErrorLogging(handler),

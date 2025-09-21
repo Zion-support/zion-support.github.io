@@ -79,9 +79,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ docs-search-index-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ docs-search-index-runner failed:', error),
     return {
       statusCode: 500,
@@ -91,6 +89,5 @@ exports.handler = async function(event, context) {
         function: 'docs-search-index-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

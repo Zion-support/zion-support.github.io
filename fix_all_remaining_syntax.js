@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
+const path = require('path'),
 
 // Function to fix all remaining syntax errors
 function fixAllSyntaxErrors(content) {
@@ -9,13 +9,13 @@ function fixAllSyntaxErrors(content) {
   
   // Fix extra commas in imports
   fixed = fixed.replace(/import\s+[^;]+,\s*;/g, (match) => {
-    return match.replace(/,\s*;/, ';');
+    return match.replace(/,\s*;/, ';'),
   });
   
   // Fix missing semicolons in imports
   fixed = fixed.replace(/import\s+[^;]+(?<!;)$/gm, (match) => {
     if (!match.trim().endsWith(';')) {
-      return match + ';';
+      return match + ',';
     }
     return match;
   });
@@ -26,7 +26,6 @@ function fixAllSyntaxErrors(content) {
   
   // Fix missing return statements
   fixed = fixed.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{\s*$/gm, 'export default function $1() {\n  return (');
-  
   // Fix missing closing braces
   fixed = fixed.replace(/(\w+)\s*{\s*$/gm, '$1 {\n  ');
   
@@ -34,22 +33,20 @@ function fixAllSyntaxErrors(content) {
   fixed = fixed.replace(/,(\s*[}\]])/g, '$1');
   
   // Fix missing quotes in JSX attributes
-  fixed = fixed.replace(/className=\s*{([^}]+)}/g, 'className={$1}');
+  fixed = fixed.replace(/className=\s*{([^}]+)}/g, 'className={$1}'),
   
   // Fix missing semicolons after variable declarations
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?<!;)$/gm, (match) => {
     if (!match.trim().endsWith(';')) {
-      return match + ';';
+      return match + ',';
     }
     return match;
   });
   
   // Fix duplicate return statements
   fixed = fixed.replace(/return\s*\(\s*return\s*\(/g, 'return (');
-  
   // Fix missing return statements in function components
   fixed = fixed.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{\s*$/gm, 'export default function $1() {\n  return (');
-  
   // Fix JSX fragments
   fixed = fixed.replace(/<>\s*$/gm, '<>');
   fixed = fixed.replace(/^\s*<\/>/gm, '</>');
@@ -68,7 +65,7 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`),
       return true;
     }
     return false;
@@ -103,3 +100,4 @@ function processDirectory(dir) {
 console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('./src');
 console.log(`Fixed ${fixedCount} files`);
+}

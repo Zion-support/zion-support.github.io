@@ -2,11 +2,9 @@ function insertOrReplace(content, markerStart, markerEnd, block) {,
   const startIdx = content.indexOf(markerStart),
   const endIdx = content.indexOf(markerEnd),
   if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {,
-    return content.slice(0, startIdx + markerStart.length) + '\n' + block + '\n' + content.slice(endIdx),
-  }
+    return content.slice(0, startIdx + markerStart.length) + '\n' + block + '\n' + content.slice(endIdx)}
   // append if not found,
-  return content + `\n\n${markerStart}\n${block}\n${markerEnd}\n`,
-}
+  return content + `\n\n${markerStart}\n${block}\n${markerEnd}\n`}
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -28,8 +26,7 @@ exports.handler = async function(event, context) {,
     if (linkHealth && Array.isArray(linkHealth.results)) {,
       const total = linkHealth.results.length,
       const ok = linkHealth.results.filter(r => r.ok).length,
-      passRate = total ? `${Math.round((ok/total)*100)}%` : 'n/a',
-    }
+      passRate = total ? `${Math.round((ok/total)*100)}%` : 'n/a'}
 ,
     const badgeBlock = `![Deploy](https: //img.shields.io/badge/deploy-automatic-success) ![Link%20Health](https://img.shields.io/badge/link%20health-${encodeURIComponent(passRate)}-blue)`,
     // Read README,
@@ -55,8 +52,6 @@ exports.handler = async function(event, context) {,
     }),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
-  } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
-  }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) }} catch (e) {,
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) }}
 },

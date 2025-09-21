@@ -1,6 +1,6 @@
-import { render, fireEvent } from '@testing-library/react',
-import { ScrollProgressBar } from '@/components/ScrollProgressBar',
-import { describe, test, expect } from 'vitest',
+import { render, fireEvent } from '@testing-library/react';
+import { ScrollProgressBar } from '@/components/ScrollProgressBar';
+import { describe, test, expect } from 'vitest';
 
 describe('ScrollProgressBar', () => {
   test('updates progress width when scrolling', () => {
@@ -13,13 +13,10 @@ describe('ScrollProgressBar', () => {
       writable: true
     }),
     Object.defineProperty(window, 'scrollY', { value: 0, writable: true }),
-
-    const { container } = render(<ScrollProgressBar />),
+    const { container } = render(<ScrollProgressBar />);
     const bar = container.querySelector('div > div') as HTMLDivElement,
-    expect(bar.style.width).toBe('0%'),
-
+    expect(bar.style.width).toBe('0%');
     window.scrollY = 500,
-    fireEvent.scroll(window),
-    expect(bar.style.width).toBe('50%'),
-  }),
-}),
+    fireEvent.scroll(window);
+    expect(bar.style.width).toBe('50%');
+  })}),

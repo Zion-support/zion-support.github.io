@@ -18,8 +18,7 @@ exports.handler = async function(event, context) {
       if (Math.random() > 0.05) { // 95% success rate
         newsroomResults.processedArticles++,
         if (Math.random() > 0.2) { // 80% publish rate
-          newsroomResults.publishedArticles++,
-        }
+          newsroomResults.publishedArticles++}
       }
     }
     
@@ -55,8 +54,7 @@ exports.handler = async function(event, context) {
         publishDate: new Date(Date.now() + Math.random() * 7 * 24 * 60 * 60 * 1000).toISOString(), // 0-7 days from now
         author: `Author ${Math.floor(Math.random() * 10) + 1}`,
         status: ['draftreview', 'readypublished'][Math.floor(Math.random() * 4)]
-      }),
-    }
+      })}
     
     const result = {
       statusCode: 200,
@@ -84,9 +82,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ newsroom-runner completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ newsroom-runner failed:', error),
     return {
       statusCode: 500,
@@ -96,6 +92,5 @@ exports.handler = async function(event, context) {
         function: 'newsroom-runner',
         status: 'error'
       })
-    },
-  }
+    }}
 },

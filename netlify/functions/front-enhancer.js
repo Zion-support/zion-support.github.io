@@ -16,9 +16,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ front-enhancer completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ front-enhancer failed:', error),
     return {
       statusCode: 500,
@@ -28,6 +26,5 @@ exports.handler = async function(event, context) {
         function: 'front-enhancer',
         status: 'error'
       })
-    },
-  }
+    }}
 },

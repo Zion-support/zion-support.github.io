@@ -40,13 +40,11 @@ export interface MonitoringConfig {
     email: boolean,
     slack: boolean,
     webhook: boolean
-  },
-}
+  }}
 
 export class PerformanceMonitorService {
   private apiKey: string,
   private baseUrl: string,
-
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey,
     this.baseUrl = baseUrl
@@ -60,18 +58,16 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ url })
       }),
-
       if (!response.ok) {
-        throw new Error(`Performance monitoring failed: ${response.statusText}`),
-      }
+        throw new Error(`Performance monitoring failed: ${response.statusText}`)}
 
-      return await response.json(),
+      return await response.json();
     } catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockMetrics(url),
+      return this.generateMockMetrics(url);
     }
   }
 
@@ -82,15 +78,13 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`
         }
       }),
-
       if (!response.ok) {
-        throw new Error(`Failed to fetch historical data: ${response.statusText}`),
-      }
+        throw new Error(`Failed to fetch historical data: ${response.statusText}`)}
 
-      return await response.json(),
+      return await response.json();
     } catch (error) {
       // Generate mock historical data
-      return this.generateMockHistoricalData(url, days),
+      return this.generateMockHistoricalData(url, days);
     }
   }
 
@@ -101,17 +95,14 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(config)
       }),
-
       if (!response.ok) {
-        throw new Error(`Failed to set monitoring config: ${response.statusText}`),
-      }
+        throw new Error(`Failed to set monitoring config: ${response.statusText}`)}
     } catch (error) {
-      console.error('Failed to set monitoring config:', error),
-      throw error,
-    }
+      console.error('Failed to set monitoring config:', error);
+      throw error}
   }
 
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
@@ -122,15 +113,13 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`
         }
       }),
-
       if (!response.ok) {
-        throw new Error(`Failed to fetch alerts: ${response.statusText}`),
-      }
+        throw new Error(`Failed to fetch alerts: ${response.statusText}`)}
 
-      return await response.json(),
+      return await response.json();
     } catch (error) {
       // Generate mock alerts
-      return this.generateMockAlerts(url),
+      return this.generateMockAlerts(url);
     }
   }
 
@@ -148,10 +137,9 @@ export class PerformanceMonitorService {
     },
     recommendations: string[]
   }> {
-    const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30),
-    
-    const loadTimes = historicalData.map(d => d.loadTime),
-    const performanceScores = historicalData.map(d => d.performanceScore),
+    const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
+    const loadTimes = historicalData.map(d => d.loadTime);
+    const performanceScores = historicalData.map(d => d.performanceScore);
     const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0]),
 
     return {
@@ -165,14 +153,13 @@ export class PerformanceMonitorService {
         loadTime: loadTimes,
         performanceScore: performanceScores,
         dates
-      },
+      };
       recommendations: [
         'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold content',
-        'Minimize render-blocking resourcesUse a CDN for static assets',
+        'Minimize render-blocking resourcesUse a CDN for static assets';
         'Enable compression for text-based resources'
       ]
-    },
-  }
+    }}
 
   private generateMockMetrics(url: string): PerformanceMetrics {
     return {
@@ -190,15 +177,13 @@ export class PerformanceMonitorService {
       accessibilityScore: Math.floor(Math.random() * 20) + 80,
       bestPracticesScore: Math.floor(Math.random() * 20) + 80,
       seoScore: Math.floor(Math.random() * 20) + 80
-    },
-  }
+    }}
 
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
     const data: PerformanceMetrics[] = [],
-    const now = new Date(),
-
+    const now = new Date();
     for (let i = days - 1, i >= 0, i--) {
-      const date = new Date(now),
+      const date = new Date(now);
       date.setDate(date.getDate() - i),
       
       data.push({
@@ -216,10 +201,9 @@ export class PerformanceMonitorService {
         accessibilityScore: Math.floor(Math.random() * 20) + 80,
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,
         seoScore: Math.floor(Math.random() * 20) + 80
-      }),
-    }
+      })}
 
-    return data,
+    return data;
   }
 
   private generateMockAlerts(url?: string): PerformanceAlert[] {
@@ -247,8 +231,7 @@ export class PerformanceMonitorService {
         resolved: true
       }
     ],
-
-    return url ? alerts.filter(a => a.url === url) : alerts,
+    return url ? alerts.filter(a => a.url === url) : alerts;
   }
 }
 
@@ -260,7 +243,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     period: '/month',
     features: [
       'Monitor up to 5 URLs5-minute monitoring frequency',
-      'Basic performance metricsEmail alerts',
+      'Basic performance metricsEmail alerts';
       '7-day data retentionBasic reporting'
     ]
   },
@@ -281,10 +264,10 @@ export const PERFORMANCE_MONITOR_PRICING = {
     period: '/month',
     features: [
       'Monitor unlimited URLsReal-time monitoring',
-      'All performance metricsMultiple notification channels',
+      'All performance metricsMultiple notification channels';
       '1-year data retentionCustom dashboards',
       'White-label reportingPriority support',
       'SLA guarantee'
     ]
   }
-},
+};

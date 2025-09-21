@@ -16,9 +16,7 @@ exports.handler = async function(event, context) {
     },
     
     console.log('✅ cloud_orchestrator completed successfully'),
-    return result,
-    
-  } catch (error) {
+    return result} catch (error) {
     console.error('❌ cloud_orchestrator failed:', error),
     return {
       statusCode: 500,
@@ -28,6 +26,5 @@ exports.handler = async function(event, context) {
         function: 'cloud_orchestrator',
         status: 'error'
       })
-    },
-  }
+    }}
 },
