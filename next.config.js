@@ -72,17 +72,8 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
-  // Export path map for static generation
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      '/': { page: '/' },
-      '/contact': { page: '/contact' },
-      '/services': { page: '/services' },
-    }
-  },
+  // Export path map removed - not compatible with app directory
+  // Use generateStaticParams() in app directory instead
   
   // Experimental features for performance
   experimental: {
