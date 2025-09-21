@@ -1,33 +1,45 @@
-import { MapPin,,  } from 'lucide-react'
-import { PaymentButton,,  } from "@/components/transactions/PaymentButton",
+import { MapPin } from 'lucide-react';
 import React from "react";
-import React from "react";
+
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing;
-export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
-  // Handle successful payment,
-return (
-    <div className='text-center'>
-      <p className='text-zion-slate-light mb-2'>Selected Country</p>
-      <h4 className='text-xl font-bold text-white mb-2 flex items-center justify-center'>
-        <MapPin className='mr-2 h-5 w-5 text-zion-purple' />
-        {selectedCountry.country}
-      </h4>
-      <p className='text-2xl font-bold text-zion-cyan mb-6'>
-        ${selectedCountry.pricePerIncident.toFixed(2)}
-      </p>
-      <PaymentButton
-amount={selectedCountry.pricePerIncident}
-        serviceId='it-onsite-service'
-        providerId='zion-tech-group'
-        buttonText={`Pay for Service in ${selectedCountry.country}`}
-        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6'
-        redirectUrl='/it-onsite-services?success=true'
-        onPaymentInitiated={handlePaymentInitiated}      />
-      <p className='text-xs text-zion-slate-light mt-2'>
-        Price includes transportation and first hour onsite. Additional hours,
-billed separately.
-      </p>
+  selectedCountry: string | null;
+  onPaymentClick: () => void;
+}
+
+export function PaymentSection({ selectedCountry, onPaymentClick }: PaymentSectionProps) {
+  return (
+    <div className="bg-slate-800 rounded-lg border border-slate-600 p-6">
+      <div className="flex items-center space-x-3 mb-4">
+        <MapPin className="h-6 w-6 text-blue-400" />
+        <h3 className="text-xl font-semibold text-white">
+          {selectedCountry ? `IT Onsite Service - ${selectedCountry}` : 'Select a Country'}
+        </h3>
+      </div>
+      
+      {selectedCountry ? (
+        <div className="space-y-4">
+          <div className="bg-slate-700 rounded-lg p-4">
+            <h4 className="text-lg font-medium text-white mb-2">Service Details</h4>
+            <div className="space-y-2 text-gray-300">
+              <p>• Onsite IT support and installation</p>
+              <p>• 24/7 availability</p>
+              <p>• Certified technicians</p>
+              <p>• Complete setup and configuration</p>
+            </div>
+          </div>
+          
+          <button
+            onClick={onPaymentClick}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Proceed to Payment
+          </button>
+        </div>
+      ) : (
+        <p className="text-gray-400 text-center py-8">
+          Please select a country to see pricing and proceed with payment.
+        </p>
+      )}
     </div>
-  )
-}"}
+  );
+}

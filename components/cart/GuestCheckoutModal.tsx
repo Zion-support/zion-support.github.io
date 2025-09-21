@@ -34,10 +34,11 @@ export function GuestCheckoutModal({ isOpen, onClose, onCheckout }: GuestCheckou
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <Label htmlFor="email">Email Address</Label>
               <Input
                 id="email"
                 type="email"
+                label="Email Address"
+                error=""
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
