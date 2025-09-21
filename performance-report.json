@@ -64,11 +64,16 @@
     }
   },
   {
+<<<<<<< HEAD
     "timestamp": "2025-09-21T13:07:58.415Z",
+=======
+    "timestamp": "2025-09-21T13:04:30.224Z",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-842e
     "buildTime": 0,
     "bundleSize": "16M",
     "pageCount": 7,
     "performance": {
+<<<<<<< HEAD
       "buildTime": 11,
       "timestamp": "2025-09-21T13:07:58.425Z",
       "optimizations": {
@@ -151,6 +156,10 @@
     "performance": {
       "buildTime": 9,
       "timestamp": "2025-09-21T13:18:28.903Z",
+=======
+      "buildTime": 12,
+      "timestamp": "2025-09-21T13:04:30.234Z",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-842e
       "optimizations": {
         "cssOptimization": false,
         "compression": false,
