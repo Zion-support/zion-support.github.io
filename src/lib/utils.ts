@@ -1,9 +1,9 @@
 import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
 
 // Utility functions for the application
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  // Simple class name merger without tailwind-merge
+  return clsx(inputs);
 }
 
 export function formatDate(date: Date | string): string {

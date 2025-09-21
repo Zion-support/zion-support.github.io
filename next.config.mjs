@@ -1,26 +1,28 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Enable static export for Netlify
-  output: 'export',
-  trailingSlash: true,
-  
-  // Disable ESLint and TypeScript checking during build to avoid parsing issues
-  eslint: {
-    ignoreDuringBuilds: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   typescript: {
     ignoreBuildErrors: true,
     tsconfigPath: './tsconfig.json',
   },
-  
-  // Image optimization
-  images: {
-    unoptimized: true, // Required for static export
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-  
-  // Exclude certain directories from compilation
-  webpack: (config, { dev, isServer }) => {
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+    esmExternals: false,
+  },
+  webpack: (config, { isServer, dev }) => {
     // Fix for CSS processing issues with Node.js compatibility
     if (!isServer) {
       config.resolve.fallback = {
@@ -28,50 +30,46 @@ const nextConfig = {
         fs: false,
       };
     }
-    
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, '.'),
-    };
-    
-    // Exclude contracts directory from compilation
-    config.module.rules.push({
-      test: /\.ts$/,
-      include: require('path').resolve(__dirname, 'contracts'),
-      use: 'ignore-loader'
-    });
-    
+
+    // Add polyfill for globalThis
+    require('globalthis/shim');
+
+    // Optimize bundle size in production
     if (!dev && !isServer) {
-      // Optimize bundle size
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[/]node_modules[/]/,
+            test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
           },
         },
       };
     }
-    
     // Skip PostCSS processing modifications for now
-    
     return config;
   },
-  
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
   },
   
   // Disable CSS optimization to avoid matchAll issues
