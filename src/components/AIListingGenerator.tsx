@@ -9,24 +9,20 @@ import { Sparkles, ArrowRight } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
 
 interface GeneratedContent {
-  description: string;
-  tags: string[];
+  description: string,
+  tags: string[],
   suggestedPrice: {
     min: number;
-    max: number;
-  };
-  keyPoints: string[];
-}
+    max: number, };
+  keyPoints: string[], }
 
 interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void;
+  onApplyGenerated?: (content: GeneratedContent) => void,
   initialValues?: {
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string;
-  };
-}
+    targetAudience?: string, }, }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListingGeneratorProps) {
   const [title, setTitle] = useState(initialValues?.title || '')
@@ -105,8 +101,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues }: AIListin
       onApplyGenerated(generatedContent)
       toast({
         title: "Content Applied",
-        description: "Generated content has been applied to your listing.",
-      })
+        description: "Generated content has been applied to your listing.", })
     }
   }
 

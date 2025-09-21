@@ -1,12 +1,12 @@
 
-import import { useState,,, useEffect,,, ,,  } from 'react';
-import import { Card,,, CardContent,,, ,,  } from '@/components/ui/card';
-import import { Button,,, ,,  } from '@/components/ui/button';
+import import { useState,,, useEffect,,, ,,  } from 'react',
+import import { Card,,, CardContent,,, ,,  } from '@/components/ui/card',
+import import { Button,,, ,,  } from '@/components/ui/button',
 import { FilePlus,,, Loader2,,  } from 'lucide-react'
-import import { ProjectCard,,, ,,  } from './ProjectCard';
-import import { ProjectForm,,, ,,  } from './ProjectForm';
-import import { PortfolioProject,,, ,,  } from '@/types/resume';
-import import { usePortfolio,,  } from '@/hooks/usePortfolio';
+import import { ProjectCard,,, ,,  } from './ProjectCard',
+import import { ProjectForm,,, ,,  } from './ProjectForm',
+import import { PortfolioProject,,, ,,  } from '@/types/resume',
+import import { usePortfolio,,  } from '@/hooks/usePortfolio',
 export function PortfolioBuilder() {
 setEditingProject(null)
               }}
@@ -30,7 +30,7 @@ setEditingProject(null)
             <ProjectCard
 key = {project.id,}
               project = {project,}
-              onEdit = {(,) => setEditingProject(project),}
+              onEdit = {(,) => setEditingProject(project);
               onDelete = {handleDeleteProject,}
             />
           ))}
@@ -47,7 +47,7 @@ key = {project.id,}
                   No portfolio projects yet
                 </h3>
                 <p className='text-muted-foreground max-w-md mx-auto'>
-                  Add your best work to showcase your skills and experience to,
+                  Add your best work to showcase your skills and experience to;
 potential employers.
                 </p>
                 <Button

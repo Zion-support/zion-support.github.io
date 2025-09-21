@@ -1,7 +1,7 @@
 import { Copy,,, Facebook,,, Link,,, Share,,, Twitter,,  } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;,
-onCopy: () => void;
+onCopy: () => void,
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void,
 export function ReferralLink({
   referralLink,
@@ -60,7 +60,7 @@ return (
           <div className="flex space-x-2">
             <Input
 value={referralLink}
-              readOnly,
+              readOnly;
 className="font-mono text-sm"
             />
             <Button variant="outline" size="icon" onClick={handleCopy} aria-label="Copy referral link">
@@ -89,7 +89,7 @@ variant='outline'
 variant="outline"
               size="sm"
               className="flex items-center gap-2"
-              onClick = {() => onShare('twitter'),}
+              onClick = {() => onShare('twitter');
             >
               <Twitter className='h-4 w-4' />
               Twitter
@@ -102,7 +102,7 @@ variant='outline'
 variant="outline"
               size="sm"
               className="flex items-center gap-2"
-              onClick = {() => onShare('facebook'),}
+              onClick = {() => onShare('facebook');
             >
               <Facebook className='h-4 w-4' />
               Facebook

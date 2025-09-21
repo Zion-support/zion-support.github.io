@@ -69,16 +69,13 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(rule)
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to create rate limit rule: ${response.statusText}`),
-      }
+        throw new Error(`Failed to create rate limit rule: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Mock response for demo
       return {
         ...rule,
@@ -95,14 +92,11 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`),
-      }
+        throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Mock rules for demo
       return [
         {
@@ -148,21 +142,17 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify(updates)
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to update rate limit rule: ${response.statusText}`),
-      }
+        throw new Error(`Failed to update rate limit rule: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Mock update for demo
-      const existingRule = (await this.getRateLimitRules()).find(r => r.id === id),
+      const existingRule = (await this.getRateLimitRules()).find(r => r.id === id);
       if (!existingRule) {
-        throw new Error('Rule not found'),
-      }
+        throw new Error('Rule not found');
       
       return {
         ...existingRule,
@@ -179,13 +169,11 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to delete rate limit rule: ${response.statusText}`),
-      }
+        throw new Error(`Failed to delete rate limit rule: ${response.statusText}`);
     } catch (error) {
-      console.error('Failed to delete rate limit rule:', error),
+      console.error('Failed to delete rate limit rule:', error);
       throw error,
     }
   }
@@ -197,14 +185,11 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`),
-      }
+        throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Mock stats for demo
       return [
         {
@@ -244,16 +229,13 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({ name, permissions, rateLimit })
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to create API key: ${response.statusText}`),
-      }
+        throw new Error(`Failed to create API key: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Mock API key creation for demo
       return {
         id: `key_${Date.now()}`,
@@ -274,14 +256,11 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to fetch API keys: ${response.statusText}`),
-      }
+        throw new Error(`Failed to fetch API keys: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Mock API keys for demo
       return [
         {
@@ -326,14 +305,11 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
         }
-      }),
-
+      });
       if (!response.ok) {
-        throw new Error(`Failed to fetch violations: ${response.statusText}`),
-      }
+        throw new Error(`Failed to fetch violations: ${response.statusText}`);
 
-      return await response.json(),
-    } catch (error) {
+      return await response.json(); catch (error) {
       // Mock violations for demo
       return [
         {
@@ -379,19 +355,15 @@ export class APIRateLimiterService {
       recent: RateLimitViolation[]
     },
   }> {
-    const stats = await this.getRateLimitStats(),
-    const rules = await this.getRateLimitRules(),
-    const apiKeys = await this.getAPIKeys(),
-    const violations = await this.getViolations(50),
-
-    const totalRequests = stats.reduce((sum, stat) => sum + stat.totalRequests, 0),
-    const blockedRequests = stats.reduce((sum, stat) => sum + stat.blockedRequests, 0),
-
+    const stats = await this.getRateLimitStats();
+    const rules = await this.getRateLimitRules();
+    const apiKeys = await this.getAPIKeys();
+    const violations = await this.getViolations(50);
+    const totalRequests = stats.reduce((sum, stat) => sum + stat.totalRequests, 0);
+    const blockedRequests = stats.reduce((sum, stat) => sum + stat.blockedRequests, 0);
     const violationsByReason = violations.reduce((acc, violation) => {
       acc[violation.reason] = (acc[violation.reason] || 0) + 1,
-      return acc,
-    }, {} as Record<string, number>),
-
+      return acc, }, {} as Record<string, number>);
     return {
       overview: {
         totalRequests,
@@ -407,7 +379,7 @@ export class APIRateLimiterService {
           requests: stat.totalRequests,
           blocked: stat.blockedRequests,
           averageResponseTime: stat.averageResponseTime
-        })),
+        }));
       violations: {
         total: violations.length,
         byReason: violationsByReason,
@@ -453,4 +425,4 @@ export const API_RATE_LIMITER_PRICING = {
       'SLA guarantee'
     ]
   }
-},
+};

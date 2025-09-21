@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '../components/ui/button';
-
 export default function ProductPage() {
   const router = useRouter();
   const [product, setProduct] = useState(null);

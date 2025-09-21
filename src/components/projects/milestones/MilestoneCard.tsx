@@ -1,7 +1,7 @@
 import { Check,,, ArrowDown,,, X,,  } from 'lucide-react'
-import import { useDisputeCheck,,, ,,  } from '@/hooks/useDisputeCheck';
-import import { DisputeStatusBadge,,, ,,  } from '@/components/disputes/DisputeStatusBadge';
-import import { RaiseDisputeButton,,  } from '@/components/disputes/RaiseDisputeButton';
+import import { useDisputeCheck,,, ,,  } from '@/hooks/useDisputeCheck',
+import import { DisputeStatusBadge,,, ,,  } from '@/components/disputes/DisputeStatusBadge',
+import import { RaiseDisputeButton,,  } from '@/components/disputes/RaiseDisputeButton',
 interface MilestoneCardProps {
 onReject,
 }: MilestoneCardProps) {
@@ -9,13 +9,13 @@ onReject,
   function getStatusBadgeColor() {
     switch (status) {
       case 'completed':
-        return 'bg-green-500';
+        return 'bg-green-500',
       case 'in_progress':
-        return 'bg-blue-500';
+        return 'bg-blue-500',
       case 'pending':
-        return 'bg-yellow-500';
+        return 'bg-yellow-500',
       case 'rejected':
-        return 'bg-red-500';
+        return 'bg-red-500',
       default: return 'bg-gray-500'
     }
   }

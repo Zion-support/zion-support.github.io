@@ -413,7 +413,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15',
     customers: 30,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 25
   }
-],
+];

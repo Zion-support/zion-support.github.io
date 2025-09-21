@@ -528,23 +528,18 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     reviews: 17,
     isNew: true
   }
-],
-
+];
 export const getSpecializedIndustryServicesByCategory = (category: string) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.category === category)
-},
-
+};
 export const getPopularSpecializedIndustryServices = () => {
-  return revolutionarySpecializedIndustryServices2029.filter(service => service.isPopular),
-},
+  return revolutionarySpecializedIndustryServices2029.filter(service => service.isPopular);,
 
 export const getNewSpecializedIndustryServices = () => {
-  return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew),
-},
+  return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew);,
 
 export const getSpecializedIndustryServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(, '')),
+    const price = parseInt(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });;

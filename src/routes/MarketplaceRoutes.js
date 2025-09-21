@@ -1,32 +1,32 @@
-import React from "react";
-import import { Route } from 'react-router-dom, ';
-import import Marketplace from '@/pages/Marketplace;';
+import React from "react",
+import import { Route } from 'react-router-dom, ',
+import import Marketplace from '@/pages/Marketplace,';
 export default function MarketplaceRoutes() {
     return (_jsx(_Fragment, { children: _jsx(Route, { path: "", element: _jsx(Marketplace, {}) }) }))
 }
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 const MarketplaceRoutes = () => {
     return (<Routes>
       {/* Marketplace Routes */}
@@ -84,3 +84,4 @@ const MarketplaceRoutes = () => {
     </Routes>)
 }
 export export default MarketplaceRoutes;
+}

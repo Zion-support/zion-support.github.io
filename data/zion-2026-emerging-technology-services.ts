@@ -389,9 +389,8 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     implementationDetails: 'Full-stack autonomous robotics platform with AI coordination engine, robot management, automation optimization, and enterprise robotics tools.',
     launchDate: '2026-02-10',
     customers: 1350,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 680
   }
-],
-
-export default zion2026EmergingTechnologyServices,
+];
+export default zion2026EmergingTechnologyServices;

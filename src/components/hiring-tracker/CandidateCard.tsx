@@ -1,34 +1,31 @@
-import React, { useState } from "react";
-import { formatDistanceToNow } from "date-fns";
-import Link from "next/link";
-import { JobApplication } from "@/types/jobs";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+import React, { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import Link from "next/link",
+import { JobApplication } from "@/types/jobs",
+import { Card, CardContent } from "@/components/ui/card",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
 import { 
   MessageSquare, 
   User, 
   FileText, 
   MoreVertical, 
-  Calendar, 
-  AlertTriangle, 
+  Calendar;
+  AlertTriangle;
   BriefcaseIcon 
-} from "lucide-react";
+} from "lucide-react",
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
-import { useToast } from "@/hooks/use-toast";
-import { HireConfirmationModal } from "./HireConfirmationModal";
-
+  DropdownMenuTrigger, } from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { useToast } from "@/hooks/use-toast",
+import { HireConfirmationModal } from "./HireConfirmationModal",
 interface CandidateCardProps {
   application: JobApplication;
-  index: number;
-}
+  index: number, }
 
 export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showNotes, setShowNotes] = useState(false);
@@ -46,21 +43,16 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     // For now, we'll just show a toast
     toast({
       title: "Notes saved",
-      description: "Your notes have been saved",
-    });
-    setShowNotes(false);
-  };
+      description: "Your notes have been saved", });
+    setShowNotes(false);;
 
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
       title: "Hiring process initiated",
-      description: "Offer has been sent to the talent.",
-    });
-  };
+      description: "Offer has been sent to the talent.", });;
 
-  const candidateName = application.talent_profile?.full_name || "Candidate";
-
+  const candidateName = application.talent_profile?.full_name || "Candidate",
   return (
     <>
       <Card className="mb-2 p-0 shadow-sm border">
@@ -203,4 +195,3 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       />
     </>
   );
-}

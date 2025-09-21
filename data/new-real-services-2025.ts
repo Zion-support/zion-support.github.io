@@ -563,7 +563,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Flags + stats engine + SDKs.',
 		launchDate: '2025-01-27',
 		customers: 6,
-		rating: 4.4,
+		rating: 4.4;
 		reviews: 3
 	}
-],
+];

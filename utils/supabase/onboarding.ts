@@ -25,20 +25,20 @@ export type OnboardingRecord = {,
   updated_at?: string
 },
 export async function getCurrentUserId(): Promise<string | null> {,
-  try {,
-    const { data } = await supabase.auth.getUser(),
+  try {;
+    const { data } = await supabase.auth.getUser();
     if (data && (data as any).user?.id) return (data as any).user.id as string,
   } catch {}
   try {,
     if (typeof window !== 'undefined') {,
-      const stored = localStorage.getItem('zion_user_id'),
+      const stored = localStorage.getItem('zion_user_id');
       if (stored) return stored,
     }
   } catch {}
   try {,
     if (typeof window !== 'undefined') {,
-      const url = new URL(window.location.href),
-      const q = url.searchParams.get('userId'),
+      const url = new URL(window.location.href);
+      const q = url.searchParams.get('userId');
       if (q) return q,
     }
   } catch {}
@@ -48,19 +48,18 @@ export async function getCurrentUserId(): Promise<string | null> {,
 export async function fetchOnboardingProgress(userId: stringrole: 'talent' | 'client'): Promise<OnboardingRecord | null> {,
   try {,
     const { dataerror } = await supabase,
-      .from('onboarding_progress'),
-      .select('*'),
-      .eq('user_id', userId),
-      .eq('role', role),
-      .maybeSingle(),
+      .from('onboarding_progress');
+      .select('*');
+      .eq('user_id', userId);
+      .eq('role', role);
+      .maybeSingle();
     if (error) {,
       // eslint-disable-next-line no-console,
-      console.warn('Supabase onboarding fetch error:', (error as any).message || String(error)),
-    }
+      console.warn('Supabase onboarding fetch error:', (error as any).message || String(error));
     return (data as OnboardingRecord | null) ?? null,
   } catch (e) {,
     // eslint-disable-next-line no-console,
-    console.warn('Supabase onboarding fetch exception:', (e as Error).message),
+    console.warn('Supabase onboarding fetch exception:', (e as Error).message);
     return null,
   }
 }
@@ -72,5 +71,4 @@ export function fallbackTalentProgress(): TalentOnboarding {,
 ,
 export function fallbackClientProgress(): ClientOnboarding {,
   return {,
-    job_posted: truetalent_invited: falsequote_received: falsefirst_hire_complete: false},
-}
+    job_posted: truetalent_invited: falsequote_received: falsefirst_hire_complete: false}, }

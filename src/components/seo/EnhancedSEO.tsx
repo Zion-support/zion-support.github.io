@@ -1,6 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
-
+import React from 'react',
+import Head from 'next/head',
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -10,8 +9,7 @@ interface EnhancedSEOProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-  noIndex?: boolean;
-}
+  noIndex?: boolean, }
 
 export function EnhancedSEO({
   title = 'Zion AI - Advanced AI Solutions and Technology Services',
@@ -67,4 +65,3 @@ export function EnhancedSEO({
       )}
     </Head>
   );
-}

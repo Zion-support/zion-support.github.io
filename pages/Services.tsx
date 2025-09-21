@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const Services: React.FC = () => {
   const services = [
     {
@@ -46,6 +45,6 @@ const Services: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Services;

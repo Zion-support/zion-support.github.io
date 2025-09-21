@@ -1,39 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-
+import React, { useState, useEffect } from 'react',
+import { motion } from 'framer-motion',
 interface BusinessMetric {
-  id: string;
-  title: string;
-  value: string;
-  change: string;
-  trend: 'up' | 'down' | 'stable';
-  category: 'revenue' | 'growth' | 'efficiency' | 'customer';
-  icon: string;
-  color: string;
-}
+  id: string,
+  title: string,
+  value: string,
+  change: string,
+  trend: 'up' | 'down' | 'stable',
+  category: 'revenue' | 'growth' | 'efficiency' | 'customer',
+  icon: string,
+  color: string, }
 
 interface KPIData {
-  metric: string;
-  current: number;
-  target: number;
-  progress: number;
-  status: 'on-track' | 'at-risk' | 'behind';
-}
+  metric: string,
+  current: number,
+  target: number,
+  progress: number,
+  status: 'on-track' | 'at-risk' | 'behind', }
 
 interface RevenueData {
-  month: string;
-  revenue: number;
-  growth: number;
-  profit: number;
-}
+  month: string,
+  revenue: number,
+  growth: number,
+  profit: number, }
 
 interface CustomerInsight {
-  segment: string;
-  count: number;
-  revenue: number;
-  growth: number;
-  satisfaction: number;
-}
+  segment: string,
+  count: number,
+  revenue: number,
+  growth: number,
+  satisfaction: number, }
 
 export const BusinessIntelligenceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<BusinessMetric[]>([
@@ -168,37 +163,33 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return '↗️';
-      case 'down': return '↘️';
-      default: return '➡️';
-    }
+      case 'up': return '↗️',
+      case 'down': return '↘️',
+      default: return '➡️', }
   };
 
   const getTrendColor = (trend: string) => {
     switch (trend) {
-      case 'up': return 'text-green-400';
-      case 'down': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
+      case 'up': return 'text-green-400',
+      case 'down': return 'text-red-400',
+      default: return 'text-gray-400', }
   };
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'revenue': return 'from-green-500 to-emerald-600';
-      case 'growth': return 'from-blue-500 to-cyan-600';
-      case 'efficiency': return 'from-purple-500 to-violet-600';
-      case 'customer': return 'from-yellow-500 to-amber-600';
-      default: return 'from-gray-500 to-slate-600';
-    }
+      case 'revenue': return 'from-green-500 to-emerald-600',
+      case 'growth': return 'from-blue-500 to-cyan-600',
+      case 'efficiency': return 'from-purple-500 to-violet-600',
+      case 'customer': return 'from-yellow-500 to-amber-600',
+      default: return 'from-gray-500 to-slate-600', }
   };
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'on-track': return 'text-green-400 bg-green-900';
-      case 'at-risk': return 'text-yellow-400 bg-yellow-900';
-      case 'behind': return 'text-red-400 bg-red-900';
-      default: return 'text-gray-400 bg-gray-900';
-    }
+      case 'on-track': return 'text-green-400 bg-green-900',
+      case 'at-risk': return 'text-yellow-400 bg-yellow-900',
+      case 'behind': return 'text-red-400 bg-red-900',
+      default: return 'text-gray-400 bg-gray-900', }
   };
 
   const filteredMetrics = selectedCategory === 'all' 
@@ -419,7 +410,6 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );
-};
+  );;
 
 export default BusinessIntelligenceDashboard;

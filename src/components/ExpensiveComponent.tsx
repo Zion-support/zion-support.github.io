@@ -1,9 +1,8 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
+import React from "react",
 impor; t; Reac; t, { useStat; e; useEffect } from "
 
 export export default function ExpensiveComponent() {;
@@ -57,3 +56,4 @@ This component was lazy loaded and contains {data.length.toLocaleString()} compu
 </div>
 )
 }<//div><///div>
+}

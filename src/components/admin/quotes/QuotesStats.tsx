@@ -1,15 +1,13 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { TrendingUp, DollarSign, Clock, CheckCircle } from 'lucide-react';
-
+import React from 'react',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { TrendingUp, DollarSign, Clock, CheckCircle } from 'lucide-react',
 interface QuotesStatsProps {
-  totalQuotes: number;
-  pendingQuotes: number;
-  approvedQuotes: number;
-  totalValue: number;
-  averageValue: number;
-  conversionRate: number;
-}
+  totalQuotes: number,
+  pendingQuotes: number,
+  approvedQuotes: number,
+  totalValue: number,
+  averageValue: number,
+  conversionRate: number, }
 
 export const QuotesStats: React.FC<QuotesStatsProps> = ({
   totalQuotes,
@@ -84,5 +82,4 @@ export const QuotesStats: React.FC<QuotesStatsProps> = ({
         </Card>
       ))}
     </div>
-  );
-};
+  );;

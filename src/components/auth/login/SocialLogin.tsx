@@ -1,43 +1,33 @@
-import { Facebook, Twitter, Loader2 } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Web3Login } from "./Web3Login";
-import { useState } from "react";
-import { openAuthPopup } from "@/api/authSocial";
-
+import { Facebook, Twitter, Loader2 } from 'lucide-react',
+import { Button } from "@/components/ui/button",
+import { Web3Login } from "./Web3Login",
+import { useState } from "react",
+import { openAuthPopup } from "@/api/authSocial",
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGoogle = async () => {
     setIsLoading(true);
     try {
-      await openAuthPopup('google');
-    } catch (error) {
-      console.error('Google login failed:', error);
-    } finally {
+      await openAuthPopup('google'); catch (error) {
+      console.error('Google login failed:', error); finally {
       setIsLoading(false);
-    }
   };
 
   const handleFacebook = async () => {
     setIsLoading(true);
     try {
-      await openAuthPopup('facebook');
-    } catch (error) {
-      console.error('Facebook login failed:', error);
-    } finally {
+      await openAuthPopup('facebook'); catch (error) {
+      console.error('Facebook login failed:', error); finally {
       setIsLoading(false);
-    }
   };
 
   const handleTwitter = async () => {
     setIsLoading(true);
     try {
-      await openAuthPopup('twitter');
-    } catch (error) {
-      console.error('Twitter login failed:', error);
-    } finally {
+      await openAuthPopup('twitter'); catch (error) {
+      console.error('Twitter login failed:', error); finally {
       setIsLoading(false);
-    }
   };
 
   return (
@@ -113,4 +103,3 @@ export function SocialLogin() {
       </div>
     </div>
   );
-}

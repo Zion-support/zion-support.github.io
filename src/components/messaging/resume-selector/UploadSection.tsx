@@ -1,6 +1,6 @@
 
-import import React from 'react';
-import React from "react";
+import import React from 'react',
+import React from "react",
 import { Upload,,, FileText,,  } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;,

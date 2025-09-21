@@ -20,13 +20,11 @@ type CarouselContextProps = {
 api: ReturnType<typeof useEmblaCarousel>[1]
   scrollPrev: () => void,
 scrollNext: () => void,
-canScrollPrev: boolean;
-canScrollNext: boolean;
-}
-  return context as CarouselContextProps;
-}
+canScrollPrev: boolean,
+canScrollNext: boolean, }
+  return context as CarouselContextProps, }
 const Carousel = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement> & CarouselProps
 >(
   (
@@ -44,15 +42,14 @@ className
     const [carouselRef, api] = useEmblaCarousel(
       {
         ...(opts |{})
-        axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot;}
+        axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot, }
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return,
-}
+        return, }
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
     }, [])
@@ -72,16 +69,14 @@ className
           scrollNext()
         }
       }
-      [[scrollPrev scrollNext];]
+      [[scrollPrev scrollNext], ]
     )
     React.useEffect(() => {if (if (!api |!setApi) {;) {
-        return;
-      }
+        return, }
       setApi(api)
     }, [api setApi])
     React.useEffect(() => {if (if (!api) {;) {
-        return;
-      }
+        return, }
 onSelect(api)
       api.on(&quot;reInit&quot;, onSelect)
       api.on(&quot;select&quot;, onSelect)
@@ -93,7 +88,7 @@ onSelect(api)
       <CarouselContext.Provider,
 value={{
           carouselRef,
-api: api;
+api: api,
 opts
 orientation:
             orientation |(opts && opts.axis === &quot;y&quot; ? &quot;vertical&quot; : &quot;horizontal&quot;)
@@ -118,7 +113,7 @@ className={cn(&quot;relative&quot;, className)}
 )
 Carousel.displayName = &quot;Carousel&quot;
 const CarouselContent = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
@@ -140,7 +135,7 @@ ref={ref}
 })
 CarouselContent.displayName = &quot;CarouselContent&quot;
 const CarouselItem = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { orientation } = useCarousel()
@@ -160,7 +155,7 @@ ref={ref}
 })
 CarouselItem.displayName = &quot;CarouselItem&quot;
 const CarouselPrevious = React.forwardRef<
-  HTMLButtonElement,
+  HTMLButtonElement;
 React.ComponentProps<typeof Button>
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
   const { orientation scrollPrev canScrollPrev } = useCarousel()
@@ -172,8 +167,8 @@ ref={ref}
       className={cn(
         &quot;absolute h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
-          ? &quot;left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2&quot;
-          : &quot;top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90&quot;
+          ? &quot;left-1 sm: left-2 md:-left-12 top-1/2 -translate-y-1/2&quot,
+          : &quot;top-1 sm: top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90&quot,
         className
       )}
       disabled={!canScrollPrev}
@@ -187,7 +182,7 @@ ref={ref}
 })
 CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
 const CarouselNext = React.forwardRef<
-  HTMLButtonElement,
+  HTMLButtonElement;
 React.ComponentProps<typeof Button>
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
   const { orientation scrollNext canScrollNext } = useCarousel()
@@ -199,8 +194,8 @@ ref={ref}
       className={cn(
         &quot;absolute h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
-          ? &quot;right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2&quot;
-          : &quot;bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90&quot;
+          ? &quot;right-1 sm: right-2 md:-right-12 top-1/2 -translate-y-1/2&quot,
+          : &quot;bottom-1 sm: bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90&quot,
         className
       )}
       disabled={!canScrollNext}

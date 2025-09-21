@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react',
 interface PerformanceMetrics {
-  loadTime: number;
+  loadTime: number,
   renderTime: number;
   memoryUsage?: number;
-  networkLatency?: number;
-}
+  networkLatency?: number, }
 
 export function PerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -25,25 +23,19 @@ export function PerformanceMonitor() {
         renderTime,
         memoryUsage,
         networkLatency: navigation.responseStart - navigation.requestStart
-      });
-    };
+      });;
 
     // Measure after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
+      measurePerformance(); else {
       window.addEventListener('load', measurePerformance);
-    }
 
     return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
+      window.removeEventListener('load', measurePerformance);, }, []);
 
   // Only show in development
   if (process.env.NODE_ENV !== 'development' || !metrics) {
-    return null;
-  }
+    return null, }
 
   return (
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">
@@ -58,4 +50,3 @@ export function PerformanceMonitor() {
       )}
     </div>
   );
-}

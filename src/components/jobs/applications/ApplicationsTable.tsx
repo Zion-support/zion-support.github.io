@@ -1,6 +1,6 @@
 interface ApplicationsTableProps {
-  applications: JobApplication[[];],
-processingId: string | null;
+  applications: JobApplication[[], ],
+processingId: string | null,
   onViewApplication: (applicationId: string) => Promise<void>,
 onStatusChange: (applicationId: string newStatus: string) => Promise<void>,
 onViewScore: (application: JobApplication) => void,
@@ -82,7 +82,7 @@ application = {application,}
       </div>
       <HireConfirmationModal
 isOpen = {hireModalOpen,}
-        onClose = {() => setHireModalOpen(false),}
+        onClose = {() => setHireModalOpen(false);
         application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
       />

@@ -1,27 +1,24 @@
-import { useState } from 'react';
-import { useForm, type ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Switch } from '@/components/ui/switch';
-import { useContractTemplates } from '@/hooks/useContractTemplates';
-import { ContractTemplate } from '@/types/contracts';
-
+import { useState } from 'react',
+import { useForm, type ControllerRenderProps } from 'react-hook-form',
+import { zodResolver } from '@hookform/resolvers/zod',
+import { z } from 'zod',
+import { Loader2 } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Label } from '@/components/ui/label',
+import { Switch } from '@/components/ui/switch',
+import { useContractTemplates } from '@/hooks/useContractTemplates',
+import { ContractTemplate } from '@/types/contracts',
 const formSchema = z.object({
-  title: z.string().min(1, 'Template name is required'),
-  isDefault: z.boolean().optional(),
-});
+  title: z.string().min(1, 'Template name is required');
+  isDefault: z.boolean().optional(););
 
 type FormValues = z.infer<typeof formSchema>;
 
 interface TemplateSaveFormProps {
   template?: ContractTemplate;
-  onCancel: () => void;
-  onSuccess: () => void;
-}
+  onCancel: () => void,
+  onSuccess: () => void, }
 
 export function TemplateSaveForm({ template, onCancel, onSuccess }: TemplateSaveFormProps) {
   const [saving, setSaving] = useState(false);
@@ -42,8 +39,7 @@ export function TemplateSaveForm({ template, onCancel, onSuccess }: TemplateSave
         await updateTemplate(template.id, {
           name: data.title,
           isDefault: data.isDefault,
-        });
-      } else {
+        }); else {
         await createTemplate({
           name: data.title,
           description: 'User created template',
@@ -52,13 +48,9 @@ export function TemplateSaveForm({ template, onCancel, onSuccess }: TemplateSave
           isDefault: data.isDefault || false,
           isStarred: false,
         });
-      }
-      onSuccess();
-    } catch (error) {
-      console.error('Failed to save template:', error);
-    } finally {
+      onSuccess(); catch (error) {
+      console.error('Failed to save template:', error); finally {
       setSaving(false);
-    }
   };
 
   return (
@@ -103,4 +95,3 @@ export function TemplateSaveForm({ template, onCancel, onSuccess }: TemplateSave
       </div>
     </form>
   );
-}

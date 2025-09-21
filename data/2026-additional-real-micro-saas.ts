@@ -74,4 +74,4 @@ export const additionalRealMicroSaas2026 = [
 		rating: 4.6,
 		launchDate: '2025-11-10'
 	}
-],
+];

@@ -507,7 +507,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     implementationDetails: 'Advanced quantum blockchain infrastructure with quantum-secured transactions, smart contract automation, and DeFi integration. Includes developer tools and comprehensive APIs.',
     launchDate: '2026-02-10',
     customers: 800,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 500
   }
-],
+];

@@ -3,17 +3,15 @@ import { NavigationItem, NavigationCategory, NavigationConfig } from '../types/n
 export class NavigationGenerator {
   private services: NavigationItem[] = [],
   private categories: NavigationCategory[] = [],
-  private pages: NavigationItem[] = [],
-
+  private pages: NavigationItem[] = [];
   constructor() {
     this.initializeNavigation()
   }
 
   private async initializeNavigation() {
-    await this.discoverServices(),
-    await this.discoverPages(),
-    await this.generateCategories(),
-  }
+    await this.discoverServices();
+    await this.discoverPages();
+    await this.generateCategories();
 
   // Auto-discover services from data and generate navigation
   async discoverServices(): Promise<NavigationItem[]> {
@@ -604,29 +602,24 @@ export class NavigationGenerator {
 
   // Generate categories from services
   async generateCategories(): Promise<NavigationCategory[]> {
-    const categoryMap = new Map<string, NavigationItem[]>(),
-    
+    const categoryMap = new Map<string, NavigationItem[]>();
     // Group services by category
     this.services.forEach(service => {
       if (service.category) {
         if (!categoryMap.has(service.category)) {
-          categoryMap.set(service.category, []),
-        }
-        categoryMap.get(service.category)!.push(service),
-      }
-    }),
-
+          categoryMap.set(service.category, []);
+        categoryMap.get(service.category)!.push(service);
+    });
     // Create category objects
     this.categories = Array.from(categoryMap.entries()).map(([name, services]) => ({
-      id: name.toLowerCase().replace(/\s+/g, '-'),
+      id: name.toLowerCase().replace(/\s+/g, '-');
       name,
-      slug: name.toLowerCase().replace(/\s+/g, '-'),
+      slug: name.toLowerCase().replace(/\s+/g, '-');
       icon: this.getCategoryIcon(name),
       serviceCount: services.length,
       services: services.map(s => s.id),
       priority: this.getCategoryPriority(name)
-    })),
-
+    }));
     // Add additional categories for pages
     this.categories.push(
       {
@@ -655,8 +648,7 @@ export class NavigationGenerator {
         services: [],
         priority: 3
       }
-    ),
-
+    );
     return this.categories,
   }
 
@@ -777,29 +769,26 @@ export class NavigationGenerator {
         href: '/sitemap.xml',
         priority: 7
       }
-    ],
-  }
+    ], }
 
   // Generate sidebar navigation based on context
   generateSidebarNavigation(context: any): NavigationItem[] {
     switch (context.pageType) {
       case 'service':
-        return this.generateServiceSidebar(context.currentService),
+        return this.generateServiceSidebar(context.currentService);
       case 'category':
-        return this.generateCategorySidebar(context.currentCategory),
+        return this.generateCategorySidebar(context.currentCategory);
       case 'dashboard':
-        return this.generateDashboardSidebar(),
+        return this.generateDashboardSidebar();
       default:
         return this.generateDefaultSidebar()
     }
   }
 
   private generateServiceSidebar(serviceId?: string): NavigationItem[] {
-    if (!serviceId) return this.generateDefaultSidebar(),
-    
-    const service = this.services.find(s => s.id === serviceId),
-    if (!service) return this.generateDefaultSidebar(),
-
+    if (!serviceId) return this.generateDefaultSidebar();
+    const service = this.services.find(s => s.id === serviceId);
+    if (!service) return this.generateDefaultSidebar();
     return [
       {
         id: 'service-overview',
@@ -830,13 +819,10 @@ export class NavigationGenerator {
   }
 
   private generateCategorySidebar(categoryId?: string): NavigationItem[] {
-    if (!categoryId) return this.generateDefaultSidebar(),
-    
-    const category = this.categories.find(c => c.id === categoryId),
-    if (!category) return this.generateDefaultSidebar(),
-
-    const categoryServices = this.services.filter(s => s.category === category.name),
-    
+    if (!categoryId) return this.generateDefaultSidebar();
+    const category = this.categories.find(c => c.id === categoryId);
+    if (!category) return this.generateDefaultSidebar();
+    const categoryServices = this.services.filter(s => s.category === category.name);
     return [
       {
         id: 'category-overview',
@@ -908,9 +894,8 @@ export class NavigationGenerator {
 
   // Auto-update navigation when new services are added
   async updateNavigation(): Promise<void> {
-    await this.discoverServices(),
-    await this.generateCategories(),
-  }
+    await this.discoverServices();
+    await this.generateCategories();
 
   // Get complete navigation configuration
   async getNavigationConfig(): Promise<NavigationConfig> {
@@ -937,6 +922,5 @@ export class NavigationGenerator {
           priority: 2
         }
       ]
-    },
-  }
+    }, }
 }

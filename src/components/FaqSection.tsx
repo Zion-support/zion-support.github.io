@@ -1,5 +1,4 @@
 import React from "react";
-
 export function FaqSection() {
 return (
 <div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
@@ -86,7 +85,7 @@ answer:
       'Check the Orders page in your account or ask our chatbot with your order ID for a quick update.'
   }
   {
-    question: 'How do I contact support?',
+    question: 'How do I contact support?';
 answer:
       'Reach us via the chat widget email support@ziontechgroup.com or call +1 302 464 0950 anytime.'
   }
@@ -98,7 +97,7 @@ export function FaqSection() {
         <div className='text-center mb-12'>
           <GradientHeading>Frequently Asked Questions</GradientHeading>
           <p className='mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto'>
-            Find answers to common questions about AI product listings IT,
+            Find answers to common questions about AI product listings IT;
 equipment rentals and datacenter maintenance services
           </p>
         </div>

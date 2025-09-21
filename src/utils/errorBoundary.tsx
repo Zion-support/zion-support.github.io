@@ -1,17 +1,14 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
-import { motion } from "framer-motion";
-
+import React, { Component, ErrorInfo, ReactNode } from "react",
+import { motion } from "framer-motion",
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
+  children: ReactNode,
+  fallback?: ReactNode, }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-  retryCount: number;
-}
+  retryCount: number, }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -19,16 +16,14 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       retryCount: 0
-    };
-  }
+    }, }
 
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
       retryCount: 0
-    };
-  }
+    }, }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error("ErrorBoundary caught an error:", error, errorInfo);
@@ -39,7 +34,6 @@ class ErrorBoundary extends Component<Props, State> {
         description: error.message,
         fatal: false
       });
-    }
   }
 
   handleRetry = () => {
@@ -48,18 +42,15 @@ class ErrorBoundary extends Component<Props, State> {
       error: undefined,
       errorInfo: undefined,
       retryCount: prevState.retryCount + 1
-    }));
-  };
+    }));;
 
   handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload();;
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback, }
 
       return (
         <motion.div
@@ -137,10 +128,8 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </motion.div>
       );
-    }
 
-    return this.props.children;
-  }
+    return this.props.children, }
 }
 
 export default ErrorBoundary;

@@ -159,7 +159,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Connectors and scoring models with dashboards',
     launchDate: '2025-08-01',
     customers: 35,
-    rating: 4.6,
+    rating: 4.6;
     reviews: 28
   }
-],
+];

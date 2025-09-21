@@ -268,4 +268,4 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Space tourismTraining programs', 'Safety managementCustomer experience'],
     technology: ['Space systemsSafety protocols', 'Training technologyCustomer management']
   }
-],
+];

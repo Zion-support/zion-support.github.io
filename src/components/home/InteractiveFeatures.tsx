@@ -1,12 +1,10 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
-
+import React from 'react',
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react',
 export function InteractiveFeatures() {
   const features = [
-    {
-      icon: Search,
+    { icon: Search,
       title: "Smart Search",
       description: "Find exactly what you need with our AI-powered search",
       action: "Try Search"
@@ -58,4 +56,3 @@ export function InteractiveFeatures() {
       </div>
     </section>
   );
-}

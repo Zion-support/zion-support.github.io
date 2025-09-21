@@ -346,4 +346,4 @@ export const emergingTech2027Services: Service[] = [
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',
     tags: ['Climate ModelingQuantum Computing', 'EnvironmentalWeather', 'Research']
   }
-],
+];

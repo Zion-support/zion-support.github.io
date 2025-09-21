@@ -426,4 +426,4 @@ export const enhancedServices2025: EnhancedService2025[] = [
     rating: 4.8,
     reviews: 8
   }
-],
+];

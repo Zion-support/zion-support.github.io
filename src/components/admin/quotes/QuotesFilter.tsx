@@ -1,26 +1,23 @@
-import React from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Calendar, RefreshCw } from 'lucide-react';
-
-type QuoteStatus = 'pending' | 'approved' | 'rejected' | 'expired';
+import React from 'react',
+import { Input } from '@/components/ui/input',
+import { Button } from '@/components/ui/button',
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
+import { Calendar, RefreshCw } from 'lucide-react',
+type QuoteStatus = 'pending' | 'approved' | 'rejected' | 'expired',
 type DateRange = {
   from: Date;
-  to: Date;
-};
+  to: Date, };
 
 interface QuotesFilterProps {
-  searchQuery: string;
-  setSearchQuery: (value: string) => void;
-  statusFilter: QuoteStatus | 'all';
-  setStatusFilter: (value: QuoteStatus | 'all') => void;
-  archiveFilter: 'active' | 'archived' | 'all';
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
-  dateRange: DateRange | undefined;
-  setDateRange: (range: DateRange | undefined) => void;
-  onReset: () => void;
-}
+  searchQuery: string,
+  setSearchQuery: (value: string) => void,
+  statusFilter: QuoteStatus | 'all',
+  setStatusFilter: (value: QuoteStatus | 'all') => void,
+  archiveFilter: 'active' | 'archived' | 'all',
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
+  dateRange: DateRange | undefined,
+  setDateRange: (range: DateRange | undefined) => void,
+  onReset: () => void, }
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery,
@@ -30,7 +27,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter,
   setArchiveFilter,
   dateRange,
-  setDateRange,
+  setDateRange;
   onReset
 }) => {
   return (
@@ -95,8 +92,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             value={dateRange?.from ? dateRange.from.toISOString().split('T')[0] : ''}
             onChange={(e) => {
               const from = e.target.value ? new Date(e.target.value) : undefined;
-              setDateRange(from ? { from, to: dateRange?.to || new Date() } : undefined);
-            }}
+              setDateRange(from ? { from, to: dateRange?.to || new Date() } : undefined);}
           />
         </div>
       </div>
@@ -108,5 +104,4 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </Button>
       </div>
     </div>
-  );
-};
+  );;

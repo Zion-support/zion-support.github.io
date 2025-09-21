@@ -37,14 +37,12 @@ class PasswordStrengthService {
       'adminletmein', 'welcomemonkey', 'dragonmaster', 'hellofreedom', 'whateverqazwsx', 'trustno1jordan', 'harleyranger', 'iwantujennifer', 'hunterbuster', 'thomastigger',
       'robertsoccer', 'batmantest', 'passkiller', 'hockeygeorge', 'charlieandrew', 'michellelove', 'sunshinejessica',
       'asshole6969', 'amandaaccess', 'yankees987654321', 'dallasaustin', 'thundertaylor', 'baileyshadow', 'wolverinesteelers'
-    ]),
-
+    ]);
     // Common words that make passwords weak
     this.commonWords = new Set([
       'passwordadmin', 'userlogin', 'welcomehello', 'testguest', 'demosample', 'exampledefault', 'rootsystem',
       'computerinternet', 'websiteemail', 'phonemobile'
-    ]),
-
+    ]);
     // Common patterns that make passwords predictable
     this.patterns = [
       /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/,
@@ -68,7 +66,7 @@ class PasswordStrengthService {
         hasUppercase: /[A-Z]/.test(password),
         hasLowercase: /[a-z]/.test(password),
         hasNumbers: /\d/.test(password),
-        hasSymbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(password),
+        hasSymbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(password);
         hasCommonWords: this.hasCommonWords(password),
         hasSequentialChars: this.hasSequentialChars(password),
         hasRepeatingChars: this.hasRepeatingChars(password),
@@ -79,14 +77,12 @@ class PasswordStrengthService {
     },
 
     // Calculate score
-    result.score = this.calculateScore(result.details),
-    result.strength = this.getStrengthLevel(result.score),
-
+    result.score = this.calculateScore(result.details);
+    result.strength = this.getStrengthLevel(result.score);
     // Generate feedback
-    result.feedback = this.generateFeedback(result.details),
-    result.suggestions = this.generateSuggestions(result.details),
-    result.warnings = this.generateWarnings(result.details),
-
+    result.feedback = this.generateFeedback(result.details);
+    result.suggestions = this.generateSuggestions(result.details);
+    result.warnings = this.generateWarnings(result.details);
     return result,
   }
 
@@ -118,10 +114,8 @@ class PasswordStrengthService {
     // Penalties (0-25 points deducted)
     if (details.hasCommonWords) score -= 15,
     if (details.hasSequentialChars) score -= 10,
-    if (details.hasRepeatingChars) score -= 10,
-
-    return Math.max(0, Math.min(100, score)),
-  }
+    if (details.hasRepeatingChars) score -= 10;
+    return Math.max(0, Math.min(100, score));
 
   /**
    * Determine strength level based on score
@@ -138,7 +132,7 @@ class PasswordStrengthService {
    * Check if password contains common words
    */
   private hasCommonWords(password: string): boolean {
-    const lowerPassword = password.toLowerCase(),
+    const lowerPassword = password.toLowerCase();
     for (const word of this.commonWords) {
       if (lowerPassword.includes(word)) {
         return true
@@ -175,17 +169,16 @@ class PasswordStrengthService {
    * Calculate password entropy (measure of randomness)
    */
   private calculateEntropy(password: string): number {
-    const charset = new Set(password.split('')).size,
-    return Math.log2(Math.pow(charset, password.length)),
-  }
+    const charset = new Set(password.split('')).size;
+    return Math.log2(Math.pow(charset, password.length));
 
   /**
    * Estimate time to crack password
    */
   private estimateCrackTime(password: string): string {
-    const entropy = this.calculateEntropy(password),
+    const entropy = this.calculateEntropy(password);
     const attemptsPerSecond = 1000000000, // 1 billion attempts per second
-    const totalAttempts = Math.pow(2, entropy),
+    const totalAttempts = Math.pow(2, entropy);
     const seconds = totalAttempts / attemptsPerSecond,
 
     if (seconds < 1) return 'Instantly',
@@ -201,40 +194,31 @@ class PasswordStrengthService {
    */
   private generateFeedback(details: PasswordStrengthResult['details']): string[] {
     const feedback: string[] = [],
-
     if (details.length < 8) {
       feedback.push('Password is too short - minimum 8 characters recommended')
     } else if (details.length < 12) {
-      feedback.push('Consider using a longer password for better security'),
-    }
+      feedback.push('Consider using a longer password for better security');
 
     if (!details.hasUppercase) {
-      feedback.push('Add uppercase letters to increase complexity'),
-    }
+      feedback.push('Add uppercase letters to increase complexity');
 
     if (!details.hasLowercase) {
-      feedback.push('Add lowercase letters to increase complexity'),
-    }
+      feedback.push('Add lowercase letters to increase complexity');
 
     if (!details.hasNumbers) {
-      feedback.push('Include numbers to make password harder to guess'),
-    }
+      feedback.push('Include numbers to make password harder to guess');
 
     if (!details.hasSymbols) {
-      feedback.push('Add special characters for maximum security'),
-    }
+      feedback.push('Add special characters for maximum security');
 
     if (details.hasCommonWords) {
-      feedback.push('Avoid common words that are easily guessed'),
-    }
+      feedback.push('Avoid common words that are easily guessed');
 
     if (details.hasSequentialChars) {
-      feedback.push('Avoid sequential character patterns'),
-    }
+      feedback.push('Avoid sequential character patterns');
 
     if (details.hasRepeatingChars) {
-      feedback.push('Avoid repeating character patterns'),
-    }
+      feedback.push('Avoid repeating character patterns');
 
     return feedback,
   }
@@ -244,27 +228,22 @@ class PasswordStrengthService {
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
     const suggestions: string[] = [],
-
     if (details.length < 12) {
       suggestions.push('Use at least 12 characters for strong passwords')
     }
 
     if (!details.hasUppercase || !details.hasLowercase || !details.hasNumbers || !details.hasSymbols) {
-      suggestions.push('Mix uppercase, lowercase, numbers, and symbols'),
-    }
+      suggestions.push('Mix uppercase, lowercase, numbers, and symbols');
 
     if (details.hasCommonWords) {
-      suggestions.push('Use random combinations instead of dictionary words'),
-    }
+      suggestions.push('Use random combinations instead of dictionary words');
 
     if (details.hasSequentialChars) {
-      suggestions.push('Avoid keyboard patterns like qwerty or 123456'),
-    }
+      suggestions.push('Avoid keyboard patterns like qwerty or 123456');
 
-    suggestions.push('Consider using a passphrase with random words'),
-    suggestions.push('Use unique passwords for each account'),
-    suggestions.push('Consider a password manager for secure storage'),
-
+    suggestions.push('Consider using a passphrase with random words');
+    suggestions.push('Use unique passwords for each account');
+    suggestions.push('Consider a password manager for secure storage');
     return suggestions,
   }
 
@@ -308,12 +287,10 @@ class PasswordStrengthService {
     
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
-      password += charset[Math.floor(Math.random() * charset.length)],
-    }
+      password += charset[Math.floor(Math.random() * charset.length)], }
     
     // Shuffle the password
-    return password.split('').sort(() => Math.random() - 0.5).join(''),
-  }
+    return password.split('').sort(() => Math.random() - 0.5).join('');
 
   /**
    * Generate a memorable passphrase
@@ -355,12 +332,10 @@ class PasswordStrengthService {
       totalCommonPasswords: this.commonPasswords.size,
       totalCommonWords: this.commonWords.size,
       totalPatterns: this.patterns.length
-    },
-  }
+    }, }
 }
 
 // Export singleton instance
-export const passwordStrengthService = new PasswordStrengthService(),
-
+export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
 export { PasswordStrengthService },

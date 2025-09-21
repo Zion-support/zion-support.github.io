@@ -1,22 +1,20 @@
 interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
+  id: string,
+  title: string,
+  slug: string,
+  excerpt: string,
+  content: string,
   author: {
-    name: string;
-    avatar: string;
-    avatarUrl: string;
-    bio: string;
-  };
-  publishedAt: string;
-  publishedDate: string;
-  tags: string[];
-  category: string;
-  readTime: number;
-  featuredImage: string;
-}
+    name: string,
+    avatar: string,
+    avatarUrl: string,
+    bio: string, };
+  publishedAt: string,
+  publishedDate: string,
+  tags: string[],
+  category: string,
+  readTime: number,
+  featuredImage: string, }
 
 export function generateRandomBlogPost(): BlogPost {
   const titles = [
@@ -41,7 +39,7 @@ export function generateRandomBlogPost(): BlogPost {
   return {
     id: randomId,
     title: randomTitle,
-    slug: randomTitle.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
+    slug: randomTitle.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
     excerpt: `A comprehensive guide to ${randomTitle.toLowerCase()} and its impact on modern technology.`,
     content: `This is a detailed article about ${randomTitle.toLowerCase()}...`,
     author: randomAuthor,
@@ -51,5 +49,4 @@ export function generateRandomBlogPost(): BlogPost {
     category: "Technology",
     readTime: Math.floor(Math.random() * 10) + 5,
     featuredImage: `/blog/${randomId}.jpg`
-  };
-}
+  }, }

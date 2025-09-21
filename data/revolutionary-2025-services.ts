@@ -455,7 +455,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     implementationDetails: 'Quantum-powered financial optimization platform with portfolio optimization, risk assessment, and algorithmic trading capabilities.',
     launchDate: '2025-02-10',
     customers: 95,
-    rating: 4.9,
+    rating: 4.9;
     reviews: 67
   }
-],
+];

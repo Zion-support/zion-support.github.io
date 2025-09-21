@@ -8,13 +8,12 @@ const meta: Meta<typeof AvatarMenu> = {,
   component: AvatarMenu},
 export default meta,
 export const Default: StoryObj<typeof AvatarMenu> = {,
-  render: () => (,
-    <MemoryRouter>,
-      <AvatarMenu />,
-    </MemoryRouter>),
+  render: () => (;
+    <MemoryRouter>;
+      <AvatarMenu />;
+    </MemoryRouter>);
   play: async ({ canvasElement }) => {,
-    const canvas = within(canvasElement),
-    await userEvent.click(canvas.getByRole('button')),
-    await userEvent.keyboard('{Escape}'),
-  }
-},
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button'));
+    await userEvent.keyboard('{Escape}');
+};

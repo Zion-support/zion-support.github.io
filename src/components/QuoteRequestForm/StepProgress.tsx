@@ -18,7 +18,7 @@ className = {cn(
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
-                ),}
+                );
               >
                 {step.label}
               </span>
@@ -36,8 +36,7 @@ className = {cn(
 }</span>)
 }</div> <span)
 }> {
-  step.label,
-}</span> </div>)
+  step.label, }</span> </div>)
 })
 }</div> </div>)
 }"          )

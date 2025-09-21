@@ -1,10 +1,8 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
 import React from "react";
-
 const EnhancedPerformanceMonitor: React.FC = () => {
 return (
 <div className="enhanced-performance-monitor">

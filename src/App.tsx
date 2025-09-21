@@ -13,8 +13,8 @@ import {
   Zap, 
   Shield, 
   Cloud, 
-  Brain,
-  ArrowRight,
+  Brain;
+  ArrowRight;
   CheckCircle
 } from 'lucide-react'
 
@@ -29,7 +29,10 @@ const Header = () => (
         <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
         <Link href="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
       </nav>
-    </div>
+    
+      <RealTimePerformanceMonitor />
+
+      </div>
   </header>
 )
 
@@ -99,8 +102,7 @@ const HomePage = () => {
     { id: 'overview', label: 'Overview', icon: Activity },
     { id: 'performance', label: 'Performance', icon: Zap },
     { id: 'analytics', label: 'Analytics', icon: BarChart3 },
-    { id: 'seo', label: 'SEO', icon: Search },
-  ]
+    { id: 'seo', label: 'SEO', icon: Search }, ]
 
   return (
     <div className="p-8">

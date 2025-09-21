@@ -1,5 +1,5 @@
-import React from "react";
-import import { useRouter,,, ,,  } from 'next/router';
+import React from "react",
+import import { useRouter,,, ,,  } from 'next/router',
 import { useJobApplications,,  } from "@/hooks/useJobApplications",
 import { useResume,,  } from "@/hooks/useResume",
 import { useAuth,,  } from "@/hooks/useAuth",
@@ -10,8 +10,8 @@ import { Select,,, SelectContent,,, SelectItem,,, SelectTrigger,,, SelectValue,,
 import { Alert,,, AlertDescription,,  } from "@/components/ui/alert",
 import { AlertCircle,,, FileText,,, Loader2,,  } from 'lucide-react'
 import { formatDistanceToNow,,  } from "date-fns",
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
 interface ApplyToJobFormProps {
 onSuccess?: () => void,
 }
@@ -36,7 +36,7 @@ return (
           <Textarea
 id="coverLetter"
             value = {coverLetter,}
-            onChange = {(e,) => setCoverLetter(e.target.value),}
+            onChange = {(e,) => setCoverLetter(e.target.value);
             rows = {6,}
             placeholder="Introduce yourself and explain why you are a good fit for this job..."
             className="mt-1"
@@ -84,7 +84,7 @@ value = {selectedResumeId,}
 variant="outline"
                 size="sm"
                 type="button"
-                onClick = {(,) => router.push("/dashboard/talent/portfolio"),}
+                onClick = {(,) => router.push("/dashboard/talent/portfolio");
               >
                 Create Resume
               </Button>
@@ -98,7 +98,7 @@ id="cvUpload"
             type="file"
             accept=".pdf"
             className="mt-1"
-            onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
+            onChange = {(e,) => setResumeFile(e.target.files?.[0] |null);
           />
         </div>
       </div>
@@ -141,7 +141,7 @@ handleSubmit,
 }onValueChange= {
   setSelectedResumeId "
 }> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>)
-}return null,
+}return null;
 })
 }</SelectContent> </Select> > Create Resume </Button> </div>) "
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")

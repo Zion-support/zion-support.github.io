@@ -1,18 +1,16 @@
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Clock, MapPin, Building, CheckCircle, XCircle, AlertCircle } from "lucide-react";
-
+import React from "react",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Clock, MapPin, Building, CheckCircle, XCircle, AlertCircle } from "lucide-react",
 interface Application {
-  id: string;
-  jobTitle: string;
-  company: string;
-  location: string;
+  id: string,
+  jobTitle: string,
+  company: string,
+  location: string,
   appliedDate: string;
   salary?: string;
-  status: 'pending' | 'reviewed' | 'accepted' | 'rejected' | 'interviewed';
-}
+  status: 'pending' | 'reviewed' | 'accepted' | 'rejected' | 'interviewed', }
 
 export function ApplicationsTracker() {
   const applications: Application[] = [
@@ -40,25 +38,23 @@ export function ApplicationsTracker() {
       case 'rejected':
         return <XCircle className="h-4 w-4 text-red-500" />;
       default:
-        return <Clock className="h-4 w-4" />;
-    }
+        return <Clock className="h-4 w-4" />, }
   };
 
   const getStatusColor = (status: Application['status']) => {
     switch (status) {
       case 'pending':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-yellow-100 text-yellow-800',
       case 'reviewed':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-blue-800',
       case 'interviewed':
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-purple-100 text-purple-800',
       case 'accepted':
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-100 text-green-800',
       case 'rejected':
-        return 'bg-red-100 text-red-800';
+        return 'bg-red-100 text-red-800',
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800', }
   };
 
   return (
@@ -107,4 +103,3 @@ export function ApplicationsTracker() {
         ))}
       </div>    </div>
   );
-}

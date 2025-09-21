@@ -460,7 +460,7 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     implementationDetails: 'AI autonomous customer service platform with 24/7 support, multi-channel integration, and automatic issue resolution.',
     launchDate: '2024-04-01',
     customers: 123,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 67
   }
-],
+];

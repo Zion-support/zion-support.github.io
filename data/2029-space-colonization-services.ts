@@ -269,7 +269,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     implementationDetails: 'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01',
     customers: 18,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 52
   }
-],
+];

@@ -1,30 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { PlusCircle, Save, Trash } from 'lucide-react';
-
-type WebhookEventType = 'job_created' | 'job_updated' | 'job_deleted' | 'application_created' | 'application_updated' | 'user_registered';
-
+import React, { useEffect, useState } from 'react',
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Label } from '@/components/ui/label',
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
+import { PlusCircle, Save, Trash } from 'lucide-react',
+type WebhookEventType = 'job_created' | 'job_updated' | 'job_deleted' | 'application_created' | 'application_updated' | 'user_registered',
 interface Webhook {
-  id: string;
-  name: string;
-  url: string;
-  event_types: WebhookEventType[];
+  id: string,
+  name: string,
+  url: string,
+  event_types: WebhookEventType[],
   is_active: boolean;
   last_triggered_at?: string;
-  secret?: string;
-}
+  secret?: string, }
 
 interface NewWebhook {
-  name: string;
-  url: string;
-  eventTypes: WebhookEventType[];
-  selectedEvent: WebhookEventType;
-  secret: string;
-}
+  name: string,
+  url: string,
+  eventTypes: WebhookEventType[],
+  selectedEvent: WebhookEventType,
+  secret: string, }
 
 const eventOptions = [
   { value: 'job_created', label: 'Job Created' },
@@ -32,15 +28,13 @@ const eventOptions = [
   { value: 'job_deleted', label: 'Job Deleted' },
   { value: 'application_created', label: 'Application Created' },
   { value: 'application_updated', label: 'Application Updated' },
-  { value: 'user_registered', label: 'User Registered' },
-];
+  { value: 'user_registered', label: 'User Registered' }, ];
 
 export function WebhookManager() {
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [testResult, setTestResult] = useState<{ status: number; statusText: string; responseBody: string } | null>(null);
-  
+  const [testResult, setTestResult] = useState<{ status: number; statusText: string; responseBody: string } | null>(null),
   const [newWebhook, setNewWebhook] = useState<NewWebhook>({
     name: '',
     url: '',
@@ -50,43 +44,34 @@ export function WebhookManager() {
   });
 
   useEffect(() => {
-    loadWebhooks();
-  }, []);
+    loadWebhooks();, []);
 
   const loadWebhooks = async () => {
     setLoading(true);
     try {
       // Mock API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      setWebhooks([]);
-    } catch (err) {
-      setError('Failed to load webhooks');
-    } finally {
+      setWebhooks([]); catch (err) {
+      setError('Failed to load webhooks'); finally {
       setLoading(false);
-    }
   };
 
   const handleAddEvent = () => {
     if (newWebhook.selectedEvent && !newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       setNewWebhook({
         ...newWebhook,
-        eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
-      });
-    }
+        eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent], });
   };
 
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
-      ...newWebhook,
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event),
-    });
-  };
+      ...newWebhook;
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event););;
 
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       setError('Please fill in all required fields');
-      return;
-    }
+      return, }
 
     try {
       // Mock API call
@@ -109,10 +94,8 @@ export function WebhookManager() {
         selectedEvent: 'job_created',
         secret: '',
       });
-      setError(null);
-    } catch (err) {
+      setError(null); catch (err) {
       setError('Failed to create webhook');
-    }
   };
 
   const toggleWebhook = async (id: string, isActive: boolean) => {
@@ -122,10 +105,8 @@ export function WebhookManager() {
       
       setWebhooks(webhooks.map(w => 
         w.id === id ? { ...w, is_active: isActive } : w
-      ));
-    } catch (err) {
+      )); catch (err) {
       setError('Failed to toggle webhook');
-    }
   };
 
   const deleteWebhook = async (id: string) => {
@@ -133,10 +114,8 @@ export function WebhookManager() {
       // Mock API call
       await new Promise(resolve => setTimeout(resolve, 500));
       
-      setWebhooks(webhooks.filter(w => w.id !== id));
-    } catch (err) {
+      setWebhooks(webhooks.filter(w => w.id !== id)); catch (err) {
       setError('Failed to delete webhook');
-    }
   };
 
   const handleTestWebhook = async (id: string, eventType: WebhookEventType) => {
@@ -148,14 +127,12 @@ export function WebhookManager() {
         status: 200,
         statusText: 'OK',
         responseBody: 'Webhook test successful',
-      });
-    } catch (err) {
+      }); catch (err) {
       setTestResult({
         status: 500,
         statusText: 'Internal Server Error',
         responseBody: 'Webhook test failed',
       });
-    }
   };
 
   return (
@@ -370,4 +347,3 @@ export function WebhookManager() {
       </div>
     </div>
   );
-}

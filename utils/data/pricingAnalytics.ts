@@ -7,4 +7,4 @@ export const trackPricingRequest = async (data: any) => {
 export const getPricingMetrics = async () => {
   // Placeholder implementation
   return { metrics: {}, success: true },
-},
+};

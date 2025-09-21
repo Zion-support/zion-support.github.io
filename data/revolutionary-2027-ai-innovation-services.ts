@@ -272,7 +272,7 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     implementationDetails: 'AI-powered space technology platform with satellite optimization, space debris tracking, and comprehensive mission planning.',
     launchDate: '2027-06-15',
     customers: 120,
-    rating: 4.7,
+    rating: 4.7;
     reviews: 85
   }
-],
+];

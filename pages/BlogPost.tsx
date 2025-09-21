@@ -4,7 +4,6 @@ import type { BlogPost as BlogPostType } from "../types/blog";
 import { Separator } from "../components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import { logErrorToProduction } from '../utils/productionLogger';
-
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-zion-blue">

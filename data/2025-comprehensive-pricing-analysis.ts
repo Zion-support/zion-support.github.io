@@ -338,4 +338,4 @@ export const getCompetitiveLandscape = () => {
     manufacturing: ['SiemensRockwell Automation', 'ABBGE Digital'],
     blockchain: ['ChainalysisConsenSys', 'AlchemyInfura']
   },
-},
+};

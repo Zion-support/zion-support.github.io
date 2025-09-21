@@ -42,8 +42,7 @@ src={review.reviewer_profile.avatar_url}
             </div>
             <div className='text-sm text-muted-foreground'>
               {formatDistanceToNow(new Date(review.created_at), {
-                addSuffix: true;
-})}
+                addSuffix: true, })}
             </div>
           </div>
         </div>
@@ -164,7 +163,7 @@ placeholder='Why are you reporting this review?'              value={reportReaso
               className='min-h-[100px]'
               placeholder="Why are you reporting this review?"
               value = {reportReason,}
-              onChange = {(e,) => setReportReason(e.target.value),}
+              onChange = {(e,) => setReportReason(e.target.value);
               className="min-h-[100px]"
             />
             <DialogFooter>
@@ -199,8 +198,7 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }</Avatar>) "
 }<div> </div> <div className="text-sm text-muted-foreground"> {
   formatDistanceToNow (new Date (review.created at), {
-  addSuffix: true;
-}) "
+  addSuffix: true, }) "
 }</div> </div> </div> <div className="flex"> {
   renderStars (review.rating) "
 }</div> </div> <div className="mb-4"> <p className="text-sm whitespace-pre-wrap"> {
@@ -222,6 +220,6 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }<DialogTrigger asChild> <Button variant="ghost" size="sm" className="text-muted-foreground"> <Flag className="h-3 w-3 mr-1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button onClick={
   handleReport,
 }disabled= {
-  !reportReason.trim () |isReporting,
+  !reportReason.trim () |isReporting;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)
 }"}

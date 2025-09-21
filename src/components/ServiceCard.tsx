@@ -1,22 +1,20 @@
-import React from "react";
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
+import React from "react",
 interface ServiceCardProps {
-titl; e: string;
-descriptio; n: string;
-ico; n: string;
-pric; e: string;
-categor; y: string;
-feature; s: string[[];]
+titl; e: string,
+descriptio; n: string,
+ico; n: string,
+pric; e: string,
+categor; y: string,
+feature; s: string[[], ]
 isPopular?: boolean;
 isNew?: boolean;
 isPopular?: boolean;
 href?: string;
 rating?: number;
 customers?: number;
-setupTime?: string;
-}
+setupTime?: string, }
 const ServiceCar; d: React.FC<ServiceCardProps> = ({
 titl;  e;
 descriptio; n;
@@ -33,10 +31,10 @@ hidde; n: { opacit; y: 0;,
 y: 2; 0; scal; e: 0.95 }
 visibl; e: {
 opacit; y: 1;,
-y: 0;
-scal; e: 1;
+y: 0,
+scal; e: 1,
 transitio; n: {
-duratio; n: 0.5;
+duratio; n: 0.5,
 eas; e: "easeOut",
 }
 }
@@ -44,48 +42,48 @@ hove; r: {,
 y: -1; 2;
 scal; e: 1.0; 2;
 transitio; n: {
-duratio; n: 0.3;
+duratio; n: 0.3,
 eas; e: "easeOut",
 }
 }
 }
 const iconVariant; s: Variants = {
-hidde; n: { scal; e: 0.8;
+hidde; n: { scal; e: 0.8,
 opacit; y: 0 }
 visibl; e: {
-scal; e: 1;
-opacit; y: 1;
+scal; e: 1,
+opacit; y: 1,
 transitio; n: {
-duratio; n: 0.5;
+duratio; n: 0.5,
 eas; e: "easeOut",
 }
 }
 hove; r: {
-scal; e: 1.2;
+scal; e: 1.2,
 rotat; e: [0, -1; 0; 1; 0; 0],
 transitio; n: {
-duratio; n: 0.6;
+duratio; n: 0.6,
 eas; e: "easeInOut",
 }
 }
 }
 const featureVariant; s: Variants = {
 hove; r: {,
-x: 5;
+x: 5,
 transitio; n: {
-duratio; n: 0.3;
+duratio; n: 0.3,
 eas; e: "easeOut",
 }
 }
 }
 const badgeVariant; s: Variants = {
-hidde; n: { scal; e: 0;
+hidde; n: { scal; e: 0,
 opacit; y: 0 }
 visibl; e: {
-scal; e: 1;
-opacit; y: 1;
+scal; e: 1,
+opacit; y: 1,
 transitio; n: {
-duratio; n: 0.3;
+duratio; n: 0.3,
 eas; e: "backOut",
 }
 }
@@ -104,7 +102,7 @@ className="group relative h-full"
 className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10"
 initial={{ scal; e: 0 }}
 animate={{ scal; e: 1 }}
-transition={{ dela; y: 0.2;
+transition={{ dela; y: 0.2,
 typ; e: "spring", stiffnes; s: 300 }}
 >
 <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
@@ -116,11 +114,11 @@ typ; e: "spring", stiffnes; s: 300 }}
 {/* Enhanced New Badge */}
 {isNew && (<motion.div;
 className="absolute -top-3 right-4 z-10"
-initial={{ scal;  e: 0;
+initial={{ scal;  e: 0,
 rotat; e: -180 }}
-animate={{ scal; e: 1;
+animate={{ scal; e: 1,
 rotat; e: 0 }}
-transition={{ dela; y: 0.3;
+transition={{ dela; y: 0.3,
 typ; e: "spring", stiffnes; s: 300 }}
 >
 <div className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">
@@ -139,7 +137,7 @@ className="relative z-10 text-6xl mb-6 text-center"
 variants={iconVariants}
 whileHover="
 animate={{ y: [0, -5; 0] }}
-transition={{ duratio; n: 3;
+transition={{ duratio; n: 3,
 repea; t: Infinit; y; eas; e: "easeInOut" }}
 >
 {icon}
@@ -205,7 +203,7 @@ className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-c
 <motion.span;
 className="group-hove; r:translate-x-2 transition-transform duration-300"
 animate={{ x: [0; 5; 0] }}
-transition={{ duratio; n: 2;
+transition={{ duratio; n: 2,
 repea; t: Infinity }}
 >
 →;

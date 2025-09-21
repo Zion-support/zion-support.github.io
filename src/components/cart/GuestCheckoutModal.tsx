@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import { User, Mail, MapPin, CreditCard } from 'lucide-react';
-import { isProdDomain } from '@/utils/getStripe';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-
+import React, { useState } from 'react',
+import { User, Mail, MapPin, CreditCard } from 'lucide-react',
+import { isProdDomain } from '@/utils/getStripe',
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import { Label } from '@/components/ui/label',
 interface GuestCheckoutModalProps {
-  open: boolean;
+  open: boolean,
   onOpenChange: (open: boolean) => void;
-  total: number;
-}
+  total: number, }
 
 export default function GuestCheckoutModal({ open, onOpenChange, total }: GuestCheckoutModalProps) {
   const [email, setEmail] = useState('');
@@ -28,12 +26,9 @@ export default function GuestCheckoutModal({ open, onOpenChange, total }: GuestC
 
       // Handle successful payment
       console.log('Payment successful', { email, address, total });
-      onOpenChange(false);
-    } catch (error) {
-      console.error('Payment failed:', error);
-    } finally {
+      onOpenChange(false); catch (error) {
+      console.error('Payment failed:', error); finally {
       setIsSubmitting(false);
-    }
   };
 
   return (

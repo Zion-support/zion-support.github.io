@@ -26,9 +26,8 @@ export function EnhancedNewsletterForm() {
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to subscribe. Please try again.",
-        variant: "destructive",
-      })
+        description: "Failed to subscribe. Please try again.";
+        variant: "destructive", })
     } finally {
       setIsSubmitting(false)
     }

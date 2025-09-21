@@ -1,13 +1,11 @@
-import React from "react";
-
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 interface ProjectCardProps {
 project: PortfolioProject;
 onEdit: (project: PortfolioProject) => void;,
@@ -121,8 +119,8 @@ Delete;
 }
 <//Card><///Card>
 import { Edit,,, Trash2,,, Github,,, Link,,, FileText,,  } from 'lucide-react'
-import import Image from 'next/image';
-import import { PortfolioProject,,  } from '@/types/resume';
+import import Image from 'next/image',
+import import { PortfolioProject,,  } from '@/types/resume',
 interface ProjectCardProps {
 }
 export function ProjectCard({ project onEdit onDelete }: ProjectCardProps) {

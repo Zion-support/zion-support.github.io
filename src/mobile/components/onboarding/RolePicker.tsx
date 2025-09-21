@@ -1,7 +1,7 @@
 
 import React, { useState } from "react",
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
 import { Briefcase,,, Users,,, Check,,  } from 'lucide-react'
 
 type UserRole = any;
@@ -18,7 +18,7 @@ className={`cursor-pointer transition-all ${
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick = {(,) => handleSelect('talent'),}
+          onClick = {(,) => handleSelect('talent');
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>
@@ -43,7 +43,7 @@ className={`cursor-pointer transition-all ${
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick = {() => handleSelect('client'),}
+          onClick = {() => handleSelect('client');
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>

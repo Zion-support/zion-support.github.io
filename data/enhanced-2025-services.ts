@@ -538,18 +538,15 @@ export const enhancedServices2025: EnhancedService[] = [
 
 export const getServicesByCategory = (category: EnhancedService['category']) => {
   return enhancedServices2025.filter(service => service.category === category)
-},
-
+};
 export const getPopularServices = () => {
-  return enhancedServices2025.filter(service => service.isPopular),
-},
+  return enhancedServices2025.filter(service => service.isPopular);,
 
 export const getNewServices = () => {
-  return enhancedServices2025.filter(service => service.isNew),
-},
+  return enhancedServices2025.filter(service => service.isNew);,
 
 export const getServicesByAudience = (audience: string) => {
   return enhancedServices2025.filter(service => 
     service.targetAudience.includes(audience)
   )
-},
+};

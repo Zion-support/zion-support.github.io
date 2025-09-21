@@ -248,7 +248,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     implementationDetails: 'Production-ready social media platform with AI-powered optimization, comprehensive scheduling tools, and advanced analytics.',
     launchDate: '2025-02-25',
     customers: 156,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 445
   }
-],
+];

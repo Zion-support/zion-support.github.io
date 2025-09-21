@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Wallet } from "lucide-react";
-import { useState } from "react";
-
+import { Button } from "@/components/ui/button",
+import { Wallet } from "lucide-react",
+import { useState } from "react",
 export function Web3Login() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -22,10 +21,8 @@ export function Web3Login() {
       // 4. Receive JWT token
       
     } catch (error) {
-      console.error('Web3 login failed:', error);
-    } finally {
+      console.error('Web3 login failed:', error); finally {
       setIsLoading(false);
-    }
   };
 
   return (
@@ -40,4 +37,3 @@ export function Web3Login() {
       <Wallet className='h-5 w-5' />
     </Button>
   );
-}

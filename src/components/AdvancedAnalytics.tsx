@@ -1,15 +1,13 @@
-import import React, { useState, useEffect } from 'react';
-import import { motion } from 'framer-motion';
-
+import import React, { useState, useEffect } from 'react',
+import import { motion } from 'framer-motion',
 interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
+  pageViews: number,
+  uniqueVisitors: number,
+  bounceRate: number,
+  avgSessionDuration: number,
   conversionRate: number;
-  topPages: Array<{ page: string; views: number }>;
-  trafficSources: Array<{ source: string; percentage: number }>;
-}
+  topPages: Array<{ page: string; views: number }>,
+  trafficSources: Array<{ source: string; percentage: number }>, }
 
 export const AdvancedAnalytics: React.FC = () => {
   const [data, setData] = useState<AnalyticsData>({
@@ -39,18 +37,15 @@ export const AdvancedAnalytics: React.FC = () => {
   useEffect(() => {
     // Simulate data loading
     setIsLoading(true);
-    setTimeout(() => setIsLoading(false), 1000);
-  }, [timeRange]);
+    setTimeout(() => setIsLoading(false), 1000);, [timeRange]);
 
   const formatNumber = (num: number) => {
-    return new Intl.NumberFormat().format(num);
-  };
+    return new Intl.NumberFormat().format(num);;
 
   const formatDuration = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
-    return `${minutes}m ${remainingSeconds}s`;
-  };
+    return `${minutes}m ${remainingSeconds}s`, };
 
   if (isLoading) {
     return (
@@ -58,7 +53,6 @@ export const AdvancedAnalytics: React.FC = () => {
         <div className="text-white text-xl">Loading analytics...</div>
       </div>
     );
-  }
 
   return (
     <div className="p-6 bg-gray-900 min-h-screen">
@@ -181,7 +175,6 @@ export const AdvancedAnalytics: React.FC = () => {
         </motion.div>
       </motion.div>
     </div>
-  );
-};
+  );;
 
 export default AdvancedAnalytics;

@@ -1,6 +1,6 @@
-import import Image from 'next/image';
+import import Image from 'next/image',
 import { Loader2,,  } from 'lucide-react'
-import import { useState,,  } from 'react';
+import import { useState,,  } from 'react',
 interface YoutubeEmbedProps {
 return (
     <div className='relative aspect-video max-w-3xl mx-auto'>
@@ -9,7 +9,7 @@ return (
           <Image
 src={poster}
             alt={`${title} poster`}
-            fill,
+            fill;
 className='object-cover rounded'
           />
           <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
@@ -30,7 +30,7 @@ className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
     </div>
   )
 }        loading="lazy"
-        onLoad = {() => setLoaded(true),}
+        onLoad = {() => setLoaded(true);
         allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture"
         loading="lazy"
         onLoad={() => setLoaded(true)}

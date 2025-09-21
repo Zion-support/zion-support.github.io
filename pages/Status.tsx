@@ -2,7 +2,6 @@ import { SEO } from "../components/SEO";
 import { useState, useEffect } from "react";
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
 import { Button } from "../components/ui/button";
-
 export default function Status() {
   const [status, setStatus] = useState('operational');
 

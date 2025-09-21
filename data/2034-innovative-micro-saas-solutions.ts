@@ -1,7 +1,7 @@
 export type InnovativeMicroSaas = {
-	id: string;
-	name: string;
-	description: string;
+	id: string,
+	name: string,
+	description: string,
 	tagline?: string;
 	category:
 		| 'Content Marketing'
@@ -12,16 +12,15 @@ export type InnovativeMicroSaas = {
 		| 'Financial Technology'
 		| 'Human Resources'
 		| 'Supply Chain Management'
-		| 'Customer Support';
+		| 'Customer Support',
 	pricing: { starter: string; professional?: string; enterprise?: string };
-	features: string[];
+	features: string[],
 	integrations?: string[];
 	useCases?: string[];
-	link: string;
+	link: string,
 	realService?: boolean;
 	rating?: number;
-	launchDate?: string;
-};
+	launchDate?: string, };
 
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	{

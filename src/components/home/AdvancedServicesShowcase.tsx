@@ -1,13 +1,12 @@
 interface Service {
-id: string;
-name: string;
-}
+id: string,
+name: string, }
 
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 import import { Brain;
 Shield;
 Cloud;
@@ -17,10 +16,8 @@ Zap;
 TrendingUp;
 CheckCircle;
 ArrowRight;
-Star;
-} from "
-import React from "react";
-
+Star, } from "
+import React from "react",
 /
 const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0; 6)
 

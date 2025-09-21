@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Button } from "../components/ui/button";
 import { Header } from "../components/Header";
 import { ShieldAlert } from 'lucide-react';
-
 export default function Unauthorized() {
   return (
     <div className="min-h-screen bg-zion-blue">

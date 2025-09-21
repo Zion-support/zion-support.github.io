@@ -16,24 +16,24 @@ interface SystemHealth {,
     responseTime: number,
     memoryUsage: number,
     cacheHitRate: number,
-    activeConnections: number},
+    activeConnections: number};
   "uptime": number}
-export default async function handler("req": NextApiRequest, "res": NextApiResponse) {,
-  if (req.method !== 'GET') {,
-    res.setHeader('Allow', ['GET']),
+export default async function handler("req": NextApiRequest, "res": NextApiResponse) {;
+  if (req.method !== 'GET') {;
+    res.setHeader('Allow', ['GET']);
     return res.status(405).json({ "error": 'Method not allowed' })}
-  const startTime = Date.now(),
+  const startTime = Date.now();
   try {,
     // Check database health,
-    const dbHealth = await dbManager.healthCheck(),
+    const dbHealth = await dbManager.healthCheck();
     // Check cache health,
     const cacheStats = {,
       "api": { active: 0 },
       "user": { active: 0 },
       "static": { active: 0 }
     },
-    const avgResponseTime = 100, // mock,
-    const memoryUsage = process.memoryUsage(),
+    const avgResponseTime = 100, // mock;
+    const memoryUsage = process.memoryUsage();
     const services = {,
       "database": dbHealth,
       "cache": cacheStats.api.active > 0,
@@ -47,8 +47,8 @@ export default async function handler("req": NextApiRequest, "res": NextApiRespo
       status = 'degraded'} else {,
       status = 'unhealthy'}
     const "health": SystemHealth = {,
-      status,
-      "timestamp": new Date().toISOString(),
+      status;
+      "timestamp": new Date().toISOString();
       services,
       "metrics": {,
         responseTime: avgResponseTime,
@@ -59,11 +59,11 @@ export default async function handler("req": NextApiRequest, "res": NextApiRespo
       "uptime": process.uptime()
     },
     const responseTime = Date.now() - startTime,
-    return res.status(200).json({ ...health, responseTime })} catch (error) {,
-    console.error('Health check "failed": ', error),
+    return res.status(200).json({ ...health, responseTime })} catch (error) {;
+    console.error('Health check "failed": ', error);
     return res.status(500).json({,
       "status": 'unhealthy',
-      "timestamp": new Date().toISOString(),
+      "timestamp": new Date().toISOString();
       "error": 'Health check failed',
       "services": {,
         database: false,
@@ -79,4 +79,4 @@ export default async function handler("req": NextApiRequest, "res": NextApiRespo
       "uptime": process.uptime()
     })}
 }
-,
+;

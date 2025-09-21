@@ -1,24 +1,21 @@
-import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
+import { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react',
+import { logErrorToProduction } from '@/utils/productionLogger',
 interface ModelConfig {
-  id: string;
-  version: number;
-  purpose: string;
-  baseModel: string;
-  active: boolean;
-  createdAt: string;
-}
+  id: string,
+  version: number,
+  purpose: string,
+  baseModel: string,
+  active: boolean,
+  createdAt: string, }
 
 interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string;
-}
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
+  errorMessage?: string, }
 
 export function ModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]);
@@ -71,12 +68,9 @@ export function ModelManager() {
         }
       ];
       
-      setModels(mockModels);
-    } catch (error) {
-      logErrorToProduction('Failed to fetch models:', { error });
-    } finally {
+      setModels(mockModels); catch (error) {
+      logErrorToProduction('Failed to fetch models:', { error }); finally {
       setIsLoading(false);
-    }
   };
 
   const checkTrainingStatus = async (modelId: string) => {
@@ -89,12 +83,9 @@ export function ModelManager() {
         model.id === modelId 
           ? { ...model, trainingStatus: 'succeeded' as const }
           : model
-      ));
-    } catch (error) {
-      logErrorToProduction('Failed to check training status:', { error, modelId });
-    } finally {
+      )); catch (error) {
+      logErrorToProduction('Failed to check training status:', { error, modelId }); finally {
       setActiveJobs(prev => ({ ...prev, [modelId]: false }));
-    }
   };
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
@@ -106,15 +97,12 @@ export function ModelManager() {
         model.id === modelId 
           ? { ...model, active: !currentActive }
           : model
-      ));
-    } catch (error) {
+      )); catch (error) {
       logErrorToProduction('Failed to toggle model status:', { error, modelId });
-    }
   };
 
   useEffect(() => {
-    fetchModels();
-  }, []);
+    fetchModels();, []);
 
   return (
     <Card className="w-full">
@@ -217,4 +205,3 @@ export function ModelManager() {
       </CardContent>
     </Card>
   );
-}

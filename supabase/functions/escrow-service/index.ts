@@ -5,21 +5,18 @@ import { corsHeaders } from "../_shared/cors.ts",
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
-  }
+    return new Response(null, { headers: corsHeaders });
 
   const supabase = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     { auth: { persistSession: false } }
-  ),
-
+  );
   const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
     apiVersion: "2025-05-28.basil", // Updated to the expected version
-  }),
-
+  });
   try {
-    const body = await req.json(),
+    const body = await req.json();
     const {
       action,
       amount,
@@ -40,8 +37,7 @@ serve(async (req) => {
             ? { destination: providerAccountId }
             : undefined,
           metadata: { orderId }
-        }),
-
+        });
         await supabase.from("transactions").insert({
           order_id: orderId,
           provider_id: providerAccountId,
@@ -51,18 +47,16 @@ serve(async (req) => {
           in_escrow: true,
           stripe_payment_intent: intent.id,
           created_at: new Date().toISOString()
-        }),
-
+        });
         return new Response(
           JSON.stringify({ paymentIntentId: intent.id }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        ),
-      }
+        );
 
       case "release": {
         if (!paymentIntentId)
-          throw new Error("paymentIntentId required"),
-        await stripe.paymentIntents.capture(paymentIntentId),
+          throw new Error("paymentIntentId required");
+        await stripe.paymentIntents.capture(paymentIntentId);
         await supabase
           .from("transactions")
           .update({
@@ -70,36 +64,32 @@ serve(async (req) => {
             released_at: new Date().toISOString(),
             in_escrow: false
           })
-          .eq("stripe_payment_intent", paymentIntentId),
+          .eq("stripe_payment_intent", paymentIntentId);
         return new Response(
           JSON.stringify({ message: "released" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        ),
-      }
+        );
 
       case "dispute": {
-        if (!orderId) throw new Error("orderId required"),
+        if (!orderId) throw new Error("orderId required");
         await supabase
           .from("transactions")
           .update({ status: "disputed" })
-          .eq("order_id", orderId),
+          .eq("order_id", orderId);
         return new Response(
           JSON.stringify({ message: "dispute filed" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        ),
-      }
+        );
 
       default:
         return new Response(
           JSON.stringify({ error: "invalid action" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 400 }
-        ),
-    }
+        );
   } catch (err) {
-    console.error("escrow-service error", err),
+    console.error("escrow-service error", err);
     return new Response(
       JSON.stringify({ error: err.message }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 500 }
-    ),
-  }
-}),
+    );
+});

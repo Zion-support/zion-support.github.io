@@ -1,27 +1,21 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react',
 interface Props {
-  children: ReactNode;
-}
+  children: ReactNode, }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-}
+  error?: Error, }
 
 class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
-  }
+    this.state = { hasError: false }, }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
+    return { hasError: true, error }, }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
-  }
 
   render() {
     if (this.state.hasError) {
@@ -43,10 +37,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       );
-    }
 
-    return this.props.children;
-  }
+    return this.props.children, }
 }
 
 export default GlobalErrorBoundary;

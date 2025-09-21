@@ -316,7 +316,7 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
     implementationDetails: 'Enterprise-grade AI ethics and governance platform with comprehensive monitoring, compliance tools, and audit capabilities. Includes custom policy development and integration services.',
     launchDate: '2025-02-10',
     customers: 65,
-    rating: 4.6,
+    rating: 4.6;
     reviews: 38
   }
-],
+];

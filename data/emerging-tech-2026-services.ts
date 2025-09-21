@@ -460,7 +460,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     implementationDetails: 'Full-featured virtual events platform with AI-powered engagement and comprehensive event management tools.',
     launchDate: '2026-08-01',
     customers: 320,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 198
   }
-],
+];

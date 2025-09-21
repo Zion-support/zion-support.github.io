@@ -37,8 +37,8 @@ class ApiDocumentationGenerator {,
       "servers": [{,
           url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
           "description": 'Development server'}
-      ],
-      "paths": this.generatePaths(),
+      ];
+      "paths": this.generatePaths();
       "components": {,
         schemas: this.generateSchemas()}}}
   private generatePaths() {,
@@ -62,7 +62,7 @@ class ApiDocumentationGenerator {,
                   'application/json': {,
                     schema: response.schema}}
               : undefined},
-          return acc}, {} as Record<string, any>)}}),
+          return acc}, {} as Record<string, any>)}});
     return paths}
   private generateSchemas() {,
     return {,
@@ -90,13 +90,13 @@ class ApiDocumentationGenerator {,
         markdown += '### Parameters\n\n',
         markdown += '| Name | Type | Required | Location | Description |\n',
         markdown += '|------|------|----------|----------|-------------|\n',
-        endpoint.parameters.forEach((param) => {,
-          markdown += `| ${param.name} | ${param.type} | ${param.required ? 'Yes' : 'No'} | ${param.location} | ${param.description} |\n`}),
+        endpoint.parameters.forEach((param) => {;
+          markdown += `| ${param.name} | ${param.type} | ${param.required ? 'Yes' : 'No'} | ${param.location} | ${param.description} |\n`});
         markdown += '\n'}
       if (endpoint.responses && endpoint.responses.length > 0) {,
         markdown += '### Responses\n\n',
         endpoint.responses.forEach((response) => {,
-          markdown += `- **${response.status}**: ${response.description}\n`}),
+          markdown += `- **${response.status}**: ${response.description}\n`});
         markdown += '\n'}
       if (endpoint.examples && endpoint.examples.length > 0) {,
         markdown += '### Examples\n\n',
@@ -106,20 +106,21 @@ class ApiDocumentationGenerator {,
           markdown += "\"\"\"json\n${JSON.stringify(example.request, null, 2)}\n\"\"\"\n\n",
           markdown += "**"Response": **\n",
           markdown += "\"\"\"json\n${JSON.stringify(example.response, null, 2)}\n\"\"\"\n\n"})}
-      markdown += '---\n\n'}),
+      markdown += '---\n\n'});
     return markdown}
 }
-export const apiDocGenerator = new ApiDocumentationGenerator(),
+export const apiDocGenerator = new ApiDocumentationGenerator();
 export default function handler("req": NextApiRequest, "res": NextApiResponse) {,
   if (req.method === 'GET') {,
     const format = (req.query.format as string) || 'json',
-    if (format === 'markdown') {,
-      res.setHeader('Content-Typetext/markdown'),
+    if (format === 'markdown') {;
+      res.setHeader('Content-Typetext/markdown');
       res.status(200).send(apiDocGenerator.generateMarkdown())} else {,
-      res.setHeader('Content-Typeapplication/json'),
+      res.setHeader('Content-Typeapplication/json');
       res.status(200).json(apiDocGenerator.generateOpenAPISpec())}
   } else {,
-    res.setHeader('Allow', ['GET']),
+    res.setHeader('Allow', ['GET']);
     res.status(405).json({ "error": 'Method not allowed' })}
 }
-,
+;
+}

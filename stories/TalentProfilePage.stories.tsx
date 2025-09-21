@@ -18,12 +18,11 @@ const meta: Meta<typeof TalentProfilePage> = {
       router: {
         query: { id: 't-001' }
       }
-    },
+    };
     mockData: {
       profile: sampleTalent
     }
   }
-},
-
-export default meta,
+};
+export default meta;
 export const Default: StoryObj<typeof TalentProfilePage> = {},

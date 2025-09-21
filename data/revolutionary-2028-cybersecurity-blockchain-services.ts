@@ -272,7 +272,7 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     implementationDetails: 'AI-powered privacy-preserving analytics platform with federated learning, homomorphic encryption, and comprehensive privacy protection.',
     launchDate: '2028-07-15',
     customers: 450,
-    rating: 4.8,
+    rating: 4.8;
     reviews: 320
   }
-],
+];

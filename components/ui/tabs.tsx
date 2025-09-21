@@ -1,13 +1,23 @@
 import React, { useState, createContext, useContext } from 'react';
+<<<<<<< HEAD
 
 interface TabsContextType {
   activeTab: string;
-  setActiveTab: (value: string) => void;
+  setActiveTab: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
+=======
+const TabsContext = createContext(undefined);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-7b54
 
-export function Tabs({ defaultValue, children, className = '' }) {
+interface TabsProps {
+  defaultValue?: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function Tabs({ defaultValue, children, className = '' }: TabsProps) {
   const [activeTab, setActiveTab] = useState(defaultValue || '');
   
   return (
@@ -19,7 +29,12 @@ export function Tabs({ defaultValue, children, className = '' }) {
   );
 }
 
-export function TabsList({ children, className = '' }) {
+interface TabsListProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function TabsList({ children, className = '' }: TabsListProps) {
   return (
     <div className={`inline-flex h-10 items-center justify-center rounded-md bg-gray-100 p-1 ${className}`}>
       {children}
@@ -27,7 +42,13 @@ export function TabsList({ children, className = '' }) {
   );
 }
 
-export function TabsTrigger({ value, children, className = '' }) {
+interface TabsTriggerProps {
+  value: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function TabsTrigger({ value, children, className = '' }: TabsTriggerProps) {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsTrigger must be used within Tabs');
   
@@ -46,7 +67,13 @@ export function TabsTrigger({ value, children, className = '' }) {
   );
 }
 
-export function TabsContent({ value, children, className = '' }) {
+interface TabsContentProps {
+  value: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function TabsContent({ value, children, className = '' }: TabsContentProps) {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsContent must be used within Tabs');
   

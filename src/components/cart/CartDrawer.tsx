@@ -1,21 +1,18 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import Link from 'next/link';
-import type { RootState } from '@/store';
-import { ShoppingCart } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { LoginModal } from '@/components/auth/LoginModal';
-
+import React, { useState } from 'react',
+import { useSelector } from 'react-redux',
+import Link from 'next/link',
+import type { RootState } from '@/store',
+import { ShoppingCart } from 'lucide-react',
+import { useAuth } from '@/hooks/useAuth',
+import { LoginModal } from '@/components/auth/LoginModal',
 export function CartDrawer() {
   const [loginOpen, setLoginOpen] = useState(false);
   const { user } = useAuth();
-  const count = useSelector((state: RootState) => state.cart.items.length);
-
+  const count = useSelector((state: RootState) => state.cart.items.length),
   const handleClick = (e: React.MouseEvent) => {
     if (!user) {
       e.preventDefault();
       setLoginOpen(true);
-    }
   };
 
   return (
@@ -36,4 +33,3 @@ export function CartDrawer() {
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
-}

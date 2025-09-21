@@ -1,35 +1,35 @@
-import React from "react";
-import import { Route } from 'react-router-dom, ';
-import import Dashboard from '@/pages/Dashboard;';
-import import ClientDashboard from '@/pages/ClientDashboard;';
-import import TalentDashboard from '@/pages/TalentDashboard;';
+import React from "react",
+import import { Route } from 'react-router-dom, ',
+import import Dashboard from '@/pages/Dashboard,';
+import import ClientDashboard from '@/pages/ClientDashboard,';
+import import TalentDashboard from '@/pages/TalentDashboard,';
 export default function DashboardRoutes() {
     return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "", element: _jsx(Dashboard, {}) }), _jsx(Route, { path: "client", element: _jsx(ClientDashboard, {}) }), _jsx(Route, { path: "talent", element: _jsx(TalentDashboard, {}) })] }))
 }
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
+import React from "react",
 const DashboardRoutes = () => {
     return (<Routes>
       {/* Dashboard Routes */}
@@ -108,3 +108,4 @@ const DashboardRoutes = () => {
     </Routes>)
 }
 export export default DashboardRoutes;
+}
