@@ -6,6 +6,9 @@ if (typeof globalThis === 'undefined') {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
   output: 'export',
   trailingSlash: true,
   distDir: 'out',
@@ -15,6 +18,7 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
     domains: ["localhost"],
+    formats: ['image/webp', 'image/avif'],
   },
   
   // TypeScript configuration
@@ -31,61 +35,16 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
+  
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   
   generateBuildId: async () => {
     return 'build-' + Date.now()
-  },
-  
-  // Webpack configuration
-  webpack: (config, { dev, isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibility
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-        crypto: false,
-      };
-    }
-    
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, '.'),
-    };
-    
-    // Exclude problematic directories from compilation
-    config.module.rules.push({
-      test: /\.ts$/,
-      include: require('path').resolve(__dirname, 'contracts'),
-      use: 'ignore-loader'
-    });
-    
-    if (!dev && !isServer) {
-      // Optimize bundle size
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[/]node_modules[/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    
-    // Add globalThis polyfill
-    config.plugins = config.plugins || [];
-    config.plugins.push(
-      new (require('webpack')).DefinePlugin({
-        'globalThis': 'global',
-      })
-    );
-    
-    return config;
   },
 };
 
