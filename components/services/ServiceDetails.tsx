@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { Server, Clock, MapPin } from 'lucide-react';
-=======
-import { Server, Clock, MapPin } from 'lucide-react'
->>>>>>> origin/main
 import React from "react";
 
 interface ServiceDetailsProps {
@@ -10,7 +6,6 @@ interface ServiceDetailsProps {
 }
 
 export function ServiceDetails({ country }: ServiceDetailsProps) {
-<<<<<<< HEAD
   return (
     <div className="space-y-6">
       <div className="bg-slate-800 rounded-lg border border-slate-600 p-6">
@@ -20,114 +15,57 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
         
         <div className="grid md:grid-cols-3 gap-6 mb-6">
           <div className="flex items-center space-x-3">
-            <Server className="h-6 w-6 text-blue-400" />
-            <div>
-              <h3 className="text-lg font-semibold text-white">Hardware Setup</h3>
-              <p className="text-gray-300 text-sm">Complete installation and configuration</p>
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-3">
-            <Clock className="h-6 w-6 text-blue-400" />
-            <div>
-              <h3 className="text-lg font-semibold text-white">24/7 Support</h3>
-              <p className="text-gray-300 text-sm">Round-the-clock technical assistance</p>
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-3">
             <MapPin className="h-6 w-6 text-blue-400" />
             <div>
-              <h3 className="text-lg font-semibold text-white">Onsite Service</h3>
-              <p className="text-gray-300 text-sm">Technicians visit your location</p>
+              <p className="text-sm text-gray-400">Service Location</p>
+              <p className="text-white font-medium">{country}</p>
+            </div>
+          </div>
+          
+          <div className="flex items-center space-x-3">
+            <Clock className="h-6 w-6 text-green-400" />
+            <div>
+              <p className="text-sm text-gray-400">Response Time</p>
+              <p className="text-white font-medium">2-24 hours</p>
+            </div>
+          </div>
+          
+          <div className="flex items-center space-x-3">
+            <Server className="h-6 w-6 text-purple-400" />
+            <div>
+              <p className="text-sm text-gray-400">Service Type</p>
+              <p className="text-white font-medium">Onsite IT Support</p>
             </div>
           </div>
         </div>
         
-        <div className="bg-slate-700 rounded-lg p-4">
-          <h4 className="text-lg font-medium text-white mb-3">Service Includes:</h4>
-          <ul className="space-y-2 text-gray-300">
-            <li>• Hardware installation and setup</li>
-            <li>• Network configuration and optimization</li>
-            <li>• Software installation and configuration</li>
-            <li>• System troubleshooting and maintenance</li>
-            <li>• Security implementation</li>
-            <li>• User training and documentation</li>
-          </ul>
-=======
-  const getRegionalInstructions = (countryName: string) => {
-    const instructions: { [key: string]: string } = {
-      'United States': 'Our technicians operate during business hours (8AM-6PM EST). Response times are typically within 4 hours for metropolitan areas.',
-      'Canada': 'Our technicians operate during business hours (8AM-6PM EST). Response times are typically within 6 hours for major cities.',
-      'United Kingdom': 'Our technicians operate during business hours (8AM-6PM GMT). Response times are typically within 8 hours for London and major cities.',
-    };
-    return instructions[countryName] || `Our technicians operate during business hours. Response times vary by location.`;
-  };
-
-  const datacenters = ['Major Cities', 'Business Districts', 'Industrial Areas'];
-
-  return (
-    <div className="bg-gray-800 border border-gray-700 rounded-lg">
-      <div className="p-6">
-        <div className="flex items-center mb-4">
-          <Server className="mr-2 h-5 w-5 text-blue-400" />
-          <h3 className="text-xl font-semibold text-white">
-            IT Onsite Service in {country}
-          </h3>
-        </div>
-        
-        <p className="text-gray-300 mb-6">
-          Details about our service locations and capabilities in {country}
-        </p>
-        
-        <div className="space-y-6">
-          <div>
-            <h4 className="text-lg font-medium text-white mb-3 flex items-center">
-              <MapPin className="mr-2 h-4 w-4 text-purple-400" />
-              Service Locations
-            </h4>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-              {datacenters.map((dc, idx) => (
-                <div
-                  key={idx}
-                  className="bg-gray-700 p-2 rounded border border-gray-600 text-center text-gray-300"
-                >
-                  {dc}
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-medium text-white mb-3 flex items-center">
-              <Clock className="mr-2 h-4 w-4 text-purple-400" />
-              Service Instructions
-            </h4>
-            <p className="text-gray-300">
-              {getRegionalInstructions(country)}
-            </p>
-          </div>
-          
-          <div className="bg-gray-700 rounded-lg p-4 border border-gray-600">
-            <h4 className="text-lg font-medium text-white mb-3">
-              What's Included
-            </h4>
-            <ul className="list-disc list-inside text-gray-300 space-y-1">
-              <li>Transportation to your site</li>
-              <li>First hour of onsite technical support</li>
-              <li>Basic hardware diagnosis</li>
-              <li>Network connectivity troubleshooting</li>
-              <li>Equipment installation assistance</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="mt-6 pt-4 border-t border-gray-700">
-          <p className="text-sm text-gray-400">
-            For custom enterprise needs or multi-site services in {country},
-            please contact our enterprise team for tailored pricing.
+        <div className="prose prose-invert max-w-none">
+          <h3 className="text-xl font-semibold text-white mb-3">Service Overview</h3>
+          <p className="text-gray-300 mb-4">
+            Our professional IT technicians will come directly to your location in {country} 
+            to provide comprehensive IT support services. We handle everything from hardware 
+            installation to software configuration and troubleshooting.
           </p>
->>>>>>> origin/main
+          
+          <h4 className="text-lg font-medium text-white mb-2">What We Cover:</h4>
+          <ul className="list-disc list-inside text-gray-300 space-y-1 mb-4">
+            <li>Computer and server installation</li>
+            <li>Network setup and configuration</li>
+            <li>Software installation and updates</li>
+            <li>Hardware troubleshooting and repair</li>
+            <li>Data migration and backup</li>
+            <li>Security implementation</li>
+            <li>User training and documentation</li>
+          </ul>
+          
+          <h4 className="text-lg font-medium text-white mb-2">Service Benefits:</h4>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <li>Certified and experienced technicians</li>
+            <li>Same-day or next-day service availability</li>
+            <li>Comprehensive documentation and training</li>
+            <li>Follow-up support and maintenance</li>
+            <li>Transparent pricing with no hidden fees</li>
+          </ul>
         </div>
       </div>
     </div>
