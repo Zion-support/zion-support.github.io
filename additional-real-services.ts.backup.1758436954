@@ -1,4 +1,8 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+<<<<<<< HEAD:additional-real-services.ts
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-e331:data/additional-real-services.ts
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',

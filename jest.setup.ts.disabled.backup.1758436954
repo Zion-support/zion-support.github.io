@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+// Jest setup file for testing environment
+// Mock global objects that might not be available in test environment
+export {};
+=======
 import '@testing-library/jest-dom';
 
 // Jest setup file for testing environment
@@ -61,3 +66,4 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-e331

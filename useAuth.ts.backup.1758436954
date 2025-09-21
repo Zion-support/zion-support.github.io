@@ -1,4 +1,7 @@
+<<<<<<<< HEAD:useAuth.ts
+========
 import { useState, useEffect } from 'react';
+>>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-e331:hooks/useAuth.ts.disabled
 interface User {
   id: string;
   email: string;
@@ -49,7 +52,10 @@ export function useAuth() {
         loading: false,
         isAuthenticated: true
       });
+<<<<<<<< HEAD:useAuth.ts
+========
       
+>>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-e331:hooks/useAuth.ts.disabled
       return { success: true };
     } catch (error) {
       setAuthState(prev => ({ ...prev, loading: false }));
@@ -71,4 +77,10 @@ export function useAuth() {
     login,
     logout
   };
+<<<<<<<< HEAD:useAuth.ts
 }
+// useAuth hook module
+export {};
+========
+}
+>>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-e331:hooks/useAuth.ts.disabled

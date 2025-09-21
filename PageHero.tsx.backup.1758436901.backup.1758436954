@@ -1,7 +1,11 @@
 
 import React from "react";
+<<<<<<< HEAD:PageHero.tsx.backup.1758436901
+import { Clock,,, Map,,, DollarSign,,  } from 'lucide-react'
+=======
 import { Clock, Map, DollarSign } from 'lucide-react'
 import { GradientHeading } from '@/components/GradientHeading'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-e331:components/services/PageSections/PageHero.tsx
 export function PageHero() {
   return (
     <div className='text-center mb-12'>

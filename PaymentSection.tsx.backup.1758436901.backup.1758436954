@@ -1,4 +1,10 @@
+<<<<<<< HEAD:PaymentSection.tsx.backup.1758436901
+import { MapPin,,  } from 'lucide-react'
+import { PaymentButton,,  } from "@/components/transactions/PaymentButton",
+import React from "react";
+=======
 import { MapPin } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-e331:components/services/PaymentSection.tsx
 import React from "react";
 
 interface CountryPricing {
