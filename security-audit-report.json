@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-21T14:27:24.688Z",
+  "timestamp": "2025-09-21T14:40:22.032Z",
   "score": 25,
   "issues": [
     {
@@ -11,42 +11,42 @@
           "error": "Could not run npm audit"
         }
       ],
-      "timestamp": "2025-09-21T14:27:23.371Z"
+      "timestamp": "2025-09-21T14:40:20.978Z"
     },
     {
       "category": "environment",
       "severity": "high",
       "message": "Hardcoded secret in .env: NEXT_PUBLIC_SUPABASE_ANON_KEY",
       "details": [],
-      "timestamp": "2025-09-21T14:27:24.684Z"
+      "timestamp": "2025-09-21T14:40:22.029Z"
     },
     {
       "category": "permissions",
       "severity": "medium",
       "message": "File package.json has overly permissive permissions",
       "details": [],
-      "timestamp": "2025-09-21T14:27:24.684Z"
+      "timestamp": "2025-09-21T14:40:22.029Z"
     },
     {
       "category": "permissions",
       "severity": "medium",
       "message": "File package-lock.json has overly permissive permissions",
       "details": [],
-      "timestamp": "2025-09-21T14:27:24.685Z"
+      "timestamp": "2025-09-21T14:40:22.029Z"
     },
     {
       "category": "permissions",
       "severity": "medium",
       "message": "File .env has overly permissive permissions",
       "details": [],
-      "timestamp": "2025-09-21T14:27:24.685Z"
+      "timestamp": "2025-09-21T14:40:22.029Z"
     },
     {
       "category": "permissions",
       "severity": "medium",
       "message": "File .env.production has overly permissive permissions",
       "details": [],
-      "timestamp": "2025-09-21T14:27:24.685Z"
+      "timestamp": "2025-09-21T14:40:22.029Z"
     },
     {
       "category": "headers",
@@ -59,14 +59,14 @@
         "Strict-Transport-Security",
         "Content-Security-Policy"
       ],
-      "timestamp": "2025-09-21T14:27:24.685Z"
+      "timestamp": "2025-09-21T14:40:22.029Z"
     },
     {
       "category": "network",
       "severity": "medium",
       "message": "HTTPS enforcement not configured",
       "details": [],
-      "timestamp": "2025-09-21T14:27:24.688Z"
+      "timestamp": "2025-09-21T14:40:22.032Z"
     }
   ],
   "recommendations": [
