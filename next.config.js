@@ -57,12 +57,12 @@ const nextConfig = {
         fs: false,
         net: false,
         tls: false,
-        crypto: false,
+        crypto: require.resolve('crypto-browserify'),
+        stream: require.resolve('stream-browserify'),
+        buffer: require.resolve('buffer'),
+        process: require.resolve('process/browser'),
       };
     }
-    
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
     
     // Add path alias resolution
     config.resolve.alias = {
@@ -76,6 +76,28 @@ const nextConfig = {
       include: require('path').resolve(__dirname, 'contracts'),
       use: 'ignore-loader'
     });
+    
+    if (!dev && !isServer) {
+      // Optimize bundle size
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[/]node_modules[/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    
+    // Add globalThis polyfill
+    config.plugins = config.plugins || [];
+    config.plugins.push(
+      new (require('webpack')).DefinePlugin({
+        'globalThis': 'global',
+      })
+    );
     
     return config;
   },
