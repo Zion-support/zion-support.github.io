@@ -110,7 +110,11 @@
     "linting:start": "npm run linting:orchestrator continuous",
     "linting:status": "npm run linting:orchestrator status",
     "linting:check": "npm run linting:orchestrator check",
-    "linting:fix": "npm run linting:orchestrator fix"
+    "linting:fix": "npm run linting:orchestrator fix",
+    "perf:improve": "node scripts/performance-improvements.js",
+    "perf:analyze": "npm run build && npm run build:analyze",
+    "perf:audit": "npm run security:audit && npm run optimize",
+    "perf:full": "npm run perf:improve && npm run perf:analyze && npm run perf:audit"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -142,9 +146,9 @@
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
-    "react": "^17.0.2",
+    "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.3.1",
     "uuid": "^11.1.0"
   },
   "devDependencies": {

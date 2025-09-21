@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --legacy-peer-deps && NODE_OPTIONS='--openssl-legacy-provider' npm run build && node generate-static.js"
+  command = "npm install --legacy-peer-deps && npx vite build && node generate-static.js"
   publish = "out"
 
 [build.processing]
@@ -20,39 +20,18 @@
   compress = true
 
 [build.environment]
-  NODE_VERSION = "22.16.0"
-  NPM_FLAGS = "--legacy-peer-deps"
-  NODE_OPTIONS = "--openssl-legacy-provider"
+  NODE_VERSION = "20.18.1"
 
 # Performance optimizations
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-lighthouse"
 
 # Image optimization
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
-# Cache optimization - moved to _headers file for static export compatibility
-# [[headers]]
-#   for = "/*"
-#   [headers.values]
-#     Cache-Control = "public, max-age=31536000, immutable"
-
-# [[headers]]
-#   for = "/_next/static/*"
-#   [headers.values]
-#     Cache-Control = "public, max-age=31536000, immutable"
-
-# Security headers - moved to _headers file for static export compatibility
-# [[headers]]
-#   for = "/*"
-#   [headers.values]
-#     X-Frame-Options = "DENY"
-#     X-Content-Type-Options = "nosniff"
-#     Referrer-Policy = "origin-when-cross-origin"
-#     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-# Redirects are now handled by _redirects file
-
-[functions]
-  node_bundler = "esbuild" 
+# Redirects for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

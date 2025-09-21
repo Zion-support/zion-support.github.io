@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -25,7 +25,6 @@ const nextConfig = {
     optimizeCss: false,
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'react', 'react-dom'],
-    esmExternals: false,
   },
   
   // Compiler optimizations
@@ -54,11 +53,11 @@ const nextConfig = {
         net: false,
         tls: false,
         path: false,
-        crypto: require.resolve('crypto-browserify'),
-        stream: require.resolve('stream-browserify'),
+        crypto: 'crypto-browserify',
+        stream: 'stream-browserify',
         util: false,
-        buffer: require.resolve('buffer'),
-        process: require.resolve('process/browser'),
+        buffer: 'buffer',
+        process: 'process/browser',
       };
     }
     
@@ -66,4 +65,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
