@@ -1,8 +1,19 @@
 import React from 'react';
-import { useTheme } from './ThemeProvider';
+import { useTheme } from '../components/ThemeProvider';
 
 export const ThemeToggle = () => {
-  const { theme, toggleTheme } = useTheme();
+  // Handle case when ThemeProvider is not available (SSR/SSG)
+  let theme = 'dark';
+  let toggleTheme = () => {};
+  
+  try {
+    const themeContext = useTheme();
+    theme = themeContext.theme;
+    toggleTheme = themeContext.toggleTheme;
+  } catch (error) {
+    // Fallback for SSR/SSG when ThemeProvider is not available
+    console.warn('ThemeToggle used outside ThemeProvider, using fallback');
+  }
 
   return (
     <button
