@@ -35,8 +35,7 @@ const nextConfig = {
     scrollRestoration: true,
   },
   
-  // Typed routes configuration
-  typedRoutes: false,
+  // Typed routes configuration removed - not supported in this Next.js version
   
   // Webpack configuration
   webpack: (config, { dev, isServer }) => {
@@ -89,32 +88,8 @@ const nextConfig = {
     return config;
   },
   
-  // Headers for better security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-    ];
-  },
+  // Headers removed - not compatible with static export
+  // Headers will be handled by Netlify configuration instead
 };
 
 module.exports = nextConfig;
