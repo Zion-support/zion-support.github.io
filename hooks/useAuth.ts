@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface User {
@@ -72,3 +73,7 @@ export function useAuth() {
     logout
   };
 }
+=======
+// useAuth hook module
+export {};
+>>>>>>> pr-22753

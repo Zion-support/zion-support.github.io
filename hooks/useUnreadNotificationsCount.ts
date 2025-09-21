@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export function useUnreadNotificationsCount() {
@@ -22,3 +23,7 @@ export function useUnreadNotificationsCount() {
 
   return unreadCount;
 }
+=======
+// useUnreadNotificationsCount hook module
+export {};
+>>>>>>> pr-22753

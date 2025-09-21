@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Simple performance monitor hook
 export function usePerformanceMonitor() {
   return {
@@ -47,3 +48,7 @@ export function usePerformanceMonitor() {
   return metrics;
 }
 >>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
+=======
+// usePerformanceMonitor hook module
+export {};
+>>>>>>> pr-22753

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Empty module to satisfy TypeScript isolatedModules requirement
 export {};
 =======
@@ -31,3 +32,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T)
   return [storedValue, setValue];
 }
 >>>>>>> 82689a4cb07645633bb2f61079b0d20275046e16
+=======
+// useLocalStorage hook module
+export {};
+>>>>>>> pr-22753

@@ -23,11 +23,15 @@
       }
     ],
     "strictNullChecks": true,
+<<<<<<< HEAD
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
+=======
+    "forceConsistentCasingInFileNames": true
+>>>>>>> pr-22753
   },
   "include": [
     "**/*.ts",
