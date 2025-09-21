@@ -13,8 +13,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import FAQSection from '../components/FAQSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
-import { CookieConsent } from '../components/CookieConsent';
-import { NotificationSystem } from '../components/NotificationSystem';
+import CookieConsent from '../components/CookieConsent';
+import { NotificationProvider } from '../components/NotificationSystem';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
