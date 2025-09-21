@@ -16,6 +16,6 @@ export const aiAutonomousEcosystem2029: AIAutonomousEcosystem2029[] = [
     name: 'AI Autonomous Ecosystem 2029 1',
     tagline: 'AI autonomous ecosystem 2029',
     price: '$1599',
-    features: ['AI autonomous features', '2029 ecosystem', 'Advanced AI solutions']
-  }
+    features: ['AI autonomous features', '2029 ecosystem', 'Advanced AI solutions'],
+  },
 ];

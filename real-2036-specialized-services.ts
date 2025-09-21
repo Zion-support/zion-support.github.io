@@ -15,8 +15,8 @@ export type Real2036SpecializedService = {
   competitiveAdvantage?: string,
   integration?: string[],
   useCases?: string[],
-  technology?: string[]
-},
+  technology?: string[],
+}
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
   {
@@ -41,7 +41,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: 'Brain-inspired architecture, Ultra-efficiency, Real-time learning',
     integration: ['AI frameworksEdge devices', 'IoT platformsCloud services'],
     useCases: ['Edge AI processingAutonomous systems', 'Cognitive computingEnergy-efficient AI'],
-    technology: ['Neuromorphic chipsSpiking neural networks', 'Analog computingBio-inspired algorithms']
+    technology: ['Neuromorphic chipsSpiking neural networks', 'Analog computingBio-inspired algorithms'],
   },
   // Synthetic Biology Platform
   {
@@ -66,7 +66,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: 'AI integration, Automated protocols, Safety focus',
     integration: ['Lab automation systemsDNA synthesis platforms', 'Sequencing servicesCloud platforms'],
     useCases: ['Drug discoveryBiofuel production', 'Environmental remediationAgricultural optimization'],
-    technology: ['CRISPRGene editing', 'DNA synthesisBioinformatics']
+    technology: ['CRISPRGene editing', 'DNA synthesisBioinformatics'],
   },
   // Quantum Internet Protocol Suite
   {
@@ -91,7 +91,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: 'Quantum protocols, Interoperability, Security focus',
     integration: ['Quantum networksInternet infrastructure', 'Security systemsCloud platforms'],
     useCases: ['Quantum networksSecure communications', 'Internet infrastructureGovernment networks'],
-    technology: ['Quantum protocolsNetwork standards', 'Security frameworksInteroperability']
+    technology: ['Quantum protocolsNetwork standards', 'Security frameworksInteroperability'],
   },
   // Brain-Computer Interface Platform
   {
@@ -116,7 +116,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: 'Direct neural interface, Real-time processing, Safety focus',
     integration: ['Medical devicesAccessibility tools', 'Gaming platformsResearch systems'],
     useCases: ['Assistive technologyMedical research', 'Gaming and entertainmentHuman augmentation'],
-    technology: ['EEGNeural implants', 'Signal processingMachine learning']
+    technology: ['EEGNeural implants', 'Signal processingMachine learning'],
   },
   // Metaverse Development Studio Pro
   {
@@ -141,7 +141,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: '3D tools, AI integration, Blockchain support',
     integration: ['VR headsetsAR devices', 'Blockchain platforms3D engines'],
     useCases: ['Virtual worldsDigital real estate', 'Educational experiencesSocial platforms'],
-    technology: ['3D graphicsVirtual reality', 'Augmented realityBlockchain']
+    technology: ['3D graphicsVirtual reality', 'Augmented realityBlockchain'],
   },
   // Autonomous Vehicle AI Platform
   {
@@ -166,7 +166,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: 'Advanced AI, Safety focus, Real-time processing',
     integration: ['Vehicle systemsSensor arrays', 'Navigation systemsCloud platforms'],
     useCases: ['Self-driving carsAutonomous trucks', 'Delivery robotsPublic transportation'],
-    technology: ['Computer visionMachine learning', 'Sensor fusionControl systems']
+    technology: ['Computer visionMachine learning', 'Sensor fusionControl systems'],
   },
   // Quantum Materials Discovery Platform
   {
@@ -191,7 +191,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: 'Quantum simulation, AI discovery, Custom design',
     integration: ['Quantum computersAI platforms', 'Lab systemsResearch databases'],
     useCases: ['New materialsEnergy storage', 'ElectronicsManufacturing'],
-    technology: ['Quantum computingMachine learning', 'Materials scienceSimulation']
+    technology: ['Quantum computingMachine learning', 'Materials scienceSimulation'],
   },
   // AI-Powered Climate Modeling Platform
   {
@@ -216,7 +216,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: 'AI modeling, Real-time analysis, Predictive capabilities',
     integration: ['Climate sensorsSatellite data', 'Weather servicesResearch databases'],
     useCases: ['Climate predictionPolicy planning', 'Environmental researchRisk assessment'],
-    technology: ['Machine learningClimate models', 'Data analysisSimulation']
+    technology: ['Machine learningClimate models', 'Data analysisSimulation'],
   },
   // Quantum Neural Network Platform
   {
@@ -241,7 +241,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: 'Quantum enhancement, Advanced AI, Performance optimization',
     integration: ['Quantum computersAI frameworks', 'Cloud platformsResearch tools'],
     useCases: ['Advanced AIResearch applications', 'Commercial AIScientific computing'],
-    technology: ['Quantum computingNeural networks', 'Machine learningOptimization']
+    technology: ['Quantum computingNeural networks', 'Machine learningOptimization'],
   },
   // Space Tourism Platform
   {
@@ -266,6 +266,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management',
     integration: ['Spacecraft systemsTraining facilities', 'Booking systemsSafety systems'],
     useCases: ['Space tourismTraining programs', 'Safety managementCustomer experience'],
-    technology: ['Space systemsSafety protocols', 'Training technologyCustomer management']
-  }
+    technology: ['Space systemsSafety protocols', 'Training technologyCustomer management'],
+  },
 ],

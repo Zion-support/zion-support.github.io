@@ -79,7 +79,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade quantum computing platform with access to multiple quantum processors and comprehensive development tools.',
     launchDate: '2024-10-15',
@@ -126,7 +126,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade blockchain infrastructure platform with multi-chain support and comprehensive development tools.',
     launchDate: '2024-11-01',
@@ -173,7 +173,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Comprehensive edge computing orchestration platform with intelligent resource management and real-time processing capabilities.',
     launchDate: '2024-11-20',
@@ -220,7 +220,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Comprehensive metaverse development platform with integrated tools for creating immersive virtual experiences.',
     launchDate: '2024-12-01',
@@ -267,12 +267,12 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade space technology platform with comprehensive satellite management and space data analytics capabilities.',
     launchDate: '2024-10-01',
     customers: 34,
     rating: 4.9,
     reviews: 23
-  }
+  },
 ],

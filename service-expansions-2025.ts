@@ -36,5 +36,5 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
+  },
 ],

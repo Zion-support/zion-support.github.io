@@ -273,5 +273,5 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     customers: 123,
     rating: 4.6,
     reviews: 89
-  }
+  },
 ];

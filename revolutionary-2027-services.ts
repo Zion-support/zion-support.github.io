@@ -36,5 +36,5 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
+  },
 ],

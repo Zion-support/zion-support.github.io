@@ -322,5 +322,5 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 18,
     rating: 4.7,
     reviews: 35
-  }
+  },
 ];

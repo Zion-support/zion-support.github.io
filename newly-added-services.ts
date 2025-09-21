@@ -4,7 +4,7 @@ const contact = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+}
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'managed-ml-feature-store-starter',
@@ -707,7 +707,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 45,
     rating: 4.7,
     reviews: 19
-  }
+  },
   ,
   {
     id: 'finops-cost-anomaly-guard',
@@ -1761,5 +1761,5 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 10,
     rating: 4.6,
     reviews: 5
-  }
+  },
 ],

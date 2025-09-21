@@ -1,13 +1,8 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const path = require('path');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
   
@@ -18,10 +13,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  swcMinify: false,
-  experimental: {
-    esmExternals: false,
-  },
+  // Removed deprecated swcMinify option (defaults to true in Next.js 15+)
+  // Removed experimental.esmExternals (not recommended)
   
   // Webpack configuration
   webpack: (config, { isServer }) => {
@@ -39,46 +32,27 @@ const nextConfig = {
       };
     }
     
+    // globalThis polyfill is imported at the top level
+    
+    // Disable PostCSS processing temporarily
+    config.module.rules.forEach((rule) => {
+      if (rule.test && rule.test.toString().includes('css')) {
+        rule.use = rule.use || [];
+        rule.use = rule.use.map((use) => {
+          if (typeof use === 'string' && use.includes('postcss')) {
+            return 'css-loader';
+          }
+          return use;
+        });
+      }
+    });
+    
     return config;
   },
   
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
-  },
-  
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
-  
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ]
-  },
-  
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
   },
 };
 

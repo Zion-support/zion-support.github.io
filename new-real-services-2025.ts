@@ -4,7 +4,7 @@ const contact = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+}
 export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'agent-ops-monitor',
@@ -45,7 +45,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 23,
 		rating: 4.7,
 		reviews: 12
-	},
+	}
 	{
 		id: 'pii-privacy-scanner',
 		name: 'Data Lake PII & Privacy Scanner',
@@ -85,7 +85,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 11,
 		rating: 4.6,
 		reviews: 8
-	},
+	}
 	{
 		id: 'vector-db-benchmark',
 		name: 'Vector DB Benchmark & Tuning',
@@ -125,7 +125,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 15,
 		rating: 4.7,
 		reviews: 9
-	},
+	}
 	{
 		id: 'llm-prompt-safety-scanner',
 		name: 'LLM Prompt Safety Scanner',
@@ -165,7 +165,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 9,
 		rating: 4.5,
 		reviews: 6
-	},
+	}
 	{
 		id: 'rfp-auto-responder',
 		name: 'RFP Auto-Responder',
@@ -205,7 +205,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 14,
 		rating: 4.6,
 		reviews: 7
-	},
+	}
 	{
 		id: 'ai-red-team-simulator',
 		name: 'AI Red Team Simulator',
@@ -245,7 +245,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 6,
 		rating: 4.5,
 		reviews: 4
-	},
+	}
 	{
 		id: 'speech-analytics-center',
 		name: 'Contact Center Speech Analytics',
@@ -285,7 +285,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 8,
 		rating: 4.6,
 		reviews: 5
-	},
+	}
 	{
 		id: 'synthetic-data-studio',
 		name: 'Synthetic Data Studio',
@@ -325,7 +325,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 5,
 		rating: 4.5,
 		reviews: 4
-	},
+	}
 	{
 		id: 'feature-store-starter',
 		name: 'Feature Store Starter',
@@ -365,7 +365,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 4,
 		rating: 4.4,
 		reviews: 3
-	},
+	}
 	{
 		id: 'model-registry-lite',
 		name: 'Model Registry Lite',
@@ -405,7 +405,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 7,
 		rating: 4.5,
 		reviews: 4
-	},
+	}
 	{
 		id: 'data-quality-monitoring',
 		name: 'Data Quality Monitoring',
@@ -445,7 +445,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 10,
 		rating: 4.6,
 		reviews: 6
-	},
+	}
 	{
 		id: 'privacy-request-automation',
 		name: 'Privacy Request Automation',
@@ -485,7 +485,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 6,
 		rating: 4.5,
 		reviews: 4
-	},
+	}
 	{
 		id: 'customer-360-cdp-starter',
 		name: 'Customer 360 CDP Starter',
@@ -525,7 +525,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		customers: 5,
 		rating: 4.5,
 		reviews: 3
-	},
+	}
 	{
 		id: 'ab-testing-lab',
 		name: 'A/B Testing Lab',

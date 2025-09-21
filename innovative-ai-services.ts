@@ -84,7 +84,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI platform with real-time neural processing, secure quantum encryption, and comprehensive research tools. Includes mobile app, web dashboard, and API access.',
     launchDate: '2024-03-01',
@@ -137,7 +137,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Enterprise-grade space mission management platform with real-time satellite tracking, mission planning tools, and comprehensive analytics. Includes mobile apps, web dashboard, and API access.',
     launchDate: '2024-02-15',
@@ -190,7 +190,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Comprehensive biotech AI platform with advanced drug discovery algorithms, genetic analysis tools, and clinical trial optimization. Includes research collaboration tools and regulatory compliance features.',
     launchDate: '2024-01-20',
@@ -243,7 +243,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI trading platform with nanosecond execution speed, comprehensive risk management, and portfolio optimization tools. Includes real-time analytics and regulatory compliance features.',
     launchDate: '2024-02-01',
@@ -296,7 +296,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Comprehensive autonomous vehicle AI platform with computer vision, sensor fusion, path planning, and safety protocols. Includes simulation environment and fleet management tools.',
     launchDate: '2024-01-10',
@@ -349,7 +349,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum-resistant cybersecurity platform with post-quantum cryptography, AI-powered threat detection, and automated incident response. Includes compliance automation and security analytics.',
     launchDate: '2024-02-20',
@@ -402,7 +402,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered metaverse development platform with 3D world generation, intelligent NPCs, and virtual economy systems. Includes VR/AR support and cross-platform compatibility.',
     launchDate: '2024-01-25',
@@ -455,12 +455,12 @@ export const innovativeAIServices: InnovativeAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum internet security platform with quantum key distribution, quantum-resistant protocols, and quantum network monitoring. Includes compliance automation and security analytics.',
     launchDate: '2024-03-05',
     customers: 65,
     rating: 4.9,
     reviews: 145
-  }
+  },
 ];

@@ -36,5 +36,5 @@ export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
+  },
 ],

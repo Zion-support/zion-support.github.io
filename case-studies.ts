@@ -19,6 +19,6 @@ export const CASE_STUDIES: CaseStudy[] = [
       '50% reduction in support tickets',
       '24/7 customer support',
       '95% customer satisfaction'
-    ]
-  }
+    ],
+  },
 ];

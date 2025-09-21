@@ -118,13 +118,13 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
       'Ensure compliance standardsProtect critical assets'
     ],
     launchDate: '2025-01-05'
-  }
+  },
 ],
 
 export const getServicesByCategory = (category: string) => {
   if (category === 'all') return INNOVATIVE_SERVICES_2025,
   return INNOVATIVE_SERVICES_2025.filter(service => service.category === category)
-},
+}
 
 export const getServicesByPriceRange = (priceRange: string) => {
   if (priceRange === 'all') return INNOVATIVE_SERVICES_2025,
@@ -132,12 +132,12 @@ export const getServicesByPriceRange = (priceRange: string) => {
   const [min, max] = priceRange.split('-').map(Number),
   if (priceRange === '3000+') {
     return INNOVATIVE_SERVICES_2025.filter(service => service.price >= 3000),
-  }
+  },
   return INNOVATIVE_SERVICES_2025.filter(service => service.price >= min && service.price <= max),
-},
+}
 
 export const getTopRatedServices = (limit: number = 5) => {
-  return [...INNOVATIVE_SERVICES_2025]
+  return [...INNOVATIVE_SERVICES_2025],
     .sort((a, b) => b.rating - a.rating)
     .slice(0, limit),
-},
+}

@@ -36,5 +36,5 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
+  },
 ],

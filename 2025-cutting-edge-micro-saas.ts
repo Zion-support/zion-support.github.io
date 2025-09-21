@@ -15,25 +15,25 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 199, 
         period: 'month', 
         features: ['Up to 1,000 customersBasic AI features', 'Email support'] 
-      },
+      }
       professional: { 
         price: 499, 
         period: 'month', 
         features: ['Up to 10,000 customersAdvanced AI features', 'Priority supportCustom workflows'] 
-      },
+      }
       enterprise: { 
         price: 1299, 
         period: 'month', 
         features: ['Unlimited customersFull AI platform', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'Customer Success',
     tags: ['Customer SuccessAI', 'Churn PredictionEngagement', 'Analytics'],
     website: 'https://ziontechgroup.com/customer-success-ai-pro',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$11.8B',
     targetAudience: 'SaaS companies, subscription businesses, customer success teams, growth companies',
     competitiveAdvantage: 'AI-powered churn prediction, personalized engagement, predictive analytics',
@@ -43,7 +43,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Customer lifetime value optimization'
     ],
     integrations: ['SalesforceHubSpot', 'IntercomZendesk', 'SlackMicrosoft Teams'],
-    compliance: ['GDPRCCPA', 'SOC2Data Privacy Standards']
+    compliance: ['GDPRCCPA', 'SOC2Data Privacy Standards'],
   },
   {
     id: 'quantum-supply-chain-optimizer',
@@ -61,25 +61,25 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 299, 
         period: 'month', 
         features: ['Basic optimization featuresStandard analytics', 'Email support'] 
-      },
+      }
       professional: { 
         price: 799, 
         period: 'month', 
         features: ['Advanced optimizationQuantum algorithms', 'Priority supportCustom modeling'] 
-      },
+      }
       enterprise: { 
         price: 1999, 
         period: 'month', 
         features: ['Full quantum platformCustom algorithms', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'Supply Chain',
     tags: ['Supply ChainQuantum Computing', 'LogisticsOptimization', 'Analytics'],
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$15.4B',
     targetAudience: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks',
     competitiveAdvantage: 'Quantum-enhanced optimization, real-time monitoring, predictive analytics',
@@ -89,7 +89,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk management and mitigation'
     ],
     integrations: ['ERP SystemsWMS Platforms', 'TMS SolutionsE-commerce Platforms', 'Analytics Tools'],
-    compliance: ['Supply Chain StandardsLogistics Regulations', 'Data Privacy Laws']
+    compliance: ['Supply Chain StandardsLogistics Regulations', 'Data Privacy Laws'],
   },
   {
     id: 'blockid-verify-pro',
@@ -107,25 +107,25 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 149, 
         period: 'month', 
         features: ['Up to 1,000 verificationsBasic verification features', 'Email support'] 
-      },
+      }
       professional: { 
         price: 399, 
         period: 'month', 
         features: ['Up to 10,000 verificationsAdvanced verification features', 'Priority supportCustom workflows'] 
-      },
+      }
       enterprise: { 
         price: 999, 
         period: 'month', 
         features: ['Unlimited verificationsFull verification platform', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'Identity Verification',
     tags: ['Identity VerificationBlockchain', 'BiometricsSecurity', 'Compliance'],
     website: 'https://ziontechgroup.com/blockid-verify-pro',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$13.7B',
     targetAudience: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups',
     competitiveAdvantage: 'Blockchain-based verification, biometric authentication, global compliance',
@@ -135,7 +135,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial services compliance'
     ],
     integrations: ['CRM SystemsBanking Platforms', 'Healthcare SystemsE-commerce Platforms', 'Government APIs'],
-    compliance: ['KYC/AMLGDPR', 'CCPASOC2', 'Global Identity Standards']
+    compliance: ['KYC/AMLGDPR', 'CCPASOC2', 'Global Identity Standards'],
   },
   {
     id: 'hr-analytics-ai-suite',
@@ -153,25 +153,25 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 249, 
         period: 'month', 
         features: ['Up to 500 employeesBasic analytics features', 'Email support'] 
-      },
+      }
       professional: { 
         price: 649, 
         period: 'month', 
         features: ['Up to 5,000 employeesAdvanced analytics features', 'Priority supportCustom reporting'] 
-      },
+      }
       enterprise: { 
         price: 1699, 
         period: 'month', 
         features: ['Unlimited employeesFull analytics platform', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'HR Analytics',
     tags: ['HR AnalyticsAI', 'Performance ManagementEmployee Engagement', 'Predictive Analytics'],
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$9.8B',
     targetAudience: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies',
     competitiveAdvantage: 'AI-powered HR analytics, predictive modeling, comprehensive insights',
@@ -181,7 +181,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Organizational effectiveness analysis'
     ],
     integrations: ['WorkdayBambooHR', 'ADPSuccessFactors', 'SlackMicrosoft Teams'],
-    compliance: ['HR Data PrivacyEmployment Laws', 'Data Protection Regulations']
+    compliance: ['HR Data PrivacyEmployment Laws', 'Data Protection Regulations'],
   },
   {
     id: 'quantum-risk-financial-manager',
@@ -199,25 +199,25 @@ export const cuttingEdgeMicroSaasServices2025 = [
         price: 399, 
         period: 'month', 
         features: ['Basic risk managementStandard analytics', 'Email support'] 
-      },
+      }
       professional: { 
         price: 999, 
         period: 'month', 
         features: ['Advanced risk managementQuantum algorithms', 'Priority supportCustom models'] 
-      },
+      }
       enterprise: { 
         price: 2499, 
         period: 'month', 
         features: ['Full risk management platformCustom algorithms', 'Dedicated specialists24/7 support'] 
       }
-    },
+    }
     category: 'Financial Risk Management',
     tags: ['Risk ManagementQuantum Computing', 'Financial AnalyticsPortfolio Optimization', 'Compliance'],
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
+    }
     marketSize: '$28.9B',
     targetAudience: 'Investment firms, banks, hedge funds, asset management companies, financial institutions',
     competitiveAdvantage: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics',
@@ -227,6 +227,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Performance analysis and attribution'
     ],
     integrations: ['Bloomberg TerminalReuters Eikon', 'Trading PlatformsRisk Management Systems', 'Financial Data Providers'],
-    compliance: ['Basel IIISolvency II', 'Dodd-FrankFinancial Regulations', 'Risk Management Standards']
-  }
+    compliance: ['Basel IIISolvency II', 'Dodd-FrankFinancial Regulations', 'Risk Management Standards'],
+  },
 ],

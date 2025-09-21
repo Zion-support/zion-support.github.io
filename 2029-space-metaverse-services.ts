@@ -255,5 +255,5 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  },
 ],

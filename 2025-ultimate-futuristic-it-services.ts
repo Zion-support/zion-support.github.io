@@ -79,7 +79,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Quantum-secured zero-trust platform with advanced threat detection, behavioral analytics, and automated incident response.',
     launchDate: '2024-12-01',
@@ -126,7 +126,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Autonomous DevOps platform with AI-powered automation, self-healing systems, and predictive maintenance capabilities.',
     launchDate: '2024-11-01',
@@ -173,7 +173,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Quantum-enhanced cloud infrastructure with quantum processing, quantum networking, and quantum-secured storage.',
     launchDate: '2024-10-01',
@@ -220,7 +220,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI-powered IT asset management platform with automatic discovery, classification, and optimization capabilities.',
     launchDate: '2024-09-01',
@@ -267,7 +267,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Autonomous network management platform with AI-powered monitoring, optimization, and self-healing capabilities.',
     launchDate: '2024-08-01',
@@ -314,7 +314,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Quantum-secured data center platform with quantum encryption, zero-trust security, and high-performance computing capabilities.',
     launchDate: '2024-07-01',
@@ -361,7 +361,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'AI-powered IT service desk with automated ticket resolution, intelligent routing, and predictive problem prevention.',
     launchDate: '2024-06-01',
@@ -408,7 +408,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Quantum-enhanced backup and recovery platform with quantum encryption, zero-knowledge security, and instant recovery capabilities.',
     launchDate: '2024-05-01',
@@ -455,12 +455,12 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Autonomous compliance platform with AI-powered monitoring, automated reporting, and regulatory intelligence.',
     launchDate: '2024-04-01',
     customers: 19,
     rating: 4.7,
     reviews: 10
-  }
+  },
 ],

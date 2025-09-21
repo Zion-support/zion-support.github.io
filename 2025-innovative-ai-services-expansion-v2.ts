@@ -41,7 +41,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Consciousness algorithms, emotional intelligence, cognitive evolution, ethical decision making.',
     launchDate: '2025-01-05',
@@ -92,7 +92,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Quantum neural networks, consciousness integration, superintelligent learning, quantum optimization.',
     launchDate: '2025-01-15',
@@ -143,7 +143,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Autonomous research, hypothesis generation, experimental design, scientific discovery.',
     launchDate: '2025-02-01',
@@ -194,7 +194,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Emotional understanding, empathy development, social intelligence, therapeutic applications.',
     launchDate: '2025-01-20',
@@ -245,7 +245,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Quantum metaverse creation, AI consciousness integration, immersive experiences, quantum rendering.',
     launchDate: '2025-02-10',
@@ -296,7 +296,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Autonomous analysis, strategic decision making, business insights, predictive analytics.',
     launchDate: '2025-01-30',
@@ -316,7 +316,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       currency: 'USD',
       trialDays: 30,
       setupTime: '2-3 weeks'
-    },
+    }
     features: [
       'AI-powered failure prediction',
       'Real-time equipment monitoring',
@@ -380,7 +380,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       currency: 'USD',
       trialDays: 21,
       setupTime: '1-2 weeks'
-    },
+    }
     features: [
       'AI-powered threat detection',
       'Behavioral analysis',
@@ -444,7 +444,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       currency: 'USD',
       trialDays: 21,
       setupTime: '3-5 days'
-    },
+    }
     features: [
       'AI-powered chatbots',
       'Natural language processing',
@@ -508,7 +508,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       currency: 'USD',
       trialDays: 21,
       setupTime: '3-5 days'
-    },
+    }
     features: [
       'AI-powered lead scoring',
       'Prospect identification',
@@ -572,7 +572,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       currency: 'USD',
       trialDays: 21,
       setupTime: '3-5 days'
-    },
+    }
     features: [
       'AI-powered campaign optimization',
       'Personalized content delivery',
@@ -636,7 +636,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       currency: 'USD',
       trialDays: 21,
       setupTime: '1-2 weeks'
-    },
+    }
     features: [
       'AI-powered data analysis',
       'Predictive analytics',
@@ -700,7 +700,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       currency: 'USD',
       trialDays: 30,
       setupTime: '2-3 weeks'
-    },
+    }
     features: [
       'AI-powered image analysis',
       'Disease detection',
@@ -764,7 +764,7 @@ export const innovativeAIServices2025ExpansionV2 = [
       currency: 'USD',
       trialDays: 21,
       setupTime: '1-2 weeks'
-    },
+    }
     features: [
       'AI-powered document analysis',
       'Contract review automation',
@@ -815,5 +815,5 @@ export const innovativeAIServices2025ExpansionV2 = [
     customers: 480,
         rating: 4.8,
     reviews: 67
-  }
+  },
 ];

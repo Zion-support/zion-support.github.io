@@ -47,7 +47,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+}
 
 export const ultimateInnovativeServices2025: UltimateInnovativeService[] = [
   // REVOLUTIONARY AI & AUTONOMOUS SYSTEMS
@@ -508,7 +508,7 @@ export const ultimateInnovativeServices2025: UltimateInnovativeService[] = [
     patentStatus: 'Trade Secret',
     aiCapabilities: ['Personalized RecommendationsDynamic Pricing', 'Customer Behavior AnalysisSales Forecasting'],
     marketDisruption: 'Revolutionizes retail with AI personalization'
-  }
+  },
 ],
 
 export default ultimateInnovativeServices2025,

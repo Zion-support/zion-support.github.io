@@ -77,7 +77,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional quantum BCI platform with FDA approval pathway, quantum encryption, real-time neural processing, and comprehensive research tools.',
     launchDate: '2024-06-01',
@@ -123,7 +123,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully autonomous AI platform with SEC compliance, real-time market analysis, automated investment execution, and comprehensive reporting.',
     launchDate: '2024-05-15',
@@ -169,7 +169,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional quantum AI platform with FDA collaboration, real-time molecular simulation, automated drug screening, and comprehensive research tools.',
     launchDate: '2024-04-01',
@@ -215,7 +215,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully autonomous space mission control platform with regulatory compliance, real-time mission management, automated operations, and comprehensive analytics.',
     launchDate: '2024-03-15',
@@ -261,7 +261,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully functional quantum cybersecurity platform with regulatory compliance, real-time threat detection, automated response, and comprehensive security analytics.',
     launchDate: '2024-02-01',
@@ -307,12 +307,12 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Fully autonomous logistics platform with real-time optimization, automated decision making, comprehensive analytics, and regulatory compliance.',
     launchDate: '2024-01-15',
     customers: 180,
     rating: 4.8,
     reviews: 298
-  }
+  },
 ],

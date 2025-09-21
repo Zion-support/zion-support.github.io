@@ -86,7 +86,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Full-stack AI content intelligence platform with real-time analytics, predictive modeling, and automated optimization.',
     launchDate: '2025-01-15',
@@ -139,7 +139,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete quantum-secure communication infrastructure with QKD, quantum networks, and post-quantum cryptography.',
     launchDate: '2025-02-01',
@@ -192,7 +192,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete autonomous AI operations center with self-managing infrastructure, predictive analytics, and automated optimization.',
     launchDate: '2025-01-20',
@@ -245,7 +245,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete blockchain supply chain platform with AI intelligence, IoT integration, and comprehensive tracking capabilities.',
     launchDate: '2025-02-15',
@@ -298,7 +298,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete metaverse development platform with 3D tools, AI content generation, and VR/AR integration.',
     launchDate: '2025-01-30',
@@ -351,7 +351,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete quantum financial trading platform with quantum computing integration, AI algorithms, and comprehensive trading tools.',
     launchDate: '2025-02-10',
@@ -404,7 +404,7 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete AI healthcare diagnostics platform with medical imaging analysis, diagnosis generation, and treatment recommendations.',
     launchDate: '2025-01-25',
@@ -457,12 +457,12 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete edge computing orchestration platform with distributed management, IoT integration, and AI-powered optimization.',
     launchDate: '2025-02-05',
     customers: 38,
     rating: 4.8,
     reviews: 20
-  }
+  },
 ];

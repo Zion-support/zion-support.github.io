@@ -1,33 +1,37 @@
-import { MapPin,,  } from 'lucide-react'
-import { PaymentButton,,  } from "@/components/transactions/PaymentButton",
+import { MapPin } from 'lucide-react';
 import React from "react";
-import React from "react";
+
+interface CountryPricing {
+  name: string;
+  code: string;
+  currency: string;
+  multiplier: number;
+}
+
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
+}
+
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
-  // Handle successful payment,
-return (
+  return (
     <div className='text-center'>
-      <p className='text-zion-slate-light mb-2'>Selected Country</p>
+      <p className='text-gray-300 mb-2'>Selected Country</p>
       <h4 className='text-xl font-bold text-white mb-2 flex items-center justify-center'>
-        <MapPin className='mr-2 h-5 w-5 text-zion-purple' />
-        {selectedCountry.country}
+        <MapPin className='mr-2 h-5 w-5 text-purple-400' />
+        {selectedCountry.name}
       </h4>
-      <p className='text-2xl font-bold text-zion-cyan mb-6'>
-        ${selectedCountry.pricePerIncident.toFixed(2)}
-      </p>
-      <PaymentButton
-amount={selectedCountry.pricePerIncident}
-        serviceId='it-onsite-service'
-        providerId='zion-tech-group'
-        buttonText={`Pay for Service in ${selectedCountry.country}`}
-        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6'
-        redirectUrl='/it-onsite-services?success=true'
-        onPaymentInitiated={handlePaymentInitiated}      />
-      <p className='text-xs text-zion-slate-light mt-2'>
-        Price includes transportation and first hour onsite. Additional hours,
-billed separately.
-      </p>
+      <div className='bg-blue-900/50 border border-blue-700 rounded-lg p-6 mb-6'>
+        <p className='text-gray-300 mb-2'>Service Fee</p>
+        <p className='text-3xl font-bold text-cyan-400'>
+          ${(150 * selectedCountry.multiplier).toFixed(2)} {selectedCountry.currency}
+        </p>
+        <p className='text-sm text-gray-400 mt-2'>
+          Per incident • Transportation included
+        </p>
+      </div>
+      <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105'>
+        Proceed to Payment
+      </button>
     </div>
-  )
-}"}
+  );
+}

@@ -78,7 +78,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete enterprise AI platform with process automation, business intelligence, and system integration capabilities.',
     launchDate: '2024-02-01',
@@ -125,7 +125,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete AI supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring.',
     launchDate: '2024-01-15',
@@ -172,7 +172,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete AI customer experience platform with personalization, automation, and analytics capabilities.',
     launchDate: '2024-01-01',
@@ -219,7 +219,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete AI financial risk platform with real-time assessment, fraud detection, and compliance monitoring.',
     launchDate: '2023-12-01',
@@ -266,7 +266,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete AI healthcare analytics platform with predictive diagnostics, treatment optimization, and population health management.',
     launchDate: '2023-11-01',
@@ -313,7 +313,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete AI manufacturing platform with predictive maintenance, quality control, and production optimization.',
     launchDate: '2023-10-01',
@@ -360,7 +360,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete AI energy management platform with optimization, renewable integration, and predictive analytics.',
     launchDate: '2023-09-01',
@@ -407,7 +407,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete AI education platform with personalized learning, intelligent tutoring, and educational analytics.',
     launchDate: '2023-08-01',
@@ -454,12 +454,12 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete AI real estate platform with property valuation, market analysis, and investment recommendations.',
     launchDate: '2023-07-01',
     customers: 45,
     rating: 4.6,
     reviews: 52
-  }
+  },
 ],

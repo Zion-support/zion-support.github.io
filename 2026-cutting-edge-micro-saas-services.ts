@@ -42,7 +42,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+}
 export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
   {
     id: 'ai-powered-customer-success-platform',
@@ -363,5 +363,5 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     customers: 45,
     rating: 4.8,
     reviews: 89
-  }
+  },
 ],

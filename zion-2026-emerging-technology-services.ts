@@ -46,7 +46,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+}
 
 export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyService[] = [
   // Quantum-Enhanced Blockchain and Web3 Platform
@@ -391,7 +391,7 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     customers: 1350,
     rating: 4.8,
     reviews: 680
-  }
+  },
 ],
 
 export default zion2026EmergingTechnologyServices,

@@ -85,7 +85,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.',
     launchDate: '2025-01-22',
@@ -136,7 +136,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain payment platform with enterprise-grade security and compliance features.',
     launchDate: '2025-01-28',
@@ -187,7 +187,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready quantum financial platform with advanced algorithms and enterprise integration.',
     launchDate: '2025-02-03',
@@ -238,7 +238,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.',
     launchDate: '2025-02-08',
@@ -289,12 +289,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
     rating: 4.5,
     reviews: 52
-  }
+  },
 ];

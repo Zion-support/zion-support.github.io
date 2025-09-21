@@ -79,7 +79,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced neural interface platform with real-time signal processing, AI-powered analysis, and comprehensive development tools.',
     launchDate: '2026-04-01',
@@ -126,7 +126,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced quantum consciousness simulation platform with research-grade algorithms and comprehensive collaboration tools.',
     launchDate: '2026-04-15',
@@ -173,7 +173,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Full-featured holographic metaverse platform with AI-powered world generation and comprehensive collaboration tools.',
     launchDate: '2026-05-01',
@@ -220,7 +220,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production autonomous manufacturing platform with comprehensive AI capabilities and equipment integration.',
     launchDate: '2026-05-15',
@@ -267,7 +267,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Advanced space technology platform with AI-powered satellite management and comprehensive space operations tools.',
     launchDate: '2026-06-01',
@@ -314,7 +314,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production quantum energy management platform with advanced optimization algorithms and comprehensive utility integration.',
     launchDate: '2026-06-15',
@@ -361,7 +361,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Full-featured AI robotics platform with comprehensive robot programming and coordination tools.',
     launchDate: '2026-07-01',
@@ -408,7 +408,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production quantum logistics platform with advanced optimization algorithms and comprehensive supply chain integration.',
     launchDate: '2026-07-15',
@@ -455,12 +455,12 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Full-featured virtual events platform with AI-powered engagement and comprehensive event management tools.',
     launchDate: '2026-08-01',
     customers: 320,
     rating: 4.8,
     reviews: 198
-  }
+  },
 ],

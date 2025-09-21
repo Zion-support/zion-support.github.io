@@ -46,7 +46,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+}
 
 export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasService[] = [
   // AI-Powered Autonomous Business Intelligence Platform
@@ -477,7 +477,7 @@ export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasS
     customers: 3200,
     rating: 4.8,
     reviews: 1450
-  }
+  },
 ],
 
 export default zion2026CuttingEdgeMicroSaasServices,

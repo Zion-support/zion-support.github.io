@@ -22,7 +22,7 @@ export const real2036InnovativeServices = [
     useCases: [
       'Customer service automationSupply chain optimization',
       'Financial process automationHR workflow management'
-    ]
+    ],
   },
   {
     id: 'quantum-ai-fusion-platform',
@@ -47,7 +47,7 @@ export const real2036InnovativeServices = [
     useCases: [
       'Drug discovery and molecular modelingFinancial portfolio optimization',
       'Climate change modelingAdvanced AI model training'
-    ]
+    ],
   },
   {
     id: 'space-mining-automation-platform',
@@ -72,7 +72,7 @@ export const real2036InnovativeServices = [
     useCases: [
       'Asteroid mining operationsLunar resource extraction',
       'Space station resource managementInterplanetary resource planning'
-    ]
+    ],
   },
   {
     id: 'metaverse-ai-development-studio-pro',
@@ -97,7 +97,7 @@ export const real2036InnovativeServices = [
     useCases: [
       'Virtual event platformsEducational metaverses',
       'Virtual retail experiencesSocial virtual worlds'
-    ]
+    ],
   },
   {
     id: 'brain-computer-interface-platform',
@@ -122,7 +122,7 @@ export const real2036InnovativeServices = [
     useCases: [
       'Assistive technologyGaming and entertainment',
       'Medical researchHuman augmentation'
-    ]
+    ],
   },
   {
     id: 'quantum-bio-computing-platform',
@@ -147,7 +147,7 @@ export const real2036InnovativeServices = [
     useCases: [
       'Pharmaceutical researchGenetic medicine',
       'Biological researchPersonalized medicine'
-    ]
+    ],
   },
   {
     id: 'ai-consciousness-evolution-platform',
@@ -172,7 +172,7 @@ export const real2036InnovativeServices = [
     useCases: [
       'AI research and developmentEthical AI training',
       'Consciousness studiesAGI development'
-    ]
+    ],
   },
   {
     id: 'quantum-internet-security-gateway',
@@ -197,7 +197,7 @@ export const real2036InnovativeServices = [
     useCases: [
       'Government communicationsFinancial institutions',
       'Healthcare data protectionCritical infrastructure'
-    ]
+    ],
   },
   {
     id: 'ai-autonomous-robotics-platform',
@@ -222,7 +222,7 @@ export const real2036InnovativeServices = [
     useCases: [
       'Manufacturing automationWarehouse operations',
       'Service roboticsAgricultural automation'
-    ]
+    ],
   },
   {
     id: 'quantum-financial-trading-platform',
@@ -247,6 +247,6 @@ export const real2036InnovativeServices = [
     useCases: [
       'Hedge fund operationsInvestment banking',
       'Portfolio managementRisk assessment'
-    ]
-  }
+    ],
+  },
 ],

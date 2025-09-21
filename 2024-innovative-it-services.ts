@@ -83,7 +83,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.',
     launchDate: '2024-01-15',
@@ -136,7 +136,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready zero trust platform with comprehensive security features, compliance tools, and enterprise-grade monitoring.',
     launchDate: '2024-02-01',
@@ -189,7 +189,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready edge computing platform with global node distribution, real-time processing, and comprehensive orchestration tools.',
     launchDate: '2024-01-20',
@@ -242,7 +242,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready IT operations platform with AI-powered monitoring, predictive analytics, and comprehensive automation tools.',
     launchDate: '2024-02-10',
@@ -295,7 +295,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready database platform with quantum-resistant encryption, distributed architecture, and comprehensive security features.',
     launchDate: '2024-01-05',
@@ -348,7 +348,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready API management platform with AI-powered optimization, comprehensive security, and developer-friendly tools.',
     launchDate: '2024-02-15',
@@ -401,7 +401,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready cost optimization platform with AI-powered analysis, automated optimization, and comprehensive cost management tools.',
     launchDate: '2024-01-25',
@@ -454,12 +454,12 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Production-ready network security platform with AI-powered threat detection, automated response, and comprehensive security features.',
     launchDate: '2024-02-01',
     customers: 720,
     rating: 4.8,
     reviews: 410
-  }
+  },
 ];

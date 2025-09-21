@@ -12,7 +12,7 @@ export const innovative2025AIAutonomousEcosystem = [
       professional: '$799/month',
       enterprise: '$1,999/month',
       custom: 'Contact for pricing'
-    },
+    }
     features: [
       'Fully autonomous content generation',
       'Multi-format content creation (blog, social, video scripts)',
@@ -76,7 +76,7 @@ export const innovative2025AIAutonomousEcosystem = [
       professional: '$999/month',
       enterprise: '$2,499/month',
       custom: 'Contact for pricing'
-    },
+    }
     features: [
       'Fully autonomous customer support',
       'Multi-channel integration (chat, email, phone, social)',
@@ -140,7 +140,7 @@ export const innovative2025AIAutonomousEcosystem = [
       professional: '$1,299/month',
       enterprise: '$3,499/month',
       custom: 'Contact for pricing'
-    },
+    }
     features: [
       'Fully autonomous lead generation',
       'Predictive lead scoring',
@@ -204,7 +204,7 @@ export const innovative2025AIAutonomousEcosystem = [
       professional: '$1,599/month',
       enterprise: '$4,999/month',
       custom: 'Contact for pricing'
-    },
+    }
     features: [
       'Fully autonomous financial analysis',
       'Real-time market data processing',
@@ -268,7 +268,7 @@ export const innovative2025AIAutonomousEcosystem = [
       professional: '$1,999/month',
       enterprise: '$5,999/month',
       custom: 'Contact for pricing'
-    },
+    }
     features: [
       'Fully autonomous medical image analysis',
       'Multi-modality imaging support',
@@ -317,5 +317,5 @@ export const innovative2025AIAutonomousEcosystem = [
     slug: '/ai-autonomous-healthcare-diagnostics-2025',
     demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostics',
     documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics'
-  }
+  },
 ];

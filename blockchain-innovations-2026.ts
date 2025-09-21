@@ -79,7 +79,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete blockchain infrastructure platform with multi-chain support, development tools, monitoring, and enterprise features. Includes custom blockchain networks and comprehensive support.',
     launchDate: '2026-01-20',
@@ -126,7 +126,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete DeFi platform with AI-powered optimization, multi-protocol support, risk management, and comprehensive analytics. Includes mobile apps and API access.',
     launchDate: '2026-02-01',
@@ -173,7 +173,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete NFT platform with marketplace builder, creation tools, management system, and analytics. Includes white-label solutions and enterprise features.',
     launchDate: '2026-01-30',
@@ -220,7 +220,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete Web3 identity platform with DID support, zero-knowledge proofs, and privacy-preserving features. Includes SDKs, APIs, and enterprise tools.',
     launchDate: '2026-02-15',
@@ -267,12 +267,12 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    },
+    }
     realImplementation: true,
     implementationDetails: 'Complete blockchain supply chain platform with traceability, automation, monitoring, and analytics. Includes IoT integration and enterprise features.',
     launchDate: '2026-03-01',
     customers: 420,
     rating: 4.8,
     reviews: 210
-  }
+  },
 ],
