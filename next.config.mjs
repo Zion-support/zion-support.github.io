@@ -58,6 +58,12 @@ const nextConfig = {
       };
     }
     
+    // Fix for OpenSSL legacy provider issue
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      crypto: require.resolve('crypto-browserify'),
+    };
+    
     // Disable PostCSS processing to avoid matchAll issues
     config.module.rules.forEach((rule) => {
       if (rule.oneOf) {
