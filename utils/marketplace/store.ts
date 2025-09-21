@@ -1,100 +1,138 @@
-
-,
+export interface Project {
   id: string,
   title: string,
   summary: string,
   client_id: string,
-  talent_slug?: string;
+  talent_slug?: string,
   startDateIso: string,
-  endDateIso?: string;
+  endDateIso?: string,
   status: 'DRAFT' | 'ACTIVE' | 'COMPLETED' | 'CANCELLED' | 'PAUSED',
-  timeline: Array<{,
+  timeline: Array<{
     id: string,
-    title: string}
-,
-export interface Conversation {;
+    title: string
+  }>
+}
+
+export interface Offer {
+  id: string,
+  project_id: string,
+  talent_id: string,
+  amount: number,
+  currency: string,
+  message: string,
+  status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN',
+  createdAtIso: string
+}
+
+export interface Application {
+  id: string,
+  project_id: string,
+  talent_id: string,
+  cover_letter: string,
+  status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN',
+  createdAtIso: string
+}
+
+export interface Message {
+  id: string,
+  conversation_id: string,
+  sender_id: string,
+  content: string,
+  createdAtIso: string
+}
+
+export interface Conversation {
   id: string,
   participants: string[],
   lastMessageAtIso: string,
-  lastMessageId?: string;
-  createdAtIso: string}
-class MarketplaceStore {,
-  private projects: Map<stringProject> = new Map(),
-  private offers: Map<stringOffer> = new Map(),
-  private applications: Map<stringApplication> = new Map(),
-  private messages: Map<stringMessage> = new Map(),
-  private conversations: Map<stringConversation> = new Map(),
+  lastMessageId?: string,
+  createdAtIso: string
+}
+
+class MarketplaceStore {
+  private projects: Map<string, Project> = new Map();
+  private offers: Map<string, Offer> = new Map();
+  private applications: Map<string, Application> = new Map();
+  private messages: Map<string, Message> = new Map();
+  private conversations: Map<string, Conversation> = new Map();
+
   // Project methods
-}
-;
-export function generate_id (prefix: string = 'item'): string {,
-  return `${prefix}_${Date.now()}_${Math.random ().to_string (36).substr (2, 9)}`}
-,
-import fs from "fs";
-import path from "path";
-import { MarketplaceDb, Offer, Project } from "./types";
-const DATA_DIR = path.join(process.cwd(), "data", "runtime"),
-const DB_PATH = path.join(DATA_DIR, "marketplace.json");
-function ensureDataFile(): void {,
-  if (!fs.existsSync(DATA_DIR)) {,
-    fs.mkdirSync(DATA_DIR, { recursive: true })}
-  if (!fs.existsSync(DB_PATH)) {;
-    const initial: MarketplaceDb = { offers: [], projects: [] },
-    fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2), "utf-8")}
-}
-,
-export function readDb(): MarketplaceDb {,
-  ensureDataFile();
-  try {,
-    const raw = fs.readFileSync(DB_PATH, "utf-8");
-    const data = JSON.parse(raw) as MarketplaceDb,
-    if (!data.offers) data.offers = [],
-    if (!data.projects) data.projects = [],
-    return data} catch (err) {,
-    return { offers: [], projects: [] }}
-}
-;
-export function writeDb(db: MarketplaceDb): void {,
-  ensureDataFile();
-  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), "utf-8")}
-,
-export function saveOffer(offer: Offer): Offer {,
-  const db = readDb();
-  const index = db.offers.findIndex((o) => o.id === offer.id),
-  if (index >= 0) {,
-    db.offers[index] = offer
-  } else {,
-    db.offers.push(offer);
+  createProject(project: Omit<Project, 'id'>): Project {
+    const id = generate_id('project');
+    const newProject = { ...project, id };
+    this.projects.set(id, newProject);
+    return newProject;
   }
-  writeDb(db);
-  return offer}
-,
-export function getOfferById(id: string): Offer | undefined {,
-  const db = readDb();
-  return db.offers.find((o) => o.id === id)
-}
-,
-export function listOffers(params?: { talentSlug?: string, clientId?: string, status?: string }): Offer[] {,
-  const db = readDb(),
-  let list = db.offers,
-  if (params?.talentSlug) list = list.filter((o) => o.talentSlug === params.talentSlug),
-  if (params?.clientId) list = list.filter((o) => o.clientId === params.clientId),
-  if (params?.status) list = list.filter((o) => o.status === params.status),
-  return list.sort((a, b) => b.createdAtIso.localeCompare(a.createdAtIso))}
-,
-export function saveProject(project: Project): Project {,
-  const db = readDb();
-  const index = db.projects.findIndex((p) => p.id === project.id),
-  if (index >= 0) {,
-    db.projects[index] = project
-  } else {,
-    db.projects.push(project);
+
+  getProject(id: string): Project | undefined {
+    return this.projects.get(id);
   }
-  writeDb(db);
-  return project}
-,
-export function getProjectById(id: string): Project | undefined {,
-  const db = readDb();
-  return db.projects.find((p) => p.id === id)
+
+  updateProject(id: string, updates: Partial<Project>): Project | undefined {
+    const project = this.projects.get(id);
+    if (project) {
+      const updated = { ...project, ...updates };
+      this.projects.set(id, updated);
+      return updated;
+    }
+    return undefined;
+  }
+
+  deleteProject(id: string): boolean {
+    return this.projects.delete(id);
+  }
+
+  // Offer methods
+  createOffer(offer: Omit<Offer, 'id'>): Offer {
+    const id = generate_id('offer');
+    const newOffer = { ...offer, id };
+    this.offers.set(id, newOffer);
+    return newOffer;
+  }
+
+  getOffer(id: string): Offer | undefined {
+    return this.offers.get(id);
+  }
+
+  // Application methods
+  createApplication(application: Omit<Application, 'id'>): Application {
+    const id = generate_id('application');
+    const newApplication = { ...application, id };
+    this.applications.set(id, newApplication);
+    return newApplication;
+  }
+
+  getApplication(id: string): Application | undefined {
+    return this.applications.get(id);
+  }
+
+  // Message methods
+  createMessage(message: Omit<Message, 'id'>): Message {
+    const id = generate_id('message');
+    const newMessage = { ...message, id };
+    this.messages.set(id, newMessage);
+    return newMessage;
+  }
+
+  getMessage(id: string): Message | undefined {
+    return this.messages.get(id);
+  }
+
+  // Conversation methods
+  createConversation(conversation: Omit<Conversation, 'id'>): Conversation {
+    const id = generate_id('conversation');
+    const newConversation = { ...conversation, id };
+    this.conversations.set(id, newConversation);
+    return newConversation;
+  }
+
+  getConversation(id: string): Conversation | undefined {
+    return this.conversations.get(id);
+  }
 }
-;
+
+export function generate_id(prefix: string = 'item'): string {
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export const marketplaceStore = new MarketplaceStore();
