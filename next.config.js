@@ -11,6 +11,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   distDir: 'out',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   // Image optimization
   images: {
@@ -21,7 +22,6 @@ const nextConfig = {
   // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
-    // tsconfigPath: './tsconfig.json',
   },
   
   // ESLint configuration
@@ -33,6 +33,10 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
     scrollRestoration: true,
+  },
+  
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
   },
   
   // Webpack configuration
