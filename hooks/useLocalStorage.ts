@@ -1,0 +1,2 @@
+// useLocalStorage hook module
+export {};
