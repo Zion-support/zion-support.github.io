@@ -31,18 +31,24 @@ class SecurityAuditor {
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       
-      // Check for sensitive information in package.json
-      const sensitiveKeys = ['password', 'secret', 'key', 'token', 'auth'];
+      // Check for sensitive information in package.json (only actual values, not keys)
       const packageString = JSON.stringify(packageJson);
       
-      for (const key of sensitiveKeys) {
-        if (packageString.toLowerCase().includes(key)) {
+      // Look for actual sensitive values, not just the words in package names
+      const sensitivePatterns = [
+        /"(password|secret|token|api[_-]?key|auth[_-]?token)":\s*"[^"]*"/i,
+        /"(private[_-]?key|access[_-]?token|bearer[_-]?token)":\s*"[^"]*"/i
+      ];
+      
+      for (const pattern of sensitivePatterns) {
+        if (pattern.test(packageString)) {
           this.securityIssues.push({
             type: 'package-security',
             severity: 'high',
-            issue: `Potential sensitive information in package.json: ${key}`,
+            issue: 'Potential sensitive information in package.json',
             recommendation: 'Remove any sensitive information from package.json'
           });
+          break; // Only report once
         }
       }
       
@@ -117,6 +123,11 @@ class SecurityAuditor {
     
     for (const file of codeFiles) {
       try {
+        // Skip security audit script itself to avoid false positives
+        if (file.includes('security-audit.js')) {
+          continue;
+        }
+        
         const content = fs.readFileSync(file, 'utf8');
         
         // Check for dangerous patterns

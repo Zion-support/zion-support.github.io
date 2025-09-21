@@ -1,18 +1,6 @@
 {
-  "timestamp": "2025-09-21T12:57:55.995Z",
+  "timestamp": "2025-09-21T13:02:12.031Z",
   "securityIssues": [
-    {
-      "type": "package-security",
-      "severity": "high",
-      "issue": "Potential sensitive information in package.json: key",
-      "recommendation": "Remove any sensitive information from package.json"
-    },
-    {
-      "type": "package-security",
-      "severity": "high",
-      "issue": "Potential sensitive information in package.json: auth",
-      "recommendation": "Remove any sensitive information from package.json"
-    },
     {
       "type": "configuration",
       "severity": "medium",
@@ -24,18 +12,6 @@
       "severity": "medium",
       "issue": "ESLint errors are ignored during builds",
       "recommendation": "Enable ESLint error checking in production"
-    },
-    {
-      "type": "code-security",
-      "severity": "critical",
-      "issue": "Use of eval() function found in scripts/security-audit.js",
-      "recommendation": "Review and refactor to use safer alternatives"
-    },
-    {
-      "type": "code-security",
-      "severity": "medium",
-      "issue": "Use of document.write() found in scripts/security-audit.js",
-      "recommendation": "Review and refactor to use safer alternatives"
     }
   ],
   "recommendations": [],
@@ -47,9 +23,9 @@
     }
   ],
   "summary": {
-    "totalIssues": 6,
-    "criticalIssues": 1,
-    "highIssues": 2,
-    "status": "critical"
+    "totalIssues": 2,
+    "criticalIssues": 0,
+    "highIssues": 0,
+    "status": "excellent"
   }
 }

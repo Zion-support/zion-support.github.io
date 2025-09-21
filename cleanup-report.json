@@ -1,48 +1,11 @@
 {
-  "timestamp": "2025-09-21T12:57:46.502Z",
-  "removedFiles": [
-    "next.config.cjs.backup",
-    "eslint.config.cjs.disabled2",
-    "next.config.js.complex",
-    "performance.config.js",
-    "batch-pr-merge-report.json",
-    "comprehensive-pr-merge-report.json",
-    "quick-merge-report.json",
-    "retry-failed-merges-report.json",
-    "pr-processing-report.json",
-    "advanced_merge_resolver.py",
-    "batch_merge_processor.py",
-    "continue_merge_batches.py",
-    "final_merge_pusher.py",
-    "comprehensive_pr_merger.js",
-    "continue_pr_merges.js",
-    "merge_prs_batch.js",
-    "merge_specific_branches.js",
-    "process_remaining_prs.js",
-    "quick_merge_fix.js",
-    "retry_failed_merges.js",
-    "fix_divergent_branches.js",
-    "fix-all-duplicates.js",
-    "fix-duplicate-properties.js",
-    "fix-incomplete-services.js",
-    "fix-remaining-variants.js",
-    "fix-variants.js",
-    "merge_branches.sh",
-    "merge_recent_branches.sh",
-    "build.sh",
-    "Footer.jsx",
-    "Header.jsx",
-    "ThemeProvider.js",
-    "vite.config.js",
-    "index.html"
-  ],
-  "removedDirectories": [
-    "backup"
-  ],
+  "timestamp": "2025-09-21T13:02:24.593Z",
+  "removedFiles": [],
+  "removedDirectories": [],
   "errors": [],
   "summary": {
-    "filesRemoved": 34,
-    "directoriesRemoved": 1,
+    "filesRemoved": 0,
+    "directoriesRemoved": 0,
     "errors": 0
   }
 }
