@@ -12,6 +12,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  swcMinify: false,
+  experimental: {
+    esmExternals: false,
+  },
   webpack: (config, { isServer }) => {
     // Minimal webpack configuration
     if (!isServer) {
