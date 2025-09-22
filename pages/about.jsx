@@ -102,7 +102,7 @@ function About() {
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Work With Us?</h2>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Let's discuss how we can help transform your business with innovative technology solutions.
+                Let&apos;s discuss how we can help transform your business with innovative technology solutions.
               </p>
               <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 inline-block">
                 Get In Touch
