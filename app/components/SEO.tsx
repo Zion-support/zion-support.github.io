@@ -1,5 +1,5 @@
-import Head from 'next/head'
-
+// This component is deprecated in App Router - use metadata exports instead
+// Keeping for backward compatibility but it won't render anything
 interface SEOProps {
   title: string
   description: string
@@ -9,24 +9,7 @@ interface SEOProps {
 }
 
 export default function SEO({ title, description, keywords, canonical, url }: SEOProps) {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="article" />
-      {url && <meta property="og:url" content={url} />}
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-    </Head>
-  )
+  // In App Router, SEO is handled via metadata exports in page.tsx files
+  // This component is kept for backward compatibility but doesn't render anything
+  return null
 }
