@@ -1,4 +1,4 @@
-const blogPosts = [
+export const blogPosts = [
   {
     id: 'ai-2025-ultimate-breakthrough-trends',
     title: 'AI 2025: Ultimate Breakthrough Trends That Will Reshape Everything',
@@ -24,3 +24,5 @@ const blogPosts = [
     tags: ['AI', 'Security', 'Enterprise']
   }
 ];
+
+export default blogPosts;
