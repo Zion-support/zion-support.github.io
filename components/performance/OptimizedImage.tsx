@@ -1,62 +1,126 @@
+
+
 import React from 'react';
-import Image from 'next/image';
+
+interface OptimizedImageProps {;
+  src: string, alt: string,;
+
+export default OptimizedImage;
+
+      quality={quality}
+      style={style}
+
+  );
+};
+
+export default OptimizedImage;
+
+;
+
+import React from "react";
+import Image from "next/image";
+
+import Image from 'next / image';
+;
+
+import React from "react";
+import Image from "next/image";
+
+import React from "react";
+import Image from "next/image";
+
+import React from \"react\";"
+import Image from \"next/image\";
+
 interface OptimizedImageProps {
-  src: string, alt: string
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
+
+interface OptimizedImageProps {}
   width?: number;
   height?: number;
-  className?: string;
-  priority?: boolean;
-  sizes?: string;
-  quality?: number;
-  fill?: boolean;
-  style?: React.CSSProperties;
-}
-<<<<<<< HEAD
+  class_name?: string;
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src;
-  alt;
-  width;
-  height;
-  priority;
-=======
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src
-  alt
-  width
-  height
-  className = ''
-  priority = false
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-  quality = 85
-  fill = false
-  style
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  priority?: boolean;
+  quality?: number;
+  sizes?: string;
+}
+
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+  priority = false,
+  quality = 75,
+  sizes = "100vw",
 }) => {
-  if (fill) {
+
+}
     return (
-      <Image
+      <Image;
         src={src}
         alt={alt}
-        fill
-        className={className}
+        fill;
+        className={class_name}
         priority={priority}
         sizes={sizes}
         quality={quality}
         style={style}
-      />
-    );
-  }
+
+      src={src}
+
+  priority?: boolean;
+  quality?: number;
+  sizes?: string;}
+}
+
+}) => {
+  return (
     <Image
       src={src}
+  quality = 75}"
+  sizes = \"100vw\"}
+}) => {}
+   }) => {
+
+ ;
+  return (}
+    <Image;}
+src={src}
+
       alt={alt}
-      width={width |800}
-      height={height |600}
+      width={width}
+      height={height}
       className={className}
       priority={priority}
+
       sizes={sizes}
+      quality={quality}
+      style={style}
+
 quality={quality}
       style={style}
   );
 }
+
 export default OptimizedImage;
+
+      sizes={sizes}
+      quality={quality}
+
+    />
+  );
+};
+
+export default OptimizedImage;
+
+  )
+};
+
+export default OptimizedImage;
+"
+

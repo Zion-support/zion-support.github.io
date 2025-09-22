@@ -1,238 +1,207 @@
 {
-  "timestamp": "2025-09-06T05:21:56.828Z",
-  "totalDuration": 2991,
-  "scriptsRun": [
-    {
-      "name": "health-monitor.cjs",
-      "description": "Health Monitor",
-      "status": "success",
-      "duration": 1729,
-      "output": "🏥 Starting Health Monitor...\n🏥 Health Monitor completed. Status: critical\n📊 5 checks performed\n💡 1 recommendations generated\n"
+  "timestamp": "2025-09-05T15:58:44.701Z",
+  "totalDuration": "130s",
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 52674,
+      "errors": []
     },
-    {
-      "name": "performance-analyzer.cjs",
-      "description": "Performance Analyzer",
-      "status": "success",
-      "duration": 62,
-      "output": "⚡ Starting Performance Analyzer...\n⚡ Performance analysis completed. Score: 80/100\n🔧 1 optimization opportunities found\n"
+    "typescriptFix": {
+      "success": true,
+      "duration": 12508,
+      "errors": []
+  "timestamp": "2025-09-05T01:24:11.708Z",
+  "totalDuration": "61s",
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 60590,
+
+origin/cursor/fix-syntax-push-and-merge-to-main-8452
+  "timestamp": "2025-09-05T15:05:30.907Z",
+  "totalDuration": "86s",
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 79551,
+      "errors": []
     },
-    {
-      "name": "security-auditor.cjs",
-      "description": "Security Auditor",
-      "status": "success",
-      "duration": 1196,
-      "output": "🔒 Starting Security Auditor...\n🔒 Security audit completed. Score: 90/100\n🚨 1 vulnerabilities found\n💡 5 recommendations generated\n"
+    "typescriptFix": {
+      "success": false,
+      "duration": 19,
+      "duration": 25,
+      "errors": ["Command failed: node automation/typescript-fixer.cjs"]
+      "errors": ["Command failed: node automation/typescript-fixer.cjs"]
+origin/cursor/fix-syntax-push-and-merge-to-main-8452
+      "errors": [
+        "Command failed: node automation/typescript-fixer.cjs"
+      ]
+    },
+    "healthCheck": {
+      "success": true,
+      "duration": 21039,
+      "errors": []
+    },
+    "securityScan": {
+      "success": true,
+      "duration": 2557,
+      "errors": []
+    },
+    "performanceOptimize": {
+      "success": true,
+      "duration": 20709,
+      "errors": []
+    },
+    "buildTest": {
+      "success": true,
+      "duration": 20538,
+      "errors": []
+      "success": false,
+      "duration": 103,
+      "errors": [
+        "Command failed: npm run build"
+      ]
+      "success": false,
+      "duration": 26,
+      "errors": ["Command failed: node automation/health-check.cjs"]
+    },
+    "securityScan": {
+      "success": false,
+      "duration": 24,
+      "errors": ["Command failed: node automation/security-scanner.cjs"]
+    },
+    "performanceOptimize": {
+      "success": false,
+      "duration": 23,
+      "errors": ["Command failed: node automation/performance-optimizer.cjs"]
+    },
+    "buildTest": {
+      "success": false,
+      "duration": 6106,
+      "errors": ["Command failed: npm run build"]
+      "errors": [
+        "Command failed: npm run build"
+      ]
+
+      "errors": ["Command failed: npm run build"]
+origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
-  ],
-  "reports": [
-    {
-      "file": "health-monitor-report.json",
-      "data": {
-        "timestamp": "2025-09-06T05:21:56.848Z",
-        "status": "critical",
-        "checks": [
-          {
-            "name": "Disk Space",
-            "status": "healthy",
-            "value": "13% used",
-            "threshold": "80%"
-          },
-          {
-            "name": "Memory Usage",
-            "status": "healthy",
-            "value": "9% used (1440MB/16017MB)",
-            "threshold": "80%"
-          },
-          {
-            "name": "Node Modules Size",
-            "status": "critical",
-            "value": "1093MB",
-            "threshold": "500MB"
-          },
-          {
-            "name": "Build Freshness",
-            "status": "healthy",
-            "value": "0 hours old",
-            "threshold": "24 hours"
-          },
-          {
-            "name": "Security Vulnerabilities",
-            "status": "error",
-            "error": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-          }
-        ],
-        "metrics": {},
-        "recommendations": [
-          "Consider cleaning node_modules or reviewing dependencies"
-        ]
-      }
-    },
-    {
-      "file": "performance-analysis-report.json",
-      "data": {
-        "timestamp": "2025-09-06T05:21:58.576Z",
-        "metrics": {
-          "codeComplexity": {
-            "totalFiles": 1667,
-            "totalLines": 163022,
-            "averageLinesPerFile": 98,
-            "complexFiles": 281,
-            "complexityRatio": "16.9"
-          },
-          "dependencies": {
-            "production": 100,
-            "development": 40,
-            "total": 140
-          }
-        },
-        "analysis": [],
-        "optimizations": [
-          {
-            "type": "dependencies",
-            "priority": "medium",
-            "description": "Large number of dependencies, review and remove unused ones",
-            "impact": "Reduces bundle size and build time"
-          }
-        ],
-        "score": 80
-      }
-    },
-    {
-      "file": "security-audit-report.json",
-      "data": {
-        "timestamp": "2025-09-06T05:21:58.638Z",
-        "securityScore": 90,
-        "vulnerabilities": [
-          {
-            "type": "file_permissions",
-            "file": "next.config.js",
-            "permissions": "755",
-            "severity": "medium",
-            "description": "File has overly permissive permissions"
-          }
-        ],
-        "recommendations": [
-          "Run npm audit fix to address dependency vulnerabilities",
-          "Regularly update dependencies to latest secure versions",
-          "Implement Content Security Policy (CSP) headers",
-          "Use environment variables for sensitive configuration",
-          "Enable security headers in production"
-        ],
-        "checks": [
-          {
-            "name": "Dependency Vulnerabilities",
-            "status": "error",
-            "error": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-          },
-          {
-            "name": "File Permissions",
-            "status": "fail",
-            "issues": 1
-          },
-          {
-            "name": "Environment Variables",
-            "status": "pass",
-            "issues": 0
-          },
-          {
-            "name": "Code Security",
-            "status": "pass",
-            "issues": 0
-          }
-        ]
-      }
-    },
-    {
-      "file": "comprehensive-automation-report.json",
-      "data": {
-        "timestamp": "2025-09-06T05:04:37.833Z",
-        "totalDuration": 171239,
-        "successfulTasks": 3,
-        "totalTasks": 8,
-        "results": {
-          "dependencyFix": {
-            "success": true,
-            "duration": 25103,
-            "errors": [],
-            "warnings": []
-          },
-          "codeQuality": {
-            "success": false,
-            "duration": 20991,
-            "errors": [
-              "spawnSync /bin/sh ENOBUFS",
-              "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-            ],
-            "warnings": []
-          },
-          "securityAudit": {
-            "success": false,
-            "duration": 3323,
-            "errors": [
-              "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-            ],
-            "warnings": []
-          },
-          "buildOptimization": {
-            "success": false,
-            "duration": 37591,
-            "errors": [
-              "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\n[BABEL] Note: The code generator has deoptimised the styling of /workspace/node_modules/lucide-react/dist/cjs/lucide-react.js as it exceeds the max of 500KB.\nFailed to compile.\n\n./data/api-docs/v1.ts:4:1\nSyntax error: Unexpected keyword 'const'. (4:0)\n\n  2 | const baseUrl = 'https: //api.zion.os',\n  3 |\n> 4 | const v1: ApiDocsSpec = {\n    | ^\n  5 |   product: 'Zion OS',\n  6 |   versions: ['v1'],\n  7 |   defaultVersion: 'v1',\n\n./lib/integrations/registry.ts:3:90\nSyntax error: Unexpected token, expected \",\"\n\n  1 | import { IntegrationProviderMeta } from './types';\n  2 | export const PROVIDERS: IntegrationProviderMeta[] = [\n> 3 |   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' };\n    |                                                                                           ^\n  4 |   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' };\n  5 |   { id: 'zoho', name: 'Zoho CRM', category: 'crm', description: 'All-in-one CRM' };\n  6 |   { id: 'pipedrive', name: 'PipeDrive', category: 'crm', description: 'Sales pipeline CRM' };\n\n./pages/api/admin/analytics/summary.ts:11:1\nSyntax error: Missing semicolon.\n\n   9 |   properties?: Record<string, any>;\n  10 |   at: string\n> 11 | },\n     |  ^\n  12 | const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl');\n  13 | function parseLines(startIso?: string, endIso?: string): EventRow[] {\n  14 |   try {\n\n./pages/api/admin/kyc-queue.ts:21:2\nSyntax error: Unexpected keyword 'if'.\n\n  19 | export default function handler(req: NextApiRequest, res: NextApiResponse) {\n  20 |   const db = load(),\n> 21 |   if (req.method === 'GET') {\n     |   ^\n  22 |     const queue = Object.values(db).filter((p) => p.status === 'submitted' || p.status === 'needs_more_info');\n  23 |     return res.status(200).json({ ok: true, queue })\n  24 |   }\n\n./pages/api/admin/learn/course.ts:7:4\nSyntax error: Unexpected token\n\n   5 |   if (req.method !== 'POST') {\n   6 |     res.setHeader('AllowPOST'),\n>  7 |     return res.status(405).end('Method Not Allowed')\n     |     ^\n   8 |   }\n   9 |\n  10 |   try {\n\n\n> Build failed because of webpack errors\n"
-            ],
-            "warnings": []
-          },
-          "seoOptimization": {
-            "success": true,
-            "duration": 63,
-            "errors": [],
-            "warnings": []
-          },
-          "accessibilityImprovements": {
-            "success": false,
-            "duration": 16222,
-            "errors": [
-              "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-            ],
-            "warnings": []
-          },
-          "performanceOptimization": {
-            "success": false,
-            "duration": 66288,
-            "errors": [
-              "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n[BABEL] Note: The code generator has deoptimised the styling of /workspace/node_modules/lucide-react/dist/cjs/lucide-react.js as it exceeds the max of 500KB.\nFailed to compile.\n\n./data/api-docs/v1.ts:4:1\nSyntax error: Unexpected keyword 'const'. (4:0)\n\n  2 | const baseUrl = 'https: //api.zion.os',\n  3 |\n> 4 | const v1: ApiDocsSpec = {\n    | ^\n  5 |   product: 'Zion OS',\n  6 |   versions: ['v1'],\n  7 |   defaultVersion: 'v1',\n\n./lib/integrations/registry.ts:3:90\nSyntax error: Unexpected token, expected \",\"\n\n  1 | import { IntegrationProviderMeta } from './types';\n  2 | export const PROVIDERS: IntegrationProviderMeta[] = [\n> 3 |   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' };\n    |                                                                                           ^\n  4 |   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' };\n  5 |   { id: 'zoho', name: 'Zoho CRM', category: 'crm', description: 'All-in-one CRM' };\n  6 |   { id: 'pipedrive', name: 'PipeDrive', category: 'crm', description: 'Sales pipeline CRM' };\n\n./pages/api/admin/analytics/summary.ts:11:1\nSyntax error: Missing semicolon.\n\n   9 |   properties?: Record<string, any>;\n  10 |   at: string\n> 11 | },\n     |  ^\n  12 | const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl');\n  13 | function parseLines(startIso?: string, endIso?: string): EventRow[] {\n  14 |   try {\n\n./pages/api/admin/kyc-queue.ts:21:2\nSyntax error: Unexpected keyword 'if'.\n\n  19 | export default function handler(req: NextApiRequest, res: NextApiResponse) {\n  20 |   const db = load(),\n> 21 |   if (req.method === 'GET') {\n     |   ^\n  22 |     const queue = Object.values(db).filter((p) => p.status === 'submitted' || p.status === 'needs_more_info');\n  23 |     return res.status(200).json({ ok: true, queue })\n  24 |   }\n\n./pages/api/admin/learn/course.ts:7:4\nSyntax error: Unexpected token\n\n   5 |   if (req.method !== 'POST') {\n   6 |     res.setHeader('AllowPOST'),\n>  7 |     return res.status(405).end('Method Not Allowed')\n     |     ^\n   8 |   }\n   9 |\n  10 |   try {\n\n\n> Build failed because of webpack errors\n"
-            ],
-            "warnings": []
-          },
-          "deployment": {
-            "success": true,
-            "duration": 1652,
-            "errors": [],
-            "warnings": []
-          }
-        },
-        "recommendations": [
-          "Review and fix code quality issues",
-          "Address security vulnerabilities",
-          "Optimize application performance",
-          "Enhance accessibility features"
-        ]
-      }
-    }
-  ],
-  "overallStatus": "success",
+  },
   "summary": {
-    "health": {
-      "status": "critical",
-      "checks": 5,
-      "recommendations": 1
+    "totalPhases": 6,
+    "successfulPhases": 6,
+    "failedPhases": 0,
+    "overallSuccess": true
+    "successfulPhases": 4,
+    "failedPhases": 2,
+    "overallSuccess": false
+
+    "successfulPhases": 1,
+    "failedPhases": 5,
+    "overallSuccess": false
+
+  }
+}
+  "timestamp": "2025-09-06T19:17:00.201Z",
+  "duration": "4s",
+  "results": {
+    "builds": {
+      "success": 1,
+      "failed": 0
     },
-    "performance": {
-      "score": 80,
-      "optimizations": 1
+    "tests": {
+      "passed": 0,
+      "failed": 0
+    },
+    "optimizations": {
+      "applied": 2,
+      "errors": 0
     },
     "security": {
-      "score": 90,
-      "vulnerabilities": 1
-    }
+      "issues": 0,
+      "fixed": 0
+    },
+    "improvements": [
+      "Error Boundary Component",
+      "Performance Monitor Hook",
+      "SEO Meta Component"
+    ]
+  },
+  "summary": {
+    "buildsSuccessful": 1,
+    "buildsFailed": 0,
+    "optimizationsApplied": 2,
+    "securityIssuesFixed": 0,
+    "improvementsCreated": 3,
+    "totalDuration": "4s"
+origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
+}
+  "timestamp": "2025-09-07T02:58:12.987Z",
+  "duration": 15254,
+  "summary": {
+    "successful": 2,
+    "errors": 6,
+    "warnings": 0
+  },
+  "results": {
+    "success": [
+      {
+        "script": "Performance Optimizer",
+        "output": "ℹ️ 🚀 Starting Performance Optimizer...\nℹ️ 💻 Optimizing code...\n✅ 🎉 Performance optimization completed!\n"
+      },
+      {
+        "script": "Comprehensive Monitoring",
+        "output": "ℹ️ 🚀 Starting Comprehensive Monitoring...\nℹ️ 🔨 Checking build health...\n❌ Build health check failed\nℹ️ 🧪 Checking test health...\n❌ Test health check failed\nℹ️ 📦 Checking dependencies...\n✅ Found 84 dependencies\nℹ️ 📁 Checking file system...\n❌ File system check failed\nℹ️ 🔒 Checking security...\n✅ Security check passed\n✅ 📊 Health report saved to /workspace/health-monitoring-report.json\n✅ 🎉 Monitoring completed! Health status: critical\n❌ ⚠️ 3 alerts generated\n❌   - Build failed - immediate attention required\n❌   - Tests failing - review test suite\n❌   - File system check failed\n"
+      }
+    ],
+    "errors": [
+      {
+        "script": "Comprehensive Error Fixer",
+        "error": "Command failed: node scripts/comprehensive-error-fixer.cjs\nError fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'\n    at Object.statSync (node:fs:1740:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:86:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at ComprehensiveErrorFixer.getAllJSFiles (/workspace/scripts/comprehensive-error-fixer.cjs:99:5)\n    at ComprehensiveErrorFixer.fixSyntaxErrors (/workspace/scripts/comprehensive-error-fixer.cjs:26:24)\n    at ComprehensiveErrorFixer.run (/workspace/scripts/comprehensive-error-fixer.cjs:157:18)\n    at Object.<anonymous> (/workspace/scripts/comprehensive-error-fixer.cjs:177:9)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: '/workspace/media/docu-script/requirements.txt'\n}\n"
+      },
+      {
+        "script": "Enhanced App Improvement",
+        "error": "Command failed: node scripts/enhanced-app-improvement.cjs\n/workspace/scripts/enhanced-app-improvement.cjs:58\n    fixed = fixed.replace(/className=\\\\\"([^\"]*)\\\\\"\\\\s*\\\\/>/g, 'className=\"$1\" />');\n                                                                                ^^^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "Security Auditor",
+        "error": "Command failed: node scripts/security-auditor.js\nfile:///workspace/scripts/security-auditor.js:2\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/security-auditor.js:2:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
+      },
+      {
+        "check": "ESLint",
+        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      },
+      {
+        "check": "TypeScript",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "check": "Smoke Tests",
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n● Validation Warning:\n\n  Unknown option \"moduleNameMapping\" with value {\"^@/(.*)$\": \"<rootDir>/src/$1\"} was found.\n  This is probably a typing mistake. Fixing it will remove this message.\n\n  Configuration Documentation:\n  https://jestjs.io/docs/configuration\n\n● Validation Warning:\n\n  Unknown option \"moduleNameMapping\" with value {\"^@/(.*)$\": \"<rootDir>/src/$1\"} was found.\n  This is probably a typing mistake. Fixing it will remove this message.\n\n  Configuration Documentation:\n  https://jestjs.io/docs/configuration\n\nPASS ./App.test.tsx\nFAIL src/__tests__/App.test.jsx\n  ● Test suite failed to run\n\n      \u001b[31mx\u001b[0m Unterminated string constant\n       ,-[\u001b[36;1;4m/workspace/src/__tests__/App.test.jsx\u001b[0m:2:1]\n     \u001b[2m1\u001b[0m | import { render, screen  } from '@testing-library/react';\n     \u001b[2m2\u001b[0m | import { BrowserRouter } from 'react-router-dom';\\\"\\\";\n       : \u001b[35;1m                                                  ^^^^\u001b[0m\n     \u001b[2m3\u001b[0m | import App from '../App';\\\"\\\";\n     \u001b[2m4\u001b[0m | // Mock the pages to avoid complex dependencies'';\\\"\\\";\n     \u001b[2m5\u001b[0m | jest.mock('../pages/Index', () => {}\n       `----\n      \u001b[31mx\u001b[0m Expected unicode escape\n       ,-[\u001b[36;1;4m/workspace/src/__tests__/App.test.jsx\u001b[0m:2:1]\n     \u001b[2m1\u001b[0m | import { render, screen  } from '@testing-library/react';\n     \u001b[2m2\u001b[0m | import { BrowserRouter } from 'react-router-dom';\\\"\\\";\n       : \u001b[35;1m                                                 ^\u001b[0m\n     \u001b[2m3\u001b[0m | import App from '../App';\\\"\\\";\n     \u001b[2m4\u001b[0m | // Mock the pages to avoid complex dependencies'';\\\"\\\";\n     \u001b[2m5\u001b[0m | jest.mock('../pages/Index', () => {}\n       `----\n\n\n    Caused by:\n        Syntax Error\n\n      at Object.transformSync (node_modules/next/src/build/swc/index.ts:1396:25)\n      at transformSync (node_modules/next/src/build/swc/index.ts:1516:19)\n      at Object.process (node_modules/next/src/build/swc/jest-transformer.ts:105:25)\n      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)\n      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)\n      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)\n\nFAIL ./AppMinimal.test.tsx\n  ● Test suite failed to run\n\n    Cannot find module './AppMinimal' from 'AppMinimal.test.tsx'\n\n    However, Jest was able to find:\n    \t'./AppMinimal.test.tsx'\n\n    You might want to include a file extension in your import, or update your 'moduleFileExtensions', which is currently ['js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx', 'json', 'node'].\n\n    See https://jestjs.io/docs/configuration#modulefileextensions-arraystring\n\n       6 |   it('renders without crashing', () => {\n       7 |     render(<AppMinimal />);\n    >  8 |     expect(screen.getByRole('main')).toBeInTheDocument();\n         |                                                          ^\n       9 |   });\n      10 |\n      11 |   it('displays correct content', () => {\n\n      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/resolver.js:427:11)\n      at Object.<anonymous> (AppMinimal.test.tsx:8:60)\n\nPASS ./App.smoke.test.tsx\n\nTest Suites: 2 failed, 2 passed, 4 total\nTests:       3 passed, 3 total\nSnapshots:   0 total\nTime:        0.743 s, estimated 1 s\nRan all test suites.\n"
+      }
+    ],
+    "warnings": [],
+    "metrics": {}
+  },
+  "recommendations": [
+    "Address all errors before deployment",
+    "Implement continuous integration pipeline",
+    "Set up automated deployment process",
+    "Monitor performance metrics in production",
+    "Regular security audits and dependency updates",
+    "Implement code review process",
+    "Set up monitoring and alerting"
+  ],
+  "nextSteps": [
+    "Review the master automation report",
+    "Address any critical errors identified",
+    "Implement recommended optimizations",
+    "Set up monitoring for production environment",
+    "Schedule regular automation runs",
+    "Document automation workflows",
+    "Train team on new processes",
+    "Deploy to staging environment for testing"
+  ]
 }

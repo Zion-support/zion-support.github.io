@@ -1,6 +1,8 @@
+
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
-
 function run(cmd) {}
 	console.log(`$ ${cmd}`);
 	return execSync(cmd, { "stdio": 'inherit' })};
@@ -14,3 +16,6 @@ try {}
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
 	process.exit(1)};
+
+
+

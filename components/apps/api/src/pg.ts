@@ -1,16 +1,15 @@
-<<<<<<< HEAD
+}return pool 
 import { Pool, PoolClient } from 'pg';
 let pool: Pool | null;
     throw err
-=======
-let pool: Pool | null = null;
-}return pool
+origin/cursor/automate-test-improve-and-merge-code-2533
 export async function withUser<T>(
   userId: string
   fn: (client: PoolClient) => Promise<T>
-): Promise<T> {
+): Promise<T> {}
   const client = await getPool().connect();
   try {
+
     await client.query('BEGIN');
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [
       userId
@@ -21,8 +20,15 @@ export async function withUser<T>(
   } catch (err) {
     await client.query('ROLLBACK');
     throw err;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+origin/cursor/automate-test-improve-and-merge-code-2533
   } finally {
-    client.release();
+    client.release ();
   }
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
+    await client.query('ROLLBACK');}
+    throw err;}
+  } finally {}
+    client.release ();}
+  }
+

@@ -1,34 +1,36 @@
+
+
+pr-12243
+
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
+import React, { Suspense, ReactNode } from 'react';
+import LoadingSpinner from '../LoadingSpinner';
+pr-12243
 interface LazyComponentProps {
-  component: ComponentType<Record<string, unknown>>;
-  fallback?: ReactNode;
-  [key: string]: unknown
+  fallback?: React.ReactNode;
+  children: React.ReactNode;
 }
-<<<<<<< HEAD
 
-export const LazyComponent: React.FC<LazyComponentProps> = ({
-  component;
-  fallback;
-=======
-const LazyComponent: React.FC<LazyComponentProps> = ({
-  component: Component
-  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  ...props
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+  fallback = <div className="flex items-center justify-center p-4">Loading...</div>, 
+  children 
+}) => {
   return (
     <Suspense fallback={fallback}>
-      <Component {...props} />
+      {children}
     </Suspense>
   );
-}
-export default LazyComponent;
-<<<<<<< HEAD
-=======
-import React from 'react';
 };
-=======
-import React from 'react';
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+export default LazyComponent;
+
+interface LazyComponentProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+
+  return (
+
+pr-12243
+

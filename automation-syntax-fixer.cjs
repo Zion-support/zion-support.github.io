@@ -16,7 +16,7 @@ class SyntaxFixer {
   fixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
       
       // Fix import statements
       content = content.replace(/import\s+([^;]+),\s*$/gm, 'import $1;');

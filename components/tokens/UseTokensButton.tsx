@@ -1,50 +1,33 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import UseTokensModal, { RedemptionType } from './UseTokensModal';
-export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
-=======
-import React, { useState } from "react";
-import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+
 export default function UseTokensButton({
+origin/cursor/automate-test-improve-and-merge-code-2533
   serviceId
   defaultType
 }: {
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <button
-        onClick={() => setOpen(true)}
-        className="enhanced-button enhanced-button-primary"
-      >
-        Use Tokens
-      </button>
-      <UseTokensModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
+origin/cursor/automate-test-improve-and-merge-code-2533
+        Use Tokens;
+      </button>;
+      <UseTokensModal;
+        isOpen = {open}
+        onClose={() = /> setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-      />
-    </>
-  );
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <button
-        onClick={() => setOpen(true)}
-        className="enhanced-button enhanced-button-primary"
-      >
-        Use Tokens
-      </button>
-      <UseTokensModal
+  ;
+  const [open, setOpen] = useState(false)return (<>;
+      <button;
+        onClick={() = /> setOpen(true)}"
+        className=\"enhanced-button enhanced-button-primary\">
+
+        Use Tokens;
+      </button>;
+      <UseTokensModal;
         isOpen={open}
-        onClose={() => setOpen(false)}
+        onClose={() = /> setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-      />
-    </>
-  );
-}
+      />;
+    </>);
+origin/cursor/automate-test-improve-and-merge-code-2533

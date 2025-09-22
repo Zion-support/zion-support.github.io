@@ -1,86 +1,105 @@
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
+
+import React from 'react';
+import Head from 'next/head';
+
+import React from 'react';
+import Head from 'next/head';
+
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Menu, 
+  X, 
+  ChevronDown,
+  Star,
+  CheckCircle
+} from 'lucide-react';
+
+interface LayoutProps {
+import React, { ReactNode } from 'react';
+
+interface LayoutProps {
+  children: ReactNode;
+  title?: string;
+  description?: string;
   keywords?: string;
-  canonical?: string;
+  ogImage?: string;
   ogTitle?: string;
   ogDescription?: string;
-  ogImage?: string;
-  noIndex?: boolean;
+  ogUrl?: string;
+
+interface LayoutProps {
+
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
 }
-const Layout: React.FC<LayoutProps> = ({
-  children
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
-  canonical = "https://ziontechgroup.com"
-  ogTitle
-  ogDescription
-  ogImage = "https://ziontechgroup.com/og-image.jpg"
-  noIndex = false
-}) => {
-  const jsonLd = {
-    "@context": "https://schema.org"
-    "@type": "Organization"
-    name: "Zion Tech Group"
-    url: "https://ziontechgroup.com"
-    logo: "https://ziontechgroup.com/logo.png"
-    description: description
-    address: {
-      "@type": "PostalAddress"
-      streetAddress: "364 E Main St STE 1008"
-      addressLocality: "Middletown"
-      addressRegion: "DE"
-      postalCode: "19709"
-      addressCountry: "US"
-    }
-    contactPoint: {
-      "@type": "ContactPoint"
-      telephone: "+1-302-464-0950"
-      contactType: "customer service"
-      email: "kleber@ziontechgroup.com"
-    }
-  }
-  return (
-    <div className="min-h-screen bg-white">
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        {canonical && <link rel="canonical" href={canonical} />}
-        {noIndex && <meta name="robots" content="noindex,nofollow" />}
-        {/* Open Graph */}
-        <meta property="og:title" content={ogTitle |title} />
-        <meta
-          property="og:description"
-          content={ogDescription |description}
-        />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={ogTitle |title} />
-        <meta
-          name="twitter:description"
-          content={ogDescription |description}
-        />
-        <meta name="twitter:image" content={ogImage} />
-        {/* JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
+  ogImage = "https: //ziontechgroup.com/og-image.jpg";,
+  ogTitle,
+  ogDescription,
+  ogUrl
+}: LayoutProps) {
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <main>{children}</main>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+
+}
+
+}
+import React, { ReactNode } from 'react';
+
+}
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children ;}) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
-}
+};
+
 export default Layout;
+main
+main
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+pr-12243
+
+}
+

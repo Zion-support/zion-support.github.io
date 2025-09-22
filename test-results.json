@@ -1,4 +1,5 @@
 {
+
   "timestamp": "2025-09-06T04:59:28.012Z",
   "summary": {
     "total": 5,
@@ -26,6 +27,7 @@
     {
       "command": "npm run test:performance",
       "error": "Command failed: npm run test:performance\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+
     }
   ],
   "summary": {

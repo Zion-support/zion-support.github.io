@@ -1,35 +1,33 @@
 #!/bin/bash
 
-echo "Resolving merge conflicts by keeping HEAD (main) version..."
+echo "Starting merge conflict resolution..."
 
-# Function to resolve conflicts in a file
+# Function to resolve conflicts in a file by keeping HEAD version
 resolve_conflicts() {
     local file="$1"
-    echo "Processing: $file"
-    
-    # Use git checkout to keep the HEAD version (main branch)
-    git checkout --ours "$file"
-    
-    # Add the resolved file
-    git add "$file"
+    echo "Resolving conflicts in: $file"
+    # Create a backup
+    cp "$file" "$file.backup"
+    # Use sed to resolve conflicts by keeping HEAD version
+    # Remove conflict markers and keep only the HEAD version
+    sed -i '/^
+    # Remove any remaining conflict markers
+    sed -i '/^<<<<<<< /d; /^
+    echo "Resolved conflicts in: $file"
 }
 
-# Get list of conflicted files
-conflicted_files=$(git diff --name-only --diff-filter=U)
+# Find all files with merge conflicts
+echo "Finding files with merge conflicts..."
+conflict_files=$(grep -r "" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" -l | head -50)
 
-if [ -z "$conflicted_files" ]; then
-    echo "No merge conflicts found."
-    exit 0
-fi
+echo "Found $(echo "$conflict_files" | wc -l) files with conflicts"
 
-echo "Found conflicted files:"
-echo "$conflicted_files"
-
-# Resolve each conflicted file
-echo "$conflicted_files" | while read -r file; do
-    if [ -n "$file" ]; then
+# Process each file
+for file in $conflict_files; do
+    if [ -f "$file" ]; then
         resolve_conflicts "$file"
     fi
 done
 
-echo "All merge conflicts resolved by keeping HEAD version."
+echo "Merge conflict resolution completed!"
+echo "Files processed: $(echo "$conflict_files" | wc -l)"

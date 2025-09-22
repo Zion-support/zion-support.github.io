@@ -9,7 +9,7 @@ let totalFiles = 0;
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     
     // Fix malformed JSX return statements
     content = content.replace(/return\s*\(\s*<div[^>]*>\s*<\/div>\s*<div/g, 'return (\n    <div className="max-w-2xl mx-auto">\n      <div');
