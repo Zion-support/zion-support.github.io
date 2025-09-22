@@ -1,16 +1,23 @@
-# Dockerfile for Zion Tech Nexus Market
-# Build stage
-FROM node:20 AS builder
+# Use Node.js 18 as base image
+FROM node:18-alpine
+
+# Set working directory
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production
+
+# Copy source code
 COPY . .
+
+# Build the application
 RUN npm run build
 
-# Production stage
-FROM node:20-slim AS runner
-WORKDIR /app
-COPY --from=builder /app .
-ENV NODE_ENV=production
+# Expose port
 EXPOSE 3000
-CMD ["npx", "next", "start", "-p", "3000"]
+
+# Start the application
+CMD ["npm", "start"]

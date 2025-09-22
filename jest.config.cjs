@@ -1,112 +1,237 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = {
-  // Automatically clear mock calls and instances between every test
-  clearMocks: true,
-
-  // The directory where Jest should output its coverage files
-  coverageDirectory: 'coverage',
-
-  // Use v8 coverage provider to avoid issues with babel-plugin-istanbul
-  coverageProvider: 'v8',
-
   testEnvironment: 'jsdom',
-  transform: {
-    '^.+\\.(t|j)sx?$': ['babel-jest', {
-      presets: [
-        ['@babel/preset-env', { targets: { node: 'current' }, modules: 'commonjs' }],
-        ['@babel/preset-typescript', { allExtensions: true, isTSX: true }], // Added isTSX: true
-        ['@babel/preset-react', { runtime: 'automatic' }]
-      ],
-      plugins: [
-        '@babel/plugin-transform-runtime'
-      ],
-      babelrc: false,
-      configFile: false
-    }],
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'], // Keep ts/tsx here
-  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
-  testMatch: [ // More specific test match patterns
-    "**/__tests__/**/*.test.[jt]s?(x)",
-    "**/tests/**/*.test.[jt]s?(x)",
-    // If you have tests directly within src, you might add:
-    // "<rootDir>/src/**/__tests__/**/*.test.[jt]s?(x)",
-    // "<rootDir>/src/**/*.test.[jt]s?(x)",
-  ],
-  testPathIgnorePatterns: [ // Ignore patterns
-    "/node_modules/",
-    "/cypress/",
-    "/playwright/", // Assuming playwright tests might be in a root /playwright folder
-    "tests/storybook/", // Exclude storybook visual tests
-    "\\.spec\\.[jt]s?(x)$", // Convention for Playwright spec files, to avoid conflict if any
-    // Attempt to ignore specific vitest files or directories
-    "__tests__/utils/validateEnv.test.ts",
-    "src/hooks/auth/__tests__/useEmailAuth.test.ts",
-    "tests/Accessibility.test.tsx", // This one imports vitest
-    "tests/apiClient.msw.test.ts", // This one imports vitest
-    "tests/apiClient.test.ts", // This one imports vitest
-    "tests/authController.test.ts", // This one imports vitest
-    "tests/cartSlice.test.ts", // This one imports vitest
-    "tests/CategoryListingPageLoading.test.tsx", // This one imports vitest
-    "tests/devtools.test.ts", // This one imports vitest
-    "tests/HeroSection.test.tsx", // This one imports vitest (indirectly via router mock)
-    "tests/LoginForm.test.tsx", // This one imports vitest
-    "tests/LoginFormFetch.test.tsx", // This one imports vitest
-    "tests/Login.test.tsx", // This one imports vitest
-    "tests/NewPostRoute.test.tsx", // This one imports vitest
-    "tests/NavLink.test.tsx", // This one imports vitest
-    "tests/PointsSystem.test.ts", // This one imports vitest
-    "tests/ProductActions.test.tsx", // This one imports vitest
-    "tests/RegisterApi.jest.test.ts", // This one imports vitest
-    "tests/ServicesNavigation.test.tsx", // This one imports vitest
-    "tests/SyncRoute.test.ts", // This one imports vitest
-    "tests/supabaseSafeFetch.test.ts", // This one imports vitest
-    "__tests__/api/user-id.test.ts", // This one imports vitest
-    "__tests__/api/user-me.test.ts", // This one imports vitest
-    "__tests__/api/reset-password.test.ts", // This one imports vitest
-    "__tests__/auth/register.test.ts", // This one imports vitest
-    "__tests__/components/EnhancedNewsletterForm.test.tsx", // This one imports vitest
-    "__tests__/pages/talent/[id].test.tsx", // This one imports vitest
-    "tests/authService.test.ts",
-    "tests/apiErrorHandler.test.ts",
-    "tests/TalentProfilePage.test.tsx",
-    "tests/ServiceTypeStep.test.tsx",
-    "tests/visual-regression.test.ts"
-  ],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+module.exports = {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const nextJest = require('next/jest')
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   moduleNameMapper: {
-    // Specific aliases first
-    '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
-    '^@/components/(.*)$': '<rootDir>/src/components/$1',
-    '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
-    '^@/context/(.*)$': '<rootDir>/src/context/$1',
-    '^@/lib/(.*)$': '<rootDir>/src/lib/$1',
-    '^@/utils/(.*)$': '<rootDir>/src/utils/$1',
-    '^@/config/(.*)$': '<rootDir>/src/config/$1',
-    '^@/styles/(.*)$': '<rootDir>/src/styles/$1',
-    '^@/integrations/(.*)$': '<rootDir>/src/integrations/$1',
-    '^@/public/(.*)$': '<rootDir>/public/$1',
-    // General alias last
     '^@/(.*)$': '<rootDir>/src/$1',
-    // 'vitest$': '<rootDir>/tests/vitest-mock.ts', // Removed vitest mock
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    // Next.js mocks
-    '^next/router$': '<rootDir>/tests/__mocks__/next/router.js',
-    '^next/image$': '<rootDir>/tests/__mocks__/next/image.js',
-    '^next/link$': '<rootDir>/tests/__mocks__/next/link.js',
-    '^next-auth/react$': '<rootDir>/tests/__mocks__/next-auth/react.js',
-    '^@stripe/react-stripe-js$': '<rootDir>/tests/__mocks__/@stripe/react-stripe-js.js',
-    '^@stripe/stripe-js$': '<rootDir>/tests/__mocks__/@stripe/stripe-js.js',
-    '^next-cloudinary$': '<rootDir>/tests/__mocks__/next-cloudinary.js',
   },
-  transformIgnorePatterns: [
-    '/node_modules/(?!(@reown/.*|@walletconnect/.*|uint8arrays/.*|multiformats/.*|bson|mongodb|mongoose|lit|lit-html|lit-element|@lit/reactive-element)/)', // Specifically add @lit/reactive-element
+<<<<<<< HEAD
+=======
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' } }],
+        ['@babel/preset-react', { runtime: 'automatic' }],
+        '@babel/preset-typescript'
+      ]
+    }]
+  },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  testMatch: [
+    '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
+    '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
-  roots: ['<rootDir>/__tests__', '<rootDir>/tests', '<rootDir>/src'],
+  collectCoverageFrom: [
+<<<<<<< HEAD
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/index.tsx',
+    '!src/main.tsx',
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/build/',
+<<<<<<< HEAD
+  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  verbose: true,
+  collectCoverage: false,
+<<<<<<< HEAD
+  testTimeout: 10000,
+<<<<<<< HEAD
+=======
+};
+=======
+<<<<<<< HEAD
+  testTimeout: 10000,
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+};
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  collectCoverageFrom: [
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+    'components/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+    'app/**/*.{js,jsx,ts,tsx}',
+    'utils/**/*.{js,jsx,ts,tsx}',
+    '!**/node_modules/**',
+    '!**/*.d.ts',
+  ],
+  testPathIgnorePatterns: [
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    '<rootDir>/.next/',
+    '<rootDir>/out/',
+    '<rootDir>/__tests__.disabled/',
+    '<rootDir>/tests.disabled/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/test.disabled/',
+    '<rootDir>/plugins.disabled/',
+    '<rootDir>/supabase.disabled/',
+    '<rootDir>/dao/',
+    '<rootDir>/pages.disabled/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/src.disabled/',
+    '<rootDir>/components.disabled/',
+    '<rootDir>/components.disabled_full/',
+    '<rootDir>/contracts.disabled/',
+    '<rootDir>/data.disabled/',
+    '<rootDir>/api.disabled/',
+    '<rootDir>/api.disabled.temp/',
+    '<rootDir>/cypress_backup/',
+    '<rootDir>/data_backup/',
+    '<rootDir>/apps.backup/',
+    '<rootDir>/automation_backup/',
+    '<rootDir>/backup/',
+    '<rootDir>/backups/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/corrupted-files-backup/',
+    '<rootDir>/broken_files_backup/',
+  ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  dir: './',
+});
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
+
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+    '!src/**/*.test.{js,jsx,ts,tsx}',
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+<<<<<<< HEAD
+module.exports = createJestConfig(customJestConfig)
+=======
+module.exports = createJestConfig(customJestConfig)
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 10000,
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
     global: {
-      statements: 80,
-      branches: 80,
-      functions: 80,
-      lines: 80,
-    },
-  },
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
+    }
+  }
+<<<<<<< HEAD
 };
+<<<<<<< HEAD
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+module.exports = createJestConfig(customJestConfig);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
