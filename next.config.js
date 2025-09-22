@@ -4,7 +4,6 @@ import path from 'path';
 const nextConfig = {
   reactStrictMode: false,
   trailingSlash: true,
-  distDir: 'out',
   
   // Static export configuration
   output: 'export',
@@ -37,6 +36,7 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   generateEtags: true,
+  
   
   // Generate unique build ID for better caching
   generateBuildId: async () => {

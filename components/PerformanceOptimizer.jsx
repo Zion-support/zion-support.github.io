@@ -1,25 +1,59 @@
 import React, { useEffect, useState } from 'react';
 
-const PerformanceOptimizer = ({ children }) => {
+const PerformanceOptimizer = () => {
+  const [metrics, setMetrics] = useState({
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    fcp: 0,
+    ttfb: 0
+  });
+
   const [isOptimized, setIsOptimized] = useState(false);
-  const [connectionSpeed, setConnectionSpeed] = useState('4g');
 
   useEffect(() => {
-    // Detect connection speed
-    if (navigator.connection) {
-      const connection = navigator.connection;
-      setConnectionSpeed(connection.effectiveType || '4g');
-      
-      // Adjust loading strategy based on connection
-      if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
-        // For slow connections, defer non-critical resources
-        document.documentElement.classList.add('slow-connection');
+    // Performance monitoring
+    const measurePerformance = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0];
+        const paint = performance.getEntriesByType('paint');
+        
+        const fcp = paint.find(entry => entry.name === 'first-contentful-paint');
+        const lcp = performance.getEntriesByType('largest-contentful-paint');
+        
+        setMetrics(prev => ({
+          ...prev,
+          fcp: fcp ? fcp.startTime : 0,
+          lcp: lcp.length > 0 ? lcp[lcp.length - 1].startTime : 0,
+          ttfb: navigation ? navigation.responseStart - navigation.requestStart : 0
+        }));
+
+        // Check if performance is optimized
+        const isGoodPerformance = 
+          (fcp ? fcp.startTime : 0) < 1800 && // FCP < 1.8s
+          (lcp.length > 0 ? lcp[lcp.length - 1].startTime : 0) < 2500; // LCP < 2.5s
+        
+        setIsOptimized(isGoodPerformance);
       }
+    };
+
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
 
-    // Preload critical resources
+    // Cleanup
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, []);
+
+  // Preload critical resources
+  useEffect(() => {
     const preloadCriticalResources = () => {
-      // Preload fonts
+      // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
       fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
@@ -27,115 +61,84 @@ const PerformanceOptimizer = ({ children }) => {
       document.head.appendChild(fontLink);
 
       // Preload critical images
-      const criticalImages = ['/favicon.ico', '/logo.png'];
-      criticalImages.forEach(src => {
-        const img = new Image();
-        img.src = src;
-      });
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/services-bg.jpg'
+      ];
 
-      setIsOptimized(true);
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = src;
+        link.as = 'image';
+        document.head.appendChild(link);
+      });
     };
 
-    // Optimize images with lazy loading
+    preloadCriticalResources();
+  }, []);
+
+  // Optimize images
+  useEffect(() => {
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.remove('lazy');
-            observer.unobserve(img);
-          }
+      
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              observer.unobserve(img);
+            }
+          });
         });
-      });
 
-      images.forEach(img => imageObserver.observe(img));
-    };
-
-    // Implement service worker for caching
-    const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator) {
-        try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('Service Worker registered:', registration);
-        } catch (error) {
-          console.log('Service Worker registration failed:', error);
-        }
+        images.forEach(img => imageObserver.observe(img));
       }
     };
 
-    // Execute optimizations
-    preloadCriticalResources();
     optimizeImages();
-    registerServiceWorker();
-
-    // Cleanup
-    return () => {
-      // Remove slow connection class if added
-      document.documentElement.classList.remove('slow-connection');
-    };
   }, []);
 
-  // Monitor Core Web Vitals
+  // Resource hints
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Largest Contentful Paint
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          console.log('LCP:', entry.startTime);
-        }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          console.log('FID:', entry.processingStart - entry.startTime);
-        }
-      }).observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (!entry.hadRecentInput) {
-            console.log('CLS:', entry.value);
-          }
-        }
-      }).observe({ entryTypes: ['layout-shift'] });
-    }
-  }, []);
-
-  // Resource hints based on connection speed
-  useEffect(() => {
-    if (connectionSpeed === 'slow-2g' || connectionSpeed === '2g') {
-      // For slow connections, prioritize critical resources
-      const criticalResources = [
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+    const addResourceHints = () => {
+      // DNS prefetch for external domains
+      const domains = [
+        'fonts.googleapis.com',
+        'fonts.gstatic.com',
+        'www.google-analytics.com'
       ];
-      
-      criticalResources.forEach(href => {
+
+      domains.forEach(domain => {
         const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = href;
-        link.as = 'style';
+        link.rel = 'dns-prefetch';
+        link.href = `//${domain}`;
         document.head.appendChild(link);
       });
-    }
-  }, [connectionSpeed]);
+    };
 
-  return (
-    <div className={`performance-optimizer ${isOptimized ? 'optimized' : 'loading'}`}>
-      {children}
-      
-      {/* Performance indicator for development */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 left-4 bg-black/80 text-white p-2 rounded text-xs font-mono">
-          <div>Connection: {connectionSpeed}</div>
-          <div>Optimized: {isOptimized ? 'Yes' : 'No'}</div>
+    addResourceHints();
+  }, []);
+
+  // Development mode performance display
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+        <div className="mb-2 font-bold">Performance Metrics</div>
+        <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
+        <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
+        <div>TTFB: {metrics.ttfb.toFixed(0)}ms</div>
+        <div className={`mt-2 ${isOptimized ? 'text-green-400' : 'text-red-400'}`}>
+          {isOptimized ? '✓ Optimized' : '⚠ Needs Optimization'}
         </div>
-      )}
-    </div>
-  );
+      </div>
+    );
+  }
+
+  return null;
 };
 
 export default PerformanceOptimizer;
