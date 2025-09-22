@@ -37,7 +37,7 @@ Cross-Origin-Resource-Policy = "same-origin"
 X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
 
-## Enable Netlify Next.js runtime plugin
+## Using Next.js static export; no Netlify Next.js runtime plugin required
 
 # Static redirects for specific routes
 [[redirects]]
