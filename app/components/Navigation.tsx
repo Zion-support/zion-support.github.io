@@ -54,7 +54,7 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center space-x-4">
               <ThemeToggle />
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium">
                 Get Started
