@@ -14,4 +14,3 @@ const ErrorRoutes = () => {;
       <Route path="*" element={<NotFound />} />;
     </Routes>;
 <<<<<<< HEAD
-

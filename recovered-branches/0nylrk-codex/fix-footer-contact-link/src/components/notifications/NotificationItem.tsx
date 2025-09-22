@@ -1,21 +1,7 @@
 <<<<<<< HEAD
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// Use the centralized icon wrapper to avoid missing icons;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-import React from 'react';
-// Use the centralized icon wrapper to avoid missing icons
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
 import {Check, Trash2, ChevronRight} from '@/components/icons';'
 import {Button} from '@/components/ui/button';'
@@ -25,10 +11,7 @@ import {cn} from '@/lib/utils';'
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';'
 import {useNavigate} from 'react-router-dom';'
 import {Notification, NotificationType} from '@/context/notifications';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    case 'quote_request':
+case 'quote_request':
       return <span className="text-purple-500">📝</span>,
     case 'booking_confirmation':
       return <span className="text-green-500">✅</span>,
@@ -44,25 +27,10 @@ import {Notification, NotificationType} from '@/context/notifications';
   }
 }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
 export const getTypeIcon = (type: NotificationType) => {}
   switch (type) {';
     case 'message':;
       return <span className="text-blue-500">💬</span>;
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -79,14 +47,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { useNavigate } from 'react-router-dom','
 import { Notification, NotificationType } from '@/context/notifications',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
@@ -104,18 +64,7 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-yellow-500">⚠️</span>
     default:
       return <span className="text-gray-500">📣</span>
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
-  switch (type) {
-    case 'message':;
-      return <span className="text-blue-500">💬</span>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -166,9 +115,6 @@ export const getTypeIcon = (type: NotificationType) => {
     default:
       return <span className="text-gray-500">📣</span>
 
-
-<<<<<<< HEAD
-
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -177,15 +123,9 @@ export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     case 'message':;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return <span className="text-blue-500">💬</span>;
-=======
-    case 'message':;      return <span className="text-blue-500">💬</span>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     case 'message':;      return <span className="text-blue-500">💬</span>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -229,28 +169,19 @@ export const getTypeIcon = (type: NotificationType) => {}
     case 'onboarding':;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return <span className="text-zion-cyan">🚀</span>;
-<<<<<<< HEAD
-
-    case 'system':;
+case 'system':;
       return <span className="text-yellow-500">⚠️</span>,;
     default:;
       return <span className="text-gray-500">📣</span>;
   }
 };
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface NotificationItemProps {
 <<<<<<< HEAD
-=======
-interface NotificationItemProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   notification: Notification,
   onMarkAsRead: (id: string) => Promise<void>,
   onDismiss: (id: string) => Promise<void>
@@ -267,18 +198,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (!notification.read) {
       onMarkAsRead(notification.id)
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 interface NotificationItemProps {}
 '
@@ -340,7 +259,6 @@ export const getTypeIcon = (type: NotificationType) => {;
 
   }
 }
-<<<<<<< HEAD
 interface NotificationItemProps {}
   notification: Notification;
   onMarkAsRead: (id: string) => Promise<void>
@@ -358,9 +276,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({};
 
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
-=======
-interface NotificationItemProps {export const NotificationItem: React.FC<NotificationItemProps> = ({;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 interface NotificationItemProps {export const NotificationItem: React.FC<NotificationItemProps> = ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -393,16 +308,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   const handleClick = () => {;
     if (!notification.read) {;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       onMarkAsRead(notification.id);
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 =======
@@ -418,45 +327,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
       navigate(notification.action_url)
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  }
-  },
 
-  },
-  };
-  },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-    }'
-    // If there's an action URL, navigate to it;
-    if (notification.action_url) {}
-      navigate(notification.action_url)
-    }
-
-
-    }'
-    // If there's an action URL, navigate to it;
-    if (notification.action_url) {}
-      navigate(notification.action_url)
-    }
-  }
-  },
-
-
-  },
-  };
-  },
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
 export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   notification, ;
   onMarkAsRead, ;
@@ -473,24 +346,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
       navigate(notification && notification.action_url);
     }
   }
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   };
   },
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    }
-=======
-      onMarkAsRead(notification.id);    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
     }
@@ -505,7 +365,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   },
   };
   },
-
 
 interface NotificationItemProps {;
   notification: Notification,;
@@ -588,35 +447,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-  return (
-    <div;
-      className={cn(
-
-              <Button"
-                variant="link""
-                size="sm""
-                className="text-zion-cyan p-0 h-auto"
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 onClick={handleClick}>;
                 {notification && notification.action_text}"
                 <ChevronRight className="h-3 w-3 ml-1" />;
               </Button>;
             )}
-<<<<<<< HEAD
-=======
-=======
-                onClick={handleClick}>;
-                {notification && notification.action_text}
-                <ChevronRight className="h-3 w-3 ml-1" />;
-              </Button>;
-            )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           </div>;
         </div>;
@@ -624,16 +459,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 
       {/* Action buttons that appear on hover */}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                onClick={handleClick}
-              >
-                {notification.action_text}
-                <ChevronRight className="h-3 w-3 ml-1" />
-              </Button>
-            )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>
         </div>
       </div>
@@ -642,13 +467,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <Button
                 variant="ghost"
@@ -678,22 +500,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                   e.stopPropagation(),
                   onDismiss(notification.id)
 
-<<<<<<< HEAD
 };
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -701,11 +516,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
-<<<<<<< HEAD
-            </TooltipContent>;
+</TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
-<<<<<<< HEAD
 <<<<<<< HEAD
         <TooltipProvider>;
           <Tooltip>;
@@ -725,38 +538,16 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
             <TooltipContent>;
               <p>Dismiss</p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-              <Button"
-                variant="ghost" "
-                size="icon" "
-                className="h-6 w-6"
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
       </div>;
-<<<<<<< HEAD
-    </div>;
+</div>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
       </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -767,8 +558,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
     </div>);
 }
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -782,27 +571,19 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
         </TooltipProvider>;
       </div>;
 
-
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 };
     </div>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
+</div>;
   )
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,11 +13,6 @@ interface AuthConfigurationErrorProps {;
 }
 ;
 export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
 =======
@@ -28,20 +22,20 @@ class ErrorBoundary extends React.Component {}
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }'
@@ -50,23 +44,13 @@ import Link from 'next/link';
 '
 import { Button } from '@/components/ui/button';'
 import { Alert, AlertDescription } from '@/components/ui/alert';
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 
 import React from 'react'
 import Link from 'next/link'
 import {
 
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 =======
 '
 import React from 'react''
@@ -80,12 +64,7 @@ import {}
   Settings,;
   CheckCircle;
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -95,37 +74,12 @@ import Link from 'next/link';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
-=======
-'
-} from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react''
-import { Button } from '@/components/ui/button''
-import { Alert, AlertDescription } from '@/components/ui/alert'
-'
-import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'';
-import { Button  } from '@/components/ui/button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
 import { Alert, AlertDescription } from '@/components/ui/alert';
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
+:src/components/auth/AuthConfigurationError.tsx
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-import React from 'react',;
-import Link from 'next/link',;
-import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-interface AuthConfigurationErrorProps {;
-  onRetry?: () => void,;
-  showSetupButton?: boolean;
-}
-;
-export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 interface AuthConfigurationErrorProps {;
   onRetry?: () => void;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -135,27 +89,16 @@ export function AuthConfigurationError(): any ({;
   onRetry,;
   showSetupButton = true,;
 }: AuthConfigurationErrorProps) {;
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
   const handleRefresh = () => {;
     if (onRetry) {;
       onRetry();
     } else {;
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
       window.location.reload();
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 }
 
 export function AuthConfigurationError({ onRetry, showSetupButton;
@@ -168,22 +111,11 @@ export function AuthConfigurationError({
       onRetry()
     } else {
       window.location.reload();
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   },
-=======
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-  },
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full">
-        {/* Main Error Card */}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
       window && window.location.reload();    }
       window.location.reload()'
 import React from 'react';'
@@ -214,43 +146,10 @@ if ( {) {}
     } else {}
       window.location.reload () }
   }
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
   return (
-=======
-  return ('
-    <div className='min - h-screen bg - gradient - to - br from - red - 50 via - orange - 50 to - yellow - 50 flex items - center justify - center p - 4'>;'
-      <div className='max - w-2xl w - full'>;
-export /**;
- * AuthConfigurationError - Function description;
- */
-function AuthConfigurationError() {}
-  const handle_refresh = () =>: any {}
-    // Check condition;
-if ( {) {}
-  $2;
-}
-      on_retry ();
-    } else {}
-      window.location.reload ();
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
 
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-=======
-import React from 'react',;
-import Link from 'next/link',;
-import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-interface AuthConfigurationErrorProps {;
-  onRetry?: () => void,;
-  showSetupButton?: boolean;
-}
-;
-export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {;  const handleRefresh = () => {;
-    if (onRetry) {;
-      onRetry();
-    } else {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src/components/auth/AuthConfigurationError.tsx
     }
   },
 
@@ -275,18 +174,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         {/* Main Error Card */}
-=======
-
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
-=======
-        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">"
-          <div className="text-center mb-6">"
-            <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
               <AlertTriangle className="h-8 w-8 text-red-600" />
             </div>"
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
@@ -297,18 +187,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             </p>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
           <Alert variant="destructive" className="mb-6">
@@ -325,36 +203,22 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           </Alert>
 
           {/* Technical Details */}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src/components/auth/AuthConfigurationError.tsx
 =======
 =======
 
-
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
-=======
-"
-            <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
             <ul className="text-sm text-gray-700 space-y-1">
 <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
       <div className='max-w-2xl w-full'>
@@ -393,26 +257,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li>• AUTH0_CLIENT_ID</li>
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
           </div>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 
 <<<<<<< HEAD
           {/* Action Buttons */}
-=======
-        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
-          <div className='text-center mb-6'>;
-            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>;
-=======
-'
-        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;'
-          <div className='text-center mb-6'>;'
-            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
               <AlertTriangle className='h-8 w-8 text-red-600' />;
             </div>;'
             <h1 className='text-3xl font-bold text-gray-900 mb-2'>;
@@ -434,34 +285,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Technical Details */}        {/* Main Error Card */}
           {/* Action Buttons */}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 <div className='flex flex-col sm:flex-row gap-3 mb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {showSetupButton && (
               <Button '
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-=======
-          </div>
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
@@ -471,14 +308,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Setup Guide;
               </Button>
 
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
+:src/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
   };
   return (;"
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;"
@@ -496,21 +327,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               The sign-up system needs to be configured before users can create accounts;
             </p>;
           </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
           <Alert variant="destructive" className="mb-6">;
             <AlertTriangle className="h-4 w-4" />;
             <AlertDescription>;
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured.;
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           <Alert variant="destructive" className="mb-6">;
 =======
@@ -558,7 +381,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               are not configured. New users cannot sign up until this is;
               resolved.            </AlertDescription>;
           </Alert>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
           {/* Technical Details */}        {/* Main Error Card */}
         <div className="bg - white rounded - 2xl shadow - xl border border - red - 200 p - 8 mb-6">;
           <div className="text - center mb-6">;
@@ -574,58 +397,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <Alert variant="destructive" className="mb-6">;
             <AlertTriangle className="h - 4 w-4" />;
-=======
-          {/* Technical Details */}        {/* Main Error Card */}"
-        <div className="bg - white rounded - 2xl shadow - xl border border - red - 200 p - 8 mb - 6">;"
-          <div className="text - center mb - 6">;"
-            <div className="mx - auto mb - 4 h - 16 w - 16 rounded - full bg - red - 100 flex items - center justify - center">;"
-              <AlertTriangle className="h - 8 w - 8 text - red - 600" />;
-            </div>;"
-            <h1 className="text - 3xl font - bold text - gray - 900 mb - 2">;
-              Authentication Service Unavailable;
-            </h1>;"
-            <p className="text - gray - 600">;
-              The sign - up system needs to be configured before users can create accounts;
-            </p>;
-          </div>;"
-          <Alert variant="destructive" className="mb - 6">;"
-            <AlertTriangle className="h - 4 w - 4" />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
             <AlertDescription>;
               <strong > Critical Issue #1:</strong> Auth0 environment variables are not configured.;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               New users cannot sign up until this is resolved.;
             </AlertDescription>;
           </Alert>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
           {/* Technical Details */}
-<<<<<<< HEAD
-          <div className="bg-gray-50 rounded-lg p-4 mb-6">;
+<div className="bg-gray-50 rounded-lg p-4 mb-6">;
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>;
             <ul className="text-sm text-gray-700 space-y-1">;
-=======
-          <div className='bg - gray - 50 rounded - lg p - 4 mb - 6'>;
-            <h3 className='font - semibold text - gray - 900 mb - 2'>;
-              Missing Configuration:;
-            </h3>;
-<<<<<<< HEAD
-            <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
-            <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
-=======
-          {/* Technical Details */}'
-          <div className='bg - gray - 50 rounded - lg p - 4 mb - 6'>;'
-            <h3 className='font - semibold text - gray - 900 mb - 2'>;
-              Missing Configuration:;
-            </h3>;'"
-            <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;"
-            <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
             <ul className="text - sm text - gray - 700 space - y-1">;
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
               <li>• AUTH0_SECRET</li>;
               <li>• AUTH0_BASE_URL</li>;
               <li>• AUTH0_ISSUER_BASE_URL</li>;
@@ -633,54 +419,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li>• AUTH0_CLIENT_SECRET</li>;
             </ul>;
           </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             {showSetupButton && (;
               <Button;
-=======
-
-                onClick = {(,) => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
-=======
-'
-                onClick = {(,) => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
               >;'
                 <Settings className='w-4 h-4 mr-2' />;
                 Setup Guide;
               </Button>;
 
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
             )}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-=======
-            <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb-6">;
-            <h3 className="font - semibold text - gray - 900 mb-2">Missing Configuration:</h3>;
-            <ul className="text - sm text - gray - 700 space-y-1">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:src_backup/components/auth/AuthConfigurationError.tsx
             <Button
               onClick={handleRefresh}
               variant='outline'
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+<div className="flex flex-col sm:flex-row gap-3 mb-6">
             {showSetupButton && (
               <Button 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -690,65 +449,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Settings className="w-4 h-4 mr-2" />;
                 Setup Guide;
               </Button>;
-=======
-            <Button;
-              onClick={handleRefresh}'
-              variant='outline'
-"
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
-            {showSetupButton && (
-              <Button '
-                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}"
-                className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
-              >"
-                <Settings className="w-4 h-4 mr-2" />
-                Setup Guide;
-              </Button>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
             )}
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 ;
             <Button;
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-            
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+
+:src_backup/components/auth/AuthConfigurationError.tsx
             <Button 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
               onClick={handleRefresh}
-              variant="outline" 
-=======
-            <Button;
-              onClick={handleRefresh}"
-              variant="outline" "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
+              variant="outline"
               className="flex-1"
             >"
               <RefreshCw className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              Check Again
+Check Again
             </Button>
           </div>
 
           {/* Quick Setup Steps */}
-<<<<<<< HEAD
-=======
 
-              className='flex-1'
-            >
-              <RefreshCw className='w-4 h-4 mr-2' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-              Check Again
-=======
-              Check Again;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
             </Button>
           </div>'
               className='flex-1'>;'"
@@ -758,25 +479,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
 
           {/* Quick Setup Steps */}
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
           <div className="border-t pt-6">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <h3 className="font-semibold text-gray-900 mb-3">Quick Setup Steps:</h3>
             <ol className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
@@ -788,20 +495,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li className="flex items-start gap-3">"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">1</span>
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 <div className='border-t pt-6'>
             <h3 className='font-semibold text-gray-900 mb-3'>
               Quick Setup Steps:
@@ -811,12 +506,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   1
                 </span>
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
                 <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />
@@ -827,22 +519,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className="text-blue-600 hover:underline inline-flex items-center gap-1"
                   >"
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </Link>
                 </div>
               </li>
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-              
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <a
                     href="https://manage.auth0.com/"
                     target="_blank"
@@ -850,23 +533,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className="text-blue-600 hover:underline inline-flex items-center gap-1"
                   >
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-              
-
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-
+:src_backup/components/auth/AuthConfigurationError.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
               <li className="flex items-start gap-3">
-=======
-"
-              <li className="flex items-start gap-3">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
@@ -879,23 +553,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Create a "Regular Web Application" named "Zion AI Marketplace"
                 </div>
               </li>
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
-
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
-              
               <li className="flex items-start gap-3">
 =======
               "
@@ -904,35 +564,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
 =======
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-<li className='flex items-start gap-3'>
-                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
-                  3
-                </span>
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
                 <div>
                   <strong>Configure Environment:</strong>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
                   <br />
-<<<<<<< HEAD
-                  Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
+Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
                 </div>
               </li>
-=======
-                    className='text-blue-600 hover:underline inline-flex items-center gap-1'>;
-=======
-                  <br />'
-                    className='text-blue-600 hover:underline inline-flex items-center gap-1'>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
                     Visit Auth0 Dashboard <ExternalLink className='w-3 h-3' />;
                   </a>;
                 </div>;
@@ -1044,33 +687,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <code className='bg-gray-100 px-1 rounded'>;
                     npm run dev;'
                   </code>{' '}
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
-              
-              <li className="flex items-start gap-3">
-=======
-              "
-              <li className="flex items-start gap-3">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
+<li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
                 <div>
 
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
                   <strong>Configure Environment:</strong>
                   <br />"
                   Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file;
@@ -1078,16 +703,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </li>"
               <li className="flex items-start gap-3">
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
+:src_backup/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              
+
               <li className="flex items-start gap-3">
 <<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
@@ -1099,17 +719,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
-=======
+:src/components/auth/AuthConfigurationError.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
                   to apply changes
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1118,27 +729,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ol>
           </div>
         </div>
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Alternative Actions Card */}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-"
-                  Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes;
-                </div>
-              </li>
-            </ol>
-          </div>
-        </div>
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
                   to apply changes                </div>                <div>;
                   <strong>Configure Environment:</strong>;
                   <br />;"
@@ -1194,27 +790,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ol>;
           </div>;
         </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
           <h3 className="font-semibold text-blue-900 mb-3">Alternative Actions:</h3>
-=======
-"
-        <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">"
-          <h3 className="font-semibold text-blue-900 mb-3">Alternative Actions:</h3>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link "
               href="/marketplace" "
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
-=======
+:src/components/auth/AuthConfigurationError.tsx
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
 
@@ -1228,26 +814,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Link
               href='/marketplace'
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
             >
               <span>Browse Marketplace</span>"
               <ExternalLink className="w-4 h-4" />
             </Link>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
 =======
                 <div>
@@ -1259,7 +836,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-            
+
             <Link 
               href="/talent"               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1271,15 +848,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span>View Talent Pool</span>"
               <ExternalLink className="w-4 h-4" />
             </Link>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+:src_backup/components/auth/AuthConfigurationError.tsx
             <Link 
               href="/help" 
 =======
@@ -1291,94 +861,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span>Contact Support</span>"
               <ExternalLink className="w-4 h-4" />
             </Link>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
-            
-=======
-
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>;
+:src_backup/components/auth/AuthConfigurationError.tsx
+className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>;
               <span>Browse Marketplace</span>            >;
               <span>Browse Marketplace</span>;"
               <ExternalLink className="w-4 h-4" />;
             </Link>;
 <<<<<<< HEAD
-            
 
-            
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <Link 
-              href="/status" 
-=======
-            <Link "
-              href="/status" "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
+              href="/status"
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>System Status</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <ExternalLink className="w-4 h-4" />
+<ExternalLink className="w-4 h-4" />
             </Link>
-=======
-
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/talent'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>View Talent Pool</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/help'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>Contact Support</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/status'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>System Status</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-              <ExternalLink className="w-4 h-4" />
-            </Link>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </div>
         {/* Setup Script Info */}
-<<<<<<< HEAD
-        {showSetupButton && (
-<<<<<<< HEAD
-=======
+{showSetupButton && (
 
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
           </div>
         </div>
@@ -1386,15 +890,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Setup Script Info */}
         {showSetupButton && (
 
-
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-
+:src_backup/components/auth/AuthConfigurationError.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
           <div className="mt-6 text-center">
-=======
-        {showSetupButton && (          <div className="mt-6 text-center">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="bg-green-50 rounded-lg border border-green-200 p-4">
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
                 <CheckCircle className="w-5 h-5" />
@@ -1406,29 +905,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <CheckCircle className="w-5 h-5" />"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
                 <span className="font-semibold">Automated Setup Available</span>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
 =======
-
 
               </div>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
               </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
@@ -1446,7 +934,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 npm run setup:auth0
 =======
 
-
 "
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
                 npm run setup:auth0;
@@ -1455,39 +942,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         )}
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 ;
         {/* Footer */}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="mt-6 text-center text-sm text-gray-500">
           <p>
             For detailed instructions, see{' '}
-<<<<<<< HEAD
-=======
 
-            >
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <button 
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
               className="text-blue-600 hover: underline"
             >
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1559,17 +1026,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         )}
         {/* Footer */}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 <div className='mt-6 text-center text-sm text-gray-500'>
           <p>
-=======
-
-
-"
-        <div className="mt-6 text-center text-sm text-gray-500">
-          <p>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
             For detailed instructions, see{' '}
             <button
               onClick={() =>
@@ -1577,66 +1037,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }
               className='text-blue-600 hover:underline'
             >
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
               AUTH0_SETUP_GUIDE_ISSUE_1.md
-=======
-
-            <button '
-              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}"
-              className="text-blue-600 hover: underline"
-            >
-
-              AUTH0_SETUP_GUIDE_ISSUE_1.md;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
             </button>
           </p>
         </div>
       </div>
     </div>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
-<<<<<<< HEAD
   )
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;
 }
 }
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
@@ -1645,26 +1073,15 @@ export default AuthConfigurationError;
             For detailed instructions, see{' '}
             <button;'
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
-<<<<<<< HEAD
-              className="text-blue-600 hover: underline";
+:src_backup/components/auth/AuthConfigurationError.tsx
+className="text-blue-600 hover: underline";
             >;
               AUTH0_SETUP_GUIDE_ISSUE_1.md;
-=======
-
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/auth/AuthConfigurationError.tsx
               className="text-blue-600 hover: underline";
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
               AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
               AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md;
 
@@ -1675,21 +1092,14 @@ export default AuthConfigurationError;
       </div>;
     </div>;
   );
-<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
+:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/AuthConfigurationError.tsx
 
   );
 }
 
-
 export default AuthConfigurationError;}
-
-
 
 export default AuthConfigurationError;
 
@@ -1793,19 +1203,13 @@ export default AuthConfigurationError;
     </div>);
 export default AuthConfigurationError }
 export default AuthConfigurationError,
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+:src_backup/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 export default AuthConfigurationError;
 <<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======

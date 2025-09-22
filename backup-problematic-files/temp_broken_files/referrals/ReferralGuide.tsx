@@ -27,4 +27,3 @@ export function ReferralGuide() {;
       <CardContent>;
         <div className="space-y-4">;
 <<<<<<< HEAD
-

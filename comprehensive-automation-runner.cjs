@@ -1,27 +1,10 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
-#!/usr/bin/env node
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 const { execSync, spawn } = require('child_process');
 
@@ -35,27 +18,14 @@ const { execSync, spawn } = require('child_process');
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -74,20 +44,11 @@ class ComprehensiveAutomationRunner {
       optimizations: 0,
       errors: []
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-  ensureLogDir() {
+ensureLogDir() {
     if (!fs.existsSync(this.logDir)) {
       fs.mkdirSync(this.logDir, { recursive: true });
 
-<<<<<<< HEAD
-  log(message, type = 'INFO') {
+log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = {
       'INFO': 'ℹ️',
@@ -109,15 +70,6 @@ class ComprehensiveAutomationRunner {
         timeout: timeout
       });
 <<<<<<< HEAD
-
-=======
-      this.log(`${description} completed successfully`, 'SUCCESS');
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`${description} failed: ${error.message}`, 'ERROR');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.results.errors.push({
         command,
         description,
@@ -139,7 +91,6 @@ class ComprehensiveAutomationRunner {
 
   async runBuildProcess() {
 
-
     let buildSuccess = true;
     for (const task of buildTasks) {
       if (!result.success) {
@@ -148,24 +99,12 @@ class ComprehensiveAutomationRunner {
     return buildSuccess;
 
   async runTests() {
-<<<<<<< HEAD
-    this.log('🧪 Running comprehensive tests...');
-<<<<<<< HEAD
-
-    }
+this.log('🧪 Running comprehensive tests...');
+}
   }
 }
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
-
-=======
-    const testTasks = [
-      { command: 'npm run test:smoke', description: 'Smoke Tests' },
-      { command: 'npm test -- --passWithNoTests', description: 'Jest Tests' }
-    ];
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     let testsPassed = 0;
     for (const task of testTasks) {
@@ -174,20 +113,11 @@ if (require.main === module) {
     return testsPassed;
 
   async runAllAutomations() {
-<<<<<<< HEAD
-    this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
-    
+this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
+
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-      // Run all automation steps
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-
-  // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       await this.runSyntaxFixes();
@@ -199,7 +129,6 @@ if (require.main === module) {
       this.generateFinalReport();
 
       process.exit(1);
-
 
   generateFinalReport() {
     const duration = Date.now() - this.startTime;
@@ -214,10 +143,9 @@ if (require.main === module) {
         totalErrors: this.results.errors.length,
       },
 
-<<<<<<< HEAD
-    const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.json');
+const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
+
     this.log('📊 Final Report Generated', 'SUCCESS');
     this.log(`✅ Syntax Fixes: ${report.summary.syntaxFixes}`);
     this.log(`🏗️ Build Success: ${report.summary.buildSuccess}`);
@@ -226,33 +154,14 @@ if (require.main === module) {
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Run if called directly;
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  runner.runAllAutomations().catch(error => {
-    console.error('Comprehensive automation runner failed:', error);
-    process.exit(1);
-  });
-}
-
-module.exports = ComprehensiveAutomationRunner;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
     console.error('Comprehensive automation runner failed:', error);
 
-
 module.exports = ComprehensiveAutomationRunner;
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/contracts/components/ContractForm.tsx
-<<<<<<< HEAD
+:src/components/contracts/components/ContractForm.tsx
 <<<<<<< HEAD
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -12,8 +11,6 @@ import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
 <<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/components/ContractForm.tsx
 const formSchema = z && z.object({;
   projectName: z && z.string().min(1, "Project name is required");
   scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
@@ -26,7 +23,6 @@ const formSchema = z && z.object({;
 
 export type ContractFormValues = z && z.infer<typeof formSchema>;
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
@@ -62,22 +58,13 @@ interface ContractFormProps {
   initialValues?: ContractFormValues,
   onFormValuesChange?: (values: ContractFormValues) => void,
   onContractGenerated: (contractContent: string) => void
-=======
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         values, ;
         talent, ;
         clientName, ;
 
-<<<<<<< HEAD:src/components/contracts/components/ContractForm.tsx
+:src/components/contracts/components/ContractForm.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/components/ContractForm.tsx
 export type ContractFormValues = z.infer<typeof formSchema" > interface ContractFormProps {"
   talent: TalentProfile;
    clientName: string;
@@ -86,17 +73,12 @@ export type ContractFormValues = z.infer<typeof formSchema" > interface Contract
    onContractGenerated: (contractContent: string) => void;
    deployOptions?: DeploymentOptions
    onDeployOptionsChange?: (options: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {
-<<<<<<< HEAD:src/components/contracts/components/ContractForm.tsx
+:src/components/contracts/components/ContractForm.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/components/ContractForm.tsx
 }
   );
 }
-
-<<<<<<< HEAD
 
 export function ContractForm({
   talent,
@@ -117,7 +99,7 @@ export function ContractForm({
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
       additionalClauses: ["nda", "ip"]}}),
-  
+
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
@@ -157,11 +139,7 @@ interface ContractFormProps {;
   initialValues?: ContractFormValues,;
   onFormValuesChange?: (values: ContractFormValues) => void,;
   onContractGenerated: (contractContent: string) => void;
-=======
-  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-<<<<<<< HEAD
 ;
 export function ContractForm({;
   talent,;
@@ -200,20 +178,20 @@ export function ContractForm({;
     }
     return undefined
   }, [form, onFormValuesChange]),
-  
+
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones),
-    
+
     // If payment terms isn't already set to milestone, update it
     if (form.getValues("paymentTerms") !== "milestone") {
       form.setValue("paymentTerms", "milestone")
     }
-    
+
     toast({
       title: "Milestones Generated",
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
   },
-  
+
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true),
     try {
@@ -223,7 +201,7 @@ export function ContractForm({;
         clientName, 
         generatedMilestones
       ),
-      
+
       onContractGenerated(contract)
     } catch (error) {
       logErrorToProduction('Error generating contract:', { data: error }),
@@ -274,13 +252,13 @@ export function ContractForm({;
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
-    
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <ProjectDetailsFields 
             form={form} 
           />
-          
+
           <PaymentTermsFields 
             form={form}
             handleMilestonesGenerated={handleMilestonesGenerated}
@@ -288,7 +266,7 @@ export function ContractForm({;
           <AdditionalClausesFields;
             form={form}
           />
-          
+
           <Button 
             type="submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
@@ -305,7 +283,7 @@ export function ContractForm({;
           </Button>
         </form>
       </Form>
-      
+
       <DialogFooter className="gap-2 flex-wrap mt-4">
         <Button 
           variant="outline" 
@@ -318,51 +296,9 @@ export function ContractForm({;
     </>;
   );
 }
-=======
-
-import { useState, useEffect  } from './react';
-import { use_form  } from './react - hook - form';
-import { zod_resolver  } from '@hookform / resolvers / zod';
-import { z  } from './zod';
-import { Loader2 } from 'lucide-react'import { Button  } from '@/components / ui / button';
-import { Form  } from '@/components / ui / form';
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle  } from '@/components / ui / dialog';
-import { use_toast  } from '@/hooks / use - toast';
-import { TalentProfile  } from '@/types / talent';
-import { GeneratedMilestone  } from '@/hooks / useMilestoneGenerator';
-import { generate_contract  } from '../utils / contract_utils';
-import { ProjectDetailsFields  } from './ProjectDetailsFields';
-import { PaymentTermsFields  } from './PaymentTermsFields';
-import { AdditionalClausesFields  } from './AdditionalClausesFields';
-import {logErrorToProduction} from '@/utils / production_logger';
-const form_schema = z.object ({
-  project_name: z.string ().min (1, "Project name is required");
-  scope_summary: z.string ().min (10, "Scope summary should be at least 10 characters");
-  start_date: z.date ({
-    required_error: "Start date is required"}),
-  end_date: z.date ().optional (),
-  payment_terms: z.enum (["hourly", "fixed", "milestone"]);
-  payment_amount: z.string ().min (1, "Payment amount is required");
-  additional_clauses: z.array (z.string ()).optional ()}),
-export type ContractFormValues = z.infer < typeof form_schema>;
-        values,
-        talent,
-        client_name,
-}
-  );
-}
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/contracts/components/ContractForm.tsx
+:src/components/contracts/components/ContractForm.tsx
 <<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -394,22 +330,22 @@ const formSchema = null;
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
-    
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <ProjectDetailsFields 
             form={form} 
           />
-          
+
           <PaymentTermsFields 
             form={form}
             handleMilestonesGenerated={handleMilestonesGenerated}
           />
-          
+
           <AdditionalClausesFields 
             form={form}
           />
-          
+
           <Button 
             type="submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
@@ -426,7 +362,7 @@ const formSchema = null;
           </Button>
         </form>
       </Form>
-      
+
       <DialogFooter className="gap-2 flex-wrap mt-4">
         <Button 
           variant="outline" 
@@ -459,9 +395,6 @@ talent.full name ;
 }"
   )
 }
-<<<<<<< HEAD:src/components/contracts/components/ContractForm.tsx
+:src/components/contracts/components/ContractForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/contracts/components/ContractForm.tsx

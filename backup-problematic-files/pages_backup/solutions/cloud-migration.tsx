@@ -1,27 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/cloud-migration.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/cloud-migration.tsx
+
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Cloud,
   Shield,
   Zap,
-=======
-import Link from 'next/link';';
-import { Cloud, 
-  Shield, 
-  Zap, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   CheckCircle,
   ArrowRight,
   BarChart3,
@@ -33,30 +20,16 @@ import { Cloud,
   Smartphone,
   Brain;
 } from 'lucide-react';
-<<<<<<< HEAD
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
-
 const phases = [;
   {}
     title: 'Assessment & Planning,',;
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
-=======
-=======
-import Layout from "../../components/Layout";";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const phases = [;
   {}
     title: 'Assessment & Planning,',,
   description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  {}"
-    title: 'Assessment & Planning,',;
-    description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     icon: BarChart3,;
     steps: [,;
       'Infrastructure audit,',;
@@ -66,13 +39,8 @@ pr-12325
     ];
   },;
   {}
-<<<<<<< HEAD
-    title: 'Design & Architecture,',;
+title: 'Design & Architecture,',;
     description: 'Cloud-native architecture design and security framework implementation.,',;
-=======
-    title: 'Design & Architecture,',,
-  description: 'Cloud-native architecture design and security framework implementation.,',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: Settings,;
       'Cloud architecture design,',;
       'Security framework',',;
@@ -81,20 +49,8 @@ pr-12325
     ];
   },;
   {}
-<<<<<<< HEAD
-    title: 'Migration Execution,',;
+title: 'Migration Execution,',;
     description: 'Phased migration with minimal downtime and comprehensive testing.,',;
-=======
-    title: 'Migration Execution,',,
-  description: 'Phased migration with minimal downtime and comprehensive testing.,',;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      'Cost optimization;']
-    title: 'Migration Execution,',;
-    description: 'Phased migration with minimal downtime and comprehensive testing.,',;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     icon: Cloud,;
       'Data migration,',;
       'Application migration',',;
@@ -103,14 +59,8 @@ pr-12325
     ];
   },;
   {}
-<<<<<<< HEAD
-    title: 'Optimization,',;
+title: 'Optimization,',;
     description: 'Continuous monitoring and optimization for peak performance.,',;
-=======
-    title: 'Optimization,',,
-  description: 'Continuous monitoring and optimization for peak performance.,',;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       'Go-live support;']
     title: 'Optimization,',;
@@ -127,13 +77,8 @@ pr-12325
 
 const services = [;
   {}
-<<<<<<< HEAD
-    title: 'AWS Migration,',;
+title: 'AWS Migration,',;
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
-=======
-    title: 'AWS Migration,',,
-  description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: Cloud,;
     title: 'AWS Migration,',;
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
@@ -146,14 +91,8 @@ pr-12325
     ];
   },;
   {}
-<<<<<<< HEAD
-    title: 'Azure Migration,',;
+title: 'Azure Migration,',;
     description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
-=======
-    title: 'Azure Migration,',,
-  description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       'Lambda serverless functions;']
     title: 'Azure Migration,',;
@@ -168,14 +107,8 @@ pr-12325
     ];
   },;
   {}
-<<<<<<< HEAD
-    title: 'Google Cloud Migration,',;
+title: 'Google Cloud Migration,',;
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
-=======
-    title: 'Google Cloud Migration,',,
-  description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       'Azure Functions deployment;']
     title: 'Google Cloud Migration,',;
@@ -190,14 +123,8 @@ pr-12325
     ];
   },;
   {}
-<<<<<<< HEAD
-    title: 'Multi-Cloud Strategy,',;
+title: 'Multi-Cloud Strategy,',;
     description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
-=======
-    title: 'Multi-Cloud Strategy,',,
-  description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
       'Cloud Functions deployment;']
     title: 'Multi-Cloud Strategy,',;
@@ -211,8 +138,7 @@ pr-12325
 
 const benefits = [;
   {}
-<<<<<<< HEAD
-    title: 'Cost Reduction,',;
+title: 'Cost Reduction,',;
     description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',;
     icon: BarChart3,;
   },;
@@ -237,38 +163,6 @@ export default function CloudMigrationPage() {;
     <Layout)
       title="Cloud Migration Solutions - Zion Tech Group""
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    title: 'Cost Reduction,',,
-  description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',;
-    icon: BarChart3,;
-  },;
-  {}
-    title: 'Enhanced Security,',,
-  description: 'Enterprise-grade security with automated updates and monitoring.,',;
-    icon: Shield,;
-  },;
-  {}
-    title: 'Improved Scalability,',,
-  description: 'Scale resources up or down based on demand automatically.,',;
-    icon: Zap,;
-  },;
-  {}
-    title: 'Better Performance,',,
-  description: 'Faster load times and improved application performance.,',;
-    title: 'Cost Reduction,',;
-    description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',;
-    title: 'Enhanced Security,',;
-    description: 'Enterprise-grade security with automated updates and monitoring.,',;
-    title: 'Improved Scalability,',;
-    description: 'Scale resources up or down based on demand automatically.,',;
-    title: 'Better Performance,',;
-    description: 'Faster load times and improved application performance.,',;
-pr-12325
-    icon: Smartphone,;
-<<<<<<< HEAD
-  }
-;];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services.""
       keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -334,43 +228,24 @@ pr-12325
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";"
                 <motion&& motion.div}),
                   key={phase && phase.title}
-<<<<<<< HEAD
-                  initial={{ opacity: 0, y: 20 }}
+initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   className="text-center"">;
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";
                     <phase && phase.icon className="w-8 h-8 text-white" />";
                   </div>;
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <ul className="space-y-2 text-left">";
                     {phase && phase.steps.map((step, stepIndex) => (,;
                       <li key={stepIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                         {step}
-=======
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}"
-                  className="text-center"">;"
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";"
-                    <phase && phase.icon className="w-8 h-8 text-white" />";"
-</phase>
-                  <ul className="space-y-2 text-left">";"
-</ul>"
-                      <li key={stepIndex} className="flex items-center text-sm text-gray-600">";"
-</li>"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </li>,;
                   </ul>,;
               ))}
             </div>,;
-<<<<<<< HEAD
-          </div>;
+</div>;
         </section>;
 
         {/* Services Section */}
@@ -387,13 +262,7 @@ pr-12325
                 Choose from leading cloud providers or implement a multi-cloud strategy;
                 for maximum flexibility and redundancy.;
               </p>;
-<<<<<<< HEAD
-=======
-            </motion && motion.div>;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {services && services.map((service, index) => (,;
                 <motion&& motion.div}),
@@ -408,11 +277,7 @@ pr-12325
                     </div>,;
                     <h3 className="text-2xl font-bold text-gray-900">{service && service.title}</h3>";
                   </div>;
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
         <section className="py-20 bg-gray-50">";"
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Cloud Migration Services,;"
@@ -434,8 +299,7 @@ pr-12325
                 </motion && motion.div>;)
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Cloud Migration?,;"
                   key={benefit && benefit.title}
-<<<<<<< HEAD
-                  initial={{ opacity: 0, y: 20 }}
+initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   className="text-center"">;
@@ -456,19 +320,8 @@ pr-12325
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
+transition={{ duration: 0.8 }}
 <<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/cloud-migration.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                    <benefit && benefit.icon className="w-8 h-8 text-white" />";"
-</benefit>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit && benefit.title}</h3>";""
-                  <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">";"
-          <div className="container mx-auto px-4 text-center">";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -490,9 +343,7 @@ pr-12325
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/cloud-migration.tsx
+
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
@@ -500,11 +351,7 @@ pr-12325
                 Ready to Move to the Cloud?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Let our cloud migration experts help you seamlessly transition to the cloud
-=======
-                Let our cloud migration experts help you seamlessly transition to the cloud 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+Let our cloud migration experts help you seamlessly transition to the cloud
                 with minimal downtime and maximum security.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -520,13 +367,7 @@ pr-12325
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-  );
-=======
-  )
-};
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+);
 =======
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";"
 </h2>"
@@ -545,6 +386,5 @@ pr-12325
 
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">"
 
-                
             </motion.div>
         </section>

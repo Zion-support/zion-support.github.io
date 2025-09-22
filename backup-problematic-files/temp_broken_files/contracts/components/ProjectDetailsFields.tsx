@@ -100,4 +100,3 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 Leave empty if the end date is flexible;
               </FormDescription>;
               <FormMessage />;
-

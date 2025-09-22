@@ -1,60 +1,27 @@
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
-<<<<<<< HEAD
+:pages_backup/client/dashboard.tsx
 <<<<<<< HEAD:pages_backup/client/dashboard.tsx
 <<<<<<< HEAD:pages/client/dashboard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-export default function ClientDashboard() {;
-  const { data, error, mutate } = useSWR('/api/jobs', fetcher);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-export default function ClientDashboard() {;
-  const { data, error, mutate } = useSWR('/api/jobs', fetcher);
-
-  if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import useSWR from 'swr';
 import Link from 'next/link';
 const fetcher = null;
     mutate()
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/client/dashboard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const jobs = data.jobs as any[];
 =======
-
-
-
 
   if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
-
 
   const jobs = data.jobs as any[];
 '
@@ -68,39 +35,20 @@ export default function ClientDashboard() { return null; }
   if (error) return <div className="text-red-600">Failed to load</div>,
   if (!data) return <div>Loading…</div>,
   const jobs = data.jobs as any[]
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
   async function closeJob(id: string) {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
 <<<<<<< HEAD:pages/client/dashboard.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  async function closeJob(id: string) {}
-    await fetch(`/api/jobs/${id}`, {'
-      method: 'PATCH','
-      headers: { 'Content-Type': 'application/json' },'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
       body: JSON.stringify({ status: 'Closed' })}),
     mutate();
     } catch (error) {";
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
-<<<<<<< HEAD
+:pages_backup/client/dashboard.tsx
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-body: JSON.stringify({ status: 'Closed' }),
-    });
-    mutate();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 body: JSON.stringify({ status: 'Closed' }),
@@ -109,8 +57,6 @@ body: JSON.stringify({ status: 'Closed' }),
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
 =======
@@ -150,12 +96,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className='px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800'
                       >
                         {s}
-<<<<<<< HEAD
-                      </span>                    ))}
-=======
-                      </span>
-                    ))}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+</span>                    ))}
                   </div>
                 )}"
                       <span key={s} className="px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800">{s}</span>'
@@ -181,13 +122,7 @@ export default function ClientDashboard(req, res) {}
 }
 ;
               </div>
-<<<<<<< HEAD:pages/client/dashboard.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
+:pages/client/dashboard.tsx
 <div className='flex gap-2'>
                 <Link href={`/client/jobs/${job.id}/applicants`}>
                   <a className='px-2 py-1 text-sm border rounded'>
@@ -204,45 +139,30 @@ export default function ClientDashboard(req, res) {}
                   Close Job
                 </button>
               </div>
-<<<<<<< HEAD:pages/client/dashboard.tsx
+:pages/client/dashboard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
             </div>
           </div>
         ))}
       </div>
     </div>
 );
-<<<<<<< HEAD:pages/client/dashboard.tsx
+:pages/client/dashboard.tsx
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       </div>;
     </div>;
   );
 
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
   )
@@ -301,50 +221,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>);
 ;
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
-
-
-
-
-
 
               </div>
             </div>
           </div>
 
-
 }
 
-
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
 <<<<<<< HEAD
-=======
-const fetcher = (url: string) => fetch(url).then(r => r.json())
-export default function ClientDashboard() {
-  const { data, error, mutate } = useSWR('/api/jobs', fetcher);
-  if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
-  const jobs = data.jobs as any[];
-;
-  async /**
- * close_job - Function description
- */
-function close_job() {
-    await fetch (`/api / jobs/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ status: 'Closed' }),
-    });
-    mutate();
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
 
-
-
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const jobs = data.jobs as any[];
 ;
@@ -374,30 +263,18 @@ function close_job() {
 <<<<<<< HEAD
 
   return (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               </div>
             </div>
           </div>
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
           </div>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
   return (
 
@@ -427,11 +304,7 @@ function close_job() {
                       >
                         {s}
                       </span>                    ))}
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
-=======
-                      </span>
-                    ))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
                   </div>
                 )}
                       <span key={s} className="px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800">{s}</span>
@@ -490,9 +363,8 @@ export default function ClientDashboard(req, res) {
   }
 }
               </div>
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
-<<<<<<< HEAD
-              <div className="flex gap-2">
+:pages_backup/client/dashboard.tsx
+<div className="flex gap-2">
                 <Link href={`/client/jobs/${job.id}/applicants`}><a className="px-2 py-1 text-sm border rounded">View Applicants</Link></Link>
                 <Link href={`/client/jobs/${job.id}/edit`}><a className="px-2 py-1 text-sm border rounded">Edit Job</Link></Link>
                 <button className="px-2 py-1 text-sm border rounded" onClick={() => closeJob(job.id)}>Close Job</button>
@@ -500,9 +372,6 @@ export default function ClientDashboard(req, res) {
             </div>
           </div>
               </div>
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/client/dashboard.tsx
 <div className='flex gap-2'>
                 <Link href={`/client/jobs/${job.id}/applicants`}>
                   <a className='px-2 py-1 text-sm border rounded'>
@@ -520,10 +389,8 @@ export default function ClientDashboard(req, res) {
                 </button>
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/client/dashboard.tsx
             </div>
           </div>
         ))}
@@ -532,13 +399,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 
 }
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -779,7 +641,6 @@ export default function ClientDashboard(req, res) {
     console.error("Error:", error);
 =======
 
-
         ))  } catch (error) {"
     console.error("Error:", error);"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
@@ -794,29 +655,15 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx
 
-
-<<<<<<< HEAD:pages_backup/client/dashboard.tsx
+:pages_backup/client/dashboard.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -831,11 +678,6 @@ export default function ClientDashboard(req, res) {
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/dashboard.tsx
 =======
-
-
-
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/dashboard.tsx

@@ -1,41 +1,16 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 }
 
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(v1)
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
 }
-
 
 '
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import v1 from '../../../data/api-docs/v1';
-<<<<<<< HEAD
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
-=======
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  res.setHeader("Content-Type", "application/json");
+res.setHeader("Content-Type", "application/json");
   res.status(200).json(v1);
 }
 "
@@ -54,31 +29,12 @@ export default function handler(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  res.setHeader('Content-Typeapplication/json');
-  res.status(200).json(v1)
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
-
-
-
 }
-
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

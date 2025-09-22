@@ -49,4 +49,3 @@ export const SitemapPage:React.FC = () => {;
               ))}
             </ul>;
           </div>;
-

@@ -29,28 +29,28 @@
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
-    
+
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory,      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-    
+
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
-    
+
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
       listing.price <= currentPriceFilter[1]
     ),
-    
+
     const matchesRating = 
       selectedRating === null || 
       (listing.rating !== undefined && listing.rating >= selectedRating),
-    
+
     return matchesSearch && matchesCategory && matchesPrice && matchesRating
   }),
 
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true),
-    
+
     const listing = allListings.find(item => item.id === listingId),
-    
+
     setTimeout(() => {
       setIsLoading(false),
       if (listing) {
@@ -58,7 +58,7 @@
           title: &quot;Quote Requested&quot;,
           description: `Your quote request for ${listing.title} has been sent.`
         }),
-        
+
         navigate(&quot;/request-quote", {
           state: { 
             serviceType: categorySlug,
@@ -88,7 +88,7 @@
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">
                 <Filter className="mr-2 h-5 w-5" /> Filters
               </h3>
-              
+
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2&quot;>
                   Category
@@ -100,7 +100,7 @@ value={selectedCategory}
                     setSelectedCategory(value)                  }}
                   value={selectedCategory} 
                   onValueChange={_(value: string) => {
-                    
+
                     setSelectedCategory(value)}}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white&quot;>
@@ -115,7 +115,7 @@ value={selectedCategory}
                   </SelectContent>
                 </Select>
               </div>
-              
+
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Price Range

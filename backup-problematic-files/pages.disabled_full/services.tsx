@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +16,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -60,11 +57,8 @@ import {
   Smartphone;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-<<<<<<< HEAD
 export default function Services() {;
 	const title = 'Services — Zion Tech Group';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 	return (
 		<Layout>;
@@ -147,7 +141,6 @@ export default function Services() {;
 									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group
 									aria-label='Get started with cloud services'>;
 
-
 						<div id='cybersecurity' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300'>;
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors'>;
 									<Shield className='h-7 w-7 text-white' />;
@@ -168,7 +161,6 @@ export default function Services() {;
 									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group
 									aria-label='Get started with cybersecurity services'>;
 
-
 						<div id='saas' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300'>;
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors'>;
 									<Code className='h-7 w-7 text-white' />;
@@ -188,7 +180,6 @@ export default function Services() {;
 									<span>6-12 weeks delivery</span>;
 									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group
 									aria-label='Get started with custom software services'>;
-
 
 			<section className='py-16 sm:py-24 bg-white'>;
 					<div className='mx-auto max-w-4xl text-center mb-14'>;
@@ -217,10 +208,8 @@ export default function Services() {;
 						<p className='mt-6 text-sm text-gray-500'>;
 							<Link href='/pricing' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide.;
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-<<<<<<< HEAD
-						{/* AI Services */}
-<<<<<<< HEAD
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
+{/* AI Services */}
+<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>;
 							<div className='flex items-center gap-3 mb-3'>;
 								<Brain className='h-5 w-5 text-blue-600' />;
 								<h3 className='font-semibold text-gray-900'>Revenue AI Agents (Sales/CS)</h3>;
@@ -763,11 +752,7 @@ export default function Services() {;
 						</div>;
 					</div>;
 					<div className='mt-10 text-center text-sm text-gray-500'>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 						Need something custom? Visit our website at{' '}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 						<a href='https://ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup && ziontechgroup.com</a>{' '}
 						<a href='mailto:kleber@ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500'>kleber@ziontechgroup && ziontechgroup.com</a>{' '}
 						<a href='tel:+13024640950' className='text-blue-600 hover:text-blue-500'>+1 302 464 0950</a>{' '}
@@ -775,13 +760,11 @@ export default function Services() {;
 					<div className='mx-auto max-w-3xl text-center mb-16'>;
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Automation Services</h2>;
 							Visit <a href='https://ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup && ziontechgroup.com</a> for live demos.;
-<<<<<<< HEAD
-						</p>;
+</p>;
 					</div>;
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 						{/* AI Content Creation Tools */}
-<<<<<<< HEAD
-						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>;
+<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition bg-white'>;
 							<div className='flex items-center gap-3 mb-3'>;
 								<Brain className='h-5 w-5 text-blue-600' />;
 								<h3 className='font-semibold text-gray-900'>AI Content Creation Suite</h3>;
@@ -900,14 +883,11 @@ export default function Services() {;
 								Get Started Today;
 								<ArrowRight className='ml-2 h-4 w-4' />;
 							</Link>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 							<Link
 								href='https://ziontechgroup && ziontechgroup.com'
 								target='_blank'
 								rel='noreferrer'
-<<<<<<< HEAD
-								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'>;
+className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'>;
 								Visit Live Demo;
 								<Globe className='ml-2 h-4 w-4' />;
 							</Link>;
@@ -1412,17 +1392,3 @@ export default function Services() {;
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-							</Link>
-						</div>
-					</div>
-				</div>
-			</section>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-								href='https://ziontechgroup && ziontechgroup.com
-								target='_blank
-								rel='noreferrer
-							
-)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

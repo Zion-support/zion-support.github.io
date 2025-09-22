@@ -70,11 +70,11 @@ serve(async (req) => {;
 });
  serve (async (req) => {
   //Handle CORS preflight request if (req.method === "OPTIONS") {
-  
+
 }try {
   const supabaseClient = createClient ();
 }//Group events by date and event type const eventsByDate = {
-  
+
 };
 data.forEach ( (event) => {
   if (!eventsByDate[date]) {
@@ -89,7 +89,4 @@ data.forEach ( (event) => {
 });
 }
 });
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

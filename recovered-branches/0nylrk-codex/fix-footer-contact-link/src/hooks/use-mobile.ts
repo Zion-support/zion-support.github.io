@@ -1,43 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import {useState, useEffect} from 'react';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {useState, useEffect} from 'react';
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
-  return isMobile
-import {useState, useEffect} from 'react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function useIsMobile() {
 =======
 export function useIsMobile() {}
@@ -45,8 +12,7 @@ export function useIsMobile() {}
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth < 768 : false,;
   );
-<<<<<<< HEAD
-  useEffect(() => {
+useEffect(() => {
 
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -62,19 +28,8 @@ export function useIsMobile() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return isMobile
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
   return isMobile
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -85,48 +40,15 @@ export /**
 function useIsMobile() {
   const [is_mobile, setIsMobile] = useState (
     typeof window !== 'undefined' ? window.inner_width < 768 : false);
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-  return isMobile;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-;
-  useEffect (() => {
-    const handle_resize = () =>: any {
-      setIsMobile (window.inner_width < 768);
-    }
-=======
-export /**
- * useIsMobile - Function description
- */
-function useIsMobile() {
-  const [is_mobile, setIsMobile] = useState (
-    typeof window !== 'undefined' ? window.inner_width < 768 : false);
-;
-  useEffect (() => {
-    const handle_resize = () =>: any {
-      setIsMobile (window.inner_width < 768);
-    }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
     // Check condition
 if ( {) {
   $2}
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  return isMobile;
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       window.addEventListener ('resize', handle_resize);
@@ -143,8 +65,7 @@ if ( {) {
     return undefined;
   }, []);
 
-<<<<<<< HEAD
-  return isMobile;
+return isMobile;
 }'
       window.addEventListener ('resize', handle_resize);'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -153,18 +74,10 @@ if ( {) {
     return undefined;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   }, []);
 
-
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-      setIsMobile(window.innerWidth < 768)
-=======
-setIsMobile(window.innerWidth < 768)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', handleResize);
@@ -172,18 +85,11 @@ setIsMobile(window.innerWidth < 768)
     }
     return undefined
   }, []);
-<<<<<<< HEAD
-
-  return isMobile
+return isMobile
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
-=======
-  }, []);import { useState, useEffect } from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   }, []);import { useState, useEffect } from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -196,11 +102,7 @@ import { useState, useEffect } from 'react',;
   return isMobile
 }
 import { useState, useEffect } from 'react',;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  }, []);import { useState, useEffect } from 'react',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
@@ -224,7 +126,6 @@ export function useIsMobile() {;
 }"
       window.addEventListener ('resize', handle_resize);
       return () => window.removeEventListener ('resize', handle_resize);
-
 
 import { useState, useEffect } from 'react',;
 '
@@ -261,18 +162,8 @@ export function useIsMobile() { return null; }
   }, []);
   return isMobile;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 ;
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 }
 ;
@@ -280,52 +171,8 @@ export function useIsMobile() { return null; }
 
 }
 ;
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  return is_mobile;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}}
-=======
-}
-}
-}}
 ;
-
-
-
-
-}
-}
-'
-import { useState, useEffect } from 'react',;'
-;
-  return is_mobile;
-
-    typeof window !== 'undefined' ? window.innerWidth < 768 :false;')
-      setIsMobile(window.innerWidth < 768),;
-      window.addEventListener('resize', handleResize),;
-      return () => window.removeEventListener('resize', handleResize),;
-    return undefined,;
-  }, []),;
-  return isMobile,;}
- export function useIsMobile () {
-  const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
-pr-12325
- export function useIsMobile () {'
-  const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);'
-return isMobile;
-}
-}
-;
-}
-;
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -354,17 +201,10 @@ return isMobile
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 }
 ;

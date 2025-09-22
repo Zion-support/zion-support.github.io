@@ -171,4 +171,3 @@ if (showTestResult) {;
 setShowTestResult (false);
 clearTestResult ();
 }
-

@@ -169,8 +169,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                 <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors"></div>;""
                 <div className="text-gray-300 text-sm">Future Possibilities</div>;"
               </div>;
-<<<<<<< HEAD
-              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-blue-400/20">;
+<div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-blue-400/20">;
                 <div className="text-3xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">100+</div>;
                 <div className="text-gray-300 text-sm">Quantum Solutions</div>;
               </div>;
@@ -179,11 +178,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                 <div className="text-gray-300 text-sm">Autonomous Operations</div>;
               </div>;
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20">;
-<<<<<<< HEAD
-                <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">∞</div>;
-=======
-                <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors"></div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">∞</div>;
                 <div className="text-gray-300 text-sm">Future Possibilities</div>;
               </div>;
             </motion.div>;
@@ -215,21 +210,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
               const IconComponent = category.icon,;
               return (;
                 <motion.div;
-=======
-      </section>;"
-      <section className="py-20 px-4 bg-black/30 relative">;"
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>;""
-        <div className="max-w-7xl mx-auto relative z-10">;"
-            whileInView={{ opacity: 1;, y: 0 ;}}
-            transition={{ duration: 0.8 ;}}
-            viewport={{ once: true ;}}"
-            className="text-center mb-16";"
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;"
-</h2>
-            </h2>;"
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">;"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   key={category.name}
                   transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                   className="group relative";"
@@ -323,25 +303,9 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
               <p>Address: 364 E Main St STE 1008;, Middletown DE 19709</p>;"
               <p>Website:<a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>;"
       </section>;
-<<<<<<< HEAD
-    </Layout>;
+</Layout>;
   );
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-:temp_conflicts/pages/comprehensive-2025-innovative-services-showcase.tsx
-};
-export default Comprehensive2025InnovativeServicesShowcase;
-}
-}
-},;
-;
-export default Comprehensive2025InnovativeServicesShowcase,;
-:backup-problematic-files/temp_conflicts/pages/comprehensive-2025-innovative-services-showcase.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     ;"`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

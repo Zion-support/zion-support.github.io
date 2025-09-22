@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 <<<<<<< HEAD:pages/api-disabled/api/kyc/status.ts
-=======
-
-<<<<<<< HEAD:pages/api/kyc/status.ts
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/kyc/status.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
@@ -26,20 +14,12 @@ import fs from "fs";"
 import path from "path";
 ;
 
-<<<<<<< HEAD:pages/api-disabled/api/kyc/status.ts
+:pages/api-disabled/api/kyc/status.ts
 const DATA_DIR = path && path.join(process && process.cwd(), "data", "kyc");
-=======
-
-
-
-"
-const DATA_DIR = path && path.join(process && process.cwd(), "data", "kyc");"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/status.ts
 const FILE = path && path.join(DATA_DIR, "profiles && profiles.json");
 ;
 
-
-<<<<<<< HEAD:pages/api-disabled/api/kyc/status.ts
+:pages/api-disabled/api/kyc/status.ts
 function load(): Record<string, KycProfile> {;
   try {;
     const raw = fs.readFileSync(FILE, "utf8");
@@ -56,38 +36,6 @@ function handler() {;
   if (;
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
-=======
-
-function load(): Record<string, KycProfile> {}
-  try {}
-  } catch {}
-    return {}
-
-  }
-}
-
-
-  });
-
-}
-
-
-    ok: true, profile,
-    requiredDocuments: getRequiredDocuments(profile.role),
-    optionalDocuments: getOptionalDocuments(profile.role)})
-
-
-}
-
-
-export default /**;
- * handler - Function description;
- */
-function handler() {}
-  if ("
-    return res.status (405).json ({ error: "Method not allowed" })) {}
-  $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/status.ts
 }
   const { user_id } = req.query as { user_id?: string }"
   if (return res.status (400).json ({ error: "Missing user_id" })) {}
@@ -98,7 +46,7 @@ function handler() {}
   if (return res.status (404).json ({ error: "Profile not found" })) {}
   $2;
 }
-<<<<<<< HEAD:pages/api-disabled/api/kyc/status.ts
+:pages/api-disabled/api/kyc/status.ts
   res.status (200).json ({;
     ok: true;
     profile;
@@ -106,10 +54,6 @@ function handler() {}
     optional_documents: getOptionalDocuments (profile.role)
   });
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
   res.status(200).json({ message: 'API endpoint' });
@@ -177,24 +121,12 @@ function load (): Record < string, KycProfile> {;
   }
 }
 
-
-<<<<<<< HEAD:pages/api/kyc/status.ts
+:pages/api/kyc/status.ts
 <<<<<<< HEAD
   });
 
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
-    requiredDocuments: getRequiredDocuments(profile.role),
-    optionalDocuments: getOptionalDocuments(profile.role),
-  });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -204,12 +136,6 @@ function load (): Record < string, KycProfile> {;
   res.status (200).json ({}
     ok: true,
     profile,
-
-
-
-
-
-
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/status.ts

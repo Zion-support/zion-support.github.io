@@ -51,19 +51,12 @@ export default function SavedTalentsPage() {
               skills,
               location,
               availability,
-<<<<<<< HEAD:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
+:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
 <<<<<<< HEAD
               is_verified
             )
           `
           )
-=======
-              is_verified);
-          `);
-=======
-              is_verified);`
-          `);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/SavedTalentsPage.tsx
           .eq ('user_id', user.id);
         // Check condition;
 if ( {) {}
@@ -101,16 +94,11 @@ if ( {) {}
     router.push (`/talent/${talent_id}`);
   }
 
-<<<<<<< HEAD:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
+:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
   const handleRequestHire = (talent: TalentProfile) =>: any {
     log_info ('Request to hire:', { data: talent });    toast ({
 
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  const handleRequestHire = (talent: TalentProfile) =>: any {'
-    log_info ('Request to hire:', { data: talent });    toast ({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/SavedTalentsPage.tsx
           .eq("user_id", user.id),
 
         if (error) {}
@@ -225,7 +213,7 @@ export default function SavedTalentsPage() { return null; }
 
   const handleViewProfile = (talentId: string) => {;`
     router.push(`/talent/${talentId}`);
-<<<<<<< HEAD:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
+:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
   },;
   const handleRequestHire = (talent: TalentProfile) => {;
 <<<<<<< HEAD
@@ -251,15 +239,6 @@ export default function SavedTalentsPage() { return null; }
         if (error) {;
           throw error;
         }
-=======
-    logInfo('Request to hire:', { data: talent });    toast({
-      title: 'Hire Request Sent',
-=======
-  };
-  const handleRequestHire = (talent: TalentProfile) => {;'
-    logInfo('Request to hire:', { data: talent });    toast({'
-      title: 'Hire Request Sent',`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/SavedTalentsPage.tsx
       description: `A hire request has been sent to ${talent.full_name}.`,
     })
   }
@@ -271,7 +250,6 @@ export default function SavedTalentsPage() { return null; }
         logWarn('User not authenticated.')
         return;
       }
-
 
 ;
       if (isCurrentlySaved) {;
@@ -290,7 +268,7 @@ if ( {) {}
         }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  
+
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         ),
@@ -298,26 +276,18 @@ if ( {) {}
           title: "Talent Removed","
           description: "Talent removed from saved list."})
 
-
       } else {}
         // Add to saved talents;
         const { error } = await supabase'
           .from('saved_talents')
 
           .insert([{ user_id: user.id, talent_id: talentId }]),
-  
-<<<<<<< HEAD:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
+
+:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
         if (error) {
           throw error
-=======
-          .insert([{ user_id: user.id, talent_id: talentId }]),
-  
-
-        if (error) {}
-          throw error;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/SavedTalentsPage.tsx
         }
-  
+
         // Fetch the updated talent profile and add it to the list;
         const { data: talentData, error: talentError } = await supabase'
           .from('talent_profiles')'
@@ -338,7 +308,7 @@ export default function SavedTalentsPage() { return null; }
   }
           return;
           .single(),
-  
+
         if (talentError) {'
           logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' }),
           toast({"
@@ -347,7 +317,7 @@ export default function SavedTalentsPage() { return null; }
             variant: "destructive"}),
           return;
         }
-  
+
         if (talentData) {}
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({"
@@ -375,7 +345,7 @@ export default function SavedTalentsPage() { return null; }
         <p className="text-muted-foreground">'
           Here are the talents you've saved for future reference.
         </p>
-        
+
         {isLoading ? ("
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? ("
@@ -432,73 +402,16 @@ export default function SavedTalentsPage() { return null; }
       }
     } catch (error) {;'
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
+:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
       toast({;
         title: "Error",;
         description: "Failed to update saved talents. Please try again later.";
         variant: "destructive"});
-=======
-      toast({;'
-        title: 'Error',;'
-        description: 'Failed to update saved talents. Please try again later.',;'
-        variant: 'destructive',;
-      });
-        // Fetch the updated talent profile and add it to the list;
-        const { data: talent_data, error: talent_error } = await supabase;'
-          .from ('talent_profiles');'
-          .select ('*');'
-          .eq ('id', talent_id);
-          .single ();
-        // Check condition;
-if ( {) {}
-  $2;
-}
-          logErrorToProduction (
-            talent_error instanceof Error;
-              ? talent_error.message;
-              : String (talent_error),
-            talent_error instanceof Error ? talent_error : undefined,'
-            { message: 'Error fetching talent profile' }
-          );
-          toast ({'
-            title: 'Error',
-            description:;'
-              'Failed to update saved talents. Please try again later.','
-            variant: 'destructive',
-          });
-          return;
-        }
-        // Check condition;
-if ( {) {}
-  $2;
-}
-          setSavedTalents (prev_talents => [;
-            ...prev_talents,
-            talent_data as unknown as TalentProfile,
-          ]);
-          toast ({'
-            title: 'Talent Saved','
-            description: 'Talent saved to your list.',
-          });
-        }
-      }
-    } catch (error) {}
-      logErrorToProduction (
-        error instanceof Error ? error.message : String (error),
-        error instanceof Error ? error : undefined,'
-        { message: 'Error toggling saved talent' }
-      );
-      toast ({'
-        title: 'Error','
-        description: 'Failed to update saved talents. Please try again later.','
-        variant: 'destructive',
-      });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/SavedTalentsPage.tsx
     }
   };
   return (;
     <>;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
+:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
       <SEO;
         title="Saved Talents | Zion AI Marketplace";
         description="View and manage your saved talents in the Zion AI Marketplace";
@@ -517,24 +430,6 @@ if ( {) {}
               title="No Saved Talents";
               description="You haven't saved any talents yet.";
               action={{ text: 'Browse Talent', href: '/talent' }}
-=======
-
-      />;"
-      <div className="container mx-auto px-4 py-8">;"
-        <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>;"
-        <p className="text-muted-foreground">;'
-          Here are the talents you've saved for future reference.;
-        </p>;
-        {isLoading ? (;'
-          <div className='text-center py-8'>Loading saved talents...</div>;
-        ) : savedTalents && savedTalents.length === 0 ? (;'
-          <div className='py-8'>;
-
-            <EmptyState'
-              icon={<Heart className='h-8 w-8' />}'"
-              title='No Saved Talents'              description="You haven't saved any talents yet.";'
-              action={{ text: 'Browse Talent', href: '/talent' }}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/SavedTalentsPage.tsx
               className="border-none bg-transparent text-center";
             />;
           </div>;
@@ -548,156 +443,16 @@ if ( {) {}
                 onRequestHire={handleRequestHire}
                 isAuthenticated={!!user}
               />;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </div>;
         )}
-<<<<<<< HEAD
-=======
 
-      <SEO;'
-        title='Saved Talents | Zion AI Marketplace';'
-        description='View and manage your saved talents in the Zion AI Marketplace';
-      />;'
-      <div className='container mx - auto px - 4 py - 8'>;'
-        <h1 className='text - 3xl font - bold mb - 4'>Saved Talents</h1>;'
-        <p className='text - muted - foreground'>;'
-          Here are the talents you've saved for future reference.;
-        </p>;
-        {is_loading ? ('
-          <div className='text - center py - 8'>Loading saved talents...</div>) : saved_talents.length === 0 ? ('
-          <div className='py - 8'>;
-            <EmptyState;'
-              icon={<Heart className='h - 8 w - 8' />}'"
-              title='No Saved Talents'              description="You haven't saved any talents yet.";'
-              action={{ text: 'Browse Talent', href: '/talent' }}'
-              className='border - none bg - transparent text - center';
-            />;
-          </div>) : ('
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8'>;
-            {saved_talents.map (talent => (              <TalentCard;
-                key = {talent.id, }
-                talent = {talent, }
-                onViewProfile = {handleViewProfile, }
-                onRequestHire = {handleRequestHire, }
-                is_authenticated = {!!user, }
-              />))}
-          </div>)}
-      </div>;
-    </>);
-}, [user, router]);
-}const {}
-  data, error;"
-}= await supabase .from ("saved talents") user id;
-full name;
-professional title;
-profile picture url;
-hourly rate;
-bio;
-years experience;
-key projects;
-skills;
-location;
-availability;`
-is verified) `);
-}finally {}
-  setIsLoading (false);
-
-}
-}, [user])
-}
-  try {}
-  if (!user) {}
-}//Remove from saved talents const {'
-  error ''
-}= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talentId)
-<<<<<<< HEAD:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
-}else {
-  //Add to saved talents const {
-  error '
-}= await supabase .from ('saved talents') .insert ([ {
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
     </>;
   );
 }
-<<<<<<< HEAD
-=======
-  throw error;
-}data: talent_data, error: talent_error ';
-=======
-}else {}
-  //Add to saved talents const {'
-  error ''
-}= await supabase .from ('saved talents') .insert ([ {}
-      </div>;
-    </>;
-  );
 
-}, [user, router]);
-}const {;
-  data, error ;"
-}= await supabase .from ("saved talents") user id;
-full name;
-professional title;
-profile picture url;
-hourly rate;
-bio;
-years experience;
-key projects;
-skills;
-location;
-availability;`
-is verified) `) ;
-}finally {;
-  setIsLoading (false) ;
-
-};
-}, [user]);
-};
-  try {;
-  if (!user) {;
-
-}//Remove from saved talents const {;'
-  error ';'
-}= await supabase .from ('saved talents') .delete () .eq ('user id', user && user.id) .eq ('talent id', talentId);
-}else {;
-  //Add to saved talents const {;'
-  error ';'
-}= await supabase .from ('saved talents') .insert ([ {;
-  user id: user && user.id, talent id: talentId ;
-}]);
-if (error) {;
-  throw error ;'
-}data: talentData, error: talentError ';'
-}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ();
-return;
-
-}catch (error) {;'
-  logErrorToProduction (error instanceof Error ? error && error.message : String (error),  error instanceof Error ? error : undefined, {';'
-  message: 'Error toggling saved talent' ;
-});
-toast ({;
-
-'"
-};'";'"
-return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents && savedTalents.length === 0 ? (<div className="py-8" > <EmptyState<TalentCard key= {}
-  talent && talent.id;
-  user id: user.id, talent id: talent_id;
-}]);
-// Check condition;
-if ( {) {}
-  $2;
-}
-  throw error;'
-}data: talent_data, error: talent_error ';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/SavedTalentsPage.tsx
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talent_id) .single ();
 return;
 }catch (error) {'
@@ -726,9 +481,6 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
     </>;
   );
 }
-<<<<<<< HEAD:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
+:temp_exclude/hooks.disabled/SavedTalentsPage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/SavedTalentsPage.tsx

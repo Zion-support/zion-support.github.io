@@ -3,20 +3,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect  } from 'react';
@@ -27,14 +16,7 @@ import { SEO  } from '@/components/SEO';
 import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { Button  } from '@/components/ui/button';
 import { toast } from 'sonner';
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -46,20 +28,7 @@ import {SEO} from '@/components/SEO';
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -71,10 +40,7 @@ import { SEO } from "@/components/SEO";
 import { VideoCallRoom } from "@/components/video/VideoCallRoom";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -108,11 +74,7 @@ export default function VideoCall() {
   const [isJoining, setIsJoining] = useState(false);
   const [hasJoined, setHasJoined] = useState(false);
   const [participants, setParticipants] = useState<
-<<<<<<< HEAD
-    Array<{}
-=======
-    Array<{
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+Array<{}
       id: string;
       name: string;
       avatar?: string;
@@ -121,15 +83,9 @@ export default function VideoCall() {
       isScreenSharing?: boolean;
       isHost?: boolean;
     }>
-<<<<<<< HEAD
-  >([]
+>([]
     {"
       id: "user-1","
-=======
-  >([
-    {
-      id: "user-1",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: "You",
       isVideoEnabled: true,
       isMuted: false,
@@ -139,18 +95,11 @@ export default function VideoCall() {
   const navigate = useNavigate();
   const [isJoining, setIsJoining] = useState(false);
   const [hasJoined, setHasJoined] = useState(false);
-<<<<<<< HEAD
-  const [participants, setParticipants] = useState<Array<{}
+const [participants, setParticipants] = useState<Array<{}
     id: string;
     name: string;
     avatar?: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  const [participants, setParticipants] = useState<Array<{
-    id: string
-    name: string
-    avatar?: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     isMuted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
@@ -162,11 +111,8 @@ export default function VideoCall() {
       isVideoEnabled: true;
       isMuted: false;
     }
-<<<<<<< HEAD
-  ]);
-<<<<<<< HEAD
-
-  const handleJoinCall = () => {
+]);
+const handleJoinCall = () => {
     setIsJoining(true),
     // Simulate connection delay
     setTimeout(() => {
@@ -176,25 +122,6 @@ export default function VideoCall() {
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
-
-=======
-import { useState, useEffect } from 'react',;
-import { useParams, useNavigate } from 'react-router-dom',;
-import { Header } from '@/components/Header',;
-import { Footer } from '@/components/Footer',;
-import { SEO } from '@/components/SEO',;
-import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
-import { Button } from '@/components/ui/button',;
-=======
-  ]);'
-import { useState, useEffect } from 'react',;'
-import { useParams, useNavigate } from 'react-router-dom',;'
-import { Header } from '@/components/Header',;'
-import { Footer } from '@/components/Footer',;'
-import { SEO } from '@/components/SEO',;'
-import { VideoCallRoom } from '@/components/video/VideoCallRoom',;'
-import { Button } from '@/components/ui/button',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from 'sonner',;
 export default function VideoCall() { return null; }
   const { roomId } = useParams(),;
@@ -210,10 +137,6 @@ export default function VideoCall() { return null; }
     isScreenSharing?: boolean,;
     isHost?: boolean;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     id: string,
     name: string,
     avatar?: string;
@@ -231,15 +154,8 @@ export default function VideoCall() { return null; }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-  ]),
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setIsJoining(true);
@@ -269,12 +185,7 @@ export default function VideoCall() { return null; }
       })
     }, 1500)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  ]);
+]);
   const handleJoinCall = () => {;
     setIsJoining(true);
     // Simulate connection delay;
@@ -285,13 +196,8 @@ export default function VideoCall() { return null; }
         description: `You have joined meeting room ${roomId}`,
       });
 <<<<<<< HEAD
-<<<<<<< HEAD
     }, 1500)
 };
-=======
-    }, 1500);
-  };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const handleLeaveCall = () => {;
 
@@ -301,37 +207,19 @@ export default function VideoCall() { return null; }
     });
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    setHasJoined(false);"
-    toast && toast.info("Call ended", {;"
-      description: "You have left the meeting";
-    });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
   }
 
   },
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  const handleLeaveCall = () => {
-    setHasJoined(false),
-    toast.info("Call ended", {
-<<<<<<< HEAD
-      description: "You have left the meeting"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Navigate back after a short delay
     setTimeout(() => {
       navigate(-1)
     }, 1500)
-<<<<<<< HEAD
-
-  ]),;
+]),;
   const handleJoinCall = () => {;
     setIsJoining(true),;
     // Simulate connection delay;
@@ -348,62 +236,25 @@ export default function VideoCall() { return null; }
     toast.info("Call ended", {;
       description: "You have left the meeting";
     }),;
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Navigate back after a short delay;
     setTimeout(() => {;
-=======
-=======
-
-
-  }
-  },
-
-  const handleLeaveCall = () => {
-    setHasJoined(false),
-    toast.info("Call ended", {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       description: "You have left the meeting",
     });
 
     // Navigate back after a short delay
     setTimeout(() => {
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-  const handleLeaveCall = () => {}
-    setHasJoined(false),"
-    toast.info("Call ended", {"
-      description: "You have left the meeting",
-    });
-
-    // Navigate back after a short delay;
-    setTimeout(() => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       navigate(-1);
     }, 1500);
-<<<<<<< HEAD
-  },;
-=======
-  };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+},;
   const simulateUserJoining = () => {;
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mockUsers = [;
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-<<<<<<< HEAD
-    ],;
+],;
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
     if (!participants.find(p => p.id === randomUser.id)) {;
       setParticipants(prev => [...prev, randomUser]);
@@ -414,40 +265,14 @@ export default function VideoCall() { return null; }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-    ];
-<<<<<<< HEAD
-
-    const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)];
-
-    if (!participants && participants.find(p => p && p.id === randomUser && randomUser.id)) {;
-
-=======
-    const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)];
-    if (!participants && participants.find(p => p && p.id === randomUser && randomUser.id)) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-
-  }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  const simulateUserJoining = () => {
+const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
-=======
-  const simulateUserJoining = () => {}
-    // This is just for demo purposes - in a real app, this would be handled by the video call service;
-    const mockUsers = ["
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { id: "user-2", name: "Alex Chen", isVideoEnabled: true, isMuted: false },
       {"
         id: "user-3","
@@ -467,13 +292,8 @@ export default function VideoCall() { return null; }
         isVideoEnabled: false,
         isMuted: true,
       },
-<<<<<<< HEAD
-      {"
+{"
         id: "user-4","
-=======
-      {
-        id: "user-4",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         name: "Jordan Smith",
         isVideoEnabled: true,
         isMuted: false,
@@ -484,17 +304,8 @@ export default function VideoCall() { return null; }
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    if (!participants.find((p) => p.id === randomUser.id)) {
-      setParticipants((prev) => [...prev, randomUser]);
-=======
-    if (!participants.find((p) => p.id === randomUser.id)) {}
-      setParticipants((prev) => [...prev, randomUser]);`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       toast(`${randomUser.name} joined the call`);
     }
   };
@@ -526,21 +337,11 @@ export default function VideoCall() { return null; }
           <div className="space-y-4">
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
             <VideoCallRoom 
               roomId={roomId || ''} 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-            <VideoCallRoom
-=======
-            <VideoCallRoom"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               roomId={roomId || ""}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -593,20 +394,6 @@ import { toast } from 'sonner';
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    }, 1500)
-};
-
-  const handleLeaveCall = () => {;
-    setHasJoined(false);
-    toast && toast.info("Call ended", {,
-  description: "You have left the meeting";
-    });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* This button is just for demo/testing purposes */}
@@ -628,8 +415,6 @@ import { toast } from 'sonner';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">
               <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
@@ -644,41 +429,14 @@ import { toast } from 'sonner';
   )
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
       </main>;
       <Footer />;
     </>;
-<<<<<<< HEAD
-  );
-=======
-      </main>;
-      <Footer />;
-    </>;  );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+);
 }
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      </main>;
-      <Footer />;
-    </>;
-=======
-      </main>
-      <Footer />
-    </>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 =======
       </main>;
@@ -710,19 +468,12 @@ import { toast } from 'sonner';
   ]);
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleLeaveCall = () =>: any {
     setHasJoined (false);
     toast.info ("Call ended", {
@@ -850,13 +601,7 @@ import { toast } from 'sonner';
 
     </>);
 <<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ),; roomId 
 }` 
@@ -927,10 +672,6 @@ return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom room
 ;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
 };
 return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom roomId= {
   roomId || '' 
@@ -973,10 +714,6 @@ return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom room
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 ;

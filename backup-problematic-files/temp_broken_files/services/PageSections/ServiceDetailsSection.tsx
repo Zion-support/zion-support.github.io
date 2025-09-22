@@ -27,4 +27,3 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
       )}
     </div>;
 <<<<<<< HEAD
-

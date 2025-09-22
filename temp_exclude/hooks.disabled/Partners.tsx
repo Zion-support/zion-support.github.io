@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-=======
-Card,
-  CardContent,
-  CardDescription,
-  CardHeader,;
-  CardTitle;
-
-} from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { PartnerRegistrationForm } from '@/components/partners/PartnerRegistrationForm';
-import { PartnerReferralLinks } from '@/components/partners/PartnerReferralLinks';
-import { PartnerDashboard } from '@/components/partners/PartnerDashboard';
-import { PartnerLeaderboard } from '@/components/partners/PartnerLeaderboard';
-import { PartnerResources } from '@/components/partners/PartnerResources';
-import { useAuth } from '@/hooks/useAuth';
-import { useRouter } from 'next/router';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -48,8 +24,7 @@ export default function Partners() {
   const router = useRouter(),
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
 
-<<<<<<< HEAD
-  useEffect(() => {
+useEffect(() => {
     async function checkHealth() {
       try {
         const res = await fetch('/api/auth/health'),
@@ -148,7 +123,7 @@ export default function Partners() {
                 <p>{t('partner.steps.join_desc')}</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -160,7 +135,7 @@ export default function Partners() {
                 <p>{t('partner.steps.share_desc')}</p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -203,46 +178,13 @@ import { useAuth } from "@/hooks/useAuth",;
 import { useRouter } from 'next/router',;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
 export default function Partners() {;
-=======
-export default function Partners() {;
-  logInfo('PartnersPage rendering');
-  const [activeTab, setActiveTab] = useState('overview');
-  const { t } = useTranslation();
-  const { user, isAuthenticated } = useAuth();
-  const router = useRouter();
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
-
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
-
-import { useState, useEffect } from "react";
-import { useTranslation  } from 'react-i18next';
-
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react'
-import { useState, useEffect } from "react",
-import { useTranslation } from 'react-i18next',
-import Link from 'next/link',
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
-import { PartnerResources } from "@/components/partners/PartnerResources",
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   logInfo('PartnersPage rendering'),;
   const [activeTab, setActiveTab] = useState("overview"),;
   const { t } = useTranslation(),;
   const { user, isAuthenticated } = useAuth(),;
   const router = useRouter(),;
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true),;
-<<<<<<< HEAD
-  useEffect(() => {;
+useEffect(() => {;
     async function checkHealth() {;
       try {;
         const res = await fetch('/api/auth/health'),;
@@ -412,15 +354,15 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
           <TabsTrigger value="leaderboard">{t('partner.tabs.leaderboard')}</TabsTrigger>
           <TabsTrigger value="resources">{t('partner.tabs.resources')}</TabsTrigger>
         </TabsList>
-        
+
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
         </TabsContent>
-        
+
         <TabsContent value="referrals" className="space-y-4">
           <PartnerReferralLinks />
         </TabsContent>
-        
+
         <TabsContent value="earnings" className="space-y-4">
           <Card>
             <CardHeader>
@@ -433,11 +375,11 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
             </CardContent>
           </Card>
         </TabsContent>
-        
+
         <TabsContent value="leaderboard" className="space-y-4">
           <PartnerLeaderboard />
         </TabsContent>
-        
+
         <TabsContent value="resources" className="space-y-4">
           <PartnerResources />
         </TabsContent>
@@ -446,14 +388,3 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
   )
 }
 ;
-=======
-
-export default function Partners() {
-
-  logInfo('PartnersPage rendering'),
-  const [activeTab, setActiveTab] = useState("overview"),
-  const { t } = useTranslation(),
-  const { user, isAuthenticated } = useAuth(),
-  const router = useRouter(),
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

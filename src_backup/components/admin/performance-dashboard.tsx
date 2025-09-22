@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
+:src/components/admin/performance-dashboard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,10 +20,6 @@ interface PerformanceMetrics {;
   lcp: number, // Largest Contentful Paint;
   cls: number, // Cumulative Layout Shift;
   fid: number, // First Input Delay;
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
@@ -51,11 +46,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
+:src/components/admin/performance-dashboard.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -80,13 +72,7 @@ interface PerformanceMetrics {;
   bundleSize: number;
   loadTime: number;
   performanceScore: number;
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
+:src/components/admin/performance-dashboard.tsx
   chunkCount: number;
 =======
 import React, { useState, useEffect } from 'react'
@@ -101,9 +87,8 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Progress } from '@/components / ui / progress';
 import {
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
-  Activity
+:src/components/admin/performance-dashboard.tsx
+Activity
   Zap
   Package
   TrendingUp
@@ -164,99 +149,6 @@ interface BundleChunk {;
   type: string;
 }
 <<<<<<< HEAD
-=======
-  Activity,
-  Zap,
-  Package,
-  TrendingUp,
-  TrendingDown,
-  AlertTriangle,
-  CheckCircle,
-  RefreshCw,
-  BarChart3,
-  Clock,
-  Globe,
-} from 'lucide-react';
-import { bundle_monitor } from '@/utils / bundle_monitor';
-import { logErrorToProduction, log_info } from '@/utils / production_logger';
-interface PerformanceMetrics {
-  bundle_size: number;
-  load_time: number;
-  performance_score: number;
-  chunk_count: number;
-  cacheHitRate: number;
-  fcp: number; // First Contentful Paint;
-  lcp: number; // Largest Contentful Paint;
-  cls: number; // Cumulative Layout Shift;
-  fid: number; // First Input Delay;
-
-interface BundleChunk {
-  name: string;
-  size: number;
-  load_time: number;
-  cached: boolean;
-  type: string;
-export /**
- * PerformanceDashboard - Function description
- */
-function PerformanceDashboard() {
-  const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
-  const [chunks, set_chunks] = useState < BundleChunk[]>([]);
-  const [is_loading, setIsLoading] = useState (false);
-  const [last_updated, setLastUpdated] = useState < Date | null>(null);
-  const collect_metrics = async () => {
-    try {
-      // Collect performance metrics;
-      const memory_info = (performance as any).memory;
-      const navigation_entry = performance.getEntriesByType (
-        'navigation')[0] as PerformanceNavigationTiming;
-      const resource_count = performance.getEntriesByType ('resource').length;
-      const performance_metrics: PerformanceMetrics = {
-        bundle_size: 0, // This would need to be calculated separately;
-        load_time: navigation_entry;
-          ? navigation_entry.loadEventEnd - navigation_entry.fetch_start;
-          : 0,
-        performance_score: 0, // This would need to be calculated;
-        chunk_count: resource_count,
-        cacheHitRate: 0, // This would need to be calculated from resource timing;
-        fcp: 0, // First Contentful Paint - would need Performance Observer;
-        lcp: 0, // Largest Contentful Paint - would need Performance Observer;
-        cls: 0, // Cumulative Layout Shift - would need Performance Observer;
-        fid: 0, // First Input Delay - would need Performance Observer;
-      }
-      set_metrics (performance_metrics);
-      log_info ('Performance metrics collected successfully', {
-        load_time: performance_metrics.load_time,
-        resource_count: performance_metrics.chunk_count,
-      });
-    } catch (error) {
-      logErrorToProduction ('Failed to collect performance metrics', error, {
-        component: 'PerformanceDashboard',
-        action: 'collect_metrics',
-      });
-      // Set fallback metrics;
-      set_metrics ({
-        bundle_size: 0,
-        load_time: 0,
-        performance_score: 0,
-        chunk_count: 0,
-        cacheHitRate: 0,
-        fcp: 0,
-        lcp: 0,
-        cls: 0,
-        fid: 0,
-      });
-
-    }
-  }
-  const collectWebVitals = async (): Promise < Partial < PerformanceMetrics>> => {
-    // Check condition
-if (return {}
-    const vitals: Partial < PerformanceMetrics> = {}
-    // Collect navigation timing) {
-  $2
-}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
     const navigation = performance.getEntriesByType (
       'navigation')[0] as PerformanceNavigationTiming;
     // Check condition
@@ -385,8 +277,6 @@ interface BundleChunk {;
   cached: boolean,;
   type: string;
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 export function PerformanceDashboard() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),;
@@ -401,18 +291,8 @@ export function PerformanceDashboard() {;
       const resourceCount = window.window.window.performance.getEntriesByType('resource').length,;
       const performanceMetrics: PerformanceMetrics = {;
         bundleSize: 0, // This would need to be calculated separately;
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
-        loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-        loadTime: navigationEntry;
-          ? navigationEntry && navigationEntry.loadEventEnd - navigationEntry && navigationEntry.fetchStart;
-          : 0,;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
+:src/components/admin/performance-dashboard.tsx
+loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;
         performanceScore: 0, // This would need to be calculated;
 =======
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;        performanceScore: 0, // This would need to be calculated;
@@ -422,28 +302,14 @@ export function PerformanceDashboard() {;
         fcp: 0, // First Contentful Paint - would need Performance Observer;
         lcp: 0, // Largest Contentful Paint - would need Performance Observer;
         cls: 0, // Cumulative Layout Shift - would need Performance Observer;
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
-        fid: 0  // First Input Delay - would need Performance Observer;
+:src/components/admin/performance-dashboard.tsx
+fid: 0  // First Input Delay - would need Performance Observer;
       },;
       setMetrics(performanceMetrics),;
       logInfo('Performance metrics collected successfully', {;
         loadTime: performanceMetrics.loadTime,;
 <<<<<<< HEAD
         resourceCount: performanceMetrics.chunkCount;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-        fid: 0, // First Input Delay - would need Performance Observer;
-      };
-
-      setMetrics(performanceMetrics);
-      logInfo('Performance metrics collected successfully', {;
-        loadTime: performanceMetrics && performanceMetrics.loadTime,;
-        resourceCount: performanceMetrics && performanceMetrics.chunkCount,;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
       });
 =======
         resourceCount: performanceMetrics.chunkCount;      });
@@ -451,19 +317,10 @@ export function PerformanceDashboard() {;
     } catch (error) {;
       logErrorToProduction('Failed to collect performance metrics', error, {;
         component: 'PerformanceDashboard',;
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
-        action: 'collectMetrics';
+:src/components/admin/performance-dashboard.tsx
+action: 'collectMetrics';
 <<<<<<< HEAD
       }),;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-        action: 'collectMetrics',;
-      });
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
       // Set fallback metrics;
 =======
       }),;      // Set fallback metrics;
@@ -477,17 +334,9 @@ export function PerformanceDashboard() {;
         fcp: 0,;
         lcp: 0,;
         cls: 0,;
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
+:src/components/admin/performance-dashboard.tsx
 <<<<<<< HEAD
         fid: 0;
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-        fid: 0,;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
       });
 =======
         fid: 0;      });
@@ -531,25 +380,20 @@ export function PerformanceDashboard() {;
           observer.disconnect(),;
           resolve(vitals);
         }, 2000);
-<<<<<<< HEAD
-      });
+});
     }
-    
+
     return vitals
   },
 
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
 <<<<<<< HEAD
   const collectChunkData = async (): Promise<BundleChunk[]> => {
     if (typeof window === 'undefined') return [],
-    
+
     const resourceEntries = window.window.window.performance.getEntriesByType('resource') as PerformanceResourceTiming[],
     const scriptEntries = resourceEntries.filter(entry => 
       entry.name.includes('/_next/static/') && entry.name.endsWith('.js')
     ),
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return scriptEntries.map(entry => ({
       name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
       size: entry.transferSize || entry.encodedBodySize || 0,
@@ -558,9 +402,7 @@ export function PerformanceDashboard() {;
       type: categorizeChunk(entry.name)
     })).sort((a, b) => b.size - a.size)
   },
-<<<<<<< HEAD
-
-  const categorizeChunk = (filename: string): string => {
+const categorizeChunk = (filename: string): string => {
     if (filename.includes('framework')) return 'framework',
     if (filename.includes('vendor')) return 'vendor',
     if (filename.includes('pages')) return 'page',
@@ -595,13 +437,6 @@ export function PerformanceDashboard() {;
     return () => clearInterval(interval)
   }, []),
 =======
-<<<<<<< HEAD
-      });    }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
@@ -624,12 +459,9 @@ export function PerformanceDashboard() {
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null),
 
   const collectMetrics = null;
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
+:src/components/admin/performance-dashboard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -642,16 +474,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
     return vitals;
   },;
   const collectChunkData = async (): Promise<BundleChunk[]> => {;
@@ -799,8 +625,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
+:src/components/admin/performance-dashboard.tsx
 <<<<<<< HEAD
           {isLoading ? 'Collecting...' : 'Refresh'}
         </Button>;
@@ -831,7 +656,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Progress value={metrics.performanceScore} className="h-2" />
                 </div>
               </div>
-              
+
               {lastUpdated && (
                 <p className="text-sm text-muted-foreground">
                   Last updated: {lastUpdated.toLocaleString()}
@@ -908,14 +733,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
 ;
       {/* Bundle Chunks */}
-=======
-
-          {isLoading ? 'Collecting...' : 'Refresh'}
-        </Button>
-      </div>
-      {/* Performance Score */}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -1011,221 +828,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
       {/* Bundle Chunks */}      <Card>
-=======
-
-=======
-
-
-          {isLoading ? 'Collecting...' : 'Refresh'}
-
-        </Button>;
-      </div>;
-
-
-      {/* Performance Score */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
-            <Zap className='w-5 h-5' />;
-        <Button on_click={collect_metrics} disabled={is_loading}>;
-          <RefreshCw;
-            className={`w - 4 h - 4 mr - 2 ${is_loading ? 'animate - spin' : ''}`}
-          />;
-          {is_loading ? 'Collecting...' : 'Refresh'}
-        </Button>;
-      </div>;
-      {/* Performance Score */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items - center gap - 2'>;
-            <Zap className='w - 5 h - 5' />;
-            Performance Score;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-
-
-              
-              {lastUpdated && (
-                <p className="text-sm text-muted-foreground">
-
-
-                  Last updated: {lastUpdated.toLocaleString()}
-                </p>
-                    </Badge>;
-                  </div>;
-                  <Progress value={metrics && metrics.performanceScore} className='h-2' />;
-                </div>;
-              </div>;
-
-              {lastUpdated && (;
-                <p className='text-sm text-muted-foreground'>;
-                  Last updated: {lastUpdated && lastUpdated.toLocaleString()}
-                </p>;
-              )}
-            </div>;
-          ) : (;
-            <div className='text-center py-8'>;
-              <Clock className='w-8 h-8 mx-auto mb-2 text-muted-foreground' />;
-              <p className='text-muted-foreground'>;
-                Click refresh to collect metrics;
-              </p>;
-            </div>;
-          )}
-
-        </CardContent>;
-      </Card>;
-
-
-      {/* Metrics Grid */}
-      {metrics && (;
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>;
-          <Card>;
-            <CardContent className='p-4'>;
-              <div className='flex items-center gap-2'>;
-                <Package className='w-4 h-4 text-blue-600' />;
-                <span className='text-sm font-medium'>Bundle Size</span>;
-              </div>;
-              <p className='text-2xl font-bold mt-2'>;
-                {formatSize(metrics.bundleSize)}
-
-              </p>;
-              <p className='text-xs text-muted-foreground'>;
-                {metrics && metrics.chunkCount} chunks;
-              </p>;
-            </CardContent>;
-          </Card>;
-
-          <Card>;
-            <CardContent className='p-4'>;
-              <div className='flex items-center gap-2'>;
-                <Clock className='w-4 h-4 text-purple-600' />;
-                <span className='text-sm font-medium'>Load Time</span>;
-              </div>;
-              <p className='text-2xl font-bold mt-2'>;
-                {metrics && metrics.loadTime.toFixed(0)}ms;
-              </p>;
-              <p className='text-xs text-muted-foreground'>;
-          {metrics ? (
-            <div className='space - y-4'>;
-              <div className='flex items - center gap - 4'>;
-                {getScoreIcon (metrics.performance_score)}
-                <div className='flex - 1'>;
-                  <div className='flex items - center justify - between mb - 2'>;
-                    <span className='text - 2xl font - bold'>;
-                      {metrics.performance_score}/100;
-                    </span>;
-                    <Badge;
-                      variant={
-                        metrics.performance_score >= 90 ? 'default' : 'secondary';
-                      }
-                    >;
-                      {metrics.performance_score >= 90;
-                        ? 'Excellent';
-                        : metrics.performance_score >= 70;
-                          ? 'Good';
-                          : 'Needs Improvement'}
-                    </Badge>;
-                  </div>;
-                  <Progress value={metrics.performance_score} className='h - 2' />;
-                </div>;
-              </div>;
-              {last_updated && (
-                <p className='text - sm text - muted - foreground'>;
-                  Last updated: {last_updated.toLocaleString ()}
-                </p>)}
-            </div>) : (
-            <div className='text - center py - 8'>;
-              <Clock className='w - 8 h - 8 mx - auto mb - 2 text - muted - foreground' />;
-              <p className='text - muted - foreground'>;
-                Click refresh to collect metrics;
-              </p>;
-            </div>)}
-        </CardContent>;
-      </Card>;
-      {/* Metrics Grid */}
-      {metrics && (
-        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
-          <Card>;
-            <CardContent className='p - 4'>;
-              <div className='flex items - center gap - 2'>;
-                <Package className='w - 4 h - 4 text - blue - 600' />;
-                <span className='text - sm font - medium'>Bundle Size</span>;
-              </div>;
-              <p className='text - 2xl font - bold mt - 2'>;
-                {format_size (metrics.bundle_size)}
-              </p>;
-              <p className='text - xs text - muted - foreground'>;
-                {metrics.chunk_count} chunks;
-              </p>;
-            </CardContent>;
-          </Card>;
-          <Card>;
-            <CardContent className='p - 4'>;
-              <div className='flex items - center gap - 2'>;
-                <Clock className='w - 4 h - 4 text - purple - 600' />;
-                <span className='text - sm font - medium'>Load Time</span>;
-              </div>;
-              <p className='text - 2xl font - bold mt - 2'>;
-                {metrics.load_time.to_fixed (0)}ms;
-              </p>;
-              <p className='text - xs text - muted - foreground'>;
-
-                Average chunk load time;
-              </p>;
-            </CardContent>;
-          </Card>;
-
-          <Card>;
-            <CardContent className='p - 4'>;
-              <div className='flex items - center gap - 2'>;
-                <Globe className='w - 4 h - 4 text - green - 600' />;
-                <span className='text - sm font - medium'>;
-                  First Contentful Paint;
-                </span>;
-              </div>;
-              <p className='text - 2xl font - bold mt - 2'>;
-                {metrics.fcp ? `${metrics.fcp.to_fixed (0)}ms` : 'N / A'}
-              </p>;
-              <p className='text - xs text - muted - foreground'>;
-
-                Time to first paint;
-              </p>;
-            </CardContent>;
-          </Card>;
-
-          <Card>;
-            <CardContent className='p - 4'>;
-              <div className='flex items - center gap - 2'>;
-                <BarChart3 className='w - 4 h - 4 text - orange - 600' />;
-                <span className='text - sm font - medium'>;
-                  Largest Contentful Paint;
-                </span>;
-              </div>;
-              <p className='text - 2xl font - bold mt - 2'>;
-                {metrics.lcp ? `${metrics.lcp.to_fixed (0)}ms` : 'N / A'}
-              </p>;
-              <p className='text - xs text - muted - foreground'>;
-
-                Time to largest paint;
-              </p>;
-            </CardContent>;
-          </Card>;
-
-        </div>)}
-      {/* Bundle Chunks */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items - center gap - 2'>;
-            <Package className='w - 5 h - 5' />;
-
-            Bundle Chunks;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
       <Card>
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <CardHeader>
@@ -1237,7 +839,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <CardContent>
           {chunks.length > 0 ? (
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="space-y-2">
               {chunks.slice(0, 10).map((chunk, index) => (
@@ -1246,13 +847,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
 
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -1277,22 +871,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               ))}
 
-<<<<<<< HEAD
-              
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {chunks.length > 10 && (
                 <p className="text-sm text-muted-foreground text-center pt-2">
                   ... and {chunks.length - 10} more chunks
                 </p>
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
+:src/components/admin/performance-dashboard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
 
               {chunks && chunks.length > 10 && (;
                 <p className='text-sm text-muted-foreground text-center pt-2'>;
@@ -1306,7 +891,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               No chunk data available. Refresh to collect metrics.;
             </p>;
           )}
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
+:src/components/admin/performance-dashboard.tsx
 <<<<<<< HEAD
         </CardContent>;
       </Card>;
@@ -1331,10 +916,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </div>
             </div>
-            
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
               <div>
@@ -1346,36 +927,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </div>
             </div>
-=======
-
-<<<<<<< HEAD
-
-            
-=======
-            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
-              <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />            
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
-              <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
-
-              <div>
-                <p className="font-medium text-blue-900 dark:text-blue-100">
-                  Bundle splitting implemented
-                </p>
-                <p className="text-sm text-blue-700 dark:text-blue-300">
-                  Your bundle is properly split into framework, vendor, and application chunks
-=======
-=======
-
-
-
-            
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
-              <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
@@ -1388,22 +939,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
 
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
+:src/components/admin/performance-dashboard.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-            
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
-
+:src/components/admin/performance-dashboard.tsx
+=======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
@@ -1419,8 +961,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             )}
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
-<<<<<<< HEAD
+:src/components/admin/performance-dashboard.tsx
 <<<<<<< HEAD
           </div>;
         </CardContent>;
@@ -1428,9 +969,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 } ;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         </CardContent>;
       </Card>;
@@ -1587,16 +1125,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1609,9 +1140,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Card>
     </div>
   );
-<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
+:src/components/admin/performance-dashboard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/performance-dashboard.tsx

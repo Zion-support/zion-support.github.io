@@ -79,7 +79,7 @@ export const useLoadMilestones = (projectId?:string) => {;
 }= await supabase .from ('project milestones') .select ('*') .eq ('project id', projectId) if (milestonesError) throw milestonesError;
 setMilestones (milestonesData);
 //Fetch activities for each milestone const activitiesMap: Record<string MilestoneActivity[]> = {
-  
+
 };
 for (const milestone of milestonesData) {
   const {
@@ -105,7 +105,4 @@ error;
 refetch: fetchMilestones 
 }
 };
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

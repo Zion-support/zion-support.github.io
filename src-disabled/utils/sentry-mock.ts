@@ -1,7 +1,5 @@
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
-<<<<<<< HEAD
-
 const noop = () => {};
 const noopReturn = () => null;
 
@@ -27,7 +25,7 @@ const mockSentry = {
   // Transaction and performance monitoring
   startTransaction: () => mockTransaction,
   finishTransaction: noop,
-  
+
   // Error boundary and React integration
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
@@ -43,7 +41,7 @@ const mockSentry = {
     errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next(),
     tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next(),
   },
-  
+
   // Next.js specific
   withSentryConfig: (config: any) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
@@ -176,10 +174,3 @@ export const Severity = mockSentry.Severity;
 
 // Additional exports for compatibility
 export { mockSentry as Sentry };
-=======
-
-
-const noop = null;
-// All exports are already defined above
-
->>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398

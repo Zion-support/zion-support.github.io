@@ -1,5 +1,4 @@
-<<<<<<< HEAD:pages_backup/careers.tsx
-<<<<<<< HEAD
+:pages_backup/careers.tsx
 <<<<<<< HEAD:pages_backup/careers.tsx
 <<<<<<< HEAD:pages/careers.tsx
 <<<<<<< HEAD
@@ -7,28 +6,9 @@
 <<<<<<< HEAD
 
 import React from 'react';
-
-=======
-<<<<<<< HEAD
-=======
-
-
-
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-=======
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
-
-
 
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
@@ -53,17 +33,10 @@ const Page = () => {
   );
 };
 
-<<<<<<< HEAD
-
 import {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export default Page;
-<<<<<<< HEAD:pages_backup/careers.tsx
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -90,17 +63,10 @@ export default Page;
   GraduationCap,
   Globe,
   CheckCircle,;
-<<<<<<< HEAD:pages_backup/careers.tsx
+:pages_backup/careers.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -233,15 +199,15 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -330,7 +296,7 @@ export default function Careers() {
       icon: Award
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
-    
+
     return this.props.children;
   }
 }
@@ -353,23 +319,15 @@ import {;
   GraduationCap,;
   Globe,;
   CheckCircle,;
-<<<<<<< HEAD:pages_backup/careers.tsx
-<<<<<<< HEAD
+:pages_backup/careers.tsx
 <<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-=======
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
+
 import {
-  Users
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import {
+Users
   MapPin
   Clock
   DollarSign
@@ -384,90 +342,6 @@ import {
   GraduationCap
   Globe
   CheckCircle
-  Users,
-  MapPin,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  Coffee,
-  Zap,
-  Shield,
-  Briefcase,
-  GraduationCap,
-  Globe,
-  CheckCircle,;
-} from "lucide-react";
-
-const Careers: React.FC<CareersProps> = ({ className }) => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
-
-import {
-
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-import {
-<<<<<<< HEAD
-  Users
-  MapPin
-  Clock
-  DollarSign
-  ArrowRight
-  Heart
-  Star
-  Award
-  Coffee
-  Zap
-  Shield
-  Briefcase
-  GraduationCap
-  Globe
-  CheckCircle
-=======
-  Users,
-  MapPin,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  Coffee,
-  Zap,
-  Shield,
-  Briefcase,
-  GraduationCap,
-  Globe,
-  CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "lucide-react";
@@ -600,12 +474,6 @@ const values = [;
   },;
 ];
 
-<<<<<<< HEAD
-=======
-
-const Careers: React.FC<CareersProps> = ({ className }) => {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
@@ -617,93 +485,29 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
       keywords="careers, jobs, employment, technology careers, AI jobs, software development">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-<<<<<<< HEAD:pages_backup/careers.tsx
-<<<<<<< HEAD
+:pages_backup/careers.tsx
 <<<<<<< HEAD:pages/careers.tsx
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
 import Head from 'next/head';
 
-<<<<<<< HEAD:pages_backup/careers.tsx
+:pages_backup/careers.tsx
 export default function CareersPage() {
-  
+
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
-<<<<<<< HEAD:pages_backup/careers.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<h1 className="text-4xl md:text-6xl font-bold mb-6">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
-<<<<<<< HEAD
-=======
-=======
-export default function Careers() {
-  const openPositions = [
-    {
-      title: "Senior AI Engineer",
-      department: "Engineering",
-      location: "Remote",
-      type: "Full-time",
-      description: "Lead the development of cutting-edge AI solutions and machine learning models."
-    },
-    {
-      title: "Full Stack Developer",
-      department: "Engineering", 
-      location: "New York, NY",
-      type: "Full-time",
-      description: "Build scalable web applications using modern technologies and frameworks."
-    },
-    {
-      title: "Product Manager",
-      department: "Product",
-      location: "San Francisco, CA",
-      type: "Full-time", 
-      description: "Drive product strategy and roadmap for our AI-powered platform."
-    },
-    {
-      title: "DevOps Engineer",
-      department: "Engineering",
-      location: "Remote",
-      type: "Full-time",
-      description: "Manage cloud infrastructure and deployment pipelines for our services."
-    }
-  ];
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
-
-  const benefits = [
-    "Competitive salary and equity",
-    "Comprehensive health insurance",
-    "Flexible remote work options",
-    "Professional development budget",
-    "Unlimited PTO",
-    "Top-tier equipment and tools"
-  ];
-
-<<<<<<< HEAD:pages_backup/careers.tsx
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -716,10 +520,7 @@ export default function Careers() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
-<<<<<<< HEAD:pages_backup/careers.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/careers.tsx
+:pages_backup/careers.tsx
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -761,7 +562,7 @@ export default function Careers() {
                 The principles that guide everything we do
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {companyValues.map((value, index) => (
                 <div key={index} className="text-center">
@@ -787,7 +588,7 @@ export default function Careers() {
                 We offer more than just a job - we offer a career with purpose
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow">
@@ -1172,189 +973,7 @@ transition={{ duration: 0 && 0.8 }}
         </section>;
 
         {/* Open Positions */}
-<<<<<<< HEAD:pages_backup/careers.tsx
-=======
-        <section id="open - positions" className="py - 20 bg - white">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center mb - 16";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
->;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
-                Open Positions;
-              </h2>;
-              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
-                Explore our current job openings and find the perfect role for;
-                you.;
-              </p>;
-            </motion.div>;
-            <div className="max - w-6xl mx - auto">;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {job_openings.map ((job, index) => (
-                  <motion.div;
-                    key={job.id}
-                    className="bg - white border border - gray - 200 rounded - lg p - 6 hover:shadow - lg transition - shadow duration - 300";
-                    initial={{ opacity: 0, coordinate_y: 30 }}
-                    whileInView={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >;
-                    <div className="flex items - center justify - between mb - 4">;
-                      <span className="bg - blue - 100 text - blue - 800 px - 3 py - 1 rounded - full text - sm font - semibold">;
-                        {job.department}
-</span>;
-                      <span className="text - gray - 500 text - sm">{job.type}</span>;
-                    </div>;
-                    <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
-                      {job.title}
-                    </h3>;
-                    <p className="text - gray - 600 mb - 4">{job.description}</p>;
-                    <div className="space - y-2 mb - 6">;
-                      <div className="flex items - center text - sm text - gray - 600">;
-                        <MapPin className="w - 4 h - 4 mr - 2" />;
-                        {job.location}
-                      </div>;
-                      <div className="flex items - center text - sm text - gray - 600">;
-                        <Clock className="w - 4 h - 4 mr - 2" />;
-                        {job.experience}
-transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                Open Positions;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-                Explore our current job openings and find the perfect role for;
-                you.;
-              </p>;
-            </motion && motion.div>;
-            <div className="max-w-6xl mx-auto">;
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {jobOpenings && jobOpenings.map((job, index) => (;
-                  <motion&& motion.div
-                    key={job && job.id}
-                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>;
-                    <div className="flex items-center justify-between mb-4">;
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">;
-                        {job && job.department}
-                      </span>;
-                      <span className="text-gray-500 text-sm">{job && job.type}</span>;
-                    </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">;
-                      {job && job.title}
-                    </h3>;
-                    <p className="text-gray-600 mb-4">{job && job.description}</p>;
-                    <div className="space-y-2 mb-6">;
-                      <div className="flex items-center text-sm text-gray-600">;
-                        <MapPin className="w-4 h-4 mr-2" />;
-                        {job && job.location}
-                      </div>;
-                      <div className="flex items-center text-sm text-gray-600">;
-                        <Clock className="w-4 h-4 mr-2" />;
-                        {job && job.experience}
-                      </div>;
-                    </div>;
-                    <div className="mb-6">;
-                      <h4 className="font-semibold text-gray-900 mb-2">;
-                        Key Requirements:;
-                      </h4>;
-                      <ul className="space-y-1">;
-                        {job && job.requirements;
-                          .slice(0, 3);
-                          .map((requirement, idx) => (;
-                            <li
-                              key={idx}
-                              className="flex items-center text-sm text-gray-600">;
-                              <CheckCircle className="w-3 h-3 text-green-500 mr-2" />;
-                              {requirement}
-                            </li>;
-                          ))}
-</ul>;
-                    </div>;
-                    <div className="mb-6">;
-                      <h4 className="font-semibold text-gray-900 mb-2">;
-                        Benefits:;
-                      </h4>;
-                      <div className="flex flex-wrap gap-2">;
-                        {job && job.benefits.map((benefit, idx) => (;
-                          <span
-                            key={idx}
-                            className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">;
-                            {benefit}
-                          </span>;
-                        ))}
-</div>;
-                    </div>;
-                    <a
-                      href={`/careers/${job && job.id}`}
-                      className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center">;
-                      Apply Now;
-                      <ArrowRight className="w-4 h-4 ml-2" />;
-                    </a>;
-                  </motion && motion.div>;
-                ))}
-</div>;
-                    </div>;
-                    <div className="mb - 6">;
-                      <h4 className="font - semibold text - gray - 900 mb - 2">;
-                        Key Requirements:;
-                      </h4>;
-                      <ul className="space - y-1">;
-                        {job.requirements;
-                          .slice (0, 3);
-                          .map ((requirement, idx) => (
-                            <li;
-                              key={idx}
-                              className="flex items - center text - sm text - gray - 600";
-                            >;
-                              <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2" />;
-                              {requirement}
-                            </li>))}
-                      </ul>;
-                    </div>;
-                    <div className="mb - 6">;
-                      <h4 className="font - semibold text - gray - 900 mb - 2">;
-                        Benefits:;
-                      </h4>;
-                      <div className="flex flex - wrap gap - 2">;
-                        {job.benefits.map ((benefit, idx) => (
-                          <span;
-                            key={idx}
-                            className="bg - gray - 100 text - gray - 700 px - 2 py - 1 rounded text - xs";
-                          >;
-                            {benefit}
-                          </span>))}
-                      </div>;
-                    </div>;
-                    <a;
-                      href={`/careers/${job.id}`}
-                      className="w - full bg - gradient - to - r from - blue - 500 to - purple - 600 text - white py - 3 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold flex items - center justify - center";
-                    >;
-                      Apply Now;
-                      <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                    </a>;
-                  </motion.div>))}
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                  Learn More About Us;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
+:pages_backup/careers.tsx
         <section id="positions" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -1365,7 +984,7 @@ transition={{ duration: 0 && 0.8 }}
                 Find your next career opportunity with us
               </p>
             </div>
-            
+
             <div className="space-y-8">
               {openPositions.map((position, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">
@@ -1404,7 +1023,7 @@ transition={{ duration: 0 && 0.8 }}
                       </button>
                     </Link>
                   </div>
-                  
+
                   <div className="border-t pt-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Requirements:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -1464,8 +1083,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD:pages_backup/careers.tsx
-<<<<<<< HEAD
+:pages_backup/careers.tsx
 <<<<<<< HEAD
 
   );
@@ -1473,14 +1091,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            >;
-=======
->;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Don't See Your Dream Job?;
               </h2>;
@@ -1507,10 +1117,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </section>;
       </div>;
     </MainLayout>);
-<<<<<<< HEAD:pages_backup/careers.tsx
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
+:pages_backup/careers.tsx
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See Your Dream Job?
@@ -1518,57 +1125,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 We're always looking for talented individuals. Send us your
                 resume and let us know how you'd like to contribute to our team.
-<<<<<<< HEAD:pages_backup/careers.tsx
-=======
-  return (
-    <>
-      <Head>
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team and help shape the future of AI and technology. Explore open positions at Zion Tech Group." />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-b border-gray-800">
-          <div className="max-w-7xl mx-auto px-4 py-16">
-            <div className="text-center">
-              <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Join Our Team
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Help us build the future of AI and technology. We're looking for passionate individuals 
-                who want to make a real impact.
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
+:pages_backup/careers.tsx
               </p>
             </div>
           </div>
-<<<<<<< HEAD:pages_backup/careers.tsx
+:pages_backup/careers.tsx
         </section>
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                >
-                  Send Resume
-                </a>
-                <a
-                  href="/about"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Learn More About Us
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
     </MainLayout>
     </MainLayout>
     </Layout>
@@ -1577,19 +1143,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </MainLayout>;
   );
 }
-<<<<<<< HEAD:pages_backup/careers.tsx
-<<<<<<< HEAD
+:pages_backup/careers.tsx
 <<<<<<< HEAD:pages/careers.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/careers.tsx
 import { motion } from 'framer-motion';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -1603,23 +1162,18 @@ const Page = () => {
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Careers</h1>
           <p className="text-xl text-gray-600">Join our innovative team! Check back soon for exciting career opportunities.</p>
-<<<<<<< HEAD:pages_backup/careers.tsx
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
+:pages_backup/careers.tsx
         </div>
 
-<<<<<<< HEAD:pages_backup/careers.tsx
+:pages_backup/careers.tsx
 export default Page;
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/careers.tsx
 =======
@@ -1653,7 +1207,7 @@ export default Page;
                   <h3 className="text-xl font-bold mb-3">Innovation First</h3>
                   <p className="text-gray-300">Work on cutting-edge AI and technology projects that push the boundaries of what's possible.</p>
                 </div>
-                
+
                 <div className="bg-gray-800/50 rounded-xl p-6">
                   <h3 className="text-xl font-bold mb-3">Growth Opportunities</h3>
                   <p className="text-gray-300">Continuous learning and development opportunities to advance your career.</p>
@@ -1682,7 +1236,6 @@ export default Page;
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======

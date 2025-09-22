@@ -1,52 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import EmptyState from '../../components/ui/EmptyState'
 export default function RequestsPage() {
     <div>
       <h2 className="text-xl font-semibold mb-2">Requests</h2>
       <EmptyState title="Nothing here yet..." message="Submit a quote or respond to invitations to see them here." ctaLabel="Submit a quote" ctaHref="/dashboard" />
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
-import EmptyState from '../../components / ui / EmptyState';
-export default /**
- * RequestsPage - Function description
- */
-function RequestsPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-  return (
-    <div>;
-      <h2 className=&quot;text - xl font - semibold mb - 2&quot;>Requests</h2>;
-      <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; cta_label=&quot;Submit a quote & quot; cta_href=&quot;/dashboard & quot; />;
-    </div>);
-}
-
-
-
-
-  return (
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 export default function RequestsPage() {};
   return (;
@@ -54,22 +12,13 @@ export default function RequestsPage() {};
       <h2 className=&quot;text-xl font-semibold mb-2&quot;>Requests</h2>
       <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; ctaLabel=&quot;Submit a quote&quot; ctaHref=&quot;/dashboard&quot; />
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function RequestsPage() {_return (
 
     <div>
       <h2 className="text-xl font-semibold mb-2">Requests</h2>
       <EmptyState title="Nothing here yet..." message="Submit a quote or respond to invitations to see them here." ctaLabel="Submit a quote" ctaHref="/dashboard" />
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 =======
@@ -87,17 +36,7 @@ export default function RequestsPage() {_return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -111,11 +50,6 @@ export default function RequestsPage() { return null; }
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

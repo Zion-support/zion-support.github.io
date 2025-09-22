@@ -41,4 +41,3 @@ export function HowItWorksSection() {;
         </div>;
       </div>;
     </section>;
-

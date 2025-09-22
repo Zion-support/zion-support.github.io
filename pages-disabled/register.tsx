@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
-import Layout from "../components/Layout";
-export default function RegisterPage() {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default function RegisterPage() {;
 =======
-
 
 export default function RegisterPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-<<<<<<< HEAD
 export default function RegisterPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -34,9 +22,6 @@ export default function RegisterPage() {;
     company: "",;
     agreeToTerms: false,;
     subscribeNewsletter: false,;
-=======
-export default function RegisterPage() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   });
 
   const [passwordRequirements, setPasswordRequirements] = useState({;

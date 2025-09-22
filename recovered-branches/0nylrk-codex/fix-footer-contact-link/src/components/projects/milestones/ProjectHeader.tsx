@@ -2,8 +2,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from './react';
 import { use_navigate  } from './react-router-dom';
@@ -12,10 +10,6 @@ import { ArrowLeft  } from './lucide-react';
 interface ProjectHeaderProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   title: string;
 }
 export /**
@@ -40,14 +34,6 @@ function ProjectHeader() {
         <h1 className="text - 2xl md:text - 3xl font - bold truncate max - w-xl">;
           {title}
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   title: string
 }
 =======
@@ -81,28 +67,10 @@ interface ProjectHeaderProps {
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { Button } from '@/components/ui/button',;
 import { ArrowLeft } from 'lucide-react',;
-=======
-
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from 'react';
-import {useNavigate} from 'react-router-dom';
-import {Button} from '@/components/ui/button';
-import {ArrowLeft} from 'lucide-react';
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -116,20 +84,13 @@ interface ProjectHeaderProps {}
   title: string;
 }
 
-<<<<<<< HEAD
 export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useNavigate} from 'react-router-dom';
 import {Button} from '@/components/ui/button';
 import {ArrowLeft} from 'lucide-react';
@@ -139,17 +100,9 @@ interface ProjectHeaderProps {;
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
 =======
-  
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
 
   return ("
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">"
@@ -163,13 +116,7 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
           onClick={() => navigate(-1)}
 }
 
-<<<<<<< HEAD
-  
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-export function ProjectHeader({ title }: ProjectHeaderProps) {
-  const navigate = useNavigate(),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
@@ -178,16 +125,9 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
           variant="ghost"
           size="sm"
           className="mr-2"
-<<<<<<< HEAD
-=======
-export function ProjectHeader() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           onClick={() => navigate(-1)}
 }
-
-  
-
-
 
   return ("
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">"
@@ -210,11 +150,7 @@ import {ArrowLeft} from 'lucide-react';
 interface ProjectHeaderProps {;
   title: string;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-    
 =======
 ;
 export function ProjectHeader() { return null; }
@@ -228,7 +164,7 @@ export function ProjectHeader() { return null; }
     </div>;
 export function ProjectHeader({ title }: ProjectHeaderProps) {}
   const navigate = useNavigate(),
-  
+
   return ("
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">"
       <div className="flex items-center">
@@ -292,25 +228,9 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 }
 ;
 
-<<<<<<< HEAD
-
-
-  ),;}"
+),;}"
  <Button variant="ghost" size="sm" className="mr-2" onClick= {}
   () => navigate (-1) "
-=======
-  ),;}
- <Button variant="ghost" size="sm" className="mr-2" onClick= {
-    </div>;"
-          className="mr-2""
-          <ArrowLeft className="h-4 w-4 mr-1" />"
-
-        <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">"
-</h1>
- <Button variant="ghost" size="sm" className="mr-2" onClick= {"
-  () => navigate (-1) 
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }> <ArrowLeft className="h-4 w-4 mr-1" /> Back </Button> </div> </div>) 
 }
   );
@@ -330,11 +250,5 @@ pr-12325
   )
 }
 ;
-<<<<<<< HEAD
-
-
-
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

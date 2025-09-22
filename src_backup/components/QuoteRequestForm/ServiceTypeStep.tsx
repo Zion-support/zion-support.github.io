@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/QuoteRequestForm/ServiceTypeStep.tsx
-<<<<<<< HEAD
+:src/components/QuoteRequestForm/ServiceTypeStep.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,12 +14,6 @@ import { useDebounce } from "@/hooks/useDebounce",
 import { useIsMounted } from "@/hooks/useIsMounted",
 import { z } from "zod",
 import {logErrorToProduction} from '@/utils/productionLogger',
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx
 import { useEffect, useState } from 'react';
 import { QuoteFormData, ListingItem, ServiceType } from '@/types/quotes';
 import { Input } from '@/components/ui/input';
@@ -34,19 +27,15 @@ import { useIsMounted } from '@/hooks/useIsMounted';
 import { z } from 'zod';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-<<<<<<< HEAD:src/components/QuoteRequestForm/ServiceTypeStep.tsx
+:src/components/QuoteRequestForm/ServiceTypeStep.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
   category: z.string(),
-<<<<<<< HEAD:src/components/QuoteRequestForm/ServiceTypeStep.tsx
-<<<<<<< HEAD
-  image: z.string().optional()}),
+:src/components/QuoteRequestForm/ServiceTypeStep.tsx
+image: z.string().optional()}),
 
 const listingsSchema = z.array(listingSchema),
 
@@ -54,9 +43,6 @@ interface ServiceTypeStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
@@ -94,9 +80,6 @@ interface ServiceTypeStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
-<<<<<<< HEAD
-
-
 const listing_schema = z.object ({
   id: z.string (),
   title: z.string (),
@@ -107,7 +90,6 @@ const listing_schema = z.object ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
-
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
   const debouncedQuery = useDebounce(searchQuery, 300),
@@ -115,9 +97,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const isMounted = useIsMounted(),
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx
   image: z.string().optional(),
 });
 
@@ -142,7 +121,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // Fetch services when the service type or query changes
   useEffect(() => {
     if (!formData.serviceType) {
-<<<<<<< HEAD:src/components/QuoteRequestForm/ServiceTypeStep.tsx
+:src/components/QuoteRequestForm/ServiceTypeStep.tsx
 <<<<<<< HEAD
       setListings([]),
       return
@@ -168,8 +147,6 @@ interface ServiceTypeStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState(""),;
@@ -183,8 +160,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     if (!formData.serviceType) {;
       setListings([]),;
       return;
-<<<<<<< HEAD
-    }
+}
 ;
     const fetchServices = async () => {;
       setLoading(true),;
@@ -227,11 +203,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
     fetchServices()
   }, [formData.serviceType, debouncedQuery, isMounted]),
-  
+
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type })
   },
-  
+
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({ 
       specificItem: item,
@@ -239,7 +215,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       serviceType: item.category.toLowerCase() as ServiceType
     })
   },
-  
+
   const sourceListings = listings,
 
   const filteredListings = sourceListings.filter(item => {
@@ -248,14 +224,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
       if (!categoryMatch) return false
     }
-    
+
     if (searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx
       setListings([]);
       return;
     }
@@ -351,7 +324,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h4 className="font-medium text-white">Services</h4>
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>
           </Card>
-          
+
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent" 
@@ -363,7 +336,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h4 className="font-medium text-white">Talent</h4>
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>
           </Card>
-          
+
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment" 
@@ -371,41 +344,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
             onClick={() => handleTypeSelect("equipment")}
-<<<<<<< HEAD:src/components/QuoteRequestForm/ServiceTypeStep.tsx
+:src/components/QuoteRequestForm/ServiceTypeStep.tsx
           >
             <h4 className="font-medium text-white">Equipment</h4>
             <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>
           </Card>
         </div>
       </div>
-      
+
       {formData.serviceType && (
         <div className="space-y-4">
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
-          
+
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
-=======
-}
-
-
-  )
-}
-
-
-const listing_schema = z.object ({
-  id: z.string (),
-  title: z.string (),
-  category: z.string (),
-  image: z.string ().optional ()}),
-      const max_retries = 3;
-  const source_listings = listings;
-}
-  );
-}
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx
     },;
     fetchServices();
   }, [formData.serviceType, debouncedQuery, isMounted]),;
@@ -480,7 +433,7 @@ const listing_schema = z.object ({
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD:src/components/QuoteRequestForm/ServiceTypeStep.tsx
+:src/components/QuoteRequestForm/ServiceTypeStep.tsx
 <<<<<<< HEAD
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple";
             />;
@@ -528,33 +481,9 @@ const listing_schema = z.object ({
   );
 }
 <<<<<<< HEAD
-=======
-
-    },;
-    fetchServices();
-  }, [formData.serviceType, debouncedQuery, isMounted]),;
-  const handleTypeSelect = (type: ServiceType) => {;
-    updateFormData({ serviceType: type });
-  },;
-  const handleItemSelect = (item: ListingItem) => {;
-    updateFormData({;
-      specificItem: item,;
-      serviceCategory: item.category,;
-      serviceType: item.category.toLowerCase() as ServiceType;
-    });
-  },;
-  const sourceListings = listings,;
-  const filteredListings = sourceListings.filter(item => {;
-    // Filter by category only when a service type has been selected;
-    if (formData.serviceType !== "") {;
-      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),;
-      if (!categoryMatch) return false;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
 ;
-<<<<<<< HEAD
-    const fetchServices = async () => {;
+const fetchServices = async () => {;
       setLoading(true),;
       setError(null),;
       const url = `/api/public/services?category=${encodeURIComponent(;
@@ -595,11 +524,11 @@ const listing_schema = z.object ({
 
     fetchServices()
   }, [formData.serviceType, debouncedQuery, isMounted]),
-  
+
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type })
   },
-  
+
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({ 
       specificItem: item,
@@ -607,7 +536,7 @@ const listing_schema = z.object ({
       serviceType: item.category.toLowerCase() as ServiceType
     })
   },
-  
+
   const sourceListings = listings,
 
   const filteredListings = sourceListings.filter(item => {
@@ -616,7 +545,7 @@ const listing_schema = z.object ({
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
       if (!categoryMatch) return false
     }
-    
+
     if (searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
@@ -638,7 +567,7 @@ const listing_schema = z.object ({
             <h4 className="font-medium text-white">Services</h4>
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>
           </Card>
-          
+
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent" 
@@ -650,7 +579,7 @@ const listing_schema = z.object ({
             <h4 className="font-medium text-white">Talent</h4>
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>
           </Card>
-          
+
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment" 
@@ -722,12 +651,6 @@ const listing_schema = z.object ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
-            onClick={() => handleTypeSelect("equipment")}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 =======
@@ -769,9 +692,6 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 }"
   )
 }
-<<<<<<< HEAD:src/components/QuoteRequestForm/ServiceTypeStep.tsx
+:src/components/QuoteRequestForm/ServiceTypeStep.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/QuoteRequestForm/ServiceTypeStep.tsx

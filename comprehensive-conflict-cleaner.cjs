@@ -16,18 +16,15 @@ class ComprehensiveConflictCleaner {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
 
-      if (!content.includes('<<<<<<< HEAD')) {
+      if (!content.includes('')) {
         return false;
       }
 
       // Clean merge conflicts - keep the HEAD version by default
       let cleanedContent = content
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
+        .replace(/<<<<<<< HEAD[\s\S]*?
           // Extract the HEAD version (before =======)
-          const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
-          return headMatch ? headMatch[1].trim() : '';
-        })
-        .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
+          const headMatch = match.match(/([\s\S]*?)
           // Extract the HEAD version (before =======)
           const headMatch = match.match(/<<<<<<< [^\n]+([\s\S]*?)=======/);
           return headMatch ? headMatch[1].trim() : '';

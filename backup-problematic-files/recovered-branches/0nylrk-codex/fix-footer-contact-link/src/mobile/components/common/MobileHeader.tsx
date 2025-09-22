@@ -63,4 +63,3 @@ export function MobileHeader({;
         </div>;
       </div>;
     </header>;
-

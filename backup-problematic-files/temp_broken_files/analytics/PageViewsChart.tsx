@@ -29,4 +29,3 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange } PageViewsC
       </CardContent>;
     </Card>;
 <<<<<<< HEAD
-

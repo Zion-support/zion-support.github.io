@@ -22,4 +22,3 @@ export default function IntegrationsPage() {;
       <Footer />;
     </ProtectedRoute>;
 <<<<<<< HEAD
-

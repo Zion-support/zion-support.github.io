@@ -32,15 +32,10 @@ class DeploymentAutomation {}
       this.log(`Completed "step": ${stepName} (${duration}ms)`);"
       return result} catch(error) {}
 
-<<<<<<< HEAD
-    // Check if working directory is clean;
+// Check if working directory is clean;
     try {}
       const gitStatus = execSync('git status --porcelain', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe'
       };);
@@ -52,11 +47,7 @@ class DeploymentAutomation {}
     // Check if tests pass;
     try {}
       execSync('npm test -- --watchAll=false', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 120000;
       })) {}
@@ -68,11 +59,7 @@ class DeploymentAutomation {}
     // Check if tests pass;
     try {}
       execSync('npm test -- --watchAll=false', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 120000;
       })};
@@ -81,11 +68,7 @@ class DeploymentAutomation {}
     // Check if build succeeds;
     try {}
       execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "stdio": 'pipe',
         "timeout": 300000;
       }
@@ -98,26 +81,17 @@ class DeploymentAutomation {}
     this.log('Building application...');
     try {}
       const buildOutput = execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
       };);
-=======
-        "timeout": 300000;"
-});"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         "timestamp": new Date().toISOString();"
 
       this.results.build = buildInfo;"
       this.log('Application built successfully');
-<<<<<<< HEAD
-      return buildInfo} catch(error) {}
+return buildInfo} catch(error) {}
       this.log(`Build "failed": ${error.message}`, 'ERROR');
       throw error};
   };
@@ -125,17 +99,11 @@ class DeploymentAutomation {}
     this.log('Running test suite...');
     try {}
       const testOutput = execSync('npm test -- --coverage --watchAll=false', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot,
-=======
-        "cwd": this.projectRoot, 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+"cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 120000;
       };);
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         this.log('Already on main branch')) {}
      {}
@@ -143,8 +111,7 @@ class DeploymentAutomation {}
         return { "merged": true, "alreadyOnMain": true }};"
       // Switch to main;"
 
-<<<<<<< HEAD
-      // Pull latest changes;
+// Pull latest changes;
       execSync('git pull origin main', { "cwd": this.projectRoot }
 });
       this.log('Pulled latest main changes');
@@ -179,17 +146,7 @@ class DeploymentAutomation {}
 });
       execSync(`git push origin ${tagName}`, { "cwd": this.projectRoot }
 });
-<<<<<<< HEAD
-
-      this.log(`Created and pushed "tag": ${tagName}`);
-
-=======
-      
-      this.log(`Created and pushed "tag": ${tagName}`);
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+this.log(`Created and pushed "tag": ${tagName}`);
       const tagInfo = {}
         tagName,"
 
@@ -203,16 +160,13 @@ class DeploymentAutomation {}
       failedSteps,
       successRate,
 
-<<<<<<< HEAD
-    this.log(`Deployment "Summary": ${successfulSteps}/${totalSteps} steps successful (${successRate}%)`)};
+this.log(`Deployment "Summary": ${successfulSteps}/${totalSteps} steps successful (${successRate}%)`)};
   async run() {}
     this.log('Starting Deployment Automation...');
     try {}
       // Pre-deployment checks;
       await this.runStep('Pre-deployment Checks', () => this.preDeploymentChecks());
-<<<<<<< HEAD
-
-      // Build application;
+// Build application;
       await this.runStep('Build Application', () => this.buildApplication());
 
       // Run tests;
@@ -226,25 +180,6 @@ class DeploymentAutomation {}
 
       // Merge to main;
       await this.runStep('Merge to Main', () => this.mergeToMain());
-
-=======
-      
-      // Build application;
-      await this.runStep('Build Application', () => this.buildApplication());
-      
-      // Run tests;
-      await this.runStep('Run Tests', () => this.runTests());
-      
-      // Commit changes;
-      await this.runStep('Commit Changes', () => this.commitChanges());
-      
-      // Push to repository;
-      await this.runStep('Push to Repository', () => this.pushToRepository());
-      
-      // Merge to main;
-      await this.runStep('Merge to Main', () => this.mergeToMain());
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Create deployment tag;
       await this.runStep('Create Deployment Tag', () => this.createDeploymentTag());
 
@@ -262,23 +197,12 @@ class DeploymentAutomation {}
   };
 };
 if ( {})
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const deployment = new DeploymentAutomation) {}
   const deployment = new DeploymentAutomation}(;);
   deployment.run().catch(console.error)};
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = DeploymentAutomation;
-module.exports = DeploymentAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 module.exports = DeploymentAutomation;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

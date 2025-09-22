@@ -1,20 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -27,15 +13,8 @@ import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function useFetchResume() {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export function useFetchResume() {
@@ -45,22 +24,7 @@ import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -85,7 +49,6 @@ export function useFetchResume() {  const { user } = useAuth();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
   const { user } = useAuth();
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -103,8 +66,7 @@ export function useFetchResume() {  const { user } = useAuth();
     }
     setIsLoading(true);
     setError(null);
-<<<<<<< HEAD
-    try {
+try {
       // If resumeId is provided, fetch that specific resume
       // Otherwise, fetch the user's active resume or most recent resume
 
@@ -147,18 +109,10 @@ const { data: resumeData, error: resumeError } = await resumeQuery && resumeQuer
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
         }
         throw resumeError
       }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume } from '@/types/resume',;
@@ -171,13 +125,8 @@ export function useFetchResume() {;
   const fetchResume = async (resumeId?: string) => {;
     if (!user) {;
       setError('You must be logged in to access resumes'),;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from 'react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import {useState} from 'react';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -200,13 +149,11 @@ import {Resume} from '@/types / resume';
         resumeQuery = resumeQuery'
           .eq('user_id', user && user.id)
 
-
 '
           .order('is_active', { ascending: false })'
           .order('created_at', { ascending: false })
           .limit(1)
       }
-
 
       if (resumeError) {'
         if (resumeError && resumeError.code === 'PGRST116') {}
@@ -233,7 +180,6 @@ import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
 
-
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -245,42 +191,22 @@ pr-12325
   const [error, set_error] = useState < string | null>(null);
   const [resume, set_resume] = useState < Resume | null>(null);
 ;
-<<<<<<< HEAD
-  const fetch_resume = async (resume_id?: string) => {
+const fetch_resume = async (resume_id?: string) => {
     // Check condition
 if ( {) {
   $2
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const fetch_resume = async (resume_id?: string) => {}
-    // Check condition;
-if ( {) {}
-  $2;
-}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       set_error ('You must be logged in to access resumes');
-
-
-=======
-      set_error ('You must be logged in to access resumes');
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return null;
     }
     setIsLoading (true);
     set_error (null);
 ;
-<<<<<<< HEAD
-    try {}
+try {}
       // If resume_id is provided, fetch that specific resume;'
       // Otherwise, fetch the user's active resume or most recent resume;'
-=======
-    try {
-      // If resume_id is provided, fetch that specific resume;
-      // Otherwise, fetch the user's active resume or most recent resume;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       let resume_query = supabase.from ('talent_resumes').select ('*');
 ;
           // No resume found, this is not a critical error for a new user;
@@ -288,8 +214,7 @@ if ( {) {}
           setIsLoading(false),;
           return null;
         }
-<<<<<<< HEAD
-        throw resumeError;
+throw resumeError;
       }
       // Check condition;
 if ( {) {}
@@ -300,41 +225,18 @@ if ( {) {}
         resume_query = resume_query;'
           .eq ('user_id', user.id);'
           .order ('is_active', { ascending: false });'
-=======
-        throw resumeError
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        resume_query = resume_query.eq ('id', resume_id);
-      } else {
-        resume_query = resume_query;
-          .eq ('user_id', user.id);
-          .order ('is_active', { ascending: false });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           .order ('created_at', { ascending: false });
           .limit (1);
       }
       const { data: resume_data, error: resume_error } = await resume_query.single ();
 ;
-<<<<<<< HEAD
-      // Check condition;
+// Check condition;
 if ( {) {}
   $2;
 }
         // Check condition;
 if ( {) {}
   $2;
-=======
-      // Check condition
-if ( {) {
-  $2
-}
-        // Check condition
-if ( {) {
-  $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
           // No resume found, this is not a critical error for a new user;
           set_resume (null);
@@ -342,20 +244,10 @@ if ( {) {
           return null;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -364,15 +256,7 @@ if ( {) {
         throw resume_error;
       }
 
-<<<<<<< HEAD
-
-      
-
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-
-
 
       // Fetch work experience;
       const { data: workData, error: workError } = await supabase'
@@ -401,16 +285,8 @@ if ( {) {
         .from('resume_skills')'
         .select('*')
 
-
-
       if (skillsError) throw skillsError;
 <<<<<<< HEAD
-=======
-      set_error ('You must be logged in to access resumes');      if (skillsError) throw skillsError;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      set_error ('You must be logged in to access resumes');      if (skillsError) throw skillsError;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 =======
@@ -451,11 +327,7 @@ if ( {) {
         .eq('resume_id', resumeData && resumeData.id);
         .eq('resume_id', resumeData.id);
       if (skillsError) throw skillsError;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      set_error ('You must be logged in to access resumes');      if (skillsError) throw skillsError;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Fetch certifications
       const { data: certData, error: certError } = await supabase
         .from('certifications')
@@ -482,7 +354,6 @@ if ( {) {
         is_active: resumeData && resumeData.is_active
       };
 
-
       setResume(fullResume);
               setResume(fullResume);
       return fullResume
@@ -490,129 +361,7 @@ if ( {) {
       console && console.error('Error fetching resume:', e);
       setError(e && e.message);
       return null
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      // Fetch certifications;
-      const { data: certData, error: certError } = await supabase'
-        .from('certifications')'
-        .select('*')
 
-
-
-      if (certError) throw certError;
-      const fullResume: Resume = {}
-        id: resumeData && resumeData.id;
-        user_id: resumeData && resumeData.user_id;
-        basic_info: {}
-          id: resumeData && resumeData.id;
-          title: resumeData && resumeData.title;
-          headline: resumeData && resumeData.headline,
-          summary: resumeData && resumeData.summary;
-        };
-        work_experience: workData || [];
-        education: educationData || [];
-        skills: skillsData || [];
-        certifications: certData || [],
-        is_active: resumeData && resumeData.is_active;
-      };
-
-
-
-      setResume(fullResume);
-      return fullResume;
-    } catch (e: any) {'
-      console && console.error('Error fetching resume:', e);
-      setError(e && e.message);
-      return null;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    // Check condition;
-if ( {) {
-  $2;
-}
-      set_error ('You must be logged in to access resumes');
-      return null;
-    setIsLoading (true);
-    set_error (null);
-    try {
-  // TODO: Implement
-      // If resume_id is provided, fetch that specific resume;
-      // Otherwise, fetch the user's active resume or most recent resume;
-      let resume_query = supabase.from ('talent_resumes').select ('*');
-          // No resume found, this is not a critical error for a new user;
-          setResume(null),;
-          setIsLoading(false),;
-        throw resumeError;
-      // Check condition;
-        resume_query = resume_query.eq ('id', resume_id);
-      } else {
-  // TODO: Implement
-        resume_query = resume_query;
-          .eq ('user_id', user.id);
-          .order ('is_active', { ascending: false });
-          .order ('created_at', { ascending: false });
-          .limit (1);
-      const { data: resume_data, error: resume_error } = await resume_query.single ();
-      // Check condition;
-        // Check condition;
-          // No resume found, this is not a critical error for a new user;
-          set_resume (null);
-          setIsLoading (false);
-
-
-
-
-        throw resume_error;
-
-
-
-
-      // Fetch work experience;
-      const { data: workData, error: workError } = await supabase;
-        .from('work_history')
-        .select('*')
-        .eq('resume_id', resumeData && resumeData.id)
-        .order('is_current', { ascending: false })
-        .order('start_date', { ascending: false });
-      if (workError) throw workError;
-      // Fetch education;
-      const { data: educationData, error: educationError } = await supabase;
-        .from('education')
-      if (educationError) throw educationError;
-      // Fetch skills;
-      const { data: skillsData, error: skillsError } = await supabase;
-        .from('resume_skills')
-        .eq('resume_id', resumeData && resumeData.id);
-      if (skillsError) throw skillsError;
-      // Fetch certifications;
-      const { data: certData, error: certError } = await supabase;
-        .from('certifications')
-      if (certError) throw certError;
-      const fullResume: Resume = {,
-  id: resumeData && resumeData.id;
-        user_id: resumeData && resumeData.user_id;,
-  basic_info: {
-
-          id: resumeData && resumeData.id;,
-  title: resumeData && resumeData.title;
-          headline: resumeData && resumeData.headline,
-          summary: resumeData && resumeData.summary;
-        };
-        work_experience: workData || [];,
-  education: educationData || [];
-        skills: skillsData || [];,
-  certifications: certData || [],
-        is_active: resumeData && resumeData.is_active;
-
-      setResume(fullResume);
-      return fullResume;
-    } catch (e: any) {
-      console && console.error('Error fetching resume:', e);
-      setError(e && e.message);
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Fetch work experience;
       const { data: work_data, error: work_error } = await supabase;'
         .from ('work_history');'
@@ -679,7 +428,6 @@ if (throw cert_error) {}
       console.error ('Error fetching resume:', e);
       set_error (e.message);
       return null;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
       setIsLoading (false);
@@ -692,13 +440,9 @@ if (throw cert_error) {}
     resume;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   return {
     isLoading;
@@ -726,8 +470,7 @@ if (throw cert_error) {}
       console.error('Error fetching resume:', e);
       setError(e.message);
       return null
-<<<<<<< HEAD
-    } finally {
+} finally {
       setIsLoading(false)
     }
   }
@@ -738,125 +481,11 @@ if (throw cert_error) {}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-;
-      // Fetch work experience;
-      const { data: workData, error: workError } = await supabase;
-        .from('work_history');
-        .select('*');
-        .eq('resume_id', resumeData.id);
-        .order('is_current', { ascending: false });
-        .order('start_date', { ascending: false }),;
-      if (workError) throw workError,;
-      // Fetch education;
-      const { data: educationData, error: educationError } = await supabase;
-        .from('education');
-        .select('*');
-        .eq('resume_id', resumeData.id);
-        .order('is_current', { ascending: false });
-        .order('start_date', { ascending: false }),;
-      if (educationError) throw educationError,;
-      // Fetch skills;
-      const { data: skillsData, error: skillsError } = await supabase;
-        .from('resume_skills');
-        .select('*');
-        .eq('resume_id', resumeData.id),;
-      if (skillsError) throw skillsError,;
-      // Fetch certifications;
-      const { data: certData, error: certError } = await supabase;
-        .from('certifications');
-        .select('*');
-        .eq('resume_id', resumeData.id),;
-      if (certError) throw certError,;
-      const fullResume: Resume = {;
-        id: resumeData.id,;
-        user_id: resumeData.user_id,;
-        basic_info: {;
-          id: resumeData.id,;
-          title: resumeData.title,;
-          headline: resumeData.headline,;
-          summary: resumeData.summary;
-        },;
-        work_experience: workData || [],;
-        education: educationData || [],;
-        skills: skillsData || [],;
-        certifications: certData || [],;
-        is_active: resumeData.is_active;
-      },;
-      setResume(fullResume),;
-      return fullResume;
-    } catch (e: any) {;
-      console.error('Error fetching resume:', e),;
-      setError(e.message),;
-      return null;
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  return {;
-    isLoading,;
-
-;
-=======
-    } finally {}
-      setIsLoading (false);
-    }
-  }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     error;
     resume;
 }
-<<<<<<< HEAD
-=======
 
-;
-
-    resume;
-}
-      // Check condition;
-if (throw work_error) {
-      // Fetch education;
-      const { data: education_data, error: education_error } = await supabase;
-        .from ('education');
-      // Check condition;
-if (throw education_error) {
-      // Fetch skills;
-      const { data: skills_data, error: skills_error } = await supabase;
-        .from ('resume_skills');
-      // Check condition;
-if (throw skills_error) {
-      // Fetch certifications;
-      const { data: cert_data, error: cert_error } = await supabase;
-        .from ('certifications');
-      // Check condition;
-if (throw cert_error) {
-      const full_resume: Resume = {,
-  id: resume_data.id;
-        user_id: resume_data.user_id;,
-          id: resume_data.id;,
-  title: resume_data.title;
-          headline: resume_data.headline,
-          summary: resume_data.summary;
-        work_experience: work_data || [];,
-  education: education_data || [];
-        skills: skills_data || [];,
-  certifications: cert_data || [],
-        is_active: resume_data.is_active;
-      set_resume (full_resume);
-      return full_resume;
-      console.error ('Error fetching resume:', e);
-      set_error (e.message);
-    } finally {
-  // TODO: Implement
-
-
-    is_loading;
-    error;
-    resume;
-fetch_resume}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume } from '@/types/resume',;
@@ -999,28 +628,17 @@ certifications: certData || [];
 is active: resumeData.is active 
 };
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     error;
     resume;
 
     fetchResume}
 }
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

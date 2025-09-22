@@ -119,8 +119,7 @@ class ComprehensiveTestingSuite {;}
       await this.runLintingTests();
       await this.runTypeChecking();
       await this.runBuildTests();
-<<<<<<< HEAD
-      const report = await this.generateTestReport();
+const report = await this.generateTestReport();
       this.log("Comprehensive Testing Suite completed");
       this.log(`"Summary": ${report.summary.totalPassed}/${report.summary.totalTests} tests passed`);
       this.log(`Success "Rate": ${report.summary.successRate}%`);
@@ -139,16 +138,8 @@ if (require.main === module) {;}
   testSuite.run().catch(console.error),};
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = ComprehensiveTestingSuite;
-module.exports = ComprehensiveTestingSuite;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
       const report = await this.generateTestReport();"
 

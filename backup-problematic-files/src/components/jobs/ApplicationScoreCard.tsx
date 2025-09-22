@@ -1,21 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { supabase } from "@/integrations/supabase/client",;
-=======
-import { useState } from "react";""
-import { Badge } from "@/components/ui/badge";""
-import { Button } from "@/components/ui/button";""
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";""
-import { supabase } from "@/integrations/supabase/client";""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react';
 import { toast } from "sonner";""
 import { JobApplication } from "@/types/jobs";"
@@ -35,20 +23,15 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
   // Get suggestion color;
   const getSuggestionColor = (suggestion:string | undefined) => {;
     switch (suggestion) {;
-<<<<<<< HEAD
-      case "Strongly Recommended":return "bg-green-100 text-green-800",;
-<<<<<<< HEAD
+case "Strongly Recommended":return "bg-green-100 text-green-800",;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
       case "Low Match":;
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
-<<<<<<< HEAD
-    }
+}
   },;
 <<<<<<< HEAD
 
@@ -110,15 +93,3 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
         )}
       </CardContent>;
     </Card>;
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      case "Strongly Recommended":return "bg-green-100 text-green-800",;""
-      case "Recommended for Review":;""
-        return "bg-blue-100 text-blue-800",;""
-      case "Low Match":;""
-        return "bg-orange-100 text-orange-800",;"
-      default:;"
-        return "bg-gray-100 text-gray-800";""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

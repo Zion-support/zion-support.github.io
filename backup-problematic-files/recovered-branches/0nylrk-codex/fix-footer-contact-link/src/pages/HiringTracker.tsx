@@ -50,4 +50,3 @@ function HiringTrackerContent() {;
       </main>;
       <Footer />;
     </>;
-

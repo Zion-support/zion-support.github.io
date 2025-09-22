@@ -3,21 +3,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Progress } from "@/components/ui/progress";
 import { ResumeProgressProps } from "./types";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -27,18 +15,9 @@ import { ResumeProgressProps } from "./types",
 import {Progress} from "@/components/ui/progress";
 import {ResumeProgressProps} from "./types";
 import { Progress } from "@/components/ui/progress",
-<<<<<<< HEAD
 import { ResumeProgressProps } from "./types",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -55,35 +34,11 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {}
         <span className="text-sm font-medium">{progress.toFixed(0)}%</span>
       </div>"
       <Progress value={progress} className="h-2 w-full sm: w-48" />
+</div>
 <<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {Progress} from "@/components/ui/progress";
-import {ResumeProgressProps} from "./types";
-=======
-
-=======
-=======
-    </div>;
-  );
-};
-
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import { ResumeProgressProps } from "./types",  )
 };
@@ -106,7 +61,6 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
 import { Progress } from "@/components/ui/progress",;
 import { ResumeProgressProps } from "./types",;
 import {Progress} from "@/components/ui/progress";
@@ -123,14 +77,6 @@ import { ResumeProgressProps } from "./types",  )
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 =======
@@ -160,12 +106,7 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {;
       </div>;"
       <Progress value={progress} className="h-2 w-full sm: w-48" />;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+)
 };
 
   )
@@ -184,53 +125,6 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) =>: an
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  );
-
-
-
-import { Progress  } from '@/components / ui / progress';'
-import { ResumeProgressProps  } from './types';
-export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) =>: any {}
-  return (";
-    <div className="flex flex - col gap - 1 w - full sm:w - auto">;"
-      <div className="flex items - center gap - 2">;"
-        <span className="text - sm text - muted - foreground">Resume completion</span>;"
-        <span className="text - sm font - medium">{progress.to_fixed (0)}%</span>;
-      </div>;"
-      <Progress value={progress} className="h - 2 w - full sm: w - 48" />;
-    </div>);
-}
-;
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-export default ResumeProgress;
-
-import { Progress } from "@/components/ui/progress",;
-import { ResumeProgressProps } from "./types",;
-;
-export const ResumeProgress = ({ resume, progress } ResumeProgressProps) => {;
-  return (;
-    <div className="flex flex-col gap-1 w-full sm:w-auto">;
-      <div className="flex items-center gap-2">;
-        <span className="text-sm text-muted-foreground">Resume completion</span>;
-        <span className="text-sm font-medium">{progress.toFixed(0)}%</span>;
-      </div>;
-      <Progress value={progress} className="h-2 w-full sm:w-48" />;
-    </div>;
-  );
-},; export const ResumeProgress = ({
-  resume, progress 
-}: ResumeProgressProps) => {
-  return (<div className="flex flex-col gap-1 w-full sm:w-auto" > <div className="flex items-center gap-2" > <span className="text-sm text-muted-foreground" >Resume completion</span> <span className="text-sm font-medium" > {
-  progress.toFixed (0) 
-}%</span> </div> 
-};
-);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 };
@@ -263,10 +157,5 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
     </div>);"
 pr-12325
 
-
-<<<<<<< HEAD
-
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

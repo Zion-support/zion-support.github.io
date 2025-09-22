@@ -102,4 +102,3 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
         )}
       </ul>;
     </nav>;
-

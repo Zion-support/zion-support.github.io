@@ -1,17 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
 import { WorkspaceHeader } from "./WorkspaceHeader";
 import { SharedInbox } from "./SharedInbox";
@@ -30,15 +18,11 @@ export interface Company {;
   };
   plan: string;
   teamSize: number;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
-
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -52,8 +36,6 @@ import { SharedInbox } from "./SharedInbox",
 import { TeamStats } from "./TeamStats",
 import { QuickActions } from "./QuickActions",
 
-
-
 import React from "react",;
 import { WorkspaceHeader } from "./WorkspaceHeader",;
 import { SharedInbox } from "./SharedInbox",;
@@ -62,18 +44,11 @@ import { QuickActions } from "./QuickActions",;
 
 import { RecentActivity } from "./RecentActivity";
 import { TalentPool } from "./TalentPool";
-<<<<<<< HEAD
 import { RecentActivity } from "./RecentActivity",
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { TalentPool } from "./TalentPool",
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { TalentPool } from "./TalentPool",
@@ -83,8 +58,6 @@ import { RecentActivity } from "./RecentActivity",;
 import { TalentPool } from "./TalentPool",    primaryColor: string,;
     backgroundColor: string,
     textColor: string
-
-
 
 import React from "react",""
 import { WorkspaceHeader } from "./WorkspaceHeader",""
@@ -103,20 +76,7 @@ export interface Company {
   name: string,
   logoUrl?: string,
   theme?: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    primaryColor: string;
+primaryColor: string;
     backgroundColor: string;
 
     textColor: string;
@@ -131,12 +91,7 @@ export interface Company {
 interface CompanyDashboardProps {
   company: Company;
 }
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     primaryColor: string,
 =======
@@ -164,32 +119,9 @@ interface CompanyDashboardProps {
 }
 
     primaryColor: string,
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     backgroundColor: string,
     textColor: string
-=======
-
-
-import React from "react","
-import { WorkspaceHeader } from "./WorkspaceHeader","
-import { SharedInbox } from "./SharedInbox","
-import { TeamStats } from "./TeamStats","
-import { QuickActions } from "./QuickActions",";
-import { RecentActivity } from "./RecentActivity";"
-import { TalentPool } from "./TalentPool";"
-import { RecentActivity } from "./RecentActivity","
-import { TalentPool } from "./TalentPool",
-
-export interface Company {}
-  id: string,
-  name: string,
-  logoUrl?: string,
-  theme?: {}
-    primaryColor: string,;
-    backgroundColor: string,;
-    textColor: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
     backgroundColor: string,
@@ -219,8 +151,6 @@ export interface Company {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     textColor: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,20 +158,8 @@ export interface Company {;
   plan: string,;
   teamSize: number,;
 <<<<<<< HEAD
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -254,8 +172,6 @@ export interface Company {;
   billingCycle: string;
   workspaceUrl: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 interface CompanyDashboardProps {;
 
@@ -263,26 +179,10 @@ interface CompanyDashboardProps {
 ;
 interface CompanyDashboardProps {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   company: Company;
 }
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-    textColor: string;  teamLimit: number;
-=======
-    textColor: string;
-  },;
-  plan: string,;
-  teamSize: number,;
-
-
-
-  teamLimit: number;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   billingCycle: string;
   workspaceUrl: string
 }
@@ -303,7 +203,6 @@ interface CompanyDashboardProps {;
 interface CompanyDashboardProps {;
 interface CompanyDashboardProps {
 =======
-
 
 interface CompanyDashboardProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -313,70 +212,34 @@ interface CompanyDashboardProps {;
   company: Company;
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
       <WorkspaceHeader company={company} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-export function CompanyDashboard({ company }: CompanyDashboardProps) {}
-  return ("
-    <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
-      <WorkspaceHeader company={company} />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-<<<<<<< HEAD
-      
-
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-      
-      
+
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
 =======
-
 
 "
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">"
@@ -389,38 +252,16 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
-<<<<<<< HEAD
-        
-
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        
-        
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -430,8 +271,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-        
-        
+
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="space-y-6">
@@ -442,20 +282,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {}
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -474,15 +301,10 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {}
 }
   )
 ;
-<<<<<<< HEAD
 export function CompanyDashboard({ company }: CompanyDashboardProps) {;
   return (;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 interface CompanyDashboardProps {;
   company: Company;
@@ -491,13 +313,6 @@ interface CompanyDashboardProps {;
 export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export function CompanyDashboard() { return null; }
-}
-
-export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
-  return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">;
       <WorkspaceHeader company={company} />;
 "
@@ -506,17 +321,7 @@ export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -558,7 +363,6 @@ interface CompanyDashboardProps {}
 export /**;
  * CompanyDashboard - Function description;
  */
-<<<<<<< HEAD
 function CompanyDashboard() {
   return (
     <div className="container mx - auto max - w-7xl py - 8 px - 4 md:px-6">;
@@ -625,12 +429,9 @@ export interface Company {;
   plan: string,;
   teamSize: number,;
 
-
-
   teamLimit: number;,
   billingCycle: string;
   workspaceUrl: string;
-
 
   company: Company;
 
@@ -639,7 +440,6 @@ interface CompanyDashboardProps {;
 
 interface CompanyDashboardProps {
   // TODO: Implement
-
 
 }
 interface CompanyDashboardProps {
@@ -650,16 +450,11 @@ interface CompanyDashboardProps {;}
   company: Company;}
 }
 
-
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return ("
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">"
 </div>
       <WorkspaceHeader company={company} />
-
-
-
-
 
       "
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">"
@@ -672,11 +467,6 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
           <RecentActivity />
 
           <TalentPool />
-
-
-
-
-
 
         <div className="space-y-6">"
 </div>
@@ -711,13 +501,10 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
         </div>;
 
-
     </div>;)
     </div>);
     </div>);"
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">;"
-
-
 
         <div className="space-y-6">;"
 
@@ -738,76 +525,9 @@ pr-12325
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 export function CompanyDashboard({ company } CompanyDashboardProps) {;
   return (;
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">;
-=======
-function CompanyDashboard() {}
-  return ("
-    <div className="container mx - auto max - w-7xl py - 8 px - 4 md:px - 6">;
-      <WorkspaceHeader company={company} />;"
-      <div className="mt - 8 grid grid - cols - 1 lg: grid - cols - 3 gap - 6">;"
-        <div className="lg:col - span - 2 space - y-6">;
-
-
-
-
-          <QuickActions />;
-          <RecentActivity />;
-          <TalentPool />;
-        </div>;
-
-
-
-          <TeamStats />;
-          <SharedInbox />;
-        </div>;
-      </div>;
-
-
-    </div>
-
-
-    </div>;
-  );
-
-}
-
-    </div>);
-}
-    </div>);
-}
-"
-import React from "react",;"
-import { WorkspaceHeader } from "./WorkspaceHeader",;"
-import { SharedInbox } from "./SharedInbox",;"
-import { TeamStats } from "./TeamStats",;"
-import { QuickActions } from "./QuickActions",;"
-import { RecentActivity } from "./RecentActivity",;"
-import { TalentPool } from "./TalentPool",;
-;
-export interface Company {;
-  id:string,;
-  name:string,;
-  logoUrl?:string,;
-  theme?:{;
-    primaryColor:string,;
-    backgroundColor:string,;
-    textColor:string;
-  },;
-  plan:string,;
-  teamSize:number,;
-  teamLimit:number,;
-  billingCycle:string,;
-  workspaceUrl:string;}
-;
-interface CompanyDashboardProps {;
-  company:Company;
-}
-;
-export function CompanyDashboard() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <WorkspaceHeader company={company} />;
       ;"
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">;"
@@ -825,7 +545,6 @@ export function CompanyDashboard() { return null; }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>;
   );
-<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -836,20 +555,12 @@ export function CompanyDashboard() { return null; }
 ;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  );
-}
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
   );
 }

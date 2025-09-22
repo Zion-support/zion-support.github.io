@@ -65,13 +65,7 @@ if (theme === 'system') {'
     localStorage.setItem('theme', newTheme);
 
   return (
-<<<<<<< HEAD:src/context/ThemeContext.tsx
+:src/context/ThemeContext.tsx
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 };
-=======
-    <ThemeContext.Provider value={{ theme, setTheme: handleSetTheme, actualTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172:temp-disabled/src/context/ThemeContext.tsx

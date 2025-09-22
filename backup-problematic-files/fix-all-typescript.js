@@ -33,4 +33,3 @@ function fixTypeScriptFiles(dir) {,
         console && console.log(`Error processing ${fullPath}: ${error && error.message}`)};
     };
   })};
-

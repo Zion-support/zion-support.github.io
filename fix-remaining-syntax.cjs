@@ -1,20 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 function fixFile(filePath) {
-
-
-=======
-function fixFile(filePath) {
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-function fixFile(filePath) {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}
@@ -45,12 +32,11 @@ function fixFilesInDirectory(dirPath) {}
     content = content.replace(/<\/h3>/g, );
     // Fix malformed object destructuring;
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
-<<<<<<< HEAD
-        return `const { ${user} } = useAuth();
+return `const { ${user} } = useAuth();
     const [${savedTalents}] = useState([]);
     const [${isLoading}] = useState(true);
     const navigate = useNavigate();
-    
+
     useEffect(() => {
         const fetchSavedTalents = async () => {
             if (!user) return;
@@ -65,11 +51,10 @@ function fixFilesInDirectory(dirPath) {}
         };
         fetchSavedTalents();
     }, [user]);
-    
+
     const handleRequestHire = (talentId) => {
         // Handle hire request logic here
-<<<<<<< HEAD
-    if (stat.isDirectory()) {}
+if (stat.isDirectory()) {}
       fixedCount += fixFilesInDirectory(filePath);
     } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {}
       if (fixRemainingSyntax(filePath)) {}
@@ -159,10 +144,3 @@ walkDir('./lib');
 walkDir('./pages');
 
 console.log('Remaining syntax error fixing completed!');
-
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,10 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
@@ -32,35 +26,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X } from "lucide-react";
-=======
-import {useState, useEffect} from "react";"
-import {useAuth} from "@/hooks/useAuth";"
-import {useNavigate} from "react-router-dom";"
-import {Button} from "@/components/ui/button";"
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";"
-import {Input} from "@/components/ui/input";"
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";"
-import {Badge} from "@/components/ui/badge";"
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";"
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";"
-import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";"
-import {toast} from "@/hooks/use-toast";"
-import {Check, Flag, Search, Settings, X} from "lucide-react";"
-import {supabase} from "@/integrations/supabase/client";"
-import { useState, useEffect } from "react","
-import { useAuth } from "@/hooks/useAuth","
-import { useNavigate } from "react-router-dom","
-import { Button } from "@/components/ui/button","
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
-import { Input } from "@/components/ui/input","
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table","
-import { Badge } from "@/components/ui/badge","
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog","
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert","
-import { toast } from "@/hooks/use-toast",";
-import { Check, Flag, Search, Settings, X } from "lucide-react";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from "@/integrations/supabase/client";
 interface PartnerProfile {}
   id: string;
@@ -109,8 +74,7 @@ status: 'pending' | 'approved' | 'rejected'
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
 
-<<<<<<< HEAD
-  const navigate = useNavigate();
+const navigate = useNavigate();
   const navigate = useNavigate();
 
   const navigate = useNavigate();
@@ -232,19 +196,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;"
 import { toast } from "@/hooks/use-toast",;"
 import { Check, Flag, Search, Settings, X } from "lucide-react",;"
 import { supabase } from "@/integrations/supabase/client",;
-<<<<<<< HEAD
-=======
-interface PartnerProfile {;
-  id: string,;
-  user_id: string,;
-  name: string,;'
-  status: 'pending' | 'approved' | 'rejected',;
-  created_at: string,;
-  niche: string,;
-  audience_size: string,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -260,42 +211,7 @@ import { toast } from "@/hooks/use-toast",
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-import { useState, useEffect } from './react';
-import { use_auth } from '@/hooks / use_auth';
-import { use_navigate } from './react-router-dom';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
-import { toast } from '@/hooks / use - toast';
-import { Check, Flag, Search, Settings, X } from './lucide-react';
-import { supabase } from '@/integrations / supabase / client';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PartnerProfile {
-=======
-  social_media?: Record<string, string>;
-'
-import { useState, useEffect } from './react';'
-import { use_auth } from '@/hooks / use_auth';'
-import { use_navigate } from './react-router-dom';'
-import { Button } from '@/components / ui / button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';'
-import { Input } from '@/components / ui / input';'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';'
-import { Badge } from '@/components / ui / badge';'
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';'
-import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';'
-import { toast } from '@/hooks / use - toast';'
-import { Check, Flag, Search, Settings, X } from './lucide-react';'
-import { supabase } from '@/integrations / supabase / client';
-interface PartnerProfile {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string,
   user_id: string,
   name: string,'
@@ -303,8 +219,7 @@ interface PartnerProfile {}
   created_at: string,
   niche: string,
   audience_size: string,
-<<<<<<< HEAD
-  social_media?: Record<string string>,
+social_media?: Record<string string>,
   website?: string,
   bio?: string,
   payout_method?: string,
@@ -312,10 +227,6 @@ interface PartnerProfile {}
 
   commission_rate?: number
 }
-
-=======
-  social_media?: Record < string, string>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -331,9 +242,7 @@ interface PartnerProfile {}
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-<<<<<<< HEAD
-
-  const navigate = useNavigate();
+const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
 
@@ -436,8 +345,6 @@ interface PartnerProfile {}
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
 
-
-
   useEffect(() => {;
     if (!isAuthenticated) {;
 
@@ -445,26 +352,13 @@ interface PartnerProfile {}
       return;
     }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
         setPartners(mockData);
         filterPartners(mockData, activeTab, searchQuery);
       } else {;
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default /**
  * PartnerManager - Function description
-=======
-export default /**;
- * PartnerManager - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
 function PartnerManager() {}
   const [partners, set_partners] = useState < PartnerProfile[]>([]);
@@ -590,30 +484,16 @@ if ( {) {}
       } else {}
         set_partners (data as PartnerProfile[]);
         filter_partners (data as PartnerProfile[], active_tab, search_query);
-<<<<<<< HEAD
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     } finally {}
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    } finally {
+} finally {
       setIsLoading(false)
     }
-=======
-  }
-  },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners
     // Filter by status
@@ -625,8 +505,7 @@ if ( {) {}
     if (status !== "all") {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       filtered = filtered.filter(p => p.status === status)
-<<<<<<< HEAD
-    }
+}
     // Filter by search query
     if (query) {
       const lowerQuery = query.toLowerCase();
@@ -640,15 +519,6 @@ if ( {) {}
     setFilteredPartners(filtered)
   }
 =======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -658,7 +528,6 @@ if ( {) {}
         title: "Error",,
   description: "Failed to load partner data",;
 =======
-
 
     } catch (error) {;"
       console.error("Error fetching partners:", error),;
@@ -690,20 +559,12 @@ if ( {) {}
         p && p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-    
+
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setFilteredPartners(filtered)
   },
@@ -711,10 +572,6 @@ if ( {) {}
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {}
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)
-<<<<<<< HEAD
-=======
-  },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const handleTabChange = (value: string) => {}
     setActiveTab(value)
@@ -723,31 +580,18 @@ if ( {) {}
   const handleViewDetails = (partner: PartnerProfile) => {}
     setSelectedPartner(partner)
     setIsDetailsOpen(true)
-<<<<<<< HEAD
 
-=======
-  }
-  const handleOpenSettings = (partner: PartnerProfile) => {}
-    setSelectedPartner(partner);
-    setCommissionRate(partner.commission_rate |25)
-<<<<<<< HEAD
-    setIsSettingsOpen(true)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p =>
         p.id === partnerId ? { ...p, status } : p
-<<<<<<< HEAD
-
-      filterPartners(
+filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
         searchQuery
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       toast({
 =======
     setIsSettingsOpen(true)'
@@ -772,31 +616,14 @@ if ( {) {}
         description: "Failed to update partner status""
         variant: "destructive"})
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    try {
+try {
       // Update commission rate
       setPartners(partners.map(p =>
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       toast({
         title: "Settings Updated"
         description: "Partner settings have been updated successfully."
-=======
-    try {}
-      // Update commission rate;
-      setPartners(partners.map(p =>
-        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p;
-      toast({"
-        title: "Settings Updated""
-        description: "Partner settings have been updated successfully.""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "default"})
       setIsSettingsOpen(false)
     } catch (error) {"
@@ -805,9 +632,7 @@ if ( {) {}
         title: "Error""
         description: "Failed to update partner settings""
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
+}
   }
   const getAudienceSizeLabel = (size: string) => {
     switch (size) {
@@ -820,9 +645,6 @@ if ( {) {}
     }
   }
   };
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   };
 
@@ -858,8 +680,7 @@ if ( {) {}
         activeTab,;
         activeTab;
         searchQuery;
-<<<<<<< HEAD
-      ),;
+),;
       toast({;
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",;
         description: `The partner has been ${status}.`,;
@@ -876,42 +697,19 @@ if ( {) {}
         variant: "destructive"});
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
-
-=======
-        searchQuery;
-<<<<<<< HEAD
-      );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case 'under1k': return 'Under 1,000';
       case '1k-10k': return '1,000 - 10,000';
       case '10k-50k': return '10,000 - 50,000';
       case '50k-100k': return '50,000 - 100,000';
-=======
-      );'
-      case 'under1k': return 'Under 1,000';'
-      case '1k-10k': return '1,000 - 10,000';'
-      case '10k-50k': return '10,000 - 50,000';'
-      case '50k-100k': return '50,000 - 100,000';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'over100k': return 'Over 100,000';
       default: return size;
     }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getStatusBadge = (status: string) => {
@@ -920,7 +718,6 @@ if ( {) {}
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
       case 'approved':;
         return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
-
 
 =======
   const getStatusBadge = (status: string) => {}
@@ -940,18 +737,9 @@ if ( {) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
       case 'rejected':;
@@ -969,10 +757,7 @@ if ( {) {}
 "
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">"
         <Flag className="h-3 w-3" />
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
   const getStatusBadge = (status: string) => {;
     switch (status) {;'
@@ -1013,17 +798,9 @@ if ( {) {}
               <CardHeader className="pb-2">;"
                 <CardTitle className="text-sm font-medium text-zion-slate-light">;
                   Pending Applications;
-<<<<<<< HEAD
-                </CardTitle>;
+</CardTitle>;
                 <div className="text-2xl font-bold text-white">;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
                 </CardTitle>;"
                 <div className="text-2xl font-bold text-white">;'
@@ -1044,22 +821,12 @@ if ( {) {}
                 </CardTitle>"
                 <div className="text-2xl font-bold text-white">'
                   {partners.filter(p => p.status === 'approved').length}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
               </CardHeader>"
               <CardContent className="pt-0">"
                 <p className="text-xs text-zion-slate-light">
-<<<<<<< HEAD
-=======
-                  Currently approved and active partners;
-                </p>;
-              </CardContent>;
-            </Card>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
                   Total potential fraud flags detected
 =======
                   Total potential fraud flags detected;
@@ -1091,8 +858,7 @@ if ( {) {}
                 className="pl-8"
                 value={searchQuery}
                 onChange={handleSearch}
-<<<<<<< HEAD
-              />
+/>
             </div>
           </div>
         </CardHeader>
@@ -1147,26 +913,7 @@ if ( {) {}
         </CardContent>;
       </Card>;
 
-
                 isLoading={isLoading}
-=======
-              />;
-            </div>;
-          </div>;
-        </CardHeader>;
-        <CardContent>;"
-              <TabsTrigger value="pending">Pending</TabsTrigger>;"
-              <TabsTrigger value="approved">Approved</TabsTrigger>;"
-              <TabsTrigger value="rejected">Rejected</TabsTrigger>;"
-              <TabsTrigger value="all">All</TabsTrigger>;
-            </TabsList>;
-<<<<<<< HEAD
-                isLoading={isLoading}
-            <TabsContent value="pending" className="space-y-4">;
-=======
-                isLoading={isLoading}"
-            <TabsContent value="pending" className="space - y-4">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -1176,23 +923,15 @@ if ( {) {}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
-              />
+/>
             </TabsContent>
             <TabsContent value="approved" className="space-y-4">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 isLoading={isLoading}
               />;
-<<<<<<< HEAD
-            </TabsContent>;
+</TabsContent>;
             <TabsContent value="approved" className="space-y-4">;
-=======
-            </TabsContent>;"
-            <TabsContent value="approved" className="space - y-4">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -1201,38 +940,22 @@ if ( {) {}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
-              />
+/>
             </TabsContent>
             <TabsContent value="rejected" className="space-y-4">
-=======
-              <PartnerTable
-                partners={filteredPartners}
-              <PartnerTable 
-
-                partners={filteredPartners} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 isLoading={isLoading}
               />;
-<<<<<<< HEAD
-            </TabsContent>;
+</TabsContent>;
             <TabsContent value="rejected" className="space-y-4">;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 isLoading={isLoading}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -1246,13 +969,8 @@ if ( {) {}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
-<<<<<<< HEAD
-                getFraudFlagBadge={getFraudFlagBadge}
+getFraudFlagBadge={getFraudFlagBadge}
             <TabsContent value="all" className="space-y-4">;
-=======
-                getFraudFlagBadge={getFraudFlagBadge}"
-            <TabsContent value="all" className="space - y-4">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -1260,10 +978,8 @@ if ( {) {}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
-<<<<<<< HEAD
-                getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
-              />
+getFraudFlagBadge={getFraudFlagBadge}
+/>
             </TabsContent>
           </Tabs>
         </CardContent>
@@ -1322,12 +1038,6 @@ if ( {) {}
                   </div>
                 </div>
               )}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                getFraudFlagBadge={getFraudFlagBadge}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="grid grid-cols-2 gap-2">
                 <div>"
                   <p className="text-xs text-zion-slate-light">Payout Method</p>"
@@ -1351,17 +1061,10 @@ if ( {) {}
               )}'
               {selectedPartner.status === 'pending' && ("
                 <div className="flex justify-end gap-2 mt-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <Button
+<Button
                     variant="destructive"
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   >
-=======
-                  >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <X className="h-4 w-4 mr-1" />
                     Reject;
                   </Button>
@@ -1379,16 +1082,6 @@ if ( {) {}
                     variant="destructive" '
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-=======
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="grid grid-cols-2 gap-2">;
                 <div>;"
                   <p className="text-xs text-zion-slate-light">Payout Method</p>;"
@@ -1405,8 +1098,7 @@ if ( {) {}
                   <AlertTitle className="flex items-center gap-2">;"
                     <Flag className="h-4 w-4" />;
                     Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
-<<<<<<< HEAD
-          {selected_partner && (
+{selected_partner && (
             <div className="space-y-4">;
               <div className="grid grid - cols - 2 gap-2">;
                 <div>;
@@ -1444,46 +1136,6 @@ if ( {) {}
                     {Object.entries (selected_partner.social_media).map (([platform, handle]) => (
                       <p key={platform} className="text-white">;
                         <span className="font-medium">{platform}: </span>;
-=======
-          {selected_partner && ("
-            <div className="space - y-4">;"
-              <div className="grid grid - cols - 2 gap - 2">;
-                <div>;"
-                  <p className="text - xs text - zion - slate - light">Name</p>;"
-                  <p className="font - medium text - white">{selected_partner.name}</p>;
-                </div>;
-                <div>;"
-                  <p className="text - xs text - zion - slate - light">Status</p>;
-                  <div>{getStatusBadge (selected_partner.status)}</div>;
-                </div>;
-              </div>;
-              <div>;"
-                <p className="text - xs text - zion - slate - light">Bio</p>;"
-                <p className="text - white">{selected_partner.bio || "No bio provided"}</p>;
-              </div>;"
-              <div className="grid grid - cols - 2 gap - 2">;
-                <div>;"
-                  <p className="text - xs text - zion - slate - light">Niche</p>;"
-                  <p className="text - white">{selected_partner.niche}</p>;
-                </div>;
-                <div>;"
-                  <p className="text - xs text - zion - slate - light">Audience Size</p>;"
-                  <p className="text - white">{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
-                </div>;
-              </div>;
-              {selected_partner.website && (
-                <div>;"
-                  <p className="text - xs text - zion - slate - light">Website</p>;"
-                  <p className="text - zion - cyan">{selected_partner.website}</p>;
-                </div>)}
-              {selected_partner.social_media && Object.keys (selected_partner.social_media).length > 0 && (
-                <div>;"
-                  <p className="text - xs text - zion - slate - light">Social Media</p>;"
-                  <div className="grid grid - cols - 2 gap - 2">;
-                    {Object.entries (selected_partner.social_media).map (([platform, handle]) => ("
-                      <p key={platform} className="text - white">;"
-                        <span className="font - medium">{platform}: </span>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               />;
             </TabsContent>;
           </Tabs>;
@@ -1505,12 +1157,8 @@ if ( {) {}
                   <Button"
                     className="bg-green-600 hover:bg-green-700"'
                     onClick={() => handleUpdateStatus(selectedPartner && selectedPartner.id, 'approved')}
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   >;
-=======
-                  >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Check className="h-4 w-4 mr-1" />;
                     Approve;
                   </Button>;
@@ -1518,8 +1166,7 @@ if ( {) {}
               )}
             </div>;
           )}
-<<<<<<< HEAD
-        </DialogContent>
+</DialogContent>
       </Dialog>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Partner Settings Dialog */}
@@ -1527,9 +1174,6 @@ if ( {) {}
         <DialogContent className="bg - zion - blue border - zion - blue - light">;
           <DialogHeader>;
             <DialogTitle > Partner Settings</DialogTitle>;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <DialogDescription>;
               Configure commission rates and other settings;
             </DialogDescription>;
@@ -1538,12 +1182,8 @@ if ( {) {}
         </DialogContent>;
       </Dialog>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
+);
 }
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface PartnerTableProps {
   partners: PartnerProfile[]
   isLoading: boolean
@@ -1553,12 +1193,6 @@ interface PartnerTableProps {
   getStatusBadge: (status: string) => JSX.Element
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
-=======
-function PartnerTable({
-  partners
-  isLoading
-  onViewDetails
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 function PartnerTable({ 
 =======
@@ -1571,48 +1205,25 @@ function PartnerTable({}
   partners, 
   isLoading, 
   onViewDetails, 
-<<<<<<< HEAD
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
 
-<<<<<<< HEAD
-  getFraudFlagBadge
+getFraudFlagBadge
 }: PartnerTableProps) {
   if (isLoading) {
     return (
-<<<<<<< HEAD
-      <div className="text-center py-8">
+<div className="text-center py-8">
         <p className="text-zion-slate-light">Loading partner data...</p>
       </div>
     )
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return (
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="text-center py-8">;
-=======
-  getFraudFlagBadge;
-}: PartnerTableProps) {}
-  if (isLoading) {}
-    return ("
-      <div className="text-center py-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1628,43 +1239,23 @@ function PartnerTable({}
     );}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (partners.length === 0) {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
-<<<<<<< HEAD
-      <div className="text-center py-8">;
-=======
-    return ("
-      <div className="text-center py-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+<div className="text-center py-8">;
         <p className="text-zion-slate-light">No partners found.</p>;
-=======
-      <div className=\"text-center py-8\" />;
-        <p className=\"text-zion-slate-light\" />No partners found.</p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>;
     );
   }
   return (
-<<<<<<< HEAD
-    <Table>;
-<<<<<<< HEAD
-      <TableHeader>;
+<Table>;
+<TableHeader>;
         <TableRow className="hover:bg-transparent">;
-=======
-      <TableHeader>;"
-        <TableRow className="hover:bg - transparent">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TableHead > Name</TableHead>;
           <TableHead > Niche</TableHead>;
           <TableHead > Audience</TableHead>;
           <TableHead > Status</TableHead>;
-<<<<<<< HEAD
-          <TableHead > Date</TableHead>;
+<TableHead > Date</TableHead>;
           <TableHead className="text-right">Actions</TableHead>;
         </TableRow>;
       </TableHeader>;
@@ -1673,53 +1264,18 @@ function PartnerTable({}
           <TableRow key={partner.id} className="border - zion - blue - light hover:bg - zion - blue-light / 10">;
             <TableCell className="font - medium text-white">;
               <div className="flex items - center gap-2">;
-=======
-          <TableHead > Date</TableHead>;"
-          <TableHead className="text - right">Actions</TableHead>;
-        </TableRow>;
-      </TableHeader>;
-      <TableBody>;
-        {partners.map ((partner) => ("
-          <TableRow key={partner.id} className="border - zion - blue - light hover:bg - zion - blue - light / 10">;"
-            <TableCell className="font - medium text - white">;"
-              <div className="flex items - center gap - 2">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    <Table />;
-      <TableHeader />;
-        <TableRow className=\"hover:bg-transparent\" />;
-          <TableHead  /> Name</TableHead>;
-          <TableHead  /> Niche</TableHead>;
-          <TableHead  /> Audience</TableHead>;
-          <TableHead  /> Status</TableHead>;
-          <TableHead  /> Date</TableHead>;
-          <TableHead className=\"text-right\" />Actions</TableHead>;
-        </TableRow>;
-      </TableHeader>;
-      <TableBody />;
-        {partners.map ((partner) => (}
-          <TableRow key={partner.id} className=\"border - zion - blue - light hover:bg - zion - blue-light / 10\" />;
-            <TableCell className=\"font - medium text-white\" />;
-              <div className=\"flex items - center gap-2\" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {partner.name}
                 {getFraudFlagBadge (partner.fraud_flags)}
               </div>;
             </TableCell>;
-<<<<<<< HEAD
-            <TableCell>{partner.niche}</TableCell>;
+<TableCell>{partner.niche}</TableCell>;
             <TableCell>;'
-=======
-            <TableCell />{partner.niche}</TableCell>;
-            <TableCell />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {partner.audience_size.replace ('k, 000').replace ('- - ').replace ('over_over ')}
             </TableCell>;
             <TableCell />{getStatusBadge (partner.status)}</TableCell>;
             <TableCell />;
               {new Date (partner.created_at).toLocaleDateString ()}
-<<<<<<< HEAD
-            </TableCell>;"
+</TableCell>;"
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20";
                     >;"
                       <Check className="h-4 w-4" />;"
@@ -1728,8 +1284,6 @@ function PartnerTable({}
                   </>;
                 )}
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 
                 <Button
                   variant="ghost" 
@@ -1747,33 +1301,12 @@ function PartnerTable({}
             </TableCell>
           </TableRow>
         ))}
-=======
-                <Button
-                  variant="outline"
-                
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Button 
 
                   variant="outline" 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   size="sm"
                   onClick={() => onViewDetails(partner)}
-=======
-            </TableCell>;
-                      className=\"text-green-500 hover:text-green-600 hover:bg-green-900/20\";
-                    >;
-                      <Check className=\"h-4 w-4\" />;
-                      <span className=\"sr-only\" />Approve</span>;
-                    </Button>;
-                  </>;
-                )}
-                <Button;
-variant=\"outline\"
-                <Button;
-variant=\"outline\" 
-                  size=\"sm\"
-                  onClick={() = /> onViewDetails(partner)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <>;
                     <Button;
                       variant=\"ghost\";
@@ -1790,55 +1323,18 @@ variant=\"outline\"
                       on_click={() = /> onUpdateStatus (partner.id, 'approved')}
                       className=\"text - green - 500 hover:text - green - 600 hover:bg - green-900 / 20\";
                     >;
-<<<<<<< HEAD
-                      <Check className="h - 4 w-4" />;
+<Check className="h - 4 w-4" />;
                       <span className="sr-only">Approve</span>;
-=======
-                <Button"
-                  variant="outline"
-                
-                <Button;
-"
-                  variant="outline" "
-                  size="sm"
-                  onClick={() => onViewDetails(partner)}
-                  <>;
-                    <Button;"
-                      variant="ghost";"
-                      size="sm";'
-                      on_click={() => onUpdateStatus (partner.id, 'rejected')}"
-                      className="text - red - 500 hover:text - red - 600 hover:bg - red - 900 / 20";
-                    >;"
-                      <X className="h - 4 w - 4" />;"
-                      <span className="sr - only">Reject</span>;
-                    </Button>;
-                    <Button;"
-                      variant="ghost";"
-                      size="sm";'
-                      on_click={() => onUpdateStatus (partner.id, 'approved')}"
-                      className="text - green - 500 hover:text - green - 600 hover:bg - green - 900 / 20";
-                    >;"
-                      <Check className="h - 4 w - 4" />;"
-                      <span className="sr - only">Approve</span>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </Button>;
                   </>)}
                 <Button;"
                   variant="ghost";"
                   size="sm";
-<<<<<<< HEAD
-                  on_click={() => onOpenSettings (partner)}
+on_click={() => onOpenSettings (partner)}
                   className="text - zion - slate - light hover:text-white";
                 >;
                   <Settings className="h - 4 w-4" />;
                   <span className="sr-only">Settings</span>;
-=======
-                  on_click={() => onOpenSettings (partner)}"
-                  className="text - zion - slate - light hover:text - white";
-                >;"
-                  <Settings className="h - 4 w - 4" />;"
-                  <span className="sr - only">Settings</span>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Button>;
                 <Button;"
                   variant="outline";"
@@ -1871,16 +1367,10 @@ variant=\"outline\"
           </TableRow>))}
       </TableBody>;
     </Table>);
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

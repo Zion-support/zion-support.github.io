@@ -1,24 +1,13 @@
 
-<<<<<<< HEAD
-=======
-        modified = true};
-;
-    };
-=======
-        modified = true}
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (modified) {,;
       fs.writeFileSync(filePath, content, "utf8"),;""
       console.log("Fixed parsing errors "in":${filePath}"),;"
       return true};
   } catch (error) {,;
     console.error("Error fixing ${filePath} ", error.message)};
-<<<<<<< HEAD
-  return false};
+return false};
   };
-<<<<<<< HEAD
-  let createdCount = 0,;
+let createdCount = 0,;
   for (const [filePath, content] of Object.entries(minimalFiles)) {,;
     try {,;
       const dir = path.dirname(filePath),;
@@ -56,7 +45,7 @@ if (process.argv[1] === new URL(import.meta.url).pathname) {,;
       createdCount++} catch (error) {;
       console.error("Error creating ${filePath}:", error.message)};        fs.mkdirSync(dir, _{ "recursive": true})};
       fs.writeFileSync(filePath, content);
-      
+
       createdCount++} catch (error) {_;};};
   return createdCount};
 // Main execution;
@@ -67,7 +56,7 @@ if (process.argv[1] === new URL(import.meta.url).pathname) {;
   try {;
     main()} catch (error) {;
     console.error('Error during "fixes": ', error);    main()} catch (error) {_;
-    
+
     process.exit(1)};
 };
 ;
@@ -96,16 +85,3 @@ import path from "path", function fixParsingErrors(filePath) { try { let content
   return false};
   };
 <<<<<<< HEAD
-
-=======
-  return false}
-};
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  } catch (error) {,;"
-    console.error("Error fixing ${filePath} ", error.message)};"
-  return false};
-"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

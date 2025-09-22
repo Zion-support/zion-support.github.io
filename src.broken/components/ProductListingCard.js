@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";"
 import { DollarSign } from "lucide-react";
-<<<<<<< HEAD
-
 export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
   const isGrid = view === 'grid';
   const navigate = useNavigate();
@@ -16,12 +14,6 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
     if (listing.price === null) return "Custom pricing";
     return `${listing.currency || '$'}${listing.price.toLocaleString()}`
 };
-=======
-'
-export function ProductListingCard() { return null; }
-    return `${listing.currency || '$'}${listing.price.toLocaleString()}`;
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleImageError = () => {}
     if (!imageError) {'
@@ -30,15 +22,9 @@ export function ProductListingCard() { return null; }
     }
   };
 
-<<<<<<< HEAD
-  const handleViewListing = () => {
+const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`)
 };
-=======
-  const handleViewListing = () => {}`
-    navigate(`${detailBasePath}/${listing.id}`);
-  };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleRequestQuote = (e) => {}
     e.preventDefault();
@@ -52,7 +38,6 @@ export function ProductListingCard() { return null; }
 '
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
-  
       onKeyDown={(e) => {'
         if (e.key === 'Enter' || e.key === ' ') {}
           e.preventDefault();
@@ -87,7 +72,7 @@ export function ProductListingCard() { return null; }
           )}
         </div>
       </div>
-      
+
       {/* Content */}'`
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
@@ -103,7 +88,7 @@ export function ProductListingCard() { return null; }
               </div>
             )}
           </div>
-          
+
           {/* Title & Description */}"
           <div onClick={handleViewListing} className="block">"
             <h3 className="font-semibold text-white mb-2 hover:text-cyan-400 transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
@@ -113,7 +98,7 @@ export function ProductListingCard() { return null; }
           <p className="text-slate-300 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
             {listing.description}
           </p>
-          
+
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && ("
             <div className="flex flex-wrap gap-1 mb-4">
@@ -125,7 +110,7 @@ export function ProductListingCard() { return null; }
             </div>
           )}
         </div>
-        
+
         {/* Footer with price and button */}"
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-slate-600/20">"
           <div className="text-sm font-medium">

@@ -60,4 +60,3 @@ export function FeatureHighlights() {;
         </div>;
       </div>;
     </section>;
-

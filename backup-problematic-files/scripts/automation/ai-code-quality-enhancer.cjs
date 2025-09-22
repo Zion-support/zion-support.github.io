@@ -42,25 +42,15 @@ class $1 {}
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
-<<<<<<< HEAD
+
 =======
-
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
-<<<<<<< HEAD
-
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
   this.log("🤖 Starting AI-powered code quality analysis...");
 =======
-
 
   async analyzeCodeQuality() {}"
   this.log("🤖 Starting AI-powered code quality analysis...");"
@@ -181,8 +171,7 @@ class $1 {}
   const recommendations = [];
     // Group improvements by category and priority;
     const grouped = improvements.reduce((acc, imp) => {}
-<<<<<<< HEAD
-  // Group improvements by category and priority;
+// Group improvements by category and priority;
     const grouped = improvements.reduce((acc, imp) => {}
   if (!acc[imp.category]) acc[imp.category] = {};
       if (!acc[imp.category][imp.priority]);
@@ -412,16 +401,8 @@ if (require.main === module) {}
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = AICodeQualityEnhancer;
-module.exports = AICodeQualityEnhancer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 </div>"`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

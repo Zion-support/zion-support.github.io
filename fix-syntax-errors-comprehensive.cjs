@@ -1,16 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fixes = [];
 
 function fixFile(filePath, description, fixFunction) {
     console.log(`\n🔍 Checking: ${filePath}`);
-    
+
     if (!fs.existsSync(filePath)) {
         console.log(`⚠️  File not found: ${filePath}`);
         return;
     }
-    
+
 console.log('🔧 Starting comprehensive syntax error fixing...');
 
 const fs = require('fs');
@@ -33,79 +31,22 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\\\]/g, ']');
     content = content.replace(/\\\(/g, '(');
     content = content.replace(/\\\)/g, ')');
-
-=======
-// Function to fix common syntax errors
-function fixSyntaxErrors(content, filePath) {
-    let fixes = 0;
-    let originalContent = content;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
-
-
-
-<<<<<<< HEAD
-=======
-    // Fix malformed return statements
-    content = content.replace(/return\s*\(\s*<div[^>]*>\s*\/\*[^*]*\*\/\s*<div[^>]*>\s*<div[^>]*><\/div>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<\/div>\s*<p[^>]*>([^<]*)<\/p>\s*<p[^>]*>([^<]*)<\/p>\s*<div[^>]*>\s*<Link[^>]*>([^<]*)<\/Link>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*\)/g, (match, title, desc1, desc2, linkText) => {
-        fixes++;
-        return `return (
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-            <div className="relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                        ${title}
-                    </h1>
-                    <p className="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">
-                        ${desc1}
-                    </p>
-                    <p className="text-lg text-zion-cyan-light mb-12 max-w-3xl mx-auto">
-                        ${desc2}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/contact" className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                            ${linkText}
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );`;
-    });
-<<<<<<< HEAD
-
-
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
-    
+
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
-    
+
     // Fix malformed return statements in functions
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
 
     // Fix missing semicolons
-<<<<<<< HEAD
-
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -114,11 +55,11 @@ function fixSyntaxErrors(content, filePath) {
     const [${savedTalents}] = useState([]);
     const [${isLoading}] = useState(true);
     const navigate = useNavigate();
-    
+
     try {
         const originalContent = fs.readFileSync(filePath, 'utf8');
         const fixedContent = fixFunction(originalContent);
-        
+
         if (originalContent !== fixedContent) {
             fs.writeFileSync(filePath, fixedContent, 'utf8');
             console.log(`✅ Fixed: ${description}`);
@@ -139,15 +80,8 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     );
 });
 
-<<<<<<< HEAD
-    // Fix missing semicolons at end of statements
+// Fix missing semicolons at end of statements
 ursor/automate-test-improve-and-merge-code-59d5
-=======
-
-
-    // Fix missing semicolons at end of statements
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     content = content.replace(/([^;}])\s*$/gm, '$1;');
 
 =======
@@ -161,15 +95,8 @@ ursor/automate-test-improve-and-merge-code-59d5
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 
-<<<<<<< HEAD
 }
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-<<<<<<< HEAD
 // Main execution
 async function main() {
     const patterns = ['src/**/*.tsx',
@@ -189,7 +116,7 @@ async function main() {
 
     for (const pattern of patterns) {
         const files = glob.sync(pattern, { "ignore": ['node_modules/**', '.next/**', 'dist/**'] });
-        
+
         for (const file of files) {
             if (fs.existsSync(file)) {
                 const fixes = processFile(file);
@@ -199,19 +126,9 @@ async function main() {
         }
     }
 
-    
-    
-    
-    
     if (totalFixes > 0) {
-        
+
     } else {
-        
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -219,10 +136,9 @@ async function main() {
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
     );
-    
+
     return fixed;
 });
-<<<<<<< HEAD
 console.log(`Total fixes applied: ${fixes.length}`);
 
 if (fixes.length > 0) {
@@ -236,11 +152,6 @@ if (fixes.length > 0) {
 
 console.log('\n🎯 Syntax error fixing completed!');
 origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
@@ -251,12 +162,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
     // Fix missing closing parentheses
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
-<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -318,7 +224,6 @@ function fixSyntaxErrors(content, filePath) {
 
     // Fix triple quotes in imports;
 
-
     // Fix malformed JSX closing tags;
     content = content.replace(/<\/HTMLDivElement>/g, );
     content = content.replace(/<\/HTMLInputElement>/g, );
@@ -342,7 +247,6 @@ function fixSyntaxErrors(content, filePath) {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                         <Link href="/contact" className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">"
 
-
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       modified = true;
     }
@@ -353,12 +257,6 @@ function fixSyntaxErrors(content, filePath) {
     return false;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
@@ -389,14 +287,7 @@ function processDirectory(dirPath) {
 console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
-<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

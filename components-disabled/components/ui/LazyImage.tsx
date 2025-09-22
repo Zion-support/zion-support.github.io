@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
+placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
   threshold = 0.1;
   width;
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({}
@@ -46,9 +45,6 @@ import React from 'react';
   placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0 && 0.1;
   width;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -67,7 +63,6 @@ interface LazyImageProps {
 export const LazyImage: React.FC<LazyImageProps /> = ({src;
   alt;
   className;
-<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -111,8 +106,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const handle_load = () =>: any {}
     setIsLoaded (true);
   }
-<<<<<<< HEAD
-  const handleLoad = () => {
+const handleLoad = () => {
     setIsLoaded(true);
   };
 
@@ -126,21 +120,12 @@ alt=''
 origin/cursor/automate-test-improve-and-merge-code-2533
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
-=======
-  return (`
-    <div className={`relative overflow - hidden ${class_name}`}>;
-      {/* Placeholder */}`
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${'
-          isLoaded ? 'opacity-0' : 'opacity-100'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }`}
         style={{ width, height }}
       />
 
-
-
       />
-      
+
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Actual Image */}
       {isInView && (;
@@ -183,17 +168,9 @@ export default LazyImage);
 ;
 export default LazyImage;
 ;
-<<<<<<< HEAD
-    </div>
+</div>
 );
 };
 
 export default LazyImage;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

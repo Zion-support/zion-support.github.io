@@ -1,21 +1,11 @@
-<<<<<<< HEAD:src/components/messaging/resume-selector/ResumePreviewCard.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
+:src/components/messaging/resume-selector/ResumePreviewCard.tsx
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
-<<<<<<< HEAD:src/components/messaging/resume-selector/ResumePreviewCard.tsx
-<<<<<<< HEAD
+:src/components/messaging/resume-selector/ResumePreviewCard.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
@@ -30,15 +20,7 @@ interface Resume {
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-import { Resume } from '@/types/resume';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import { Resume } from '@/types/resume';
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
 
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
@@ -52,10 +34,8 @@ interface ResumePreviewCardProps {
   isLoading: boolean
 }
 
-<<<<<<< HEAD:src/components/messaging/resume-selector/ResumePreviewCard.tsx
+:src/components/messaging/resume-selector/ResumePreviewCard.tsx
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
   resume,
@@ -76,14 +56,12 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
     }
   };
 
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
-<<<<<<< HEAD:src/components/messaging/resume-selector/ResumePreviewCard.tsx
-<<<<<<< HEAD
-        <div className="flex justify-between items-start mb-2">
+:src/components/messaging/resume-selector/ResumePreviewCard.tsx
+<div className="flex justify-between items-start mb-2">
           <div>
             <h4 className="font-medium text-white">{resume.basic_info.title}</h4>
             {resume.basic_info.headline && (
@@ -99,34 +77,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
             onClick={onDownload} 
             disabled={isLoading}
             className="h-8 w-8 p-0"
-=======
-          >
-            <Download className="h-4 w-4 text-zion-cyan" />
-            <span className="sr-only">Download Resume</span>
-          </Button>
-        </div>
-            {resume.basic_info.summary}
-          </p>
-        )}
-        {resume.skills && resume.skills.length > 0 && (
-          <div className='flex flex-wrap gap-1 mt-2'>
-            {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge
-                key={index}
-                variant='outline'
-<<<<<<< HEAD
-                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
-        
-        {resume.skills && resume.skills.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-2">
-            {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge 
-                key={index} 
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -149,20 +99,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 }
-<<<<<<< HEAD:src/components/messaging/resume-selector/ResumePreviewCard.tsx
+:src/components/messaging/resume-selector/ResumePreviewCard.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex-1">
-            <h3 className="font-semibold text-gray-900 mb-1">
-              {resume.title}
-            </h3>
-            <p className="text-sm text-gray-600 mb-2">
-              {resume.description}
-            </p>
-          </div>
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
           {resume.status && (
             <Badge className={getStatusColor(resume.status)}>
               {resume.status}
@@ -185,17 +123,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
             className="flex-1"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           >
             <Download className="h-4 w-4 text-zion-cyan" />
             <span className="sr-only">Download Resume</span>
           </Button>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        {resume.basic_info.summary && (
+{resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
 import React from 'react',;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -236,19 +169,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             {resume.basic_info.summary}
           </p>;
         )}
-=======
-            {resume.basic_info.summary}
-          </p>
-        )}
-        {resume.skills && resume.skills.length > 0 && (
-          <div className='flex flex-wrap gap-1 mt-2'>
-            {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge
-                key={index}
-                variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        
+
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (
@@ -256,19 +177,11 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
                 key={index} 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
-<<<<<<< HEAD
-              >
+>
                 {skill.name}
               </Badge>;
             ))}
             {resume.skills.length > 5 && (
-=======
-                {skill.name}
-              </Badge>
-            ))}
-            {resume.skills.length > 5 && (
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Badge 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
@@ -276,32 +189,13 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
                 +{resume.skills.length - 5} more
               </Badge>
             )}
-<<<<<<< HEAD
-          </div>;
+</div>;
         )}
       </CardContent>;
     </Card>;
   );
 }
 ;
-=======
-      </CardContent>
-    </Card>
-  );
-<<<<<<< HEAD:src/components/messaging/resume-selector/ResumePreviewCard.tsx
-<<<<<<< HEAD
-};
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          </div>
-        )}
-      </CardContent>;
-    </Card>;
-  )
-};
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

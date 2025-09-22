@@ -1,47 +1,19 @@
-<<<<<<< HEAD
 import React from 'react';
 import * as React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
-
-=======
-
-
-
-import * as React from 'react';
-import {cn} from '@/lib/utils';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import * as React from "react"
 "
 import { cn } from "@/lib/utils"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ;
 import {cn} from '@/lib/utils';"
@@ -49,19 +21,11 @@ import * as React from "react"
 "
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const Card = React.forwardRef<
   HTMLDivElement
-=======
-const Card = React.forwardRef<;
-  HTMLDivElement;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   React.HTMLAttributes<HTMLDivElement>
 ></HTMLDivElement>(({ className, ...props }, ref) => (
-
-
-
 
 =======
 
@@ -87,15 +51,9 @@ const Card = React && React.forwardRef<;
   React && React.HTMLAttributes<HTMLDivElement>;
 ></HTMLDivElement>(({ className, ...props }, ref) => (;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   <div
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -133,25 +91,12 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-<<<<<<< HEAD
 
-=======
-=======
-      'rounded-lg border bg-card text-card-foreground shadow-sm'  <div
-    ref={ref}
-    className={cn(
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'rounded-lg border bg-card text-card-foreground shadow-sm'
       "rounded-lg border bg-card text-card-foreground shadow-sm",
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className
 =======
@@ -174,26 +119,10 @@ const Card = React.forwardRef<
     {...props}
   />
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 >(({ className, ...props }, ref) => (
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-));
-Card.displayName = 'Card';
-const CardHeader = React.forwardRef<
-  HTMLDivElement
-  React.HTMLAttributes<</HTMLDivElement>HTMLDivElement>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ))
 =======
-
-
 
 ))"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -202,61 +131,30 @@ Card.displayName = "Card"
 const CardHeader = React.forwardRef<
   HTMLDivElement,
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   React.HTMLAttributes<HTMLDivElement>
 
 >(({ className, ...props }, ref) => (
-<<<<<<< HEAD
 '
-=======
->(({ className, ...props }, ref) => (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 Card && Card.displayName = 'Card';
 
 const CardHeader = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<</HTMLDivElement>HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
-<<<<<<< HEAD
-      className;
-=======
-      className
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+className;
     )}
     {...props}
   />;
 ));
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   <div
     ref={ref}
-=======
-  <div;
-    ref={ref}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     className={cn('flex flex-col space-y-1 && 1.5 p-6', className)}
     {...props}
 >(({ className, ...props }, ref) => (
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-));
-CardHeader.displayName = 'CardHeader';
-const CardTitle = React.forwardRef<
-  HTMLParagraphElement
-  React.HT</HTMLHeadingElement>MLAttributes<HTMLHeadingElement>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ))
-=======
-))"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   <div
     ref={ref}
@@ -283,18 +181,8 @@ const CardTitle = React.forwardRef<
   React.HTMLAttributes<HTMLHeadingElement>
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >(({ className, ...props }, ref) => (
-=======
-=======
-  />;
-));
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -312,65 +200,20 @@ CardHeader && CardHeader.displayName = 'CardHeader';
 />;
 ));
 CardHeader && CardHeader.displayName = 'CardHeader';
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  React.HTMLAttributes<HTMLDivElement>CardHeader && CardHeader.displayName = 'CardHeader';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const CardTitle = React && React.forwardRef<;
   HTMLParagraphElement,;
   React && React.HT</HTMLHeadingElement>MLAttributes<HTMLHeadingElement>;
 >(({ className, ...props }, ref) => (;
-<<<<<<< HEAD
-  <h3
-<<<<<<< HEAD
-    ref={ref}  />;
-=======
-
-  />;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    ref={ref}
-Card.displayName = "Card";
-;
-const CardHeader = React.forwardRef<;
-  HTMLDivElement,;
-  React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
-  <div;
-    ref={ref}
-
-      "text-2xl font-semibold leading-none tracking-tight",
-
-      className
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
-    {...props}
-  />;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    ref={ref}  />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<h3
+ref={ref}  />;
 ));
   <h3;
     ref={ref}
-<<<<<<< HEAD
-    className={cn(
+className={cn(
+=======
 
-=======
-      'text-2xl font-semibold leading-none tracking-tight'
-      "text-2xl font-semibold leading-none tracking-tight",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className
 =======
@@ -401,19 +244,6 @@ const CardDescription = React.forwardRef<
     {...props}
   />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-));
-CardTitle.displayName = 'CardTitle';
-const CardDescription = React.forwardRef<
-  HTMLParagraph</HTMLParagraphElement>Element
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ))
@@ -423,64 +253,19 @@ const CardDescription = React.forwardRef<
 CardTitle.displayName = "CardTitle"
 
 const CardDescription = React.forwardRef<
-<<<<<<< HEAD
-<<<<<<< HEAD
-  HTMLParagraphElement,
+HTMLParagraphElement,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-<<<<<<< HEAD
-    className={cn('text-sm text-muted-foreground', className)}
-=======
-    className={cn (
-  HTMLParagraphElement,    className={cn (
-      'rounded - lg border bg - card text - card - foreground shadow - sm',
-      class_name)}
-    {...props}
-));
-CardDescription.displayName = 'CardDescription';
-const CardContent </HTMLDivElement>= React.forwardRef<
-  HTMLDivElement
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />
-));
-CardContent.displayName = 'CardContent';
-</HTMLDivElement>const CardFooter = React.forwardRef<
-  HTMLDivElement
-))
-CardDescription.displayName = "CardDescription"
-
-const CardContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
-CardContent.displayName = "CardContent"
-
-const CardFooter = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn('flex items-center p-6 pt-0', className)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+className={cn('text-sm text-muted-foreground', className)}
     {...props}
   />
 
-<<<<<<< HEAD
-  <p
+<p
     ref={ref}
     className={cn ('text - sm text - muted - foreground', class_name)}
     {...props}
@@ -547,7 +332,6 @@ const CardTitle = React && React.forwardRef<;
       "text-2xl font-semibold leading-none tracking-tight","
 const CardDescription = React.forwardRef<
 
-
   React.HTMLAttributes<HTMLParagraphElement>
 
 const CardDescription = React && React.forwardRef<;
@@ -596,22 +380,6 @@ export {;
   CardDescription,;
   CardContent,;
 };
-
-=======
-  />));
-CardFooter.display_name = 'CardFooter';
-;
-export {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,
-}
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -624,35 +392,21 @@ CardTitle.displayName = "CardTitle"
 
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-<<<<<<< HEAD
 '
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 CardTitle && CardTitle.displayName = 'CardTitle';
 
 const CardDescription = React && React.forwardRef<;
   HTMLParagraph</HTMLParagraphElement>Element,;
   React && React.HTMLAttributes<HTMLParagraphElement>;
 >(({ className, ...props }, ref) => (;
-<<<<<<< HEAD
-
-  <p;
+<p;
 ;'
-=======
-  <p
-;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {cn} from '@/lib / utils';
 ;
 const Card = React.forward_ref<;
@@ -661,21 +415,12 @@ const Card = React.forward_ref<;
 ></HTMLDivElement>(({ class_name, ...props }, ref) => (
   <div;
     ref={ref}
-<<<<<<< HEAD
-
-    className={cn('
+className={cn('
       'text-2xl font-semibold leading-none tracking-tight'
   <p;
     ref={ref}
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     className={cn (
-=======
-  HTMLParagraphElement,    className={cn (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  HTMLParagraphElement,    className={cn (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     className={cn(
       'text-2xl font-semibold leading-none tracking-tight'
@@ -719,42 +464,15 @@ CardContent.displayName = "CardContent"
 
 const CardFooter = React.forwardRef<
   HTMLDivElement,
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div;
-    ref={ref}'
-    className={cn('flex items-center p-6 pt-0', className)}
-    {...props}
-  />
-    ref={ref}'
-    className={cn ('text - sm text - muted - foreground', class_name)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    {...props}
-'
-=======
-    {...props}
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 CardDescription && CardDescription.displayName = 'CardDescription';
 
 const CardContent </HTMLDivElement>= React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (;'
   <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />;
 ));'
-=======
->(({ className, ...props }, ref) => (;
-  <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />;
-));
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 CardContent && CardContent.displayName = 'CardContent';
 
 </HTMLDivElement>const CardFooter = React && React.forwardRef<;
@@ -762,27 +480,15 @@ CardContent && CardContent.displayName = 'CardContent';
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
 
-<<<<<<< HEAD
-
-
-  <div;
+<div;
   />));'
-=======
-  <div
-  />));
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 CardDescription.display_name = 'CardDescription';
 ;
 const CardContent </HTMLDivElement>= React.forward_ref<;
   HTMLDivElement,
   React.HTMLAttributes < HTMLDivElement>;
-<<<<<<< HEAD
 >(({ class_name, ...props }, ref) => ('
   <div ref={ref} className={cn ('p - 6 pt - 0', class_name)} {...props} />));'
-=======
->(({ class_name, ...props }, ref) => (
-  <div ref={ref} className={cn ('p - 6 pt - 0', class_name)} {...props} />));
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 CardContent.display_name = 'CardContent';
 ;
 </HTMLDivElement > const CardFooter = React.forward_ref<;
@@ -790,17 +496,10 @@ CardContent.display_name = 'CardContent';
   React.HTMLAttributes < HTMLDivElement>;
 >(({ class_name, ...props }, ref) => (
   <div;
-<<<<<<< HEAD
-    ref={ref}'
+ref={ref}'
     className={cn ('flex items - center p - 6 pt - 0', class_name)}
     {...props}
 '
-=======
-    ref={ref}
-    className={cn ('flex items - center p - 6 pt - 0', class_name)}
-    {...props}
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 CardFooter && CardFooter.displayName = 'CardFooter';
 
 export {;
@@ -812,37 +511,20 @@ export {;
   CardContent,;
 };
 
-<<<<<<< HEAD
-
-
-  />));'
+/>));'
 CardFooter.display_name = 'CardFooter';
 ;
 export {}
-=======
-  />));
-CardFooter.display_name = 'CardFooter';
-;
-export {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Card,
   CardHeader,
   CardFooter,
   CardTitle,
   CardDescription,
   CardContent,
-<<<<<<< HEAD
 };
 ;
 
 ))"
-=======
-}
-;
-  />
-=======
-/>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   />
 
@@ -864,15 +546,9 @@ CardDescription.displayName = "CardDescription"
 const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => ("
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
 ))"
-=======
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 CardContent.displayName = "CardContent"
 
 const CardFooter = React.forwardRef<
@@ -880,40 +556,19 @@ const CardFooter = React.forwardRef<
 
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-<<<<<<< HEAD
-  <div;
+<div;
     ref={ref}'
-=======
-  <div
-    ref={ref}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     className={cn('flex items-center p-6 pt-0', className)}
     {...props}
   />
 
-<<<<<<< HEAD
 ))"
 CardFooter.displayName = "CardFooter"
 
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-))
-CardFooter.displayName = "CardFooter"
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 CardTitle.displayName = "CardTitle";
 ;
-
-
-
 
 const CardDescription = React.forwardRef<;
   React.HTMLAttributes<HTMLParagraphElement>;
@@ -938,8 +593,7 @@ React.HTMLAttributes<HTMLHeadingElement> > ( ({
 }, ref) => (<h3) 
 }/>) ) CardTitle.displayName = "CardTitle" const CardDescription = React.forwardRef< HTMLParagraphElement;"
 React.HTMLAttributes<HTMLParagraphElement> > ( ({
-<<<<<<< HEAD
-  className, ...props 
+className, ...props 
 }, ref) => (<p />) ) CardDescription.displayName = "CardDescription" const CardContent = React.forwardRef< HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement>) ) CardContent.displayName = "CardContent" const CardFooter = React.forwardRef< HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement> > ( ({
@@ -957,17 +611,9 @@ export {
   CardDescription
   CardContent
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ))
 CardFooter.displayName = "CardFooter"
-=======
-}, ref) => (<p />) ) CardDescription.displayName = "CardDescription" const CardContent = React.forwardRef< HTMLDivElement;"
-</p>"
-React.HTMLAttributes<HTMLDivElement>) ) CardContent.displayName = "CardContent" const CardFooter = React.forwardRef< HTMLDivElement;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
@@ -982,13 +628,7 @@ export {
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     {...props}
@@ -997,8 +637,6 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
     {...props}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

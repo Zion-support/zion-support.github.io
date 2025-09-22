@@ -78,7 +78,7 @@ const footerSections: FooterSection[] = [;
 ],
 
 const socialLinks = [
-<<<<<<< HEAD:components/layout/UltraAdvancedFuturisticFooter2025.tsx.backup.1756001073
+:components/layout/UltraAdvancedFuturisticFooter2025.tsx.backup.1756001073
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" />, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" />, color: 'hover:text-sky-400' },
   { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" />, color: 'hover:text-blue-600' },
@@ -86,20 +86,6 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" />, color: 'hover:text-red-500' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" />, color: 'hover:text-gray-400' }
 ];
-=======
-  { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
-  { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
-  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
-],;
-const quickLinks = [;
-  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },;
-  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },;
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },;
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },;
-  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },;
-  { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/layout/UltraAdvancedFuturisticFooter2025.tsx
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
@@ -245,12 +231,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <p className="text-sm text-gray-400">Future Technology Solutions</p>
                 </div>
               </div>
-              
+
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Pioneering the future with revolutionary AI consciousness, quantum computing, 
                 and autonomous systems. Transforming businesses through next-generation technology.
               </p>
-              
+
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
                 Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services. 
                 We help businesses transform and thrive in the digital age.
@@ -346,7 +332,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD:components/layout/UltraAdvancedFuturisticFooter2025.tsx.backup.1756001073
+:components/layout/UltraAdvancedFuturisticFooter2025.tsx.backup.1756001073
                   >
                     Subscribe
                   </motion.button>
@@ -390,34 +376,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   Contact
                 </Link>
                 <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-=======
-                  >;
-                    Subscribe;
-                  </motion.button>;
-                </div>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-        {/* Bottom Bar */}
-        <motion.div;
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl"
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="text-gray-400 text-sm">
-                 2024 Zion Tech Group. All rights reserved. | 
-                <Link href="/privacy" className="hover:text-white transition-colors duration-200 ml-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/layout/UltraAdvancedFuturisticFooter2025.tsx
                   Privacy Policy
                 </a> | 
                 <Link href="/terms" className="hover:text-white transition-colors duration-200 ml-2">
                   Terms of Service
-<<<<<<< HEAD:components/layout/UltraAdvancedFuturisticFooter2025.tsx.backup.1756001073
+:components/layout/UltraAdvancedFuturisticFooter2025.tsx.backup.1756001073
                 </Link>
                 <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
                   Cookie Policy
@@ -426,28 +389,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   Sitemap
                 </Link>
               </motion.div>
-=======
-                </a>
-              </div>
-              
-              <div className="flex items-center space-x-4 text-gray-400 text-sm">
-                <span>Powered by</span>
-                <div className="flex items-center space-x-2">
-                  <Brain className="w-4 h-4 text-cyan-400" />
-                  <span>AI Consciousness</span>
-                </div>
-                <span></span>
-                <div className="flex items-center space-x-2">
-                  <Atom className="w-4 h-4 text-purple-400" />
-                  <span>Quantum Computing</span>
-                </div>
-                <span></span>
-                <div className="flex items-center space-x-2">
-                  <Rocket className="w-4 h-4 text-pink-400" />
-                  <span>Space Technology</span>
-                </div>
-              </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/layout/UltraAdvancedFuturisticFooter2025.tsx
             </div>
           </div>
         </motion.div>

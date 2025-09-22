@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/admin/TokenManager.jsx
-<<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/admin/TokenManager.jsx
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 class ErrorBoundary extends React.Component {
   // TODO: Implement
@@ -15,28 +7,24 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/pages.disabled/admin/TokenManager.jsx
 import React from 'react';
-========
->>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/pages.disabled/admin/TokenManager.jsx
 =======
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);'
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }
@@ -56,29 +44,18 @@ export default function TokenManager({ }: TokenManagerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/admin/TokenManager.jsx
 }
 <<<<<<< HEAD
-=======
-}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/admin/TokenManager.jsx
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/src/pages.disabled/admin/TokenManager.jsx
-========
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/pages.disabled/admin/TokenManager.jsx
 =======
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
@@ -15,29 +14,6 @@ import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { logErrorToProduction } from '@/utils/productionLogger',
 import { EmptyState } from "@/components/ui/empty-state",
-=======
-onViewDetails, }
-
-  )
-}
-
-
-
-import { use_router } from 'next / router';'
-import { Button  } from '@/components / ui / button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';'
-import { Input  } from '@/components / ui / input';'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components / ui / table';'
-import { Badge  } from '@/components / ui / badge';'
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components / ui / dialog';'
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';'
-import { Alert, AlertDescription, AlertTitle  } from '@/components / ui / alert';'
-import { toast  } from '@/hooks / use - toast';'
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';'
-import { logErrorToProduction } from '@/utils / production_logger';'
-import { EmptyState  } from '@/components / ui / empty - state';
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/PartnerManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PartnerProfile {
 =======
 interface PartnerProfile {}
@@ -49,8 +25,7 @@ interface PartnerProfile {}
   created_at: string,
   niche: string,
   audience_size: string,
-<<<<<<< HEAD
-  social_media?: Record<string string>,
+social_media?: Record<string string>,
   website?: string,
   bio?: string,
   payout_method?: string,
@@ -104,16 +79,9 @@ interface PartnerProfile {;
   bio?: string,;
   payout_method?: string,;
   fraud_flags?: number,;
-=======
-  social_media?: Record < string, string>;
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   commission_rate?: number;
 }
-<<<<<<< HEAD:temp_exclude/hooks.disabled/admin/PartnerManager.tsx
+:temp_exclude/hooks.disabled/admin/PartnerManager.tsx
 ;
 export default function PartnerManager() {;
   const [partners, setPartners] = useState<PartnerProfile[]>([]),;
@@ -130,29 +98,6 @@ export default function PartnerManager() {;
   useEffect(() => {;
     if (!isAuthenticated) {;
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),;
-=======
-export default /**;
- * PartnerManager - Function description;
- */
-function PartnerManager() {}
-  const [partners, set_partners] = useState < PartnerProfile[]>([]);
-  const [filtered_partners, setFilteredPartners] = useState < PartnerProfile[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const [search_query, setSearchQuery] = useState ("");"
-  const [active_tab, setActiveTab] = useState ("pending");
-  const [selected_partner, setSelectedPartner] = useState < PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState (false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState (false);
-  const [commission_rate, setCommissionRate] = useState (25);
-  const { user, is_authenticated } = use_auth ();
-  const router = use_router ();
-  useEffect ((, ) => {}
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      router.push ('/auth / login?return_to=' + encodeURIComponent ('/admin / partners'));
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/admin/PartnerManager.tsx
       return;
     }
 ;
@@ -265,7 +210,7 @@ if ( {) {}
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {}
     let filtered = partners,
-    
+
     // Filter by status"
     if (status !== "all") {}
       filtered = filtered.filter(p => p.status === status)
@@ -296,7 +241,7 @@ if ( {) {}
         p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-    
+
     setFilteredPartners(filtered)
   },
 
@@ -327,18 +272,18 @@ if ( {) {}
       setPartners(partners.map(p => 
         p.id === partnerId ? { ...p, status } : p;
       )),
-      
+
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
         searchQuery;
       ),
-      
+
       toast({'"
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
         description: `The partner has been ${status}.`,'"
         variant: status === 'approved' ? "default" : "destructive"}),
-      
+
       // Close the dialog if open;
       if (isDetailsOpen && selectedPartner?.id === partnerId) {}
         setIsDetailsOpen(false)
@@ -354,24 +299,24 @@ if ( {) {}
 
   const handleSaveSettings = async () => {}
     if (!selectedPartner) return,
-    
+
     try {}
       // Update commission rate;
       setPartners(partners.map(p => 
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p;
       )),
-      
+
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
         activeTab,
         searchQuery;
       ),
-      
+
       toast({"
         title: "Settings Updated","
         description: "Partner settings have been updated successfully.","
         variant: "default"}),
-      
+
       setIsSettingsOpen(false)
     } catch (error) {'
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),
@@ -477,7 +422,7 @@ if ( {) {}
 
   const getFraudFlagBadge = (flags: number = 0) => {}
     if (flags === 0) return null,
-    
+
     return ("
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">"
         <Flag className="h-3 w-3" />
@@ -652,7 +597,7 @@ if ( {) {}
               Review the details of the partner application;
             </DialogDescription>
           </DialogHeader>
-          
+
           {selectedPartner && ("
             <div className="space-y-4">"
               <div className="grid grid-cols-2 gap-2">
@@ -665,7 +610,7 @@ if ( {) {}
                   <div>{getStatusBadge(selectedPartner.status)}</div>
                 </div>
               </div>
-              
+
               <div>"
                 <p className="text-xs text-zion-slate-light">Bio</p>"
                 <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>
@@ -681,7 +626,7 @@ if ( {) {}
                   <p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p>
                 </div>
               </div>
-              
+
               {selectedPartner.website && (
                 <div>"
                   <p className="text-xs text-zion-slate-light">Website</p>"
@@ -713,7 +658,7 @@ if ( {) {}
                   <p className="text-white">{selectedPartner.commission_rate || 25}%</p>
                 </div>
               </div>
-              
+
               {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && ("
                 <Alert className="bg-red-900/20 border-red-900/50 text-red-500">"
                   <AlertTitle className="flex items-center gap-2">"
@@ -757,14 +702,14 @@ if ( {) {}
               Configure commission rates and other settings;
             </DialogDescription>
           </DialogHeader>
-          
+
           {selectedPartner && ("
             <div className="space-y-4">
               <div>"
                 <label className="text-sm font-medium text-white">Partner Name</label>"
                 <p className="text-zion-slate-light">{selectedPartner.name}</p>
               </div>
-              
+
               <div>"
                 <label className="text-sm font-medium text-white" htmlFor="commission-rate">
                   Commission Rate (%)
@@ -781,7 +726,7 @@ if ( {) {}
                   Percentage of reward granted to this partner for successful referrals;
                 </p>
               </div>
-              
+
               <DialogFooter>"
                 <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
                   Cancel;
@@ -797,11 +742,7 @@ if ( {) {}
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 interface PartnerTableProps {;
   partners: PartnerProfile[],;
@@ -815,7 +756,7 @@ interface PartnerTableProps {;
 ;
 function PartnerTable() { return null; }
   }
-  
+
   if (partners.length === 0) {}
     return ("
       <div className="py-8">
@@ -882,7 +823,7 @@ function PartnerTable() { return null; }
                     </Button>
                   </>
                 )}
-                
+
                 <Button "
                   variant="ghost" "
                   size="sm"
@@ -892,7 +833,7 @@ function PartnerTable() { return null; }
                   <Settings className="h-4 w-4" />"
                   <span className="sr-only">Settings</span>
                 </Button>
-                
+
                 <Button "
                   variant="outline" "
                   size="sm"

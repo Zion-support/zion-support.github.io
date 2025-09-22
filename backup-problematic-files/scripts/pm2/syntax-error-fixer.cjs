@@ -6,19 +6,7 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class SyntaxErrorFixer {}
@@ -32,18 +20,8 @@ class SyntaxErrorFixer {}
     this.fixesSkipped = 0;
     this.fixedFiles = new Set();
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.syntaxPatterns = {}
@@ -71,18 +49,9 @@ class SyntaxErrorFixer {}
       level,
       message,
       data,
-<<<<<<< HEAD
-      service: 'syntax-error-fixer'
+service: 'syntax-error-fixer'
     };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -98,7 +67,7 @@ class SyntaxErrorFixer {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting Syntax Error Fixer Service...');
-    
+
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -111,21 +80,10 @@ class SyntaxErrorFixer {}
       this.startContinuousFixing();
       // Listen for signals to trigger fixes;
       this.setupSignalHandlers();
-<<<<<<< HEAD
-      
-      this.log('info', 'Syntax Error Fixer Service started successfully');
-<<<<<<< HEAD
+this.log('info', 'Syntax Error Fixer Service started successfully');
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      
-      
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Keep the process alive;
       setInterval(async () => {}
         await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {}
@@ -136,26 +94,12 @@ class SyntaxErrorFixer {}
       process.exit(1)};
   ensureDirectories() {}
     const dirs = []
-<<<<<<< HEAD
-      'logs/pm2',
+'logs/pm2',
       'backups',
       'temp',
       'fixed-files'
     ];
-<<<<<<< HEAD
-=======
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-
-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -165,18 +109,7 @@ class SyntaxErrorFixer {}
 
       // Reset counters;
       this.fixedFiles.clear();
-<<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Find files with syntax issues;
@@ -189,18 +122,8 @@ class SyntaxErrorFixer {}
         const batch = filesWithIssues.slice(i, i + batchSize);
         await Promise.all(batch.map(file => this.fixFileSyntax(file)));
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        
-        
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Small delay between batches;
@@ -209,18 +132,10 @@ class SyntaxErrorFixer {}
       // Generate report;
 
     const filesWithIssues = [];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const dir of sourceDirs) {}
@@ -246,8 +161,7 @@ class SyntaxErrorFixer {}
       if (this.skipLargeFiles && content.length > this.largeFileThreshold) {}
         return false};
       // Check for various syntax issues;
-<<<<<<< HEAD
-      return this.detectSyntaxIssues(content)} catch (error) {}
+return this.detectSyntaxIssues(content)} catch (error) {}
       this.log('warn', `Error reading file: ${filePath}`, error.message);
       return false};
   };
@@ -258,17 +172,8 @@ class SyntaxErrorFixer {}
     const backticks = (content.match(/`/g) || []).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
     const backticks = (content.match(/`/g) || []).length;
@@ -287,18 +192,8 @@ class SyntaxErrorFixer {}
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {}
@@ -316,25 +211,15 @@ class SyntaxErrorFixer {}
       const fixedContent = await this.applySyntaxFixes(content, filePath);
       if (fixedContent !== content) {}
         // Write fixed content;
-<<<<<<< HEAD
-        fs.writeFileSync(filePath, fixedContent, 'utf8');
-        
+fs.writeFileSync(filePath, fixedContent, 'utf8');
+
         this.fixesApplied++;
         this.fixedFiles.add(filePath);
-        
+
         this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
-<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-        
-        
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}
           this.log('info', `Fix verification passed for: ${filePath}`)} else {`}
@@ -355,7 +240,7 @@ class SyntaxErrorFixer {}
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
-      
+
       fs.copyFileSync(filePath, backupPath);
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
@@ -398,9 +283,7 @@ class SyntaxErrorFixer {}
     let inComment = false;
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i];
-<<<<<<< HEAD
-      
-      if (line.includes('/*') && !line.includes('*/')) {}
+if (line.includes('/*') && !line.includes('*/')) {}
         inComment = true};
       if (inComment && line.includes('*/')) {}
         inComment = false};
@@ -414,16 +297,15 @@ class SyntaxErrorFixer {}
     return lines.join('\n')};
   fixMissingSemicolons(content, fixes) {}
     const fixed = content;
-    
+
     // Fix missing semicolons after statements;
     const lines = fixed.split('\n');
-    
+
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i].trim();
-      
+
       if (line && )
-<<<<<<< HEAD
-          !line.endsWith(';') &&
+!line.endsWith(';') &&
           !line.endsWith('{') && }
           !line.endsWith('}') &&
           !line.endsWith('[') && ]
@@ -447,24 +329,6 @@ class SyntaxErrorFixer {}
           !line.includes('switch') &&
           !line.includes('try') &&
           !line.includes('catch') &&
-=======
-          !line.endsWith(';') && 
-          !line.endsWith('{') && }
-          !line.endsWith('}') && 
-          !line.endsWith('[') && ]
-          !line.endsWith(']') && 
-          !line.endsWith('(') && 
-          !line.endsWith(')') &&
-          !line.startsWith('//') && 
-          !line.startsWith('/*') && 
-          !line.startsWith('*') &&
-          !line.includes('function') && 
-          !line.includes('class') && 
-=======
-
-          !line.includes('function') &&
-          !line.includes('class') &&
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           !line.includes('const') &&
           !line.includes('let') &&
           !line.includes('var') &&
@@ -475,14 +339,9 @@ class SyntaxErrorFixer {}
           !line.includes('for') &&
           !line.includes('while') &&
           !line.includes('switch') &&
-<<<<<<< HEAD
-          !line.includes('try') && 
+!line.includes('try') && 
           !line.includes('catch') && 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-          !line.includes('try') &&
-          !line.includes('catch') &&
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           !line.includes('finally')) {}
 
   fixMalformedImports(content, fixes) {}
@@ -506,17 +365,8 @@ class SyntaxErrorFixer {}
     const closeParens = (fixed.match(/\)/g) || []).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Add missing closing braces;
@@ -529,14 +379,13 @@ class SyntaxErrorFixer {}
       if (tagStart.includes('=') && !tagStart.endsWith('/>')) {}
 
         return `<React.Fragment>${content}</React.Fragment>`};
-<<<<<<< HEAD
-      return match}
+return match}
 });
-    
+
     return fixed};
   fixTypeScriptIssues(content, fixes) {}
     let fixed = content;
-    
+
     // Fix type annotations;
     fixed = fixed.replace(/(\w+):\s*([^,\n]+?)(?=\s*[,\n])/g, (match, varName, typeName) => {}
       if (typeName.includes('any') && typeName !== 'any') {}
@@ -545,7 +394,7 @@ class SyntaxErrorFixer {}
         return `${varName}: any`};
       return match}
 });
-    
+
     // Fix interface declarations;
     fixed = fixed.replace(/interface\s+(\w+)\s*\{/g, (match, interfaceName) => {}
       if (!content.includes(`interface ${interfaceName}`)) {`}
@@ -554,13 +403,13 @@ class SyntaxErrorFixer {}
         return `interface ${interfaceName} {`};
       return match}
 });
-    
+
     return fixed};
   async verifyFix(filePath) {}
     try {}
       // Try to parse the file to verify syntax is correct;
       const content = fs.readFileSync(filePath, 'utf8');
-      
+
       // Basic syntax validation;
       if (this.detectSyntaxIssues(content)) {}
         return false};
@@ -568,13 +417,8 @@ class SyntaxErrorFixer {}
       if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {}
         try {}
           execSync(`npx tsc --noEmit "${filePath}"`, { `})
-<<<<<<< HEAD
-            cwd: this.projectRoot,
+cwd: this.projectRoot,
             stdio: 'pipe'
-=======
-            cwd: this.projectRoot, 
-            stdio: 'pipe' 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           })} catch (error) {}
           return false};
       };
@@ -601,17 +445,8 @@ class SyntaxErrorFixer {}
 
     this.log('info', `Syntax fix report generated: ${reportPath}`);
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    
-    
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return report};
   generateRecommendations() {}
     const recommendations = [];
@@ -637,7 +472,7 @@ class SyntaxErrorFixer {}
     return recommendations};
   startContinuousFixing() {}
     this.log('info', 'Starting continuous syntax fixing...');
-    
+
     // Monitor for new syntax issues every 5 minutes;
     setInterval(async () => {}
       await this.performSyntaxFixes()}, 300000); // 5 minutes;
@@ -678,17 +513,7 @@ process.on('unhandledRejection', (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-});
-});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

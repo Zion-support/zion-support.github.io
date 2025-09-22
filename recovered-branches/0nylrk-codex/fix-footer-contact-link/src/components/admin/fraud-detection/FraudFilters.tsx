@@ -1,20 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -24,9 +13,7 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Search, Filter} from "lucide-react";
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -40,20 +27,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Search, Filter } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Search, Filter } from "lucide-react",
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface FraudFiltersProps {
 =======
@@ -79,29 +58,11 @@ interface FraudFiltersProps {};
   setContentTypeFilter: (value: string | null) => void;
   resetFilters: () => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-=======
 
-"
-import React from "react";"
-import {Input} from "@/components/ui/input";"
-import {Button} from "@/components/ui/button";"
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";"
-import {Search, Filter} from "lucide-react";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-<<<<<<< HEAD
-  setContentTypeFilter,
+setContentTypeFilter,
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
@@ -116,31 +77,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-import { Search, Filter } from "lucide-react",
-
-interface FraudFiltersProps {
-
-  searchQuery: string
-  setSearchQuery: (value: string) => void
-  statusFilter: string | null
-  setStatusFilter: (value: string | null) => void
-  severityFilter: string | null
-  setSeverityFilter: (value: string | null) => void
-  contentTypeFilter: string | null
-  setContentTypeFilter: (value: string | null) => void
-
-  resetFilters: () => void
-}
-
-import React from "react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Search, Filter} from "lucide-react";
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface FraudFiltersProps {;
   searchQuery: string,;
   setSearchQuery: (value: string) => void,;
@@ -155,11 +91,7 @@ interface FraudFiltersProps {;
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
-<<<<<<< HEAD
-
-
-
-  searchQuery;
+searchQuery;
 export const FraudFilters: React.FC<FraudFiltersProps> = ({};
   searchQuery;
 import React from './react';'
@@ -168,17 +100,6 @@ import { Button } from '@/components / ui / button';'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';'
 import { Search, Filter } from './lucide-react';
 interface FraudFiltersProps {}
-=======
-  searchQuery;
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  searchQuery;
-import React from './react';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Search, Filter } from './lucide-react';
-interface FraudFiltersProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   search_query: string,
   setSearchQuery: (value: string) => void,
   status_filter: string | null,
@@ -189,14 +110,9 @@ interface FraudFiltersProps {
   setContentTypeFilter: (value: string | null) => void,
   reset_filters: () => void;
 }
-<<<<<<< HEAD
 export const FraudFilters: React.FC < FraudFiltersProps> = ({};
   search_query;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export const FraudFilters: React.FC < FraudFiltersProps> = ({
-  search_query;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   setSearchQuery;
   status_filter;
   setStatusFilter;
@@ -204,10 +120,7 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
   setSeverityFilter;
   contentTypeFilter;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  resetFilters}) => {}
+resetFilters}) => {}
   setContentTypeFilter,;
   resetFilters}) => {;
   return ("
@@ -220,29 +133,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({;
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  severityFilter;
-  setSeverityFilter;
-  contentTypeFilter;
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  severityFilter;
-  setSeverityFilter;
-  contentTypeFilter;
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   resetFilters}) => {
   return (
@@ -252,45 +142,23 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         <Input
           placeholder="Search by user or content..."
           value={searchQuery}
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           onChange={(e) => setSearchQuery(e.target.value)}
           className="pl-10"
         />
       </div>
-<<<<<<< HEAD
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-
 "
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
-
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
-      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <SelectTrigger className="w-[180px]">
 =======
-
 
 "
         <SelectTrigger className="w-[180px]">"
@@ -305,22 +173,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="actioned">Actioned</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-      <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
+<Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
-=======
-
-
-"
-      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
-
-
-
-
-<<<<<<< HEAD
-      <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
-      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -338,23 +192,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-      <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
+<Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
-"
-      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
-
-
-
-
-<<<<<<< HEAD
-      <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
-      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -379,21 +219,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -510,18 +338,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 };
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 onChange={(e) => setSearchQuery(e && e.target.value)}
 
@@ -536,14 +355,7 @@ import React from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-<<<<<<< HEAD
-=======
-},"
-import React from "react",;"
-import { Input } from "@/components/ui/input",;"
-import { Button } from "@/components/ui/button",;"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Search, Filter } from "lucide-react",;
@@ -558,7 +370,6 @@ interface FraudFiltersProps {;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
 }
-<<<<<<< HEAD
 "
           className="pl-10";
         />;
@@ -566,29 +377,6 @@ interface FraudFiltersProps {;
 "
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  setContentTypeFilter,
-  reset_filters}) => {
-  return (
-    <div className="flex flex - col md:flex - row gap - 4 mb - 6">;
-      <div className="relative flex - 1">;
-        <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400" />;
-        <Input;
-          placeholder="Search by user or content...";
-          value={search_query}
-          on_change={(e) => setSearchQuery (e.target.value)}
-          className="pl - 10";
-        />;
-      </div>;
-      <Select value={status_filter || ""} onValueChange={value => setStatusFilter (value || null)}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 "
 import React from "react",;"
@@ -665,8 +453,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
   contentTypeFilter,;
   setContentTypeFilter,;
   resetFilters}) => {;
-<<<<<<< HEAD
-  return (;"
+return (;"
     <div className="flex flex-col md:flex-row gap-4 mb-6">;"
       <div className="relative flex-1">;"
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
@@ -679,20 +466,13 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
       </div>;
       ;"
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <SelectTrigger className="w-[180px]">;
 =======
 import { Search, Filter } from "lucide-react",        <SelectTrigger className="w-[180px]">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { Search, Filter } from "lucide-react",        <SelectTrigger className="w-[180px]">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 "
         <SelectTrigger className="w-[180px]">;"
@@ -712,7 +492,6 @@ import { Search, Filter } from "lucide-react",        <SelectTrigger className="
       ;
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
@@ -726,43 +505,14 @@ import { Search, Filter } from "lucide-react",        <SelectTrigger className="
       </Select>;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
       <Select value={severity_filter || ""} onValueChange={value => setSeverityFilter (value || null)}>;        <SelectTrigger className="w-[180px]">;
-=======
-
-"
-        <SelectTrigger className="w-[180px]">;"
-          <SelectValue placeholder="Severity" />;
-        </SelectTrigger>;
-        <SelectContent>;"
-          <SelectItem value="">All Severities</SelectItem>;"
-          <SelectItem value="safe">Safe</SelectItem>;"
-          <SelectItem value="suspicious">Suspicious</SelectItem>;"
-=======
-      <Select value={severity_filter || ""} onValueChange={value => setSeverityFilter (value || null)}>;
-
-        <SelectTrigger className="w-[180px]">;
-          <SelectValue placeholder="Severity" />;
-        </SelectTrigger>;
-        <SelectContent>;
-          <SelectItem value="">All Severities</SelectItem>;
-          <SelectItem value="safe">Safe</SelectItem>;
-          <SelectItem value="suspicious">Suspicious</SelectItem>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <SelectItem value="dangerous">Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
 
-<<<<<<< HEAD
-
 "
         <SelectTrigger className="w-[180px]">;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter (value || null)}>;
-
-        <SelectTrigger className="w-[180px]">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
         <SelectContent>;"
@@ -776,57 +526,27 @@ import { Search, Filter } from "lucide-react",        <SelectTrigger className="
       </Select>;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
       <Button variant="outline" on_click={reset_filters} className="md: w-auto">;
         <Filter className="h - 4 w - 4 mr-2" /> Reset Filters;
-=======
-      <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
-        <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </Button>;
     </div>);
-=======
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 
 export default FraudFilters;
 
-
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default FraudFilters;
 
 export default FraudFilters;
       ;
       <Button variant="outline" onClick={resetFilters} className="md:w-auto">;
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">;
-<<<<<<< HEAD
-=======
-      ;"
-      <Button variant="outline" onClick={resetFilters} className="md:w-auto">;"
-      <Button variant="outline" onClick={resetFilters} className="md: w-auto">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Filter className="h-4 w-4 mr-2" /> Reset Filters;
       </Button>;
     </div>;
@@ -835,21 +555,13 @@ export default FraudFilters;
 
 export default FraudFilters;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -857,7 +569,6 @@ export default FraudFilters;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 ursor/fix-website-loading-errors-and-merge-6662
-
 
 import React from "react";""
 import {Input} from "@/components/ui/input";""
@@ -907,6 +618,5 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
   severity_filter;
   setSeverityFilter;
   contentTypeFilter;
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

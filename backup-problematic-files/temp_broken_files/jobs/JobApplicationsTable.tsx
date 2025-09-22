@@ -40,4 +40,3 @@ export function JobApplicationsTable({ jobId } JobApplicationsTableProps) {;
         onScoreUpdated={handleScoreUpdated}
       />;
     </>;
-

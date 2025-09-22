@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',;'
-import { readJson, writeJson } from '../../../utils/fsDb',;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 export default async function handler() { return null; }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
@@ -20,9 +8,7 @@ export default async function handler() { return null; }
 '
   const requests = readJson<any[]>('support/requests.json', []),
   const idx = requests.findIndex((r) => r.id === id),
-<<<<<<< HEAD
-=======
->>>>>>> pr-12243
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
 ;
@@ -49,7 +35,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     writeJson('support/requests.json', requests)
   }
   return res.status(200).json({ ok: true })
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -71,7 +56,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 
   }
   return res.status(200).json({ ok: true })
@@ -121,9 +105,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
   if (idx >= 0) {'
     requests[idx].status = 'resolved',

@@ -313,7 +313,7 @@ export function useApiKeys() {;
   //Using optional chaining ensures this function works both in the browser // (where import.meta.env is injected by Vite) and in Node environments //such as tests or server side rendering. setLoading (true);
 setError (null);
 try {
-  
+
 }getApiUrl () 
 }/keys`, {
   method: 'GET', headers: {
@@ -332,7 +332,7 @@ try {
 setError (null);
 setNewApiKey (null);
 try {
-  
+
 }getApiUrl () 
 }/create`, {
   method: 'POST', headers: {
@@ -347,7 +347,7 @@ return result;
   console.error ('Error creating API key:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
+
 }finally {
   setLoading (false) 
 }
@@ -357,7 +357,7 @@ toast ({
 setError (null);
 setNewApiKey (null);
 try {
-  
+
 }getApiUrl () 
 }/regenerate`, {
   method: 'POST', headers: {
@@ -372,7 +372,7 @@ return result;
   console.error ('Error regenerating API key:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
+
 }finally {
   setLoading (false) 
 }
@@ -381,7 +381,7 @@ toast ({
   if (!user) return;
 setError (null);
 try {
-  
+
 }getApiUrl () 
 }/revoke`, {
   method: 'POST', headers: {
@@ -395,7 +395,7 @@ return result;
   console.error ('Error revoking API key:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
+
 }finally {
   setLoading (false) 
 }
@@ -404,7 +404,7 @@ toast ({
   if (!user) return;
 setError (null);
 try {
-  
+
 }getApiUrl () 
 }/logs?limit=$ {
   limit 
@@ -439,8 +439,5 @@ revokeApiKey;
 fetchApiLogs;
 clearNewApiKey: () => setNewApiKey (null) 
 }
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

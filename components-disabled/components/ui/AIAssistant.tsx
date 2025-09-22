@@ -1,6 +1,4 @@
 
-
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -18,8 +16,7 @@ class ErrorBoundary extends React.Component {}
   authorizationToken?: string;
   buttonLabel = "Generate with AI""
   title = "AI Writing Assistant"
-<<<<<<< HEAD
-  defaultPrompt
+defaultPrompt
   systemPrompt
   onAccept
   authorizationToken
@@ -29,15 +26,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }: AIAssistantProps) {
 
   buttonLabel = "Generate with AI",
-=======
-  defaultPrompt;
-  systemPrompt;
-  onAccept;
-  authorizationToken;
-}: AIAssistantProps) {}
-"
-  buttonLabel = "Generate with AI","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title = "AI Writing Assistant",
   defaultPrompt,
   systemPrompt,
@@ -115,18 +103,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />"
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">"
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">"
-=======
-  return (
-    < />;
-      <button;"
-type=\"button\"
-        onClick={onOpen}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-          <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h3 className="text-base font-semibold">{title}</h3>
       {isOpen && (;"
         <div className="fixed inset-0 z-50 flex items-center justify-center">;"
@@ -137,36 +113,15 @@ type=\"button\"
               <button;
                 onClick={onClose}"
                 className="text-sm opacity-70 hover:opacity-100">;
-<<<<<<< HEAD
-                Close;"
+Close;"
               </button>{" "}
-=======
-}
-<div className='fixed inset-0 z-50 flex items-center justify-center' />}
-          <div className='absolute inset-0 bg-black/50' onClick={onClose} />
-          <div className='relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black shadow-xl' />
-            <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800' />
-              <h3 className='text-base font-semibold' />{title}</h3>
-              <button;
-onClick={onClos}
-}
-                className='text-sm opacity-70 hover:opacity-100' />
-
-                Close;
-              </button>;
-            </div>;
-            <div className='p-4 space-y-3' />;
-              <div />;
-                <label className='block text-xs font-medium mb-1' />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Operator prompt;
                 </label>;
                 <textarea;
                   value={prompt}
                   onChange={e = /> setPrompt(e.target.value)}
                   rows={4}
-<<<<<<< HEAD
-                <button;
+<button;
                   onClick={callOperator}
                   disabled={loading}"
                   className="rounded-md bg-blue-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60">;"
@@ -194,42 +149,6 @@ onClick={onClos}
                   onClick={() => {;
                     (onAccept(output), onClose());
                   }}
-=======
-                  className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm';
-                />;
-              </div>;
-              <div className='flex items-center gap-2' />;
-                <button;
-                  onClick={callOperator}
-                  disabled={loading}
-                  className='rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled: opacity-60' />
-
-                  {loading ? 'Generating…' : 'Generate}
-}
-                </button>;
-                <button;
-                  onClick={callOperator}
-                  disabled={loading}
-                  className='rounded-md border px-3 py-1.5 text-sm' />
-
-                  {loading ? '…' : 'Regenerate'}
-                </button>;
-                <button;
-                  onClick={() = /> setIsEditing(v => !v)}
-                  className='rounded-md border px-3 py-1.5 text-sm'>
-
-                  {isEditing ? 'Preview' : 'Edit'}
-                </button>;
-                <button;
-                  onClick={onCopy}
-                  disabled={!output}
-                  className='rounded-md border px-3 py-1.5 text-sm disabled:opacity-60' />
-
-                  Copy;
-                </button>;
-                <button;
-                  onClick={() = /> {onAccept(output)onClose()}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   disabled={!canAccept}
 
                   className='ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled: opacity-60'
@@ -239,10 +158,6 @@ onClick={onClos}
               </div>;"
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='fixed inset-0 z-50 flex items-center justify-center'>
           <div className='absolute inset-0 bg-black/50' onClick={onClose} />
           <div className='relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl'>
@@ -315,9 +230,6 @@ onClick={onClos}
               <div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <label
-=======
-                <label"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="block text-xs font-medium mb-1"
                   Output (markdown);
                 </label>;
@@ -369,20 +281,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
     </>
-<<<<<<< HEAD
-  );
+);
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-    </>
-
-  );
-}
-
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

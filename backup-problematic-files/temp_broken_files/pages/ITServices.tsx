@@ -1,8 +1,6 @@
-<<<<<<< HEAD:pages/ITServices.tsx
+:pages/ITServices.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 
 import React from 'react';
 import Layout from '../components/Layout';
@@ -30,47 +28,13 @@ export default function ITServices() {
   );
 
 }
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-import React from "react";
-import Layout from "../components/Layout";
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function ITServices() {
   return (
     <Layout
       title="IT Services - Zion Tech Group"
 =======
-
 
 export default function ITServices() {}
   return (;
@@ -82,50 +46,23 @@ export default function ITServices() {}
       <div className="min-h-screen bg-gray-50 py-20">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-12">
-<<<<<<< HEAD
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete IT solutions to power your digital transformation.
             </p>
           </div>"
           <div className="text-center">
-<<<<<<< HEAD
-=======
 
-              IT Services page is under construction.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { Star } from 'lucide-react';
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Star } from 'lucide-react';
 '
 import React from 'react';
-<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
@@ -140,9 +77,6 @@ import {
   Database,
   Smartphone,
   Monitor,
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -170,9 +104,7 @@ import {}
   Server, 
   Shield, 
   Cloud, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Database, 
+Database, 
   Monitor, 
   CheckCircle, 
   Settings,
@@ -211,33 +143,6 @@ import {}
 <<<<<<< HEAD:pages/ITServices.tsx
   Cpu
 =======
-  Network, 
-  Database, 
-  Smartphone, 
-  Monitor, 
-  ArrowRight, 
-  CheckCircle, 
-  Clock,
-  Users,
-  Globe,
-  Lock,
-  Zap,
-  Settings,
-  BarChart3,
-  Headphones,
-  Wrench,
-  HardDrive,
-  Wifi,
-  Phone,
-  Mail,
-  MapPin,
-  FileText,
-  Cpu;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
   Cpu,
   Lock
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
@@ -245,22 +150,8 @@ import {}
 
 const itServices = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    category: "Managed IT Services",
+category: "Managed IT Services",
     icon: Server,
-=======
-<<<<<<< HEAD
-    title: 'Cloud Infrastructure Management',
-=======
-  FileText,;
-  Cpu;'
-} from 'lucide-react';
-
-const itServices = []
-  {'
-    title: 'Cloud Infrastructure Management','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,'
     features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', '24/7 monitoring'],'
@@ -306,10 +197,6 @@ const itServices = []
     features: ['Server setup', 'Performance monitoring', 'Updates & patches', 'Backup management'],'
     price: '$1,500/month','
     benefits: ['Reliable servers', 'Optimal performance', 'Data protection', 'Minimal downtime']
-=======
-    category: "Managed IT Services",
-    icon: Server,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     color: "from-blue-500 to-cyan-500",
     services: [
       {
@@ -575,9 +462,7 @@ const processSteps = [
     step: "05",
     title: "Optimization",
     description: "Ongoing optimization and updates to keep your IT infrastructure current."
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -585,40 +470,18 @@ const processSteps = [
   }
 ];
 
-<<<<<<< HEAD
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
-<<<<<<< HEAD
 <<<<<<< HEAD
   { number: "15min", label: "Response Time" },
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
-=======
-<<<<<<< HEAD
-  { number: "24/7", label: "Support Available" },
-  { number: "500+", label: "Systems Managed" },
-=======
-const stats = ["
-  { number: "99.9%", label: "Uptime Guarantee" },"
-  { number: "24/7", label: "Support Available" },"
-  { number: "500+", label: "Systems Managed" },"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { number: "15min", label: "Average Response Time" }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 ];
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 export default function ITServices() {
-  
-=======
-export default function ITServicesPage() {
-  return (
-    <MainLayout
-      title="IT Services - Zion Tech Group"
-      description="Comprehensive IT services including cloud management, network security, database administration, and 24/7 support."
-      keywords="IT services, cloud management, network security, database administration, IT support, infrastructure"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
@@ -672,8 +535,7 @@ export default function ITServicesPage() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          {itServices.map((category, categoryIndex) => (
+{itServices.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
               className="mb-16"
@@ -690,22 +552,6 @@ export default function ITServicesPage() {
                   {category.category}
                 </h3>
               </div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
@@ -720,7 +566,7 @@ export default function ITServicesPage() {
                     <p className="text-gray-600 mb-4">
                       {service.description}
                     </p>
-                    
+
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-700">
@@ -791,9 +637,8 @@ export default function ITServicesPage() {
                     {solution.name}
                   </h3>
                 </div>
-                
-<<<<<<< HEAD
-                <p className="text-gray-600 mb-4">
+
+<p className="text-gray-600 mb-4">
                   {solution.description}
                 </p>
 
@@ -810,40 +655,7 @@ export default function ITServicesPage() {
                   <div className="text-2xl font-bold text-green-600">
                     {solution.pricing}
                   </div>
-=======
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-blue-400">{service.price}</div>
-<<<<<<< HEAD
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <Link
                     href="/contact"
                     className="px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
@@ -890,28 +702,13 @@ export default function ITServicesPage() {
             ))}
           </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>
       </section>
 
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-=======
-<<<<<<< HEAD
-        </div>
-      </section>
-      {/* Process Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-=======
-
->>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -925,19 +722,9 @@ export default function ITServicesPage() {
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
               A proven methodology that ensures successful IT implementation and maximum value for your investment.
             </p>
-<<<<<<< HEAD:pages/ITServices.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </motion.div>
-
-=======
+:pages/ITServices.tsx
 <<<<<<< HEAD
           </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          </motion.div>
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -965,14 +752,8 @@ export default function ITServicesPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages/ITServices.tsx
-<<<<<<< HEAD
+:pages/ITServices.tsx
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
@@ -997,14 +778,8 @@ export default function ITServicesPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages/ITServices.tsx
-<<<<<<< HEAD
+:pages/ITServices.tsx
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
@@ -1018,44 +793,28 @@ export default function ITServicesPage() {
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-600">
-<<<<<<< HEAD:pages/ITServices.tsx
-<<<<<<< HEAD
-              Let's discuss your IT needs and create a comprehensive solution that supports your business growth.
+:pages/ITServices.tsx
+Let's discuss your IT needs and create a comprehensive solution that supports your business growth.
               Get a free consultation and discover how our IT services can benefit your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-=======
-              Let's discuss your IT needs and create a comprehensive solution that supports your business growth. 
-=======
-              Let&apos;s discuss your IT needs and create a comprehensive solution that supports your business growth. 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
               Get a free consultation and discover how our IT services can benefit your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-<<<<<<< HEAD:pages/ITServices.tsx
+:pages/ITServices.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
               >
                 Get Free IT Consultation
               </Link>
-<<<<<<< HEAD:pages/ITServices.tsx
+:pages/ITServices.tsx
 <<<<<<< HEAD
               <Link
                 href="tel:+13024640950"
-=======
-              <Link 
-                href="tel:+13024640950" 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              <Link 
-                href="tel:+13024640950" 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
                 className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold"
               >
                 Call: +1 302 464 0950
@@ -1064,14 +823,8 @@ export default function ITServicesPage() {
             <div className="mt-8 text-gray-600">
               <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a></p>
               <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-<<<<<<< HEAD:pages/ITServices.tsx
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
+:pages/ITServices.tsx
+
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
               <div className="flex items-center text-white">
                 <Phone className="h-5 w-5 mr-2" />
@@ -1085,11 +838,8 @@ export default function ITServicesPage() {
                 <MapPin className="h-5 w-5 mr-2" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
-<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
           <motion.div;
@@ -1112,58 +862,18 @@ export default function ITServicesPage() {
       </section>
     </Layout>
   );
-<<<<<<< HEAD:pages/ITServices.tsx
+:pages/ITServices.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-
-
-
-
-
-}
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
-=======
-  { number: "15min", label: "Response Time" },
-  { number: "500+", label: "IT Projects Completed" },
-  { number: "24/7", label: "Support Available" }
-];
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              IT Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Complete IT solutions to power your digital transformation.
-            </p>
-}
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

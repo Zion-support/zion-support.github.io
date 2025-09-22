@@ -1,45 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React, { useState } from "react",
 import { Control, UseFormSetValue } from "react-hook-form",
-=======
-import React, { useState } from 'react';
-import { Control, UseFormSetValue } from 'react-hook-form';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormDescription,
-<<<<<<< HEAD
-  FormMessage
+FormMessage
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
-=======
-} import {
-=======
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { TalentRateRecommender } from '@/components/pricing/TalentRateRecommender';
-import { Card, CardContent } from '@/components/ui/card';
-
-import React, { useState } from "react";
-import { Control, UseFormSetValue } from "react-hook-form";
-import {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   FormField;
   FormItem;
   FormLabel;
   FormControl;
   FormDescription;
-<<<<<<< HEAD
-
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface RateOptimizationSectionProps {
@@ -51,8 +27,6 @@ interface RateOptimizationSectionProps {
   location?: string,
   rateType: "hourly" | "fixed"
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
   control,
@@ -66,8 +40,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     setValue("hourlyRate", rate)
   },
 
-<<<<<<< HEAD
-  return (
+return (
     <div className="space-y-4">
       <FormField
         control={control}
@@ -151,37 +124,3 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>;
   );
 };
-=======
-
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
-import { Card, CardContent } from "@/components/ui/card",
-
-interface RateOptimizationSectionProps {
-  control: Control<any>,
-  setValue: UseFormSetValue<any>,
-  skills: string[],
-  yearsExperience: number,
-  location?: string,
-  rateType: "hourly" | "fixed"
-}
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  FormMessage
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-import { Card, CardContent } from "@/components/ui/card";
-interface RateOptimizationSectionProps {
-  control: Control<any>;
-  setValue: UseFormSetValue<any>;
-  skills: string[];
-  yearsExperience: number;
-  location?: string;
-  rateType: "hourly" | "fixed"
-}
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-  );
-};
-"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

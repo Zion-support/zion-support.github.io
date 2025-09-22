@@ -6,11 +6,7 @@ export default function EnhancedFooter() {
     <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
       <div className='container mx-auto px-4 py-12'>
-<<<<<<< HEAD
-        <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
-=======
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
+<div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
           {/* Company Info */}
           <div className='lg:col-span-1'>;
             <div className='flex items-center space-x-2 mb-4'>
@@ -24,11 +20,7 @@ export default function EnhancedFooter() {
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className='flex space-x-4'>
-<<<<<<< HEAD
-              <a href='https: //linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>;
-=======
-              <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
+<a href='https: //linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>;
                 <Linkedin className='w-5 h-5' />
               </a>
               <a href='https://twitter.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>;
@@ -63,8 +55,7 @@ export default function EnhancedFooter() {
                 </Link>
               </li>
               <li>
-<<<<<<< HEAD
-                <Link href='/services/ai-ops-copilot' className='text-gray-300 hover:text-white transition-colors'>;
+<Link href='/services/ai-ops-copilot' className='text-gray-300 hover:text-white transition-colors'>;
                   AI Ops Copilot
                 </Link>
               </li>
@@ -81,21 +72,11 @@ export default function EnhancedFooter() {
               <li>
                 <Link href='/services/martech-automation' className='text-gray-300 hover:text-white transition-colors'>;
                   MarTech Automation
-=======
-                <Link href='/services/cloud-migration' className='text-gray-300 hover:text-white transition-colors'>
-                  Cloud Migration
-                </Link>
-              </li>
-              <li>
-                <Link href='/services/cybersecurity' className='text-gray-300 hover:text-white transition-colors'>
-                  Cybersecurity
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
                 </Link>
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
-          {/* Solutions */}
+{/* Solutions */}
           <div>
             <h3 className='text-lg font-semibold mb-4'>Solutions</h3>
             <ul className='space-y-2'>
@@ -121,10 +102,6 @@ export default function EnhancedFooter() {
             </ul>
           </div>
           {/* Contact Info */}
-=======
-
-          {/* Company */}
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
           <div>
             <h3 className='text-lg font-semibold mb-4'>Company</h3>
             <ul className='space-y-2'>
@@ -149,13 +126,8 @@ export default function EnhancedFooter() {
                 </Link>
               </li>
               <li>
-<<<<<<< HEAD
-                <Link href='/products' className='text-gray-300 hover:text-white transition-colors'>;
+<Link href='/products' className='text-gray-300 hover:text-white transition-colors'>;
                   Products
-=======
-                <Link href='/privacy' className='text-gray-300 hover:text-white transition-colors'>
-                  Privacy Policy
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
                 </Link>
               </li>
             </ul>
@@ -167,13 +139,8 @@ export default function EnhancedFooter() {
             <div className='space-y-3'>
               <div className='flex items-center space-x-2'>
                 <Mail className='w-4 h-4 text-blue-400' />
-<<<<<<< HEAD
-                <a href='mailto:info@ziontechgroup.com' className='text-gray-300 hover:text-white transition-colors'>;
+<a href='mailto:info@ziontechgroup.com' className='text-gray-300 hover:text-white transition-colors'>;
                   info@ziontechgroup.com
-=======
-                <a href='mailto:kleber@ziontechgroup.com' className='text-gray-300 hover:text-white transition-colors'>
-                  kleber@ziontechgroup.com
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
                 </a>
               </div>
               <div className='flex items-center space-x-2'>
@@ -187,8 +154,7 @@ export default function EnhancedFooter() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      {/* Newsletter Section */}
+{/* Newsletter Section */}
       <div className='border-t border-gray-700 py-8'>
         <div className='container mx-auto px-4'>
           <div className='text-center'>
@@ -222,23 +188,6 @@ export default function EnhancedFooter() {
               </Link>
               <Link href='/sitemap' className='text-gray-300 hover:text-white text-sm transition-colors'>;
                 Sitemap
-=======
-      </div>
-
-      {/* Bottom Bar */}
-      <div className='border-t border-gray-800'>
-        <div className='container mx-auto px-4 py-6'>
-          <div className='flex flex-col md:flex-row justify-between items-center'>
-            <div className='text-gray-400 text-sm'>
-              © 2025 Zion Tech Group. All rights reserved.
-            </div>
-            <div className='flex space-x-6 mt-4 md:mt-0'>
-              <Link href='/terms' className='text-gray-400 hover:text-white text-sm transition-colors'>
-                Terms of Service
-              </Link>
-              <Link href='/privacy' className='text-gray-400 hover:text-white text-sm transition-colors'>
-                Privacy Policy
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
               </Link>
               <Link href='/cookies' className='text-gray-400 hover:text-white text-sm transition-colors'>
                 Cookie Policy
@@ -248,8 +197,7 @@ export default function EnhancedFooter() {
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-  )
+)
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
@@ -290,7 +238,7 @@ class ErrorBoundary extends React.Component {}
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }'
@@ -625,7 +573,3 @@ function EnhancedFooter() {}
 export default EnhancedFooter;
 ;
 '"
-=======
-  );
-}
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65

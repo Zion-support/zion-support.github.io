@@ -6,22 +6,8 @@ console.log('🚀 Comprehensive Merge Conflict Resolver');
 
 // Function to remove merge conflict markers;
 function removeMergeConflictMarkers(content) {
-<<<<<<< HEAD
-  return content
-<<<<<<< HEAD
-    .replace(/[a-f0-9]+/g, '');
-=======
-
-    .replace(/
-    .replace(/
-    .replace(/
-
-    .replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-  return content;
-    .replace(/
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+return content
+.replace(/[a-f0-9]+/g, '');
 }
 
 // Function to fix common syntax errors;)
@@ -41,15 +27,8 @@ function processFile(filePath) {
     const originalContent = content;
     content = fixSyntaxErrors(content);
 
-<<<<<<< HEAD
-    // Check for merge conflict markers
-<<<<<<< HEAD
-=======
-
-    if (content.includes('
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-            files.push(fullPath);
+// Check for merge conflict markers
+files.push(fullPath);
           }
         } catch (error) {
           // Skip files that can't be read
@@ -57,7 +36,7 @@ function processFile(filePath) {
       }
     }
   }
-  
+
   searchDirectory('/workspace');
   return files;
       // Remove any remaining conflict markers;
@@ -77,20 +56,6 @@ function processFile(filePath) {
   cleanupBuildArtifacts() {
     this.log("🧹 Cleaning up build artifacts...")
     const artifactsToRemove = [
-=======
-// Function to find all files with merge conflicts;
-function findFilesWithConflicts() {
-  const files = [];
-  function searchDirectory(dir) {
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-
-  cleanupBuildArtifacts() {"
-    this.log("🧹 Cleaning up build artifacts...")"
-    const artifactsToRemove = ["
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ".next",
       "node_modules/.cache",
       "dist",

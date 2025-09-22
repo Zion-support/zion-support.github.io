@@ -42,4 +42,3 @@ export default function WalletPage() {;
         <button className="px-4 py-2 bg-zion-purple text-white rounded-md">Connect Wallet</button>;
       </div>;
     </div>;
-

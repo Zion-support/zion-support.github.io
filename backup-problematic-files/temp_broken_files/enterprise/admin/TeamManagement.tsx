@@ -115,4 +115,3 @@ export function TeamManagement() {;
                     {member.status}
                   </Badge>;
                 </TableCell>;
-

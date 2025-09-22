@@ -84,4 +84,3 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
-

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // SEO Meta Tags Configuration;
 export const defaultSEO = {}
     type: 'website','
@@ -50,24 +49,7 @@ export const defaultSEO = {}
     },
   ],
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default defaultSEO;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
-export default defaultSEO;
-
-
-export default defaultSEO;
-;
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 // SEO Meta Tags Configuration
 export const defaultSEO = {

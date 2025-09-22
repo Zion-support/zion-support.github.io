@@ -1,10 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -26,26 +22,12 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
-
-
-
 
 import { useState, useEffect } from "react";"
 import { useTranslation } from "react-i18next";
@@ -62,21 +44,9 @@ import { useTranslation } from "react-i18next";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 AlertDialogTitle,;
-=======
-<<<<<<< HEAD
-AlertDialogTitle,;
-=======
-  AlertDialogTitle,
->>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -85,39 +55,8 @@ import {}
   useLanguage,
   SupportedLanguage,;
   LanguageContextType,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-AlertDialogTitle,;
-AlertDialogTitle,;
-} from "../components/ui/alert-dialog";
-import {
-  useLanguage,
-  SupportedLanguage,
-  LanguageContextType,;
-
-
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-} from "../context/LanguageContext";
-export function LanguageDetectionPopup() {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-"
-} from "../context/LanguageContext";
-<<<<<<< HEAD
-=======
-AlertDialogTitle,;export function LanguageDetectionPopup() {} from "../context/LanguageContext";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-AlertDialogTitle,;export function LanguageDetectionPopup() {} from "../context/LanguageContext";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function LanguageDetectionPopup() {
 =======
 export function LanguageDetectionPopup() {};
@@ -130,16 +69,6 @@ import {;
   AlertDialogDescription,;
   AlertDialogFooter,;
   AlertDialogHeader,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  AlertDialogTitle,;
-} from "../components/ui/alert-dialog";
-import {;
-  useLanguage,;
-  SupportedLanguage,;
-  LanguageContextType,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 } from "../context/LanguageContext";
 
 export function LanguageDetectionPopup() {;
@@ -151,56 +80,24 @@ export function LanguageDetectionPopup() {;
   const [detectedLanguage, setDetectedLanguage] =;
     useState<SupportedLanguage | null>(null);
 
-
   useEffect(() => {;
     // Check if this is first visit;
-=======
-
-  AlertDialogTitle,;"
-} from "../components/ui/alert-dialog";
-import {;
-  useLanguage,;
-  SupportedLanguage,;
-  LanguageContextType,;
-
-
-"
-} from "../context/LanguageContext";
-
-export function LanguageDetectionPopup() { return null; }
-  const { t } = useTranslation();
-
-  const { changeLanguage, currentLanguage, supportedLanguages } =;
-    useLanguage() as LanguageContextType;
-  const [detectedLanguage, setDetectedLanguage] =;
-    useState<SupportedLanguage | null>(null);
-
-  useEffect(() => {;
-    // Check if this is first visit;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const hasVisited = localStorage && localStorage.getItem("zion_has_visited");
     if (hasVisited) return;
 
-
     );
     if (isSupported && browserLang !== currentLanguage) {;
     );
     if (isSupported && browserLang !== currentLanguage) {;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setDetectedLanguage(browserLang);
       setOpen(true);
     }
   }, []);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (!detectedLanguage) return null;
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 
   const languageName =;
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
@@ -209,34 +106,21 @@ export function LanguageDetectionPopup() { return null; }
     await changeLanguage(detectedLanguage);
     setOpen(false);
   }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     await changeLanguage(detectedLanguage);
-=======
-  if (!detectedLanguage) return null;    await changeLanguage(detectedLanguage);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   if (!detectedLanguage) return null;    await changeLanguage(detectedLanguage);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   if (!detectedLanguage) return null;
 
-
     await changeLanguage(detectedLanguage);
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setOpen(false);
   }
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
-=======
-import { useState, useEffect } from 'react',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useTranslation } from 'react-i18next',;
 import {;
   AlertDialog,;
@@ -271,28 +155,14 @@ export function LanguageDetectionPopup() { return null; }
   if (!detectedLanguage) return null,
 
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const handleAccept = async () => {}
     await changeLanguage(detectedLanguage),
     setOpen(false)
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}  const languageName =;
-=======
-
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
-  const languageName =;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+{`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}  const languageName =;
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
     detectedLanguage;
 
@@ -303,20 +173,8 @@ export function LanguageDetectionPopup() { return null; }
   }
 export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false),;
-=======
-'
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>"
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
-
-export function LanguageDetectionPopup() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { t } = useTranslation(),;
   const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,;
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;
 
@@ -324,76 +182,16 @@ export function LanguageDetectionPopup() { return null; }
     // Check if this is first visit;'
     const hasVisited = localStorage.getItem('zion_has_visited'),;
     if (hasVisited) return,;
-
-=======
-  const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;
-  useEffect(() => {;
-    // Check if this is first visit;
-    const hasVisited = localStorage.getItem('zion_has_visited'),;
-    if (hasVisited) return,;
-    // Mark as visited;
-    localStorage.setItem('zion_has_visitedtrue'),;
-    // Get browser language;
-    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Check if browser language is supported and different from current language;
     const isSupported = supportedLanguages.some(lang => lang.code === browserLang),;
     if (isSupported && browserLang !== currentLanguage) {;
       setDetectedLanguage(browserLang),;
-<<<<<<< HEAD
-
-    <AlertDialog open={open} onOpenChange={setOpen}>;"
+<AlertDialog open={open} onOpenChange={setOpen}>;"
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">;
         <AlertDialogHeader>;"
           <AlertDialogTitle className="text-white">;
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-      setOpen(true);
-    }
-  }, []),
-
-  if (!detectedLanguage) return null,
-
-  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
-
-
-
-  const handleAccept = async () => {
-    await changeLanguage(detectedLanguage),
-    setOpen(false)
-  },
-
-  return (
-
-
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-
-
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
-
-      setOpen(true),;
-    }
-  }, []),;
-;
-  if (!detectedLanguage) return null,;
-;
-  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,;
-;
-  const handleAccept = async () => {;
-    await changeLanguage(detectedLanguage),;
-    setOpen(false),;
-  },;
-;
-  return (;
-    <AlertDialog open={open} onOpenChange={setOpen}>;
-      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">;
-        <AlertDialogHeader>;
-          <AlertDialogTitle className="text-white">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {t("language && language.switch_to_detected", { language: languageName })}
           </AlertDialogTitle>;
           <AlertDialogDescription className="text-zion-slate-light">;
@@ -403,32 +201,12 @@ export function LanguageDetectionPopup() { return null; }
         <AlertDialogFooter>;
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">;
             {t("general && general.no")}
-<<<<<<< HEAD
-=======
+
           </AlertDialogCancel>;
 
           <AlertDialogAction
             onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
-            {t("general && general.yes")}
 
-);
-
-);
-            {t('general.no')}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-          </AlertDialogCancel>;
-
-          <AlertDialogAction
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            onClick={handleAccept}
-<<<<<<< HEAD
-=======
-=======
-);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
 =======
 "
@@ -438,30 +216,17 @@ export function LanguageDetectionPopup() { return null; }
 
 );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-          <AlertDialogAction
-            onClick={handleAccept}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t("general.yes")}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-<<<<<<< HEAD
 );
 <<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -479,18 +244,6 @@ export function LanguageDetectionPopup() { return null; }
           >'
             {t('general.yes')}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            {t('language.switch_to_detected', { language:languageName })}
-=======
-{t('language.switch_to_detected', { language:languageName })}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </AlertDialogTitle>;
           <AlertDialogDescription className="text-zion-slate-light">;
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
@@ -570,27 +323,15 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark";"
           >;
             {t('general.yes')}
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-</AlertDialogAction>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { useState, useEffect  } from './react';
 import { use_translation  } from './react - i18next';
@@ -629,33 +370,17 @@ function LanguageDetectionPopup() {
 if (return) {
   $2
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
 
   );
-<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
     // Mark as visited;
 =======
   );    // Mark as visited;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  );    // Mark as visited;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
 
 }
     // Mark as visited;"
@@ -682,19 +407,8 @@ if (return) {
     const is_supported = supported_languages.some (
       (lang) => lang.code === browser_lang,
     );
-<<<<<<< HEAD
-    // Check condition;
+// Check condition;
 if ( {) {}
-=======
-    // Check condition
-if ( {) {
-  $2
-    const is_supported = supported_languages.some ()
-      (lang) => lang.code === browser_lang,
-    );
-    // Check condition;
-if ( {) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   $2;
 }
       setDetectedLanguage (browser_lang);
@@ -702,16 +416,8 @@ if ( {) {
     }
   }, []);
 ;
-<<<<<<< HEAD
-  // Check condition;
+// Check condition;
 if (return null) {}
-=======
-  // Check condition
-if (return null) {
-  $2
-  // Check condition;
-if (return null) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   $2;
 }
   const language_name =;
@@ -724,8 +430,7 @@ if (return null) {
   }
 ;
   return (
-<<<<<<< HEAD
-    <AlertDialog open={open} onOpenChange={set_open}>;
+<AlertDialog open={open} onOpenChange={set_open}>;
       <AlertDialogContent className="bg - zion - blue - dark text - white border border - zion-purple / 20">;
         <AlertDialogHeader>;
           <AlertDialogTitle className="text-white">;
@@ -743,42 +448,12 @@ if (return null) {
             on_click={handle_accept}
             className="bg - zion - purple text - white hover:bg - zion - purple-dark";
           >;
-=======
-    <AlertDialog open={open} onOpenChange={set_open}>;"
-      <AlertDialogContent className="bg - zion - blue - dark text - white border border - zion - purple / 20">;
-        <AlertDialogHeader>;"
-          <AlertDialogTitle className="text - white">;"
-            {t ("language.switch_to_detected", { language: language_name })}
-          </AlertDialogTitle>;"
-          <AlertDialogDescription className="text - zion - slate - light">;"`
-            {`${supported_languages.find ((lang) => lang.code === detected_language)?.flag || ""} ${language_name}`}
-          </AlertDialogDescription>;
-        </AlertDialogHeader>;
-        <AlertDialogFooter>;"
-          <AlertDialogCancel className="bg - transparent text - white border border - zion - purple / 20 hover:bg - zion - purple / 10">;"
-            {t ("general.no")}
-          </AlertDialogCancel>;
-          <AlertDialogAction;
-            on_click={handle_accept}"
-            className="bg - zion - purple text - white hover:bg - zion - purple - dark";
-          >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {t ("general.yes")}
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }}
-=======
-}
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-),; if (!detectedLanguage) return null;
-}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ),; if (!detectedLanguage) return null;
 > {
   t ('general.yes') 
@@ -791,14 +466,7 @@ if (return null) {
   );
 }
 }
-<<<<<<< HEAD
-=======
 
-
-}
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   useLanguage,;
   SupportedLanguage,;
@@ -815,8 +483,6 @@ export function LanguageDetectionPopup() {;
 
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">"
-
-
 
     <AlertDialog open={open} onOpenChange={setOpen}>;
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">;"
@@ -840,7 +506,6 @@ export function LanguageDetectionPopup() {;
 
             className="bg-zion-purple text-white hover:bg-zion-purple-dark""
           >
-
 
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">;            {t('general.no')}
 

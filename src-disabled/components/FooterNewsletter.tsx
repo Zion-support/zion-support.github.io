@@ -1,61 +1,16 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-{/* Honeypot field */}
-      <input
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> pr-12243
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
-=======
-import React, { useState } from 'react';
-// import { Input } from '@/components/ui/input';
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 import { Button } from '@/components/ui/button';
 // import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 
 export function FooterNewsletter(): React.ReactElement {
-<<<<<<< HEAD
-
-  const [email, setEmail] = useState('')
-=======
-import React, { useState, useRef } from 'react';'
-import { Input  } from '@/components/ui/input';'
-import { Button  } from '@/components/ui/button';'
-import { useToast  } from '@/hooks/use-toast';'
-import React, { useState, useRef } from 'react''
-import { Input } from '@/components/ui/input''
-import { Button } from '@/components/ui/button''
-import { useToast } from '@/hooks/use-toast''
-import { Loader2 } from 'lucide-react'';
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function FooterNewsletter(): React.ReactElement {}
-'
-  const [email, setEmail] = useState('')'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const [email, setEmail] = useState('')
   const [honeypot, setHoneypot] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)'
   const [emailError, setEmailError] = useState('')
@@ -146,30 +101,6 @@ export function FooterNewsletter(): React.ReactElement {
       <label htmlFor="newsletter-email" className="sr-only">
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-=======
-import React, { useState, useRef } from 'react';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { useToast  } from '@/hooks/use-toast';
-import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function FooterNewsletter(): React.ReactElement {
-  const [email, setEmail] = useState('');
-  const [honeypot, setHoneypot] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [emailError, setEmailError] = useState('');
-  const { toast } = useToast();
-  const EMAIL_REGEX = null;
-  return (
-    <form
-      id="footer-newsletter-form"
-      aria-label="Newsletter sign-up"
-      onSubmit={handleSubmit}
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
-    >
-      <label htmlFor="newsletter-email" className="sr-only">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         Email address for newsletter subscription
 =======
         Email address for newsletter subscription;
@@ -182,8 +113,7 @@ export function FooterNewsletter(): React.ReactElement {
         placeholder='Enter your email''
         className='flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center'
         value={email}
-<<<<<<< HEAD
-        onChange={e => setEmail(e.target.value)}'
+onChange={e => setEmail(e.target.value)}'
         autoComplete='email'        required'
 import React, { useState, useRef } from 'react','
 import { Input } from '@/components/ui/input','
@@ -201,14 +131,8 @@ export function FooterNewsletter(): React.ReactElement {'
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
 
   const lastSubmit = useRef(0),
-=======
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  // const { toast } = useToast();
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
@@ -230,100 +154,12 @@ export function FooterNewsletter(): React.ReactElement {'
       // });
       alert("Error: Failed to subscribe. Please try again.");
     } finally {
-=======
-  const handleSubmit = async (e: React.FormEvent) => {};
-    e.preventDefault(),;
-    if (honeypot) return, // ignore bots;
-    const now = Date.now(),
-    if (now - lastSubmit.current < 1000) return,
-    lastSubmit.current = now,
-
-    const trimmedEmail = email.trim(),
-    if (!EMAIL_REGEX.test(trimmedEmail)) {"
-      setEmailError("Please enter a valid email address."),
-      return;
-    } else {"
-      setEmailError("")
-    }
-
-    setIsSubmitting(true),`
-    const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID;
-    try {'
-      const res = await fetch('/api/newsletter', {'
-        method: 'POST','
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmedEmail })
-      }),
-
-      const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error;
-      if (res.ok) {'
-        if (data.status === 'already_subscribed') {'"`
-          toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` })
-        } else {'`
-          toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` })'
-import React, { useState, useRef } from 'react',;'
-import { Input } from '@/components/ui/input',;'
-import { Button } from '@/components/ui/button',;'
-import { useToast } from '@/hooks/use-toast',;'
-import { Loader2 } from 'lucide-react';'
-import {logErrorToProduction} from '@/utils/productionLogger',;
-export function FooterNewsletter(): React.ReactElement {;'
-  const [email, setEmail] = useState(''),;'
-  const [honeypot, setHoneypot] = useState(''),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;'
-  const [emailError, setEmailError] = useState(''),;
-  const { toast } = useToast(),;
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
-  const lastSubmit = useRef(0),;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    if (honeypot) return, // ignore bots;
-    const now = Date.now(),;
-    if (now - lastSubmit.current < 1000) return,;
-    lastSubmit.current = now,;
-    const trimmedEmail = email.trim(),;
-    if (!EMAIL_REGEX.test(trimmedEmail)) {;"
-      setEmailError("Please enter a valid email address."),;
-      return;
-    } else {;"
-      setEmailError("");
-    }
-;
-    setIsSubmitting(true),;`
-    const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID;
-    try {;'
-      const res = await fetch('/api/newsletter', {;'
-        method: 'POST',;'
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ email: trimmedEmail });
-      }),;
-      const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error;
-      if (res.ok) {;'
-        if (data.status === 'already_subscribed') {;'"`
-          toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` });
-        } else {;'`
-          toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` });
-        }'
-        setEmail(''),;'
-        // setEmailError(''), // Already cleared if regex passed;
-      } else {;'
-        logErrorToProduction('Newsletter subscription failed:', { data: data }),;
-        // Use a more specific error message if available from API, otherwise generic;'
-        const errorMessage = data.error || 'Subscription failed. Please try again.',;`
-        toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` });
-      }
-    } catch (err: any) {;'
-      logErrorToProduction('Newsletter subscription error:', { data: err });'`
-      toast.error('Unable to subscribe right now. Please try again later.', { id: `${uniqueToastIdBase}-catch-error` });
-    } finally {;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsSubmitting(false);
     }
   };
 
   return (
-<<<<<<< HEAD
-    <form onSubmit={handleSubmit} className="space-y-3">
+<form onSubmit={handleSubmit} className="space-y-3">
       <input
         type="email"
         placeholder="Enter your email"
@@ -332,30 +168,7 @@ export function FooterNewsletter(): React.ReactElement {;'
         className="w-full px-3 py-2 bg-slate-800 border border-slate-700 text-white placeholder-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         required
       />
-<<<<<<< HEAD
-=======
-    <form"
-      id="footer-newsletter-form""
-      aria-label="Newsletter sign-up"
-      onSubmit={handleSubmit}"
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
-    >"
-      <label htmlFor="newsletter-email" className="sr-only">
-        Email address for newsletter subscription;
-      </label>
-      <Input"
-        type="email""
-        id="newsletter-email""
-        name="newsletterEmail""
-        placeholder="Enter your email""
-        className="flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}"
-        autoComplete="email"
-        required;
-      />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
+{emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input;
 {/* Honeypot field */}
@@ -377,7 +190,6 @@ export function FooterNewsletter(): React.ReactElement {;'
 "
         type="text"
 
-
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
@@ -385,15 +197,6 @@ export function FooterNewsletter(): React.ReactElement {;'
 '
         type='text'"
         type="text"
-=======
-        onChange={e => setEmail(e.target.value)}
-        autoComplete='email'        required
-      />
-      {emailError && <p className='text-red-500 text-sm mt-1'>{emailError}</p>}
-      {/* Honeypot field */}
-      <input
-        type='text'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}'
@@ -413,13 +216,8 @@ export function FooterNewsletter(): React.ReactElement {;'
       >
 >>>>>>> pr-12243
         {isSubmitting ? (
-<<<<<<< HEAD
-          <>
+<>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-=======
-          <>'
-            <Loader2 className='h-4 w-4 mr-2 animate-spin' />
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Subscribing...
           </>
         ) : ('
@@ -427,8 +225,6 @@ export function FooterNewsletter(): React.ReactElement {;'
         )}
       </Button>
     </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -439,19 +235,8 @@ export function FooterNewsletter(): React.ReactElement {;'
 <<<<<<< HEAD
         tabIndex={-1}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> pr-12243
@@ -470,28 +255,10 @@ export function FooterNewsletter(): React.ReactElement {;'
       >;
         {isSubmitting ? (;
           <>;
-<<<<<<< HEAD
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
-=======
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
+
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> pr-12243
             Subscribing...;
@@ -605,20 +372,11 @@ export function FooterNewsletter():React.ReactElement {;'
           <>;"
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;"
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> pr-12243
@@ -631,35 +389,16 @@ export function FooterNewsletter():React.ReactElement {;'
     </form>;
   );
 } ;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-  );
-} ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 } ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> pr-12243
 } ;
@@ -786,31 +525,12 @@ if ( {) {}
     </form>);
 }
 }
-<<<<<<< HEAD
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-=======
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
+
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> pr-12243
-
 
 };"
 return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubmit= {;"
@@ -823,31 +543,16 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 } ;
 }
 }
-<<<<<<< HEAD
-=======
-);
-} 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 }
-<<<<<<< HEAD
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======

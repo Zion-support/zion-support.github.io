@@ -62,4 +62,3 @@ export function FaqSection() {;
       </div>;
     </section>;
 <<<<<<< HEAD
-

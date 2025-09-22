@@ -1,14 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { motion } from 'framer-motion';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface ServiceCardProps {
   title: string,
   description: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   icon: string;
@@ -37,13 +31,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         ))}
       </ul>
     </div>
-=======
-  icon?: string;
-  features?: string[];
-=======
-  icon: string;
-  features: string[];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   className?: string;
 }
 
@@ -55,22 +42,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   className = ''
 }) => {
   return (
-<<<<<<< HEAD
-=======
-  icon?: string;
-  features?: string[];
-  className?: string;
-}
 
-const ServiceCard: React.FC<ServiceCardProps> = ({
-  title,
-  description,
-  icon,
-  features = [],
-  className = ''
-}) => {
-  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <motion.div 
       className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 ${className}`}
       whileHover={{ y: -5 }}
@@ -86,27 +58,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <h3 className="text-xl font-semibold mb-3 text-white text-center">{title}</h3>
       <p className="text-gray-300 mb-4 text-center">{description}</p>
       {features.length > 0 && (
-<<<<<<< HEAD:src/components/ServiceCard.tsx
+:src/components/ServiceCard.tsx
 <<<<<<< HEAD
         <ul className="space-y-2">
-=======
-    <div className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${className}`}>
-      <div className="text-center mb-6">
-        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span className="text-3xl">{icon}</span>        </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
-        <p className="text-gray-600 leading-relaxed">{description}</p>
-      </div>
-
-      <div className="space-y-3">
-        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>        <ul className="space-y-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-        </div>
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ServiceCard.tsx
         <ul className="space-y-2">
@@ -118,8 +72,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </li>
           ))}
         </ul>
-<<<<<<< HEAD:src/components/ServiceCard.tsx
-<<<<<<< HEAD
+:src/components/ServiceCard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
       )}
@@ -127,11 +80,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
   );
 =======
       </div>

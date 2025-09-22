@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/components/mobile-app/admin/ScreenshotManager.tsx
-<<<<<<< HEAD
+:src/components/mobile-app/admin/ScreenshotManager.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,24 +35,20 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
   },
-  
+
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
-    
+
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files"),
       return
     }
-    
+
     // Limit the number of screenshots
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
-    
+
     if (availableSlots <= 0) {
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
@@ -111,12 +106,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.dataTransfer.files));
     }
   },
-  
-<<<<<<< HEAD
-  return (
-=======
+
 return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -133,7 +124,6 @@ return (
       </CardHeader>
       <CardContent>
 
-<<<<<<< HEAD
 type Screenshot = {;
   id: string,;
   url: string,;
@@ -219,12 +209,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardHeader>;
       <CardContent>;
 
-<<<<<<< HEAD:src/components/mobile-app/admin/ScreenshotManager.tsx
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/admin/ScreenshotManager.tsx
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
@@ -241,15 +225,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               ? "border-zion-cyan bg-zion-cyan/10" 
               : "border-zion-purple/30"
           }`}
-<<<<<<< HEAD:src/components/mobile-app/admin/ScreenshotManager.tsx
-<<<<<<< HEAD
-        >
+:src/components/mobile-app/admin/ScreenshotManager.tsx
+>
           <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <input
             ref={fileInputRef}
             type="file"
@@ -260,44 +241,31 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           />
           <Button 
             variant="outline" 
-<<<<<<< HEAD
-            onClick={() => fileInputRef.current?.click()}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+onClick={() => fileInputRef.current?.click()}
             className="mt-2"
           >
             <Plus className="mr-2 h-4 w-4" />
             Select Files
           </Button>
         </div>
-<<<<<<< HEAD
-        
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios" 
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
         </div>
-<<<<<<< HEAD
-        
-        <div className="grid grid-cols-2 gap-3">
+<div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot) => (
             <div key={screenshot.id} className="relative group">
               <img
                 src={screenshot.url}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
                 loading="lazy"
               />
               <button
-<<<<<<< HEAD
-                onClick={() => removeScreenshot(screenshot.id)}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+onClick={() => removeScreenshot(screenshot.id)}
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 aria-label="Remove screenshot"
               >
@@ -308,17 +276,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-  );
+);
 };
-=======
-          <input
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  )
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -364,9 +323,6 @@ return filtered;
 }</div> </CardContent> </Card>) ;
 };
 "
-<<<<<<< HEAD:src/components/mobile-app/admin/ScreenshotManager.tsx
+:src/components/mobile-app/admin/ScreenshotManager.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/mobile-app/admin/ScreenshotManager.tsx

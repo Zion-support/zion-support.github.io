@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -251,16 +250,8 @@ this.logError("Code review failed")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  const content = fs.readFileSync(filePath, ")
-  const content = fs.readFileSync(filePath, ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
         .map(line => line.split(" ")"

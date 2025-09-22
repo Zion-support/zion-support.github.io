@@ -162,4 +162,3 @@ export function DisputeDetail() {;
           </Card>;
         </div>;
       </div>;
-

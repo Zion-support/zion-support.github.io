@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/ultimate-syntax-fix.cjs
-=======
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node
 
 const fs = require('fs');
 const { execSync } = require('child_process');
-=======
-
-
-#!/usr/bin/env node
-
-const fs = require('fs');
-
-console.log('🔧 Final Syntax Cleanup');
-console.log('=');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/complete-syntax-fix.cjs
 
 console.log('🔧 Ultimate Syntax Fix');
 console.log('
@@ -30,4 +14,3 @@ const { execSync } = require('child_process');
 function fixAllSyntax(content) {
   return content;
     // Fix malformed JSX tags;
-

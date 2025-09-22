@@ -20,4 +20,3 @@ const MobileAppPage:React.FC = () => {;
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs";
       />;
 <<<<<<< HEAD
-

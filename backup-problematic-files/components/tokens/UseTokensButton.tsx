@@ -14,10 +14,7 @@ export default function UseTokensButton(_{_serviceId, _defaultType}: {_serviceId
   return (_<>
       <button onClick={() => setOpen(true)} className="enhanced-button enhanced-button-primary">Use Tokens</button>
       <UseTokensModal isOpen={_open} onClose={_() => setOpen(false)} serviceId={_serviceId} defaultType={_defaultType} />
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </>
   )
 }

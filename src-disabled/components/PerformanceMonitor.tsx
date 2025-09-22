@@ -4,39 +4,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { usePerformance } from '../hooks/usePerformance';
-
-const PerformanceMonitor: React.FC = () => {
-  const metrics = usePerformance();
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Only show in development
-    if (process.env.NODE_ENV === 'development') {
-      setIsVisible(true);
-    }
-  }, []);
-
-  if (!isVisible) return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function PerformanceMonitor() {
   return (
-<<<<<<< HEAD
-=======
-import React from 'react';
-import React from 'react';
-;
 
-export default function PerformanceMonitor() {
-  return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="performance-monitor">
       <p>Performance Monitor</p>
     </div>
@@ -97,45 +69,14 @@ export default function PerformanceMonitor() {
           <span className="text-sm font-medium text-white">Performance Monitor</span>,;
           <button,;
             onClick={() => setIsVisible(false)},;
-<<<<<<< HEAD
-=======
-    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-3 rounded-lg shadow-lg text-xs font-mono z-50">
-      <div className="mb-2 font-semibold">Performance</div>
-      <div>Render: {metrics.renderTime}ms</div>
-      <div>Load: {metrics.loadTime}ms</div>
-      {metrics.memoryUsage && (
-        <div>Memory: {metrics.memoryUsage}MB</div>
-      )}
-    </div>
-  );
-};
 
-export default PerformanceMonitor;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from 'react';
-<<<<<<< HEAD
-
 <<<<<<< HEAD
 import React from 'react';
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-interface PerformanceMonitorProps {
-  children: React.ReactNode;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default PerformanceMonitor;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 import React, { useEffect, useState } from 'react';
 =======
@@ -156,18 +97,7 @@ interface PerformanceMonitorProps {
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
   return <>{children}</>;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
 
-<<<<<<< HEAD
-export default PerformanceMonitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-import React from 'react';
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 

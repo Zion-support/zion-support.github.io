@@ -38,4 +38,3 @@ export function ContractTypeCards({ onStandardClick, onSmartClick } ContractType
           </Button>;
         </CardFooter>;
       </Card>;
-

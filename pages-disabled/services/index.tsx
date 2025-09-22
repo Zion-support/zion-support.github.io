@@ -1,21 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
@@ -148,15 +134,7 @@ const sampleServices: Service[] = []
     category: 'Space','
     features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],'
     link: '/space-tech'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -186,16 +164,6 @@ import { additionalLiveServices2025 } from '../../data/additional-live-services-
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 '
 import type { NextPage } from 'next';'
 import Head from 'next/head';'
@@ -224,7 +192,6 @@ import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 '
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';'
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
-<<<<<<< HEAD
 // Define a common service interface
 interface Service {
   id?: string
@@ -234,9 +201,6 @@ interface Service {
   category?: string
   popular?: boolean
   launchDate?: string
-=======
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   [key: string]: unknown, // Allow additional properties
 }
 // Define a unified service interface
@@ -308,12 +272,6 @@ const sampleServices: Service[] = [
 ]
 =======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Define a common service interface;
 interface Service {;
@@ -329,14 +287,8 @@ interface Service {;
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -345,49 +297,7 @@ interface Service {;
 ;
 // Define a unified service interface;
 interface Service {;
-<<<<<<< HEAD
-=======
-=======
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',
-import Card from '../../components/ui/Card';
-import Link from 'next/link';
-import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices  } from '../../data/additional-real-services';
-import { extraServices  } from '../../data/extra-services';
-import { newlyAddedServices  } from '../../data/newly-added-services';
-import { curatedMarketServices  } from '../../data/curated-market-services';
-import { realMarketServices  } from '../../data/real-market-services';
-import { new2025Services  } from '../../data/new-2025-services';
-import { marketValidatedServices  } from '../../data/market-validated-services';
-import { moreRealServices2025  } from '../../data/more-real-services-2025';
-import { realOperationalServices  } from '../../data/real-operational-services';
-import { verified2025Additions  } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025  } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025  } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2  } from '../../data/verified-real-services-2025-batch2';
-import { additionalLiveServices2025  } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions  } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3  } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025  } from '../../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realServicesQ42025 } from '../../data/real-services-q4-2025';
-// Define a common service interface
-interface Service {
-  id?: string;
-  name: string;
-  description?: string;
-  price?: string;
-  category?: string;
-  popular?: boolean;
-  launchDate?: string;
-  [key: string]: unknown, // Allow additional properties
-}
-// Define a unified service interface
-interface Service {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string;
   name: string;
@@ -396,10 +306,7 @@ interface Service {
   price: string;
   category: string;
   features: string[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
   popular?: boolean,;
   icon?: string,;
   link?: string;
@@ -469,16 +376,8 @@ const sampleServices: Service[] = [;
 ],
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ServicesIndexPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 export default function ServicesIndexPage() {}
@@ -505,31 +404,14 @@ export default function ServicesIndexPage() {}
       realServicesQ22025 as unknown[]
       realServicesQ32025 as unknown[]
       realServicesQ42025 as unknown[]
-<<<<<<< HEAD
-    )
+)
     return acc
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-  }, {} as Record<string Service[]>),
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }, {} as Record<string, Service[]>),
-
-=======
-  }, {} as Record<string Service[]>),
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   }, {} as Record<string, Service[]>),
@@ -541,10 +423,7 @@ export default function ServicesIndexPage() {}
     return acc;
   }, {} as Record<string, Service[]>),
 
-
   }, {} as Record<string Service[]>),
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
@@ -564,9 +443,7 @@ export default function ServicesIndexPage() {}
             </div>"
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {filtered.map((service) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
+<EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
               ))}
             </div>
           </div>
@@ -593,27 +470,16 @@ export default function ServicesIndexPage() {}
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
 
-
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {featuredServices.length > 0 && (
               <section className="mb-20">
 =======
-
 
             {featuredServices.length > 0 && ("
               <section className="mb-20">"
@@ -623,8 +489,7 @@ export default function ServicesIndexPage() {}
                 </h2>"
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {featuredServices.map((service: Service, index: number) => (
-<<<<<<< HEAD
-                    <UltraFuturisticServiceCard2026
+<UltraFuturisticServiceCard2026
                       key={`${service.id |service.name}-${index}`}
                       service={service}
                       variant="quantum"
@@ -637,19 +502,11 @@ export default function ServicesIndexPage() {}
                       key={`${service.id || service.name}-${index}`}
                       service={service}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
                       key={`${service.id || service.name}-${index}`}
                       service={service}
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -661,34 +518,6 @@ export default function ServicesIndexPage() {}
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                      variant="quantum"
-                    />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-                      key={`${service.id || service.name}-${index}`}
-                      service={service}
-
-=======
-                      key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-                      variant="quantum"
-                    />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
                       variant="quantum"
                     />
@@ -717,23 +546,13 @@ export default function ServicesIndexPage() {}
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {latestServices.length > 0 && (
               <section className="mb-20">
 =======
-
-
 
             {latestServices.length > 0 && ("
               <section className="mb-20">"
@@ -743,32 +562,15 @@ export default function ServicesIndexPage() {}
                 </h2>"
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {latestServices.map((service: Service, index: number) => (
-<<<<<<< HEAD
-                    <UltraFuturisticServiceCard2026
-<<<<<<< HEAD
+<UltraFuturisticServiceCard2026
 <<<<<<< HEAD
                       key={`${service.id |service.name}-${index}`}
                       key={`${service.id || service.name}-${index}`}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
                       key={`${service.id || service.name}-${index}`}
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       service={service}
-=======
-                    <UltraFuturisticServiceCard2026;
-                      key={`${service.id || service.name}-${index}`}
-
-
-                      service={service}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       variant="ai"
                     />
                   ))}
@@ -777,55 +579,12 @@ export default function ServicesIndexPage() {}
             )}
             {/* Services by Category */}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-=======
-                      key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      variant="ai"
-                    />
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>;
-              </section>;
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-            {/* Services by Category */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <section className="mb-20">
 =======
 
@@ -836,9 +595,7 @@ export default function ServicesIndexPage() {}
                 Services by Category;
               </h2>"
               <div className="space-y-12">
-<<<<<<< HEAD
-                {categories.map((category) => {
-<<<<<<< HEAD
+{categories.map((category) => {
 <<<<<<< HEAD
 
                   return (
@@ -849,260 +606,8 @@ export default function ServicesIndexPage() {}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-import type { NextPage } from 'next',
-import Head from 'next / head',
-import UltraAdvancedFuturisticBackground from '../../components / ui / UltraAdvancedFuturisticBackground',
-import Card from '../../components / ui / Card',
-import Link from 'next / link',
-import { enhancedRealMicroSaasServices } from '../../data / enhanced - real - micro - saas - services',
-import { additionalEnhancedServices } from '../../data / additional - real - services',
-import { extra_services } from '../../data / extra - services',
-import { newlyAddedServices } from '../../data / newly - added - services',
-import { curatedMarketServices } from '../../data / curated - market - services',
-import { realMarketServices } from '../../data / real - market - services',
-import { new2025Services } from '../../data / new - 2025 - services',
-import { marketValidatedServices } from '../../data / market - validated - services',
-import { moreRealServices2025 } from '../../data / more - real - services - 2025',
-import { realOperationalServices } from '../../data / real - operational - services',
-import { verified2025Additions } from '../../data / verified - 2025 - additions',
-import { realServicesQ12025 } from '../../data / real - services - q1 - 2025';
-import { realEnterpriseServices2025 } from '../../data / real - enterprise - services - 2025',
-import { realMarketAugmentations2025 } from '../../data / real - market - augmentations - 2025',
-import { verifiedRealServices2025Batch2 } from '../../data / verified - real - services - 2025 - batch2',
-import { additionalLiveServices2025 } from '../../data / additional - live - services - 2025',
-import { real2025Q2Additions } from '../../data / real - 2025 - q2 - additions',
-import { augmentedServicesBatch3 } from '../../data / real - augmented - services - 2025 - batch3',
-import { realServicesQ22025 } from '../../data / real - services - q2 - 2025',
-import { realServicesQ32025 } from '../../data / real - services - q3 - 2025',
-import { realServicesQ42025 } from '../../data / real - services - q4 - 2025',
-// Define a common service interface;
-interface Service {
-  id?: string,
-  name: string,
-  description?: string,
-  price?: string,
-  category?: string,
-  popular?: boolean,
-launch_date?: string,
-  [key: string]: unknown, // Allow additional properties;
-}
-// Define a unified service interface;
-interface Service {
-  id: string,
-  name: string,
-  tagline: string,
-  description: string,
-  price: string,
-  category: string,
-  features: string[],
-  popular?: boolean,
-  icon?: string,
-link?: string;
-}
-// Sample services for now;
-const sample_services: Service[] = [;
-  {
-    id: 'ai - services',
-    name: 'AI & Machine Learning',
-    tagline: 'Advanced AI solutions for enterprise',
-    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
-    price: '$2, 999 / month',
-    category: 'AI',
-    features: ['Custom AI ModelsMLOps PipelineReal - time Analytics24 / 7 Support'],
-    popular: true,
-    link: '/ai - services';
-  },
-  {
-    id: 'quantum - computing',
-    name: 'Quantum Computing',
-    tagline: 'Next - generation quantum solutions',
-    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.',
-    price: '$9, 999 / month',
-    category: 'Quantum',
-    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'],
-    link: '/quantum - computing';
-  },
-  {
-    id: 'cybersecurity',
-    name: 'Cybersecurity',
-    tagline: 'Enterprise security solutions',
-    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
-price: '$1, 999 / month',
-    category: 'Security',
-    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
-    link: '/cybersecurity';
-  },
-  {
-    id: 'cloud - platform',
-    name: 'Cloud Platform',
-    tagline: 'Scalable cloud infrastructure',
-    description: 'Multi - cloud platform services with automated scaling and global deployment capabilities.',
-    price: '$1, 499 / month',
-    category: 'Cloud',
-    features: ['Multi - CloudAuto - scaling_global CDNDevOps Tools'],
-    link: '/cloud - platform';
-  },
-  {
-    id: 'space - technology',
-    name: 'Space Technology',
-    tagline: 'Innovative space solutions',
-    description: 'Cutting - edge space technology services for satellite operations and space missions.',
-    price: '$24, 999 / month',
-    category: 'Space',
-    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
-    link: '/space - tech';
-  }
-],
-export default /**
- * ServicesIndexPage - Function description
- */
-function ServicesIndexPage() {
-  const all = (enhancedRealMicroSaasServices as unknown[]);
-    .concat (
-      extra_services as unknown[],
-      additionalEnhancedServices as unknown[],
-      newlyAddedServices as unknown[],
-      curatedMarketServices as unknown[],
-      realMarketServices as unknown[],
-      new2025Services as unknown[],
-      marketValidatedServices as unknown[],
-      moreRealServices2025 as unknown[],
-      realOperationalServices as unknown[],
-      verified2025Additions as unknown[],
-      realServicesQ12025 as unknown[],
-      realEnterpriseServices2025 as unknown[],
-      realMarketAugmentations2025 as unknown[],
-      verifiedRealServices2025Batch2 as unknown[],
-      additionalLiveServices2025 as unknown[],
-      real2025Q2Additions as unknown[],
-      augmentedServicesBatch3 as unknown[],
-      realServicesQ22025 as unknown[],
-      realServicesQ32025 as unknown[],
-      realServicesQ42025 as unknown[]),
-    return acc;
-  }, {} as Record < string, Service[]>),
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
-        <title > Zion AI Marketplace - Services</title>;
-        <meta name="description" content="Discover curated IT services. Request quotes with AI - assisted summaries." />;
-      </Head>;
-      <div className="relative">;
-        <div className="absolute -z - 10 -top - 40 -left - 40 w - 96 h - 96 rounded - full blur - 3xl opacity - 40 bg - gradient - to - tr from - cyan - 400 via - blue - 500 to - purple - 500" />;
-        <div className="flex flex - col sm:flex - row gap - 6">;
-          <MarketplaceFilters available_categories={available_categories} value={filters} on_change={set_filters} />;
-          <div className="flex - 1">;
-            <div className="mb - 4 flex items - center justify - between">;
-              <h1 className="text - 2xl font - semibold text - white">Services</h1>;
-              <div className="text - sm text - white / 70">{filtered.length} results</div>;
-            </div>;
-            <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 5">;
-              {filtered.map ((service) => (
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
-            </div>;
-          </div>;
-        </section>;
-            {/* Featured Services */}
-            {featured_services.length > 0 && (
-              <section className="mb - 20">;
-                <h2 className="text - 3xl md:text - 4xl font - bold mb - 12 text - center bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                  Featured Services;
-                </h2>;
-                <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                  {featured_services.map ((service: Service, index: number) => (
-                    <UltraFuturisticServiceCard2026;
-                      key={`${service.id || service.name}-${index}`}
-                      service={service}
-                      variant="quantum";
-                    />))}
-                </div>;
-              </section>)}
-            {/* Latest Services */}
-            {latest_services.length > 0 && (
-              <section className="mb - 20">;
-                <h2 className="text - 3xl md:text - 4xl font - bold mb - 12 text - center bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
-                  Latest Services (2026);
-                </h2>;
-                <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                  {latest_services.map ((service: Service, index: number) => (
-                    <UltraFuturisticServiceCard2026;
-                      key={`${service.id || service.name}-${index}`}
-                      service={service}
-                      variant="ai";
-                    />))}
-                </div>;
-              </section>)}
-            {/* Services by Category */}
-            <section className="mb - 20">;
-              <h2 className="text - 3xl md: text - 4xl font - bold mb - 12 text - center bg - gradient - to - r from - green - 400 to - emerald - 500 bg - clip - text text - transparent">;
-                Services by Category;
-              </h2>;
-              <div className="space - y-12">;
-                {categories.map ((category) => {
-                  const category_services = servicesByCategory[category],
-                  // Check condition
-if (return null, ) {
-  $2
-}
-
-                  return (
-                    <div key={category} className="border border - gray - 800 rounded - 2xl p - 8 bg - black / 50 backdrop - blur - sm">;
-                      <h3 className="text - 2xl font - bold mb - 6 text - white flex items - center gap - 3">;
-                        <span className="text - 3xl">;
-                          {category === 'AI & Data' && '🧠'}
-                          {category === 'Developer Tools' && '⚙️'}
-                          {category === 'Cloud & FinOps' && '☁️'}
-                          {category === 'Observability' && '📊'}
-                          {category === 'Quality & Monitoring' && '🔍'}
-                          {category === 'Quantum Computing' && '⚛️'}
-                          {category === 'Space Technology' && '🚀'}
-                          {category === 'Metaverse' && '🌐'}
-                          {category === 'Cybersecurity' && '🛡️'}
-                          {category === 'Supply Chain' && '📦'}
-                          {category === 'Financial Services' && '💰'}
-                          {category === 'Healthcare' && '🏥'}
-                          {category === 'Manufacturing' && '🏭'}
-                          {category === 'Retail' && '🛍️'}
-                          {category === 'Education' && '📚'}
-                          {category === 'Government' && '🏛️'}
-                          {category === 'Energy' && '⚡'}
-                          {category === 'Transportation' && '🚗'}
-</span>;
-                        {category}
-
-
-                  const categoryServices = servicesByCategory[category],
-                  if (!categoryServices || categoryServices.length === 0) return null,
-
-                  return (
-                    <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
-                      <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-                        <span className="text-3xl">
-
-            <section className="mb-20">;
-              <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
-                Services by Category;
-              </h2>;
-              <div className="space-y-12">;
-                {categories.map((category) => {;
-                  const categoryServices = servicesByCategory[category];
-                  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-                        {category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
                 {categories.map((category) => {}
 "
@@ -1113,20 +618,10 @@ if (return null, ) {
                       </h3>"
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {categoryServices.slice(0, 6).map((service: Service, index: number) => (
-<<<<<<< HEAD
-                          <UltraFuturisticServiceCard2026
-<<<<<<< HEAD
+<UltraFuturisticServiceCard2026
 <<<<<<< HEAD
                             key={`${service.id |service.name}-${index}`}
                             key={`${service.id || service.name}-${index}`}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-=======
-                          <UltraFuturisticServiceCard2026;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <span className="px - 3 py - 1 bg - gradient - to - r from - gray - 700 to - gray - 800 rounded - full text - sm text - gray - 300">;
                           {category_services.length} services;
                         </span>;
@@ -1136,42 +631,8 @@ if (return null, ) {
                           <UltraFuturisticServiceCard2026;`
                             key={`${service.id || service.name}-${index}`}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             service={service}
-=======
-
-                            service={service}
-                            variant="default";
-                          />))}
-                      </div>;
-                      {category_services.length > 6 && (
-                        <div className="mt - 6 text - center">;
-                          <Link;
-                            href={`/services / category/${to_slug (category)}`}
-                            className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text - white font - medium rounded - lg transition - all duration - 300 hover:scale - 105";
-                          >;
-                            View All {category} Services;
-                            <svg className="ml - 2 w - 5 h - 5" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                              <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 5l7 7 - 7 7" />;
-                            </svg>;
-                          </Link>;
-                        </div>)}
-                    </div>);
-                })}
-
-
-                            key={`${service.id || service.name}-${index}`}
-
-                            service={service}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-                            service={service}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
 =======
@@ -1188,16 +649,8 @@ if (return null, ) {
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1211,31 +664,20 @@ if (return null, ) {
                       </div>
                       {categoryServices.length > 6 && ("
                         <div className="mt-6 text-center">
-<<<<<<< HEAD
-                          <Link
-<<<<<<< HEAD
+<Link
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             href={`/services/category/${toSlug(category)}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
                           <Link;`
                             href={`/services/category/${toSlug(category)}`  } catch (error) {"
@@ -1255,17 +697,8 @@ if (return null, ) {
                           </Link>
                         </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       )  } catch (error) {
     console.error("Error:", error);
-=======
-                      )  } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1284,26 +717,16 @@ if (return null, ) {
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <section className="text-center">
               <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
 =======
-
 
 "
             <section className="text-center">"
@@ -1313,27 +736,13 @@ if (return null, ) {
                   Need a Custom Solution?
                 </h2>"
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  Our team of experts can help you build custom solutions tailored to your specific needs.
+Our team of experts can help you build custom solutions tailored to your specific needs.
                   Our team of experts can help you build custom solutions tailored to your specific needs. 
                   Our team of experts can help you build custom solutions tailored to your specific needs.
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
-
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Let's discuss how we can transform your business with cutting-edge technology.
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1355,15 +764,8 @@ if (return null, ) {
           </div>
         </div>
       </UltraFuturisticBackground>
+{categories.map((cat) => (
 <<<<<<< HEAD
-        {categories.map((cat) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
 =======
         {categories.map((cat) => ("
@@ -1373,42 +775,17 @@ if (return null, ) {
               {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {}
                 const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string }'
                 const slug = service.link ? (() => { try { const u = new URL(service.link), const p = u.pathname.replace(/^\/+|\/+$/g, ''), return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id |service.name |'') } catch { return toSlug(service.id |service.name |'') } })() : toSlug(service.id |service.name |'')
+return (
 <<<<<<< HEAD
-                return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>
                     <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline |service.description}</p>
                     <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
                     <div className="flex gap-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-
-                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
-                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover: border-cyan-500/70">Learn</Link>
-                    </div>
-                  </Card>
-                )
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {featuredServices.length > 0 && (
             <section className="mb-20">
 =======
@@ -1418,7 +795,6 @@ if (return null, ) {
                     <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>"
                     <div className="flex gap-3">
 
-
           {featuredServices.length > 0 && ("
             <section className="mb-20">"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1427,8 +803,7 @@ if (return null, ) {
               </h2>"
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {featuredServices.map((service: Service, index: number) => (
-<<<<<<< HEAD
-                  <UltraFuturisticServiceCard2026
+<UltraFuturisticServiceCard2026
                     key={`${service.id |service.name}-${index}`}
                     service={service}
                     variant="quantum"
@@ -1441,25 +816,11 @@ if (return null, ) {
                     key={`${service.id || service.name}-${index}`}
                     service={service}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
                     key={`${service.id || service.name}-${index}`}
                     service={service}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
 =======
@@ -1479,16 +840,7 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1513,24 +865,14 @@ if (return null, ) {
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {latestServices.length > 0 && (
             <section className="mb-20">
 =======
-
-
 
           {latestServices.length > 0 && ("
             <section className="mb-20">"
@@ -1543,42 +885,17 @@ if (return null, ) {
                   <UltraFuturisticServiceCard2026;`
                     key={`${service.id || service.name}-${index}`}
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     service={service}
-=======
-                    service={service}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     variant="ai"
-
-=======
-                    service={service}
-                    variant="ai"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   />
                 ))}
               </div>
             </section>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-          {/* Services by Category */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-          {/* Services by Category */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
 =======
@@ -1615,214 +932,20 @@ if (return null, ) {
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <section className="mb-20">
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               Services by Category
             </h2>
             <div className="space-y-12">
               {categories.map((category) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-          <section className="mb-20">;
-            <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
-              Services by Category;
-            </h2>;
-            <div className="space-y-12">;
-              {categories.map((category) => {;
-                const categoryServices = servicesByCategory[category];
-                if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-                      {category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-  popular?: boolean;
-  icon?: string;
-  link?: string
-}
-// Sample services for now
-const sampleServices: Service[] = [
-  {
-    id: 'ai-services';
-    name: 'AI & Machine Learning';
-    tagline: 'Advanced AI solutions for enterprise';
-    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
-    price: '$2,999/month',
-    category: 'AI';
-    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'];
-    popular: true;
-    link: '/ai-services'
-  }
-  {
-    id: 'quantum-computing';
-    name: 'Quantum Computing';
-    tagline: 'Next-generation quantum solutions';
-    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.';
-    price: '$9,999/month',
-    category: 'Quantum';
-    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'];
-    link: '/quantum-computing'
-  }
-  {
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    tagline: 'Enterprise security solutions';
-    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.';
-    price: '$1,999/month',
-    category: 'Security';
-    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'];
-    link: '/cybersecurity'
-  }
-  {
-    id: 'cloud-platform';
-    name: 'Cloud Platform';
-    tagline: 'Scalable cloud infrastructure';
-    description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.';
-    price: '$1,499/month',
-    category: 'Cloud';
-    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'];
-    link: '/cloud-platform'
-  }
-  {
-    id: 'space-technology';
-    name: 'Space Technology';
-    tagline: 'Innovative space solutions';
-    description: 'Cutting-edge space technology services for satellite operations and space missions.';
-    price: '$24,999/month',
-    category: 'Space';
-    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'];
-    link: '/space-tech'
-  }
-]
-export default function ServicesIndexPage() {
-  const all = null;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-                return (
+return (
                   <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
                     <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
                       <span className="text-3xl">
-<<<<<<< HEAD
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-              </div>;
-            </section>;
-            {/* CTA Section */}
-            <section className="text - center">;
-              <div className="bg - gradient - to - r from - gray - 900 to - black border border - gray - 800 rounded - 2xl p - 12">;
-                <h2 className="text - 3xl md:text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                  Need a Custom Solution?;
-                </h2>;
-                <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
-                  Our team of experts can help you build custom solutions tailored to your specific needs.;
-                  Let's discuss how we can transform your business with cutting - edge technology.;
-                </p>;
-                <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                  <Link;
-                    href="/contact";
-                    className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 600 hover:from - cyan - 700 hover:to - blue - 700 text - white font - medium rounded - lg transition - all duration - 300 hover:scale - 105";
-                  >;
-                    Get Started;
-                  </Link>;
-                  <Link;
-                    href="/contact";
-                    className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - medium rounded - lg transition - all duration - 300 hover:scale - 105";
-                  >;
-                    Schedule Demo;
-                  </Link>;
-                </div>;
-              </div>;
-            </section>;
-          </div>;
-        </div>;
-      </UltraFuturisticBackground>;
-        {categories.map ((cat) => (
-          <section key={cat} id={anchor_map[cat] || to_slug (cat)}>;
-            <h2 className="text - 2xl md:text - 3xl font - semibold text - white mb - 4">{cat}</h2>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {by_category[cat].slice (0, (shown_counts[cat] ?? 12)).map ((s) => {
-                const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string },
-                const slug = service.link ? (() => { try { const u = new URL (service.link), const p = u.pathname.replace (/^\/+|\/+$/g, ''), return p.starts_with ('services/') ? p.substring ('services/'.length) : to_slug (service.id || service.name || '') } catch { return to_slug (service.id || service.name || '') } })() : to_slug (service.id || service.name || ''),
-                return (
-                  <Card key={service.id || service.name} className="p - 6 bg - black / 50 border border - gray - 700 / 60 hover:border - cyan - 500 / 50 transition - colors shadow - lg / 10">;
-                    <div className="text - sm text - gray - 400 mb - 1">{service.category || 'Service'}</div>;
-                    <h3 className="text - white text - xl font - semibold mb - 2">{service.name}</h3>;
-                    <p className="text - gray - 300 / 90 line - clamp - 3 mb - 3">{service.tagline || service.description}</p>;
-                    <div className="text - gray - 100 font - bold mb - 4">{service.price}<span className="text - sm text - gray - 400 font - medium">{service.period}</span></div>;
-                    <div className="flex gap - 3">;
-                      <Link href={service.link || `/${slug}`} className="px - 4 py - 2 rounded - lg bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium shadow - glow hover:shadow - glow - lg">View</Link>;
-                      <Link href={service.link || `/${slug}`} className="px - 4 py - 2 rounded - lg border border - gray - 600 text - gray - 200 hover: border - cyan - 500 / 70">Learn</Link>;
-                    </div>;
-                  </Card>);
-              })}
-            </div>;
-          </div>;
-          {/* Featured Services */}
-          {featured_services.length > 0 && (
-            <section className="mb - 20">;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 12 text - center bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                Featured Services;
-              </h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {featured_services.map ((service: Service, index: number) => (
-                  <UltraFuturisticServiceCard2026;
-                    key={`${service.id || service.name}-${index}`}
-                    service={service}
-                    variant="quantum";
-                  />))}
-              </div>;
-            </section>)}
-          {/* Latest Services */}
-          {latest_services.length > 0 && (
-            <section className="mb - 20">;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 12 text - center bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
-                Latest Services (2026);
-              </h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                {latest_services.map ((service: Service, index: number) => (
-                  <UltraFuturisticServiceCard2026;
-                    key={`${service.id || service.name}-${index}`}
-                    service={service}
-                    variant="ai";
-                  />))}
-              </div>;
-            </section>)}
-          {/* Services by Category */}
-          <section className="mb - 20">;
-            <h2 className="text - 3xl md: text - 4xl font - bold mb - 12 text - center bg - gradient - to - r from - green - 400 to - emerald - 500 bg - clip - text text - transparent">;
-              Services by Category;
-            </h2>;
-            <div className="space - y-12">;
-              {categories.map ((category) => {
-                const category_services = servicesByCategory[category],
-                // Check condition
-if (return null, ) {
-  $2
-}
-
-                return (
-                  <div key={category} className="border border - gray - 800 rounded - 2xl p - 8 bg - black / 50 backdrop - blur - sm">;
-                    <h3 className="text - 2xl font - bold mb - 6 text - white flex items - center gap - 3">;
-                      <span className="text - 3xl">;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         {category === 'AI & Data' && '🧠'}
                         {category === 'Developer Tools' && '⚙️'}
                         {category === 'Cloud & FinOps' && '☁️'}
@@ -1841,10 +964,8 @@ if (return null, ) {
                         {category === 'Government' && '🏛️'}
                         {category === 'Energy' && '⚡'}
                         {category === 'Transportation' && '🚗'}
-<<<<<<< HEAD
 </span>;
                       {category}
-
 
                 const categoryServices = servicesByCategory[category],
                 if (!categoryServices || categoryServices.length === 0) return null,
@@ -1856,18 +977,6 @@ if (return null, ) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <section className="mb-20">;
-=======
-
-"
-          <section className="mb-20">"
-            <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-              Services by Category;
-            </h2>"
-            <div className="space-y-12">
-              {categories.map((category) => {}
-"
-          <section className="mb-20">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
               Services by Category;
             </h2>;"
@@ -1881,48 +990,27 @@ if (return null, ) {
   }
 }
 
-<<<<<<< HEAD
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                      </span>
-                      {category}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
                         {categoryServices.length} services;
                       </span>
                     </h3>"
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {categoryServices.slice(0, 6).map((service: Service, index: number) => (
-<<<<<<< HEAD
-                        <UltraFuturisticServiceCard2026
-<<<<<<< HEAD
+<UltraFuturisticServiceCard2026
 <<<<<<< HEAD
                           key={`${service.id |service.name}-${index}`}
                           key={`${service.id || service.name}-${index}`}
                           service={service}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
                           key={`${service.id || service.name}-${index}`}
 
                           service={service}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
 =======
@@ -1943,17 +1031,8 @@ if (return null, ) {
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 "
@@ -1964,28 +1043,11 @@ if (return null, ) {
                     </div>
                     {categoryServices.length > 6 && ("
                       <div className="text-center mt-6">
+<Link
 <<<<<<< HEAD
-                        <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-                          href={`/services/category/${toSlug(category)}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
                         <Link;
 "
@@ -1995,42 +1057,17 @@ if (return null, ) {
                           View All {category} Services ({categoryServices.length})
                         </Link>
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    )}
+)}
 
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <div className="flex items-center justify-between mb-6">
                       <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
@@ -2080,22 +1117,11 @@ if (return null, ) {
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </p>
 =======
-
 
                     </p>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2104,55 +1130,6 @@ if (return null, ) {
                         <div key={featureIndex} className="flex items-center text-sm text-gray-400">"
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-                      <span className="text - sm text - gray - 400 bg - gray - 800 px - 3 py - 1 rounded - full">;
-                        {category_services.length} services;
-                      </span>;
-                    </h3>;
-                    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-                      {category_services.slice (0, 6).map ((service: Service, index: number) => (
-                        <UltraFuturisticServiceCard2026;
-                          key={`${service.id || service.name}-${index}`}
-                          service={service}
-                          variant="default";
-                        />))}
-                    </div>;
-                    {category_services.length > 6 && (
-                      <div className="text - center mt - 6">;
-                        <Link;
-                          href={`/services / category/${to_slug (category)}`}
-                          className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border border - cyan - 500 / 30 rounded - lg text - cyan - 300 hover:from - cyan - 500 / 30 hover:to - blue - 500 / 30 transition - all";
-                        >;
-                          View All {category} Services ({category_services.length});
-                        </Link>;
-                      </div>)}
-                    <div className="flex items - center justify - between mb - 6">;
-                      <div className="text - cyan - 400 group - hover:text - blue - 400 transition - colors duration - 300">;
-                        <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl flex items - center justify - center">;
-                          <span className="text - 2xl font - bold">{service.name.char_at (0)}</span>;
-                        </div>;
-                      </div>;
-                      <ArrowRight className="w - 5 h - 5 text - gray - 500 group - hover:text - cyan - 400 transition - colors duration - 300" />;
-                    </div>;
-                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300">;
-                      {service.name}
-                    </h3>;
-                    <p className="text - cyan - 400 text - sm mb - 4">;
-                      {service.tagline}
-                    </p>;
-                    <p className="text - gray - 300 mb - 6 leading - relaxed">;
-                      {service.description}
-                    </p>;
-                    <div className="space - y-2 mb - 6">;
-                      {service.features.slice (0, 3).map ((feature, feature_index) => (
-                        <div key={feature_index} className="flex items - center text - sm text - gray - 400">;
-                          <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2165,32 +1142,8 @@ if (return null, ) {
                         {service.price}
                       </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-          <section className="mb-20">;
-            <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
-              Services by Category;
-            </h2>;
-            <div className="space-y-12">;
-              {categories.map((category) => {;
-                const categoryServices = servicesByCategory[category];
-                if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-                      {category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
-
-
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2233,7 +1186,6 @@ if (return null, ) {
                         </Link>
                       </div>
 
-
                     )  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -2251,20 +1203,13 @@ if (return null, ) {
                     </div>"
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
 
-
-
-
                     </p>"
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, featureIndex) => ("
                         <div key={featureIndex} className="flex items-center text-sm text-gray-400">"
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 
-<<<<<<< HEAD
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2309,15 +1254,7 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
@@ -2325,23 +1262,8 @@ if (return null, ) {
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-        {/* Call to Action */}
-<<<<<<< HEAD
-=======
-        <section className="py - 20 px - 4">;
-          <div className="container mx - auto max - w-4xl text - center">;
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-        {/* Call to Action */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             )  } catch (error) {
     console.error("Error:", error);
 =======
@@ -2359,15 +1281,8 @@ if (return null, ) {
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="py-20 px-4">
 =======
 
@@ -2409,13 +1324,7 @@ if (return null, ) {
                 >
                   Get Started;
                 </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-              </div>
+</div>
             </motion.div>
           </div>
         </section>
@@ -2426,9 +1335,6 @@ if (return null, ) {
           <div className="container mx-auto max-w-4xl text-center">;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div;
@@ -2437,13 +1343,7 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-=======
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
@@ -2475,21 +1375,11 @@ if (return null, ) {
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-
-
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <QuoteRequestModal
-=======
-      <QuoteRequestModal;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
@@ -2497,23 +1387,7 @@ if (return null, ) {
       />
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2526,28 +1400,13 @@ if (return null, ) {
     </div>);
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
 
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               animate={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
 =======
-
 
               animate={{ opacity: 1, y: 0 }  } catch (error) {"
     console.error("Error:", error);"
@@ -2619,32 +1478,18 @@ if (return null, ) {
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 ;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-
-
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

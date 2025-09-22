@@ -33,4 +33,3 @@ export function SharedInbox() {;
           </button>;
         </div>;
       </CardContent>;
-

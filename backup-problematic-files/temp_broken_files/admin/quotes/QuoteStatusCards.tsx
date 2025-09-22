@@ -101,4 +101,3 @@ interface QuoteStatusCardsProps {_statusCounts: {
     responded: number;
     accepted: number;
 <<<<<<< HEAD
-

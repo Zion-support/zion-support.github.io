@@ -1,30 +1,18 @@
-<<<<<<< HEAD:src_backup/components/support/help-content.tsx
-<<<<<<< HEAD:src/components/support/help-content.tsx
+:src_backup/components/support/help-content.tsx
 <<<<<<< HEAD
 
 import React from "react",
 import { HelpCategory } from "./types",
 import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: "getting-started",
     name: "Getting Started",
     description: "Learn the basics of using the Zion AI Marketplace",
-<<<<<<< HEAD:src/components/support/help-content.tsx
+:src/components/support/help-content.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
     icon: <HelpCircle className = "h-6 w-6 text-zion-purple" />,    articles: [
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/support/help-content.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/support/help-content.tsx
 
     articles: [
@@ -180,10 +168,9 @@ export const HELP_CATEGORIES: HelpCategory[] = []
         lastUpdated: "2023-11-18","
         tags: ["mediation", "dispute", "resolution"]
       },
-<<<<<<< HEAD:src_backup/components/support/help-content.tsx
+:src_backup/components/support/help-content.tsx
       {
-<<<<<<< HEAD
-        id: "dispute-prevention",
+id: "dispute-prevention",
         title: "Tips for preventing disputes",
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
         lastUpdated: "2023-12-05",
@@ -218,16 +205,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\nUse the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.",;
         lastUpdated: "2023-12-01",;
         tags: ["navigation", "interface"];
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -299,13 +276,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ["portfolio", "projects", "showcase"];
       }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';
 =======
@@ -345,17 +315,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ];
   },;
-<<<<<<< HEAD:src_backup/components/support/help-content.tsx
+:src_backup/components/support/help-content.tsx
   {;
     id: 'getting-started',;
     name: 'Getting Started',,
   description: 'Learn the basics of using the Zion AI Marketplace',;
-=======
-  {;'
-    id: 'getting-started',;'
-    name: 'Getting Started',;'
-    description: 'Learn the basics of using the Zion AI Marketplace',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/help-content.tsx
     icon: <HelpCircle className='h-6 w-6 text-zion-purple' />,;
     articles: [;
       {;'
@@ -384,9 +348,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
       },;
     ],;
   },;
-<<<<<<< HEAD:src_backup/components/support/help-content.tsx
+:src_backup/components/support/help-content.tsx
   {;
-<<<<<<< HEAD:src/components/support/help-content.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -409,44 +372,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         lastUpdated: "2023-11-18",;
         tags: ["mediation", "dispute", "resolution"];
       },;
-=======
-    id: 'hiring',;
-    name: 'Hiring Process',,
-  description: 'How to find and hire talent on the platform',;
-    icon: <Briefcase className='h-6 w-6 text-zion-cyan' />,;
-    articles: [;
-      {;
-        id: 'post-job',;
-        title: 'Posting a job',;
-        content:;
-          "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.",;
-        lastUpdated: '2023-10-25',;
-        tags: ['job', 'hiring', 'recruitment'],;
-      },;
-      {;
-        id: 'ai-matching',;
-        title: 'Using AI matching',;
-        content:;
-          "Zion's AI matching system is designed to connect you with the perfect talent for your needs. Here's how to make the most of this feature:\n\n1. Ensure your job posting is detailed and specific\n2. Navigate to the 'AI Matcher' section from your dashboard\n3. Review the automatically generated list of compatible talent\n4. Use filters to refine your search based on skills, experience, or availability\n5. Click on profiles to view detailed information about each candidate\n6. Save promising matches for future reference or reach out directly\n\nOur AI system considers not just skills and experience, but also work style compatibility, communication preferences, and past project success to suggest optimal matches.",;
-        lastUpdated: '2023-11-05',;
-        tags: ['ai', 'matching', 'recruitment'],;      },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {;
 =======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD:src/components/support/help-content.tsx
-=======
-    id: "payments",;
-    name: "Payments",;
-    description: "Everything about payments and billing",;
-=======
-  {;"
-    id: "payments",;"
-    name: "Payments",;"
-    description: "Everything about payments and billing",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/help-content.tsx
+:src/components/support/help-content.tsx
     icon: <CreditCard className="h-6 w-6 text-zion-cyan" />,;
     articles: [;
       {;"
@@ -467,42 +395,23 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 
       },;
       {;
-<<<<<<< HEAD:src_backup/components/support/help-content.tsx
+:src_backup/components/support/help-content.tsx
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         id: "dispute-prevention",;
         title: "Tips for preventing disputes",;
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",;
         lastUpdated: "2023-12-05";
-=======
-"
-        id: "dispute-prevention",;"
-        title: "Tips for preventing disputes",;'"
-        content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",;"
-        lastUpdated: "2023-12-05";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/help-content.tsx
         tags: ["prevention", "best practices", "communication"];
       }
     ];
   }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ];
 
-<<<<<<< HEAD:src_backup/components/support/help-content.tsx
+:src_backup/components/support/help-content.tsx
 import React from 'react';
-=======
-
-'
-import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/help-content.tsx
 import { HelpCategory } from './types';
 import {}
   HelpCircle,
@@ -680,29 +589,10 @@ id: 'dispute - prevention','
       },
     ],
   },
-<<<<<<< HEAD:src_backup/components/support/help-content.tsx
-<<<<<<< HEAD
+:src_backup/components/support/help-content.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
-=======
-];
-
-import React from "react";
-import { HelpCategory } from "./types";
-import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
-
-export const HELP_CATEGORIES: HelpCategory[] = [
-  {
-    id: "getting-started";
-    name: "Getting Started";
-    description: "Learn the basics of using the Zion AI Marketplace";
-    icon: <HelpCircle className;
-<<<<<<< HEAD:src/components/support/help-content.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/support/help-content.tsx
 =======
 ];'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/support/help-content.tsx

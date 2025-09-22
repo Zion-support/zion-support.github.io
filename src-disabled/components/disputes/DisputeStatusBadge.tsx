@@ -1,21 +1,13 @@
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD:src/components/disputes/DisputeStatusBadge.tsx
+:src_backup/components/disputes/DisputeStatusBadge.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeStatusBadge.tsx
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
   Tooltip
   TooltipContent
   TooltipTrigger
 } from '@/components/ui/tooltip'
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
@@ -66,32 +58,20 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
-<<<<<<< HEAD:src/components/disputes/DisputeStatusBadge.tsx
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+:src/components/disputes/DisputeStatusBadge.tsx
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeStatusBadge.tsx
 status: 'open' | 'under_review' | 'resolved' | 'closed';
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD
+:src_backup/components/disputes/DisputeStatusBadge.tsx
 import { Badge } from "@/components/ui/badge",
 import { ShieldAlert } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
-=======
-=======
-status: 'open' | 'under_review' | 'resolved' | 'closed';
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx
 export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
   let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
     'destructive';
   let message = 'This item has an open dispute';
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx
+:src_backup/components/disputes/DisputeStatusBadge.tsx
 import { Badge } from '@/components / ui / badge';
 import { ShieldAlert } from 'lucide-react';
 import {
@@ -139,32 +119,8 @@ pr-12325
       break;
     default:;,
       break;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
+:src_backup/components/disputes/DisputeStatusBadge.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-interface DisputeStatusBadgeProps {
-  status: 'open' | 'under_review' | 'resolved' | 'closed''
-}
-export function DisputeStatusBadge({ status }:,  DisputeStatusBadgeProps) {
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive","
-  let message = "This item has an open dispute","
-  switch (status) {
-    case 'under_review':'
-      variant = "secondary","
-      message = "This dispute is under review by our team","
-      break,
-    case 'resolved':'
-      variant = "outline","
-      message = "This dispute has been resolved","
-      break,
-    case 'closed':'
-      variant = "outline","
-      message = "This dispute has been closed","
-
-import { Badge } from "@/components/ui/badge",
-import { ShieldAlert } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
@@ -207,24 +163,14 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       message = "This dispute has been closed","
 pr-12325
       break,
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx
+:src_backup/components/disputes/DisputeStatusBadge.tsx
     default:
       break
   }
-  
+
   return (
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
+:src_backup/components/disputes/DisputeStatusBadge.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Tooltip>
       <TooltipTrigger asChild>
         <Badge variant={variant} className="flex items-center gap-1">
@@ -234,12 +180,9 @@ pr-12325
       </TooltipTrigger>
       <TooltipContent>
         <p>{message}</p>
-<<<<<<< HEAD
-      </TooltipContent>
+</TooltipContent>
     </Tooltip>
   )
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -268,28 +211,14 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   }
 ;
   return (;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
-<<<<<<< HEAD
-          <span>Under Dispute</span>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-=======
+<span>Under Dispute</span>;
 
-<<<<<<< HEAD:src/components/disputes/DisputeStatusBadge.tsx
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeStatusBadge.tsx
 =======
   }
   return (
@@ -353,8 +282,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD:src/components/disputes/DisputeStatusBadge.tsx
+:src_backup/components/disputes/DisputeStatusBadge.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -362,34 +290,16 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   );
 }
 ;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/disputes/DisputeStatusBadge.tsx
-=======
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/disputes/DisputeStatusBadge.tsx
-
-
-
 
     </Tooltip>);
 }
       </TooltipContent>
     </Tooltip>
-<<<<<<< HEAD:src_backup/components/disputes/DisputeStatusBadge.tsx
-<<<<<<< HEAD:src/components/disputes/DisputeStatusBadge.tsx
+:src_backup/components/disputes/DisputeStatusBadge.tsx
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======

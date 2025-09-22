@@ -1,18 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/deployment-automation.cjs
-<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-
-=======
-
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:deployment-automation.cjs
 const { execSync } = require('child_process')
       "environments"
       "steps"
@@ -24,15 +15,9 @@ const { execSync } = require('child_process')
   console.log(' Deployment report "generated")
 
   console.error(' Deployment automation "failed")
-<<<<<<< HEAD:backup-problematic-files/deployment-automation.cjs
+:backup-problematic-files/deployment-automation.cjs
 
 #!/usr/bin/env node
-
-=======
-#!/usr/bin/env node;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process');
@@ -48,8 +33,7 @@ class DeploymentAutomation {
      {
         // Add production deployment logic here;
       } else {
-<<<<<<< HEAD
-        // Add environment-specific deployment logic here
+// Add environment-specific deployment logic here
       }
       return { "success": true, environment }} catch (error) {
       console.error('❌ Deployment "failed": ', error.message);
@@ -85,10 +69,6 @@ class DeploymentAutomation {
   async deploy() {
     console.log('🚀 Starting Deployment Automation...');
 <<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const steps = [
       { name: 'Build Application', command: 'npm run build' },
       { name: 'Run Tests', command: 'npm test -- --passWithNoTests' },
@@ -109,8 +89,6 @@ class DeploymentAutomation {
     }
   }
 }
-<<<<<<< HEAD
-
 const { execSync } = require('child_process')
       "environments"
       "steps"
@@ -120,34 +98,8 @@ const { execSync } = require('child_process')
       console.error(' Rollback "failed")
       "status"
   console.log(' Deployment report "generated")
-=======
-<<<<<<< HEAD
-  console.error(' Deployment automation "failed")
-// Run deployment automation
-deployApplication();
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  console.error(' Deployment automation "failed")
-  console.error(' Deployment automation "failed")
-  console.error(' Deployment automation "failed")
-#!/usr/bin/env node
-=======
-  // TODO: Implement
-        // Add environment-specific deployment logic here;
-
-    return report}
-// Run deployment automation;
-const deployment = new DeploymentAutomation;(;);
-deployment.generateDeploymentReport().then(report => {)
-  }).catch(error => {)
-
-    ];
-
-    for (const step of steps) {
-  // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Automated deployment process;
 function deployApplication() {
@@ -174,17 +126,11 @@ function deployApplication() {
       console.log(`⚠️  Deployment automation completed with ${errors.length} errors.`);
     return report;
 
-
-
 const deployment = new DeploymentAutomation();
 deployment.deploy().catch(console.error);
-<<<<<<< HEAD
 const deployment = new DeploymentAutomation();
 deployment.deploy().catch(console.error);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:deployment-automation.cjs
 =======
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

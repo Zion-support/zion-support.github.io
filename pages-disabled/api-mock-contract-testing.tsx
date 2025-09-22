@@ -1,16 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -27,9 +15,6 @@ class ErrorBoundary extends React.Component {}
   }
 }
 import React from 'react';
-
-
-
 
 '
 import Head from 'next / head';'
@@ -83,33 +68,22 @@ function ApiMockContractTestingPage() {}
 ;
   return (
 
-
-
 '
           href='https://ziontechgroup && ziontechgroup.com/api-mock-contract-testing'
         />;
       </Head>;'
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>;
 
-
-
-
         <ServiceAds'
           heading='API Quality Fast-Track''
           subheading='Mock, validate, and ship with confidence.'
           items={adItems}
-
-
-
 
         />;
 '
         <div className='max-w-5xl mx-auto mt-8'>;'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
             {tiers && tiers.map(t => (;
-
-
-
 
               <div;
                 key={t && t.name}'
@@ -131,19 +105,11 @@ function ApiMockContractTestingPage() {}
                 </ul>;
               </div>;
 
-
             ))}
 
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',
 import Head from 'next/head';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
@@ -169,33 +135,27 @@ export default function ApiMockContractTestingPage() {}
     mobile: '+1 302 464 0950''
     email: 'kleber@ziontechgroup.com''
     address: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
-    
+
     return this.props.children;
   }
 }'
@@ -208,7 +168,6 @@ import ServiceAds from '../components / sections / ServiceAds';
 export default /**;
  * ApiMockContractTestingPage - Function description;
  */
-<<<<<<< HEAD
 function ApiMockContractTestingPage() {
   const contact_info = {
     mobile: '+1 302 464 0950',
@@ -220,21 +179,11 @@ function ApiMockContractTestingPage() {
   const adItems = [
     {
 <<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       title: '🧪 API Mock & Contract Testing Platform'
       description:
         'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
       price: 'Starting at $69/month'
       features: [
-
-=======
-=======
-    website: 'https://ziontechgroup.com',  }
-;
-  const ad_items = [;
-    {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         'OpenAPI/GraphQL import and live mock server'
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
         'Dynamic data generators and scenario templates'
@@ -265,10 +214,7 @@ function ApiMockContractTestingPage() {}
       link: 'https://ziontechgroup.com/api-mock-contract-testing',;
       contactInfo,;
     },;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ];
   const tiers = []
     {'
@@ -287,25 +233,11 @@ function ApiMockContractTestingPage() {}
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
     },  ];
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import Head from 'next/head';
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-=======
-'
-import React from 'react';'
-import Head from 'next/head';'
-import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';'
-import Layout from '../components/layout/Layout';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ServiceAds from '../components/sections/ServiceAds';
 export default function ApiMockContractTestingPage(req, res) {}
   try {};
@@ -356,7 +288,6 @@ export default function ApiMockContractTestingPage(req, res) {}
   ];
 ;
   const tiers = [;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },  ];
 ;
@@ -367,8 +298,7 @@ export default function ApiMockContractTestingPage(req, res) {}
         <title>API Mock & Contract Testing | Zion Tech Group</title>"
         <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />"
         <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
-<<<<<<< HEAD
-      </Head>
+</Head>
 <<<<<<< HEAD
 
                 </ul>
@@ -377,37 +307,14 @@ export default function ApiMockContractTestingPage(req, res) {}
           </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-    },  ];
-;
-=======
-import React from 'react',
-import Head from 'next/head';
-  const contactInfo = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
         <title>API Mock & Contract Testing | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
+<meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
         <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
-=======
-<meta
-          name='description'
-          content='OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals.'
-        />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/api-mock-contract-testing'
-        />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      </Head>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds'
           heading='API Quality Fast-Track''
@@ -425,45 +332,18 @@ import Head from 'next/head';
                 </div>;'
                 <ul className='space-y-2 text-gray-300 text-sm'>;
                   {t && t.items.map(i => (;
-<<<<<<< HEAD
-                    <li
+<li
                       key={i}
-<<<<<<< HEAD
-                      className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
+className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
                       <Check /> <span>{i}</span>;
                     </li>                  ))}
           </div>
           <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
-=======
-<<<<<<< HEAD
-                      className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
-                      <Check /> <span>{i}</span>;
-                    </li>                  ))}
-=======
-                      className='flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400'
-                    >
-                      <Check /> <span>{i}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
 <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>
-=======
-                    <li;
-                      key={i}'
-                      className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
-                      <Check /> <span>{i}</span>;
-                    </li>                  ))}
-          </div>'
-          <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>'
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className='flex items-center justify-center gap-2 text-cyan-400 w-4 h-4'>
                 <Phone />
                 <span>{contactInfo.mobile}</span>
@@ -476,8 +356,6 @@ import Head from 'next/head';
                 <MapPin />
                 <span>{contactInfo.address}</span>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
@@ -507,25 +385,13 @@ import Head from 'next/head';
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
 "
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
-<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          </div>
-
-          <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
               <div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
@@ -539,64 +405,28 @@ import Head from 'next/head';
             </div>"
             <div className="text-center">
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
 "
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
 
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 <<<<<<< HEAD
-=======
-              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
-            </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
             </div>
-<<<<<<< HEAD
-=======
-            <div className='text-center'>
-              <a
-                href='/contact'
-                className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'
-              >
-                Book a Demo
-              </a>
-            </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
             </div>
-
-
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
@@ -604,24 +434,12 @@ import Head from 'next/head';
       </div>
     </Layout>
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -712,23 +530,11 @@ import Head from 'next/head';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          </div>;
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 Book a Demo;
@@ -737,31 +543,13 @@ import Head from 'next/head';
         </div>;
       </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
 
 }
 
-
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
-
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
@@ -770,21 +558,12 @@ import Head from 'next/head';
     </Layout>);
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
 
 ;
-
 
   )
 }
@@ -801,32 +580,15 @@ import Head from 'next/head';
 }
 ;
 
-
-
-
-
 ;
 
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
-
-
-=======
-);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

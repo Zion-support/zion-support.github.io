@@ -1,5 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:src_backup/components/Sidebar.tsx
+:src_backup/components/Sidebar.tsx
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
@@ -58,10 +58,6 @@ import { X } from 'lucide-react';
               </Link>
             </li>
           </ul>
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/Sidebar.tsx
 interface SidebarProps {
   isOpen: boolean;,
   onClose: () => void;

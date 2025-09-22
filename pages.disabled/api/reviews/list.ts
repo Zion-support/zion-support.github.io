@@ -1,74 +1,28 @@
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
+:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages/api/reviews/list.ts
 
 <<<<<<< HEAD
-=======
-}
-
-
-
-    }
-
-    if (targetType !== 'talent' && targetType !== 'client') {
-      return res.status(400).json({ error: 'Invalid targetType' })
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readReviews, readProjects } from '../../../utils/dataStore';
-import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
-import { TALENT_PROFILES } from '../../../data/talent';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-  try {;
-    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readReviews, readProjects } from "../../../utils/dataStore";
 import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
 import { TALENT_PROFILES } from "../../../data/talent";
 export default async function handler(
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
+:pages_backup/api/reviews/list.ts
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
-  try {
-    const { targetType, targetId } = req.query as {
-      targetType?: string;
-      targetId?: string;
-    };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
-
 
     }
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
+:pages_backup/api/reviews/list.ts
 
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { readReviews, readProjects } from '../../../utils/dataStore';
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
 import { TALENT_PROFILES } from '../../../data/talent';
@@ -79,47 +33,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {;
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readReviews, readProjects } from "../../../utils/dataStore";
-import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
-import { TALENT_PROFILES } from "../../../data/talent";
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
-  try {
-    const { targetType, targetId } = req.query as {
-      targetType?: string;
-      targetId?: string;
-<<<<<<< HEAD
-    }
-
-      return res.status(400).json({ error: "Missing targetType or targetId" });
-    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
-=======
-    };
->>>>>>> main
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!targetType || !targetId) {
-=======
-
-
-    if (!targetType || !targetId) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
       return res.status(400).json({ error: "Missing targetType or targetId" });
     }"
     if (targetType !== "talent" && targetType !== "client") {"
       return res.status(400).json({ error: "Invalid targetType" });
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
+:pages_backup/api/reviews/list.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
@@ -135,14 +57,9 @@ export default async function handler(
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
 
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
+:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages/api/reviews/list.ts
 <<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
@@ -150,13 +67,6 @@ origin/cursor/automate-test-improve-and-merge-code-382a
       const matchesTarget =
         r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/api/reviews/list.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
@@ -175,21 +85,11 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     const filtered = all.filter((r) => {
 
       if (r.removed || !r.approved) return false;
-<<<<<<< HEAD
-      const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
+const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
 
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/api/reviews/list.ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      const matchesTarget =
-        r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -205,8 +105,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           x && x.toRole !== r && r.toRole &&
           x && x.approved &&
           !x && x.removed,
-
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_reviews, read_projects  } from '../../../utils / data_store';
@@ -260,54 +158,21 @@ if (return false) {
           x.from_role !== r.from_role &&;
           x.to_role !== r.to_role &&;
           x.approved &&;
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/api/reviews/list.ts
           !x.removed,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-    }
-
-    const all = await readReviews();
-    // Include reviews where both sides have submitted and both are approved and not removed;
-    const filtered = all && all.filter((r) => {}
-      if (r && r.removed || !r && r.approved) return false;
-
-      const matchesTarget ="
-        r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
-
-    const filtered = all.filter((r) => {}
-      if (r.removed || !r.approved) return false;
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
-=======
-          !x.removed
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       );
       return counterpart_exists;
     });
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-  try {
+try {
     const { targetType, targetId } = req.query as {
       targetType?: string;
       targetId?: string;
     };
 >>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-      );
-      return counterpart_exists;
-    });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
           !x.removed
 origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -317,11 +182,9 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     });
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
 
-
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
           !x.removed,
       );
@@ -382,8 +245,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (!targetType || !targetId) {
 =======
 
-
-
     if (!targetType || !targetId) {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
       return res.status(400).json({ error: "Missing targetType or targetId" });
@@ -392,20 +253,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       return res.status(400).json({ error: "Invalid targetType" });
     }
 
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
+:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages_backup/api/reviews/list.ts
 
 <<<<<<< HEAD:pages/api/reviews/list.ts
 <<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-    const all = await readReviews();
-    // Include reviews where both sides have submitted and both are approved and not removed
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
 try {
 =======
     const all = await readReviews();
@@ -437,9 +289,8 @@ const { targetType, targetId } = req.query as {}
     }
 
     const all = await readReviews();
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
+:pages_backup/api/reviews/list.ts
     // Include reviews where both sides have submitted and both are approved and not removed
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
     const filtered = all.filter((r) => {
@@ -456,21 +307,6 @@ const { targetType, targetId } = req.query as {}
           x.toRole !== r.toRole &&
           x.approved &&
           !x.removed,
-=======
-      const matchesTarget =
-        r.toRole === (targetType as "talent" | "client") && r.toId === targetId;
-      if (!matchesTarget) return false;
-      const counterpartExists = all && all.some(
-        (x) =>
-          x.projectId === r.projectId &&
-          x.fromRole !== r.fromRole &&
-          x.toRole !== r.toRole &&
-          x.approved &&
-          !x.removed,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    // Include reviews where both sides have submitted and both are approved and not removed;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
       );
       return counterpart_exists;
     });
@@ -493,7 +329,6 @@ const { targetType, targetId } = req.query as {}
           authorName,
         };
       });
-
 
 =======
 =======
@@ -553,7 +388,6 @@ const matchesTarget =
         };
       });
 
-
 !x.removed
       );
       return counterpartExists;
@@ -578,13 +412,9 @@ const matchesTarget =
       });
 origin/cursor/automate-test-improve-and-merge-code-2533
     const totalReviews = publicReviews.length;
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
+:pages_backup/api/reviews/list.ts
     const averageRating = totalReviews
 ? Math.round(
-=======
-    const averageRating = totalReviews;
-      ? Math.round(
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
           (publicReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews) *
             10,
         ) / 10;
@@ -606,44 +436,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     };
 
     return res.status(200).json({ summary, reviews: publicReviews });
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
+:pages_backup/api/reviews/list.ts
   } catch (error: any) {
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/api/reviews/list.ts
 <<<<<<< HEAD
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
 =======
 
-      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
 =======
 
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
-
 
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
 
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
       .map((r) => {
@@ -659,34 +473,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           authorName = t ? t && t.name : r && r.fromId;
         }"
         if (r && r.anonymous) authorName = "Anonymous";
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
+:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages/api/reviews/list.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
 
-
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
+:pages_backup/api/reviews/list.ts
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
-=======
-
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
-
-
 
     const summary: ReviewsSummary = {
       average_rating;
@@ -719,14 +520,9 @@ if (author_name = "Anonymous") {}
 
       });
     const totalReviews = publicReviews && publicReviews.length;
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
+:pages_backup/api/reviews/list.ts
     const averageRating = totalReviews;
         ) / 10;
-=======
-    const averageRating = totalReviews
-
-        ) / 10
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
       : 0;
     const projects = await readProjects();
     const totalCompletedProjects = projects && projects.filter(
@@ -737,21 +533,12 @@ if (author_name = "Anonymous") {}
           (targetType === "client" && p && p.clientId === targetId)),
     ).length;
 
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
+:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages/api/reviews/list.ts
-=======
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
           author_name,
 =======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 author_name
-
 
           author_name,
 
@@ -777,23 +564,14 @@ author_name
           (target_type === "client" && p.client_id === target_id)),
     ).length;
 ;
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
+:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages/api/reviews/list.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 <<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const summary: ReviewsSummary = {
 =======
-
-
-
-
 
     const summary: ReviewsSummary = {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
@@ -818,89 +596,47 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
       average_rating
       total_reviews
       totalCompletedProjects
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
+:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages/api/reviews/list.ts
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
-=======
-
-most_recent: public_reviews.slice (0, 5),
-    }
-;
-    return res.status (200).json ({ summary, reviews: public_reviews });
-  } catch (error: any) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
-
-
 
   } catch (error: any) {}
     return res;
       .status (500);"
       .json ({ error: "Internal server error", details: error?.message });
   }
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
+:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages/api/reviews/list.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  } catch (error) {
+} catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
-
 
   }
 }
 ursor/fix-website-loading-errors-and-merge-6662
 
-
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
 =======
 
-
-
 }
-
-
-
 
   }
 }
@@ -908,22 +644,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
 =======
 
-
   }
 }
 ursor/fix-website-loading-errors-and-merge-6662
 
-
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
-
-
-
   }
 }
-
-
 
 }
 
@@ -937,19 +666,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   }
 }
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  } catch (error) {
+:pages_backup/api/reviews/list.ts
+} catch (error) {
     console.error("Error:", error);
-=======
-
-
-  } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -968,8 +687,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       .status(500)"
       .json({ error: "Internal server error", details: error?.message });
   }
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
-<<<<<<< HEAD
+:pages_backup/api/reviews/list.ts
 <<<<<<< HEAD:pages/api/reviews/list.ts
 <<<<<<< HEAD
 }
@@ -978,15 +696,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -997,25 +708,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 
-
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api/reviews/list.ts
 
-
-
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD:pages_backup/api/reviews/list.ts
+:pages_backup/api/reviews/list.ts
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/reviews/list.ts
 =======
-
-
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/reviews/list.ts
-=======
-
-
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

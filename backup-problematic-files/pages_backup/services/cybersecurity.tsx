@@ -1,264 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup/services/cybersecurity.tsx
 import React from 'react';
 import Layout from "../../components/Layout";";
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Layout from "../../components/Layout";";
-import {motion} from 'framer-motion';
-import Layout from '../../components/Layout';
-import {Eye,, Shield,, Lock,, AlertTriangle} from 'lucide-react';
-export default function CybersecurityPage() {;
-  const securityServices = [;
-    {}
-      title: "Security Assessment",",
-  description: "Comprehensive security evaluation of your systems",";
-      icon: Eye,;
-      features: ["Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]";
-    },;
-    {}
-      title: "Threat Protection",",
-  description: "Advanced threat detection and prevention systems",";
-      icon: Shield,;
-      features: ["Real-time Monitoring", "AI-Powered Detection", "Incident Response"]";
-    },;
-    {}
-      title: "Data Encryption",",
-  description: "End-to-end encryption for sensitive data",";
-      icon: Lock,;
-      features: ["Data at Rest", "Data in Transit", "Key Management"]";
-    },;
-    {}
-      title: "Compliance",",
-  description: "Ensure compliance with industry standards",";
-      icon: AlertTriangle,;
-      features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]";
-    }
-;  ];
-  return (
-    <Layout)
-      title="Cybersecurity Services - Zion Tech Group""
-      description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."">;
-      <div className="min-h-screen bg-gray-50">";
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">";
-          <div className="container mx-auto px-4">";
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cybersecurity Services,;
-              </h1>;
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
-                Protect your business with our comprehensive cybersecurity solutions. ;
-                Stay ahead of threats with advanced security measures and expert support.;
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-        {/* Services Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
-              {securityServices && securityServices.map((service, index) => {}
-                const IconComponent = service && service.icon;
-                return (
-                  <motion&& motion.div)
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>,;
-                    <div className="text-red-600 mb-4">";
-                      <IconComponent className="w-10 h-10" />";
-                    </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
-                      {service && service.title}
-                    </h3>,;
-                    <p className="text-gray-600 mb-4">";
-                      {service && service.description}
-                    </p>,;
-                    <ul className="space-y-2">";
-                      {service && service.features.map((feature, featureIndex) => (,;
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
-                          {feature}
-                        </li>,;
-                      ))}
-                    </ul>,;
-                  </motion && motion.div>;
-                );
-              })}
-            </div>,;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-white">";
-          <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Secure Your Business Today,;
-            </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Don't wait for a security breach. Let our experts help you build a robust security framework.';
-            </p>;
-            <motion&& motion.a
-              href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-              whileHover={{ scale: 1 && 1.05 }}>,;
-              Get Security Assessment;
-              <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion && motion.a>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-import Layout from '../../components/Layout';
-  return (
-    <Layout
-      title="Cybersecurity Services - Zion Tech Group"
-      description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
-      keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
-      <div className="min-h-screen bg-white">;
-        {/* Hero Section */}
-import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
-export default function CybersecurityPage() {;
-  const securityServices = [;
-    {}
-      title: "Security Assessment",",
-  description: "Comprehensive security evaluation of your systems",";
-      icon: Eye,;
-      features: ["Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]";
-    },;
-    {}
-      title: "Threat Protection",",
-  description: "Advanced threat detection and prevention systems",";
-      icon: Shield,;
-      features: ["Real-time Monitoring", "AI-Powered Detection", "Incident Response"]";
-    },;
-    {}
-      title: "Data Encryption",",
-  description: "End-to-end encryption for sensitive data",";
-      icon: Lock,;
-      features: ["Data at Rest", "Data in Transit", "Key Management"]";
-    },;
-    {}
-      title: "Compliance",",
-  description: "Ensure compliance with industry standards",";
-      icon: AlertTriangle,;
-      features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]";
-    }
-;  ];
-  return (
-    <Layout)
-      title="Cybersecurity Services - Zion Tech Group""
-      description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."">;
-      <div className="min-h-screen bg-gray-50">";
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">";
-          <div className="container mx-auto px-4">";
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                Cybersecurity Services;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                Protect your business with our comprehensive cybersecurity solutions. ;
-                Stay ahead of threats with advanced security measures and expert support.;
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-        {/* Services Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {securityServices && securityServices.map((service, index) => {}
-                const IconComponent = service && service.icon;
-                return (
-                  <motion&& motion.div)
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>,;
-                    <div className="text-red-600 mb-4">";
-                      <IconComponent className="w-10 h-10" />";
-                    </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
-                      {service && service.title}
-                    </h3>,;
-                    <p className="text-gray-600 mb-4">";
-                      {service && service.description}
-                    </p>,;
-                    <ul className="space-y-2">";
-                      {service && service.features.map((feature, featureIndex) => (,;
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
-                          {feature}
-                        </li>,;
-                      ))}
-                    </ul>,;
-                  </motion && motion.div>;
-                );
-              })}
-            </div>,;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-white">";
-          <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Secure Your Business Today;
-            </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Don't wait for a security breach. Let our experts help you build a robust security framework.';
-            </p>;
-            <motion&& motion.a
-              href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold""
-              whileHover={{ scale: 1 && 1.05 }}>,;
-              Get Security Assessment;
-              <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion && motion.a>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-import Layout from '../../components/Layout';
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-import Layout from "../../components/Layout";";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import React from 'react';
-import Layout from "../../components/Layout";";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
@@ -477,11 +219,7 @@ export default function CybersecurityPage() {;
                 Cybersecurity Services;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-<<<<<<< HEAD
-                Protect your business with our comprehensive cybersecurity solutions.
-=======
-                Protect your business with our comprehensive cybersecurity solutions. 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+Protect your business with our comprehensive cybersecurity solutions.
                 Stay ahead of threats with advanced security measures and expert support.;
               </p>;
             </motion.div>;
@@ -607,22 +345,14 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cybersecurity.tsx
-=======
-import * as React from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const securityServices = [
-<<<<<<< HEAD
-  {
+{
     title: "Security Assessment",
     description: "Comprehensive security evaluation of your systems",
     icon: Eye,
@@ -651,11 +381,7 @@ const securityServices = [
     pricing: "$500 - $2,000/month"
   }
 ];
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cybersecurity.tsx
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  {
+{
     title: "Security Assessment",
     description: "Comprehensive security evaluation of your systems",
     icon: Eye,
@@ -695,15 +421,8 @@ const benefits = [
 ];
 export default function CybersecurityServices() {
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function CybersecurityPage() {
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cybersecurity.tsx
-=======
-
-export default function CybersecurityPage() {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default function CybersecurityPage() {
   return (
@@ -714,8 +433,7 @@ export default function CybersecurityPage() {
       </Head>
 
       <div className="min-h-screen bg-gray-50">
-<<<<<<< HEAD
-        {/* Hero Section */}
+{/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -732,11 +450,7 @@ export default function CybersecurityPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cybersecurity.tsx
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        {/* Hero Section */}
+{/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -772,12 +486,6 @@ export default function CybersecurityPage() {
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cybersecurity.tsx
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -790,17 +498,12 @@ export default function CybersecurityPage() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
-<<<<<<< HEAD
-                  </div>
+</div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="space-y-2 mb-4">
@@ -820,47 +523,11 @@ export default function CybersecurityPage() {
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </motion.div>
-=======
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="space-y-2 mb-4">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</div>
-                  <Link
-                    href="/contact"
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    Get Quote
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </motion.div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cybersecurity.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        {/* Benefits Section */}
+{/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -880,9 +547,6 @@ export default function CybersecurityPage() {
                     </li>
                   ))}
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">
@@ -899,11 +563,6 @@ export default function CybersecurityPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cybersecurity.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
@@ -938,149 +597,14 @@ export default function CybersecurityPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cybersecurity.tsx
-    </Layout>
+</Layout>
     </Layout>
     </>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cybersecurity.tsx
     </>
   );
 }
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </Layout>
     </Layout>
     </>
     </>
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  );
-}
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
-export default function CybersecurityPage() {
-  const securityServices = [;
-    {}
-      title: "Security Assessment";,"
-      description: "Comprehensive security evaluation of your systems";,"
-      icon: Eye;,
-      features: ["Vulnerability Scanning";, "Penetration Testing", "Risk Analysis"]"
-    },
-    {}
-      title: "Threat Protection";,"
-      description: "Advanced threat detection and prevention systems";,"
-      icon: Shield;,
-      features: ["Real-time Monitoring";, "AI-Powered Detection", "Incident Response"]"
-    },
-    {}
-      title: "Data Encryption";,"
-      description: "End-to-end encryption for sensitive data";,"
-      icon: Lock;,
-      features: ["Data at Rest";, "Data in Transit", "Key Management"]"
-    },
-    {}
-      title: "Compliance";,"
-      description: "Ensure compliance with industry standards";,"
-      icon: AlertTriangle;,
-      features: ["GDPR";, "HIPAA", "SOC 2", "ISO 27001"]"
-    }
-;  ];
-  return (;
-    <Layout );
-      title="Cybersecurity Services - Zion Tech Group"";
-      description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."";
-    ;
-    <Layout;"
-      title="Cybersecurity Services - Zion Tech Group"""
-      description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."""
-      keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;"
-      <div className="min-h-screen bg-white">;"
-    <Layout)"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";"
-
-
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";"
-              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"""
-
-    <Layout );"
-      title="Cybersecurity Services - Zion Tech Group"";""
-      description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."";"
-pr-12325
-    >;
-        <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">""
-            <motion.div;
-              transition={{ duration: 0.8 ;}}"
-              className="text-center"""
-            </motion.div>;
-        <section className="py-20">""
-                  <motion.div);
-                    transition={{ duration: 0.8;, delay: index * 0.1 ;}}
-                    viewport={{ once: true ;}}
-                  >,
-
-                    </h3>,"
-                    </p>,"
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">""
-
-                        </li>,
-                    </ul>,
-            </div>,
-        <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-white">""
-            <motion.a;"
-              href="/contact"";""
-              className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";"
-              whileHover={{ scale: 1.05 ;}}
-
-            </motion.a>;
-    ;"
-        <section className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            <div className="text-center">"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-              </h1>"
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">"
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
-</button>
-                </button>"
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">"
-        <section className="py-20 bg-gray-50">"
-            <div className="text-center mb-16">"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
-              </h2>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">"
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">"
-                    <feature.icon className="w-6 h-6 text-red-600" />"
-</feature>"
-        <section className="py-16 px-4">;"
-          <div className="max-w-7xl mx-auto">;"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;"
-                  key={index}
-                  initial={{ opacity: 0;, y: 20 ;}}
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">"
-                  </h3>"
-                  <p className="text-gray-600">"
-        <section className="py-20">;"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;"
-              <div>;
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;"
-                <p className="text-xl text-gray-600 mb-8">;"
-                </p>;"
-                <ul className="space-y-4">;"
-                    <li key={index} className="flex items-start">;"
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;"
-                      <span className="text-gray-700">{benefit}</span>;"
-                    </li>;
-    
-    
-    </>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,16 +1,6 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -20,14 +10,7 @@ import {Badge} from "@/components/ui/badge";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -37,19 +20,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { Badge } from "@/components/ui/badge",
@@ -59,39 +34,19 @@ export function RecentActivity() {
 
   const activities = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      id: "act-1"
+id: "act-1"
       user: "Michael Chen"
       action: "posted a new job"
       target: "Senior React Developer"
       timestamp: "1h ago"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       type: "job";
@@ -99,11 +54,8 @@ export function RecentActivity() {
       type: "job"
     }
     },
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 import React from "react",";
@@ -129,8 +81,6 @@ export function RecentActivity() {};
     }
     },
 
-
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
@@ -140,38 +90,7 @@ export function RecentActivity() {};
       target: "5 candidates for UI/UX Designer"
       timestamp: "3h ago"
       type: "candidate"
-<<<<<<< HEAD
 
-=======
-    }
-    },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-    },
-=======
-
-    {"
-      id: "act-2""
-      user: "Sarah Wilson""
-      action: "shortlisted""
-      target: "5 candidates for UI/UX Designer""
-      timestamp: "3h ago""
-      type: "candidate"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-
-    }
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       id: "act-3"
@@ -180,33 +99,10 @@ export function RecentActivity() {};
       target: "Alex Morgan"
       timestamp: "Yesterday"
       type: "interview"
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-    },
-=======
-    {"
-      id: "act-3""
-      user: "David Johnson""
-      action: "scheduled an interview with""
-      target: "Alex Morgan""
-      timestamp: "Yesterday""
-      type: "interview"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-<<<<<<< HEAD
-
-    }
+}
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { Badge } from "@/components/ui/badge",      id: "act-1",
@@ -259,18 +155,7 @@ type: "job";
 
 },
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { Badge } from "@/components/ui/badge",      id: "act-1",
-      user: "Michael Chen",
-      action: "posted a new job",
-      target: "Senior React Developer",
-      timestamp: "1h ago",      type: "job"
-    }
-    },
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       id: "act-4"
       user: "Emily Davis"
@@ -281,34 +166,11 @@ import { Badge } from "@/components/ui/badge",      id: "act-1",
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-=======
-
-  ],
-
-
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
   ],
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
 
@@ -351,34 +213,17 @@ import {Badge} from "@/components/ui/badge";
         return <Badge variant="outline">Activity</Badge>
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   },
-=======
-    }
-    },
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-  }
+}
   },
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   },
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -408,8 +253,6 @@ import {Badge} from "@/components/ui/badge";
                     {getBadgeForType(activity.type)}"
                     <span className="text-xs text-muted-foreground">{activity.timestamp}</span>
 
-
-
 import React from "react";""
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Badge} from "@/components/ui/badge";""
@@ -438,7 +281,6 @@ export function RecentActivity() {
     }
     },
 
-
     {"
       id: "act-2"","
   user: "Sarah Wilson"""
@@ -448,7 +290,6 @@ export function RecentActivity() {
   type: "candidate""
     },
 
-
     {"
       id: "act-3"","
   user: "David Johnson"""
@@ -457,7 +298,6 @@ export function RecentActivity() {
       timestamp: "Yesterday"","
   type: "interview""
     },
-
 
     {"
       id: "act-4"","
@@ -522,30 +362,7 @@ import {Badge} from "@/components/ui/badge";"
     </Card>
   )
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-"
-import React from "react",;"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
-import { Badge } from "@/components/ui/badge",;
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -600,25 +417,14 @@ export function RecentActivity() {;
       target: "Alex Morgan",;
       timestamp: "Yesterday",;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       type: "interview";
 <<<<<<< HEAD
 <<<<<<< HEAD
     };
 =======
-    },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
       type: "interview";
     };
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-},;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     {;
       id: "act-4",;
       user: "Emily Davis",;
@@ -628,31 +434,16 @@ export function RecentActivity() {;
       type: "comment";
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ];
 
   const getBadgeForType = (type: string) => {;
     switch (type) {;
-<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
-<<<<<<< HEAD
-=======
-      type: "interview";      case "candidate":;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      type: "interview";      case "candidate":;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
@@ -680,180 +471,16 @@ export function RecentActivity() { return null; }
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (          {activities && activities.map((activity) => (;
-=======
-  return (
-id:"act-1",;
-      user:"Michael Chen",;
-      action:"posted a new job",;
-      target:"Senior React Developer",;
-      timestamp:"1h ago",;
-      type:"job";
-    },;
-    {;
-      id:"act-2",;
-      user:"Sarah Wilson",;
-      action:"shortlisted",;
-      target:"5 candidates for UI/UX Designer",;
-      timestamp:"3h ago",;
-      type:"candidate";
-    },;
-    {;
-      id:"act-3",;
-      user:"David Johnson",;
-      action:"scheduled an interview with",;
-      target:"Alex Morgan",;
-      timestamp:"Yesterday",;
-      type:"interview";
-    },;
-    {;
-      id:"act-4",;
-      user:"Emily Davis",;
-      action:"added comments to",;
-      target:"Frontend Developer application",;
-      timestamp:"2d ago",;
-      type:"comment";
-    }
-  ],;
-;
-  const getBadgeForType = (type:string) => {;
-    switch (type) {;
-      case "job":return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,;
-  ],;
-  const getBadgeForType = (type: string) => {;
-    switch (type) {;
-      case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,;
-      case "candidate":;
-        return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>,;
-      case "interview":;
-        return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>,;
-    }
-  },;
-;
-  return (;
-      case "comment":;
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>;
-      default:;
-        return <Badge variant="outline">Activity</Badge>;
-    }
-  };
-  return (;
-  return (          {activities && activities.map((activity) => (;
+return (          {activities && activities.map((activity) => (;
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
-
-        </div>"
-        <div className="p-3 text-center border-t border-border">"
-</div>"
-          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">"
-</button>
-          </button>
-        </div>
-      </CardContent>
-    </Card>"
-      case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;""
-        return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;""
-        return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;"
-    <Card>;
-</Card>
-      <CardHeader>;
-</CardHeader>
-        <CardTitle>Recent Activity</CardTitle>;
-        <CardDescription>Latest actions from your team</CardDescription>;
-      </CardHeader>;
-      <CardContent className="p-0">;
-        <div className="divide-y divide-border">;
-          {activities && activities.map((activity) => (;
-            <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
-                {activity && activity.user.charAt(0)}
-              </div>;
-              <div className="flex-1">;
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">;
-                  <p className="text-sm">;
-                    <span className="font-medium">{activity && activity.user}</span>{" "}
-                    {activity && activity.action}{" "}
-                    <span className="font-medium">{activity && activity.target}</span>;
-                  </p>;
-                  <div className="flex items-center gap-2 mt-1 sm:mt-0">;
-                    {getBadgeForType(activity && activity.type)}
-                    <span className="text-xs text-muted-foreground">{activity && activity.timestamp}</span>;
-{activities.map((activity) => (;
-            <div key={activity.id} className="p-4 flex items-start gap-3">;
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
-                {activity.user.charAt(0)}
-                    <span className="font-medium">{activity.user}</span>{" "}
-                    {activity.action}{" "}
-                    <span className="font-medium">{activity.target}</span>;
-                  </p>;
-                  <div className="flex items-center gap-2 mt-1 sm:mt-0">;
-                    {getBadgeForType(activity.type)}
-                    <span className="text-xs text-muted-foreground">{activity.timestamp}</span>;
-          {activities && activities.map((activity) => (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-            <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
-<<<<<<< HEAD
-=======
-  return (
-
-
-
-    <Card>;
-      <CardHeader>;
-        <CardTitle>Recent Activity</CardTitle>;
-        <CardDescription>Latest actions from your team</CardDescription>;
-      </CardHeader>;"
-      <CardContent className="p-0">;"
-        <div className="divide-y divide-border">;
-
-
-          {activities && activities.map((activity) => (;"
-            <div key={activity && activity.id} className="p-4 flex items-start gap-3">;"
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      </CardHeader>;"
-      <CardContent className="p-0">;"
-</CardContent>"
-        <div className="divide-y divide-border">;"
-</div>"
-            <div key={activity && activity.id} className="p-4 flex items-start gap-3">;"
-</div>"
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;"
-</div>
-              </div>;"
-              <div className="flex-1">;"
-</div>"
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">;"
-</div>"
-                  <p className="text-sm">;"
-</p>"
-                    <span className="font-medium">{activity && activity.user}</span>{" "}""
-                    <span className="font-medium">{activity && activity.target}</span>;"
-                  </p>;"
-                  <div className="flex items-center gap-2 mt-1 sm:mt-0">;"
-</div>"
-                    <span className="text-xs text-muted-foreground">{activity && activity.timestamp}</span>;""
-            <div key={activity && activity.id} className="p-4 flex items-start gap-3">;"
-</div>"
-              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;"
-</div>
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>;
                 </div>;
               </div>;
             </div>;
           ))}
 
-
-<<<<<<< HEAD
-        <div className="p-3 text-center border-t border-border">;
-<<<<<<< HEAD
+<div className="p-3 text-center border-t border-border">;
 <<<<<<< HEAD
 <<<<<<< HEAD
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
@@ -864,102 +491,8 @@ id:"act-1",;
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-import React from './react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-export /**
- * RecentActivity - Function description
- */
-function RecentActivity() {
-  // Mock activity data;
-  const activities = [;
-    {
-      id: "act - 1",
-      user: "Michael Chen",
-      action: "posted a new job",
-      target: "Senior React Developer",
-      timestamp: "1h ago",
-      type: "job";
-    }
-    {
-      id: "act - 2",
-      user: "Sarah Wilson",
-      action: "shortlisted",
-      target: "5 candidates for UI / UX Designer",
-      timestamp: "3h ago",
-      type: "candidate";
-    }
-    {
-      id: "act - 3",
-      user: "David Johnson",
-      action: "scheduled an interview with",
-      target: "Alex Morgan",
-      timestamp: "Yesterday",
-      type: "interview";
-    }
-    {
-      id: "act - 4",
-      user: "Emily Davis",
-      action: "added comments to",
-      target: "Frontend Developer application",
-      timestamp: "2d ago",
-      type: "comment";
-    }
-  ];
-;
-  const getBadgeForType = (type: string) =>: any {
-    switch (type) {
-      case "job": return <Badge variant="outline" className="bg - blue - 100 text - blue - 800 border - blue - 200">Job</Badge>;
-      case "candidate":;
-        return <Badge variant="outline" className="bg - green - 100 text - green - 800 border - green - 200">Candidate</Badge>;
-      case "interview":;
-        return <Badge variant="outline" className="bg - purple - 100 text - purple - 800 border - purple - 200">Interview</Badge>;
-      case "comment":;
-        return <Badge variant="outline" className="bg - amber - 100 text - amber - 800 border - amber - 200">Comment</Badge>,
-      default:;
-        return <Badge variant="outline">Activity</Badge>;
-    }
-  }
-;
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle > Recent Activity</CardTitle>;
-        <CardDescription > Latest actions from your team</CardDescription>;
-      </CardHeader>;
-      <CardContent className="p - 0">;
-        <div className="divide - y divide - border">;
-          {activities.map ((activity) => (
-            <div key={activity.id} className="p - 4 flex items - start gap - 3">;
-              <div className="w - 8 h - 8 rounded - full bg - muted flex items - center justify - center">;
-                {activity.user.char_at (0)}
-              </div>;
-              <div className="flex - 1">;
-                <div className="flex flex - col sm:flex - row sm:items - center sm:justify - between">;
-                  <p className="text - sm">;
-                    <span className="font - medium">{activity.user}</span>{" "}
-                    {activity.action}{" "}
-                    <span className="font - medium">{activity.target}</span>;
-                  </p>;
-                  <div className="flex items - center gap - 2 mt - 1 sm:mt - 0">;
-                    {getBadgeForType (activity.type)}
-                    <span className="text - xs text - muted - foreground">{activity.timestamp}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>))}
-        </div>;
-        <div className="p - 3 text - center border - t border - border">;
-          <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
             View All Activity;
-=======
-          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1077,46 +610,19 @@ function RecentActivity() {
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
             View All Activity;
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;            View All Activity;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </button>;
         </div>;
       </CardContent>;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 </Card>);
 }
 }
 ;
     </Card>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }}
-=======
-
-
-
-
-
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 }}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -1171,29 +677,14 @@ default:
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </Card>);
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 "
@@ -1201,7 +692,6 @@ default:
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
-
 
 import React from "react";""
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -1229,7 +719,6 @@ export function RecentActivity() {
     },"
     },
 
-
     {"
       id: "act-2"","
   user: "Sarah Wilson"""
@@ -1238,14 +727,12 @@ export function RecentActivity() {
       timestamp: "3h ago"","
   type: "candidate""
 
-
       id: "act-3"","
   user: "David Johnson"""
       action: "scheduled an interview with"","
   target: "Alex Morgan"""
       timestamp: "Yesterday"","
   type: "interview""
-
 
       id: "act-4"","
   user: "Emily Davis"""

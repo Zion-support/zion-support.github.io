@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   test('contact form is accessible', async ({ page }) => {
     await page.goto('/contact');
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze(;);
@@ -35,15 +31,7 @@ export default function A11y.spec({ }: A11y.specProps) {
 </div>
       <h1>A11y.spec</h1>
       <p>This component is currently under development.</p>
-<<<<<<< HEAD
-    </div>
+</div>
   );
 }
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </div>)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

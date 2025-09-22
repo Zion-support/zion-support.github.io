@@ -1,13 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
-=======
-import Link from 'next/link';
-import { useRouter } from 'next/router';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
@@ -146,14 +137,8 @@ const baseItems = [ {';
 
 pr-12325
 }</span>) ;
-<<<<<<< HEAD
 }</div> {;
   item.name ;
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}</div> {;"
-}) ) ";""
-}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;""`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

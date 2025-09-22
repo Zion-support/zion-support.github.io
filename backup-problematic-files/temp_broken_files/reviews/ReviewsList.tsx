@@ -39,4 +39,3 @@ export function ReviewsList({ reviews, isLoading, onReportReview } ReviewsListPr
           Once reviews are submitted and approved, they will appear here.;
         </p>;
       </div>;
-

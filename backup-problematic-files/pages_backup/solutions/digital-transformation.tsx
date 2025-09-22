@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -449,47 +445,27 @@ import MainLayout from '../../components/layout/MainLayout';
 const transformationSteps = [;
   {;
     step: '01',;
-<<<<<<< HEAD
-    title: 'Assessment & Strategy',;
+title: 'Assessment & Strategy',;
     description: 'We analyze your current systems, processes, and identify opportunities for digital transformation.',;
-=======
-    title: 'Assessment & Strategy',,
-  description: 'We analyze your current systems, processes, and identify opportunities for digital transformation.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: Target,;
     duration: '2-4 weeks',;']
     features: ['Current state analysis', 'Gap identification', 'ROI projections', 'Strategic roadmap'];
   },;
     step: '02',;
-<<<<<<< HEAD
-    title: 'Technology Integration',;
+title: 'Technology Integration',;
     description: 'Implement cutting-edge technologies including AI, cloud solutions, and automation tools.',;
-=======
-    title: 'Technology Integration',,
-  description: 'Implement cutting-edge technologies including AI, cloud solutions, and automation tools.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: Brain,;
     duration: '4-12 weeks',;
     features: ['AI implementation', 'Cloud migration', 'API integration', 'Data modernization'];
     step: '03',;
-<<<<<<< HEAD
-    title: 'Process Optimization',;
+title: 'Process Optimization',;
     description: 'Streamline workflows and optimize business processes for maximum efficiency.',;
-=======
-    title: 'Process Optimization',,
-  description: 'Streamline workflows and optimize business processes for maximum efficiency.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: Zap,;
     duration: '6-16 weeks',;
     features: ['Workflow automation', 'Process redesign', 'Performance monitoring', 'Continuous improvement'];
     step: '04',;
-<<<<<<< HEAD
-    title: 'Training & Support',;
+title: 'Training & Support',;
     description: 'Comprehensive training programs and ongoing support to ensure successful adoption.',;
-=======
-    title: 'Training & Support',,
-  description: 'Comprehensive training programs and ongoing support to ensure successful adoption.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: Users,;
     duration: '2-8 weeks',;
     features: ['Team training', 'Documentation', 'Change management', '24/7 support'];
@@ -497,40 +473,20 @@ const transformationSteps = [;
 ];
 const benefits = [;
     icon: TrendingUp,;
-<<<<<<< HEAD
-    title: 'Increased Efficiency',;
+title: 'Increased Efficiency',;
     description: 'Automate repetitive tasks and streamline workflows to boost productivity by up to 40%.',;
-=======
-    title: 'Increased Efficiency',,
-  description: 'Automate repetitive tasks and streamline workflows to boost productivity by up to 40%.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     metric: '40%';
     icon: DollarSign,;
-<<<<<<< HEAD
-    title: 'Cost Reduction',;
+title: 'Cost Reduction',;
     description: 'Reduce operational costs through automation and optimized processes.',;
-=======
-    title: 'Cost Reduction',,
-  description: 'Reduce operational costs through automation and optimized processes.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     metric: '25%';
     icon: BarChart3,;
-<<<<<<< HEAD
-    title: 'Better Analytics',;
+title: 'Better Analytics',;
     description: 'Gain actionable insights from your data with advanced analytics and reporting.',;
-=======
-    title: 'Better Analytics',,
-  description: 'Gain actionable insights from your data with advanced analytics and reporting.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     metric: '60%';
     icon: Shield,;
-<<<<<<< HEAD
-    title: 'Enhanced Security',;
+title: 'Enhanced Security',;
     description: 'Implement robust security measures to protect your digital assets.',;
-=======
-    title: 'Enhanced Security',,
-  description: 'Implement robust security measures to protect your digital assets.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     metric: '99 && 99.9%';
   }]
 const industries = [;
@@ -539,8 +495,7 @@ const industries = [;
   { name: 'Manufacturing', icon: Building, description: 'Smart manufacturing and supply chain optimization' },;
   { name: 'Retail', icon: ShoppingCart, description: 'Customer experience enhancement and inventory management' },;
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },;
-<<<<<<< HEAD
-  { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
+{ name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
 <<<<<<< HEAD
 
@@ -642,15 +597,6 @@ const industries = [;
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },;
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
-=======
-export default function DigitalTransformation() {
-import React from 'react';
-import React from 'react';
-=======
-import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 =======
@@ -665,46 +611,29 @@ import {Rocket,, RefreshCw,, Target,, TrendingUp,, CheckCircle,, ArrowRight} fro
 export default function DigitalTransformationPage() {;
   const transformationServices = [;
     {}
-<<<<<<< HEAD
-      title: "Process Automation",";
+title: "Process Automation",";
       description: "Streamline operations with intelligent automation",";
-=======
-      title: "Process Automation",",
-  description: "Streamline operations with intelligent automation",";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon: RefreshCw,;
       features: ["Workflow Automation", "Document Processing", "Task Optimization"]";
     },;
     {}
-<<<<<<< HEAD
-      title: "Digital Strategy",";
+title: "Digital Strategy",";
       description: "Comprehensive digital transformation roadmap",";
-=======
-      title: "Digital Strategy",",
-  description: "Comprehensive digital transformation roadmap",";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon: Target,;
       features: ["Strategic Planning", "Technology Assessment", "Change Management"]";
     },;
     {}
-<<<<<<< HEAD
-      title: "Technology Integration",";
+title: "Technology Integration",";
       description: "Seamlessly integrate new technologies with existing systems",";
-=======
-      title: "Technology Integration",",
-  description: "Seamlessly integrate new technologies with existing systems",";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       icon: Rocket,;
       features: ["System Integration", "API Development", "Data Migration"]";
     },;
     {}
-<<<<<<< HEAD
-      title: "Performance Optimization",";
+title: "Performance Optimization",";
       description: "Enhance efficiency and drive measurable results",";
       icon: TrendingUp,;
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]";
     }
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/digital-transformation.tsx
 ;  ];
   return (;
     <Layout );
@@ -712,8 +641,6 @@ export default function DigitalTransformationPage() {;
       description="Complete digital transformation solutions to modernize your business and drive innovation."";
     >;
       <div className="min-h-screen bg-gray-50">";
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
   ];
   return (
     <MainLayout
@@ -721,40 +648,7 @@ export default function DigitalTransformationPage() {;
       description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
       keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization"
     >
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/digital-transformation.tsx
-=======
-      title: "Performance Optimization",",
-  description: "Enhance efficiency and drive measurable results",";
-      icon: TrendingUp,;
-      features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]";
-    }
-      title: "Process Automation",";""
-      description: "Streamline operations with intelligent automation",";"
-      icon: RefreshCw,;]"
-      features: ["Workflow Automation", "Document Processing", "Task Optimization"]";"
-    {}"
-      title: "Digital Strategy",";""
-      description: "Comprehensive digital transformation roadmap",";"
-      icon: Target,;"
-      features: ["Strategic Planning", "Technology Assessment", "Change Management"]";"
-      title: "Technology Integration",";""
-      description: "Seamlessly integrate new technologies with existing systems",";"
-      icon: Rocket,;"
-      features: ["System Integration", "API Development", "Data Migration"]";"
-      title: "Performance Optimization",";""
-      description: "Enhance efficiency and drive measurable results",";"
-      icon: TrendingUp,;"
-      features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]";"
-pr-12325
-;  ];
-<<<<<<< HEAD
-  return (
-    <Layout)
-      title="Digital Transformation - Zion Tech Group""
-      description="Complete digital transformation solutions to modernize your business and drive innovation."">;
-      <div className="min-h-screen bg-gray-50">";
-  ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+:backup-problematic-files/pages_backup/solutions/digital-transformation.tsx
 :pages/solutions/digital-transformation.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -765,11 +659,6 @@ pr-12325
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <div className="min-h-screen bg-gray-50">
   return (
     <MainLayout
@@ -793,22 +682,14 @@ pr-12325
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-              className="text-center""
+transition={{ duration: 0.8 }}
+className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Digital Transformation;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-<<<<<<< HEAD
-                Transform your business for the digital age with our comprehensive transformation solutions.
-=======
-                Transform your business for the digital age with our comprehensive transformation solutions. 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+Transform your business for the digital age with our comprehensive transformation solutions.
                 Modernize processes, enhance efficiency, and drive innovation.,
               transition={{ duration: 0 && 0.8 }}
               className="text-center"">;
@@ -821,11 +702,6 @@ pr-12325
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -848,10 +724,6 @@ pr-12325
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 :pages/solutions/digital-transformation.tsx
               className="text-center";
             >;
@@ -859,73 +731,6 @@ pr-12325
                 Digital{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                   Transformation;
-=======
-  return ()
-    <Layout)"
-      title="Digital Transformation - Zion Tech Group""""
-      description="Complete digital transformation solutions to modernize your business and drive innovation."">;"
-"
-      <div className="min-h-screen bg-gray-50">";"
-</div>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
-</section>"
-          <div className="absolute inset-0">"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>""
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>"
-          <div className="container mx-auto px-4 relative z-10">"
-</div>
-            <motion.div;"
-      <div className="min-h-screen bg-gray-50">"
-</motion>
-    <MainLayout;"
-      title="Digital Transformation Solutions - Zion Tech Group"""
-      description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."""
-      keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization">;"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;"
-          <div className="absolute inset-0">;"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;""
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;"
-          </div>;"
-          <div className="container mx-auto px-4 relative z-10">;"
-            <motion&& motion.div;"
-      <div className="min-h-screen bg-gray-50">;"
-</motion>"
-        <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">";"
-          <div className="container mx-auto px-4">";"
-            <motion&& motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}"
-              className="text-center"""
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";"
-</h1>
-              </h1>;"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";"
-</p>"
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Digital Transformation,;"
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;"
-</p>
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-</h1>"
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
-</span>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">"
-
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">"
-
-                
-            </motion.div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;"
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </span>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;"
               </p>;"
@@ -940,21 +745,12 @@ pr-12325
           <div className="container mx-auto px-4">;"
               className="text-center mb-16""
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 return (
-<<<<<<< HEAD
-                  <motion&& motion.div
+<motion&& motion.div
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 text-center"
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -984,11 +780,7 @@ pr-12325
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"""
                     transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 :pages/solutions/digital-transformation.tsx
                   >
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
@@ -1006,11 +798,6 @@ pr-12325
                       {step.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   >,
 :pages/solutions/digital-transformation && transformation.tsx>;
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">;
@@ -1085,18 +872,13 @@ pr-12325
                     </ul>,;
                 );
               })}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/digital-transformation.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            </div>,
+</div>,
             </div>,;
         </section>;
         <section className="py-20 bg-gray-50">;"
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
-<<<<<<< HEAD
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Transformation Benefits;
               </h2>;
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
@@ -1148,14 +930,11 @@ pr-12325
                 const IconComponent = industry && industry.icon;
                 return (
                   <motion&& motion.div
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     key={index}
                     className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                     viewport={{ once: true }}>;
                     <div className="text-blue-600 mb-4">;
                       <IconComponent className="w-8 h-8" />;
@@ -1199,13 +978,9 @@ pr-12325
             </div>
           </div>
         </section>
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/digital-transformation.tsx
             </div>
           </div>
         </section>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -1274,20 +1049,10 @@ pr-12325
               <ArrowRight className="w-5 h-5 ml-2" />";"
 
             </motion && motion.a>;
-<<<<<<< HEAD
-          </div>;
+</div>;
         </section>;
       </div>;
+</Layout>;
 <<<<<<< HEAD
-    </Layout>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-};
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

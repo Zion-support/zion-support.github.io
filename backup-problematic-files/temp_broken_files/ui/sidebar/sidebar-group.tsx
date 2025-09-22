@@ -42,4 +42,3 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
 <<<<<<< HEAD
-

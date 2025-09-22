@@ -39,4 +39,3 @@ export function ApiDocsLayout({ children } ApiDocsLayoutProps) {;
         {children}
       </div>;
     </div>;
-

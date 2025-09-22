@@ -1,21 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/industry.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import * as React from 'react';
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/industry.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Link from 'next/link';';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
-<<<<<<< HEAD
 import Layout from "../../components/Layout";";
 
 <<<<<<< HEAD
@@ -273,10 +262,6 @@ export default function IndustrySolutionsPage() {
 
 export default Industry;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-import Layout from "../../components/Layout";";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const Industry: React.FC<IndustryProps> = ({ className }) => {
 "
     <div className={className || }>
@@ -287,9 +272,4 @@ const Industry: React.FC<IndustryProps> = ({ className }) => {
   )
 };
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      <p>This component is under development.</p>
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

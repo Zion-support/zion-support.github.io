@@ -1,26 +1,12 @@
-<<<<<<< HEAD
-
 import { useEffect, useCallback } from 'react';
 // Define MessageEvent type if not available
-
-=======
-import { useEffect, useCallback  } from './react';
-;
-// Define MessageEvent if not available;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface Event {
   // TODO: Implement
 }
   type: string;,
   target: EventTarget | null;
 type EventListener = (event: Event) => void;
-<<<<<<< HEAD
-
 ;
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface EventTarget {
   // TODO: Implement
   addEventListener (type: string, listener: EventListener): void;
@@ -33,18 +19,9 @@ interface MessagePort {
   post_message (message: any): void;
   start (): void;
   close (): void;
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-
 interface MessageEvent < T = any> extends Event {
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   data: T;
-=======
-  data: T;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   origin: string;
   lastEventId: string;,
   source: MessageEventSource | null;
@@ -53,25 +30,11 @@ interface MessageChannelHandlerProps {
   // TODO: Implement
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-
-export /**
- * useMessageChannelHandler - Function description
- */
-function useMessageChannelHandler() {
-  const handle_message = useCallback (
-    (event: MessageEvent < unknown>) => {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-  onError
+onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       try {
@@ -83,36 +46,13 @@ if ( {) {
       } catch (error) {
         // Check condition;
           on_error (error as Error);
-<<<<<<< HEAD
-        }
-<<<<<<< HEAD
-
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
     } catch (error) {
       if (onError) {
         onError(error as Error);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-      }
-    },
-    [on_message, on_error],
-  );
-;
-  useEffect (() => {
-    window.addEventListener ("message", handle_message);
-    return () => {
-      window.removeEventListener ("message", handle_message);
-    }
-  }, [handle_message]);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======

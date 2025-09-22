@@ -78,4 +78,3 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
-

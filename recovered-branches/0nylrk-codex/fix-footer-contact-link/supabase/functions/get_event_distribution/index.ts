@@ -1,23 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -29,30 +17,9 @@ const corsHeaders = {}
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm ;
-
-
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
@@ -78,50 +45,25 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS preflight request
   if (req && req.method === "OPTIONS") {
 =======
-serve(async (req) => {
-  // Handle CORS preflight request
-  if (req && req.method === "OPTIONS") {
-serve(async (req) => {
-  // Handle CORS preflight request
-  if (req.method === "OPTIONS") {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-serve(async (req) => {
-  // Handle CORS preflight request
-  if (req && req.method === "OPTIONS") {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 
 "
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts","
@@ -131,13 +73,9 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";"
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts","
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 
-
-
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*","
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-
-
 
 serve(async (req) => {}
   // Handle CORS preflight request"
@@ -153,24 +91,6 @@ serve(async (req) => {}
 ;
     // Parse the request body;
     const { days_back = 7 } = await req.json(),
-
-
-
-<<<<<<< HEAD
-=======
-      Deno && Deno.env.get("SUPABASE_URL") ?? "";
-      Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
-    );
-    // Parse the request body
-    const { days_back = 7 } = await req && req.json();
-    // Calculate the start date
-    const startDate = new Date();
-    startDate && startDate.setDate(startDate && startDate.getDate() - days_back);
-    
-    // Calculate the start date
-    const startDate = new Date(),
-    startDate.setDate(startDate.getDate() - days_back),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
     // Parse the request body
@@ -247,33 +167,12 @@ Deno && Deno.env.get("SUPABASE_URL") ?? "";
     startDate.setDate(startDate.getDate() - days_back),
 
     // Parse the request body
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Query analytics events
     const { data, error } = await supabaseClient
       .from("analytics_events")
       .select("event_type, created_at")
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       .gte("created_at", startDate && startDate.toISOString());
 
@@ -288,41 +187,20 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
       .from("analytics_events")"
       .select("event_type, created_at")
 
-
-
     if (error) {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console && console.error("Error fetching analytics data:", error);
       throw error;
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Group events by date and event type
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
-    // Group events by date and event type;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const eventsByDate = {},
-    
-
 
     data.forEach((event) => {"
       const date = new Date(event.created_at).toISOString().split("T")[0];
-<<<<<<< HEAD
-      if (!eventsByDate[date]) {
-
-
-<<<<<<< HEAD
-=======
-      .gte("created_at", startDate.toISOString());
-      .gte("created_at", startDate.toISOString()),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+if (!eventsByDate[date]) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (error) {
@@ -332,7 +210,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
     // Group events by date and event type
 
 <<<<<<< HEAD
-<<<<<<< HEAD
     data.forEach((event) => {
       const date = new Date(event.created_at).toISOString().split("T")[0],
       if (!eventsByDate[date]) {
@@ -341,14 +218,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-=======
-      if (!eventsByDate[date]) {}
-"
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 const corsHeaders = {;"
   "Access-Control-Allow-Origin": "*",;"
@@ -361,7 +231,6 @@ serve(async (req) => {;
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const eventsByDate = {},
-
 
     data.forEach((event) => {
       const date = new Date(event.created_at).toISOString().split("T")[0];
@@ -393,13 +262,8 @@ serve(async (req) => {;
   }
 ;
   try {;
-<<<<<<< HEAD
-    const supabaseClient = createClient(;"
+const supabaseClient = createClient(;"
       Deno.env.get("SUPABASE_URL") ?? "",;"
-=======
-    const supabaseClient = createClient(;
-      Deno.env.get("SUPABASE_URL") ?? "",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     ),;
     // Parse the request body;
@@ -408,42 +272,23 @@ serve(async (req) => {;
     const startDate = new Date(),;
     startDate.setDate(startDate.getDate() - days_back),;
     // Query analytics events;
-<<<<<<< HEAD
-    const { data, error } = await supabaseClient;"
+const { data, error } = await supabaseClient;"
       .from("analytics_events");"
       .select("event_type, created_at");"
       .gte("created_at", startDate.toISOString()),;
     if (error) {;"
-=======
-    const { data, error } = await supabaseClient;
-      .from("analytics_events");
-      .select("event_type, created_at");
-      .gte("created_at", startDate.toISOString()),;
-    if (error) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error("Error fetching analytics data:", error),;
       throw error;
     }
 ;
     // Group events by date and event type;
     const eventsByDate = {},;
-<<<<<<< HEAD
-    data.forEach((event) => {;"
-=======
-    data.forEach((event) => {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+data.forEach((event) => {;"
       const date = new Date(event.created_at).toISOString().split("T")[0],;
       if (!eventsByDate[date]) {;
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
@@ -454,14 +299,7 @@ serve(async (req) => {;
         eventsByDate[date][event.event_type] = 0;
       }
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
@@ -479,13 +317,7 @@ serve(async (req) => {;
         eventsByDate[date][event && event.event_type] = 0
       }
       eventsByDate[date][event && event.event_type]++
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
     // Convert to array for easier consumption by frontend;
       headers: {}
@@ -499,28 +331,11 @@ serve(async (req) => {;
       headers: {
         ...corsHeaders
         "Content-Type": "application/json"}
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      
-=======
-});
-    // Convert to array for easier consumption by frontend
-    const result = Object && Object.values(eventsByDate).sort((a, b) => a && a.date.localeCompare(b && b.date));
-    return new Response(JSON && JSON.stringify(result), {
-      eventsByDate[date][event.event_type]++
-    });
-    // Convert to array for easier consumption by frontend
-    const result = Object.values(eventsByDate).sort((a, b) => a.date.localeCompare(b.date));
-    return new Response(JSON.stringify(result), {
-      headers: {
-        ...corsHeaders
-        "Content-Type": "application/json"}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       eventsByDate[date][event.event_type]++
     }),
 
-<<<<<<< HEAD
-    // Convert to array for easier consumption by frontend;
+// Convert to array for easier consumption by frontend;
     const result = Object.values(eventsByDate).sort((a, b) => a.date.localeCompare(b.date)),
 
     return new Response(JSON.stringify(result), {}
@@ -528,16 +343,10 @@ serve(async (req) => {;
         ...corsHeaders,"
         "Content-Type": "application/json"},
 
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       status: 200})
   } catch (error) {
-=======
-    // Group events by date and event type  } catch (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     // Group events by date and event type  } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -552,32 +361,15 @@ serve(async (req) => {;
 
       status: 200})
   } catch (error) {
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    // Group events by date and event type  } catch (error) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console && console.error("Error:", error && error.message);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: {
-<<<<<<< HEAD
 
-=======
-=======
-      status: 200})
-  } catch (error) {"
-    console && console.error("Error:", error && error.message);
-    return new Response(JSON && JSON.stringify({ error: error && error.message }), {}
-      headers: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 });
 
-<<<<<<< HEAD
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,'
-=======
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*","
@@ -652,34 +444,15 @@ if ( {) {}
         "Content - Type": "application / json"}
       status: 500});
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-status: 200})
-  } catch (error) {
-    console.error("Error:", error.message),
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: {
-        ...corsHeaders
-        "Content-Type": "application/json"}
-      status: 500})
-  }
-});
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         ...corsHeaders,
         "Content-Type": "application/json"},
       status: 500})
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
       eventsByDate[date][event.event_type]++;
     }),;
@@ -697,14 +470,8 @@ status: 200})
         ...corsHeaders,;
         "Content-Type": "application/json"},;
       status: 500});
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         ...corsHeaders,
 =======
 =======
@@ -722,20 +489,12 @@ status: 200})
       status: 500})
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -787,9 +546,6 @@ serve(async (req) => {
     const startDate = new Date();
     startDate && startDate.setDate(startDate && startDate.getDate() - days_back);
 
-
-
-
     // Parse the request body;
     // Query analytics events;
     const { data, error } = await supabaseClient;"
@@ -803,7 +559,6 @@ serve(async (req) => {
       throw error;
     // Group events by date and event type;
     const eventsByDate = {},
-
 
     data.forEach((event) => {"
       const date = new Date(event.created_at).toISOString().split("T")[0];"
@@ -841,7 +596,6 @@ serve(async (req) => {;
     data.forEach((event) => {;"
       const date = new Date(event.created_at).toISOString().split("T")[0],;"
       if (!eventsByDate[date]) {;
-
 
         eventsByDate[date] = { date }
       if (!eventsByDate[date][event.event_type]) {
@@ -1020,8 +774,6 @@ pr-12325
   }
 
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
 //Convert to array for easier consumption by frontend status: 500 
 });
 }
@@ -1031,13 +783,7 @@ pr-12325
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  }
-});
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   }
 });
@@ -1046,7 +792,6 @@ pr-12325
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 ;
-
 
   }
 });

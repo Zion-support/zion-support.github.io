@@ -311,7 +311,7 @@ return {
 }
 }catch (error) {
   toast ({
-  
+
 }finally {
   setIsLoading (false) 
 }
@@ -337,7 +337,7 @@ const {
 }
 }catch (error) {
   toast ({
-  
+
 }finally {
   setIsLoading (false) 
 }
@@ -354,10 +354,10 @@ toast ({
 }else {
   setUser (null);
 //Clear the user state upon successful logout toast ({
-  
+
 }else {
   setUser (null), //Clear the user state upon successful logout toast ({
-  
+
 }finally {
   setIsLoading (false) 
 }
@@ -379,7 +379,7 @@ if (error) {
 }
 }catch (error) {
   toast ({
-  
+
 }finally {
   setIsLoading (false) 
 }
@@ -388,7 +388,7 @@ const updateProfile = async (profileData: Partial<UserProfile>) => {
   setIsLoading (true);
 try {
   if (!profileData || !profileData.id) {
-  
+
 }const {
   error 
 }= await supabase .from ("profiles") .update ({
@@ -410,7 +410,7 @@ return {
   error: null 
 }
 }catch (error) {
-  
+
 }finally {
   setIsLoading (false) 
 }
@@ -421,7 +421,7 @@ try {
   const {
   data, error 
 }= await supabase.auth.signInWithOAuth ({
-  
+
 }
 }finally {
   setIsLoading (false) 
@@ -433,7 +433,7 @@ try {
   const {
   data, error 
 }= await supabase.auth.signInWithOAuth ({
-  
+
 }
 }finally {
   setIsLoading (false) 
@@ -445,7 +445,7 @@ try {
   const {
   data, error 
 }= await supabase.auth.signInWithOAuth ({
-  
+
 }
 }finally {
   setIsLoading (false) 
@@ -456,7 +456,7 @@ const loginWithWeb3 = async () => {
 try {
   const ethereum = (window as any) .ethereum;
 if (!ethereum) {
-  
+
 }const accounts = await ethereum.request ({
   method: 'eth requestAccounts' 
 });
@@ -496,8 +496,5 @@ loginWithFacebook;
 loginWithTwitter;
 loginWithWeb3 
 }
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

@@ -1,96 +1,23 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {useAuth} from "@/hooks/useAuth";
-import {Wallet} from "@/components/icons";
-import {toast} from "sonner";
-export function Web3Login() {;
-
-  const { loginWithWeb3 } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleWeb3Login = async () => {;
-    try {;
-      setIsLoading(true);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
 
-
   const handleWeb3Login = async () => {
     try {
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-      setIsLoading(true),
-      
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Check if wallet is available
-<<<<<<< HEAD
-      const ethereum = (window as any).ethereum;        toast("Web3 wallet not found", {
-=======
-import {useState} from "react";"
-import {Button} from "@/components/ui/button";"
-import {useAuth} from "@/hooks/useAuth";"
-import {Wallet} from "@/components/icons";"
-import {toast} from "sonner";
-export function Web3Login() { return null; }
-  const handleWeb3Login = async () => {}
-    try {}
-      setIsLoading(true),
-      
-
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum;
-"
-import { useState } from "react","
-import { Button } from "@/components/ui/button","
-import { useAuth } from "@/hooks/useAuth",";
-import { Wallet } from "@/components/icons";"
-import { toast } from "sonner";"
-import { Wallet } from "@/components/icons","
-import { toast } from "sonner",
-;
-=======
-      const ethereum = (window as any).ethereum;
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { Wallet } from "@/components/icons";
-import { toast } from "sonner";
-import { Wallet } from "@/components/icons",
-import { toast } from "sonner",
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+const ethereum = (window as any).ethereum;        toast("Web3 wallet not found", {
   const handleWeb3Login = async () => {;
     try {;
       setIsLoading(true);
 
-
-
-<<<<<<< HEAD
 export function Web3Login() {}
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),;
@@ -100,15 +27,6 @@ export function Web3Login() {}
       if (!ethereum) {"
         toast("Web3 wallet not found", {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-export function Web3Login() {
-  const { loginWithWeb3 } = useAuth(),
-  const [isLoading, setIsLoading] = useState(false),
-      // Check if wallet is available
-      const ethereum = (window as any).ethereum,
-      if (!ethereum) {
-        toast("Web3 wallet not found", {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           description: "Please install MetaMask or another compatible wallet"})
         return;
       }
@@ -120,46 +38,18 @@ export function Web3Login() {
     } finally {}
       setIsLoading(false)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const ethereum = (window as any).ethereum;
+const ethereum = (window as any).ethereum;
       if (!ethereum) {;
         toast("Web3 wallet not found", {,
   description: "Please install MetaMask or another compatible wallet"}),;
-=======
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {;"
-        toast("Web3 wallet not found", {;"
-          description: "Please install MetaMask or another compatible wallet"}),;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {;
-        toast("Web3 wallet not found", {;
-          description: "Please install MetaMask or another compatible wallet"}),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         return;
       }
 
       await loginWithWeb3();
 
-<<<<<<< HEAD
-    } catch (error: any) {;
-<<<<<<< HEAD
-      toast("Login failed", {,
+} catch (error: any) {;
+toast("Login failed", {,
   description: error && error.message || "Failed to connect wallet"}),;
-=======
-    } catch (error: any) {;"
-      toast("Login failed", {;"
-        description: error && error.message || "Failed to connect wallet"}),;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      toast("Login failed", {;
-        description: error && error.message || "Failed to connect wallet"}),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console && console.error("Web3 login error:", error);
     } finally {;
       setIsLoading(false);
@@ -167,39 +57,11 @@ export function Web3Login() {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
-=======
-=======
     }
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   },
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }
-  }
-  },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
 
   return (
     <Button"
@@ -208,9 +70,6 @@ export function Web3Login() {
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -227,17 +86,12 @@ export function Web3Login() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   }
     }
 
   },
-
-
-
-
 
   return (
     <Button
@@ -266,34 +120,13 @@ export function Web3Login() {
         </>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       )}
     </Button>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -338,7 +171,6 @@ export function Web3Login() { return null; }
       disabled={isLoading}
     >;
 
-
       {isLoading ? (;"
         <span className="flex items-center">;"
           <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;"
@@ -353,10 +185,6 @@ export function Web3Login() { return null; }
           <Wallet className="h-5 w-5" />;
         </>;
 
-
-
-
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       )}
@@ -367,9 +195,6 @@ export function Web3Login() { return null; }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 =======
       )}
 =======
@@ -378,18 +203,9 @@ export function Web3Login() { return null; }
 
       )}
 
-<<<<<<< HEAD
-      )}
+)}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from './react';
-=======
-
-      )}
-    </Button>
-  )
-<<<<<<< HEAD
-}import { useState } from './react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
       )}
@@ -508,11 +324,7 @@ export function Web3Login() {;
 
       )}
 import { useState } from './react';
-<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}import { useState } from './react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';
 import { Wallet } from '@/components / icons';
@@ -530,18 +342,10 @@ function Web3Login() {}
   const { loginWithWeb3 } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleWeb3Login = async () => {
     try {
   // TODO: Implement
@@ -558,8 +362,6 @@ import { toast } from "sonner";""
 import { Wallet } from "@/components/icons",""
 import { toast } from "sonner","
 
-
-
       // Check if wallet is available;
       const ethereum = (window as any).ethereum,
       if (!ethereum) {"
@@ -574,7 +376,6 @@ import { toast } from "sonner","
     } finally {
   // TODO: Implement
       setIsLoading(false)
-
 
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;
@@ -591,12 +392,7 @@ import { toast } from "sonner","
     } finally {;
       setIsLoading(false);
 
-
   },
-
-
-
-
 
   return (
     <Button;"
@@ -642,10 +438,6 @@ import { toast } from "sonner","
 
         </>;
 
-
-
-
-
     ;
       className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";"
       on_click={handleWeb3Login}
@@ -659,14 +451,8 @@ import { toast } from "sonner","
           <Wallet className="h - 5 w - 5" />;"
         </>)}
     </Button>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),; export function Web3Login () {
   const {
   loginWithWeb3 
@@ -700,20 +486,12 @@ return (<Button type="button" variant="outline" className="w-full border border-
 }
 ;
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
-
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

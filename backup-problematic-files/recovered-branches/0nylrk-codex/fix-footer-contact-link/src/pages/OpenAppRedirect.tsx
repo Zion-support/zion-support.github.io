@@ -102,4 +102,3 @@ const OpenAppRedirect:React.FC = () => {;
         )}
       </div>;
     </div>;
-

@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
-<<<<<<< HEAD:src/components/services/GeneratedDescriptionDisplay.tsx
+:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -22,9 +21,6 @@ export function GeneratedDescriptionDisplay({
   const { toast } = useToast(),
   const [isEditing, setIsEditing] = useState(false),
   const [editedDescription, setEditedDescription] = useState(description),
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -37,8 +33,6 @@ import {;
 } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Check, Pencil } from 'lucide-react';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/GeneratedDescriptionDisplay.tsx
@@ -57,10 +51,8 @@ export function GeneratedDescriptionDisplay(): any ({;
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
-<<<<<<< HEAD:src/components/services/GeneratedDescriptionDisplay.tsx
-<<<<<<< HEAD
-
-  const handleSave = () => {;
+:src/components/services/GeneratedDescriptionDisplay.tsx
+const handleSave = () => {;
     onSave(editedDescription);
     setIsEditing(false);
     toast({;
@@ -68,10 +60,6 @@ export function GeneratedDescriptionDisplay(): any ({;
   description: 'Your edited description has been saved.',;
     })
 };
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/GeneratedDescriptionDisplay.tsx
   const handleSave = null;
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
@@ -107,10 +95,6 @@ export function GeneratedDescriptionDisplay({
     })
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/GeneratedDescriptionDisplay.tsx
   return (
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">"
@@ -157,22 +141,8 @@ export function GeneratedDescriptionDisplay({
   },
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
@@ -180,13 +150,8 @@ export function GeneratedDescriptionDisplay({
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
-<<<<<<< HEAD
-=======
+:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/GeneratedDescriptionDisplay.tsx
           <Button 
             variant="outline" 
             size="sm" 
@@ -204,13 +169,8 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
-<<<<<<< HEAD
-=======
+:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/GeneratedDescriptionDisplay.tsx
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -237,18 +197,11 @@ export function GeneratedDescriptionDisplay({;
     onSave(editedDescription),;
     setIsEditing(false),;
     toast({;
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
+:src_backup/components/services/GeneratedDescriptionDisplay.tsx
       title: "Description Saved",
   description: "Your edited description has been saved.";
     })
 };
-=======
-      title: "Description Saved";",
-      title: "Description Saved";
-      description: "Your edited description has been saved.";
-    });
-  };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/GeneratedDescriptionDisplay.tsx
   return (;
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
@@ -275,16 +228,7 @@ export function GeneratedDescriptionDisplay({;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
-=======
-            onChange={(e) => setEditedDescription(e.target.value)}
-            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"",
-          />
-        ) : (,
-          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">"
-            {editedDescription}
-          </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/GeneratedDescriptionDisplay.tsx
+:src_backup/components/services/GeneratedDescriptionDisplay.tsx
         {isEditing ? (;
           <Textarea;
             value={editedDescription}
@@ -293,12 +237,7 @@ export function GeneratedDescriptionDisplay({;
           />
         ) : (
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -306,15 +245,7 @@ export function GeneratedDescriptionDisplay({;
             {editedDescription}
           </div>;
         )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
@@ -329,18 +260,11 @@ export function GeneratedDescriptionDisplay({;
         <CardFooter>;
 
             onClick={handleSave}
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
+:src_backup/components/services/GeneratedDescriptionDisplay.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={handleSave}
-=======
-      </CardContent>;
-      {isEditing && (;
-        <CardFooter>;
-          <Button            onClick={handleSave}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white""
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/GeneratedDescriptionDisplay.tsx
@@ -351,21 +275,10 @@ export function GeneratedDescriptionDisplay({;
           </Button>
         </CardFooter>
       )}
-<<<<<<< HEAD:src_backup/components/services/GeneratedDescriptionDisplay.tsx
-<<<<<<< HEAD
-    </Card>;
+:src_backup/components/services/GeneratedDescriptionDisplay.tsx
+</Card>;
   );
 }
-=======
-
-}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) 
-}</Card>) 
-}'"
-=======
-}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) "
-}</Card>)
-}'";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/services/GeneratedDescriptionDisplay.tsx
 };
     </Card>;
   );
@@ -413,21 +326,6 @@ export function GeneratedDescriptionDisplay({;
 }</Card>);
 }'";
 }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;
-    </Card>;
-  );
-}
-;
-}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
-}</Card>)
-}'"
-<<<<<<< HEAD:src/components/services/GeneratedDescriptionDisplay.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/GeneratedDescriptionDisplay.tsx

@@ -28,4 +28,3 @@ const Card = React.forwardRef<;
     {...props}
   />;
 ));
-

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Button } from "@/components/ui/button",
@@ -83,9 +82,9 @@ export default function ContentGenerator() {;
           includeImage: contentType === 'blog' ? includeImage : false;
         }
       }),
-      
+
       if (error) throw error,
-      
+
       setPreviewContent(data), // Expecting { generatedContent: "..." }
       toast.success(`Content for "${contentType}" generated successfully!`)
     } catch (error) {
@@ -101,7 +100,7 @@ export default function ContentGenerator() {;
       toast.error("Please enter a test email address"),
       return
     }
-    
+
     if (!previewContent) {
       toast.error("Generate newsletter content first"),
       return
@@ -137,9 +136,9 @@ export default function ContentGenerator() {;
           testEmail;
         }
       }),
-      
+
       if (error) throw error,
-      
+
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       logErrorToProduction('Error sending test newsletter:', { data: error }),
@@ -158,9 +157,6 @@ export default function ContentGenerator() {;
       </>
     )
   }
-=======
-import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const ContentGenerator = () => {
   return (
@@ -171,8 +167,7 @@ const ContentGenerator = () => {
   );
 };
 
-<<<<<<< HEAD
-                  <div className="space-y-2">
+<div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Main Topic / User Prompt</Label>
                     <Input
                       id="topic"
@@ -198,7 +193,7 @@ const ContentGenerator = () => {
                       onChange={(e) => setKeywords(e.target.value)}
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="customPrompt" className="text-white">Detailed Instructions / Custom Prompt (Optional)</Label>
                     <Textarea
@@ -209,7 +204,7 @@ const ContentGenerator = () => {
                       onChange={(e) => setCustomPrompt(e.target.value)}
                     />
                   </div>
-                  
+
                   {contentType === 'blog' && (
                     <>
                       <div className="flex items-center justify-between">
@@ -220,7 +215,7 @@ const ContentGenerator = () => {
                           onCheckedChange={setAutoPublish}
                         />
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
@@ -330,7 +325,7 @@ const ContentGenerator = () => {
                       </div>;
                     </>;
                   )}
-                  
+
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
@@ -363,7 +358,7 @@ const ContentGenerator = () => {
                 </CardFooter>
               </Card>
             </div>
-            
+
             <div className="lg:col-span-2">
               <Card className="bg-zion-blue-dark border border-zion-blue-light h-full">
                 <CardHeader>
@@ -435,6 +430,3 @@ const ContentGenerator = () => {
   );
 }
 ;
-=======
-export default ContentGenerator;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

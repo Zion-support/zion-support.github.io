@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  try {
+try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
 <<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
@@ -22,19 +17,8 @@ files && files.forEach((file) => {
     const modified = false;
     // Fix import statements with double punctuation;
     content = content ;/g,
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       (match) => {
-=======
-
-  try {}
-    const filePath = path.join(process.cwd(), file);
-    let content = fs.readFileSync(filePath, "utf8");
-    const modified = false;
-    // Fix import statements with double punctuation;
-    content = content ;/g,
-      (match) => {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return match && match.replace(",;", ";");
 #!/usr / bin / env node;
 import fs from './fs';'
@@ -60,27 +44,16 @@ files.for_each ((file) => {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 =======
@@ -196,21 +169,12 @@ if (.ends_with (") {
           return match.trim () + ";";
         return match.replace (\",\", \";\");
 
-<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-    content = content.replace(;
-      /import\s+.*?from\s+['\"][^'\"]+['\"],\s*;/g,
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       (match) => {
 =======
 
-
-
     content = content.replace(;'"
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
-
 
       (match) => {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -219,9 +183,7 @@ if (.ends_with (") {
     );
     // Fix import statements missing semicolons;
     content = content.replace(
-<<<<<<< HEAD
-<<<<<<< HEAD
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
+/^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
       (match) => {
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
@@ -230,11 +192,6 @@ if (.ends_with (") {
           return match.trim() + ";";
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
 "
@@ -243,32 +200,18 @@ if (.ends_with (") {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
-
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
         return match;
       }
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-    content = content && content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      (match, varName) => {
+(match, varName) => {
         if (
           !match.includes("function") &&
           !match.includes("if") &&
@@ -284,25 +227,6 @@ if (.ends_with (") {
           !match.includes("continue") &&
           !match.includes("debugger") &&
           !match.includes("export") &&
-=======
-
-      (match, varName) => {}
-        if ("
-          !match.includes("function") &&"
-          !match.includes("if") &&"
-          !match.includes("for") &&"
-          !match.includes("while") &&"
-          !match.includes("switch") &&"
-          !match.includes("try") &&"
-          !match.includes("catch") &&"
-          !match.includes("finally") &&"
-          !match.includes("return") &&"
-          !match.includes("throw") &&"
-          !match.includes("break") &&"
-          !match.includes("continue") &&"
-          !match.includes("debugger") &&"
-          !match.includes("export") &&"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           !match.includes("import")
         ) {"
           return match + ";";
@@ -310,60 +234,3 @@ if (.ends_with (") {
         return match;
       }
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
-
-;
-    // Check condition
-if ( {) {
-  $2
-    content = content.replace(;
-      /import\s+.*?from\s+['\"][^'\"]+['\"],\s*;/g,
-
-      (match) => {}
-        return match.replace(\";\", \";\");}
-      }
-    )content = content && content.replace(/(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,(match, varName) => {if (!match.includes(\"function\") &&;
-          !match.includes(\"if\") &&;
-          !match.includes(\"for\") &&;
-          !match.includes(\"while\") &&;
-          !match.includes(\"switch\") &&;
-          !match.includes(\"try\") &&;
-          !match.includes(\"catch\") &&;
-          !match.includes(\"finally\") &&;
-          !match.includes(\"return\") &&;
-          !match.includes(\"throw\") &&;
-          !match.includes(\"break\") &&;
-          !match.includes(\"continue\") &&;
-          !match.includes(\"debugger\") &&;
-          !match.includes(\"export\") &&;}
-          !match.includes(\"import\")) {return match + \";\";}
-        }
-        return match;
-      }
-    )console && console.log(`\nTotal files fixed: ${totalFixe;,}
-}`);
-    // Check condition;
-if ( {) {$2;}
-}
-      fs.writeFileSync (file_path, content, \"utf8\")console.log (`Fixed: ${fil;,}
-}`)total_fixed++;
-    }
-  } catch (error) {
-    console.error (`Error processing ${file}:`, error.message);
-  }
-});
-;
-console.log (`\n_total files fixed: ${total_fixed}`);
-;
-  } catch (error) {console.error (`Error processing ${file}:`, error.message)}
-})console.log (`\n_total files fixed: ${total_fixe;,}
-}`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

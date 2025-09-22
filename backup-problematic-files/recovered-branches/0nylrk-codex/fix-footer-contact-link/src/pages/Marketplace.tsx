@@ -124,21 +124,21 @@ export default function Marketplace() {;
         );
         break}
   };
-  
+
   const clearAllFilters = () => {setSearchQuery("");
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
     setSelectedRating(null)};
-  
+
   // Handle requesting a quote,
 const handleRequestQuote = (listingId: string) => {const listing = MARKETPLACELISTINGS.find(item => item.id === listingId);
-    
+
     if (listing) {
       toast({
         title: "Quote Requested", description: `Your quote request for ${listing.title} has been sent.`
       });
-      
+
       // Navigate to the quote request page with the listing information,
 navigate("/request-quote", {state: { 
           serviceType: listing.category, specificItem: {
