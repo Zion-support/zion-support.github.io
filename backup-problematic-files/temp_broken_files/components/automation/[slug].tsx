@@ -1,3 +1,5 @@
+
+
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import { use_router } from 'next / router',
@@ -24,14 +26,48 @@ if ( {) {
   } catch (e) {
     data = null;
 
+
   }
+<<<<<<< HEAD
+=======
+
+
+  return (
+
+
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     <EnhancedLayout>
-
       <Head>
-
         <title>{_title} - Zion Tech Solutions</title>
-
+      </Head>
       <h1 className=&quot;text-xl font-semibold mb-4&quot;>{title}</h1>
+<<<<<<< HEAD
       {!data ? (
         <div className=&quot;opacity-70&quot;>No report found.</div>
       ) : (
+=======
+
+
+      {!data ? (
+
+        <div className=&quot;opacity - 70 & quot;>No report found.</div>) : (
+        <pre className=&quot;text - xs whitespace - pre - wrap break - words rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 bg - white dark:bg - zinc - 900 overflow - x-auto & quot;>{JSON.stringify (data, null, 2)}</pre>)}
+    </EnhancedLayout>);
+},
+
+export default AutomationDetail;
+
+
+
+        <pre className=&quot;text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto&quot;>{JSON.stringify(data, null, 2)}</pre>      )}
+    </EnhancedLayout>
+  )
+},
+
+export default AutomationDetail,
+
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

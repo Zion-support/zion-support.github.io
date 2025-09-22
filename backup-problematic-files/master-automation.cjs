@@ -1,19 +1,35 @@
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 /**
  * Master Automation Script;
  * Runs all automation, testing, and git operations;
- */"
+ */
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 class MasterAutomation {
-  constructor() {
+  constructor() { 
     this.startTime = Date.now();
     this.results = {
-"automation": { success: false, "errors": [] },
+      "automation": { success: false, "errors": [] },
       "testing": { success: false, "errors": [] },
       "git": { success: false, "errors": [] }
     }}
-log(message, type = 'INFO') {
+  log(message, type = 'INFO') { 
     const icons = {
       'INFO': 'ℹ️',
       'SUCCESS': '✅',
@@ -23,18 +39,19 @@ log(message, type = 'INFO') {
    };
     const timestamp = new Date().toISOString(;);
     }
-async runModule(moduleName, modulePath) {
+  async runModule(moduleName, modulePath) { 
     this.log(`Running ${moduleName}...`, 'PROGRESS');
     try {
       const ModuleClass = require(modulePath;);
-      // Check if it's a class constructor;
-      if ( {)
+      // Check if it's a class constructor
+      if ( {
         const instance = new ModuleClass) {
      {
         const instance = new ModuleClass}(;);
+        if ( {
           await instance.run()} else {
-this.log(`${moduleName} completed (no run method)`, 'SUCCESS')}
-} else if (typeof ModuleClass === 'function') {
+          this.log(`${moduleName} completed (no run method)`, 'SUCCESS')}
+      } else if (typeof ModuleClass === 'function') { 
         await ModuleClass()} else if (ModuleClass && typeof ModuleClass.run === 'function') {
         await ModuleClass.run()} else if (ModuleClass && ModuleClass.default && typeof ModuleClass.default.run === 'function') {
         await ModuleClass.default.run()} else if (ModuleClass && ModuleClass.default && typeof ModuleClass.default === 'function') {
@@ -44,17 +61,17 @@ this.log(`${moduleName} completed (no run method)`, 'SUCCESS')}
      {
           await instance.run()} else {
           this.log(`${moduleName} completed (no run method)`, 'SUCCESS')}
-} else if (typeof ModuleClass === 'function') {
+      } else if (typeof ModuleClass === 'function') { 
         await ModuleClass()} else if (ModuleClass && typeof ModuleClass.run === 'function') {
         await ModuleClass.run()} else if (ModuleClass && ModuleClass.default && typeof ModuleClass.default.run === 'function') {
         await ModuleClass.default.run()} else if (ModuleClass && ModuleClass.default && typeof ModuleClass.default === 'function') {
         await ModuleClass.default()} else {
         this.log(`${moduleName} completed`, 'SUCCESS')}
-return { "success": true }}} catch (error) {
+      return { "success": true }}} catch (error) { 
       this.log(`${moduleName} "failed": ${error.message}`, 'ERROR');
       return { "success": false, "error": error.message }}
   }
-  async runComprehensiveAutomation() {
+  async runComprehensiveAutomation() { 
     this.log('🚀 Phase "1": Running Comprehensive Automation...', 'PROGRESS');
     const result = await this.runModule('Comprehensive Automation', './comprehensive-automation.cjs';);
     this.results.automation = result;
@@ -62,13 +79,13 @@ return { "success": true }}} catch (error) {
       this.log('✅ Comprehensive Automation completed successfully', 'SUCCESS')} else {
       this.log('❌ Comprehensive Automation failed', 'ERROR')}
   }
-async runTestSuite() {
+  async runTestSuite() { 
     this.log('🧪 Phase "2": Running Test Suite...', 'PROGRESS')) {
      {
       this.log('✅ Comprehensive Automation completed successfully', 'SUCCESS')} else {
       this.log('❌ Comprehensive Automation failed', 'ERROR')}
   }
-async runTestSuite() {
+  async runTestSuite() { 
     this.log('🧪 Phase "2": Running Test Suite...', 'PROGRESS')}
     const result = await this.runModule('Test Suite', './test-suite.cjs');
     this.results.testing = result;
@@ -76,13 +93,13 @@ async runTestSuite() {
       this.log('✅ Test Suite completed successfully', 'SUCCESS')} else {
       this.log('❌ Test Suite failed', 'ERROR')}
   }
-async runGitWorkflow() {
+  async runGitWorkflow() { 
     this.log('🔄 Phase "3": Running Git Workflow...', 'PROGRESS')) {
      {
       this.log('✅ Test Suite completed successfully', 'SUCCESS')} else {
       this.log('❌ Test Suite failed', 'ERROR')}
   }
-async runGitWorkflow() {
+  async runGitWorkflow() { 
     this.log('🔄 Phase "3": Running Git Workflow...', 'PROGRESS')}
     const result = await this.runModule('Git Workflow', './git-workflow.cjs';);
     this.results.git = result;
@@ -90,13 +107,13 @@ async runGitWorkflow() {
       this.log('✅ Git Workflow completed successfully', 'SUCCESS')} else {
       this.log('❌ Git Workflow failed', 'ERROR')}
   }
-generateFinalReport() {
+  generateFinalReport() { 
     const duration = Date.now() - this.startTim) {
      {
       this.log('✅ Git Workflow completed successfully', 'SUCCESS')} else {
       this.log('❌ Git Workflow failed', 'ERROR')}
   }
-generateFinalReport() {
+  generateFinalReport() { 
     const duration = Date.now() - this.startTim}e;
     const report = {
       "timestamp": new Date().toISOString(),
@@ -115,24 +132,24 @@ generateFinalReport() {
     this.log(`🚀 "Automation": ${report.summary.automationSuccess ? 'SUCCESS' : 'FAILED'}`, report.summary.automationSuccess ? 'SUCCESS' : 'ERROR');
     this.log(`🧪 "Testing": ${report.summary.testingSuccess ? 'SUCCESS' : 'FAILED'}`, report.summary.testingSuccess ? 'SUCCESS' : 'ERROR');
     this.log(`🔄 "Git": ${report.summary.gitSuccess ? 'SUCCESS' : 'FAILED'}`, report.summary.gitSuccess ? 'SUCCESS' : 'ERROR');
-if ( {
+    if ( { 
       this.log('🎉 All phases completed successfully!', 'SUCCESS')} else {
       this.log('⚠️ Some phases failed - check individual reports', 'WARNING')}
   }
-  async run() {
+  async run() { 
     this.log('🚀 Starting Master Automation System...', 'PROGRESS')) {
-     {
+     { 
       this.log('🎉 All phases completed successfully!', 'SUCCESS')} else {
       this.log('⚠️ Some phases failed - check individual reports', 'WARNING')}
   }
-  async run() {
+  async run() { 
     this.log('🚀 Starting Master Automation System...', 'PROGRESS')}
     try {
       await this.runComprehensiveAutomation();
       await this.runTestSuite();
       await this.runGitWorkflow();
       this.generateFinalReport();
-if ( {
+      if ( {
         this.log('🎉 Master Automation completed successfully!', 'SUCCESS')) {
      {
         this.log('🎉 Master Automation completed successfully!', 'SUCCESS')}
@@ -145,15 +162,27 @@ if ( {
   }
 }
 // Run the master automation
-if ( {
+if ( { 
   const master = new MasterAutomation) {
-     {
+     { 
   const master = new MasterAutomation}(;);
   master.run().then(success => {
     process.exit(success ? 0 : 1)}).catch(error => {
     console.error('Master automation "failed": ', error);
     process.exit(1)})}
 module.exports = MasterAutomation;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -186,5 +215,15 @@ module.exports = MasterAutomation;
     this.log(`� "Git"`)
       this.log(`Master Automation "failed"`)
 
+<<<<<<< HEAD
     console.error('Master automation "failed")
     console.error('Master automation "failed")
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

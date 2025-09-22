@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
@@ -9,24 +10,32 @@ class AdvancedAppImprovementSuite {}
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
     this.ensureDirectories()}
 #!/usr/bin/env node
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 #!/usr/bin/env node
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
-const path = require("path");"
+const path = require("path");
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
+
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 class AdvancedAppImprovementSuite {
-  // TODO: Implement
-}
   constructor(projectRoot) {
-this.projectRoot = projectRoot || process.cwd();
+    this.projectRoot = projectRoot || process.cwd();
     this.reportsDir = path.join(this.projectRoot, "improvement-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
+<<<<<<< HEAD
 this.ensureDirectories();
   }
   ensureDirectories() {
@@ -36,23 +45,32 @@ this.ensureDirectories();
     }  }
     this.startTime = new Date();
     this.results = {};
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     this.ensureDirectories();
+  }
+
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
-ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }  }
+<<<<<<< HEAD
 :backup-problematic-files/advanced-app-improvement-suite.cjs
     }  }
-:backup-problematic-files/advanced-app-improvement-suite.cjs
-    }  }
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");
+<<<<<<< HEAD
     }
   }
 
@@ -65,34 +83,41 @@ log(message, level = 'INFO') {
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");
   }
+=======
 
-log(message) {
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] ${message};`;
-    fs.appendFileSync(this.logFile, logMessage + "\n")}
+  }
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+
+
+<<<<<<< HEAD
   async runCommand(command, description) {
 
       return { success: false, error: error.message };
     }
   }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-async optimizeBundle() {
-    this.log("📦 Optimizing bundle size...");
-    const tasks = [
-:backup-problematic-files/advanced-app-improvement-suite.cjs
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+
   async runCommand(command, description) {
     this.log(`Starting: ${description}`);
     try {
-  // TODO: Implement
       const result = execSync(command, {
-        cwd: this.projectRoot,"
-        encoding: "utf8","
-        timeout: 300000 // 5 minutes timeout;)
-
+        cwd: this.projectRoot,
+        encoding: "utf8",
+        timeout: 300000 // 5 minutes timeout
+      });
+      this.log(`Completed: ${description}`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`Failed: ${description} - ${error.message}`);
       return { success: false, error: error.message };
-}
+    }
   }
+<<<<<<< HEAD
   async optimizeBundleSize() {
     this.log("Optimizing bundle size...");
     const optimizations = [
@@ -103,10 +128,18 @@ async optimizeBundle() {
     const optimizations = [
 
 "
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       { command: "npm run analyze", description: "Bundle Analysis" },
-      { command: "npm run build", description: "Production Build" }"]
+      { command: "npm run build", description: "Production Build" }
     ];
+
     const results = [];
+<<<<<<< HEAD
 :backup-problematic-files/advanced-app-improvement-suite.cjs
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
@@ -130,10 +163,26 @@ async optimizeBundle() {
     this.log("Improving performance...");
     const performanceTasks = [
 
+=======
+    for (const optimization of optimizations) {
+      const result = await this.runCommand(optimization.command, optimization.description);
+      results.push({ ...optimization, result });
+    }
+    return results;
+  }
+
+
+  async improvePerformance() {
+    this.log("Improving performance...");
+    const performanceTasks = [
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       { command: "npm run lint:fix", description: "Fix Linting Issues" },
       { command: "npm run type-check", description: "TypeScript Type Check" }
     ];
+
+
     const results = [];
+<<<<<<< HEAD
 :backup-problematic-files/advanced-app-improvement-suite.cjs
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
@@ -160,10 +209,26 @@ async optimizeBundle() {
     this.log("Enhancing security...");
     const securityTasks = [
 
+=======
+    for (const task of performanceTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, result });
+    }
+    return results;
+  }
+
+
+  async enhanceSecurity() {
+    this.log("Enhancing security...");
+    const securityTasks = [
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       { command: "npm audit --audit-level=moderate", description: "Security Audit" },
       { command: "npm audit fix --force", description: "Fix Security Vulnerabilities" }
     ];
+
+
     const results = [];
+<<<<<<< HEAD
 :backup-problematic-files/advanced-app-improvement-suite.cjs
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
@@ -190,10 +255,26 @@ async optimizeBundle() {
     this.log("Running tests...");
     const testTasks = [
 
+=======
+    for (const task of securityTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, result });
+    }
+    return results;
+  }
+
+
+  async runTests() {
+    this.log("Running tests...");
+    const testTasks = [
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       { command: "npm test", description: "Run Test Suite" },
       { command: "npm run test:coverage", description: "Generate Test Coverage" }
     ];
+
+
     const results = [];
+<<<<<<< HEAD
 :backup-problematic-files/advanced-app-improvement-suite.cjs
     for (const task of tasks) {
       const result = await this.runCommand(task.command, task.description);
@@ -206,10 +287,16 @@ async optimizeBundle() {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
+=======
+    for (const task of testTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      results.push({ ...task, result });
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }
     return results;
   }
 
+<<<<<<< HEAD
 :backup-problematic-files/advanced-app-improvement-suite.cjs
   async generateReport(results) {
     this.log("📊 Generating improvement reports...");
@@ -219,53 +306,57 @@ async optimizeBundle() {
       performanceImprovements: results.performanceImprovements,
       securityEnhancements: results.securityEnhancements,
       testResults: results.testResults
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   async generateReports() {
     this.log("Generating improvement reports...");
     const report = {
       timestamp: new Date().toISOString(),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       bundleOptimization: await this.optimizeBundleSize(),
       performanceImprovements: await this.improvePerformance(),
       securityEnhancements: await this.enhanceSecurity(),
       testResults: await this.runTests()
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     };
+
+
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportFile}`);    return report;
   }
+
+
   async run() {
     this.log("Starting Advanced App Improvement Suite...");
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportFile}`);
+<<<<<<< HEAD
 :backup-problematic-files/advanced-app-improvement-suite.cjs
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  }
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     console.log(`[${timestamp}] ${message}`);
-  }
-
-  async runPerformanceOptimizations() {
-    this.log('🚀 Running performance optimizations...');
-
-};
-  async start() {}"
-    this.log("🚀 Starting Advanced App Improvement Suite...");"
-    try {}
-      const results = {}
-        bundleOptimization: await this.optimizeBundle(),
-        testResults: await this.runTests();
-      await this.generateReport(results);"
-      this.log("✅ Advanced App Improvement Suite completed successfully!");"
-
-// Run if called directly;
-if (require.main === module) {}
-  const suite = new AdvancedAppImprovementSuite(process.cwd());
-  suite.start().catch(console.error);
-
-console.log(`[${timestamp}] ${message}`);
 
   }
   async runPerformanceOptimizations() {
     this.log('🚀 Running performance optimizations...');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     try {
       // Optimize images
       this.log('📸 Optimizing images...');
@@ -274,19 +365,21 @@ console.log(`[${timestamp}] ${message}`);
     } catch (error) {
       this.log(`⚠️ Image optimization failed: ${error.message}`);
     }
-try {
+
+
+    try {
       // Bundle analysis
       this.log('📦 Analyzing bundle...');
       execSync('npm run analyze:bundle', { stdio: 'inherit' });
       this.improvements.push('Bundle analysis completed');
     } catch (error) {
-this.log(`⚠️ Bundle analysis failed: ${error.message}`);
+      this.log(`⚠️ Bundle analysis failed: ${error.message}`);
     }
   }
 
   async runSecurityEnhancements() {
     this.log('🔒 Running security enhancements...');
-
+    
     try {
       // Security audit
       this.log('🔍 Running security audit...');
@@ -308,7 +401,7 @@ this.log(`⚠️ Bundle analysis failed: ${error.message}`);
 
   async runCodeQualityImprovements() {
     this.log('📝 Running code quality improvements...');
-
+    
     try {
       // Lint fix
       this.log('🔧 Fixing linting issues...');
@@ -330,7 +423,7 @@ this.log(`⚠️ Bundle analysis failed: ${error.message}`);
 
   async runAccessibilityImprovements() {
     this.log('♿ Running accessibility improvements...');
-
+    
     try {
       // Accessibility check
       this.log('🔍 Running accessibility check...');
@@ -343,7 +436,7 @@ this.log(`⚠️ Bundle analysis failed: ${error.message}`);
 
   async runSEOOptimizations() {
     this.log('🔍 Running SEO optimizations...');
-
+    
     try {
       // Generate sitemap
       this.log('🗺️ Generating sitemap...');
@@ -357,7 +450,7 @@ this.log(`⚠️ Bundle analysis failed: ${error.message}`);
   async createImprovementReport() {
     const endTime = new Date();
     const duration = endTime - this.startTime;
-
+    
     const report = {
       timestamp: endTime.toISOString(),
       duration: duration,
@@ -372,8 +465,9 @@ this.log(`⚠️ Bundle analysis failed: ${error.message}`);
 
     const reportPath = path.join(this.projectRoot, 'advanced-improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
+    
     this.log(`📊 Improvement report saved to: ${reportPath}`);
+<<<<<<< HEAD
   }
 
   async start() {
@@ -392,6 +486,8 @@ this.log(`⚠️ Bundle analysis failed: ${error.message}`);
     } catch (error) {
       this.log(`❌ Advanced App Improvement Suite failed: ${error.message}`, 'ERROR');
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     return report;
   }
 
@@ -403,12 +499,17 @@ this.log(`⚠️ Bundle analysis failed: ${error.message}`);
       return results;
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
+<<<<<<< HEAD
 :backup-problematic-files/advanced-app-improvement-suite.cjs
       throw error;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       throw error;    }
+
   }
 }
 
+<<<<<<< HEAD
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
       throw error;
 :backup-problematic-files/advanced-app-improvement-suite.cjs
@@ -427,141 +528,276 @@ if (require.main === module) {
   suite.start().catch(console.error);
 }
 module.exports = AdvancedAppImprovementSuite;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 if (require.main === module) {
   const suite = new AdvancedAppImprovementSuite();
   suite.run().catch(console.error);
 }
+
+
 module.exports = AdvancedAppImprovementSuite;
 // Run the improvement suite
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
+<<<<<<< HEAD
 module.exports = AdvancedAppImprovementSuite;
 // Run the improvement suite;
 // Run the improvement suite;
 
+=======
+
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     this.ensureDirectories();,
+}
 
   ensureDirectories() {;
   if (!fs.existsSync(this.reportsDir)) {;
   fs.mkdirSync(this.reportsDir, { recursive: true });,
+}
+  }
 
   log(message) {;
-
+  const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + "\n");,"
+    fs.appendFileSync(this.logFile, logMessage + "\n");,
+}
 
+  async runCommand(command, description) {;
+  this.log(`🚀 Starting: ${description}`);
+    try {;
+  const result = execSync(command, {;
+  cwd: this.projectRoot,
+        encoding: "utf8",
+        timeout: 300000, // 5 minutes timeout;,
+});
+      this.log(`✅ Completed: ${description}`);
+      return { success: true, output: result }
+    } catch (error) {;
+  this.log(`❌ Failed: ${description} - ${error.message}`);
       return { success: false, error: error.message }
+    }
+  }
 
-  async optimizeBundleSize() {;"
-  this.log("📦 Optimizing bundle size...");"
+  async optimizeBundleSize() {;
+  this.log("📦 Optimizing bundle size...");
     const optimizations = [;
-  {;"
+  {;
   command: "npm run analyze",
-        description: "Bundle Analysis";,"
+        description: "Bundle Analysis";,
 },
-
-        description: "Next.js Bundle Analysis";,"
-}]
+      {;
+  command: "npx next-bundle-analyzer",
+        description: "Next.js Bundle Analysis";,
+}
+    ];
+    const results = [];
     for (const opt of optimizations) {;
   const result = await this.runCommand(opt.command, opt.description);
       results.push({ ...opt, ...result });,
+}
 
     return results;,
+}
 
-  async improvePerformance() {;"
-  this.log("⚡ Improving performance...");"
-    // Create performance optimization script;`;
-    const perfScript = `;"
-
+  async improvePerformance() {;
+  this.log("⚡ Improving performance...");
+    // Create performance optimization script;
+    const perfScript = `;
+const fs = require("fs");
+const path = require("path");
 class PerformanceOptimizer {;
   constructor() {;
   this.projectRoot = process.cwd();,
+}
 
-  async optimizeImages() {;"
-  console.log("🖼️ Optimizing images...");"
+  async optimizeImages() {;
+  console.log("🖼️ Optimizing images...");
     // Add image optimization logic here;,
+}
 
-  async optimizeCSS() {;"
-  console.log("🎨 Optimizing CSS...");"
+  async optimizeCSS() {;
+  console.log("🎨 Optimizing CSS...");
     // Add CSS optimization logic here;,
+}
 
-  async optimizeJavaScript() {;"
-  console.log("⚡ Optimizing JavaScript...");"
+  async optimizeJavaScript() {;
+  console.log("⚡ Optimizing JavaScript...");
     // Add JS optimization logic here;,
+}
 
   async run() {;
   await this.optimizeImages();
     await this.optimizeCSS();
-    await this.optimizeJavaScript();"
-    console.log("✅ Performance optimization completed!");,"
+    await this.optimizeJavaScript();
+    console.log("✅ Performance optimization completed!");,
+}
+}
 
 const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);`;
-`;"
+optimizer.run().catch(console.error);
+`;
     fs.writeFileSync(path.join(this.projectRoot, "scripts/performance-optimizer.cjs"), perfScript);
     this.log("✅ Created performance optimizer script");
-    return await this.runCommand("node scripts/performance-optimizer.cjs", "Performance Optimization");,"
+    return await this.runCommand("node scripts/performance-optimizer.cjs", "Performance Optimization");,
+}
 
-  async enhanceSecurity() {;"
-  this.log("🔒 Enhancing security...");"`;
-    const securityScript = `;"
-
+  async enhanceSecurity() {;
+  this.log("🔒 Enhancing security...");
+    const securityScript = `;
+const fs = require("fs");
+const path = require("path");
 class SecurityEnhancer {;
+  constructor() {;
+  this.projectRoot = process.cwd();,
+}
 
-  async addSecurityHeaders() {;"
-  console.log("🛡️ Adding security headers...");"`;
+  async addSecurityHeaders() {;
+  console.log("🛡️ Adding security headers...");
     const securityConfig = \`;
 // Security headers configuration;
 const securityHeaders = [;
-
-    value: "origin-when-cross-origin";,"
-module.exports = { securityHeaders }`;
-\`;"
+  {;
+  key: "X-DNS-Prefetch-Control",
+    value: "on";,
+},
+  {;
+  key: "Strict-Transport-Security",
+    value: "max-age=63072000; includeSubDomains; preload";,
+},
+  {;
+  key: "X-XSS-Protection",
+    value: "1; mode=block";,
+},
+  {;
+  key: "X-Frame-Options",
+    value: "SAMEORIGIN";,
+},
+  {;
+  key: "X-Content-Type-Options",
+    value: "nosniff";,
+},
+  {;
+  key: "Referrer-Policy",
+    value: "origin-when-cross-origin";,
+}
+];
+module.exports = { securityHeaders }
+\`;
     fs.writeFileSync(path.join(this.projectRoot, "security.config.js"), securityConfig);
-    console.log("✅ Security headers configuration created");,"
+    console.log("✅ Security headers configuration created");,
+}
 
-  async addCSP() {;"
-  console.log("🔐 Adding Content Security Policy...");"`;
+  async addCSP() {;
+  console.log("🔐 Adding Content Security Policy...");
     const cspConfig = \`;
 // Content Security Policy configuration;
-const cspHeader = {;"
-  "Content-Security-Policy": [;"
+const cspHeader = {;
+  "Content-Security-Policy": [;
+  {;
+  key: "default-src",
+      value: ""self"";,
+},
+    {;
+  key: "script-src",
+      value: ""self" "unsafe-eval" "unsafe-inline"";,
+},
+    {;
+  key: "style-src",
+      value: ""self" "unsafe-inline"";,
+},
+    {;
+  key: "img-src",
+      value: ""self" blob: data: https:";,
+},
+    {;
+  key: "font-src",
+      value: ""self" https:";,
+},
+    {;
+  key: "object-src",
+      value: ""none"";,
+},
+    {;
+  key: "base-uri",
+      value: ""self"";,
+},
+    {;
+  key: "form-action",
+      value: ""self"";,
+},
+    {;
+  key: "frame-ancestors",
+      value: ""none"";,
+}
+  ];,
+}
+module.exports = { cspHeader }
+\`;
+    fs.writeFileSync(path.join(this.projectRoot, "csp.config.js"), cspConfig);
+    console.log("✅ CSP configuration created");,
+}
 
-    console.log("✅ CSP configuration created");,"
-
+  async run() {;
   await this.addSecurityHeaders();
-    await this.addCSP();"
-    console.log("✅ Security enhancement completed!");,"
+    await this.addCSP();
+    console.log("✅ Security enhancement completed!");,
+}
+}
 
 const enhancer = new SecurityEnhancer();
+enhancer.run().catch(console.error);
+`;
+    fs.writeFileSync(path.join(this.projectRoot, "scripts/security-enhancer.cjs"), securityScript);
+    this.log("✅ Created security enhancer script");
+    return await this.runCommand("node scripts/security-enhancer.cjs", "Security Enhancement");,
+}
 
-    return await this.runCommand("node scripts/security-enhancer.cjs", "Security Enhancement");,"
-
-  async improveSEO() {;"
-  this.log("🔍 Improving SEO...");"`;
-    const seoScript = `;"
-
+  async improveSEO() {;
+  this.log("🔍 Improving SEO...");
+    const seoScript = `;
+const fs = require("fs");
+const path = require("path");
 class SEOImprover {;
+  constructor() {;
+  this.projectRoot = process.cwd();,
+}
 
-  async generateSitemap() {;"
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;"
-</urlset>
+  async generateSitemap() {;
+  console.log("🗺️ Generating sitemap...");
+    const sitemapContent = \`<?xml version="1.0" encoding="UTF-8"?>;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
   <url>;
-</url>
     <loc>https://bolt.new.zion.app/</loc>;
     <lastmod>\${new Date().toISOString()}</lastmod>;
     <changefreq>daily</changefreq>;
     <priority>1.0</priority>;
   </url>;
+  <url>;
     <loc>https://bolt.new.zion.app/about</loc>;
+    <lastmod>\${new Date().toISOString()}</lastmod>;
     <changefreq>weekly</changefreq>;
     <priority>0.8</priority>;
+  </url>;
+  <url>;
     <loc>https://bolt.new.zion.app/services</loc>;
+    <lastmod>\${new Date().toISOString()}</lastmod>;
+    <changefreq>weekly</changefreq>;
+    <priority>0.8</priority>;
+  </url>;
+  <url>;
     <loc>https://bolt.new.zion.app/contact</loc>;
+    <lastmod>\${new Date().toISOString()}</lastmod>;
     <changefreq>monthly</changefreq>;
     <priority>0.6</priority>;
-</url>;
+  </url>;
 </urlset>\`;
     fs.writeFileSync(path.join(this.projectRoot, "public/sitemap.xml"), sitemapContent);
     console.log("✅ Sitemap generated");,
@@ -810,9 +1046,19 @@ suite.run();
 // Run the improvement suite
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
+<<<<<<< HEAD
 
 
 }
 
   </url>;`;
 </urlset>\`;"`;
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

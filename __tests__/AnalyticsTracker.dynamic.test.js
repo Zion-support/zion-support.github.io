@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('AnalyticsTracker.dynamic', () => {
@@ -9,13 +10,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic';
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-describe('AnalyticsTrackerdynamic', () => {
+import AnalyticsTracker from '../components/AnalyticsTracker';
+
+describe('AnalyticsTracker', () => {
   test('renders without crashing', () => {
+<<<<<<< HEAD
     render(<AnalyticsTrackerdynamic />);
     expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument();
   });
@@ -27,20 +31,31 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Analytic
 
 });
 });
+=======
+    render(<AnalyticsTracker />);
+    expect(screen.getByTestId('analyticstracker')).toBeInTheDocument();
+  });
+  
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   test('displays correct content', () => {
-    render(<AnalyticsTrackerdynamic />);
+    render(<AnalyticsTracker />);
   });
+  
   test('handles user interactions', () => {
-    render(<AnalyticsTrackerdynamic />);
+    render(<AnalyticsTracker />);
   });
+  
   test('applies correct styling', () => {
-    render(<AnalyticsTrackerdynamic />);
+    render(<AnalyticsTracker />);
   });
 });
+<<<<<<< HEAD
+=======
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AnalyticsTrackerdynamic from "./components/AnalyticsTracker.dynamic"; describe("AnalyticsTrackerdynamic",() => { test("renders without crashing",() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId("analyticstracker.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<AnalyticsTrackerdynamic />)}); test("handles user interactions",() => { render(<AnalyticsTrackerdynamic />)}); test("applies correct styling",() => { render(<AnalyticsTrackerdynamic />)})});''"
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -52,8 +67,10 @@ describe('AnalyticsTrackerdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AnalyticsTrackerdynamic from "./components/AnalyticsTracker.dynamic"; describe('AnalyticsTrackerdynamic', () => { test("renders without crashing",() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId("analyticstracker.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<AnalyticsTrackerdynamic />)}); test("handles user interactions",() => { render(<AnalyticsTrackerdynamic />)}); test("applies correct styling"
 
 });
+<<<<<<< HEAD
 
 import _React from 'react';  import '@testing-library/jest-dom'; import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic'; describe('AnalyticsTrackerdynamic',() => { test('renders without crashing',() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<AnalyticsTrackerdynamic />)}); test('handles user interactions',() => { render(<AnalyticsTrackerdynamic />)}); test('applies correct styling',() => { render(<AnalyticsTrackerdynamic />)})});
 main
@@ -74,3 +91,7 @@ main
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+});
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

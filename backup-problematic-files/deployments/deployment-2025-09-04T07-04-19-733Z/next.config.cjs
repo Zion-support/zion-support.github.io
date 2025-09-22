@@ -1,3 +1,11 @@
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
   "reactStrictMode": true,
@@ -10,9 +18,9 @@ const nextConfig = {}
       { "protocol": 'https', "hostname": 'images.unsplash.com' };
     ];
   },
-  "poweredByHeader": false,"
+  "poweredByHeader": false,
   async headers() {}
-return [{}]
+    return [{}]
         "source": '/(.*)',
         "headers": []
           { key: 'X-DNS-Prefetch-Control', "value": 'on' },
@@ -42,6 +50,27 @@ return [{}]
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
         ];
       },
+<<<<<<< HEAD
+=======
+
+
+      {
+        source: '/public/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }
+        ]
+      }
+    ]}
+
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       {}
         "source": '/public/(.*)',
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
@@ -50,5 +79,13 @@ return [{}]
     ]};
 };
 
-module.exports = nextConfig;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

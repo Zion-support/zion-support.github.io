@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('ServicesSection.dynamic', () => {
@@ -9,6 +10,16 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Services
 import _React from 'react';  import '@testing-library/jest-dom'; import ServicesSectiondynamic from '../components/ServicesSection.dynamic'; describe('ServicesSectiondynamic',() => { test('renders without crashing',() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId('servicessection.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ServicesSectiondynamic />)}); test('handles user interactions',() => { render(<ServicesSectiondynamic />)}); test('applies correct styling',() => { render(<ServicesSectiondynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import ServicesSectiondynamic from '../components/ServicesSection.dynamic'; describe('ServicesSectiondynamic',() => { test('renders without crashing',() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId('servicessection.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ServicesSectiondynamic />)}); test('handles user interactions',() => { render(<ServicesSectiondynamic />)}); test('applies correct styling',() => { render(<ServicesSectiondynamic />)})});
 
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';  import '@testing-library/jest-dom'; import ServicesSection from '../components/ServicesSection.dynamic'; describe('ServicesSection',() => { test('renders without crashing',() => { render(<ServicesSection />)expect(screen.getByTestId('servicessection')).toBeInTheDocument()})test('displays correct content',() => { render(<ServicesSection />)})test('handles user interactions',() => { render(<ServicesSection />)})test('applies correct styling',() => { render(<ServicesSection />)})})ursor/automate-test-improve-and-merge-code-646c;
+ursor/automate-test-improve-and-merge-code-646c;
+import _React from 'react';  import '@testing-library/jest-dom'; import ServicesSectiondynamic from '../components/ServicesSection.dynamic'; describe('ServicesSectiondynamic',() => { test('renders without crashing',() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId('servicessection.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ServicesSectiondynamic />)}); test('handles user interactions',() => { render(<ServicesSectiondynamic />)}); test('applies correct styling',() => { render(<ServicesSectiondynamic />)})});
+
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -16,37 +27,6 @@ import '@testing-library/jest-dom'
 import ServicesSectiondynamic from '../components/ServicesSection && ServicesSection.dynamic'
 describe('ServicesSectiondynamic'
   test('renders without crashing'
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ServicesSection from '../components/ServicesSection.dynamic';
-
-describe('ServicesSection', () => {
-  test('renders without crashing', () => {
-    render(<ServicesSection />);'
-    expect(screen.getByTestId('servicessection.dynamic')).toBeInTheDocument();
-  });'
-  test('displays correct content', () => {
-    render(<ServicesSection />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });'
-  test('handles user interactions', () => {
-    render(<ServicesSection />);
-    // Add interaction tests here
-  });'
-  test('applies correct styling', () => {
-    render(<ServicesSection />);
-    // Add styling tests here
-  });
-});'
-
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import ServicesSectiondynamic from '../components/ServicesSection.dynamic'
-describe('ServicesSectiondynamic'
-  test('renders without crashing'
-
 import ServicesSectiondynamic from '../components/ServicesSection.dynamic'
 describe('ServicesSectiondynamic'
   test('renders without crashing'
@@ -56,19 +36,24 @@ describe('ServicesSectiondynamic'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ServicesSectiondynamic from "./components/ServicesSection.dynamic"; describe('ServicesSectiondynamic', () => { test("renders without crashing",() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId("servicessection.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ServicesSectiondynamic />)}); test("handles user interactions",() => { render(<ServicesSectiondynamic />)}); test("applies correct styling"
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ServicesSectiondynamic from "./components/ServicesSection.dynamic"; describe('ServicesSectiondynamic', () => { test("renders without crashing",() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId("servicessection.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ServicesSectiondynamic />)}); test("handles user interactions",() => { render(<ServicesSectiondynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import ServicesSectiondynamic from '../components/ServicesSection.dynamic'; describe('ServicesSectiondynamic',() => { test('renders without crashing',() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId('servicessection.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ServicesSectiondynamic />)}); test('handles user interactions',() => { render(<ServicesSectiondynamic />)}); test('applies correct styling',() => { render(<ServicesSectiondynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ServicesSectiondynamic from '../components/ServicesSection.dynamic';
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-describe('ServicesSectiondynamic', () => {
+import ServicesSection from '../components/ServicesSection';
+
+describe('ServicesSection', () => {
   test('renders without crashing', () => {
-    render(<ServicesSectiondynamic />);
-    expect(screen.getByTestId('servicessection.dynamic')).toBeInTheDocument();
+    render(<ServicesSection />);
+    expect(screen.getByTestId('servicessection')).toBeInTheDocument();
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     render(<ServicesSectiondynamic />);
   });
@@ -117,14 +102,36 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     render(<ServicesSectiondynamic />);
   });
 });
+=======
+  
+  test('displays correct content', () => {
+    render(<ServicesSection />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<ServicesSection />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<ServicesSection />);
+  });
+});
+<<<<<<< HEAD
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
     expect(screen.getByTestId('servicessection.dynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
 
+
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ServicesSectiondynamic from "./components/ServicesSection.dynamic"; describe('ServicesSectiondynamic', () => { test("renders without crashing",() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId("servicessection.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ServicesSectiondynamic />)}); test("handles user interactions",() => { render(<ServicesSectiondynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 
 import _React from 'react';  import '@testing-library/jest-dom'; import ServicesSectiondynamic from '../components/ServicesSection.dynamic'; describe('ServicesSectiondynamic',() => { test('renders without crashing',() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId('servicessection.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ServicesSectiondynamic />)}); test('handles user interactions',() => { render(<ServicesSectiondynamic />)}); test('applies correct styling',() => { render(<ServicesSectiondynamic />)})});
 
 import _React from 'react';  import '@testing-library/jest-dom'; import ServicesSectiondynamic from '../components/ServicesSection.dynamic'; describe('ServicesSectiondynamic',() => { test('renders without crashing',() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId('servicessection.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ServicesSectiondynamic />)}); test('handles user interactions',() => { render(<ServicesSectiondynamic />)}); test('applies correct styling',() => { render(<ServicesSectiondynamic />)})});
+=======
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

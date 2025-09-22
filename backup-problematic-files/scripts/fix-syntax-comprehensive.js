@@ -1,83 +1,99 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-// Common syntax fixes;
+
+// Common syntax fixes
 const fixes = [
-  // Fix malformed JSX attributes with extra slashes;
+  // Fix malformed JSX attributes with extra slashes
   {
     pattern: /\/ \/ \/ \/ \/ \/>/g,
-    replacement: ' />
+    replacement: ' />'
   },
-  // Fix malformed JSX attributes with quotes and slashes;
-    pattern: /" \/ \/ \/ \/ \/ \/>/g,""
-    replacement: '" />
-  // Fix malformed semicolons in JSX;
-    pattern: /;"";"/g,""
-    replacement: 
-  // Fix malformed JSX expressions;
+  // Fix malformed JSX attributes with quotes and slashes
+  {
+    pattern: /" \/ \/ \/ \/ \/ \/>/g,
+    replacement: '" />'
+  },
+  // Fix malformed semicolons in JSX
+  {
+    pattern: /;"";"/g,
+    replacement: ''
+  },
+  // Fix malformed JSX expressions
+  {
     pattern: /;\s*{/g,
-    replacement: ' {
-  // Fix malformed return statements;
+    replacement: ' {'
+  },
+  // Fix malformed return statements
+  {
     pattern: /return\(/g,
-    replacement: 'return (
-  // Fix malformed JSX closing tags;
-  {)]
+    replacement: 'return ('
+  },
+  // Fix malformed JSX closing tags
+  {
     pattern: /<\/([^>]+)\s*\/\s*>/g,
-    replacement: '</$1>
-  // Fix malformed object properties;
+    replacement: '</$1>'
+  },
+  // Fix malformed object properties
+  {
     pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,
-    replacement: '$1: $2$3
-  // Fix malformed array assignments;
-    pattern: /\[\s*\]\s*=\s*\[/g,]
-    replacement: '[] = [
-  // Fix malformed object properties with spaces;
+    replacement: '$1: $2$3'
+  },
+  // Fix malformed array assignments
+  {
+    pattern: /\[\s*\]\s*=\s*\[/g,
+    replacement: '[] = ['
+  },
+  // Fix malformed object properties with spaces
+  {
     pattern: /(\w+):\s*(\w+)\s*(\w+)/g,
-    replacement: '$1: $2 $3
-  // Fix malformed JSX self-closing tags;
-  {]
+    replacement: '$1: $2 $3'
+  },
+  // Fix malformed JSX self-closing tags
+  {
     pattern: /<(\w+)\s+([^>]*)\s*\/\s*>/g,
-    replacement: '<$1 $2 />
+    replacement: '<$1 $2 />'
   }
 ];
 
 function fixFile(filePath) {
   try {
-  // TODO: Implement
     const content = fs.readFileSync(filePath, 'utf8');
     let fixedContent = content;
     let hasChanges = false;
+<<<<<<< HEAD
     fixes.forEach(fix => {
     fixes.forEach(fix => {)
+=======
+    
+    fixes.forEach(fix => {
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       const newContent = fixedContent.replace(fix.pattern, fix.replacement);
       if (newContent !== fixedContent) {
         fixedContent = newContent;
         hasChanges = true;
+      }
     });
-<if (hasChanges) {
+    
+    if (hasChanges) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✅ Fixed syntax in ${filePath}`);
-      return true;
-    }
 
-    return false;
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
 
 async function main() {
-<:backup-problematic-files/scripts/fix-syntax-comprehensive.js
   console.log('🔧 Starting comprehensive syntax fixes...');
+
+  
   const patterns = [
     'src/**/*.tsx',
     'src/**/*.ts',
     'components/**/*.tsx',
     'components/**/*.ts',
     'pages/**/*.tsx',
-'pages/**/*.ts'
+    'pages/**/*.ts'
   ];
+<<<<<<< HEAD
 
   let totalFixed = 0;
 
@@ -112,3 +128,8 @@ main().catch(console.error);
 
 main().catch(console.error);
 
+=======
+  
+  let totalFixed = 0;
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

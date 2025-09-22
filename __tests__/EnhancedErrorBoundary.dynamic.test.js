@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('EnhancedErrorBoundary.dynamic', () => {
@@ -9,13 +10,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import EnhancedErrorBoundarydynamic from '../components/EnhancedErrorBoundary.dynamic';
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-describe('EnhancedErrorBoundarydynamic', () => {
+import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';
+
+describe('EnhancedErrorBoundary', () => {
   test('renders without crashing', () => {
+<<<<<<< HEAD
     render(<EnhancedErrorBoundarydynamic />);
     expect(
       screen.getByTestId('enhancederrorboundary.dynamic')
@@ -29,20 +33,31 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
 
 });
 });
+=======
+    render(<EnhancedErrorBoundary />);
+    expect(screen.getByTestId('enhancederrorboundary')).toBeInTheDocument();
+  });
+  
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   test('displays correct content', () => {
-    render(<EnhancedErrorBoundarydynamic />);
+    render(<EnhancedErrorBoundary />);
   });
+  
   test('handles user interactions', () => {
-    render(<EnhancedErrorBoundarydynamic />);
+    render(<EnhancedErrorBoundary />);
   });
+  
   test('applies correct styling', () => {
-    render(<EnhancedErrorBoundarydynamic />);
+    render(<EnhancedErrorBoundary />);
   });
 });
+<<<<<<< HEAD
+=======
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedErrorBoundarydynamic from "./components/EnhancedErrorBoundary.dynamic"; describe("EnhancedErrorBoundarydynamic",() => { test("renders without crashing",() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId("enhancederrorboundary.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<EnhancedErrorBoundarydynamic />)}); test("applies correct styling",() => { render(<EnhancedErrorBoundarydynamic />)})});''"
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -54,8 +69,10 @@ describe('EnhancedErrorBoundarydynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedErrorBoundarydynamic from "./components/EnhancedErrorBoundary.dynamic"; describe('EnhancedErrorBoundarydynamic', () => { test("renders without crashing",() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId("enhancederrorboundary.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<EnhancedErrorBoundarydynamic />)}); test("applies correct styling"
 
 });
+<<<<<<< HEAD
 
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedErrorBoundarydynamic from '../components/EnhancedErrorBoundary.dynamic'; describe('EnhancedErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId('enhancederrorboundary.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<EnhancedErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<EnhancedErrorBoundarydynamic />)})});
 main
@@ -76,3 +93,7 @@ main
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+});
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

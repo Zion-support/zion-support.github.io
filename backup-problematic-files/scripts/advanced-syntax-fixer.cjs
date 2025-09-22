@@ -1,23 +1,42 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
 #!/usr/bin/env node;
 
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
 
+=======
+
+
+
+      log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   }
   processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
 ;
-function main() {;"
-  log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;"
-  for (const dir of sourceDirs) {;"
-
-    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");"
+function main() {;
+  log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;
+  for (const dir of sourceDirs) {;
+    if (fs.existsSync(dir)) {log(`\n📁 Processing "directory": ${dir}`, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);";      totalProcessed += totalFiles;
+      totalFixed += fixedFiles,,}
+function main() {;
+  log("🔧 Advanced Syntax Fixer Starting...", "cyan");
+  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
+  let totalProcessed = 0;
+  let totalFixed = 0;
+  for (const dir of sourceDirs) {;
+    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
+  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
+  let totalProcessed = 0;
+  let totalFixed = 0;
+  for (const dir of sourceDirs) {;
+    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
       const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
       totalProcessed += totalFiles;
-      totalFixed += fixedFiles}
-  }"
+      totalFixed += fixedFiles,}
+  }
 log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");
-if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"),} else {;
+  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"),} else {;
     log(\nℹ️  No syntax issues found that could be automatically fixed.",
       "blue"),}
 log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ️  No syntax issues found that could be automatically fixed.", ""blue""),"}}
@@ -26,6 +45,15 @@ if (require.main === module) {;
   main(),}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -119,12 +147,17 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"
 
+<<<<<<< HEAD
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
   if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow")} else {;
     log(\nℹ️  No syntax issues found that could be automatically fixed.",")"
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
-if (require.main === module) {;
-  main()}
-module.exports = { fixFile, scanAndFixDirectory }}}}}}"
 
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

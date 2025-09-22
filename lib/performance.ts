@@ -1,4 +1,4 @@
-// Performance optimization utilities
+import { Metadata } from 'next';
 
 export function optimizeImages() {
   return {

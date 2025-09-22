@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 function run(cmd) {}
 	console.log(`$ ${cmd}`);
 	return execSync(cmd, { "stdio": 'inherit' })};
@@ -10,6 +18,7 @@ try {}
 	try { run('pm2 reload bolt-zion-app')} catch {};
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
+<<<<<<< HEAD
 process.exit(1)};
 	process.exit(1)};
 #!/usr/bin/env node
@@ -218,3 +227,20 @@ console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
 	process.exit(1)};
 
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,4 +1,4 @@
-    }},
+}},
   {
     "name": 'ESLint Code Analysis',
     "action": () => {
@@ -38,7 +38,6 @@
       });
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
-
     }},
   {
     "name": 'Import/Export Analysis',
@@ -55,7 +54,6 @@
           importCount += (content.match(/^import\s+/gm) || []).length;
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
-
       }
     }},
   {
@@ -86,7 +84,6 @@
             }
           });
         });
-
       }
     }},
 ];
@@ -116,8 +113,11 @@ if (!fs.existsSync(reportsDir)) {
 }
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
 
 :backup-problematic-files/temp_broken_files/automation/code-quality.cjs
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

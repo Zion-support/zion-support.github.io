@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -8,19 +9,35 @@ main
 
 
 
+=======
+<<<<<<< HEAD
+const { execSync, spawn } = require('child_process');
+=======
+
+
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
-class ErrorMonitor {}
-  constructor() {}
 
-    this.errorThreshold = 10; // Maximum errors before triggering fixes;
-    this.lastCheck = null;
-  };
-  log(message) {}
+class ErrorMonitor {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logs', 'error-monitor.log');
+    this.errorCount = 0;
+    this.lastCheck = new Date();
+    this.setupLogging();
+  }
+
+  setupLogging() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message) {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -28,135 +45,152 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] ${message}\n`;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
     const logMessage = `[${timestamp}] ${message}\n`;`
+>>>>>>> origin/merge-pr-12271
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
-  async runLintCheck() {}
-    try {}
-this.log('Running lint check...');
-      const { stdout, stderr } = await execAsync('npm run "lint": check', {})
-        "cwd": process.cwd(),
-        "timeout": 30000}
-});
-      if (stderr) {}
-        this.log(`Lint "stderr": ${stderr}`);
-        return { "hasErrors": true, "output": stderr };
-      };
-      this.log('Lint check completed successfully');
-      return { "hasErrors": false, "output": stdout };"
+  }
 
-      return { "hasErrors": true, "output": error.message };"
-  async runTypeCheck() {}
-try {}
-      this.log('Running type check...');
-      const { stdout, stderr } = await execAsync('npm run type-check', {})
-        "cwd": process.cwd(),
-        "timeout": 30000}
-});
-      if (stderr) {}
-        this.log(`Type check "stderr": ${stderr}`);
-        return { "hasErrors": true, "output": stderr };
-      };
-      this.log('Type check completed successfully');
-      return { "hasErrors": false, "output": stdout };
-    } catch (error) {}
-      this.log(`Type check "failed": ${error.message}`);
-      return { "hasErrors": true, "output": error.message };
-    };
-  };
-  async runBuildCheck() {}
-    try {}
+  async runLintCheck() {
+    try {
+      this.log('Running ESLint check...');
+      const result = execSync('npm run lint', { 
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: process.cwd()
+      });
+      this.log('ESLint check passed');
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`ESLint errors found: ${error.message}`);
+      return { success: false, output: error.stdout || error.message };
+    }
+  }
+
+  async runTypeCheck() {
+    try {
+      this.log('Running TypeScript check...');
+      const result = execSync('npm run type-check', { 
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: process.cwd()
+      });
+      this.log('TypeScript check passed');
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`TypeScript errors found: ${error.message}`);
+      return { success: false, output: error.stdout || error.message };
+    }
+  }
+
+  async runBuildCheck() {
+    try {
       this.log('Running build check...');
-      const { stdout, stderr } = await execAsync('npm run build', {})
-        "cwd": process.cwd(),
-        "timeout": 60000}
-});
-      if (stderr) {}
-        this.log(`Build "stderr": ${stderr}`);
-        return { "hasErrors": true, "output": stderr };
-      };
-      this.log('Build check completed successfully');
-      return { "hasErrors": false, "output": stdout };
-    } catch (error) {}
-      this.log(`Build check "failed": ${error.message}`);
-      return { "hasErrors": true, "output": error.message };
-    };
-  };
-  async fixLintErrors() {}
-    try {}
+      const result = execSync('npm run build', { 
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: process.cwd()
+      });
+      this.log('Build check passed');
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`Build errors found: ${error.message}`);
+      return { success: false, output: error.stdout || error.message };
+    }
+  }
+
+  async fixLintErrors() {
+    try {
       this.log('Attempting to fix lint errors...');
-      const { stdout, stderr } = await execAsync('npm run "lint": fix', {})
-        "cwd": process.cwd(),
-        "timeout": 30000}
-});
-      this.log(`Lint fix "output": ${stdout}`);
-      if (stderr) {}
-        this.log(`Lint fix "stderr": ${stderr}`);
-      };
-      return { "success": true, "output": stdout };
-    } catch (error) {}
-      this.log(`Lint fix "failed": ${error.message}`);
-      return { "success": false, "output": error.message };
-    };
-  };
-  async countErrors(output) {}
-    if (!output) return 0;
-    const errorMatches = output.match(/error/g) || [];
-    const warningMatches = output.match(/warning/g) || [];
-    return errorMatches.length + Math.floor(warningMatches.length / 2); // Weight warnings less;
-};
-  async checkAndFix() {}
+      execSync('npm run fix:all', { 
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: process.cwd()
+      });
+      this.log('Lint errors fixed');
+      return true;
+    } catch (error) {
+      this.log(`Failed to fix lint errors: ${error.message}`);
+      return false;
+    }
+  }
+
+  async commitChanges() {
+    try {
+      this.log('Committing changes...');
+      execSync('git add .', { cwd: process.cwd() });
+      execSync('git commit -m "fix: auto-fix linting and type errors"', { cwd: process.cwd() });
+      this.log('Changes committed');
+      return true;
+    } catch (error) {
+      this.log(`Failed to commit changes: ${error.message}`);
+      return false;
+    }
+  }
+
+  async pushChanges() {
+    try {
+      this.log('Pushing changes...');
+      execSync('git push origin main', { cwd: process.cwd() });
+      this.log('Changes pushed to main branch');
+      return true;
+    } catch (error) {
+      this.log(`Failed to push changes: ${error.message}`);
+      return false;
+    }
+  }
+
+  async checkAndFix() {
     this.log('Starting error monitoring cycle...');
+    
     const lintResult = await this.runLintCheck();
     const typeResult = await this.runTypeCheck();
-    const buildResult = await this.runBuildCheck();
-    const totalErrors =
-      (await this.countErrors(lintResult.output)) +
-      (await this.countErrors(typeResult.output)) +
-      (await this.countErrors(buildResult.output));
-this.log(`Total errors "detected": ${totalErrors}`);
-    if (totalErrors > this.errorThreshold) {}
-      this.log()`;
-        `Error threshold exceeded (${totalErrors} > ${this.errorThreshold}). Attempting fixes...``
-);
-      if (lintResult.hasErrors) {}
-        await this.fixLintErrors();
-      // Re-run checks after fixes;
-      const newLintResult = await this.runLintCheck();
-      const newTypeResult = await this.runTypeCheck();
-      const newBuildResult = await this.runBuildCheck();
-      const newTotalErrors =
-        (await this.countErrors(newLintResult.output)) +
-        (await this.countErrors(newTypeResult.output)) +
-        (await this.countErrors(newBuildResult.output));
-this.log(`Errors after "fixes": ${newTotalErrors}`);
-      if (newTotalErrors < totalErrors) {}
-        this.log('Fixes applied successfully');
-      } else {}
-        this.log('Fixes did not reduce error count significantly');
-
-  async start() {}
-    this.log('Error Monitor started');
-    // Run initial check;
-    await this.checkAndFix();
-    // Set up periodic checks every 30 minutes;
-    setInterval()
-      async () => {}
-      },
-      30 * 60 * 1000;
-// Start the monitor if this script is run directly;
-if (require.main === module) {}
-  const monitor = new ErrorMonitor();
-  monitor.start().catch(error => {})
-
-    process.exit(1);
+    
+    if (!lintResult.success || !typeResult.success) {
+      this.errorCount++;
+      this.log(`Errors detected (count: ${this.errorCount})`);
+      
+      // Try to fix lint errors
+      if (!lintResult.success) {
+        const fixed = await this.fixLintErrors();
+        if (fixed) {
+          // Re-run lint check
+          const recheckResult = await this.runLintCheck();
+          if (recheckResult.success) {
+            this.log('Lint errors successfully fixed');
+          }
+        }
+      }
+      
+      // If we have fixes, commit and push
+      if (await this.commitChanges()) {
+        await this.pushChanges();
+      }
+    } else {
+      this.log('No errors detected');
+      this.errorCount = 0;
+    }
+    
+    this.lastCheck = new Date();
   }
+<<<<<<< HEAD
+=======
 });
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 module.exports = ErrorMonitor;
+>>>>>>> origin/merge-pr-12271
 
+<<<<<<< HEAD
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 module.exports = ErrorMonitor;
@@ -166,3 +200,26 @@ module.exports = ErrorMonitor;
 
 module.exports = ErrorMonitor;
 
+=======
+  async start() {
+    this.log('Error Monitor started');
+    
+    // Run initial check
+    await this.checkAndFix();
+    
+    // Set up periodic checks every 30 minutes
+    setInterval(async () => {
+      await this.checkAndFix();
+    }, 30 * 60 * 1000);
+  }
+}
+
+<<<<<<< HEAD
+// Start the error monitor
+const monitor = new ErrorMonitor();
+monitor.start().catch(console.error);
+
+module.exports = ErrorMonitor;
+=======
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,8 +1,11 @@
-<
+
 #!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,,"}),"}) fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) ,"}) '🔗 Link Integrity Checker Started'),"}),"}) ,"}),"}) class LinkIntegrityChecker {,"}),"}) constructor() {,"}),"}) this.projectRoot = path.resolve(__dirname,..,"}),"}) '),"}),"}) this.issues = [],"}),"}) this.checkedFiles = 0,"}),"}) }"}),"}) ,"}),"}) async checkIntegrity() {,"}),"}) try {,"}),"}) ,"}) '),"}),"}) ,"}),"}) await this.checkHtmlIntegrity(),"}),"}) ,"}),"}) await this.checkCssIntegrity(),"}),"}) ,"}),"}) await this.checkJsIntegrity(),"}),"}) ,"}),"}) await this.checkBuildArtifacts(),"}),"}) ,"}),"}) await this.generateReport(),"}),"}) ,"}),"}) ,"}) '),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error('❌ Error during integrity check: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkHtmlIntegrity() {,"}),"}) try {,"}),"}) ,"}) '),"}),"}) ,"}),"}) const htmlFiles = this.findFiles('.html,"}),"}) '),"}),"}) ,"}),"}) for (const file of htmlFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const imgRegex = /<img[^>]+src=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = imgRegex.exec(content)) !== null) {,"}),"}) const src = match[1],"}),"}) if (!this.isValidAsset(src,file)) {,"}),"}) this.issues.push(`Broken image reference in ${file}: ${src}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const scriptRegex = /<script[^>]+src=["']([^","}),"}) ']+)["']/g,"}),"}) while ((match = scriptRegex.exec(content)) !== null) {,"}),"}) const src = match[1],"}),"}) if (!this.isValidAsset(src,file)) {,"}),"}) this.issues.push(`Broken script reference in ${file}: ${src}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const linkRegex = /<link[^>]+href=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) while ((match = linkRegex.exec(content)) !== null) {,"}),"}) const href = match[1],"}),"}) if (!this.isValidAsset(href,file)) {,"}),"}) this.issues.push(`Broken stylesheet reference in ${file}: ${href}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) ⚠️ Could not check HTML integrity: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkCssIntegrity() {,"}),"}) try {,"}),"}) ,"}) '),"}),"}) ,"}),"}) const cssFiles = this.findFiles('.css,"}),"}) '),"}),"}) ,"}),"}) for (const file of cssFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const urlRegex = /url\([,"}),"}) '"]?([^'")\s]+)[,"}),"}) '"]?\)/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = urlRegex.exec(content)) !== null) {,"}),"}) const url = match[1],"}),"}) if (!this.isValidAsset(url,file)) {,"}),"}) this.issues.push(`Broken asset reference in CSS ${file}: ${url}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) ⚠️ Could not check CSS integrity: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkJsIntegrity() {,"}),"}) try {,"}),"}) ,"}) '),"}),"}) ,"}),"}) const jsFiles = this.findFiles('.js,"}),"}) '),"}),"}) const tsFiles = this.findFiles('.ts,"}),"}) '),"}),"}) const allFiles = [...jsFiles,...tsFiles],"}),"}) ,"}),"}) for (const file of allFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const importRegex = /import\s+.*?from\s+[,"}),"}) '"]([^'"]+)[,"}),"}) '"]/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = importRegex.exec(content)) !== null) {,"}),"}) const importPath = match[1],"}),"}) if (!this.isValidImport(importPath,file)) {,"}),"}) this.issues.push(`Broken import in ${file}: ${importPath}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const requireRegex = /require\s*\(\s*['"]([^,"}),"}) '"]+)['"]\s*\)/g,"}),"}) while ((match = requireRegex.exec(content)) !== null) {,"}),"}) const requirePath = match[1],"}),"}) if (!this.isValidImport(requirePath,file)) {,"}),"}) this.issues.push(`Broken require in ${file}: ${requirePath}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) '⚠️ Could not check JavaScript integrity:',error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkBuildArtifacts() {,"}),"}) try {,"}),"}) ,"}) '🔨 Checking build artifacts...'),"}),"}) ,"}),"}) const distPath = path.join(this.projectRoot,dist,"}),"}) '),"}),"}) if (!fs.existsSync(distPath)) {,"}),"}) this.issues.push('Build directory (dist) does not exist,"}),"}) '),"}),"}) return,"}),"}) }"}),"}) ,"}),"}) const essentialFiles = [,"}),"}) 'index.html,"}),"}) ',css',js,"}),"}) ',assets',"}),"}) ],"}),"}) ,"}),"}) for (const file of essentialFiles) {,"}),"}) const filePath = path.join(distPath,file),"}),"}) if (!fs.existsSync(filePath)) {,"}),"}) this.issues.push(`Missing essential build file: ${file}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const indexHtmlPath = path.join(distPath,index.html,"}),"}) '),"}),"}) if (fs.existsSync(indexHtmlPath)) {,"}),"}) const content = fs.readFileSync(indexHtmlPath,utf8'),"}),"}) ,"}),"}) const assetRegex = /(src|href)=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = assetRegex.exec(content)) !== null) {,"}),"}) const assetPath = match[2],"}),"}) if (assetPath.startsWith('./,"}),"}) ') || assetPath.startsWith('/,"}),"}) ')) {,"}),"}) const fullPath = path.join(distPath,assetPath.replace(/^\.?\ if (!fs.existsSync(fullPath)) {,"}),"}) this.issues.push(`Broken asset reference in build: ${assetPath}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) ⚠️ Could not check build artifacts: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) isValidAsset(assetPath,sourceFile) {,"}),"}) if (assetPath.startsWith(,,"}),"}) http: ') || assetPath.startsWith('https: return true,"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith(,,"}),"}) data: )) {,"}),"}) return true,"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith('./,"}),"}) ') || assetPath.startsWith('../,"}),"}) ')) {,"}),"}) const sourceDir = path.dirname(sourceFile),"}),"}) const fullPath = path.resolve(sourceDir,assetPath),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith('/,"}),"}) ')) {,"}),"}) const fullPath = path.join(this.projectRoot,assetPath.substring(1)),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) const fullPath = path.join(this.projectRoot,assetPath),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) isValidImport(importPath,sourceFile) {,"}),"}) if (!importPath.startsWith('.,"}),"}) ') && !importPath.startsWith('/,"}),"}) ')) {,"}),"}) return true,"}),"}) }"}),"}) ,"}),"}) if (importPath.startsWith('./,"}),"}) ') || importPath.startsWith('../,"}),"}) ')) {,"}),"}) const sourceDir = path.dirname(sourceFile),"}),"}) const fullPath = path.resolve(sourceDir,importPath),"}),"}) ,"}),"}) const extensions = ['.js,"}),"}) ',.ts',.tsx,"}),"}) ',.jsx'],"}),"}) return extensions.some(ext => {,"}),"}) const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"}) return fs.existsSync(testPath),"}),"}) }),"}),"}) }"}),"}) ,"}),"}) if (importPath.startsWith(,"}),"}) '/')) {,"}),"}) const fullPath = path.join(this.projectRoot,importPath.substring(1)),"}),"}) const extensions = [,"}),"}) '.js',.ts,"}),"}) ',.tsx',.jsx,"}),"}) '],"}),"}) return extensions.some(ext => {,"}),"}) const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"}) return fs.existsSync(testPath),"}),"}) }),"}),"}) }"}),"}) ,"}),"}) return false,"}),"}) }"}),"}) ,"}),"}) findFiles(extension) {,"}),"}) const files = [],"}),"}) ,"}),"}) const scanDirectory = (dir) => {,"}),"}) try {,"}),"}) const items = fs.readdirSync(dir),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) ,"}),"}) if (stat.isDirectory() && !item.startsWith('.,"}),"}) ') && item !== 'node_modules,"}),"}) ') {,"}),"}) scanDirectory(fullPath),"}),"}) } else if (stat.isFile() && item.endsWith(extension)) {,"}),"}) files.push(fullPath),"}),"}) }"}),"}) }"}),"}) } catch (error) {,"}),"}) }"}),"}) },"}),"}) ,"}),"}) scanDirectory(this.projectRoot),"}),"}) return files,"}),"}) }"}),"}) ,"}),"}) async generateReport() {,"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) checkedFiles: this.checkedFiles,,"}),"}) issues: this.issues.length,"}),"}) },,"}),"}) issues: this.issues,,"}),"}) recommendations: this.generateRecommendations(),"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(this.projectRoot,logs,"}),"}) ',link-integrity-report.json'),"}),"}) try {,"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) '⚠️ Could not save report: ,"}),"}) ,error.message),"}),"}) }"}),"}) ,"}),"}) ,"}) '\n📋 Integrity Check Summary: '),"}),"}) ,"}) '─.repeat(50)),"}),"}) ,"}),"}) ,"}),"}) ,"}),"}) if (this.issues.length > 0) {,"}),"}) ,"}) '\n🔍 Issues:'),"}),"}) this.issues.forEach((issue,index) => {,"}),"}) ,"}),"}) }),"}),"}) } else {,"}),"}) ,"}) '\n🎉 All links and assets are valid!'),"}),"}) }"}),"}) ,"}),"}) ,"}) '─'.repeat(50)),"}),"}) }"}),"}) ,"}),"}) generateRecommendations() {,"}),"}) const recommendations = [],"}),"}) ,"}),"}) if (this.issues.length > 0) {,"}),"}) recommendations.push(,"}),"}) 'Fix broken asset references and imports'),"}),"}) recommendations.push(,"}),"}) 'Verify all file paths are correct'),"}),"}) recommendations.push(,"}),"}) 'Check for typos in import statements'),"}),"}) recommendations.push(,"}),"}) 'Ensure build process generates all required assets'),"}),"}) } else {,"}),"}) recommendations.push(,"}),"}) 'Continue monitoring for new issues'),"}),"}) recommendations.push(,"}),"}) 'Consider adding automated integrity checks to CI/CD'),"}),"}) }"}),"}) ,"}),"}) return recommendations,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const checker = new LinkIntegrityChecker(),"}),"}) checker.checkIntegrity().then(() => {,"}),"}) ,"}) '🔗 Link Integrity Checker Completed'),"}),"}) process.exit(0),"}),"}) }).catch((error) => {,"}),"}) console.error(,"}),"}) '❌ Link Integrity Checker Failed:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) fs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename);  class LinkIntegrityChecker {; constructor() {; this.projectRoot = path.resolve(__dirname,..';); this.issues = []; this.checkedFiles = 0} async checkIntegrity() { try {'  await this.checkHtmlIntegrity(); await this.checkCssIntegrity(); await this.checkJsIntegrity(); await this.checkBuildArtifacts(); await this.generateReport(); } catch (error) {'; console.error('❌ Error during integrity "check": error.message)}'}'; async checkHtmlIntegrity() {; try {; ';; const htmlFiles = this.findFiles('.html';';)';; for (const file of htmlFiles) {';; this.checkedFiles++; const content = fs.readFileSync(file,utf8')';;  const htmlFiles = this.findFiles('.html';); for (const file of htmlFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const imgRegex = /<img[^>]+src=['']([^']+)['']/g; let match; while ((match = imgRegex.exec(content)) !== null) {; const src = match[1]; if (!this.isValidAsset(src,file)) {' this.issues.push(`Broken image reference in ${file}: ${src}`)} } const scriptRegex = /<script[^>]+src=['']([^'']+)['']/g; while ((match = scriptRegex.exec(content)) !== null) { const src = match[1]; if (!this.isValidAsset(src,file)) {' this.issues.push(`Broken script reference in ${file}: ${src}`)} } const linkRegex = /<link[^>]+href=['']([^']+)['']/g; while ((match = linkRegex.exec(content)) !== null) {; const href = match[1]; if (!this.isValidAsset(href,file)) {' this.issues.push(`Broken stylesheet reference in ${file}: ${href}`)} } } } catch (error) {; } } async checkCssIntegrity() { try {`  const cssFiles = this.findFiles('.css';); for (const file of cssFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const urlRegex = /url\([']?([^')\s]+)[']?\)/g; let match; while ((match = urlRegex.exec(content)) !== null) {; const url = match[1]; if (!this.isValidAsset(url,file)) {' this.issues.push(`Broken asset reference in CSS ${file}: ${url}`)} } } } catch (error) {; } } async checkJsIntegrity() { try {`  const jsFiles = this.findFiles('.js';); const tsFiles = this.findFiles('.ts';); const allFiles = [...jsFiles,...tsFiles]; ; for (const file of allFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const importRegex = /import\s+.*?from\s+[']([^']+)[']/g; let match; while ((match = importRegex.exec(content)) !== null) {; const importPath = match[1]; if (!this.isValidImport(importPath,file)) {' this.issues.push(`Broken import in ${file}: ${importPath}`)} } const requireRegex = /require\s*\(\s*['']([^';']+)['']\s*\)/g; while ((match = requireRegex.exec(content)) !== null) { const requirePath = match[1]; if (!this.isValidImport(requirePath,file)) {' this.issues.push(`Broken require in ${file}: ${requirePath}`)} } } } catch (error) { } } async: checkBuildArtifacts() { try {
 
+<<<<<<< HEAD
 <
 #!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,,"}),"}) fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) ,"}) '🔗 Link Integrity Checker Started'),"}),"}) ,"}),"}) class LinkIntegrityChecker {,"}),"}) constructor() {,"}),"}) this.projectRoot = path.resolve(__dirname,..,"}),"}) '),"}),"}) this.issues = [],"}),"}) this.checkedFiles = 0,"}),"}) }"}),"}) ,"}),"}) async checkIntegrity() {,"}),"}) try {,"}),"}) ,"}) '),"}),"}) ,"}),"}) await this.checkHtmlIntegrity(),"}),"}) ,"}),"}) await this.checkCssIntegrity(),"}),"}) ,"}),"}) await this.checkJsIntegrity(),"}),"}) ,"}),"}) await this.checkBuildArtifacts(),"}),"}) ,"}),"}) await this.generateReport(),"}),"}) ,"}),"}) ,"}) '),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error('❌ Error during integrity check: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkHtmlIntegrity() {,"}),"}) try {,"}),"}) ,"}) '),"}),"}) ,"}),"}) const htmlFiles = this.findFiles('.html,"}),"}) '),"}),"}) ,"}),"}) for (const file of htmlFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const imgRegex = /<img[^>]+src=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = imgRegex.exec(content)) !== null) {,"}),"}) const src = match[1],"}),"}) if (!this.isValidAsset(src,file)) {,"}),"}) this.issues.push(`Broken image reference in ${file}: ${src}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const scriptRegex = /<script[^>]+src=["']([^","}),"}) ']+)["']/g,"}),"}) while ((match = scriptRegex.exec(content)) !== null) {,"}),"}) const src = match[1],"}),"}) if (!this.isValidAsset(src,file)) {,"}),"}) this.issues.push(`Broken script reference in ${file}: ${src}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const linkRegex = /<link[^>]+href=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) while ((match = linkRegex.exec(content)) !== null) {,"}),"}) const href = match[1],"}),"}) if (!this.isValidAsset(href,file)) {,"}),"}) this.issues.push(`Broken stylesheet reference in ${file}: ${href}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) ⚠️ Could not check HTML integrity: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkCssIntegrity() {,"}),"}) try {,"}),"}) ,"}) '),"}),"}) ,"}),"}) const cssFiles = this.findFiles('.css,"}),"}) '),"}),"}) ,"}),"}) for (const file of cssFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const urlRegex = /url\([,"}),"}) '"]?([^'")\s]+)[,"}),"}) '"]?\)/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = urlRegex.exec(content)) !== null) {,"}),"}) const url = match[1],"}),"}) if (!this.isValidAsset(url,file)) {,"}),"}) this.issues.push(`Broken asset reference in CSS ${file}: ${url}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) ⚠️ Could not check CSS integrity: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkJsIntegrity() {,"}),"}) try {,"}),"}) ,"}) '),"}),"}) ,"}),"}) const jsFiles = this.findFiles('.js,"}),"}) '),"}),"}) const tsFiles = this.findFiles('.ts,"}),"}) '),"}),"}) const allFiles = [...jsFiles,...tsFiles],"}),"}) ,"}),"}) for (const file of allFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const importRegex = /import\s+.*?from\s+[,"}),"}) '"]([^'"]+)[,"}),"}) '"]/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = importRegex.exec(content)) !== null) {,"}),"}) const importPath = match[1],"}),"}) if (!this.isValidImport(importPath,file)) {,"}),"}) this.issues.push(`Broken import in ${file}: ${importPath}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const requireRegex = /require\s*\(\s*['"]([^,"}),"}) '"]+)['"]\s*\)/g,"}),"}) while ((match = requireRegex.exec(content)) !== null) {,"}),"}) const requirePath = match[1],"}),"}) if (!this.isValidImport(requirePath,file)) {,"}),"}) this.issues.push(`Broken require in ${file}: ${requirePath}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) '⚠️ Could not check JavaScript integrity:',error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkBuildArtifacts() {,"}),"}) try {,"}),"}) ,"}) '🔨 Checking build artifacts...'),"}),"}) ,"}),"}) const distPath = path.join(this.projectRoot,dist,"}),"}) '),"}),"}) if (!fs.existsSync(distPath)) {,"}),"}) this.issues.push('Build directory (dist) does not exist,"}),"}) '),"}),"}) return,"}),"}) }"}),"}) ,"}),"}) const essentialFiles = [,"}),"}) 'index.html,"}),"}) ',css',js,"}),"}) ',assets',"}),"}) ],"}),"}) ,"}),"}) for (const file of essentialFiles) {,"}),"}) const filePath = path.join(distPath,file),"}),"}) if (!fs.existsSync(filePath)) {,"}),"}) this.issues.push(`Missing essential build file: ${file}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const indexHtmlPath = path.join(distPath,index.html,"}),"}) '),"}),"}) if (fs.existsSync(indexHtmlPath)) {,"}),"}) const content = fs.readFileSync(indexHtmlPath,utf8'),"}),"}) ,"}),"}) const assetRegex = /(src|href)=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = assetRegex.exec(content)) !== null) {,"}),"}) const assetPath = match[2],"}),"}) if (assetPath.startsWith('./,"}),"}) ') || assetPath.startsWith('/,"}),"}) ')) {,"}),"}) const fullPath = path.join(distPath,assetPath.replace(/^\.?\ if (!fs.existsSync(fullPath)) {,"}),"}) this.issues.push(`Broken asset reference in build: ${assetPath}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) ⚠️ Could not check build artifacts: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) isValidAsset(assetPath,sourceFile) {,"}),"}) if (assetPath.startsWith(,,"}),"}) http: ') || assetPath.startsWith('https: return true,"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith(,,"}),"}) data: )) {,"}),"}) return true,"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith('./,"}),"}) ') || assetPath.startsWith('../,"}),"}) ')) {,"}),"}) const sourceDir = path.dirname(sourceFile),"}),"}) const fullPath = path.resolve(sourceDir,assetPath),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith('/,"}),"}) ')) {,"}),"}) const fullPath = path.join(this.projectRoot,assetPath.substring(1)),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) const fullPath = path.join(this.projectRoot,assetPath),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) isValidImport(importPath,sourceFile) {,"}),"}) if (!importPath.startsWith('.,"}),"}) ') && !importPath.startsWith('/,"}),"}) ')) {,"}),"}) return true,"}),"}) }"}),"}) ,"}),"}) if (importPath.startsWith('./,"}),"}) ') || importPath.startsWith('../,"}),"}) ')) {,"}),"}) const sourceDir = path.dirname(sourceFile),"}),"}) const fullPath = path.resolve(sourceDir,importPath),"}),"}) ,"}),"}) const extensions = ['.js,"}),"}) ',.ts',.tsx,"}),"}) ',.jsx'],"}),"}) return extensions.some(ext => {,"}),"}) const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"}) return fs.existsSync(testPath),"}),"}) }),"}),"}) }"}),"}) ,"}),"}) if (importPath.startsWith(,"}),"}) '/')) {,"}),"}) const fullPath = path.join(this.projectRoot,importPath.substring(1)),"}),"}) const extensions = [,"}),"}) '.js',.ts,"}),"}) ',.tsx',.jsx,"}),"}) '],"}),"}) return extensions.some(ext => {,"}),"}) const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"}) return fs.existsSync(testPath),"}),"}) }),"}),"}) }"}),"}) ,"}),"}) return false,"}),"}) }"}),"}) ,"}),"}) findFiles(extension) {,"}),"}) const files = [],"}),"}) ,"}),"}) const scanDirectory = (dir) => {,"}),"}) try {,"}),"}) const items = fs.readdirSync(dir),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) ,"}),"}) if (stat.isDirectory() && !item.startsWith('.,"}),"}) ') && item !== 'node_modules,"}),"}) ') {,"}),"}) scanDirectory(fullPath),"}),"}) } else if (stat.isFile() && item.endsWith(extension)) {,"}),"}) files.push(fullPath),"}),"}) }"}),"}) }"}),"}) } catch (error) {,"}),"}) }"}),"}) },"}),"}) ,"}),"}) scanDirectory(this.projectRoot),"}),"}) return files,"}),"}) }"}),"}) ,"}),"}) async generateReport() {,"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) checkedFiles: this.checkedFiles,,"}),"}) issues: this.issues.length,"}),"}) },,"}),"}) issues: this.issues,,"}),"}) recommendations: this.generateRecommendations(),"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(this.projectRoot,logs,"}),"}) ',link-integrity-report.json'),"}),"}) try {,"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) ,"}),"}) } catch (error) {,"}),"}) ,"}) '⚠️ Could not save report: ,"}),"}) ,error.message),"}),"}) }"}),"}) ,"}),"}) ,"}) '\n📋 Integrity Check Summary: '),"}),"}) ,"}) '─.repeat(50)),"}),"}) ,"}),"}) ,"}),"}) ,"}),"}) if (this.issues.length > 0) {,"}),"}) ,"}) '\n🔍 Issues:'),"}),"}) this.issues.forEach((issue,index) => {,"}),"}) ,"}),"}) }),"}),"}) } else {,"}),"}) ,"}) '\n🎉 All links and assets are valid!'),"}),"}) }"}),"}) ,"}),"}) ,"}) '─'.repeat(50)),"}),"}) }"}),"}) ,"}),"}) generateRecommendations() {,"}),"}) const recommendations = [],"}),"}) ,"}),"}) if (this.issues.length > 0) {,"}),"}) recommendations.push(,"}),"}) 'Fix broken asset references and imports'),"}),"}) recommendations.push(,"}),"}) 'Verify all file paths are correct'),"}),"}) recommendations.push(,"}),"}) 'Check for typos in import statements'),"}),"}) recommendations.push(,"}),"}) 'Ensure build process generates all required assets'),"}),"}) } else {,"}),"}) recommendations.push(,"}),"}) 'Continue monitoring for new issues'),"}),"}) recommendations.push(,"}),"}) 'Consider adding automated integrity checks to CI/CD'),"}),"}) }"}),"}) ,"}),"}) return recommendations,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const checker = new LinkIntegrityChecker(),"}),"}) checker.checkIntegrity().then(() => {,"}),"}) ,"}) '🔗 Link Integrity Checker Completed'),"}),"}) process.exit(0),"}),"}) }).catch((error) => {,"}),"}) console.error(,"}),"}) '❌ Link Integrity Checker Failed:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) fs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename);  class LinkIntegrityChecker {; constructor() {; this.projectRoot = path.resolve(__dirname,..';); this.issues = []; this.checkedFiles = 0} async checkIntegrity() { try {'  await this.checkHtmlIntegrity(); await this.checkCssIntegrity(); await this.checkJsIntegrity(); await this.checkBuildArtifacts(); await this.generateReport(); } catch (error) {'; console.error('❌ Error during integrity "check": error.message)}'}'; async checkHtmlIntegrity() {; try {; ';; const htmlFiles = this.findFiles('.html';';)';; for (const file of htmlFiles) {';; this.checkedFiles++; const content = fs.readFileSync(file,utf8')';;  const htmlFiles = this.findFiles('.html';); for (const file of htmlFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const imgRegex = /<img[^>]+src=['']([^']+)['']/g; let match; while ((match = imgRegex.exec(content)) !== null) {; const src = match[1]; if (!this.isValidAsset(src,file)) {' this.issues.push(`Broken image reference in ${file}: ${src}`)} } const scriptRegex = /<script[^>]+src=['']([^'']+)['']/g; while ((match = scriptRegex.exec(content)) !== null) { const src = match[1]; if (!this.isValidAsset(src,file)) {' this.issues.push(`Broken script reference in ${file}: ${src}`)} } const linkRegex = /<link[^>]+href=['']([^']+)['']/g; while ((match = linkRegex.exec(content)) !== null) {; const href = match[1]; if (!this.isValidAsset(href,file)) {' this.issues.push(`Broken stylesheet reference in ${file}: ${href}`)} } } } catch (error) {; } } async checkCssIntegrity() { try {`  const cssFiles = this.findFiles('.css';); for (const file of cssFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const urlRegex = /url\([']?([^')\s]+)[']?\)/g; let match; while ((match = urlRegex.exec(content)) !== null) {; const url = match[1]; if (!this.isValidAsset(url,file)) {' this.issues.push(`Broken asset reference in CSS ${file}: ${url}`)} } } } catch (error) {; } } async checkJsIntegrity() { try {`  const jsFiles = this.findFiles('.js';); const tsFiles = this.findFiles('.ts';); const allFiles = [...jsFiles,...tsFiles]; ; for (const file of allFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const importRegex = /import\s+.*?from\s+[']([^']+)[']/g; let match; while ((match = importRegex.exec(content)) !== null) {; const importPath = match[1]; if (!this.isValidImport(importPath,file)) {' this.issues.push(`Broken import in ${file}: ${importPath}`)} } const requireRegex = /require\s*\(\s*['']([^';']+)['']\s*\)/g; while ((match = requireRegex.exec(content)) !== null) { const requirePath = match[1]; if (!this.isValidImport(requirePath,file)) {' this.issues.push(`Broken require in ${file}: ${requirePath}`)} } } } catch (error) { } } async: checkBuildArtifacts() { try {
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node,"}),"})
 /**,"}),"})
  * Link Integrity Checker Script,"}),"})
@@ -15,6 +18,7 @@ import path from,"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
 ,"}),"})
+
 const __filename = fileURLToPath(import && import.meta.url),"}),"})
 const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
@@ -23,15 +27,17 @@ console && console.log(,"}),"})
 ,"}),"})
 class LinkIntegrityChecker {,"}),"})
   constructor() {,"}),"})
-this && this.projectRoot = path && path.resolve(__dirname,..,"}),"})
+    this && this.projectRoot = path && path.resolve(__dirname,..,"}),"})
   '),"}),"})
     this && this.issues = [],"}),"})
     this && this.checkedFiles = 0,"}),"})
+
   }"}),"})
 ,"}),"})
   async checkIntegrity() {,"}),"})
     try {,"}),"})
-console && console.log('🔍 Checking link and asset integrity...,"}),"})
+
+      console && console.log('🔍 Checking link and asset integrity...,"}),"})
   '),"}),"})
 ,"}),"})
       // Check HTML files for broken references,"}),"})
@@ -54,22 +60,27 @@ console && console.log('🔍 Checking link and asset integrity...,"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
       console && console.error('❌ Error during integrity "check": error && error.message),"}),"})
+
     }"}),"})
   }"}),"})
 ,"}),"})
   async checkHtmlIntegrity() {,"}),"})
     try {,"}),"})
-console && console.log('📄 Checking HTML integrity...,"}),"})
+
+      console && console.log('📄 Checking HTML integrity...,"}),"})
   '),"}),"})
 ,"}),"})
       const htmlFiles = this && this.findFiles('.html,"}),"})
   '),"}),"})
 ,"}),"})
 
+<<<<<<< HEAD
         this.checkedFiles++,"}),"})
         const content = fs.readFileSync(file,utf8'),"}),"})
         this && this.checkedFiles++,"}),"})
         const content = fs && fs.readFileSync(file,utf8'),"}),"})
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ,"}),"})
         // Check for broken image references,"}),"})
         const imgRegex = /<img[^>]+src=[","}),"})
@@ -77,20 +88,24 @@ console && console.log('📄 Checking HTML integrity...,"}),"})
   ']/g,"}),"})
         let match,"}),"})
 ,"}),"})
-while ((match = imgRegex && imgRegex.exec(content)) !== null) {,"}),"})
+
+        while ((match = imgRegex && imgRegex.exec(content)) !== null) {,"}),"})
           const src = match[1],"}),"})
           if (!this && this.isValidAsset(src, file)) {,"}),"})
             this && this.issues.push(`Broken image reference in ${file}: ${src}`),"}),"})
+
           }"}),"})
         }"}),"})
 ,"}),"})
         // Check for broken script references,"}),"})
         const scriptRegex = /<script[^>]+src=["']([^","}),"})
   ']+)["']/g,"}),"})
-while ((match = scriptRegex && scriptRegex.exec(content)) !== null) {,"}),"})
+
+        while ((match = scriptRegex && scriptRegex.exec(content)) !== null) {,"}),"})
           const src = match[1],"}),"})
           if (!this && this.isValidAsset(src, file)) {,"}),"})
             this && this.issues.push(`Broken script reference in ${file}: ${src}`),"}),"})
+
           }"}),"})
         }"}),"})
 ,"}),"})
@@ -98,33 +113,41 @@ while ((match = scriptRegex && scriptRegex.exec(content)) !== null) {,"}),"})
         const linkRegex = /<link[^>]+href=[","}),"})
   ']([^"']+)[","}),"})
   ']/g,"}),"})
-while ((match = linkRegex && linkRegex.exec(content)) !== null) {,"}),"})
+
+        while ((match = linkRegex && linkRegex.exec(content)) !== null) {,"}),"})
           const href = match[1],"}),"})
           if (!this && this.isValidAsset(href, file)) {,"}),"})
             this && this.issues.push(`Broken stylesheet reference in ${file}: ${href}`),"}),"})
+
           }"}),"})
         }"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-console && console.warn(,,"}),"})
+
+      console && console.warn(,,"}),"})
   ⚠️  Could not check HTML "integrity": error && error.message),"}),"})
+
     }"}),"})
   }"}),"})
 ,"}),"})
   async checkCssIntegrity() {,"}),"})
     try {,"}),"})
-console && console.log('🎨 Checking CSS integrity...,"}),"})
+
+      console && console.log('🎨 Checking CSS integrity...,"}),"})
   '),"}),"})
 ,"}),"})
       const cssFiles = this && this.findFiles('.css,"}),"})
   '),"}),"})
 ,"}),"})
 
+<<<<<<< HEAD
         this.checkedFiles++,"}),"})
         const content = fs.readFileSync(file,utf8'),"}),"})
         this && this.checkedFiles++,"}),"})
         const content = fs && fs.readFileSync(file,utf8'),"}),"})
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ,"}),"})
         // Check for broken image references in CSS,"}),"})
         const urlRegex = /url\([,"}),"})
@@ -132,23 +155,28 @@ console && console.log('🎨 Checking CSS integrity...,"}),"})
   '"]?\)/g,"}),"})
         let match,"}),"})
 ,"}),"})
-while ((match = urlRegex && urlRegex.exec(content)) !== null) {,"}),"})
+
+        while ((match = urlRegex && urlRegex.exec(content)) !== null) {,"}),"})
           const url = match[1],"}),"})
           if (!this && this.isValidAsset(url, file)) {,"}),"})
             this && this.issues.push(`Broken asset reference in CSS ${file}: ${url}`),"}),"})
+
           }"}),"})
         }"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-console && console.warn(,,"}),"})
+
+      console && console.warn(,,"}),"})
   ⚠️  Could not check CSS "integrity": error && error.message),"}),"})
+
     }"}),"})
   }"}),"})
 ,"}),"})
   async checkJsIntegrity() {,"}),"})
     try {,"}),"})
-console && console.log('⚡ Checking JavaScript integrity...,"}),"})
+
+      console && console.log('⚡ Checking JavaScript integrity...,"}),"})
   '),"}),"})
 ,"}),"})
       const jsFiles = this && this.findFiles('.js,"}),"})
@@ -158,10 +186,13 @@ console && console.log('⚡ Checking JavaScript integrity...,"}),"})
       const allFiles = [...jsFiles, ...tsFiles],"}),"})
 ,"}),"})
 
+<<<<<<< HEAD
         this.checkedFiles++,"}),"})
         const content = fs.readFileSync(file,utf8'),"}),"})
         this && this.checkedFiles++,"}),"})
         const content = fs && fs.readFileSync(file,utf8'),"}),"})
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ,"}),"})
         // Check for broken import statements,"}),"})
         const importRegex = /import\s+.*?from\s+[,"}),"})
@@ -169,64 +200,81 @@ console && console.log('⚡ Checking JavaScript integrity...,"}),"})
   '"]/g,"}),"})
         let match,"}),"})
 ,"}),"})
-while ((match = importRegex && importRegex.exec(content)) !== null) {,"}),"})
+
+        while ((match = importRegex && importRegex.exec(content)) !== null) {,"}),"})
           const importPath = match[1],"}),"})
           if (!this && this.isValidImport(importPath, file)) {,"}),"})
             this && this.issues.push(`Broken import in ${file}: ${importPath}`),"}),"})
+
           }"}),"})
         }"}),"})
 ,"}),"})
         // Check for broken require statements,"}),"})
         const requireRegex = /require\s*\(\s*['"]([^,"}),"})
   '"]+)['"]\s*\)/g,"}),"})
-while ((match = requireRegex && requireRegex.exec(content)) !== null) {,"}),"})
+
+        while ((match = requireRegex && requireRegex.exec(content)) !== null) {,"}),"})
           const requirePath = match[1],"}),"})
           if (!this && this.isValidImport(requirePath, file)) {,"}),"})
             this && this.issues.push(`Broken require in ${file}: ${requirePath}`),"}),"})
+
           }"}),"})
         }"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-console && console.warn(,"}),"})
+
+      console && console.warn(,"}),"})
   '⚠️  Could not check JavaScript "integrity": ', error && error.message),"}),"})
+
     }"}),"})
   }"}),"})
 ,"}),"})
   async checkBuildArtifacts() {,"}),"})
     try {,"}),"})
-console && console.log(,"}),"})
+
+      console && console.log(,"}),"})
   '🔨 Checking build artifacts...'),"}),"})
 ,"}),"})
       const distPath = path && path.join(this && this.projectRoot,dist,"}),"})
   '),"}),"})
       if (!fs && fs.existsSync(distPath)) {,"}),"})
         this && this.issues.push('Build directory (dist) does not exist,"}),"})
+
   '),"}),"})
         return,"}),"})
       }"}),"})
 ,"}),"})
       // Check for essential build files,"}),"})
       const essentialFiles = [,"}),"})
-'index && index.html,"}),"})
+
+        'index && index.html,"}),"})
+
   ',css',js,"}),"})
   ',assets',"}),"})
       ],"}),"})
 ,"}),"})
+<<<<<<< HEAD
         const filePath = path.join(distPath, file),"}),"})
         if (!fs.existsSync(filePath)) {,"}),"})
           this.issues.push(`Missing essential build "file": ${file}`),"}),"})
         const filePath = path && path.join(distPath, file),"}),"})
         if (!fs && fs.existsSync(filePath)) {,"}),"})
           this && this.issues.push(`Missing essential build "file": ${file}`),"}),"})
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         }"}),"})
       }"}),"})
 ,"}),"})
       // Check for broken internal links in build,"}),"})
-const indexHtmlPath = path && path.join(distPath,index && index.html,"}),"})
+
+      const indexHtmlPath = path && path.join(distPath,index && index.html,"}),"})
   '),"}),"})
       if (fs && fs.existsSync(indexHtmlPath)) {,"}),"})
         const content = fs && fs.readFileSync(indexHtmlPath,utf8'),"}),"})
+
 ,"}),"})
         // Check for broken asset references,"}),"})
         const assetRegex = /(src|href)=[","}),"})
@@ -234,7 +282,8 @@ const indexHtmlPath = path && path.join(distPath,index && index.html,"}),"})
   ']/g,"}),"})
         let match,"}),"})
 ,"}),"})
-while ((match = assetRegex && assetRegex.exec(content)) !== null) {,"}),"})
+
+        while ((match = assetRegex && assetRegex.exec(content)) !== null) {,"}),"})
           const assetPath = match[2],"}),"})
           if (assetPath && assetPath.startsWith('./,"}),"})
   ') || assetPath && assetPath.startsWith('/,"}),"})
@@ -242,33 +291,41 @@ while ((match = assetRegex && assetRegex.exec(content)) !== null) {,"}),"})
             const fullPath = path && path.join(distPath, assetPath && assetPath.replace(/^\.?\//)),"}),"})
             if (!fs && fs.existsSync(fullPath)) {,"}),"})
               this && this.issues.push(`Broken asset reference in "build": ${assetPath}`),"}),"})
+
             }"}),"})
           }"}),"})
         }"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-console && console.warn(,,"}),"})
+
+      console && console.warn(,,"}),"})
   ⚠️  Could not check build "artifacts": error && error.message),"}),"})
+
     }"}),"})
   }"}),"})
 ,"}),"})
   isValidAsset(assetPath, sourceFile) {,"}),"})
     // Skip external URLs,"}),"})
-if (assetPath && assetPath.startsWith(,,"}),"})
+
+    if (assetPath && assetPath.startsWith(,,"}),"})
   "http": //,"}),"})
   ') || assetPath && assetPath.startsWith('"https": //)) {,"}),"})
+
       return true,"}),"})
     }"}),"})
 ,"}),"})
     // Skip data URLs,"}),"})
-if (assetPath && assetPath.startsWith(,,"}),"})
+
+    if (assetPath && assetPath.startsWith(,,"}),"})
+
   "data": )) {,"}),"})
       return true,"}),"})
     }"}),"})
 ,"}),"})
     // Handle relative paths,"}),"})
-if (assetPath && assetPath.startsWith('./,"}),"})
+
+    if (assetPath && assetPath.startsWith('./,"}),"})
   ') || assetPath && assetPath.startsWith('../,"}),"})
   ')) {,"}),"})
       const sourceDir = path && path.dirname(sourceFile),"}),"})
@@ -286,44 +343,55 @@ if (assetPath && assetPath.startsWith('./,"}),"})
     // Handle relative paths from project root,"}),"})
     const fullPath = path && path.join(this && this.projectRoot, assetPath),"}),"})
     return fs && fs.existsSync(fullPath),"}),"})
+
   }"}),"})
 ,"}),"})
   isValidImport(importPath, sourceFile) {,"}),"})
     // Skip external packages,"}),"})
-if (!importPath && importPath.startsWith('.,"}),"})
+
+    if (!importPath && importPath.startsWith('.,"}),"})
   ') && !importPath && importPath.startsWith('/,"}),"})
+
   ')) {,"}),"})
       return true,"}),"})
     }"}),"})
 ,"}),"})
     // Handle relative imports,"}),"})
-if (importPath && importPath.startsWith('./,"}),"})
+
+    if (importPath && importPath.startsWith('./,"}),"})
   ') || importPath && importPath.startsWith('../,"}),"})
   ')) {,"}),"})
       const sourceDir = path && path.dirname(sourceFile),"}),"})
       const fullPath = path && path.resolve(sourceDir, importPath),"}),"})
+
 ,"}),"})
       // Check for .js, .ts, .tsx, .jsx extensions,"}),"})
       const extensions = ['.js,"}),"})
   ',.ts',.tsx,"}),"})
   ',.jsx'],"}),"})
-return extensions && extensions.some(ext => {,"}),"})
+
+      return extensions && extensions.some(ext => {,"}),"})
         const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"})
         return fs && fs.existsSync(testPath),"}),"})
+
       }),"}),"})
     }"}),"})
 ,"}),"})
     // Handle absolute imports from project root,"}),"})
-if (importPath && importPath.startsWith(,"}),"})
+
+    if (importPath && importPath.startsWith(,"}),"})
   '/')) {,"}),"})
       const fullPath = path && path.join(this && this.projectRoot, importPath && importPath.substring(1)),"}),"})
+
       const extensions = [,"}),"})
   '.js',.ts,"}),"})
   ',.tsx',.jsx,"}),"})
   '],"}),"})
-return extensions && extensions.some(ext => {,"}),"})
+
+      return extensions && extensions.some(ext => {,"}),"})
         const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"})
         return fs && fs.existsSync(testPath),"}),"})
+
       }),"}),"})
     }"}),"})
 ,"}),"})
@@ -335,9 +403,11 @@ return extensions && extensions.some(ext => {,"}),"})
 ,"}),"})
     const scanDirectory = (dir) => {,"}),"})
       try {,"}),"})
-const items = fs && fs.readdirSync(dir),"}),"})
+
+        const items = fs && fs.readdirSync(dir),"}),"})
 ,"}),"})
 
+<<<<<<< HEAD
           const fullPath = path.join(dir, item),"}),"})
           const stat = fs.statSync(fullPath),"}),"})
           const fullPath = path && path.join(dir, item),"}),"})
@@ -349,6 +419,8 @@ const items = fs && fs.readdirSync(dir),"}),"})
             scanDirectory(fullPath),"}),"})
           } else if (stat && stat.isFile() && item && item.endsWith(extension)) {,"}),"})
             files && files.push(fullPath),"}),"})
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           }"}),"})
         }"}),"})
       } catch (error) {,"}),"})
@@ -356,7 +428,9 @@ const items = fs && fs.readdirSync(dir),"}),"})
       }"}),"})
     },"}),"})
 ,"}),"})
-scanDirectory(this && this.projectRoot),"}),"})
+
+    scanDirectory(this && this.projectRoot),"}),"})
+
     return files,"}),"})
   }"}),"})
 ,"}),"})
@@ -364,7 +438,8 @@ scanDirectory(this && this.projectRoot),"}),"})
     const report = {,"}),"})
       "timestamp": new Date().toISOString(),,"}),"})
       "summary": {,"}),"})
-"checkedFiles": this && this.checkedFiles,,"}),"})
+
+        "checkedFiles": this && this.checkedFiles,,"}),"})
         "issues": this && this.issues.length,"}),"})
       },,"}),"})
       "issues": this && this.issues,,"}),"})
@@ -404,12 +479,14 @@ scanDirectory(this && this.projectRoot),"}),"})
 ,"}),"})
     console && console.log(,"}),"})
   '─'.repeat(50)),"}),"})
+
   }"}),"})
 ,"}),"})
   generateRecommendations() {,"}),"})
     const recommendations = [],"}),"})
 ,"}),"})
-if (this && this.issues.length > 0) {,"}),"})
+
+    if (this && this.issues.length > 0) {,"}),"})
       recommendations && recommendations.push(,"}),"})
   'Fix broken asset references and imports'),"}),"})
       recommendations && recommendations.push(,"}),"})
@@ -422,6 +499,7 @@ if (this && this.issues.length > 0) {,"}),"})
       recommendations && recommendations.push(,"}),"})
   'Continue monitoring for new issues'),"}),"})
       recommendations && recommendations.push(,"}),"})
+
   'Consider adding automated integrity checks to CI/CD'),"}),"})
     }"}),"})
 ,"}),"})
@@ -431,6 +509,7 @@ if (this && this.issues.length > 0) {,"}),"})
 ,"}),"})
 // Run the link integrity checker,"}),"})
 const checker = new LinkIntegrityChecker(),"}),"})
+
 checker && checker.checkIntegrity().then(() => {,"}),"})
   console && console.log(,"}),"})
   '🔗 Link Integrity Checker Completed'),"}),"})
@@ -445,7 +524,8 @@ import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(',
-process ;
+
+  process ;
 import path from "pathpath';
 import {fileURLToPath} from "urlurl';
 const __filename = fileURLToPath(import && import.meta.url);
@@ -473,6 +553,7 @@ class LinkIntegrityChecker {;
       console && console.log('✅ Link integrity check completed', ')} catch (error) {';      console && console.error('❌ Error during integrity "check":  error && error.message)}'}';  async checkHtmlIntegrity() {;
     try {;
 
+<<<<<<< HEAD
       for (const file of htmlFiles) {;
         this && this.checkedFiles++;
         const content = fs && fs.readFileSync(file,utf8');
@@ -527,6 +608,8 @@ class LinkIntegrityChecker {;
       const tsFiles = this && this.findFiles('.ts';);
       const allFiles = [...jsFiles, ...tsFiles];
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         }
         // Check for broken require statements;"
         const requireRegex = /require\s*\(\s*['']([^';']+)['']\s*\)/g;
@@ -543,4 +626,8 @@ class LinkIntegrityChecker {;
   "async": checkBuildArtifacts() {
     try {
 #!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,,"}),"}) fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) console.log(,"}),"}) '🔗 Link Integrity Checker Started'),"}),"}) ,"}),"}) class LinkIntegrityChecker {,"}),"}) constructor() {,"}),"}) this.projectRoot = path.resolve(__dirname,..,"}),"}) '),"}),"}) this.issues = [],"}),"}) this.checkedFiles = 0,"}),"}) }"}),"}) ,"}),"}) async checkIntegrity() {,"}),"}) try {,"}),"}) console.log('🔍 Checking link and asset integrity...,"}),"}) '),"}),"}) ,"}),"}) await this.checkHtmlIntegrity(),"}),"}) ,"}),"}) await this.checkCssIntegrity(),"}),"}) ,"}),"}) await this.checkJsIntegrity(),"}),"}) ,"}),"}) await this.checkBuildArtifacts(),"}),"}) ,"}),"}) await this.generateReport(),"}),"}) ,"}),"}) console.log('✅ Link integrity check completed,"}),"}) '),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error('❌ Error during integrity check: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkHtmlIntegrity() {,"}),"}) try {,"}),"}) console.log('📄 Checking HTML integrity...,"}),"}) '),"}),"}) ,"}),"}) const htmlFiles = this.findFiles('.html,"}),"}) '),"}),"}) ,"}),"}) for (const file of htmlFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const imgRegex = /<img[^>]+src=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = imgRegex.exec(content)) !== null) {,"}),"}) const src = match[1],"}),"}) if (!this.isValidAsset(src,file)) {,"}),"}) this.issues.push(`Broken image reference in ${file}: ${src}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const scriptRegex = /<script[^>]+src=["']([^","}),"}) ']+)["']/g,"}),"}) while ((match = scriptRegex.exec(content)) !== null) {,"}),"}) const src = match[1],"}),"}) if (!this.isValidAsset(src,file)) {,"}),"}) this.issues.push(`Broken script reference in ${file}: ${src}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const linkRegex = /<link[^>]+href=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) while ((match = linkRegex.exec(content)) !== null) {,"}),"}) const href = match[1],"}),"}) if (!this.isValidAsset(href,file)) {,"}),"}) this.issues.push(`Broken stylesheet reference in ${file}: ${href}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.warn(,,"}),"}) ⚠️ Could not check HTML integrity: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkCssIntegrity() {,"}),"}) try {,"}),"}) console.log('🎨 Checking CSS integrity...,"}),"}) '),"}),"}) ,"}),"}) const cssFiles = this.findFiles('.css,"}),"}) '),"}),"}) ,"}),"}) for (const file of cssFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const urlRegex = /url\([,"}),"}) '"]?([^'")\s]+)[,"}),"}) '"]?\)/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = urlRegex.exec(content)) !== null) {,"}),"}) const url = match[1],"}),"}) if (!this.isValidAsset(url,file)) {,"}),"}) this.issues.push(`Broken asset reference in CSS ${file}: ${url}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.warn(,,"}),"}) ⚠️ Could not check CSS integrity: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkJsIntegrity() {,"}),"}) try {,"}),"}) console.log('⚡ Checking JavaScript integrity...,"}),"}) '),"}),"}) ,"}),"}) const jsFiles = this.findFiles('.js,"}),"}) '),"}),"}) const tsFiles = this.findFiles('.ts,"}),"}) '),"}),"}) const allFiles = [...jsFiles,...tsFiles],"}),"}) ,"}),"}) for (const file of allFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const importRegex = /import\s+.*?from\s+[,"}),"}) '"]([^'"]+)[,"}),"}) '"]/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = importRegex.exec(content)) !== null) {,"}),"}) const importPath = match[1],"}),"}) if (!this.isValidImport(importPath,file)) {,"}),"}) this.issues.push(`Broken import in ${file}: ${importPath}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const requireRegex = /require\s*\(\s*['"]([^,"}),"}) '"]+)['"]\s*\)/g,"}),"}) while ((match = requireRegex.exec(content)) !== null) {,"}),"}) const requirePath = match[1],"}),"}) if (!this.isValidImport(requirePath,file)) {,"}),"}) this.issues.push(`Broken require in ${file}: ${requirePath}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.warn(,"}),"}) '⚠️ Could not check JavaScript integrity:',error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkBuildArtifacts() {,"}),"}) try {,"}),"}) console.log(,"}),"}) '🔨 Checking build artifacts...'),"}),"}) ,"}),"}) const distPath = path.join(this.projectRoot,dist,"}),"}) '),"}),"}) if (!fs.existsSync(distPath)) {,"}),"}) this.issues.push('Build directory (dist) does not exist,"}),"}) '),"}),"}) return,"}),"}) }"}),"}) ,"}),"}) const essentialFiles = [,"}),"}) 'index.html,"}),"}) ',css',js,"}),"}) ',assets',"}),"}) ],"}),"}) ,"}),"}) for (const file of essentialFiles) {,"}),"}) const filePath = path.join(distPath,file),"}),"}) if (!fs.existsSync(filePath)) {,"}),"}) this.issues.push(`Missing essential build file: ${file}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const indexHtmlPath = path.join(distPath,index.html,"}),"}) '),"}),"}) if (fs.existsSync(indexHtmlPath)) {,"}),"}) const content = fs.readFileSync(indexHtmlPath,utf8'),"}),"}) ,"}),"}) const assetRegex = /(src|href)=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = assetRegex.exec(content)) !== null) {,"}),"}) const assetPath = match[2],"}),"}) if (assetPath.startsWith('./,"}),"}) ') || assetPath.startsWith('/,"}),"}) ')) {,"}),"}) const fullPath = path.join(distPath,assetPath.replace(/^\.?\ if (!fs.existsSync(fullPath)) {,"}),"}) this.issues.push(`Broken asset reference in build: ${assetPath}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.warn(,,"}),"}) ⚠️ Could not check build artifacts: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) isValidAsset(assetPath,sourceFile) {,"}),"}) if (assetPath.startsWith(,,"}),"}) http: ') || assetPath.startsWith('https: return true,"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith(,,"}),"}) data: )) {,"}),"}) return true,"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith('./,"}),"}) ') || assetPath.startsWith('../,"}),"}) ')) {,"}),"}) const sourceDir = path.dirname(sourceFile),"}),"}) const fullPath = path.resolve(sourceDir,assetPath),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith('/,"}),"}) ')) {,"}),"}) const fullPath = path.join(this.projectRoot,assetPath.substring(1)),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) const fullPath = path.join(this.projectRoot,assetPath),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) isValidImport(importPath,sourceFile) {,"}),"}) if (!importPath.startsWith('.,"}),"}) ') && !importPath.startsWith('/,"}),"}) ')) {,"}),"}) return true,"}),"}) }"}),"}) ,"}),"}) if (importPath.startsWith('./,"}),"}) ') || importPath.startsWith('../,"}),"}) ')) {,"}),"}) const sourceDir = path.dirname(sourceFile),"}),"}) const fullPath = path.resolve(sourceDir,importPath),"}),"}) ,"}),"}) const extensions = ['.js,"}),"}) ',.ts',.tsx,"}),"}) ',.jsx'],"}),"}) return extensions.some(ext => {,"}),"}) const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"}) return fs.existsSync(testPath),"}),"}) }),"}),"}) }"}),"}) ,"}),"}) if (importPath.startsWith(,"}),"}) '/')) {,"}),"}) const fullPath = path.join(this.projectRoot,importPath.substring(1)),"}),"}) const extensions = [,"}),"}) '.js',.ts,"}),"}) ',.tsx',.jsx,"}),"}) '],"}),"}) return extensions.some(ext => {,"}),"}) const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"}) return fs.existsSync(testPath),"}),"}) }),"}),"}) }"}),"}) ,"}),"}) return false,"}),"}) }"}),"}) ,"}),"}) findFiles(extension) {,"}),"}) const files = [],"}),"}) ,"}),"}) const scanDirectory = (dir) => {,"}),"}) try {,"}),"}) const items = fs.readdirSync(dir),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) ,"}),"}) if (stat.isDirectory() && !item.startsWith('.,"}),"}) ') && item !== 'node_modules,"}),"}) ') {,"}),"}) scanDirectory(fullPath),"}),"}) } else if (stat.isFile() && item.endsWith(extension)) {,"}),"}) files.push(fullPath),"}),"}) }"}),"}) }"}),"}) } catch (error) {,"}),"}) }"}),"}) },"}),"}) ,"}),"}) scanDirectory(this.projectRoot),"}),"}) return files,"}),"}) }"}),"}) ,"}),"}) async generateReport() {,"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) checkedFiles: this.checkedFiles,,"}),"}) issues: this.issues.length,"}),"}) },,"}),"}) issues: this.issues,,"}),"}) recommendations: this.generateRecommendations(),"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(this.projectRoot,logs,"}),"}) ',link-integrity-report.json'),"}),"}) try {,"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) console.log(`📊 Report saved to: ${reportPath}`),"}),"}) } catch (error) {,"}),"}) console.warn(,"}),"}) '⚠️ Could not save report: ,"}),"}) ,error.message),"}),"}) }"}),"}) ,"}),"}) console.log(,"}),"}) '\n📋 Integrity Check Summary: '),"}),"}) console.log(,"}),"}) '─.repeat(50)),"}),"}) console.log(`📁 Files checked: ${this.checkedFiles}`),"}),"}) console.log(`⚠️ Issues found: ${this.issues.length}`),"}),"}) ,"}),"}) if (this.issues.length > 0) {,"}),"}) console.log(,"}),"}) '\n🔍 Issues:'),"}),"}) this.issues.forEach((issue,index) => {,"}),"}) console.log(` ${index + 1}. ${issue}`),"}),"}) }),"}),"}) } else {,"}),"}) console.log(,"}),"}) '\n🎉 All links and assets are valid!'),"}),"}) }"}),"}) ,"}),"}) console.log(,"}),"}) '─'.repeat(50)),"}),"}) }"}),"}) ,"}),"}) generateRecommendations() {,"}),"}) const recommendations = [],"}),"}) ,"}),"}) if (this.issues.length > 0) {,"}),"}) recommendations.push(,"}),"}) 'Fix broken asset references and imports'),"}),"}) recommendations.push(,"}),"}) 'Verify all file paths are correct'),"}),"}) recommendations.push(,"}),"}) 'Check for typos in import statements'),"}),"}) recommendations.push(,"}),"}) 'Ensure build process generates all required assets'),"}),"}) } else {,"}),"}) recommendations.push(,"}),"}) 'Continue monitoring for new issues'),"}),"}) recommendations.push(,"}),"}) 'Consider adding automated integrity checks to CI/CD'),"}),"}) }"}),"}) ,"}),"}) return recommendations,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const checker = new LinkIntegrityChecker(),"}),"}) checker.checkIntegrity().then(() => {,"}),"}) console.log(,"}),"}) '🔗 Link Integrity Checker Completed'),"}),"}) process.exit(0),"}),"}) }).catch((error) => {,"}),"}) console.error(,"}),"}) '❌ Link Integrity Checker Failed:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) fs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(','🔗 Link Integrity Checker Started'); class LinkIntegrityChecker {; constructor() {; this.projectRoot = path.resolve(__dirname,..';); this.issues = []; this.checkedFiles = 0} async checkIntegrity() { try {' console.log('🔍 Checking link and asset integrity...';); await this.checkHtmlIntegrity(); await this.checkCssIntegrity(); await this.checkJsIntegrity(); await this.checkBuildArtifacts(); await this.generateReport(); console.log('✅ Link integrity check completed';';)} catch (error) {'; console.error('❌ Error during integrity "check": error.message)}'}'; async checkHtmlIntegrity() {; try {; console.log('📄 Checking HTML integrity...';';)';; const htmlFiles = this.findFiles('.html';';)';; for (const file of htmlFiles) {';; this.checkedFiles++; const content = fs.readFileSync(file,utf8')';; console.log('📄 Checking HTML integrity...';); const htmlFiles = this.findFiles('.html';); for (const file of htmlFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const imgRegex = /<img[^>]+src=['']([^']+)['']/g; let match; while ((match = imgRegex.exec(content)) !== null) {; const src = match[1]; if (!this.isValidAsset(src,file)) {' this.issues.push(`Broken image reference in ${file}: ${src}`)} } const scriptRegex = /<script[^>]+src=['']([^'']+)['']/g; while ((match = scriptRegex.exec(content)) !== null) { const src = match[1]; if (!this.isValidAsset(src,file)) {' this.issues.push(`Broken script reference in ${file}: ${src}`)} } const linkRegex = /<link[^>]+href=['']([^']+)['']/g; while ((match = linkRegex.exec(content)) !== null) {; const href = match[1]; if (!this.isValidAsset(href,file)) {' this.issues.push(`Broken stylesheet reference in ${file}: ${href}`)} } } } catch (error) {; console.warn(,⚠️ Could not check HTML integrity: error.message)} } async checkCssIntegrity() { try {` console.log('🎨 Checking CSS integrity...';); const cssFiles = this.findFiles('.css';); for (const file of cssFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const urlRegex = /url\([']?([^')\s]+)[']?\)/g; let match; while ((match = urlRegex.exec(content)) !== null) {; const url = match[1]; if (!this.isValidAsset(url,file)) {' this.issues.push(`Broken asset reference in CSS ${file}: ${url}`)} } } } catch (error) {; console.warn(,⚠️ Could not check CSS integrity: error.message)} } async checkJsIntegrity() { try {` console.log('⚡ Checking JavaScript integrity...';); const jsFiles = this.findFiles('.js';); const tsFiles = this.findFiles('.ts';); const allFiles = [...jsFiles,...tsFiles]; ; for (const file of allFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const importRegex = /import\s+.*?from\s+[']([^']+)[']/g; let match; while ((match = importRegex.exec(content)) !== null) {; const importPath = match[1]; if (!this.isValidImport(importPath,file)) {' this.issues.push(`Broken import in ${file}: ${importPath}`)} } const requireRegex = /require\s*\(\s*['']([^';']+)['']\s*\)/g; while ((match = requireRegex.exec(content)) !== null) { const requirePath = match[1]; if (!this.isValidImport(requirePath,file)) {' this.issues.push(`Broken require in ${file}: ${requirePath}`)} } } } catch (error) { console.warn(` '⚠️ Could not check JavaScript integrity:',error.message)} } async: checkBuildArtifacts() { try {
+<<<<<<< HEAD
 #!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,,"}),"}) fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) console.log(,"}),"}) '🔗 Link Integrity Checker Started'),"}),"}) ,"}),"}) class LinkIntegrityChecker {,"}),"}) constructor() {,"}),"}) this.projectRoot = path.resolve(__dirname,..,"}),"}) '),"}),"}) this.issues = [],"}),"}) this.checkedFiles = 0,"}),"}) }"}),"}) ,"}),"}) async checkIntegrity() {,"}),"}) try {,"}),"}) console.log('🔍 Checking link and asset integrity...,"}),"}) '),"}),"}) ,"}),"}) await this.checkHtmlIntegrity(),"}),"}) ,"}),"}) await this.checkCssIntegrity(),"}),"}) ,"}),"}) await this.checkJsIntegrity(),"}),"}) ,"}),"}) await this.checkBuildArtifacts(),"}),"}) ,"}),"}) await this.generateReport(),"}),"}) ,"}),"}) console.log('✅ Link integrity check completed,"}),"}) '),"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.error('❌ Error during integrity check: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkHtmlIntegrity() {,"}),"}) try {,"}),"}) console.log('📄 Checking HTML integrity...,"}),"}) '),"}),"}) ,"}),"}) const htmlFiles = this.findFiles('.html,"}),"}) '),"}),"}) ,"}),"}) for (const file of htmlFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const imgRegex = /<img[^>]+src=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = imgRegex.exec(content)) !== null) {,"}),"}) const src = match[1],"}),"}) if (!this.isValidAsset(src,file)) {,"}),"}) this.issues.push(`Broken image reference in ${file}: ${src}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const scriptRegex = /<script[^>]+src=["']([^","}),"}) ']+)["']/g,"}),"}) while ((match = scriptRegex.exec(content)) !== null) {,"}),"}) const src = match[1],"}),"}) if (!this.isValidAsset(src,file)) {,"}),"}) this.issues.push(`Broken script reference in ${file}: ${src}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const linkRegex = /<link[^>]+href=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) while ((match = linkRegex.exec(content)) !== null) {,"}),"}) const href = match[1],"}),"}) if (!this.isValidAsset(href,file)) {,"}),"}) this.issues.push(`Broken stylesheet reference in ${file}: ${href}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.warn(,,"}),"}) ⚠️ Could not check HTML integrity: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkCssIntegrity() {,"}),"}) try {,"}),"}) console.log('🎨 Checking CSS integrity...,"}),"}) '),"}),"}) ,"}),"}) const cssFiles = this.findFiles('.css,"}),"}) '),"}),"}) ,"}),"}) for (const file of cssFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const urlRegex = /url\([,"}),"}) '"]?([^'")\s]+)[,"}),"}) '"]?\)/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = urlRegex.exec(content)) !== null) {,"}),"}) const url = match[1],"}),"}) if (!this.isValidAsset(url,file)) {,"}),"}) this.issues.push(`Broken asset reference in CSS ${file}: ${url}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.warn(,,"}),"}) ⚠️ Could not check CSS integrity: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkJsIntegrity() {,"}),"}) try {,"}),"}) console.log('⚡ Checking JavaScript integrity...,"}),"}) '),"}),"}) ,"}),"}) const jsFiles = this.findFiles('.js,"}),"}) '),"}),"}) const tsFiles = this.findFiles('.ts,"}),"}) '),"}),"}) const allFiles = [...jsFiles,...tsFiles],"}),"}) ,"}),"}) for (const file of allFiles) {,"}),"}) this.checkedFiles++,"}),"}) const content = fs.readFileSync(file,utf8'),"}),"}) ,"}),"}) const importRegex = /import\s+.*?from\s+[,"}),"}) '"]([^'"]+)[,"}),"}) '"]/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = importRegex.exec(content)) !== null) {,"}),"}) const importPath = match[1],"}),"}) if (!this.isValidImport(importPath,file)) {,"}),"}) this.issues.push(`Broken import in ${file}: ${importPath}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const requireRegex = /require\s*\(\s*['"]([^,"}),"}) '"]+)['"]\s*\)/g,"}),"}) while ((match = requireRegex.exec(content)) !== null) {,"}),"}) const requirePath = match[1],"}),"}) if (!this.isValidImport(requirePath,file)) {,"}),"}) this.issues.push(`Broken require in ${file}: ${requirePath}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.warn(,"}),"}) '⚠️ Could not check JavaScript integrity:',error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async checkBuildArtifacts() {,"}),"}) try {,"}),"}) console.log(,"}),"}) '🔨 Checking build artifacts...'),"}),"}) ,"}),"}) const distPath = path.join(this.projectRoot,dist,"}),"}) '),"}),"}) if (!fs.existsSync(distPath)) {,"}),"}) this.issues.push('Build directory (dist) does not exist,"}),"}) '),"}),"}) return,"}),"}) }"}),"}) ,"}),"}) const essentialFiles = [,"}),"}) 'index.html,"}),"}) ',css',js,"}),"}) ',assets',"}),"}) ],"}),"}) ,"}),"}) for (const file of essentialFiles) {,"}),"}) const filePath = path.join(distPath,file),"}),"}) if (!fs.existsSync(filePath)) {,"}),"}) this.issues.push(`Missing essential build file: ${file}`),"}),"}) }"}),"}) }"}),"}) ,"}),"}) const indexHtmlPath = path.join(distPath,index.html,"}),"}) '),"}),"}) if (fs.existsSync(indexHtmlPath)) {,"}),"}) const content = fs.readFileSync(indexHtmlPath,utf8'),"}),"}) ,"}),"}) const assetRegex = /(src|href)=[","}),"}) ']([^"']+)[","}),"}) ']/g,"}),"}) let match,"}),"}) ,"}),"}) while ((match = assetRegex.exec(content)) !== null) {,"}),"}) const assetPath = match[2],"}),"}) if (assetPath.startsWith('./,"}),"}) ') || assetPath.startsWith('/,"}),"}) ')) {,"}),"}) const fullPath = path.join(distPath,assetPath.replace(/^\.?\ if (!fs.existsSync(fullPath)) {,"}),"}) this.issues.push(`Broken asset reference in build: ${assetPath}`),"}),"}) }"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) } catch (error) {,"}),"}) console.warn(,,"}),"}) ⚠️ Could not check build artifacts: error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) isValidAsset(assetPath,sourceFile) {,"}),"}) if (assetPath.startsWith(,,"}),"}) http: ') || assetPath.startsWith('https: return true,"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith(,,"}),"}) data: )) {,"}),"}) return true,"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith('./,"}),"}) ') || assetPath.startsWith('../,"}),"}) ')) {,"}),"}) const sourceDir = path.dirname(sourceFile),"}),"}) const fullPath = path.resolve(sourceDir,assetPath),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) if (assetPath.startsWith('/,"}),"}) ')) {,"}),"}) const fullPath = path.join(this.projectRoot,assetPath.substring(1)),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) const fullPath = path.join(this.projectRoot,assetPath),"}),"}) return fs.existsSync(fullPath),"}),"}) }"}),"}) ,"}),"}) isValidImport(importPath,sourceFile) {,"}),"}) if (!importPath.startsWith('.,"}),"}) ') && !importPath.startsWith('/,"}),"}) ')) {,"}),"}) return true,"}),"}) }"}),"}) ,"}),"}) if (importPath.startsWith('./,"}),"}) ') || importPath.startsWith('../,"}),"}) ')) {,"}),"}) const sourceDir = path.dirname(sourceFile),"}),"}) const fullPath = path.resolve(sourceDir,importPath),"}),"}) ,"}),"}) const extensions = ['.js,"}),"}) ',.ts',.tsx,"}),"}) ',.jsx'],"}),"}) return extensions.some(ext => {,"}),"}) const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"}) return fs.existsSync(testPath),"}),"}) }),"}),"}) }"}),"}) ,"}),"}) if (importPath.startsWith(,"}),"}) '/')) {,"}),"}) const fullPath = path.join(this.projectRoot,importPath.substring(1)),"}),"}) const extensions = [,"}),"}) '.js',.ts,"}),"}) ',.tsx',.jsx,"}),"}) '],"}),"}) return extensions.some(ext => {,"}),"}) const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"}) return fs.existsSync(testPath),"}),"}) }),"}),"}) }"}),"}) ,"}),"}) return false,"}),"}) }"}),"}) ,"}),"}) findFiles(extension) {,"}),"}) const files = [],"}),"}) ,"}),"}) const scanDirectory = (dir) => {,"}),"}) try {,"}),"}) const items = fs.readdirSync(dir),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) ,"}),"}) if (stat.isDirectory() && !item.startsWith('.,"}),"}) ') && item !== 'node_modules,"}),"}) ') {,"}),"}) scanDirectory(fullPath),"}),"}) } else if (stat.isFile() && item.endsWith(extension)) {,"}),"}) files.push(fullPath),"}),"}) }"}),"}) }"}),"}) } catch (error) {,"}),"}) }"}),"}) },"}),"}) ,"}),"}) scanDirectory(this.projectRoot),"}),"}) return files,"}),"}) }"}),"}) ,"}),"}) async generateReport() {,"}),"}) const report = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) summary: {,"}),"}) checkedFiles: this.checkedFiles,,"}),"}) issues: this.issues.length,"}),"}) },,"}),"}) issues: this.issues,,"}),"}) recommendations: this.generateRecommendations(),"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(this.projectRoot,logs,"}),"}) ',link-integrity-report.json'),"}),"}) try {,"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) console.log(`📊 Report saved to: ${reportPath}`),"}),"}) } catch (error) {,"}),"}) console.warn(,"}),"}) '⚠️ Could not save report: ,"}),"}) ,error.message),"}),"}) }"}),"}) ,"}),"}) console.log(,"}),"}) '\n📋 Integrity Check Summary: '),"}),"}) console.log(,"}),"}) '─.repeat(50)),"}),"}) console.log(`📁 Files checked: ${this.checkedFiles}`),"}),"}) console.log(`⚠️ Issues found: ${this.issues.length}`),"}),"}) ,"}),"}) if (this.issues.length > 0) {,"}),"}) console.log(,"}),"}) '\n🔍 Issues:'),"}),"}) this.issues.forEach((issue,index) => {,"}),"}) console.log(` ${index + 1}. ${issue}`),"}),"}) }),"}),"}) } else {,"}),"}) console.log(,"}),"}) '\n🎉 All links and assets are valid!'),"}),"}) }"}),"}) ,"}),"}) console.log(,"}),"}) '─'.repeat(50)),"}),"}) }"}),"}) ,"}),"}) generateRecommendations() {,"}),"}) const recommendations = [],"}),"}) ,"}),"}) if (this.issues.length > 0) {,"}),"}) recommendations.push(,"}),"}) 'Fix broken asset references and imports'),"}),"}) recommendations.push(,"}),"}) 'Verify all file paths are correct'),"}),"}) recommendations.push(,"}),"}) 'Check for typos in import statements'),"}),"}) recommendations.push(,"}),"}) 'Ensure build process generates all required assets'),"}),"}) } else {,"}),"}) recommendations.push(,"}),"}) 'Continue monitoring for new issues'),"}),"}) recommendations.push(,"}),"}) 'Consider adding automated integrity checks to CI/CD'),"}),"}) }"}),"}) ,"}),"}) return recommendations,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const checker = new LinkIntegrityChecker(),"}),"}) checker.checkIntegrity().then(() => {,"}),"}) console.log(,"}),"}) '🔗 Link Integrity Checker Completed'),"}),"}) process.exit(0),"}),"}) }).catch((error) => {,"}),"}) console.error(,"}),"}) '❌ Link Integrity Checker Failed:',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) fs'; import path from "pathpath'; import { fileURLToPath } from "urlurl'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(','🔗 Link Integrity Checker Started'); class LinkIntegrityChecker {; constructor() {; this.projectRoot = path.resolve(__dirname,..';); this.issues = []; this.checkedFiles = 0} async checkIntegrity() { try {' console.log('🔍 Checking link and asset integrity...';); await this.checkHtmlIntegrity(); await this.checkCssIntegrity(); await this.checkJsIntegrity(); await this.checkBuildArtifacts(); await this.generateReport(); console.log('✅ Link integrity check completed';';)} catch (error) {'; console.error('❌ Error during integrity "check": error.message)}'}'; async checkHtmlIntegrity() {; try {; console.log('📄 Checking HTML integrity...';';)';; const htmlFiles = this.findFiles('.html';';)';; for (const file of htmlFiles) {';; this.checkedFiles++; const content = fs.readFileSync(file,utf8')';; console.log('📄 Checking HTML integrity...';); const htmlFiles = this.findFiles('.html';); for (const file of htmlFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const imgRegex = /<img[^>]+src=['']([^']+)['']/g; let match; while ((match = imgRegex.exec(content)) !== null) {; const src = match[1]; if (!this.isValidAsset(src,file)) {' this.issues.push(`Broken image reference in ${file}: ${src}`)} } const scriptRegex = /<script[^>]+src=['']([^'']+)['']/g; while ((match = scriptRegex.exec(content)) !== null) { const src = match[1]; if (!this.isValidAsset(src,file)) {' this.issues.push(`Broken script reference in ${file}: ${src}`)} } const linkRegex = /<link[^>]+href=['']([^']+)['']/g; while ((match = linkRegex.exec(content)) !== null) {; const href = match[1]; if (!this.isValidAsset(href,file)) {' this.issues.push(`Broken stylesheet reference in ${file}: ${href}`)} } } } catch (error) {; console.warn(,⚠️ Could not check HTML integrity: error.message)} } async checkCssIntegrity() { try {` console.log('🎨 Checking CSS integrity...';); const cssFiles = this.findFiles('.css';); for (const file of cssFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const urlRegex = /url\([']?([^')\s]+)[']?\)/g; let match; while ((match = urlRegex.exec(content)) !== null) {; const url = match[1]; if (!this.isValidAsset(url,file)) {' this.issues.push(`Broken asset reference in CSS ${file}: ${url}`)} } } } catch (error) {; console.warn(,⚠️ Could not check CSS integrity: error.message)} } async checkJsIntegrity() { try {` console.log('⚡ Checking JavaScript integrity...';); const jsFiles = this.findFiles('.js';); const tsFiles = this.findFiles('.ts';); const allFiles = [...jsFiles,...tsFiles]; ; for (const file of allFiles) {; this.checkedFiles++; const content = fs.readFileSync(file,utf8'); const importRegex = /import\s+.*?from\s+[']([^']+)[']/g; let match; while ((match = importRegex.exec(content)) !== null) {; const importPath = match[1]; if (!this.isValidImport(importPath,file)) {' this.issues.push(`Broken import in ${file}: ${importPath}`)} } const requireRegex = /require\s*\(\s*['']([^';']+)['']\s*\)/g; while ((match = requireRegex.exec(content)) !== null) { const requirePath = match[1]; if (!this.isValidImport(requirePath,file)) {' this.issues.push(`Broken require in ${file}: ${requirePath}`)} } } } catch (error) { console.warn(` '⚠️ Could not check JavaScript integrity:',error.message)} } async: checkBuildArtifacts() { try {
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -9,36 +10,40 @@
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const chokidar = require('chokidar'); const { execSync } = class FileWatcher { constructor() { this.logFile = path.join(__dirname,'logs','file-watcher.log'); this.watchPaths = [ 'src*.{js,jsx,ts,tsx}','pages*.{js,jsx,ts,tsx}','components*.{js,jsx,ts,tsx}','hooks*.{js,jsx,ts,tsx}','utils*.{js,jsx,ts,tsx}','package.json','tsconfig.json','next.config.js' ]; this.debounceDelay = 2000; this.debounceTimer = null; this.pendingChanges = new Set(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(this.logFile,logMessage)} async validateFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const issues = []; if (content.includes('return()') && !content.includes('return ()')) { issues.push('Invalid return statement syntax')} replacement: '',description: 'Removed merge conflict markers' },{ replacement: '',description: 'Removed merge conflict markers' } ];  in ${filePath}`)} } if (content.includes('React.') && !content.includes('import React')) { content = `import React from 'react';\n${content}`; modified = true; this.log(`Added React import to ${filePath}`)} if (modified) { const backupPath = `${filePath}.auto-backup.${Date.now()}`; fs.copyFileSync(filePath,backupPath); fs.writeFileSync(filePath,content); this.log(`Auto-fixed file: ${filePath}`); return true} return false} catch (error) { this.log(`Error auto-fixing file ${filePath}: ${error.message}`,'ERROR'); return false} } async processChanges() { if (this.pendingChanges.size === 0) return; this.log(`Processing ${this.pendingChanges.size} file changes...`); const results = { validated: 0,issues: 0,autoFixed: 0,files: [] }; for (const filePath of this.pendingChanges) { this.log(`Validating: ${filePath}`); const issues = await this.validateFile(filePath); const typeErrors = await this.quickTypeCheck(filePath); results.validated++; if (issues.length > 0 || typeErrors.length > 0) { results.issues++; this.log(`Issues found in ${filePath}: ${[...issues,...typeErrors].join(',')}`,'WARN'); const fixed = await this.autoFixFile(filePath); if (fixed) { results.autoFixed++} } results.files.push({ path: filePath,issues: issues,typeErrors: typeErrors,timestamp: new Date().toISOString() })} const reportPath = path.join(__dirname,'reports','real-time-validation.json'); fs.mkdirSync(path.dirname(reportPath),{ recursive: true }); fs.writeFileSync(reportPath,JSON.stringify(results,null,2)); this.log(`Validation complete: ${results.validated} files,${results.issues} with issues,${results.autoFixed} auto-fixed`); this.pendingChanges.clear()} setupWatcher() { this.log('Setting up file watcher...'); const watcher = chokidar.watch(this.watchPaths,{ ignored: [ '**/node_modules.git.nextdistbuild*.log','**/*.backup*' ],persistent: true,ignoreInitial: true }); watcher.on('change',(filePath) => { this.log(`File changed: ${filePath}`); this.pendingChanges.add(filePath); if (this.debounceTimer) { clearTimeout(this.debounceTimer)} this.debounceTimer = setTimeout(() => { this.processChanges().catch(error => { this.log(`Error processing changes: ${error.message}`,'ERROR')})},this.debounceDelay)}); watcher.on('add',(filePath) => { this.log(`File added: ${filePath}`); this.pendingChanges.add(filePath)}); watcher.on('error',(error) => { this.log(`Watcher error: ${error.message}`,'ERROR')}); watcher.on('ready',() => { this.log('File watcher ready. Monitoring for changes...')}); return watcher} async run() { this.log('Starting File Watcher...'); try { const watcher = this.setupWatcher(); process.on('SIGTERM',() => { this.log('Received SIGTERM,closing watcher...'); watcher.close(); process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,closing watcher...'); watcher.close(); process.exit(0)})} catch (error) { this.log(`Error in file watcher: ${error.message}`,'ERROR')} } } try { require('chokidar')} catch (error) {  execSync('yarn add chokidar',{ stdio: 'inherit' })} if (require.main === module) { const watcher = new FileWatcher(); watcher.run().catch(console.error)} module.exports = FileWatcher;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const chokidar = require('chokidar'); const { execSync } = class FileWatcher { constructor() { this.logFile = path.join(__dirname,'logs','file-watcher.log'); this.watchPaths = [ 'src*.{js,jsx,ts,tsx}','pages*.{js,jsx,ts,tsx}','components*.{js,jsx,ts,tsx}','hooks*.{js,jsx,ts,tsx}','utils*.{js,jsx,ts,tsx}','package.json','tsconfig.json','next.config.js' ]; this.debounceDelay = 2000; this.debounceTimer = null; this.pendingChanges = new Set(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(this.logFile,logMessage)} async validateFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const issues = []; if (content.includes('return()') && !content.includes('return ()')) { issues.push('Invalid return statement syntax')} replacement: '',description: 'Removed merge conflict markers' },{ replacement: '',description: 'Removed merge conflict markers' } ]; for (const fix of fixes) { if (fix.pattern.test(content)) { content = content.replace(fix.pattern,fix.replacement); modified = true; this.log(`Applied fix: ${fix.description} in ${filePath}`)} } if (content.includes('React.') && !content.includes('import React')) { content = `import React from 'react';\n${content}`; modified = true; this.log(`Added React import to ${filePath}`)} if (modified) { const backupPath = `${filePath}.auto-backup.${Date.now()}`; fs.copyFileSync(filePath,backupPath); fs.writeFileSync(filePath,content); this.log(`Auto-fixed file: ${filePath}`); return true} return false} catch (error) { this.log(`Error auto-fixing file ${filePath}: ${error.message}`,'ERROR'); return false} } async processChanges() { if (this.pendingChanges.size === 0) return; this.log(`Processing ${this.pendingChanges.size} file changes...`); const results = { validated: 0,issues: 0,autoFixed: 0,files: [] }; for (const filePath of this.pendingChanges) { this.log(`Validating: ${filePath}`); const issues = await this.validateFile(filePath); const typeErrors = await this.quickTypeCheck(filePath); results.validated++; if (issues.length > 0 || typeErrors.length > 0) { results.issues++; this.log(`Issues found in ${filePath}: ${[...issues,...typeErrors].join(',')}`,'WARN'); const fixed = await this.autoFixFile(filePath); if (fixed) { results.autoFixed++} } results.files.push({ path: filePath,issues: issues,typeErrors: typeErrors,timestamp: new Date().toISOString() })} const reportPath = path.join(__dirname,'reports','real-time-validation.json'); fs.mkdirSync(path.dirname(reportPath),{ recursive: true }); fs.writeFileSync(reportPath,JSON.stringify(results,null,2)); this.log(`Validation complete: ${results.validated} files,${results.issues} with issues,${results.autoFixed} auto-fixed`); this.pendingChanges.clear()} setupWatcher() { this.log('Setting up file watcher...'); const watcher = chokidar.watch(this.watchPaths,{ ignored: [ '**/node_modules.git.nextdistbuild*.log','**/*.backup*' ],persistent: true,ignoreInitial: true }); watcher.on('change',(filePath) => { this.log(`File changed: ${filePath}`); this.pendingChanges.add(filePath); if (this.debounceTimer) { clearTimeout(this.debounceTimer)} this.debounceTimer = setTimeout(() => { this.processChanges().catch(error => { this.log(`Error processing changes: ${error.message}`,'ERROR')})},this.debounceDelay)}); watcher.on('add',(filePath) => { this.log(`File added: ${filePath}`); this.pendingChanges.add(filePath)}); watcher.on('error',(error) => { this.log(`Watcher error: ${error.message}`,'ERROR')}); watcher.on('ready',() => { this.log('File watcher ready. Monitoring for changes...')}); return watcher} async run() { this.log('Starting File Watcher...'); try { const watcher = this.setupWatcher(); process.on('SIGTERM',() => { this.log('Received SIGTERM,closing watcher...'); watcher.close(); process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,closing watcher...'); watcher.close(); process.exit(0)})} catch (error) { this.log(`Error in file watcher: ${error.message}`,'ERROR')} } } try { require('chokidar')} catch (error) {  execSync('yarn add chokidar',{ stdio: 'inherit' })} if (require.main === module) { const watcher = new FileWatcher(); watcher.run().catch(console.error)} module.exports = FileWatcher;
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const chokidar = require('chokidar'); const { execSync } = class FileWatcher { constructor() { this.logFile = path.join(__dirname,'logs','file-watcher.log'); this.watchPaths = [ 'src*.{js,jsx,ts,tsx}','pages*.{js,jsx,ts,tsx}','components*.{js,jsx,ts,tsx}','hooks*.{js,jsx,ts,tsx}','utils*.{js,jsx,ts,tsx}','package.json','tsconfig.json','next.config.js' ]; this.debounceDelay = 2000; this.debounceTimer = null; this.pendingChanges = new Set(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(this.logFile,logMessage)} async validateFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const issues = []; if (content.includes('return()') && !content.includes('return ()')) { issues.push('Invalid return statement syntax')} replacement: ,description: 'Removed merge conflict markers' },{ replacement: ,description: 'Removed merge conflict markers' } ];  in ${filePath}`)} } if (content.includes('React.') && !content.includes('import React')) { content = `import React from 'react';\n${content}`; modified = true; this.log(`Added React import to ${filePath}`)} if (modified) { const backupPath = `${filePath}.auto-backup.${Date.now()}`; fs.copyFileSync(filePath,backupPath); fs.writeFileSync(filePath,content); this.log(`Auto-fixed file: ${filePath}`); return true} return false} catch (error) { this.log(`Error auto-fixing file ${filePath}: ${error.message}`,'ERROR'); return false} } async processChanges() { if (this.pendingChanges.size === 0) return; this.log(`Processing ${this.pendingChanges.size} file changes...`); const results = { validated: 0,issues: 0,autoFixed: 0,files: [] }; for (const filePath of this.pendingChanges) { this.log(`Validating: ${filePath}`); const issues = await this.validateFile(filePath); const typeErrors = await this.quickTypeCheck(filePath); results.validated++; if (issues.length > 0 || typeErrors.length > 0) { results.issues++; this.log(`Issues found in ${filePath}: ${[...issues,...typeErrors].join(',')}`,'WARN'); const fixed = await this.autoFixFile(filePath); if (fixed) { results.autoFixed++} } results.files.push({ path: filePath,issues: issues,typeErrors: typeErrors,timestamp: new Date().toISOString() })} const reportPath = path.join(__dirname,'reports','real-time-validation.json'); fs.mkdirSync(path.dirname(reportPath),{ recursive: true }); fs.writeFileSync(reportPath,JSON.stringify(results,null,2)); this.log(`Validation complete: ${results.validated} files,${results.issues} with issues,${results.autoFixed} auto-fixed`); this.pendingChanges.clear()} setupWatcher() { this.log('Setting up file watcher...'); const watcher = chokidar.watch(this.watchPaths,{ ignored: [ '**/node_modules.git.nextdistbuild*.log','**/*.backup*' ],persistent: true,ignoreInitial: true }); watcher.on('change',(filePath) => { this.log(`File changed: ${filePath}`); this.pendingChanges.add(filePath); if (this.debounceTimer) { clearTimeout(this.debounceTimer)} this.debounceTimer = setTimeout(() => { this.processChanges().catch(error => { this.log(`Error processing changes: ${error.message}`,'ERROR')})},this.debounceDelay)}); watcher.on('add',(filePath) => { this.log(`File added: ${filePath}`); this.pendingChanges.add(filePath)}); watcher.on('error',(error) => { this.log(`Watcher error: ${error.message}`,'ERROR')}); watcher.on('ready',() => { this.log('File watcher ready. Monitoring for changes...')}); return watcher} async run() { this.log('Starting File Watcher...'); try { const watcher = this.setupWatcher(); process.on('SIGTERM',() => { this.log('Received SIGTERM,closing watcher...'); watcher.close(); process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,closing watcher...'); watcher.close(); process.exit(0)})} catch (error) { this.log(`Error in file watcher: ${error.message}`,'ERROR')} } } try { require('chokidar')} catch (error) {  execSync('yarn add chokidar',{ stdio: 'inherit' })} if (require.main === module) { const watcher = new FileWatcher(); watcher.run().catch(console.error)} module.exports = FileWatcher;
-#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar');
+<<<<<<< HEAD
 
 #!/usr/bin/env node'
 const fs = require('fs');'
 const path = require('path');'
 const chokidar = require('chokidar');'
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const { execSync } = // // require('child_process');
 /**
- * File Watcher - Real-time monitoring of file changes for immediate error detection;
+ * File Watcher - Real-time monitoring of file changes for immediate error detection
  */
-class FileWatcher {}
-  constructor() {'
-    this.logFile = path.join(__dirname, 'logs', 'file-watcher.log');'
-    this.watchPaths = ['src/**/*.{js,jsx,ts,tsx}','
-      'pages/**/*.{js,jsx,ts,tsx}','
-      'components/**/*.{js,jsx,ts,tsx}','
-      'hooks/**/*.{js,jsx,ts,tsx}','
-      'utils/**/*.{js,jsx,ts,tsx}','
-      'package.json','
-      'tsconfig.json','
+class FileWatcher {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logs', 'file-watcher.log');
+    this.watchPaths = ['src/**/*.{js,jsx,ts,tsx}',
+      'pages/**/*.{js,jsx,ts,tsx}',
+      'components/**/*.{js,jsx,ts,tsx}',
+      'hooks/**/*.{js,jsx,ts,tsx}',
+      'utils/**/*.{js,jsx,ts,tsx}',
+      'package.json',
+      'tsconfig.json',
       'next.config.js'
     ];
-    this.debounceDelay = 2000; // 2 seconds;
+    this.debounceDelay = 2000; // 2 seconds
     this.debounceTimer = null;
     this.pendingChanges = new Set();
+<<<<<<< HEAD
 // Ensure directories exist
 
 
@@ -50,13 +55,15 @@ class FileWatcher {}
     fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
   }
 
+=======
+    // Ensure directories exist
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     fs.mkdirSync(path.dirname(this.logFile), { "recursive": true })}
-    // Ensure directories exist;
-    fs.mkdirSync(path.dirname(this.logFile), { "recursive": true })}""
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();`;
+    const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(logMessage.trim());
+<<<<<<< HEAD
 
 
 
@@ -69,12 +76,16 @@ class FileWatcher {}
     fs.appendFileSync(this.logFile, logMessage)}
   async validateFile(filePath) {
 
+=======
+    fs.appendFileSync(this.logFile, logMessage)}
+  async validateFile(filePath) {
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     try {
-  // TODO: Implement
       const content = fs.readFileSync(filePath, 'utf8');
       const issues = [];
-      // Basic syntax checks;
+      // Basic syntax checks
       if (content.includes('return()') && !content.includes('return ()')) {
+<<<<<<< HEAD
 
 
     fs.appendFileSync(this.logFile, logMessage)}
@@ -117,28 +128,44 @@ issues.push('Invalid return statement syntax');
         issues.push('Merge conflict markers found');
       }
 
+=======
+        issues.push('Merge conflict markers found');
+      }
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       // Check for unmatched braces (simple check)
       const openBraces = (content.match(/{/g) || []).length;
       const closeBraces = (content.match(/}/g) || []).length;
-      if (openBraces !== closeBraces) {'
+      if (openBraces !== closeBraces) {
         issues.push('Unmatched braces detected');
+      }
 
       // Check for unmatched parentheses
+<<<<<<< HEAD
 
       // Check for unmatched parentheses;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       const openParens = (content.match(/\(/g) || []).length;
       const closeParens = (content.match(/\)/g) || []).length;
-      if (openParens !== closeParens) {'
+      if (openParens !== closeParens) {
         issues.push('Unmatched parentheses detected');
       }
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       // Check for React usage without import
-      // Check for React usage without import;
       if (content.includes('React.') && !content.includes('import React')) {
         issues.push('React used without import');
+<<<<<<< HEAD
 
 
       // Check for React usage without import
@@ -159,22 +186,36 @@ issues.push('Invalid return statement syntax');
 
       return issues;
 } catch (error) {}`
+=======
+      }
+
+      return issues;
+    } catch (error) {
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       return [`File read error: ${error.message}`];
     }
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   async quickTypeCheck(filePath) {
     if (!filePath.endsWith('.ts') && !filePath.endsWith('.tsx')) {
       return [];
+    }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     try {
-execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
+      execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, { 
         stdio: 'pipe',
         cwd: process.cwd()
       });
       return [];
+<<<<<<< HEAD
     } catch (error) {}
       const output = error.stdout || error.message;'
   // TODO: Implement
@@ -183,22 +224,26 @@ execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
         stdio: 'pipe',')
         cwd: process.cwd()
       });
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     } catch (error) {
       const output = error.stdout || error.message;
       return output.split('\n').filter(line => line.includes('error TS'));
+    }
+  }
 
   async autoFixFile(filePath) {
-  // TODO: Implement
+    try {
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
 
       // Auto-fix common issues
-      // Auto-fix common issues;
       const fixes = [
         {
           pattern: /return\(\)/g,
           replacement: 'return (',
           description: 'Fixed return statement syntax'
+<<<<<<< HEAD
 
 
 // Auto-fix common issues;
@@ -224,18 +269,27 @@ execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
         issues.push('Invalid return statement syntax')}
           "replacement": ,
           "description": 'Removed merge conflict markers
+=======
+        issues.push('Invalid return statement syntax')}
+          "replacement": '',
+          "description": 'Removed merge conflict markers'
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         },
-        {'"
-          "replacement": '','"
+        {
+          "replacement": '',
           "description": 'Removed merge conflict markers'
         }
       ];
+<<<<<<< HEAD
 
         }]
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       for (const fix of fixes) {
         if (fix.pattern.test(content)) {
           content = content.replace(fix.pattern, fix.replacement);
           modified = true;
+<<<<<<< HEAD
 
 
 
@@ -248,11 +302,15 @@ execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
 "`
           this.log(`Applied "fix": ${fix.description} in ${filePath}`)}
 
+=======
+          this.log(`Applied "fix": ${fix.description} in ${filePath}`)}
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       }
-      // Add React import if needed'
-      if (content.includes('React.') && !content.includes('import React')) {';`
+      // Add React import if needed
+      if (content.includes('React.') && !content.includes('import React')) {
         content = `import React from 'react';\n${content}`;
         modified = true;
+<<<<<<< HEAD
 
 
 
@@ -271,11 +329,15 @@ execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
 
         this.log(`Added React import to ${filePath}`)}
 
+=======
+        this.log(`Added React import to ${filePath}`)}
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       if (modified) {
-        // Create backup;`;
+        // Create backup
         const backupPath = `${filePath}.auto-backup.${Date.now()}`;
         fs.copyFileSync(filePath, backupPath);
         // Write fixed content
+<<<<<<< HEAD
 fs.writeFileSync(filePath, content);
 
 
@@ -295,26 +357,31 @@ fs.writeFileSync(filePath, content);
 "`
         this.log(`Auto-fixed "file": ${filePath}`);
 
+=======
+        fs.writeFileSync(filePath, content);
+        this.log(`Auto-fixed "file": ${filePath}`);
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         return true}
-      return false} catch (error) {'`
+      return false} catch (error) {
       this.log(`Error auto-fixing file ${filePath}: ${error.message}`, 'ERROR');
       return false;
     }
   }
-  async processChanges() {}
-    if (this.pendingChanges.size === 0) return;`
+  async processChanges() {
+    if (this.pendingChanges.size === 0) return;
     this.log(`Processing ${this.pendingChanges.size} file changes...`);
-    const results = {"
-      "validated": 0,"
-      "issues": 0,"
-      "autoFixed": 0,"
+    const results = {
+      "validated": 0,
+      "issues": 0,
+      "autoFixed": 0,
       "files": []
     };
-    for (const filePath of this.pendingChanges) {"`
+    for (const filePath of this.pendingChanges) {
       this.log(`"Validating": ${filePath}`);
       const issues = await this.validateFile(filePath);
       const typeErrors = await this.quickTypeCheck(filePath);
       results.validated++;
+<<<<<<< HEAD
       if (issues.length > 0 || typeErrors.length > 0) {}
         results.issues++;'`
 
@@ -340,13 +407,18 @@ fs.writeFileSync(filePath, content);
       results.validated++;
       if (issues.length > 0 || typeErrors.length > 0) {
         results.issues++;"`;
+=======
+      if (issues.length > 0 || typeErrors.length > 0) {
+        results.issues++;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         this.log(`Issues found in ${filePath}: ${[...issues, ...typeErrors].join(', ')}`, 'WARN');
-        // Attempt auto-fix;
+        // Attempt auto-fix
         const fixed = await this.autoFixFile(filePath);
-        if (fixed) {}
+        if (fixed) {
           results.autoFixed++;
-}
+        }
       }
+<<<<<<< HEAD
 results.files.push({
 
       results.files.push({}
@@ -370,13 +442,15 @@ results.files.push({
         "path": filePath,"
         "issues": issues,"
         "typeErrors": typeErrors,"
+=======
+      results.files.push({
+        "path": filePath,
+        "issues": issues,
+        "typeErrors": typeErrors,
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         "timestamp": new Date().toISOString()
-
-        "path": filePath,""
-        "issues": issues,""
-        "typeErrors": typeErrors,""
-        "timestamp": new Date().toISOString()"
       })}
+<<<<<<< HEAD
 // Save results'
     const reportPath = path.join(__dirname, 'reports', 'real-time-validation.json');"
     fs.mkdirSync(path.dirname(reportPath), { "recursive": true });
@@ -396,34 +470,34 @@ results.files.push({
 
 
 "`
+=======
+    // Save results
+    const reportPath = path.join(__dirname, 'reports', 'real-time-validation.json');
+    fs.mkdirSync(path.dirname(reportPath), { "recursive": true });
+    fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     this.log(`Validation "complete": ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
-    fs.mkdirSync(path.dirname(reportPath), { "recursive": true });"
-    fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));`;
-    this.log(`Validation complete: ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);
-    this.pendingChanges.clear();
-
-"`;
-    this.log(`Validation "complete": ${results.validated} files, ${results.issues} with issues, ${results.autoFixed} auto-fixed`);"
     this.pendingChanges.clear()}
-setupWatcher() {'
+  setupWatcher() {
     this.log('Setting up file watcher...');
-    const watcher = chokidar.watch(this.watchPaths, {'"
-      "ignored": ['**/node_modules/**','
-        '**/.git/**','
-        '**/.next/**','
-        '**/dist/**','
-        '**/build/**','
-        '**/*.log','
+    const watcher = chokidar.watch(this.watchPaths, {
+      "ignored": ['**/node_modules/**',
+        '**/.git/**',
+        '**/.next/**',
+        '**/dist/**',
+        '**/build/**',
+        '**/*.log',
         '**/*.backup*'
-      ],"
-      "persistent": true,"
-      "ignoreInitial": true;
-    });'
-    watcher.on('change', (filePath) => {"`
+      ],
+      "persistent": true,
+      "ignoreInitial": true
+    });
+    watcher.on('change', (filePath) => {
       this.log(`File "changed": ${filePath}`);
       this.pendingChanges.add(filePath);
-// Debounce processing
+      // Debounce processing
       if (this.debounceTimer) {
+<<<<<<< HEAD
 
       // Debounce processing;
       if (this.debounceTimer) {}
@@ -456,26 +530,29 @@ setupWatcher() {'
 
 
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         clearTimeout(this.debounceTimer)}
-      this.debounceTimer = setTimeout(() => {}
-        this.processChanges().catch(error => {'"`
-          this.log(`Error processing "changes": ${error.message}`, 'ERROR')})}, this.debounceDelay)});'
-    watcher.on('add', (filePath) => {"`
+      this.debounceTimer = setTimeout(() => {
+        this.processChanges().catch(error => {
+          this.log(`Error processing "changes": ${error.message}`, 'ERROR')})}, this.debounceDelay)});
+    watcher.on('add', (filePath) => {
       this.log(`File "added": ${filePath}`);
-      this.pendingChanges.add(filePath)});'
-    watcher.on('error', (error) => {'"`
-      this.log(`Watcher "error": ${error.message}`, 'ERROR')});'
-    watcher.on('ready', () => {'
+      this.pendingChanges.add(filePath)});
+    watcher.on('error', (error) => {
+      this.log(`Watcher "error": ${error.message}`, 'ERROR')});
+    watcher.on('ready', () => {
       this.log('File watcher ready. Monitoring for changes...')});
     return watcher}
-  async run() {'
+  async run() {
     this.log('Starting File Watcher...');
-try {}
+    try {
       const watcher = this.setupWatcher();
-      // Keep the process running'
-      process.on('SIGTERM', () => {'
+      // Keep the process running
+      process.on('SIGTERM', () => {
         this.log('Received SIGTERM, closing watcher...');
         watcher.close();
+<<<<<<< HEAD
 
 
 
@@ -523,10 +600,26 @@ try {}
 // Install chokidar if not present;
   // TODO: Implement
   // // require('chokidar');
-  console.log('Installing chokidar...');
-  execSync('yarn add chokidar', { stdio: 'inherit' });
-
+=======
+        process.exit(0)});
+      process.on('SIGINT', () => {
+        this.log('Received SIGINT, closing watcher...');
+        watcher.close();
+        process.exit(0)})} catch (error) {
+      this.log(`Error in file "watcher": ${error.message}`, 'ERROR')}
+  }
 }
+// Install chokidar if not present
+try {
+  require('chokidar')} catch (error) {
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+  console.log('Installing chokidar...');
+<<<<<<< HEAD
+  execSync('yarn add chokidar', { "stdio": 'inherit' })}
+=======
+  execSync('yarn add chokidar', { stdio: 'inherit' });
+}
+<<<<<<< HEAD
 
 // Main execution
 if (require.main === module) {
@@ -582,3 +675,13 @@ module.exports = FileWatcher;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const chokidar = require('chokidar'); const { execSync } = class FileWatcher { constructor() { this.logFile = path.join(__dirname,'logs','file-watcher.log'); this.watchPaths = [ 'src*.{js,jsx,ts,tsx}','pages*.{js,jsx,ts,tsx}','components*.{js,jsx,ts,tsx}','hooks*.{js,jsx,ts,tsx}','utils*.{js,jsx,ts,tsx}','package.json','tsconfig.json','next.config.js' ]; this.debounceDelay = 2000; this.debounceTimer = null; this.pendingChanges = new Set(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async validateFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const issues = []; if (content.includes('return()') && !content.includes('return ()')) { issues.push('Invalid return statement syntax')} replacement: '',description: 'Removed merge conflict markers' },{ replacement: '',description: 'Removed merge conflict markers' } ]; for (const fix of fixes) { if (fix.pattern.test(content)) { content = content.replace(fix.pattern,fix.replacement); modified = true; this.log(`Applied fix: ${fix.description} in ${filePath}`)} } if (content.includes('React.') && !content.includes('import React')) { content = `import React from 'react';\n${content}`; modified = true; this.log(`Added React import to ${filePath}`)} if (modified) { const backupPath = `${filePath}.auto-backup.${Date.now()}`; fs.copyFileSync(filePath,backupPath); fs.writeFileSync(filePath,content); this.log(`Auto-fixed file: ${filePath}`); return true} return false} catch (error) { this.log(`Error auto-fixing file ${filePath}: ${error.message}`,'ERROR'); return false} } async processChanges() { if (this.pendingChanges.size === 0) return; this.log(`Processing ${this.pendingChanges.size} file changes...`); const results = { validated: 0,issues: 0,autoFixed: 0,files: [] }; for (const filePath of this.pendingChanges) { this.log(`Validating: ${filePath}`); const issues = await this.validateFile(filePath); const typeErrors = await this.quickTypeCheck(filePath); results.validated++; if (issues.length > 0 || typeErrors.length > 0) { results.issues++; this.log(`Issues found in ${filePath}: ${[...issues,...typeErrors].join(',')}`,'WARN'); const fixed = await this.autoFixFile(filePath); if (fixed) { results.autoFixed++} } results.files.push({ path: filePath,issues: issues,typeErrors: typeErrors,timestamp: new Date().toISOString() })} const reportPath = path.join(__dirname,'reports','real-time-validation.json'); fs.mkdirSync(path.dirname(reportPath),{ recursive: true }); fs.writeFileSync(reportPath,JSON.stringify(results,null,2)); this.log(`Validation complete: ${results.validated} files,${results.issues} with issues,${results.autoFixed} auto-fixed`); this.pendingChanges.clear()} setupWatcher() { this.log('Setting up file watcher...'); const watcher = chokidar.watch(this.watchPaths,{ ignored: [ '**/node_modules.git.nextdistbuild*.log','**/*.backup*' ],persistent: true,ignoreInitial: true }); watcher.on('change',(filePath) => { this.log(`File changed: ${filePath}`); this.pendingChanges.add(filePath); if (this.debounceTimer) { clearTimeout(this.debounceTimer)} this.debounceTimer = setTimeout(() => { this.processChanges().catch(error => { this.log(`Error processing changes: ${error.message}`,'ERROR')})},this.debounceDelay)}); watcher.on('add',(filePath) => { this.log(`File added: ${filePath}`); this.pendingChanges.add(filePath)}); watcher.on('error',(error) => { this.log(`Watcher error: ${error.message}`,'ERROR')}); watcher.on('ready',() => { this.log('File watcher ready. Monitoring for changes...')}); return watcher} async run() { this.log('Starting File Watcher...'); try { const watcher = this.setupWatcher(); process.on('SIGTERM',() => { this.log('Received SIGTERM,closing watcher...'); watcher.close(); process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,closing watcher...'); watcher.close(); process.exit(0)})} catch (error) { this.log(`Error in file watcher: ${error.message}`,'ERROR')} } } try { require('chokidar')} catch (error) { console.log('Installing chokidar...'); execSync('yarn add chokidar',{ stdio: 'inherit' })} if (require.main === module) { const watcher = new FileWatcher(); watcher.run().catch(console.error)} module.exports = FileWatcher;
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const chokidar = require('chokidar'); const { execSync } = class FileWatcher { constructor() { this.logFile = path.join(__dirname,'logs','file-watcher.log'); this.watchPaths = [ 'src*.{js,jsx,ts,tsx}','pages*.{js,jsx,ts,tsx}','components*.{js,jsx,ts,tsx}','hooks*.{js,jsx,ts,tsx}','utils*.{js,jsx,ts,tsx}','package.json','tsconfig.json','next.config.js' ]; this.debounceDelay = 2000; this.debounceTimer = null; this.pendingChanges = new Set(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async validateFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const issues = []; if (content.includes('return()') && !content.includes('return ()')) { issues.push('Invalid return statement syntax')} replacement: ,description: 'Removed merge conflict markers' },{ replacement: ,description: 'Removed merge conflict markers' } ]; for (const fix of fixes) { if (fix.pattern.test(content)) { content = content.replace(fix.pattern,fix.replacement); modified = true; this.log(`Applied fix: ${fix.description} in ${filePath}`)} } if (content.includes('React.') && !content.includes('import React')) { content = `import React from 'react';\n${content}`; modified = true; this.log(`Added React import to ${filePath}`)} if (modified) { const backupPath = `${filePath}.auto-backup.${Date.now()}`; fs.copyFileSync(filePath,backupPath); fs.writeFileSync(filePath,content); this.log(`Auto-fixed file: ${filePath}`); return true} return false} catch (error) { this.log(`Error auto-fixing file ${filePath}: ${error.message}`,'ERROR'); return false} } async processChanges() { if (this.pendingChanges.size === 0) return; this.log(`Processing ${this.pendingChanges.size} file changes...`); const results = { validated: 0,issues: 0,autoFixed: 0,files: [] }; for (const filePath of this.pendingChanges) { this.log(`Validating: ${filePath}`); const issues = await this.validateFile(filePath); const typeErrors = await this.quickTypeCheck(filePath); results.validated++; if (issues.length > 0 || typeErrors.length > 0) { results.issues++; this.log(`Issues found in ${filePath}: ${[...issues,...typeErrors].join(',')}`,'WARN'); const fixed = await this.autoFixFile(filePath); if (fixed) { results.autoFixed++} } results.files.push({ path: filePath,issues: issues,typeErrors: typeErrors,timestamp: new Date().toISOString() })} const reportPath = path.join(__dirname,'reports','real-time-validation.json'); fs.mkdirSync(path.dirname(reportPath),{ recursive: true }); fs.writeFileSync(reportPath,JSON.stringify(results,null,2)); this.log(`Validation complete: ${results.validated} files,${results.issues} with issues,${results.autoFixed} auto-fixed`); this.pendingChanges.clear()} setupWatcher() { this.log('Setting up file watcher...'); const watcher = chokidar.watch(this.watchPaths,{ ignored: [ '**/node_modules.git.nextdistbuild*.log','**/*.backup*' ],persistent: true,ignoreInitial: true }); watcher.on('change',(filePath) => { this.log(`File changed: ${filePath}`); this.pendingChanges.add(filePath); if (this.debounceTimer) { clearTimeout(this.debounceTimer)} this.debounceTimer = setTimeout(() => { this.processChanges().catch(error => { this.log(`Error processing changes: ${error.message}`,'ERROR')})},this.debounceDelay)}); watcher.on('add',(filePath) => { this.log(`File added: ${filePath}`); this.pendingChanges.add(filePath)}); watcher.on('error',(error) => { this.log(`Watcher error: ${error.message}`,'ERROR')}); watcher.on('ready',() => { this.log('File watcher ready. Monitoring for changes...')}); return watcher} async run() { this.log('Starting File Watcher...'); try { const watcher = this.setupWatcher(); process.on('SIGTERM',() => { this.log('Received SIGTERM,closing watcher...'); watcher.close(); process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,closing watcher...'); watcher.close(); process.exit(0)})} catch (error) { this.log(`Error in file watcher: ${error.message}`,'ERROR')} } } try { require('chokidar')} catch (error) { console.log('Installing chokidar...'); execSync('yarn add chokidar',{ stdio: 'inherit' })} if (require.main === module) { const watcher = new FileWatcher(); watcher.run().catch(console.error)} module.exports = FileWatcher;`;
+=======
+}
+>>>>>>> origin/merge-pr-12271
+// Main execution
+if (require.main === module) {
+  const watcher = new FileWatcher();
+  watcher.run().catch(console.error)}
+module.exports = FileWatcher;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const chokidar = require('chokidar'); const { execSync } = class FileWatcher { constructor() { this.logFile = path.join(__dirname,'logs','file-watcher.log'); this.watchPaths = [ 'src*.{js,jsx,ts,tsx}','pages*.{js,jsx,ts,tsx}','components*.{js,jsx,ts,tsx}','hooks*.{js,jsx,ts,tsx}','utils*.{js,jsx,ts,tsx}','package.json','tsconfig.json','next.config.js' ]; this.debounceDelay = 2000; this.debounceTimer = null; this.pendingChanges = new Set(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async validateFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const issues = []; if (content.includes('return()') && !content.includes('return ()')) { issues.push('Invalid return statement syntax')} replacement: '',description: 'Removed merge conflict markers' },{ replacement: '',description: 'Removed merge conflict markers' } ]; for (const fix of fixes) { if (fix.pattern.test(content)) { content = content.replace(fix.pattern,fix.replacement); modified = true; this.log(`Applied fix: ${fix.description} in ${filePath}`)} } if (content.includes('React.') && !content.includes('import React')) { content = `import React from 'react';\n${content}`; modified = true; this.log(`Added React import to ${filePath}`)} if (modified) { const backupPath = `${filePath}.auto-backup.${Date.now()}`; fs.copyFileSync(filePath,backupPath); fs.writeFileSync(filePath,content); this.log(`Auto-fixed file: ${filePath}`); return true} return false} catch (error) { this.log(`Error auto-fixing file ${filePath}: ${error.message}`,'ERROR'); return false} } async processChanges() { if (this.pendingChanges.size === 0) return; this.log(`Processing ${this.pendingChanges.size} file changes...`); const results = { validated: 0,issues: 0,autoFixed: 0,files: [] }; for (const filePath of this.pendingChanges) { this.log(`Validating: ${filePath}`); const issues = await this.validateFile(filePath); const typeErrors = await this.quickTypeCheck(filePath); results.validated++; if (issues.length > 0 || typeErrors.length > 0) { results.issues++; this.log(`Issues found in ${filePath}: ${[...issues,...typeErrors].join(',')}`,'WARN'); const fixed = await this.autoFixFile(filePath); if (fixed) { results.autoFixed++} } results.files.push({ path: filePath,issues: issues,typeErrors: typeErrors,timestamp: new Date().toISOString() })} const reportPath = path.join(__dirname,'reports','real-time-validation.json'); fs.mkdirSync(path.dirname(reportPath),{ recursive: true }); fs.writeFileSync(reportPath,JSON.stringify(results,null,2)); this.log(`Validation complete: ${results.validated} files,${results.issues} with issues,${results.autoFixed} auto-fixed`); this.pendingChanges.clear()} setupWatcher() { this.log('Setting up file watcher...'); const watcher = chokidar.watch(this.watchPaths,{ ignored: [ '**/node_modules.git.nextdistbuild*.log','**/*.backup*' ],persistent: true,ignoreInitial: true }); watcher.on('change',(filePath) => { this.log(`File changed: ${filePath}`); this.pendingChanges.add(filePath); if (this.debounceTimer) { clearTimeout(this.debounceTimer)} this.debounceTimer = setTimeout(() => { this.processChanges().catch(error => { this.log(`Error processing changes: ${error.message}`,'ERROR')})},this.debounceDelay)}); watcher.on('add',(filePath) => { this.log(`File added: ${filePath}`); this.pendingChanges.add(filePath)}); watcher.on('error',(error) => { this.log(`Watcher error: ${error.message}`,'ERROR')}); watcher.on('ready',() => { this.log('File watcher ready. Monitoring for changes...')}); return watcher} async run() { this.log('Starting File Watcher...'); try { const watcher = this.setupWatcher(); process.on('SIGTERM',() => { this.log('Received SIGTERM,closing watcher...'); watcher.close(); process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,closing watcher...'); watcher.close(); process.exit(0)})} catch (error) { this.log(`Error in file watcher: ${error.message}`,'ERROR')} } } try { require('chokidar')} catch (error) { console.log('Installing chokidar...'); execSync('yarn add chokidar',{ stdio: 'inherit' })} if (require.main === module) { const watcher = new FileWatcher(); watcher.run().catch(console.error)} module.exports = FileWatcher;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

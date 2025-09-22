@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('AIChatbotSystem.test', () => {
@@ -7,18 +8,14 @@ describe('AIChatbotSystem.test', () => {
 });
 
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import React from 'react';
-import '@testing-library/jest-dom';
-import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AIChatbotSystemtest from "./components/AIChatbotSystem.test"; describe("AIChatbotSystemtest",() => { test("renders without crashing",() => { render(<AIChatbotSystemtest />); expect(screen.getByTestId("aichatbotsystem.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AIChatbotSystemtest />)}); test("handles user interactions",() => { render(<AIChatbotSystemtest />)}); test("applies correct styling",() => { render(<AIChatbotSystemtest />)})});''"
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+import AIChatbotSystem from '../components/AIChatbotSystem';
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -26,42 +23,40 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import '@testing-library/jest-dom';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
+=======
+<<<<<<< HEAD
+describe('AIChatbotSystem', () => {
+=======
 
-import React from 'react';
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
 
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-import { render, screen } from '@testing-library/react';
+
+
+
 
 describe('AIChatbotSystemtest', () => {
+>>>>>>> origin/merge-pr-12271
   test('renders without crashing', () => {
-    render(<AIChatbotSystemtest />);
-    expect(screen.getByTestId('aichatbotsystem.test')).toBeInTheDocument();
+    render(<AIChatbotSystem />);
+    expect(screen.getByTestId('aichatbotsystem')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   test('displays correct content', () => {
-    render(<AIChatbotSystemtest />);
+    render(<AIChatbotSystem />);
   });
-
-test('displays correct content', () => {
-    render(<AIChatbotSystemtest />);
-    // Add specific content tests based on component
-  });
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-  test('displays correct content', () => {
-    render(<AIChatbotSystemtest />);
-  });
-
-main
+  
   test('handles user interactions', () => {
-    render(<AIChatbotSystemtest />);
+    render(<AIChatbotSystem />);
   });
+<<<<<<< HEAD
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -91,6 +86,15 @@ main
   });
 });
 
+=======
+  
+  test('applies correct styling', () => {
+    render(<AIChatbotSystem />);
+  });
+});
+<<<<<<< HEAD
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   test('applies correct styling', () => {
     render(<AIChatbotSystemtest />);
   });
@@ -98,16 +102,20 @@ main
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test'
-
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AIChatbotSystemtest from "./components/AIChatbotSystem.test"; describe('AIChatbotSystemtest', () => { test("renders without crashing",() => { render(<AIChatbotSystemtest />); expect(screen.getByTestId("aichatbotsystem.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AIChatbotSystemtest />)}); test("handles user interactions",() => { render(<AIChatbotSystemtest />)}); test("applies correct styling"
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
     // Add styling tests if needed
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

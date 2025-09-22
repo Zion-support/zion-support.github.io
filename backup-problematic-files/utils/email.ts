@@ -1,11 +1,11 @@
-import fs from 'fs-extra';
-import path from 'path';
-export interface WarningEmailPayload {;
+
+
   toUserId: string;
   toAddress?: string | null;
   subject: string;
   body: string;
 }
+<<<<<<< HEAD
 to: string;
   subject: string;
   body: string;
@@ -29,3 +29,8 @@ export async function sendWarningEmail(payload: WarningEmailPayload): Promise<vo
   await fs.ensureDir(logDir);
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
   await fs.appendFile(logPath, line, 'utf8');
+=======
+
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -6,16 +6,17 @@ import { Star } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 ;
 interface ProfileHeroProps {;
-  name: string;,;
-  title: string;,;
+  name:string,;
+  title:string,;
   avatarUrl?:string,;
   coverImageUrl?:string,;
   location?:string,;
   rating?:number,;
   reviewCount?:number,;
-  aiScore?:number,;"
+  aiScore?:number,;
   profileType:'service' | 'talent';
 }
+;
 export function ProfileHero({;
   name,;
   title,;
@@ -25,20 +26,20 @@ export function ProfileHero({;
   rating,;
   reviewCount,;
   aiScore,;
-  profileType;)
+  profileType;
 } ProfileHeroProps) {;
   return (;
     <div className="w-full overflow-hidden">;
       <div className="relative">;
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
           {coverImageUrl ? (;
-<img;
+            <img;
               src={coverImageUrl}
-              alt={`${name} cover`}"
-              className="w-full h-full object-cover";""
-              loading="lazy";"
+              alt={`${name} cover`}
+              className="w-full h-full object-cover";
+              loading="lazy";
             />;
-) :(;
+          ) :(;
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
           )}
         </AspectRatio>;
@@ -122,19 +123,25 @@ profileType ;
   return (<div className="w-full overflow-hidden" > <div className="relative" > <AspectRatio ratio= {;"  3/1 ";"}className="bg-zion-blue-light" > {;
   coverImageUrl ? (<img src= {;
   coverImageUrl ;
-}alt= {;`;
-  `$ {;)"`;
-  name ;"}cover` ";"}className="w-full h-full object-cover" loading="lazy" w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />) ;"
-</img>
-} ) ;
-}) ;
-} </div>) ;
+}alt= {;
+  `$ {;
+  name ;"}cover` ";"}className="w-full h-full object-cover" loading="lazy" w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />) ;
+}</AspectRatio> </AvatarFallback>) ;
+}</Avatar>) ;
+}> {';
+  profileType === 'service' ? 'Service Provider' : 'Talent' ;
+}</Badge> </div>) ;
 }</div>) ;
 }AI Match: {;
   aiScore ;
 }% </div>) ;
+<<<<<<< HEAD
 :temp_broken_files/profile/ProfileHero.tsx
 }</div> </div> </div> </div> </div> </div>) ;"}'"
 }</div> </div> </div> </div> </div> </div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileHero.tsx
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

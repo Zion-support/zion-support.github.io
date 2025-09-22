@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('AICodeGenerator.test', () => {
@@ -7,18 +8,14 @@ describe('AICodeGenerator.test', () => {
 });
 
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import React from 'react';
-import '@testing-library/jest-dom';
-import AICodeGeneratortest from '../components/AICodeGenerator.test';
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AICodeGeneratortest from '../components/AICodeGenerator.test';
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AICodeGeneratortest from "./components/AICodeGenerator.test"; describe("AICodeGeneratortest",() => { test("renders without crashing",() => { render(<AICodeGeneratortest />); expect(screen.getByTestId("aicodegenerator.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AICodeGeneratortest />)}); test("handles user interactions",() => { render(<AICodeGeneratortest />)}); test("applies correct styling",() => { render(<AICodeGeneratortest />)})});''"
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+import AICodeGenerator from '../components/AICodeGenerator';
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -26,42 +23,40 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
+=======
+<<<<<<< HEAD
+describe('AICodeGenerator', () => {
+=======
 
-import React from 'react';
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AICodeGeneratortest from '../components/AICodeGenerator.test';
 
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-import { render, screen } from '@testing-library/react';
+
+
+
 
 describe('AICodeGeneratortest', () => {
+>>>>>>> origin/merge-pr-12271
   test('renders without crashing', () => {
-    render(<AICodeGeneratortest />);
-    expect(screen.getByTestId('aicodegenerator.test')).toBeInTheDocument();
+    render(<AICodeGenerator />);
+    expect(screen.getByTestId('aicodegenerator')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   test('displays correct content', () => {
-    render(<AICodeGeneratortest />);
+    render(<AICodeGenerator />);
   });
-
-test('displays correct content', () => {
-    render(<AICodeGeneratortest />);
-    // Add specific content tests based on component
-  });
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-  test('displays correct content', () => {
-    render(<AICodeGeneratortest />);
-  });
-
-main
+  
   test('handles user interactions', () => {
-    render(<AICodeGeneratortest />);
+    render(<AICodeGenerator />);
   });
+<<<<<<< HEAD
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -91,6 +86,15 @@ main
   });
 });
 
+=======
+  
+  test('applies correct styling', () => {
+    render(<AICodeGenerator />);
+  });
+});
+<<<<<<< HEAD
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   test('applies correct styling', () => {
     render(<AICodeGeneratortest />);
   });
@@ -98,16 +102,20 @@ main
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import AICodeGeneratortest from '../components/AICodeGenerator.test'
-
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AICodeGeneratortest from "./components/AICodeGenerator.test"; describe('AICodeGeneratortest', () => { test("renders without crashing",() => { render(<AICodeGeneratortest />); expect(screen.getByTestId("aicodegenerator.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AICodeGeneratortest />)}); test("handles user interactions",() => { render(<AICodeGeneratortest />)}); test("applies correct styling"
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
     // Add styling tests if needed
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

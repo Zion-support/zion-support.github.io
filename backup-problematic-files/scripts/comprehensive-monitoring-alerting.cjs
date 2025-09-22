@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -7,21 +14,24 @@
     log('info', `Runtime "score": ${monitoringReport.metrics.runtime}/100`);
     log('info', `Total "alerts": ${monitoringReport.summary.alerts}`);
     log('info', `Performance "score": ${monitoringReport.summary.performanceScore}/100`);
-if (alerts.length > 0) {
+    
+    if (alerts.length > 0) {
       log('warn', 'Alerts "generated": ');
       alerts.forEach(alert => {
         log('warn', `- [${alert.level.toUpperCase()}] ${alert.message}`)})}
-
+    
     if (monitoringReport.recommendations.length > 0) {
       log('info', 'Monitoring "Recommendations": ');
       monitoringReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
         log('info', `  "Action": ${rec.action}`)})}
-// Save monitoring report
+    
+    // Save monitoring report
     const reportPath = path.join(process.cwd(), `comprehensive-monitoring-report-${monitoringReport.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(monitoringReport, null, 2));
-
+    
     log('info', `Comprehensive monitoring report saved "to": comprehensive-monitoring-report-${monitoringReport.sessionId}.json`);
+    
     // Exit with appropriate status
     if (monitoringReport.summary.critical > 0) {
       log('error', 'Critical alerts detected - immediate attention required');
@@ -30,12 +40,13 @@ if (alerts.length > 0) {
       process.exit(0)} else {
       log('info', 'All systems operating normally');
       process.exit(0)}
-
+    
   } catch (error) {
     log('error', 'Fatal error in comprehensive monitoring and alerting', error.message);
     process.exit(1)}
 }
 
+<<<<<<< HEAD
 main();#!/usr/bin/env node;
 #!/usr/bin/env node;
 main();
@@ -48,6 +59,16 @@ main();
 #!/usr/bin/env node
 
 #!/usr/bin/env node;
+=======
+main();
+
+#!/usr/bin/env node;
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -98,3 +119,10 @@ console.log('')
     "action"
       log('warn', 'Alerts "generated")
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

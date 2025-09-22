@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = {;
   testEnvironmen:t:'jsdom',;
   setupFilesAfterEn:v:['<rootDir>/jest.setup.js'],;
@@ -24,6 +25,17 @@ module.exports = { preset: "ts-jest","" testEnvironment: "jsdom"," globals: {" "
 module.exports = {
   preset: 'ts-jest',
 
+=======
+
+
+
+module.exports = {
+  preset: 'ts-jest',
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -34,6 +46,16 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   testEnvironment: 'jsdom',
   testMatch: [
     '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
@@ -57,12 +79,22 @@ const customJestConfig = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1'
   },
+<<<<<<< HEAD
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
+=======
+
+
+};
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   testTimeout: 10000,
@@ -70,6 +102,7 @@ const customJestConfig = {
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 
+<<<<<<< HEAD
     '/node_modules/(?!(.*\.mjs$))'
   ]
 };
@@ -88,3 +121,9 @@ module.exports = createJestConfig(customJestConfig)
   ]
 };
 
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

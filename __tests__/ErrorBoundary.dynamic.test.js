@@ -1,41 +1,39 @@
-import { describe, it, expect } from '@jest/globals';
-
-describe('ErrorBoundary.dynamic', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-import _React from 'react';  import '@testing-library/jest-dom'; import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic'; describe('ErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<ErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<ErrorBoundarydynamic />)})});
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic';
+import ErrorBoundary from '../components/ErrorBoundary';
 
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-describe('ErrorBoundarydynamic', () => {
+<<<<<<< HEAD
+describe('ErrorBoundary', () => {
   test('renders without crashing', () => {
-    render(<ErrorBoundarydynamic />);
-    expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument();
+    render(<ErrorBoundary />);
+    expect(screen.getByTestId('errorboundary')).toBeInTheDocument();
   });
+  
   test('displays correct content', () => {
-    render(<ErrorBoundarydynamic />);
+    render(<ErrorBoundary />);
   });
+  
   test('handles user interactions', () => {
-    render(<ErrorBoundarydynamic />);
+    render(<ErrorBoundary />);
   });
+  
   test('applies correct styling', () => {
-    render(<ErrorBoundarydynamic />);
+    render(<ErrorBoundary />);
   });
 });
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ErrorBoundarydynamic from "./components/ErrorBoundary.dynamic"; describe("ErrorBoundarydynamic",() => { test("renders without crashing",() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId("errorboundary.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<ErrorBoundarydynamic />)}); test("applies correct styling",() => { render(<ErrorBoundarydynamic />)})});''"
 
 import _React from 'react';  import '@testing-library/jest-dom'; import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic'; describe('ErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<ErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<ErrorBoundarydynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic'; describe('ErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<ErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<ErrorBoundarydynamic />)})});
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -47,7 +45,9 @@ describe('ErrorBoundarydynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ErrorBoundarydynamic from "./components/ErrorBoundary.dynamic"; describe('ErrorBoundarydynamic', () => { test("renders without crashing",() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId("errorboundary.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<ErrorBoundarydynamic />)}); test("applies correct styling"
 
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic'; describe('ErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<ErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<ErrorBoundarydynamic />)})});
 
 import _React from 'react';  import '@testing-library/jest-dom'; import ErrorBoundarydynamic from '../components/ErrorBoundary.dynamic'; describe('ErrorBoundarydynamic',() => { test('renders without crashing',() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ErrorBoundarydynamic />)}); test('handles user interactions',() => { render(<ErrorBoundarydynamic />)}); test('applies correct styling',() => { render(<ErrorBoundarydynamic />)})});
@@ -69,3 +69,6 @@ main
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

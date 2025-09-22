@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
@@ -8,6 +9,8 @@
   "arrowParens": "avoid",
   "endOfLine": "lf"
 }
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   "semi": true,
   "trailingComma": "es5",
   "singleQuote": true,
@@ -17,9 +20,16 @@
   "bracketSpacing": true,
   "bracketSameLine": false,
   "arrowParens": "avoid",
+<<<<<<< HEAD
+  "endOfLine": "lf"
+=======
   "endOfLine": "lf",
   "quoteProps": "as-needed",
   "jsxSingleQuote": true,
   "proseWrap": "preserve"
+>>>>>>> origin/auto/autonomy-17186719616
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

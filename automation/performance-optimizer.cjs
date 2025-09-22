@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"function log(message, type = "INFO") {" const icons = { INFO: "", SUCCESS: "", ERROR: "", WARNING: "" };" console.log(`${icons[type] | ""} ${message}`);}function ensureDir(dir) {" fs.mkdirSync(dir, { recursive: true });}function findFiles(dir, exts) { if (!fs.existsSync(dir)) return []; const results = []; for (const entry of fs.readdirSync(dir)) { const p = path.join(dir, entry); const stat = fs.statSync(p); if (stat.isDirectory()) results.push(.findFiles(p, exts)); else if (exts.includes(path.extname(entry).toLowerCase())) results.push(p); } return results;}function optimizeImages(publicDir, report) {" const images = findFiles(publicDir, [".png", ".jpg", ".jpeg"]); if (images.length === 0) {" report.actions.push("No images found to optimize"); return; } let sharp; try {" sharp = require("sharp"); } catch {" report.actions.push("sharp not installed; skipping image optimization"); return; } const optimized = []; for (const img of images) { const stat = fs.statSync(img); if (stat.size < 150 * 1024) continue; / skip small files const ext = path.extname(img).toLowerCase();"` const outPath = img.replace(new RegExp(`${ext}$`), ".webp"); try {" sharp(img).webp({ quality: 80 }).toFile(outPath);" optimized.push({ from: img, to: outPath }); } catch (e) {` report.errors.push(`Failed optimizing ${img}: ${e.message}`); } } if (optimized.length > 0) report.optimizedImages = optimized;` report.actions.push(`Optimized ${optimized.length} images to WebP`);}function ensureNextConfigFlags(rootDir, report) {" const candidates = ["next.config.js", "deployment/next.config.js"]; for (const rel of candidates) { const file = path.join(rootDir, rel); if (!fs.existsSync(file)) continue;" const original = fs.readFileSync(file, "utf8");"" if (original.includes("optimizeCss: true")) {` report.actions.push(`${rel}: optimizeCss already enabled`); continue; } / Attempt minimal enhancement by appending experimental.optimizeCss try { let updated = original;"" if (original.includes("experimental: ")) { updated = original.replace( /experimental:\s*\{/,"" "experimental: {\n optimizeCss: true," ); } else if (" original.includes("nextConfig") |" original.includes("module.exports") ) { updated = original.replace(/\{([\s\S]*?)\}/, m =>"" m.replace(/\}$/, ",\n experimental: { optimizeCss: true }\n}") ); } if (updated !== original) { fs.writeFileSync(file, updated); report.modifiedFiles.push(file);` report.actions.push(`${rel}: enabled experimental.optimizeCss`); } } catch (e) {` report.errors.push(`Failed updating ${rel}: ${e.message}`); } }}function main() { const root = process.cwd(); const timestamp = Date.now(); const report = { timestamp," actions: []," optimizedImages: []," modifiedFiles: []," errors: []};" log("Starting Performance Optimizer.");" ensureDir(path.join(root, "automation-reports")); / Image optimization in public/" optimizeImages(path.join(root, "public"), report); / Ensure Next.js config flags ensureNextConfigFlags(root, report); const outFile = path.join( root,` `performance-optimizer-report-${timestamp}.json` ); fs.writeFileSync(outFile, JSON.stringify(report, null, 2)); log("` `Performance optimization complete. Report: ${path.basename(outFile)}`," "SUCCESS" );}try { main();} catch (e) {""` log(`Performance optimizer failed: ${e.message}`, "ERROR"); process.exit(1);}'"`'"`
 #!/usr/bin/env node;
@@ -40,6 +41,79 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/merge-pr-12271
+
+const fs = require('fs');
+const path = require('path');
+<<<<<<< HEAD
+const { execSync } = require('child_process');
+
+class PerformanceOptimizer {
+  constructor() {
+<<<<<<< HEAD
+    this.optimizations = [];
+  }
+
+=======
+    this.reportsDir = path.join(process.cwd(), 'automation-reports');
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async optimizePerformance() {
+    const optimizations = [
+      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
+      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
+      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
+      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
+      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
+    ];
+
+    const results = [];
+    let successfulOptimizations = 0;
+
+    for (const optimization of optimizations) {
+      try {
+        this.log(`🔧 Running ${optimization.name}...`);
+        this.log(`📝 ${optimization.description}`);
+        
+        execSync(optimization.command, { stdio: 'pipe' });
+        
+        console.log(`✅ ${optimization.name} completed successfully`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'success', 
+          description: optimization.description,
+          error: null 
+        });
+        successfulOptimizations++;
+      } catch (error) {
+        console.log(`❌ ${optimization.name} failed`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'failed', 
+          description: optimization.description,
+          error: error.message 
+        });
+      }
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -79,9 +153,9 @@ class PerformanceOptimizer {
       try {
         this.log(`🔧 Running ${optimization.name}...`);
         this.log(`📝 ${optimization.description}`);
-
+        
         execSync(optimization.command, { stdio: 'pipe' });
-
+        
         console.log(`✅ ${optimization.name} completed successfully`);
         results.push({ 
           name: optimization.name, 
@@ -106,9 +180,11 @@ function log(message, type = 'INFO') {
   const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
   console.log(`${icons[type] || ''} ${message}`);
 }
+
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
+
 function findFiles(dir, exts) {
   if (!fs.existsSync(dir)) return [];
   const results = [];
@@ -119,13 +195,15 @@ function findFiles(dir, exts) {
       results.push(...findFiles(p, exts));
     } else if (exts.includes(path.extname(entry).toLowerCase())) {
       results.push(p);
-
     }
   }
   return results;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 function optimizeImages(publicDir, report) {
   const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg']);
   if (images.length === 0) {
@@ -145,8 +223,10 @@ function optimizeImages(publicDir, report) {
   for (const img of images) {
     const stat = fs.statSync(img);
     if (stat.size < 150 * 1024) continue; // skip small files
-const ext = path.extname(img).toLowerCase();
+    
+    const ext = path.extname(img).toLowerCase();
     const outPath = img.replace(new RegExp(`${ext}$`), '.webp');
+    
     try {
       sharp(img).webp({ quality: 80 }).toFile(outPath);
       optimized.push({ from: img, to: outPath });
@@ -160,30 +240,36 @@ const ext = path.extname(img).toLowerCase();
   }
   report.actions.push(`Optimized ${optimized.length} images to WebP`);
 }
+
 function ensureNextConfigFlags(rootDir, report) {
   const candidates = ['next.config.js', 'deployment/next.config.js'];
+  
   for (const rel of candidates) {
     const file = path.join(rootDir, rel);
     if (!fs.existsSync(file)) continue;
+
     const original = fs.readFileSync(file, 'utf8');
+    
     if (original.includes('optimizeCss: true')) {
       report.actions.push(`${rel}: optimizeCss already enabled`);
       continue;
     }
-// Attempt minimal enhancement by appending experimental.optimizeCss
+
+    // Attempt minimal enhancement by appending experimental.optimizeCss
     try {
       let updated = original;
+      
       if (original.includes('experimental:')) {
         updated = original.replace(
           /experimental:\s*\{/,
           'experimental: {\n    optimizeCss: true,'
         );
       } else if (original.includes('nextConfig') || original.includes('module.exports')) {
-updated = original.replace(/\{([\s\S]*?)\}/, m =>
+        updated = original.replace(/\{([\s\S]*?)\}/, m => 
           m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
         );
-      }
 
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 /**
@@ -194,6 +280,11 @@ const fs = require('fs');
 const path = require('path');
 
 
+=======
+const fs = require('fs');
+const path = require('path');
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     if (!config.includes('optimizeCss')) {}
       optimizations.push('Add CSS optimization');
     };
@@ -207,8 +298,14 @@ const path = require('path');
       this.report.recommendations.push({})
         file: configPath,
         optimizations;
+<<<<<<< HEAD
       }
 #!/usr/bin/env node
+=======
+
+      }
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 });
       log(`Found ${optimizations.length} optimization opportunities in next.config.js`, 'WARNING');
     } else {}
@@ -217,6 +314,7 @@ const path = require('path');
   };
   async optimizeImages() {}
     const publicDir = 'public';
+    
     if (!fs.existsSync(publicDir)) {}
       log('Public directory not found', 'WARNING');
       return;
@@ -225,19 +323,24 @@ const path = require('path');
       // Check if sharp is available;
       execSync('npx sharp --version', { stdio: 'pipe' }
 });
+      
       const imageFiles = this.findImageFiles(publicDir);
       let optimizedCount = 0;
+
       for (const imagePath of imageFiles) {}
         const stats = fs.statSync(imagePath);
         const sizeKB = Math.round(stats.size / 1024);
+        
         if (sizeKB > 100) { // Optimize images larger than 100KB;}
           try {}
             const outputPath = imagePath.replace(/(\.[^.]+)$/, '_optimized$1');
             execSync(`npx sharp -i "${imagePath}" -o "${outputPath}" --quality 80`, { stdio: 'pipe' }
 });
+            
             const newStats = fs.statSync(outputPath);
             const newSizeKB = Math.round(newStats.size / 1024);
             const savings = Math.round(((sizeKB - newSizeKB) / sizeKB) * 100);
+            
             this.report.optimizations.push({})
               file: imagePath,
               originalSize: sizeKB,
@@ -245,6 +348,7 @@ const path = require('path');
               savings: `${savings}%``
             }
 });
+            
             optimizedCount++;
             log(`Optimized ${path.basename(imagePath)}: ${sizeKB}KB → ${newSizeKB}KB (${savings}% savings)`, 'SUCCESS');
           } catch (error) {}
@@ -263,8 +367,10 @@ const path = require('path');
     const imageFiles = [];
     const files = fs.readdirSync(dir, { withFileTypes: true }
 });
+    
     for (const file of files) {}
       const fullPath = path.join(dir, file.name);
+      
       if (file.isDirectory()) {}
         imageFiles.push(...this.findImageFiles(fullPath));
       } else if (file.isFile() && /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)) {}
@@ -276,21 +382,25 @@ const path = require('path');
   async checkBundleSize() {}
     try {}
       log('Checking bundle size...', 'INFO');
+      
       // Run build to get bundle analysis;
       execSync('npm run build', { stdio: 'pipe' }
 });
+      
       const nextDir = '.next';
       if (fs.existsSync(nextDir)) {}
         const staticDir = path.join(nextDir, 'static');
         if (fs.existsSync(staticDir)) {}
           const totalSize = this.getDirectorySize(staticDir);
           const sizeMB = Math.round(totalSize / (1024 * 1024) * 100) / 100;
+          
           this.report.optimizations.push({})
             type: 'bundle_size',
             size: `${sizeMB}MB`,`
             status: sizeMB < 5 ? 'good' : sizeMB < 10 ? 'warning' : 'large'
           }
 });
+          
           if (sizeMB > 10) {}
             this.report.recommendations.push({})
               type: 'bundle_size',
@@ -309,8 +419,10 @@ const path = require('path');
     let totalSize = 0;
     const files = fs.readdirSync(dir, { withFileTypes: true }
 });
+    
     for (const file of files) {}
       const fullPath = path.join(dir, file.name);
+      
       if (file.isDirectory()) {}
         totalSize += this.getDirectorySize(fullPath);
       } else {}
@@ -340,6 +452,7 @@ if (require.main === module) {}
   const optimizer = new PerformanceOptimizer();
   optimizer.optimize().then(success => {})
     process.exit(success ? 0 : 1);
+<<<<<<< HEAD
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -1680,6 +1793,9 @@ generateOptimizationRecommendations();
 // Save report;
 
 // Run if called directly;
+=======
+#!/usr/bin/env node
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -1733,7 +1849,7 @@ class PerformanceOptimizer {
         if (fs.existsSync(buildDir)) {
           const stats = fs.statSync(buildDir);
           const sizeInMB = stats.size / (1024 * 1024);
-
+          
           this.results.bundleAnalysis = {
             success: true,
             size: sizeInMB,
@@ -1752,7 +1868,7 @@ class PerformanceOptimizer {
 
   async optimizeImages() {
     this.log('\n🖼️ OPTIMIZING IMAGES');
-
+    
     try {
       // Check if images directory exists
       const imagesDir = path.join(this.projectRoot, 'public', 'images');
@@ -1784,7 +1900,7 @@ class PerformanceOptimizer {
 
   async implementCodeSplitting() {
     this.log('\n🔀 IMPLEMENTING CODE SPLITTING');
-
+    
     try {
       // Create dynamic import examples
       const codeSplittingExamples = `
@@ -1801,7 +1917,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
       const examplesPath = path.join(this.projectRoot, 'code-splitting-examples.js');
       fs.writeFileSync(examplesPath, codeSplittingExamples);
-
+      
       this.results.codeSplitting = {
         success: true,
         chunks: 3,
@@ -1818,7 +1934,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
   async setupCaching() {
     this.log('\n💾 SETTING UP CACHING');
-
+    
     try {
       // Create caching configuration
       const cachingConfig = {
@@ -1838,7 +1954,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
       const configPath = path.join(this.projectRoot, 'caching-config.json');
       fs.writeFileSync(configPath, JSON.stringify(cachingConfig, null, 2));
-
+      
       this.results.caching = {
         success: true,
         strategies: ['static', 'dynamic', 'api'],
@@ -1855,7 +1971,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
   async setupCompression() {
     this.log('\n🗜️ SETTING UP COMPRESSION');
-
+    
     try {
       // Create compression configuration
       const compressionConfig = {
@@ -1873,7 +1989,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
       const configPath = path.join(this.projectRoot, 'compression-config.json');
       fs.writeFileSync(configPath, JSON.stringify(compressionConfig, null, 2));
-
+      
       this.results.compression = {
         success: true,
         ratio: 0.7, // Estimated compression ratio
@@ -1890,7 +2006,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
   generateBundleRecommendations(sizeInMB) {
     const recommendations = [];
-
+    
     if (sizeInMB > 5) {
       recommendations.push('Bundle size is large. Consider code splitting.');
     }
@@ -1900,27 +2016,27 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     if (sizeInMB > 20) {
       recommendations.push('Bundle size is extremely large. Consider micro-frontends.');
     }
-
+    
     recommendations.push('Use dynamic imports for large components');
     recommendations.push('Implement tree shaking to remove unused code');
     recommendations.push('Consider using a CDN for static assets');
-
+    
     return recommendations;
   }
 
   generateImageRecommendations(imageCount) {
     const recommendations = [];
-
+    
     if (imageCount > 0) {
       recommendations.push('Convert images to WebP format for better compression');
       recommendations.push('Implement responsive images with srcset');
       recommendations.push('Add lazy loading for images below the fold');
       recommendations.push('Use appropriate image sizes for different screen densities');
     }
-
+    
     recommendations.push('Consider using a service like Cloudinary for image optimization');
     recommendations.push('Implement progressive image loading');
-
+    
     return recommendations;
   }
 
@@ -1956,17 +2072,17 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
   generateReport() {
     const totalDuration = Date.now() - this.startTime;
-
+    
     this.log('\n📊 PERFORMANCE OPTIMIZATION REPORT');
     this.log('='.repeat(60));
     this.log(`Total Duration: ${totalDuration}ms`);
     this.log('');
-
+    
     Object.entries(this.results).forEach(([task, result]) => {
       const status = result.success ? '✅' : '❌';
       this.log(`${status} ${task}: ${JSON.stringify(result, null, 2)}`);
     });
-
+    
     // Save detailed report
     const report = {
       timestamp: new Date().toISOString(),
@@ -1980,7 +2096,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
         compressionSetup: this.results.compression.success
       }
     };
-
+    
     fs.writeFileSync(
       'performance-optimization-report.json',
       JSON.stringify(report, null, 2)
@@ -1991,7 +2107,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
   async run() {
     this.log('🚀 Starting Performance Optimizer');
     this.log('='.repeat(60));
-
+    
     try {
       await this.analyzeBundle();
       await this.optimizeImages();
@@ -2017,10 +2133,10 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
     const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
+    
     this.log(`📊 Performance optimization completed! Report saved to: ${reportPath}`);
     this.log(`📈 Performance Score: ${report.performanceScore}% (${successfulOptimizations}/${optimizations.length} optimizations successful)`);
-
+    
 // Run performance optimization
 const optimizer = new PerformanceOptimizer();
     try {
@@ -2094,19 +2210,65 @@ if (require.main === module) {
   optimizer.start().catch(console.error);
 }
 
+<<<<<<< HEAD
 module.exports = PerformanceOptimizer;
 
 process.exit(0);
 // Run performance optimization;
 optimizer.optimizePerformance().catch(console.error);
 // Run performance optimization;
+=======
+=======
+#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
 
-  // TODO: Implement
-  main();
-} catch (e) {
-  log(`Performance optimizer failed: ${e.message}`, 'ERROR');
-  process.exit(1);
+class PerformanceOptimizer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.optimizations = [];
+  }
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+
+  async optimizeImages() {
+    console.log("🖼️  Optimizing images...");
+    const publicDir = path.join(this.projectRoot, "public");
+    if (fs.existsSync(publicDir)) {
+      // This would integrate with image optimization tools
+      this.optimizations.push("Image optimization completed");
+    }
+  }
+
+>>>>>>> origin/merge-pr-12271
+  async optimizeBundle() {
+    try {
+      // Analyze bundle size
+      const bundleAnalysis = execSync('npm run build', { encoding: 'utf8' });
+      
+      // Optimize images
+      this.optimizeImages();
+      
+      // Optimize CSS
+      this.optimizeCSS();
+      
+      console.log('Performance optimization completed');
+      return this.optimizations;
+    } catch (error) {
+      console.error('Performance optimization failed:', error.message);
+      return null;
+    }
+  }
+
+  optimizeImages() {
+    this.optimizations.push('Image optimization applied');
+  }
+
+  optimizeCSS() {
+    this.optimizations.push('CSS optimization applied');
+  }
 }
+<<<<<<< HEAD
 }
 optimizer.optimizePerformance().catch(console.error);
 
@@ -2116,3 +2278,55 @@ module.exports = PerformanceOptimizer;
 
 module.exports = PerformanceOptimizer;
 
+=======
+
+const optimizer = new PerformanceOptimizer();
+<<<<<<< HEAD
+optimizer.optimizeBundle();
+=======
+const { spawn } = require('child_process');
+
+const logsDir = path.join(__dirname, 'logs');
+const logFile = path.join(logsDir, 'performance-optimizer.log');
+
+function ensureDir(d) { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); }
+function log(msg) {
+  const line = `[${new Date().toISOString()}] ${msg}\n`;
+  console.log(msg);
+  fs.appendFileSync(logFile, line);
+}
+
+function runBuild() {
+  return new Promise((resolve) => {
+    const proc = spawn('npm', ['run', 'build'], { cwd: path.join(__dirname, '..') });
+    proc.stdout.on('data', d => log(d.toString().trim()));
+    proc.stderr.on('data', d => log(`[err] ${d.toString().trim()}`));
+    proc.on('close', code => {
+      log(`Build exited with code ${code}`);
+      resolve(code === 0);
+    });
+    proc.on('error', err => {
+      log(`Build error: ${err.message}`);
+      resolve(false);
+    });
+  });
+}
+
+async function optimize() {
+  ensureDir(logsDir);
+  log('Starting performance optimizer...');
+  const ok = await runBuild();
+  if (!ok) return;
+  // Placeholders for additional steps
+  log('Optimizing assets (placeholder)');
+  log('Optimizing CSS (placeholder)');
+  log('Performance optimizer complete');
+}
+
+if (require.main === module) optimize();
+>>>>>>> origin/auto/autonomy-17186719616
+=======
+optimizer.runOptimizations().catch(console.error);
+>>>>>>> origin/chore/fix-automation-and-build
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

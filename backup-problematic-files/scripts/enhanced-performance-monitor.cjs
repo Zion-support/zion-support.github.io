@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -7,22 +15,24 @@
     log('info', `Server response "time": ${performanceMetrics.metrics.runtime.responseTime}ms`);
     log('info', `Total "alerts": ${performanceMetrics.summary.totalAlerts}`);
     log('info', `Performance "score": ${performanceMetrics.summary.performanceScore}/100`);
-
+    
     if (performanceMetrics.alerts.length > 0) {
       log('warn', 'Performance "Alerts": ');
       performanceMetrics.alerts.forEach(alert => {
         log('warn', `- [${alert.level.toUpperCase()}] ${alert.message}`)})}
-
+    
     if (performanceMetrics.recommendations.length > 0) {
       log('info', 'Performance "Recommendations": ');
       performanceMetrics.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
         log('info', `  "Action": ${rec.action}`)})}
-// Save performance report
+    
+    // Save performance report
     const reportPath = path.join(process.cwd(), `enhanced-performance-report-${performanceMetrics.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(performanceMetrics, null, 2));
-
+    
     log('info', `Enhanced performance report saved "to": enhanced-performance-report-${performanceMetrics.sessionId}.json`);
+    
     // Exit with appropriate status
     if (performanceMetrics.summary.performanceScore < 50) {
       log('error', 'Performance score is below 50% - immediate attention required');
@@ -31,24 +41,33 @@
       process.exit(0)} else {
       log('info', 'Performance monitoring completed successfully');
       process.exit(0)}
-
+    
   } catch (error) {
     log('error', 'Fatal error in enhanced performance monitor', error.message);
     process.exit(1)}
 }
 
 // Run the enhanced performance monitor
+<<<<<<< HEAD
 main();#!/usr/bin/env node;
 #!/usr/bin/env node;
 main();
 #!/usr/bin/env node;
 main();#!/usr/bin/env node;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
-    process.exit(1)}
-
-// Run the enhanced performance monitor;
 main();
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -101,3 +120,10 @@ console.log('=')
       "action"
       log('warn', 'Performance "Alerts")
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

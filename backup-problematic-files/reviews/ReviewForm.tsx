@@ -1,21 +1,30 @@
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
 }</button> </form>)
 }
 type Props = {
-initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+import StarRating from './StarRating';
+export type ReviewFormValues = {
 
-import StarRating from './StarRating';
-export type ReviewFormValues = {
-};import React, { useState } from 'react';
-import StarRating from './StarRating';
-export type ReviewFormValues = {
-  projectId: string;,
-  fromRole: 'client' | 'talent';,
-  fromId: string;,
-  rating: number;,
-  text: string;,
+
+  projectId: string,
+  fromRole: 'client' | 'talent',
+  fromId: string,
+  rating: number,
+  text: string,
   categories?: {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
@@ -24,8 +33,9 @@ export type ReviewFormValues = {
   anonymous?: boolean
 }
 type Props = {
-initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 const ReviewForm: React.FC<Props> = ({ initial }) => {
+<<<<<<< HEAD
       return <div>Something went wrong.</div>;
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;""
   submitting ? 'Submitting...' : 'Submit Review' ;
@@ -51,15 +61,16 @@ export type ReviewFormValues = {;
 type Props = {;
 initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
   const [communication, setCommunication] = useState<number | undefined>();
-</number>
   const [qualityOfWork, setQualityOfWork] = useState<number | undefined>();
   const [timeliness, setTimeliness] = useState<number | undefined>();
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
-</boolean>
+  const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -84,7 +95,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           }
         })
       });
-const data = await res.json();
+      const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {
@@ -93,22 +104,9 @@ const data = await res.json();
       setSubmitting(false);    }
   }
   return (
-
-            communication;
-            qualityOfWork;
-            timeliness;
-            wouldWorkWithAgain}})});
-
-    } catch (err: any) {
-      set_message (err.message);
-    } finally {
-
-    }
-  }
-  return (
-
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
+<<<<<<< HEAD
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
@@ -148,13 +146,37 @@ const data = await res.json();
 </form>
       <div>
 </div>
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
-</div>
+      </div>
       <div>
+<<<<<<< HEAD
+=======
+
+
+    }
+  }
+  return (
+
+
+        <StarRating value={rating} onChange={setRating} />
+      </div>
+      <div>
+
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
       {message && <p className='text-sm'>{message}</p>}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     </form>
   );
 }
@@ -163,6 +185,11 @@ export default ReviewForm;    </form>
 }
 export default ReviewForm;
 
+<<<<<<< HEAD
       </button>
       {message && <p className='text-sm'>{message}</p>}
 export default ReviewForm;    </form>
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

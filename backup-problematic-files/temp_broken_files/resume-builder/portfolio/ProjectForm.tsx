@@ -5,6 +5,7 @@ import { z } from 'zod',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -14,6 +15,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+import {logErrorToProduction} from '@/utils/productionLogger',;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import {;
   Form,;
   FormControl,;
@@ -21,17 +25,18 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage} from '@/components/ui/form',;
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react',;
+import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
 import { PortfolioProject } from '@/types/resume',;
 import { usePortfolio } from '@/hooks/usePortfolio',;
 import { useAuth } from '@/hooks/useAuth',;
 ;
 // Define schema for form validation;
 const projectSchema = z.object({;
-title:z.string().min(1, 'Project title is required'),;
+  title:z.string().min(1, 'Project title is required'),;
   description:z.string().optional(),;
   technologies:z.string().optional(),;
   image_url:z.string().optional(),;
+<<<<<<< HEAD
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
@@ -45,17 +50,34 @@ pr-12325
   description: z.string().optional();,;
   technologies: z.string().optional();,;
   image_url: z.string().optional();,;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   github_url:z;
-    .union([z.string().url('Please enter a valid URL'), z.literal()]);
+    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
     .optional(),;
   demo_url:z;
-  pdf_url: z.string().optional();}),;
+    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
+    .optional(),;
+  pdf_url:z.string().optional()}),;
+;
 type ProjectFormValues = z.infer<typeof projectSchema>,;
-</typeof>
+;
+interface ProjectFormProps {;
+  project?:PortfolioProject,;
+  onSuccess:() => void,;
+  onCancel:() => void;
+}
+;
+export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {;
+  const { user } = useAuth(),;
+  const { addProject, updateProject } = usePortfolio(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const isEditing = !!project,;
+  ;
   const form = useForm<ProjectFormValues>({;
-    resolver: zodResolver(projectSchema);,;
+    resolver:zodResolver(projectSchema),;
     defaultValues:{;
-title:project?.title || '',;
+      title:project?.title || '',;
       description:project?.description || '',;
       technologies:project?.technologies ? project.technologies.join() :'',;
       image_url:project?.image_url || '',;
@@ -71,14 +93,14 @@ title:project?.title || '',;
     ;
     try {;
       const projectData:PortfolioProject = {;
-title:data.title,;
+        title:data.title,;
         description:data.description,;
         technologies:data.technologies ? ;
           data.technologies.split().map(tech => tech.trim()) :[],;
-        image_url: data.image_url;,;
-        github_url: data.github_url || undefined;,;
-        demo_url: data.demo_url || undefined;,;
-        pdf_url: data.pdf_url;},;
+        image_url:data.image_url,;
+        github_url:data.github_url || undefined,;
+        demo_url:data.demo_url || undefined,;
+        pdf_url:data.pdf_url},;
       ;
       let success = false,;
       ;
@@ -94,56 +116,50 @@ title:data.title,;
         form.reset(),;
       }
     } catch (error) {;
+<<<<<<< HEAD
       console.error('Error saving project:', error),;
       logErrorToProduction('Error saving project: ';, { data: error ;}),;
+=======
+      logErrorToProduction('Error saving project:', { data:error }),;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     } finally {;
       setIsLoading(false),;
     }
   },;
   ;
   return (;
-
-pr-12325
     <Form {...form}>;
-)
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;"
-</form>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
         <FormField;
-control={form.control}
+          control={form.control}
           name="title";
+<<<<<<< HEAD
           render={({ field }) => (;
+=======
+          render={({ field } { field:any }) => (;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             <FormItem>;
               <FormLabel>Project Title</FormLabel>;
               <FormControl>;
-
-          render={({ field }) => (;
+                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;          )}
+        />;
+        ;
+        <FormField;
+          control={form.control}
+          name="description";
+          render={({ field } { field:any }) => (;
             <FormItem>;
               <FormLabel>Project Description</FormLabel>;
               <FormControl>;
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Technologies Used</FormLabel>;
-              <FormControl>;
-            <FormItem>;
-
-              <FormLabel>Project Title;
-              <FormControl>;
-"
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;"
-
-              <FormMessage />;
-            ;          )}
-          name="description";"
-
-              <FormLabel>Project Description;
-
-                <Textarea ;"
-                  placeholder="Describe what the project does and your role in it...";""
-                  className="min-h-[100px]";"
+                <Textarea ;
+                  placeholder="Describe what the project does and your role in it...";
+                  className="min-h-[100px]";
                   {...field} ;
                 />;
-</FormControl>;
+              </FormControl>;
               <FormMessage />;
             </FormItem>;          )}
         />;
@@ -161,8 +177,11 @@ control={form.control}
             </FormItem>;
           )}
         />;
+<<<<<<< HEAD
 
             render={({ field }) => (;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
@@ -175,8 +194,11 @@ control={form.control}
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 
             render={({ field }) => (;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   <Input placeholder="https://github.com/yourusername/project" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -193,8 +215,11 @@ control={form.control}
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 
           render={({ field }) => (;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   <Input placeholder="https://your-project-demo.com" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -212,20 +237,27 @@ control={form.control}
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
+=======
+                <Input placeholder="https://example.com/screenshot.jpg" {...field} />;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
         />;
-
+        ;
+        {/* Future file upload field would go here */}
+        ;
         <div className="flex justify-end space-x-2 pt-4">;
           <Button type="button" variant="outline" onClick={onCancel}>;
             Cancel;
           </Button>;
           <Button type="submit" disabled={isLoading}>;
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-
+            {isEditing ? 'Update' :'Add'} Project;
           </Button>;
+<<<<<<< HEAD
 
           name="technologies";"
 
@@ -250,22 +282,15 @@ control={form.control}
 
                   <Input placeholder="https: //your-project-demo.com" {...field;} />;"
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         </div>;
-          name="image_url";"
-
-                <FileImage className="h-4 w-4" />;"
-
-                <Input placeholder="https: //example.com/screenshot.jpg" {...field;} />;"
-
-        <div className="flex justify-end space-x-2 pt-4">;"
-</div>"
-          <Button type="button" variant="outline" onClick={onCancel}>;"
-
-          <Button type="submit" disabled={isLoading}>;"
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
-</Loader2>
       </form>;
+<<<<<<< HEAD
 </Form>;
+=======
+    </Form>;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   ),;}
  type ProjectFormValues = z.infer<typeof projectSchema>;
 setIsLoading (true);
@@ -279,8 +304,13 @@ try {;
 }/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> {;
   /* Future file upload field would go here */ ;
+<<<<<<< HEAD
 :temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
 }</Button> </div> </form> </Form>) ;"}"
 }</Button> </div> </form> </Form>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectForm.tsx
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

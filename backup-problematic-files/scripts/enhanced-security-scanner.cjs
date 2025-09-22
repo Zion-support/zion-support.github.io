@@ -1,25 +1,35 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
     log('info', `Medium "severity": ${securityReport.summary.medium}`);
     log('info', `Low "severity": ${securityReport.summary.low}`);
     log('info', `Security "score": ${securityReport.summary.securityScore}/100`);
-if (securityReport.vulnerabilities.length > 0) {
+    
+    if (securityReport.vulnerabilities.length > 0) {
       log('warn', 'Vulnerabilities "found": ');
       securityReport.vulnerabilities.forEach(vuln => {
         log('warn', `- [${vuln.severity.toUpperCase()}] ${vuln.description}`)})}
-
+    
     if (securityReport.recommendations.length > 0) {
       log('info', 'Security "Recommendations": ');
       securityReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
         log('info', `  "Action": ${rec.action}`)})}
-// Save report
+    
+    // Save report
     const reportPath = path.join(process.cwd(), `enhanced-security-report-${securityReport.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2));
-
+    
     log('info', `Enhanced security report saved "to": enhanced-security-report-${securityReport.sessionId}.json`);
+    
     // Exit with appropriate status
     if (securityReport.summary.securityScore < 50) {
       log('error', 'Security score is below 50% - immediate attention required');
@@ -28,18 +38,29 @@ if (securityReport.vulnerabilities.length > 0) {
       process.exit(0)} else {
       log('info', 'Security scan completed successfully');
       process.exit(0)}
-
+    
   } catch (error) {
     log('error', 'Fatal error in enhanced security scanner', error.message);
     process.exit(1)}
 }
 
+<<<<<<< HEAD
 main();#!/usr/bin/env node;
 #!/usr/bin/env node;
 
 main();
 
 #!/usr/bin/env node;
+=======
+main();
+
+#!/usr/bin/env node;
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -70,8 +91,15 @@ console.log('======')
     "action"
       log('warn', 'Vulnerabilities "found")
 
+<<<<<<< HEAD
       log('info', 'Security "Recommendations")
 log('info', 'Security "Recommendations")
     process.exit(1)}
 main();
 
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

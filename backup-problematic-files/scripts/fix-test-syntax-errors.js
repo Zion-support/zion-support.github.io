@@ -1,7 +1,13 @@
 #!/usr/bin/env: node;
+<<<<<<< HEAD
 #!/usr/bin/env: node; ; import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { glob } from 'glob';; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ';; class: TestSyntaxErrorFixer { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this.fixedFiles: = []; this.errors: = []} async run() { try { ';; const testFiles = await glob('*** */)' })  for (const testFile of testFiles) {; await this.fixTestFile(testFile)} this.generateSummary()} catch (error) { console.error(`❌ Error during test syntax fixing:`,error.message) } console.error('❌ Error during test syntax fixing: ',error.message)} } async fixTestFile(filePath) {; try {; const fullPath = path.join(this.projectRoot,filePath); const content = fs.readFileSync(fullPath,`utf8`); if (this.hasSyntaxErrors(content)) {', let fixedContent = content; fixedContent = this.fixImportStatements(fixedContent); fixedContent = this.fixStringLiterals(fixedContent); fixedContent = this.fixTestStructure(fixedContent); fixedContent = this.fixJSXSyntax(fixedContent); fs.writeFileSync(fullPath,fixedContent); this.fixedFiles.push(filePath)} } catch (error) { console.error(`❌ Error fixing ${filePath }:`,error.message); this.errors.push({ file: filePath,console.error(`❌ Error fixing ${filePath}:`,error.message); this.errors.push({; file: filePath,error: error.message})} } hasSyntaxErrors(content) {; const errorPatterns = [; /import.*from\s*;/g,/from\s*;\s*[``]/g,/['']\s*;\s*['']/g,/expect\(.*\)\.toBeInTheDocument\(\)\s*;\s*}\)\s*;/g,/describe\(.*,\s*\(\)\s*=>\s*{/g,/it\(.*,\s*\(\)\s*=>\s*{/g,/test\(.*,\s*\(\)\s*=>\s*{/g,return errorPatterns.some(pattern => pattern.test(content)); fixImportStatements(content) { content = content.replace(/import\s+([^]+)\s+from\s*;\s*['']([^'']+)['']/g,'import $1 from \'$2\''); content = content.replace(/import\s+([^]+)\s+from\s*;\s*([^]+);/g,'import $1 from \'$2\';); content = content.replace(/import\s+([^]+)\s+from\s*;\s*['']([^'']+)['']/g,'import $1 from \'$2\''); content = content.replace(/import\s+([^]+)\s+from\s*;\s*([^]+);/g,'import $1 from \'$2\); content = content.replace(/import\s+([^]+)\s+from\s*;\s*[']([^']+)[']/g,'import $1 from \'$2\'); ; return content} fixStringLiterals(content) {; content = content.replace(/[']([^']*)\s*;\s*[']/g,'\'$1\'); content = content.replace(/[']([^']*)\s*,\s*[']/g,'\'$1\'); content = content.replace(/[']([^']*);\s*[']/g,'\'$1\'); return content} fixTestStructure(content) {; content = content.replace(/describe\(\s*;\s*([^]+),\s*\(\)\s*=>\s*{/g,'describe(\'$1\',() => {'); content = content.replace(/describe\(\s*,\s*([^]+),\s*\(\)\s*=>\s*{/g,'describe(\'$1\',() => {'); content = content.replace(/it\(\s*;\s*([^]+),\s*\(\)\s*=>\s*{/g,'it(\'$1\',() => {'); content = content.replace(/it\(\s*,\s*([^]+),\s*\(\)\s*=>\s*{/g,'it(\'$1\',() => {'); content = content.replace(/test\(\s*;\s*([^]+),\s*\(\)\s*=>\s*{/g,'test(\'$1\',() => {'); content = content.replace(/test\(\s*,\s*([^]+),\s*\(\)\s*=>\s*{/g,'test(\'$1\',() => {'); content = content.replace(/expect\(([^)]+)\)\.toBeInTheDocument\(\)\s*;\s*}\)\s*;/g,'expect($1).toBeInTheDocument();\n })); return content} fixJSXSyntax(content) {; content = content.replace(/<([^>]+)\s*;\s*([^>]+)>/g,'<$1 $2>'); content = content.replace(/<([^>]+)\s*,\s*([^>]+)>/g,'<$1 $2>'); return content} generateSummary() {'    if (this.fixedFiles.length > 0) {  this.fixedFiles.forEach(file => { })} if (this.errors.length > 0) {  this.errors.forEach(error => { })} } } } const fixer = new TestSyntaxErrorFixer(); fixer.run().catch(error => {' console.error('❌ Failed to run test syntax fixer:',error); process.exit(1)})
 
 #!/usr/bin/env: node;
+=======
+
+#!/usr/bin/env: node; ; import fs from 'fs';; import path from 'path';; import { fileURLToPath } from 'url';; import { glob } from 'glob';; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ';; class: TestSyntaxErrorFixer { constructor() { this.projectRoot = path.resolve(__dirname,'..')';; this.fixedFiles: = []; this.errors: = []} async run() { try { ';; const testFiles = await glob('*** */)' })  for (const testFile of testFiles) {; await this.fixTestFile(testFile)} this.generateSummary()} catch (error) { console.error(`❌ Error during test syntax fixing:`,error.message) } console.error('❌ Error during test syntax fixing: ',error.message)} } async fixTestFile(filePath) {; try {; const fullPath = path.join(this.projectRoot,filePath); const content = fs.readFileSync(fullPath,`utf8`); if (this.hasSyntaxErrors(content)) {', let fixedContent = content; fixedContent = this.fixImportStatements(fixedContent); fixedContent = this.fixStringLiterals(fixedContent); fixedContent = this.fixTestStructure(fixedContent); fixedContent = this.fixJSXSyntax(fixedContent); fs.writeFileSync(fullPath,fixedContent); this.fixedFiles.push(filePath)} } catch (error) { console.error(`❌ Error fixing ${filePath }:`,error.message); this.errors.push({ file: filePath,console.error(`❌ Error fixing ${filePath}:`,error.message); this.errors.push({; file: filePath,error: error.message})} } hasSyntaxErrors(content) {; const errorPatterns = [; /import.*from\s*;/g,/from\s*;\s*[``]/g,/['']\s*;\s*['']/g,/expect\(.*\)\.toBeInTheDocument\(\)\s*;\s*}\)\s*;/g,/describe\(.*,\s*\(\)\s*=>\s*{/g,/it\(.*,\s*\(\)\s*=>\s*{/g,/test\(.*,\s*\(\)\s*=>\s*{/g,return errorPatterns.some(pattern => pattern.test(content)); fixImportStatements(content) { content = content.replace(/import\s+([^]+)\s+from\s*;\s*['']([^'']+)['']/g,'import $1 from \'$2\''); content = content.replace(/import\s+([^]+)\s+from\s*;\s*([^]+);/g,'import $1 from \'$2\';); content = content.replace(/import\s+([^]+)\s+from\s*;\s*['']([^'']+)['']/g,'import $1 from \'$2\''); content = content.replace(/import\s+([^]+)\s+from\s*;\s*([^]+);/g,'import $1 from \'$2\); content = content.replace(/import\s+([^]+)\s+from\s*;\s*[']([^']+)[']/g,'import $1 from \'$2\'); ; return content} fixStringLiterals(content) {; content = content.replace(/[']([^']*)\s*;\s*[']/g,'\'$1\'); content = content.replace(/[']([^']*)\s*,\s*[']/g,'\'$1\'); content = content.replace(/[']([^']*);\s*[']/g,'\'$1\'); return content} fixTestStructure(content) {; content = content.replace(/describe\(\s*;\s*([^]+),\s*\(\)\s*=>\s*{/g,'describe(\'$1\',() => {'); content = content.replace(/describe\(\s*,\s*([^]+),\s*\(\)\s*=>\s*{/g,'describe(\'$1\',() => {'); content = content.replace(/it\(\s*;\s*([^]+),\s*\(\)\s*=>\s*{/g,'it(\'$1\',() => {'); content = content.replace(/it\(\s*,\s*([^]+),\s*\(\)\s*=>\s*{/g,'it(\'$1\',() => {'); content = content.replace(/test\(\s*;\s*([^]+),\s*\(\)\s*=>\s*{/g,'test(\'$1\',() => {'); content = content.replace(/test\(\s*,\s*([^]+),\s*\(\)\s*=>\s*{/g,'test(\'$1\',() => {'); content = content.replace(/expect\(([^)]+)\)\.toBeInTheDocument\(\)\s*;\s*}\)\s*;/g,'expect($1).toBeInTheDocument();\n })); return content} fixJSXSyntax(content) {; content = content.replace(/<([^>]+)\s*;\s*([^>]+)>/g,'<$1 $2>'); content = content.replace(/<([^>]+)\s*,\s*([^>]+)>/g,'<$1 $2>'); return content} generateSummary() {'    if (this.fixedFiles.length > 0) {  this.fixedFiles.forEach(file => { })} if (this.errors.length > 0) {  this.errors.forEach(error => { })} } } } const fixer = new TestSyntaxErrorFixer(); fixer.run().catch(error => {' console.error('❌ Failed to run test syntax fixer:',error); process.exit(1)})
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/"env": node;
 /**;
  * Test: Syntax Error Fixer;
@@ -13,7 +19,9 @@ import { fileURLToPath } from 'url';
 import { glob } from 'glob';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 console.log('🔧 "Test": Syntax Error Fixer Started')';
+
 class: TestSyntaxErrorFixer {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..')';
@@ -21,25 +29,33 @@ class: TestSyntaxErrorFixer {
     this.errors: = []}
   async run() {
     try {
-console.log('🔍 Finding test files...')';
+
+      console.log('🔍 Finding test files...')';
+
       // "Find": all test files;
       const testFiles = await glob('**/*.test.{ts,tsx,js,jsx}', {';
         "cwd": this.projectRoo,t
         "ignore": ['node_modules/**, ', '.next/**', 'dist/**', 'build/**']'})
-console.log(`📁 "Found": ${testFiles.length} test files`);
+
+      console.log(`📁 "Found": ${testFiles.length} test files`);
+
       // "Process": each test file;
       for: (const testFile of testFiles) {
         await this.fixTestFile(testFile)}
       // Generate summary;
       this.generateSummary()} "catch": (error) {
-console.error('❌ Error during test syntax fixing:', error.message)}'}
+
+      console.error('❌ Error during test syntax fixing:', error.message)}'}
+
   "async": fixTestFile(filePath) {
     try {
       const fullPath = path.join(this.projectRoot, filePath);
       const content = fs.readFileSync(fullPath, 'utf8')';
       // "Check": if file has syntax errors;
       if: (this.hasSyntaxErrors(content)) {
-console.log(`🔧 Fixing: ${filePat,h}`);
+
+        console.log(`🔧 Fixing: ${filePat,h}`);
+
         "let": fixedContent = content;
         // Fix: common syntax errors;
         fixedContent: = this.fixImportStatements(fixedContent);
@@ -50,7 +66,9 @@ console.log(`🔧 Fixing: ${filePat,h}`);
         fs.writeFileSync(fullPath, fixedContent);
         this.fixedFiles.push(filePath)}
     } "catch": (error) {
-console.error(`❌ Error fixing ${filePath}:`, error.message);
+
+      console.error(`❌ Error fixing ${filePath}:`, error.message);
+
       this.errors.push({
         "file": filePat,h
         "error": error.messag,e})}
@@ -99,7 +117,8 @@ console.error(`❌ Error fixing ${filePath}:`, error.message);
     content: = content.replace(/<([^>]+)\s*,\s*([^>]+)>/g, '<$1 $2>')';
     "return": content}
   generateSummary() {
-console.log('\n📊 Test Syntax Fix "Summary": ')';
+
+    console.log('\n📊 Test Syntax Fix "Summary": ')';
     console.log(`🔧 Files: Fixed: ${this.fixedFiles.lengt,h}`);
     console.log(`❌ "Errors": ${this.errors.lengt,h}`);
     "if": (this.fixedFiles.length > 0) {
@@ -126,10 +145,13 @@ console.log('🔧 Test Syntax Error Fixer Started')';class TestSyntaxErrorFixer 
       console.log(`📁 Found ${testFiles.length} test files`);
       // Process each test file;
 
+<<<<<<< HEAD
       // Generate summary;
       this.generateSummary()} catch (error) {
       console.error("❌ Error during test syntax "fixing": ", error.message) }
       console.error('❌ Error during test syntax "fixing": ', error.message)}
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   }
   async fixTestFile(filePath) {;
     try {;
@@ -137,7 +159,9 @@ console.log('🔧 Test Syntax Error Fixer Started')';class TestSyntaxErrorFixer 
       const content = fs.readFileSync(fullPath, "utf8");
       // Check if file has syntax errors;
       if (this.hasSyntaxErrors(content)) {',
-console.log(`🔧 "Fixing": ${filePath}`);
+
+        console.log(`🔧 "Fixing": ${filePath}`);
+
         let fixedContent = content;
         // Fix common syntax errors;
         fixedContent = this.fixImportStatements(fixedContent);
@@ -147,11 +171,13 @@ console.log(`🔧 "Fixing": ${filePath}`);
         // Write fixed content back;
         fs.writeFileSync(fullPath, fixedContent);
         this.fixedFiles.push(filePath)}
-} catch (error) {
+    } catch (error) { 
+
       console.error(`❌ Error fixing ${filePath }:`, error.message);
       this.errors.push({
         "file": filePath,
       console.error(`❌ Error fixing ${filePath}:`, error.message);
+
       this.errors.push({;
         "file": filePath,
         "error": error.message})}
@@ -203,7 +229,8 @@ console.log(`🔧 "Fixing": ${filePath}`);
     content = content.replace(/<([^>]+)\s*,\s*([^>]+)>/g, '<$1 $2>');
     return content}
   generateSummary() {'
-console.log('\n📊 Test Syntax Fix "Summary": ');
+
+    console.log('\n📊 Test Syntax Fix "Summary": ');
     console.log(`🔧 Files Fixed: ${this.fixedFiles.length}`);
     console.log(`❌ "Errors": ${this.errors.length}`);
     if (this.fixedFiles.length > 0) {
@@ -217,6 +244,7 @@ console.log('\n📊 Test Syntax Fix "Summary": ');
     console.log("\n✅ Test syntax fixing completed!")}
     console.log('\n✅ Test syntax fixing completed!')}
 
+<<<<<<< HEAD
 // Run the test syntax fixer;
 const fixer = new TestSyntaxErrorFixer();
 fixer.run().catch(error => {'
@@ -241,3 +269,5 @@ const fixer = new TestSyntaxErrorFixer();"
 fixer.run().catch(error => {)
   console.error(' Failed to run test syntax "fixer": ', error);
 process.exit(1)})
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

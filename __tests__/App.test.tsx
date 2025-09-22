@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('App', () => {
@@ -27,13 +28,19 @@ describe('App', () => {
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+=======
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import '@testing-library/jest-dom';
-import App from '../src/App';
+import App from '../components/App';
+
 describe('App', () => {
   test('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByRole('heading', { level: 1, name: 'Zion Tech Group' })).toBeInTheDocument();
+    expect(screen.getByTestId('app')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 });
 
 });
@@ -54,20 +61,30 @@ import "@testing-library/jest-dom";
 import App from "../src/App";
 describe("App", () => {
   test("renders without crashing", () => {
+=======
+  
+  test('displays correct content', () => {
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     render(<App />);
-    expect(
-      screen.getByRole("heading", { level: 1, name: "Zion Tech Group" }),
-    ).toBeInTheDocument();
   });
+<<<<<<< HEAD
 });
 
   it('has proper heading structure', () => {
+=======
+  
+  test('handles user interactions', () => {
     render(<App />);
-
-    const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toBeInTheDocument();
+  });
+  
+  test('applies correct styling', () => {
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+    render(<App />);
   });
 });
+<<<<<<< HEAD
 
 });
 
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

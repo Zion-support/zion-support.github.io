@@ -1,17 +1,21 @@
 
 import React from "react",;
 import { format } from "date-fns",;
+<<<<<<< HEAD
 import React from "react";""
 import { format } from "date-fns";"
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { ;
   Card,;
   CardContent, ;
   CardHeader, ;
   CardTitle, ;
-CardDescription;
+  CardDescription;
 } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
+<<<<<<< HEAD
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",;
 import type { QuoteRequest } from "@/types/quotes",;
   CardDescription;"
@@ -20,25 +24,42 @@ import { Button } from "@/components/ui/button";""
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";""
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";"
+=======
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react';
+import type { QuoteRequest } from "@/types/quotes",;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 type QuoteRequestCardProps = {;
-  quote: QuoteRequest;,;
-  onViewDetails: (quote:QuoteRequest) => void;,;
-  onMarkAsResponded?:(id: string) => void;,;
-  onToggleArchive: (id:string;, isArchived:boolean) => void;
+  quote:QuoteRequest,;
+  onViewDetails:(quote:QuoteRequest) => void,;
+  onMarkAsResponded?:(id:string) => void,;
+  onToggleArchive:(id:string, isArchived:boolean) => void;
 },;
+;
 export const QuoteRequestCard:React.FC<QuoteRequestCardProps> = ({;
-quote,;
+  quote,;
   onViewDetails,;
   onMarkAsResponded,;
   onToggleArchive;
 }) => {;
   // Format date for display;
-<div>;
-</div>"
-            <CardTitle className="text-white">{quote.project_name};""
-            <CardDescription className="text-zion-slate-light">;"
-
+  const formatDate = (dateString:string) => {;
+    try {;
+      return format(new Date(dateString), 'PP'),;
+    } catch (e) {;
+      return dateString,;
+    }
+  },;
+;
+  return (;
+    <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+      <CardHeader className="pb-2">;
+        <div className="flex justify-between items-start">;
+          <div>;
+            <CardTitle className="text-white">{quote.project_name}</CardTitle>;
+            <CardDescription className="text-zion-slate-light">;
+              {formatDate(quote.created_at)}
+            </CardDescription>;
           </div>;
           <QuoteStatusBadge status={quote.status} />;
         </div>;
@@ -95,7 +116,7 @@ quote,;
           </div>;
         </div>;
       </CardContent>;
-</Card>;
+    </Card>;
   ),;
 },; import {;
   Card;
@@ -116,8 +137,13 @@ quote, onViewDetails, onMarkAsResponded, onToggleArchive ;
   quote.status ;
 }/> </div> </CardHeader> <CardContent> </div> <div className="flex justify-between items-center mt-4" > <Button > <Eye className="h-4 w-4" /> View Details </Button> onClick={;"  () => onMarkAsResponded (quote.id) ";"}className="flex items-center gap-1" > <MessageSquare className="h-4 w-4" /> Mark Responded </Button>) ";"}<Button) : (<ArchiveIcon className="h-4 w-4" />) ;
 }</Button> </div> </div> </CardContent> </Card>) ;
+<<<<<<< HEAD
 :temp_broken_files/quotes/QuoteRequestCard.tsx
 };""
 };
 "
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/QuoteRequestCard.tsx
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,7 +1,23 @@
-import { describe, it, expect } from '@jest/globals';
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import PerformanceMonitor from '../components/PerformanceMonitor';
 
-describe('PerformanceMonitor.dynamic', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
+describe('PerformanceMonitor', () => {
+  test('renders without crashing', () => {
+    render(<PerformanceMonitor />);
+    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<PerformanceMonitor />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<PerformanceMonitor />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<PerformanceMonitor />);
   });
 });

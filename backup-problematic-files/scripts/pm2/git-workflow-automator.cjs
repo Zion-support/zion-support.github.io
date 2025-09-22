@@ -1,15 +1,41 @@
 
+<<<<<<< HEAD
             // Simple conflict resolution - take the incoming change
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?
 
             // Simple conflict resolution - take the incoming change;
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+            // Simple conflict resolution - take the incoming change
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             fs.writeFileSync(file, resolved);
-
+            execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
+            this.log(`✅ Auto-resolved conflicts in: ${file}`);
           }
+        }
 
-        // Commit the resolution;
+        // Commit the resolution
         try {
-  // TODO: Implement
+          execSync('git commit -m "fix: resolve merge conflicts"', {
+            cwd: this.projectRoot,
+            stdio: 'pipe'
+          });
+          this.log('✅ Merge conflicts resolved and committed');
+          return true;
+        } catch (error) {
+          this.log(`Warning: Could not commit conflict resolution: ${error.message}`);
+        }
+      }
+
+      return false;
+    } catch (error) {
+      this.log(`❌ Error resolving merge conflicts: ${error.message}`);
+      return false;
+    }
+  }
 
   async generateWorkflowReport() {
     const report = {
@@ -21,55 +47,98 @@
       recommendations: []
     };
 
-    // Generate recommendations;
-    if (report.branchStatus && report.branchStatus.behind > 0) {`;
+    // Generate recommendations
+    if (report.branchStatus && report.branchStatus.behind > 0) {
       report.recommendations.push(`Branch is ${report.branchStatus.behind} commits behind origin. Consider pulling latest changes.`);
+    }
 
-    if (report.branchStatus && report.branchStatus.ahead > 0) {`;
+    if (report.branchStatus && report.branchStatus.ahead > 0) {
       report.recommendations.push(`Branch is ${report.branchStatus.ahead} commits ahead of origin. Consider pushing changes.`);
+    }
 
     if (report.branchStatus && report.branchStatus.hasChanges) {
+      report.recommendations.push('Working directory has uncommitted changes. Consider committing or stashing them.');
+    }
 
-    const oldBranches = report.localBranches.filter(branch =>)
+    const oldBranches = report.localBranches.filter(branch =>
       !this.config.protectedBranches.includes(branch) &&
-      branch !== report.currentBranch;
+      branch !== report.currentBranch
     );
 
-    if (oldBranches.length > 5) {`;
+    if (oldBranches.length > 5) {
       report.recommendations.push(`Many local branches (${oldBranches.length}). Consider cleaning up old branches.`);
+    }
 
     return report;
+  }
 
   async saveReport(report) {
-  // TODO: Implement
+    try {
       const logsDir = path.dirname(this.reportFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
+      }
 
-  // TODO: Implement
-      // Generate workflow report;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      this.log(`📊 Workflow report saved: ${this.reportFile}`);
+    } catch (error) {
+      this.log(`Error saving report: ${error.message}`);
+    }
+  }
+
+  async run() {
+    this.log('🚀 Git Workflow Automator starting...');
+
+    try {
+      // Generate workflow report
       const report = await this.generateWorkflowReport();
       await this.saveReport(report);
 
-      // Auto-cleanup if enabled;
+      // Auto-cleanup if enabled
       if (this.config.cleanupOldBranches) {
         await this.cleanupOldBranches();
+      }
 
-      // Resolve any merge conflicts;
+      // Resolve any merge conflicts
       await this.resolveMergeConflicts();
 
-      process.exit(1);
+      // Log summary
+      this.log(`📊 Workflow report generated for branch: ${report.currentBranch}`);
 
-// Run if called directly;
+      if (report.recommendations.length > 0) {
+        this.log('💡 Recommendations:');
+        report.recommendations.forEach(rec => this.log(`   - ${rec}`));
+      }
+
+      this.log('✅ Git Workflow Automator completed successfully');
+    } catch (error) {
+      this.log(`❌ Git Workflow Automator failed: ${error.message}`);
+      process.exit(1);
+    }
+  }
+}
+
+// Run if called directly
 if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
 
+<<<<<<< HEAD
 '
 module.exports = GitWorkflowAutomator;
 
 '
+=======
+module.exports = GitWorkflowAutomator;
+
+'
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"
@@ -137,6 +206,13 @@ execSync(`"git": add ${file}`, { "cwd": this.projectRoo,t, "stdio"`})
           this.log(' "Merge")
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
 
+<<<<<<< HEAD
   git commit -m '"fix"
 git commit -m '"fix"
 
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

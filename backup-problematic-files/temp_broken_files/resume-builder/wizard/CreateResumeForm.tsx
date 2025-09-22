@@ -8,22 +8,30 @@ import { CreateResumeFormProps } from "./types",;
 export const CreateResumeForm = ({ ;
   onCreateResume,;
   onCancel,;
-  isLoading ;)
-} CreateResumeFormProps) => {;"
-  const [newResumeTitle, setNewResumeTitle] = useState(),;
+  isLoading ;
+} CreateResumeFormProps) => {;
+  const [newResumeTitle, setNewResumeTitle] = useState(''),;
+;
   const handleSubmit = async () => {;
     if (!newResumeTitle.trim()) return,;
     await onCreateResume(newResumeTitle),;
   },;
+;
   return (;
     <Card className="w-full max-w-2xl mx-auto">;
       <CardContent className="py-8">;
         <div className="text-center">;
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
-value={newResumeTitle}
+          ;
+          <div className="flex gap-2 max-w-md mx-auto">;
+            <input;
+              type="text";
+              placeholder="Resume Title (e.g. 'AI Engineer Resume')";
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
+              value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
-</input>
+            />;
             <Button ;
               onClick={handleSubmit}
               disabled={!newResumeTitle.trim() || isLoading}
@@ -59,8 +67,13 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 }disabled= {;
   !newResumeTitle.trim () || isLoading ;
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>) ;
+<<<<<<< HEAD
 :temp_broken_files/resume-builder/wizard/CreateResumeForm.tsx
 };"'"
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/wizard/CreateResumeForm.tsx
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node
-#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
@@ -32,16 +36,20 @@ const OPTIMIZATIONS = {
     "gzip": true,
     "brotli": true}};
 function optimizeNextConfig() {
-const configPath = 'next && next.config.js';
+
+  const configPath = 'next && next.config.js';
   if (!fs && fs.existsSync(configPath)) {
     console && console.log('❌ next && next.config.js not found');
     return false}
-  let config = fs.readFileSync(configPath, 'utf8');
+  let config = fs && fs.readFileSync(configPath, 'utf8');
+
   // Add performance optimizations
   const performanceConfig = "
   // Performance optimizations
   "experimental": {
-    ...config.experimental,
+
+    ...config && config.experimental,
+
     "optimizeCss": true,
     "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons'],
     "turbo": {
@@ -51,7 +59,9 @@ const configPath = 'next && next.config.js';
           "as": '*.js'}}}},
   // Image optimization
   "images": {
-    ...config.images,
+
+    ...config && config.images,
+
     "formats": ['image/webp', 'image/avif'],
     "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384],
@@ -68,63 +78,6 @@ const configPath = 'next && next.config.js';
         "source": '/(.*)',
         "headers": [
           {
- * Performance optimization script for Zion Tech Group;
- * Implements various performance improvements;
- */
-const OPTIMIZATIONS = {
-  // Image optimization;
-  "images": {"
-    enabled: true,"
-    "formats": ['webp', 'avif'],
-    "quality": 85,""
-    "sizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840]},"
-  // Bundle optimization;"
-  "bundle": {"
-    "chunkSize": 244000, // 244KB;""
-    "maxChunks": 5},"
-  // Caching;"
-  "caching": {"
-    "staticAssets": 31536000, // 1 year;""
-    "apiResponses": 3600, // 1 hour;""
-    "pages": 86400, // 1 day;"
-  },
-  // Compression;"
-  "compression": {"
-    "gzip": true,""
-    "brotli": true}};"
-function optimizeNextConfig() {
-    return false}"
-  let config = fs && fs.readFileSync(configPath, 'utf8');
-  // Add performance optimizations;
-  const performanceConfig = ""
-  // Performance optimizations;"
-  "experimental": {"
-    ...config && config.experimental,"
-    "optimizeCss": true,""
-    "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons'],
-    "turbo": {"
-      rules: {"
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          "as": '*.js'}}}},
-  // Image optimization;
-    ...config && config.images,"
-    "formats": ['image/webp', 'image/avif'],
-    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],""
-    "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384],""
-    "minimumCacheTTL": 60,""
-    "dangerouslyAllowSVG": true,""
-    "contentSecurityPolicy": "default-src 'self'; script-src 'none'; sandbox;"},"
-  // Compression;"
-  "compress": true,"
-  // Power optimizations;"
-  "poweredByHeader": false,"
-  // Headers for performance;
-  async headers() {
-    return [{"
-        "source": '/(.*)',
-        "headers": ["
-          {"
             key: 'X-Content-Type-Options',
             "value": 'nosniff'},
           {
@@ -153,11 +106,12 @@ function optimizeNextConfig() {
   },
   ";
   // Insert performance config before the closing brace
-  config = config.replace(
+
+  config = config && config.replace(
     /export default nextConfig;/,
     `${performanceConfig}\n\nexport default nextConfig;`
   );
-fs && fs.writeFileSync(configPath, config);
+  fs && fs.writeFileSync(configPath, config);
   console && console.log('✅ Next && Next.js config optimized for performance');
   return true}
 function optimizePackageJson() {
@@ -165,52 +119,34 @@ function optimizePackageJson() {
   if (!fs && fs.existsSync(packagePath)) {
     console && console.log('❌ package && package.json not found');
     return false}
-  const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-  // Add performance scripts
-  packageJson.scripts = {
-    ...packageJson.scripts,
-            "key": 'X-XSS-Protection',
-            "value": '1; mode=block'},
-            "key": 'Referrer-Policy',
-            "value": 'origin-when-cross-origin'},']
-        ]},
-        "source": '/static/(.*)',
-        "headers": [{""
-            key: 'Cache-Control',
-            "value": 'public, max-age=31536000, immutable'},']
-        "source": '/_next/static/(.*)',
-    ]
-  ";"
-  // Insert performance config before the closing brace;
-  config = config && config.replace(
-    /export default nextConfig;/,
-    `${performanceConfig}\n\nexport default nextConfig;`)
-  );
   const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
-  // Add performance scripts;
+  // Add performance scripts
   packageJson && packageJson.scripts = {
     ...packageJson && packageJson.scripts,
+
     '"build": analyze': 'ANALYZE=true npm run build',
     '"build": production': 'NODE_ENV=production npm run build',
     '"perf": audit': 'npm run build:analyze',
     '"perf": lighthouse':
-      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html'};
+
+      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report && report.html'};
   // Add performance dependencies if not present
   const perfDeps = {
-    '@next/bundle-analyzer': '^15.5.2',
-    "lighthouse": '^12.0.0',
-    'web-vitals': '^5.1.0'};
-  for (const [dep, version] of Object.entries(perfDeps)) {
-    if (!packageJson.devDependencies[dep]) {
-      packageJson.devDependencies[dep] = version}
+    '@next/bundle-analyzer': '^15 && 15.5.2',
+    "lighthouse": '^12 && 12.0.0',
+    'web-vitals': '^5 && 5.1.0'};
+  for (const [dep, version] of Object && Object.entries(perfDeps)) {
+    if (!packageJson && packageJson.devDependencies[dep]) {
+      packageJson && packageJson.devDependencies[dep] = version}
   }
-  fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
-  console.log('✅ package.json optimized for performance');
+  fs && fs.writeFileSync(packagePath, JSON && JSON.stringify(packageJson, null, 2));
+  console && console.log('✅ package && package.json optimized for performance');
   return true}
 function createPerformanceComponents() {
   const componentsDir = 'components/performance';
-  if (!fs.existsSync(componentsDir)) {
-    fs.mkdirSync(componentsDir, { "recursive": true })}
+  if (!fs && fs.existsSync(componentsDir)) {
+    fs && fs.mkdirSync(componentsDir, { "recursive": true })}
+
   // Create optimized image component
   const optimizedImageComponent = "import React from 'react'
 import Image from 'next/image'
@@ -222,7 +158,8 @@ interface OptimizedImageProps {
   priority?: boolean
   className?: string
   sizes?: string
-}
+
+
 export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -233,8 +170,8 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
   sizes = '(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw'
 }) => {
   return (
-    <Image
-      src={src}
+
+
       alt={alt}
       width={width}
       height={height}
@@ -243,6 +180,7 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
       sizes={sizes}
       quality={85}
       placeholder="blur"
+<<<<<<< HEAD
       blurDataURL=""data": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
     />
   )
@@ -375,15 +313,25 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
       sizes={sizes}
       quality={85}
       placeholder="blur"
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 export default OptimizedImage
 ";
   fs && fs.writeFileSync(
     path && path.join(componentsDir, 'OptimizedImage && OptimizedImage.tsx'),
+
     optimizedImageComponent
   );
   // Create lazy loading component
   const lazyLoadingComponent = "import React, { Suspense, lazy } from 'react'
 interface LazyComponentProps {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     lazyLoadingComponent
   );
   console && console.log('✅ Performance components created');
@@ -392,11 +340,13 @@ function optimizeImages() {
   const publicDir = 'public';
   if (!fs && fs.existsSync(publicDir)) {
     console && console.log('❌ public directory not found');
+
     return false}
   // Create images directory structure
   const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
   for (const dir of imageDirs) {
-}
+
+
   }
   console && console.log('✅ Image directories optimized');
   return true}
@@ -404,12 +354,14 @@ function main() {
   console && console.log('🚀 Starting performance optimization...');
   const optimizations = [{ "name": 'Next && Next.js Config', "fn": optimizeNextConfig },
     { "name": 'Package && Package.json', "fn": optimizePackageJson },
+
     { "name": 'Performance Components', "fn": createPerformanceComponents },
     { "name": 'Image Directories', "fn": optimizeImages },
   ];
   let successCount = 0;
   for (const optimization of optimizations) {
     try {
+<<<<<<< HEAD
         successCount++}
     } catch (error) {
       console && console.error(`❌ Error in ${optimization && optimization.name}:`, error && error.message)}
@@ -438,3 +390,8 @@ main();
   sizes?: string;"
 export const "OptimizedImage": React.FC<OptimizedImageProps> = ({"
 )"`;
+=======
+
+
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

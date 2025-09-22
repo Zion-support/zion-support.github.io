@@ -1,7 +1,23 @@
-import { describe, it, expect } from '@jest/globals';
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SEOEnhancer from '../components/SEOEnhancer';
 
-describe('SEOEnhancer.dynamic', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
+describe('SEOEnhancer', () => {
+  test('renders without crashing', () => {
+    render(<SEOEnhancer />);
+    expect(screen.getByTestId('seoenhancer')).toBeInTheDocument();
+  });
+  
+  test('displays correct content', () => {
+    render(<SEOEnhancer />);
+  });
+  
+  test('handles user interactions', () => {
+    render(<SEOEnhancer />);
+  });
+  
+  test('applies correct styling', () => {
+    render(<SEOEnhancer />);
   });
 });

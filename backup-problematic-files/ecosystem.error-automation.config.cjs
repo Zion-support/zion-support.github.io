@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
@@ -54,6 +55,17 @@ module.exports = {
       },
 
 :backup-problematic-files/ecosystem.error-automation.config.cjs
+=======
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
@@ -86,9 +98,15 @@ module.exports = {
     // Syntax Error Fixer
     {
 
+
+
       "name": 'syntax-error-fixer';
       "script": 'scripts/pm2/syntax-error-fixer.js';
         "NODE_ENV": 'production';
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "PORT": 3000
       };
       "env_production": {
@@ -109,12 +127,16 @@ module.exports = {
         "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
         "ERROR_THRESHOLD": '10'
       };
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/error-detection-monitor.log',
       "error_file": './automation/logs/error-detection-monitor-error.log',
       "out_file": './automation/logs/error-detection-monitor-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
@@ -131,6 +153,8 @@ module.exports = {
         "TYPESCRIPT_FIX_INTERVAL": '600000', // 10 minutes
         "AUTO_FIX_ENABLED": 'true'
       },
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     },
     // TypeScript Error Auto-Fixer
@@ -151,6 +175,7 @@ module.exports = {
       "error_file": './automation/logs/typescript-error-auto-fixer-error.log',
       "out_file": './automation/logs/typescript-error-auto-fixer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
@@ -167,6 +192,8 @@ module.exports = {
         "ESLINT_FIX_INTERVAL": '300000', // 5 minutes
         "AUTO_FIX_ENABLED": 'true'
       },
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     },
     // ESLint Error Auto-Fixer
@@ -187,6 +214,7 @@ module.exports = {
       "error_file": './automation/logs/eslint-error-auto-fixer-error.log',
       "out_file": './automation/logs/eslint-error-auto-fixer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
@@ -203,6 +231,8 @@ module.exports = {
         "DEPENDENCY_CHECK_INTERVAL": '1800000', // 30 minutes
         "AUTO_UPDATE_ENABLED": 'true'
       },
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     },
     // Dependency Error Resolver
@@ -223,8 +253,12 @@ module.exports = {
       "error_file": './automation/logs/dependency-error-resolver-error.log',
       "out_file": './automation/logs/dependency-error-resolver-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
+=======
+      "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     },
     // Build Error Auto-Fixer
     {
@@ -235,7 +269,7 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'syntax-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
         "BACKUP_FILES": 'true';
@@ -249,15 +283,16 @@ NODE_ENV: 'development',
       "out_file": 'logs/pm2/syntax-error-fixer-out.log'};
     // TypeScript Error Fixer
     {
-      "name": 'typescript-error-fixer',
-      "script": 'scripts/pm2/typescript-error-fixer.js',
-        "NODE_ENV": 'production',
-"BUILD_CHECK_INTERVAL": '900000', // 15 minutes
-        "AUTO_FIX_ENABLED": 'true'
-      },
+
+
+
       "name": 'typescript-error-fixer';
       "script": 'scripts/pm2/typescript-error-fixer.js';
         "NODE_ENV": 'production';
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "BUILD_CHECK_INTERVAL": '900000', // 15 minutes
         "AUTO_FIX_ENABLED": 'true'
       };
@@ -266,8 +301,12 @@ NODE_ENV: 'development',
       "error_file": './automation/logs/build-error-auto-fixer-error.log',
       "out_file": './automation/logs/build-error-auto-fixer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
+=======
+      "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     },
     // Code Quality Auto-Enhancer
     {
@@ -278,7 +317,7 @@ NODE_ENV: 'development',
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'typescript-error-fixer',
         "FIX_INTERVAL": '900000', // 15 minutes
         "AUTO_IMPORT_FIX": 'true';
@@ -291,11 +330,14 @@ NODE_ENV: 'development',
       "error_file": 'logs/pm2/typescript-error-fixer-error.log';
       "out_file": 'logs/pm2/typescript-error-fixer-out.log'};
     // ESLint Error Fixer
-        "NODE_ENV": 'production',
-"QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
-        "AUTO_ENHANCE_ENABLED": 'true'
-      },
-        "NODE_ENV": 'production';
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
         "AUTO_ENHANCE_ENABLED": 'true'
       };
@@ -304,6 +346,7 @@ NODE_ENV: 'development',
       "error_file": './automation/logs/code-quality-auto-enhancer-error.log',
       "out_file": './automation/logs/code-quality-auto-enhancer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
@@ -320,6 +363,8 @@ NODE_ENV: 'development',
         "PREVENTION_CHECK_INTERVAL": '600000', // 10 minutes
         "PREVENTIVE_ACTIONS_ENABLED": 'true'
       },
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     },
     // Error Prevention Monitor
@@ -340,8 +385,12 @@ NODE_ENV: 'development',
       "error_file": './automation/logs/error-prevention-monitor-error.log',
       "out_file": './automation/logs/error-prevention-monitor-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
+=======
+      "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     },
     // Error Analytics Dashboard
     {
@@ -352,7 +401,7 @@ NODE_ENV: 'development',
       "watch": false;
       "max_memory_restart": '512M';
       "env": {
-NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'eslint-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
         "AUTO_FIX": 'true';
@@ -366,15 +415,16 @@ NODE_ENV: 'development',
       "out_file": 'logs/pm2/eslint-error-fixer-out.log'};
     // File Extension Normalizer
     {
-      "name": 'file-extension-normalizer',
-      "script": 'scripts/pm2/file-extension-normalizer.js',
-        "NODE_ENV": 'production',
-"DASHBOARD_UPDATE_INTERVAL": '300000', // 5 minutes
-        "ANALYTICS_ENABLED": 'true'
-      },
+
+
+
       "name": 'file-extension-normalizer';
       "script": 'scripts/pm2/file-extension-normalizer.js';
         "NODE_ENV": 'production';
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "DASHBOARD_UPDATE_INTERVAL": '300000', // 5 minutes
         "ANALYTICS_ENABLED": 'true'
       };
@@ -383,8 +433,12 @@ NODE_ENV: 'development',
       "error_file": './automation/logs/error-analytics-dashboard-error.log',
       "out_file": './automation/logs/error-analytics-dashboard-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
+=======
+      "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     },
     // Intelligent Error Orchestrator
     {
@@ -395,7 +449,7 @@ NODE_ENV: 'development',
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
-NODE_ENV: 'development',
+        NODE_EN: V: 'development',
         "PM2_PROCESS_NAME": 'file-extension-normalizer',
         "SCAN_INTERVAL": '1800000', // 30 minutes
         "AUTO_RENAME": 'true';
@@ -513,11 +567,14 @@ NODE_ENV: 'development',
       "error_file": 'logs/pm2/intelligent-error-prevention-error.log';
       "out_file": 'logs/pm2/intelligent-error-prevention-out.log'}
   ]
-        "NODE_ENV": 'production',
-"ORCHESTRATION_INTERVAL": '300000', // 5 minutes
-        "INTELLIGENT_FIXING_ENABLED": 'true'
-      },
-        "NODE_ENV": 'production';
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         "ORCHESTRATION_INTERVAL": '300000', // 5 minutes
         "INTELLIGENT_FIXING_ENABLED": 'true'
       };
@@ -526,6 +583,7 @@ NODE_ENV: 'development',
       "error_file": './automation/logs/intelligent-error-orchestrator-error.log',
       "out_file": './automation/logs/intelligent-error-orchestrator-out.log',
       "merge_logs": true,
+<<<<<<< HEAD
 :backup-problematic-files/ecosystem.error-automation.config.cjs
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     }
@@ -536,6 +594,8 @@ NODE_ENV: 'development',
       "host": 'localhost',
       "ref": 'origin/main',
       "repo": 'git@github.com:your-username/zion-tech-group.git',
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     }
   ];
@@ -551,11 +611,17 @@ NODE_ENV: 'development',
       'pre-setup': ''
     }
   }
+
 };
 
+<<<<<<< HEAD
   "apps": [    // Main Error Detection and Fixing Service;"
     {"
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
-      }
-    // Error Detection and Monitoring System;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
