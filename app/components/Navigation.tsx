@@ -10,9 +10,10 @@ export default function Navigation() {
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Resources', href: '/content' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   return (
