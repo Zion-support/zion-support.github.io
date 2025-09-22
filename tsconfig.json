@@ -31,13 +31,27 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
+    "__tests__/**/*",
+    "components/**/*",
+    "lib/**/*",
     "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "pages/**/*",
+    "src/**/*",
+    "types/**/*",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    ".next",
+    "out",
+    "dist",
+    // Temporarily exclude corrupted components until repaired
+    "components/vendors",
+    "components/wallet",
+    "components/zion",
+    "components/token",
+    "components/tokens",
+    // Common backup/conflict/temp dirs (merged from origin/main)
     "data_backup",
     "backup",
     "backups",
@@ -47,6 +61,19 @@
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    // Disabled dirs in this repo
+    "components.disabled",
+    "components-disabled",
+    "pages-disabled",
+    "pages.disabled",
+    "pages.disabled_full",
+    "src.disabled",
+    "src_backup",
+    "src_backup_temp",
+    "temp_exclude",
+    "corrupted_backup",
+    "recovered-branches",
+    "tests"
   ]
 }

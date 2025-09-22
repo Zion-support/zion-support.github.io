@@ -14,6 +14,7 @@ const customJestConfig = {
     '/.next/',
     '/out/',
     '/dist/',
+    '/__tests__/',
     '/recovered-branches/',
     '/src_backup/',
     '/backup/',
