@@ -9,7 +9,7 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
-  // Jest 29 uses moduleNameMapper
+  // Correct key is moduleNameMapper (not moduleNameMapping)
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
@@ -41,6 +41,7 @@ const customJestConfig = {
     '<rootDir>/pages-disabled/',
     '<rootDir>/pages.disabled/',
     '<rootDir>/pages_disabled/',
+<<<<<<< HEAD
     '<rootDir>/pages.disabled_auto/',
     '<rootDir>/pages.disabled.full/',
     '<rootDir>/pages.disabled_full/',
@@ -66,6 +67,22 @@ const customJestConfig = {
     '<rootDir>/temp_exclude/',
     '<rootDir>/test_build/',
     '<rootDir>/ts_files_backup/',
+=======
+    '<rootDir>/pages.bak/',
+    '<rootDir>/components.disabled/',
+    '<rootDir>/components.disabled_full/',
+    '<rootDir>/pages.disabled/',
+    '<rootDir>/pages.disabled_auto/',
+    '<rootDir>/pages.disabled_full/',
+    '<rootDir>/pages_backup_before_cleanup/',
+    '<rootDir>/pages.broken/',
+    '<rootDir>/pages.corrupted',
+    '<rootDir>/pages.corrupted.*',
+    '<rootDir>/recovered-branches/',
+    '<rootDir>/ts_files_backup/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/corrupted_backup/',
+>>>>>>> 7c38257c182a (Refactor: Update testing libraries and Jest config)
     '<rootDir>/e2e/',
   ],
   maxWorkers: 1,
