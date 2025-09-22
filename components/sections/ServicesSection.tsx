@@ -1,23 +1,7 @@
-  Brain,
-  Cloud,
-  RefreshCw,
-  Wifi,
-  Shield,
-  BarChart3,;
-  ArrowRight,;'
-  Zap,;} from 'lucide-react';import { ;
-  Brain;
-  Cloud;
-  RefreshCw;
-  Wifi;
-  Shield;
-  BarChart3;
-  ArrowRight;
-  Zap
-  ArrowRight,
-  Zap,;
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Brain, Shield, Rocket, Cloud, BarChart3, Atom } from 'lucide-react';
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 const ServicesSection: React.FC = () => {
   const services = [;
@@ -253,9 +237,27 @@ features: [;
       ],
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms',
+=======
+export default function ServicesSection() {
+  const services = [
+    {
+      title: 'AI & Machine Learning',
+      description: 'Custom AI solutions, neural networks, and autonomous systems',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500'
     },
     {
+      title: 'Quantum Computing',
+      description: 'Quantum algorithms, cryptography, and quantum AI integration',
+      icon: Atom,
+      color: 'from-blue-500 to-cyan-500'
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced threat detection, quantum-resistant encryption',
       icon: Shield,
+<<<<<<< HEAD
       title: 'Blockchain Solutions',
       description:
         'Scalable cloud solutions and infrastructure design for modern applications.';
@@ -280,9 +282,31 @@ features: [;
       ],
       color: 'from-teal-500 to-blue-500',
       href: '/services/data-analytics',
+=======
+      color: 'from-red-500 to-orange-500'
     },
+    {
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions, edge computing, and DevOps',
+      icon: Cloud,
+      color: 'from-emerald-500 to-teal-500'
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Big data processing, predictive analytics, and insights',
+      icon: BarChart3,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation and modernization',
+      icon: Rocket,
+      color: 'from-yellow-500 to-orange-500'
+    }
   ];
 
+<<<<<<< HEAD
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -299,101 +323,19 @@ visible: { opacity: 1, y: 0 },
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
   return (
-    <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
-      {/* Background Elements */}
-'
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
-
-  return (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
-      {/* Background Elements */}
-      <div className='absolute inset-0'>
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
-      </div>
-
-      <div className='relative container mx-auto px-4'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {/* Section Header */}
-      }
-    }
-  }
-;
-  const card_variants = {}
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: { opacity: 1, coordinate_y: 0 },
-  }
-  };
-
-  const cardVariants = {}
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  return ('
-    <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
-      {/* Background Elements */}
-
-  return ("
-    <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden">;
-      {/* Background Elements */}
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-
-  };
-
-  const cardVariants = {}
-    hidden: { opacity: 0, y: 20 },
-
-        {/* Section Header */}
-
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }}
-
-        >
-          <motion.div;
-        stagger_children: 0.1,
-      },
-    },  }
-;
-  const card_variants = {}
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1;
-      }
-    }
-  }
-;
-  const card_variants = {}
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: { opacity: 1, coordinate_y: 0 },
-  }
-    hidden: { opacity: 0, y: 20 },
-  };
-
-  const cardVariants = {}
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  return ('
-    <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
-      {/* Background Elements */}
-
-  return ("
-    <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden">;
-      {/* Background Elements */}
-        <motion.div;
+    <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
+      <div className='max-w-7xl mx-auto'>
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
+          className='text-center mb-16'
         >
+<<<<<<< HEAD
           <motion.div;
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -419,9 +361,16 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             for businesses across all industries.
             We deliver cutting-edge technology solutions that drive innovation,
             efficiency, and growth for businesses across all industries.
+=======
+          <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+            Our Services
+          </h2>
+          <p className='text-xl text-white/70 max-w-3xl mx-auto'>
+            Comprehensive technology solutions designed to accelerate your digital transformation
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
           </p>
-origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
+<<<<<<< HEAD
             <Zap className='w-5 h-5 text-blue-400' />;
             <span className='text-blue-400 font-medium'>Our Services</span>;
           </motion && motion.div>;'
@@ -456,13 +405,20 @@ initial='hidden'
               whileHover={{ y: -10 }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16';
         >
+=======
+        
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              variants={cardVariants}
-              whileHover={{ y: -10 }}
-className='group relative'
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
             >
+<<<<<<< HEAD
               <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Background Gradient */}
@@ -501,12 +457,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <ArrowRight className='w-4 h-4' />;
                 </Link>;
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>;
+=======
+              <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+              <div className='relative z-10'>
+                <div
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 flex items-center justify-center`}
+                >
+                  <service.icon className='w-8 h-8 text-white' />
+                </div>
+                <h3 className='text-xl font-bold mb-4 text-white'>
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
                   {service.title}
                 </h3>
-
-                <p className='text-gray-300 mb-6 leading-relaxed'>
+                <p className='text-white/70 leading-relaxed'>
                   {service.description}
                 </p>
+<<<<<<< HEAD
                 {/* Features */}
 <ul className='space-y-2 mb-8'>
                   {service.features.map(feature => (
@@ -660,10 +626,13 @@ export default ServicesSection;
             </Link>
           </div>
         </motion.div>
+=======
+              </div>
+            </motion.div>
+          ))}
+        </div>
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
       </div>
     </section>
-);
-};
-
-export default ServicesSection;
-origin/cursor/automate-test-improve-and-merge-code-2533
+  );
+}

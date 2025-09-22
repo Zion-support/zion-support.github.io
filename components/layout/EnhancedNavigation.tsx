@@ -1,71 +1,32 @@
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  User,
-  Settings,
-  LogOut,
-  Bell,
-  Globe,
-  Zap,
-  Brain,
-  Rocket,
-  Dna,
-  DollarSign,
-  Lock,
-  Wifi,
-  Truck,
-  Gamepad2,
-  Bot,
-  Factory,
-  Car,;
-} from "lucide-react";"
-import Link from "next/link";
-interface EnhancedNavigationProps {;
-  className?: string;
-ursor/automate-test-fix-improve-and-merge-code-48f3
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [solutionsOpen, setSolutionsOpen] = useState(false)
-import React, { useState } from 'react';
 import Link from 'next/link';
+import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const EnhancedNavigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+export default function EnhancedNavigation() {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const navigationItems = [
+  const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services', hasDropdown: true },
-    { name: 'Products', href: '/products' },
+    { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  const services = [
-    { name: 'All Services', href: '/services' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Innovative Solutions', href: '/innovative-it-services' }
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' }
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+    <nav className='bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50'>
+      <div className='container mx-auto px-4'>
+        <div className='flex justify-between items-center h-16'>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+          <Link href='/' className='flex items-center space-x-2'>
+            <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
+              <span className='text-white font-bold text-sm'>Z</span>
             </div>
-            <div>
-              <div className="text-xl font-bold text-gray-800">Zion Tech Group</div>
-              <div className="text-xs text-gray-500">Technology Solutions</div>
-            </div>
+            <span className='text-white font-bold text-xl'>Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden lg:flex space-x-8">;
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
@@ -104,10 +65,27 @@ const EnhancedNavigation: React.FC = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">;
+=======
+          <div className='hidden md:flex items-center space-x-8'>
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Link
+              href='/contact'
+              className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105'
+            >
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
               Get Started
             </Link>
           </div>
 
+<<<<<<< HEAD
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -157,12 +135,46 @@ const EnhancedNavigation: React.FC = () => {
                 <span className="block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center">;
                   Get Started
                 </span>
+=======
+          {/* Mobile menu button */}
+          <div className='md:hidden'>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className='text-gray-300 hover:text-white transition-colors'
+            >
+              {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className='md:hidden'>
+            <div className='px-2 pt-2 pb-3 space-y-1 border-t border-gray-800'>
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className='block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors duration-200'
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                href='/contact'
+                className='block px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md text-center font-medium transition-all duration-200'
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
               </Link>
             </div>
           </div>
         )}
       </div>
     </nav>
+<<<<<<< HEAD
   )
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
@@ -630,3 +642,7 @@ export default EnhancedNavigation
 export default EnhancedNavigation;
 
 "`
+=======
+  );
+}
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
