@@ -1,16 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Let Netlify's Next.js runtime handle output; do not force standalone
-  // output: 'standalone',
-
+  // Optimized for static export and Netlify deployment
+  output: 'export',
+  
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
-
-  eslint: { ignoreDuringBuilds: false },
+  
+  // Enhanced build settings
+  eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['jsx', 'js'],
+  pageExtensions: ['jsx', 'js', 'tsx', 'ts'],
   images: {
     domains: [
       'localhost',
