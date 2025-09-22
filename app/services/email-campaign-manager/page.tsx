@@ -3,20 +3,14 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Email Campaign Manager - Zion Tech Group',
-  description: 'Professional email campaign manager services powered by AI and modern technology',
+  description: 'Professional email campaign manager services by Zion Tech Group.',
 };
 
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-          Email Campaign Manager
-        </h1>
-        <p className="text-center text-gray-600 mb-8">
-          Professional email campaign manager services powered by AI and modern technology
-        </p>
-      </div>
+    <div>
+      <h1>Email Campaign Manager</h1>
+      <p>Professional email campaign manager services tailored to your business needs.</p>
     </div>
   );
 }

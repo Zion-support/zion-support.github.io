@@ -3,20 +3,14 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Smart Invoice Generator - Zion Tech Group',
-  description: 'Professional smart invoice generator services powered by AI and modern technology',
+  description: 'Professional smart invoice generator services by Zion Tech Group.',
 };
 
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-          Smart Invoice Generator
-        </h1>
-        <p className="text-center text-gray-600 mb-8">
-          Professional smart invoice generator services powered by AI and modern technology
-        </p>
-      </div>
+    <div>
+      <h1>Smart Invoice Generator</h1>
+      <p>Professional smart invoice generator services tailored to your business needs.</p>
     </div>
   );
 }

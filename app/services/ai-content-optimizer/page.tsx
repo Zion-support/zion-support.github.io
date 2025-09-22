@@ -2,21 +2,15 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Content Optimizer - Zion Tech Group',
-  description: 'Professional AI content optimization services powered by AI and modern technology',
+  title: 'Ai Content Optimizer - Zion Tech Group',
+  description: 'Professional ai content optimizer services by Zion Tech Group.',
 };
 
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-          AI Content Optimizer
-        </h1>
-        <p className="text-center text-gray-600 mb-8">
-          Professional AI content optimization services powered by AI and modern technology
-        </p>
-      </div>
+    <div>
+      <h1>Ai Content Optimizer</h1>
+      <p>Professional ai content optimizer services tailored to your business needs.</p>
     </div>
   );
 }
