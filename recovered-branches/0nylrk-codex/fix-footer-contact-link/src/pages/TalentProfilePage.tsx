@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
@@ -39,16 +37,7 @@ constructor(props) {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -65,32 +54,22 @@ import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
 import {UserProfile} from "@/types/auth";
 import {toast} from "@/hooks/use-toast";  const navigate = useNavigate();
-=======
 import {toast} from "@/hooks/use-toast";
 export default function TalentProfilePage() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string };
 
   const navigate = useNavigate();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
-<<<<<<< HEAD
   const { isAuthenticated, user } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from "react",
-=======
   const { isAuthenticated, user } = useAuth();import React, { useState, useEffect } from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const { isAuthenticated, user } = useAuth();
 
 import React, { useState, useEffect } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useParams, useNavigate } from "react-router-dom",
 import { TalentProfile } from "@/components/profile/TalentProfile",
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
@@ -109,11 +88,6 @@ import { toast } from "@/hooks/use-toast";
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
 import React, { useState, useEffect } from "react","
 import { useParams, useNavigate } from "react-router-dom","
@@ -133,10 +107,7 @@ import { UserProfile } from "@/types/auth",";
 import { toast } from "@/hooks/use-toast";
 export default function TalentProfilePage() {};
   // Cast to specify the expected route param type since useParams may be untyped;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { id } = useParams() as { id?: string }
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
@@ -153,14 +124,7 @@ export default function TalentProfilePage() {};
   const [isHireModalOpen, setIsHireModalOpen] = useState(false),
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
-<<<<<<< HEAD
   const { isAuthenticated, user } = useAuth(),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   // Create a compatible UserProfile from UserDetails or the authenticated user;
   const userProfile: UserProfile = user ? {}
@@ -184,34 +148,19 @@ export default function TalentProfilePage() {};
     role: '' // Default empty string since userDetails doesn't have this property
 },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Handle loading error gracefully
-=======
   const { isAuthenticated, user } = useAuth(),  // Handle loading error gracefully
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const { isAuthenticated, user } = useAuth(),  // Handle loading error gracefully
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // Handle loading error gracefully
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     if (error) {
       toast({
         title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/components/profile/TalentProfile",;
@@ -227,7 +176,6 @@ import { Handshake, MessageSquare } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { UserProfile } from "@/types/auth",;
-=======
   } : {'
     id: userDetails?.id |'''
     displayName: userDetails?.name |'''
@@ -260,7 +208,6 @@ import { Handshake, MessageSquare } from "lucide-react",;"
 import { Button } from "@/components/ui/button",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { UserProfile } from "@/types/auth",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "@/hooks/use-toast",;
 export default function TalentProfilePage() { return null; }
   const { id } = useParams() as { id?: string },;
@@ -301,15 +248,7 @@ title: "Error loading profile",,
   }, [error]),;
   if (isLoading) {;
     return <ProfileLoadingState />;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   if (error |!profile) {}
     return <ProfileErrorState error={error} />
@@ -325,16 +264,12 @@ title: "Error loading profile",,
       return;
     }
     setIsHireModalOpen(true)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleMessageTalent = () => {
-=======
 
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
 }  const handleMessageTalent = () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   }
 
   const handleRequestHire = () => {
@@ -351,13 +286,11 @@ title: "Error loading profile",,
   },
 
   const handleMessageTalent = () => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!isAuthenticated) {
       toast({
         title: "Authentication required"
         description: "Please sign in to message this talent."
         variant: "default"})
-=======
 
   const handleMessageTalent = () => {}
     if (!isAuthenticated) {}
@@ -365,21 +298,17 @@ title: "Error loading profile",,
         title: "Authentication required""
         description: "Please sign in to message this talent.""
         variant: "default"})'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       navigate('/login', { state: { from: `/talent/${id}` } })
       return;
     }
-<<<<<<< HEAD
     setIsMessageModalOpen(true)
 
-<<<<<<< HEAD
   },
 
   return ("
     <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile;
         profile={profile} 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
@@ -413,9 +342,6 @@ title: "Error loading profile",,
     <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile 
         profile={profile} 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ;
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
@@ -451,7 +377,6 @@ title: "Error loading profile",,
       <TalentProfile 
         profile={profile} 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />
@@ -467,7 +392,6 @@ title: "Error loading profile",,
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now;
           </Button>
-<<<<<<< HEAD
 
   // Create a compatible UserProfile from UserDetails or the authenticated user;
   const userProfile: UserProfile = user ? {;'
@@ -491,12 +415,8 @@ title: "Error loading profile",,
   };
 
   // Handle loading error gracefully;
-=======
     setIsMessageModalOpen(true)  // Handle loading error gracefully;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     setIsMessageModalOpen(true)  // Handle loading error gracefully;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   useEffect(() => {;
     if (error) {;
       toast({;
@@ -542,18 +462,11 @@ return ("
       <TalentProfile;
         profile={profile} 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />;
       <BackToDirectoryButton />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>;"
@@ -565,13 +478,6 @@ return ("
             <Handshake className="mr-2 h-4 w-4" />;
             Hire Now;
           </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>;
@@ -583,31 +489,19 @@ return ("
             <Handshake className="mr-2 h-4 w-4" />;
             Hire Now;
           </Button>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Button
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           >
             <MessageSquare className="mr-2 h-4 w-4" />
             Message
           </Button>
         </div>
       </StickyAction>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             onClick={handleMessageTalent}>;
             <MessageSquare className="mr-2 h-4 w-4" />;            Message;
-=======
 
           <Button"
             size="sm""
@@ -637,9 +531,6 @@ export default /**;
  * TalentProfilePage - Function description;
  */
 function TalentProfilePage() {}
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             onClick={handleMessageTalent}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
@@ -663,7 +554,6 @@ export default /**
  * TalentProfilePage - Function description
  */
 function TalentProfilePage() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Cast to specify the expected route param type since use_params may be untyped;
   const { id } = use_params () as { id?: string }
   const navigate = use_navigate ();
@@ -777,24 +667,14 @@ return ("
             <MessageSquare className="mr - 2 h - 4 w - 4" />;
 
             Message;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Button>;
         </div>;
-<<<<<<< HEAD
       </StickyAction>;
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Request to Hire Modal */}
-=======
       </StickyAction>;      {/* Request to Hire Modal */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       </StickyAction>;      {/* Request to Hire Modal */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <StickyAction>;
         <div className="p - 2 flex gap - 2">;
           <Button;
@@ -838,19 +718,13 @@ return ("
       </StickyAction>;
 
       {/* Request to Hire Modal */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <HireRequestModal
-=======
       {/* Request to Hire Modal */}
       <HireRequestModal;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
-<<<<<<< HEAD
         userDetails={userProfile}
-<<<<<<< HEAD
-<<<<<<< HEAD
       />
       {/* Message Talent Modal */}
       <MessageTalentModal
@@ -892,7 +766,6 @@ return ("
         on_close={() => setIsHireModalOpen (false)}
 user_details={user_profile}
       />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Message Talent Modal */}
       <MessageTalentModal;
         is_open={isMessageModalOpen}
@@ -901,23 +774,14 @@ user_details={user_profile}
     </div>);
 }
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       />
       {/* Message Talent Modal */}
       <MessageTalentModal;
-=======
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       />
       {/* Message Talent Modal */}
       <MessageTalentModal
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         talent={profile}
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
@@ -1040,27 +904,14 @@ profile
 }isOpen= {
   isMessageModalOpen 
 }onClose= {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   () => setIsMessageModalOpen (false) 
 }/> </div>) 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         userDetails={userProfile}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 }/> </div>) "
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

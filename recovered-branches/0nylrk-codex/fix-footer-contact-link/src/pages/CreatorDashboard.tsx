@@ -1,51 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-<<<<<<< HEAD
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
 import { AppSidebar } from "@/components/creator/CreatorSidebar",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function CreatorDashboard() {
-=======
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
 import { AppSidebar } from "@/components/creator/CreatorSidebar",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",export default function CreatorDashboard() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { Footer } from "@/components/Footer",export default function CreatorDashboard() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";"
 import { AppSidebar } from "@/components/creator/CreatorSidebar";"
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer";
 export default function CreatorDashboard() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/creator/CreatorSidebar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 export default function CreatorDashboard() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <SidebarProvider>"
       <div className="min-h-screen flex w-full bg-zion-blue">
@@ -103,11 +84,6 @@ export default function CreatorDashboard() {
                 Create new content, monitor your analytics, or manage your;
                 account using the sidebar menu.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* Placeholder for more creator-specific content */}
             </div>
           </main>
@@ -118,13 +94,10 @@ export default function CreatorDashboard() {
     </SidebarProvider>
 )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function CreatorDashboard() {;
   return (
     <SidebarProvider>;
@@ -139,9 +112,7 @@ export default function CreatorDashboard() {;
 ;
 }
 ;
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { SidebarProvider, SidebarTrigger } from '@/components / ui / sidebar';
 import { AppSidebar } from '@/components / creator / CreatorSidebar';
 import { Header } from '@/components / Header';
@@ -197,20 +168,8 @@ function CreatorDashboard() {
         </div>;
       </div>;
 <SidebarTrigger />;
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-=======
-=======
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
     </SidebarProvider>);
 
@@ -283,11 +242,8 @@ function CreatorDashboard() {
       </div>;
       <SidebarTrigger />;    </SidebarProvider>);
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       <SidebarTrigger />;    </SidebarProvider>);
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </SidebarProvider>);
 }
     </SidebarProvider>;
@@ -303,19 +259,7 @@ function CreatorDashboard() {
 ;
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";""
 import { AppSidebar } from "@/components/creator/CreatorSidebar";""
@@ -389,4 +333,3 @@ pr-12325
 }</div> </main> <Footer /> </div> </div> <SidebarTrigger /> </SidebarProvider>) 
 </Footer>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

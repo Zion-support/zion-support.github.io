@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
 import { useNavigate } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
 export interface TalentCardProps {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -44,7 +38,6 @@ export function TalentCard({;
 
 export function TalentCard(): any ({;
 
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
@@ -61,7 +54,6 @@ export interface TalentCardProps {
   isAuthenticated: boolean
 }
 export function TalentCard({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
@@ -83,23 +75,15 @@ export interface TalentCardProps {
 }
 
 export function TalentCard({;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 export function TalentCard(): any ({;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import {Button} from "@/components/ui/button";"
 import {Card} from "@/components/ui/card";"
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";"
 import {useNavigate} from "react-router-dom";"
 import {TalentProfile} from "@/types/talent";
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   talent;
   onViewProfile;
   onRequestHire;
@@ -138,21 +122,15 @@ export interface TalentCardProps {}
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire: (talent: TalentProfile) => void,
-<<<<<<< HEAD
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
   };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
 import { useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/types/talent",;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   isSaved: boolean,;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
@@ -163,7 +141,6 @@ import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;"
 import { useNavigate } from "react-router-dom",;"
 import { TalentProfile } from "@/types/talent",;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -175,7 +152,6 @@ export interface TalentCardProps {;
 
 export function TalentCard(): any ({;
 
-=======
 
 import {Button} from "@/components/ui/button";""
 import {Card} from "@/components/ui/card";""
@@ -183,7 +159,6 @@ import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";""
 import {useNavigate} from "react-router-dom";""
 import {TalentProfile} from "@/types/talent";"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talent;
   onViewProfile;
   onRequestHire;
@@ -192,9 +167,7 @@ pr-12325
 }
 
 isAuthenticated;
-=======
   isAuthenticated;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }: TalentCardProps) {;
   const navigate = useNavigate();
 
@@ -216,7 +189,6 @@ isAuthenticated;
     }
   };
 
-=======
     </Card>;
   );}
  export interface TalentCardProps {
@@ -277,7 +249,6 @@ isAuthenticated
 }<Button > View <ArrowRight className="ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) 
 }
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     if (onToggleSave) {;
       onToggleSave(talent && talent.id, !isSaved);
@@ -286,10 +257,8 @@ isAuthenticated
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
 "
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;"
@@ -301,7 +270,6 @@ isAuthenticated
             </div>;
             {talent && talent.is_verified && (;"
               <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;"
-=======
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 
@@ -328,7 +296,6 @@ isAuthenticated
             </div>;
             {talent && talent.is_verified && (;
               <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
               </div>;
             )}
@@ -342,26 +309,15 @@ isAuthenticated
                 variant="ghost""
                 size="sm""
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
   return (              <Button
                 variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   return (              <Button
                 variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           </div>;
 
           {/* Main Info */}
@@ -373,34 +329,21 @@ isAuthenticated
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 onClick={handleToggleSave}>;
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
-=======
 
                 onClick={handleToggleSave}>;"`
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>;
               </Button>;
             </div>;"
             <p className="text-zion-cyan font-medium">{talent && talent.professional_title}</p>;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Location & Availability */}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
             {/* Location & Availability */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
             {/* Location & Availability */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;"
                 <div className="flex items-center text-zion-slate-light">;"
@@ -415,19 +358,9 @@ isAuthenticated
 </div>;
               )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <span
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
           </div>;
         </div>;
@@ -454,8 +387,6 @@ isAuthenticated
               )}
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>;
         {/* Skills */}
         {skills.length > 0 && (;
@@ -463,7 +394,6 @@ isAuthenticated
             <div className="flex flex-wrap gap-2">;
               {skills.map((skill, index) => (;
                 <span;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
                 >;
@@ -478,7 +408,6 @@ isAuthenticated
         <div className="mt-5 flex items-center justify-between">;
           <div>;
                 </span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               )}
             </div>;
           </div>;
@@ -489,25 +418,17 @@ isAuthenticated
               </div>;
             ) : (;"
               <div className="text-zion-slate-light">Rate not specified</div>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             )}
-=======
         )}                <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}            )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         )}                <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}            )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         )}
 
         {/* Hourly Rate & Actions */}
@@ -522,7 +443,6 @@ isAuthenticated
               <div className="text-zion-slate-light">Rate not specified</div>;
 
             )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 </div>;
 
@@ -550,19 +470,12 @@ isAuthenticated
             )}
             <Button
               size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
               variant="ghost"
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 handleViewProfile()
               }}"
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >"
-=======
               variant="ghost"
 
               onClick={(e) => {
@@ -573,7 +486,6 @@ isAuthenticated
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </div>
@@ -581,10 +493,7 @@ isAuthenticated
       </div>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
               onClick={(e) => {;
                 e && e.stopPropagation();
                 handleViewProfile();
@@ -599,7 +508,6 @@ import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from './lucide-react';'
 import { use_navigate } from './react-router-dom';'
 import { TalentProfile } from '@/types / talent';
 export interface TalentCardProps {}
-=======
 }
               onClick={(e) => {;
                 e && e.stopPropagation();
@@ -614,7 +522,6 @@ import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from './lucide-react';
 import { use_navigate } from './react-router-dom';
 import { TalentProfile } from '@/types / talent';
 export interface TalentCardProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire: (talent: TalentProfile) => void,
@@ -674,7 +581,6 @@ return ("
           <div className="relative mr - 4">;"
             <div className="w - 16 h - 16 rounded - full overflow - hidden bg - zion - blue - dark border border - zion - blue - light">;
               {talent.profile_picture_url ? (
-=======
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 
@@ -687,7 +593,6 @@ return ("
           <div className="relative mr-4">;"
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;"
 </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <img;
                   src={talent && talent.profile_picture_url} 
                   alt={talent && talent.full_name} "
@@ -813,7 +718,6 @@ alt={talent.full_name}"
 </div>)}
               {talent.availability_type && (
                 <div className="flex items - center text - zion - slate - light">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Clock className="h - 4 w - 4 mr - 1" />;
                   <span>{talent.availability_type}</span>;
                 </div>)}
@@ -821,7 +725,6 @@ alt={talent.full_name}"
           </div>;
         </div>;
         {/* Skills */}
-<<<<<<< HEAD
         {skills.length > 0 && ("
           <div className="mt - 4">;"
             <div className="flex flex - wrap gap - 2">;
@@ -868,9 +771,6 @@ alt={talent.full_name}"
               className="text - zion - cyan hover: text - white hover:bg - zion - blue - light";
             >;"
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
@@ -902,18 +802,10 @@ alt={talent.full_name}"
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </Button>;
-=======
               variant="ghost"            </Button>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               variant="ghost"            </Button>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             </Button>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </div>;
         </div>;
       </div>;
@@ -921,7 +813,6 @@ alt={talent.full_name}"
 </Card>);
 }
 
-=======
                 </div>)}"
                   <Clock className="h - 4 w - 4 mr - 1" />;"
 
@@ -952,4 +843,3 @@ alt={talent.full_name}"
 
     );"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

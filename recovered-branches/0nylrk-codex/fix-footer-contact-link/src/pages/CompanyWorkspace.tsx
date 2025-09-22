@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -33,8 +25,6 @@ import { Navigate, useParams } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useWhitelabel } from "@/context/WhitelabelContext";
 export default function CompanyWorkspace() {
   const { companySlug } = useParams() as { companySlug?: string };
@@ -49,20 +39,12 @@ export default function CompanyWorkspace() {
   const { company, isLoading, error } = useCompanyWorkspace(companySlug),
   const { isWhitelabel, tenant, brandName } = useWhitelabel(),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
       </div>
-<<<<<<< HEAD
     )
   }
   if (error |!company) {
@@ -79,7 +61,6 @@ export default function CompanyWorkspace() {
   const hasAccess = true, // For demo purposes, always grant access
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
-<<<<<<< HEAD
 
   }
   return (
@@ -116,7 +97,6 @@ import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 import {useWhitelabel} from "@/context/WhitelabelContext";
 
       <SEO
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -138,19 +118,13 @@ if (isLoading) {;
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
       </div>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
   if (isLoading) {}
     return ("
       <div className="flex items-center justify-center min-h-screen">"
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
       </div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     );
-=======
     )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 if (error |!company) {
     return <Navigate to="/not-found" />
@@ -166,29 +140,20 @@ if (error |!company) {
   const hasAccess = true, // For demo purposes, always grant access
   if (!hasAccess) {
 return <Navigate to="/unauthorized" />;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
-<<<<<<< HEAD
 ;
   return (;
     <ProtectedRoute>;
       <SEO;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
-=======
   }
 return (
     <ProtectedRoute>
       <SEO
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : "Zion AI Marketplace"}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : "on Zion AI Marketplace"}. Collaborate with your team to find top talent.`}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       />
 
       <SEO 
@@ -207,8 +172,6 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
       </div>;
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     );
   }
   }
@@ -219,10 +182,6 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       <SEO;
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}      />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Header
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
@@ -238,10 +197,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       </main>
       <Footer />
     </ProtectedRoute>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
     <ProtectedRoute>;
       <SEO
         title={`${company && company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
@@ -260,18 +216,12 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
 }
 
 import React from './react';
-=======
   )import React from './react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   )import React from './react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 }
 
 import React from './react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { CompanyDashboard } from '@/components / enterprise / workspace / CompanyDashboard';
@@ -280,7 +230,6 @@ import { Navigate, use_params } from './react-router-dom';
 import { SEO } from '@/components / SEO';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
-=======
 
 import React from './react';'
 import { Header } from '@/components / Header';'
@@ -291,7 +240,6 @@ import { Navigate, use_params } from './react-router-dom';'
 import { SEO } from '@/components / SEO';'
 import { ProtectedRoute } from '@/components / ProtectedRoute';'
 import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { use_whitelabel } from '@/context / WhitelabelContext';
 export default /**;
  * CompanyWorkspace - Function description;
@@ -308,13 +256,10 @@ if ( {) {}
   $2;
 }
 return (
-<<<<<<< HEAD
       <div className="flex items - center justify - center min-h-screen">;
         <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion-cyan"></div>;
-=======
       <div className="flex items - center justify - center min-h-screen">;
         <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion-cyan"></div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>);
   }
   // Check condition;
@@ -348,44 +293,25 @@ if ( {) {}
         custom_logo={is_whitelabel ? tenant?.logo_url : company.logo_url}
         custom_theme={effective_theme}
 />;
-<<<<<<< HEAD
       <main className="min-h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
-=======
       <main className="min-h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <CompanyDashboard company={company} />;
       </main>;
       <Footer />;
     </ProtectedRoute>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 }
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }}
 }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }}
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 
 import React from "react",;
@@ -581,4 +507,3 @@ export default function CompanyWorkspace() {_const { companySlug} = useParams() 
 ;
 ;
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

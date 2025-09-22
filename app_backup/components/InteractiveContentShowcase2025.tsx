@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Download, FileText, TrendingUp, Users, Zap, Star, Award, Clock, Eye, ThumbsUp, ArrowRight } from 'lucide-react';
 
 const InteractiveContentShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -143,7 +142,7 @@ const InteractiveContentShowcase2025 = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-gradient-to-r from-blue-400 to-purple-400 text-black rounded-full px-8 py-3 mb-8 font-bold text-lg">
-            <Star className="w-6 h-6 mr-3" />
+            <span>Star</span>
             🎯 INTERACTIVE CONTENT SHOWCASE 2025
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -187,7 +186,7 @@ const InteractiveContentShowcase2025 = () => {
               {/* Featured Badge */}
               {item.featured && (
                 <div className="inline-flex items-center bg-yellow-400 text-black rounded-full px-3 py-1 text-xs font-bold mb-4">
-                  <Star className="w-3 h-3 mr-1" />
+                  <span>Star</span>
                   FEATURED
                 </div>
               )}
@@ -200,7 +199,7 @@ const InteractiveContentShowcase2025 = () => {
                     {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Resource'}
                   </span>
                   {item.type === 'resource' && (
-                    <Download className="w-4 h-4 text-green-400" />
+                    <span>Download</span>
                   )}
                 </div>
               </div>
@@ -231,15 +230,15 @@ const InteractiveContentShowcase2025 = () => {
               <div className="flex items-center justify-between text-xs text-gray-400 mb-6">
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center">
-                    <Clock className="w-3 h-3 mr-1" />
+                    <span>Clock</span>
                     {item.readingTime}
                   </div>
                   <div className="flex items-center">
-                    <Eye className="w-3 h-3 mr-1" />
+                    <span>Eye</span>
                     {item.views}
                   </div>
                   <div className="flex items-center">
-                    <ThumbsUp className="w-3 h-3 mr-1" />
+                    <span>ThumbsUp</span>
                     {item.likes}
                   </div>
                 </div>
@@ -251,7 +250,7 @@ const InteractiveContentShowcase2025 = () => {
                 className={`w-full bg-gradient-to-r ${getColorClasses(item.color)} text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center`}
               >
                 {item.type === 'resource' ? 'Download' : 'Read More'}
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <span className="w-4 h-4 ml-2">📊</span>
               </Link>
             </div>
           ))}
@@ -278,7 +277,7 @@ const InteractiveContentShowcase2025 = () => {
               className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300"
             >
               Browse All Resources
-              <BookOpen className="w-6 h-6 ml-2 inline" />
+              <span className="w-6 h-6 ml-2 inline">📊</span>
             </Link>
           </div>
         </div>

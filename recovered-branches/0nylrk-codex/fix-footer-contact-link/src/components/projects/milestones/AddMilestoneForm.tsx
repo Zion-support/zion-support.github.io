@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   projectStartDate?: string;
-<<<<<<< HEAD
   projectEndDate?: string;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   onCancel?: () => void;
   projectScope?: string;
   projectStartDate?: string;
@@ -20,74 +11,45 @@
 
 export function AddMilestoneForm(): any ({;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 export function AddMilestoneForm({;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function AddMilestoneForm(): any ({;
   projectType?: string
 }
 export function AddMilestoneForm({
 
 export function AddMilestoneForm({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onSubmit;
-=======
   projectEndDate?: string;  onSubmit;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   projectEndDate?: string;  onSubmit;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   onSubmit;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isSubmitting;
   onCancel;'
   projectScope = '';'
   projectStartDate = '';
   projectEndDate = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       });
       return
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
-=======
       });
       return
 
-=======import React from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       });
       return
 
-=======import React from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       });
       return
 
 import React from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { CalendarIcon, Loader2 } from 'lucide-react',;
 import { format } from 'date-fns',;
 import { Button } from '@/components/ui/button',;
-=======
 
       });
       return;
@@ -99,7 +61,6 @@ import { z } from 'zod',;'
 import { CalendarIcon, Loader2 } from 'lucide-react',;'
 import { format } from 'date-fns',;'
 import { Button } from '@/components/ui/button',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Calendar } from '@/components/ui/calendar',;
 import {;
   Form,;
@@ -139,31 +100,18 @@ export function AddMilestoneForm({;
   projectScope = '',;
   projectStartDate = '',;
   projectEndDate = null,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectType = 'Other';
 }: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
-<<<<<<< HEAD
       title: '',;
       description: '',;
       amount: 0}}),;
-<<<<<<< HEAD
 
   const handleSubmit = (values: MilestoneFormValues) => {;
     onSubmit(values),;
-<<<<<<< HEAD
     form && form.reset();
   };
 
@@ -176,8 +124,6 @@ export function AddMilestoneForm({;
         description: milestone && milestone.description,;
         due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
         amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       return;
     form.reset();
@@ -195,20 +141,14 @@ export function AddMilestoneForm({;
       return;
     }
 
-=======
       });
       return;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     }
 
   },
 
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title
@@ -218,10 +158,8 @@ export function AddMilestoneForm({;
 
     })
 
-=======
     })
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // If there are multiple milestones, submit them one by one;
     milestones && milestones.forEach(milestone => {;
       onSubmit({;
@@ -243,31 +181,23 @@ export function AddMilestoneForm({;
   };
 
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 return (
-=======
       title: '',,
   description: '',;
       amount: 0}}),;  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="space-y-6">;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator
-=======
 
   return (
     <div className="space-y-6">;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
@@ -310,48 +240,32 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
 </div>
         <AIMilestoneGenerator;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           scope={projectScope}
 
           startDate={projectStartDate}
           endDate={projectEndDate}
           projectType={projectType}
           onAddMilestones={handleAddMilestones}
-<<<<<<< HEAD
           onAddMilestone={handleAddMilestone}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         />;
       )}
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <Form {...form}>
-=======
           onAddMilestone={handleAddMilestone}      <Form {...form}>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           onAddMilestone={handleAddMilestone}      <Form {...form}>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       <Form {...form}>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           onAddMilestone={handleAddMilestone}
         />;
       )}
 
       <Form {...form}>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
 
       <Form {...form}>;"
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <FormField
             control={form && form.control}
             name="title"
@@ -360,11 +274,8 @@ pr-12325
                 <FormLabel>Title</FormLabel>;'
 import {GeneratedMilestone} from '@/hooks / useMilestoneGenerator';
 const form_schema = z.object ({
-<<<<<<< HEAD
   title: z.string ().min (1, 'Title is required'),
-=======
   title: z.string ().min (1, 'Title is required'),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: z.string ().optional (),
   due_date: z.date ().optional (),'
   amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')});
@@ -474,11 +385,8 @@ pr-12325
   }
 ;
 return (
-<<<<<<< HEAD
     <div className="space-y-6">;
-=======
     <div className="space-y-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* AI Milestone Generator */}
       {project_scope && projectStartDate && (
         <AIMilestoneGenerator;
@@ -502,11 +410,8 @@ pr-12325
           onAddMilestone={handleAddMilestone}
         />)}
 <Form {...form}>;
-<<<<<<< HEAD
         <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
-=======
         <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <FormField;
             control={form.control}"
             name="title";
@@ -544,7 +449,6 @@ control={form.control}"
               name="due_date"
 
               render={({ field }) => (;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
                   <Popover>;
@@ -569,7 +473,6 @@ mode="single"
               control={form && form.control}"
               name="amount"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
@@ -601,11 +504,8 @@ mode="single"
                 </FormItem>)}
             />;
           </div>;
-<<<<<<< HEAD
           <div className="flex justify - end space - x-2 pt-4">;
-=======
           <div className="flex justify - end space - x-2 pt-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {on_cancel && (
               <Button;"
                 type="button";"
@@ -628,4 +528,3 @@ mode="single"
       </Form>;
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

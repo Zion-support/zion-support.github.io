@@ -1,22 +1,13 @@
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {check_message, monitor_content} from '@/services / fraud';
 import {toast} from '@/hooks / use - toast';
 import {supabase} from '@/integrations / supabase / client';
 // Props for the middleware component;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface FraudDetectionMiddlewareProps {
 children: React.ReactNode
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import React, { useCallback } from 'react';
 import { checkMessage, monitorContent  } from '@/services/fraud';
 import { toast  } from '@/hooks/use-toast';
@@ -25,17 +16,13 @@ import { supabase } from '@/integrations/supabase/client';
 interface FraudDetectionMiddlewareProps {
   children: React.ReactNode
 interface FraudDetectionMiddlewareProps {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 // Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
-=======
 }
 // Interface for the context;
 interface FraudDetectionContextType {}
@@ -44,38 +31,22 @@ interface FraudDetectionContextType {}
 import React, { useCallback } from 'react',;'
 import { checkMessage, monitorContent } from '@/services/fraud',;'
 import { toast } from '@/hooks/use-toast',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   children: React.ReactNode;
-=======
 children: React.ReactNode;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from '@/integrations/supabase/client',;
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-}
-=======
-  children: React.ReactNode}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  children: React.ReactNode}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  children: React.ReactNode}
+  children: React.ReactNode}
+
+}
 ;
 // Interface for the context;
 interface FraudDetectionContextType {;
@@ -123,30 +94,15 @@ pr-12325
     explanation?: string;}
   }>;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     userId: string
     messageId: string
     content: string
     userEmail?: string
   ) => Promise<{
     isSafe: boolean
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     userId: string;
     messageId: string;
@@ -161,31 +117,22 @@ pr-12325
 // aren't available. Passing a generic argument to an untyped function causes;
 // TS2347, so we cast the default value instead of using a type parameter.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const FraudDetectionContext = React.createContext(
 
-<<<<<<< HEAD
 
   undefined as FraudDetectionContextType | undefined;
 );
   undefined as FraudDetectionContextType | undefined
 );
 ),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
-=======
 export const FraudDetectionContext = React.createContext(export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export const FraudDetectionContext = React.createContext(
 
   undefined as FraudDetectionContextType | undefined
 
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
     userId: string
@@ -194,12 +141,9 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // If the quick check finds suspicious content, flag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
-=======
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {};
   // Function to scan message content for fraud;
   const scanMessageContent = useCallback(async (
@@ -212,12 +156,10 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       // If the quick check finds suspicious content, flag it;
       if (quickCheck.isSuspicious) {}
         // Flag the content for review;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         await monitorContent(
 '
 import {checkMessage, monitorContent} from '@/services/fraud';'
 import {toast} from '@/hooks/use-toast';'
-=======
       // If the quick check finds suspicious content, flag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
@@ -225,7 +167,6 @@ import {toast} from '@/hooks/use-toast';'
 
 import {checkMessage, monitorContent} from '@/services/fraud';
 import {toast} from '@/hooks/use-toast';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {supabase} from '@/integrations/supabase/client';
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
@@ -269,37 +210,23 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         // Flag the content for review;
         await monitorContent(;
 
-=======
 
       // First do a quick local check using the fraud detection service
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
       // First do a quick local check using the fraud detection service
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           userId;
           userEmail;'
           'message';
           messageId;
           content;
         );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           userId,
           userEmail,'
           'message',
           messageId,
 content
-<<<<<<< HEAD
-=======
 
           userId,
           userEmail,
@@ -307,13 +234,8 @@ content
           messageId,
           content
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         ),
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
@@ -327,28 +249,21 @@ content
           return {}
             isSafe: false,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
         }
       }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
-=======
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           };
       }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -363,10 +278,7 @@ content
         console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error;
       }
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
@@ -376,14 +288,11 @@ content
         return {}
           isSafe: false,
 explanation: data.explanation
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
       if (data.classification === 'dangerous') {;
         toast({;"
           title: "Message Blocked",;"
           description: data.explanation || "This message contains prohibited content.",;"
-=======
 
         }),
         return { 
@@ -394,7 +303,6 @@ explanation: data.explanation
         toast({;
           title: "Message Blocked",;
           description: data.explanation || "This message contains prohibited content.",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           variant: "destructive";
         }),;
         return {;
@@ -405,11 +313,7 @@ explanation: data.explanation
         return { 
           isSafe: false,
           explanation: data.explanation
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
       }
       */
@@ -417,22 +321,17 @@ explanation: data.explanation
 
 }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         // If it's dangerous, show a warning to the user;
         if (quickCheck && quickCheck.severity === 'dangerous') {;
           toast({;
             title: "Message Flagged",,
   description: "Your message contains content that may violate our terms of service.",;
-=======
 '
         // If it's dangerous, show a warning to the user;'
         if (quickCheck && quickCheck.severity === 'dangerous') {;
           toast({;"
             title: "Message Flagged",;"
             description: "Your message contains content that may violate our terms of service.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 
         // If it's dangerous, show a warning to the user;
@@ -440,7 +339,6 @@ explanation: data.explanation
           toast({;
             title: "Message Flagged",;
             description: "Your message contains content that may violate our terms of service.",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             variant: "destructive",;
             duration: 5000;
           });
@@ -477,12 +375,6 @@ title: "Message Blocked",,
       }
       */;
       return { isSafe: true }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Create the context value;
   const contextValue: FraudDetectionContextType = {;
@@ -507,18 +399,9 @@ return { isSafe: true }
       {children}
 
     </FraudDetectionContext && FraudDetectionContext.Provider>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (error) {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     } catch (error) {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     } catch (error) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
       return { isSafe: true }
@@ -549,9 +432,7 @@ export const useFraudDetection = () => {;
   const context = React && React.useContext(FraudDetectionContext);
 throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
-<<<<<<< HEAD
   return context;
-<<<<<<< HEAD
 
 };
 // Interface for the context;
@@ -680,11 +561,6 @@ if ( {) {}
   return context;
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
@@ -831,28 +707,11 @@ explanation: data.explanation
   children 
 }</FraudDetectionContext.Provider>) 
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   return context
-=======
 // Hook to use the fraud detection context 
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   return context
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

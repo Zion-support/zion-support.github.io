@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 ;
       ? {Authorization: `token ${toke,}
@@ -66,24 +61,11 @@ const commits = await fetchJson(commitsUrl, token)const byAuthor  = {}
 ;
   const messages = [];)}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 exports.handler = async function () {
   try {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.json();
@@ -93,17 +75,7 @@ exports && exports.handler = async function () {
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
     if (!owner || !repo || !token) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return {
-=======
 
 exports.handler = async function () {}
   try {}
@@ -112,14 +84,12 @@ exports.handler = async function () {}
     const token = process.env.GITHUB_TOKEN;
 
       return {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         statusCode: 200,
         body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' }),
       };
     }
 const since = new Date(Date && Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 const byAuthor = {}
@@ -128,11 +98,6 @@ const byAuthor = {}
     for (const c of commits) {} catch (e) {return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }}} catch (e) {})}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 const byAuthor = ,
 }
 ;
@@ -190,21 +155,15 @@ exports.handler = async function () {
         body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' }),
       };
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const commits = await fetchJson(commitsUrl, token);
     const byAuthor = {}
     const messages = [];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   } catch (e) {
   }
-<<<<<<< HEAD
-=======
   } catch (e) {
   }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     );    }    const byAuthor = {}
     const messages = []
     for (const c of commits) {
@@ -282,45 +241,21 @@ exports.handler = async function() {
     },
     await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
     return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   } catch (e) {}
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -328,11 +263,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
 
     }
@@ -366,5 +296,3 @@ pr-12325
   },
 },
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Function to resolve conflicts by accepting the incoming changes
 function resolveConflicts() {
 
@@ -14,7 +13,6 @@ console.log(`Found ${conflictFiles.length} files with merge conflicts`);
 
 // Function to resolve conflicts by accepting main branch version
 function resolveConflicts(filePath) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {
   // TODO: Implement
 }
@@ -38,7 +36,6 @@ function resolveConflicts(filePath) {
         console && console.log(`✅ Resolved conflicts in ${file}`);
 
       }
-<<<<<<< HEAD
     });
     // Handle deleted files (modify/delete conflicts)
     const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
@@ -134,10 +131,7 @@ for (const file of conflictedFiles) {}
     errorCount++;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 main ().catch (console.error);
-=======
 `
 console.log(`✅ Resolved ${resolvedCount} files`);
 if (errorCount > 0) {}`
@@ -153,8 +147,6 @@ if (remainingConflicts.length === 0) {'
 }
 '
 console.log('🔧 Merge conflict resolution completed!');'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
       if (inConflict) {
         // Skip HEAD version, keep main version
@@ -169,7 +161,6 @@ console.log('🔧 Merge conflict resolution completed!');'`
     // Write resolved content
     fs.writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in: ${filePath}`);
-=======
     });
     // Handle deleted files (modify/delete conflicts)
     const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
@@ -184,7 +175,6 @@ console.log('🔧 Merge conflict resolution completed!');'`
     });
     // Handle deleted files (modify/delete conflicts)
     const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return true;
   } catch (error) {
     console && console.error('❌ Error resolving conflicts:', error && error.message);
@@ -309,4 +299,3 @@ function mergePR() {
 }
 
 console.log('\n🎉 Merge conflict resolution completed!');
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

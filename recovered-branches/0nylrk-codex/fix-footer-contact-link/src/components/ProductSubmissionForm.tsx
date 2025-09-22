@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -24,9 +15,6 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Define the form schema with zod;
 const productSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
@@ -47,11 +35,7 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React && React.useState(false);
   const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
   const [activeTab, setActiveTab] = React && React.useState("manual");
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -106,21 +90,13 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React && React.useState(false);
   const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
   const [activeTab, setActiveTab] = React && React.useState("manual");
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Define the form schema with zod
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 // Define the form schema with zod
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-<<<<<<< HEAD
     message: "Price must be a valid number"}),
   category: z.string().min(1, "Please select a category"),
   image: z.instanceof(File).optional(),
@@ -129,16 +105,11 @@ const productSchema = z.object({
 // Type for our form values;
 type ProductFormValues = z.infer<typeof productSchema>,
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Initialize the form
   const form = useForm<ProductFormValues>({
-=======
 
   // Initialize the form;
   const form = useForm<ProductFormValues>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(productSchema)
     defaultValues: {"
       title: """
@@ -169,7 +140,6 @@ type ProductFormValues = z.infer<typeof productSchema>,
     }
   },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
     form.setValue("description", content.description),
@@ -473,14 +443,10 @@ export function ProductSubmissionForm() {;
           throw new Error(updateError.message);
 
     setIsSubmitting(true),
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     setIsSubmitting(true),
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
       // Create the product listing
       const productData = {
@@ -499,7 +465,6 @@ export function ProductSubmissionForm() {;
         .insert([productData])
         .select('id')
 
-<<<<<<< HEAD
       }
       // If we have an image, upload it;
       if (values.image) {}
@@ -543,7 +508,6 @@ import z from "zod",;"
 import { supabase } from "@/integrations/supabase/client",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { useToast } from "@/hooks/use-toast",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useNavigate } from "react-router-dom",;
 import {;
   Form,;
@@ -579,11 +543,6 @@ export function ProductSubmissionForm() { return null; }
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;"
   const [activeTab, setActiveTab] = React.useState("manual"),;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -693,14 +652,8 @@ export function ProductSubmissionForm() { return null; }
         if (updateError) {;
           throw new Error(updateError.message);
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     setIsSubmitting(true),
 
@@ -722,19 +675,15 @@ try {
         .insert([productData])'
         .select('id')
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
       }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Show success message
       toast({
         title: "Product Published!"
-=======
 
       // Show success message;
       toast({"
         title: "Product Published!""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "Your product has been successfully published on Zion."})
       // Redirect to product page;`
       navigate(`/marketplace/listing/${productRecord.id}`)
@@ -802,25 +751,19 @@ setIsSubmitting(true);
 
       // Show success message;
 toast({;
-<<<<<<< HEAD
         title: "Product Published!",,
   description: "Your product has been successfully published on Zion."}),;
-=======
         title: "Product Published!",,
   description: "Your product has been successfully published on Zion."}),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       // Redirect to product page;`
       navigate(`/marketplace/listing/${productRecord && productRecord.id}`);
     } catch (error) {;
 toast({;
-<<<<<<< HEAD
         title: "Publication Failed",,
   description: error instanceof Error ? error && error.message : "An unknown error occurred",;
-=======
         title: "Publication Failed",,
   description: error instanceof Error ? error && error.message : "An unknown error occurred",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -830,14 +773,10 @@ toast({;
 
   },
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-<<<<<<< HEAD
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">
@@ -851,13 +790,10 @@ toast({;
       <TabsContent value="manual">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <FormField
               control={form.control}
-=======
             <FormField
               control={form.control}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               name="title"
               render={({ field }) => (
                 <FormItem>
@@ -893,7 +829,6 @@ toast({;
       toast({;
         title: "Publication Failed",;
         description: error instanceof Error ? error.message : "An unknown error occurred",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -901,14 +836,8 @@ toast({;
   };
   return (;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-=======
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
   }
   return (
@@ -1083,14 +1012,11 @@ export function ProductSubmissionForm() {;
   },
 
   return (    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <TabsList className="grid grid-cols-2 mb-6">;
-=======
 
 "
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;"
       <TabsList className="grid grid-cols-2 mb-6">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
           Manual Creation;
         </TabsTrigger>;"
@@ -1099,33 +1025,25 @@ export function ProductSubmissionForm() {;
           AI-Powered Creation;
         </TabsTrigger>;
       </TabsList>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
       <TabsContent value="manual">;
         <Form {...form}>;"
-=======
 
       <TabsContent value="manual">;
         <Form {...form}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
     }
     setIsSubmitting(true);
     }
   }
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <FormField
               control={form && form.control}
               name="title"
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
-<<<<<<< HEAD
 import React from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -1315,14 +1233,7 @@ return ("
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />;
             <FormField
               control={form && form.control}
@@ -1337,19 +1248,10 @@ return ("
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <FormControl>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                   <FormControl>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                   <FormControl>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
                   <FormDescription>;
@@ -1358,23 +1260,14 @@ return ("
                   <FormMessage />;
 
 </FormItem>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               )}
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />;
 
               )}
 
             />;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormField
               control={form && form.control}
               name="description"
@@ -1386,18 +1279,13 @@ return ("
                     <Textarea
                       placeholder="Describe your product in detail..." 
                       className="min-h-32" 
-<<<<<<< HEAD
                       {...field} 
-<<<<<<< HEAD
             <FormField;
               control={form && form.control}"
               name="description"
 
                     />;
-=======
                       {...field}                     />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       {...field} 
 </FormItem>)}
             />;
@@ -1418,7 +1306,6 @@ return ("
                       className="min-h-32" ;
                       {...field} ;
                     />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </FormControl>;
                   <FormDescription>;'
                     Provide a detailed description of what you're offering;
@@ -1434,8 +1321,6 @@ return ("
                   <FormItem>;
                     <FormLabel > Price (USD)</FormLabel>;
 <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
                     </FormControl>;
                     <FormDescription>;
@@ -1465,17 +1350,11 @@ control={form.control}"
 <select;"
                         className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
                         {...field}
-<<<<<<< HEAD
                       >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <select;
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
                         {...field}
                       >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <option value="">Select a category</option>;
                         <option value="digital_product">Digital Product</option>;
                         <option value="service">Service</option>;
@@ -1483,8 +1362,6 @@ control={form.control}"
                         <option value="course">Course</option>;
                         <option value="template">Template</option>;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <option value="other">Other</option>;
                       </select>;
                     </FormControl>;
@@ -1505,9 +1382,6 @@ control={form.control}"
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Tags</FormLabel>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             />;
             <FormField
               control={form && form.control}
@@ -1522,22 +1396,13 @@ control={form.control}"
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Tags</FormLabel>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <FormControl>;
 
-=======
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;                  <FormControl>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                   <FormControl>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                   <FormControl>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;                  <FormControl>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
@@ -1577,7 +1442,6 @@ control={form.control}"
                     </div>;
                   )}
                 </FormItem>;
-<<<<<<< HEAD
               )}
               </Button>;
             </div>;
@@ -1588,10 +1452,8 @@ control={form.control}"
 <AIListingGenerator;
           onApplyGenerated={handleApplyGenerated}
 initialValues={{
-<<<<<<< HEAD
 
             category: form.getValues("category")
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       ;
       <TabsContent value="ai">;
         <AIListingGenerator ;
@@ -1599,16 +1461,10 @@ initialValues={{
           initialValues={{;
             title:form.getValues("title"),;
             category:form.getValues("category");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           initialValues={{"
             title: form && form.getValues("title"),"
             category: form && form.getValues("category")
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }}
         />;
       </TabsContent>;
@@ -1923,15 +1779,12 @@ if ( {) {
           onApplyGenerated={handleApplyGenerated}
           initial_values={{
             title: form.get_values ("title"),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             category: form.get_values ("category");
           }}
         />;
       </TabsContent>;
     </Tabs>);
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   Form;
 FormControl;
 FormDescription;
@@ -2000,7 +1853,6 @@ return (<Tabs value= {
             title:form.getValues("title"),;""
             category:form.getValues("category");"
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             title: form.getValues("title"),
             category: form.getValues("category")
           }}
@@ -2064,21 +1916,11 @@ pr-12325
       </TabsContent>
     </Tabs>
   )
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
-=======
               )}}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
     </Tabs>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { useParams } from "react-router-dom",
@@ -32,9 +31,6 @@ export default function ListingDetail() {;
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -51,11 +47,9 @@ import { ProfileContact } from "@/components/profile/ProfileContact",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 export default function ListingDetail() {};
   // useParams may be untyped in this environment, so avoid passing a;
-=======
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // type argument and cast the result instead to prevent TS2347 errors.
   const { id } = useParams() as { id?: string }
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -70,24 +64,19 @@ export default function ListingDetail() {};
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
   const [isLoading, setIsLoading] = useState(false),
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
 
-=======
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (!listing) {
-=======
   if (!listing) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
       <AppLayout>"
         <div className="min-h-screen bg-zion-blue py-12 px-4">"
@@ -105,32 +94,21 @@ export default function ListingDetail() {};
     )
   }
 const handleContact = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     setIsContactDialogOpen(true)
-<<<<<<< HEAD
 
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
 
-=======
     setIsContactDialogOpen(true)  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <AppLayout>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
-=======
     <AppLayout>"
       <div className="min-h-screen bg-zion-blue py-12 px-4">"
         <div className="container mx-auto">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}"
             <div className="lg:col-span-2">"
@@ -167,23 +145,13 @@ const handleContact = () => {
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}"
                           className="w-full h-full object-cover"
-<<<<<<< HEAD
-<<<<<<< HEAD
                           onError={(e) => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             const target = e.target as HTMLImageElement,
-=======
                           onError={(e) => {                            const target = e.target as HTMLImageElement,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                           onError={(e) => {                            const target = e.target as HTMLImageElement,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           onError={(e) => {
 
                             const target = e.target as HTMLImageElement,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             target.src = "/placeholder.svg"
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
@@ -197,7 +165,6 @@ import { toast } from "@/hooks/use-toast",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { ProfileContact } from "@/components/profile/ProfileContact",;
-=======
                           onError={(e) => {}
                             const target = e.target as HTMLImageElement,"
                             target.src = "/placeholder.svg""
@@ -213,7 +180,6 @@ import { toast } from "@/hooks/use-toast",;"
 import { PaymentButton } from "@/components/transactions/PaymentButton",;"
 import { AppLayout } from "@/layout/AppLayout",;"
 import { ProfileContact } from "@/components/profile/ProfileContact",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
 export default function ListingDetail() { return null; }
   const { id } = useParams() as { id?: string },;
@@ -255,8 +221,6 @@ export default function ListingDetail() { return null; }
                   {listing && listing.images && listing && listing.images.length > 0 ? (;
                     <img
                       src={listing && listing.images[selectedImageIndex]} 
-<<<<<<< HEAD
-<<<<<<< HEAD
                       alt={listing && listing.title}
 
 "
@@ -289,14 +253,12 @@ alt={listing.title} ;"
                     </div>;
                   )}
 
-=======
                 </div>;
 
                 {listing && listing.images && listing && listing.images.length > 1 && (;
                   <div className="flex p-4 gap-2 overflow-x-auto">;
                     {listing && listing.images.map((image, index) => (;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -304,24 +266,16 @@ alt={listing.title} ;"
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         )}
-<<<<<<< HEAD
                       >;
                         <img
                           src={image} 
                           alt={`${listing && listing.title} - image ${index + 1}`} 
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           className="w-full h-full object-cover"
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       <div;
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -331,12 +285,8 @@ alt={listing.title} ;"
                         )}
 
                       >;
-=======
                       alt={listing && listing.title}                       >;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <img;
                           src={image} `
                           alt={`${listing && listing.title} - image ${index + 1}`} 
@@ -354,34 +304,22 @@ alt={listing.title} ;"
                           className="w-full h-full object-cover";
                           onError={(e) => {;
 const target = e.target as HTMLImageElement,;
-<<<<<<< HEAD
-<<<<<<< HEAD
                             target.src = "/placeholder.svg";
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           }}
                         />;
                       </div>;
                     ))}
                   </div>;
                 )}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex items-start gap-3">
                       <div className="p-2 rounded-full bg-zion-purple/20">
-=======
 
                 {/* Features */}"
                 <div className="mt-8">"
@@ -389,7 +327,6 @@ const target = e.target as HTMLImageElement,;
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
                     <div className="flex items-start gap-3">"
                       <div className="p-2 rounded-full bg-zion-purple/20">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <Brain className="h-5 w-5 text-zion-purple" />
                       </div>
                       <div>"
@@ -410,24 +347,19 @@ const target = e.target as HTMLImageElement,;
                 </div>
 
               {/* Description Section */}
-=======
                             target.src = "/placeholder.svg";                        />;
                       </div>;
                     ))}
                   </div>;
                 )}              {/* Description Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                             target.src = "/placeholder.svg";                        />;
                       </div>;
                     ))}
                   </div>;
                 )}              {/* Description Section */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;
-=======
 
               </div>;
 
@@ -436,8 +368,6 @@ const target = e.target as HTMLImageElement,;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;"
                 <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                             target.src = "/placeholder.svg";
 
                           }}
@@ -477,7 +407,6 @@ const target = e.target as HTMLImageElement,;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 ;
                 {listing.images && listing.images.length > 1 && (;"
                   <div className="flex p-4 gap-2 overflow-x-auto">;
@@ -509,10 +438,6 @@ const target = e.target as HTMLImageElement,;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;"
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>;
                 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {/* Features */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
@@ -533,7 +458,6 @@ const target = e.target as HTMLImageElement,;
                       </div>;
                       <div>;"
                         <h4 className="font-medium text-white">Enterprise Security</h4>;"
-=======
                         <Brain className="h-5 w-5 text-zion-purple" />;
                       </div>;
                       <div>;
@@ -547,7 +471,6 @@ const target = e.target as HTMLImageElement,;
                       </div>;
                       <div>;
                         <h4 className="font-medium text-white">Enterprise Security</h4>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>;
                       </div>;
                     </div>;
@@ -556,17 +479,13 @@ const target = e.target as HTMLImageElement,;
                 </div>;
 
                 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Tags */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
-=======
 
                 {/* Tags */}"
                 <div className="mt-8">;"
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="flex flex-wrap gap-2">;
 
                     {listing.tags.map((tag, i) => (;"
@@ -607,7 +526,6 @@ const target = e.target as HTMLImageElement,;
 
 "h-5 w-5",
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           )}
                         />;
                       ))}
@@ -642,25 +560,16 @@ const target = e.target as HTMLImageElement,;
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Right Column - Details */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
                 <div className="mb-2">;
-=======
             ;
             {/* Right Column - Details */}"
             <div className="lg:col-span-1">;"
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;"
                 <div className="mb-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
                     {listing.category}
                   </Badge>;
@@ -796,18 +705,11 @@ const target = e.target as HTMLImageElement,;
                           title: "Payment Processing"
                           description: "Redirecting to secure checkout..."
                         })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       }}
                     />
                   ) : (
-=======
 
                 <div className="space-y-3 mb-8">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   {listing.price !== null ? (;
                     <PaymentButton;
                       amount={listing.price}
@@ -835,7 +737,6 @@ title: "Payment Processing",,
                       }}
                     />;
                   ) : (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}"
@@ -846,28 +747,20 @@ title: "Payment Processing",,
 
 const target = e.target as HTMLImageElement,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-<<<<<<< HEAD
                   <Button
-=======
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)                  <Button
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     variant="outline" 
                     onClick={handleContact}
                     disabled={isLoading}
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;                        }}
-=======
                   <Button"
-=======
 
                           const target = e.target as HTMLImageElement,
 
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                   <Button
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     variant="outline" 
                     onClick={handleContact}
                     disabled={isLoading}"
@@ -947,7 +840,6 @@ const target = e && e.target as HTMLImageElement;"
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 
                         }}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       />;
                     ) : (;"
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;"
@@ -967,12 +859,10 @@ target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.a
                     onClick={handleContact}
                     disabled={isLoading}
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <MessageSquare className="h-4 w-4 mr-2" />;
                     Contact Publisher;
                   </Button>;
                 </div>;
-<<<<<<< HEAD
 
                 {/* Publisher Info */}"
                 <div className="border-t border-zion-blue-light pt-6">;"
@@ -990,13 +880,7 @@ target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.a
                         <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
                       </div>;
                     )}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 }
                 {/* Publisher Info */}
@@ -1015,7 +899,6 @@ target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.a
                         <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
                       </div>;
                     )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;"
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -1310,10 +1193,6 @@ if ( {) {
                   <div className="flex justify-between mb-2">;
                     <span className="text-zion-slate-light">ID</span>;
                     <span className="text-white">{listing.id}</span>;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </div>;
                 </div>;
               </div>;
@@ -1322,11 +1201,8 @@ if ( {) {
         </div>;
       </div>;
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
@@ -1345,7 +1221,6 @@ if ( {) {
 }
     </AppLayout>);
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
         <DialogContent className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md">;
@@ -1362,13 +1237,7 @@ if ( {) {
 </AppLayout>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </AppLayout>);
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;"
@@ -1410,26 +1279,15 @@ if ( {) {
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     </AppLayout>);
 }
 ;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </AppLayout>);
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import {useState} from "react";""
 import {useParams} from "react-router-dom";""
 import {Badge} from "@/components/ui/badge";""
@@ -1761,4 +1619,3 @@ pr-12325
 }</p> <p className=" text-xs text-zion-slate-light">Member since 2022</p> text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </AppLayout>)"
     </AppLayout>);"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

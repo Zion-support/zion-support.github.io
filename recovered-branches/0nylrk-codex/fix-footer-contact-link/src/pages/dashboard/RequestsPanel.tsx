@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
 constructor(props) {
     super(props);
@@ -23,16 +21,7 @@ constructor(props) {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -46,8 +35,6 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function RequestsPanel() {;
   const { user } = useAuth();
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -63,7 +50,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import { QuoteDetails } from '@/components / quotes / QuoteDetails';
 import { RequestsHeader, QuoteRequestsList } from '@/components / quotes';
 import type { QuoteRequest } from "@/types / quotes";
-=======
 
 import React, { useState } from "react";"
 import {Header} from "@/components/Header";"
@@ -84,7 +70,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import { QuoteDetails } from '@/components / quotes / QuoteDetails';'
 import { RequestsHeader, QuoteRequestsList } from '@/components / quotes';"
 import type { QuoteRequest } from "@/types / quotes";'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 export default /**;
  * RequestsPanel - Function description;
@@ -106,8 +91,6 @@ const {
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -132,16 +115,7 @@ const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {};
   const { user } = useAuth();
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -155,7 +129,6 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {
   const { user } = useAuth();
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);"
 import type { QuoteRequest } from "@/types/quotes","
@@ -166,27 +139,11 @@ export default function RequestsPanel() {}
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const {
-=======
 
   const {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     quotes,
     unreadCount,
     isLoading,
@@ -197,58 +154,33 @@ export default function RequestsPanel() {}
 markAsViewed,
     markAsResponded,
     toggleArchive
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     markAsViewed,;
     markAsResponded,;
     toggleArchive;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {}
     setSelectedQuote(quote),
     setShowDetails(true),
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
-<<<<<<< HEAD
 
   },
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   // Filter quotes by archive status;
-=======
 
   },
 
   // Filter quotes by archive status
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
     <ProtectedRoute>
@@ -257,24 +189,17 @@ markAsViewed,
         <div className="min-h-screen bg-zion-blue px-4 py-8">"
           <div className="container mx-auto">
 <RequestsHeader
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         <Header />
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useTalentQuotes } from "@/hooks/useTalentQuotes",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-=======
             <RequestsHeader;
 "
 import React, { useState } from "react",;"
@@ -283,7 +208,6 @@ import { Footer } from "@/components/Footer",;"
 import { useTalentQuotes } from "@/hooks/useTalentQuotes",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
 import {;
   RequestsHeader,;
@@ -388,36 +312,19 @@ function RequestsPanel() {}
 ;
 
     <ProtectedRoute>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div>;
         <Header />;"
         <div className="min-h-screen bg-zion-blue px-4 py-8">;"
           <div className="container mx-auto">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <RequestsHeader;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             <RequestsHeader            <RequestsHeader
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             <RequestsHeader            <RequestsHeader
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
             <RequestsHeader;
 
             <RequestsHeader
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -442,7 +349,6 @@ function RequestsPanel() {}
                   onToggleArchive={toggleArchive}
 
 <QuoteRequestsList;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   quotes={archivedQuotes}
                   isLoading={isLoading}
                   isArchived={true}
@@ -459,17 +365,12 @@ function RequestsPanel() {}
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           isOpen={showDetails}
-<<<<<<< HEAD
 
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 />;
               </TabsContent>;
             </Tabs>;
@@ -481,28 +382,17 @@ function RequestsPanel() {}
           quote={selectedQuote}
           isOpen={showDetails}
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             setSelectedQuote(null)
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }}
         />
         <Footer />
       </div>
     </ProtectedRoute>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
           onClose={() => {;
             setShowDetails(false);
@@ -532,13 +422,11 @@ if ( {) {}
         <div className="min - h-screen bg - zion - blue px - 4 py - 8">;"
           <div className="container mx - auto">;
             <RequestsHeader;
-=======
 
         <Footer />
 
         <div className="min - h-screen bg - zion - blue px - 4 py - 8">;"
           <div className="container mx - auto">;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               unread_count={unread_count}
               status_filter={status_filter}
               archive_filter={archive_filter}
@@ -581,15 +469,11 @@ on_close={() => {}
             setSelectedQuote (null);
           }}
         />;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Footer />;
       </div>;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             setShowDetails(false),;
             setSelectedQuote(null),;
           }}
@@ -647,19 +531,9 @@ const [showDetails, setShowDetails] = useState (false);
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
 }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           isOpen={showDetails}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
     );
 
@@ -679,4 +553,3 @@ pr-12325
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
 </QuoteDetails>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

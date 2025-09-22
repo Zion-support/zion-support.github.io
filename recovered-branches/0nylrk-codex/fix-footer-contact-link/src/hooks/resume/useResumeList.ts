@@ -1,37 +1,19 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function useResumeList() {
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export function useResumeList() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { useState, useEffect  } from 'react';'
 import { supabase  } from '@/integrations/supabase/client';'
 import { Resume  } from '@/types/resume';'
@@ -43,22 +25,13 @@ import {supabase} from '@/integrations/supabase/client';'
 import {Resume} from '@/types/resume';'
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
-=======
 export function useResumeList() {  const { user } = useAuth();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function useResumeList() {  const { user } = useAuth();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const { user } = useAuth();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 export function useResumeList() {  const { user } = useAuth();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -78,20 +51,14 @@ export function useResumeList() {  const { user } = useAuth();
 setResumes([]);
         return []
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
       // Transform data to match Resume type
-<<<<<<< HEAD
-<<<<<<< HEAD
       const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
         id: resume && resume.id;
         user_id: resume && resume.user_id;
-<<<<<<< HEAD
     // Check condition
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         basic_info: {
 
           id: resume && resume.id;
@@ -99,8 +66,6 @@ if ( {) {
           headline: resume && resume.headline,
           summary: resume && resume.summary;
         };
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         work_experience: [];
         education: [];
         skills: [];
@@ -139,14 +104,10 @@ if ( {) {}
     resumes;
 
       }));
-=======
       // Transform data to match Resume type  }
 }      }));
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       // Transform data to match Resume type  }
 }      }));
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setResumes(transformedResumes);
       return transformedResumes;
     } catch (e: any) {}
@@ -256,6 +217,5 @@ certifications: [];
 is active: resume.is active 
 }) );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }

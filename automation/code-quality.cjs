@@ -1,6 +1,14 @@
 
 }},
+<<<<<<< HEAD
+}},
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -14,9 +22,19 @@ const qualityChecks = [{
       } catch (error) {
       }
     },
+<<<<<<< HEAD
+},
+
+    }},
+main
+
+
+    }},
+=======
   },
 
     }},
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   {
     "name": 'ESLint Code Analysis',
     "action": () => {
@@ -27,7 +45,23 @@ const qualityChecks = [{
       } catch (error) {
         
       }
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+  {
+    "name": 'ESLint Code Analysis',
+  // TODO: Implement
+        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio": 'pipe' });
+
+
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }},
   {
     "name": 'Prettier Code Formatting',
@@ -39,7 +73,26 @@ const qualityChecks = [{
       } catch (error) {
         
       }
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+    "name": ESLint Code Analysis,
+    "action": () => {"
+      try {
+  // TODO: Implement
+}"
+        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx, { "stdio": pipe});
+      } catch (error) {
+
+
+
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }},
   {
     "name": 'Code Complexity Analysis',
@@ -54,7 +107,32 @@ const qualityChecks = [{
       [pagesDir, componentsDir].forEach(dir => {
         if (fs.existsSync(dir)) {
           const files = fs
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+    "name": Prettier Code Formatting,
+    "action": () => {"
+      try {
+  // TODO: Implement
+}"
+        execSync('npx prettier --check ., { "stdio": pipe});
+      } catch (error) {
+
+      let totalLines = 0;
+      let totalFiles = 0;
+]
+      [pagesDir, componentsDir].forEach(dir => {)
+        if (fs.existsSync(dir)) {
+
+
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
 
@@ -71,11 +149,27 @@ const qualityChecks = [{
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
 
+<<<<<<< HEAD
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       console.log(`Average lines per file: ${avgLinesPerFile}`);
       console.log(`Total files analyzed: ${totalFiles}`);
     },
   },
 
+<<<<<<< HEAD
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }},
   {
     "name": 'Import/Export Analysis',
@@ -95,12 +189,30 @@ const qualityChecks = [{
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
 
+<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         console.log(`Total imports: ${importCount}`);
         console.log(`Total exports: ${exportCount}`);
       }
     },
   },
 
+<<<<<<< HEAD
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       }
     }},
   {
@@ -123,6 +235,12 @@ const qualityChecks = [{
             const importName = importLine.match(/import\s+{([^}]+)}/);
             if (importName) {
               const names = importName[1].split(',').map(name => name.trim());
+<<<<<<< HEAD
+
+        console.log(`Total exports: ${exportCount}`);
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               names.forEach(name => {
                 if (
                   !content.includes(name) ||
@@ -135,16 +253,42 @@ const qualityChecks = [{
           });
         });
 
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         console.log(`Potential unused imports: ${unusedImports}`);
       }
     },
   },
 
+<<<<<<< HEAD
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       }
     }},
 ];
 
 // Run quality checks
+<<<<<<< HEAD
+
+        console.log(`Potential unused imports: ${unusedImports}`);
+
+];
+
+// Run quality checks;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 let successCount = 0;
 let totalCount = qualityChecks.length;
 
@@ -165,6 +309,12 @@ const report = {
   "checks": qualityChecks.map(check => ({
     name: check.name,
 
+<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     status: 'completed',
   })),
   summary: {
@@ -173,13 +323,36 @@ const report = {
     failed: totalCount - successCount,
   },
 };
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+=======
+
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
 
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -188,6 +361,31 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  "summary": {"
+    total: totalCount,"
+    "successful": successCount,""
+    "failed": totalCount - successCount}};""
+const reportsDir = path.join(process.cwd(), 'automation-reports');
+
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { "recursive": true });"
+const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
+fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+
+main
+
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -204,7 +402,27 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
     "status"
+<<<<<<< HEAD
+    "status"
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
 
     "status"
     "status"
 
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+
+    "status"
+    "status"
+
+<<<<<<< HEAD
+    "status"
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

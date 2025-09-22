@@ -8,7 +8,6 @@ import Link from 'next/link';
             pipelines, and prebuilt auditor workflows. Integrates with cloud;
             providers and ticketing systems.;
           </p>;
-<<<<<<< HEAD
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {[;
               {title: 'Controls Library';
@@ -264,7 +263,6 @@ key={f.title}
                 </p>;
                 <p className='mt-4 text-3xl font-bold' />;
                   $290;
-<<<<<<< HEAD
                   <span className='text - base font - normal text - gray - 300'>;/mo;
                   </span>;
                 </p>;
@@ -274,14 +272,12 @@ key={f.title}
                 </p>;
               </div>;
 <div className='rounded - 2xl border border - cyan - 400 / 30 p - 6'>;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
                 <h3 className='text - xl font - bold'>Growth</h3>;
                 <p className='mt - 2 text - gray - 300'>;
                   Vendor risk, SSO, SIEM, ticketing.;
                 </p>;
                 <p className='mt-4 text-3xl font-bold' />;
                   $690;
-<<<<<<< HEAD
                   <span className='text - base font - normal text - gray - 300'>;/mo;
                   </span>;
                 </p>;
@@ -292,7 +288,6 @@ key={f.title}
                 </p>;
               </div>;
                 rel='noreferrer'>;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               <div className='rounded - 2xl border border - purple - 400 / 30 p - 6'>;
                 <h3 className='text - xl font - bold'>Enterprise</h3>;
                 <p className='mt - 2 text - gray - 300'>;
@@ -348,11 +343,9 @@ key={f.title}
                 href='https://securityscorecard.com/';
                 target='_blank';
 rel='noreferrer';
-<<<<<<< HEAD
               >;SecurityScorecard;
               >;
                 SecurityScorecard;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
               </a>;
               .;
             </p>;
@@ -360,9 +353,7 @@ rel='noreferrer';
           </div>;
 
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
-=======
           <div className='mt - 12 flex flex - wrap items - center gap - 4' />;
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
             <Link;
               href='/contact';
               className='px - 5 py - 3 rounded - lg bg - pink - 400 text - black font - semibold' />
@@ -386,7 +377,6 @@ rel='noreferrer';
     </div>;
     </div>;
   </section>;
-<<<<<<< HEAD
   </>)}}}ursor/fix-website-loading-errors-and-merge-6662;
 }}
 }
@@ -398,4 +388,3 @@ rel='noreferrer';
 }
   </>);
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

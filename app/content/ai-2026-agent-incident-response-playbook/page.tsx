@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Eval‑gated triage, mitigation, and escalation with autonomous agents.'
 };
 
-function AgentIncidentResponsePlaybookPage() {
+export default function AgentIncidentResponsePlaybookPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <header className="mb-10">
@@ -99,7 +99,5 @@ function AgentIncidentResponsePlaybookPage() {
     </main>
   );
 }
-
-export default AgentIncidentResponsePlaybookPage;
 
 

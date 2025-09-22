@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {Link} from "react-router-dom";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Link } from "react-router-dom",
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -27,7 +15,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth",
 import {};
-=======
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
 import {
@@ -42,7 +29,6 @@ import {
   // TODO: Implement
 }
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   MessageSquare;
   Briefcase;
   Code;
@@ -54,18 +40,11 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     icon: "Briefcase"
   }"
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -74,23 +53,13 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,"
     icon: "Briefcase"
   },
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
-=======
     icon: "Briefcase"
   }
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",  {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     icon: "Briefcase"
   }
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",  {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 
     icon: "Briefcase"
   }
@@ -106,18 +75,13 @@ const categories: ForumCategoryInfo[] = [
   },
 
   {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
     icon: "MessageSquare"
 
-<<<<<<< HEAD
 
 icon: "Code"
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
   {"
@@ -126,15 +90,9 @@ icon: "Code"
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,"
     icon: "Code"
-<<<<<<< HEAD
   },
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   {}
 "
@@ -146,8 +104,6 @@ icon: "Code"
     icon: "FileText"
 }
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
 
     id: "announcements"
@@ -163,23 +119,18 @@ import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const iconMap = {
-=======
 const iconMap = {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Briefcase,
   MessageSquare,
   Code,
   FileText,
 Megaphone
-<<<<<<< HEAD
 
   const visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
   ),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 },
 
   return ("
@@ -196,7 +147,6 @@ Megaphone
                 <CardTitle className="text-xl">{category.name}</CardTitle>
               </CardHeader>
               <CardContent>"
-=======
   Megaphone
 
 },
@@ -215,7 +165,6 @@ Megaphone
                 <CardTitle className="text-xl">{category.name}</CardTitle>
               </CardHeader>
               <CardContent>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <CardDescription className="text-base">{category.description}</CardDescription>
               </CardContent>
             </Card>
@@ -227,9 +176,7 @@ Megaphone
   )
 }
 export default ForumCategories;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-<<<<<<< HEAD
 export default ForumCategories;
 import { useAuth } from "@/hooks/useAuth",;
 import {;
@@ -269,12 +216,8 @@ const categories: ForumCategoryInfo[] = [;
   }
 
 const iconMap = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { Link } from './react-router-dom';
-=======
     icon: "MessageSquare"import { Link } from './react-router-dom';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   Megaphone;
 } from "@/components/icons",;
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",;
@@ -319,16 +262,13 @@ const categories: ForumCategoryInfo[] = [;
 
 const iconMap = {;
 import { Link } from './react-router-dom';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';
-=======
 import { Link } from './react-router-dom';'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';'
 import { use_auth } from '@/hooks / use_auth';'
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ForumCategory, ForumCategoryInfo } from '@/types / community';
 const categories: ForumCategoryInfo[] = [;
   {"
@@ -341,11 +281,9 @@ const categories: ForumCategoryInfo[] = [;
   {"
     id: "project - help","
     name: "Project Help","
-=======
   {
     id: "project - help",
     name: "Project Help",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     description: "Get help with your ongoing projects and collaboration.",
     admin_only: false,"
     icon: "MessageSquare";
@@ -374,14 +312,10 @@ const categories: ForumCategoryInfo[] = [;
 ];
 ;
 const icon_map = {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Briefcase;
   MessageSquare;
   Code;
   FileText;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   Megaphone;
 };
@@ -610,28 +544,12 @@ export const ForumCategories = () =>: any {};
 ;
 export default ForumCategories;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ForumCategories;
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default ForumCategories;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 export default ForumCategories;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

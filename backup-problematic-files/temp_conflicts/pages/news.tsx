@@ -1558,7 +1558,11 @@ export default function News() {;
                       <span>By {article.author}</span>;
                       <span></span>;
                       <span>{article.date}</span>;
+<<<<<<< HEAD
+                      <span>•</span>;
+=======
                       <span></span>;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                       <span>{article.readTime}</span>;
                     </div>;
                     <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">;
@@ -1624,5 +1628,9 @@ export default function News() {;
     </>;
   );
 }
+<<<<<<< HEAD
+"`;
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

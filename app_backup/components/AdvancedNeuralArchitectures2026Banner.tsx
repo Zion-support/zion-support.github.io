@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, TrendingUp, Zap, Shield } from 'lucide-react';
 
 const AdvancedNeuralArchitectures2026Banner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -74,11 +73,11 @@ const AdvancedNeuralArchitectures2026Banner = () => {
           <div className="flex-1">
             <div className="flex items-center space-x-2 mb-2">
               <div className="flex items-center space-x-1 bg-white/20 rounded-full px-3 py-1">
-                <Zap className="w-4 h-4 text-yellow-300" />
+                <span className="w-4 h-4 text-yellow-300">📊</span>
                 <span className="text-sm font-medium">NEW ULTIMATE BREAKTHROUGH</span>
               </div>
               <div className="flex items-center space-x-1 bg-green-500/20 rounded-full px-3 py-1">
-                <Star className="w-4 h-4 text-green-300" />
+                <span>Star</span>
                 <span className="text-sm font-medium">FEATURED</span>
               </div>
             </div>
@@ -97,12 +96,12 @@ const AdvancedNeuralArchitectures2026Banner = () => {
 
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <TrendingUp className="w-5 h-5 text-green-300" />
+                <span className="w-5 h-5 text-green-300">📊</span>
                 <span className="font-semibold">{content[currentSlide].metrics}</span>
               </div>
               
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <Shield className="w-5 h-5 text-blue-300" />
+                <span className="w-5 h-5 text-blue-300">📊</span>
                 <span className="text-sm">{content[currentSlide].type}</span>
               </div>
               
@@ -117,7 +116,7 @@ const AdvancedNeuralArchitectures2026Banner = () => {
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
               >
                 <span>Explore Now</span>
-                <ArrowRight className="w-5 h-5" />
+                <span className="w-5 h-5">📊</span>
               </Link>
               
               <Link
@@ -174,7 +173,7 @@ const AdvancedNeuralArchitectures2026Banner = () => {
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
         aria-label="Dismiss banner"
       >
-        <X className="w-6 h-6" />
+        <span>X</span>
       </button>
     </div>
   );

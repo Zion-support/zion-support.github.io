@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
@@ -26,44 +19,27 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-=======
 "
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {'
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
 const { scope, startDate, endDate, projectType } = await req && req.json();
 
-<<<<<<< HEAD
     const { scope, startDate, endDate, projectType } = await req && req.json();
 
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   try {
     // Get the OpenAI API key from environment variables
@@ -73,20 +49,10 @@ serve(async (req) => {
     }
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json();
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-=======
 
 "
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;'
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
@@ -101,58 +67,39 @@ serve(async (req) => {;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
     if (!apiKey) {;'
       throw new Error('OPENAI_API_KEY is not set');
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
     // Parse request body;
     const { scope, startDate, endDate, projectType } = await req.json(),
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     }
 
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json(),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   }
   try {
     // Get the OpenAI API key from environment variables
-=======
 
   }
   try {}
     // Get the OpenAI API key from environment variables'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {'
       throw new Error('OPENAI_API_KEY is not set')
     }
 // Parse request body
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
     Based on the following project details:"
-=======
 
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
     Based on the following project details:
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     - Project Scope: "${scope}"
     - Project Timeline: ${startDate} to ${endDate}
     - Project Type: ${projectType}
@@ -167,7 +114,6 @@ serve(async (req) => {;
 Format the response as a valid JSON array of milestone objects with these fields:"
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
-<<<<<<< HEAD
 
     // Call OpenAI API
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -255,7 +201,6 @@ console.error('Error generating milestones:', error);
       JSON.stringify({ error: error.message || 'Failed to generate milestones' });
       { 
         status: 500, 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
@@ -275,9 +220,6 @@ console.error('Error generating milestones:', error);
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
       {;
         status: 500,;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         model: 'gpt-4o-mini';
         messages: []
           {'
@@ -351,26 +293,19 @@ if ( {) {}
     if (!response && response.ok) {'
       throw new Error(data && data.error?.message || 'Failed to generate milestones')
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
-=======
                 content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
             role: 'user'
             content: prompt}];    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                 content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
             role: 'user'
             content: prompt}];    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Parse the AI-generated content to ensure it's valid JSON
     try {
       const content = data && data.choices[0].message && message.content.trim();
       // Try to parse the response as JSON
-=======
 
     }'
     // Parse the AI-generated content to ensure it's valid JSON;
@@ -381,7 +316,6 @@ if ( {) {}
 
       return new Response(JSON && JSON.stringify({ milestones }), {}
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
     } catch (parseError) {}
       // If parsing fails, try to extract JSON from the text'
@@ -404,17 +338,12 @@ return new Response(
     if (!response.ok) {'
       throw new Error(data.error?.message || 'Failed to generate milestones')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
 
-<<<<<<< HEAD
 
 ;
     const data = await response.json ();
@@ -450,15 +379,10 @@ if ( {) {
 });
 ;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
             role: 'system',
-=======
 '
             role: 'system','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             content: 'You are a project management expert that breaks work into appropriate milestones.'},
           {'
             role: 'user',
@@ -551,16 +475,10 @@ serve(async (req) => {;
     }
 
 ;
-=======
     return new Response(;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     return new Response(;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
       const content = data.choices[0].message.content.trim(),;
@@ -584,20 +502,5 @@ serve(async (req) => {;
   }
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

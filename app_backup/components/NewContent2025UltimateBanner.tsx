@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
 const NewContent2025UltimateBanner = () => {
   return (
@@ -52,7 +51,7 @@ const NewContent2025UltimateBanner = () => {
                 <span>Predictive Intelligence</span>
               </div>
             <div className="flex items-center text-sm text-green-400 mb-4">
-              <TrendingUp className="w-4 h-4 mr-2" />
+              <span className="w-4 h-4 mr-2">📊</span>
               <span>400% Average ROI Achieved</span>
             </div>
             <Link 

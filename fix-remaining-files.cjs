@@ -1,11 +1,6 @@
 const fs = require('fs');
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 
 >import Link from 'next/link';
@@ -389,7 +384,6 @@ files.forEach(file => {
 });
 main
 
-<<<<<<< HEAD
 console.log('Fixed remaining files');
     console.log('Fixe: d:', file.path);
 
@@ -399,15 +393,5 @@ console.log('Fixed remaining files');
 console.log('Fixed remaining files');
 ;
 console.log('Fixed remaining files');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

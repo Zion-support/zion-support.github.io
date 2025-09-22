@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useMemo } from "react";
 import {
@@ -7,7 +6,6 @@ import {
 } from "@/data/onsiteServicePricing";
 import { Input } from "@/components/ui/input";
 import {
-<<<<<<< HEAD
   Table
   TableBody
   TableCell
@@ -19,7 +17,6 @@ import {
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -60,15 +57,10 @@ import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() { return null; }
   const [sortConfig, setSortConfig] = useState<{}
     key: keyof CountryPricing;"
-=======
     key: keyof CountryPricing;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     direction: "ascending" | "descending";
 }>({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     let filteredData = [...onsiteServicePricing],
 
@@ -161,7 +153,6 @@ export function ITServicePricingTable() { return null; }
         <div className="relative flex-1">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
           <Input
-=======
 "
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;"
       <div className="flex items-center mb-6">;"
@@ -169,7 +160,6 @@ export function ITServicePricingTable() { return null; }
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
 
           <Input"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             placeholder="Search by country..."
             value={searchQuery}
 "
@@ -224,7 +214,6 @@ export function ITServicePricingTable() { return null; }
                   No countries match your search;
                 </TableCell>
               </TableRow>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Input;
             placeholder="Search by country...";
             value={searchQuery}
@@ -279,9 +268,6 @@ export function ITServicePricingTable() { return null; }
                 </TableCell>;
               </TableRow>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </TableBody>;
         </Table>;
@@ -295,24 +281,16 @@ export function ITServicePricingTable() { return null; }
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                   <TableCell className="text - right font - medium text - white">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                   <TableCell className="text - right font - medium text-white">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     ${item.pricePerIncident.to_fixed (2)}
                   </TableCell>;
                 </TableRow>))) : (
               <TableRow>;
                 <TableCell;
 col_span={2}
-<<<<<<< HEAD
                   className="text - center py - 10 text - zion - slate-light";
-=======
                   className="text - center py - 10 text - zion - slate-light";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   No countries match your search;
                 </TableCell>;
@@ -322,4 +300,3 @@ col_span={2}
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

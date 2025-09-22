@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 
@@ -5,6 +7,7 @@
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -23,6 +26,8 @@ class ComprehensiveTestRunner {}
   log(message) {
     .toISOString()}] ${message}`)}
   async runTests() {
+<<<<<<< HEAD
+=======
 
 
 
@@ -30,6 +35,7 @@ class ComprehensiveTestRunner {}
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "total": 0;
     }};
   log(message) {}
@@ -69,9 +75,12 @@ class ComprehensiveTestRunner {
       { name: 'Lint Check', command: 'npm run lint' },
       { name: 'Build Test', command: 'npm run build' },
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     ];
 
     for (const test of tests) {
@@ -91,5 +100,12 @@ class ComprehensiveTestRunner {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 
+<<<<<<< HEAD
+const runner = new ComprehensiveTestRunner();
+runner.runTests().catch(console.error);
+runner.runTests().catch(console.error);
+`;
+=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

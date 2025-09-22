@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
@@ -16,17 +12,9 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -35,7 +23,6 @@ import { z } from "zod",
 import { Mail } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button";
-=======
 
 import { useState } from "react","
 import { Link } from "react-router-dom","
@@ -45,7 +32,6 @@ import { z } from "zod","
 import { Mail } from "lucide-react","
 import { useAuth } from "@/hooks/useAuth",";
 import { Button } from "@/components/ui/button";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Input } from "@/components/ui/input";
 import {};
   Form;
@@ -71,26 +57,14 @@ import { Footer } from "@/components/Footer",
 
 const forgotPasswordSchema = z.object({
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Form validation schema
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 // Form validation schema
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const forgotPasswordSchema = z.object({
-=======
 ;
 // Form validation schema;
 const forgotPasswordSchema = z.object({"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   email: z.string().email("Please enter a valid email")})
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 export default function ForgotPassword() {};
@@ -100,31 +74,19 @@ const [submitted, setSubmitted] = useState(false);export default function Forgot
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
-<<<<<<< HEAD
 export default function ForgotPassword() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export default function ForgotPassword() {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
 export default function ForgotPassword() {}
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Initialize react-hook-form
   const form = useForm({
-=======
 ;
   // Initialize react-hook-form;
   const form = useForm({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(forgotPasswordSchema)
     defaultValues: {"
       email: ""}}) as UseFormReturn<ForgotPasswordFormValues>
@@ -133,10 +95,7 @@ export default function ForgotPassword() {}
     await resetPassword(data.email)
     setSubmitted(true)
 
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema)
@@ -147,16 +106,10 @@ export default function ForgotPassword() {}
     await resetPassword(data.email)
     setSubmitted(true)
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   },
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Header />"
@@ -338,25 +291,19 @@ export default function ForgotPassword() {;
                 Reset your password;
               </h2>;
               <p className="mt-2 text-sm text-zion-slate-light">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Enter your email and we'll send you a link to reset your password.;
               </p>;
             </div>;
 
 "
             <div className="bg-zion-blue-dark rounded-lg p-6">;
-<<<<<<< HEAD
-=======
             <div className="bg-zion-blue-dark rounded-lg p-6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {submitted ? (;
                 <div className="text-center py-8">;
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
-=======
               {submitted ? (;"
                 <div className="text-center py-8">;"
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Mail className="h-6 w-6 text-zion-purple" />;
                   </div>;"
                   <h3 className="text-lg font-medium text-white">Check your email</h3>;"
@@ -364,17 +311,10 @@ export default function ForgotPassword() {;
                     We've sent a password reset link to your email address.;
                   </p>;"
                   <div className="mt-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ;
             <div className="bg-zion-blue-dark rounded-lg p-6">;
 // Form validation schema
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <Link
                       to="/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
@@ -386,13 +326,11 @@ export default function ForgotPassword() {;
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;                    <Link
                       to="/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
-=======
 
                     <Link"
                       to="/login""
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       Back to login;
                     </Link>;
                   </div>;
@@ -457,7 +395,6 @@ const form = use_form ({}
   const on_submit = async (data: ForgotPasswordFormValues) => {}
   // Form submission handler;
   const on_submit = async (data: ForgotPasswordFormValues) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     await reset_password (data.email),
     set_submitted (true);
   }
@@ -554,7 +491,6 @@ const form = use_form ({}
                 <p className="text-lg text-white/80">;
 
 '
-=======
 </Form>)}
             </div>;
           </div>;
@@ -565,7 +501,6 @@ const form = use_form ({}
               <div className="max - w-md text - center">;
                 <h3 className="text - 3xl font - bold text - white mb - 4">Account Recovery</h3>;
                 <p className="text - lg text - white / 80">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   We'll help you get back into your account so you can continue your journey in the Zion marketplace.;
 </Link>
                       </Link>;
@@ -595,9 +530,7 @@ const form = use_form ({}
 
 "
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       >
-=======
 </Footer>
 
     </>);
@@ -606,21 +539,16 @@ const form = use_form ({}
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light""
                       >
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         Back to login;
                       </Link>
                     </div>
                   </form>
                 </Form>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 
 ;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
             </div>
           </div>
@@ -643,23 +571,13 @@ const form = use_form ({}
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 ;
 
 ;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -668,7 +586,6 @@ import { z } from "zod",;
 import { Mail } from "lucide-react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
-=======
 
 ;
 
@@ -681,7 +598,6 @@ import { z } from "zod",;"
 import { Mail } from "lucide-react",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { Button } from "@/components/ui/button",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Input } from "@/components/ui/input",;
 import {;
   Form,;
@@ -745,8 +661,6 @@ export default function ForgotPassword() { return null; }
               ) : (;
                 <Form {...form}>;"
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <FormField;
   FormLabel,"
 import { Header } from "@/components/Header",""
@@ -926,11 +840,6 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
 
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </>;
 return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24"> <div className="mx-auto w-full max-w-sm lg:w-96"> <div className="text-center mb-10"> <h2 className="text-3xl font-bold tracking-tight text-white"> Reset your password </h2> <p className="mt-2 text-sm text-zion-slate-light"> Enter your email and we'll send you a link to reset your password. </p> </div> <div className="bg-zion-blue-dark rounded-lg p-6"> {"
   submitted ? (<div className="text-center py-8"> <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4"> <Mail className="h-6 w-6 text-zion-purple" /> </div> <h3 className="text-lg font-medium text-white">Check your email</h3> <p className="mt-2 text-sm text-zion-slate-light"> We've sent a password reset link to your email address. </p> <div className="mt-6" > <Link to="/login" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center" > Back to login  </div> </div>) : (<Form {"
@@ -963,19 +872,8 @@ return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div clas
 }/> <Button </Button> <div className="text-center" > <Link to="/login" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light" > Back to login </Link> </div> </form> </Form>) 
 }</div> </div> </div> <div className="hidden lg: block relative w-0 flex-1"> <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80"> <div className="flex flex-col justify-center items-center h-full px-8"> <div className="max-w-md text-center"> <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3> <p className="text-lg text-white/80"> We'll help you get back into your account so you can continue your journey in the Zion marketplace. </p> </div> </div> </div> </div> </div> <Footer /> </>) 
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     <FormField;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

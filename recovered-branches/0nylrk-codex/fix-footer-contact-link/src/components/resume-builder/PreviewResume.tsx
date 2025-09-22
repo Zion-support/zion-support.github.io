@@ -1,5 +1,4 @@
 import { Resume } from "@/types/resume";
-<<<<<<< HEAD
 import {
   PreviewHeader
   ResumeBasicInfoSection
@@ -11,7 +10,6 @@ import {
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
 
-<<<<<<< HEAD
 interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void
@@ -20,12 +18,9 @@ interface PreviewResumeProps {
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Resume } from '@/types/resume',;
 import {;
   PreviewHeader,;
@@ -52,20 +47,14 @@ import {;
 } from './preview',;
 interface PreviewResumeProps {;
   resume: Resume;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onBack: () => void;import { Resume } from "@/types/resume";
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void;
 }
 
 import { Resume } from "@/types/resume";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
   PreviewHeader,
   ResumeBasicInfoSection,
@@ -88,7 +77,6 @@ interface PreviewResumeProps {
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
-=======
 import {}
   PreviewHeader,
   ResumeBasicInfoSection,
@@ -123,7 +111,6 @@ interface PreviewResumeProps {}
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
   return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
 
@@ -154,23 +141,11 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
 }
 ;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   CertificationsSection,"
 } from "./preview";"
 interface PreviewResumeProps {
@@ -209,4 +184,3 @@ pr-12325
     </div>;)
  </div> </div>) "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

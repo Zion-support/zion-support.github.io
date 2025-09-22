@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -19,14 +16,12 @@ export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const { profileId } = useParams() as { profileId?: string }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams() as { profileId?: string };
 
-=======
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -42,7 +37,6 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "@/components/profile/HireNowCTA",
 import { 
-=======
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -55,8 +49,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 import { useState, useEffect } from "react";"
 import { useParams } from "react-router-dom";"
 import { supabase } from "@/integrations/supabase/client";"
@@ -69,7 +61,6 @@ import { Badge } from "@/components/ui/badge";"
 import { Button } from "@/components/ui/button";"
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Star,
   MapPin,
   Clock,
@@ -89,7 +80,6 @@ export default function ProfilePage() {
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [isError, setIsError] = useState(false),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
@@ -103,14 +93,12 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
 import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
-=======
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams() as { profileId?: string };
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -118,17 +106,8 @@ export default function ProfilePage() {
 useEffect(() => {
     const fetchProfile = async () => {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading(true),
       setIsError(false),
       try {
@@ -154,14 +133,11 @@ useEffect(() => {
         console.error("Error fetching profile:", error),
         setIsError(true),
         toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
           title: "Error"
           description: "Failed to load profile. Please try again later."
           variant: "destructive"})
       } finally {
         setIsLoading(false)
-<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { useParams } from "react-router-dom",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -194,7 +170,6 @@ export default function ProfilePage() {;
 
   useEffect(() => {;
     const fetchProfile = async () => {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setIsLoading(true);
       setIsError(false);
 
@@ -282,12 +257,9 @@ import {;
 if (profileId) {
       fetchProfile();
     }
-<<<<<<< HEAD
   }, [profileId]),
 
 if (isLoading) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
       <div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
@@ -301,8 +273,6 @@ if (isLoading) {
       </div>;
     );
   }
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function ProfilePage() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
@@ -310,18 +280,15 @@ export default function ProfilePage() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
-=======
 
     return ("
       <div className="min-h-screen flex items-center justify-center">"
         <p className="text-red-500">Failed to load profile.</p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
     );
   }
@@ -330,15 +297,10 @@ if (isError || !profileData) {;    <>;
       <SEO
 
         title={`${profileData.full_name} | Talent Profile`}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         description={profileData.bio || "View the profile of this talented individual."}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         description={
           profileData.bio || "View the profile of this talented individual."
-=======
 
       </div>
     <>;
@@ -347,38 +309,24 @@ if (isError || !profileData) {;    <>;
         description={"
           profileData.bio || "View the profile of this talented individual.""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
         description={
           profileData.bio || "View the profile of this talented individual."
         }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />
 
       <AppHeader />
 <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>;
       <SEO      />;
-=======
       />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 "
 
 </AppHeader>"
       <div className="container mx-auto px-4 py-8">"
         <div className="grid grid-cols-12 gap-6">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <AppHeader />;
       <div className="container mx-auto px-4 py-8">;"
         <div className="grid grid-cols-12 gap-6">;"
@@ -417,7 +365,6 @@ if (isError || !profileData) {;    <>;
                       </h1>"
                       <p className="text-zion-cyan font-medium">
                         {profileData.professional_title}
-=======
                 <div className="flex-1">"
                   <div className="flex justify-between items-start">"
                     <div>
@@ -427,7 +374,6 @@ if (isError || !profileData) {;    <>;
                       <p className="text-zion-cyan font-medium">"
 </p>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </p>
                     </div>
                   </div>
@@ -448,14 +394,10 @@ if (isError || !profileData) {;    <>;
 
                       </div>;
 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </div>;
                 </div>;
               </div>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -481,25 +423,16 @@ if (isError || !profileData) {;    <>;
                         {skill}
                       </Badge>
                     ))}
-<<<<<<< HEAD
             </div>;
             {/* Bio Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             </div>
 
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
             </div>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
@@ -511,8 +444,6 @@ if (isError || !profileData) {;    <>;
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
               <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
             </div>;            {/* Portfolio Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   </div>;
                 </div>;
               )}
@@ -527,7 +458,6 @@ if (isError || !profileData) {;    <>;
             </div>
 
             {/* Portfolio Section */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
@@ -541,17 +471,14 @@ if (isError || !profileData) {;    <>;
                       rel="noopener noreferrer"
 </div>;
             </div>;                      <LinkIcon className="h-4 w-4 mr-2" />;
-=======
                       className="flex items-center text-zion-cyan hover:text-white transition-colors">;
                       <LinkIcon className="h-4 w-4 mr-2" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       {link}
                     </a>
                   ))
                 ) : ("
                   <p className="text-zion-slate-light">
                     No portfolio links provided.
-=======
               </div>"
                 <div className="mt-4">"
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>""
@@ -577,22 +504,17 @@ if (isError || !profileData) {;    <>;
                   <p className="text-zion-slate-light">"
 </p>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </p>
               </div>
 
 {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {profileData.experience || "No experience provided."}
               </p>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             </div>
 
             {/* Social Links */}"
@@ -607,22 +529,10 @@ if (isError || !profileData) {;    <>;
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Github className="h-6 w-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
                   </Link>
                   </Link>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
             </div>"
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"
 </div>"
@@ -633,12 +543,10 @@ if (isError || !profileData) {;    <>;
                     className="text-zion-cyan hover:text-white transition-colors""
                   >
                     <Github className="h-6 w-6" />"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                     <Github className="h-6 w-6" />;"
 
                   </a>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -649,35 +557,21 @@ className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Twitter className="h-6 w-6" />
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     <Twitter className="h-6 w-6" />;
                   </a>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a;
                     href={profileData && profileData.linkedin_link}"
                     target="_blank""
                     rel="noopener noreferrer"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Linkedin className="h-6 w-6" />
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                   </Link>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 )}
               </div>
             </div>
@@ -690,19 +584,13 @@ className="text-zion-cyan hover:text-white transition-colors"
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
               talentProfile={{
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 professional_title: profileData?.professional_title || "",
                 hourly_rate: profileData?.hourly_rate || 0,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                 hourly_rate: profileData?.hourly_rate || 0,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               }}
             />;
 
@@ -711,18 +599,14 @@ className="text-zion-cyan hover:text-white transition-colors"
     </>
 )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
-<<<<<<< HEAD
 
               }}
             />;
             {/* Placeholder for other sidebar elements */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
         </div>;
       </div>;
@@ -730,12 +614,6 @@ className="text-zion-cyan hover:text-white transition-colors"
 </>);
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </>;
   ),; import {};
   Star;
@@ -792,7 +670,6 @@ if (isLoading) {"
   );
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
 ;
@@ -840,29 +717,17 @@ if (isLoading) {"
   );
 }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 ;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ;
 ;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }</div> </div> </div> <Footer /> </>) 
 
 `;
 pr-12325
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

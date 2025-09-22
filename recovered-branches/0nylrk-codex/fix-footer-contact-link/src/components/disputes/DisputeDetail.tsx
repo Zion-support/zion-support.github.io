@@ -1,8 +1,6 @@
-<<<<<<< HEAD
   const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
   const { user } = useAuth();
-<<<<<<< HEAD
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
 "
 import React, { useState, useEffect } from "react","
@@ -39,7 +37,6 @@ export function DisputeDetail() {};
           navigate("/dashboard/disputes");
           return;
 
-<<<<<<< HEAD
 
         const messagesData = await getDisputeMessages(disputeId);
         setMessages(messagesData);
@@ -130,8 +127,6 @@ export function DisputeDetail() {
 
   useEffect(() => {
     if (!disputeId) return,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     const loadDisputeData = async () => {
       setIsLoading(true),
@@ -147,7 +142,6 @@ export function DisputeDetail() {
 
         const messagesData = await getDisputeMessages(disputeId),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         setMessages(messagesData)
       } catch (error) {"
         console.error("Error loading dispute data:", error),"
@@ -163,29 +157,20 @@ export function DisputeDetail() {
     const success = await updateDisputeStatus(disputeId, status);
     if (success && dispute) {
       setDispute({ ...dispute, status })
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
   const handleResolveDispute = async () => {}
     if (!disputeId) return;
   };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();  }
   const handleResolveDispute = async () => {
     if (!disputeId) return
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();  }
   const handleResolveDispute = async () => {
     if (!disputeId) return
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         setMessages(messagesData)
       } catch (error) {
         console.error("Error loading dispute data:", error),
@@ -203,7 +188,6 @@ export function DisputeDetail() {
 
   };
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -219,7 +203,6 @@ import { format, formatDistanceToNow } from "date-fns",;
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;
 import { useAuth } from "@/hooks/useAuth",;
-=======
 "
 import React, { useState, useEffect } from "react",;"
 import { useParams, useNavigate } from "react-router-dom",;"
@@ -236,7 +219,6 @@ import { format, formatDistanceToNow } from "date-fns",;"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;"
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;"
 import { useAuth } from "@/hooks/useAuth",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "sonner",;
 export function DisputeDetail() { return null; }
   const { disputeId } = useParams() as { disputeId?: string },;
@@ -287,13 +269,7 @@ export function DisputeDetail() { return null; }
 
   const handleResolveDispute = async () => {}
     if (!disputeId) return,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary");
       return
@@ -308,8 +284,6 @@ export function DisputeDetail() { return null; }
 const success = await resolveDispute(disputeId, resolution);
 
     const success = await resolveDispute(disputeId, resolution),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -320,8 +294,6 @@ const success = await resolveDispute(disputeId, resolution);
       })
     }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   const handleSendMessage = async () => {}
@@ -329,16 +301,10 @@ const success = await resolveDispute(disputeId, resolution);
 
     setIsSending(true),
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
-=======
         if (!resolution.summary) {
-=======
 
     if (!resolution.summary) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error("Please provide a resolution summary");
       return
     }
@@ -349,12 +315,8 @@ const success = await resolveDispute(disputeId, resolution);
       toast.error("Please provide a resolution summary"),
       return
 }    try {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
     try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     }
     const success = await resolveDispute(disputeId, resolution);
 
@@ -379,7 +341,6 @@ const success = await resolveDispute(disputeId, resolution);
     setIsSending(true),
 
     try {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {}
         // Refresh messages;
@@ -396,7 +357,6 @@ const success = await resolveDispute(disputeId, resolution);
       return;
     }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {;
       setDispute({;
@@ -426,9 +386,6 @@ const success = await resolveDispute(disputeId, resolution);
     } finally {;
       setIsSending(false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   };
 
@@ -465,11 +422,8 @@ const success = await resolveDispute(disputeId, resolution);
     }
 },;
   const handleSendMessage = async () => {;
-<<<<<<< HEAD
     if (!disputeId || !message && message.trim()) return;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setIsSending(true);
     try {;
       const success = await addDisputeMessage(disputeId, message, isAdmin),;
@@ -487,35 +441,28 @@ const success = await resolveDispute(disputeId, resolution);
   },;
   if (isLoading) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="p-8 text-center">;
-=======
 "
       <div className="p-8 text-center">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>;
         <p>Loading dispute details...</p>;
       </div>;
     );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
       default: return "default"
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return (
 
   }
 
     return (
-=======
 
   }
 
     return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="p-8 text-center">
         <p>Dispute not found</p>"
         <Button onClick={() => navigate("/dashboard/disputes")} className="mt-4">
@@ -560,16 +507,10 @@ if (!dispute) {;
 ;
   if (!dispute) {;
     return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="p-8 text-center">;
         <p>Dispute not found</p>;"
-=======
       <div className="p-8 text-center">;
         <p>Dispute not found</p>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Button onClick={() => navigate("/dashboard/disputes")} className="mt-4">;
           Back to Disputes;
         </Button>;
@@ -579,25 +520,14 @@ if (!dispute) {;
 
 const getStatusBadgeVariant = (status: DisputeStatus) => {;
 
-=======
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     switch (status) {;
       case "open": return "default";
       case "under_review": return "secondary",;
       case "resolved": return "outline", // Changed from "success" to "outline";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { use_disputes } from '@/hooks / use_disputes';
@@ -613,7 +543,6 @@ import { format, formatDistanceToNow } from './date - fns';
 import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from './lucide-react';
 import { use_auth } from '@/hooks / use_auth';
-=======
     switch (status) {;"
       case "open": return "default";"
       case "under_review": return "secondary",;"
@@ -634,7 +563,6 @@ import { format, formatDistanceToNow } from './date - fns';'
 import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';'
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from './lucide-react';'
 import { use_auth } from '@/hooks / use_auth';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from './sonner';
 export /**;
  * DisputeDetail - Function description;
@@ -783,9 +711,6 @@ if ( {) {
       case "open": return "default";
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from './success'; to "outline";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       case "closed": return "outline";
       default: return "default";
     }
@@ -805,7 +730,6 @@ import { format, formatDistanceToNow } from "date-fns",;
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;
 import { useAuth } from "@/hooks/useAuth",;
-=======
 
 "
 import React, { useState, useEffect } from "react",;"
@@ -823,7 +747,6 @@ import { format, formatDistanceToNow } from "date-fns",;"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;"
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;"
 import { useAuth } from "@/hooks/useAuth",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "sonner",;
 ;
 export function DisputeDetail() { return null; }
@@ -938,18 +861,9 @@ return (;
         <div>;"
           <div className="flex items-center gap-2">;"
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
-<<<<<<< HEAD
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {dispute.status.replace('_ ')}
             </Badge>
           </div>"
@@ -964,7 +878,6 @@ return (;
           {isAdmin && dispute.status === "open" && ("
             <Button onClick={() => handleStatusChange("under_review")}>
               Start Review;
-=======
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
 
               {dispute.status.replace('_ ')}
@@ -981,13 +894,10 @@ return (;
           {isAdmin && dispute.status === "open" && (
             <Button onClick={() => handleStatusChange("under_review")}>
               Start Review
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </Button>
           )}
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
   return ("
     <div className="container mx - auto p - 4 space - y-6">;"
@@ -1008,7 +918,6 @@ return (;
             Back to List;
           </Button>;"
           {is_admin && dispute.status === "open" && ("
-=======
 ;
   return (
     <div className="container mx - auto p - 4 space - y-6">;
@@ -1029,7 +938,6 @@ return (;
             Back to List;
           </Button>;
           {is_admin && dispute.status === "open" && (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Button on_click={() => handleStatusChange ("under_review")}>;
               Start Review;
             </Button>)}
@@ -1039,16 +947,12 @@ return (;
       {dispute.status === "resolved" && dispute.resolution_summary && ("
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;"
           <Check className="h - 4 w - 4" />;
-=======
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;      {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green-900">;
           <Check className="h - 4 w-4" />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
           <Check className="h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <AlertTitle > This dispute has been resolved</AlertTitle>;
           <AlertDescription>;
             {dispute.resolution_summary}
@@ -1148,28 +1052,16 @@ return (;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">2</Badge>;
                           <span > Under review</span>;
                         </li>)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {dispute.resolved_at && (
                         <li className="flex gap - 2 items - center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">;
-=======
                         <li className="flex gap - 2 items-center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify-center">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                         <li className="flex gap - 2 items-center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify-center">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       {dispute.resolved_at && (
                         <li className="flex gap - 2 items - center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                             {dispute.status !== "open" ? "3" : "2"}
 
     <div className="container mx-auto p-4 space-y-6">;
@@ -1187,7 +1079,6 @@ return (;
         </div>;
 
         <div className="flex gap-2">;
-=======
                 </CardHeader>;"
                 <CardContent className="space - y-4">;
                   <div>;"
@@ -1241,7 +1132,6 @@ return (;
         </div>;
 "
         <div className="flex gap-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>;
             Back to List;
           </Button>;"
@@ -1420,12 +1310,10 @@ const isCurrentUser = user?.id === msg.user_id;                    )}
                           return (
 
                     )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>;
                 </CardContent>;
                 <CardFooter>;"
                   <div className="w-full space-y-4">;
-<<<<<<< HEAD
                               key={msg.id}
                               className={`flex ${isCurrentUser ? 'justify - end' : 'justify - start'}`}
                             >;
@@ -1526,10 +1414,8 @@ on_click={() => handleStatusChange ("closed")}                          disabled
                         <div className="space - y-4">;
                           <Textarea;
                             placeholder="Enter resolution summary...";
-<<<<<<< HEAD
                             value={resolution.summary}
 
-<<<<<<< HEAD
 ;
                     <div>;"
                       <h3 className="font-medium mb-2">Admin Notes</h3>;"
@@ -1549,12 +1435,7 @@ on_click={() => handleStatusChange ("closed")}                          disabled
                                 <span className="text-sm font-medium">'
                                   {msg.user_profile?.display_name || 'Admin'}
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                                 </span>
                               </div>"
                               <span className="text-xs opacity-70">'
@@ -1570,7 +1451,6 @@ on_click={() => handleStatusChange ("closed")}                          disabled
                       </div>"
                       <div className="mt-4 space-y-4">
                         <Textarea"
-=======
                             value={resolution.summary}
 
 ;
@@ -1607,7 +1487,6 @@ on_click={() => handleStatusChange ("closed")}                          disabled
                       </div>
                       <div className="mt-4 space-y-4">
                         <Textarea
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           placeholder="Add an admin note (only visible to administrators)..."
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
@@ -1617,22 +1496,14 @@ on_click={() => handleStatusChange ("closed")}                          disabled
 onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
-<<<<<<< HEAD
                                 getDisputeMessages(disputeId!).then(setMessages);
                     />;
-=======
                             value={resolution.summary}                    />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                             value={resolution.summary}                    />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           onClick={() => {}
                             if (message.trim()) {}
                               addDisputeMessage(disputeId!, message, true).then(() => {}
                     />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                         <Button
                           variant="outline"
                           onClick={() => {
@@ -1640,7 +1511,6 @@ onClick={() => {
                               addDisputeMessage(disputeId!, message, true).then(() => {
 
                     />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;"
                         {isSending ? "Sending..." : "Send Message"}
@@ -1698,7 +1568,6 @@ onClick={() => {
                         >;
                           Close Dispute;
                         </Button>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       </div>;
                     </div>;"
                     {dispute && dispute.status !== "resolved" && (;
@@ -1803,13 +1672,10 @@ onClick={() => {
 getDisputeMessages(disputeId!).then(setMessages);
 
                                 setMessage("")
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               })
                                 getDisputeMessages(disputeId!).then(setMessages),"
                                 setMessage("")
                               })
-<<<<<<< HEAD
-<<<<<<< HEAD
                       </div>;
                       <div className="mt-4 space-y-4">;
                         <Textarea;"
@@ -1824,13 +1690,9 @@ getDisputeMessages(disputeId!).then(setMessages);
                                 getDisputeMessages(disputeId!).then(setMessages);"
                                 setMessage("");
                               });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                             }                      </div>;
                       ;
-=======
 
                             on_change={(e) => set_resolution ({ ...resolution, summary: e.target.value })}"
                             className="min - h-[100px]";
@@ -1886,7 +1748,6 @@ getDisputeMessages(disputeId!).then(setMessages);
 
                       </div>;
                       ;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <div className="mt-4 space-y-4">;
                         <Textarea;"
                           placeholder="Add an admin note (only visible to administrators)...";
@@ -1898,7 +1759,6 @@ getDisputeMessages(disputeId!).then(setMessages);
                                 setMessage("")
                               })
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             }
                           }}
                         >
@@ -1979,11 +1839,7 @@ getDisputeMessages(disputeId!).then(setMessages);
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                             }
                           .filter(msg => msg.is_admin_note);
                           .map((msg) => (;
@@ -2038,7 +1894,6 @@ getDisputeMessages(disputeId!).then(setMessages);
                 </Card>;
 "
         <div className="space-y-6">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Card>;
             <CardHeader>;
               <CardTitle>Parties Involved</CardTitle>;
@@ -2121,16 +1976,11 @@ getDisputeMessages(disputeId!).then(setMessages);
               </div>;
 <div className="flex justify-between">;
                 <span className="font-medium">Raised by:</span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" :"Talent"}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               <div className="flex justify - between">;
                 <span className="font - medium">Raised by:</span>;
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>;
             </CardContent>;
           </Card>;
@@ -2257,7 +2107,6 @@ const messagesData = await getDisputeMessages (disputeId);
 setMessages (messagesData) 
 }catch (error) {
 }finally {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   setIsLoading (false) 
 }
           <p className="text-muted-foreground">"
@@ -2272,7 +2121,6 @@ setMessages (messagesData)
 }
 };
 }const success = await resolveDispute (disputeId, resolution);
-<<<<<<< HEAD
 if (success && dispute) {}
   setDispute ({}
   ...dispute;"
@@ -2413,26 +2261,14 @@ formatDistanceToNow (new Date (dispute.created at), {}
 }
 }
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>) 
 }
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   msg.id;"
 }className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900"> <div className="flex items-center justify-between mb-2"> <div className="flex items-center gap-2"> <Avatar className="h-6 w-6"> <AvatarImage src= {"
 }</span> </div> <span className="text-xs opacity-70"> {"
@@ -2447,4 +2283,3 @@ pr-12325
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) "
 }</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

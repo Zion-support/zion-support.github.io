@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -18,7 +13,6 @@ import { DollarSign,
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {}
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -27,7 +21,6 @@ import * as React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   DollarSign,
   Brain,
   Shield,
@@ -38,12 +31,9 @@ import {
   Lock,
   CreditCard,
   Database,
-<<<<<<< HEAD
   FileText,;
   Users;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -53,12 +43,8 @@ import Layout from '../../components/Layout';
 import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';;
 import React from 'react';
 import Link from 'next/link';';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
-=======
 import Layout from '../../components/Layout';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const services = [
   {
     title: 'Blockchain Solutions',
@@ -68,12 +54,10 @@ const services = [
       'Smart contract development,',
       'Cryptocurrency integration',',
       'Decentralized finance (DeFi)',',
-<<<<<<< HEAD
       'Digital identity management'';
     ];
   },
   {}
-<<<<<<< HEAD
 
     title: 'AI Trading Algorithms,',;
     description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',;
@@ -89,7 +73,6 @@ const services = [
       'Algorithmic trading systems,',
       'Risk management AI',',
       'Market prediction models',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Portfolio optimization'';
     ];
   },
@@ -104,7 +87,6 @@ title: 'Digital Payment Systems,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Digital Payment Systems,',
     description: 'Secure, scalable payment processing solutions for modern financial transactions.',',
     icon: CreditCard,
@@ -112,14 +94,10 @@ title: 'Digital Payment Systems,',;
       'Payment gateway integration,',
       'Mobile payment solutions',',
       'Cross-border payments',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Fraud detection systems'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Risk Management AI,',;
     description: 'AI-powered risk assessment and management tools for financial institutions.,',;
@@ -135,7 +113,6 @@ title: 'Digital Payment Systems,',;
       'Credit risk analysis,',
       'Market risk modeling',',
       'Operational risk assessment',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Regulatory compliance monitoring'';
     ];
   },
@@ -150,7 +127,6 @@ title: 'Fraud Detection Systems,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Fraud Detection Systems,',
     description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',
     icon: Lock,
@@ -158,14 +134,10 @@ title: 'Fraud Detection Systems,',;
       'Real-time transaction monitoring,',
       'Behavioral analysis',',
       'Pattern recognition',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Automated alert systems'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Regulatory Compliance Tools,',;
     description: 'Automated compliance monitoring and reporting for financial regulations.,',;
@@ -178,8 +150,6 @@ title: 'Fraud Detection Systems,',;
       'Compliance dashboards'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
@@ -195,7 +165,6 @@ const benefits = [;
       'Compliance dashboards'';
     ];
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = []
   {'
@@ -204,7 +173,6 @@ const benefits = []
     icon: Shield;
   },
 {}
-<<<<<<< HEAD
 
     title: 'Improved Efficiency,',;
     description: 'Automated processes reduce manual work and increase operational efficiency.,',;
@@ -221,8 +189,6 @@ const benefits = []
     icon: FileText,;
 
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 export default function FinancePage() {
   return (;
@@ -271,7 +237,6 @@ export default function FinancePage() {
             </motion.div>;
           </div>;
         </section>;
-=======
     title: 'Regulatory Compliance Tools,',
     description: 'Automated compliance monitoring and reporting for financial regulations.,',
     icon: FileText,
@@ -296,12 +261,9 @@ const benefits = [
     icon: Shield
   },
   {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Improved Efficiency,',
-=======
   {}'
     title: 'Improved Efficiency,','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Automated processes reduce manual work and increase operational efficiency.,',
     icon: BarChart3;
   },
@@ -318,19 +280,16 @@ const benefits = [
 ;];
 export default function FinancePage() {;
   return (
-<<<<<<< HEAD
     <Layout
       title="Financial Technology Solutions - Zion Tech Group"
       description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems."
       keywords="fintech, blockchain solutions, AI trading, digital payments, risk management, financial technology"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems.""
       keywords="fintech, blockchain solutions, AI trading, digital payments, risk management, financial technology""
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
@@ -342,8 +301,6 @@ export default function FinancePage() {;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >"
@@ -378,9 +335,6 @@ export default function FinancePage() {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -397,11 +351,9 @@ transition={{ duration: 0.8 }}
               className="text-center mb-16"
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto"">;
-=======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto""
             >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex items-center justify-center mb-6">";
                 <DollarSign className="w-12 h-12 text-green-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -426,13 +378,10 @@ transition={{ duration: 0.8 }}
             </motion.div>;
           </div>;
 </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Financial Technology Services;
               </h2>"
@@ -448,10 +397,6 @@ transition={{ duration: 0.8 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">";
@@ -475,7 +420,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
-=======
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
               {services && services.map((service, index) => (,;
@@ -506,8 +450,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";                        {feature}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
@@ -524,22 +466,17 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -547,9 +484,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -577,16 +511,11 @@ Our financial technology solutions deliver enhanced security, improved efficienc
             </div>;
           </div>;
         </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               className="text-center mb-16"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Fintech Solutions?
               </h2>"
@@ -599,7 +528,6 @@ Our financial technology solutions deliver enhanced security, improved efficienc
               {benefits.map((benefit, index) => (
                 <motion.div;
                   key={benefit.title}
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
@@ -612,9 +540,6 @@ Our financial technology solutions deliver enhanced security, improved efficienc
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
@@ -639,31 +564,21 @@ Our financial technology solutions deliver enhanced security, improved efficienc
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}        {/* CTA Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">"
-=======
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Financial Services?;
-=======
               transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Financial Services?;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              transition={{ duration: 0.8 }}
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Financial Services?;
               </h2>;
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";
                 Let our fintech experts help you implement cutting-edge financial technology;
@@ -689,11 +604,8 @@ Our financial technology solutions deliver enhanced security, improved efficienc
         </section>;
       </div>;
 </Layout>;            >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     </Layout>;
             >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?
               </h2>"
@@ -715,9 +627,6 @@ Our financial technology solutions deliver enhanced security, improved efficienc
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Financial Services?;
@@ -741,10 +650,5 @@ Our financial technology solutions deliver enhanced security, improved efficienc
     </Layout>;
   ),;
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

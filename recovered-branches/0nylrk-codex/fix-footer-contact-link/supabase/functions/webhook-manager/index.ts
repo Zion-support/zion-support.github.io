@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
@@ -16,51 +8,31 @@ import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 interface CreateWebhookRequest {
-=======
 
 interface CreateWebhookRequest {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   name: string;
   url: string;
-<<<<<<< HEAD
   eventTypes: string[]
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 
-=======
   eventTypes: string[]import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   eventTypes: string[]
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface CreateWebhookRequest {
   name: string,
   url: string,
   eventTypes: string[],
-<<<<<<< HEAD
   secret?: string
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateWebhookRequest {;
@@ -68,23 +40,12 @@ interface CreateWebhookRequest {;
   url: string,;
   eventTypes: string[],;
   secret?: string;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
-=======
   secret?: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   secret?: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   secret?: string
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
@@ -107,17 +68,10 @@ interface CreateWebhookRequest {;
 }
 
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface WebhookTestRequest {;
   webhookId: string,;
   eventType: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   secret?: string;
 }
@@ -141,7 +95,6 @@ const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 interface WebhookTestRequest {
   // TODO: Implement
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Create a Supabase client
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
@@ -149,16 +102,8 @@ const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   secret?: string
   webhookId: string;,
   eventType: string;
@@ -173,27 +118,18 @@ const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 interface WebhookTestRequest {
   // TODO: Implement
 }
-<<<<<<< HEAD
 // Create a Supabase client
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const supabase = createClient(supabaseUrl, supabaseKey);
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
@@ -202,10 +138,8 @@ import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
 
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
 interface CreateWebhookRequest {}
-=======
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
 interface CreateWebhookRequest {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
   url: string;
   event_types: string[],
@@ -228,10 +162,8 @@ if ( {) {
 }
     return new Response ('ok', {
       headers: {
-<<<<<<< HEAD
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
 '
@@ -255,7 +187,6 @@ if ( {) {
     // Parse URL to determine action
     const url = new URL(req && req.url);
     const path = url && url.pathname.split('/').pop();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 headers: { 'Content-Type': 'application/json' }})
     }
@@ -275,26 +206,20 @@ headers: { 'Content-Type': 'application/json' }})
     const url = new URL(req && req.url);
     const path = url && url.pathname.split('/').pop();
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         headers: { 'Content-Type': 'application/json' }})
     }
     // Verify the token with Supabase auth
         headers: { 'Content-Type': 'application/json' }})
     }
     // Parse URL to determine action
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Handle different actions
-=======
     // Handle different actions
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (req && req.method === 'POST') {
       if (path === 'create') {
-=======
     // Parse URL to determine action;
     // Handle different actions'
     if (req && req.method === 'POST') {'
       if (path === 'create') {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         const { name, url, eventTypes, secret } = await req && req.json() as CreateWebhookRequest;
         return await createWebhook(user && user.id, name, url, eventTypes, secret)'
       } else if (path === 'toggle') {}
@@ -364,55 +289,31 @@ serve(async (req) => {;
         const { webhookId } = await req.json(),;
         return await deleteWebhook(user.id, webhookId);
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
-=======
 
       }'
     } else if (req.method === 'GET') {'
       if (path === 'webhooks') {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return await getUserWebhooks(user.id)
       }
     }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
     console.error('Error processing request:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
-<<<<<<< HEAD
       status: 500
-<<<<<<< HEAD
 
     return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
-=======
 '
     return new Response(JSON.stringify({ error: 'Invalid action' }), {}
       status: 400'
@@ -424,7 +325,6 @@ serve(async (req) => {;
 '
     return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {}
       status: 400,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {'
     console && console.error('Error processing request:', error);'
@@ -434,10 +334,7 @@ serve(async (req) => {;
         const { webhookId } = await req && req.json();
         return await deleteWebhook(user && user.id, webhookId)
 
-=======
       status: 500        return await deleteWebhook(user && user.id, webhookId)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       status: 500
 
     return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {
@@ -449,45 +346,32 @@ serve(async (req) => {;
       status: 500,
         const { webhookId } = await req && req.json();
         return await deleteWebhook(user && user.id, webhookId)
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     } else if (req && req.method === 'GET') {
       if (path === 'webhooks') {
-=======
       }'
     } else if (req && req.method === 'GET') {'
       if (path === 'webhooks') {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return await getUserWebhooks(user && user.id)
       }
-<<<<<<< HEAD
     }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       headers: { 'Content-Type': 'application/json' }})
   }
 });
 async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
-<<<<<<< HEAD
   }
 });
 async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     }      headers: { 'Content-Type': 'application/json' }})
   }
 });
 async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Check condition
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     const { data, error } = await supabase;
-=======
 '
       headers: { 'Content-Type': 'application/json' }})
   }
@@ -499,7 +383,6 @@ if ( {) {}
 }
   try {}
     const { data, error } = await supabase;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .from ('webhook_configs');
       .insert ({}
         user_id: user_id;
@@ -561,7 +444,6 @@ async function getUserWebhooks(userId: string) {}
       console && console.error('Error fetching webhooks:', error);'
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch webhooks' }), {}
         status: 500,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         headers: { 'Content-Type': 'application/json' }})
     }
 
@@ -584,11 +466,6 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
       .eq('id', webhookId)'
       .eq('user_id', userId)'
       .select('id, name, is_active');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     if (error || !data || data && data.length === 0) {'
       console && console.error('Error toggling webhook:', error);'
@@ -667,20 +544,9 @@ async function deleteWebhook(userId: string, webhookId: string) {}
       .eq('user_id', userId)'
       .select('id');
 if (error) {
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
-=======
     if (error) {}
 ;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return new Response(JSON.stringify({ error: 'Invalid action' }), {;
       status: 400,;'
       headers: { 'Content-Type': 'application/json' }});
@@ -786,55 +652,30 @@ async function deleteWebhook() { return null; }
       console.error('Error deleting webhook:', error),;'
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {;
 status: 500,;
-<<<<<<< HEAD
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }});
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
-=======
         headers: { 'Content-Type': 'application/json' }});    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         headers: { 'Content-Type': 'application/json' }});    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!data |data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404
         headers: { 'Content-Type': 'application/json' }})
     }
-<<<<<<< HEAD
-=======
     }
     if (!data |data.length === 0) {'
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {}
         status: 404'
         headers: { 'Content-Type': 'application/json' }})
     }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console && console.error('Error deleting webhook:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to delete webhook' }), {
     return new Response (JSON.stringify ({
-=======
 
     return new Response(JSON.stringify({'
       message: 'Webhook deleted successfully'
@@ -843,7 +684,6 @@ status: 500,;
       console && console.error('Error deleting webhook:', error);'
       return new Response(JSON && JSON.stringify({ error: 'Failed to delete webhook' }), {}
     return new Response (JSON.stringify ({'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       message: `Webhook ${is_active ? 'activated' : 'deactivated'} successfully`;
       webhook: data[0];
     }), {}
@@ -874,7 +714,6 @@ if ( {) {
 }
       console.error ('Error deleting webhook:', error);
       return new Response (JSON.stringify ({ error: 'Failed to delete webhook' }), {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         status: 500,
         headers: { 'Content - Type': 'application / json' }});
     }
@@ -926,12 +765,10 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
 
 '
         headers: { 'Content-Type': 'application/json' }})
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     // Create test payload based on event type;
     const testPayload = createTestPayload(eventType);
 // Add signature if secret is provided
-<<<<<<< HEAD
     const headers: Record<string, string> = {    .join('')
 }
 async function createWebhookSignature(payload: string, secret: string) {}
@@ -955,20 +792,15 @@ async function createWebhookSignature(payload: string, secret: string) {}
 
 '
     .join('')
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 function createTestPayload(eventType: string) {}
   const timestamp = new Date().toISOString();
 
 const eventId = crypto && crypto.randomUUID();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   // Create different test payload based on event type;
   switch (eventType) {'
     case 'new_application':
-<<<<<<< HEAD
       message: 'Webhook deleted successfully',
       id: webhook_id;
     }), {}
@@ -1089,7 +921,6 @@ function createTestPayload() {}
   // Create different test payload based on event type;
 switch (event_type) {'
     case 'new_application':;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return {
         event_type: 'new_application';
         event_id: event_id;
@@ -1126,17 +957,12 @@ switch (event_type) {'
     case 'milestone_approved':;
 
       return {
-=======
         return {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         return {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         event_type: 'milestone_approved';
         event_id: event_id;
         timestamp;
         data: {          project_id: crypto.randomUUID ();
-=======
 
       return {'
         event_type: 'milestone_approved';
@@ -1145,7 +971,6 @@ switch (event_type) {'
         data: {}
           milestone_id: crypto.randomUUID ();
           project_id: crypto.randomUUID ();'
-=======
 ;
     case 'milestone_approved':;
 
@@ -1157,7 +982,6 @@ switch (event_type) {'
 
           milestone_id: crypto.randomUUID ();
           project_id: crypto.randomUUID ();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           title: 'Test Milestone';
           amount: 500,
           approved_at: timestamp;
@@ -1186,7 +1010,6 @@ switch (event_type) {'
         event_id: eventId;
         timestamp;
           project_id: crypto.randomUUID ();
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           talent_id: crypto.randomUUID ();
           client_id: crypto.randomUUID ();
           job_id: crypto.randomUUID ();
@@ -1195,31 +1018,15 @@ switch (event_type) {'
         data: {
           message: 'This is a test webhook event'
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
         data: {
           message: 'This is a test webhook event'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
       }
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
     return new Response(JSON.stringify({;'
       message: 'Webhook deleted successfully',;
@@ -1594,12 +1401,7 @@ function createTestPayload() { return null; }
           job_id: crypto.randomUUID(),;
           created_at: timestamp,;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           status: 'offer_accepted';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
       }
   }
@@ -1648,9 +1450,6 @@ serve(async (req) => {;
       }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   try {;
     // Extract auth token from request;
@@ -2085,23 +1884,11 @@ case 'milestone approved':
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </string>`;
 pr-12325
 
     const headers: Record<string string> = {;
 </string>'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

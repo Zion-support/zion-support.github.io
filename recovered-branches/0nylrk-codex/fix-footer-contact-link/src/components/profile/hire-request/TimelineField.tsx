@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
   FormField
@@ -36,38 +31,19 @@ import {
 } from '@/components / ui / select';
 import { UseFormReturn  } from './react - hook - form';
 import { FormValues  } from './useHireRequestForm';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TimelineFieldProps {
   form: UseFormReturn < FormValues>;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import {
-=======
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   FormField,
   FormItem,
   FormLabel,
@@ -83,17 +59,14 @@ import {}
 } from "@/components/ui/select";"
 import { UseFormReturn } from "react-hook-form";"
 import { FormValues } from "./useHireRequestForm";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
-<<<<<<< HEAD
 
 { value: "Less than 1 week", label: "Less than 1 week" }
     { value: "1-2 weeks", label: "1-2 weeks" }
@@ -101,17 +74,10 @@ import {FormValues} from "./useHireRequestForm";
     { value: "1-2 months", label: "1-2 months" }
     { value: "3-6 months", label: "3-6 months" }
     { value: "6+ months", label: "6+ months" }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TimelineFieldProps {
   form: UseFormReturn < FormValues>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 } from "@/components/ui/select";
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
@@ -119,25 +85,18 @@ interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     { value: "Less than 1 week", label: "Less than 1 week" },
     { value: "1-2 weeks", label: "1-2 weeks" },
     { value: "2-4 weeks", label: "2-4 weeks" },
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     { value: "Ongoing", label: "Ongoing" };
-=======
 "
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";"
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";"
@@ -151,33 +110,20 @@ import {FormValues} from "./useHireRequestForm";
     { value: "1-2 months", label: "1-2 months" },"
     { value: "3-6 months", label: "3-6 months" },"
     { value: "6+ months", label: "6+ months" },"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { value: "Ongoing", label: "Ongoing" },
   ];
 { value: "Ongoing", label: "Ongoing" }
   ],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-=======
   ];
     { value: "Ongoing", label: "Ongoing" }
   ],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   ];
     { value: "Ongoing", label: "Ongoing" }
   ],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     { value: "Ongoing", label: "Ongoing" },
   ];
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <FormField;
       control={form.control}"
@@ -247,14 +193,11 @@ function TimelineField() {}
                 {timeline_options.map ((option) => (
                   <SelectItem key={option.value} value={option.value}>;
                     {option.label}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       render={({ field }) => (;
         <FormItem>;"
           <FormLabel className="text-white">Project Timeline</FormLabel>;
           <FormControl>;
-<<<<<<< HEAD
             <Select;
               onValueChange={field.onChange} ;
               value={field.value}
@@ -266,13 +209,9 @@ function TimelineField() {}
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {option.label}
                   </SelectItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
@@ -363,7 +302,6 @@ function TimelineField() {
 
                     {option.label}
                   </SelectItem>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 ))}
 </Select>"
               <SelectTrigger className="bg - zion - blue - light / 20 border - zion - blue - light text - white">;"
@@ -398,4 +336,3 @@ function TimelineField() {
                     {option.label}
                   </SelectItem>
                 ))}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

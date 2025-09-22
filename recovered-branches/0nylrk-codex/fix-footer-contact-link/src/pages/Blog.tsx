@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -16,17 +12,9 @@ import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/c
 import {BlogPost} from "@/types/blog";
 import {Search} from "lucide-react";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -44,14 +32,8 @@ import { Search } from "lucide-react";
 const BLOG_POSTS: BlogPost[] = [
   {
 import { BlogPost } from "@/types/blog",
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Search } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { Search } from "lucide-react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -60,7 +42,6 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "ai-trends-2025",
 
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
-=======
 
 import { BlogPost } from "@/types/blog",;
 import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
@@ -90,22 +71,13 @@ import { Search } from "lucide-react","
     slug: "ai-trends-2025",""
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.","
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <h2>1. Multimodal AI Systems</h2>
-=======
 import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <h2>1. Multimodal AI Systems</h2>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>"
 pr-12325
@@ -120,7 +92,6 @@ pr-12325
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
-<<<<<<< HEAD
 
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -139,20 +110,13 @@ pr-12325
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",`
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       name: "Dr. Alicia Zhang"
       title: "AI Research Director"
-=======
 "
       name: "Dr. Alicia Zhang""
       title: "AI Research Director""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
       title: "AI Research Director",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
     }"
     publishedDate: "Apr 15, 2025";"
@@ -168,14 +132,9 @@ pr-12325
     slug: "optimize-ai-listings"
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
 content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       name: "Dr. Alicia Zhang"
       title: "AI Research Director"
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -192,11 +151,7 @@ content: `<p>In the competitive AI marketplace, standing out is essential. This 
     title: "How to Optimize Your AI Service Listings for Maximum Visibility"
     slug: "optimize-ai-listings"
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
-<<<<<<< HEAD
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   {"
     id: "optimize-ai-listings""
     title: "How to Optimize Your AI Service Listings for Maximum Visibility""
@@ -204,10 +159,7 @@ content: `<p>In the competitive AI marketplace, standing out is essential. This 
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."`
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -226,9 +178,6 @@ content: `<p>In the competitive AI marketplace, standing out is essential. This 
       title: "Marketing Strategist""
       avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     },
     publishedDate: "Apr 10, 2025",
     readTime: "8 min read",
@@ -247,9 +196,6 @@ content: `<p>In the competitive AI marketplace, standing out is essential. This 
     featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
   }
 {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
   },
   {
@@ -263,7 +209,6 @@ content: `<p>As AI and cloud computing demand grows exponentially, so does the e
     featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
   }
   {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -281,42 +226,27 @@ content: `<p>As AI and cloud computing demand grows exponentially, so does the e
       title: "Sustainability Engineer""
       avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     publishedDate: "Apr 5, 2025",
     readTime: "6 min read",
     category: "Sustainability",
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
   },
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
-=======
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>  {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>  {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: "ai-ethics-frameworks"
     title: "Implementing Ethical AI Frameworks in Enterprise Applications"
     slug: "ai-ethics-frameworks"
     excerpt: "A comprehensive guide to integrating ethical considerations into your AI development lifecycle."
 
-=======
 <h2>Measuring and Reporting Impact</h2>`;
 <p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`;`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     content: `<p>As AI systems become more prevalent in critical decision-making, organizations must implement robust ethical frameworks to ensure responsible deployment. This article provides a practical roadmap for embedding ethics throughout your AI development lifecycle.</p>
 <h2>Establishing Ethical Principles</h2>'
 <p>Begin by defining clear ethical principles that align with your organization's values and industry requirements. These typically include fairness, transparency, accountability, privacy, and human oversight. These principles should be documented and socialized across all teams involved in AI development.</p>
@@ -333,8 +263,6 @@ pr-12325
     author: {
       name: "Dr. James Peterson"
       title: "AI Ethics Officer"
-<<<<<<< HEAD
-<<<<<<< HEAD
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
 
     },"
@@ -345,12 +273,6 @@ pr-12325
     featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
     id: "ai-talent-acquisition"
     title: "Winning the AI Talent War: Recruitment Strategies for 2025"
@@ -360,7 +282,6 @@ content: `<p>The demand for skilled AI professionals continues to outpace supply
 <h2>Beyond Compensation: What AI Talent Really Wants</h2>'
     content: `<p>The demand for skilled AI professionals continues to outpace supply, creating intense competition among employers. This article examines effective strategies for attracting and retaining top AI talent in today's challenging market.</p>
 <h2>Beyond Compensation: What AI Talent Really Wants</h2>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <p>While competitive salaries are essential, today's AI professionals are equally motivated by challenging problems, access to cutting-edge infrastructure, and opportunities to publish and contribute to the field. Creating an environment that balances practical applications with research opportunities can be a major differentiator.</p>
 <h2>Continuous Ethical Evaluation</h2>'
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;''
@@ -389,38 +310,24 @@ content: `<p>The demand for skilled AI professionals continues to outpace supply
     category: "Recruitment",
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
-=======
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"  {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"  {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: "ai-compute-optimization"
     title: "AI Compute Optimization: Balancing Performance and Cost"
     slug: "ai-compute-optimization"
     excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity."
 
-=======
 <h2>Retention Through Growth Paths</h2>`;
 <p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`;`;
 pr-12325
 <h2>Retention Through Growth Paths</h2>'
 <p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`;''
 <p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`;'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>
 <h2>Right-sizing Compute Resources</h2>
 <p>Many organizations overprovision computing resources for AI workloads. Implementing proper benchmarking and profiling helps identify true requirements and eliminate waste. Consider different compute profiles for development, training, and inference stages.</p>
@@ -435,8 +342,6 @@ pr-12325
     author: {
       name: "Michael Wong"
       title: "ML Infrastructure Architect"
-<<<<<<< HEAD
-<<<<<<< HEAD
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
 
 "All Categories";
@@ -473,8 +378,6 @@ const BLOG_POSTS: BlogPost[] = [;
     featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630";
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
     publishedDate: "Mar 15, 2025",
     readTime: "6 min read",
@@ -483,9 +386,7 @@ const BLOG_POSTS: BlogPost[] = [;
     featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
   }
 ],
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Categories for filtering
 const CATEGORIES = [
   "All Categories",
@@ -500,10 +401,7 @@ const CATEGORIES = [
 ],
 
   return (
-=======
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   "Infrastructure"
 
 // Categories for filtering;
@@ -511,7 +409,6 @@ const CATEGORIES = [;
 ],
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>
       <SEO"
         title="Blog - AI & Tech Insights""
@@ -529,8 +426,6 @@ const CATEGORIES = [;
             </p>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;"
@@ -643,7 +538,6 @@ const BLOG_POSTS: BlogPost[] = [;
     title: "How to Optimize Your AI Service Listings for Maximum Visibility",
     slug: "optimize - ai - listings",
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     content: `<p > In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>;
 <h2 > Crafting an Irresistible Service Title</h2>;
 <p > Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>;
@@ -796,7 +690,6 @@ const CATEGORIES = [;"
   }
 ],
 
-<<<<<<< HEAD
 // Categories for filtering;
 const CATEGORIES = ["
   "All Categories","
@@ -815,7 +708,6 @@ const CATEGORIES = [
   "Ethics",
   "Recruitment",
   "Infrastructure"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ],
 
 export default function Blog() {;
@@ -838,9 +730,6 @@ export default function Blog() {
 
 ],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>
       <SEO"
@@ -858,14 +747,7 @@ export default function Blog() {
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
             </p>
           </div>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return (
     <>
       <SEO
@@ -884,7 +766,6 @@ export default function Blog() {
             </p>
           </div>
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Header } from "@/components/Header",;
@@ -896,7 +777,6 @@ import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
 import { BlogPost } from "@/types/blog",;
-=======
           "
 import { useState } from "react",;"
 import { Link } from "react-router-dom",;"
@@ -909,7 +789,6 @@ import { Button } from "@/components/ui/button",;"
 import { Input } from "@/components/ui/input",;"
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;"
 import { BlogPost } from "@/types/blog",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Search } from "lucide-react",;
 // Sample blog data - in a real app this would come from an API or CMS;
 const BLOG_POSTS: BlogPost[] = [;
@@ -1111,7 +990,6 @@ const CATEGORIES = [;"
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT""
         canonical="https://app && app.ziontechgroup.com/blog"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       />;
       <Header />;"
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">;"
@@ -1122,18 +1000,9 @@ const CATEGORIES = [;"
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
             </p>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;
 ;
@@ -1154,7 +1023,6 @@ const CATEGORIES = [;"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
                     alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-=======
 "
             <div className="mb-16">;"
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;"
@@ -1164,7 +1032,6 @@ const CATEGORIES = [;"
                     alt={featuredPosts[0].title}"
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   />;
                 </div>;"
                 <div className="flex flex-col justify-center">;"
@@ -1192,10 +1059,7 @@ const CATEGORIES = [;"
 <Button
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
-<<<<<<< HEAD
                     />;
                     <div>;
                       <p className="text - white font - medium">{featured_posts[0].author.name}</p>;
@@ -1209,15 +1073,10 @@ const CATEGORIES = [;"
                     className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit";
                   >;
                     <Link to={`/blog/${featured_posts[0].slug}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;                    <img ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       src={featuredPosts[0].author.avatarUrl} ;                      alt={featuredPosts[0].author.name}
-=======
                     <img ;
                       src={featuredPosts[0].author.avatarUrl} ;                      alt={featuredPosts[0].author.name}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className="w-10 h-10 rounded-full mr-3";
                     />;
                     <div>;"
@@ -1250,30 +1109,15 @@ const CATEGORIES = [;"
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit";
                   >;`
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       Read Article;
                     </Link>;
                   </Button>;
                 </div>;
               </div>;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </div>;
           )}
         ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -1333,7 +1177,6 @@ const CATEGORIES = [;"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
                 <Input
                   type="text"
-=======
           {/* Filters and Search */}"
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
@@ -1342,9 +1185,7 @@ const CATEGORIES = [;"
 
                 <Input"
                   type="text""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   placeholder="Search articles..."
-<<<<<<< HEAD
                   value={searchQuery}
 
                   onChange={(e) => setSearchQuery(e && e.target.value)}"
@@ -1352,7 +1193,6 @@ const CATEGORIES = [;"
                 />;
               </div>;
 
-<<<<<<< HEAD
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>;"
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;"
                   <SelectValue placeholder="Select Category" />;
@@ -1420,7 +1260,6 @@ const CATEGORIES = [;"
                     <SelectItem key={category} value={category} className="text - white">;
                       {category}
                     </SelectItem>))}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </SelectContent>;
               </Select>;
             </div>;
@@ -1487,13 +1326,9 @@ const CATEGORIES = [;"
                       className="text-zion-cyan p-0 hover:text-zion-purple"
                       asChild>;`
                       <Link to={`/blog/${post && post.slug}`}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     </p>;
-=======
 
                     </p>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="flex items - center">;
                       <img;
                         src={post.author.avatar_url}
@@ -1555,9 +1390,6 @@ const CATEGORIES = [;"
                       asChild;
                     >;`
                       <Link to={`/blog/${post.slug}`}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           {filteredPosts && filteredPosts.length > 0 ? (;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {filteredPosts && filteredPosts.map((post) => (;
@@ -1671,7 +1503,6 @@ className="text-zion-cyan p-0 hover:text-zion-purple"
                       asChild;
                     >;
                       <Link to={`/blog/${post.slug}`}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         Read More →;
                       </Link>;
                     </Button>;
@@ -1685,9 +1516,7 @@ className="text-zion-cyan p-0 hover:text-zion-purple"
             <div className="text-center py-16">;"
               <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;"
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>;
-<<<<<<< HEAD
               <Button
-<<<<<<< HEAD
                 variant="outline"
                 onClick={() => {
 
@@ -1695,30 +1524,17 @@ className="text-zion-cyan p-0 hover:text-zion-purple"
                 }}
                 }}
                   setSelectedCategory("All Categories");
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters;
               </Button>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           )}
-=======
                   value={searchQuery}          )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   value={searchQuery}          )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 variant="outline" 
                 onClick={() => {;
                   setSearchQuery("");
@@ -1815,7 +1631,6 @@ variant="outline"
                 variant="outline"
                 onClick={() => {
                   setSearchQuery("");
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                   setSearchQuery(""),
                   setSelectedCategory("All Categories")
@@ -1838,22 +1653,15 @@ variant="outline"
             </div>
 
           )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>
       </div>
       <Footer />
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </p>;
-=======
 
                     </p>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="flex items-center">;
                       <img;
                         src={post.author.avatarUrl} ;
@@ -1869,7 +1677,6 @@ variant="outline"
                       className="text-zion-cyan p-0 hover:text-zion-purple";
                       asChild;
                     >;`
-=======
 }
                     </p>;
                     <div className="flex items-center">;
@@ -2110,7 +1917,6 @@ variant="outline"
                       className="text-zion-cyan p-0 hover:text-zion-purple";"
                       asChild;
                     >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <Link to={`/blog/${post.slug}`}>;
 </Link>
                       </Link>;
@@ -2170,13 +1976,7 @@ variant="outline"
 
 )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           )}
 )}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
@@ -2186,23 +1986,14 @@ variant="outline"
             </div>;
           )}
           )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>;
-=======
 }        </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }        </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               </Button>;
             </div>;
         </div>;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>;
       <Footer />;
 </Footer>
@@ -2222,11 +2013,8 @@ variant="outline"
                   setSearchQuery ("");"
                   setSelectedCategory ("All Categories");
 }}
-<<<<<<< HEAD
                 className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
-=======
                 className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >;
                 Clear all filters;
 
@@ -2638,34 +2426,19 @@ const BLOG_POSTS: BlogPost[] = [;
 }
 ;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" 
 }</div> </div> <Footer /> </>) 
 }
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
+}
 
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   ),; }];"
 //Categories for filtering "All Categories";""
@@ -2718,4 +2491,3 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
 pr-12325
 </Footer>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

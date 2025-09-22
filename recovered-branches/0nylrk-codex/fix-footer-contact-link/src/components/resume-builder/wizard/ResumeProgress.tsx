@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Progress } from "@/components/ui/progress";
 import { ResumeProgressProps } from "./types";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
@@ -16,15 +8,8 @@ import {Progress} from "@/components/ui/progress";
 import {ResumeProgressProps} from "./types";
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Progress } from "@/components/ui/progress";
-=======
 import { Progress } from "@/components/ui/progress";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ResumeProgressProps } from "./types";
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {}
   return ("
@@ -35,15 +20,10 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {}
       </div>"
       <Progress value={progress} className="h-2 w-full sm: w-48" />
 </div>
-<<<<<<< HEAD
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
-=======
 import { ResumeProgressProps } from "./types",  )
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { Progress } from "@/components/ui/progress";
 import { ResumeProgressProps } from "./types";
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
@@ -57,9 +37,6 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
     </div>
   );
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { Progress } from "@/components/ui/progress",;
 import { ResumeProgressProps } from "./types",;
@@ -69,32 +46,19 @@ import { Progress } from "@/components/ui/progress",;
 import { ResumeProgressProps } from "./types",  )
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
 
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   )
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 },
 import { Progress } from "@/components/ui/progress",;
-=======
 
   )
 },"
 import { Progress } from "@/components/ui/progress",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ResumeProgressProps } from "./types",;
 
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {;
@@ -124,7 +88,6 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) =>: an
     </div>);
 }
 ;
-<<<<<<< HEAD
 
 }
 };
@@ -158,4 +121,3 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
 pr-12325
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

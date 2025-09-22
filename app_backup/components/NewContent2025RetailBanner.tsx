@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, ShoppingBag, Heart, Users, BarChart3, ArrowRight } from 'lucide-react';
 
 const NewContent2025RetailBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -61,11 +60,11 @@ const NewContent2025RetailBanner = () => {
 
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <Heart className="w-5 h-5 text-pink-300" />
+                <span>Heart</span>
                 <span className="text-sm font-medium">98% Customer Satisfaction</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
-                <Users className="w-5 h-5 text-blue-300" />
+                <span className="w-5 h-5 text-blue-300">📊</span>
                 <span className="text-sm font-medium">89% Personalization Accuracy</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-4 py-2">
@@ -80,14 +79,14 @@ const NewContent2025RetailBanner = () => {
                 className="inline-flex items-center space-x-2 bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 <span>Read Full Guide</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
               </Link>
               <Link
                 href="/case-studies/fortune-500-retail-ai-transformation-2025"
                 className="inline-flex items-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
               >
                 <span>View Case Study</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
               </Link>
             </div>
           </div>
@@ -124,7 +123,7 @@ const NewContent2025RetailBanner = () => {
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
         aria-label="Dismiss banner"
       >
-        <X className="w-6 h-6" />
+        <span>X</span>
       </button>
     </div>
   );

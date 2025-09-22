@@ -28,11 +28,9 @@ export default function Placeholder() {
     <main className='min-h-screen p-8'>;
       <Head>;
         <title>Products - Placeholder</title>;
-=======
 export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {export default function Placeholder() {return (<main className='min-h-screen p-8' />;
       <Head />;
         <title />Products - Placeholder</title>;
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
         <meta name='robots' content='noindex' />;
       </Head>;
       <div className='max-w-3xl mx-auto' />;
@@ -95,7 +93,6 @@ export default /**
  */
 function Placeholder() {
   return (
-=======
         <title>Products - Placeholder</title>;"
         <meta name="robots" content="noindex" />;"
       ;"
@@ -105,7 +102,6 @@ function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/products</code>.</p>;""
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a>;"
     </main>;"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     <main className='min - h-screen p - 8'>;
 
         <title > Products - Placeholder</title>;
@@ -125,7 +121,6 @@ function Placeholder() {
         <p className="text - gray - 600 mb - 6">Auto - generated placeholder for missing route: <code>/products</code>.</p>;""
         <Link href="/"><a className="text - blue - 600 hover:underline">Back to Home</a>;"
     </main>);
-<<<<<<< HEAD
 }
 
 }
@@ -313,4 +308,3 @@ export default function Placeholder() {return (<main className='min-h-screen p-8
 
 }
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

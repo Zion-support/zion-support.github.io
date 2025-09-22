@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -46,30 +37,20 @@ import {}
 Globe,";
 } from "lucide-react";"
 import { useAuth } from "@/hooks/useAuth";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Link } from "react-router-dom";
 export default function ZionHireAI() {};
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from "@/hooks/useAuth",
 import { Link } from "react-router-dom",
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
   const { isAuthenticated } = useAuth(),
     return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>
       <SEO"
         title="Zion Hire AI - White-labeled AI Recruiting Assistant""
@@ -114,9 +95,6 @@ export default function ZionHireAI() { return null; }
       <Header />;"
       <main className="flex-1">;
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section ;
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24";
           style={primaryColor ? { backgroundImage:`linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } {}}
@@ -132,7 +110,6 @@ export default function ZionHireAI() { return null; }
                   improve candidate matches, and enhance the applicant experience.;
                 </p>;
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -142,9 +119,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button",
 import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth";
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Link } from "react-router-dom";
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
@@ -164,7 +139,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button",
 import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
 
@@ -234,24 +208,20 @@ export default function ZionHireAI() {;
       <SEO;
         title="Zion Hire AI - White-labeled AI Recruiting Assistant";
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
       <Header />;
       <main className="flex-1">;
         {/* Hero Section */}
-<<<<<<< HEAD
         <section
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
           style={}
             primaryColor;
               ? {}
-=======
         <section
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
           style={
             primaryColor
               ? {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`,
                 }
               : {}
@@ -284,15 +254,12 @@ export default function ZionHireAI() {;
                     variant="outline""
                     size="lg""
                     className="bg-transparent border-white text-white hover:bg-white/10"
-<<<<<<< HEAD
-<<<<<<< HEAD
                     asChild
                   >
                     <Link to="/enterprise/demo">
                       Request Demo
                     </Link>
                     <Link to="/enterprise/demo">Request Demo</Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   </Button>
                 </div>
               </div>"
@@ -561,9 +528,6 @@ function ZionHireAI() {
                     as_child;
                   >;
                     <Link to="/enterprise / demo">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       Request Demo;
                     </Link>;
                   </Button>;
@@ -593,8 +557,6 @@ export default function ZionHireAI() {;
       <Header />;
       <main className="flex-1">;
         {/* Hero Section */}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <section;
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24";
           style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
@@ -917,37 +879,26 @@ return (
         </section>;
       </main>;
       <Footer />;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 ;
         {/* CTA Section */}
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
         {/* CTA Section */}"
         <section className="bg-zion-blue-dark py-16">"
           <div className="container mx-auto px-4 md:px-6 text-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to transform your hiring process?
             </h2>"
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
               Join leading companies using Zion Hire AI to find better talent;
               faster, reduce time-to-hire, and improve candidate experience.
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </p>
             <Button"
               size="lg""
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
 asChild>;
               <Link to="/enterprise/demo">;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Schedule a Demo;
               </Link>;
             </Button>;
@@ -957,14 +908,10 @@ asChild>;
       <Footer />;
 </>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
               asChild
             >
-=======
               asChild;
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Link to="/enterprise/demo">Schedule a Demo</Link>
             </Button>
           </div>
@@ -973,16 +920,11 @@ asChild>;
       <Footer />
     </>
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 </>);
 }
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
     </>);
 }
@@ -1004,34 +946,13 @@ reduce time-to-hire, and improve candidate experience. </p> <Button asChild > <L
 }
     </>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 import React from "react";""
 import { Header } from "@/components/Header";""
@@ -1128,4 +1049,3 @@ pr-12325
 }
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

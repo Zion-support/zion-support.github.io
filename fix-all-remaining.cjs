@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 const path = require('path');
 
@@ -49,9 +43,7 @@ const helpCategories = [
       "API documentation",
       "Integration guides"
     ]
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 
@@ -349,4 +341,3 @@ fs.writeFileSync('/workspace/pages/industries/education.tsx', educationContent);
 console.log('✅ Fixed industries/education.tsx');
 
 console.log('🎉 All remaining syntax errors fixed!');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

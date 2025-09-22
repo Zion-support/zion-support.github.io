@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, DollarSign, Users, Clock, CheckCircle, Award } from 'lucide-react';
 
 const AI2025UltimateBreakthroughShowcase = () => {
   const content = [
@@ -83,7 +82,7 @@ const AI2025UltimateBreakthroughShowcase = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
-            <Star className="w-4 h-4 mr-2" />
+            <span>Star</span>
             <span className="text-sm font-medium">ULTIMATE BREAKTHROUGH CONTENT</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -132,7 +131,7 @@ const AI2025UltimateBreakthroughShowcase = () => {
                   </div>
                   {item.featured && (
                     <div className="flex items-center space-x-1 text-yellow-500">
-                      <Star className="w-4 h-4 fill-current" />
+                      <span>Star</span>
                       <span className="text-xs font-medium">FEATURED</span>
                     </div>
                   )}
@@ -164,11 +163,11 @@ const AI2025UltimateBreakthroughShowcase = () => {
                 
                 <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
                   <div className="flex items-center space-x-1">
-                    <Clock className="w-4 h-4" />
+                    <span>Clock</span>
                     <span>{item.readingTime}</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Users className="w-4 h-4" />
+                    <span className="w-4 h-4">📊</span>
                     <span>500+ Success Stories</span>
                   </div>
                 </div>
@@ -196,7 +195,7 @@ const AI2025UltimateBreakthroughShowcase = () => {
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2 group"
                 >
                   <span>Read {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Guide' : 'Article'}</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <span className="w-4 h-4 group-hover:translate-x-1 transition-transform">📊</span>
                 </Link>
               </div>
             </div>
@@ -216,7 +215,7 @@ const AI2025UltimateBreakthroughShowcase = () => {
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2"
               >
                 <span>Get Free Consultation</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
               </Link>
               <Link
                 href="/services"

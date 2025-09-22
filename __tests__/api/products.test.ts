@@ -78,6 +78,28 @@ jest.mock('@prisma/client', () => {
           "name_similarity": 0.82,
           "description_similarity": 0.85
         }
+<<<<<<< HEAD
+
+      const mockRawResults = [
+        {
+          id: 'product-gpt-high-score',
+          name_similarity: 0.9,
+          description_similarity: 0.5,
+        },
+        {
+          id: 'product-other',
+          name_similarity: 0.2,
+          description_similarity: 0.1,
+        },
+        {
+          id: 'product-gpt-medium-score',
+          name_similarity: 0.82,
+          description_similarity: 0.85,
+        },
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       ];
       // Note: The API sorts by GREATEST(name_similarity, description_similarity) DESC
       // So, product-gpt-high-score (0.9) should come first, then product-gpt-medium-score (0.85)
@@ -182,4 +204,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 });
 });
+<<<<<<< HEAD
+main
+});
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+=======
 >>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

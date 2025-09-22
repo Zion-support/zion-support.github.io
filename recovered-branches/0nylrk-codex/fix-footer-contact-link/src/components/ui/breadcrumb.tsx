@@ -7,33 +7,24 @@ const Breadcrumb = React.forwardRef<;
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   HTMLElement;
-<<<<<<< HEAD
   React && React.ComponentPropsWithoutRef<"nav"> & {;
     separator?: React && React.ReactNode;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Slot } from "@radix-ui/react-slot"
-=======
 import * as React from "react""
 import {Slot} from "@radix-ui/react-slot""
 import {ChevronRight} from "lucide-react"
 
 "
 import { Slot } from "@radix-ui/react-slot""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ChevronRight } from "lucide-react"
  "
 import { cn } from "@/lib/utils"
 
 const Breadcrumb = React.forwardRef<
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import * as React from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {ChevronRight} from "lucide-react";
@@ -41,32 +32,22 @@ import {ChevronRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 
 const Breadcrumb = React && React.forwardRef<;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   HTMLElement;
-=======
   HTMLElement;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   React && React.ComponentPropsWithoutRef<"nav"> & {;
     separator?: React && React.ReactNode;
   }
 >(({ className, separator, ...props }, ref) => (;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 >(({ className, separator, ...props }, ref) => (
 >(({ className, separator, ...props }, ref) => (;
   <nav
     ref={ref}
-=======
 
 const Breadcrumb = React.forwardRef<
   HTMLElement,"
@@ -76,9 +57,7 @@ const Breadcrumb = React.forwardRef<
 
   <nav;
     ref={ref}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     aria-label="breadcrumb"
-<<<<<<< HEAD
     className={cn(
 
   HTMLOListElement;"
@@ -118,22 +97,17 @@ const BreadcrumbItem = React.forwardRef<;
     asChild?: boolean;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from './react';
 import { Slot } from '@radix - ui / react - slot';
 import { ChevronRight } from './lucide-react';
-=======
 
 import * as React from './react';'
 import { Slot } from '@radix - ui / react - slot';'
 import { ChevronRight } from './lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from '@/lib / utils';
 const Breadcrumb = React.forward_ref<;
   HTMLElement;"
   React.ComponentPropsWithoutRef<"nav"> & {}
-=======
 >(({ className, asChild = false, ...props }, ref) => {;
   const Comp = asChild ? Slot : "a";
 
@@ -144,7 +118,6 @@ import { cn } from '@/lib / utils';
 const Breadcrumb = React.forward_ref<;
   HTMLElement;
   React.ComponentPropsWithoutRef<"nav"> & {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     separator?: React.ReactNode;
   }
 >(({ class_name, separator, ...props }, ref) => (
@@ -184,10 +157,6 @@ const BreadcrumbLink = React.forward_ref<;
   }
 >(({ class_name, as_child = false, ...props }, ref) => {"
   const Comp = as_child ? Slot : "a";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
     <Comp;
@@ -203,7 +172,6 @@ const BreadcrumbLink = React.forward_ref<;
     role="presentation""
     aria-hidden="true""
     className={cn("flex h-9 w-9 items-center justify-center", className)}
-<<<<<<< HEAD
 
   class_name;
   ...props;
@@ -218,9 +186,6 @@ const BreadcrumbLink = React.forward_ref<;
   </span>
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {children || <ChevronRight className="h - 4 w - 4" />}
   </li>);"
 BreadcrumbSeparator.display_name = "BreadcrumbSeparator";
@@ -246,76 +211,40 @@ export {};
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 
 export {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export {;
 export {
 
 export {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     className={cn(export {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   BreadcrumbEllipsis}
 
 export {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
-<<<<<<< HEAD
   BreadcrumbSeparator,
-<<<<<<< HEAD
-<<<<<<< HEAD
   BreadcrumbEllipsis}
 ;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   BreadcrumbSeparator,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   BreadcrumbEllipsis}
 ;
 BreadcrumbEllipsis}
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   BreadcrumbSeparator,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   BreadcrumbEllipsis}
     &#8230,;
   </span>;
@@ -347,10 +276,7 @@ return (<Comp ref= {
   BreadcrumbEllipsis}
 ;
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

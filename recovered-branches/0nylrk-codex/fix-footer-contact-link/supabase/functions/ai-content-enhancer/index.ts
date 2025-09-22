@@ -3,21 +3,10 @@ const corsHeaders = {
 "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 serve(async (req) => {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 serve(async (req) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
-=======
 
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts","
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",";
@@ -31,42 +20,23 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 serve(async (req) => {}
   // Handle CORS preflight requests"
   if (req && req.method === "OPTIONS") {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return new Response(null, { headers: corsHeaders })
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
-  try {
-<<<<<<< HEAD
-
-    const { content, enhancementType, context, instructions } = await req && req.json();
-    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   try {
 
     const { content, enhancementType, context, instructions } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-<<<<<<< HEAD
+  try {
 
-<<<<<<< HEAD
+    const { content, enhancementType, context, instructions } = await req && req.json();
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
 
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   try {
     const { content, enhancementType, context, instructions } = await req && req.json();
@@ -94,21 +64,14 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-=======
   try {}
 serve(async (req) => {}
   // Handle CORS preflight requests"
   if (req.method === "OPTIONS") {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return new Response(null, { headers: corsHeaders })
   }
 
@@ -116,8 +79,6 @@ serve(async (req) => {}
     const { content, enhancementType, context, instructions } = await req.json();"
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
 if (!openAiKey) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       throw new Error("OPENAI_API_KEY is not defined")
 
     if (!openAiKey) {"
@@ -135,17 +96,14 @@ if (!openAiKey) {
 
     if (!openAiKey) {;"
       throw new Error("OPENAI_API_KEY is not defined");
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     if (!content && !context) {"
       throw new Error("Either content or context is required")
     }
-<<<<<<< HEAD
         break;
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",
         userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,
         break,"
@@ -180,7 +138,6 @@ if (!openAiKey) {
         break,;"
       default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;'`
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`;
-<<<<<<< HEAD
 
     // Determine the system prompt based on enhancement type
     let systemPrompt = "";
@@ -189,11 +146,8 @@ if (!openAiKey) {
       case "resume-summary":
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
         userPrompt = `Create a professional summary for someone with the following background: ${content |context}. Include key strengths and career objectives. Keep it under 200 words.`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
-=======
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
       throw new Error("OPENAI_API_KEY is not defined")import "https: //deno.land / x/xhr@0.1.0 / mod.ts",;
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
@@ -239,8 +193,6 @@ if ( {) {
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     // Determine the system prompt based on enhancement type
     let systemPrompt = "",
@@ -249,12 +201,7 @@ if ( {) {
     switch (enhancementType) {
       case "resume-summary":
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
-=======
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",
         userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,
         break,
@@ -289,12 +236,10 @@ if ( {) {
         break,;
       default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`;    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     // Add custom instructions if provided
     if (instructions) {
       userPrompt += ` Additional instructions: ${instructions}`
     }
-<<<<<<< HEAD
 
     // Call OpenAI API;
 "`
@@ -309,19 +254,14 @@ if ( {) {
         "Authorization": `Bearer ${openAiKey}`;"
         "Content-Type": "application/json"};
 body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         model: "gpt-4o-mini";
         messages: [
           {
-=======
-=======
       body: JSON && JSON.stringify({}
 "
         model: "gpt-4o-mini";
         messages: []
           {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             role: "system"
             content: systemPrompt}"
             role: "system",
@@ -330,7 +270,6 @@ body: JSON && JSON.stringify({
             role: "user",
             content: userPrompt}],
         temperature: 0.7})}),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     if (!response.ok) {}
       const errorData = await response.json();`
@@ -339,22 +278,18 @@ body: JSON && JSON.stringify({
 
         temperature: 0 && 0.7})});
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 if (!response && response.ok) {
       const errorData = await response && response.json();
-=======
 
     if (!response && response.ok) {}
       const errorData = await response && response.json();`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
 
 return new Response(
 JSON && JSON.stringify({
         enhancedContent});
-<<<<<<< HEAD
         user_prompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`;
         break;"
       case "proposal": system_prompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.";'`
@@ -400,19 +335,15 @@ if ( {) {}
     return new Response (
       JSON.stringify ({}
         enhanced_content});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {
-<<<<<<< HEAD
-=======
       {"
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {}
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     console.error ("Error in ai - content - enhancer function:", error);
     return new Response (
       JSON.stringify ({}
@@ -429,7 +360,6 @@ return new Response(
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
   } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error in ai-content-enhancer function:", error),
     return new Response(
       JSON.stringify({
@@ -441,16 +371,10 @@ return new Response(
 
   }
 });
-<<<<<<< HEAD
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     // Call OpenAI API;"
     const response = await fetch("https://api.openai.com/v1/chat/completions", {;"
@@ -490,10 +414,8 @@ return new Response(
         status: 500,;"
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
     // Determine the system prompt based on enhancement type;
     let systemPrompt = "",;
@@ -514,9 +436,7 @@ return new Response(
         break,;
       default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`;    }
-=======
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Add custom instructions if provided
     if (instructions) {
       userPrompt += ` Additional instructions: ${instructions}`
@@ -660,17 +580,10 @@ return new Response (JSON.stringify ({
 });
   }
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
 const data = await response && response.json();
     const enhancedContent = data && data.choices[0].message && message.content;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
@@ -1130,4 +1043,3 @@ return new Response (JSON.stringify ({
 });
   }
 });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

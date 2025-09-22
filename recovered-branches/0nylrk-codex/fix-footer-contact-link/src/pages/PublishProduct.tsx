@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -22,19 +13,14 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
 import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router-dom";
-=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { SEO } from "@/components/SEO";
 export default function PublishProduct() {};
   const { isAuthenticated, isLoading } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 export default function PublishProduct() {
@@ -42,27 +28,21 @@ export default function PublishProduct() {
 
   // Show loading while checking authentication;
   if (isLoading) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   // Show loading while checking authentication
   if (isLoading) {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   // Show loading while checking authentication
   if (isLoading) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
-=======
 
     return ("
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
       </div>
     );
   }
-<<<<<<< HEAD
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -82,16 +62,12 @@ export default function PublishProduct() {;
       </div>;
     );
   }
-<<<<<<< HEAD
 ;
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
     return <Navigate to="/login" state={{ from: '/publish' }} replace />;
 }
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -133,7 +109,6 @@ import { useAuth } from "@/hooks/useAuth",
   return (;
 
     <div className="min-h-screen flex flex-col bg-zion-blue">;      <SEO
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
@@ -212,8 +187,6 @@ export default function PublishProduct() {
 )
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -232,12 +205,10 @@ export default function PublishProduct() {;
         </div>;
       </div>;
     );
-=======
 
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: "/publish" }} replace />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
   // Redirect to login if not authenticated;
@@ -246,10 +217,7 @@ export default function PublishProduct() {;
 }
 ;
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen flex flex-col bg-zion-blue">;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <SEO
         title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
@@ -262,7 +230,6 @@ export default function PublishProduct() {;
         title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />
       <Header />
       <main className="flex-1 p-6 md:p-10">
@@ -279,7 +246,6 @@ export default function PublishProduct() {;
       <Footer />
     </div>
   )
-=======
 />;
       <Header />;
       <main className="flex-1 p-6 md:p-10">;
@@ -288,11 +254,9 @@ export default function PublishProduct() {;
           <p className="text-zion-slate mb-8">;
             Share your products, services, or digital assets with the Zion community.;
           </p>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 ;
-<<<<<<< HEAD
 }
     return (
       <div className="flex justify - center items - center min - h-screen bg - zion-blue">;
@@ -322,26 +286,14 @@ if ( {) {
           <p className="text - zion - slate mb-8">;
             Share your products, services, or digital assets with the Zion community.;
           </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p-8">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p-8">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">;
 ;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <ProductSubmissionForm />;
 
 </Footer>
@@ -387,13 +339,9 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
     </div>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 }
 </div>);
@@ -401,11 +349,8 @@ if ( {) {
 }
 ;
     </div>);
-<<<<<<< HEAD
 }}
-=======
 }}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>);
 }
     </div>);
@@ -426,23 +371,12 @@ if ( {) {
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import React from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -527,4 +461,3 @@ pr-12325
 
     </div>);"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

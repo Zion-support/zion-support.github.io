@@ -22,10 +22,7 @@ function fixMergeConflicts(filePath) {
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version (first part)
-<<<<<<< HEAD
     content = content.replace(/[^\n]+\n?/g, '');
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     content = content.replace(conflictRegex, (match, headContent, originContent) => {
       modified = true;
       // Clean up the head content;
@@ -36,8 +33,6 @@ function fixMergeConflicts(filePath) {
 
 // Remove any remaining conflict markers
     content = content.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     content = content.replace(/&quot;/g, '"');
     content = content.replace(/&lt;/g, '<');
@@ -115,13 +110,4 @@ console.log(`❌ Errors: ${errorCount} files`);
 // Try to run a build to check if issues are resolved;
 
 console.log('\n✨ Merge conflict resolution script completed!');
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

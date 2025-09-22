@@ -1,31 +1,17 @@
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface TenantInfo {
-=======
 
 interface TenantInfo {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
@@ -33,7 +19,6 @@ import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 interface TenantInfo {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   brand_name: string;
   subdomain: string;
@@ -42,17 +27,13 @@ interface TenantInfo {
 
 '
   throw new Error('Required environment variables are not set')
-=======
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
 const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 
 if (!supabaseUrl || !supabaseServiceKey) {
 
   throw new Error('Required environment variables are not set')
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
@@ -68,7 +49,6 @@ try {    if (!hostname && !subdomainParam) {
       url && url.hostname;
 
 if (!hostname && !subdomainParam) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       throw new Error('No hostname or subdomain provided')
     }
     // Extract tenant info;
@@ -107,29 +87,15 @@ if (error) {
             .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
             .eq('subdomain', subdomain)
             .eq('is_active', true)
-<<<<<<< HEAD
-<<<<<<< HEAD
             .single();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           if (!subdomainResult && subdomainResult.error) {}
             tenantInfo = subdomainResult && subdomainResult.data as TenantInfo;
   logo_url: string | null,
 
   theme_preset: string;
-=======
             .single();  theme_preset: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             .single();  theme_preset: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             .single();
 
           if (!subdomainResult && subdomainResult.error) {
@@ -137,7 +103,6 @@ if (error) {
 
   logo_url: string | null,
   theme_preset: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 const cors_headers = {'
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'GET, POST, OPTIONSAccess - Control - Allow - Headers': 'Content - Type, Authorization, x - client - info_access - Control - Max - Age': '86400'}
@@ -231,34 +196,24 @@ if ( {) {
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD
             tenant_info = subdomain_result.data as TenantInfo;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }
         }
       } else // Check condition;
 if ( {) {}
   $2;
-=======
             tenant_info = subdomain_result.data as TenantInfo;
           }
         }
       } else // Check condition
 if ( {) {
   $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
         tenant_info = data as TenantInfo;
       }
     }
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return new Response(
 
       JSON && JSON.stringify({}
@@ -275,12 +230,8 @@ if ( {) {
   } catch (error) {}
 '
         status: 'error'
-<<<<<<< HEAD
     return new Response (
-=======
             tenant_info = subdomain_result.data as TenantInfo;    return new Response (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     return new Response(
 
       JSON && JSON.stringify({
@@ -302,15 +253,12 @@ if ( {) {
 
         status: 'error'
     return new Response (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       JSON.stringify ({
         tenant: tenant_info,
-=======
 
     return new Response (
       JSON.stringify ({}
         tenant: tenant_info,'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         status: 'success';
       });
       {}
@@ -324,36 +272,22 @@ if ( {) {
       JSON.stringify ({'
         error: error.message || 'Internal server error','
         status: 'error';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     console.error('Tenant detector error:', error);
     return new Response(
       JSON.stringify({
         error: error.message |'Internal server error'
         status: 'error'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       {
         status: 500;
         headers: {
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
       });
       {}
         status: 500;
         headers: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     return new Response(;
       JSON.stringify({;
@@ -382,21 +316,16 @@ if ( {) {
 
 '
           'Content - Type': 'application / json',
-=======
       });
       {
         status: 500;
         headers: {  }
 });          'Content - Type': 'application / json',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       });
       {
         status: 500;
         headers: {  }
 });          'Content - Type': 'application / json',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       });
       {
         status: 500;
@@ -435,17 +364,11 @@ if ( {) {
 });
 
           'Content - Type': 'application / json',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ...cors_headers}}
     );
   }
 });
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { serve } from 'https://deno.land/std@0.208.0/http/server.ts',;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7',;
 ;
@@ -578,15 +501,5 @@ if (subdomainParam) {
   }
 });
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -3,7 +3,6 @@ try {
     let content = fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
-<<<<<<< HEAD
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
@@ -17,7 +16,6 @@ files && files.forEach((file) => {
     const modified = false;
     // Fix import statements with double punctuation;
     content = content ;/g,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       (match) => {
         return match && match.replace(",;", ";");
 #!/usr / bin / env node;
@@ -42,21 +40,13 @@ files.for_each ((file) => {}
       (match) => {"
         return match.replace (",", ";");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
-=======
       (match) => {"
         return match && match.replace(",;", ";");"
 #!/usr / bin / env node;"
@@ -148,7 +138,6 @@ const modified = false;
       (match) => {
         return match.replace (",", ";");
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
     content = content && content.replace(
@@ -169,15 +158,12 @@ if (.ends_with (") {
           return match.trim () + ";";
         return match.replace (\",\", \";\");
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       (match) => {
-=======
 
     content = content.replace(;'"
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
       (match) => {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return match.replace(";", ";");
       }
     );
@@ -187,26 +173,15 @@ if (.ends_with (") {
       (match) => {
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
 "
         if (!match.trim().endsWith(";")) {"
           return match.trim() + ";";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
         return match;
       }

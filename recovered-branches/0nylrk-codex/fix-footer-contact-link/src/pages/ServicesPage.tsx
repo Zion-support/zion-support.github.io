@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -10,22 +6,15 @@ import {TrustedBySection} from "@/components/TrustedBySection";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 import {Globe} from "lucide-react";
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom";
-=======
 
 import { DynamicListingPage } from "@/components/DynamicListingPage","
 import { ProductListing } from "@/types/listings","
@@ -33,7 +22,6 @@ import { AppLayout } from "@/layout/AppLayout","
 import { TrustedBySection } from "@/components/TrustedBySection","
 import { Button } from "@/components/ui/button",";
 import { Link } from "react-router-dom";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Globe } from "lucide-react";
 // Sample service listings;
 const SERVICE_LISTINGS: ProductListing[] = []
@@ -47,15 +35,8 @@ price: 5000
     currency: "$"
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Globe } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { Globe } from "lucide-react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -68,44 +49,30 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$","
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     author: {
-=======
 import { Globe } from "lucide-react",    author: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { Globe } from "lucide-react",    author: {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     category: "Development",
     price: 5000,
     currency: "$",
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
 
     author: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: "TechSolutions Inc."
       id: "tech-solutions"
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"}
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"]
-=======
 
     author: {"
       name: "TechSolutions Inc.""
       id: "tech-solutions""
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"}"
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"]"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     createdAt: "2023-12-10T14:48:00.000Z"
     aiScore: 95;
     rating: 4.9;
     reviewCount: 124}
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
     id: "service-2",
     title: "Cloud Infrastructure Management",
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
@@ -114,17 +81,9 @@ import { Globe } from "lucide-react",    author: {
     currency: "$","
     tags: ["Cloud", "DevOps", "Security"],
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     author: {
-=======
   {    author: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   {    author: {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   {
 
     id: "service-2",
@@ -136,25 +95,19 @@ import { Globe } from "lucide-react",    author: {
     tags: ["Cloud", "DevOps", "Security"],
 
     author: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: "CloudPro Experts"
       id: "cloud-pro"}
     images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"]
-=======
 
     author: {"
       name: "CloudPro Experts""
       id: "cloud-pro"}"
     images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"]"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     createdAt: "2023-11-20T09:30:00.000Z"
     aiScore: 88;
     rating: 4.7;
     reviewCount: 92}
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
     id: "service-3",
     title: "Big Data Analysis & Insights",
     description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
@@ -163,10 +116,6 @@ import { Globe } from "lucide-react",    author: {
     currency: "$","
     tags: ["Big Data", "Analytics", "Business Intelligence"],
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   {
 
     id: "service-3",
@@ -177,7 +126,6 @@ import { Globe } from "lucide-react",    author: {
     currency: "$",
     tags: ["Big Data", "Analytics", "Business Intelligence"],
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     author: {
       name: "DataMind Solutions"
       id: "datamind"
@@ -197,17 +145,9 @@ id: "service-4",
     currency: "$","
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     author: {
-=======
   {    author: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   {    author: {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     createdAt: "2024-01-05T11:15:00.000Z"
     aiScore: 92
     rating: 4.8
@@ -223,76 +163,51 @@ id: "service-4",
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
 
     author: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: "SecureNet Team"
       id: "secure-net"}
     images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"]
-=======
 
 author: {"
       name: "SecureNet Team""
       id: "secure-net"}"
     images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"]"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     createdAt: "2023-12-28T16:22:00.000Z"
     aiScore: 89;
     rating: 4.9;
     reviewCount: 103}
 {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: "service-5",
     title: "IT Infrastructure Modernization",
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
-=======
   {}
 "
     id: "service-5","
     title: "IT Infrastructure Modernization","
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     category: "Consulting",
     price: 8500,"
     currency: "$","
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"]
-=======
 
     author: {"
       name: "ModernizeIT Consulting""
       id: "modernize-it"}"
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"]"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     createdAt: "2023-11-10T08:45:00.000Z"
     aiScore: 86;
     rating: 4.6;
     reviewCount: 67}
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
     id: "service-6",
     title: "AI Strategy & Implementation",
     description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
@@ -301,10 +216,6 @@ author: {"
     currency: "$","
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   {
 
     id: "service-6",
@@ -315,7 +226,6 @@ author: {"
     currency: "$",
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     author: {
       name: "AI Future Consulting"
       id: "ai-future"
@@ -335,7 +245,6 @@ const SERVICE_FILTERS = []
   { label: 'Consulting', value: 'consulting' }'
   { label: 'Strategy', value: 'strategy' }]
 
-=======
     createdAt: "2024-02-02T10:30:00.000Z"
     aiScore: 94
     rating: 4.8
@@ -348,7 +257,6 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         listings={SERVICE_LISTINGS}
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 3000, max: 10000 }}
@@ -358,7 +266,6 @@ const SERVICE_FILTERS = [
   )
 };
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -366,10 +273,6 @@ import { TrustedBySection } from "@/components/TrustedBySection",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { Globe } from "lucide-react",;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -377,13 +280,10 @@ import {TrustedBySection} from "@/components/TrustedBySection";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 import {Globe} from "lucide-react";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Sample service listings;
 const SERVICE_LISTINGS: ProductListing[] = [;
-=======
 // Sample service listings;
 const SERVICE_LISTINGS: ProductListing[] = [;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {;
     id: "service-1",;
     title: "AI Development & Integration",;
@@ -459,7 +359,6 @@ title: "Cybersecurity Assessment & Protection",,
     id: "service-4",;"
     title: "Cybersecurity Assessment & Protection",;"
     description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     category: "Security",;
     price: 6000,;"
     currency: "$",;
@@ -518,27 +417,19 @@ tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
 </TrustedBySection>
     </AppLayout>;
 );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <DynamicListingPage;
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
         category_slug="services";
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         listings={SERVICE_LISTINGS}
-=======
       <DynamicListingPage;"
         title="IT & AI Services";""
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";""
         category_slug="services";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         category_filters={SERVICE_FILTERS}
         initial_price={{ min: 3000, max: 10000 }}
       />;
@@ -572,9 +463,6 @@ reviewCount: 85;
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.""
         categorySlug="services"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }/> <TrustedBySection /> </AppLayout>) 
 </DynamicListingPage>
       <DynamicListingPage;"
@@ -591,19 +479,9 @@ reviewCount: 85;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </TrustedBySection>
     </AppLayout>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

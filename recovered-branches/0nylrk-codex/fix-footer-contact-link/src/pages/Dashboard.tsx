@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
@@ -19,8 +10,6 @@ import {NotificationCenter} from "@/components/NotificationCenter";
 import {useToast} from "@/hooks/use-toast";
 import {Link} from "react-router-dom";
 export default function Dashboard() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
@@ -45,9 +34,7 @@ import { NotificationCenter } from "@/components/NotificationCenter";"
 import { useToast } from "@/hooks/use-toast";"
 import { Link } from "react-router-dom";
 export default function Dashboard() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export default function Dashboard() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
@@ -55,12 +42,9 @@ export default function Dashboard() {
 const { user, logout } = useAuth();
   const { toast } = useToast();
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   const { user, logout } = useAuth();
   const { toast } = useToast();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -79,15 +63,8 @@ export default function Dashboard() {};
 const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const handleTestNotification = async () => {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
@@ -103,12 +80,9 @@ export default function Dashboard() {
   if (!user) return null,
 
   const handleTestNotification = async () => {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const result = await createTestNotification(user && user.id);
     if (result && result.success) {;
 toast({;
@@ -135,7 +109,6 @@ toast({;
       });
     }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <>;
       <Header />;"
@@ -143,16 +116,13 @@ toast({;
         <div className="container mx-auto px-4 py-8">;"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
 {/* Left Sidebar - User Profile */}
-<<<<<<< HEAD
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex flex-col items-center text-center">
-=======
             {/* Left Sidebar - User Profile */}"
             <div className="lg:col-span-1">"
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">"
                 <div className="flex flex-col items-center text-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
                     {user.displayName"
                       .split(" ")
@@ -163,40 +133,26 @@ toast({;
                     {user.displayName}
                   </h2>"
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   <Badge 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
-=======
 
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Badge className="bg-zion-purple text-white mb-4">
                     {user.userType;
                       ? user.userType.charAt(0).toUpperCase() +
                         user.userType.slice(1)"
                       : "New User"}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   </Badge>
 <Button
                   <Button
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-=======
                   <Button"
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     onClick={() => (window.location.href = "/profile")}
                   >
                     <UserCheck size={16} />
@@ -253,32 +209,20 @@ toast({;
                     </Button>
 <Button
                     <Button 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
 await createOnboardingNotification({
-<<<<<<< HEAD
                           userId: user.id,
 missingMilestone: 'profile_completed',
                           userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
                         }),
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
                     <Button"
                       className="w-full flex items-center justify-center gap-2""
                       variant="outline"
                       onClick={async () => {}
                         await createOnboardingNotification({}
                           userId: user.id,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           missingMilestone: "profile_completed",
                           userRole:"
                             user.userType === "employer" ||"
@@ -286,7 +230,6 @@ missingMilestone: 'profile_completed',
                               ? "client""
                               : "talent",
                         });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                         toast({
                           title: "Onboarding notification sent",
                           description: "Check your notification center",
@@ -298,17 +241,9 @@ missingMilestone: 'profile_completed',
                     </Button>
 <Button
                     <Button 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                       className="w-full flex items-center justify-center gap-2"
-=======
                     <Button"
                       className="w-full flex items-center justify-center gap-2""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       variant="outline"
                       onClick={async () => {}
                         await createSystemNotification({}
@@ -447,8 +382,6 @@ missingMilestone: 'profile_completed',
       <Footer />
     </>
 )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
                 <div className="flex flex-col items-center text-center">;
@@ -876,16 +809,9 @@ if ( {) {}
                 {/* Community Section */}
                 <div>;"
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <CommunityDiscussion />;
-=======
                         await createOnboardingNotification({                  <CommunityDiscussion />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                         await createOnboardingNotification({                  <CommunityDiscussion />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <div>;
                   <h3 className="text - lg font - bold text - white mb - 4">Community</h3>;
                 ;
@@ -896,7 +822,6 @@ if ( {) {}
                 <div>;
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
                   <CommunityDiscussion />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>;
               </div>;
             </div>;
@@ -908,15 +833,7 @@ if ( {) {}
 </>);
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     </>;
   ),; export default function Dashboard () {}
@@ -934,7 +851,6 @@ const {}
 }= useAuth ();
 const {
   toast 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }= useToast ();
 
 };"
@@ -958,30 +874,15 @@ return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <Use
   16 
 }className="text-yellow-500" /> space-y-4"> <Link to=" /notifications"className=" block"> <Button variant=" outline"className=" w-full"> <Bell className=" mr-2 h-4 w-4"/> View All Notifications </Button> </Link> </div> </div> </div> Logout </Button> </div> </div> </div> <div className=" p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light"> <h3 className=" text-lg font-medium text-white">Getting Started</h3> <p className=" text-zion-slate-light mt-1">Complete your profile to unlock all features.</p> </div> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Newcomer</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">First Post</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> <div className=" flex flex-col items-center opacity-40"> <div className=" w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2"> <span className=" text-zion-slate-light text-xl">?</span> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> </div> </div> {
   /* Community Section */ 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }<div> <h3 className=" text-lg font-bold text-white mb-4" >Community</h3> <CommunityDiscussion /> </div> </div> </div> </div> </div> </div> <Footer /> </>) 
 }
     </>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }className="text-yellow-500" /> space-y-4"> <Link to=" /notifications"className=" block"> <Button variant=" outline"className=" w-full"> <Bell className=" mr-2 h-4 w-4"/> View All Notifications   </div> </div> </div> Logout  </div> </div> </div> <div className=" p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light"> <h3 className=" text-lg font-medium text-white">Getting Started</h3> <p className=" text-zion-slate-light mt-1">Complete your profile to unlock all features.</p> </div> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Newcomer</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">First Post</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> <div className=" flex flex-col items-center opacity-40"> <div className=" w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2"> <span className=" text-zion-slate-light text-xl">?</span> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> </div> </div> {"
 )"
 }<div> <h3 className=" text-lg font-bold text-white mb-4" >Community</h3> <CommunityDiscussion /> </div> </div> </div> </div> </div> </div> <Footer /> </>)"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

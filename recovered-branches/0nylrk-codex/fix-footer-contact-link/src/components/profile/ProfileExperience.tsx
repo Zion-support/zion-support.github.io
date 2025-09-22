@@ -1,38 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
 import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
-=======
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";import { Briefcase } from "lucide-react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";import { Briefcase } from "lucide-react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ProfileExperienceProps {
 
 import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";""
@@ -43,9 +24,7 @@ interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ProfileExperienceProps {
-=======
 import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";"
 import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {}
@@ -53,7 +32,6 @@ interface ProfileExperienceProps {}
 }
 
 interface ProfileExperienceProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   experience: ProfileExperienceType[];
 }
 export function ProfileExperience({ experience }: ProfileExperienceProps) {}
@@ -113,7 +91,6 @@ import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
-<<<<<<< HEAD
 }
 
 ;
@@ -134,18 +111,13 @@ export function ProfileExperience() { return null; }
               <p className="text-zion-slate">{exp.description}</p>;
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         ))}
       </div>
     </div>
   );
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ))}
       </div>
     </div>
@@ -178,10 +150,6 @@ interface ProfileExperienceProps {}
 }className=" flex"> <div className=" mr-4"> <div className=" h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center"> <Briefcase className=" h-5 w-5 text-zion-purple" /> </div> </div> <div> </div> </div>) ) 
 }</div> </div>) 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ProfileExperience, as, ProfileExperienceType  } from '@/types / profile';
 import { Briefcase  } from './lucide-react';
 interface ProfileExperienceProps {}
@@ -208,7 +176,6 @@ function ProfileExperience() {}
               <div className="text - sm text - zion - slate - light mb - 2">;"
                 {exp.start_date} - {exp.current ? "Present" : exp.end_date}
               </div>;"
-=======
  interface ProfileExperienceProps {
   experience: ProfileExperienceType[] 
 }export function ProfileExperience ({
@@ -250,7 +217,6 @@ function ProfileExperience() {
               <div className="text - sm text - zion - slate - light mb - 2">;
                 {exp.start_date} - {exp.current ? "Present" : exp.end_date}
               </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <p className="text - zion - slate">{exp.description}</p>;
             </div>;
           </div>))}
@@ -258,24 +224,14 @@ function ProfileExperience() {
     </div>);
 }
 
-<<<<<<< HEAD
         ))}
       </div>
     </div>
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </div>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

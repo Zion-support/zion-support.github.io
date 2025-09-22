@@ -5,18 +5,11 @@ export function SocialLogin() {
 
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 
 const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     useAuth();
 
   return (
@@ -33,20 +26,12 @@ const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
       </div>"
       <div className="mt-6 grid grid-cols-4 gap-3">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <Button
           type="button"
           variant="outline"
-=======
         <Button"
           type="button""
           variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => loginWithGoogle()}
           disabled={isLoading}
@@ -90,19 +75,12 @@ const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
           variant="outline""
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => loginWithTwitter()}
-<<<<<<< HEAD
           disabled={isLoading}
 
-<<<<<<< HEAD
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
-=======
           disabled={isLoading}  )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Twitter</span>
@@ -115,16 +93,13 @@ const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 );
 }
   )
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
-=======
   )"
 import { Facebook, Twitter } from "lucide-react",;"
 import { Button } from "@/components/ui/button",;"
 import { useAuth } from "@/hooks/useAuth",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Web3Login } from "./Web3Login",;
 
 return (    <div className="mt-6">;
@@ -132,16 +107,11 @@ return (    <div className="mt-6">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;
-<<<<<<< HEAD
         <div className="relative flex justify-center text-sm">;
-<<<<<<< HEAD
-<<<<<<< HEAD
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
-<<<<<<< HEAD
 import { Facebook, Twitter  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
-=======
 "
     <div className="mt-6">;"
       <div className="relative">;"
@@ -153,7 +123,6 @@ import { use_auth  } from '@/hooks / use_auth';
 import { Facebook, Twitter  } from './lucide-react';'
 import { Button  } from '@/components / ui / button';'
 import { use_auth  } from '@/hooks / use_auth';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Web3Login  } from './Web3Login';
 export /**;
  * SocialLogin - Function description;
@@ -170,13 +139,11 @@ function SocialLogin() {}
         </div>;"
         <div className="relative flex justify - center text - sm">;"
           <span className="px - 2 bg - zion - blue - dark text - zion - slate - light">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             Or continue with;
           </span>;
         </div>;
         >;"
           <span className="sr-only">Sign in with Twitter</span>;"
-=======
         <div className="relative flex justify-center text-sm">;
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
 import { Facebook, Twitter  } from './lucide-react';
@@ -203,7 +170,6 @@ function SocialLogin() {
         </div>;
         >;
           <span className="sr-only">Sign in with Twitter</span>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Twitter className="h-5 w-5" />;
         </Button>;
         <Web3Login />;
@@ -218,23 +184,15 @@ className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hov
   );
 }
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
         </div>;
       </div>;
       <div className="mt-6 grid grid-cols-4 gap-3">;
 
-=======
         <div className="relative flex justify-center text-sm">;          on_click={() => loginWithGoogle ()}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
           on_click={() => loginWithGoogle ()}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         <div className="relative flex justify-center text-sm">;          on_click={() => loginWithGoogle ()}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           disabled={is_loading}
         >;
           <span className="sr-only">Sign in with Google</span>;
@@ -281,32 +239,16 @@ className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hov
         >;
 <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h - 5 w-5" />;
-=======
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h - 5 w-5" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </Button>;
         <Web3Login />;
       </div>;
     </div>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
     useAuth();
 
@@ -422,4 +364,3 @@ className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hov
     </div>);"
 pr-12325
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

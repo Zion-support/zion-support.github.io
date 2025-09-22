@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -20,11 +11,9 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Badge} from "@/components/ui/badge";
 import {MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe} from "lucide-react";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
-<<<<<<< HEAD
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from "react",
 import { useParams } from "react-router-dom",
 import { supabase } from "@/integrations/supabase/client",
@@ -46,7 +35,6 @@ import {
   Phone;
   Globe
 } from "lucide-react",
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -79,7 +67,6 @@ import {}
   Phone,
 Globe,
 } from "lucide-react";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import { 
   MapPin;
@@ -93,27 +80,19 @@ import {
   Phone;
   Globe
 } from "lucide-react",import { HireNowCTA } from "@/components/profile/HireNowCTA";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
-=======
   Globe,";
 } from "lucide-react";"
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {};
   // useParams is typed as `any` in this environment due to missing type;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { profileId } = useParams();
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
   useEffect(() => {
     const fetchProfile = async () => {
       setIsLoading(true),
@@ -127,21 +106,14 @@ export default function ProfileDetail() {};
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   useEffect(() => {;
     const fetchProfile = async () => {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [profileData, setProfileData] = useState<any>(null),
-=======
   const [profileData, setProfileData] = useState<any>(null);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 useEffect(() => {
@@ -159,17 +131,13 @@ useEffect(() => {
           .eq("id", profileId)
           .single();
           .single(),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsLoading(true);
       setError(null);
       try {;
         if (!profileId) {;"
           setError("Profile ID is missing.");
           return;
-<<<<<<< HEAD
         }
 
           .single(),
@@ -177,16 +145,10 @@ useEffect(() => {
           .single();
           .single(),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         if (error) {
           throw new Error(error.message);
         }
         if (!data) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         const { data, error } = await supabase;
           .from("talent_profiles");
           .select("*");
@@ -198,8 +160,6 @@ useEffect(() => {
         }
 
         if (!data) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         }
 
           .single();
@@ -209,7 +169,6 @@ useEffect(() => {
           throw new Error(error.message);
         }
         if (!data) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           setError("Profile not found.");
           return;
         }
@@ -230,7 +189,6 @@ useEffect(() => {
       }
     }
     },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 setError("Profile not found.");
           return;
@@ -292,19 +250,12 @@ if ( {) {
           return;
         }
         setProfileData (data);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (isLoading) {
     return (
-=======
 
   if (isLoading) {}
     return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>
@@ -323,7 +274,6 @@ if ( {) {
         <p>Profile not found.</p>
       </div>
 )
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState, useEffect } from "react",;
 import { useParams } from "react-router-dom",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -397,21 +347,16 @@ export default function ProfileDetail() {;
   }, [profileId]);
 
   if (isLoading) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
-=======
 
     return (
 ;
   if (error) {;
     return (;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen flex items-center justify-center">;
         <p>Loading profile...</p>;
       </div>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     );
   }
 
@@ -429,36 +374,24 @@ return (;      <div className="min-h-screen flex items-center justify-center">;
     return (;
 "
       <div className="min-h-screen flex items-center justify-center">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p>Profile not found.</p>;
       </div>;
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <>;
       <SEO
 title={`${profileData.full_name} | Zion AI Marketplace`}
-<<<<<<< HEAD
 
         description={profileData.bio || "Check out this talent's profile on Zion!"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         description={
           profileData.bio || "Check out this talent's profile on Zion!"
         }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <SEO;
       />;
       <Header />;"
@@ -490,7 +423,6 @@ title={`${profileData.full_name} | Zion AI Marketplace`}
                       {profileData && profileData.is_verified && (;"
                         <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
                       )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -500,7 +432,6 @@ title={`${profileData.full_name} | Zion AI Marketplace`}
                     </CardDescription>
                   </div>
                 </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               </CardHeader>
               <CardContent>"
                 <div className="flex flex-wrap gap-4 text-sm">
@@ -547,7 +478,6 @@ title={`${profileData.full_name} | Zion AI Marketplace`}
                 )}
               </CardContent>
             </Card>
-<<<<<<< HEAD
               <CardHeader>;
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>;
               </CardHeader>;
@@ -651,8 +581,6 @@ if ( {) {
                         <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />)}
                     </CardTitle>;
                     <CardDescription className="text - zion - cyan">{profile_data.professional_title}</CardDescription>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
               </CardHeader>;
@@ -759,13 +687,9 @@ if ( {) {
               </CardHeader>;
 <CardContent>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Portfolio Section */}
-=======
 
             {/* Portfolio Section */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>"
                 <CardTitle className="text-xl font-bold text-white">
@@ -776,7 +700,6 @@ if ( {) {
                 {profileData.portfolio_links ? ("
                   <div className="flex flex-col gap-3">
 {profileData.portfolio_links.map((link: any, index: number) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       <a
                         key={index}
                         href={link && link.url}
@@ -835,7 +758,6 @@ if ( {) {
                 )}
               </div>
             </div>
-=======
 
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
@@ -850,7 +772,6 @@ export default function ProfileDetail() {
 
                 hourly_rate: profileData?.hourly_rate || 0
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
             />;
             {/* Contact Information */}"
@@ -907,27 +828,19 @@ export default function ProfileDetail() {
                   </a>;
                 )}
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>;
             </div>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-=======
 
                 id: profileData?.id || '','
                 full_name: profileData?.full_name || '','
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               }}
             />;
             {/* Contact Information */}
@@ -939,7 +852,6 @@ export default function ProfileDetail() {
                   </div>;
                 )}
                 )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
@@ -972,17 +884,8 @@ export default function ProfileDetail() {
                     LinkedIn;
                   </a>;
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
                 <div className="flex flex - wrap gap - 4 text - sm">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                 <div className="flex flex - wrap gap - 4 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   {profile_data.location && (
                     <div className="flex items - center text - zion - slate-light">;
                       <MapPin className="h - 4 w - 4 mr-1" />;
@@ -997,9 +900,7 @@ export default function ProfileDetail() {
                     <div className="text - white font-bold">;
                       ${profile_data.hourly_rate}
 <span className="text - zion - slate - light font-normal">/hr</span>;
-=======
                       <span className="text - zion - slate - light font-normal">/hr</span>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </div>)}
                 </div>;
               </CardContent>;
@@ -1067,11 +968,8 @@ export default function ProfileDetail() {
             </Card>;
           </div>;
           {/* Sidebar with HireNowCTA */}
-<<<<<<< HEAD
           <div className="col - span - 4 lg:col - span-1">;
-=======
           <div className="col - span - 4 lg:col - span-1">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <HireNowCTA;
               talent_profile={{'
                 id: profile_data?.id || '','
@@ -1095,15 +993,12 @@ export default function ProfileDetail() {
                     <span>{profile_data.phone}</span>;
                   </div>)}
                 {profile_data.website && (
-<<<<<<< HEAD
                   <div className="flex items - center gap - 2 text - zion - slate-light">;
                     <Globe className="h - 4 w-4" />;
                     <a href={profile_data.website} target="_blank" rel="noopener noreferrer" className="hover:text - zion-cyan">;
-=======
                   <div className="flex items - center gap - 2 text - zion - slate-light">;
                     <Globe className="h - 4 w-4" />;
                     <a href={profile_data.website} target="_blank" rel="noopener noreferrer" className="hover:text - zion-cyan">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       Website;
                     </a>;
                   </div>)}
@@ -1189,18 +1084,11 @@ LinkedIn
     </>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </>;
   ),; import {};
-=======
 
     </>;
   ),; import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 import { useState, useEffect } from "react";""
 import { useParams } from "react-router-dom";""
@@ -1502,7 +1390,6 @@ export default function ProfileDetail() {
     </>;
   ),; import {
   // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   MapPin;
 Clock;
 Link as LinkIcon;
@@ -1567,7 +1454,6 @@ profileData.full name?.charAt (0)
 }</CardContent> </Card> </div> <HireNowCTA talentProfile= {
   {
   id: profileData?.id || '', full name: profileData?.full name || '', professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 }/> Website </Link> </div>) 
 }</div> </div> GitHub </Link>) 
@@ -1579,22 +1465,8 @@ profileData.full name?.charAt (0)
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 `;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

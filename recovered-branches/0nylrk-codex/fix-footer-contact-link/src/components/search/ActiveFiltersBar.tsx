@@ -1,39 +1,22 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {X} from "lucide-react";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {X} from "lucide-react";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
 import { ClickableBadge } from "@/components/ui/clickable-badge",
-<<<<<<< HEAD
 import { X } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ActiveFiltersBarProps {
-=======
 import React from "react",";
 import { ClickableBadge } from "@/components/ui/clickable-badge";"
 import { X } from "lucide-react";"
 import { ClickableBadge } from "@/components/ui/clickable-badge","
 import { X } from "lucide-react",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface ActiveFiltersBarProps {}
   selectedProductTypes: string[]
@@ -47,19 +30,13 @@ interface ActiveFiltersBarProps {}
 }
 
 export function ActiveFiltersBar({;
-=======
 import { X } from "lucide-react",export function ActiveFiltersBar({;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { X } from "lucide-react",export function ActiveFiltersBar({;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { X } from "lucide-react",
 
 export function ActiveFiltersBar(): any ({;
 
 export function ActiveFiltersBar({;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   selectedProductTypes;
   selectedLocations;
   selectedAvailability;
@@ -111,7 +88,6 @@ return ("
       {searchQuery && (
 
         <ClickableBadge
-=======
 
   onClearSearch;
 }: ActiveFiltersBarProps) {;
@@ -129,7 +105,6 @@ return ("
       <span className="text-sm text-zion-slate-light">Active filters:</span>;
 
         <ClickableBadge"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onClearSearch}>;
 
@@ -143,7 +118,6 @@ return ("
         </ClickableBadge>;
       )}
 
-<<<<<<< HEAD
       {selectedProductTypes && selectedProductTypes.map(type => (;
 
 {selectedProductTypes && selectedProductTypes.map(type => (;
@@ -173,23 +147,19 @@ interface ActiveFiltersBarProps {;
   onRemoveRating:() => void,;
   onClearSearch:() => void;
         <ClickableBadge
-=======
         <ClickableBadge;
           key={`type-${type}`}"
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('productTypes', type)}
 
         <ClickableBadge"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
         <ClickableBadge "
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2""
 import React from "react",;"
 import { ClickableBadge } from "@/components/ui/clickable-badge",;"
 import { X } from "lucide-react",;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {X} from "lucide-react";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ActiveFiltersBarProps {;
   selectedProductTypes: string[],;
   selectedLocations: string[],;
@@ -212,8 +182,6 @@ export function ActiveFiltersBar(): any ({;
   onRemoveFilter;
   onRemoveRating;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   onClearSearch
 }: ActiveFiltersBarProps) {
   const hasActiveFilters = 
@@ -225,11 +193,9 @@ export function ActiveFiltersBar(): any ({;
 
   if (!hasActiveFilters) return null,
 
-=======
   onClearSearch
 }: ActiveFiltersBarProps) {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 return (
     <div className="flex flex-wrap gap-2 items-center mb-4">
@@ -272,7 +238,6 @@ return (
 ))}          {location}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
-<<<<<<< HEAD
       ))}
 
         <ClickableBadge;`
@@ -286,7 +251,6 @@ return (
         </ClickableBadge>;
       ))}
 
-<<<<<<< HEAD
 
           {selectedRating}+ Stars;"
       {selectedRating !== null && (;
@@ -301,23 +265,17 @@ return (
           onClick={onRemoveRating}
         >;
           {selectedRating}+ Stars;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
-=======
 '
 import React from './react';'
 import { ClickableBadge } from '@/components / ui / clickable - badge';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { X } from './lucide-react';
 interface ActiveFiltersBarProps {}
-=======
     </div>;
   );
 }
@@ -327,7 +285,6 @@ import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { X } from './lucide-react';
 interface ActiveFiltersBarProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   selectedProductTypes: string[],
   selected_locations: string[],
   selected_availability: string[],
@@ -400,9 +357,6 @@ if (return null) {}
         </ClickableBadge>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
  interface ActiveFiltersBarProps {
   selectedProductTypes: string[];
@@ -458,19 +412,8 @@ pr-12325
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       ))}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </div>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

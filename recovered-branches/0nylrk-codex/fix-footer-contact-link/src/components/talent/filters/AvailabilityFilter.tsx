@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
 import {AvailabilityFilterProps} from "@/types/filters";
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { id: "project", label: "Project-based" }
 
 export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
@@ -27,7 +19,6 @@ import { AvailabilityFilterProps } from "@/types/filters";
 
 import { Checkbox } from "@/components/ui/checkbox",
 import { AvailabilityFilterProps } from "@/types/filters",
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -35,24 +26,18 @@ import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
 import {AvailabilityFilterProps} from "@/types/filters";
 import { ChevronDown, ChevronUp } from "lucide-react",import { Checkbox } from "@/components/ui/checkbox";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { AvailabilityFilterProps } from "@/types/filters";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
-=======
 import { ChevronDown, ChevronUp } from "lucide-react";"
 import { Checkbox } from "@/components/ui/checkbox";"
 import { AvailabilityFilterProps } from "@/types/filters";
 const AVAILABILITY_OPTIONS = ["
   { id: "full_time", label: "Full-time" },"
   { id: "part_time", label: "Part-time" },"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { id: "project", label: "Project-based" },
 ];
 
@@ -67,13 +52,11 @@ export function AvailabilityFilter({}
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button;
         onClick={toggleSection}"
-=======
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         className="flex w-full items-center justify-between text-white font-medium"
       >
         <span>Availability</span>
@@ -115,9 +98,6 @@ const AVAILABILITY_OPTIONS = [;"
         ) : (;"
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </button>;
 
@@ -133,15 +113,11 @@ const AVAILABILITY_OPTIONS = [;"
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
               />;
 <label
-<<<<<<< HEAD
 
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-=======
               <label;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {option.label}
               </label>
             </div>
@@ -154,7 +130,6 @@ const AVAILABILITY_OPTIONS = [;"
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -207,22 +182,11 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 
               <label;
                 {option.label}
               </label>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>;
       )}
   );
@@ -330,4 +294,3 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 pr-12325
     </div>"
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

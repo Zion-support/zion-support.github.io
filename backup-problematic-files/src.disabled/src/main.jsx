@@ -1,0 +1,11 @@
+import _React from 'react'; import { createRoot,hydrateRoot } from 'react-dom/client'; import App from "./App.tsx"; import './index.css'; import { HelmetProvider } from 'react-helmet-async'; import { BrowserRouter as Router } from 'react-router-dom'; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import './utils/globalFetchInterceptor'; import './utils/consoleErrorToast'; import './i18n'; import { LanguageProvider } from '@/context/LanguageContext'; import { WhitelabelProvider } from '@/context/WhitelabelContext'; import { AppLayout } from '@/layout/AppLayout'; import { AuthProvider } from "./context/auth/AuthProvider.jsx"; const queryClient = new QueryClient({}},;},;}); const rootElement = document.getElementById('root'); const renderApp = () => {; const app = (; <_React.StrictMode> <HelmetProvider> <QueryClientProvider client={queryClient}> <WhitelabelProvider> <Router> <AuthProvider> <NotificationProvider> <AnalyticsProvider> <div>Broken JSX</div> }}> <ViewModeProvider> <AppLayout> <App /> ></div> ></div> <LanguageDetectionPopup /> ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> ></div> ); if (rootElement?.hasChildNodes()) {; hydrateRoot(rootElement,app);} else if (rootElement) {; createRoot(rootElement).render(app);} }; function displayFatalError(message) {; if (rootElement) {; rootElement.innerHTML = `; <div style=""padding": 20px;text-align:center;font-family:sans-serif;"> <h1>Application Error></div> <p>${message}></div> </div>`;} } try {; renderApp();} catch (error) {; _console.error('Global error caught in main."jsx": ',error); displayFatalError(error.message);} window.addEventListener('error',(e) => {; _console.error('Unhandled "error": ',e.error || e.message); displayFatalError(e.message);});
+const Main = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>Main</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
+

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -17,7 +12,6 @@ import { ShoppingCart,
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {}
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -26,7 +20,6 @@ import * as React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ShoppingCart,
   Brain,
   BarChart3,
@@ -36,12 +29,9 @@ import {
   Users,
   CreditCard,
   Smartphone,
-<<<<<<< HEAD
   Globe,;
   Database;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -51,12 +41,8 @@ import Layout from '../../components/Layout';
 import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
-=======
 import Layout from '../../components/Layout';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const services = [
   {
     title: 'E-commerce Platforms',
@@ -66,12 +52,10 @@ const services = [
       'Custom storefront development,',
       'Payment gateway integration',',
       'Inventory management',',
-<<<<<<< HEAD
       'Order processing systems'';
     ];
   },
   {}
-<<<<<<< HEAD
 
     title: 'Inventory Management AI,',;
     description: 'AI-powered inventory optimization and demand forecasting systems.,',;
@@ -87,7 +71,6 @@ const services = [
       'Demand forecasting,',
       'Stock optimization',',
       'Automated reordering',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Waste reduction'';
     ];
   },
@@ -102,7 +85,6 @@ title: 'Customer Analytics,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Customer Analytics,',
     description: 'Advanced analytics to understand customer behavior and preferences.,',
     icon: BarChart3,
@@ -110,14 +92,10 @@ title: 'Customer Analytics,',;
       'Customer segmentation,',
       'Purchase pattern analysis',',
       'Personalization engines',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Lifetime value prediction'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Personalized Recommendations,',;
     description: 'AI-driven product recommendation systems for enhanced customer experience.,',;
@@ -133,7 +111,6 @@ title: 'Customer Analytics,',;
       'Machine learning algorithms,',
       'Real-time recommendations',',
       'Cross-selling optimization',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'A/B testing frameworks'';
     ];
   },
@@ -148,7 +125,6 @@ title: 'Supply Chain Optimization,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Supply Chain Optimization,',
     description: 'End-to-end supply chain management with AI optimization.,',
     icon: Package,
@@ -156,14 +132,10 @@ title: 'Supply Chain Optimization,',;
       'Supplier management,',
       'Logistics optimization',',
       'Demand planning',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Cost reduction'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Omnichannel Solutions,',;
     description: 'Seamless integration across all sales channels and touchpoints.,',;
@@ -176,8 +148,6 @@ title: 'Supply Chain Optimization,',;
       'Social commerce integration'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
@@ -193,7 +163,6 @@ const benefits = [;
       'Social commerce integration'';
     ];
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = []
   {'
@@ -202,7 +171,6 @@ const benefits = []
     icon: ShoppingCart;
   },
 {}
-<<<<<<< HEAD
 
     title: 'Better Customer Experience,',;
     description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',;
@@ -219,8 +187,6 @@ const benefits = []
     icon: Database,;
 
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 export default function RetailPage() {
   return (;
@@ -269,7 +235,6 @@ export default function RetailPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
     title: 'Omnichannel Solutions,',
     description: 'Seamless integration across all sales channels and touchpoints.,',
     icon: Smartphone,
@@ -294,12 +259,9 @@ const benefits = [
     icon: ShoppingCart
   },
   {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Better Customer Experience,',
-=======
   {}'
     title: 'Better Customer Experience,','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',
     icon: Users;
   },
@@ -316,19 +278,16 @@ const benefits = [
 ;];
 export default function RetailPage() {;
   return (
-<<<<<<< HEAD
     <Layout
       title="Retail Technology Solutions - Zion Tech Group"
       description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."
       keywords="retail technology, e-commerce, inventory management, customer analytics, omnichannel retail, retail AI"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions.""
       keywords="retail technology, e-commerce, inventory management, customer analytics, omnichannel retail, retail AI""
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-purple-900 via-violet-900 to-indigo-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
@@ -340,8 +299,6 @@ export default function RetailPage() {;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >"
@@ -376,9 +333,6 @@ export default function RetailPage() {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -395,11 +349,9 @@ transition={{ duration: 0.8 }}
               className="text-center mb-16"
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto"">;
-=======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto""
             >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex items-center justify-center mb-6">";
                 <ShoppingCart className="w-12 h-12 text-purple-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -424,13 +376,10 @@ transition={{ duration: 0.8 }}
             </motion.div>;
           </div>;
 </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Retail Technology Services;
               </h2>"
@@ -446,10 +395,6 @@ transition={{ duration: 0.8 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -473,7 +418,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
-=======
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
               {services && services.map((service, index) => (,;
@@ -504,8 +448,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";                        {feature}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
@@ -522,22 +464,17 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -545,9 +482,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -575,16 +509,11 @@ Our retail technology solutions deliver measurable improvements in sales,
             </div>;
           </div>;
         </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               className="text-center mb-16"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Retail Solutions?
               </h2>"
@@ -597,7 +526,6 @@ Our retail technology solutions deliver measurable improvements in sales,
               {benefits.map((benefit, index) => (
                 <motion.div;
                   key={benefit.title}
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
@@ -610,9 +538,6 @@ Our retail technology solutions deliver measurable improvements in sales,
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
@@ -637,31 +562,21 @@ Our retail technology solutions deliver measurable improvements in sales,
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}        {/* CTA Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">"
-=======
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Retail?;
-=======
               transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Retail?;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              transition={{ duration: 0.8 }}
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Retail?;
               </h2>;
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let our retail technology experts help you implement solutions that drive sales;
@@ -687,11 +602,8 @@ Our retail technology solutions deliver measurable improvements in sales,
         </section>;
       </div>;
 </Layout>;            >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     </Layout>;
             >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?
               </h2>"
@@ -713,9 +625,6 @@ Our retail technology solutions deliver measurable improvements in sales,
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Retail?;
@@ -739,10 +648,5 @@ Our retail technology solutions deliver measurable improvements in sales,
     </Layout>;
   ),;
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

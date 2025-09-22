@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, CheckCircle, TrendingUp, DollarSign, Users, Zap, ArrowRight, Star, Award } from 'lucide-react';
 
 const AITransformation2025SuccessBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -109,11 +108,11 @@ const AITransformation2025SuccessBanner: React.FC = () => {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center space-x-3">
             <div className="flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
-              <Award className="w-5 h-5 text-yellow-300" />
+              <span className="w-5 h-5 text-yellow-300">📊</span>
               <span className="text-sm font-semibold">PROVEN SUCCESS</span>
             </div>
             <div className="hidden sm:flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
-              <ArrowRight className="w-4 h-4" />
+              <span className="w-4 h-4">📊</span>
               <span className="text-sm font-semibold">600% ROI ACHIEVED</span>
             </div>
           </div>
@@ -123,7 +122,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
             className="p-2 hover:bg-white/20 rounded-full transition-colors"
             aria-label="Dismiss banner"
           >
-            <X className="w-5 h-5" />
+            <span>X</span>
           </button>
         </div>
 
@@ -143,7 +142,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
             <div className="flex items-center justify-center mb-3">
-              <TrendingUp className="w-8 h-8 text-yellow-300" />
+              <span className="w-8 h-8 text-yellow-300">📊</span>
             </div>
             <div className="text-4xl font-bold text-yellow-300 mb-2">{animatedNumbers.roi}%</div>
             <div className="text-sm text-emerald-100">Average ROI</div>
@@ -151,7 +150,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
             <div className="flex items-center justify-center mb-3">
-              <DollarSign className="w-8 h-8 text-green-300" />
+              <span className="w-8 h-8 text-green-300">📊</span>
             </div>
             <div className="text-4xl font-bold text-green-300 mb-2">${animatedNumbers.savings}M</div>
             <div className="text-sm text-emerald-100">Annual Savings</div>
@@ -159,7 +158,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
             <div className="flex items-center justify-center mb-3">
-              <Zap className="w-8 h-8 text-blue-300" />
+              <span className="w-8 h-8 text-blue-300">📊</span>
             </div>
             <div className="text-4xl font-bold text-blue-300 mb-2">{animatedNumbers.efficiency}%</div>
             <div className="text-sm text-emerald-100">Efficiency Gains</div>
@@ -167,7 +166,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
             <div className="flex items-center justify-center mb-3">
-              <Users className="w-8 h-8 text-purple-300" />
+              <span className="w-8 h-8 text-purple-300">📊</span>
             </div>
             <div className="text-4xl font-bold text-purple-300 mb-2">{animatedNumbers.satisfaction}%</div>
             <div className="text-sm text-emerald-100">Success Rate</div>
@@ -180,10 +179,10 @@ const AITransformation2025SuccessBanner: React.FC = () => {
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  <span className="w-5 h-5 text-green-300">📊</span>
                   <span className="text-sm font-medium text-emerald-100">{story.industry}</span>
                 </div>
-                <Star className="w-5 h-5 text-yellow-300" />
+                <span>Star</span>
               </div>
               
               <h3 className="text-lg font-semibold mb-2">{story.company}</h3>
@@ -214,7 +213,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ArrowRight className="w-8 h-8 text-yellow-300" />
+                <span className="w-8 h-8 text-yellow-300">📊</span>
               </div>
               <h4 className="font-semibold mb-2">Proven Framework</h4>
               <p className="text-sm text-emerald-100">Battle-tested strategies from 500+ successful implementations</p>
@@ -222,7 +221,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-blue-300" />
+                <span className="w-8 h-8 text-blue-300">📊</span>
               </div>
               <h4 className="font-semibold mb-2">Rapid Implementation</h4>
               <p className="text-sm text-emerald-100">Achieve results in 18 months with our accelerated approach</p>
@@ -230,7 +229,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-green-300" />
+                <span className="w-8 h-8 text-green-300">📊</span>
               </div>
               <h4 className="font-semibold mb-2">Expert Support</h4>
               <p className="text-sm text-emerald-100">Dedicated AI transformation experts guide you every step</p>
@@ -238,7 +237,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-purple-300" />
+                <span className="w-8 h-8 text-purple-300">📊</span>
               </div>
               <h4 className="font-semibold mb-2">Guaranteed Results</h4>
               <p className="text-sm text-emerald-100">94% success rate with measurable ROI within 18 months</p>
@@ -259,7 +258,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
               className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors flex items-center justify-center space-x-2"
             >
               <span>Read Full Case Studies</span>
-              <ArrowRight className="w-5 h-5" />
+              <span className="w-5 h-5">📊</span>
             </Link>
             
             <Link
@@ -267,7 +266,7 @@ const AITransformation2025SuccessBanner: React.FC = () => {
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center space-x-2"
             >
               <span>Start Your Transformation</span>
-              <ArrowRight className="w-5 h-5" />
+              <span className="w-5 h-5">📊</span>
             </Link>
           </div>
         </div>

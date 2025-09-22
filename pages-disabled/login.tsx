@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye } from 'lucide-react';
@@ -510,7 +509,6 @@ Email address
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;"
                     <Mail className="h-5 w-5 text-gray-400" />;
                   </div>;
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye } from 'lucide-react';
@@ -551,8 +549,6 @@ export default function LoginPage() {}
                   Email address;
                 </label>"
                 <div className="mt-1 relative">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                   <input
                     id="email"
                     name="email"
@@ -816,13 +812,7 @@ required
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }
-=======
 
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </Layout>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages-disabled/login.tsx

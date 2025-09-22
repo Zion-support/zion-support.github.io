@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, TrendingUp, DollarSign, Users, Clock } from 'lucide-react';
 
 const AI2025UltimateBreakthroughPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,11 +68,11 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
           <div className="flex-1 pr-8">
             <div className="flex items-center space-x-4 mb-4">
               <div className="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-2">
-                <Star className="w-4 h-4 text-yellow-400" />
+                <span>Star</span>
                 <span className="text-sm font-medium">NEW ULTIMATE BREAKTHROUGH</span>
               </div>
               <div className="flex items-center space-x-2 bg-green-500/20 rounded-full px-4 py-2">
-                <TrendingUp className="w-4 h-4 text-green-400" />
+                <span className="w-4 h-4 text-green-400">📊</span>
                 <span className="text-sm font-medium">2,500% ROI ACHIEVED</span>
               </div>
             </div>
@@ -87,15 +86,15 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
               </p>
               <div className="flex items-center space-x-6 text-sm">
                 <div className="flex items-center space-x-2">
-                  <DollarSign className="w-4 h-4 text-green-400" />
+                  <span className="w-4 h-4 text-green-400">📊</span>
                   <span className="text-green-400 font-semibold">$3.2B+ Savings</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4 text-blue-400" />
+                  <span className="w-4 h-4 text-blue-400">📊</span>
                   <span className="text-blue-400 font-semibold">500+ Success Stories</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-purple-400" />
+                  <span>Clock</span>
                   <span className="text-purple-400 font-semibold">18 Months</span>
                 </div>
               </div>
@@ -107,7 +106,7 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
                 className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-2"
               >
                 <span>{content[currentSlide].cta}</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="w-4 h-4">📊</span>
               </Link>
               <Link
                 href="/contact"
@@ -146,7 +145,7 @@ const AI2025UltimateBreakthroughPromotionBanner = () => {
         onClick={handleDismiss}
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
       >
-        <X className="w-6 h-6" />
+        <span>X</span>
       </button>
     </div>
   );

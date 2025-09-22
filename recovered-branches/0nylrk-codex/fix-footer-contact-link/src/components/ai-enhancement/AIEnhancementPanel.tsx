@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
 import {Textarea} from '@/components/ui/textarea';
 import {Button} from '@/components/ui/button';
@@ -26,11 +18,7 @@ interface AIEnhancementPanelProps {;
 }
 
 export function AIEnhancementPanel(): any ({;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export function AIEnhancementPanel({;
 
@@ -39,52 +27,31 @@ import React, { useState } from 'react';
   showInstructions?: boolean;
   initialContent?: string;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
-export function AIEnhancementPanel({;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 export function AIEnhancementPanel({;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+export function AIEnhancementPanel({;
   title;
   defaultOptions;
   onApply;
   onClose;
-<<<<<<< HEAD
 
 showInstructions = true;
   initialContent = '';
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions;
-<<<<<<< HEAD
 
     content: initialContent || defaultOptions && defaultOptions.content}),;
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
-<<<<<<< HEAD
     const result = await enhanceContent(options);
-=======
 export function AIEnhancementPanel({;    const result = await enhanceContent(options);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function AIEnhancementPanel({;    const result = await enhanceContent(options);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     const result = await enhanceContent(options);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 export function AIEnhancementPanel({;    const result = await enhanceContent(options);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (result) {
       setGeneratedContent(result)
     }
@@ -94,15 +61,12 @@ export function AIEnhancementPanel({;    const result = await enhanceContent(opt
 
 };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Sparkles, Loader2, Copy, Check } from '@/components/icons',;
-=======
 export function AIEnhancementPanel() { return null; }
     if (result) {}
       setGeneratedContent(result)
@@ -117,7 +81,6 @@ import { Textarea } from '@/components/ui/textarea',;'
 import { Button } from '@/components/ui/button',;'
 import { Input } from '@/components/ui/input',;'
 import { Sparkles, Loader2, Copy, Check } from '@/components/icons',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
 interface AIEnhancementPanelProps {;
   title: string,;
@@ -135,9 +98,6 @@ export function AIEnhancementPanel() { return null; }
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
 
 const handleGenerate = async () => {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
@@ -145,39 +105,18 @@ const handleGenerate = async () => {;
 
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const result = await enhanceContent(options);
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const handleGenerate = async () => {;
-=======
 const handleGenerate = async () => {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const handleGenerate = async () => {;
     const result = await enhanceContent(options);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (result) {;
       setGeneratedContent(result);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions;
@@ -202,13 +141,11 @@ const handleApply = () => {
     setOptions({
       ...options
       [field]: e.target.value})
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
 
@@ -216,7 +153,6 @@ const handleApply = () => {
 
     <Card className="w-full max-w-2xl mx-auto">;
 <CardHeader>;
-=======
 
   };
 
@@ -306,12 +242,9 @@ export function AIEnhancementPanel({;
   return (
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <CardTitle className="flex items-center gap-2">;
-=======
       <CardHeader>;"
         <CardTitle className="flex items-center gap-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Sparkles className="h-5 w-5 text-primary" />;
 
           {title}
@@ -324,7 +257,6 @@ export function AIEnhancementPanel({;
 
         {/* Context input */}
         <div className="space-y-2">;
-=======
 
           <Textarea"
             placeholder="Enter your content to enhance...""
@@ -334,7 +266,6 @@ export function AIEnhancementPanel({;
 
         {/* Context input */}"
         <div className="space-y-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <label className="text-sm font-medium">Context (optional)</label>;
           <Textarea"
             placeholder="Add any relevant context to guide the AI...""
@@ -343,8 +274,6 @@ export function AIEnhancementPanel({;
             onChange={(e) => handleInputChange(e, 'context')}
 />;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         {/* Instructions input (optional) */}
         {showInstructions && (;"
@@ -418,24 +347,10 @@ const handleCopy = () => {
         {/* Generate button */}
         <Button 
           onClick={handleGenerate} 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         >
           {isEnhancing ? (
             <>"
@@ -512,7 +427,6 @@ import React, { useState } from 'react';')
   showInstructions?: boolean;
   initialContent?: string;
 }
-<<<<<<< HEAD
 export /**;
  * AIEnhancementPanel - Function description;
  */
@@ -534,23 +448,19 @@ if ( {) {}
     // Check condition;
 if ( {) {
 $2
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       setGeneratedContent (result);
   const handleInputChange = (
 e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,
-<<<<<<< HEAD
     field: keyof AIEnhancementOptions) =>: any {}
     set_options ({}
     field: keyof AIEnhancementOptions) =>: any {
   // TODO: Implement
     set_options ({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ...options,
       [field]: e.target.value});
   }
 ;
-<<<<<<< HEAD
   const handle_apply = () =>: any {}
     on_apply (generated_content);
     if (on_close ()) {}
@@ -564,13 +474,11 @@ e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,
     on_apply (generated_content);
     if (on_close ()) {
   const handle_copy = () =>: any {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     navigator.clipboard.write_text (generated_content);
     set_copied (true);
     set_timeout (() => set_copied (false), 2000);
   }
 ;
-<<<<<<< HEAD
   return ("
     <Card className="w - full max - w-2xl mx - auto">;
       <CardHeader>;"
@@ -619,12 +527,10 @@ e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,
             placeholder="Add any relevant context to guide the AI...";
             className="min - h-[60px]";
             value={options.context}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             on_change={(e) => handleInputChange (e, 'context')}
           />;
         </div>;
         {/* Instructions input (optional) */}
-<<<<<<< HEAD
         {show_instructions && ("
           <div className="space - y-2">;"
             <label className="text - sm font - medium">Special instructions (optional)</label>;
@@ -688,8 +594,5 @@ on_click={handle_generate}"
     </Card>);
 }
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </Card>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

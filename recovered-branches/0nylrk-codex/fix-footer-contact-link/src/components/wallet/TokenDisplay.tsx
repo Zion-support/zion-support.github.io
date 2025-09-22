@@ -3,11 +3,7 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
   const { wallet, loading } = useWallet();
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { wallet, loading } = useWallet();
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
 import { useWallet } from "@/hooks/useWallet",
@@ -16,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 export function TokenDisplay() {
 const { wallet, loading } = useWallet(),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <Card>
@@ -107,11 +102,6 @@ export function TokenDisplay() {;
       </CardContent>;
     </Card>);
 }
-=======
 }
 ;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

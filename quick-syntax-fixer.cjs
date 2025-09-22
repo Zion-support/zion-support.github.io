@@ -23,7 +23,6 @@ class QuickSyntaxFixer {
         // Remove merge conflict markers
         .replace(/[\s\S]*?
 
-        .replace(/^>>>>>>>.*$/gm, '')
 ursor/fix-lint-push-and-merge-to-main-28da
 
         // Fix module.exports

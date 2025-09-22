@@ -7,18 +7,9 @@ import { Award, Share, Star, TrendingUp } from "lucide-react";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from "lucide-react",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ReferralStatsProps {
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 interface ReferralStatsProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   stats: ReferralStatsType;
   isLoading: boolean;
 }
@@ -47,9 +38,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />"
       description: "Credits earned from referrals"
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Award, Share, Star, TrendingUp  } from './lucide-react';
 interface ReferralStatsProps {}
   stats: ReferralStatsType;
@@ -84,12 +72,7 @@ function ReferralStats() {}
       icon: <Award className="h - 5 w - 5 text - muted - foreground" />,"
       description: "Credits earned from referrals",
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4;
   ];
-=======
-=======  ];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { ReferralStats, as, ReferralStatsType  } from '@/types / referrals';
 import { Award, Share, Star, TrendingUp  } from './lucide-react';
@@ -127,7 +110,6 @@ function ReferralStats() {
       description: "Credits earned from referrals",
     },
   ];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 return (
     <div className=\"grid gap - 4 md:grid - cols - 2 lg:grid - cols-4\" />;
@@ -141,7 +123,6 @@ return (
             {is_loading ? (
 <div className="h - 6 w - 20 bg - muted animate - pulse rounded" />) : (
               <>;
-<<<<<<< HEAD
                 <div className="text - 2xl font-bold">{card.value}</div>;
                 <p className="text - xs text - muted-foreground">;
                   {card.description}
@@ -180,7 +161,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {}
       icon: <Award className="h-5 w-5 text-muted-foreground" />,"
       description: "Credits earned from referrals",
 },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   ];
 
   return ("
@@ -249,9 +229,6 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
               </>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             )}
           </CardContent>;
         </Card>;
@@ -262,7 +239,6 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
   )
 }
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 </p>;
               </>)}
@@ -270,26 +246,12 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
         </Card>))}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>
   );
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 interface ReferralStatsProps {
   // TODO: Implement
@@ -357,4 +319,3 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
     </div>]"
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

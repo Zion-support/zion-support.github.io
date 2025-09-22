@@ -5,9 +5,6 @@ export type Json =;
   | boolean;
   | null;
   | { [key: string]: Json | undefined }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   | Json[];
 
 export type Database = {}
@@ -53,7 +50,6 @@ export type Database = {
           user_id: string;
         }
         Insert: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           id?: string;
           message: string;,
@@ -84,7 +80,6 @@ Update: {}
           metadata: Json | null;
           path: string | null;
           session_id: string | null;
-=======
       analytics_events: {,
   Row: {
           created_at: string | null;,
@@ -93,7 +88,6 @@ Update: {}
   metadata: Json | null;
           path: string | null;,
   session_id: string | null;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           user_id: string | null;
         }
 Insert: {}
@@ -139,7 +133,6 @@ name: string;"
         Insert: {}
         }
         Insert: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           expires_at?: string | null;
           id?: string;
@@ -147,7 +140,6 @@ name: string;"
           key_hash: string;,
   key_prefix: string;
           last_used_at?: string | null;
-<<<<<<< HEAD
           name: string;"
           scopes?: Database["public"]["Enums"]["api_key_scope"][];
           user_id: string;
@@ -156,7 +148,6 @@ name: string;"
           user_id: string;
         }
         Update: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           expires_at?: string | null;
           id?: string;
@@ -164,7 +155,6 @@ name: string;"
           key_hash?: string;
           key_prefix?: string;
           last_used_at?: string | null;
-<<<<<<< HEAD
           name?: string;"
           scopes?: Database["public"]["Enums"]["api_key_scope"][];
           user_id?: string;
@@ -179,8 +169,6 @@ name: string;"
           }];
       }
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       api_logs: {;,
   Row: {;
@@ -335,26 +323,13 @@ created_at: string
           user_id?: string | null
       api_logs: {;
         Row: {;
-<<<<<<< HEAD
-<<<<<<< HEAD
       api_logs: {;
         Row: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           api_key_id: string | null;
-=======
   | Json[];          api_key_id: string | null;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   | Json[];          api_key_id: string | null;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           api_key_id: string | null;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at: string;
           endpoint: string;
           id: string;
@@ -377,8 +352,6 @@ Insert: {        Insert: {
 
           user_agent?: string | null;
           user_id?: string | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
         }
           api_key_id?: string | null;
           created_at?: string;
@@ -390,7 +363,6 @@ Insert: {        Insert: {
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
-<<<<<<< HEAD
         }
         Relationships: [;
           {
@@ -403,24 +375,18 @@ columns: ["api_key_id"]
             referencedColumns: ["id"]
           }
           },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
         Relationships: [;
           {
         }
         Relationships: [;
           {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             foreignKeyName: "api_logs_api_key_id_fkey"
-=======
 "
             foreignKeyName: "api_logs_api_key_id_fkey""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["api_key_id"]
             isOneToOne: false"
             referencedRelation: "api_keys"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           }
 "
@@ -436,8 +402,6 @@ columns: ["api_key_id"]
         Relationships: [;
           {}
           }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -729,14 +693,11 @@ columns: ["api_key_id"]
         }
         Relationships: [;
 {
-<<<<<<< HEAD
 
             foreignKeyName: "fraud_flags_reviewed_by_fkey";
-=======
           {}
 "
             foreignKeyName: "fraud_flags_reviewed_by_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["reviewed_by"];
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
@@ -746,15 +707,11 @@ columns: ["api_key_id"]
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "fraud_flags_user_id_fkey";
-=======
 
           {"
             foreignKeyName: "fraud_flags_user_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["user_id"];
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
@@ -926,24 +883,19 @@ columns: ["api_key_id"]
         }
         Relationships: [;
 {
-<<<<<<< HEAD
 
           },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "job_applications_resume_id_fkey"
-=======
           {}
           },
 
           {"
             foreignKeyName: "job_applications_resume_id_fkey""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["resume_id"]
             isOneToOne: false"
             referencedRelation: "talent_resumes""
             referencedColumns: ["id"]
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             columns: ["api_key_id"]
             isOneToOne: false
             referencedRelation: "api_keys"
@@ -1983,7 +1935,6 @@ referencedColumns: ["id"];
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
           },
 
@@ -2017,29 +1968,16 @@ foreignKeyName: "job_applications_job_id_fkey";
 
           },
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           {"
             foreignKeyName: "job_applications_resume_id_fkey";"
-=======
           {
             foreignKeyName: "job_applications_resume_id_fkey";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             columns: ["resume_id"];
             isOneToOne: false;"
             referenced_relation: "talent_resumes";"
             referenced_columns: ["id"];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
           {"
             foreignKeyName: "job_applications_talent_id_fkey";"
@@ -2170,11 +2108,6 @@ jobs: {}
         }
         Relationships: [;
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             foreignKeyName: "milestone_activities_milestone_id_fkey";
             columns: ["milestone_id"];
@@ -3319,7 +3252,6 @@ jobs: {}
             referenced_relation: "user_metrics";","
   referenced_columns: ["user_id"];"
           }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
 },
           {
@@ -3417,17 +3349,11 @@ jobs: {}
             isOneToOne: false
             referencedRelation: "project_milestones"
             referencedColumns: ["id"]
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             foreignKeyName: "milestone_activities_milestone_id_fkey";
-=======
           {}
 "
             foreignKeyName: "milestone_activities_milestone_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["milestone_id"];
             isOneToOne: false;"
             referenced_relation: "project_milestones";"
@@ -3438,8 +3364,6 @@ jobs: {}
           },
 
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "milestone_activities_user_id_fkey";
             columns: ["user_id"];
@@ -3766,14 +3690,11 @@ foreignKeyName: "partner_payouts_partner_id_fkey";
         }
         Relationships: [;
           {
-<<<<<<< HEAD
 
             foreignKeyName: "profiles_id_fkey";
-=======
           {}
 "
             foreignKeyName: "profiles_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["id"];
             isOneToOne: true;"
             referenced_relation: "user_metrics";"
@@ -3783,15 +3704,11 @@ foreignKeyName: "partner_payouts_partner_id_fkey";
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "profiles_tenant_id_fkey";
-=======
 
           {"
             foreignKeyName: "profiles_tenant_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["tenant_id"];
             isOneToOne: false;"
             referenced_relation: "whitelabel_tenants";"
@@ -3840,14 +3757,11 @@ foreignKeyName: "partner_payouts_partner_id_fkey";
         }
         Relationships: [;
 {
-<<<<<<< HEAD
 
             foreignKeyName: "project_milestones_created_by_fkey";
-=======
           {}
 "
             foreignKeyName: "project_milestones_created_by_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["created_by"];
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
@@ -3860,42 +3774,27 @@ foreignKeyName: "partner_payouts_partner_id_fkey";
           }
 
           },
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
           }          }
 
           },
 
           },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {
             foreignKeyName: "project_milestones_project_id_fkey";
-=======
 
           {"
             foreignKeyName: "project_milestones_project_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["project_id"];
             isOneToOne: false;"
             referenced_relation: "projects";"
             referenced_columns: ["id"];
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             foreignKeyName: "project_notes_project_id_fkey";
-=======
           {}
 "
             foreignKeyName: "project_notes_project_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["project_id"];
             isOneToOne: false;"
             referenced_relation: "projects";"
@@ -3905,14 +3804,10 @@ foreignKeyName: "partner_payouts_partner_id_fkey";
 
           },
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "project_notes_user_id_fkey";
             columns: ["user_id"];
@@ -3963,19 +3858,15 @@ foreignKeyName: "partner_payouts_partner_id_fkey";
         }
         Relationships: [;
 {
-<<<<<<< HEAD
 
           },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "projects_job_id_fkey"
-=======
           {}
           },
 
           {"
             foreignKeyName: "projects_job_id_fkey""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["job_id"]
             isOneToOne: false"
             referencedRelation: "jobs""
@@ -3985,24 +3876,19 @@ foreignKeyName: "partner_payouts_partner_id_fkey";
             columns: ["job_id"];
             foreignKeyName: "projects_client_id_fkey";
             columns: ["client_id"];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
 
           }
-=======
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]          }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]          }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
           {"
             foreignKeyName: "projects_talent_id_fkey";"
@@ -4032,7 +3918,6 @@ foreignKeyName: "partner_payouts_partner_id_fkey";
           talent_id: string | null;
           timeline: string;
           updated_at: string;
-=======
           {"
             foreignKeyName: "projects_talent_id_fkey";","
   columns: ["talent_id"];"
@@ -4061,7 +3946,6 @@ foreignKeyName: "partner_payouts_partner_id_fkey";
   talent_id: string | null;
           timeline: string;,
   updated_at: string;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           viewed_at: string | null;
 
         }
@@ -4119,10 +4003,6 @@ Update: {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           },
           {
             foreignKeyName: "projects_talent_id_fkey"
@@ -4203,66 +4083,40 @@ Update: {
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             foreignKeyName: "quote_requests_requester_id_fkey";
-=======
         Update: {}
 "
             foreignKeyName: "quote_requests_requester_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["requester_id"];
             isOneToOne: false;"
             referenced_relation: "profiles";"
             referenced_columns: ["id"];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           }
 
           },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {
             foreignKeyName: "quote_requests_talent_id_fkey";
-=======
 
           {"
             foreignKeyName: "quote_requests_talent_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["talent_id"];
             isOneToOne: false;"
             referenced_relation: "profiles";"
             referenced_columns: ["id"];
           }];
-<<<<<<< HEAD
       }
       referral_codes: {;
         Row: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       }
 
       referral_codes: {;
         Row: {;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           code: string;
           created_at: string;
           id: string;
@@ -4282,21 +4136,14 @@ Insert: {}
           id?: string;
           updated_at?: string;
           user_id?: string;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
         Relationships: [;
-=======
       }          code?: string;
           created_at?: string;
           id?: string;
           updated_at?: string;
           user_id?: string;        Relationships: [;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         Insert: {
 Insert: {;
         Insert: {
@@ -4316,16 +4163,13 @@ Update: {;
 
         }
         Relationships: [;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {
             foreignKeyName: "referral_codes_user_id_fkey";
-=======
 
         }
         Relationships: [;
           {"
             foreignKeyName: "referral_codes_user_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["user_id"];
             isOneToOne: true;"
             referenced_relation: "user_metrics";"
@@ -4433,20 +4277,15 @@ Update: {;
           user_id?: string;}
         }
         Relationships: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
           {
-<<<<<<< HEAD
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-<<<<<<< HEAD
 
           },
 
 },
 
-<<<<<<< HEAD
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
@@ -4476,34 +4315,22 @@ Update: {;
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
-=======
           {            foreignKeyName: "referral_rewards_referral_id_fkey"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           {            foreignKeyName: "referral_rewards_referral_id_fkey"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           {}
           },
 
           {"
             foreignKeyName: "referral_rewards_referral_id_fkey""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["referral_id"]
             isOneToOne: false"
             referencedRelation: "referrals""
             referencedColumns: ["id"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             foreignKeyName: "referral_rewards_partner_id_fkey";
             columns: ["partner_id"];
             isOneToOne: false;"
@@ -4519,11 +4346,7 @@ Update: {;
             isOneToOne: false;"
             referenced_relation: "referrals";"
             referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
           {"
             foreignKeyName: "referral_rewards_user_id_fkey";"
@@ -4584,35 +4407,22 @@ referrals: {}
         }
         Relationships: [;
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "referrals_referral_code_fkey"
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           {}
           },
 
           {"
             foreignKeyName: "referrals_referral_code_fkey""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["referral_code"]
             isOneToOne: false"
             referencedRelation: "referral_codes""
             referencedColumns: ["code"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
@@ -4628,7 +4438,6 @@ foreignKeyName: "referrals_partner_id_fkey";
 
           },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           {"
             foreignKeyName: "referrals_referral_code_fkey";"
@@ -4643,18 +4452,11 @@ foreignKeyName: "referrals_partner_id_fkey";
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
           },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
           },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
           {"
             foreignKeyName: "referrals_referrer_id_fkey";"
@@ -4665,10 +4467,6 @@ foreignKeyName: "referrals_partner_id_fkey";
           }];
 }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
       reminder_logs: {;
         Row: {;
@@ -4716,7 +4514,6 @@ foreignKeyName: "referrals_partner_id_fkey";
       reminder_logs: {;
         Row: {;
           clicked_at: string | null;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           email_body: string;
           email_subject: string;
           id: string;
@@ -4734,7 +4531,6 @@ Insert: {        Insert: {
           reminder_type: string;
           sent_at?: string | null;
           user_id: string;
-<<<<<<< HEAD
         }
           clicked_at?: string | null;
           email_body?: string;
@@ -4745,35 +4541,24 @@ Insert: {        Insert: {
           sent_at?: string | null;
           user_id?: string;
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        }
-        Relationships: [;
-=======
-        }        Relationships: [;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         }
         Relationships: [;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+        }        Relationships: [;
+
+        }
+        Relationships: [;
         }
         Relationships: [;
         }        Relationships: [;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {
           {
             foreignKeyName: "resume_skills_resume_id_fkey";
-=======
         }
         Relationships: [;
           {}
           {"
             foreignKeyName: "resume_skills_resume_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["resume_id"];
             isOneToOne: false;"
             referenced_relation: "talent_resumes";"
@@ -4990,10 +4775,6 @@ Insert: {        Insert: {
         }
         Relationships: [;
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         Relationships: [
           {
             foreignKeyName: "reminder_logs_user_id_fkey"
@@ -5075,23 +4856,13 @@ Insert: {        Insert: {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             foreignKeyName: "review_reports_reporter_id_fkey";
-=======
           {}
 "
             foreignKeyName: "review_reports_reporter_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["reporter_id"];
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
@@ -5101,15 +4872,10 @@ Insert: {        Insert: {
 
           },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "review_reports_review_id_fkey";
             columns: ["review_id"];
@@ -5120,7 +4886,6 @@ Insert: {        Insert: {
       }
       reviews: {}
         Row: {}
-=======
           }
 },
 
@@ -5137,7 +4902,6 @@ Insert: {        Insert: {
       }
       reviews: {
         Row: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           communication_rating: number | null;
           created_at: string;
           id: string;
@@ -5193,9 +4957,6 @@ Update: {}
         }
         Relationships: [;
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           },
           {
             foreignKeyName: "review_reports_review_id_fkey"
@@ -5267,29 +5028,18 @@ Update: {}
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
-<<<<<<< HEAD
 
           },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           {}
           },
 
           {"
             foreignKeyName: "reviews_reviewee_id_fkey""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
           },
 
@@ -5301,15 +5051,11 @@ Update: {}
 
           },
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             columns: ["reviewee_id"]
             isOneToOne: false"
             referencedRelation: "user_metrics""
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             foreignKeyName: "reviews_project_id_fkey";
             columns: ["project_id"];
             isOneToOne: false;"
@@ -5325,11 +5071,7 @@ Update: {}
             isOneToOne: false;"
             referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
           {"
             foreignKeyName: "reviews_reviewer_id_fkey";"
@@ -5479,18 +5221,14 @@ Update: {}
         }
         Relationships: [;
 {
-<<<<<<< HEAD
 
             foreignKeyName: "tenant_administrators_tenant_id_fkey";
-=======
           {}
 "
             foreignKeyName: "tenant_administrators_tenant_id_fkey";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["tenant_id"];
             isOneToOne: false;"
             referenced_relation: "whitelabel_tenants";"
-=======
 
             foreignKeyName: "reviews_project_id_fkey";
             columns: ["project_id"];
@@ -5816,14 +5554,12 @@ Update: {}
             columns: ["tenant_id"];
             isOneToOne: false;
             referenced_relation: "whitelabel_tenants";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             referenced_columns: ["id"];
 
           }
 
           },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             foreignKeyName: "tenant_administrators_user_id_fkey";
             columns: ["user_id"];
@@ -5834,7 +5570,6 @@ Update: {}
       }
       user_onboarding: {}
         Row: {}
-=======
           {
             foreignKeyName: "tenant_administrators_user_id_fkey";
             columns: ["user_id"];
@@ -5845,7 +5580,6 @@ Update: {}
       }
       user_onboarding: {
         Row: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           application_sent: boolean | null;
           application_sent_at: string | null;
           availability_set: boolean | null;
@@ -6164,7 +5898,6 @@ Update: {}
       }
     }
 
-<<<<<<< HEAD
           conversion_rate: number | null
           conversion_type: string | null
           date: string | null
@@ -6218,21 +5951,13 @@ Update: {}
           days_since_login: number
           onboarding_status: Json
         }[]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     Functions: {;
       check_users_needing_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: {;
 
 user_id: string;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           user_id: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           email: string;
           display_name: string;
           user_type: string;
@@ -6241,29 +5966,14 @@ user_id: string;
           days_since_login: number;
           onboarding_status: Json;
         }[];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       complete_referral: {
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
       complete_referral: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         Args: { _referred_id: string, _user_type: string }
         Returns: undefined;
       }
@@ -6277,26 +5987,14 @@ user_id: string;
         }
         Returns: string;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       create_scheduled_reminders: {;
         Args: Record<PropertyKey never>;
 Args: Record < PropertyKey, never>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         Args: Record < PropertyKey, never>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Returns: undefined;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       flag_suspicious_content: {}
         Args: {}
@@ -6327,27 +6025,16 @@ Args: Record < PropertyKey, never>;
         Args: { key_prefix: string, provided_key: string }
         Returns: string;
       }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         Args: Record < PropertyKey, never>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         Returns: string;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
       get_event_distribution: {}
         Args: { days_back?: number }
         Returns: {}
       }
       hash_api_key: {}
-=======
         Returns: string;
       get_current_tenant_id: {;
         Args: Record<PropertyKey never>;
@@ -6363,15 +6050,10 @@ Args: Record < PropertyKey, never>;
         }[];
       }
       hash_api_key: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Args: { api_key: string }
         Returns: string;
       }
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
@@ -6379,7 +6061,6 @@ Args: Record < PropertyKey, never>;
         Args: Record < PropertyKey, never>;
 
         Returns: number;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       trigger_resume_scoring: {}
         Args: { application_id: string }
@@ -6390,10 +6071,7 @@ Args: Record < PropertyKey, never>;
         Returns: undefined;
       }
       verify_api_key: {}
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
         Args: Record < PropertyKey, never>;
@@ -6408,22 +6086,14 @@ Args: Record < PropertyKey, never>;
         Returns: undefined;
       }
       verify_api_key: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Args: { provided_key: string, stored_hash: string }
         Returns: boolean;
       }
     }
 Enums: {
-<<<<<<< HEAD
-<<<<<<< HEAD
       api_key_scope:;
-=======
         Returns: string;      api_key_scope:;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         Returns: string;      api_key_scope:;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     Enums: {
 | { [key:string]:Json | undefined }
   | Json[];
@@ -8694,7 +8364,6 @@ export type Database = {;
     }
     Enums:{;
       api_key_scope:;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         | "jobs:read";
         | "jobs:write";
         | "talent:read";
@@ -8719,7 +8388,6 @@ export type Tables<;
           date: string;
           event_type: string;
           count: number;
-=======
       referral_status: "pending" | "completed" | "expired";
     }
     CompositeTypes: {
@@ -8761,7 +8429,6 @@ export type Tables<;
           date: string
           event_type: string
           count: number
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }[]
       }
       hash_api_key: {}
@@ -8814,24 +8481,13 @@ export type Tables<;
 type DefaultSchema = Database[Extract<keyof Database, "public">]
 export type Tables<
 DefaultSchemaTableNameOrOptions extends
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
     | { schema: keyof Database };"
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 | { schema: keyof Database }
     | { schema: keyof Database },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -8851,13 +8507,6 @@ DefaultSchemaTableNameOrOptions extends
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {}
         Row: infer R;
       }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
     : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
@@ -8872,16 +8521,12 @@ DefaultSchemaTableNameOrOptions extends
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ? R
       : never
     : never
 export type TablesInsert<
-<<<<<<< HEAD
   DefaultSchemaTableNameOrOptions extends
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       ? R;
       : never;
@@ -8916,16 +8561,13 @@ DefaultSchemaTableNameOrOptions extends;"
 "
     | keyof DefaultSchema["Tables"]
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
-=======
 
   TableName extends DefaultSchemaTableNameOrOptions extends {}
     schema: keyof Database;
   }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
     : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
@@ -8937,14 +8579,11 @@ DefaultSchemaTableNameOrOptions extends;"
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
         Insert: infer I;
       }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ? I
       : never
     : never
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       ? I;
       : never;
@@ -8978,16 +8617,13 @@ export type TablesUpdate<;
 "
     | keyof DefaultSchema["Tables"]
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
-=======
 
   TableName extends DefaultSchemaTableNameOrOptions extends {}
     schema: keyof Database;
   }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
     : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
@@ -8999,8 +8635,6 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
         Update: infer U;
       }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ? U
       : never
     : never
@@ -9012,12 +8646,9 @@ export type Enums<
     | keyof DefaultSchema["Enums"]
     | { schema: keyof Database }
     | { schema: keyof Database },
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
-=======
 
       ? U;
       : never;
@@ -9027,7 +8658,6 @@ export type Enums<;
   EnumName extends DefaultSchemaEnumNameOrOptions extends {}
     schema: keyof Database;
   }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
     : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }"
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]"
@@ -9175,9 +8805,7 @@ export type TablesUpdate<;
         Update: infer U;
       }
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       ? U;
       : never;
@@ -9188,27 +8816,18 @@ export type Enums<;
 
     | { schema: keyof Database }
 
-=======
   DefaultSchemaTableNameOrOptions extends    | { schema: keyof Database }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
-=======
   EnumName extends DefaultSchemaEnumNameOrOptions extends {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     schema: keyof Database;
   }"
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never;
-<<<<<<< HEAD
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
 
   }"
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
@@ -9226,10 +8845,7 @@ export type CompositeTypes<;
 
     | { schema: keyof Database }
 
-=======
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }    | { schema: keyof Database }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
@@ -9239,18 +8855,14 @@ export type CompositeTypes<;
     | keyof DefaultSchema["CompositeTypes"];
 
     | { schema: keyof Database }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
-=======
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     schema: keyof Database;
   }"
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
 
-<<<<<<< HEAD
     | keyof DefaultSchema["CompositeTypes"]
 
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
@@ -9266,7 +8878,6 @@ export type CompositeTypes<;
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
-<<<<<<< HEAD
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
@@ -9291,8 +8902,6 @@ export const Constants = {}
 
 "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
@@ -9319,7 +8928,6 @@ export const Constants = {
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 ;
 
@@ -10645,12 +10253,6 @@ export const Constants = {;
         "closed",;
         "archived"];
       referral_status: ["pending", "completed", "expired"]}}} as const;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;
 
@@ -10662,11 +10264,7 @@ export const Constants = {}
 ;
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   | Json[];
 
 export type Database = {
@@ -11742,4 +11340,3 @@ pr-12325
 ;
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

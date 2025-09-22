@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Badge } from '@/components / ui / badge';
 import { Crown, Medal, Trophy } from './lucide-react';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -14,55 +10,32 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface LeaderboardEntry {
 
 interface LeaderboardEntry {}
   id: string;
   rank: number;
   name: string;
-=======
 
 interface LeaderboardEntry {
 
   id: string
   rank: number
   name: string
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   avatar?: string;
 
-<<<<<<< HEAD
 interface LeaderboardEntry {
-=======
 interface LeaderboardEntry {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 interface LeaderboardEntry {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string,
   rank: number,
   name: string,
   avatar?: string,
   referrals: number,
   earnings: number,
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   badges: string[]
 }
 export function PartnerLeaderboard() {};
@@ -72,20 +45,12 @@ export function PartnerLeaderboard() {};
       id: "1"
 rank: 1
       name: "AI Tech Guru"
-<<<<<<< HEAD
-<<<<<<< HEAD
       avatar: "", // URL would be here
-<<<<<<< HEAD
-=======
       avatar: "", // URL would be here
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       referrals: 178,
       earnings: 4500,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       referrals: 178
       earnings: 4500
 
@@ -96,7 +61,6 @@ rank: 1
       badges: ["gold", "trending"]
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       earnings: 4500
       referrals: 178,
       earnings: 4500,
@@ -105,31 +69,16 @@ rank: 1
       badges: ["gold", "trending"]
     }
     },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       referrals: 178,
       earnings: 4500,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
-=======
       avatar: "", // URL would be here    {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 referrals: 178,
       earnings: 4500,
     {
       avatar: "", // URL would be here    {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     {}
 "
@@ -141,14 +90,8 @@ referrals: 178,
       earnings: 3625;
 "
       badges: ["silver"]
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
     }
     },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     {
 
       id: "3"
@@ -164,11 +107,8 @@ referrals: 178,
 
 },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     {
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     {}
 "
@@ -181,19 +121,12 @@ referrals: 178,
 "
       badges: ["bronze"]
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
     },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     {}
 "
@@ -205,9 +138,6 @@ referrals: 178,
       earnings: 2450;
       badges: []
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       id: "5"
       rank: 5
@@ -217,28 +147,18 @@ referrals: 178,
       earnings: 2175
 
 badges: ["newcomer"]
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       badges: ["newcomer"]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   ];
   // Function to render rank badge
 
   return (
     <div className="space-y-6">
-=======
     }
   ];
   // Function to render rank badge;
   return ("
     <div className="space-y-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>"
           <CardTitle className="flex items-center gap-2">"
@@ -269,8 +189,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
 import { Badge } from "@/components/ui/badge",;"
 import { Crown, Medal, Trophy } from "lucide-react",;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
@@ -283,9 +201,6 @@ interface LeaderboardEntry {;
   badges: string[];
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function PartnerLeaderboard() {;
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
@@ -299,13 +214,11 @@ export function PartnerLeaderboard() {;
       badges: ["gold", "trending"]
 };    };
     {;
-=======
 
 export function PartnerLeaderboard() { return null; }
     };
 
     {;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       id: "2",;
       rank: 2,;"
       name: "Machine Learning Hub",;"
@@ -340,15 +253,10 @@ badges: []
       referrals: 87,;
       earnings: 2175,;"
       badges: ["newcomer"];
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   ];
   // Function to render rank badge
 
-<<<<<<< HEAD
 
   // Function to render rank badge;
   const renderRankBadge = (rank: number) => {;
@@ -431,7 +339,6 @@ function PartnerLeaderboard() {}
     }
   }
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -463,11 +370,9 @@ function PartnerLeaderboard() {}
           <div className="space - y-4">;
             {leaderboard.length > 0 ? (
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 `
                   }`}
-=======
     },
     {
       id: "5",
@@ -668,13 +573,10 @@ function PartnerLeaderboard() {
             {leaderboard.length > 0 ? (
 
                   }`}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 >
                   <div className="flex items-center gap-3">
-=======
                 >"
                   <div className="flex items-center gap-3">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">
                       {renderRankBadge(entry.rank)}
                     </div>"
@@ -698,8 +600,6 @@ function PartnerLeaderboard() {
                       {entry.badges.includes("gold") && ("
                         <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
 Elite
-<<<<<<< HEAD
-<<<<<<< HEAD
                         </Badge>
 
       case 3:;"
@@ -732,10 +632,6 @@ Elite
                           Trending;
                         </Badge>;
                       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div className="text-xs text-zion-slate-light">earned</div>;
                     </div>;
                     <div className="flex gap-1">;
@@ -744,7 +640,6 @@ Elite
                           Elite;
                         </Badge>;
                       )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       )}
                       {entry.badges.includes("trending") && (
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
@@ -770,7 +665,6 @@ Elite
                   Start referring to earn your spot on the leaderboard
                 </p>
               </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     </div>;
                   </div>;
                 </div>;
@@ -784,29 +678,18 @@ Elite
                 </p>;
               </div>;
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </div>;
         </CardContent>;
       </Card>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             )}
 
-=======
                         </Badge>            )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                         </Badge>            )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </CardContent>
       </Card>"
@@ -1425,8 +1308,6 @@ pr-12325
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             )}
           </div>;
         </CardContent>;
@@ -1455,18 +1336,13 @@ pr-12325
             </Badge>;
           </div>;
         </CardContent>;
-<<<<<<< HEAD
       </Card>;            </ul>;
-=======
       </Card>;            </ul>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>;
         </CardContent>;
       </Card>;
 
 </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
     </div>;
@@ -1519,19 +1395,9 @@ return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zi
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }> <div className="flex items-center gap-3"> <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light"> {"
 }</div> <Avatar className="h-10 w-10 border border-zion-blue-light"> <AvatarImage src= {"
 }/> <AvatarFallback className="bg-zion-blue text-zion-cyan"> {"
@@ -1545,4 +1411,3 @@ return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zi
 pr-12325
 }</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Your Ranking</CardTitle> <CardDescription>How you compare to other partners</CardDescription> </CardHeader> <CardContent> <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg"> <p className="text-zion-slate-light mb-4" > Start referring to appear on the leaderboard </p> <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple"> New Partner </Badge> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Rewards Program</CardTitle> <CardDescription>Exclusive perks for top partners</CardDescription> </CardHeader> <CardContent className="space-y-4"> <div className="p-4 bg-zion-blue rounded-md"> <div className="flex items-center gap-2 mb-2" > <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400"> Elite Partner </Badge> <span className="text-xs text-zion-slate-light"> (Top 3) </span> </div> <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1"> <li>Increased commission rate (35%) </li> <li>Featured on Zion AI home page</li> <li>Early access to new Zion AI features</li> <li>Monthly strategy call with Zion AI team</li> </ul> </div> <div className="p-4 bg-zion-blue rounded-md"> <div className="flex items-center gap-2 mb-2" > <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300"> Premier Partner </Badge> <span className="text-xs text-zion-slate-light"> (Top 10) </span> </div> <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1"> <li>Increased commission rate (30%) </li> <li>Custom landing page for your referrals</li> <li>Co-marketing opportunities</li> </ul> </div> </CardContent> </Card> </div>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

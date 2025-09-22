@@ -1,4 +1,3 @@
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Type definition for MessageEvent
 interface MessageEvent {
   data: unknown;
@@ -8,7 +7,6 @@ import { useEffect, useCallback } from "react";
 interface Event {
   type: string;
   target: EventTarget | null;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 // Type definition for MessageEvent;
 interface MessageEvent {
@@ -60,7 +58,6 @@ main
   onMessage;
 origin/cursor/automate-test-improve-and-merge-code-2533
   onError
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
@@ -83,7 +80,6 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
 main
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
 
@@ -114,4 +110,3 @@ interface MessageEvent<T = any> extends Event {
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
 </unknown>"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

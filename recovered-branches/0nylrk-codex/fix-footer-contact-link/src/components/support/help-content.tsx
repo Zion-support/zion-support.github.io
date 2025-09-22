@@ -1,49 +1,27 @@
 import React from "react";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
-=======
 
 import React from "react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { HelpCategory } from "./types",
 import {}
-=======
 
-=======
 import {HelpCategory} from "./types";
 import {HelpCircle, CreditCard, Users, Calendar, Briefcase} from "lucide-react";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { HelpCategory } from "./types",
 import { 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   HelpCircle,
   CreditCard, 
   Users, 
   Calendar, 
 Briefcase "
 } from "lucide-react",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const HELP_CATEGORIES: HelpCategory[] = [
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   Briefcase 
 } from "lucide-react",
 
 export const HELP_CATEGORIES: HelpCategory[] = [
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "getting-started"
     name: "Getting Started"
@@ -53,12 +31,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
 
         id: "create-account",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {
         id: "complete-profile"
         title: "Completing your profile"
@@ -68,23 +41,14 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["profile", "setup"]
 
       },
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         tags: ["profile", "setup"]
 
       },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {
         id: "platform-navigation",
         title: "Navigating the platform",
         content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\nUse the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.",
         lastUpdated: "2023-12-01",
-=======
       },
 
       {"
@@ -92,35 +56,23 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         title: "Navigating the platform","
         content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\nUse the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.","
         lastUpdated: "2023-12-01","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         tags: ["navigation", "interface"]
       }
-<<<<<<< HEAD
     ]
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
-=======
     ]  {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     ]  {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     ]
   },
 
   {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: "hiring"
     name: "Hiring Process"
     description: "How to find and hire talent on the platform"
     icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
     articles: [
-<<<<<<< HEAD
       {
-<<<<<<< HEAD
         tags: ["job", "hiring", "recruitment"]
       }
       {
@@ -146,18 +98,12 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         id: "post-job",
-=======
       {        id: "post-job",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       {        id: "post-job",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Posting a job",
         content: "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.",
         lastUpdated: "2023-10-25",
-=======
 
   {"
     id: "hiring""
@@ -171,7 +117,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         title: "Posting a job",'"
         content: "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.","
         lastUpdated: "2023-10-25","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         tags: ["job", "hiring", "recruitment"]
       },
       {"
@@ -198,9 +143,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 ]
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
     id: "profile-setup"
     name: "Profile Setup"
@@ -209,11 +151,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     articles: [
       {
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         id: "talent-profile",
         title: "Setting up a talent profile",
         content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.",
@@ -221,8 +159,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["profile", "talent"]
       },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {
         id: "client-profile"
         title: "Setting up a client profile"
@@ -230,11 +166,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: "2023-10-20"
         tags: ["profile", "client"]
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   {"
     id: "profile-setup""
@@ -258,7 +189,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: "2023-10-20""
         tags: ["profile", "client"]
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       },
       {"
         id: "portfolio-creation","
@@ -270,9 +200,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
     id: "payments"
     name: "Payments"
@@ -281,16 +208,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     articles: [
       {
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         id: "payment-methods",
         title: "Accepted payment methods",
         content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.",
         lastUpdated: "2023-11-01",
-=======
   {"
     id: "payments""
     name: "Payments""
@@ -303,7 +225,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         title: "Accepted payment methods",'"
         content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.","
         lastUpdated: "2023-11-01","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         tags: ["payment", "billing", "finance"]
       },
       {"
@@ -323,9 +244,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
     id: "disputes"
     name: "Disputes"
@@ -365,10 +283,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         lastUpdated: "2023-12-01",;
         tags: ["navigation", "interface"];
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
     ];
   };
@@ -523,7 +437,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         title: "How to file a dispute",
         content: "If you encounter issues with a contract or project, you can use our dispute resolution system. Here's how to file a dispute:\n\n1. Navigate to the project in question from your dashboard\n2. Click the 'Issues' tab and select 'File a Dispute'\n3. Select the dispute category (payment, deliverables, communication, etc.)\n4. Provide a clear description of the issue\n5. Attach any relevant evidence (messages, deliverables, contract details)\n6. Submit your dispute\n\nOnce submitted, the other party will be notified and given 72 hours to respond. Our support team will be automatically notified of all disputes filed.",
         lastUpdated: "2023-11-05",
-=======
 "
         id: "file-dispute""
         title: "How to file a dispute"'"
@@ -554,7 +467,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         title: "How to file a dispute",'"
         content: "If you encounter issues with a contract or project, you can use our dispute resolution system. Here's how to file a dispute:\n\n1. Navigate to the project in question from your dashboard\n2. Click the 'Issues' tab and select 'File a Dispute'\n3. Select the dispute category (payment, deliverables, communication, etc.)\n4. Provide a clear description of the issue\n5. Attach any relevant evidence (messages, deliverables, contract details)\n6. Submit your dispute\n\nOnce submitted, the other party will be notified and given 72 hours to respond. Our support team will be automatically notified of all disputes filed.","
         lastUpdated: "2023-11-05","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         tags: ["dispute", "resolution", "conflict"]
       },
       {"
@@ -566,19 +478,12 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
       },
 {
         id: "dispute-prevention",
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: "Tips for preventing disputes",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
         lastUpdated: "2023-12-05",
         tags: ["prevention", "best practices", "communication"]
 import React from "react",;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { HelpCategory } from "./types",;
 import {;
   HelpCircle,;
@@ -739,7 +644,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ["prevention", "best practices", "communication"];
       }
     ];
-<<<<<<< HEAD
 
   }
 ];
@@ -750,11 +654,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 
 ;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 '
 import React from './react';'
@@ -787,7 +688,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         title: "Navigating the platform",'"
         content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\n_use the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.";"
         last_updated: "2023 - 12 - 01","
-=======
   {;
     id: "disputes",;
     name: "Disputes",;
@@ -847,7 +747,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         title: "Navigating the platform",
         content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\n_use the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.";
         last_updated: "2023 - 12 - 01",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         tags: ["navigation", "interface"];
       }
     ];
@@ -1291,20 +1190,10 @@ tags: ["prevention", "best practices", "communication" ]
 ];
   }
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         title: "Tips for preventing disputes",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

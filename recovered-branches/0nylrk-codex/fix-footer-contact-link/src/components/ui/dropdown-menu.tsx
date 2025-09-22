@@ -1,32 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import * as DropdownMenuPrimitive from &quot;@radix-ui/react-dropdown-menu&quot;
 import { Check, ChevronRight, Circle } from &quot;lucide-react&quot;
 import { cn } from &quot;@/lib/utils&quot;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import * as React from "react"
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import * as React from "react"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import * as React from "react"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import * as React from "react"
+import * as React from "react"
+
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
-=======
 
 import * as React from "react""
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Check, ChevronRight, Circle } from "lucide-react"
 "
 import { cn } from "@/lib/utils"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
@@ -37,10 +24,7 @@ const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup
 const DropdownMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
-<<<<<<< HEAD
     inset?: boolean
-<<<<<<< HEAD
-=======
 
 ;
 const DropdownMenu = DropdownMenuPrimitive.Root;
@@ -53,10 +37,7 @@ const DropdownMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {}
     inset?: boolean;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     inset?: boolean
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as React from &quot;react & quot;
 import * as DropdownMenuPrimitive from &quot;@radix - ui / react - dropdown - menu & quot;
 import { Check, ChevronRight, Circle } from &quot;lucide-react & quot;
@@ -83,9 +64,6 @@ const DropdownMenuSubTrigger = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.SubTrigger>,
 React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {}
     inset?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import * as React from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { Check, ChevronRight, Circle } from "lucide-react";
@@ -114,18 +92,10 @@ const DropdownMenuSubTrigger = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {;
     inset?:boolean;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
-=======
     inset?: boolean  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     inset?: boolean  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >(({ class_name, inset, children, ...props }, ref) => (
 pr-12325
   <DropdownMenuPrimitive.SubTrigger;
@@ -133,14 +103,10 @@ pr-12325
 
       inset && "pl-8",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 >(({ className, inset, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent&quot;
       inset && &quot;pl-8&quot;
@@ -150,50 +116,29 @@ className={cn(
 
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       className
-=======
 
     className={cn("
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent","
       inset && "pl-8",
 
       className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     )}
     {...props}
   >;
     {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     <ChevronRight className="ml-auto h-4 w-4" />
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 <ChevronRight className="ml-auto h-4 w-4" />
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <ChevronRight className="ml-auto h-4 w-4" />
     className={cn("
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",""
@@ -205,7 +150,6 @@ className={cn(
 
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
     <ChevronRight className="ml-auto h-4 w-4" />
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   </DropdownMenuPrimitive.SubTrigger>
 ))
 DropdownMenuSubTrigger.displayName =
@@ -216,23 +160,13 @@ const DropdownMenuSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.SubContent;
     ref={ref}
-<<<<<<< HEAD
     className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className
-=======
     className={cn(      className
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     className={cn(
 
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
@@ -242,43 +176,33 @@ const DropdownMenuSubContent = React.forwardRef<
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
       className
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )}
     {...props}
   />;
 ));
 DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
-<<<<<<< HEAD
 const DropdownMenuContent = React.forwardRef<;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 React.ElementRef<typeof DropdownMenuPrimitive.Content>;
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 const DropdownMenuContent = React.forwardRef<;
 
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,;
 
 React.ElementRef<typeof DropdownMenuPrimitive.Content>,;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>;
 >(({ className, sideOffset = 4, ...props }, ref) => (;
   <DropdownMenuPrimitive.Portal>;
     <DropdownMenuPrimitive.Content;
       ref={ref}
       sideOffset={sideOffset}
-<<<<<<< HEAD
 
         &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;,
       className={cn("
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 className={cn(
         &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
       className={cn("
@@ -286,17 +210,10 @@ className={cn(
         &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;,
       className={cn("
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         className
-=======
 const DropdownMenuContent = React.forwardRef<;        className
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
       className={cn(
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
@@ -327,7 +244,6 @@ className={cn(
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
         className
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       )}
       {...props}
     />;
@@ -359,17 +275,10 @@ pr-12325
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 className={cn (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 className={cn (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent data-[state = open]:bg - accent & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -483,13 +392,11 @@ const DropdownMenuItem = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?:boolean;
-=======
 
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 >(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Item;
@@ -499,22 +406,16 @@ const DropdownMenuItem = React.forwardRef<;
 
 className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-<<<<<<< HEAD
       inset && "pl-8",    className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof DropdownMenuPrimitive.Item>;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {inset?: boolean;
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 >(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Item;
@@ -528,41 +429,25 @@ className={cn(
 
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       className
-=======
 
     className={cn("
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50","
       inset && "pl-8",
 
       className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     )}
     {...props}
   />;
 ));
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 const DropdownMenuCheckboxItem = React.forwardRef<;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>;
 >(({ className, children, checked, ...props }, ref) => (;
   <DropdownMenuPrimitive.CheckboxItem;
@@ -571,28 +456,21 @@ className={cn(
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
     className={cn("
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 className
     )}
 
-=======
 
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     className={cn(
-=======
 
     className={cn("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
@@ -654,7 +532,6 @@ const DropdownMenuCheckboxItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     checked={checked}
     {...props}
   >;
@@ -663,12 +540,7 @@ className={cn (
         <Check className=&quot;h - 4 w - 4&quot; />;
       </DropdownMenuPrimitive.ItemIndicator>;
     </span>;
-<<<<<<< HEAD
     {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     )}
     checked={checked}
     {...props}
@@ -684,21 +556,13 @@ className={cn (
 DropdownMenuCheckboxItem.displayName =;
   DropdownMenuPrimitive.CheckboxItem.displayName;
 const DropdownMenuRadioItem = React.forwardRef<;
-<<<<<<< HEAD
-=======
     {children}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
 
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>;
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
@@ -710,8 +574,6 @@ className={cn(
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
 className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       className
     )}
 
@@ -743,11 +605,8 @@ React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Label> & {}
     inset?: boolean;
 
 }
-=======
     className={cn(;
-=======
 className={cn(;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",;
       inset && "pl-8",;
       className;
@@ -808,7 +667,6 @@ const DropdownMenuLabel = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?:boolean;
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label;
     ref={ref}
@@ -817,23 +675,16 @@ const DropdownMenuLabel = React.forwardRef<;
 
 className={cn(
       "px-2 py-1.5 text-sm font-semibold",
-<<<<<<< HEAD
       inset && "pl-8",    className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof DropdownMenuPrimitive.Label>;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {inset?: boolean;
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 >(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Label;
@@ -847,49 +698,30 @@ className={cn(
 
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       className
-=======
 
     className={cn("
       "px-2 py-1.5 text-sm font-semibold","
       inset && "pl-8",
 
       className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     )}
     {...props}
   />;
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
 
-=======
 
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,;
 
@@ -900,7 +732,6 @@ const DropdownMenuSeparator = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
 className={cn (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -911,7 +742,6 @@ const DropdownMenuSeparator = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   <DropdownMenuPrimitive.Separator;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
@@ -922,26 +752,14 @@ const DropdownMenuSeparator = React.forward_ref<;
       className={cn (&quot;ml - auto text - xs tracking - widest opacity - 60 & quot;, class_name)}
       {...props}
     />);
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export {
-=======
 export {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   DropdownMenu,
-=======
 }  DropdownMenu,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }  DropdownMenu,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 
 DropdownMenuShortcut.display_name = &quot;DropdownMenuShortcut & quot;
@@ -1012,7 +830,6 @@ DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
 
 export {
   DropdownMenu,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -1113,12 +930,6 @@ React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator> > ( ({
   DropdownMenuRadioGroup}
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;
 ;
@@ -1126,11 +937,7 @@ React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator> > ( ({
   DropdownMenuRadioGroup}
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   DropdownMenuRadioGroup}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,)
     checked={checked}
 
@@ -1250,4 +1057,3 @@ React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator> > ( ({
   return (<span />) 
 </span>"
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

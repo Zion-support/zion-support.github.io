@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import { UseFormReturn } from "react-hook-form";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -29,11 +20,6 @@ import { UseFormReturn } from "react-hook-form",
 
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
@@ -41,10 +27,7 @@ import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 import { 
 
@@ -63,7 +46,6 @@ import {
 }
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   FormField;
   FormItem;
   FormLabel;
@@ -72,14 +54,11 @@ pr-12325
   FormDescription;
 FormMessage
 } from "@/components/ui/form",
-<<<<<<< HEAD
 import {
 
 import { Input } from "@/components/ui/input";
 import { Input } from "@/components/ui/input",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Select;
   SelectContent;
   SelectItem;
@@ -90,22 +69,14 @@ import { MilestoneSuggestions } from "@/components/projects/milestones/Milestone
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PaymentTermsFieldsProps {
-=======
 import { Input } from "@/components/ui/input",interface PaymentTermsFieldsProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 import { Input } from "@/components/ui/input",interface PaymentTermsFieldsProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface PaymentTermsFieldsProps {}
   form: UseFormReturn<ContractFormValues>;
@@ -122,27 +93,15 @@ import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export function PaymentTermsFields({
   form;
   talent;
   handleMilestonesGenerated
-<<<<<<< HEAD
   handleMilestonesGenerated
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }: PaymentTermsFieldsProps) {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }: PaymentTermsFieldsProps) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function PaymentTermsFields({ ;
   form;
@@ -152,7 +111,6 @@ export function PaymentTermsFields({
   talent,
   handleMilestonesGenerated
 }: PaymentTermsFieldsProps) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>"
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -176,14 +134,8 @@ export function PaymentTermsFields({
               </Select>
               <FormMessage />
             </FormItem>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { UseFormReturn } from "react-hook-form",;
 import {;
   FormField,;
@@ -206,11 +158,6 @@ import { TalentProfile } from "@/types/talent",;"
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;"
 import { ContractFormValues } from "./ContractForm",;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   SelectValue;
 } from "@/components/ui/select",;
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",;
@@ -218,7 +165,6 @@ import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
 import { ContractFormValues } from "./ContractForm",;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface PaymentTermsFieldsProps {;
   form: UseFormReturn<ContractFormValues>,;
   talent: TalentProfile,;
@@ -230,21 +176,11 @@ export function PaymentTermsFields(): any ({ ;
   talent;
   handleMilestonesGenerated ;
 }: PaymentTermsFieldsProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>;
-=======
   return (
     <>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
         <FormField;
           control={form && form.control}"
@@ -253,9 +189,6 @@ export function PaymentTermsFields(): any ({ ;
             <FormItem>;
               <FormLabel>Payment Terms</FormLabel>;
               <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { ContractFormValues } from './ContractForm';
 interface PaymentTermsFieldsProps {}
   form: UseFormReturn < ContractFormValues>,
@@ -268,9 +201,6 @@ export /**;
 function PaymentTermsFields() {}
   return (
 <>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
 
         <FormField;
@@ -327,7 +257,6 @@ function PaymentTermsFields() {}
               </Select>
               <FormMessage />
             </FormItem>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           )}
 
         />;
@@ -348,7 +277,6 @@ function PaymentTermsFields() {}
                 <SelectContent>;
                   <SelectItem value="hourly">Hourly Rate</SelectItem>;
                   <SelectItem value="fixed">Fixed Price</SelectItem>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <SelectItem value="milestone">Milestone Payments</SelectItem>;
                 </SelectContent>;
               </Select>;
@@ -364,39 +292,28 @@ function PaymentTermsFields() {}
             </FormItem>;
           )}
 
-<<<<<<< HEAD
       {/* Project Milestones */}
-=======
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;      {/* Project Milestones */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;      {/* Project Milestones */}
-=======
         />;
       </div>;
 
 />;
       </div>;
       {/* Project Milestones */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
-<<<<<<< HEAD
 
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
             projectName={form && form.getValues("projectName") || "Project"}
@@ -429,21 +346,12 @@ function PaymentTermsFields() {}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :;
                         form.getValues("projectName").includes("Web") ? "Web Development" :"Other"}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             onMilestonesGenerated={handleMilestonesGenerated}
 
         </div>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </FormItem>)}
         />;
         <FormField;
@@ -481,18 +389,10 @@ function PaymentTermsFields() {}
         </div>)}
     </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     </>;
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 </>;
             </FormItem>)}
@@ -570,4 +470,3 @@ SelectValue interface PaymentTermsFieldsProps {
   )
 pr-12325
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

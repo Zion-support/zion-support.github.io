@@ -6,7 +6,6 @@ class ExecuteAllScripts {
   constructor() {
     this.projectRoot = process.cwd();
 
-<<<<<<< HEAD
 const scripts = [
   'git-resolution.cjs',
   'run-all-automations.cjs',
@@ -70,4 +69,3 @@ origin/cursor/automate-test-improve-and-merge-code-646c
 
 const executor = new ExecuteAllScripts();
 executor.run().catch(console.error);
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

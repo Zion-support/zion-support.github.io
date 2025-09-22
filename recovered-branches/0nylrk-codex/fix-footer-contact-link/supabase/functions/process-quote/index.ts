@@ -5,16 +5,8 @@ const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY');
 const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL') || '';
 const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
@@ -22,11 +14,9 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-=======
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts""
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');'
 const supabaseUrl = Deno.env.get('SUPABASE_URL') |'';'
@@ -43,22 +33,16 @@ import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
 const corsHeaders = {'
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface Service {
   id: string;
   title: string
   category: string
-<<<<<<< HEAD
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
@@ -86,7 +70,6 @@ interface Service {
   id: string,
   title: string,
   category: string
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
@@ -100,7 +83,6 @@ const cors_headers = {'
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
 ;
 interface Service {}
-=======
 const supabaseServiceKey = Deno.env.get ('SUPABASE_SERVICE_ROLE_KEY') || '',
 const supabase = create_client (supabase_url, supabaseServiceKey);
 ;
@@ -108,7 +90,6 @@ const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
 ;
 interface Service {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
   title: string,
   category: string;
@@ -117,12 +98,7 @@ interface Service {
 interface QuoteDetails {}
   description: string;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface QuoteDetails {
   description: string;
   email: string;
@@ -147,7 +123,6 @@ interface QuoteDetails {
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',;
-=======
 }
 interface QuoteDetails {}
   description: string;
@@ -160,7 +135,6 @@ import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;"
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;'
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;'
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',;
 
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",""
@@ -248,20 +222,10 @@ pr-12325
   timeframe: string,;
   startDate?: string,;
 endDate?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   endDate?: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 interface RequestBody {}
   service: Service | null;
@@ -269,20 +233,11 @@ interface RequestBody {}
 }
 serve(async (req) => {
   // Handle CORS preflight requests
-<<<<<<< HEAD
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 }
 interface RequestBody {
   service: Service | null
@@ -294,7 +249,6 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   try {
 
     const { service, quoteDetails } = await req && req.json() as RequestBody;
@@ -324,9 +278,6 @@ const authHeader = req.headers.get('Authorization');
         const { data: { user }, error } = await supabase.auth.getUser(token);
         if (!error && user) {
           userId = user.id
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
 
 interface RequestBody {
@@ -371,20 +322,15 @@ pr-12325
         if (!error && user) {;
           userId = user.id;
 userId = user && user.id
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
       }
     } catch (authError) {"
       console && console.log("Auth error:", authError);
 // Continue without user identity
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         const token = authHeader.replace('Bearer ', ),;
         const { data: { user }, error } = await supabase.auth.getUser(token),;
@@ -399,13 +345,9 @@ pr-12325
           headers: {
             'Authorization': `Bearer ${openAIApiKey}`;
             'Content-Type': 'application/json'};
-<<<<<<< HEAD
-<<<<<<< HEAD
           body: JSON && JSON.stringify({
-=======
       // Continue without user identity;
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             model: 'gpt-4o-mini';
             messages: []
               {'
@@ -419,22 +361,16 @@ pr-12325
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High)
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (authError) {;
-=======
 
     } catch (authError) {;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           body: JSON && JSON.stringify({
-=======
           body: JSON && JSON.stringify({            ],;
           body: JSON && JSON.stringify({,
   model: 'gpt-4o-mini';
       // Get the JWT from the Authorization header;'
       const authHeader = req.headers.get('Authorization'),;'
       if (authHeader) {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
       }
@@ -485,7 +421,6 @@ Service: ${service?.title |'Custom Service'}
                 Category: ${service?.category |'N/A'}
 
     } catch (authError) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
     // Generate a summary and tags using OpenAI;
@@ -520,15 +455,11 @@ if (openAIApiKey) {;'
               },;
 {;
                 role: 'user',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 content: `Analyze this service request and provide:;
                 1. A concise summary (max 100 words);
                 3. An estimated complexity level (Low, Medium, High);
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 '
                 Service: ${service?.title || 'Custom Service'}'
@@ -539,11 +470,7 @@ if (openAIApiKey) {;'
                 Category: ${service?.category || 'N/A'}
 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}'
@@ -563,17 +490,10 @@ Service: ${service?.title || 'Custom Service'}
 
               }
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ],;
-=======
           body: JSON && JSON.stringify({            ],;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           body: JSON && JSON.stringify({            ],;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
@@ -618,19 +538,13 @@ Service: ${service?.title || 'Custom Service'}
         if (!aiResult && aiResult.error && aiResult && aiResult.choices && aiResult && aiResult.choices.length > 0) {]
           aiAnalysis = aiResult && aiResult.choices[0].message && message.content;
             ],;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             temperature: 0.5;
 
           });
         }),;
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
-<<<<<<< HEAD
           aiAnalysis = aiResult.choices[0].message.content;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               }
 
@@ -638,12 +552,6 @@ Service: ${service?.title || 'Custom Service'}
         if (!aiResult && aiResult.error && aiResult && aiResult.choices && aiResult && aiResult.choices.length > 0) {
           aiAnalysis = aiResult && aiResult.choices[0].message && message.content
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ];
             temperature: 0 && 0.5;
           })
@@ -651,8 +559,6 @@ Service: ${service?.title || 'Custom Service'}
 const aiResult = await openAIResponse && openAIResponse.json();
         if (!aiResult && aiResult.error && aiResult && aiResult.choices && aiResult && aiResult.choices.length > 0) {
           aiAnalysis = aiResult && aiResult.choices[0].message && message.content
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
       }
     } catch (openAIError) {
@@ -736,13 +642,10 @@ if ( {) {}
 
 '
           status: 'pending'
-=======
           aiAnalysis = aiResult.choices[0].message.content;            ];
             temperature: 0 && 0.5
           })
         });          status: 'pending'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           aiAnalysis = aiResult.choices[0].message.content;
 
 }
@@ -883,7 +786,6 @@ if ( {) {
           end_date: quoteDetails.endDate;
           ai_analysis: aiAnalysis
           status: 'pending'
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
           description: quoteDetails && quoteDetails.description;,
   email: quoteDetails && quoteDetails.email;
@@ -902,7 +804,6 @@ pr-12325
       .select();
     if (error) throw error;
 
-<<<<<<< HEAD
           headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
     return new Response(JSON && JSON.stringify({ success: true, data }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
@@ -912,7 +813,6 @@ pr-12325
       status: 500,
 
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 });
 
@@ -964,14 +864,9 @@ if (throw error) {}
     console.error ('Error in process - quote function:', error);
 return new Response (JSON.stringify ({ success: false, error: error.message }), {
       status: 500,
-<<<<<<< HEAD
-<<<<<<< HEAD
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (openAIError) {;
-=======
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
 
 return new Response(JSON.stringify({ success: true, data }), {
@@ -1008,7 +903,6 @@ if (throw error) {
     console.error ('Error in process - quote function:', error);
     return new Response (JSON.stringify ({ success: false, error: error.message }), {
     } catch (openAIError) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
     // Store the quote request in the database;
@@ -1029,9 +923,7 @@ ai_analysis: aiAnalysis,;'
           status: 'pending';
         }
       ]);
-=======
         })]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       .select(),;
     if (error) throw error,;
 return new Response(JSON.stringify({ success: true, data }), {;'
@@ -1041,17 +933,9 @@ return new Response(JSON.stringify({ success: true, data }), {;'
     return new Response(JSON.stringify({ success: false, error: error.message }), {;
       status: 500,;'
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 email: string;
 budget: string;
 timeframe: string;
@@ -1105,18 +989,8 @@ if (error) throw error;
 });
   }
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect } from 'react';
@@ -442,7 +441,6 @@ interface SidebarProps {
   isOpen: boolean;
 onClose: () => void;
 }
-<<<<<<< HEAD
 
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen;, onClose    }) => {
 
@@ -535,20 +533,17 @@ const handleDropdownToggle = (
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-<<<<<<< HEAD
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto";
           >;
             <div className="p-6">;
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-=======
 </motion>
           <motion.div;"
             initial={{ x: '-100%' ;}}
             animate={{ x: 0 ;}}
             exit={{ x: '-100%' ;}}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto""
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
           >
 </motion>"
             <div className="p-6">"
@@ -635,14 +630,12 @@ const handleDropdownToggle = (
                 </div>;
                 <button;
                   onClick={onClose}
-<<<<<<< HEAD
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors";
                 >;
                   <X className="w-6 h-6" />;
                 </button>;
               </div>;
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-=======
                   className=\"p-2 text-gray-500 hover:text-gray-700 transition-colors\";
                  />;
                   <X className=\"w-6 h-6\" />;
@@ -655,7 +648,6 @@ const handleDropdownToggle = (
                 </button>;
               </div>;
                   className=\"p-2 hover:bg-gray-100 rounded-lg transition-colors\"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
                 >
                   <X className=\"w-6 h-6\" />
                 </button>
@@ -669,7 +661,6 @@ const handleDropdownToggle = (
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors";
                     >;
                       <span />{title}</span>;
@@ -1746,4 +1737,3 @@ interface SidebarProps {
   isOpen: boolean;}
   onClose: () => void;}
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Brain, Zap, TrendingUp, Users } from 'lucide-react';
 
 export default function SyntheticIntelligenceRevolutionBanner() {
   return (
@@ -15,7 +14,7 @@ export default function SyntheticIntelligenceRevolutionBanner() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
-            <Brain className="w-5 h-5 mr-2" />
+            <span className="w-5 h-5 mr-2">📊</span>
             <span className="text-sm font-medium">🚀 JUST PUBLISHED</span>
           </div>
           
@@ -32,7 +31,7 @@ export default function SyntheticIntelligenceRevolutionBanner() {
         {/* Key Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <Zap className="w-12 h-12 text-yellow-400 mb-4" />
+            <span className="w-12 h-12 text-yellow-400 mb-4">📊</span>
             <h3 className="text-xl font-bold mb-3">Self-Evolving Systems</h3>
             <p className="text-gray-300">
               AI that continuously improves itself without human intervention, 
@@ -41,7 +40,7 @@ export default function SyntheticIntelligenceRevolutionBanner() {
           </div>
           
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <Brain className="w-12 h-12 text-purple-400 mb-4" />
+            <span className="w-12 h-12 text-purple-400 mb-4">📊</span>
             <h3 className="text-xl font-bold mb-3">Consciousness Simulation</h3>
             <p className="text-gray-300">
               Advanced neural architectures that simulate aspects of consciousness 
@@ -50,7 +49,7 @@ export default function SyntheticIntelligenceRevolutionBanner() {
           </div>
           
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <TrendingUp className="w-12 h-12 text-green-400 mb-4" />
+            <span className="w-12 h-12 text-green-400 mb-4">📊</span>
             <h3 className="text-xl font-bold mb-3">Autonomous Operations</h3>
             <p className="text-gray-300">
               Complete business operations running autonomously with 

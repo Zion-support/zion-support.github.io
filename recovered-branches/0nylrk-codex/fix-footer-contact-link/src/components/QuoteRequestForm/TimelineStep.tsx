@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
@@ -17,12 +12,9 @@ Popover
 
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {format} from "date-fns";
 import {Calendar} from "@/components/ui/calendar";
@@ -33,7 +25,6 @@ import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {cn} from "@/lib/utils";
 import {QuoteFormData} from "@/types/quotes";
 
-=======
 
 import {useState} from "react";
 import {format} from "date-fns";
@@ -45,8 +36,6 @@ import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {cn} from "@/lib/utils";
 import {QuoteFormData} from "@/types/quotes";
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -57,41 +46,29 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { cn } from "@/lib/utils",
 import { QuoteFormData } from "@/types/quotes",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { useState } from "react";
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-=======
 import { useState } from "react";"
 import { format } from "date-fns";"
 import { Calendar } from "@/components/ui/calendar";"
 import { Button } from "@/components/ui/button";"
 import { Label } from "@/components/ui/label";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { CalendarIcon } from "@/components/icons";
 import {}
   Popover,
   PopoverContent,
 PopoverTrigger,
 } from "@/components/ui/popover";
-=======
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
 interface TimelineStepProps {
@@ -101,21 +78,13 @@ interface TimelineStepProps {
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 
-<<<<<<< HEAD
     <div className="space-y-6">
       <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <h3 className="text-xl font-semibold text-white mb-4">
           When do you need this?
         </h3>
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="space-y-4">
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {format} from "date-fns";
 import {Calendar} from "@/components/ui/calendar";
@@ -135,8 +104,6 @@ import { CalendarIcon } from "@/components/icons",
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { cn } from "@/lib/utils",
 import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">
@@ -145,7 +112,6 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
 
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
         <div className="space-y-4">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="flex items-center space-x-4">
             <div
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
@@ -153,7 +119,6 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
                   ? "bg-zion-purple/20 border-zion-purple"
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
               }`}
-=======
 
 "
         <div className="space-y-4">"
@@ -164,7 +129,6 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
                   ? "bg-zion-purple/20 border-zion-purple""
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"`
               }`}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               onClick={() => updateFormData({ timeline: "fixed" })}
             >"
               <h4 className="font-medium text-white">Fixed Dates</h4>"
@@ -172,19 +136,12 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
                 I have specific start and end dates;
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div
             <div
 
             <div
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
             <div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -203,8 +160,6 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">
 
               <div>"
@@ -216,8 +171,6 @@ import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4
                     <Button"
                       variant="outline"
                       className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark"
                         !formData.startDate && "text-zion-slate-light"
                       )}
@@ -339,9 +292,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
               </div>
 
 <div>
-=======
               <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Label className="block mb-2 text-zion-slate-light">
                   End Date;
                 </Label>
@@ -351,21 +302,17 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                       variant="outline"
 className={cn(                      )}
                     >
-=======
                       className={cn("
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark","
                         !formData.endDate && "text-zion-slate-light",
                       )}
                     >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <CalendarIcon className="mr-2 h-4 w-4" />
                       {formData.endDate ? ("
                         format(formData.endDate, "PPP")
                       ) : (
                         <span>Pick a date</span>
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       )}
                     </Button>
                   </PopoverTrigger>
@@ -379,20 +326,9 @@ className={cn(                      )}
                       onSelect={(date) => updateFormData({ endDate: date })}
                       initialFocus"
                       className="p-3 pointer-events-auto"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       disabled={(date) =>
                         date < (formData.startDate |new Date())
                       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",;
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
@@ -404,7 +340,6 @@ import { cn } from "@/lib/utils",;
 import { QuoteFormData } from "@/types/quotes",;
 interface TimelineStepProps {;
   formData: QuoteFormData,;
-<<<<<<< HEAD
   updateFormData: (data: Partial<QuoteFormData>) => void;
                       disabled={(date) =>
                         date < (formData.startDate || new Date())
@@ -419,14 +354,9 @@ interface TimelineStepProps {;
       </div>
     </div>
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   updateFormData: (data: Partial<QuoteFormData>) => void;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export function TimelineStep() { return null; }`
               }`}"
@@ -468,10 +398,6 @@ export function TimelineStep() { return null; }`
                     <Calendar;"
                       mode="single";
                       selected={formData.startDate}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       onSelect={(date) => updateFormData({ startDate: date })}
 
                       initialFocus;"
@@ -491,24 +417,16 @@ export function TimelineStep() { return null; }`
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <Calendar
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       mode="single"
                       selected={formData && formData.endDate}
                       onSelect={(date) => updateFormData({ endDate: date })}
 
 initialFocus;"
                       className="p-3 pointer-events-auto";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                       initialFocus;
                       className="p-3 pointer-events-auto";
                       disabled={(date) => date < (formData && formData.startDate || new Date())}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       disabled={(date) => date < (formData.startDate || new Date())}
                       disabled={(date) =>
                         date < (formData.startDate || new Date())
@@ -519,14 +437,10 @@ initialFocus;"
               </div>
             </div>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
         </div>;
       </div>;
     </div>;
@@ -534,40 +448,28 @@ initialFocus;"
 }
 }
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     >;
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
-=======
                       onSelect={(date) => updateFormData({ startDate: date })}                      <CalendarIcon className="mr - 2 h - 4 w-4" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                       onSelect={(date) => updateFormData({ startDate: date })}                      <CalendarIcon className="mr - 2 h - 4 w-4" />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         </div>
       </div>
     </div>
   )
                     >;
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       {form_data.end_date ? (
-=======
 
                     >;"
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
                       {form_data.end_date ? ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         format (form_data.end_date, "PPP")) : (
                         <span > Pick a date</span>)}
                     </Button>;
                   </PopoverTrigger>;
 <PopoverContent;
-<<<<<<< HEAD
                     className="w - auto p - 0 bg - zion - blue - dark border border - zion - blue-light";
-=======
                     className="w - auto p - 0 bg - zion - blue - dark border border - zion - blue-light";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     align="start";
                   >;
                     <Calendar;"
@@ -575,25 +477,20 @@ initialFocus;"
                       selected={form_data.end_date}
                       on_select={(date) => updateFormData ({ end_date: date })}
 initial_focus;
-<<<<<<< HEAD
                       className="p - 3 pointer - events-auto";
                       disabled={(date) =>;
-<<<<<<< HEAD
                         date < (form_data.start_date || new Date ());
                       }
                       disabled={(date) =>;
                         date < (form_data.start_date || new Date ());
                       }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     />;
                   </PopoverContent>;
                 </Popover>;
               </div>;
 
-<<<<<<< HEAD
   )
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         </div>;
       </div>;
@@ -607,20 +504,13 @@ initial_focus;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                         date < (form_data.start_date || new Date ())
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 ;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   );
   );
 }
@@ -641,4 +531,3 @@ pr-12325
 );
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -69,6 +72,8 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, count: results.length })
     }
   } catch (e) {
+<<<<<<< HEAD
+=======
 
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
@@ -115,11 +120,16 @@ exports.handler = async function () {
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
     }
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+<<<<<<< HEAD
+}
+=======
   }
 },
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

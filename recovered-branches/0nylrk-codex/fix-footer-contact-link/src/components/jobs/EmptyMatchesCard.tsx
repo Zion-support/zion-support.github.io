@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
@@ -11,9 +7,7 @@ export interface EmptyMatchesCardProps {
   onRefresh: () => void,
 isProcessing: boolean
 import { Card } from "@/components/ui/card",
-=======
   isProcessing: booleanimport { Card } from "@/components/ui/card",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
 
@@ -25,13 +19,9 @@ import { Sparkles, RefreshCcw } from "lucide-react",
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isProcessing: boolean
 
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export interface EmptyMatchesCardProps {;
   onRefresh: () => void;
@@ -46,7 +36,6 @@ export function EmptyMatchesCard(): any ({;
 import { Card } from "@/components/ui/card";
   return (import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-=======
 
 import { Card } from "@/components/ui/card","
 import { Button } from "@/components/ui/button","
@@ -62,7 +51,6 @@ export function EmptyMatchesCard(): any ({;
 "
 import { Card } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Sparkles, RefreshCcw } from "lucide-react";
 
 }
@@ -96,35 +84,22 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             Find AI Matches;
           </>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 )}
       </Button>
     </Card>
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </Card>
   );
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Card } from "@/components/ui/card",;
-=======
 import { Card } from "@/components/ui/card",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",;
-=======
 "
 import { Card } from "@/components/ui/card",;"
 import { Button } from "@/components/ui/button",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Sparkles, RefreshCcw } from "lucide-react",;
 export interface EmptyMatchesCardProps {;
   onRefresh: () => void;
@@ -133,19 +108,8 @@ export interface EmptyMatchesCardProps {;
 ;
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {;
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   return (  return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -158,9 +122,6 @@ export interface EmptyMatchesCardProps {;
 ;
 export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardProps) {;
   return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
@@ -169,22 +130,13 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
       <p className="text-muted-foreground mb-6">;
         Run AI matching to find talents that match this job's requirements.;
       </p>;
-<<<<<<< HEAD
       <Button onClick={onRefresh} disabled={isProcessing} className="mx-auto">;
-<<<<<<< HEAD
       <Button;
         onClick={onRefresh} ;
         disabled={isProcessing}
         className="mx-auto";
       >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <Button onClick={onRefresh} disabled={isProcessing} className="mx-auto">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {isProcessing ? (;
           <>;
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />;
@@ -197,12 +149,9 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
             <Sparkles className="mr-2 h-4 w-4" />;
             Find AI Matches;
           </>;
-=======
 export function EmptyMatchesCard() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         )}
       </Button>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </Card>;
 );
 
@@ -233,25 +182,16 @@ function EmptyMatchesCard() {
             Processing...;
           </>) : (
           <>;
-<<<<<<< HEAD
             <Sparkles className="mr - 2 h - 4 w-4" />;
-=======
             <Sparkles className="mr - 2 h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Find AI Matches;
           </>)}
       </Button>;
     </Card>);
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 }
@@ -271,22 +211,11 @@ isProcessing: boolean;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import { Card } from "@/components/ui/card",""
 import { Button } from "@/components/ui/button",""
@@ -391,4 +320,3 @@ pr-12325
 }</Button> </Card>) 
     </Card>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

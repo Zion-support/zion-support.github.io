@@ -51,7 +51,6 @@ const WebDevelopmentChat: NextPage = () => {
 
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
 <meta name="description" content="WebDevelopmentChat blog post" />{" "}
-<<<<<<< HEAD
 const WebDevelopmentChat: NextPage = () => {
   return (
     <div />
@@ -63,7 +62,6 @@ const WebDevelopmentChat: NextPage = () => {
         <h1>WebDevelopmentChat</h1>
         <p>Blog content coming soon...</p>
         <a href="/blog">Back to Blog</a>
-=======
       </Head>;
 
 const WebDevelopmentChat: NextPage = () => {
@@ -71,7 +69,6 @@ const WebDevelopmentChat: NextPage = () => {
         <h1 />WebDevelopmentChat</h1>
         <p />Blog content coming soon...</p>
         <a href=\"/blog\" />Back to Blog</a>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </main>
     </div>
       </Head>;

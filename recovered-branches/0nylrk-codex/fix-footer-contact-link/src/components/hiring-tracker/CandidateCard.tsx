@@ -9,18 +9,12 @@ import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from "react",
 import { Draggable } from "react-beautiful-dnd",
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Avatar } from "@/components/ui/avatar",
 ";
 import { Button } from "@/components/ui/button";"
@@ -160,7 +154,6 @@ DropdownMenu
 } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 interface CandidateCardProps {
@@ -168,8 +161,6 @@ interface CandidateCardProps {
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   MessageSquare,
   User, 
   FileText, 
@@ -184,14 +175,10 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
 DropdownMenuTrigger,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 } from "@/components/ui/dropdown-menu";
-=======
 "
 } from "@/components/ui/dropdown-menu";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 "
 import { toast } from "@/hooks/use-toast";"
@@ -207,7 +194,6 @@ import { Avatar  } from '@/components / ui / avatar';'
 import { Button  } from '@/components / ui / button';'
 import { Textarea  } from '@/components / ui / textarea';
 import {}
-=======
 DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
@@ -225,7 +211,6 @@ import { Avatar  } from '@/components / ui / avatar';
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
 import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   MessageSquare,
   User,
   FileText,
@@ -241,14 +226,9 @@ import {}
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge","
 import { toast } from "@/hooks/use-toast","
 import { HireConfirmationModal } from "./HireConfirmationModal",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface CandidateCardProps {
-=======
 
 interface CandidateCardProps {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   application: JobApplication;
   index: number;
 }
@@ -276,14 +256,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     new Date(application.updated_at).getTime() < 
     (Date.now() - 7 * 24 * 60 * 60 * 1000),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { Avatar } from "@/components/ui/avatar",  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
@@ -293,15 +269,12 @@ interface CandidateCardProps {
   index: number
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 title: "Notes saved",
       description: "Your notes have been saved"
@@ -317,7 +290,6 @@ title: "Notes saved",
     })
   },
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
@@ -340,47 +312,32 @@ title: "Notes saved",
     toast({;
 title: "Hiring process initiated",,
   description: "Offer has been sent to the talent.",;
-=======
       title: "Hiring process initiated",;
       description: "Offer has been sent to the talent.",;
 application: JobApplication;
   index: number
 }
     });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 
   return (
     <>;
       <Draggable draggableId={application && application.id} index={index}>;
-<<<<<<< HEAD
         {(provided) => (;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <Card;
             className="mb-2 p-0 shadow-sm border";
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >"
             <CardContent className="p-3">
-<<<<<<< HEAD
               {/* Candidate Header */}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
-=======
         {(provided) => (;                <div className="flex items-center gap-2">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         {(provided) => (;
 
           <Card;
@@ -402,7 +359,6 @@ application: JobApplication;
 
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Avatar className="h-8 w-8">;
                     {application && application.talent_profile?.profile_picture_url ? (;
                       <img
@@ -420,20 +376,15 @@ application: JobApplication;
                         alt={
                         }
                       />;
-<<<<<<< HEAD
                     ) : (;
-<<<<<<< HEAD
                       <img;
                         src={application && application.talent_profile.profile_picture_url}
                         alt={}
                         }
                       />;
                     ) : (;
-<<<<<<< HEAD
                       <User className="h-4 w-4" />;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <User className="h-4 w-4" />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     )}
                   </Avatar>
                   <div>"
@@ -477,14 +428,9 @@ application: JobApplication;
                     </p>
                   </div>
                 </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {application.talent_profile?.professional_title |
-=======
                     ) : (;                      {application.talent_profile?.professional_title |
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       {application.talent_profile?.professional_title |"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         "Applicant"}
                     </p>
                   </div>
@@ -493,37 +439,19 @@ application: JobApplication;
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <DropdownMenu>
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <DropdownMenu>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
-=======
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>"
                     <Button variant="ghost" className="h-8 w-8 p-0">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <MoreVertical className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>"
                   <DropdownMenuContent align="end">
-<<<<<<< HEAD
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </Avatar>;
                   <div>;"
                     <h4 className="font-medium text-sm">;"
@@ -531,7 +459,6 @@ application: JobApplication;
                     </h4>;"
                     <p className="text-xs text-muted-foreground">;
                       {application && application.talent_profile?.professional_title ||;"
-=======
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
                   </Avatar>;
                   <div>;
@@ -540,19 +467,13 @@ application: JobApplication;
                     </h4>;
                     <p className="text-xs text-muted-foreground">;
                       {application && application.talent_profile?.professional_title ||;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         "Applicant"}
                     </p>;
                   </div>;
                 </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>                      {showNotes ? "Hide notes" :"Add notes"}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {showNotes ? "Hide notes" : "Add notes"}
-=======
 
                 <DropdownMenu>;
                   <DropdownMenuTrigger asChild>;"
@@ -566,7 +487,6 @@ application: JobApplication;
 "
                       {showNotes ? "Hide notes" : "Add notes"}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;"
                       <BriefcaseIcon className="h-4 w-4 mr-2" /> Hire Candidate;
@@ -618,7 +538,6 @@ application: JobApplication;
 
 {/* Action Buttons */}
 
-<<<<<<< HEAD
                 <DropdownMenu>;
                   <DropdownMenuTrigger asChild>;
                     <Button variant="ghost" className="h-8 w-8 p-0">;
@@ -629,7 +548,6 @@ application: JobApplication;
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
                       {showNotes ? "Hide notes" : "Add notes"}
 {showNotes ? "Hide notes" :"Add notes"}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
@@ -659,12 +577,10 @@ application: JobApplication;
                       </DropdownMenuItem>;
                     )}
 
-<<<<<<< HEAD
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {/* Application Info */}
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
                 <div className="flex items-center">;
@@ -678,7 +594,6 @@ application: JobApplication;
                   </div>;
                 )}
               </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Match Score */}
               {application.match_score !== null && application.match_score !== undefined && (;
                 <div className="mb-2">;
@@ -687,14 +602,7 @@ application: JobApplication;
               )}
 ;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {/* Notes Section */}
               {showNotes && (
                 <div className="mt-2">
@@ -710,17 +618,12 @@ application: JobApplication;
                 </div>
               )}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {/* Action Buttons */}
 
 {/* Action Buttons */}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {/* Action Buttons */}
               <div className="flex justify-between mt-2 gap-1">
                 <Button variant="outline" size="sm" className="flex-1" asChild>
@@ -730,7 +633,6 @@ application: JobApplication;
                 <Button 
                   variant="outline" 
                   size="sm" 
-=======
 
               {/* Action Buttons */}"
               <div className="flex justify-between mt-2 gap-1">"
@@ -742,24 +644,14 @@ application: JobApplication;
                 <Button "
                   variant="outline" "
                   size="sm" "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="flex-1"
                   asChild;
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Link to={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
-=======
 
                   <Link to={`/messages?talentId=${application.talent_id}`}>"
                     <MessageSquare className="h-3 w-3 mr-1" /> Message;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </Link>
                 </Button>
 
@@ -772,15 +664,9 @@ application: JobApplication;
                   className="flex-1"
                   asChild;
                 >
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {application.resume?.file_url ? (
 
                   {application.resume?.file_url ? (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 </DropdownMenuContent>
                   </DropdownMenuContent>
@@ -876,11 +762,9 @@ application: JobApplication;
                 >
 
                   {application.resume?.file_url ? (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div className="flex justify-between mt-2 gap-1">;
                 <Button variant="outline" size="sm" className="flex-1" asChild>;
                   <Link to={`/messages?talentId=${application && application.talent_id}`}>;
-=======
 
                   {application.resume?.file_url ? (
 
@@ -888,14 +772,12 @@ application: JobApplication;
               <div className="flex justify-between mt-2 gap-1">;"
                 <Button variant="outline" size="sm" className="flex-1" asChild>;`
                   <Link to={`/messages?talentId=${application && application.talent_id}`}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <MessageSquare className="h-3 w-3 mr-1" /> Message;
                   </Link>;
                 </Button>;
 "
                 <Button variant="outline" size="sm" className="flex-1" asChild>;
                   {application && application.resume?.file_url ? (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <a
                       href={application && application.resume.file_url}
                       target="_blank"
@@ -957,8 +839,6 @@ application: JobApplication;
 
                 <Button
                   variant="default"
-<<<<<<< HEAD
-<<<<<<< HEAD
                   size="sm"
                 </Button>
 
@@ -969,20 +849,14 @@ application: JobApplication;
 <Button 
                   variant="default" 
                   size="sm" 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className="flex-1"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 <Button "
                   variant="default" "
                   size="sm" "
                   className="flex-1"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   onClick={() => setShowHireModal(true)}
                 >;"
-=======
                   size="sm"
 </Button>;
                 </Button>
@@ -1167,14 +1041,12 @@ application: JobApplication;
                   className="flex-1""
                   onClick={() => setShowHireModal(true)}
 >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;
                 </Button>;
               </div>;
             </CardContent>;
           </Card>;
         )}
-<<<<<<< HEAD
       </Draggable>
       </Draggable>;
 
@@ -1199,7 +1071,6 @@ const handleSaveNotes = () =>: any {}
     toast ({"
       title: "Notes saved","
       description: "Your notes have been saved",
-=======
   // TODO: Implement
 }
     // Here you would save the notes to the database;"
@@ -1207,7 +1078,6 @@ const handleSaveNotes = () =>: any {}
     toast ({'
       title: "Notes saved",""
       description: "Your notes have been saved",")
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     });
     setShowNotes (false);
   }
@@ -1217,11 +1087,9 @@ const handleHireConfirmed = () =>: any {}
     toast ({"
       title: "Hiring process initiated","
       description: "Offer has been sent to the talent.",
-=======
     toast ({"
       title: "Hiring process initiated",""
       description: "Offer has been sent to the talent.",")
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     });
   }
 ;
@@ -1266,7 +1134,6 @@ alt={"
                     </h4>;
                     <p className="text - xs text - muted - foreground">;
                       {application.talent_profile?.professional_title ||;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         "Applicant"}
                     </p>;
                   </div>;
@@ -1304,7 +1171,6 @@ alt={"
 </BriefcaseIcon>
                     </DropdownMenuItem>;
                     <DropdownMenuItem as_child>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <Link to={`/messages?talent_id=${application.talent_id}`}>;
 </Link>
                       </Link>;
@@ -1312,7 +1178,6 @@ alt={"
                       <DropdownMenuItem as_child>;
 </DropdownMenuItem>
                         <a;
-<<<<<<< HEAD
                           href={application.resume.file_url}"
                           target="_blank";"
                           rel="noopener noreferrer";
@@ -1413,7 +1278,6 @@ application.match_score !== undefined && ("
                   className="flex - 1";"
                   on_click={() => setShowHireModal (true)}
 >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <BriefcaseIcon className="h - 3 w - 3 mr - 1" /> Hire;
                 </Button>;
               </div>;
@@ -1421,11 +1285,6 @@ application.match_score !== undefined && ("
           </Card>)}
       </Draggable>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       </Draggable>;
 
       </Draggable>;
@@ -1438,10 +1297,8 @@ application.match_score !== undefined && ("
 
 />;
     </>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
-=======
         onConfirm={handleHireConfirmed}
 
       />;
@@ -1459,7 +1316,6 @@ application.match_score !== undefined && ("
 }
   );
         on_confirm={handleHireConfirmed}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       />;
     </>);
 }
@@ -1543,22 +1399,8 @@ application.match_score !== undefined && ("
     </>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     // Hiring process completed via the modal;
     toast({"
       title: "Hiring process initiated",""
@@ -1837,4 +1679,3 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 "`;
 pr-12325
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

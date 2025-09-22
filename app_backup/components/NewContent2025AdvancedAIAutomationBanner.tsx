@@ -127,7 +127,7 @@ const NewContent2025AdvancedAIAutomationBanner: React.FC = () => {
                 className="inline-flex items-center px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Read {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'}
-                <ChevronRightIcon className="ml-2 h-4 w-4" />
+                <span>ChevronRightIcon</span>
               </Link>
               
               <Link
@@ -140,7 +140,7 @@ const NewContent2025AdvancedAIAutomationBanner: React.FC = () => {
 
             {/* Reading Time */}
             <div className="mt-4 text-sm text-blue-200">
-              <ClockIcon className="inline h-4 w-4 mr-1" />
+              <span>ClockIcon</span>
               {currentContent.readingTime}
             </div>
           </div>

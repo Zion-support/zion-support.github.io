@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
 constructor(props) {
     super(props);
@@ -23,16 +21,7 @@ constructor(props) {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -48,10 +37,7 @@ import {toast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
-<<<<<<< HEAD
 export default function Marketplace() {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
@@ -96,7 +82,6 @@ export default function Marketplace() {
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
@@ -105,20 +90,13 @@ export default function Marketplace() {
 const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Filter listings based on selected filters
-=======
 export default function Marketplace() {;  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
     // Filter listings based on selected filters
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export default function Marketplace() {;  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
     // Filter listings based on selected filters
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
   const filterOptions = generateFilterOptions();
   const navigate = useNavigate(),
@@ -132,16 +110,12 @@ export default function Marketplace() {;  const searchSuggestions: SearchSuggest
   const filterOptions = generateFilterOptions(),
 
   // Filter listings based on selected filters
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
     if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
-<<<<<<< HEAD
       return false
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -173,21 +147,11 @@ export default function Marketplace() {;
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
-=======
       return false    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       return false    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
       return false
@@ -204,16 +168,11 @@ export default function Marketplace() {;
     if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
       return false
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
     return true
   });
   const handleFilterChange = (filterType: string, value: string) => {    
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return true
-=======
 
   // Filter listings based on selected filters;
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {}
@@ -258,26 +217,19 @@ export default function Marketplace() { return null; }
     }
 
     return true;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }),
 
   const handleFilterChange = (filterType: string, value: string) => {}
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
 
-<<<<<<< HEAD
 
     return true;
   });
-<<<<<<< HEAD
   const handleFilterChange = (filterType: string, value: string) => {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
     return true
   });
   const handleFilterChange = (filterType: string, value: string) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
@@ -293,9 +245,7 @@ export default function Marketplace() { return null; }
         setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   const filterOptions = generateFilterOptions();
 
@@ -359,8 +309,6 @@ setSearchQuery("");
     setSelectedLocations([]);
     setSelectedAvailability([]);
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     setSearchQuery("");
     setSelectedProductTypes([]);
@@ -369,62 +317,38 @@ setSearchQuery("");
 
   },
 
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         );
         break;
   },
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const clearAllFilters = () => {
     setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
-<<<<<<< HEAD
 
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Handle requesting a quote
-=======
     // Handle requesting a quote
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     // Handle requesting a quote
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // Handle requesting a quote
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleRequestQuote = (listingId: string) => {
-=======
 
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
     if (listing) {}
       toast({"
         title: "Quote Requested"`
         description: `Your quote request for ${listing.title} has been sent.`
 
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }),
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -436,18 +360,12 @@ setSearchQuery("");
 
             image: listing.images?.[0]
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     return true;
   }),;
   const handleFilterChange = (filterType: string, value: string) => {;`
     // // // console.log(`Filter changed: ${filterType} = ${value}`),;
     switch (filterType) {;'
-=======
             image: listing.images?.[0]
 
 ;
@@ -456,7 +374,6 @@ setSearchQuery("");
   const handleFilterChange = (filterType: string, value: string) => {;
     // // // console.log(`Filter changed: ${filterType} = ${value}`),;
     switch (filterType) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case 'productType':;
         setSelectedProductTypes(prev =>;
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
@@ -499,13 +416,7 @@ toast({;"
           serviceType: listing && listing.category,;
           specificItem: {;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -520,7 +431,6 @@ import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions 
 import { toast } from '@/hooks / use - toast';
 import { use_navigate } from './react-router-dom';
 import { SearchSuggestion } from '@/types / search';
-=======
 
 '
 import React, { useState } from './react';'
@@ -537,7 +447,6 @@ import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions 
 import { toast } from '@/hooks / use - toast';'
 import { use_navigate } from './react-router-dom';'
 import { SearchSuggestion } from '@/types / search';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AppLayout } from '@/layout / AppLayout';
 export default /**;
  * Marketplace - Function description;
@@ -643,73 +552,49 @@ if ( {) {}
             category: listing.category,;
             image: listing.images?.[0];
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         }
       });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
   },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   };
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   },
   };
   },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   };
   },  },
   };
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
 
     <AppLayout>;
       <main className="flex-grow container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto mb-8">;
           <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;
-=======
   return (
 
     <AppLayout>;"
       <main className="flex-grow container mx-auto px-4 py-8">;"
         <div className="max-w-4xl mx-auto mb-8">;"
           <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <p className="text-zion-slate-light">;
-<<<<<<< HEAD
                 selectedRating
 ;
   return (
 <AppLayout>;
-<<<<<<< HEAD
       <main className="flex - grow container mx - auto px - 4 py-8">;
         <div className="max - w-4xl mx - auto mb-8">;
           <h1 className="text - 3xl font - bold text - white mb-4">AI & Tech Marketplace</h1>;
           <p className="text - zion - slate-light">;
 
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Discover professional services and products for your AI and tech projects.;
             Browse our curated collection of solutions from verified providers.;
           </p>;
@@ -777,14 +662,8 @@ if ( {) {}
                 selectedLocations,
                 selectedAvailability,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 selectedRating
-=======
                 selectedRating
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 selected_locations;
                 selected_availability,
                 selected_rating;
@@ -808,16 +687,10 @@ if ( {) {}
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;"`
                 {searchQuery && ` for "${searchQuery}"`}
-<<<<<<< HEAD
               </p>
             </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             {/* Results count */}
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
@@ -825,10 +698,7 @@ if ( {) {}
                 {searchQuery && ` for "${searchQuery}"`}
 
                 selectedRating
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}
@@ -899,24 +769,16 @@ pr-12325
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
                 filteredListings.map((listing) => (
                   <ProductListingCard;
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
                 filteredListings.map((listing) => (
                   <ProductListingCard
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     key={listing.id}
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
@@ -928,23 +790,13 @@ pr-12325
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">'
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               ) : (
                 <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
                   <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </p>;
             </div>;
 
@@ -969,13 +821,9 @@ pr-12325
                     onClick={clearAllFilters}"
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
                     Clear Filters;
-<<<<<<< HEAD
                   </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </div>;
               )}
-<<<<<<< HEAD
 
               onRemoveRating={() => setSelectedRating (null)}"
               onClearSearch={() => setSearchQuery ("")}
@@ -1069,22 +917,12 @@ onRemoveRating={() => setSelectedRating(null)}"
     </AppLayout>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
           </div>;
         </div>;
       </main>;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </AppLayout>;
   ),; const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions ();
 const filterOptions = generateFilterOptions ();
@@ -1098,7 +936,6 @@ case 'location': setSelectedLocations (prev => prev.includes (value) ? prev.filt
 break;'
 case 'availability': setSelectedAvailability (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
 break;
-=======
     </AppLayout>);
 }
 
@@ -1116,7 +953,6 @@ case 'location': setSelectedLocations (prev => prev.includes (value) ? prev.filt
 break;
 case 'availability': setSelectedAvailability (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
 break 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 
@@ -1186,7 +1022,6 @@ Discover professional services and products for your AI and tech projects. Brows
 }/>) ) ) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg"> <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2> <p className="text-zion-slate-light max-w-md mx-auto mb-8"> We couldn't find any listings matching your filters. Try adjusting your search criteria. </p> <Button onClick= {}
   clearAllFilters "
 }className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>) 
-=======
 }className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters  </div>)"
 }</div> </div> </div> </main> ) 
     ;"`;
@@ -1194,26 +1029,14 @@ pr-12325
 }/>) ) ) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg"> <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2> <p className="text-zion-slate-light max-w-md mx-auto mb-8"> We couldn't find any listings matching your filters. Try adjusting your search criteria. </p> <Button onClick= {'
 </ProductListingCard>)'
 }className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>)"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }</div> </div> </div> </main> </AppLayout>) 
 }
     </AppLayout>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   </Button>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </AppLayout>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

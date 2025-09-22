@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 import { useIsMobile } from "@/hooks/use-mobile",
 ;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   appName?: string;
 import React, { useState, useEffect } from './react';'
 import { X, ArrowRight } from './lucide-react';'
 import { Link } from './react-router-dom';'
 import { useIsMobile } from '@/hooks / use - mobile';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SmartAppBannerProps {
   app_name?: string;
   appIconSrc?: string;
@@ -18,19 +14,12 @@ interface SmartAppBannerProps {
   delay?: number, // Delay in milliseconds before showing the banner;}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   appName = "Zion Marketplace";
   appIconSrc;
   appStoreUrl = "/download";
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   appName = "Zion Marketplace";
   appIconSrc;"
   appStoreUrl = "/download";"
@@ -59,7 +48,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     }
   }, [isMobile, delay]),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const dismissBanner = () => {
     setIsVisible(false);
     localStorage.setItem("smartBannerDismissed", "true")
@@ -76,10 +64,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     ) : null;
   }
 // Detect iOS or Android
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
@@ -109,8 +93,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 },
 import React, { useState, useEffect } from "react",;
 import { X, ArrowRight } from "lucide-react",;
@@ -256,8 +238,3 @@ return (
 };
 
 export default SmartAppBanner;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

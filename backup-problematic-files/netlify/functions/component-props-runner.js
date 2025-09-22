@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -30,6 +33,9 @@ exports.handler = async () => {
   logStep('components:generate-docs', () =>
     runNode('automation/component-props-docs.cjs')
   );
+<<<<<<< HEAD
+logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+=======
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
 
@@ -58,3 +64,4 @@ exports.handler = async () => {
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

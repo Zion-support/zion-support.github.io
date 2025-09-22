@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -13,19 +6,15 @@ import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSel
 import { RolePicker } from "../components/onboarding/RolePicker";
 import { SignUpForm } from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
-<<<<<<< HEAD
 export function MobileOnboarding() {
 
 export function MobileOnboarding() {;
 
 export function MobileOnboarding() {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 export function MobileOnboarding() {;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 import React, { useState } from "react",
@@ -36,22 +25,14 @@ import { RolePicker } from "../components/onboarding/RolePicker",
 import { SignUpForm } from "../components/onboarding/SignUpForm",
 type OnboardingStep = "language" | "role" | "signup",
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function MobileOnboarding() {
 
 export function MobileOnboarding() {;
 
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
-<<<<<<< HEAD
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role");
@@ -60,23 +41,17 @@ export function MobileOnboarding() {;
     } else {
       navigate("/mobile");
     }
-<<<<<<< HEAD
   },
 
   const handleRoleSelect = () => {
     setCurrentStep("signup")
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   };
 
   const handleRoleSelect = () => {
 setCurrentStep("signup");
   };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 py-8">
@@ -92,7 +67,6 @@ setCurrentStep("signup");
             <LanguageThemeSelector />
 
             <div className="px-4 mt-8">
-=======
 import React, { useState } from "react";"
 import { useNavigate } from "react-router-dom";"
 import { Button } from "@/components/ui/button";"
@@ -111,7 +85,6 @@ import { SignUpForm } from "../components/onboarding/SignUpForm","
 type OnboardingStep = "language" | "role" | "signup",
 
 export function MobileOnboarding() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
                 Continue;
               </Button>
@@ -149,20 +122,11 @@ export function MobileOnboarding() { return null; }
 
             <SignUpForm />
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   };
 
   const handleRoleSelect = () => {
 setCurrentStep("signup")
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -179,7 +143,6 @@ export function MobileOnboarding() {;
     if (currentStep === "language") {;
       setCurrentStep("role");
     } else if (currentStep === "role") {;
-=======
 "
 import React, { useState } from "react",;"
 import { useNavigate } from "react-router-dom",;"
@@ -193,7 +156,6 @@ type OnboardingStep = "language" | "role" | "signup",;
     if (currentStep === "language") {;"
       setCurrentStep("role");"
     } else if (currentStep === "role") {;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setCurrentStep("signup");
     } else {;"
       navigate("/mobile");
@@ -222,8 +184,6 @@ const handleRoleSelect = () => {;
               </Button>;
             </div>;
           </div>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         )}
       </div>
     </div>
@@ -424,8 +384,6 @@ if ( {) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
 import React, { useState } from "react",;"
@@ -519,15 +477,5 @@ pr-12325
     </div>);
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

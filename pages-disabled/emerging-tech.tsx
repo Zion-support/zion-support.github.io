@@ -1,32 +1,21 @@
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const solutions = [
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
     { name: '5G Private Networks', href: '/5g-private-network-solutions' },
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function EmergingTechPage() {
   const features = [
-=======
 
   const solutions = []
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },'
@@ -52,7 +41,6 @@ import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
 
 export default function EmergingTechPage() {}
   const features = ['
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
   const solutions = ['
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },'
@@ -64,12 +52,9 @@ export default function EmergingTechPage() { return null; }
     {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},'
     {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},'
     {_name: 'Metaverse AI Platform', _href: '/metaverse-ai-development-platform'}];
-<<<<<<< HEAD
 
   return (_<Layout>
   return (_<Layout>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
         <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />"
@@ -84,11 +69,6 @@ export default function EmergingTechPage() { return null; }
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Emerging Technology</h1>"
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>"
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </header>
           <section>"
@@ -98,7 +78,6 @@ export default function EmergingTechPage() { return null; }
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">"
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />"
                   <span className="text-gray-200">{f}</span>
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {solutions.map((s) => (
@@ -106,7 +85,6 @@ export default function EmergingTechPage() { return null; }
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </a>
               ))}
             </div>
@@ -121,28 +99,23 @@ export default function EmergingTechPage() { return null; }
   );
 };
 
-=======
 );
 };
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </Link>
               ))  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
-=======
 '
 import React from 'react','
 import Head from 'next / head','
 import Layout from '../components / layout / Layout','
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 export default /**;
  * EmergingTechPage - Function description;
@@ -193,43 +166,23 @@ function EmergingTechPage() {}
                   <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;"
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </Link>
               ))  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </section>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>;
   );
   } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

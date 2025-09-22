@@ -9,7 +9,6 @@ ursor/automate-test-improve-and-merge-code-85f4
     if (
       content.includes('
       content.includes('') ||
-      content.includes('>>>>>>>')
 ursor/fix-lint-push-and-merge-to-main-28da
     ) {
       console.log(`Fixing merge conflicts: in: ${filePath}`);
@@ -19,7 +18,6 @@ ursor/fix-lint-push-and-merge-to-main-28da
 
     ) {
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
@@ -28,7 +26,6 @@ ursor/fix-lint-push-and-merge-to-main-28da
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
-<<<<<<< HEAD
         if (line.includes('
 ursor/fix-lint-push-and-merge-to-main-28da
           inConflict = true;
@@ -40,7 +37,6 @@ if (line.includes('')) {
           continue;
         }
 
-        if (line.includes('>>>>>>>')) {
 ursor/fix-lint-push-and-merge-to-main-28da
           inConflict = false;
 

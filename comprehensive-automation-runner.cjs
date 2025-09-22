@@ -1,35 +1,19 @@
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 const { execSync, spawn } = require('child_process');
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 /**
  * Comprehensive Automation Runner;
  * Runs all automation scripts and provides comprehensive testing and improvement;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 class ComprehensiveAutomationRunner {
   // TODO: Implement
 }
@@ -62,14 +46,12 @@ log(message, type = 'INFO') {
 
   async runCommand(command, description, timeout = 30000) {
     this.log(`Running: ${description}`, 'PROGRESS');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       const result = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe',
         timeout: timeout
       });
-<<<<<<< HEAD
       this.results.errors.push({
         command,
         description,
@@ -116,10 +98,7 @@ if (require.main === module) {
 this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
 
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       await this.runSyntaxFixes();
       // Run build process
       await this.runBuildProcess();
@@ -152,16 +131,12 @@ const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.jso
     this.log(`🧪 Tests Passed: ${report.summary.testsPassed}`);
     this.log(`❌ Total Errors: ${report.summary.totalErrors}`);
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 // Run if called directly;
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
-<<<<<<< HEAD
-=======
     console.error('Comprehensive automation runner failed:', error);
 
 module.exports = ComprehensiveAutomationRunner;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

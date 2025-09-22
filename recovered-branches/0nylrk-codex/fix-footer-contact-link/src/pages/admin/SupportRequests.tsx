@@ -23,8 +23,6 @@ import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -39,8 +37,6 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T15:45:00Z"
     category: "authentication"
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   {
     id: "SR-1002"
     user: "sarah.smith@company.co"
@@ -116,9 +112,6 @@ const MOCK_SUPPORT_REQUESTS = [
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -142,9 +135,7 @@ const resetFilters = () => {
       <SEO
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       />
       <div className=\"container mx-auto px-4 py-8\" />
         <div className=\"flex flex-col md:flex-row items-start md:items-center justify-between mb-8\" />
@@ -287,7 +278,6 @@ title=\"Support Requests | Admin Dashboard\"
             <TabsTrigger value=\"ai-flagged\" />AI Flagged</TabsTrigger>;
             <TabsTrigger value=\"need-response\" />Need Response</TabsTrigger>;
           </TabsList>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Search and Filters */}
             <div className=\"flex flex-col md:flex-row gap-4 mb-6\" />;
               <div className=\"relative flex-1\" />;
@@ -295,20 +285,15 @@ title=\"Support Requests | Admin Dashboard\"
                 <Input;
 placeholder=\"Search by ID, user or issue...\"
                   value={searchQuery}
-<<<<<<< HEAD
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
-=======
               <Select value={statusFilter || \"\"} onValueChange={value = /> setStatusFilter(value || null)}>
                 <SelectTrigger className=\"w-[180px]\" />
                   <SelectValue placeholder=\"Status\" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </SelectTrigger>
                 <SelectContent />
                   <SelectItem value=\"\" />All Statuses</SelectItem>
@@ -317,16 +302,13 @@ placeholder=\"Search by ID, user or issue...\"
                   <SelectItem value=\"resolved\" />Resolved</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
               <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
-=======
               <Select value={priorityFilter || \"\"} onValueChange={value = /> setPriorityFilter(value || null)}>
                 <SelectTrigger className=\"w-[180px]\" />
                   <SelectValue placeholder=\"Priority\" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </SelectTrigger>
                 <SelectContent />
                   <SelectItem value=\"\" />All Priorities</SelectItem>
@@ -335,17 +317,13 @@ placeholder=\"Search by ID, user or issue...\"
                   <SelectItem value=\"low\" />Low</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
               <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
-=======
               <Select value={categoryFilter || \"\"} onValueChange={value = /> setCategoryFilter(value || null)}>
                 <SelectTrigger className=\"w-[180px]\" />
                   <SelectValue placeholder=\"Category\" />
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </SelectTrigger>
                 <SelectContent />
                   <SelectItem value=\"\" />All Categories</SelectItem>
@@ -402,8 +380,6 @@ placeholder=\"Search by ID, user or issue...\"
                               ? 'destructive'
                               : request.priority === 'medium'
 ? 'default'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                               : 'outline'
                           }>;
                             {request && request.status}
@@ -415,7 +391,6 @@ placeholder=\"Search by ID, user or issue...\"
                               ? 'destructive' 
                               : request && request.priority === 'medium' 
 ? 'default' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               : 'outline'
                           }>;
                             {request && request.priority}
@@ -463,4 +438,3 @@ placeholder=\"Search by ID, user or issue...\"
       </div>
     </AppLayout>
   )
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

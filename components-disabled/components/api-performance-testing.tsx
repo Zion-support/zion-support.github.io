@@ -33,7 +33,6 @@ class ErrorBoundary extends React.Component {
     super(props);}
     this.state = { hasError: false };
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   static getDerivedStateFromError(error) {
     return { hasError: true };
 
@@ -54,13 +53,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-=======
 
 import React from \"react\";
 import SEO from \"../components/SEO\";
 import { Check, ExternalLink } from \"lucide-react\";
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function ApiPerformanceTestingPage() {
   const features = [
     \"k6/Gatling-compatible test runner\"
@@ -740,4 +736,3 @@ href=\"https://gatling.io/open-source/\"
           </div>;
         </section>;
       </main>;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

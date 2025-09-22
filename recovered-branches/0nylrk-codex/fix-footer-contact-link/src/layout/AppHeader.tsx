@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState  } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { MainNavigation  } from './MainNavigation';
@@ -16,9 +9,6 @@ import { MobileMenu  } from '@/components/header/MobileMenu';
 import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState} from 'react';
 import {use_messaging} from '@/context / MessagingContext';
 import {MainNavigation} from './MainNavigation';
@@ -62,9 +52,6 @@ import { Menu, X  } from 'lucide-react';
 import { MobileMenu  } from '@/components/header/MobileMenu';
 import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react";
 import { useMessaging } from "@/context/MessagingContext";
 import { MainNavigation } from "./MainNavigation";
@@ -74,7 +61,6 @@ import { Menu, X } from "lucide-react";
 import { MobileMenu } from "@/components/header/MobileMenu";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { MobileBottomNav } from "@/components/header/MobileBottomNav";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function AppHeader() {
 import {useState} from 'react';
 import {use_messaging} from '@/context / MessagingContext';
@@ -82,7 +68,6 @@ import {MainNavigation} from './MainNavigation';
 import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
-=======
 import { useState } from "react";"
 import { useMessaging } from "@/context/MessagingContext";"
 import { MainNavigation } from "./MainNavigation";"
@@ -93,16 +78,12 @@ import { MobileMenu } from "@/components/header/MobileMenu";"
 import { useIsMobile } from "@/hooks/use-mobile";"
 import { MobileBottomNav } from "@/components/header/MobileBottomNav";
 export function AppHeader() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
 } catch (error) {
-<<<<<<< HEAD
     console.warn('Messaging context not available')
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -123,13 +104,8 @@ export function AppHeader() {;
   } catch (error) {;
     console.warn('Messaging context not available');
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-<<<<<<< HEAD
   } catch (error) {
     console.warn ('Messaging context not available');
 import { useState } from 'react',;
@@ -151,20 +127,14 @@ export function AppHeader() {;
     unreadCount = count;
   } catch (error) {;
     console.warn('Messaging context not available');  }
-=======
   } catch (error) {"
     console.warn("Messaging context not available");
   }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function AppHeader() {
 
   } catch (error) {
     console.warn("Messaging context not available");
   }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
@@ -249,19 +219,15 @@ export function AppHeader() {
         </div>
       </header>
 
-=======
 </button>;
           </div>;
           <ModeToggle />;
         </div>;
       </header>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && ("
         <div className="md:hidden fixed inset-0 z-40 pt-16">
 <div
-<<<<<<< HEAD
-<<<<<<< HEAD
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
 
             onClick={() => setMobileMenuOpen(false)}"
@@ -278,19 +244,14 @@ export function AppHeader() {
 unreadCount={unreadCount} 
             <MobileMenu ;
               unreadCount={unreadCount} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               onClose={() => setMobileMenuOpen(false)} ;
             />;
           </div>;
         </div>;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       )}
 
               ) : (;"
-=======
 
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -307,7 +268,6 @@ unreadCount={unreadCount}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>;
               ) : (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <Menu className="block h-6 w-6" aria-hidden="true" />;
               )}
       {/* Mobile Bottom Navigation */}
@@ -316,11 +276,9 @@ unreadCount={unreadCount}
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;"
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
 
-=======
     <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Logo />;
           <div className="ml - 6 flex-1 hidden md:block">;
             <MainNavigation unread_count={unread_count} />;
@@ -337,10 +295,8 @@ unreadCount={unreadCount}
               {mobileMenuOpen ? (
 <X className="block h - 6 w-6" aria - hidden="true" />) : (
                 <Menu className="block h - 6 w-6" aria - hidden="true" />)}
-=======
                 <X className="block h - 6 w-6" aria - hidden="true" />) : (
                 <Menu className="block h - 6 w-6" aria - hidden="true" />)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </button>;
           </div>;
           <ModeToggle />;
@@ -354,11 +310,8 @@ unreadCount={unreadCount}
             on_click={() => setMobileMenuOpen (false)}
             aria - hidden="true";
           />;
-<<<<<<< HEAD
           <div className="relative bg - zion - blue - dark border - t border - zion - purple / 20 h - auto max - h-[calc (100vh - 4rem)] overflow-y-auto">;
-=======
           <div className="relative bg - zion - blue - dark border - t border - zion - purple / 20 h - auto max - h-[calc (100vh - 4rem)] overflow-y-auto">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <MobileMenu;
               unread_count={unread_count}
               on_close={() => setMobileMenuOpen (false)}
@@ -369,11 +322,6 @@ unreadCount={unreadCount}
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
 ) : (<Menu className="block h-6 w-6" aria-hidden="true" />) 
 }</button> </div> <ModeToggle /> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick= {
@@ -501,18 +449,8 @@ export function AppHeader() {
     </>);
 
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   ),;}"
 ) : (<Menu className="block h-6 w-6" aria-hidden="true" />)"
 }</button> </div> <ModeToggle /> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick= {"
@@ -529,4 +467,3 @@ pr-12325
 }
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

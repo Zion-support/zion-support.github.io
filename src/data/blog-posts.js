@@ -24,5 +24,3 @@ const blogPosts = [
     tags: ['AI', 'Security', 'Enterprise']
   }
 ];
-
-export const BLOG_POSTS = blogPosts;

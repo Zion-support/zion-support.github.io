@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, TrendingUp, Zap, Brain } from 'lucide-react';
 
 const AI2027BreakthroughPromotionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +34,7 @@ const AI2027BreakthroughPromotionBanner: React.FC = () => {
       description: "Discover how autonomous AI ecosystems will revolutionize enterprise operations by 2027",
       metrics: "2000% ROI • 95% Automation • $9.2B Savings",
       link: "/blog/ai-2027-autonomous-business-ecosystems-revolution",
-      icon: <Brain className="w-8 h-8 text-purple-600" />,
+      icon: <span className="w-8 h-8 text-purple-600">📊</span>,
       gradient: "from-purple-600 via-blue-600 to-indigo-600"
     },
     {
@@ -44,7 +43,7 @@ const AI2027BreakthroughPromotionBanner: React.FC = () => {
       description: "Explore revolutionary quantum computing applications transforming enterprise operations",
       metrics: "1000% ROI • 1000x Speed • 99.9% Accuracy",
       link: "/blog/quantum-computing-enterprise-breakthrough-2027",
-      icon: <Zap className="w-8 h-8 text-blue-600" />,
+      icon: <span className="w-8 h-8 text-blue-600">📊</span>,
       gradient: "from-blue-600 via-cyan-600 to-teal-600"
     },
     {
@@ -53,7 +52,7 @@ const AI2027BreakthroughPromotionBanner: React.FC = () => {
       description: "Real-world case study of comprehensive AI-driven business transformation",
       metrics: "2000% ROI • 18 Months • $9.2B Value",
       link: "/case-studies/ai-2027-autonomous-enterprise-transformation-2000-roi-success",
-      icon: <TrendingUp className="w-8 h-8 text-green-600" />,
+      icon: <span className="w-8 h-8 text-green-600">📊</span>,
       gradient: "from-green-600 via-emerald-600 to-teal-600"
     },
     {
@@ -62,7 +61,7 @@ const AI2027BreakthroughPromotionBanner: React.FC = () => {
       description: "Global logistics company revolutionizes supply chain with quantum computing",
       metrics: "1500% ROI • 12 Months • $4.8B Savings",
       link: "/case-studies/quantum-computing-supply-chain-optimization-1500-roi-success",
-      icon: <Star className="w-8 h-8 text-orange-600" />,
+      icon: <span>Star</span>,
       gradient: "from-orange-600 via-red-600 to-pink-600"
     }
   ];
@@ -138,7 +137,7 @@ const AI2027BreakthroughPromotionBanner: React.FC = () => {
                       className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
                     >
                       <span>Explore Now</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <span className="w-4 h-4">📊</span>
                     </Link>
                     
                     <Link
@@ -158,7 +157,7 @@ const AI2027BreakthroughPromotionBanner: React.FC = () => {
               className="flex-shrink-0 ml-4 p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
               aria-label="Dismiss banner"
             >
-              <X className="w-6 h-6" />
+              <span>X</span>
             </button>
           </div>
         </div>

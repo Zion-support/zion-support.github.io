@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import {;
   Form,;
@@ -26,9 +22,6 @@ import {
   FormItem
   FormLabel
   FormMessage
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {;
   Form,;
@@ -39,29 +32,14 @@ import {;
   FormLabel,;
   FormMessage,;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Form,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   Form,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   FormControl,
   FormDescription,
   FormField,
   FormItem,
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   FormLabel,
   FormMessage,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "@/components/ui/form";
 "
 } from "@/components/ui/form";"
@@ -82,12 +60,7 @@ import { X } from "lucide-react";
   const keywords = watch("keywords");
   const platform = watch("platform");
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -109,8 +82,6 @@ interface MetadataFormProps {
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
@@ -120,11 +91,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {};
 "
   const keywords = watch("keywords");"
   const platform = watch("platform");
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
@@ -165,7 +132,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const keywords = watch("keywords");
   const platform = watch("platform");
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { control, register, watch, setValue } = form;
 
 const keywords = watch("keywords");
@@ -186,20 +152,15 @@ const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
 if (value && !keywords.includes(value)) {
       if (value && !keywords.includes(value)) {
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
-=======
 
       if (value && !keywords.includes(value)) {}
   const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (e && e.key === "Enter" || e && e.key === ",") {;
       e && e.preventDefault();
       const value = e && e.currentTarget.value && value.trim();
 
 if (value && !keywords && keywords.includes(value)) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         setValue("keywords", [...keywords, value]);
         e && e.currentTarget.value = "";
       }
@@ -358,22 +319,17 @@ if ( {) {}
                 <FormItem>;
                   <FormLabel>Short Description</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
                     <Input
                       placeholder="Brief description of your app"
                       maxLength={platform === "ios" ? 170 : 80}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Input ;
                       placeholder="Brief description of your app";
                       maxLength={platform === "ios" ? 170 :80}
-=======
 
                     <Input ;"
                       placeholder="Brief description of your app";"
                       maxLength={platform === "ios" ? 170 :80}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       {...field}
                     />;
                   </FormControl>;
@@ -414,18 +370,11 @@ className="min-h-32";
               )}
             />;
             <FormField;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               control={control}"
-=======
 
               control={control}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               name="shortDescription"
               render={({ field }) => (
                 <FormItem>
@@ -450,51 +399,27 @@ className="min-h-32";
             <FormField
             />;
             <FormField;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               control={control}
-=======
               control={control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
-<<<<<<< HEAD
                   <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <Textarea
                     <Textarea 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Textarea 
 
 <Textarea
 
                     <Textarea
                     <Textarea 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       placeholder="Detailed description of your app"
-=======
                   <FormControl>                      placeholder="Detailed description of your app"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
                       placeholder="Detailed description of your app""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                       placeholder="Detailed description of your app"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
                       {...field}
@@ -505,20 +430,15 @@ className="min-h-32";
                   </FormDescription>
                 </FormItem>
               )}
-<<<<<<< HEAD
             />
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
-<<<<<<< HEAD
             />;
 
             <div>;"
               <FormLabel htmlFor="keywords">Keywords</FormLabel>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Input
 
                 id="keywords"
@@ -526,21 +446,14 @@ className="min-h-32";
                 onKeyDown={addKeyword}
                 className="mb-2"
 />
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
-=======
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
 
               />;
-=======
             />              />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             />              />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <Input;
 "
                 id="keywords""
@@ -549,34 +462,26 @@ className="min-h-32";
                 className="mb-2""
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               />;
 "
               <div className="flex flex-wrap gap-2 mt-2">;
                 {keywords && keywords.map((keyword, index) => (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Badge
                     key={index}
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
                     {keyword}
 
                     <button 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     <button;
 "
                       type="button"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       type="button"
 
                       onClick={() => removeKeyword(keyword)}"
                       className="ml-1 hover:text-red-300";
                     >;"
-=======
 
                       type="button"
                     {keyword}
@@ -584,7 +489,6 @@ className="min-h-32";
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
                     >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       <X className="h-3 w-3" />;
                     </button>;
                   </Badge>;
@@ -592,39 +496,26 @@ className="min-h-32";
 
 </div>;
               <FormDescription className="mt-2">;
-=======
               </div>;
               <FormDescription className="mt-2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 Add keywords to improve discoverability (max 100 characters;
                 total);
               </FormDescription>;
             </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <FormField
-=======
                       type="button"            <FormField
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                       type="button"            <FormField
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
             <FormField
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               control={control}
-=======
             <FormField;
               control={control}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               name="version"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <Input placeholder="e.g., 1.0.0" {...field} />
                   </FormControl>
                 </FormItem>
@@ -635,15 +526,11 @@ className="min-h-32";
       </CardContent>
     </Card>
 );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <Input 
-=======
 
 );
 
                     <Input "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       placeholder="e.g., 1.0.0"
                       {...field}
                     />;
@@ -666,19 +553,13 @@ className="min-h-32";
                     <Input placeholder="e.g., 1.0.0" {...field} />;
                   </FormControl>;
                 </FormItem>)}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             />;
           </div>;
         </Form>;
       </CardContent>;
 </Card>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   );
 };
@@ -709,19 +590,14 @@ if (value && !keywords.includes (value) ) {}
 };
   );
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
 
 }
 
 );
 
-=======
 
 ););
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 );
 
                     <Input placeholder="e.g., 1.0.0" {...field} />
@@ -816,11 +692,8 @@ if (value && !keywords.includes (value) ) {
 }
 
 );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Input 
-=======
                     <Input "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       placeholder="e.g., 1.0.0"
                       {...field}
                     />;
@@ -834,7 +707,4 @@ if (value && !keywords.includes (value) ) {
     </Card>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

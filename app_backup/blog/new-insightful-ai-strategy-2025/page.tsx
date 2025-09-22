@@ -125,4 +125,3 @@ export default function AIPracticalStrategy2025() {
     </div>
   );
 }
-

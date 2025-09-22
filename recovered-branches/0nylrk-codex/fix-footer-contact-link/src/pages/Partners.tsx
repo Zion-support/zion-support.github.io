@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -15,8 +11,6 @@ import {PartnerResources} from "@/components/partners/PartnerResources";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
 export default function Partners() {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -27,12 +21,10 @@ import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
-<<<<<<< HEAD
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-<<<<<<< HEAD
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -43,9 +35,7 @@ import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard";
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
 import { PartnerResources } from "@/components/partners/PartnerResources";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { useAuth } from "@/hooks/useAuth";
-=======
   CardTitle,";
 } from "@/components/ui/card";"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
@@ -57,33 +47,20 @@ import { PartnerDashboard } from "@/components/partners/PartnerDashboard";"
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";"
 import { PartnerResources } from "@/components/partners/PartnerResources";"
 import { useAuth } from "@/hooks/useAuth";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import { useAuth } from "@/hooks/useAuth";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useNavigate } from "react-router-dom";
 export default function Partners() { return null; }
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return ("
@@ -284,33 +261,22 @@ import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview");
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
-<<<<<<< HEAD
       <div className="container max-w-6xl py-10">;
         <div className="text-center mb-8">;
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>;
           <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>;
         </div>;
 
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="grid md:grid-cols-2 gap-8 mb-12">;
           <Card className="bg-zion-blue-dark border-zion-blue-light">;
             <CardHeader>;
@@ -341,9 +307,7 @@ export default function Partners() {
               </div>;
             </CardContent>;
           </Card>;
-<<<<<<< HEAD
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card className="bg-zion-blue-dark border-zion-blue-light">;
             <CardHeader>;
               <CardTitle className="text-white">For AI Organizations</CardTitle>;
@@ -424,18 +388,13 @@ export default function Partners() {
             Apply to Join;
           </Button>;
 
-=======
 <Button;
             size="lg";
             variant="outline";
             className="text-zion-cyan border-zion-cyan";
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             onClick={() => navigate('/login')}
           >
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Button 
             size="lg" 
             variant="outline" 
@@ -578,91 +537,59 @@ export default function Partners() {;
             Apply to Join;
           </Button>;
             onClick={() => navigate('/login')}          >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Partner Login
-=======
             Partner Login;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     )
   }
-=======
     )
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     )
   }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Button
             size="lg" 
             variant="outline" 
 
             className="text-zion-cyan border-zion-cyan"
-<<<<<<< HEAD
 
           <Button 
             size="lg" 
             variant="outline" 
             className="text-zion-cyan border-zion-cyan"
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             onClick={() => navigate('/login')}
           >;
             Partner Login;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
   }
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     );
   }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     );
   }
 
     );
   }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     );
   }
     );
   }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Authenticated user view - Partner Dashboard
   return (
     <div className="container max-w-7xl py-10">
-=======
 
   // Authenticated user view - Partner Dashboard;
   return ("
     <div className="container max-w-7xl py-10">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>"
           <h1 className="text-3xl font-bold tracking-tight text-white">
@@ -778,10 +705,7 @@ Export CSV;
         </TabsContent>
       </Tabs>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
     <div className="container max-w-7xl py-10">;
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
         <div>;
@@ -932,10 +856,7 @@ return ("
             <FileDown className="h-4 w-4" />;
 
             Export CSV;
-=======
   )            Export CSV;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return (
     <div className="container max - w-7xl py - 10">;
       <div className="flex flex - col md:flex - row justify - between items - start md:items - center gap - 4 mb - 8">;
@@ -950,7 +871,6 @@ return ("
           <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>;
             <FileDown className="h-4 w-4" />;
             Export CSV;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </Button>;
         </div>;
       </div>;
@@ -1309,17 +1229,8 @@ return ("
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
@@ -1584,4 +1495,3 @@ pr-12325
 }> Apply to Join </Button> <Button > Partner Login </Button> </div> </div>) '
 }//Authenticated user view - Partner Dashboard <div> <h1 className=" text-3xl font-bold tracking-tight text-white">Partner Dashboard</h1> <p className=" text-zion-slate-light">Manage your referral links and track your performance</p> </div> Export CSV </Button> </div> </div> </TabsList> <TabsContent value=" overview"className=" space-y-4"> <PartnerDashboard /> </TabsContent> <TabsContent value=" referrals"className=" space-y-4"> <PartnerReferralLinks /> </TabsContent> <TabsContent value=" earnings"className=" space-y-4"> <Card> <CardHeader> <CardTitle>Earnings & Payouts</CardTitle> <CardDescription>Track your earnings and manage payouts</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value=" leaderboard"className=" space-y-4"> <PartnerLeaderboard /> </TabsContent> <TabsContent value=" resources"className=" space-y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

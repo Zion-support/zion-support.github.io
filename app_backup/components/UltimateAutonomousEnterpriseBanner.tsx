@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronRight, Star, TrendingUp, Zap, Shield, Brain } from 'lucide-react';
 
 const UltimateAutonomousEnterpriseBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -91,11 +90,11 @@ const UltimateAutonomousEnterpriseBanner = () => {
           <div className="flex-1 pr-8">
             <div className="flex items-center space-x-2 mb-2">
               <div className="flex items-center space-x-1">
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                <span>Star</span>
+                <span>Star</span>
+                <span>Star</span>
+                <span>Star</span>
+                <span>Star</span>
               </div>
               <span className="text-sm font-medium text-purple-200">NEW ULTIMATE BREAKTHROUGH</span>
             </div>
@@ -129,7 +128,7 @@ const UltimateAutonomousEnterpriseBanner = () => {
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
               >
                 {currentContent.cta}
-                <ChevronRight className="ml-2 w-4 h-4" />
+                <span>ChevronRight</span>
               </Link>
               
               <Link
@@ -147,25 +146,25 @@ const UltimateAutonomousEnterpriseBanner = () => {
               {/* AI Brain Icon */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center animate-pulse">
-                  <Brain className="w-16 h-16 text-white" />
+                  <span className="w-16 h-16 text-white">📊</span>
                 </div>
               </div>
               
               {/* Floating Icons */}
               <div className="absolute top-4 right-4 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
-                <TrendingUp className="w-4 h-4 text-white" />
+                <span className="w-4 h-4 text-white">📊</span>
               </div>
               
               <div className="absolute bottom-4 left-4 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center animate-bounce delay-1000">
-                <Zap className="w-4 h-4 text-white" />
+                <span className="w-4 h-4 text-white">📊</span>
               </div>
               
               <div className="absolute top-1/2 left-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center animate-bounce delay-2000">
-                <Shield className="w-4 h-4 text-white" />
+                <span className="w-4 h-4 text-white">📊</span>
               </div>
               
               <div className="absolute top-1/2 right-0 w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center animate-bounce delay-3000">
-                <Award className="w-4 h-4 text-white" />
+                <span className="w-4 h-4 text-white">📊</span>
               </div>
             </div>
           </div>
@@ -193,7 +192,7 @@ const UltimateAutonomousEnterpriseBanner = () => {
         className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors duration-200"
         aria-label="Dismiss banner"
       >
-        <X className="w-5 h-5" />
+        <span>X</span>
       </button>
     </div>
   );

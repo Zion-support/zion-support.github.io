@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
@@ -24,11 +19,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     .filter((m) => m.status === "paid")
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -38,8 +28,6 @@ interface PaymentSummaryProps {;
 
   paymentTerms: string | null;
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
@@ -51,16 +39,12 @@ const paidAmount = milestones
       (sum, m) => sum + parseFloat(m.amount.toString()), 
       0
     ).toFixed(2),
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import { Milestone } from "@/hooks/useMilestones";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CreditCard } from "lucide-react";
 interface PaymentSummaryProps {}
   milestones: Milestone[];
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   paymentTerms: string | null;
 }
 
@@ -68,7 +52,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()),
     const paidAmount = milestones
-=======
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({}
   milestones,
   paymentTerms,
@@ -78,8 +61,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({}
     .toFixed(2);
 
   const paidAmount = milestones"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
   milestones,
   paymentTerms,
@@ -89,7 +70,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     .toFixed(2);
 
   const paidAmount = milestones
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     .filter((m) => m.status === "paid")
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
@@ -115,13 +95,8 @@ return (
             </p>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <p className="font-medium">${paidAmount}</p>
             <p className="font-medium">
               ${paidAmount}
@@ -132,20 +107,14 @@ return (
     </Card>
   );
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Milestone} from '@/hooks/useMilestones';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 import {CreditCard} from 'lucide-react';
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
-<<<<<<< HEAD
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {;
   const totalPayment = milestones && milestones.reduce(;
     (sum, m) => sum + parseFloat(m && m.amount.toString()), ;
@@ -190,33 +159,23 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
               ${paidAmount}
 )
           </div>
-=======
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">${paidAmount}</p>
           </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
 };
 
   );
 
   );
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 };
   );
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 import React from './react';'
 import { Milestone  } from '@/hooks / use_milestones';'
@@ -331,9 +290,7 @@ export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, payme
 };
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 };
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

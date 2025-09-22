@@ -3,7 +3,6 @@ return (
 <select
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={category}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   onChange: (next: { category: string, level: string, isFree: string }) => void
 
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
@@ -24,7 +23,6 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 
-<<<<<<< HEAD:components/learn/FilterBar.tsx
 type Props = {
   category: string;
   level: string;
@@ -65,7 +63,6 @@ class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-=======
       <select;
         className='border rounded px-3 py-2 bg-white dark:bg-black
         value={category;
@@ -82,7 +79,6 @@ type Props = {
 </div>
       <select;"
         className="border rounded px-3 py-2 bg-white dark:bg-black""
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return ("
 </select>"
@@ -129,12 +125,10 @@ export default /**
  */
 function FilterBar() {
   return (
-=======
         <option value="">All Pricing</option>""
         <option value="true">Free</option>""
         <option value="false">Paid</option>"
     </div>"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     <div className='grid grid - cols - 1 sm:grid - cols - 3 gap - 3'>;
         className='border rounded px - 3 py - 2 bg - white dark:bg - black';
         on_change={e => on_change ({ category: e.target.value;, level, is_free })}
@@ -393,7 +387,6 @@ function FilterBar() {return (<div className=\"grid grid - cols - 1 sm:grid - co
   );
 }
 }
-=======
 }}ursor/fix-website-loading-errors-and-merge-6662;
 }
 }}
@@ -448,4 +441,3 @@ function FilterBar() {return (<div className=\"grid grid - cols - 1 sm:grid - co
 }
 }
 
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

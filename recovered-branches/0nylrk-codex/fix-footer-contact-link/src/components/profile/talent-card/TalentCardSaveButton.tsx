@@ -9,11 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface TalentCardSaveButtonProps {
   profileId: string;
     profileName: string;
@@ -91,7 +87,6 @@ title: "Authentication required",,
 }
     }
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved
@@ -100,18 +95,13 @@ title: "Authentication required",,
       variant: "default"
     })
   },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         )}
       />
     </button>
   )
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
@@ -121,7 +111,6 @@ title: "Authentication required",,
       variant: "default";
     });
   };
-=======
       return;
     }
     setLocalIsSaved(!localIsSaved);
@@ -156,7 +145,6 @@ className={cn(
       variant: \"default\";
     })
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (;
     <button;
       className=\"absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors\";
@@ -171,10 +159,7 @@ className={cn(
       />;
     </button>;
   );
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 import React from './react';
 import { Heart } from './lucide-react';
@@ -194,4 +179,3 @@ function TalentCardSaveButton() {}
   const { toast } = use_toast ();
   const [localIsSaved, setLocalIsSaved] = React.useState (is_saved);
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

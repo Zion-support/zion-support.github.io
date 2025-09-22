@@ -1,28 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { SkillCategoryProps  } from './types';
 import { SkillItem  } from './SkillItem';
 export const SkillCategory = ({
 
-<<<<<<< HEAD
   if (!skills |skills.length === 0) return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;
   if (!skills || skills.length === 0) return null;
 
-=======
 
 import { SkillCategoryProps } from './types',
 import { SkillItem } from './SkillItem',
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className="space - y-2">;
@@ -61,8 +51,6 @@ export const SkillCategory = ({}
   onDelete,
 }: SkillCategoryProps) => {};
   if (!skills || skills.length === 0) return null;
-<<<<<<< HEAD
-=======
 import { SkillCategoryProps } from "./types";
 import { SkillItem } from "./SkillItem";
 export const SkillCategory = ({
@@ -71,13 +59,10 @@ export const SkillCategory = ({
   onDelete,
 }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;  if (!skills || skills.length === 0) return null;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <div className="space-y-2">
@@ -93,19 +78,13 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
         ))}
       </div>
     </div>
-<<<<<<< HEAD
   );
 
   );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   );
 };
   );
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
             on_delete={on_delete}
           />))}
@@ -141,17 +120,12 @@ pr-12325
 }
 
   )
-=======
   )
       </div>;
     </div>;
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   )
 };
 </SkillItem>
@@ -176,4 +150,3 @@ pr-12325
     </div>;"
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
