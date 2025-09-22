@@ -75,40 +75,18 @@ const BlogPage = () => {
       date: "2025-01-01",
       featured: false,
       image: "/images/ai-trends-2025.jpg"
-<<<<<<< HEAD
-    },
-    {
-      title: "Multimodal Agents in the Enterprise",
-      category: "Enterprise AI",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/multimodal-agents-2025.jpg"
-=======
->>>>>>> 40ac30d6b50e4e85e121866b9f75741934b667c0
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="AI & Technology Blog - Latest Insights & Breakthroughs"
-        description="Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies."
-        keywords="AI blog, technology insights, quantum computing, neural interfaces, enterprise AI, business transformation, AI trends, technology news"
-        url="/blog"
-      />
-
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            AI & Technology Blog
-          </h1>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">AI & Technology Blog</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Insights, strategies, and practical guides for AI implementation, enterprise automation, and digital transformation.
           </p>
-        </div>
+        </header>
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
@@ -127,37 +105,9 @@ const BlogPage = () => {
                     </span>
                     <span className="text-sm text-gray-500">{post.date}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.description}
-                  </p>
-        {/* Featured Posts */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Articles</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {featuredPosts.map((post) => (
-              <article key={post.slug} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="aspect-w-16 aspect-h-9 bg-gray-200">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-48 object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center mb-2">
-                    <span className="text-sm text-purple-600 font-semibold">{post.category}</span>
-                    <span className="mx-2 text-gray-400">•</span>
-                    <span className="text-sm text-gray-500">{post.date}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
-                  <p className="text-gray-600 mb-4">{post.description}</p>
-                  <Link 
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
-                  >
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
+                  <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors">
                     Read More
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -167,7 +117,7 @@ const BlogPage = () => {
               </article>
             ))}
           </div>
-        </div>
+        </section>
 
         <section>
           <h2 className="text-3xl font-bold text-gray-900 mb-8">All Articles</h2>
@@ -182,73 +132,23 @@ const BlogPage = () => {
                       </span>
                       <span className="text-sm text-gray-500">{post.date}</span>
                       {post.featured && (
-                        <span className="text-sm font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">
-                          Featured
-                        </span>
+                        <span className="text-sm font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">Featured</span>
                       )}
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-purple-600 transition-colors">
-                      <Link href={`/blog/${post.slug}`}>
-                        {post.title}
-                      </Link>
+                      <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </h3>
-                    <p className="text-gray-600 mb-3">
-                      {post.description}
-                    </p>
-                    <Link 
-                      href={`/blog/${post.slug}`}
-                      className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
-                    >
+                    <p className="text-gray-600 mb-3">{post.description}</p>
+                    <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold hover:text-purple-800 transition-colors">
                       Read More →
                     </Link>
                   </div>
-        {/* All Posts */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">All Articles</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allPosts.map((post) => (
-              <article key={post.slug} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-w-16 aspect-h-9 bg-gray-200">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-40 object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <div className="flex items-center mb-2">
-                    <span className="text-xs text-purple-600 font-semibold">{post.category}</span>
-                    <span className="mx-2 text-gray-400">•</span>
-                    <span className="text-xs text-gray-500">{post.date}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{post.title}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{post.description}</p>
-                  <Link 
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 text-sm"
-                  >
-                    Read More
-                    <svg className="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
-    <div>
-      <h1>Blog</h1>
-      <div className="featured-posts">
-        {featuredPosts.map((post, index) => (
-          <div key={index} className="post-card">
-            <h2>{post.title}</h2>
-            <p>Category: {post.category}</p>
-            <p>Date: {post.date}</p>
-=======
->>>>>>> 40ac30d6b50e4e85e121866b9f75741934b667c0
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 };
