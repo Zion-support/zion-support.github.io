@@ -12,7 +12,17 @@ const nextConfig = {
     ignoreBuildErrors: true 
   },
   experimental: {
-    forceSwcTransforms: false
+    forceSwcTransforms: false,
+    optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'],
+  },
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
   },
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],

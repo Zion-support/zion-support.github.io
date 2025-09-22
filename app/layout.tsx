@@ -11,6 +11,8 @@ import Analytics from '../components/Analytics';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import BackToTop from '../components/BackToTop';
+import WebVitals from '../components/WebVitals';
+import GlobalErrorHandler from '../components/GlobalErrorHandler';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -150,6 +152,8 @@ export default function RootLayout({
           <AccessibilityEnhancer />
           <Analytics />
           <PerformanceMonitor />
+          <WebVitals />
+          <GlobalErrorHandler />
           <Navigation />
           <main id="main-content" tabIndex={-1}>{children}</main>
           <Footer />
