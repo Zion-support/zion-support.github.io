@@ -28,12 +28,12 @@ const nextConfig = {
 
   trailingSlash: false,
   basePath: '',
-  assetPrefix: '',
+  // Ensure valid non-empty string only when used; leave undefined otherwise
+  assetPrefix: undefined,
   generateEtags: true,
 
-  experimental: {
-    optimizePackageImports: ['lucide-react']
-  },
+  // Remove unsupported experimental flags for Next 12 compatibility
+  experimental: {},
 
   async redirects() {
     return [
