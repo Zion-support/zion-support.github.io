@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import Link from 'next/link'
-import React from 'react'
-import { ErrorBoundary } from '../../../components/ErrorBoundary'
-import SEO from '../../../components/SEO'
-=======
 import Link from 'next/link';
 import React from 'react';
->>>>>>> 4953af437c70 (fix(netlify): add app/components/ErrorBoundary and export default from components/ErrorBoundary; fix page type for agentic risk playbook; local build passes)
 
 export const metadata = {
   title: 'AI 2026: Agentic Risk and Safety Playbook',
