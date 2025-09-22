@@ -47,6 +47,7 @@ const nextConfig = {
         /backup-pages/,
         /\.backup/,
         /\.disabled/,
+        /blog-disabled/,
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
