@@ -36,6 +36,11 @@ export const addPerformanceMonitoring = () => {
   if (typeof window === 'undefined' || !('performance' in window)) return
 
   window.addEventListener('load', () => {
-    // Performance metrics logged
+    // const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    // console.log('Performance metrics:', {
+    //   domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+    //   loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
+    //   totalTime: perfData.loadEventEnd - perfData.fetchStart,
+    // })
   })
 }

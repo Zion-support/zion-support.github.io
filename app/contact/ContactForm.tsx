@@ -1,18 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-<<<<<<< HEAD
-
-interface ContactFormData {
-  name: string;
-  email: string;
-  company: string;
-  message: string;
-}
-
-export default function ContactForm() {
-  const [formData, setFormData] = useState<ContactFormData>({
-=======
 import { trackEvent, trackConversion } from '../../components/Analytics';
 
 interface FormErrors {
@@ -24,40 +12,11 @@ interface FormErrors {
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
     name: '',
     email: '',
     company: '',
     message: ''
   });
-<<<<<<< HEAD
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', company: '', message: '' });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-=======
   
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -102,7 +61,7 @@ export default function ContactForm() {
       trackEvent('form_submit_attempt', 'Contact Form', 'Contact Page');
       
       // Simulate API call (replace with actual API endpoint)
-      const response = await fetch('/api/contact', {
+      const response = await globalThis.fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -121,7 +80,7 @@ export default function ContactForm() {
         throw new Error('Failed to submit form');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      // console.error('Form submission error:', error);
       setSubmitStatus('error');
       
       // Track form submission error
@@ -144,49 +103,11 @@ export default function ContactForm() {
         ...errors,
         [name]: undefined
       });
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
     }
   };
 
   return (
     <div className="max-w-2xl mx-auto">
-<<<<<<< HEAD
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-              Full Name *
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Your full name"
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-              Email Address *
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="your.email@company.com"
-            />
-          </div>
-        </div>
-
-=======
       {submitStatus === 'success' && (
         <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
           <p className="font-medium">✅ Thank you for your message!</p>
@@ -249,7 +170,6 @@ export default function ContactForm() {
             <p className="mt-1 text-sm text-red-600">{errors.email}</p>
           )}
         </div>
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
             Company
@@ -260,13 +180,6 @@ export default function ContactForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
-<<<<<<< HEAD
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="Your company name"
-          />
-        </div>
-
-=======
             disabled={isSubmitting}
             className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
               isSubmitting ? 'bg-gray-100 cursor-not-allowed' : ''
@@ -275,7 +188,6 @@ export default function ContactForm() {
           />
         </div>
         
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
             Message *
@@ -286,33 +198,6 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-<<<<<<< HEAD
-            rows={6}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
-            placeholder="Tell us about your project or how we can help..."
-          />
-        </div>
-
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-        >
-          {isSubmitting ? 'Sending...' : 'Send Message'}
-        </button>
-
-        {submitStatus === 'success' && (
-          <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-            Thank you for your message! We'll get back to you soon.
-          </div>
-        )}
-
-        {submitStatus === 'error' && (
-          <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-            Sorry, there was an error sending your message. Please try again.
-          </div>
-        )}
-=======
             disabled={isSubmitting}
             rows={5}
             className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 resize-none transition-colors ${
@@ -351,7 +236,6 @@ export default function ContactForm() {
             'Send Message'
           )}
         </button>
->>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
       </form>
     </div>
   );
