@@ -6,6 +6,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import { generateStructuredData } from '../components/SEOEnhancer';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import Analytics from '../components/Analytics';
 // Performance monitoring will be added via script
 
 const inter = Inter({ subsets: ['latin'] });
@@ -75,18 +77,61 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Performance monitoring
+              // Enhanced performance monitoring and error tracking
               if (typeof window !== 'undefined') {
+                // Performance monitoring
                 window.addEventListener('load', () => {
                   if ('performance' in window) {
                     const perfData = performance.getEntriesByType('navigation')[0];
-                    console.log('Performance metrics:', {
+                    const metrics = {
                       domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
                       loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
                       totalTime: perfData.loadEventEnd - perfData.fetchStart,
-                    });
+                      firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+                      firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
+                    };
+                    console.log('Performance metrics:', metrics);
+                    
+                    // Send metrics to analytics (placeholder)
+                    if (window.gtag) {
+                      window.gtag('event', 'page_load_time', {
+                        event_category: 'Performance',
+                        value: Math.round(metrics.totalTime),
+                      });
+                    }
                   }
                 });
+
+                // Enhanced error tracking
+                window.addEventListener('error', (event) => {
+                  console.error('Global error:', {
+                    message: event.message,
+                    filename: event.filename,
+                    lineno: event.lineno,
+                    colno: event.colno,
+                    error: event.error?.stack,
+                  });
+                });
+
+                // Unhandled promise rejection tracking
+                window.addEventListener('unhandledrejection', (event) => {
+                  console.error('Unhandled promise rejection:', event.reason);
+                });
+
+                // Viewport and device info
+                const deviceInfo = {
+                  userAgent: navigator.userAgent,
+                  viewport: {
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                  },
+                  screen: {
+                    width: window.screen.width,
+                    height: window.screen.height,
+                  },
+                  devicePixelRatio: window.devicePixelRatio,
+                };
+                console.log('Device info:', deviceInfo);
               }
             `,
           }}
@@ -94,6 +139,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ErrorBoundary>
+          <Analytics />
+          <PerformanceMonitor />
           <Navigation />
           <main>{children}</main>
           <Footer />
