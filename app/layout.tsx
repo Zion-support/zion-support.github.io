@@ -1,6 +1,6 @@
-import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
+import { ReactNode } from 'react';
 import './globals.css';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -8,7 +8,9 @@ import { ErrorBoundary } from '../components/ErrorBoundary';
 import { generateStructuredData } from '../components/SEOEnhancer';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import Analytics from '../components/Analytics';
-// Performance monitoring will be added via script
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import BackToTop from '../components/BackToTop';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +21,6 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ziontechgroup.com'),
   title: 'Zion Tech Group - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, micro SaaS development, and comprehensive IT services.',
   keywords: 'AI solutions, micro SaaS, IT services, technology consulting, automation',
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   const structuredData = generateStructuredData('Organization', {
     name: 'Zion Tech Group',
@@ -139,11 +140,19 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ErrorBoundary>
+          <SEOOptimizer
+            title="Zion Tech Group - AI Solutions & Technology Services"
+            description="Leading provider of AI solutions, micro SaaS development, and comprehensive IT services."
+            keywords={['AI solutions', 'micro SaaS', 'IT services', 'technology consulting', 'automation']}
+            canonical="https://ziontechgroup.com"
+          />
+          <AccessibilityEnhancer />
           <Analytics />
           <PerformanceMonitor />
           <Navigation />
-          <main>{children}</main>
+          <main id="main-content" tabIndex={-1}>{children}</main>
           <Footer />
+          <BackToTop />
         </ErrorBoundary>
       </body>
     </html>

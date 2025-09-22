@@ -1,175 +1,170 @@
-import { Metadata } from 'next';
+'use client';
 
-interface SEOProps {
-  title: string;
-  description: string;
+import { useEffect } from 'react';
+import Head from 'next/head';
+
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
   keywords?: string[];
   canonical?: string;
   ogImage?: string;
-  ogType?: 'website' | 'article' | 'product';
+  ogType?: string;
+  twitterCard?: string;
   structuredData?: any;
-  noIndex?: boolean;
 }
 
-export function generateSEOMetadata({
+export default function SEOOptimizer({
   title,
   description,
   keywords = [],
   canonical,
-  ogImage,
+  ogImage = '/og-image.jpg',
   ogType = 'website',
-  noIndex = false,
-}: SEOProps): Metadata {
-  const baseUrl = 'https://ziontechgroup.com';
-  const defaultImage = `${baseUrl}/og-image.jpg`;
+  twitterCard = 'summary_large_image',
+  structuredData,
+}: SEOOptimizerProps) {
+  useEffect(() => {
+    // Update page title
+    if (title) {
+      document.title = title;
+    }
 
-  return {
-    title: `${title} | Zion Tech Group`,
-    description,
-    keywords: keywords.join(', '),
-    authors: [{ name: 'Zion Tech Group' }],
-    creator: 'Zion Tech Group',
-    publisher: 'Zion Tech Group',
-    robots: {
-      index: !noIndex,
-      follow: !noIndex,
-      googleBot: {
-        index: !noIndex,
-        follow: !noIndex,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-    openGraph: {
-      type: ogType,
-      locale: 'en_US',
-      url: canonical || baseUrl,
-      siteName: 'Zion Tech Group',
-      title,
-      description,
-      images: [
-        {
-          url: ogImage || defaultImage,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [ogImage || defaultImage],
-      creator: '@ZionTechGroup',
-      site: '@ZionTechGroup',
-    },
-    alternates: {
-      canonical: canonical || baseUrl,
-    },
-    other: {
-      'msapplication-TileColor': '#2563eb',
-      'theme-color': '#2563eb',
-    },
-  };
+    // Update meta description
+    if (description) {
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', description);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = 'description';
+        meta.content = description;
+        document.head.appendChild(meta);
+      }
+    }
+
+    // Update keywords
+    if (keywords.length > 0) {
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords.join(', '));
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = 'keywords';
+        meta.content = keywords.join(', ');
+        document.head.appendChild(meta);
+      }
+    }
+
+    // Update canonical URL
+    if (canonical) {
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (canonicalLink) {
+        canonicalLink.setAttribute('href', canonical);
+      } else {
+        const link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = canonical;
+        document.head.appendChild(link);
+      }
+    }
+
+    // Update Open Graph tags
+    const updateOGTag = (property: string, content: string) => {
+      const ogTag = document.querySelector(`meta[property="${property}"]`);
+      if (ogTag) {
+        ogTag.setAttribute('content', content);
+      } else {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
+
+    if (title) updateOGTag('og:title', title);
+    if (description) updateOGTag('og:description', description);
+    if (ogImage) updateOGTag('og:image', ogImage);
+    updateOGTag('og:type', ogType);
+
+    // Update Twitter Card tags
+    const updateTwitterTag = (name: string, content: string) => {
+      const twitterTag = document.querySelector(`meta[name="${name}"]`);
+      if (twitterTag) {
+        twitterTag.setAttribute('content', content);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = name;
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
+
+    if (title) updateTwitterTag('twitter:title', title);
+    if (description) updateTwitterTag('twitter:description', description);
+    if (ogImage) updateTwitterTag('twitter:image', ogImage);
+    updateTwitterTag('twitter:card', twitterCard);
+
+    // Add structured data
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+  }, [title, description, keywords, canonical, ogImage, ogType, twitterCard, structuredData]);
+
+  return null;
 }
 
-export function generateBreadcrumbStructuredData(items: Array<{ name: string; url: string }>) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url,
-    })),
-  };
+// Preload critical resources
+export function PreloadResources() {
+  useEffect(() => {
+    const preloadLink = (href: string, as: string) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = href;
+      link.as = as;
+      document.head.appendChild(link);
+    };
+
+    // Preload critical fonts
+    preloadLink('/fonts/inter.woff2', 'font');
+    
+    // Preload critical images
+    preloadLink('/hero-image.jpg', 'image');
+    
+    // Preload critical CSS
+    preloadLink('/styles.css', 'style');
+  }, []);
+
+  return null;
 }
 
-export function generateArticleStructuredData({
-  title,
-  description,
-  author,
-  datePublished,
-  dateModified,
-  image,
-  url,
-}: {
-  title: string;
-  description: string;
-  author: string;
-  datePublished: string;
-  dateModified?: string;
-  image?: string;
-  url: string;
-}) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: title,
-    description,
-    author: {
-      '@type': 'Person',
-      name: author,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png',
-      },
-    },
-    datePublished,
-    dateModified: dateModified || datePublished,
-    image: image || 'https://ziontechgroup.com/og-image.jpg',
-    url,
-  };
-}
-
-export function generateServiceStructuredData({
-  name,
-  description,
-  provider,
-  areaServed = 'Worldwide',
-  serviceType,
-  url,
-}: {
+// Generate structured data for services
+export function generateServiceStructuredData(service: {
   name: string;
   description: string;
-  provider: string;
-  areaServed?: string;
-  serviceType: string;
-  url: string;
+  price?: string;
+  category: string;
 }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name,
-    description,
+    name: service.name,
+    description: service.description,
+    category: service.category,
     provider: {
       '@type': 'Organization',
-      name: provider,
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
     },
-    areaServed,
-    serviceType,
-    url,
-  };
-}
-
-export function generateFAQStructuredData(faqs: Array<{ question: string; answer: string }>) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
+    ...(service.price && {
+      offers: {
+        '@type': 'Offer',
+        price: service.price,
+        priceCurrency: 'USD',
       },
-    })),
+    }),
   };
 }

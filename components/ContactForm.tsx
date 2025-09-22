@@ -1,25 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
-
-import React, { useState } from 'react';
-
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
 interface FormData {
   name: string;
   email: string;
   company: string;
   phone: string;
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-  phone: string;
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
   service: string;
   message: string;
 }
 
-const ContactForm: React.FC = () => {
+const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
