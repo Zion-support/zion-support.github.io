@@ -1,4 +1,4 @@
-// Note: `Metadata` import removed because it was unused
+// Note: Removed unused Metadata import to satisfy ESLint no-unused-vars
 
 export function optimizeImages() {
   return {
