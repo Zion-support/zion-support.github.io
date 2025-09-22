@@ -13,6 +13,14 @@ import {;
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
 
+<<<<<<< HEAD
+import React, { useState, useEffect, useMemo } from 'react',
+import { 
+import React, { useState, useEffect, useMemo } from 'react';
+import {
+  // TODO: Implement;
+}
+=======
 
 
 
@@ -31,6 +39,7 @@ interface ContentItem {id: string;
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
 import React, { useState, useEffect, useMemo } from 'react',
 import { 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
   BarChart3, Globe, Database, Cpu, Rocket, Brain
@@ -52,9 +61,11 @@ interface ContentItem {
 
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+<<<<<<< HEAD
+=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 }
 interface ContentCategory {id: string;
   name: string;
@@ -107,6 +118,96 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['seojson-ldschemaaudit'];
       source: 'autonomous-auditor';
       type: 'report';
+<<<<<<< HEAD
+const ContentCategorizer: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState(),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),
+  const [selectedType, setSelectedType] = useState('all'),
+  const [selectedDateRange, setSelectedDateRange] = useState('all'),
+  const [selectedRelevance, setSelectedRelevance] = useState('all'),
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
+  // Sample content data - in a real implementation, this would come from an API,
+const contentItems: ContentItem[] = [
+    {
+      id: '1';,
+      title: 'Structured Data Audit Report';,
+      href: '/reports/structured-data-audit.json';,
+      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';,
+      category: 'seo';,
+      subcategory: 'structured-data';,
+      date: '2025-08-19';,
+      relevance: 'high';,']
+      tags: ['seojson-ldschemaaudit'];,
+      source: 'autonomous-auditor';,
+      type: 'report;
+    },
+{
+      id: '2',
+      title: 'Security Vulnerability Scan Results',
+      href: '/reports/security-scan-2025-08-19',
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
+      category: 'security',
+      subcategory: 'vulnerability-scan',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['securityvulnerabilityscanremediation'],
+      source: 'security-scanner',
+      type: 'security'
+    },
+    {
+      id: '3',
+      title: 'AI Model Performance Update',
+      href: '/reports/ai-model-performance-2025-08-19',
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
+      category: 'ai',
+      subcategory: 'performance',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['aiperformanceoptimizationmetrics'],
+      source: 'ai-monitor',
+      type: 'update'
+    },
+    {
+      id: '4',
+      title: 'Feature Deployment Summary',
+      href: '/reports/feature-deployment-2025-08-19',
+      desc: 'Overview of newly deployed features and their impact on user experience.',
+      category: 'features',
+      subcategory: 'deployment',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['featuresdeploymentuximpact'],
+      source: 'deployment-tracker',
+      type: 'feature'
+    },
+    {
+      id: '5',
+      title: 'System Health Dashboard',
+      href: '/reports/system-health-2025-08-19',
+      desc: 'Real-time system performance metrics and infrastructure health status.',
+      category: 'monitoring',
+      subcategory: 'system-health',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['monitoringperformanceinfrastructurehealth'],
+      source: 'health-monitor',
+      type: 'report'
+    },
+    {
+      id: '6',
+      title: 'User Behavior Insights',
+      href: '/reports/user-behavior-2025-08-19',
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
+      category: 'analytics',
+      subcategory: 'user-behavior',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['analyticsuser-behaviorengagementoptimization'],
+      source: 'behavior-analyzer',
+      type: 'insight'
+=======
 
 
 
@@ -181,6 +282,7 @@ const ContentCategorizer: React.FC = () => {;
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -248,6 +350,10 @@ const ContentCategorizer: React.FC = () => {;
       name: 'All Content';
       icon: Globe;
       description: 'Complete collection of autonomous content';
+<<<<<<< HEAD
+  description: 'Complete collection of autonomous content';
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       color: 'from-blue-500 to-cyan-500';
       count: contentItems.length;
     }
@@ -255,6 +361,10 @@ const ContentCategorizer: React.FC = () => {;
       name: 'SEO & Analytics';
       icon: BarChart3;
       description: 'Search optimization and performance analytics';
+<<<<<<< HEAD
+  description: 'Search optimization and performance analytics';
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       color: 'from-green-500 to-emerald-500';
       count: contentItems.filter(item => item.category === 'seo').length;
       subcategories: ['structured-dataperformancetechnical-seo'];
@@ -263,6 +373,10 @@ const ContentCategorizer: React.FC = () => {;
       name: 'Security & Compliance';
       icon: Shield;
       description: 'Security assessments and compliance reports';
+<<<<<<< HEAD
+  description: 'Security assessments and compliance reports';
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       color: 'from-red-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'security').length;
       subcategories: ['vulnerability-scancompliancethreat-detection'];
@@ -271,6 +385,10 @@ const ContentCategorizer: React.FC = () => {;
       name: 'AI & Machine Learning';
       icon: Brain;
       description: 'AI model performance and insights';
+<<<<<<< HEAD
+  description: 'AI model performance and insights';
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       color: 'from-purple-500 to-pink-500';
       count: contentItems.filter(item => item.category === 'ai').length;
       subcategories: ['performancetrainingdeployment'];
@@ -279,6 +397,10 @@ const ContentCategorizer: React.FC = () => {;
       name: 'Feature Updates';
       icon: Zap;
       description: 'New features and system updates';
+<<<<<<< HEAD
+  description: 'New features and system updates';
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       color: 'from-yellow-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'features').length;
       subcategories: ['deploymentenhancementsroadmap'];
@@ -287,6 +409,10 @@ const ContentCategorizer: React.FC = () => {;
       name: 'System Monitoring';
       icon: Cpu;
       description: 'Infrastructure and system health';
+<<<<<<< HEAD
+  description: 'Infrastructure and system health';
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       color: 'from-indigo-500 to-purple-500';
       count: contentItems.filter(item => item.category === 'monitoring').length;
       subcategories: ['system-healthperformanceinfrastructure'];
@@ -295,6 +421,10 @@ const ContentCategorizer: React.FC = () => {;
       name: 'User Analytics';
       icon: TrendingUp;
       description: 'User behavior and engagement insights';
+<<<<<<< HEAD
+  description: 'User behavior and engagement insights';
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       color: 'from-teal-500 to-cyan-500';
       count: contentItems.filter(item => item.category === 'analytics').length;
       subcategories: ['user-behaviorengagementconversion'];
@@ -321,6 +451,8 @@ const ContentCategorizer: React.FC = () => {;
     { id: 'high', name: 'High Priority', color: 'text-green-400' }
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
+<<<<<<< HEAD
+=======
 
 
 
@@ -351,6 +483,7 @@ const ContentCategorizer: React.FC = () => {;
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -358,6 +491,9 @@ const ContentCategorizer: React.FC = () => {;
       switch (sortBy) {;
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
+<<<<<<< HEAD
+break;
+=======
           break;
 
 
@@ -372,6 +508,7 @@ const ContentCategorizer: React.FC = () => {;
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   ],
 
   const filteredItems = useMemo(() => {
@@ -398,14 +535,17 @@ filtered.sort((a, b) => {
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
           break,        case 'title':
           comparison = a.title.localeCompare(b.title),
+<<<<<<< HEAD
+break
+=======
           break
 
 
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       }
       return sortOrder === 'asc' ? comparison : -comparison;
     });
@@ -453,6 +593,8 @@ type=&quot;text&quot;
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
 
+<<<<<<< HEAD
+=======
 
 
 :components/ContentCategorizer.tsx
@@ -478,13 +620,15 @@ value={selectedCategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
               ))}
+<<<<<<< HEAD
+=======
 
 
 
@@ -506,8 +650,8 @@ value={selectedCategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -517,6 +661,21 @@ value={selectedSubcategory}
               <option value=&quot;all&quot;>All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
+<<<<<<< HEAD
+            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
+value={selectedType}
+              onChange={(e) => setSelectedType(e.target.value)}
+                <option key={type.id} value={type.id}>
+                </option>;
+))}
+            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
+value={selectedRelevance}
+              onChange={(e) => setSelectedRelevance(e.target.value)}
+                <option key={level.id} value={level.id}>
+            </select>;
+          </div>;
+</div>;
+=======
 
 
 
@@ -543,7 +702,6 @@ value={selectedSubcategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
@@ -576,7 +734,6 @@ value={selectedType}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
@@ -600,8 +757,8 @@ value={selectedRelevance}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
@@ -645,13 +802,15 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             Clear All Filters
           </button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 :components/ContentCategorizer.tsx
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       {/* Category Pills */}
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
@@ -704,7 +863,6 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
@@ -719,11 +877,12 @@ onClick={clearAllFilters}
 :components/ContentCategorizer.tsx
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+<<<<<<< HEAD
+=======
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   {item.type}
                 </div>;
               </div>;
@@ -747,6 +906,14 @@ onClick={clearAllFilters}
           const category = categories.find(c => c.id === item.category);
           
           return (
+<<<<<<< HEAD
+<div className=&quot;text-sm text-white/60&quot;>
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {"
+</div>"
+      <div className="text-sm text-white/60">"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             <div key={item.id} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;>
               <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
               
@@ -770,9 +937,11 @@ onClick={clearAllFilters}
 
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+<<<<<<< HEAD
+=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -780,6 +949,8 @@ onClick={clearAllFilters}
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
               </p>;
+<<<<<<< HEAD
+=======
 
 
 
@@ -789,8 +960,8 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -798,6 +969,8 @@ onClick={clearAllFilters}
                     {tag}
                   </span>;
                 ))}
+<<<<<<< HEAD
+=======
 
 
 
@@ -822,8 +995,8 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -840,6 +1013,16 @@ onClick={clearAllFilters}
                 <span className=&quot;text-xs text-white/40&quot;>
                   Source: {item.source}
                 </span>
+<<<<<<< HEAD
+
+        })}
+      </div>;
+
+      {/* No Results */}
+{filteredItems.length === 0 && (
+        <div className=&quot;text-center py-12&quot;>
+          <div className=&quot;text-white/40 text-6xl mb-4&quot;>🔍</div>
+=======
 
 
 
@@ -854,6 +1037,7 @@ onClick={clearAllFilters}
 
         })}
       </div>;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                 <a,
 href={item.href} 
                   target="blank" 
@@ -877,7 +1061,6 @@ href={item.href}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* No Results */}
 {filteredItems.length === 0 && (
@@ -897,4 +1080,8 @@ onClick={clearAllFilters}
     </div>;
   );
 }
+<<<<<<< HEAD
 export default ContentCategorizer;
+=======
+export default ContentCategorizer;
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -4,7 +4,10 @@
 
 :backup-problematic-files/reviews/ReviewCard.tsx
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -30,11 +33,15 @@ type Props = {;
   onReport?: (id: string) => void;
 
 
+<<<<<<< HEAD
+          <StarRating
+          <StarRating;
+=======
     <div className='enhanced-card hover:shadow-lg transition-shadow'>
       <div className='flex items-center justify-between mb-2'>
         <div className='flex items-center gap-2'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
           <StarRating
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             value={review && review.rating}
             onChange={() => {}}
             readOnly;
@@ -73,7 +80,6 @@ type Props = {;
         <span className='text-sm font-medium'>{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
           <span className='pill pill-success'>Would work again</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
 
@@ -88,14 +94,42 @@ type Props = {;
           <span className="pill">Timeliness: {review && review.categories.timeliness}★</span>;
         )}
 
+<<<<<<< HEAD
+        >
+          Report abuse
+        </button>
+      </div>
+
+export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
+          <span className="pill pill-success">Would work again</span>
+        )}
+      </div>
+      <p className="text-sm leading-6">{review.text}</p>
+      <div className="flex flex-wrap gap-2 mt-3">
+        {typeof review.categories?.communication === 'number' && (
+          <span className="pill">Communication: {review.categories.communication}★</span>
+};
+export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
+          <span className="pill pill-success">Would work again</span>;
+        )}
+      </div>;
+      <p className="text-sm leading-6">{review && review.text}</p>;
+      <div className="flex flex-wrap gap-2 mt-3">;
+        {typeof review && review.categories?.communication === 'number' && (;
+          <span className="pill">Communication: {review && review.categories.communication}★</span>;
+        )}
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 export default ReviewCard;
 
 
 
 export default ReviewCard;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+<<<<<<< HEAD
+:components/reviews/ReviewCard.tsx
+main:components/reviews/ReviewCard.tsx
+export default ReviewCard;
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
