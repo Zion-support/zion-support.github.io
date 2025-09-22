@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 
 const EnhancedSEO = ({ 
@@ -5,7 +6,7 @@ const EnhancedSEO = ({
   description = "Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support.",
   keywords = "AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps, enterprise technology, digital transformation",
   canonical = "",
-  ogImage = "/images/og-image.jpg",
+  ogImage = "/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
   structuredData = null
@@ -19,70 +20,30 @@ const EnhancedSEO = ({
     "name": "Zion Tech Group",
     "description": description,
     "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/logo.png",
+    "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
+      "telephone": "+1-555-0123",
       "contactType": "customer service",
       "areaServed": "US",
       "availableLanguage": "English"
     },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
     "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
+      "https://linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup"
     ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Tech Street",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "postalCode": "94105",
+      "addressCountry": "US"
+    },
     "offers": {
       "@type": "Offer",
-      "description": "AI solutions, enterprise IT services, and micro SaaS development",
+      "description": "AI, IT & Micro SaaS Services",
       "priceRange": "$$$"
-    }
-  };
-
-  const serviceStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "AI & IT Services",
-    "description": description,
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group"
-    },
-    "serviceType": "Technology Services",
-    "areaServed": "United States",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Technology Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI & Machine Learning Solutions"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Enterprise IT Solutions"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Micro SaaS Development"
-          }
-        }
-      ]
     }
   };
 
@@ -102,9 +63,11 @@ const EnhancedSEO = ({
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
@@ -116,19 +79,17 @@ const EnhancedSEO = ({
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
+      {/* Additional Meta Tags */}
+      <meta name="theme-color" content="#06b6d4" />
+      <meta name="msapplication-TileColor" content="#06b6d4" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/manifest.json" />
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -148,22 +109,10 @@ const EnhancedSEO = ({
         }}
       />
       
-      {/* Service Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceStructuredData)
-        }}
-      />
-      
-      {/* Additional Performance Hints */}
+      {/* Performance Hints */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      <link rel="preload" href="/_next/static/css/" as="style" />
+      <link rel="preload" href="/_next/static/js/" as="script" />
     </Head>
   );
 };

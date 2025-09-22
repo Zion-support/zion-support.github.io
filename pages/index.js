@@ -82,6 +82,7 @@ export default function Home() {
           title="Zion Tech Group - AI, IT & Micro SaaS Services"
           description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
           keywords="AI services, IT solutions, micro SaaS, machine learning, cloud infrastructure, DevOps, enterprise technology, digital transformation"
+          ogImage="/og-image.jpg"
         />
         <main id="main-content" role="main" className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Navigation */}
