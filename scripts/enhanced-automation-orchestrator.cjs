@@ -1,148 +1,175 @@
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + "\n")}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-  async runCommand(command, description, category = "general") {
-    this.log(`🚀 Starting: ${description}`, "INFO");
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,;
-        encoding: "utf8",;
-        timeout: 300000, // 5 minutes timeout;
-        stdio: "pipe"});
-      this.log(`✅ Completed: ${description}`, "SUCCESS");
-      this.results[category] = { success: true, output: result, errors: [] }
-      return { success: true, output: result }
-    } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`, "ERROR");
-      this.results[category] = { success: false, output: ", errors: [error.message] }
-      return { success: false, error: error.message }
-    }
-  }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node;
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+    this.logFile = path.join(this.projectRoot, "enhanced-automation-logs.txt")
+      "syntaxFixes"
+      "performanceOptimizations"
+      "securityEnhancements"
+      "testImprovements"
+      "buildOptimizations"
+      "errors"
+  log(message, type = "INFO")
+    fs.appendFileSync(this.logFile, logMessage + "\n")
+      this.log(`"Running"`)
+        "encoding": "utf8"
+        "cwd"
+        "stdio": options.silent ? "pipe" : "inherit"
+      this.log(`Command "failed": ${command} - ${error.message}`, "ERROR"`)
+      this.results.errors.push({ command, "error"})
+    this.log(" Fixing syntax errors...")
+    const syntaxCommands = ["node fix-all-syntax-errors.cjs"]
+      "node fix-final-syntax.cjs"
+      "node fix-remaining-syntax.cjs"
+      const result = await this.runCommand(command, { "silent"})
+        this.log(` Syntax fix "completed"`)
+    this.log("⚡ Optimizing performance...")
+    const perfCommands = ["node scripts/performance-optimizer.cjs"]
+      "node scripts/optimize-performance.js"
+      "npm run "optimize": performance"
+      const result = await this.runCommand(command, { "silent"})
+        this.log(` Performance optimization "completed"`)
+    this.log("� Enhancing security...")
+    const securityCommands = ["node scripts/security-audit-enhanced.cjs"]
+      "node scripts/security-enhancer.cjs"
+      "npm audit fix --force"
+      const result = await this.runCommand(command, { "silent"})
+        this.log(` Security enhancement "completed"`)
+    this.log("🧪 Improving tests...")
+    const testCommands = ["npm run "test": smoke"]
+      "npm run "test": coverage"
+      "node scripts/test-suite-enhancer.cjs"
+      const result = await this.runCommand(command, { "silent"})
+        this.log(` Test improvement "completed"`)
+    this.log("� Optimizing build...")
+    const buildCommands = ["npm run "build": clean"]
+      "npm run "build": analyze"
+      "node scripts/build-optimizer.cjs"
+      const result = await this.runCommand(command, { "silent"})
+        this.log(` Build optimization "completed"`)
+      "startTime"
+      "endTime"
+      "duration"
+      "results"
+      "status": this.results.errors.length === 0 ? "SUCCESS" : "PARTIAL_SUCCESS"
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-  async runLinting() {
-    this.log("🔍 Running linting checks...", "INFO");
-    const lintCommands = [;
-      { cmd: "npm run lint", desc: "ESLint Check" },;
-      { cmd: "npm run lint: fix", desc: "ESLint Auto-fix" },;
-      { cmd: "npm run type-check", desc: "TypeScript Type Check" }
-    ];
-    for (const { cmd, desc } of lintCommands) {
-      await this.runCommand(cmd, desc, "linting")}
-  }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    const reportFile = path.join(this.projectRoot, "enhanced-automation-report.json")
+    this.log(` Report "generated"`)
+// console.log("\n=== ENHANCED AUTOMATION REPORT ===")
+    console.log(`"Duration"`)
+// console.log(`"Status"`)
+    console.log(`Syntax "Fixes"`)
+// console.log(`Performance "Optimizations"`)
+    console.log(`Security "Enhancements"`)
+// console.log(`Test "Improvements"`)
+    console.log(`Build "Optimizations"`)
+    console.log(`"Errors"`)
+    this.log(" Starting Enhanced Automation Orchestrator...")
+      this.log(" Enhanced Automation Orchestrator completed!")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-  async runTesting() {
-    this.log("🧪 Running test suite...", "INFO");
-    const testCommands = [;
-      { cmd: "npm run test", desc: "Unit Tests" },;
-      { cmd: "npm run test: coverage", desc: "Test Coverage" }
-    ];
-    for (const { cmd, desc } of testCommands) {
-      await this.runCommand(cmd, desc, "testing")}
-  }
+=======
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      this.log(` Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  async runBuilding() {
-    this.log("🏗️ Running build process...", "INFO");
-    const buildCommands = [;
-      { cmd: "npm run build", desc: "Production Build" },;
-      { cmd: "npm run build: analyze", desc: "Build Analysis" }
-    ];
-    for (const { cmd, desc } of buildCommands) {
-      await this.runCommand(cmd, desc, "building")}
-  }
+      const duration = Date.now() - startTime;
+      const scriptResult = {
+        script: scriptPath,
+        success: result.success,
+        duration: duration,
+        output: result.output,
+        error: result.error,
+        stderr: result.stderr
 
-  async runPerformanceChecks() {
-    this.log("⚡ Running performance checks...", "INFO");
-    try {
-      // Check bundle size;
-      const buildDir = path.join(this.projectRoot, ".next");
-      if (fs.existsSync(buildDir)) {
-        const stats = fs.statSync(buildDir);
-        this.log(`Build directory size: ${(stats.size / 1024 / 1024).toFixed(2)}MB`, "INFO")}
+      this.results.scripts.push(scriptResult);
+      if (result.success) {
+        this.results.successfulScripts++;`;
+        this.log(`✅ Script completed successfully: ${scriptPath} (${duration}ms)`);
+      } else {
 
-      // Run performance audit if available;
-      await this.runCommand("npm run perf: audit", "Performance Audit", "performance"),;,
-} catch (error) {;
-      this.log(`Performance check failed: ${error.message}`, "WARN"),;,
-}
-  }
+      return scriptResult;
+        error: error.message
 
-  async runSecurityChecks() {
-    this.log("🔒 Running security checks...", "INFO");
-    const securityCommands = [;
-      { cmd: "npm audit", desc: "Security Audit" },;
-      { cmd: "npm audit fix", desc: "Security Fix" }
-    ];
-    for (const { cmd, desc } of securityCommands) {
-      await this.runCommand(cmd, desc, "security")}
-  }
 
-  async generateReport() {
-    this.log("📊 Generating automation report...", "INFO");
+
+
+        this.log(`✅ NPM script completed successfully: ${scriptName} (${duration}ms)`);
+
+
+  async runAllAutomations() {
+    this.log('🚀 Starting Enhanced Automation Orchestrator...);
+    // Ensure logs directory exists
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+
+    // Clear previous logs
+    if (fs.existsSync(this.logFile)) {
+      fs.writeFileSync(this.logFile, );
+
+
+    this.results.totalScripts = automationScripts.length + npmScripts.length;
+
+    // Run automation scripts
+    for (const script of automationScripts) {
+      if (fs.existsSync(script)) {
+        await this.runScript(script);
+
+
+    // Run npm scripts
+    for (const script of npmScripts) {
+      await this.runNpmScript(script);
+
+    // Generate final report
+    this.generateReport();
+
+    this.log(`📊 Results: ${this.results.successfulScripts}/${this.results.totalScripts} scripts successful`);
+    return this.results;
+
+  generateReport() {
+    this.results.endTime = new Date().toISOString();
+    this.results.duration = new Date(this.results.endTime) - new Date(this.results.startTime);
     const report = {
-      timestamp: new Date().toISOString(),;
+      ...this.results,
       summary: {
-        total: Object.keys(this.results).length,;
-        successful: Object.values(this.results).filter(r => r.success).length,;
-        failed: Object.values(this.results).filter(r => !r.success).length},;
-      results: this.results,;
-      recommendations: this.generateRecommendations()}
-    const reportPath = path.join(this.reportsDir, "enhanced-automation-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📄 Report saved to: ${reportPath}`, "SUCCESS");
-    return report}
+        totalScripts: this.results.totalScripts,
+        successfulScripts: this.results.successfulScripts,
+        failedScripts: this.results.failedScripts,
+        successRate: this.results.totalScripts > 0 ? 
 
-  generateRecommendations() {
-    const recommendations = [];
-    if (!this.results.linting.success) {
-      recommendations.push("Fix linting errors before deployment")}
-    if (!this.results.testing.success) {
-      recommendations.push("Ensure all tests pass before merging")}
-    if (!this.results.building.success) {
-      recommendations.push("Fix build errors before deployment")}
-    if (!this.results.security.success) {
-      recommendations.push("Address security vulnerabilities")}
 
-    if (recommendations.length === 0) {
-      recommendations.push("All checks passed! Ready for deployment.")}
+    const reportFile = path.join(this.projectRoot,enhanced-automation-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    return recommendations}
+    const summary = `
+Enhanced Automation Orchestrator Report
 
-  printSummary() {
-    this.log("\n📊 Automation Summary:", "INFO");
-    this.log("=".repeat(50), "INFO");
-    Object.entries(this.results).forEach(([category, result]) => {
-      const status = result.success ? "✅" : "❌";
-      this.log(`${status} ${category.toUpperCase()}: ${result.success ? "PASSED" : "FAILED"}`, "INFO")});
-    const total = Object.keys(this.results).length;
-    const successful = Object.values(this.results).filter(r => r.success).length;
-    const successRate = ((successful / total) * 100).toFixed(1)
-    this.log(`\n🎯 Success Rate: ${successRate}% (${successful}/${total})`, "INFO"),,
-}
-  async run() {
-    this.log("🎯 Starting Enhanced Automation Orchestrator", "INFO")
-    this.log("=".repeat(60), "INFO")
-    try {
-      await this.runLinting()
-      await this.runTesting()
-      await this.runBuilding()
-      await this.runPerformanceChecks()
-      await this.runSecurityChecks()
-      const report = await this.generateReport()
-      this.printSummary()
-      this.log("🎉 Enhanced automation completed successfully!", "SUCCESS")
-      return report,,
-} catch (error) {
-      this.log(`💥 Automation failed: ${error.message}`, "ERROR")
-      throw error,,
-}
-  }
-}
-// Run the orchestrator;
-if (require.main === module) {
-  const orchestrator = new EnhancedAutomationOrchestrator()
-  orchestrator.run().catch(console.error),,
-}
-module.exports = EnhancedAutomationOrchestrator
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

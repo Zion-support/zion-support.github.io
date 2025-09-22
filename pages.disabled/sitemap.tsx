@@ -1,2 +1,3775 @@
-import React from \'react\'; import type { NextPage } from \'next\'; import MainLayout from \'../components/layout/MainLayout\'; import Link from \'next/link\'; import { Map,ExternalLink,Download } from \'lucide-react\'; const \"Sitemap\": NextPage = () => { const siteStructure = [{ title: \'Main Pages\',\"pages\": [ { name: \'Home\',\"url\": \'/\',\"description\": \'Main homepage\' },{ \"name\": \'About Us\',\"url\": \'/about\',\"description\": \'Learn about Zion Tech Group\' },{ \"name\": \'Contact\',\"url\": \'/contact\',\"description\": \'Get in touch with us\' },{ \"name\": \'Careers\',\"url\": \'/careers\',\"description\": \'Join our team\' } ] },{ \"title\": \'Services\',\"pages\": [{ name: \'All Services\',\"url\": \'/services\',\"description\": \'Overview of all our services\' },{ \"name\": \'Micro SaaS\',\"url\": \'/services/micro-saas\',\"description\": \'Micro SaaS solutions\' },{ \"name\": \'IT Services\',\"url\": \'/services/it-services\',\"description\": \'IT consulting and services\' },{ \"name\": \'AI Services\',\"url\": \'/services/ai-services\',\"description\": \'Artificial Intelligence solutions\' } ] },{ \"title\": \'Solutions\',\"pages\": [{ name: \'All Solutions\',\"url\": \'/solutions\',\"description\": \'Overview of all our solutions\' },{ \"name\": \'Enterprise Solutions\',\"url\": \'/solutions/enterprise\',\"description\": \'Enterprise-grade solutions\' } ] },{ \"title\": \'Resources\',\"pages\": [{ name: \'Blog\',\"url\": \'/blog\',\"description\": \'Technology insights and news\' },{ \"name\": \'Case Studies\',\"url\": \'/case-studies\',\"description\": \'Success stories and case studies\' },{ \"name\": \'Webinars\',\"url\": \'/webinars\',\"description\": \'Expert-led webinars and training\' },{ \"name\": \'Documentation\',\"url\": \'/documentation\',\"description\": \'Technical documentation and guides\' },{ \"name\": \'API Reference\',\"url\": \'/api\',\"description\": \'Complete API documentation\' },{ \"name\": \'Help Center\',\"url\": \'/help\',\"description\": \'Support and help resources\' },{ \"name\": \'FAQ\',\"url\": \'/faq\',\"description\": \'Frequently asked questions\' } ] },{ \"title\": \'Company\',\"pages\": [{ name: \'Partners\',\"url\": \'/partners\',\"description\": \'Our strategic partners\' },{ \"name\": \'System Status\',\"url\": \'/status\',\"description\": \'Real-time system status\' } ] },{ \"title\": \'Legal & Privacy\',\"pages\": [{ name: \'Privacy Policy\',\"url\": \'/privacy\',\"description\": \'How we protect your privacy\' },{ \"name\": \'Terms of Service\',\"url\": \'/terms\',\"description\": \'Terms and conditions\' },{ \"name\": \'Cookie Policy\',\"url\": \'/cookies\',\"description\": \'How we use cookies\' },{ \"name\": \'Data Protection\',\"url\": \'/data-protection\',\"description\": \'Data protection measures\' },{ \"name\": \'Accessibility\',\"url\": \'/accessibility\',\"description\": \'Digital accessibility commitment\' } ] } ]; const quickLinks = [{ \"name\": \'XML Sitemap\',\"url\": \'/sitemap.xml\',\"type\": \'xml\' },{ \"name\": \'RSS Feed\',\"url\": \'/rss.xml\',\"type\": \'rss\' },{ \"name\": \'Robots.txt\',\"url\": \'/robots.txt\',\"type\": \'txt\' } ]; return ( <MainLayout title=\"Sitemap - Zion Tech Group\" description=\"Complete sitemap of Zion Tech Group\'s website. Find all pages,services,and resources organized by category.\" keywords=\"sitemap,website structure,navigation,pages,services,resources\" > <div className=\"min-h-screen bg-gray-50\"> {} <section className=\"bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16\"> <div className=\"container mx-auto px-4\"> <div className=\"max-w-4xl mx-auto text-center\"> <Map className=\"w-16 h-16 mx-auto mb-6 text-blue-400\" /> <h1 className=\"text-4xl \"md\": text-5xl font-bold mb-6\">Sitemap</h1> <p className=\"text-xl text-gray-200 mb-8\"> Complete overview of all pages and sections on our website. Find what you\'re looking for quickly and easily. </p> </div> </div> </section> {} <section className=\"py-8 bg-white border-b border-gray-200\"> <div className=\"container mx-auto px-4\"> <div className=\"max-w-6xl mx-auto\"> <h2 className=\"text-lg font-semibold text-gray-900 mb-4\">Quick Links</h2> <div className=\"flex flex-wrap gap-4\"> {quickLinks.map((link,index) => ( <a key={index} href={link.url} className=\"flex items-center space-x-2 px-4 py-2 bg-gray-100 \"hover\": bg-gray-200 rounded-lg transition-colors\" > <Download className=\"w-4 h-4 text-gray-600\" /> <span className=\"text-gray-700\">{link.name}</span> <ExternalLink className=\"w-3 h-3 text-gray-500\" /> </a> ))} </div> </div> </div> </section> {} <section className=\"py-16\"> <div className=\"container mx-auto px-4\"> <div className=\"max-w-6xl mx-auto\"> <h2 className=\"text-3xl font-bold text-center text-gray-900 mb-12\">Website Structure</h2> <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\"> {siteStructure.map((section,index) => ( <div key={index} className=\"bg-white rounded-lg shadow-lg p-6\"> <h3 className=\"text-xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2\"> {section.title} </h3> <ul className=\"space-y-3\"> {section.pages.map((page,pageIndex) => ( <li key={pageIndex}> <Link href={page.url} className=\"block p-3 rounded-lg \"hover\": bg-gray-50 transition-colors group\" > <div className=\"flex items-center justify-between\"> <div> <h4 className=\"font-medium text-gray-900 group-hover:text-blue-600 transition-colors\"> {page.name} </h4> <p className=\"text-sm text-gray-600 mt-1\">{page.description}</p> </div> <ExternalLink className=\"w-4 h-4 text-gray-400 group-\"hover\": text-blue-600 transition-colors\" /> </div> </Link> </li> ))} </ul> </div> ))} </div> </div> </div> </section> {} <section className=\"py-16 bg-white\"> <div className=\"container mx-auto px-4\"> <div className=\"max-w-4xl mx-auto\"> <h2 className=\"text-3xl font-bold text-center text-gray-900 mb-12\">Can\'t Find What You\'re Looking For?</h2> <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8\"> <div className=\"text-center\"> <div className=\"w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4\"> <span className=\"text-2xl\">🔍</span> </div> <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">Use Search</h3> <p className=\"text-gray-600\"> Try using our search functionality to find specific content or services. </p> </div> <div className=\"text-center\"> <div className=\"w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4\"> <span className=\"text-2xl\">📞</span> </div> <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">Contact Us</h3> <p className=\"text-gray-600\"> Our team is here to help you find the information you need. </p> </div> <div className=\"text-center\"> <div className=\"w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4\"> <span className=\"text-2xl\">💬</span> </div> <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">Live Chat</h3> <p className=\"text-gray-600\"> Get instant help through our live chat support system. </p> </div> </div> </div> </div> </section> {} <section className=\"py-16 bg-gradient-to-r from-blue-600 to-purple-600\"> <div className=\"container mx-auto px-4\"> <div className=\"max-w-4xl mx-auto text-center text-white\"> <h2 className=\"text-3xl font-bold mb-6\">Need Help Finding Something?</h2> <p className=\"text-xl mb-8 text-blue-100\"> If you can\'t find what you\'re looking for,our team is here to help. </p> <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\"> <Link href=\"/contact\" className=\"bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors\" > Contact Support </Link> <Link href=\"/help\" className=\"border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors\" > Help Center </Link> </div> </div> </div> </section> </div> </MainLayout> </div> </div> </> {} <section className=\"py-10 px-4 \"sm\": px-6 lg:px-8 bg-slate-800/50\"> <div className=\"max-w-7xl mx-auto\"> <motion.div initial={{ opacity: 0,\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\' }} className=\"flex flex-col \"md\": flex-row gap-4 justify-center items-center\" > <div className=\"relative w-full max-w-md\"> <Search className=\"w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400\" /> <input type=\"text\" placeholder=\"Search pages...\" className=\"w-full pl-10 pr-4 py-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500\" /> </div> <div className=\"flex gap-2\"> <Badge variant=\"outline\" className=\"cursor-pointer hover:bg-blue-500 hover:text-white transition-colors\">All Pages</Badge> <Badge variant=\"outline\" className=\"cursor-pointer hover:bg-blue-500 hover:text-white transition-colors\">Services</Badge> <Badge variant=\"outline\" className=\"cursor-pointer hover:bg-blue-500 hover:text-white transition-colors\">Resources</Badge> </div> </motion.div> </div> </section> {} <section className=\"py-20 px-4 \"sm\": px-6 lg:px-8\"> <div className=\"max-w-7xl mx-auto\"> <motion.div initial={{ opacity: 0,\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\' }} className=\"space-y-16\" > {categories.map((category,categoryIndex) => ( <motion.div key={category.name} initial={{ \"opacity\": \'0\',\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\',\"delay\": \'0.1 * categoryIndex\' }} > <div className=\"text-center mb-8\"> <h2 className=\"text-3xl font-bold text-white mb-4\">{category.name}</h2> <div className=\"w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full\"></div> </div> <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-6\"> {category.pages.map((page,pageIndex) => ( <motion.div key={page.url} initial={{ \"opacity\": \'0\',\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\',\"delay\": \'0.05 * pageIndex\' }} > <Card className=\"p-6 h-full \"hover\": shadow-lg transition-shadow\"> <div className=\"flex items-start mb-4\"> <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}> <page.icon className=\"w-6 h-6 text-white\" /> </div> <div className=\"flex-1\"> <h3 className=\"text-xl font-bold text-white mb-2\">{page.name}</h3> <p className=\"text-gray-300 text-sm mb-4\">{page.description}</p> </div> </div> <div className=\"flex items-center justify-between\"> <a href={page.url} className=\"text-blue-400 \"hover\": text-blue-300 text-sm font-medium flex items-center\"> Visit Page <ArrowRight className=\"w-4 h-4 ml-1\" /> </a> <Badge variant=\"secondary\" className=\"text-xs\">{page.url}</Badge> </div> </Card> </motion.div> ))} </div> </motion.div> ))} </motion.div> </div> </section> {} <section className=\"py-20 px-4 \"sm\": px-6 lg:px-8 bg-slate-800/50\"> <div className=\"max-w-7xl mx-auto\"> <motion.div initial={{ opacity: 0,\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\' }} className=\"text-center mb-12\" > <h2 className=\"text-3xl font-bold text-white mb-4\">Website Statistics</h2> <p className=\"text-gray-300\">Overview of our website content and structure</p> </motion.div> <div className=\"grid grid-cols-1 \"md\": grid-cols-4 gap-8\"> <motion.div initial={{ opacity: 0,\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\',\"delay\": \'0.1\' }} className=\"text-center\" > <div className=\"p-6 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30\"> <FileText className=\"w-12 h-12 text-blue-400 mx-auto mb-4\" /> <div className=\"text-3xl font-bold text-white mb-2\">{mainPages.length + servicePages.length + contentPages.length}</div> <div className=\"text-gray-300\">Total Pages</div> </div> </motion.div> <motion.div initial={{ \"opacity\": \'0\',\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\',\"delay\": \'0.2\' }} className=\"text-center\" > <div className=\"p-6 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30\"> <Briefcase className=\"w-12 h-12 text-purple-400 mx-auto mb-4\" /> <div className=\"text-3xl font-bold text-white mb-2\">{servicePages.length}</div> <div className=\"text-gray-300\">Service Pages</div> </div> </motion.div> <motion.div initial={{ \"opacity\": \'0\',\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\',\"delay\": \'0.3\' }} className=\"text-center\" > <div className=\"p-6 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30\"> <BookOpen className=\"w-12 h-12 text-green-400 mx-auto mb-4\" /> <div className=\"text-3xl font-bold text-white mb-2\">{contentPages.length + 3}</div> <div className=\"text-gray-300\">Resource Pages</div> </div> </motion.div> <motion.div initial={{ \"opacity\": \'0\',\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\',\"delay\": \'0.4\' }} className=\"text-center\" > <div className=\"p-6 rounded-lg bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30\"> <Globe className=\"w-12 h-12 text-orange-400 mx-auto mb-4\" /> <div className=\"text-3xl font-bold text-white mb-2\">100%</div> <div className=\"text-gray-300\">Mobile Responsive</div> </div> </motion.div> </div> </div> </section> {} <section className=\"py-20 px-4 \"sm\": px-6 lg:px-8\"> <div className=\"max-w-4xl mx-auto text-center\"> <motion.div initial={{ opacity: 0,\"y\": \'20\' }} animate={{ \"opacity\": \'1\',\"y\": \'0\' }} transition={{ \"duration\": \'0.6\' }} > <h2 className=\"text-4xl font-bold text-white mb-6\">Need Help Finding Something?</h2> <p className=\"text-xl text-gray-300 mb-8\">Can\'t find what you\'re looking for? Our team is here to help you navigate our website and find the information you need.</p> <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\"> <a href=\"/contact\" className=\"inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity\"> <Phone className=\"w-5 h-5 mr-2\" /> Contact Support </a> <a href=\"/services\" className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\"> <Briefcase className=\"w-5 h-5 mr-2\" /> Browse Services </a> </div> </motion.div> </div> </section> </div> )}; export default SitemapPage;
-import _React from 'react'; import type { NextPage } from 'next'; import MainLayout from '../components/layout/MainLayout'; import Link from 'next/link'; import { Map,ExternalLink,Download } from 'lucide-react'; const "Sitemap": NextPage = () => { const siteStructure = [{ title: 'Main Pages,"pages": [ { name: 'Home,"url": '/',"description": 'Main homepage' },{ "name": 'About Us',"url": '/about',"description": 'Learn about Zion Tech Group' },{ "name": 'Contact',"url": '/contact',"description": 'Get in touch with us' },{ "name": 'Careers',"url": '/careers',"description": 'Join our team' } ] },{ "title": 'Services',"pages": [{ name: 'All Services,"url": '/services',"description": 'Overview of all our services' },{ "name": 'Micro SaaS',"url": '/services/micro-saas',"description": 'Micro SaaS solutions' },{ "name": 'IT Services',"url": '/services/it-services',"description": 'IT consulting and services' },{ "name": 'AI Services',"url": '/services/ai-services',"description": 'Artificial Intelligence solutions' } ] },{ "title": 'Solutions',"pages": [{ name: 'All Solutions,"url": '/solutions',"description": 'Overview of all our solutions' },{ "name": 'Enterprise Solutions',"url": '/solutions/enterprise',"description": 'Enterprise-grade solutions' } ] },{ "title": 'Resources',"pages": [{ name: 'Blog,"url": '/blog',"description": 'Technology insights and news' },{ "name": 'Case Studies',"url": '/case-studies',"description": 'Success stories and case studies' },{ "name": 'Webinars',"url": '/webinars',"description": 'Expert-led webinars and training' },{ "name": 'Documentation',"url": '/documentation',"description": 'Technical documentation and guides' },{ "name": 'API Reference',"url": '/api',"description": 'Complete API documentation' },{ "name": 'Help Center',"url": '/help',"description": 'Support and help resources' },{ "name": 'FAQ',"url": '/faq',"description": 'Frequently asked questions' } ] },{ "title": 'Company',"pages": [{ name: 'Partners,"url": '/partners',"description": 'Our strategic partners' },{ "name": 'System Status',"url": '/status',"description": 'Real-time system status' } ] },{ "title": 'Legal & Privacy',"pages": [{ name: 'Privacy Policy,"url": '/privacy',"description": 'How we protect your privacy' },{ "name": 'Terms of Service',"url": '/terms',"description": 'Terms and conditions' },{ "name": 'Cookie Policy',"url": '/cookies',"description": 'How we use cookies' },{ "name": 'Data Protection',"url": '/data-protection',"description": 'Data protection measures' },{ "name": 'Accessibility',"url": '/accessibility',"description": 'Digital accessibility commitment' } ] } ]; const quickLinks = [{ "name": 'XML Sitemap',"url": '/sitemap.xml',"type": 'xml' },{ "name": 'RSS Feed',"url": '/rss.xml',"type": 'rss' },{ "name": 'Robots.txt',"url": '/robots.txt',"type": 'txt' } ]; return ( <MainLayout title="Sitemap - Zion Tech Group" description="Complete sitemap of Zion Tech Group's website. Find all pages,services,and resources organized by category." keywords="sitemap,website structure,navigation,pages,services,resources" > <div className="min-h-screen bg-gray-50"> {} <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16"> <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto text-center"> <Map className="w-16 h-16 mx-auto mb-6 text-blue-400" /> <h1 className="text-4xl "md": text-5xl font-bold mb-6">Sitemap</h1> <p className="text-xl text-gray-200 mb-8"> Complete overview of all pages and sections on our website. Find what you're looking for quickly and easily. </p> </div> </div> </section> {} <section className="py-8 bg-white border-b border-gray-200"> <div className="container mx-auto px-4"> <div className="max-w-6xl mx-auto"> <h2 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h2> <div className="flex flex-wrap gap-4"> {quickLinks.map((link,index) => ( <a key={index} href={link.url} className="flex items-center space-x-2 px-4 py-2 bg-gray-100 "hover": bg-gray-200 rounded-lg transition-colors" > <Download className="w-4 h-4 text-gray-600" /> <span className="text-gray-700">{link.name}</span> <ExternalLink className="w-3 h-3 text-gray-500" /> </a> ))} </div> </div> </div> </section> {} <section className="py-16"> <div className="container mx-auto px-4"> <div className="max-w-6xl mx-auto"> <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Website Structure</h2> <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8"> {siteStructure.map((section,index) => ( <div key={index} className="bg-white rounded-lg shadow-lg p-6"> <h3 className="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2"> {section.title} </h3> <ul className="space-y-3"> {section.pages.map((page,pageIndex) => ( <li key={pageIndex}> <Link href={page.url} className="block p-3 rounded-lg "hover": bg-gray-50 transition-colors group" > <div className="flex items-center justify-between"> <div> <h4 className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors"> {page.name} </h4> <p className="text-sm text-gray-600 mt-1">{page.description}</p> </div> <ExternalLink className="w-4 h-4 text-gray-400 group-"hover": text-blue-600 transition-colors" /> </div> </Link> </li> ))} </ul> </div> ))} </div> </div> </div> </section> {} <section className="py-16 bg-white"> <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto"> <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Can't Find What You're Looking For?</h2> <div className="grid grid-cols-1 "md": grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <span className="text-2xl">🔍</span> </div> <h3 className="text-xl font-semibold text-gray-900 mb-3">Use Search</h3> <p className="text-gray-600"> Try using our search functionality to find specific content or services. </p> </div> <div className="text-center"> <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <span className="text-2xl">📞</span> </div> <h3 className="text-xl font-semibold text-gray-900 mb-3">Contact Us</h3> <p className="text-gray-600"> Our team is here to help you find the information you need. </p> </div> <div className="text-center"> <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"> <span className="text-2xl">💬</span> </div> <h3 className="text-xl font-semibold text-gray-900 mb-3">Live Chat</h3> <p className="text-gray-600"> Get instant help through our live chat support system. </p> </div> </div> </div> </div> </section> {} <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600"> <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto text-center text-white"> <h2 className="text-3xl font-bold mb-6">Need Help Finding Something?</h2> <p className="text-xl mb-8 text-blue-100"> If you can't find what you're looking for,our team is here to help. </p> <div className="flex flex-col "sm": flex-row gap-4 justify-center"> <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors" > Contact Support </Link> <Link href="/help" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors" > Help Center </Link> </div> </div> </div> </section> </div> </MainLayout> </div> </div> </> {} <section className="py-10 px-4 "sm": px-6 lg:px-8 bg-slate-800/50"> <div className="max-w-7xl mx-auto"> <motion.div initial={{ opacity: 0,"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6' }} className="flex flex-col "md": flex-row gap-4 justify-center items-center" > <div className="relative w-full max-w-md"> <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" /> <input type="text" placeholder="Search pages..." className="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <div className="flex gap-2"> <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">All Pages</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">Services</Badge> <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">Resources</Badge> </div> </motion.div> </div> </section> {} <section className="py-20 px-4 "sm": px-6 lg:px-8"> <div className="max-w-7xl mx-auto"> <motion.div initial={{ opacity: 0,"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6' }} className="space-y-16" > {categories.map((category,categoryIndex) => ( <motion.div key={category.name} initial={{ "opacity": '0',"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6',"delay": '0.1 * categoryIndex' }} > <div className="text-center mb-8"> <h2 className="text-3xl font-bold text-white mb-4">{category.name}</h2> <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div> </div> <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6"> {category.pages.map((page,pageIndex) => ( <motion.div key={page.url} initial={{ "opacity": '0',"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6',"delay": '0.05 * pageIndex' }} > <Card className="p-6 h-full "hover": shadow-lg transition-shadow"> <div className="flex items-start mb-4"> <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}> <page.icon className="w-6 h-6 text-white" /> </div> <div className="flex-1"> <h3 className="text-xl font-bold text-white mb-2">{page.name}</h3> <p className="text-gray-300 text-sm mb-4">{page.description}</p> </div> </div> <div className="flex items-center justify-between"> <a href={page.url} className="text-blue-400 "hover": text-blue-300 text-sm font-medium flex items-center"> Visit Page <ArrowRight className="w-4 h-4 ml-1" /> </a> <Badge variant="secondary" className="text-xs">{page.url}</Badge> </div> </Card> </motion.div> ))} </div> </motion.div> ))} </motion.div> </div> </section> {} <section className="py-20 px-4 "sm": px-6 lg:px-8 bg-slate-800/50"> <div className="max-w-7xl mx-auto"> <motion.div initial={{ opacity: 0,"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6' }} className="text-center mb-12" > <h2 className="text-3xl font-bold text-white mb-4">Website Statistics</h2> <p className="text-gray-300">Overview of our website content and structure</p> </motion.div> <div className="grid grid-cols-1 "md": grid-cols-4 gap-8"> <motion.div initial={{ opacity: 0,"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6',"delay": '0.1' }} className="text-center" > <div className="p-6 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30"> <FileText className="w-12 h-12 text-blue-400 mx-auto mb-4" /> <div className="text-3xl font-bold text-white mb-2">{mainPages.length + servicePages.length + contentPages.length}</div> <div className="text-gray-300">Total Pages</div> </div> </motion.div> <motion.div initial={{ "opacity": '0',"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6',"delay": '0.2' }} className="text-center" > <div className="p-6 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30"> <Briefcase className="w-12 h-12 text-purple-400 mx-auto mb-4" /> <div className="text-3xl font-bold text-white mb-2">{servicePages.length}</div> <div className="text-gray-300">Service Pages</div> </div> </motion.div> <motion.div initial={{ "opacity": '0',"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6',"delay": '0.3' }} className="text-center" > <div className="p-6 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30"> <BookOpen className="w-12 h-12 text-green-400 mx-auto mb-4" /> <div className="text-3xl font-bold text-white mb-2">{contentPages.length + 3}</div> <div className="text-gray-300">Resource Pages</div> </div> </motion.div> <motion.div initial={{ "opacity": '0',"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6',"delay": '0.4' }} className="text-center" > <div className="p-6 rounded-lg bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30"> <Globe className="w-12 h-12 text-orange-400 mx-auto mb-4" /> <div className="text-3xl font-bold text-white mb-2">100%</div> <div className="text-gray-300">Mobile Responsive</div> </div> </motion.div> </div> </div> </section> {} <section className="py-20 px-4 "sm": px-6 lg:px-8"> <div className="max-w-4xl mx-auto text-center"> <motion.div initial={{ opacity: 0,"y": '20' }} animate={{ "opacity": '1',"y": '0' }} transition={{ "duration": '0.6' }} > <h2 className="text-4xl font-bold text-white mb-6">Need Help Finding Something?</h2> <p className="text-xl text-gray-300 mb-8">Can't find what you're looking for? Our team is here to help you navigate our website and find the information you need.</p> <div className="flex flex-col "sm": flex-row gap-4 justify-center"> <a href="/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity"> <Phone className="w-5 h-5 mr-2" /> Contact Support </a> <a href="/services" className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors"> <Briefcase className="w-5 h-5 mr-2" /> Browse Services </a> </div> </motion.div> </div> </section> </div> )}; export default SitemapPage;
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+export default function SitemapPage() {
+  return (
+    <MainLayout title="Sitemap - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the sitemap page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+import {}
+  Home, 
+  Brain, 
+  Network, 
+  Target, 
+  Users, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  Settings, 
+  Globe, 
+<<<<<<< HEAD
+import {
+=======
+
+
+
+
+
+
+
+;
+const sitemapData = [;
+  {;
+    category: 'Main Pages',;
+    pages: [;'
+      { name: 'Home', url: '/', icon: Home },;'
+      { name: 'About', url: '/about', icon: Users },;'
+      { name: 'Contact', url: '/contact', icon: Globe },;'
+      { name: 'Services', url: '/services', icon: Settings }
+    ];
+  },;
+  {;'
+    category: 'Services',;
+    pages: [;'
+      { name: 'AI Services', url: '/ai-services', icon: Brain },;'
+      { name: 'IT Services', url: '/it-services', icon: Network },;'
+      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },;'
+      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },;'
+      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },;'
+      { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
+    ];
+  },;
+  {;'
+    category: 'Solutions',;
+    pages: [;'
+      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },;'
+      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },;'
+      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
+    ];
+  },;
+  {;'
+    category: 'Resources',;
+    pages: [;'
+      { name: 'Documentation', url: '/docs', icon: Globe },;'
+      { name: 'API Documentation', url: '/api-docs', icon: Settings },;'
+      { name: 'Guides', url: '/guides', icon: Globe },;
+
+'
+import React from 'react';'
+import Head from 'next / head';'
+import Link from 'next / link';'
+import { motion } from 'framer-motion';
+
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  Home,
+  Brain,
+  Network,
+  Target,
+  Users,
+  Shield,
+  Cloud,
+  BarChart3,
+  Settings,
+  Globe,;
+  ArrowRight;'
+} from 'lucide-react';
+;
+const sitemap_data = [;
+<<<<<<< HEAD
+=======
+import { GetServerSideProps } from 'next';
+
+const sitemap_data = [
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  {
+    category: 'Main Pages',
+    pages: [
+      { name: 'Home', url: '/', icon: 'Home' },
+      { name: 'About', url: '/about', icon: 'Users' },
+      { name: 'Contact', url: '/contact', icon: 'Globe' },
+      { name: 'Services', url: '/services', icon: 'Settings' }
+    ]
+=======
+  {'
+    category: 'Main Pages',
+    pages: [;'
+      { name: 'Home', url: '/', icon: Home },'
+      { name: 'About', url: '/about', icon: Users },'
+      { name: 'Contact', url: '/contact', icon: Globe },'
+      { name: 'Services', url: '/services', icon: Settings }
+    ];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  },
+  {'
+    category: 'Services',
+<<<<<<< HEAD
+    pages: [
+      { name: 'AI Services', url: '/ai-services', icon: 'Brain' },
+      { name: 'IT Services', url: '/it-services', icon: 'Network' },
+      { name: 'Micro SaaS', url: '/micro-saas', icon: 'Target' },
+      { name: 'Cloud Services', url: '/services/cloud', icon: 'Cloud' },
+      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: 'Shield' },
+      { name: 'Data Analytics', url: '/services/data-analytics', icon: 'BarChart3' }
+    ]
+  }
+];
+
+<<<<<<< HEAD
+export default function SitemapPage() {
+=======
+    pages: [;'
+      { name: 'AI Services', url: '/ai - services', icon: Brain },'
+      { name: 'IT Services', url: '/it - services', icon: Network },'
+      { name: 'Micro SaaS', url: '/micro - saas', icon: Target },'
+      { name: 'Cloud Services', url: '/services / cloud', icon: Cloud },'
+      { name: 'Cybersecurity', url: '/services / cybersecurity', icon: Shield },'
+      { name: 'Data Analytics', url: '/services / data - analytics', icon: BarChart3 }
+    ];
+  },
+  {'
+    category: 'Solutions',
+    pages: [;'
+      { name: 'Cloud Migration', url: '/solutions / cloud - migration', icon: Cloud },'
+      { name: 'Digital Transformation', url: '/solutions / digital - transformation', icon: Settings },'
+      { name: 'Custom Solutions', url: '/solutions / custom', icon: Target }
+    ];
+  },
+  {'
+    category: 'Resources',
+    pages: [;'
+      { name: 'Documentation', url: '/docs', icon: Globe },'
+      { name: 'API Documentation', url: '/api - docs', icon: Settings },'
+      { name: 'Guides', url: '/guides', icon: Globe },'
+      { name: 'FAQ', url: '/faq', icon: Users }
+    ];
+  }
+];
+
+
+
+
+
+export default function SitemapPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  return (
+    <>
+      <Head>
+        <title>Sitemap - Zion Tech Group</title>
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
+      </Head>"
+      <div className="min-h-screen bg-gray-50">
+;
+export default function SitemapPage() { return null; }
+        {/* Hero Section */}"
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;"
+          <div className="max-w-7xl mx-auto px-4">;
+            <motion&& motion.div;
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+        {/* Sitemap Content */}
+        <section className="py-16">;
+          <div className="max-w-7xl mx-auto px-4">;
+=======
+
+        {/* Sitemap Content */}"
+        <section className="py-16">;"
+          <div className="max-w-7xl mx-auto px-4">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">;
+              {sitemapData && sitemapData.map((section, sectionIndex) => (;
+                <motion&& motion.div;
+                  key={section && section.category}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: sectionIndex * 0 && 0.1 }}"
+                  className="bg-white rounded-lg shadow-lg p-6">;"
+                  <h3 className="text-xl font-bold mb-4 text-gray-800">;
+                    {section && section.category}
+                  </h3>;"
+                  <div className="space-y-3">;
+                    {section && section.pages.map((page, pageIndex) => (;
+                      <Link;
+                        key={page && page.name}
+                        href={page && page.url}"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">;"
+                        <page && page.icon className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />;
+                        <div>;"
+                          <div className="font-medium text-gray-800 group-hover:text-blue-600">;
+                            {page && page.name}
+                          </div>;
+                        </div>;"
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />;
+                      </Link>;
+                    ))}
+                  </div>;
+                </motion && motion.div>;
+              ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+;
+export default /**;
+ * SitemapPage - Function description;
+ */
+function SitemapPage() {}
+  return (
+    <>;
+      <Head>;
+        <title > Sitemap - Zion Tech Group</title>;"
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />;
+      </Head>;"
+      <div className="min - h-screen bg - gray - 50">;
+        {/* Hero Section */}"
+        <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;"
+          <div className="max - w-7xl mx - auto px - 4">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}"
+              className="text - center";
+            >;"
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;"
+                Site <span className="text - yellow - 400">Map</span>;
+              </h1>;"
+              <p className="text - xl mb - 8 max - w-3xl mx - auto">;
+                Navigate through all our pages, services, and resources;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Sitemap Content */}"
+        <section className="py - 16">;"
+          <div className="max - w-7xl mx - auto px - 4">;"
+            <div className="grid gap - 8 md:grid - cols - 2 lg:grid - cols - 3">;
+              {sitemap_data.map ((section, section_index) => (
+                <motion.div;
+                  key={section.category}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: section_index * 0.1 }}"
+                  className="bg - white rounded - lg shadow - lg p - 6";
+                >;"
+                  <h3 className="text - xl font - bold mb - 4 text - gray - 800">;
+                    {section.category}
+                  </h3>;"
+                  <div className="space - y-3">;
+                    {section.pages.map ((page, page_index) => (
+                      <Link;
+                        key={page.name}
+                        href={page.url}"
+                        className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 50 transition - colors group";
+                      >;"
+                        <page.icon className="w - 5 h - 5 text - blue - 600 group - hover:text - blue - 700" />;
+                        <div>;"
+                          <div className="font - medium text - gray - 800 group - hover:text - blue - 600">;
+                            {page.name}
+    </>
+  );
+<<<<<<< HEAD
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+import {
+  Home
+  Search
+  Rocket
+  FileText
+  Users
+  Mail
+  Map
+  ArrowRight
+  ExternalLink
+  ChevronRight
+  Globe
+=======
+origin/automation-improvements-final;
+}
+ursor/integrate-build-improve-and-re-verify-8f7d;
+origin/cursor/integrate-build-improve-and-re-verify-242d;
+origin/main;
+import {};
+  Home;
+  Search;
+  Rocket;
+  FileText;
+  Users;
+  Mail;
+  Map;
+  ArrowRight;
+  ExternalLink;
+  ChevronRight;
+  Globe;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  Building;
+    </>;
+  );
+}
+
+<<<<<<< HEAD
+import {
+=======
+
+
+
+
+import {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                          </div>;
+                        </div>;"
+                        <ArrowRight className="w - 4 h - 4 text - gray - 400 group - hover:text - blue - 600 ml - auto" />;
+                      </Link>))}
+                  </div>;
+                </motion.div>))}
+
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+
+<<<<<<< HEAD
+}
+
+}
+
+import {
+
+import { 
+  Home, Search, Rocket, FileText, Users, Mail, Map, 
+  ArrowRight, ExternalLink, ChevronRight, Globe, Building
+
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+import {}
+import {}
+  Home, Search, Rocket, FileText, Users, Mail, Map, ;
+  ArrowRight, ExternalLink, ChevronRight, Globe, Building;
+'
+} from 'lucide-react';'
+import SmartHeader from '../components/SmartHeader';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import SmartFooter from '../components/SmartFooter';
+export default function SitemapPage() {}
+  const mainPages = []
+  Home,
+  Search,
+  Rocket,
+  FileText,
+  Users,
+  Mail,
+  Map,
+  ArrowRight,
+  ExternalLink,
+  ChevronRight,';
+} from 'lucide-react';'
+import SmartHeader from '../components / SmartHeader';'
+import SmartFooter from '../components / SmartFooter';
+export default /**;
+ * SitemapPage - Function description;
+ */
+function SitemapPage() {}
+  const main_pages = [;
+    {'
+      href: '/','
+      label: '🏠 Home',
+      description:;'
+        'Main landing page with company overview and featured services',
+    },
+
+    {'
+      href: '/about''
+      label: '👥 About Us''
+      description: 'Company story, mission, values, and team information'
+    }
+    {'
+      href: '/services''
+      description: 'Complete catalog of AI and technology services'
+    }
+    {'
+      href: '/explore'
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+label: '🔍 Explore'
+      description: 'Browse services by category and technology area'
+    }
+    {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+      href: '/contact',
+      label: '📧 Contact',
+=======
+'
+      href: '/contact','
+      label: '📧 Contact','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      description: 'Get in touch and start your project',
+    },;
+  ];
+
+;
+  const service_categories = [;
+    {'
+      href: '/category / ai','
+      label: '🧠 AI & Machine Learning','
+      description: 'Artificial intelligence and machine learning solutions',
+    },
+    {'
+      href: '/category / quantum','
+      label: '⚛️ Quantum Computing','
+      description: 'Quantum computing and quantum AI applications',
+    },
+    {'
+      href: '/category / cybersecurity','
+      label: '🛡️ Cybersecurity','
+      description: 'Quantum - resistant security and threat detection',
+    },
+    {'
+      href: '/category / cloud','
+      label: '☁️ Cloud & DevOps','
+      description: 'Cloud infrastructure and DevOps automation',
+    },
+    {'
+      href: '/category / edge','
+      label: '🌐 Edge Computing','
+      description: 'Edge computing orchestration and IoT management',
+    },
+    {'
+      href: '/category / space','
+      label: '🚀 Space Technology','
+      description: 'Space exploration and resource optimization',
+    },
+    {'
+      href: '/category / biotech','
+      label: '🧬 Biotechnology','
+      description: 'Neural interfaces and biomedical innovations',
+    },
+    {'
+      href: '/category / blockchain','
+      label: '⛓️ Blockchain','
+      description: 'AI - powered blockchain governance and DeFi',
+    },
+    {'
+      href: '/category / automation','
+      label: '⚡ Automation','
+      description: 'Business process automation and AI agents',
+    },
+    {'
+      href: '/category / fintech','
+      label: '💰 Financial Technology','
+      description: 'Quantum financial trading and AI analytics',
+    },
+  ];
+;
+  const featured_services = [;
+    {'
+      href: '/ai - business - intelligence','
+      label: 'AI Business Intelligence','
+      category: 'AI & ML',
+    },
+    {'
+      href: '/quantum - cybersecurity','
+      label: 'Quantum Cybersecurity','
+      category: 'Cybersecurity',
+    },
+    {'
+      href: '/edge - computing - orchestration','
+      label: 'Edge Computing Orchestration','
+      category: 'Edge Computing',
+    },
+    {'
+      href: '/space - technology','
+      label: 'Space Technology Innovation','
+      category: 'Space Technology',
+    },
+    {'
+      href: '/neural - interface','
+      label: 'Neural Interface Development','
+      category: 'Biotechnology',
+    },
+    {'
+      href: '/autonomous - devops','
+      label: 'Autonomous DevOps','
+      category: 'Cloud & DevOps',
+    },
+    {'
+      href: '/ai - customer - experience','
+      label: 'AI Customer Experience','
+      category: 'AI & ML',
+    },
+    {'
+      href: '/quantum - neural - networks','
+      label: 'Quantum Neural Networks','
+      category: 'Quantum Computing',
+    },
+  ];
+;
+  const resources = [;
+
+    {'
+      href: '/reports''
+      label: '📊 Reports''
+      description: 'Latest technology reports and insights'
+    }
+    {'
+      href: '/newsroom''
+      description: 'Company updates and industry news'
+    }
+    {'
+      href: '/automation''
+      description: 'Automation tools and solutions'
+    }
+    {'
+      href: '/search'
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+label: '🔎 Search'
+      description: 'Search across all services and content'
+    }
+  ];
+
+;
+  const external_links = [;
+    {
+      href: 'https://github.com / ai - factory',
+      label: 'GitHub',
+      description: 'Open source projects and code examples',
+    },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+    {
+      href: 'https://docs.ziontechgroup.com'
+      label: 'Documentation'
+      description: 'Technical documentation and guides'
+    }
+    {
+href: 'https://status.ziontechgroup.com',
+      label: 'System Status',
+      description: 'Real - time system status and uptime',
+    },  ];
+;
+  const contact_info = [;
+    { type: 'Phone', value: '+1 (302) 464 - 0950', action: 'tel:+13024640950' },
+    {
+      type: 'Email'
+      value: 'kleber@ziontechgroup.com'
+      action: 'mailto:kleber@ziontechgroup.com'
+    }
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Home, Search, Rocket, FileText, Users, Mail, Map;
+  ArrowRight, ExternalLink, ChevronRight, Globe, Building
+ } from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function SitemapPage() {
+  const mainPages = null;
+              resources, and information available at Zion Tech Group.
+origin/cursor/automate-test-improve-and-merge-code-2533
+    {
+=======
+
+    {'
+      href: 'https://docs.ziontechgroup.com''
+      label: 'Documentation''
+      description: 'Technical documentation and guides'
+    }
+    {}
+    {'
+      type: 'Email''
+      value: 'kleber@ziontechgroup.com''
+      action: 'mailto:kleber@ziontechgroup.com'
+    }
+    {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import {;
+  Home,;
+  Search,;
+  Rocket,;
+  FileText,;
+  Users,;
+  Mail,;
+  Map,;
+  ArrowRight,;
+  ExternalLink,;
+  ChevronRight,;
+  Globe,;
+  Building,;'
+} from 'lucide-react';'
+import SmartHeader from '../components/SmartHeader';'
+import SmartFooter from '../components/SmartFooter';
+
+export default function SitemapPage() { return null; }
+    },;
+    {;'
+      href: '/about',;'
+      label: '👥 About Us',;'
+      description: 'Company story, mission, values, and team information',;
+    },;
+    {;'
+      href: '/services',;'
+      label: '🚀 Services',;'
+      description: 'Complete catalog of AI and technology services',;
+    },;
+    {;'
+      href: '/explore',;'
+      label: '🔍 Explore',;'
+      description: 'Browse services by category and technology area',;
+    },;
+    {;'
+      href: '/contact',;'
+      label: '📧 Contact',;'
+      description: 'Get in touch and start your project',;
+    },;
+  ];
+
+  const serviceCategories = [;
+    {;'
+      href: '/category/ai',;'
+      label: '🧠 AI & Machine Learning',;'
+      description: 'Artificial intelligence and machine learning solutions',;
+    },;
+    {;'
+      href: '/category/quantum',;'
+      label: '⚛️ Quantum Computing',;'
+      description: 'Quantum computing and quantum AI applications',;
+    },;
+    {;'
+      href: '/category/cybersecurity',;'
+      label: '🛡️ Cybersecurity',;'
+      description: 'Quantum-resistant security and threat detection',;
+    },;
+    {;'
+      href: '/category/cloud',;'
+      label: '☁️ Cloud & DevOps',;'
+      description: 'Cloud infrastructure and DevOps automation',;
+    },;
+    {;'
+      href: '/category/edge',;'
+      label: '🌐 Edge Computing',;'
+      description: 'Edge computing orchestration and IoT management',;
+    },;
+    {;'
+      href: '/category/space',;'
+      label: '🚀 Space Technology',;'
+      description: 'Space exploration and resource optimization',;
+    },;
+    {;'
+      href: '/category/biotech',;'
+      label: '🧬 Biotechnology',;'
+      description: 'Neural interfaces and biomedical innovations',;
+    },;
+    {;'
+      href: '/category/blockchain',;'
+      label: '⛓️ Blockchain',;'
+      description: 'AI-powered blockchain governance and DeFi',;
+    },;
+    {;'
+      href: '/category/automation',;'
+      label: '⚡ Automation',;'
+      description: 'Business process automation and AI agents',;
+    },;
+    {;'
+      href: '/category/fintech',;'
+      label: '💰 Financial Technology',;'
+      description: 'Quantum financial trading and AI analytics',;
+    },;
+  ];
+
+  const featuredServices = [;
+    {;'
+      href: '/ai-business-intelligence',;'
+      label: 'AI Business Intelligence',;'
+      category: 'AI & ML',;
+    },;
+    {;'
+      href: '/quantum-cybersecurity',;'
+      label: 'Quantum Cybersecurity',;'
+      category: 'Cybersecurity',;
+    },;
+    {;'
+      href: '/edge-computing-orchestration',;'
+      label: 'Edge Computing Orchestration',;'
+      category: 'Edge Computing',;
+    },;
+    {;'
+      href: '/space-technology',;'
+      label: 'Space Technology Innovation',;'
+      category: 'Space Technology',;
+    },;
+    {;'
+      href: '/neural-interface',;'
+      label: 'Neural Interface Development',;'
+      category: 'Biotechnology',;
+    },;
+    {;'
+      href: '/autonomous-devops',;'
+      label: 'Autonomous DevOps',;'
+      category: 'Cloud & DevOps',;
+    },;
+    {;'
+      href: '/ai-customer-experience',;'
+      label: 'AI Customer Experience',;'
+      category: 'AI & ML',;
+    },;
+    {;'
+      href: '/quantum-neural-networks',;'
+      label: 'Quantum Neural Networks',;'
+      category: 'Quantum Computing',;
+    },;
+  ];
+
+  const resources = [;
+    {;'
+      href: '/reports',;'
+      label: '📊 Reports',;'
+      description: 'Latest technology reports and insights',;
+    },;
+    {;'
+      href: '/newsroom',;'
+      label: '📰 Newsroom',;'
+      description: 'Company updates and industry news',;
+    },;
+    {;'
+      href: '/automation',;'
+      label: '⚡ Automations',;'
+      description: 'Automation tools and solutions',;
+    },;
+    {;'
+      href: '/search',;'
+      label: '🔎 Search',;'
+      description: 'Search across all services and content',;
+    },;
+  ];
+
+  const externalLinks = [;
+    {;'
+      href: 'https://github && github.com/ai-factory',;'
+      label: 'GitHub',;'
+      description: 'Open source projects and code examples',;
+    },;
+    {;'
+      href: 'https://docs && docs.ziontechgroup.com',;'
+      label: 'Documentation',;'
+      description: 'Technical documentation and guides',;
+    },;
+    {;'
+      href: 'https://status && status.ziontechgroup.com',;'
+      label: 'System Status',;'
+      description: 'Real-time system status and uptime',;
+    },  ];'
+    { href: '/', label: '🏠 Home', description: 'Main landing page with company overview and featured services' },'
+    { href: '/about', label: '👥 About Us', description: 'Company story, mission, values, and team information' };'
+    { href: '/services', label: '🚀 Services', description: 'Complete catalog of AI and technology services' },'
+    { href: '/explore', label: '🔍 Explore', description: 'Browse services by category and technology area' },'
+    { href: '/contact', label: '📧 Contact', description: 'Get in touch and start your project' }
+  ];
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+const contactInfo = [;
+    { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+    {;
+      type: 'Email',;
+      value: 'kleber@ziontechgroup && ziontechgroup.com',;
+=======
+
+    {;'
+      type: 'Email',;'
+      value: 'kleber@ziontechgroup && ziontechgroup.com',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      action: 'mailto:kleber@ziontechgroup && ziontechgroup.com',;
+    },;
+    {;'
+      type: 'Address',;'
+      value: 'Middletown, DE',;'
+      action: 'https://maps && maps.google.com/?q=Middletown,DE',;
+    },;
+  ];
+
+        />;'
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/sitemap' />      </Head>;
+
+      <SmartHeader />;
+
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+      {/* Hero Section */}
+      <section className='pt-32 pb-20 px-6'>;
+        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
+
+  const featuredServices = [
+    { href: '/ai-business-intelligence', label: 'AI Business Intelligence', category: 'AI & ML' },
+    { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', category: 'Cybersecurity' },
+    { href: '/edge-computing-orchestration', label: 'Edge Computing Orchestration', category: 'Edge Computing' },
+    { href: '/space-technology', label: 'Space Technology Innovation', category: 'Space Technology' },
+    { href: '/neural-interface', label: 'Neural Interface Development', category: 'Biotechnology' },
+    { href: '/autonomous-devops', label: 'Autonomous DevOps', category: 'Cloud & DevOps' },
+    { href: '/ai-customer-experience', label: 'AI Customer Experience', category: 'AI & ML' },
+=======
+
+      {/* Hero Section */}'
+      <section className='pt-32 pb-20 px-6'>;'
+        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div;
+  const featuredServices = ['
+    { href: '/ai-business-intelligence', label: 'AI Business Intelligence', category: 'AI & ML' },'
+    { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', category: 'Cybersecurity' },'
+    { href: '/edge-computing-orchestration', label: 'Edge Computing Orchestration', category: 'Edge Computing' },'
+    { href: '/space-technology', label: 'Space Technology Innovation', category: 'Space Technology' },'
+    { href: '/neural-interface', label: 'Neural Interface Development', category: 'Biotechnology' },'
+    { href: '/autonomous-devops', label: 'Autonomous DevOps', category: 'Cloud & DevOps' },'
+    { href: '/ai-customer-experience', label: 'AI Customer Experience', category: 'AI & ML' },'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    { href: '/quantum-neural-networks', label: 'Quantum Neural Networks', category: 'Quantum Computing' }
+  ];
+
+  const resources = ['
+    { href: '/reports', label: '📊 Reports', description: 'Latest technology reports and insights' },'
+    { href: '/newsroom', label: '📰 Newsroom', description: 'Company updates and industry news' },'
+    { href: '/automation', label: '⚡ Automations', description: 'Automation tools and solutions' },'
+    { href: '/search', label: '🔎 Search', description: 'Search across all services and content' }
+  ];
+
+  const externalLinks = ['
+    { href: 'https://github.com/ai-factory', label: 'GitHub', description: 'Open source projects and code examples' },'
+    { href: 'https://docs.ziontechgroup.com', label: 'Documentation', description: 'Technical documentation and guides' },'
+    { href: 'https://status.ziontechgroup.com', label: 'System Status', description: 'Real-time system status and uptime' }
+  ];
+
+  const contactInfo = ['
+    { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },'
+    { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },'
+    { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      <Head>
+        <title>Sitemap | Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta
+          name='description'
+          content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category."
+        />
+        <meta property='og:title' content='Sitemap | Zion Tech Group' />
+        <meta
+          property='og:description'
+          content='Complete website sitemap and navigation guide.'
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/sitemap' />
+      </Head>
+
+      <SmartHeader />
+      {/* Hero Section */}
+<section className='pt-32 pb-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+      <SmartHeader />
+      {/* Hero Section */}
+      <section className='pt-32 pb-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
+        <meta property="og:title" content="Sitemap | Zion Tech Group" />
+        <meta property="og:description" content="Complete website sitemap and navigation guide." />
+=======
+'"
+        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />"
+        <meta property="og:title" content="Sitemap | Zion Tech Group" />"
+        <meta property="og:description" content="Complete website sitemap and navigation guide." />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
+      </Head>
+
+      <SmartHeader />
+
+      {/* Hero Section */}"
+      <section className="pt-32 pb-20 px-6">"
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+
+  ];
+
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+  return (
+=======
+
+
+
+  return ('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
+      <Head>
+        <title>Sitemap | Zion Tech Group</title>
+
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          >
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+
+            transition={{ duration: 0 && 0.8 }}>;'
+=======
+
+            transition={{ duration: 0 && 0.8 }}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
+              Site Map;
+            </h1>;'
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>;
+              Navigate our comprehensive website and discover all the AI-powered;
+              technology solutions, resources, and information available at Zion;
+              Tech Group.;
+            </p>;'
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+<h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+              Site Map
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
+              Navigate our comprehensive website and discover all the AI-powered
+              technology solutions, resources, and information available at Zion
+              Tech Group.
+
+
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              <a
+                href='#main-pages'
+=======
+
+
+              <a'
+                href='#main-pages''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
+                Explore Site;'
+                <ArrowRight className='w-5 h-5 ml-2' />;
+              </a>;
+              <a'
+                href='/search'
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Search Site
+                <Search className='w-5 h-5 ml-2' />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Main Pages */}
+<section id='main-pages' className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+<<<<<<< HEAD:pages/sitemap.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+      {/* Main Pages */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section id="main-pages" className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-16"
+className='mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+          >
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              Main Pages
+            </h2>
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Core pages that provide essential information about our company
+              and services
+            </p>
+          </motion.div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {mainPages.map((page, index) => (
+              <motion.div
+                key={page.href}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+'
+            className='mb-16'>;'
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Main Pages;
+            </h2>;'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
+              Core pages that provide essential information about our company;
+              and services;
+            </p>;
+          </motion && motion.div>;
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages && mainPages.map((page, index) => (;
+              <motion&& motion.div
+                key={page && page.href}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mainPages.map((page, index) => (
+              <motion.div
+                key={page.href  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="group"
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                <Link
+                  href={page.href}
+                  className='block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                >
+                  <div className='flex items-center justify-between mb-4'>
+                    <h3 className='text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
+                      {page.label}
+                    </h3>
+                    <ChevronRight className='w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
+                  </div>
+                  <p className='text-white/70 text-sm leading-relaxed'>
+                    {page.description}
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+{/* Service Categories */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+      {/* Service Categories */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+=======
+
+
+
+      {/* Service Categories */}"
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">"
+        <div className="max-w-7xl mx-auto">
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+<<<<<<< HEAD:pages/sitemap.tsx
+
+<<<<<<< HEAD
+=======
+            className='mb-16'
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Service Categories */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-16"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+      {/* Service Categories */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+      {/* Service Categories */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+<<<<<<< HEAD
+=======
+
+className='mb-16'
+<<<<<<< HEAD:pages/sitemap.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+          >
+=======
+          >'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              Service Categories;
+            </h2>'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>
+          </motion.div>
+<<<<<<< HEAD
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {serviceCategories.map((category, index) => (
+              <motion.div
+                key={category.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
+            className="mb-16"
+          >"
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Service Categories;
+            </h2>"
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Browse our comprehensive range of technology solutions organized by category;
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategories.map((category, index) => (
+
+<<<<<<< HEAD
+              <motion.div
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                <Link
+                  href={category.href}
+                  className='block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                >
+                  <div className='flex items-center justify-between mb-4'>
+                    <h3 className='text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
+                      {category.label}
+                    </h3>
+                    <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
+                  </div>
+                  <p className='text-white/70 text-sm leading-relaxed'>
+                    {category.description}
+                  </p>
+                </Link>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services */}
+      <section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+key={category.href}
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Service Categories;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map((category, index) => (;
+              <motion&& motion.div
+                key={category && category.href}
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+      {/* Featured Services */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+      {/* Featured Services */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+<section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+=======
+              <motion.div;
+'
+            className='mb-16'>;'
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Service Categories;
+            </h2>;'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion && motion.div>;'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map((category, index) => (;
+              <motion&& motion.div;
+                key={category && category.href}
+
+
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
+      {/* Featured Services */}'
+      <section className='py-20 px-6'>;'
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div;
+      {/* Featured Services */}"
+      <section className="py-20 px-6">"
+        <div className="max-w-7xl mx-auto">
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+<<<<<<< HEAD:pages/sitemap.tsx
+
+<<<<<<< HEAD
+=======
+            className='mb-16'
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Featured Services */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+          >
+=======
+
+
+          >'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              Featured Services;
+            </h2>'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions;
+            </p>
+          </motion.div>
+
+"
+            className="mb-16"
+<<<<<<< HEAD
+                key={category.href}
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Service Categories;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map((category, index) => (;
+              <motion&& motion.div
+                key={category && category.href}
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+      {/* Featured Services */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+      {/* Featured Services */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+<<<<<<< HEAD
+=======
+
+className='mb-16'
+<<<<<<< HEAD:pages/sitemap.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+          >
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              Featured Services
+            </h2>
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Our most popular and innovative technology solutions
+            </p>
+          </motion.div>
+
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {featuredServices.map((service, index) => (
+              <motion.div
+                key={service.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group'
+
+            className="mb-16"
+          >
+=======
+          >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Featured Services;
+            </h2>"
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Our most popular and innovative technology solutions;
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredServices.map((service, index) => (
+
+<<<<<<< HEAD
+              <motion.div
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                <Link
+                  href={service.href}
+                  className='block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'
+                >
+                  <div className='flex items-center justify-between mb-3'>
+                    <h3 className='text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate'>
+                      {service.label}
+                    </h3>
+                    <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0' />
+                  </div>
+                  <p className='text-white/60 text-xs'>{service.category}</p>
+                </Link>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resources & Tools */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+key={service.href}
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Featured Services;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.href}
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+      {/* Resources & Tools */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+      {/* Resources & Tools */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+<<<<<<< HEAD:pages/sitemap.tsx
+=======
+              <motion.div;
+'
+            className='mb-16'>;'
+=======
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb-16'
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Resources & Tools */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-16"
+                key={service.href}
+            className='mb-16'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Featured Services;
+            </h2>;'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions;
+            </p>;
+          </motion && motion.div>;'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
+              <motion&& motion.div;
+                key={service && service.href}
+
+<<<<<<< HEAD:pages/sitemap.tsx
+
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+<<<<<<< HEAD:pages/sitemap.tsx
+
+      {/* Resources & Tools */}'
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;'
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div;
+      {/* Resources & Tools */}"
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">"
+        <div className="max-w-7xl mx-auto">
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+
+<<<<<<< HEAD
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.href}
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+      {/* Resources & Tools */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+      {/* Resources & Tools */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+<<<<<<< HEAD
+=======
+
+className='mb-16'
+<<<<<<< HEAD:pages/sitemap.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+          >
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              Resources & Tools
+            </h2>
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Additional resources, tools, and information to help you succeed
+            </p>
+          </motion.div>
+
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {resources.map((resource, index) => (
+              <motion.div
+                key={resource.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group'
+=======
+          >'
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              Resources & Tools;
+            </h2>'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed;
+            </p>
+          </motion.div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
+            className="mb-16"
+          >"
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Resources & Tools;
+            </h2>"
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Additional resources, tools, and information to help you succeed;
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {resources.map((resource, index) => (
+
+<<<<<<< HEAD
+              <motion.div
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                <Link
+                  href={resource.href}
+                  className='block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'
+                >
+                  <div className='flex items-center justify-between mb-3'>
+                    <h3 className='text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
+                      {resource.label}
+                    </h3>
+                    <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
+                  </div>
+                  <p className='text-white/60 text-xs leading-relaxed'>
+                    {resource.description}
+                  </p>
+                </Link>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* External Resources */}
+      <section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+key={resource.href}
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Resources & Tools;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources && resources.map((resource, index) => (;
+              <motion&& motion.div
+                key={resource && resource.href}
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+      {/* External Resources */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+      {/* External Resources */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+<section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+<<<<<<< HEAD:pages/sitemap.tsx
+=======
+              <motion.div;
+'
+            className='mb-16'>;'
+=======
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb-16'
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* External Resources */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-16"
+                key={resource.href}
+            className='mb-16'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Resources & Tools;
+            </h2>;'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed;
+            </p>;
+          </motion && motion.div>;'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources && resources.map((resource, index) => (;
+              <motion&& motion.div;
+                key={resource && resource.href}
+
+<<<<<<< HEAD:pages/sitemap.tsx
+
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+<<<<<<< HEAD:pages/sitemap.tsx
+
+      {/* External Resources */}'
+      <section className='py-20 px-6'>;'
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div;
+      {/* External Resources */}"
+      <section className="py-20 px-6">"
+        <div className="max-w-7xl mx-auto">
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+
+<<<<<<< HEAD
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources && resources.map((resource, index) => (;
+              <motion&& motion.div
+                key={resource && resource.href}
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+      {/* External Resources */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+      {/* External Resources */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+<<<<<<< HEAD
+=======
+
+className='mb-16'
+<<<<<<< HEAD:pages/sitemap.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+          >
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              External Resources
+            </h2>
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Additional resources and tools hosted on external platforms
+            </p>
+          </motion.div>
+
+<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {externalLinks.map((link, index) => (
+              <motion.div
+                key={link.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group'
+=======
+          >'
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              External Resources;
+            </h2>'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms;
+            </p>
+          </motion.div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
+            className="mb-16"
+          >"
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              External Resources;
+            </h2>"
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Additional resources and tools hosted on external platforms;
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {externalLinks.map((link, index) => (
+
+<<<<<<< HEAD
+              <motion.div
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                <a
+                  href={link.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                >
+                  <div className='flex items-center justify-between mb-4'>
+                    <h3 className='text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
+                      {link.label}
+                    </h3>
+                    <ExternalLink className='w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
+                  </div>
+                  <p className='text-white/70 text-sm leading-relaxed'>
+                    {link.description}
+                  </p>
+                </a>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-4xl mx-auto'>          <motion.div
+key={link.href}
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              External Resources;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks && externalLinks.map((link, index) => (;
+              <motion&& motion.div
+                key={link && link.href}
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+      {/* Contact Information */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-4xl mx-auto'>          <motion&& motion.div
+
+      {/* Contact Information */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-4xl mx-auto">
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-4xl mx-auto'>
+          <motion.div
+<<<<<<< HEAD:pages/sitemap.tsx
+=======
+              <motion.div;
+'
+            className='mb-16'>;'
+=======
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb-16'
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Information */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-16"
+                key={link.href}
+            className='mb-16'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              External Resources;
+            </h2>;'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms;
+            </p>;
+          </motion && motion.div>;'
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks && externalLinks.map((link, index) => (;
+              <motion&& motion.div;
+                key={link && link.href}
+
+<<<<<<< HEAD:pages/sitemap.tsx
+
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+<<<<<<< HEAD:pages/sitemap.tsx
+
+      {/* Contact Information */}'
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;'
+        <div className='max-w-4xl mx-auto'>          <motion&& motion.div;
+      {/* Contact Information */}"
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">"
+        <div className="max-w-4xl mx-auto">
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+
+<<<<<<< HEAD
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+      {/* Contact Information */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-4xl mx-auto'>          <motion&& motion.div
+
+      {/* Contact Information */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+<<<<<<< HEAD
+=======
+
+className='mb-16'
+<<<<<<< HEAD:pages/sitemap.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+          >
+=======
+          >'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>
+              Contact Information;
+            </h2>'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Get in touch with us for consultations, support, or to start your;
+              project;
+            </p>
+          </motion.div>
+<<<<<<< HEAD
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {contactInfo.map((contact, index) => (
+              <motion.div
+                key={contact.type}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
+            className="mb-16"
+          >"
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Contact Information;
+            </h2>"
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Get in touch with us for consultations, support, or to start your project;
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {contactInfo.map((contact, index) => (
+
+<<<<<<< HEAD
+              <motion.div
+className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
+origin/cursor/automate-test-improve-and-merge-code-2533
+              >
+                <h3 className='text-lg font-bold text-white mb-3'>
+                  {contact.type}
+                </h3>
+key={contact.type}
+            className='mb-16'>;
+=======
+              <motion.div;
+'
+            className='mb-16'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Contact Information;
+            </h2>;'
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
+              Get in touch with us for consultations, support, or to start your;
+              project;
+            </p>;
+          </motion && motion.div>;
+'
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo && contactInfo.map((contact, index) => (;
+              <motion&& motion.div;
+                key={contact && contact.type}
+
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+                <a
+=======
+
+                <a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                  href={contact && contact.action}
+                  target={'
+                    contact && contact.action.startsWith('http') ? '_blank' : '_self'
+                  }
+                  rel={'
+                    contact && contact.action.startsWith('http')'
+                      ? 'noopener noreferrer''
+                      : ''
+<<<<<<< HEAD
+                  }
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+                  }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'>;
+                  {contact && contact.value}
+                </a>;
+              </motion && motion.div>;
+
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
+              >"
+                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
+                <a;
+                  href={contact.action}'
+                  target={contact.action.startsWith('http') ? '_blank' : '_self'}'
+                  rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
+<<<<<<< HEAD
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'
+<<<<<<< HEAD:pages/sitemap.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+                >
+                  {contact.value}
+                </a>
+              </motion.div>
+<<<<<<< HEAD
+            ))}
+          </div>
+        </div>
+      </section>
+            ))}
+          </div>
+        </div>
+      </section>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+      {/* Quick Navigation */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+=======
+
+      {/* Quick Navigation */}'
+      <section className='py-20 px-6'>;'
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;'
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
+              Need Help Finding Something?;
+            </h2>;'
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+              Use our search functionality or contact us directly for assistance;
+            </p>;'
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+<<<<<<< HEAD
+
+      {/* Quick Navigation */}
+<section className='py-20 px-6'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+=======
+
+
+
+      {/* Quick Navigation */}'
+      <section className='py-20 px-6'>'
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+            ))  } catch (error) {
+    console.error("Error:", error);
+=======
+
+            ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Quick Navigation */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+      <section className="py-20 px-6">"
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+          >
+<h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+=======
+
+
+          >'
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+              Need Help Finding Something?
+            </h2>'
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
+              Use our search functionality or contact us directly for assistance;
+            </p>'
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
+              <Link
+                href='/search'
+=======
+
+              <Link'
+                href='/search''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
+                Search Site;'
+                <Search className='w-5 h-5 ml-2' />;
+              </Link>;
+              <Link'
+                href='/contact'
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+  ),
+  );
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+  )
+
+  )
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Contact Support
+                <Mail className='w-5 h-5 ml-2' />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <SmartFooter />
+    </div>
+);
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+}animate= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.8
+}> <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Site Map </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#main-pages" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Explore Site <ArrowRight className="w-5 h-5 ml-2" /> </Link> <a href="/search" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Main Pages </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Core pages that provide essential information about our company and services </p> </motion.div> </h3> <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Service Categories </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Browse our comprehensive range of technology solutions organized by category </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Featured Services </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Our most popular and innovative technology solutions </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" /> </div> </Link> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Resources & Tools </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources, tools, and information to help you succeed </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > External Resources </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources and tools hosted on external platforms </p> </motion.div> </h3> <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </motion.div>) )
+=======
+
+
+
+
+  )
+
+
+
+}animate= {}
+  {}
+  opacity: 1, y: 0;
+}transition= {}
+  {}
+  duration: 0.8"
+}> <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Site Map </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#main-pages" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Explore Site <ArrowRight className="w-5 h-5 ml-2" /> </Link> <a href="/search" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Main Pages </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Core pages that provide essential information about our company and services </p> </motion.div> </h3> <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) )"
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Service Categories </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Browse our comprehensive range of technology solutions organized by category </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) )"
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Featured Services </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Our most popular and innovative technology solutions </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" /> </div> </Link> </motion.div>) )"
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Resources & Tools </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources, tools, and information to help you succeed </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) )"
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > External Resources </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources and tools hosted on external platforms </p> </motion.div> </h3> <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </motion.div>) )"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Contact Information </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Get in touch with us for consultations, support, or to start your project </p> </motion.div> </motion.div>) )
+}</div> </div> </section> <motion.div initial= {'
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
+                Contact Support;'
+                <Mail className='w-5 h-5 ml-2' />              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+      <SmartFooter />;
+    </div>;
+  ),;
+
+}animate= {;
+  {;
+  opacity: 1, y: 0 ;
+
+}transition= {;
+  {;
+  duration: 0 && 0.8 ;
+"
+}> <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Site Map </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#main-pages" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Explore Site <ArrowRight className="w-5 h-5 ml-2" /> </Link> <a href="/search" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> </div> </motion && motion.div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Main Pages </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Core pages that provide essential information about our company and services </p> </motion && motion.div> </h3> <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion && motion.div>) ) ;"
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Service Categories </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Browse our comprehensive range of technology solutions organized by category </p> </motion && motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion && motion.div>) ) ;"
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Featured Services </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Our most popular and innovative technology solutions </p> </motion && motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" /> </div> </Link> </motion && motion.div>) ) ;"
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Resources & Tools </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources, tools, and information to help you succeed </p> </motion && motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion && motion.div>) ) ;"
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > External Resources </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources and tools hosted on external platforms </p> </motion && motion.div> </h3> <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </motion && motion.div>) ) ;"
+}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Contact Information </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Get in touch with us for consultations, support, or to start your project </p> </motion && motion.div> </motion && motion.div>) ) ;
+<<<<<<< HEAD
+}</div> </div> </section> <motion&& motion.div initial= {
+
+  {
+  opacity: 0, y: 30
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+duration: 0 && 0.8 
+}viewport= {
+  {
+  once: true 
+
+=======
+}</div> </div> </section> <motion&& motion.div initial= {}
+  {}
+  opacity: 0, y: 30;
+}whileInView= {}
+  {}
+  opacity: 1, y: 0;
+}transition= {}
+  {}
+  once: true;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion && motion.div> </div> </section> <SmartFooter /> </div>) ;
+  );
+}
+
+  )
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+          >;
+=======
+
+
+
+          >;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
+              Site Map;
+            </h1>;'
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed mb - 8'>;
+              Navigate our comprehensive website and discover all the AI - powered;
+              technology solutions, resources, and information available at Zion;
+              Tech Group.;
+            </p>;'
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <a;'
+                href='#main - pages';'
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105';
+              >;
+                Explore Site;'
+                <ArrowRight className='w - 5 h - 5 ml - 2' />;
+              </a>;
+              <a;'
+                href='/search';'
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
+              >;
+                Search Site;'
+                <Search className='w - 5 h - 5 ml - 2' />              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Main Pages */}'
+      <section id='main - pages' className='py - 20 px - 6'>;'
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}'
+            className='mb - 16';
+          >;'
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Main Pages;
+            </h2>;'
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Core pages that provide essential information about our company;
+              and services;
+            </p>;
+          </motion.div>;'
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {main_pages.map ((page, index) => (
+              <motion.div;
+                key={page.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}'
+                className='group';
+              >;
+                <Link;
+                  href={page.href}'
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;'
+                  <div className='flex items - center justify - between mb - 4'>;'
+                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {page.label}
+                    </h3>;'
+                    <ChevronRight className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;'
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {page.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Service Categories */}'
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;'
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}'
+            className='mb - 16';
+          >;'
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Service Categories;
+            </h2>;'
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion.div>;'
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {service_categories.map ((category, index) => (
+              <motion.div;
+                key={category.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}'
+                className='group';
+              >;
+                <Link;
+                  href={category.href}'
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;'
+                  <div className='flex items - center justify - between mb - 4'>;'
+                    <h3 className='text - lg font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {category.label}
+                    </h3>;'
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;'
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {category.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Featured Services */}'
+      <section className='py - 20 px - 6'>;'
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}'
+            className='mb - 16';
+          >;'
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Featured Services;
+            </h2>;'
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Our most popular and innovative technology solutions;
+            </p>;
+          </motion.div>;'
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {featured_services.map ((service, index) => (
+              <motion.div;
+                key={service.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}'
+                className='group';
+              >;
+                <Link;
+                  href={service.href}'
+                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
+                >;'
+                  <div className='flex items - center justify - between mb - 3'>;'
+                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300 truncate'>;
+                      {service.label}
+                    </h3>;'
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300 flex - shrink - 0' />;
+                  </div>;'
+                  <p className='text - white / 60 text - xs'>{service.category}</p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Resources & Tools */}'
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;'
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}'
+            className='mb - 16';
+          >;'
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Resources & Tools;
+            </h2>;'
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources, tools, and information to help you succeed;
+            </p>;
+          </motion.div>;'
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {resources.map ((resource, index) => (
+              <motion.div;
+                key={resource.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}'
+                className='group';
+              >;
+                <Link;
+                  href={resource.href}'
+                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
+                >;'
+                  <div className='flex items - center justify - between mb - 3'>;'
+                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {resource.label}
+                    </h3>;'
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;'
+                  <p className='text - white / 60 text - xs leading - relaxed'>;
+                    {resource.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* External Resources */}'
+      <section className='py - 20 px - 6'>;'
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}'
+            className='mb - 16';
+          >;'
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              External Resources;
+            </h2>;'
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources and tools hosted on external platforms;
+            </p>;
+          </motion.div>;'
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {external_links.map ((link, index) => (
+              <motion.div;
+                key={link.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}'
+                className='group';
+              >;
+                <a;
+                  href={link.href}'
+                  target='_blank';'
+                  rel='noopener noreferrer';'
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;'
+                  <div className='flex items - center justify - between mb - 4'>;'
+                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {link.label}
+                    </h3>;'
+                    <ExternalLink className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;'
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {link.description}
+                  </p>                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Information */}'
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;'
+        <div className='max - w-4xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}'
+            className='mb - 16';
+          >;'
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Contact Information;
+            </h2>;'
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Get in touch with us for consultations, support, or to start your;
+              project;
+            </p>;
+          </motion.div>;'
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {contact_info.map ((contact, index) => (
+              <motion.div;
+                key={contact.type}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}'
+                className='text - center p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl';
+              >;'
+                <h3 className='text - lg font - bold text - white mb - 3'>;
+                  {contact.type}
+                </h3>;
+                <a;
+                  href={contact.action}
+                  target={'
+                    contact.action.starts_with ('http') ? '_blank' : '_self';
+                  }
+                  rel={'
+                    contact.action.starts_with ('http');'
+                      ? 'noopener noreferrer';'
+                      : '';
+                  }'
+                  className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 font - medium'                >;
+                  {contact.value}
+                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Quick Navigation */}'
+      <section className='py - 20 px - 6'>;'
+        <div className='max - w-4xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >;'
+            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
+              Need Help Finding Something?;
+            </h2>;'
+            <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
+              Use our search functionality or contact us directly for assistance;
+            </p>;'
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <Link;'
+                href='/search';'
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+              >;
+                Search Site;'
+                <Search className='w - 5 h - 5 ml - 2' />;
+              </Link>;
+              <Link;'
+                href='/contact';'
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
+              >;
+                Contact Support;'
+                <Mail className='w - 5 h - 5 ml - 2' />              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <SmartFooter />;
+<<<<<<< HEAD
+}
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+<<<<<<< HEAD
+      type: 'Address',
+      value: 'Middletown, DE',
+      action: 'https://maps.google.com/?q = Middletown, DE',
+    },
+  ];
+;
+  return (
+    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
+      <Head>;
+        <title > Sitemap | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category.";
+        />;
+        <meta property='og:title' content='Sitemap | Zion Tech Group' />;
+        <meta;
+          property='og:description';
+          content='Complete website sitemap and navigation guide.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / sitemap' />      </Head>;
+      <SmartHeader />;
+      {/* Hero Section */}
+      <section className='pt - 32 pb - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+          >;
+            <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
+              Site Map;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed mb - 8'>;
+              Navigate our comprehensive website and discover all the AI - powered;
+              technology solutions, resources, and information available at Zion;
+              Tech Group.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <a;
+                href='#main - pages';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105';
+              >;
+                Explore Site;
+                <ArrowRight className='w - 5 h - 5 ml - 2' />;
+              </a>;
+              <a;
+                href='/search';
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
+              >;
+                Search Site;
+                <Search className='w - 5 h - 5 ml - 2' />              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Main Pages */}
+      <section id='main - pages' className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Main Pages;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Core pages that provide essential information about our company;
+              and services;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {main_pages.map ((page, index) => (
+              <motion.div;
+                key={page.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={page.href}
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  <div className='flex items - center justify - between mb - 4'>;
+                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {page.label}
+                    </h3>;
+                    <ChevronRight className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {page.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Service Categories */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Service Categories;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {service_categories.map ((category, index) => (
+              <motion.div;
+                key={category.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={category.href}
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  <div className='flex items - center justify - between mb - 4'>;
+                    <h3 className='text - lg font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {category.label}
+                    </h3>;
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {category.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Featured Services */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Featured Services;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Our most popular and innovative technology solutions;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {featured_services.map ((service, index) => (
+              <motion.div;
+                key={service.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={service.href}
+                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
+                >;
+                  <div className='flex items - center justify - between mb - 3'>;
+                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300 truncate'>;
+                      {service.label}
+                    </h3>;
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300 flex - shrink - 0' />;
+                  </div>;
+                  <p className='text - white / 60 text - xs'>{service.category}</p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Resources & Tools */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Resources & Tools;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources, tools, and information to help you succeed;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {resources.map ((resource, index) => (
+              <motion.div;
+                key={resource.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={resource.href}
+                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
+                >;
+                  <div className='flex items - center justify - between mb - 3'>;
+                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {resource.label}
+                    </h3>;
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 60 text - xs leading - relaxed'>;
+                    {resource.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* External Resources */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              External Resources;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources and tools hosted on external platforms;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {external_links.map ((link, index) => (
+              <motion.div;
+                key={link.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <a;
+                  href={link.href}
+                  target='_blank';
+                  rel='noopener noreferrer';
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  <div className='flex items - center justify - between mb - 4'>;
+                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {link.label}
+                    </h3>;
+                    <ExternalLink className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {link.description}
+                  </p>                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Information */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-4xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Contact Information;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Get in touch with us for consultations, support, or to start your;
+              project;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {contact_info.map ((contact, index) => (
+              <motion.div;
+                key={contact.type}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text - center p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl';
+              >;
+                <h3 className='text - lg font - bold text - white mb - 3'>;
+                  {contact.type}
+                </h3>;
+                <a;
+                  href={contact.action}
+                  target={
+                    contact.action.starts_with ('http') ? '_blank' : '_self';
+                  }
+                  rel={
+                    contact.action.starts_with ('http');
+                      ? 'noopener noreferrer';
+                      : '';
+                  }
+                  className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 font - medium'                >;
+                  {contact.value}
+                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Quick Navigation */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-4xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
+              Need Help Finding Something?;
+            </h2>;
+            <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
+              Use our search functionality or contact us directly for assistance;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <Link;
+                href='/search';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+              >;
+                Search Site;
+                <Search className='w - 5 h - 5 ml - 2' />;
+              </Link>;
+              <Link;
+                href='/contact';
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
+              >;
+                Contact Support;
+                <Mail className='w - 5 h - 5 ml - 2' />              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <SmartFooter />;
+    </div>),
+}animate= {
+  {
+  opacity: 1, coordinate_y: 0;
+}transition= {
+  {
+  duration: 0.8;
+}> <h1 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6" > Site Map </h1> </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a href="#main - pages" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105" > Explore Site <ArrowRight className="w - 5 h - 5 ml - 2" /> </Link> <a href="/search" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Search Site <Search className="w - 5 h - 5 ml - 2" /> </Link> </div> </motion.div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Main Pages </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Core pages that provide essential information about our company and services </p> </motion.div> </h3> <ChevronRight className="w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </Link> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Service Categories </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Browse our comprehensive range of technology solutions organized by category </p> </motion.div> </h3> <ChevronRight className="w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </Link> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Featured Services </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Our most popular and innovative technology solutions </p> </motion.div> </h3> <ChevronRight className="w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300 flex - shrink - 0" /> </div> </Link> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Resources & Tools </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Additional resources, tools, and information to help you succeed </p> </motion.div> </h3> <ChevronRight className="w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </Link> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > External Resources </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Additional resources and tools hosted on external platforms </p> </motion.div> </h3> <ExternalLink className="w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Contact Information </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Get in touch with us for consultations, support, or to start your project </p> </motion.div> </motion.div>) );
+}</div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, coordinate_y: 30;
+}whileInView= {
+  {
+  opacity: 1, coordinate_y: 0;
+}transition= {
+  {
+  duration: 0.8;
+}viewport= {
+  {
+  once: true;
+}> Need Help Finding Something? </h2> <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link href="/search" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl" > Search Site <Search className="w - 5 h - 5 ml - 2" /> </Link> <Link href="/contact" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Contact Support <Mail className="w - 5 h - 5 ml - 2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>));
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+}
+
+}
+
+
+'
+import React from 'react';'
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function SitemapPage() {}
+  return ("
+    <MainLayout title="Sitemap - Zion Tech Group">"
+      <div className="container mx-auto px-4 py-16">"
+        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>"
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the sitemap page.
+        </p>
+      </div>
+    </MainLayout>;
+  );
+}
+<<<<<<< HEAD:pages/sitemap.tsx
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+</div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      type: 'Address',
+      value: 'Middletown, DE',
+      action: 'https://maps.google.com/?q = Middletown, DE',
+    },
+  ];
+;
+  return (
+    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
+      <Head>;
+        <title > Sitemap | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category.";
+        />;
+        <meta property='og:title' content='Sitemap | Zion Tech Group' />;
+        <meta;
+          property='og:description';
+          content='Complete website sitemap and navigation guide.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / sitemap' />      </Head>;
+      <SmartHeader />;
+      {/* Hero Section */}
+      <section className='pt - 32 pb - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+          >;
+            <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
+              Site Map;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed mb - 8'>;
+              Navigate our comprehensive website and discover all the AI - powered;
+              technology solutions, resources, and information available at Zion;
+              Tech Group.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <a;
+                href='#main - pages';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105';
+              >;
+                Explore Site;
+                <ArrowRight className='w - 5 h - 5 ml - 2' />;
+              </a>;
+              <a;
+                href='/search';
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
+              >;
+                Search Site;
+                <Search className='w - 5 h - 5 ml - 2' />              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Main Pages */}
+      <section id='main - pages' className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Main Pages;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Core pages that provide essential information about our company;
+              and services;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {main_pages.map ((page, index) => (
+              <motion.div;
+                key={page.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={page.href}
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  <div className='flex items - center justify - between mb - 4'>;
+                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {page.label}
+                    </h3>;
+                    <ChevronRight className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {page.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Service Categories */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Service Categories;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {service_categories.map ((category, index) => (
+              <motion.div;
+                key={category.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={category.href}
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  <div className='flex items - center justify - between mb - 4'>;
+                    <h3 className='text - lg font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {category.label}
+                    </h3>;
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {category.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Featured Services */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Featured Services;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Our most popular and innovative technology solutions;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {featured_services.map ((service, index) => (
+              <motion.div;
+                key={service.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={service.href}
+                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
+                >;
+                  <div className='flex items - center justify - between mb - 3'>;
+                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300 truncate'>;
+                      {service.label}
+                    </h3>;
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300 flex - shrink - 0' />;
+                  </div>;
+                  <p className='text - white / 60 text - xs'>{service.category}</p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Resources & Tools */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Resources & Tools;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources, tools, and information to help you succeed;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {resources.map ((resource, index) => (
+              <motion.div;
+                key={resource.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={resource.href}
+                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
+                >;
+                  <div className='flex items - center justify - between mb - 3'>;
+                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {resource.label}
+                    </h3>;
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 60 text - xs leading - relaxed'>;
+                    {resource.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* External Resources */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              External Resources;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources and tools hosted on external platforms;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {external_links.map ((link, index) => (
+              <motion.div;
+                key={link.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <a;
+                  href={link.href}
+                  target='_blank';
+                  rel='noopener noreferrer';
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  <div className='flex items - center justify - between mb - 4'>;
+                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {link.label}
+                    </h3>;
+                    <ExternalLink className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {link.description}
+                  </p>                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Information */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-4xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Contact Information;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Get in touch with us for consultations, support, or to start your;
+              project;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {contact_info.map ((contact, index) => (
+              <motion.div;
+                key={contact.type}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text - center p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl';
+              >;
+                <h3 className='text - lg font - bold text - white mb - 3'>;
+                  {contact.type}
+                </h3>;
+                <a;
+                  href={contact.action}
+                  target={
+                    contact.action.starts_with ('http') ? '_blank' : '_self';
+                  }
+                  rel={
+                    contact.action.starts_with ('http');
+                      ? 'noopener noreferrer';
+                      : '';
+                  }
+                  className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 font - medium'                >;
+                  {contact.value}
+                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Quick Navigation */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-4xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
+              Need Help Finding Something?;
+            </h2>;
+            <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
+              Use our search functionality or contact us directly for assistance;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <Link;
+                href='/search';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+              >;
+                Search Site;
+                <Search className='w - 5 h - 5 ml - 2' />;
+              </Link>;
+              <Link;
+                href='/contact';
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
+              >;
+                Contact Support;
+                <Mail className='w - 5 h - 5 ml - 2' />              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <SmartFooter />;
+    </div>),
+}animate= {
+  {
+  opacity: 1, coordinate_y: 0;
+}transition= {
+  {
+  duration: 0.8;
+}> <h1 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6" > Site Map </h1> </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a href="#main - pages" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105" > Explore Site <ArrowRight className="w - 5 h - 5 ml - 2" /> </Link> <a href="/search" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Search Site <Search className="w - 5 h - 5 ml - 2" /> </Link> </div> </motion.div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Main Pages </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Core pages that provide essential information about our company and services </p> </motion.div> </h3> <ChevronRight className="w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </Link> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Service Categories </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Browse our comprehensive range of technology solutions organized by category </p> </motion.div> </h3> <ChevronRight className="w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </Link> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Featured Services </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Our most popular and innovative technology solutions </p> </motion.div> </h3> <ChevronRight className="w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300 flex - shrink - 0" /> </div> </Link> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Resources & Tools </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Additional resources, tools, and information to help you succeed </p> </motion.div> </h3> <ChevronRight className="w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </Link> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > External Resources </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Additional resources and tools hosted on external platforms </p> </motion.div> </h3> <ExternalLink className="w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </motion.div>) );
+}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Contact Information </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Get in touch with us for consultations, support, or to start your project </p> </motion.div> </motion.div>) );
+}</div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, coordinate_y: 30;
+}whileInView= {
+  {
+  opacity: 1, coordinate_y: 0;
+}transition= {
+  {
+  duration: 0.8;
+}viewport= {
+  {
+  once: true;
+}> Need Help Finding Something? </h2> <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link href="/search" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl" > Search Site <Search className="w - 5 h - 5 ml - 2" /> </Link> <Link href="/contact" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Contact Support <Mail className="w - 5 h - 5 ml - 2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>));
+
+  )
+
+}
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function SitemapPage() {
+  return (
+    <MainLayout title="Sitemap - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the sitemap page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+  duration: 0.8
+}viewport= {
+  {
+  once: true 
+
+}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
+<<<<<<< HEAD:pages/sitemap.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+function generateSiteMap() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     ${sitemap_data
+       .flatMap(category => category.pages)
+       .map(page => {
+         return `
+       <url>
+           <loc>https://ziontechgroup.com${page.url}</loc>
+           <lastmod>${new Date().toISOString()}</lastmod>
+           <changefreq>weekly</changefreq>
+           <priority>0.8</priority>
+       </url>
+     `;
+       })
+       .join('')}
+   </urlset>
+ `;
+}
+
+function SiteMap() {
+  // getServerSideProps will do the heavy lifting
+}
+
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+// eslint-disable-next-line react-refresh/only-export-components
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  // We generate the XML sitemap with the posts data
+  const sitemap = generateSiteMap();
+
+  res.setHeader('Content-Type', 'text/xml');
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+
+  return {
+    props: {},
+  };
+};
+
+export default SiteMap;
+<<<<<<< HEAD:pages/sitemap.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/sitemap.tsx

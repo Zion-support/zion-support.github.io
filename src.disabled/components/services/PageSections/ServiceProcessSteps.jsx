@@ -1,1 +1,179 @@
-import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileText, Star, Clock export const ServiceProcessSteps = () => { const processSteps = [ { step: ,1, title: "Discovery & Assessment,", description: "We begin by understanding your current IT infrastructur,e, business needs, and objectives.", icon: Searc,h, color: "blue,", details[",Infrastructure: audit and documentation review", Business requirements gathering",Current pain points identification", Compliance and security assessment",Budget and timeline discussion" ], duration: "1-2 days,", team: "Project Manager + Senior Engineer"}, { step: ,2, title: "Planning & Design,", description: "Our team creates a comprehensive solution design tailored to your specific needs.,", icon: ClipboardLis,t, color: "green,", details[",Solution: architecture design", Technology stack selection",Implementation timeline planning", Resource allocation",Risk assessment and mitigation" ], duration: "3-5 days,", team: "Solution Architect + Technical Lead"}, { step: ,3, title: "Implementation,", description: "Expert engineers execute the planned solution with precision and attention to detail.,", icon: Setting,s, color: "purple,", details[",Infrastructure: setup and configuration", Security implementation",Integration and testing", Documentation creation",Quality assurance checks" ], duration: "1-4 weeks,", team: "Implementation Engineers + Security Specialist"}, { step: ,4, title: "Testing & Validation,", description: "Rigorous testing ensures everything works perfectly before going live.,", icon: CheckCircl,e, color: "orange,", details[",Functional: testing and validation", Performance and load testing",Security penetration testing", User acceptance testing",Compliance verification" ], duration: "2-5 days,", team: "QA Engineers + Security Team"}, { step: ,5, title: "Deployment & Go-Live,", description: "Carefully managed deployment ensures smooth transition to the new system.,", icon: User,s, color: "red,", details[",Production: deployment", Data migration and verification",User training and onboarding", Go-live support",Performance monitoring" ], duration: "1-2 days,", team: "Deployment Team + Support Engineers"}, { step: ,6, title: "Support & Maintenance,", description: "Ongoing support and maintenance ensure your system continues to perform optimally.,", icon: Headphone,s, color: "indigo,", details[",24/7: technical support", Regular maintenance and updates",Performance optimization", Security monitoring",Continuous improvement" ], duration: "Ongoing,", team: "Support Team + Maintenance Engineers" ] const getColorClasses = (color) => { const colorMap = { blue: "bg-blue-100 text-blue-600 border-blue-200,", green: "bg-green-100 text-green-600 border-green-200,", purple: "bg-purple-100 text-purple-600 border-purple-200,", orange: "bg-orange-100 text-orange-600 border-orange-200,", red: "bg-red-100 text-red-600 border-red-200,", "";'}}}}}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface ServiceProcessStepsProps {
+  // Add props here as needed
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+interface ServiceProcessStepsProps {
+  // Add props here as needed
+}
+<<<<<<< HEAD
+
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+
+}
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
+<<<<<<< HEAD
+=======
+=======export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+import React from 'react';
+interface ServiceProcessStepsProps {}
+  // Add props here as needed;
+}
+
+export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  return (
+    <div>
+      <h1>ServiceProcessSteps</h1>
+      <p>This component is currently under development.</p>
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+:src.disabled/components/services/PageSections/ServiceProcessSteps.jsx
+}
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/services/PageSections/ServiceProcessSteps.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  );}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </div>;
+  );
+
+}
+:src.disabled/components/services/PageSections/ServiceProcessSteps.jsx;
+}
+
+
+}
+
+
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,1 +1,160 @@
-const [searchQuery, setSearchQuery] = useState (") const [expandedCategories, setExpandedCategories] = useState ([ "getting - started"]) const toggleCategory = category => { setExpandedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category]) } const helpCategories = { "getting - started": { title: "Getting Started,", icon: BookOpe,n, articles: [ { title: "How to create your first account,", href: "/help / create - account,"}, { title: "Complete profile setup guide,", href: "/help / profile - setup,"}, { title: "Understanding the marketplace,", href: "/help / marketplace - guide,"}, { title: "First steps for new users,", href: "/help / first - steps"}]}, marketplace: { title "Marketplace,", icon: BookOpe,n, articles: [ { title: "How to list products and services,", href: "/help / list - products,"}, { title: "Managing your listings,", href: "/help / manage - listings"}, { title: "Understanding pricing and fees,", href: "/help / pricing - fees,"}, { title: "Marketplace policies and guidelines,", href: "/help / marketplace - policies,"}]}, talent: { title: "Talent & Hiring,", icon: BookOpe,n, articles: [ { title: "Creating a talent profile,", href: "/help / talent - profile,"}, { title: "Finding and hiring talent,", href: "/help / hire - talent"}, { title: "Managing projects and contracts,", href: "/help / manage - projects,"}, { title: "Payment and escrow system,", href: "/help / payment - system,"}]}, technical: { title: "Technical Support,", icon: BookOpe,n, articles: [ { title: "Common technical issues,", href: "/help / technical - issues,"}, { title: "Browser compatibility,", href: "/help / browser - compatibility,"}, { title: "Mobile app troubleshooting,", href: "/help / mobile - troubleshooting,"}, { title: "API and integration support,", href: "/help / api - support"}]}, billing: { title: "Billing & Payments,", icon: BookOpe,n, articles: [ { title: "Understanding your invoice,", href: "/help / invoice - guide,"}, { title: "Payment methods and security,", href: "/help / payment - methods,"}, { title: "Refund and cancellation policy,", href: "/help / refund - policy,"}, { title: "Tax information and reporting,", href: "/help / tax - information,"}]}, account: { title: "Account & Security,", icon: BookOpe,n, articles: [ { title: "Account security best practices,", href: "/help / account - security,"}, { title: "Two - factor authentication setup,", href: "/help / 2fa - setup,"}, { title: "Password reset and recovery,", href: "/help / password - recovery,"}, { title: "Privacy settings and data control,", href: "/help / privacy - settings,"}]}} const popularArticles = [ "How to create your first account", "Understanding the marketplace", "Creating a talent profile", "Finding and hiring talent", "Payment and escrow system", "Account security best practices"] return (<> <Helmet> <title > Help Center - Zion Tech Group</title> <meta name="description" content="Get help and support for Zion Tech Group"s platform. Find answers to common questions, tutorials, and contact information." / / /> <meta name="keywords" content="help center, support, FAQ, tutorials, Zion Tech Group" / / /> <link rel="canonical" href="https ;")
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+interface HelpCenterProps {
+  // Add props here as needed
+}
+
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+pr-12325
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
+pr-12325
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface HelpCenterProps {
+  // Add props here as needed
+
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+export default function HelpCenter({ }: HelpCenterProps) {
+  return (
+    <div>
+      <h1>HelpCenter</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+:src.pages.disabled/HelpCenter.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:src.pages.disabled/HelpCenter.jsx
+}
+}
+}
+}
+}
+<<<<<<< HEAD
+:temp_exclude/src.pages.disabled/HelpCenter.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+:temp_exclude/src.pages.disabled/HelpCenter.jsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+}
+
+
+
+
+
+
+:src.pages.disabled/HelpCenter.jsx
+}
+}
+}
+}
+}
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+:temp_exclude/src.pages.disabled/HelpCenter.jsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+:temp_exclude/src.pages.disabled/HelpCenter.jsx
+    <div>
+</div>
+      <h1>HelpCenter</h1>
+      <p>This component is currently under development.</p>
+    </div>'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

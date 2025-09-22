@@ -1,69 +1,39 @@
-#!/usr/bin/env node
-/**
- * Test Build Script
- * Tests the build process with various configurations
- */
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-const { execSync } = require('child_process');
-const fs = require('fs');
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log('🧪 Starting Test Build...')
+const problematicFiles = ['components/ContactForm.tsx']
+  'components/PerformanceMonitor.tsx'
+  console.log('� Attempting build without problematic files...')
+    execSync('npm run build', { "stdio"})
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-console.log('🧪 Testing build process...');
+=======
+    console.log(' Build "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    console.log(' Build "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    console.log(' Build "failed")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-try {
-  // Test 1: Basic build without type checking
-  console.log('📋 Test 1: Basic build...');
-  execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Build successful');
-} catch (error) {
-  console.log('❌ Build failed:', error.message);
-  
-  // Test 2: Try building with different configurations
-  console.log('📋 Test 2: Trying alternative build approach...');
-  
-  try {
-    // Create a temporary next.config.js without experimental features
-    const simpleConfig = `/** @type {import('next').NextConfig} */
-const nextConfig = {
-  compress: true,
-  images: {
-    domains: ['localhost'],
-  },
-};
 
-export default nextConfig;
-`;
-    
-    fs.writeFileSync('next.config.simple.js', simpleConfig);
-    
-    // Try building with the simple config
-    execSync('cp next.config.simple.js next.config.js', { stdio: 'inherit' });
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful with simple config');
-  } catch (error2) {
-    console.log('❌ Build still failed:', error2.message);
-    
-    // Test 3: Check for specific issues
-    console.log('📋 Test 3: Checking for common issues...');
-    
-    // Check if there are any obvious circular imports
-    const pagesDir = 'pages';
-    if (fs.existsSync(pagesDir)) {
-      const files = fs.readdirSync(pagesDir, { recursive: true });
-      console.log(`Found ${files.length} files in pages directory`);
-      
-      // Look for potential issues
-      const problematicFiles = files.filter(file => 
-        file.includes('.disabled') || 
-        file.includes('.backup') || 
-        file.includes('.bak')
-      );
-      
-      if (problematicFiles.length > 0) {
-        console.log(`⚠️ Found ${problematicFiles.length} potentially problematic files:`);
-        problematicFiles.forEach(file => console.log(`  - ${file}`));
-      }
-    }
-  }
-}
-
-console.log('🏁 Build testing completed');
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

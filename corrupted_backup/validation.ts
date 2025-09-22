@@ -1,4 +1,5 @@
 
+
 export const validators = {,
   email: (email: string): boolean => {,
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,

@@ -1,270 +1,275 @@
 #!/usr/bin/env node
-const { execSync } = require('child_process')
-const fs = require('fs')
 
-console.log('🚀 Comprehensive PR Merger - Processing All Remaining Branches')
-console.log('==============================================================')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-class ComprehensivePRMerger {
-  constructor() {
-    this.processedBranches = []
-    this.mergedBranches = []
-    this.failedBranches = []
-    this.skippedBranches = []
-    this.conflictsResolved = 0
-    this.startTime = Date.now()
-    this.batchSize = 5
-    this.maxRetries = 3
-  }
+console.log('🚀 Starting Comprehensive PR Merger...\n');
 
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    console.log(logEntry)
-  }
+// Configuration
+const GITHUB_REPO = 'Zion-Holdings/zion.app';
+const MAX_RETRIES = 3;
+const CONFLICT_RESOLUTION_STRATEGY = 'ours'; // 'ours', 'theirs', or 'manual'
 
-  async runCommand(command, description, retries = 0) {
-    try {
-      this.log(`Running: ${description}`)
-      const result = execSync(command, { 
-        encoding: 'utf8', 
-        stdio: 'pipe',
-        cwd: process.cwd(),
-        maxBuffer: 1024 * 1024 * 100 // 100MB buffer
-      })
-      this.log(`✅ ${description} completed successfully`, 'success')
-      return result
-    } catch (error) {
-      if (retries < this.maxRetries && error.message.includes('ENOBUFS')) {
-        this.log(`⚠️  ENOBUFS error, retrying (${retries + 1}/${this.maxRetries})`, 'warning')
-        await new Promise(resolve => setTimeout(resolve, 2000))
-        return this.runCommand(command, description, retries + 1)
-      }
-      this.log(`❌ ${description} failed: ${error.message}`, 'error')
-      throw error
-    }
-  }
-
-  async getAllRemainingBranches() {
-    try {
-      const result = await this.runCommand('git branch -r', 'Getting all remote branches')
-      const branches = result.split('\n')
-        .map(branch => branch.trim())
-        .filter(branch => branch && !branch.includes('HEAD') && branch.startsWith('origin/'))
-        .map(branch => branch.replace('origin/', ''))
-        .filter(branch => branch !== 'main')
-        .filter(branch => !branch.includes('backup-'))
-        .filter(branch => !branch.includes('cursor/'))
-        .filter(branch => branch.match(/(chore|fix|feature|codex)/i))
-      
-      this.log(`Found ${branches.length} remaining branches to process`)
-      return branches
-    } catch (error) {
-      this.log(`Error getting remote branches: ${error.message}`, 'error')
-      return []
-    }
-  }
-
-  async processBranch(branchName) {
-    try {
-      this.log(`Processing branch: ${branchName}`)
-      this.processedBranches.push(branchName)
-
-      // Fetch the latest changes
-      await this.runCommand('git fetch origin', 'Fetching latest changes')
-
-      // Checkout the branch
-      await this.runCommand(`git checkout ${branchName}`, `Checking out ${branchName}`)
-
-      // Try to merge main into the branch
-      try {
-        await this.runCommand('git merge main --no-ff -m "Merge main into ' + branchName + '"', `Merging main into ${branchName}`)
-      } catch (mergeError) {
-        this.log(`Merge conflicts detected in ${branchName}, resolving...`, 'warning')
-        
-        // Resolve conflicts automatically
-        await this.resolveConflicts(branchName)
-        
-        // Commit the resolved conflicts
-        await this.runCommand('git add .', 'Adding resolved files')
-        await this.runCommand(`git commit -m "Resolve merge conflicts in ${branchName}"`, 'Committing resolved conflicts')
-        this.conflictsResolved++
-      }
-
-      // Push the updated branch
-      await this.runCommand(`git push origin ${branchName}`, `Pushing updated ${branchName}`)
-
-      // Switch back to main
-      await this.runCommand('git checkout main', 'Switching back to main')
-
-      // Merge the branch into main
-      await this.runCommand(`git merge ${branchName} --no-ff -m "Merge ${branchName} into main"`, `Merging ${branchName} into main`)
-
-      // Push main
-      await this.runCommand('git push origin main', 'Pushing updated main')
-
-      this.mergedBranches.push(branchName)
-      this.log(`✅ Successfully merged ${branchName} into main`, 'success')
-
-      // Delete the remote branch
-      try {
-        await this.runCommand(`git push origin --delete ${branchName}`, `Deleting remote branch ${branchName}`)
-      } catch (deleteError) {
-        this.log(`Warning: Could not delete remote branch ${branchName}`, 'warning')
-      }
-
-    } catch (error) {
-      this.failedBranches.push({ branch: branchName, error: error.message })
-      this.log(`❌ Failed to process ${branchName}: ${error.message}`, 'error')
-      
-      // Switch back to main on error
-      try {
-        await this.runCommand('git checkout main', 'Switching back to main after error')
-      } catch (checkoutError) {
-        this.log(`Error switching back to main: ${checkoutError.message}`, 'error')
-      }
-    }
-  }
-
-  async resolveConflicts(branchName) {
-    try {
-      // Get list of files with conflicts
-      const conflictFiles = execSync('git diff --name-only --diff-filter=U', {
-        encoding: 'utf8',
-        maxBuffer: 1024 * 1024 * 10 // 10MB buffer
-      }).trim().split('\n').filter(f => f)
-
-      this.log(`Resolving conflicts in ${conflictFiles.length} files for ${branchName}`)
-
-      for (const file of conflictFiles) {
-        if (file) {
-          await this.resolveFileConflicts(file)
-        }
-      }
-    } catch (error) {
-      this.log(`Error resolving conflicts in ${branchName}: ${error.message}`, 'error')
-    }
-  }
-
-  async resolveFileConflicts(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8')
-      let resolvedContent = content
-
-      // Strategy: Keep our changes (HEAD) for most conflicts
-      resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*/gs,
-        '$1'
-      )
-
-      // Handle any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> .*/gs, '')
-      resolvedContent = resolvedContent.replace(/=======\n.*?\n>>>>>>> .*/gs, '')
-
-      // Write the resolved content
-      fs.writeFileSync(filePath, resolvedContent)
-      this.log(`✅ Resolved conflicts in: ${filePath}`)
-    } catch (error) {
-      this.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`, 'error')
-    }
-  }
-
-  async runAutomation() {
-    try {
-      this.log('Starting comprehensive PR merge automation...')
-
-      // Get all remaining branches
-      const branches = await this.getAllRemainingBranches()
-
-      if (branches.length === 0) {
-        this.log('No branches to process', 'info')
-        return
-      }
-
-      // Process branches in batches
-      for (let i = 0; i < branches.length; i += this.batchSize) {
-        const batch = branches.slice(i, i + this.batchSize)
-        this.log(`Processing batch ${Math.floor(i/this.batchSize) + 1}/${Math.ceil(branches.length/this.batchSize)} (${batch.length} branches)`)
-
-        for (const branch of batch) {
-          try {
-            await this.processBranch(branch)
-            // Small delay between branches
-            await new Promise(resolve => setTimeout(resolve, 1000))
-          } catch (error) {
-            this.log(`Failed to process ${branch}: ${error.message}`, 'error')
-          }
-        }
-
-        // Longer delay between batches
-        await new Promise(resolve => setTimeout(resolve, 5000))
-        
-        // Pull latest changes every 10 batches
-        if ((i / this.batchSize) % 10 === 0) {
-          try {
-            await this.runCommand('git pull --rebase origin main', 'Pulling latest changes')
-          } catch (pullError) {
-            this.log(`Warning: Could not pull latest changes: ${pullError.message}`, 'warning')
-          }
-        }
-      }
-
-      // Generate final report
-      this.generateReport()
-    } catch (error) {
-      this.log(`Automation failed: ${error.message}`, 'error')
-    }
-  }
-
-  generateReport() {
-    const endTime = Date.now()
-    const duration = Math.round((endTime - this.startTime) / 1000)
-
-    const report = {
-      summary: {
-        totalBranches: this.processedBranches.length,
-        successfullyMerged: this.mergedBranches.length,
-        failedBranches: this.failedBranches.length,
-        conflictsResolved: this.conflictsResolved,
-        duration: `${duration} seconds`
-      },
-      processedBranches: this.processedBranches,
-      mergedBranches: this.mergedBranches,
-      failedBranches: this.failedBranches,
-      timestamp: new Date().toISOString()
-    }
-
-    // Save report to file
-    fs.writeFileSync('comprehensive-pr-merge-report.json', JSON.stringify(report, null, 2))
-
-    // Display summary
-    console.log('\n🎉 Comprehensive PR Merge Complete!')
-    console.log('===================================')
-    console.log(`Total branches processed: ${this.processedBranches.length}`)
-    console.log(`Successfully merged: ${this.mergedBranches.length}`)
-    console.log(`Failed branches: ${this.failedBranches.length}`)
-    console.log(`Conflicts resolved: ${this.conflictsResolved}`)
-    console.log(`Duration: ${duration} seconds`)
-
-    if (this.failedBranches.length > 0) {
-      console.log('\n❌ Failed branches:')
-      this.failedBranches.slice(0, 10).forEach(failure => {
-        console.log(`  - ${failure.branch}: ${failure.error}`)
-      })
-      if (this.failedBranches.length > 10) {
-        console.log(`  ... and ${this.failedBranches.length - 10} more`)
-      }
-    }
-
-    console.log('\n📊 Detailed report saved to: comprehensive-pr-merge-report.json')
+// Utility functions
+function execCommand(command, options = {}) {
+  try {
+    console.log(`📝 Executing: ${command}`);
+    const result = execSync(command, { 
+      encoding: 'utf8', 
+      stdio: 'pipe',
+      ...options 
+    });
+    return result.trim();
+  } catch (error) {
+    console.error(`❌ Command failed: ${command}`);
+    console.error(`Error: ${error.message}`);
+    return null;
   }
 }
 
-// Run the automation
-const automation = new ComprehensivePRMerger()
-automation.runAutomation().then(() => {
-  console.log('\n🚀 Comprehensive PR merge automation completed!')
-}).catch(error => {
-  console.error('Automation failed:', error.message)
-  process.exit(1)
-})
+function logStep(step, message) {
+  console.log(`\n🔄 Step ${step}: ${message}`);
+  console.log('=' .repeat(50));
+}
+
+// Get all open PRs
+async function getOpenPRs() {
+  logStep(1, 'Fetching open PRs from GitHub');
+  try {
+    const response = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/pulls?state=open&per_page=100`);
+    const prs = await response.json();
+    console.log(`📊 Found ${prs.length} open PRs`);
+    return prs.map(pr => ({
+      number: pr.number,
+      title: pr.title,
+      headRef: pr.head.ref,
+      headSha: pr.head.sha,
+      baseRef: pr.base.ref,
+      mergeable: pr.mergeable,
+      mergeable_state: pr.mergeable_state,
+      url: pr.html_url
+    }));
+  } catch (error) {
+    console.error('❌ Failed to fetch PRs:', error.message);
+    return [];
+  }
+}
+
+// Check if branch exists locally
+function branchExists(branchName) {
+  try {
+    execCommand(`git show-ref --verify --quiet refs/heads/${branchName}`);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// Fetch and checkout PR branch
+function fetchAndCheckoutPR(pr) {
+  logStep(2, `Processing PR #${pr.number}: ${pr.title}`);
+  const branchName = pr.headRef;
+  const remoteBranch = `origin/${branchName}`;
+  console.log(`🔍 Checking out branch: ${branchName}`);
+  // Fetch the branch
+  const fetchResult = execCommand(`git fetch origin ${branchName}`);
+  if (!fetchResult) {
+    console.error(`❌ Failed to fetch branch ${branchName}`);
+    return false;
+  }
+  // Checkout the branch
+  const checkoutResult = execCommand(`git checkout ${branchName}`);
+  if (!checkoutResult) {
+    console.error(`❌ Failed to checkout branch ${branchName}`);
+    return false;
+  }
+  return true;
+}
+
+// Resolve merge conflicts automatically
+function resolveConflicts() {
+  logStep(3, 'Resolving merge conflicts automatically');
+  try {
+    // Get list of conflicted files
+    const conflictedFiles = execCommand('git diff --name-only --diff-filter=U');
+    if (!conflictedFiles) {
+      console.log('✅ No merge conflicts found');
+      return true;
+    }
+    const files = conflictedFiles.split('\n').filter(f => f.trim());
+    console.log(`🔧 Found ${files.length} conflicted files`);
+    for (const file of files) {
+      console.log(`🔧 Resolving conflicts in: ${file}`);
+      if (fs.existsSync(file)) {
+        // Read the file
+        let content = fs.readFileSync(file, 'utf8');
+        // Apply conflict resolution strategy
+        if (CONFLICT_RESOLUTION_STRATEGY === 'ours') {
+          // Keep our version (main branch)
+          content = content.replace(/
+        } else if (CONFLICT_RESOLUTION_STRATEGY === 'theirs') {
+          // Keep their version (PR branch)
+          content = content.replace(/
+        } else {
+          // Manual resolution - keep both and add comments
+          content = content.replace(/
+            '// CONFLICT RESOLVED: Keeping both versions\n$1\n// END CONFLICT\n$2\n// END CONFLICT\n');
+        }
+        // Write the resolved content
+        fs.writeFileSync(file, content);
+        console.log(`✅ Resolved conflicts in: ${file}`);
+      }
+    }
+    // Add resolved files
+    execCommand('git add .');
+    return true;
+  } catch (error) {
+    console.error('❌ Failed to resolve conflicts:', error.message);
+    return false;
+  }
+}
+
+// Merge PR into main
+function mergePR(pr) {
+  logStep(4, `Merging PR #${pr.number} into main`);
+  try {
+    // Switch to main branch
+    execCommand('git checkout main');
+    // Pull latest main
+    execCommand('git pull origin main');
+    // Merge the PR branch
+    const mergeResult = execCommand(`git merge ${pr.headRef} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`);
+    if (mergeResult) {
+      console.log(`✅ Successfully merged PR #${pr.number}`);
+      // Push to main
+      const pushResult = execCommand('git push origin main');
+      if (pushResult) {
+        console.log(`✅ Successfully pushed PR #${pr.number} to main`);
+        return true;
+      }
+    }
+    return false;
+  } catch (error) {
+    console.error(`❌ Failed to merge PR #${pr.number}:`, error.message);
+    return false;
+  }
+}
+
+// Clean up merged branch
+function cleanupBranch(pr) {
+  logStep(5, `Cleaning up branch for PR #${pr.number}`);
+  try {
+    // Delete local branch
+    execCommand(`git branch -D ${pr.headRef}`);
+    // Delete remote branch
+    execCommand(`git push origin --delete ${pr.headRef}`);
+    console.log(`✅ Cleaned up branch: ${pr.headRef}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ Failed to cleanup branch:`, error.message);
+    return false;
+  }
+}
+
+// Main execution function
+async function main() {
+  try {
+    // Get all open PRs
+    const prs = await getOpenPRs();
+    if (prs.length === 0) {
+      console.log('✅ No open PRs found');
+      return;
+    }
+    // Sort PRs by number (oldest first)
+    prs.sort((a, b) => a.number - b.number);
+    console.log(`\n📋 Processing ${prs.length} PRs:`);
+    prs.forEach(pr => {
+      console.log(`  - PR #${pr.number}: ${pr.title} (${pr.headRef})`);
+    });
+    let successCount = 0;
+    let failureCount = 0;
+    // Process each PR
+    for (const pr of prs) {
+      console.log(`\n🔄 Processing PR #${pr.number}: ${pr.title}`);
+      try {
+        // Fetch and checkout PR
+        if (!fetchAndCheckoutPR(pr)) {
+          failureCount++;
+          continue;
+        }
+        // Switch to main and attempt merge
+        execCommand('git checkout main');
+        // Try to merge
+        const mergeResult = execCommand(`git merge ${pr.headRef} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`);
+        if (mergeResult) {
+          // Check for conflicts
+          const status = execCommand('git status --porcelain');
+          if (status && status.includes('UU')) {
+            console.log(`⚠️  Merge conflicts detected for PR #${pr.number}`);
+            // Resolve conflicts
+            if (resolveConflicts()) {
+              // Commit the resolution
+              execCommand(`git commit -m "Resolve merge conflicts for PR #${pr.number}"`);
+              // Push to main
+              const pushResult = execCommand('git push origin main');
+              if (pushResult) {
+                console.log(`✅ Successfully merged PR #${pr.number} with conflict resolution`);
+                successCount++;
+                // Cleanup
+                cleanupBranch(pr);
+              } else {
+                console.error(`❌ Failed to push PR #${pr.number}`);
+                failureCount++;
+              }
+            } else {
+              console.error(`❌ Failed to resolve conflicts for PR #${pr.number}`);
+              failureCount++;
+            }
+          } else {
+            // No conflicts, push directly
+            const pushResult = execCommand('git push origin main');
+            if (pushResult) {
+              console.log(`✅ Successfully merged PR #${pr.number}`);
+              successCount++;
+              // Cleanup
+              cleanupBranch(pr);
+            } else {
+              console.error(`❌ Failed to push PR #${pr.number}`);
+              failureCount++;
+            }
+          }
+        } else {
+          console.error(`❌ Failed to merge PR #${pr.number}`);
+          failureCount++;
+        }
+      } catch (error) {
+        console.error(`❌ Error processing PR #${pr.number}:`, error.message);
+        failureCount++;
+      }
+    }
+    // Summary
+    console.log('\n' + '='.repeat(60));
+    console.log('📊 MERGE SUMMARY');
+    console.log('='.repeat(60));
+    console.log(`✅ Successfully merged: ${successCount} PRs`);
+    console.log(`❌ Failed to merge: ${failureCount} PRs`);
+    console.log(`📊 Total processed: ${prs.length} PRs`);
+    if (successCount > 0) {
+      console.log('\n🎉 Some PRs were successfully merged!');
+    }
+    if (failureCount > 0) {
+      console.log('\n⚠️  Some PRs failed to merge. Check the logs above for details.');
+    }
+  } catch (error) {
+    console.error('❌ Fatal error:', error.message);
+    process.exit(1);
+  }
+}
+
+// Run the main function
+if (require.main === module) {
+  main().catch(console.error);
+}
+
+module.exports = { main, getOpenPRs, fetchAndCheckoutPR, resolveConflicts, mergePR, cleanupBranch };

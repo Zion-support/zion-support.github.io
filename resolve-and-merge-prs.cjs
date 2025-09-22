@@ -1,212 +1,145 @@
-#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
-
-// Colors for console output
-const colors = {
-  reset: '\x1b[0m',
-  red: '\x1b[31m',
-  green: '\x1b[32m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  cyan: '\x1b[36m'
-};
-
-function log(message, color = 'reset') {
-  console.log(`${colors[color]}${message}${colors.reset}`);
-}
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
+const fs = require('fs');
+console.log('🚀 Starting PR Resolution and Merge Process...\n');
+// Function to run git commands safely;
+function runGitCommand(command, description) {
   try {
-    if (!fs.existsSync(filePath)) {
-      return false;
-    }
-
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let fixed = false;
-
-    // Check if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      log(`🔧 Resolving conflicts in: ${filePath}`, 'yellow');
-      
-      // Remove merge conflict markers and keep HEAD version (first part)
-      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*\n?/g, '$1');
-      
-      // Remove any remaining conflict markers
-      content = content.replace(/<<<<<<< [^\n]*\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-      
-      // Clean up extra whitespace
-      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-      content = content.replace(/^\s+$/gm, '');
-      
-      fixed = true;
-    }
-
-    if (fixed && content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      log(`✅ Resolved conflicts in: ${filePath}`, 'green');
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-    log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`, 'red');
-    return false;
-  }
+  // TODO: Implement
 }
+    console.log(`📝 ${description}...`);
 
-// Function to find files with merge conflicts
-function findConflictedFiles() {
-  const conflictedFiles = [];
-  
-  function scanDirectory(dir) {
-    try {
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          scanDirectory(fullPath);
-        } else if (stat.isFile() && (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.md'))) {
+      cwd: process.cwd()
+    });`;
+    console.log(`✅ ${description} completed successfully`);
+    return result;
+
+    return null;
+
+// Function to check if we can merge a PR;
+function canMergePR(prNumber) {
+  // TODO: Implement
+    const result = runGitCommand(`;
+      `curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${prNumber}"`,"`;
+      `Checking PR #${prNumber} status`)
+    );
+    if (result) {
+      const pr = JSON.parse(result);
+      return {
+  // TODO: Implement
+        number: pr.number,
+        title: pr.title,
+        mergeable: pr.mergeable,
+        mergeable_state: pr.mergeable_state,
+        head: pr.head.ref,
+        base: pr.base.ref,
+        draft: pr.draft;
+      };
+
+
+// Function to resolve merge conflicts;
+function resolveMergeConflicts() {"
+  console.log('\n🔧 Resolving merge conflicts...\n');
+  // First, let's check current status;
+
+    if (statusResult) {
+      const conflictedFiles = statusResult;
+        .split('\n')
+        .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
+<<<<<<< HEAD
+        .map(line => line.split(' ').pop());
+      
+      console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
+      
+      // Try to resolve conflicts automatically
+      for (const file of conflictedFiles) {
+        if (fs.existsSync(file)) {
+          console.log(`🔧 Resolving conflicts in ${file}...`);
+          
           try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-              conflictedFiles.push(fullPath);
-            }
+            let content = fs.readFileSync(file, 'utf8');
+            
+            // Remove conflict markers and keep both versions where possible
+            content = content
+<<<<<<< HEAD
+              .replace(/[^\n]+\n/g, '')
+              .replace(/<<<<<<< [^\n]+\n/g, '')
+              .replace(/=======\n/g, '')
+              .replace(/[^\n]+\n/g, '');
+=======
+              .replace(/
+              .replace(/<<<<<<< [^\n]+\n/g, '')
+<<<<<<< HEAD
+              .replace(/\n/g, '')
+              .replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              .replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            
+            fs.writeFileSync(file, content);
+            console.log(`✅ Resolved conflicts in ${file}`);
           } catch (error) {
-            // Skip files that can't be read
+            console.log(`❌ Failed to resolve conflicts in ${file}: ${error.message}`);
           }
         }
       }
-    } catch (error) {
-      // Skip directories that can't be read
-    }
-  }
-
-  scanDirectory('.');
-  return conflictedFiles;
-}
-
-// Function to merge PRs
-async function mergePRs() {
-  try {
-    log('🔄 Starting PR merge process...', 'cyan');
-    
-    // Switch to main branch
-    execSync('git checkout main', { stdio: 'inherit' });
-    log('✅ Switched to main branch', 'green');
-    
-    // Pull latest changes
-    execSync('git pull origin main', { stdio: 'inherit' });
-    log('✅ Pulled latest changes from main', 'green');
-    
-    // List of PR branches to merge
-    const prBranches = [
-      'cursor/fix-netlify-build-and-merge-to-main-c6f9',
-      'cursor/build-application-with-vite-and-nextjs-2b63'
-    ];
-    
-    for (const branch of prBranches) {
-      try {
-        log(`🔄 Attempting to merge branch: ${branch}`, 'blue');
-        
-        // Fetch the branch
-        execSync(`git fetch origin ${branch}`, { stdio: 'inherit' });
-        
-        // Check if branch exists
-        try {
-          execSync(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, { stdio: 'pipe' });
-        } catch (error) {
-          log(`⚠️ Branch ${branch} not found, skipping...`, 'yellow');
-          continue;
-        }
-        
-        // Merge the branch
-        execSync(`git merge origin/${branch} --no-ff -m "Merge PR branch: ${branch}"`, { stdio: 'inherit' });
-        log(`✅ Successfully merged branch: ${branch}`, 'green');
-        
-      } catch (error) {
-        log(`❌ Failed to merge branch ${branch}: ${error.message}`, 'red');
-        // Continue with other branches
-      }
-    }
-    
-  } catch (error) {
-    log(`❌ Error during PR merge process: ${error.message}`, 'red');
-    throw error;
-  }
-}
-
-// Function to verify build
-function verifyBuild() {
-  try {
-    log('🔍 Verifying build...', 'cyan');
-    execSync('npm install', { stdio: 'inherit' });
-    execSync('npm run build', { stdio: 'inherit' });
-    log('✅ Build successful!', 'green');
-    return true;
-  } catch (error) {
-    log(`❌ Build failed: ${error.message}`, 'red');
-    return false;
-  }
-}
-
-// Main function
-async function main() {
-  try {
-    log('🚀 Starting comprehensive merge conflict resolution and PR merging...', 'cyan');
-    
-    // Step 1: Find and resolve merge conflicts
-    log('🔍 Searching for files with merge conflicts...', 'blue');
-    const conflictedFiles = findConflictedFiles();
-    
-    if (conflictedFiles.length === 0) {
-      log('✅ No merge conflicts found!', 'green');
-    } else {
-      log(`Found ${conflictedFiles.length} files with merge conflicts:`, 'yellow');
-      conflictedFiles.forEach(file => log(`  - ${file}`, 'yellow'));
       
-      let resolvedCount = 0;
+      // Add resolved files
+      runGitCommand('git add .', 'Adding resolved files');
+      
+      // Commit the merge
+      runGitCommand('git commit -m "Resolve merge conflicts automatically"', 'Committing merge resolution');
+    }
+  }
+}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+      console.log(`Found ${conflictedFiles.length} conflicted files:`, conflictedFiles);
+      // Try to resolve conflicts automatically;
       for (const file of conflictedFiles) {
-        if (resolveMergeConflicts(file)) {
-          resolvedCount++;
-        }
-      }
-      
-      log(`🎉 Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`, 'green');
-    }
-    
-    // Step 2: Merge PRs
-    await mergePRs();
-    
-    // Step 3: Verify build
-    if (verifyBuild()) {
-      // Step 4: Commit and push changes
-      log('📤 Committing and pushing changes...', 'cyan');
-      execSync('git add .', { stdio: 'inherit' });
-      execSync('git commit -m "Resolve merge conflicts and merge PRs into main branch"', { stdio: 'inherit' });
-      execSync('git push origin main', { stdio: 'inherit' });
-      log('🎉 All changes committed and pushed successfully!', 'green');
-    } else {
-      log('⚠️ Build verification failed. Please check the errors above.', 'yellow');
-    }
-    
-  } catch (error) {
-    log(`❌ Error during execution: ${error.message}`, 'red');
-    process.exit(1);
-  }
-}
+        if (fs.existsSync(file)) {`;
+          console.log(`🔧 Resolving conflicts in ${file}...`);
+  // TODO: Implement
 
-// Run main function
-if (require.main === module) {
-  main();
-}
+            // Remove conflict markers and keep both versions where possible;
+            content = content;
+              .replace(/
+            )
 
-module.exports = { resolveMergeConflicts, findConflictedFiles, mergePRs, verifyBuild };
+  if (prInfo.draft) {`;
+    console.log(`⚠️  PR #${prNumber} is a draft. Converting to ready for review...`);
+    // Convert draft to ready for review;
+
+      `Converting PR #${prNumber} to ready for review`)
+  if (prInfo.mergeable === false) {`;
+    console.log(`⚠️  PR #${prNumber} has merge conflicts. Attempting to resolve...`);
+    resolveMergeConflicts();
+  // Try to merge the PR;`;
+  console.log(`🔄 Attempting to merge PR #${prNumber}...`);
+
+      return false;
+
+// Main execution;
+async function main() {
+  console.log('📋 Checking open PRs...\n');
+  // Get list of open PRs;
+
+  if (!prsResult) {
+    console.log('❌ Failed to fetch PRs');
+    return;
+  const prs = JSON.parse(prsResult);`;
+  console.log(`Found ${prs.length} open PRs\n`);
+  // Process each PR;
+  for (const pr of prs) {
+    const prInfo = canMergePR(pr.number);
+
+        const merged = mergePR(pr.number, prInfo);
+        if (merged) {`;
+          console.log(`✅ PR #${pr.number} merged successfully`);
+  // TODO: Implement
+        console.log(`⚠️  PR #${pr.number} cannot be merged automatically`);
+  // Update local main branch;
+

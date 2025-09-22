@@ -1,18 +1,41 @@
-#!/usr/bin/env node
 
 const fs = require('fs');
 const { execSync } = require('child_process');
-
 console.log('🔧 Resolving New Merge Conflicts');
-console.log('=====');
+<<<<<<< HEAD
+<<<<<<< HEAD
+console.log('=================================');
 
+:scripts/resolve-new-merge-conflicts.cjs
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {
   return content
-// Function to fix common syntax errors
+    .replace(/[a-f0-9]+/g, '');
+=======
+console.log('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}
+
+// Function to fix common syntax errors;)
 function fixSyntaxErrors(content) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Function to fix all remaining critical syntax errors
+function fixCriticalSyntax(content) {
+:backup-problematic-files/scripts/final-critical-fix.cjs
+:scripts/resolve-new-merge-conflicts.cjs
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return content
     // Fix malformed JSX tags
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
     .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm, '<h1$1>$2</h1>')
@@ -20,57 +43,13 @@ function fixSyntaxErrors(content) {
     .replace(/<span([^>]*)>([^<]+)><\/span>/gm, '<span$1>$2</span>')
     .replace(/<div([^>]*)>([^<]+)><\/div>/gm, '<div$1>$2</div>')
     .replace(/<motion\.div([^>]*)>([^<]+)><\/motion\.div>/gm, '<motion.div$1>$2</motion.div>')
-    
-    // Fix malformed meta tags
+</motion>
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
+</meta>
     .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
-    
-    // Fix object literal syntax
-    .replace(/\{\s*$/gm, '{')
-    .replace(/\[\s*$/gm, '[')
-    .replace(/\(\s*$/gm, '(')
-    
-    // Fix semicolons in wrong places
-    .replace(/;\s*$/gm, '')
-    .replace(/;\s*}/g, '}')
-    .replace(/;\s*]/g, ']')
-    .replace(/;\s*\)/g, ')')
-    
-    // Fix array and object syntax
-    .replace(/\[\s*\{\s*$/gm, '[{')
-    .replace(/\{\s*\[\s*$/gm, '{[')
-    .replace(/\}\s*\]\s*$/gm, '}]')
-    .replace(/\]\s*\}\s*$/gm, ']}')
-    
-    // Fix empty objects and arrays
-    .replace(/\{\s*\}/g, '{}')
-    .replace(/\[\s*\]/g, '[]')
-    
-    // Fix trailing commas
-    .replace(/,\s*}/g, '}')
-    .replace(/,\s*]/g, ']')
-    .replace(/,\s*\)/g, ')')
-    
-    // Clean up extra semicolons
-    .replace(/;;+/g, ';')
-    .replace(/;\s*;/g, ';')
-    
-    // Clean up whitespace
-    .replace(/\n\s*\n\s*\n/g, '\n\n')
-    .replace(/\s+$/gm, '');
-}
 
-// Files with merge conflicts
-const conflictFiles = [
-  'components/Footer.tsx',
-  'components/Header.tsx',
-  'components/Layout.tsx',
-  'pages/accessibility.tsx',
-  'pages/ai-services.tsx',
-  'pages/api.tsx',
-  'pages/careers.tsx'
-];
 
+<<<<<<< HEAD
 let totalFixed = 0;
 
 console.log('🔍 Resolving merge conflicts in files...');
@@ -83,33 +62,18 @@ for (const file of conflictFiles) {
     }
 
     let content = fs.readFileSync(file, 'utf8');
-    let modified = false;
-
-    // Check for merge conflict markers
 <<<<<<< HEAD
-=======
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
-      console.log(`🔧 Resolving merge conflicts in ${file}`);
-      content = resolveMergeConflicts(content);
-      modified = true;
-    }
-
-    // Fix syntax errors
     const originalContent = content;
-    content = fixSyntaxErrors(content);
+    
+    content = fixCriticalSyntax(content);
     
     if (content !== originalContent) {
-      console.log(`🔧 Fixing syntax errors in ${file}`);
-      modified = true;
-    }
-
-    if (modified) {
       fs.writeFileSync(file, content);
       console.log(`✅ Fixed ${file}`);
       totalFixed++;
     }
   } catch (error) {
-    console.log(`❌ Error processing ${file}: ${error.message}`);
+    console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
 }
 
@@ -122,30 +86,40 @@ try {
 });
   console.log('✅ Build successful!');
 } catch (error) {
-  console.log('⚠️  Build still has issues, but conflicts were resolved');
+  console.log('⚠️  Build still has issues, but syntax was fixed');
   console.log('Error:', error.message);
 }
 
-// Commit the merge
-console.log('\n📝 Committing merge...');
+// Commit the fixes
+console.log('\n📝 Committing syntax fixes...');
 try {
   execSync('git add .', { cwd: '/workspace' }
 });
-  execSync('git commit -m "resolve: Merge conflicts resolved and syntax errors fixed"', { cwd: '/workspace' }
+  execSync('git commit -m "fix: Final critical syntax fix for all remaining errors"', { cwd: '/workspace' }
 });
-  console.log('✅ Merge committed');
+  console.log('✅ Syntax fixes committed');
 } catch (error) {
-  console.log('⚠️  Failed to commit merge:', error.message);
+  console.log('⚠️  Failed to commit syntax fixes:', error.message);
 }
 
 // Push changes
-console.log('\n🚀 Pushing changes to main branch...');
+console.log('\n🚀 Pushing syntax fixes to main branch...');
 try {
   execSync('git push origin main', { cwd: '/workspace' }
 });
-  console.log('✅ Changes pushed to main branch');
+  console.log('✅ Syntax fixes pushed to main branch');
 } catch (error) {
-  console.log('⚠️  Failed to push changes:', error.message);
+  console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
 
-console.log('\n🎉 Merge conflict resolution completed!');
+console.log('\n🎉 Final critical fix completed!');
+:backup-problematic-files/scripts/final-critical-fix.cjs
+    let modified = false;
+
+    // Check for merge conflict markers
+:scripts/resolve-new-merge-conflicts.cjs
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

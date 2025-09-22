@@ -1,7 +1,13 @@
+
+
+
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -24,3 +30,11 @@ const filesToFix = ['pages/api/health.ts']
     content = content.replace(/"([^"]*?)"\s*"([^"]*?)"/g, '"$1$2"
     content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3"
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

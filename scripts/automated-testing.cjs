@@ -1,26 +1,57 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");"console.log(" Running Automated Tests.");const testReport = { timestamp: new Date().toISOString()," tests: []," summary: { total: 0," passed: 0," failed: 0 }};function runTest(name, testFn) { testReport.summary.total++; try { const result = testFn;(;); testReport.tests.push({ name,"" status: "pass", result }); testReport.summary.passed++;" console.log(" " + name + ": PASSED")} catch (error) { testReport.tests.push({ name,"" status: "fail"," error: error.message }); testReport.summary.failed++;" console.log(" " + name + ": FAILED - " + error.message)}}/ Test build process"runTest("Build Process", () => {"" execSync("npm run build", { stdio: "pipe" });" return "Build completed successfully"});/ Test linting"runTest("Code Linting", () => {"" execSync("npm run lint", { stdio: "pipe" });" return "Linting passed"});/ Test TypeScript compilation"runTest("TypeScript Compilation", () => {"" execSync("npm run type-check", { stdio: "pipe" });" return "TypeScript compilation successful"});/ Test security audit"runTest("Security Audit", () => { try {"" execSync("npm audit --audit-level=moderate", { stdio: "pipe" });" return "Security audit passed"} catch (error) {" / Security audit might fail with vulnerabilities, but that"s expected" return "Security audit completed (vulnerabilities may exist)"}});/ Save report"fs.writeFileSync("test-automation-report.json", JSON.stringify(testReport, null, 2));"console.log(" Test report saved to test-automation-report.json");""console.log(" Test Summary: " + testReport.summary.passed + "/" + testReport.summary.total + " passed");process.exit(testReport.summary.failed > 0 ? 1 : 0);"""
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
-    for (const test of tests) {
-      try {
-        console.log(`Running ${test.name}...`)
-        execSync(test.command, { cwd: this.projectRoot, stdio: "inherit" })
-        this.testResults.push({ name: test.name, status: "PASSED" })
-        console.log(`✅ ${test.name} passed`),,
-} catch (error) {
-        this.testResults.push({ name: test.name, status: "FAILED", error: error.message })
-        console.log(`❌ ${test.name} failed: ${error.message}`),,
-}
-    }
-    this.saveResults(),,
-}
-  saveResults() {
-    const reportPath = path.join(this.projectRoot, "automation-reports", "test-results.json")
-    fs.writeFileSync(reportPath, JSON.stringify(this.testResults, null, 2))
-    console.log("📊 Test results saved to automation-reports/test-results.json"),,
-}
-}
-if (require.main === module) {
-  const tester = new AutomatedTesting()
-  tester.runAllTests(),,
-}
-module.exports = AutomatedTesting
+const fs = require('fs')
+const path = require('path')
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+const { execSync } = require('child_process')
+<<<<<<< HEAD
+console.log('🧪 Running Automated Tests...')
+      "status"
+      "status"
+  execSync('npm run build', { "stdio"})
+  execSync('npm run lint', { "stdio"})
+  execSync('npm run type-check', { "stdio"})
+    execSync('npm audit --audit-level=moderate', { "stdio"})
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+console.log('🧪 Test "Summary")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+console.log('🧪 Test "Summary")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+console.log('🧪 Test "Summary")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,70 +1,24 @@
-#!/usr/bin/env node/usr/bin/env node;const { execSync } = require("$1");"const fs = require("fs");class TestingPipeline {; constructor() {; this.results = {;" timestamp: new Date().toISOString()," tests: []," coverage: {}," summary: { passed: 0, failed: 0, total: 0 } } }; async runPipeline() {;" console.log(" Starting Testing Pipeline."); try {; await this.runUnitTests(); await this.runIntegrationTests(); await this.runE2ETests(); await this.generateCoverageReport(); this.generateReport();" console.log(" Testing pipeline completed"),} catch (error) {;" console.error(" Testing pipeline failed: ", error.message); process.exit(1),} }; async runUnitTests() {;" console.log(" Running unit tests."); try {;" const result = execSync("npm run test: unit", { encoding: "utf8" });" this.results.tests.push({ type: "unit", status: "passed", output: result }); this.results.summary.passed++,} catch (error) {;" this.results.tests.push({ type: "unit", status: "failed", error: error.message }); this.results.summary.failed++,} this.results.summary.total++,}; async runIntegrationTests() {;" console.log(" Running integration tests."); try {;" const result = execSync("npm run test: integration", { encoding: "utf8" });" this.results.tests.push({ type: "integration", status: "passed", output: result }); this.results.summary.passed++,} catch (error) {;" this.results.tests.push({ type: "integration", status: "failed", error: error.message }); this.results.summary.failed++,} this.results.summary.total++,}; async runE2ETests() {;" console.log(" Running E2E tests."); try {;" const result = execSync("npm run test: e2e", { encoding: "utf8" });" this.results.tests.push({ type: "e2e", status: "passed", output: result }); this.results.summary.passed++,} catch (error) {;" this.results.tests.push({ type: "e2e", status: "failed", error: error.message }); this.results.summary.failed++,} this.results.summary.total++,}; async generateCoverageReport() {;" console.log(" Generating coverage report."); try {;" const result = execSync("npm run test: coverage", { encoding: "utf8" });" this.results.coverage = { status: "generated", output: result } } catch (error) {;" this.results.coverage = { status: "failed", error: error.message } } }; generateReport() {;" const reportPath = "testing-pipeline-report.json"; fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));" console.log("\n Testing Pipeline Results: ");" console.log("=".repeat(50)); console.log(`Total Tests: ${this.results.summary.total}`);"` console.log(`Passed: ${this.results.summary.passed}`);"` console.log(`Failed: ${this.results.summary.failed}`);" console.log("=".repeat(50));"` console.log(` Report saved to: ${reportPath}`),}};/ Run the pipeline;const pipeline = new TestingPipeline();pipeline.runPipeline().catch(console.error)"`"`
-#!/usr/bin/env node;
-  async runPipeline() {
-    console.log("🧪 Starting Testing Pipeline...");
-    try {
-      await this.runUnitTests()
-      await this.runIntegrationTests()
-      await this.runE2ETests()
-      await this.generateCoverageReport()
-      this.generateReport()
-      console.log("✅ Testing pipeline completed"),,
-} catch (error) {
-      console.error("❌ Testing pipeline failed:", error.message)
-      process.exit(1),,
-}
-  }
-  async runUnitTests() {
-    console.log("🔬 Running unit tests...")
-    try {
-      const result = execSync("npm run test:unit", { encoding: "utf8" })
-      this.results.tests.push({ type: "unit", status: "passed", output: result })
-      this.results.summary.passed++,,
-} catch (error) {
-      this.results.tests.push({ type: "unit", status: "failed", error: error.message })
-      this.results.summary.failed++,,
-}
-    this.results.summary.total++,,
-}
-  async runIntegrationTests() {
-    console.log("🔗 Running integration tests...")
-    try {
-      const result = execSync("npm run test:integration", { encoding: "utf8" })
-      this.results.tests.push({ type: "integration", status: "passed", output: result })
-      this.results.summary.passed++,,
-} catch (error) {
-      this.results.tests.push({ type: "integration", status: "failed", error: error.message })
-      this.results.summary.failed++,,
-}
-    this.results.summary.total++,,
-}
-  async runE2ETests() {
-    console.log("🎭 Running E2E tests...")
-    try {
-      const result = execSync("npm run test:e2e", { encoding: "utf8" })
-      this.results.tests.push({ type: "e2e", status: "passed", output: result })
-      this.results.summary.passed++,,
-} catch (error) {
-      this.results.tests.push({ type: "e2e", status: "failed", error: error.message })
-      this.results.summary.failed++,,
-}
-    this.results.summary.total++,,
-}
-  async generateCoverageReport() {
-    console.log("📊 Generating coverage report...")
-    try {
-      const result = execSync("npm run test:coverage", { encoding: "utf8" })
-      this.results.coverage = { status: "generated", output: result }
-    } catch (error) {
-      this.results.coverage = { status: "failed", error: error.message }    }
-  }
-
-  generateReport() {
-    const reportPath = "testing-pipeline-report.json";
-// Run the pipeline;
 <<<<<<< HEAD
-const pipeline = new TestingPipeline();
-pipeline.runPipeline().catch(console.error)
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+#!/usr/bin/env node;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require("$1")
 const fs = require("fs")
       "timestamp"
@@ -96,7 +50,23 @@ const fs = require("fs")
 // console.log(`"Passed"`)
     console.log(`"Failed"`)
 // console.log("=")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
     console.log(`� Report saved "to"`)
 =======
-const pipeline = new TestingPipeline()
-pipeline.runPipeline().catch(console.error)
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

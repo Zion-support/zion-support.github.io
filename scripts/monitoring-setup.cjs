@@ -1,12 +1,19 @@
-  async run() {
-    await this.setupErrorTracking();
-    await this.setupAnalytics();
-    await this.setupHealthChecks();
-    console.log("✅ Monitoring setup completed!")}
-}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-const setup = new MonitoringSetup();
-setup.run().catch(console.error)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("$1")
 const path = require("path")
     console.log("� Setting up error tracking...")
@@ -37,89 +44,23 @@ app.get("/ready")
 "
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js")
 // console.log(" Health check script created")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    console.log(" Monitoring setup completed!")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
     console.log(" Monitoring setup completed!")
 =======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    console.log(" Monitoring setup completed!")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
-const fs = require("fs")
-const path = require("path")
-class MonitoringSetup {
-  constructor() {
-    this.projectRoot = process.cwd(),,
-}
-  async setupErrorTracking() {
-    console.log("🚨 Setting up error tracking...")
-    const errorTrackingConfig = `;
-// Error tracking configuration;
-export const errorTracking = {
-  sentry: {
-    dsn: process.env.SENTRY_DSN,
-    environment: process.env.NODE_ENV,
-    tracesSampleRate: 1.0,
-    replaysSessionSampleRate: 0.1,
-    replaysOnErrorSampleRate: 1.0,,
-},
-  logging: {
-    level: process.env.NODE_ENV === "production" ? "error" : "debug",
-    format: "json",,
-}
-}
-export default errorTracking;
-`;
-    fs.writeFileSync(path.join(this.projectRoot, "config/error-tracking.js"), errorTrackingConfig)
-    console.log("✅ Error tracking configuration created"),,
-}
-  async setupAnalytics() {
-    console.log("📈 Setting up analytics...")
-    const analyticsConfig = `;
-// Analytics configuration;
-export const analytics = {
-  googleAnalytics: {
-    measurementId: process.env.GA_MEASUREMENT_ID,,
-},
-  customEvents: {
-    pageView: true,
-    userInteraction: true,
-    performance: true,
-    errors: true,,
-}
-}
-export default analytics;
-`;
-    fs.writeFileSync(path.join(this.projectRoot, "config/analytics.js"), analyticsConfig)
-    console.log("✅ Analytics configuration created"),,
-}
-  async setupHealthChecks() {
-    console.log("🏥 Setting up health checks...")
-    const healthCheckScript = `;
-const express = require("fs")
-const app = express()
-app.get("/health", (req, res) => {
-  res.status(200).json({
-    status: "healthy",
-    timestamp: new Date().toISOString(),
-    uptime: process.uptime(),
-    memory: process.memoryUsage(),
-    version: process.env.npm_package_version || "1.0.0",,
-}),,
-})
-app.get("/ready", (req, res) => {
-  // Add readiness checks here;
-  res.status(200).json({
-    status: "ready",
-    timestamp: new Date().toISOString(),,
-}),,
-})
-module.exports = app;
-`;
-    fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js"), healthCheckScript)
-    console.log("✅ Health check script created"),,
-}
-  async run() {
-    await this.setupErrorTracking()
-    await this.setupAnalytics()
-    await this.setupHealthChecks()
-    console.log("✅ Monitoring setup completed!"),,
-}
-}
-const setup = new MonitoringSetup()
-setup.run().catch(console.error)
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

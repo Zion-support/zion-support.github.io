@@ -40,10 +40,8 @@ export class HealthChecker {
 
   getStatus() {
     const allResults = Array.from(this.results.values());
-
     const healthy = allResults.filter(r => r.status === 'healthy').length;
     const total = allResults.length;
-
     
     return {
   // TODO: Implement
@@ -70,9 +68,7 @@ export class PerformanceMonitor {
       console.warn(\`Timer "\${name}" was not started\`);"
       return;
 
-
     const duration = performance.now() - metric.start;
-
     metric.duration = duration;
     metric.end = performance.now();
     
@@ -82,8 +78,6 @@ export class PerformanceMonitor {
     this.thresholds.set(name, threshold);
 
   getMetrics() {
-
-
     for (const [name, metric] of this.metrics) {
       const threshold = this.thresholds.get(name);
       results[name] = {
@@ -135,6 +129,16 @@ export class ErrorTracker {
         .slice(0, 10)
 
 export const errorTracker = new ErrorTracker();
+export const errorTracker = new ErrorTracker();`;
+`
+
+  Object.entries(monitoringFiles).forEach(([filename, content]) => {
+    const fullPath = path.join('/workspace', filename);
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+    fs.writeFileSync(fullPath, content);`;
+    console.log(`Created ${filename}`);
+  });
+}
 
 // Call the monitoring function
 createAdvancedMonitoring();
@@ -194,9 +198,7 @@ export class MemoryCache {
 
   set(key, value, ttl = this.defaultTTL) {
     if (this.cache.size >= this.maxSize) {
-
       const firstKey = this.cache.keys().next().value;
-
       this.cache.delete(firstKey);
 
     this.cache.set(key, {
@@ -209,6 +211,9 @@ export class MemoryCache {
   clear() {
     this.cache.clear();
 
+  size() {
+    return this.cache.size;
+}`
 export const redisCache = new RedisCache();
   `,
     'cache/memory-cache.js': `// Memory-based caching system
@@ -256,8 +261,6 @@ export class MemoryCache {
       .sort((a, b) => a[1] - b[1])[0][0];
     this.delete(oldestKey);
   }
-
-
 }
 
 export const memoryCache = new MemoryCache();
@@ -268,6 +271,8 @@ export const memoryCache = new MemoryCache();
     const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
+    console.log(`Created ${filename}`);
+  });
     console.log(`[OK] Created ${filename}`);
   });
 });
@@ -288,9 +293,7 @@ export class RateLimiter {
 
   isAllowed(identifier) {
     const now = Date.now();
-
     const windowStart = now - this.windowMs;
-
     
     if (!this.requests.has(identifier)) {
       this.requests.set(identifier, []);
@@ -306,9 +309,7 @@ export class RateLimiter {
     recentRequests.push(now);
 
   getRemainingRequests(identifier) {
-
     const userRequests = this.requests.get(identifier) || [];
-
     
     return Math.max(0, this.maxRequests - recentRequests.length);
     'api/response-cache.js': `// Response caching middleware;
@@ -318,8 +319,6 @@ export class ResponseCache {
 
   generateKey(req) {`;
     return \`\${req.method}:\${req.url}:\${JSON.stringify(req.query)}\`;
-
-
 
 
     if (Date.now() > item.expiry) {
@@ -332,11 +331,11 @@ export class ResponseCache {
 
 
   Object.entries(apiFiles).forEach(([filename, content]) => {
-
     const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-
     fs.writeFileSync(fullPath, content);
+    console.log(`Created ${filename}`);
+  });
     console.log(`[OK] Created ${filename}`);
   });
 });
