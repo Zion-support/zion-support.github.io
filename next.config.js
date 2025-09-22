@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optimized for static export and Netlify deployment
-  output: 'export',
+  // Align with Next.js supported outputs (Next 12 -> 'standalone')
+  output: 'standalone',
   
   reactStrictMode: true,
   swcMinify: true,
