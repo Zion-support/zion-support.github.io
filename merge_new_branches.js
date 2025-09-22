@@ -37,7 +37,7 @@ function sleep(ms) {
 
 // Get all cursor branches
 function getCursorBranches() {
-  const result = execCommand('git branch -r | grep "origin/cursor" | grep -v backup | head -20');
+  const result = execCommand('git branch -r | grep "origin/cursor" | grep -v backup | head -100');
   if (!result.success) {
     console.error('Failed to get cursor branches:', result.error);
     return [];
