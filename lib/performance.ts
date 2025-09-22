@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Removed unused Metadata import to satisfy lint rules
 
 export function optimizeImages() {
   return {
