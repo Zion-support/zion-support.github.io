@@ -64,7 +64,7 @@ function Contact() {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
       
-      console.log('Form submitted:', formData)
+      // Form submitted successfully
       setSubmitSuccess(true)
       setFormData({ name: '', email: '', company: '', message: '', service: '' })
       setFormErrors({})
@@ -72,7 +72,7 @@ function Contact() {
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitSuccess(false), 5000)
     } catch (error) {
-      console.error('Error submitting form:', error)
+      // Swallow error in demo form
     } finally {
       setIsSubmitting(false)
     }
@@ -108,7 +108,7 @@ function Contact() {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Contact <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Us</span>
             </h1>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready to transform your business with cutting-edge technology? Let&apos;s discuss your project and how we can help you achieve your goals.
             </p>
           </div>
