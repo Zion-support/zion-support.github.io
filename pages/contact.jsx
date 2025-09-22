@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Contact() {
+function Contact() {
   return (
     <div>
       <main>
@@ -10,3 +10,5 @@ export default function Contact() {
     </div>
   )
 }
+
+export default Contact
