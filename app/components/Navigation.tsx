@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Menu, X, Zap } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,6 +21,7 @@ export default function Navigation() {
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Resources', href: '/content' },
@@ -51,9 +53,12 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium">
-              Get Started
-            </button>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium">
+                Get Started
+              </button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -81,9 +86,12 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium w-full">
-                Get Started
-              </button>
+              <div className="flex flex-col gap-3">
+                <ThemeToggle />
+                <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium w-full">
+                  Get Started
+                </button>
+              </div>
             </div>
           </div>
         )}
