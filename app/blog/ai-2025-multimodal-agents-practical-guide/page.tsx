@@ -84,4 +84,3 @@ const MultimodalAgentsPracticalGuidePage = () => {
 };
 
 export default MultimodalAgentsPracticalGuidePage;
-

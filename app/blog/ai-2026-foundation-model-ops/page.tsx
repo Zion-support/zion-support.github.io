@@ -86,6 +86,3 @@ const FoundationModelOps2026 = () => {
     </div>
   );
 };
-
-export default FoundationModelOps2026;
-

@@ -83,5 +83,3 @@ const RealTimeRetrievalArchitectures2026: React.FC = () => {
 };
 
 export default RealTimeRetrievalArchitectures2026;
-
-

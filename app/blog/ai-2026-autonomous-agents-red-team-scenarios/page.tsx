@@ -61,4 +61,3 @@ const AutonomousAgentsRedTeamScenariosPage: React.FC = () => {
 };
 
 export default AutonomousAgentsRedTeamScenariosPage;
-

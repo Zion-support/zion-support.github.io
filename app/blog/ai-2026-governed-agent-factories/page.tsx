@@ -45,4 +45,3 @@ const GovernedAgentFactories2026 = () => {
 };
 
 export default GovernedAgentFactories2026;
-

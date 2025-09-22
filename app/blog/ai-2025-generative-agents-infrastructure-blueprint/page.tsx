@@ -85,4 +85,3 @@ const GenerativeAgentsInfrastructureBlueprintPage = () => {
 };
 
 export default GenerativeAgentsInfrastructureBlueprintPage;
-
