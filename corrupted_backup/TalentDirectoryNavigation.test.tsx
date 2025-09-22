@@ -1,4 +1,3 @@
-
 import { describe, it, expect } from '@jest/globals';
 
 describe('TalentDirectoryNavigation', () => {
@@ -6,4 +5,3 @@ describe('TalentDirectoryNavigation', () => {
     expect(true).toBe(true);
   });
 });
-

@@ -1,5 +1,4 @@
 
-=======
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -40,13 +39,9 @@ import { execSync, spawn } from;
         useRef: "
         FC: "
 
-=======
         ReactNode: "
-=======
+
         ReactNode: "
-=======
-=======
+
 #!/usr/bin/env node
 import { execSync, spawn } from;
-
-

@@ -1,16 +1,16 @@
 
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
 const { spawn, exec } = require("child_process");
-=======
+
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
 const { spawn, exec } = require("child_process");"
+
 class $1 {}
   constructor() {}"
   this.projectRoot = "/workspace";
@@ -32,20 +32,20 @@ class $1 {}
     process.on("uncaughtException", (error) => {}
   this.log("error", "Uncaught "exception": ", error);      this.shutdown()})};"
   log(level, ...args) {}
-  const timestamp = new Date().toISOString();
 
-=======
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`
     console.log("message);
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\\n");
+
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\n")};
 ;
-=======
+
   const timestamp = new Date().toISOString();"
 
     fs.appendFileSync(logFile, message + "\n")};"
+
   async runLintCheck() {}
   return new Promise((resolve) => {}"
   exec("npm run lint", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
@@ -191,21 +191,18 @@ class $1 {}
     this.healthCheckInterval = setInterval(async () => {}
   if (this.isRunning) {}
   await this.performHealthCheck()};
-    }, this.checkInterval);
-    this.log("info", "Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")};
-;
-  shutdown() {}
-  this.log("info", "Error Monitor shutting down...`);
+
   shutdown() {}
   this.log("info", "Error Monitor shutting down...");
     this.isRunning = false;
-=======
+
     }, this.checkInterval);"
     this.log("info", "Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.")};"
   shutdown() {}"`;
   this.log("info", "Error Monitor shutting down...`);"
   shutdown() {}"
   this.log("info", "Error Monitor shutting down...");"
+
     if (this.healthCheckInterval) {}
   clearInterval(this.healthCheckInterval)};
     process.exit(0)};
@@ -215,10 +212,6 @@ monitor.start().catch(error => {})"
   console.error("Failed to start Error "Monitor": ", error);"
   process.exit(1)}
 
-=======
 });
-=======
+
 });
-=======
-
-

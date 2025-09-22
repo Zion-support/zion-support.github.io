@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/main
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
@@ -10,14 +19,16 @@ interface MainLayoutProps {
   title?: string;
   description?: string;
   keywords?: string;
-  ogImage?: string}
+  ogImage?: string;
+}
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
-  ogImage = '/og-image.jpg' }) => {
+  ogImage = '/og-image.jpg',
+}) => {
   return (
     <>
       <SEOEnhancer
@@ -27,11 +38,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         ogImage={ogImage}
       />
       <PerformanceOptimizer
-:components.disabled/components/layout/MainLayout.tsx
-        ]}
-
+        preloadImages={['/hero-bg.jpg', '/services-bg.jpg', '/team-bg.jpg']}
         preloadFonts={[
-          'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' ]}
+          'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
+        ]}
       />
       <AccessibilityEnhancer>
         <div className="min-h-screen flex flex-col">
@@ -43,6 +53,22 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         </div>
       </AccessibilityEnhancer>
     </>
-  )};
+  );
+};
 
 export default MainLayout;
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

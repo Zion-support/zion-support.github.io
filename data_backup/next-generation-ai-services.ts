@@ -1,226 +1,426 @@
-export: interface NextGenerationAIService {
-  id: string;
-   name: string;
-   tagline: string;
-   price: string;
-   period: string;
-   description: string;
-   features: string[];
-   popular: boolean;
-   icon: string;
-   color: string;
-   textColor: string;
-   link: string;
-   marketPosition: string;
-   targetAudience: string;
-   trialDays: number;
-   setupTime: string;
-   category: string;
-   realService: boolean;
-   technology: string[];
-   integrations: string[];
-   useCases: string[];
-   roi: string;
-   competitors: string[];
-   marketSize: string;
-   growthRate: string;
-   variant: string;
-   contactInfo: { mobile: string;
-   email: string;
-    implementationDetails:,
-  Fully: functional quantum BCI platform with FDA approval pathway, quantum encryption, real-time neural processing, and comprehensive research tools.;
-  '',;
-    launchDate: '2024-06-0,1',;
-    customers: 15,0,
-    rating: 4.,9,
-    reviews: 8,9}, {
-    id: 'placeholder',
-  autonomous-ai-venture-capital;
-  '',;
-    name: 'Autonomous: AI Venture Capital Platfor,m'',;
-    tagline:,
-  AI-powered: investment decisions with quantum precision;
-  '',;
-    price: $1,5,999,
-  ,
-    period: '/mont,h',;
-    description: 'Revolutionary: AI platform that autonomously analyze,s, invests, and manages venture capital portfolios with quantum-level precision and market prediction accuracy.;';
-  '',;
-    features[
-      'Autonomous: investment decision making;';
-  '',;
-      'Quantum: market prediction algorithms;';
-  '',;
-      'Real-time: portfolio optimization;';
-  '',;
-      'AI-driven: due diligence;';
-  '',;
-      'Risk: assessment automation;';
-  '',;
-      'Market: trend analysis;';
-  '',;
-      'Portfolio: rebalancing;';
-  '',;
-      'Performance: tracking;';
-  '',;
-      'Regulatory: compliance;';
-  '',;
-      'Multi-fund: management;';
-  ';'],
-    popular: tru,e,
-    icon:,
-  💰;
-  '',;
-    color: 'from-yellow-600: to-orange-70,0',;
-    textColor:,
-  text-yellow-400;
-    implementationDetails:,
-  Fully: autonomous AI platform with SEC compliance, real-time market analysis, automated investment execution, and comprehensive reporting.;
-  '',;
-    launchDate: '2024-05-1,5',;
-    customers: 7,5,
-    rating: 4.,8,
-    reviews: 15,6}, {
-    id: 'placeholder',
-  quantum-ai-drug-discovery;
-  '',;
-    name: 'Quantum: AI Drug Discovery Platfor,m'',;
-    tagline:,
-  Accelerate: drug development by 100x with quantum precision;
-  '',;
-    price: $2,5,999,
-  ,
-    period: '/mont,h',;
-    description: 'Revolutionary: quantum AI platform that accelerates drug discovery by analyzing molecular interactions at quantum scale,s, reducing development time from years to months.;';
-  '',;
-    features[
-      'Quantum: molecular simulation;';
-  '',;
-      'AI: drug candidate screening;';
-  '',;
-      'Protein: folding prediction;';
-  '',;
-      'Drug: interaction modeling;';
-  '',;
-      'Clinical: trial optimization;';
-  '',;
-      'Regulatory: pathway guidance;';
-  '',;
-      'Collaborative: research tools;';
-  '',;
-      'Real-time: analytics;';
-  '',;
-      'API: for research integration;';
-  '',;
-      'Multi-omics: data analysis;';
-  ';'],
-    popular: tru,e,
-    icon:,
-  🧬;
-  '',;
-    color: 'from-emerald-600: to-teal-70,0',;
-    textColor:,
-  text-emerald-400;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = interface NextGenerationAIService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenerationAIServices NextGenerationAIService[] = [{ id,:,quantum-ai-brain-computer-interface","; name: "Quantum AI Brain-Computer Interface," tagline:,World\"s: "first quantum-enhanced AI with human-like reasonin",g;",","; price: "",$,2,999,period: "/month," description: "Revolutionary quantum AI platform that interfaces directly with neural signals,enabling breakthrough discoveries and cognitive enhancement with unprecedented accuracy.;,"; features[ "Quantum: "neural signal processin",g;",","; "Real-time: "brain activity monitorin",g;",","; "AI-powered: "cognitive enhancemen",t;",","; "Neural: "pattern recognitio",n;",","; "Secure: "quantum encryptio",n;",","; "Multi-modal: "interface suppor",t;",","; "Advanced: "analytics dashboar",d;",","; "API: "for research integratio",n;",","; "Compliance: "with medical standard",s;",","; "24/7: "quantum AI suppor",t;";","],popular: "true",icon:; ","; color: "from-purple-600 to-indig,o-700" textColor:,text-purple-400; ","; link: "https "'"'"
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
-    marketPosition:,
-  First: quantum AI drug discovery platform. Competes with Insitro ($100M+ funding) and Recursion ($2B+ funding) with quantum-level precision.;
-  '',;
-    targetAudience: Pharmaceutical: companie,s, Biotech startups, Research institutions, Medical centers, Drug development labs, Healthcare companies;
-  '',;
-    trialDays: 3,0,
-    setupTime:,
-  2: months;
-  '',;
-    category: 'Quantum: AI & Healthcar,e',;
-    realService: tru,e,
-    technology[
-  Quantum: Computing;
-  ', 'AI/ML;';
-  ', 'Molecular: Dynamics;';
-  ', 'Bioinformatics;';
-  ', 'Cloud: Computing;';
-  ', 'High-Performance: Computing;';
-  ']',;
-    integrations['PubChem;';
-  ', 'ChEMBL;';
-  ', 'PDB;';
-  ', 'Clinical: trial databases;';
-  ', 'FDA: systems;';
-  ', 'Research: platforms;';
-  ']',;
-    useCases['Drug: discovery;';
-  ', 'Target: identification;';
-  ', 'Lead: optimization;';
-  ', 'Clinical: trial design;';
-  ', 'Regulatory: compliance;';
-  ', 'Research: collaboration;';
-  ']',;
-    roi: 'Average: customer sees 1000% ROI within 18 months through accelerated drug development and reduced research costs,.',;
-    competitors[
-  Insitro;
-  ', 'Recursion;';
-  ', 'Atomwise;';
-  ', 'BenevolentAI;';
-  ', 'Exscientia;';
-  ']',;
-    marketSize: '$150B: AI in healthcare marke,t',;
-    growthRate:,
-  250% annual: growth;
-  '',;
-    variant: 'quantum-biotech-advance,d',;
-    contactInfo: {
-    marketPosition:,
-  First: quantum AI logistics platform. Competes with Flexport ($1000+/month) and Convoy ($500+/month) with autonomous optimization capabilities.;
-  '',;
-    targetAudience: Logistics: companie,s, Supply chain managers, E-commerce businesses, Manufacturing companies, Retail chains, Transportation providers;
-  '',;
-    trialDays: 3,0,
-    setupTime:,
-  1: month;
-  '',;
-    category: 'Quantum: AI & Logistic,s',;
-    realService: tru,e,
-    technology[
-  Quantum: Computing;
-  ', 'AI/ML;';
-  ', 'Supply: Chain Optimization;';
-  ', 'Route: Planning;';
-  ', 'Demand: Forecasting;';
-  ', 'Real-time: Analytics;';
-  ']',;
-    integrations['ERP: systems;';
-  ', 'WMS: platforms;';
-  ', 'Transportation: APIs;';
-  ', 'Weather: services;';
-  ', 'Customs: systems;';
-  ', 'Financial: platforms;';
-  ']',;
-    useCases['Route: optimization;';
-  ', 'Inventory: management;';
-  ', 'Demand: forecasting;';
-  ', 'Supplier: optimization;';
-  ', 'Cost: reduction;';
-  ', 'Sustainability: tracking;';
-  ']',;
-    roi: 'Average: customer sees 600% ROI within 18 months through operational efficiency and cost optimization,.',;
-    competitors[
-  Flexport;
-  ', 'Convoy;';
-  ', 'Uber: Freight;';
-  ', 'C.H. Robinson;';
-  ', 'DHL;';
-  ']',;
-    marketSize: '$15T: global logistics marke,t',;
-    growthRate:,
-  150% annual: growth;
-  '',;
-    variant: 'quantum-logistics-advance,d',;
-    contactInfo: {
+=======
 
-    implementationDetails:,
-  Fully: autonomous logistics platform with real-time optimization, automated decision making, comprehensive analytics, and regulatory compliance.;
-  '',;
-    launchDate: '2024-01-1,5',;
-    customers: 18,0,
-    rating: 4.,8,
-    reviews: 298]}}
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+=======
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+module.exports = interface NextGenerationAIService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenerationAIServices NextGenerationAIService[] = [{ id,:,quantum-ai-brain-computer-interface","; name: "Quantum AI Brain-Computer Interface," tagline:,World\"s: "first quantum-enhanced AI with human-like reasonin",g;",","; price: "",$,2,999,period: "/month," description: "Revolutionary quantum AI platform that interfaces directly with neural signals,enabling breakthrough discoveries and cognitive enhancement with unprecedented accuracy.;,"; features[ "Quantum: "neural signal processin",g;",","; "Real-time: "brain activity monitorin",g;",","; "AI-powered: "cognitive enhancemen",t;",","; "Neural: "pattern recognitio",n;",","; "Secure: "quantum encryptio",n;",","; "Multi-modal: "interface suppor",t;",","; "Advanced: "analytics dashboar",d;",","; "API: "for research integratio",n;",","; "Compliance: "with medical standard",s;",","; "24/7: "quantum AI suppor",t;";","],popular: "true",icon:,; ","; color: "from-purple-600 to-indig,o-700" textColor:,text-purple-400; ","; link: "https "'"'"
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+import React from 'react';
+interface NextgenerationaiservicesProps {
+  // Add props here as needed
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module.exports = interface NextGenerationAIService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenerationAIServices NextGenerationAIService[] = [{ id,:,quantum-ai-brain-computer-interface","; name: "Quantum AI Brain-Computer Interface," tagline:,World\"s: "first quantum-enhanced AI with human-like reasonin",g;",","; price: "",$,2,999,period: "/month," description: "Revolutionary quantum AI platform that interfaces directly with neural signals,enabling breakthrough discoveries and cognitive enhancement with unprecedented accuracy.;,"; features[ "Quantum: "neural signal processin",g;",","; "Real-time: "brain activity monitorin",g;",","; "AI-powered: "cognitive enhancemen",t;",","; "Neural: "pattern recognitio",n;",","; "Secure: "quantum encryptio",n;",","; "Multi-modal: "interface suppor",t;",","; "Advanced: "analytics dashboar",d;",","; "API: "for research integratio",n;",","; "Compliance: "with medical standard",s;",","; "24/7: "quantum AI suppor",t;";","],popular: "true",icon:; ","; color: "from-purple-600 to-indig,o-700" textColor:,text-purple-400; ","; link: "https "'"'"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = interface NextGenerationAIService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenerationAIServices NextGenerationAIService[] = [{ id,:,quantum-ai-brain-computer-interface","; name: "Quantum AI Brain-Computer Interface," tagline:,World\"s: "first quantum-enhanced AI with human-like reasonin",g;",","; price: "",$,2,999,period: "/month," description: "Revolutionary quantum AI platform that interfaces directly with neural signals,enabling breakthrough discoveries and cognitive enhancement with unprecedented accuracy.;,"; features[ "Quantum: "neural signal processin",g;",","; "Real-time: "brain activity monitorin",g;",","; "AI-powered: "cognitive enhancemen",t;",","; "Neural: "pattern recognitio",n;",","; "Secure: "quantum encryptio",n;",","; "Multi-modal: "interface suppor",t;",","; "Advanced: "analytics dashboar",d;",","; "API: "for research integratio",n;",","; "Compliance: "with medical standard",s;",","; "24/7: "quantum AI suppor",t;";","],popular: "true",icon:,; ","; color: "from-purple-600 to-indig,o-700" textColor:,text-purple-400; ","; link: "https "'"'"
+import React from 'react';
+interface NextgenerationaiservicesProps {
+  // Add props here as needed
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+}
+
+
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+module.exports = interface NextGenerationAIService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenerationAIServices NextGenerationAIService[] = [{ id,:,quantum-ai-brain-computer-interface","; name: "Quantum AI Brain-Computer Interface," tagline:,World\"s: "first quantum-enhanced AI with human-like reasonin",g;",","; price: "",$,2,999,period: "/month," description: "Revolutionary quantum AI platform that interfaces directly with neural signals,enabling breakthrough discoveries and cognitive enhancement with unprecedented accuracy.;,"; features[ "Quantum: "neural signal processin",g;",","; "Real-time: "brain activity monitorin",g;",","; "AI-powered: "cognitive enhancemen",t;",","; "Neural: "pattern recognitio",n;",","; "Secure: "quantum encryptio",n;",","; "Multi-modal: "interface suppor",t;",","; "Advanced: "analytics dashboar",d;",","; "API: "for research integratio",n;",","; "Compliance: "with medical standard",s;",","; "24/7: "quantum AI suppor",t;";","],popular: "true",icon:,; ","; color: "from-purple-600 to-indig,o-700" textColor:,text-purple-400; ","; link: "https "'"'"""
+import React from 'react';
+interface NextgenerationaiservicesProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+
+
+
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+=======
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+export default function Nextgenerationaiservices({ }: NextgenerationaiservicesProps) {
+<<<<<<< HEAD
+=======
+}export default function Nextgenerationaiservices({ }: NextgenerationaiservicesProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  return (
+    <div>
+</div>
+      <h1>Nextgenerationaiservices</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+}
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+}
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+
+}
+
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+}
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+}
+}
+    </div>)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
