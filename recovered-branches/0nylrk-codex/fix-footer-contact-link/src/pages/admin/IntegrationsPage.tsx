@@ -1,10 +1,9 @@
 
-<<<<<<< HEAD
 
-
-
-
-
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",
 
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
@@ -12,6 +11,41 @@ import {Footer} from "@/components/Footer";
 import {IntegrationsHub} from "@/components/integrations/IntegrationsHub";
 import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
+export default function IntegrationsPage() {
+export default function IntegrationsPage() {
+
+
+export default function IntegrationsPage() {
+  return (
+    <ProtectedRoute adminOnly={true}>;
+      <SEO
+        title="Integrations - Zion AI Marketplace"
+        description="Connect your Zion account with CRMs and Applicant Tracking Systems."
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",;
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+
+export default function IntegrationsPage() {
+  return (
+import React, { useState } from "react";"
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer";"
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";"
+import { SEO } from "@/components/SEO";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function IntegrationsPage() {}
+export default function IntegrationsPage() {}
+  return (;
+    <ProtectedRoute adminOnly={true}>;
+      <SEO"
+        title="Integrations - Zion AI Marketplace""
+        description="Connect your Zion account with CRMs and Applicant Tracking Systems."
+
 
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
@@ -20,30 +54,26 @@ import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SEO } from "@/components/SEO",
+"
+import React, { useState } from "react","
+import { Header } from "@/components/Header","
+import { Footer } from "@/components/Footer","
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",";
+import { SEO } from "@/components/SEO";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+import { SEO } from "@/components/SEO","
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 
 export default function IntegrationsPage() {
   return (
+export default function IntegrationsPage() {};
+  return (;
     <ProtectedRoute adminOnly={true}>;
-      <SEO
-        title="Integrations - Zion AI Marketplace"
+      <SEO"
+        title="Integrations - Zion AI Marketplace""
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
-
-=======
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-
-export default function IntegrationsPage() {
-  return (
-    <ProtectedRoute adminOnly={true}>
-      <SEO
-        title="Integrations - Zion AI Marketplace"
-        description="Connect your Zion account with CRMs and Applicant Tracking Systems."
->>>>>>> origin/auto/autonomy-17186719616
+      />
+      <Header />"
       />
       <Header />
       <main className="min-h-screen bg-background">
@@ -51,11 +81,21 @@ export default function IntegrationsPage() {
       </main>
       <Footer />
     </ProtectedRoute>
-<<<<<<< HEAD
   )
 
-
-
+}
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function IntegrationsPage() {;
+  return (;
+    <ProtectedRoute adminOnly={true}>;
+      <SEO;
+        title="Integrations - Zion AI Marketplace";
+        description="Connect your Zion account with CRMs and Applicant Tracking Systems.";
 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -78,10 +118,8 @@ export default function IntegrationsPage() {;
       <Footer />;
     </ProtectedRoute>;
   );
-
-
-
-
+}
+  ),;}
 
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
@@ -100,17 +138,63 @@ function IntegrationsPage() {
         description="Connect your Zion account with CRMs and Applicant Tracking Systems.";
       />;
       <Header />;
-      <main className="min - h-screen bg - background">;
+      <main className="min - h-screen bg-background">;
         <IntegrationsHub />;
       </main>;
       <Footer />;
-    </ProtectedRoute>);
-
-
-
-
-
-=======
+    </ProtectedRoute>);  ),;}
+ export default function IntegrationsPage () {
+  return (true 
+}> <SEO title="Integrations - Zion AI Marketplace" description="Connect your Zion account with CRMs and Applicant Tracking Systems." /> <Header /> <main className="min-h-screen bg-background" > <IntegrationsHub /> </main> <Footer /> </ProtectedRoute>) 
+}
   );
 }
->>>>>>> origin/auto/autonomy-17186719616
+;
+}
+;
+  );
+}
+
+"
+import React, { useState } from "react";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";""
+import { SEO } from "@/components/SEO";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+export default function IntegrationsPage() {
+
+  return (
+    <ProtectedRoute adminOnly={true}>;
+
+</ProtectedRoute>
+      <SEO;"
+        title="Integrations - Zion AI Marketplace"""
+        description="Connect your Zion account with CRMs and Applicant Tracking Systems."""
+import React, { useState } from "react",""
+import { Header } from "@/components/Header",""
+import { Footer } from "@/components/Footer",""
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",""
+import { ProtectedRoute } from "@/components/ProtectedRoute";""
+import { SEO } from "@/components/SEO",""
+import { ProtectedRoute } from "@/components/ProtectedRoute",")
+
+        description="Connect your Zion account with CRMs and Applicant Tracking Systems.""
+      />
+
+      <Header />
+"
+      <main className="min-h-screen bg-background">"
+</main>
+        <IntegrationsHub />
+
+      <Footer />
+
+    )"
+}> <SEO title="Integrations - Zion AI Marketplace" description="Connect your Zion account with CRMs and Applicant Tracking Systems." /> <Header /> <main className="min-h-screen bg-background" > <IntegrationsHub /> </main> <Footer /> )"
+pr-12325
+</Footer>
+    </ProtectedRoute>)"
+}> <SEO title="Integrations - Zion AI Marketplace" description="Connect your Zion account with CRMs and Applicant Tracking Systems." /> <Header /> <main className="min-h-screen bg-background" > <IntegrationsHub /> </main> <Footer /> </ProtectedRoute>)"
+</SEO>"
+
