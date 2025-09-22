@@ -1,6 +1,6 @@
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -8,7 +8,7 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 exports.config = {
-  schedule: '*/15 * * * *
+  schedule: '*/15 * * * *'
 }
 
 exports.handler = async () => {
@@ -18,13 +18,14 @@ exports.handler = async () => {
     const res = fn();
     if (res.stdout) logs.push(res.stdout);
     if (res.stderr) logs.push(res.stderr);
-`;
+
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
 
+  }
   step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-return { statusCode: 200, body: logs.join('\n') }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  return { statusCode: 200, body: logs.join('\n') }
+
+
+

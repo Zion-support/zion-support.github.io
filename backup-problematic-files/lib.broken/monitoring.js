@@ -1,36 +1,40 @@
 export const trackError = (error,context = {}) => { console && console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window && window.gtag) { window && window.gtag('event','exception',{ description: error && error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => {  if (typeof window !== 'undefined' && window && window.gtag) { window && window.gtag('event','timing_complete',{ name: metric,value: Math && Math.round(value) })} }; export const trackUserAction = (action,category,label) => {  if (typeof window !== 'undefined' && window && window.gtag) { window && window.gtag('event',action,{ event_category: category,event_label: label })} };
-// Monitoring utilities;
+// Monitoring utilities
 export const trackError = (error, context = {}) => {
   console && console.error('Error "tracked": ', error, context);
-  // Send to monitoring service;
+  // Send to monitoring service
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('event', 'exception', {
-      "description": error && error.message,""
-      "fatal": false,"
-      ...context;)
+      "description": error && error.message,
+      "fatal": false,
+      ...context
     })}
 };
-export const trackPerformance = (metric, value) => {"
-  console && console.log(`Performance "metric": ${metric} = ${value}`);""
+export const trackPerformance = (metric, value) => {
+  console && console.log(`Performance "metric": ${metric} = ${value}`);
+  if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('event', 'timing_complete', {
-      "name": metric,")"
-      "value": Math && Math.round(value)"
-export const trackUserAction = (action, category, label) => {"`;
-  console && console.log(`User "action": ${action} in ${category}`);""
+      "name": metric,
+      "value": Math && Math.round(value)
+    })}
+};
+export const trackUserAction = (action, category, label) => {
+  console && console.log(`User "action": ${action} in ${category}`);
+  if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('event', action, {
-"event_category": category,
+      "event_category": category,
       "event_label": label
     })}
 };
+
 export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: 'error.message',fatal: 'false',...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: 'metric',value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: 'category',event_label: 'label' })} };
-<<<<<<< HEAD:lib.disabled/lib/monitoring.js
-export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/monitoring.js
 export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };
 export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };
 export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/monitoring.js
+export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };
+export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+

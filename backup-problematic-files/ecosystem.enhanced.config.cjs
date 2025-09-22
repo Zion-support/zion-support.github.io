@@ -1,6 +1,11 @@
+
+
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
 module.exports = {}
   "apps": [{}]
       name: 'ziontechgroup-web',
@@ -127,7 +132,11 @@ module.exports = {}
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     };
   ];
-};
-};
+
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+

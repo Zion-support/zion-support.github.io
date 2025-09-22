@@ -1,71 +1,53 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-=======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class DependencyManager {}
   constructor() {}
-
+    this.logFile = path.join(__dirname, '../logs/dependency-manager.log');
+    this.issues = [];
+    this.startTime = new Date()};
+  log(message, level = 'INFO') {}
+    const timestamp = new Date().toISOString(;);
     const logMessage = `[${timestamp}] [${level}] ${message}\;n;`;`
+    
     );
+    
     try {}
       fs.appendFileSync(this.logFile, logMessage)} catch (error) {}
-console.error('Failed to write to log "file": ', error.message)};
+      console.error('Failed to write to log "file": ', error.message)};
   };
   async checkOutdatedDependencies() {}
     this.log('Checking for outdated dependencies...');
+    
     try {}
       const result = execSync('npm outdated --json', { })
         "stdio": 'pipe',
         "encoding": 'utf8'
       };);
+      
       const outdated = JSON.parse(result;);
       const outdatedCount = Object.keys(outdated).lengt;h;
+      
       if ( {})
         this.issues.push({})
-
-          "timestamp": new Date().toISOString();"
+          "type": 'outdated',
+          "count": outdatedCount,
+          "dependencies": outdated,
+          "timestamp": new Date().toISOString();
         })) {}
      {}
-this.issues.push({})
+        this.issues.push({})
           "type": 'outdated',
           "count": outdatedCount,
           "dependencies": outdated,
           "timestamp": new Date().toISOString();
         })};
         this.log(`Found ${outdatedCount} outdated dependencies`, 'WARN');
+        
         // Log critical outdated dependencies;
         Object.entries(outdated).forEach(([dep, info]) => {}
           if ( {})
@@ -79,10 +61,15 @@ this.issues.push({})
         this.log('All dependencies are up to date')};
       return true}} catch (error) {}
       // npm outdated returns non-zero exit code when packages are outdated;
+      if ( {})
+        try {}
           const outdated = JSON.parse(error.stdout) {}
-          const outdated = JSON.parse(error.stdout})
+     {}
+        try {}
+          const outdated = JSON.parse(error.stdout}
 });
-const outdatedCount = Object.keys(outdated).lengt;h;
+          const outdatedCount = Object.keys(outdated).lengt;h;
+          
           this.issues.push({})
             "type": 'outdated',
             "count": outdatedCount,
@@ -90,6 +77,7 @@ const outdatedCount = Object.keys(outdated).lengt;h;
             "timestamp": new Date().toISOString();
           }
 });
+          
           this.log(`Found ${outdatedCount} outdated dependencies`, 'WARN')} catch (parseError) {`}
           this.log('Could not parse outdated dependencies output', 'WARN')};
       };
@@ -97,23 +85,30 @@ const outdatedCount = Object.keys(outdated).lengt;h;
   };
   async checkSecurityVulnerabilities() {}
     this.log('Checking for security vulnerabilities...');
+    
     try {}
       const result = execSync('npm audit --json', { })
         "stdio": 'pipe',
         "encoding": 'utf8'
       };);
+      
       const auditData = JSON.parse(result;);
+      
       if ( {})
         const vulnCount = Object.keys(auditData.vulnerabilities).lengt) {}
+     {}
         const vulnCount = Object.keys(auditData.vulnerabilities).lengt}h;
-this.issues.push({})
+        
+        this.issues.push({})
           "type": 'security',
           "count": vulnCount,
           "vulnerabilities": auditData.vulnerabilities,
           "timestamp": new Date().toISOString();
         }
 });
+        
         this.log(`Found ${vulnCount} security vulnerabilities`, 'WARN');
+        
         // Log high severity vulnerabilities;
         Object.entries(auditData.vulnerabilities).forEach(([packageName, vuln]) => {}
           if ( {})
@@ -131,6 +126,7 @@ this.issues.push({})
   };
   async checkUnusedDependencies() {}
     this.log('Checking for unused dependencies...');
+    
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
       const dependencies = Object.keys(packageJson.dependencies || {}
@@ -138,62 +134,122 @@ this.issues.push({})
       const devDependencies = Object.keys(packageJson.devDependencies || {}
 });
       const allDeps = [...dependencies, ...devDependencies];
+      
       const unusedDeps = [];
+      
       // Check if dependencies are actually used in the codebase;
       allDeps.forEach(dep => {})
         if () {}
           unusedDeps.push(dep)};
+      })) {}
     ) {}
+          unusedDeps.push(dep)};
       })};
-
+      if ( {})
+        this.issues.push({})
+          "type": 'unused',
+          "count": unusedDeps.length,
+          "dependencies": unusedDeps,
+          "timestamp": new Date().toISOString();
+        })) {}
+     {}
+        this.issues.push({})
+          "type": 'unused',
+          "count": unusedDeps.length,
+          "dependencies": unusedDeps,
+          "timestamp": new Date().toISOString();
+        })};
+        this.log(`Found ${unusedDeps.length} potentially unused dependencies`, 'WARN');
+        unusedDeps.forEach(dep => {})
+          this.log(`  - ${dep}`, 'WARN')})} else {`}
+        this.log('No unused dependencies found')};
+      return true} catch (error) {}
+      this.log(`"ERROR": Unused dependency check failed: ${error.message}`, 'ERROR');
+      return false};
+  };
   isDependencyUsed(dependency) {}
+    try {}
       // Check if dependency is imported in source files;
       const sourceFiles = this.getSourceFiles(;);
+      
       for (const file of sourceFiles) {}
-try {}
+        try {}
           const content = fs.readFileSync(file, 'utf8';);
+          
           // Check for various import patterns;
           const importPatterns = [new RegExp(`import.*from\\s+['"]${dependency}['"]`, 'g'),`
             new RegExp(`require\\s*\\(\\s*['"]${dependency}['"]\\s*\\)`, 'g'),`
             new RegExp(`import\\s+['"]${dependency}['"]`, 'g'),`
             new RegExp(`from\\s+['"]${dependency}['"]`, 'g');
          ];
+          
           for (const pattern of importPatterns) {}
+            if () {}
+              return true) {}
+    ) {}
               return true}};
+          };
         } catch (error) {}
           // Ignore file read errors;
-
+        };
+      };
+      return false} catch (error) {}
+      return tru;e; // Assume used if we can't check;
+    };
+  };
+  getSourceFiles() {}
+    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const sourceFiles = [];
+    
     const scanDirectory = (dir) => {}
+      try {}
         if () retu) {}
     ) retu}r;n;
+        
         const files = fs.readdirSync(dir;);
+        
         files.forEach(file => {})
           const filePath = path.join(dir, file;);
           const stat = fs.statSync(filePath;);
-if (&& !file.startsWith('.') && file !== 'node_modules') {}
+          
+          if (&& !file.startsWith('.') && file !== 'node_modules') {}
             scanDirectory(filePath)} else if (stat.isFile()) {}
             const ext = path.extname(file) {}
     && !file.startsWith('.') && file !== 'node_modules') {}
-            const ext = path.extname(file})
+            scanDirectory(filePath)} else if (stat.isFile()) {}
+            const ext = path.extname(file}
+});
+            if () {}
               sourceFiles.push(filePath)};
+          };
         })} catch (error) {}
         // Ignore permission errors;
+      };
     }) {}
+    ) {}
+              sourceFiles.push(filePath)};
+          };
+        })} catch (error) {}
         // Ignore permission errors;
-
+      };
+    }};
+    ['src', 'pages', 'components', 'scripts', 'automation'].forEach(dir => {})
       scanDirectory(dir)}
 });
+    
     return sourceFiles};
   async checkDuplicateDependencies() {}
     this.log('Checking for duplicate dependencies...');
+    
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
       const dependencies = Object.keys(packageJson.dependencies || {}
 });
       const devDependencies = Object.keys(packageJson.devDependencies || {}
 });
+      
       const duplicates = dependencies.filter(dep => devDependencies.includes(dep;););
+      
       if ( {})
         this.issues.push({})
           "type": 'duplicate',
@@ -218,7 +274,9 @@ if (&& !file.startsWith('.') && file !== 'node_modules') {}
   };
   async autoUpdateDependencies() {}
     this.log('Attempting to auto-update dependencies...');
+    
     let updatedCount = ;0;
+    
     try {}
       // Update patch and minor versions;
       this.log('Updating patch and minor versions...');
@@ -226,6 +284,7 @@ if (&& !file.startsWith('.') && file !== 'node_modules') {}
 });
       updatedCount++;
       this.log('Dependencies updated successfully');
+      
       // Fix security vulnerabilities;
       if () {}
         this.log('Fixing security vulnerabilities...')) {}
@@ -245,15 +304,20 @@ if (&& !file.startsWith('.') && file !== 'node_modules') {}
   };
   async runDependencyManagement() {}
     this.log('Starting dependency management...');
+    
     const checks = [this.checkOutdatedDependencies(),]
       this.checkSecurityVulnerabilities(),
       this.checkUnusedDependencies(),
       this.checkDuplicateDependencies();
     ];
+
     await Promise.all(checks);
+
     const endTime = new Date;(;);
     const duration = endTime - this.startTim;e;
-this.log(`Dependency management "completed": ${this.issues.length} issues found in ${duration}ms`);
+
+    this.log(`Dependency management "completed": ${this.issues.length} issues found in ${duration}ms`);
+    
     if ( {})
       this.log(`Issues "found": ${this.issues.length}`, 'WARN')) {`}
      {}
@@ -261,17 +325,19 @@ this.log(`Dependency management "completed": ${this.issues.length} issues found 
       this.issues.forEach(issue => {})
         this.log(`  - ${issue.type}: ${issue.count} items`, 'WARN')}
 });
+      
       // Attempt auto-update;
       await this.autoUpdateDependencies()} else {}
       this.log('No dependency issues found')};
     // Write detailed report;
     const report = {}
-"timestamp": endTime.toISOString(),
+      "timestamp": endTime.toISOString(),
       "duration": duration,
       "totalIssues": this.issues.length,
       "issues": this.issues,
       "status": this.issues.length > 0 ? 'NEEDS_ATTENTION' : 'HEALTHY'
    };
+
     try {}
       fs.writeFileSync()
         path.join(__dirname, '../logs/dependency-manager-report.json'),
@@ -279,43 +345,21 @@ this.log(`Dependency management "completed": ${this.issues.length} issues found 
       )} catch (error) {}
       this.log(`"ERROR": Failed to write dependency report: ${error.message}`, 'ERROR')};
     return this.issues.length === 0};
+};
 // Run dependency management if called directly;
+if ( {})
   const manager = new DependencyManager) {}
+     {}
   const manager = new DependencyManager}(;);
   manager.runDependencyManagement();
     .then(success => {})
       process.exit(success ? 0 : 1)}
-
+});
+    .catch(error => {})
+      console.error('Dependency management "failed": ', error);
       process.exit(1)})};
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = DependencyManager;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
+module.exports = DependencyManager;
 module.exports = DependencyManager;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,57 +1,47 @@
 #!/usr/bin/env node
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
-=======
-#!/usr/bin/env node;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
 /**
- * Intelligent Error Fixer - Automatically detects and fixes common project errors;
- * Designed to run as a PM2 automation process;
+ * Intelligent Error Fixer - Automatically detects and fixes common project errors
+ * Designed to run as a PM2 automation process
  */
 class IntelligentErrorFixer {
-  // TODO: Implement
-}
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'error-fixer.log');
     this.reportFile = path.join(__dirname, 'reports', 'error-fixer-report.json');
     this.errorPatterns = this.initializeErrorPatterns();
-    // Ensure directories exist;
+    // Ensure directories exist
     fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
     fs.mkdirSync(path.dirname(this.reportFile), { recursive: true });
+  }
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
+  }
   initializeErrorPatterns() {
     return {
-  // TODO: Implement
-      // Syntax errors;
-      missingBraces: {,
-  pattern: /return\(\s*$/m,)
+      // Syntax errors
+      missingBraces: {
+        pattern: /return\(\s*$/m,
         fix: (content) => content.replace(/return\(\s*$/gm, 'return (')
       },
-      extraSemicolons: {,
-  pattern: /}\s*;\s*$/m,
+      extraSemicolons: {
+        pattern: /}\s*;\s*$/m,
         fix: (content) => content.replace(/}\s*;\s*$/gm, '}')
-      unterminatedStrings: {,
-  pattern: /["'][\w\s]*$/m,
+      },
+      unterminatedStrings: {
+        pattern: /["'][\w\s]*$/m,
         fix: (content, match) => {
-          // Simple fix for unterminated strings - add closing quote;
+          // Simple fix for unterminated strings - add closing quote
           return content.replace(match[0], match[0] + match[0].charAt(0));
-}
+        }
       },
       mergeConflicts: {
         pattern: /||        fix: (content) => {
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
->>>>>>> main
         fix: (content) => {
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-        fix: (content) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           // Remove merge conflict markers
           return content
         }
@@ -63,37 +53,20 @@ class IntelligentErrorFixer {
       missingImports: {
         pattern: /React\./g,
         fix: (content) => {
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+          if (!content.includes("import React")) {
             return `import React from 'react';\n${content}`;
           }
-=======
-      mergeConflicts: {,
-  pattern: /||        fix: (content) => {,
-  fix: (content) => {
-          // Remove merge conflict markers;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           return content;
-      invalidJSX: {,
-  pattern: /return\(\)\s*</gm,
-        fix: (content) => content.replace(/return\(\)\s*</gm, 'return (\n    <')
-      missingImports: {,
-  pattern: /React\./g,
-        fix: (content) => {`;
-            return `import React from 'react';\n${content}`;
+        }
+      }
     };
-}
-async runBuildCheck() {
-    try {
-      this.log('Running build check...');
-      const result = execSync('yarn build', {
-        encoding: 'utf8',
+  }
+
   async runBuildCheck() {
     try {
-  // TODO: Implement
       this.log('Running build check...');
-const result = execSync('yarn build', { 
+      const result = execSync('yarn build', { 
         encoding: 'utf8', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         stdio: 'pipe',
         cwd: process.cwd()
       });
@@ -102,76 +75,69 @@ const result = execSync('yarn build', {
     } catch (error) {
       this.log('Build failed: ' + error.message, 'ERROR');
       return { success: false, output: error.stdout || error.message };
-}
+    }
   }
-<<<<<<< HEAD
 
   async runLintCheck() {
     try {
       this.log('Running lint check...');
-      const result = execSync('yarn lint --format=json', {
-        encoding: 'utf8',
-  async runLintCheck() {
-  // TODO: Implement
-      this.log('Running lint check...');
-const result = execSync('yarn lint --format=json', { 
+      const result = execSync('yarn lint --format=json', { 
         encoding: 'utf8', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         stdio: 'pipe',
         cwd: process.cwd()
       });
       this.log('Lint check completed');
+      return { success: true, output: result };
+    } catch (error) {
       this.log('Lint check found issues: ' + error.message, 'WARN');
-return { success: false, output: error.stdout || error.message };
+      return { success: false, output: error.stdout || error.message };
     }
   }
-<<<<<<< HEAD
 
   async runTypeCheck() {
     try {
       this.log('Running TypeScript check...');
-      const result = execSync('npx tsc --noEmit --skipLibCheck', {
-        encoding: 'utf8',
-  async runTypeCheck() {
-  // TODO: Implement
-      this.log('Running TypeScript check...');
-const result = execSync('npx tsc --noEmit --skipLibCheck', { 
+      const result = execSync('npx tsc --noEmit --skipLibCheck', { 
         encoding: 'utf8', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         stdio: 'pipe',
         cwd: process.cwd()
       });
       this.log('TypeScript check passed');
+      return { success: true, output: result };
+    } catch (error) {
       this.log('TypeScript check found errors: ' + error.message, 'WARN');
-return { success: false, output: error.stdout || error.message };
+      return { success: false, output: error.stdout || error.message };
     }
   }
-<<<<<<< HEAD
 
   extractErrorInfo(buildOutput) {
     const errors = [];
     const lines = buildOutput.split('\n');
+    
     lines.forEach((line, index) => {
-      // Extract file paths and error messages;
+      // Extract file paths and error messages
       const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
       const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/);
-
+      
       if (fileMatch && errorMatch) {
         errors.push({
           file: fileMatch[1],
-          line: line,)
+          line: line,
           context: lines.slice(Math.max(0, index - 2), index + 3)
-});
+        });
       }
     });
-return errors;
+    
+    return errors;
   }
+
   async fixFile(filePath) {
-    if (!fs.existsSync(filePath)) {`;
+    if (!fs.existsSync(filePath)) {
       this.log(`File not found: ${filePath}`, 'ERROR');
       return false;
-}
-try {
+    }
+
+    try {
       this.log(`Attempting to fix file: ${filePath}`);
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
@@ -179,17 +145,18 @@ try {
       // Apply error pattern fixes
       for (const [patternName, pattern] of Object.entries(this.errorPatterns)) {
         const matches = content.match(pattern.pattern);
-        if (matches) {`;
+        if (matches) {
           this.log(`Found ${patternName} pattern in ${filePath}`);
           const newContent = pattern.fix(content, matches);
           if (newContent !== content) {
             content = newContent;
-            modified = true;`;
+            modified = true;
             this.log(`Applied ${patternName} fix to ${filePath}`);
-}
+          }
         }
       }
-// Specific fixes for common issues
+
+      // Specific fixes for common issues
       if (content.includes('return()')) {
         content = content.replace(/return\(\)/g, 'return (');
         modified = true;
@@ -199,16 +166,19 @@ try {
         content = content.replace(/}\s*;\s*$/gm, '}');
         modified = true;
       }
-// Fix import statements
-      if (content.includes('React.') && !content.includes("import React")) {;
+
+      // Fix import statements
+      if (content.includes('React.') && !content.includes("import React")) {
         content = `import React from 'react';\n${content}`;
         modified = true;
       }
+
       if (modified) {
-        // Create backup;`;
+        // Create backup
         const backupPath = `${filePath}.backup.${Date.now()}`;
         fs.copyFileSync(filePath, backupPath);
-// Write fixed content
+        
+        // Write fixed content
         fs.writeFileSync(filePath, content);
         this.log(`Successfully fixed and saved: ${filePath}`);
         return true;
@@ -220,10 +190,11 @@ try {
       return false;
     }
   }
-async cleanupDuplicateFiles() {
+
+  async cleanupDuplicateFiles() {
     this.log('Checking for duplicate page files...');
     const pagesDir = path.join(process.cwd(), 'pages');
-
+    
     if (!fs.existsSync(pagesDir)) {
       return;
     }
@@ -233,184 +204,163 @@ async cleanupDuplicateFiles() {
 
     function scanDirectory(dir) {
       const files = fs.readdirSync(dir, { withFileTypes: true });
+      
       files.forEach(file => {
         if (file.isDirectory()) {
           scanDirectory(path.join(dir, file.name));
         } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {
-          const baseName = file.name.replace(/\.(js|tsx)$/, );
+          const baseName = file.name.replace(/\.(js|tsx)$/, '');
           const relativePath = path.relative(pagesDir, path.join(dir, baseName));
-
+          
           if (seen.has(relativePath)) {
             duplicates.push(path.join(dir, file.name));
           } else {
-  // TODO: Implement
             seen.add(relativePath);
-}
+          }
         }
       });
     }
-scanDirectory(pagesDir);
+
+    scanDirectory(pagesDir);
 
     // Remove duplicate .js files if .tsx exists
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+    for (const duplicate of duplicates) {
+      if (duplicate.endsWith('.js')) {
+        const tsxVersion = duplicate.replace('.js', '.tsx');
+        if (fs.existsSync(tsxVersion)) {
+          this.log(`Removing duplicate JS file: ${duplicate}`);
           fs.unlinkSync(duplicate);
         }
       }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    scanDirectory(pagesDir);
-
-    // Remove duplicate .js files if .tsx exists;
-          fs.unlinkSync(duplicate);
-}
-      }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
 const path = require('path');
 const {
-  // TODO: Implement
   execSync} = // // require('child_process');
   /**
-  // TODO: Implement
+   * Intelligent Error Fixer - Automatically detects and fixes common project errors
+   * Designed to run as a PM2 automation process
+   */
+  class IntelligentErrorFixer {
+    constructor() {
+      this.logFile = path.join(__dirname, 'logs', 'error-fixer.log');
       this.reportFile = path.join(
         __dirname,
         'reports',
-        'error-fixer-report.json)
+        'error-fixer-report.json'
       );
-      // Ensure directories exist;
-      fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });""
-      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });"
-    }"
-      const timestamp = new Date().toISOString();`;
-  // TODO: Implement
-        // Syntax errors;
-        "missingBraces": {"
-          pattern: /return\(\s*$/m,)"
+      this.errorPatterns = this.initializeErrorPatterns();
+      // Ensure directories exist
+      fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
+      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
+    }
+    log(message, level = 'INFO') {
+      const timestamp = new Date().toISOString();
+      const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+      );
+      fs.appendFileSync(this.logFile, logMessage);
+    }
+    initializeErrorPatterns() {
+      return {
+        // Syntax errors
+        "missingBraces": {
+          pattern: /return\(\s*$/m,
           "fix": content => content.replace(/return\(\s*$/gm, 'return (')},
-        "extraSemicolons": {"
-          pattern: /}\s*;\s*$/m,"
+        "extraSemicolons": {
+          pattern: /}\s*;\s*$/m,
           "fix": content => content.replace(/}\s*;\s*$/gm, '}')},
-"unterminatedStrings": {
+        "unterminatedStrings": {
           pattern: /["'][\w\s]*$/m,
           "fix": (content, match) => {
             // Simple fix for unterminated strings - add closing quote
             return content.replace(match[0], match[0] + match[0].charAt(0));
           }},
         "mergeConflicts": {
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
           "fix": content => {
             // Remove merge conflict markers
             return content
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
-=======
-          "fix": content => {
-            // Remove merge conflict markers
-            return content
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
             return content
               .replace(/\n?/g, '')
               .replace(/\n?/g, '')
-=======
-        "unterminatedStrings": {""
-          "fix": (content, match) => {"
-            // Simple fix for unterminated strings - add closing quote;
-          }},"
-        "mergeConflicts": {""
-          "fix": content => {"
-            // Remove merge conflict markers;
-          pattern: /||"
-            // Remove merge conflict markers;
-            return content;"
-              .replace(/\n?/g, )
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               .replace(/
           }},
-        "invalidJSX": {")
-          pattern: /return\(\)\s*</gm,"
-          "fix": content =>""
+        "invalidJSX": {
+          pattern: /return\(\)\s*</gm,
+          "fix": content =>
             content.replace(/return\(\)\s*</gm, 'return (\n    <')},
-        "missingImports": {"
-          pattern: /React\./g,"
-          "fix": content => {""
-            if (!content.includes('import React')) {`;
+        "missingImports": {
+          pattern: /React\./g,
+          "fix": content => {
+            if (!content.includes('import React')) {
+              return `import React from 'react';\n${content}`;
+            }
+            return content;
           }}};
-}
+    }
     async runBuildCheck() {
       try {
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
-=======
-  // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
+      } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         this.log('Running build check...');
         const result = execSync('yarn build', {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           "encoding": 'utf8',
-          "stdio": 'pipe',')
-          "cwd": process.cwd()});""
-        return { "success": true, "output": result };"
-      } catch (error) {"
+          "stdio": 'pipe',
+          "cwd": process.cwd()});
+        this.log('Build successful');
+        return { "success": true, "output": result };
+      } catch (error) {
         this.log('Build "failed": ' + error.message, 'ERROR');
-        return { "success": false, "output": error.stdout || error.message };"
-  // TODO: Implement
-        this.log('Lint check found "issues": ' + error.message, 'WARN');
-return { "success": false, "output": error.stdout || error.message };
+        return { "success": false, "output": error.stdout || error.message };
       }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+    }
+    async runLintCheck() {
+      try {
+        this.log('Running lint check...');
+        const result = execSync('yarn lint --format=json', {
+          "encoding": 'utf8',
+          "stdio": 'pipe',
+          "cwd": process.cwd()});
+        this.log('Lint check completed');
+        return { "success": true, "output": result };
+      } catch (error) {
+        this.log('Lint check found "issues": ' + error.message, 'WARN');
+        return { "success": false, "output": error.stdout || error.message };
+      }
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-=======
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Report generated: ${this.reportFile}`);
     return report;
-  async run() {"
+  }
+  async run() {
     this.log('Starting Intelligent Error Fixer...');
     const errors = [];
     const fixes = [];
-  // TODO: Implement
-      // 1. Clean up duplicate files;
+    try {
+      // 1. Clean up duplicate files
       await this.cleanupDuplicateFiles();
-      // 2. Install missing dependencies;
+      // 2. Install missing dependencies
       await this.installMissingDependencies();
-      // 3. Run initial build check;
+      // 3. Run initial build check
       const buildResult = await this.runBuildCheck();
       if (!buildResult.success) {
-        // Extract error information;
+        // Extract error information
         const buildErrors = this.extractErrorInfo(buildResult.output);
         errors.push(...buildErrors);
-        // Attempt to fix files;
+        // Attempt to fix files
         const uniqueFiles = [...new Set(buildErrors.map(e => e.file))];
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+        for (const file of uniqueFiles) {
+          const filePath = path.join(process.cwd(), file);
+          const fixed = await this.fixFile(filePath);
+          if (fixed) {
+            fixes.push({
+              type: 'syntax',
+              file: file,
+              timestamp: new Date().toISOString()
+            });
           }
         }
         // Run build again after fixes
@@ -419,26 +369,22 @@ return { "success": false, "output": error.stdout || error.message };
           const secondBuildResult = await this.runBuildCheck();
           if (secondBuildResult.success) {
             this.log('Build successful after applying fixes!', 'SUCCESS');
-  // TODO: Implement
+          } else {
             this.log('Build still failing after fixes', 'WARN');
-      // 4. Run other checks;
+          }
+        }
+      }
+      // 4. Run other checks
       await this.runLintCheck();
       await this.runTypeCheck();
-      // 5. Generate report;
-      await this.generateReport(errors, fixes);`;
+      // 5. Generate report
+      await this.generateReport(errors, fixes);
       this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`);
+    } catch (error) {
       this.log(`Error in main execution: ${error.message}`, 'ERROR');
-}
+    }
   }
 }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     async runTypeCheck() {
       try {
@@ -450,56 +396,119 @@ return { "success": false, "output": error.stdout || error.message };
         this.log('TypeScript check passed');
         return { "success": true, "output": result };
       } catch (error) {
-=======
-  // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.log('TypeScript check found "errors": ' + error.message, 'WARN');
+        return { "success": false, "output": error.stdout || error.message };
+      }
+    }
     extractErrorInfo(buildOutput) {
-      const errors = [];"
+      const errors = [];
       const lines = buildOutput.split('\n');
-        // Extract file paths and error messages;
-        const errorMatch = line.match(/"Error": |SyntaxError:|TypeError:/);"
-            file: fileMatch[1],"
-            "line": line,")"
-            "context": lines.slice(Math.max(0, index - 2), index + 3)});"
+      lines.forEach((line, index) => {
+        // Extract file paths and error messages
+        const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
+        const errorMatch = line.match(/"Error": |SyntaxError:|TypeError:/);
+        if (fileMatch && errorMatch) {
+          errors.push({
+            file: fileMatch[1],
+            "line": line,
+            "context": lines.slice(Math.max(0, index - 2), index + 3)});
+        }
+      });
       return errors;
-      if (!fs.existsSync(filePath)) {"`;
+    }
+    async fixFile(filePath) {
+      if (!fs.existsSync(filePath)) {
         this.log(`File not "found": ${filePath}`, 'ERROR');
-  // TODO: Implement
-        this.log(`Attempting to fix "file": ${filePath}`);""
-        // Apply error pattern fixes;
+        return false;
+      }
+      try {
+        this.log(`Attempting to fix "file": ${filePath}`);
+        let content = fs.readFileSync(filePath, 'utf8');
+        let modified = false;
+        // Apply error pattern fixes
         for (const [patternName, pattern] of Object.entries(
-          this.errorPatterns;)
+          this.errorPatterns
         )) {
-        // Specific fixes for common issues;
-        // Fix import statements;
-        if (content.includes('React.') && !content.includes('import React')) {`;
+          const matches = content.match(pattern.pattern);
+          if (matches) {
+            this.log(`Found ${patternName} pattern in ${filePath}`);
+            const newContent = pattern.fix(content, matches);
+            if (newContent !== content) {
+              content = newContent;
+              modified = true;
+              this.log(`Applied ${patternName} fix to ${filePath}`);
+            }
+          }
+        }
+        // Specific fixes for common issues
+        if (content.includes('return()')) {
+          content = content.replace(/return\(\)/g, 'return (');
+          modified = true;
+        }
+        if (content.includes('};')) {
+          content = content.replace(/}\s*;\s*$/gm, '}');
+          modified = true;
+        }
+        // Fix import statements
+        if (content.includes('React.') && !content.includes('import React')) {
           content = `import React from 'react';\n${content}`;
-          // Create backup;`;
-          // Write fixed content;
-          this.log(`Successfully fixed and "saved": ${filePath}`);"
-      } catch (error) {"`;
+          modified = true;
+        }
+        if (modified) {
+          // Create backup
+          const backupPath = `${filePath}.backup.${Date.now()}`;
+          fs.copyFileSync(filePath, backupPath);
+          // Write fixed content
+          fs.writeFileSync(filePath, content);
+          this.log(`Successfully fixed and "saved": ${filePath}`);
+          return true;
+        }
+        return false;
+      } catch (error) {
+        this.log(`Error fixing file ${filePath}: ${error.message}`, 'ERROR');
+        return false;
+      }
+    }
     async cleanupDuplicateFiles() {
       this.log('Checking for duplicate page files...');
       const pagesDir = path.join(process.cwd(), 'pages');
       if (!fs.existsSync(pagesDir)) {
         return;
+      }
       const duplicates = [];
       const seen = new Set();
       function scanDirectory(dir) {
-        const files = fs.readdirSync(dir, { "withFileTypes": true });"
-            scanDirectory(path.join(dir, file.name));"
+        const files = fs.readdirSync(dir, { "withFileTypes": true });
+        files.forEach(file => {
+          if (file.isDirectory()) {
+            scanDirectory(path.join(dir, file.name));
+          } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {
+            const baseName = file.name.replace(/\.(js|tsx)$/, '');
             const relativePath = path.relative(
-              pagesDir,)
+              pagesDir,
               path.join(dir, baseName)
-  // TODO: Implement
-      // Remove duplicate .js files if .tsx exists;
+            );
+            if (seen.has(relativePath)) {
+              duplicates.push(path.join(dir, file.name));
+            } else {
+              seen.add(relativePath);
+            }
+          }
+        });
+      }
+      scanDirectory(pagesDir);
+      // Remove duplicate .js files if .tsx exists
       for (const duplicate of duplicates) {
         if (duplicate.endsWith('.js')) {
           const tsxVersion = duplicate.replace('.js', '.tsx');
-          if (fs.existsSync(tsxVersion)) {`;
-            this.log(`Removing duplicate JS "file": ${duplicate}`);"
-    async installMissingDependencies() {"
+          if (fs.existsSync(tsxVersion)) {
+            this.log(`Removing duplicate JS "file": ${duplicate}`);
+            fs.unlinkSync(duplicate);
+          }
+        }
+      }
+    }
+    async installMissingDependencies() {
       this.log('Checking for missing dependencies...');
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const dependencies = {
@@ -507,64 +516,88 @@ return { "success": false, "output": error.stdout || error.message };
         ...packageJson.devDependencies};
       const commonMissing = ['web3modal', 'ethers', 'react-is'];
       const toInstall = commonMissing.filter(dep => !dependencies[dep]);
-      if (toInstall.length > 0) {`;
+      if (toInstall.length > 0) {
         this.log(`Installing missing "dependencies": ${toInstall.join(', ')}`);
-  // TODO: Implement
+        try {
           execSync(`yarn add ${toInstall.join(' ')}`, { "stdio": 'pipe' });
+          this.log('Successfully installed missing dependencies');
+        } catch (error) {
           this.log(`Failed to install "dependencies": ${error.message}`, 'ERROR');
+        }
+      }
+    }
     async generateReport(errors, fixes) {
       const report = {
-        "timestamp": new Date().toISOString(),""
-        "totalErrors": errors.length,""
-        "fixesApplied": fixes.length,""
-        "errors": errors,""
-        "fixes": fixes,""
-        "summary": {""
+        "timestamp": new Date().toISOString(),
+        "totalErrors": errors.length,
+        "fixesApplied": fixes.length,
+        "errors": errors,
+        "fixes": fixes,
+        "summary": {
           buildStatus: 'checking',
-          "criticalErrors": errors.filter(e => e.critical).length,""
+          "criticalErrors": errors.filter(e => e.critical).length,
           "warningsResolved": fixes.filter(f => f.type === 'warning').length,
           "syntaxErrorsFixed": fixes.filter(f => f.type === 'syntax').length}};
-      this.log(`Report "generated": ${this.reportFile}`);"
-  // TODO: Implement
-        // 1. Clean up duplicate files;
-        // 2. Install missing dependencies;
-        // 3. Run initial build check;
-          // Extract error information;
-          // Attempt to fix files;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      this.log(`Report "generated": ${this.reportFile}`);
+      return report;
+    }
+    async run() {
+      this.log('Starting Intelligent Error Fixer...');
+      const errors = [];
+      const fixes = [];
+      try {
+        // 1. Clean up duplicate files
+        await this.cleanupDuplicateFiles();
+        // 2. Install missing dependencies
+        await this.installMissingDependencies();
+        // 3. Run initial build check
+        const buildResult = await this.runBuildCheck();
+        if (!buildResult.success) {
+          // Extract error information
+          const buildErrors = this.extractErrorInfo(buildResult.output);
+          errors.push(...buildErrors);
+          // Attempt to fix files
+          const uniqueFiles = [...new Set(buildErrors.map(e => e.file))];
           for (const file of uniqueFiles) {
             const filePath = path.join(process.cwd(), file);
             const fixed = await this.fixFile(filePath);
             if (fixed) {
               fixes.push({
                 "type": 'syntax',
-                "file": file,")"
-                "timestamp": new Date().toISOString()});"
-          // Run build again after fixes;
-          if (fixes.length > 0) {"
-  // TODO: Implement
-        // 4. Run other checks;
-        // 5. Generate report;
+                "file": file,
+                "timestamp": new Date().toISOString()});
+            }
+          }
+          // Run build again after fixes
+          if (fixes.length > 0) {
+            this.log('Re-running build after fixes...');
+            const secondBuildResult = await this.runBuildCheck();
+            if (secondBuildResult.success) {
+              this.log('Build successful after applying fixes!', 'SUCCESS');
+            } else {
+              this.log('Build still failing after fixes', 'WARN');
+            }
+          }
+        }
+        // 4. Run other checks
+        await this.runLintCheck();
+        await this.runTypeCheck();
+        // 5. Generate report
+        await this.generateReport(errors, fixes);
+        this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`);
+      } catch (error) {
         this.log(`Error in main "execution": ${error.message}`, 'ERROR');
-// Main execution;
+      }
+    }
+  };
+// Main execution
 if (require.main === module) {
   const fixer = new IntelligentErrorFixer();
   fixer.run().catch(console.error);
 }
 module.exports = IntelligentErrorFixer;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
 module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

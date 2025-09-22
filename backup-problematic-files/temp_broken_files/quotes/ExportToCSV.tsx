@@ -1,27 +1,24 @@
 
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
-import type { QuoteRequest } from "@/types/quotes",;
-=======
-import { Button } from "@/components/ui/button";""
+import { Button } from "@/components/ui/button",;
 import { Download } from 'lucide-react';
-import type { QuoteRequest } from "@/types/quotes";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import type { QuoteRequest } from "@/types/quotes",;
 ;
 interface ExportToCSVProps {;
-  quotes: QuoteRequest[];,;
+  quotes:QuoteRequest[],;
   filename?:string;
 }
-;"
-export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVProps) => {;"
+;
+export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVProps) => {;
   const handleExport = () => {;
     // Define CSV Headers;
-    const headers = [;"
+    const headers = [;
       'IDTalent Name',;
       'Requester NameRequester Email',;
       'Project NameProject Summary',;
       'BudgetTimeline',;
-      'StatusCreated Date';']
+      'StatusCreated Date';
     ],;
+    ;
     // Format quote data for CSV;
     const rows = quotes.map(quote => [;
       quote.id,;
@@ -33,32 +30,35 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       quote.budget_display || ;
         (quote.budget_min && quote.budget_max ;
           ? `$${quote.budget_min} - $${quote.budget_max}` ;
-          :quote.budget_min ;`;
-            ? `$${quote.budget_min}` ;)
+          :quote.budget_min ;
+            ? `$${quote.budget_min}` ;
             :'Not specified'),;
       quote.timeline,;
       quote.status,;
-      new Date(quote.created_at).toLocaleDateString();]
+      new Date(quote.created_at).toLocaleDateString();
     ]),;
+    ;
     // Create CSV content;
     const csvContent = [;
       headers.join(),;
       ...rows.map(row => ;
         row.map(cell => ;
-          // Escape commas and quotes in cell values;)
-          typeof cell === 'string' && (cell.includes() || cell.includes('"')) ;`;
-            ? `"${cell.replace(/"/g, '""')}"` ;"
+          // Escape commas and quotes in cell values;
+          typeof cell === 'string' && (cell.includes() || cell.includes('"')) ;
+            ? `"${cell.replace(/"/g, '""')}"` ;
             :cell;
         ).join();
-      );]"
+      );
     ].join('\n'),;
+    ;
     // Create download link;
-    const blob = new Blob([csvContent], { type: 'text/csv;,charset=utf-8,' }),;
+    const blob = new Blob([csvContent], { type:'text/csv,charset=utf-8,' }),;
     const url = URL.createObjectURL(blob),;
     const link = document.createElement('a'),;
-    link.setAttribute('href', url),;`;
+    link.setAttribute('href', url),;
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),;
     document.body.appendChild(link),;
+    ;
     // Download file and clean up;
     link.click(),;
     setTimeout(() => {;
@@ -66,21 +66,38 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       URL.revokeObjectURL(url),;
     }, 100),;
   },;
+  ;
   return (;
     <Button ;
-variant="outline" ;
+      variant="outline" ;
       onClick={handleExport}
       className="flex items-center gap-2";
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-      variant="outline" ;"
-      onClick={handleExport}"
-      className="flex items-center gap-2";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       disabled={quotes.length === 0}
     >;
-
       <Download size={16} />;
-Export CSV;
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
+      Export CSV;
+    </Button>;
+  ),;
+},; interface ExportToCSVProps {;
+  quotes: QuoteRequest[];
+filename?: string ;
+}export const ExportToCSV = ({;
+  quotes, filename = "quote-requests" ;
+}: ExportToCSVProps) => {;
+  const handleExport = () => {;
+  //Define CSV Headers const headers = [ 'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';';
+'StatusCreated Date' ];
+quote.budget min ;
+}- $$ {;
+  quote.budget max ;
+}`: quote.budget min ? `$$ {;
+  quote.budget min ';
+}` : 'Not specified');
+quote.timeline;
+quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create CSV content //Create download link className="flex items-center gap-2" disabled= {;
+  quotes.length === 0 ;
+}> <Download size= {;
+  16 ;
+}/> Export CSV </Button>) ;
+
+

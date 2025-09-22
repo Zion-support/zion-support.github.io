@@ -1,6 +1,9 @@
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+export function usePerformanceMetrics() {
+:backup-problematic-files/hooks/usePerformanceMetrics.ts
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-const [isSupported, setIsSupported] = useState(false);
+  const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
     if (typeof window === "undefined" |!("performance" in window)) {
       return;
@@ -24,7 +27,9 @@ const [isSupported, setIsSupported] = useState(false);
       }, 0);
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -32,19 +37,24 @@ const [isSupported, setIsSupported] = useState(false);
         cumulativeLayoutShift: cls
         firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
       });
-import { useEffect, useState } from 'react',;
-import { PerformanceMetrics } from '../types',;
-export function usePerformanceMetrics() {;
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),;
-  const [isSupported, setIsSupported] = useState(false),;
-  useEffect(() => {;
-    if (typeof window === 'undefined' || !('performance' in window)) {;
-      return;
+
+
     }
     // Wait for all performance entries to be available
     const timer = setTimeout(measurePerformance, 1000);
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+
+    // Wait for all performance entries to be available
+    const timer = setTimeout(measurePerformance, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return { metrics, isSupported };
+
+
+
