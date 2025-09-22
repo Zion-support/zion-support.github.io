@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
-import { Button } from './ui/Button';
 
 export default function InteractiveAICalculator() {
   const [input, setInput] = useState('');
@@ -19,37 +16,29 @@ export default function InteractiveAICalculator() {
   };
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Interactive AI Calculator</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Enter calculation..."
-            className="w-full p-2 border border-gray-300 rounded-md"
-          />
-          <Button onClick={calculate}>Calculate</Button>
-          {result && (
-            <div className="p-2 bg-gray-100 rounded-md">
-              Result: {result}
-            </div>
-          )}
-        </div>
-      </CardContent>
-    </Card>
-=======
-import React from 'react';
-
-export default function InteractiveAICalculator() {
-  return (
     <div className="bg-white rounded-lg shadow-lg p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">Interactive AI Calculator</h3>
-      <p className="text-gray-600">Calculate AI costs, performance metrics, and ROI.</p>
+      <p className="text-gray-600 mb-4">Calculate AI costs, performance metrics, and ROI.</p>
+      <div className="space-y-4">
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Enter calculation..."
+          className="w-full p-2 border border-gray-300 rounded-md"
+        />
+        <button 
+          onClick={calculate}
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"
+        >
+          Calculate
+        </button>
+        {result && (
+          <div className="p-2 bg-gray-100 rounded-md">
+            Result: {result}
+          </div>
+        )}
+      </div>
     </div>
->>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa
   );
 }

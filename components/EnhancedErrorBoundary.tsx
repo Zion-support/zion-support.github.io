@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 
@@ -44,10 +43,3 @@ export default class EnhancedErrorBoundary extends React.Component<
 
     return this.props.children;
   }
-=======
-import React from 'react';
-
-export default function EnhancedErrorBoundary({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
->>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa
-}

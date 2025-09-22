@@ -1,13 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-@tailwind utilities;
-@tailwind base; @tailwind components; @tailwind utilities;
-@tailwind base; @tailwind components; @tailwind utilities;
-@tailwind base; @tailwind components; @tailwind utilities;
-
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 html,
 body {
@@ -77,8 +69,3 @@ a {
   }
 }
 }
-origin/cursor/fix-syntax-push-and-merge-to-main-8452
-}
-=======
-@tailwind utilities;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
