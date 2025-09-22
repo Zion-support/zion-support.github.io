@@ -116,7 +116,10 @@
     "perf:improve": "node scripts/performance-improvements.js",
     "perf:analyze": "npm run build && npm run build:analyze",
     "perf:audit": "npm run security:audit && npm run optimize",
-    "perf:full": "npm run perf:improve && npm run perf:analyze && npm run perf:audit"
+    "perf:full": "npm run perf:improve && npm run perf:analyze && npm run perf:audit",
+    "optimize:build": "node scripts/build-optimizer.js",
+    "optimize:performance": "node scripts/performance-optimizer.js",
+    "optimize:all": "npm run optimize:build && npm run optimize:performance"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

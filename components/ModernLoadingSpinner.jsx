@@ -1,35 +1,21 @@
 import React from 'react';
 
-const ModernLoadingSpinner = ({ size = 'medium', text = 'Loading...' }) => {
+const ModernLoadingSpinner = ({ size = 'medium', text = 'Loading...', className = '' }) => {
   const sizeClasses = {
-    small: 'w-6 h-6',
-    medium: 'w-12 h-12',
-    large: 'w-16 h-16',
+    small: 'w-4 h-4',
+    medium: 'w-8 h-8',
+    large: 'w-12 h-12',
+    xl: 'w-16 h-16'
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
+    <div className={`flex flex-col items-center justify-center space-y-3 ${className}`}>
       <div className={`${sizeClasses[size]} relative`}>
-        {/* Outer ring */}
-        <div className="absolute inset-0 border-4 border-gray-200 rounded-full animate-spin" 
-             style={{ borderTopColor: 'transparent' }}></div>
-        
-        {/* Inner ring */}
-        <div className="absolute inset-0 border-4 border-transparent rounded-full animate-spin" 
-             style={{ 
-               borderTopColor: 'currentColor',
-               animationDirection: 'reverse',
-               animationDuration: '0.75s'
-             }}></div>
-        
-        {/* Center dot */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-2 h-2 bg-current rounded-full animate-pulse"></div>
-        </div>
+        <div className="absolute inset-0 rounded-full border-4 border-gray-200 dark:border-gray-700"></div>
+        <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-600 dark:border-t-blue-400 animate-spin"></div>
       </div>
-      
       {text && (
-        <p className="text-sm text-transparent bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text animate-pulse">
+        <p className="text-sm text-gray-600 dark:text-gray-400 animate-pulse">
           {text}
         </p>
       )}
