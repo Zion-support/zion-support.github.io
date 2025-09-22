@@ -1,7 +1,6 @@
-'use client'
+'use client';
 
-import React from 'react'
-;
+import React from 'react';
 interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
@@ -40,8 +39,8 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     console.groupEnd()
 
     // Send error to analytics service (placeholder)
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: true,
       })
