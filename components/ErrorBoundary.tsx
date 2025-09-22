@@ -106,5 +106,3 @@ function DefaultErrorFallback({ error, resetError }: { error?: Error; resetError
     </div>
   )
 }
-
-export default ErrorBoundary
