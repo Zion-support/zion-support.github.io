@@ -3,16 +3,9 @@ import React from 'react';
 import SEO from '../../components/SEO';
 
 export const metadata = {
-  title: 'AI 2026: LLM Evals Maturity Model',
-  description:
-    'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.',
-  keywords: [
-    'LLM evals',
-    'maturity model',
-    'AI quality',
-    'evaluation harness',
-    'governance',
-  ],
+  title: 'AI 2026: LLM Evals Maturity Model | Zion Tech Group',
+  description: 'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI in 2026.',
+  keywords: ['LLM evals', 'AI maturity model', 'AI governance', 'evaluation harness'],
 };
 
 export default function LLMEvalsMaturityModel2026() {
