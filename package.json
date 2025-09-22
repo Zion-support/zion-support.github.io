@@ -20,7 +20,7 @@
     "test:watch": "jest --watch",
     "preview": "npm run build && npm run start",
     "test:coverage": "jest --coverage",
-    "clean": "rm -rf .next node_modules/.cache",
+    "clean": "rm -rf .next node_modules/.cache"
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
