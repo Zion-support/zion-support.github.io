@@ -21,6 +21,7 @@ const customJestConfig = {
     '/pages-disabled/',
     '/pages.disabled/',
     '/tests/',
+    '/__tests__/',
     '/temp_exclude/'
   ],
   transform: {
