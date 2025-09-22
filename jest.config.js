@@ -9,7 +9,8 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
-  moduleNameMapping: {
+  // Correct key is moduleNameMapper (not moduleNameMapping)
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
   // Ignore extensive archived/disabled test directories to keep CI green
@@ -25,6 +26,20 @@ const customJestConfig = {
     '<rootDir>/backup-problematic-files/',
     '<rootDir>/pages-disabled/',
     '<rootDir>/pages.bak/',
+    '<rootDir>/components.disabled/',
+    '<rootDir>/components.disabled_full/',
+    '<rootDir>/pages.disabled/',
+    '<rootDir>/pages.disabled_auto/',
+    '<rootDir>/pages.disabled_full/',
+    '<rootDir>/pages_backup_before_cleanup/',
+    '<rootDir>/pages.broken/',
+    '<rootDir>/pages.corrupted',
+    '<rootDir>/pages.corrupted.*',
+    '<rootDir>/recovered-branches/',
+    '<rootDir>/ts_files_backup/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/e2e/',
   ],
   collectCoverageFrom: [
     'components/**/*.{js,jsx,ts,tsx}',
