@@ -11,8 +11,6 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  # Redirect functions directory to skip bundling broken legacy functions
-  directory = "netlify/functions_disabled"
   node_bundler = "esbuild"
 
 ## Security and caching headers for static assets
@@ -75,4 +73,9 @@ status = 301
 [[redirects]]
 from = "/smart-crm-intelligence-suite"
 to = "/services/smart-crm-intelligence-suite/"
+status = 301
+
+[[redirects]]
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
 status = 301
