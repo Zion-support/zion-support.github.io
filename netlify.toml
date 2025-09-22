@@ -20,15 +20,15 @@
   compress = true
 
 [build.environment]
-  NODE_VERSION = "20.18.1"
+  NODE_VERSION = "22.16.0"
 
-# Performance optimizations
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
+# Performance optimizations - temporarily disabled for testing
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
 
-# Image optimization
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
+# Image optimization - temporarily disabled for testing
+# [[plugins]]
+#   package = "netlify-plugin-cloudinary"
 
 # Redirects for SPA - handled by _redirects file
 # [[redirects]]
