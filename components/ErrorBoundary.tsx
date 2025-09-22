@@ -23,7 +23,35 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
+    // Enhanced error logging
+    const errorDetails = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+    }
+
+    console.group('🚨 Error Boundary Caught Error')
+    console.error('Error:', error)
+    console.error('Error Info:', errorInfo)
+    console.error('Full Details:', errorDetails)
+    console.groupEnd()
+
+    // Send error to analytics service (placeholder)
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: true,
+      })
+    }
+
+    // Send error to error tracking service (placeholder)
+    if (typeof window !== 'undefined') {
+      // This would be replaced with actual error tracking service
+      console.log('Error would be sent to error tracking service:', errorDetails)
+    }
   }
 
   resetError = () => {

@@ -1,88 +1,103 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+  domContentLoaded: number;
+  loadComplete: number;
+  totalTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint?: number;
+  cumulativeLayoutShift?: number;
+  firstInputDelay?: number;
 }
 
 export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-  });
-
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    // Monitor Core Web Vitals
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        const metric = entry as any;
+    const measurePerformance = () => {
+      try {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         
-        switch (metric.entryType) {
-          case 'paint':
-            if (metric.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: metric.startTime }));
-            }
-            break;
-          case 'largest-contentful-paint':
-            setMetrics(prev => ({ ...prev, lcp: metric.startTime }));
-            break;
-          case 'first-input':
-            setMetrics(prev => ({ ...prev, fid: metric.processingStart - metric.startTime }));
-            break;
-          case 'layout-shift':
-            if (!metric.hadRecentInput) {
-              setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + metric.value }));
-            }
-            break;
-        }
-      }
-    });
+        const metrics: PerformanceMetrics = {
+          domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+          loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
+          totalTime: perfData.loadEventEnd - perfData.fetchStart,
+          firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+          firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
+        };
 
-    // Observe different types of performance entries
-    try {
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (e) {
-      // Fallback for browsers that don't support all entry types
-      observer.observe({ entryTypes: ['paint'] });
+        // Measure Core Web Vitals
+        if ('web-vitals' in window) {
+          // This would be imported from web-vitals library in a real implementation
+          console.log('Core Web Vitals monitoring enabled');
+        }
+
+        // Log performance metrics
+        console.group('🚀 Performance Metrics');
+        console.log('DOM Content Loaded:', `${metrics.domContentLoaded.toFixed(2)}ms`);
+        console.log('Load Complete:', `${metrics.loadComplete.toFixed(2)}ms`);
+        console.log('Total Load Time:', `${metrics.totalTime.toFixed(2)}ms`);
+        console.log('First Paint:', `${metrics.firstPaint.toFixed(2)}ms`);
+        console.log('First Contentful Paint:', `${metrics.firstContentfulPaint.toFixed(2)}ms`);
+        console.groupEnd();
+
+        // Send to analytics service (placeholder)
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'page_performance', {
+            event_category: 'Performance',
+            custom_map: {
+              metric_1: 'dom_content_loaded',
+              metric_2: 'total_load_time',
+            },
+            metric_1: Math.round(metrics.domContentLoaded),
+            metric_2: Math.round(metrics.totalTime),
+          });
+        }
+
+        // Store metrics for debugging
+        (window as any).__performanceMetrics = metrics;
+
+      } catch (error) {
+        console.error('Performance monitoring error:', error);
+      }
+    };
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
 
-    // Monitor TTFB
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      setMetrics(prev => ({ 
-        ...prev, 
-        ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-      }));
+    // Monitor resource loading
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime.toFixed(2) + 'ms');
+        }
+        if (entry.entryType === 'first-input') {
+          console.log('FID:', entry.processingStart - entry.startTime + 'ms');
+        }
+        if (entry.entryType === 'layout-shift') {
+          console.log('CLS:', (entry as any).value);
+        }
+      });
+    });
+
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
 
     return () => {
       observer.disconnect();
+      window.removeEventListener('load', measurePerformance);
     };
   }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="mb-2 font-bold">Performance Metrics</div>
-      <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-      <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-      <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'Loading...'}</div>
-      <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-    </div>
-  );
+  return null; // This component doesn't render anything
 }
