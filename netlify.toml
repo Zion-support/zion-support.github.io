@@ -11,4 +11,6 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
+  # Redirect functions directory to skip bundling broken legacy functions
+  directory = "netlify/functions_disabled"
   node_bundler = "esbuild"
