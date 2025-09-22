@@ -64,7 +64,7 @@ export default function ContentPage() {
             >
               Get Custom Content
             </Link>
-          </h2>
+          </div>
           <p className="text-gray-600 mb-4">
             Adversarial scenarios, attack surfaces, and eval-gated mitigations to harden agents.
           </p>
