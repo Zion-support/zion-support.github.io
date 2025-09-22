@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
-
-
-
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -16,19 +9,30 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {;
   const { user } = useAuth();
+  }
+  return (
 
+
+
+  if (!hasBillingAccess) {
+    return <Navigate to="/unauthorized" />
+  }
+  return (
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function EnterpriseBilling() {
-  const { user } = useAuth();
-  // Check if user has billing permissions
 
+  // Check if user has billing permissions
+const hasBillingAccess = user?.role === "enterprise_admin" ||
+                          (user?.permissions && user.permissions.includes('billing_access')),
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function EnterpriseBilling() {};
+  const { user } = useAuth();
+
+// Check if user has billing permissions
 
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" || ;
@@ -41,44 +45,17 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 export default function EnterpriseBilling() {
   const { user } = useAuth(),
-  
+
   // Check if user has billing permissions
   const hasBillingAccess = user?.role === "enterprise_admin" || 
                           (user?.permissions && user.permissions.includes('billing_access')),
-  
 
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
   }
   return (
-
-    <ProtectedRoute>
+<ProtectedRoute>
       <SEO
-=======
-import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-
-export default function EnterpriseBilling() {
-  const { user } = useAuth();
-  
-  // Check if user has billing permissions
-  const hasBillingAccess = user?.role === "enterprise_admin" || 
-                          (user?.permissions && user.permissions.includes('billing_access'));
-  
-  if (!hasBillingAccess) {
-    return <Navigate to="/unauthorized" />;
-  }
-
-  return (
-    <ProtectedRoute>
-      <SEO 
->>>>>>> origin/auto/autonomy-17186719616
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
       />
@@ -88,11 +65,53 @@ export default function EnterpriseBilling() {
       </main>
       <Footer />
     </ProtectedRoute>
-<<<<<<< HEAD
   )
 
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+export default function EnterpriseBilling() {;
+  const { user } = useAuth();
+  // Check if user has billing permissions;
+  const hasBillingAccess = user?.role === "enterprise_admin" ||;
+                          (user?.permissions && user.permissions.includes('billing_access'));
+  if (!hasBillingAccess) {;
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function EnterpriseBilling() {
+  const { user } = useAuth();
 
+  // Check if user has billing permissions
+  const hasBillingAccess =
+    user?.role === "enterprise_admin" ||
+    (user?.permissions && user.permissions.includes("billing_access"));
 
+if (!hasBillingAccess) {
+    return <Navigate to="/unauthorized" />;
+
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+export default function EnterpriseBilling() {
+  const { user } = useAuth(),
+
+  // Check if user has billing permissions
+  const hasBillingAccess = user?.role === "enterprise_admin" || 
+                          (user?.permissions && user.permissions.includes('billing_access')),
+  if (!hasBillingAccess) {
+    return <Navigate to="/unauthorized" />
+  }
+  return (
 
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -112,9 +131,8 @@ export default function EnterpriseBilling() {;
   }
 ;
   return (;
-
     <ProtectedRoute>;
-      <SEO
+<SEO
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
       />;
@@ -125,42 +143,132 @@ export default function EnterpriseBilling() {;
       <Footer />;
     </ProtectedRoute>;
   );
-
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
 }
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { BillingDashboard } from '@/components / enterprise / billing / BillingDashboard';
-import { use_auth } from '@/hooks / use_auth';
-import { Navigate } from './react-router-dom';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-export default /**
- * EnterpriseBilling - Function description
- */
-function EnterpriseBilling() {
-  const { user } = use_auth ();
-;
-
-
-=======
+      />
+      <Header />
+      <main className="min-h-screen bg-background">
+        <BillingDashboard />
+      </main>
+      <Footer />
+    </ProtectedRoute>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616
+
+
+  );
+}
+
+}
+  }
+  return (
+import React from './react';'
+import { Header } from '@/components / Header';'
+import { Footer } from '@/components / Footer';'
+import { BillingDashboard } from '@/components / enterprise / billing / BillingDashboard';'
+import { use_auth } from '@/hooks / use_auth';'
+import { Navigate } from './react-router-dom';'
+import { SEO } from '@/components / SEO';'
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+export default /**;
+ * EnterpriseBilling - Function description;
+ */
+function EnterpriseBilling() {}
+  const { user } = use_auth ();
+;
+// Check if user has billing permissions;
+  const hasBillingAccess = user?.role === "enterprise_admin" ||;
+                          (user?.permissions && user.permissions.includes ('billing_access'));
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <Navigate to="/unauthorized" />;
+  }
+  return (
+    <ProtectedRoute>;
+      <SEO;
+        title="Enterprise Billing - Zion AI Marketplace";
+        description="Manage your subscription, view invoice history, and download billing statements.";
+      />;
+      <Header />;
+      <main className="min - h-screen bg-background">;
+        <BillingDashboard />;
+      </main>;
+      <Footer />;
+    </ProtectedRoute>);
+}
+  ),;}
+ export default function EnterpriseBilling () {
+  const {
+  user 
+}= useAuth ();
+//Check if user has billing permissions 
+}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> </ProtectedRoute>) 
+}
+  );
+}
+;
+
+'"
+
+import React from "react";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Navigate } from "react-router-dom";""
+import { SEO } from "@/components/SEO";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+export default function EnterpriseBilling() {
+  const { user } = useAuth();
+
+  // Check if user has billing permissions;
+  const hasBillingAccess ="
+    user?.role === "enterprise_admin" ||""
+    (user?.permissions && user.permissions.includes("billing_access"));"
+  if (!hasBillingAccess) {"
+    return <Navigate to="/unauthorized" />;"
+
+    <ProtectedRoute>
+
+      <SEO;"
+        title="Enterprise Billing - Zion AI Marketplace"""
+        description="Manage your subscription, view invoice history, and download billing statements.""
+      />
+
+      <Header />
+"
+      <main className="min-h-screen bg-background">"
+</main>
+        <BillingDashboard />
+
+      <Footer />
+
+    <ProtectedRoute>;
+
+        title="Enterprise Billing - Zion AI Marketplace";""
+        description="Manage your subscription, view invoice history, and download billing statements.";"
+
+      />;
+
+      <Header />;
+      <main className="min - h-screen bg - background">;"
+
+</Header>"
+      <main className="min - h-screen bg - background">;"
+</main>
+
+        <BillingDashboard />;
+
+      </main>;
+      <Footer />;
+
+    );"
+}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> )"
+pr-12325
+</Footer>
+    </ProtectedRoute>);"
+}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> </ProtectedRoute>)"
+</Header>"
+
