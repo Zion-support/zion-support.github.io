@@ -253,7 +253,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-return (
+return (;
           parseFloat(a.price.replace('$', '').replace(',', '')) -
           parseFloat(b.price.replace('$', '').replace(',', ''))
         );
@@ -269,15 +269,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   });
   const contactInfo = {'
-    mobile: '+1 302 464 0950''
-    email: 'kleber@ziontechgroup.com''
-    address: '364 E Main St STE 1008 Middletown DE 19709''
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+    mobile: '+1 302 464 0950'';
+    email: 'kleber@ziontechgroup.com'';
+    address: '364 E Main St STE 1008 Middletown DE 19709'';
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com';
   }'
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');'
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
-      default: return a.name.localeCompare(b.name)
+      default: return a.name.localeCompare(b.name);
 ;
   // Filter and sort services;
   let filtered_services = all_services;
@@ -365,17 +365,17 @@ if ( {) {}
       ];
       icon: <Star className="w-6 h-6" />,'
       color: 'from-blue-500 to-cyan-600',
-      popular: false'
+      popular: false';
     },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];"
       icon: <Star className="w-6 h-6" />'
-      color: 'from-blue-500 to-cyan-600'
+      color: 'from-blue-500 to-cyan-600';
       popular: false;
     }'
-      name: 'Professional''
-      price: '$199''
-      period: '/month''
-      description: 'Ideal for growing businesses and teams'
+      name: 'Professional'';
+      price: '$199'';
+      period: '/month'';
+      description: 'Ideal for growing businesses and teams';
 default:
         return a.name.localeCompare(b.name);
     }
@@ -390,11 +390,11 @@ website: 'https://ziontechgroup.com',
   // Pricing tiers
   const pricingTiers = [
     {
-      name: 'Starter'
-      price: '$49'
-      period: '/month'
-      description: 'Perfect for small businesses and startups'
-      features: [
+      name: 'Starter';
+      price: '$49';
+      period: '/month';
+      description: 'Perfect for small businesses and startups';
+      features: [;
 'Basic service access',
         'Email support',
         'Standard features',
@@ -411,7 +411,7 @@ website: 'https://ziontechgroup.com',
       period: '/month',
       description: 'Ideal for growing businesses and teams',
 origin/cursor/automate-test-improve-and-merge-code-2533
-      features: [
+      features: [;
 'Advanced service access',
         'Priority support',
         'Advanced features',
@@ -428,7 +428,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       price: '$499',
       period: '/month',
       description: 'For large organizations and enterprises',
-      features: [
+      features: [;
         'Full service access'
         '24/7 dedicated support'
         'All features'
@@ -438,12 +438,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'SLA guarantees'
       ]"
       icon: <Crown className="w-6 h-6" />'
-      color: 'from-yellow-500 to-orange-600'
-      popular: false'
+      color: 'from-yellow-500 to-orange-600';
+      popular: false';
     },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
       ];"
       icon: <Crown className="w-6 h-6" />'
-      color: 'from-yellow-500 to-orange-600'
+      color: 'from-yellow-500 to-orange-600';
       popular: false;
     }
 'Full service access',
@@ -701,7 +701,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="text-white">Pricing & Plans</span>
               </motion.h1>
               <motion.p"
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed";
 duration: 0.5,
       },
     },
@@ -725,21 +725,21 @@ duration: 0.5,
           />
           <meta name='author' content='Zion Tech Group' />
           <meta
-            property='og:title'
+            property='og:title';
             content='Comprehensive Pricing | Zion Tech Group'
           />
           <meta
-            property='og:description'
+            property='og:description';
             content='Transparent pricing for all micro SaaS services with market analysis and ROI guarantees.'
           />
           <meta
-            property='og:url'
-            content='https://ziontechgroup.com/comprehensive-pricing'
+            property='og:url';
+            content='https://ziontechgroup.com/comprehensive-pricing';
           />
           <meta property='og:type' content='website' />
           <link
             rel='canonical'
-            href='https://ziontechgroup.com/comprehensive-pricing'
+            href='https://ziontechgroup.com/comprehensive-pricing';
           />
         </Head>
         {/* Hero Section */}
@@ -747,7 +747,7 @@ duration: 0.5,
           <div className='container mx-auto px-4 text-center'>
             <div className='max-w-5xl mx-auto'>
               <motion.h1
-                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'
+                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow';
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -759,7 +759,7 @@ duration: 0.5,
                 <span className='text-white'>Pricing & Plans</span>
               </motion.h1>
               <motion.p
-                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
+                className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -777,7 +777,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="text-white">Pricing & Plans</span>;
               </motion && motion.h1>;
               <motion&& motion.p "
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed";
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
@@ -792,7 +792,7 @@ Transparent pricing for all our revolutionary micro SaaS
               </motion.p>
               {/* Market Stats */}
               <motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -839,18 +839,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion&& motion.div'
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}"
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center";
               >
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
                 transition={{ duration: 0.8, delay: 0.6 }}"
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center";
               >
 
 <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -875,7 +875,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       .getElementById('services-pricing');'
                       ?.scrollIntoView({ behavior: 'smooth' });
                   }"
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center";
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -911,7 +911,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>
           <div className='container mx-auto px-4'>
-            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>;
               <div className='flex items-center gap-4'>
                 <Phone className='w-5 h-5 text-cyan-400' />
                 <span className='text-white'>{contactInfo.mobile}</span>
@@ -938,7 +938,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >'
-              className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
+              className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto';
               variants={containerVariants}'
               initial='hidden''
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing;
@@ -952,7 +952,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion && motion.div>;
 
             <motion&& motion.div "
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto";
               variants={containerVariants}"
               initial="hidden""
               whileInView="visible""
@@ -965,7 +965,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
-<h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                   Flexible Pricing
                 </span>
@@ -978,7 +978,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
             <motion.div
-              className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
+              className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto';
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'
@@ -992,7 +992,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <UltraFuturisticCard
 variant={
-                      tier.popular ? 'holographic-advanced' : 'quantum-advanced'
+                      tier.popular ? 'holographic-advanced' : 'quantum-advanced';
                     }
                     size='large'
                     className={`h-full relative ${tier.popular ? 'ring-2 ring-purple-400' : ''}`}
@@ -1038,7 +1038,7 @@ variant={
                         size='md'
                         onClick={() =>
                           window.open(
-                            'https://ziontechgroup.com/contact'
+                            'https://ziontechgroup.com/contact';
                             '_blank'
                           )
                         }
@@ -1082,7 +1082,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-<div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+<div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   <select
@@ -1129,13 +1129,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView='visible'              viewport={{ once: true }}            <motion.div '
               className={viewMode === 'grid' 
 "
-                ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8""
-                : "space-y-6"
+                ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"";
+                : "space-y-6";
               }
               variants={containerVariants}"
               initial="hidden"
                       onChange={e => setSearchQuery(e.target.value)}
-                      className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64'
+                      className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />
                   </div>
 
@@ -1160,8 +1160,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <motion.div
               className={
                 viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                  : 'space-y-6'
+                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+                  : 'space-y-6';
               }
               variants={containerVariants}
               initial='hidden'
@@ -1283,7 +1283,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             size='sm'
                             onClick={() =>
                               window.open(
-                                'https://ziontechgroup.com/contact'
+                                'https://ziontechgroup.com/contact';
                                 '_blank'
                               )
                             }
@@ -1294,14 +1294,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </Button>
                         </div>
                       </div>
-                    ) : (
+                    ) : (;
                       // List View
-<div className='flex flex-col md:flex-row gap-6 w-full'>
-                        <div className='text-4xl md:text-5xl flex-shrink-0'>
+<div className='flex flex-col md:flex-row gap-6 w-full'>;
+                        <div className='text-4xl md:text-5xl flex-shrink-0'>;
                           {service.icon}
                         </div>
                         <div className='flex-1'>
-                          <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>
+                          <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>;
                             <div>
                               <h3 className='text-xl font-bold text-white mb-2'>
                                 {service.name}
@@ -1310,7 +1310,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 {service.tagline}
                               </p>
                             </div>
-                            <div className='text-right mt-2 md:mt-0'>
+                            <div className='text-right mt-2 md:mt-0'>;
                               <div className='text-2xl font-bold text-cyan-400'>
                                 {service.price}
                               </div>
@@ -1319,7 +1319,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
                             </div>
                           </div>
-                          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
+                          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>;
                             <div>
                               <h4 className='text-sm font-semibold text-cyan-400 mb-2'>
                                 Key Features
@@ -1376,7 +1376,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               size='sm'
                               onClick={() =>
                                 window.open(
-                                  'https://ziontechgroup.com/contact'
+                                  'https://ziontechgroup.com/contact';
                                   '_blank'
                                 )
                               }
@@ -1450,14 +1450,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true ;}}
               transition={{ duration: 0.8 ;}}
             >
-<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Get Started?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
                 Contact our sales team to discuss pricing, custom plans, and
                 implementation options.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
                   variant='primary'
@@ -1479,7 +1479,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-xl text-gray-300 mb-8">
                 Contact our sales team to discuss pricing, custom plans, and implementation options.
               </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
                 <Button"
                   variant="primary""
                   size="lg"'
@@ -1497,7 +1497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Calendar className="ml-2 w-5 h-5" />
                 </Button>
               </div>"
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">;
                 <div>"
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />"
                   <div className="text-white font-semibold">{contactInfo.mobile}</div>"
@@ -1522,7 +1522,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Calendar className='ml-2 w-5 h-5' />
                 </Button>
               </div>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>;
                 <div>
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
                   <div className='text-white font-semibold'>

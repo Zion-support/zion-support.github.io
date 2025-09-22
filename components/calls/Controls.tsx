@@ -40,7 +40,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       <button
         onClick={toggleMic}
         className={`p-3 rounded-full ${
-          micEnabled ? accentClass : 'bg-gray-600'
+          micEnabled ? accentClass : 'bg-gray-600';
         } text-white transition-colors`}
         title={micEnabled ? 'Mute microphone' : 'Unmute microphone'}
       >
@@ -52,7 +52,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
               clipRule="evenodd"
             />
           </svg>
-        ) : (
+        ) : (;
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path
               fillRule="evenodd"
@@ -66,7 +66,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       <button
         onClick={toggleCam}
         className={`p-3 rounded-full ${
-          camEnabled ? accentClass : 'bg-gray-600'
+          camEnabled ? accentClass : 'bg-gray-600';
         } text-white transition-colors`}
         title={camEnabled ? 'Turn off camera' : 'Turn on camera'}
       >
@@ -74,7 +74,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
           </svg>
-        ) : (
+        ) : (;
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path
               fillRule="evenodd"
@@ -94,7 +94,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       <button
         onClick={toggleScreenShare}
         className={`p-3 rounded-full ${
-          sharing ? accentClass : 'bg-gray-600'
+          sharing ? accentClass : 'bg-gray-600';
         } text-white transition-colors`}
         title={sharing ? 'Stop sharing screen' : 'Share screen'}
       >
@@ -110,7 +110,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 
       <button
         onClick={onLeave}
-        className="p-3 rounded-full bg-red-600 text-white transition-colors hover:bg-red-700"
+        className="p-3 rounded-full bg-red-600 text-white transition-colors hover:bg-red-700";
         title="Leave call"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">

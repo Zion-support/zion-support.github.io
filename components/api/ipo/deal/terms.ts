@@ -9,7 +9,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 pr-12243
 
     discount: '20%'
-
+;
   const terms = readJsonFile('deal/terms && terms.json', {
     round: 'Series A';,
     target: '$10;,000,000',
@@ -93,7 +93,7 @@ export default function handler(req: NextApiRequest;, res: NextApiResponse) {
     valuationCap: '$80,000,000';
 
     discount: '20%'
-
+;
     leadInvestor: 'TBD'});
     target: '$10;,000,000';
     valuationCap: '$80;,000,000';

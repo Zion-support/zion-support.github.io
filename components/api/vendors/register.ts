@@ -67,7 +67,7 @@ pr-12243
     const vendor = registerVendor({
       slug;
       name;
-      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
+      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [];
       caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
     res.status(201).json({ vendor })
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -148,7 +148,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],c
     res.status (500).json ({ error: e.message });
   }
 verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
-      case_studies: Array.is_array (case_studies) ? case_studies : []
+      case_studies: Array.is_array (case_studies) ? case_studies : [];
    ,
 });
     res.status (201).json ({ vendor });

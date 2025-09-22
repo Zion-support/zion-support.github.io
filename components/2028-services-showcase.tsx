@@ -129,7 +129,7 @@ const contactInfo = null;
     description: 'Quantum computing and beyond',
     icon: Atom,
     color: 'from-indigo-600 to-blue-600',
-services: futuristic2028Services
+services: futuristic2028Services;
       .filter(s => s.category.includes('Quantum'))
       .slice(0, 4),
   },
@@ -138,7 +138,7 @@ services: futuristic2028Services
     description: 'Next-generation AI solutions',
     icon: Brain,
     color: 'from-emerald-600 to-teal-600',
-services: emergingTech2028Services
+services: emergingTech2028Services;
       .filter(s => s.category.includes('AI'))
       .slice(0, 4),
   },
@@ -147,7 +147,7 @@ services: emergingTech2028Services
     description: 'Decentralized solutions',
     icon: Globe,
     color: 'from-orange-600 to-red-600',
-services: emergingTech2028Services
+services: emergingTech2028Services;
       .filter(s => s.category.includes('Blockchain'))
       .slice(0, 4),
   },
@@ -156,7 +156,7 @@ services: emergingTech2028Services
     description: 'Self-driving and mobility solutions',
     icon: Car,
     color: 'from-red-600 to-pink-600',
-services: futuristic2028Services
+services: futuristic2028Services;
       .filter(s => s.category.includes('Autonomous'))
       .slice(0, 4),
   },
@@ -175,21 +175,21 @@ export default function ServicesShowcase2028() {
           content='2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='2028 Futuristic Services Showcase - Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations.'
         />
         <meta
-          property='og:url'
-          content='https://ziontechgroup.com/2028-services-showcase'
+          property='og:url';
+          content='https://ziontechgroup.com/2028-services-showcase';
         />
         <meta property='og:type' content='website' />
         <link
           rel='canonical'
-          href='https://ziontechgroup.com/2028-services-showcase'
+          href='https://ziontechgroup.com/2028-services-showcase';
         />
       </Head>
 
@@ -203,7 +203,7 @@ export default function ServicesShowcase2028() {
           <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>
         </div>
 
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -214,36 +214,36 @@ className='space-y-8'
               <Sparkles className='w-4 h-4' />
               <span>2028 Future Technology</span>
             </div>
-            <h1 className='text-5xl md:text-7xl font-bold text-white leading-tight'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white leading-tight'>;
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'>
                 Futuristic
               </span>
               <br />
               <span className='text-white'>Services</span>
             </h1>
-            <p className='text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed'>
+            <p className='text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed'>;
               Experience the future of technology with our cutting-edge 2028
               services. From AI consciousness to quantum internet, we're
               building tomorrow's solutions today.
             </p>
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
               <Link
                 href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2'
+                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2';
               >
                 <span>Get Started</span>
                 <ArrowRight className='w-5 h-5' />
               </Link>
               <Link
                 href='/revolutionary-2028-pricing'
-                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'
+                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2';
               >
                 <span>View Pricing</span>
                 <DollarSign className='w-5 h-5' />
               </Link>
             </div>
             {/* Stats */}
-<div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
+<div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>;
               <div className='text-center'>
                 <div className='text-3xl font-bold text-purple-400'>50+</div>
                 <div className='text-purple-300'>Innovative Services</div>
@@ -304,12 +304,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               and propel you into the future of technology.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
       {/* Services Categories */}
 <section className='py-20 bg-black/50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Explore Our{' '}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Service Categories
@@ -322,7 +322,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {serviceCategories.map((category, index) => (
               <motion.div;
@@ -353,8 +353,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 viewport={{ once: true }}
 className='group relative'
               >
-                <div className='relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>
-                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                <div className='relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>;
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>;
                   <div className='relative z-10'>
                     <div
                       className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
@@ -384,10 +384,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     <Link
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'
+className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group';
                     >
                       <span>Explore More</span>
-                      <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />
+                      <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;
                     </Link>
                   </div>
                 </div>
@@ -405,9 +405,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
 <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Featured{' '}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Services
@@ -419,7 +419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {futuristic2028Services.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}
@@ -429,8 +429,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 viewport={{ once: true }}
 className='group relative'
               >
-                <div className='relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>
-                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                <div className='relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>;
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>;
                   <div className='relative z-10'>
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
@@ -466,8 +466,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;'
                       <div className='text-sm text-purple-300'>;'
                         <span className='font-medium'>Growth Rate:</span>{' '}"
-                <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">"
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>"
+                <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">";
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>";
                   <div className="relative z-10">"
                     <div className="flex items-start justify-between mb-4">"
                       <div className="text-4xl">{service.icon}</div>"
@@ -498,7 +498,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-center justify-between'>
                       <Link
                         href={service.link}
-                        className='px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
+                        className='px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105';
                       >
                         Learn More
                       </Link>
@@ -522,9 +522,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Market Analysis */}
 <section className='py-20 bg-black/50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Market{' '}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Insights;
@@ -536,7 +536,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             <motion.div
 
               initial={{ opacity: 0, y: 30 }}
@@ -702,7 +702,7 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -712,7 +712,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='space-y-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
             className='space-y-8'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Ready to{' '}
@@ -727,7 +727,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>;
               <Link'
                 href='/case-studies'
-                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'
+                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2';
               >
                 <span>View Case Studies</span>
                 <TrendingUp className='w-5 h-5' />

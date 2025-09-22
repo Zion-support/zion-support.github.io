@@ -38,8 +38,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 15;
-            repeat: Infinity as any'
-            ease: 'linear'
+            repeat: Infinity as any';
+            ease: 'linear';
           }}
         >'
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>
@@ -82,9 +82,9 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10'
             x: [0, 20, 0]
           }}
           transition={{
-            duration: 8
-            repeat: Infinity as any
-            ease: 'easeInOut'
+            duration: 8;
+            repeat: Infinity as any;
+            ease: 'easeInOut';
           }}
         >
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />
@@ -112,8 +112,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             x: [0, -30, 0]}}
           transition={{}
             duration: 12;
-            repeat: Infinity as any"
-            ease: "easeInOut"
+            repeat: Infinity as any";
+            ease: "easeInOut";
           }}>;'
           <div className='flex space-x-8 justify-center'>;
             {[...Array(20)].map((_, i) => (;
@@ -133,9 +133,9 @@ className='absolute top-0 left-0 w-full h-full opacity-20'
             y: [0, -100]
           }}
           transition={{
-            duration: 30
-            repeat: Infinity as any
-            ease: 'linear'
+            duration: 30;
+            repeat: Infinity as any;
+            ease: 'linear';
           }}
         >
           <div className='flex space-x-8 justify-center'>
@@ -161,7 +161,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   duration: 3,
                   repeat: Infinity as any,
                   delay: i * 0.1,'"
-                  ease: 'easeInOut',                  ease: "easeInOut"
+                  ease: 'easeInOut',                  ease: "easeInOut";
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
                 }}
@@ -202,11 +202,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             y: [0, 1000]}}
           transition={{}
             duration: 8;
-            repeat: Infinity as any'
+            repeat: Infinity as any';
             ease: 'linear',          }}
           transition={{}
             duration: 8;
-            repeat: Infinity as any'
+            repeat: Infinity as any';
             ease: 'linear',          }}
         {/* Pulse Rings */}
         <motion.div"
@@ -249,7 +249,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{}
             duration: 8,
             repeat: Infinity as any,"
-            ease: "linear"
+            ease: "linear";
           }}
         {/* Pulse Rings */}
         <motion.div;'
@@ -298,8 +298,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [1, 0]}}
           transition={{}
             duration: 4;
-            repeat: Infinity as any"
-            ease: "easeOut"
+            repeat: Infinity as any";
+            ease: "easeOut";
           }}
         >"
           <div className="w-full h-full border-2 border-cyan-400 rounded-full" />
@@ -327,8 +327,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [1, 0]}}
           transition={{}
             duration: 4;
-            repeat: Infinity as any"
-            ease: "easeOut"
+            repeat: Infinity as any";
+            ease: "easeOut";
             delay: 1;
             duration: 4,
             repeat: Infinity as any,'
@@ -392,10 +392,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             50% 100%,;
             0% 75%,;
             0% 25%;
-            duration: 4
-            repeat: Infinity as any
-            ease: 'easeOut'
-            delay: 2
+            duration: 4;
+            repeat: Infinity as any;
+            ease: 'easeOut';
+            delay: 2;
           }}
         >
           <div className='w-full h-full border-2 border-purple-400 rounded-full' />
@@ -404,7 +404,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* CSS for hexagon clip */}
       <style jsx>{`
         .clip-hexagon {
-clip-path: polygon(
+clip-path: polygon(;
             50% 0%,
             100% 25%,
             100% 75%,
@@ -430,7 +430,7 @@ export default UltraFuturisticBackground2047;
       {/* CSS for hexagon clip */}`
       <style jsx>{`;
         .clip - hexagon {}
-          clip - path: polygon (
+          clip - path: polygon (;
             50% 0%,
             100% 25%,
             100% 75%,

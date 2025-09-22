@@ -84,7 +84,7 @@ const service = getServiceById(id);
         <title />{service.name} | Zion Tech Group - Micro SaaS Services</title>
 <meta name='description' content={service.description} />
         <meta
-          property='og:title'
+          property='og:title';
           content={`${service.name} | Zion Tech Group`}
         />
         <meta property='og: description' content={service.description;} />
@@ -93,7 +93,7 @@ const service = getServiceById(id);
       <div className='min-h-screen bg-black'>
         {/* Navigation */}
         <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='flex items-center justify-between h-16'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
@@ -104,7 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href="/services""
                 variant="ghost""
                 size="sm""
-                className="text-gray-400 hover:text-white"
+                className="text-gray-400 hover:text-white";
               >"
                 <ArrowLeft className="w-4 h-4 mr-2" />
               >
@@ -121,14 +121,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Related Services CTA */}'
         <section className='py-16 bg-gray-900/50'>'
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>'
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>';
             <h2 className='text-3xl font-bold text-white mb-6'>
             </h2>'
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the;
               perfect solution for your business needs.
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
         {/* Related Services CTA */}'
         <section className='py-16 bg-gray-900/50'>;'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;'
@@ -152,14 +152,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 size='lg'
         {/* Related Services CTA */}
 <section className='py-16 bg-gray-900/50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
             <h2 className='text-3xl font-bold text-white mb-6'>
             </h2>'
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the;
               perfect solution for your business needs.
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <Button
                 href='/services'
                 variant='primary'
@@ -172,7 +172,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 href='/contact'
                 variant='outline'
                 size='lg'
-                className='border-white/20 text-white hover:border-white/40'
+                className='border-white/20 text-white hover:border-white/40';
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Get Custom Solution
@@ -339,14 +339,14 @@ variant='primary';
         {/* Related Services CTA */}
 
 <section className='py-16 bg-gray-900/50' />
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center' />;
             <h2 className='text-3xl font-bold text-white mb-6' />
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto' />
               Explore our complete portfolio of micro SaaS services to find the;
 perfect solution for your business needs.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center' />
+            <div className='flex flex-col sm:flex-row gap-4 justify-center' />;
               <Button;
                 href='/contact';
                 variant='outline';

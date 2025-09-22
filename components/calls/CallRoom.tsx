@@ -145,7 +145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const handleLeave = () => {
     if (room) {
     await r.connect(serverUrl, token, {
-      autoSubscribe: true
+      autoSubscribe: true;
     });
     // publish local tracks
 

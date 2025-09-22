@@ -71,7 +71,7 @@ pr-12243
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
-  isLoading ? 'animate-spin': ''
+  isLoading ? 'animate-spin': '';
 }`
 }/> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {
   /* Expanded View */

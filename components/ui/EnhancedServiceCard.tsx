@@ -207,10 +207,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="text-sm text-gray-400">{service.period}</div>
         </div>
         {/* Title & Tagline */}'
-        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
           {service.name}
         </h3>'"
-        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
           {service.name}
         </h3>"
         <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -225,7 +225,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
         {/* Title & Tagline */}
-<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
           {service.name}
         </h3>
         <p className='text-gray-300 text-sm mb-4 leading-relaxed'>
@@ -472,7 +472,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.a
             href={service.link}
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
-
+;
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;'
             <ExternalLink className='w-4 h-4' />;
@@ -481,7 +481,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <motion&& motion.a;`
             href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}'
-            className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
+            className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center';
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;'
             <ArrowRight className='w-4 h-4' />          </motion && motion.a>;
@@ -494,7 +494,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="flex gap-3">
           <motion.a;
             href={service.link}"
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2";
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -517,7 +517,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <motion&& motion.a;`
             href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}"
-            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
+            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center";
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;"
             <ArrowRight className="w-4 h-4" />;
@@ -550,7 +550,7 @@ export default EnhancedServiceCard;
 export default EnhancedServiceCard;
 export default EnhancedServiceCard;
 "
-      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover: opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover: opacity-100 transition-opacity duration-500" />;
     </motion.div>
   )
 };
@@ -801,7 +801,7 @@ export default EnhancedServiceCard;
 
 };
 
-<div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+<div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </motion.div>
   );
 };

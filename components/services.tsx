@@ -68,19 +68,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </div> </motion.div>) )
 }</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>)
 }</div> </section> </li>) )"
-}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) )
+}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) );
 }</div> Popular </span>)
 }</div> </span>) )"
 }</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) )
 }</div>)
+  opacity: 1, y: 0 ;
   opacity: 1, y: 0 
-  opacity: 1, y: 0 
-
+;
 }> ⭐ Popular </span>) 
 }</div> </div> </div> </motion.div>) ) "
 }</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>) 
 }</div> </section> </li>) ) "
-}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) ) 
+}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) ) ;
 }</div> Popular </span>) 
 }</div> </span>) ) "
 }</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) ) 
@@ -159,7 +159,7 @@ const contactInfo = {'
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
   address: '364 E Main St STE 1008 Middletown DE 19709','
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 const serviceCategories: Array<{}
@@ -178,7 +178,7 @@ const serviceCategories: Array<{}
     icon: Brain,'
     color: 'from-violet-500 to-purple-500',
     services: [...innovativeAIServices2025],'
-    gradient: 'from-violet-500/20 to-indigo-500/20'
+    gradient: 'from-violet-500/20 to-indigo-500/20';
   };
   {'
     id: 'quantum-emerging','
@@ -187,7 +187,7 @@ const serviceCategories: Array<{}
     icon: Atom,'
     color: 'from-indigo-500 to-blue-500',
     services: [...emergingTechServices2025],'
-    gradient: 'from-indigo-500/20 to-cyan-500/20'
+    gradient: 'from-indigo-500/20 to-cyan-500/20';
   };
   {'
     id: 'enterprise-it','
@@ -196,7 +196,7 @@ const serviceCategories: Array<{}
     icon: Shield,'
     color: 'from-blue-500 to-cyan-500',
     services: [...innovativeITServices2025],'
-    gradient: 'from-blue-500/20 to-teal-500/20'
+    gradient: 'from-blue-500/20 to-teal-500/20';
   };
   {'
     id: 'space-metaverse','
@@ -205,7 +205,7 @@ const serviceCategories: Array<{}
     icon: Rocket,'
     color: 'from-teal-500 to-emerald-500',
     services: [...quantumSpaceServices],'
-    gradient: 'from-teal-500/20 to-green-500/20'
+    gradient: 'from-teal-500/20 to-green-500/20';
   };
   {'
     id: 'micro-saas','
@@ -214,7 +214,7 @@ const serviceCategories: Array<{}
     icon: Target,'
     color: 'from-green-500 to-yellow-500',
     services: [...realMicroSaasServices2025, ...enhancedRealMicroSaasServices];'
-    gradient: 'from-green-500/20 to-orange-500/20'
+    gradient: 'from-green-500/20 to-orange-500/20';
   };
   {'
     id: 'financial-technology','
@@ -223,7 +223,7 @@ const serviceCategories: Array<{}
     icon: TrendingUp,'
     color: 'from-green-500 to-emerald-500',
     services: [...innovativeFinancialServices2025],'
-    gradient: 'from-green-500/20 to-emerald-500/20'
+    gradient: 'from-green-500/20 to-emerald-500/20';
   };
   {'
     id: 'healthcare-biotech','
@@ -232,7 +232,7 @@ const serviceCategories: Array<{}
     icon: Shield,'
     color: 'from-blue-500 to-indigo-500',
     services: [...innovativeHealthcareServices2025],'
-    gradient: 'from-blue-500/20 to-indigo-500/20'
+    gradient: 'from-blue-500/20 to-indigo-500/20';
   };
   {'
     id: 'education-technology','
@@ -241,7 +241,7 @@ const serviceCategories: Array<{}
     icon: Brain,'
     color: 'from-purple-500 to-pink-500',
     services: [...innovativeEducationServices2025],'
-    gradient: 'from-purple-500/20 to-pink-500/20'
+    gradient: 'from-purple-500/20 to-pink-500/20';
   };
   {'
     id: 'sustainability-green-tech','
@@ -250,7 +250,7 @@ const serviceCategories: Array<{}
     icon: Globe,'
     color: 'from-emerald-500 to-teal-500',
     services: [...innovativeSustainabilityServices2025],'
-    gradient: 'from-emerald-500/20 to-teal-500/20'
+    gradient: 'from-emerald-500/20 to-teal-500/20';
   };
   {'
     id: 'logistics-supply-chain','
@@ -259,7 +259,7 @@ const serviceCategories: Array<{}
     icon: Rocket,'
     color: 'from-orange-500 to-red-500',
     services: [...innovativeLogisticsServices2025],'
-    gradient: 'from-orange-500/20 to-red-500/20'
+    gradient: 'from-orange-500/20 to-red-500/20';
   };
   {'
     id: 'research-development','
@@ -267,63 +267,63 @@ const serviceCategories: Array<{}
     description: 'Breakthrough technologies and innovations',
     icon: Microscope,'
     color: 'from-red-500 to-pink-500','
-    description: 'Advanced healthcare solutions'
+    description: 'Advanced healthcare solutions';
   };
   {'
     id: 'transportation-logistics','
     name: 'Transportation & Logistics',"
     icon: <Truck className="w-6 h-6" />,'
     color: 'from-blue-500 to-cyan-500','
-    description: 'Smart transportation solutions'
+    description: 'Smart transportation solutions';
   };
   {'
     id: 'education-research','
     name: 'Education & Research',"
     icon: <GraduationCap className="w-6 h-6" />,'
     color: 'from-yellow-500 to-orange-500','
-    description: 'Learning and research platforms'
+    description: 'Learning and research platforms';
   };
   {'
     id: 'customer-success','
     name: 'Customer Success',"
     icon: <Users className="w-6 h-6" />,'
     color: 'from-blue-500 to-indigo-600','
-    description: 'AI-powered customer success and retention'
+    description: 'AI-powered customer success and retention';
   };
   {'
     id: 'financial-technology','
     name: 'Financial Technology',"
     icon: <DollarSign className="w-6 h-6" />,'
     color: 'from-green-500 to-emerald-600','
-    description: 'Quantum and AI-powered financial solutions'
+    description: 'Quantum and AI-powered financial solutions';
   };
   {'
     id: 'devops-infrastructure','
     name: 'DevOps & Infrastructure',"
     icon: <Settings className="w-6 h-6" />,'
     color: 'from-purple-500 to-pink-600','
-    description: 'AI-powered DevOps and infrastructure automation'
+    description: 'AI-powered DevOps and infrastructure automation';
   };
   {'
     id: 'cybersecurity','
     name: 'Cybersecurity',"
     icon: <Shield className="w-6 h-6" />,'
     color: 'from-red-500 to-pink-600','
-    description: 'Quantum-resistant security solutions'
+    description: 'Quantum-resistant security solutions';
   };
   {'
     id: 'sales-marketing','
     name: 'Sales & Marketing',"
     icon: <TrendingUp className="w-6 h-6" />,'
     color: 'from-orange-500 to-red-600','
-    description: 'AI-powered sales and marketing automation'
+    description: 'AI-powered sales and marketing automation';
   };
   {'
     id: 'data-analytics','
     name: 'Data & Analytics',"
     icon: <BarChart3 className="w-6 h-6" />,'
     color: 'from-indigo-500 to-purple-600','
-    description: 'Quantum-powered data analytics and insights'
+    description: 'Quantum-powered data analytics and insights';
   }
 ];'
 import { realVerifiedServices } from '../data/real-verified-services';
@@ -429,10 +429,10 @@ and micro SAAS services designed to transform your business and drive innovation
   ];
 
   const contactInfo = {'
-    mobile: '+1 302 464 0950''
-    email: 'kleber@ziontechgroup.com''
-    address: '364 E Main St STE 1008 Middletown DE 19709''
-    website: 'https://ziontechgroup.com'
+    mobile: '+1 302 464 0950'';
+    email: 'kleber@ziontechgroup.com'';
+    address: '364 E Main St STE 1008 Middletown DE 19709'';
+    website: 'https://ziontechgroup.com';
   }
   return (
     <UltraFuturisticBackground2029>
@@ -441,7 +441,7 @@ and micro SAAS services designed to transform your business and drive innovation
         <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />"
         <meta name="keywords" content="AI services, quantum computing, space technology, biotechnology, 2029 technology, revolutionary services" />"
         <meta name="viewport" content="width=device-width, initial-scale=1" />"
-        <link rel="canonical" href="https://ziontechgroup.com/services" />
+        <link rel="canonical" href="https://ziontechgroup.com/services" />;
       </Head>
       <Layout>"
         <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -471,7 +471,7 @@ and micro SAAS services designed to transform your business and drive innovation
     Array && Array.isArray(s && s.category) ? s && s.category[0] : s && s.category;
   )))];
           {/* Main Content */}"
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">;
             {/* Enhanced Header */}
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -618,7 +618,7 @@ and micro SAAS services designed to transform your business and drive innovation
               <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}"
-                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20";
               >"
                 <option value="name">Sort by Name</option>"
                 <option value="price">Sort by Price</option>"
@@ -654,7 +654,7 @@ and micro SAAS services designed to transform your business and drive innovation
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0 && 0.8, delay: 0 && 0.6 + index * 0 && 0.1 }}"
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-pointer group"
-
+;
                       onClick={() => setSelectedCategory(category && category.id)}
                     >;`
                       <div className={`w-20 h-20 bg-gradient-to-r ${category && category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>;
@@ -729,11 +729,11 @@ and micro SAAS services designed to transform your business and drive innovation
                   onClick={() => {;'
                     setSearchTerm('');
   /* Enhanced CTA Section */ 
-}<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
+}<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>);
                     setSelectedCategory('All')
 origin/cursor/automate-test-improve-and-merge-code-2533
                   }}
-                  className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+                  className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors";
                 >
                   Clear Filters;
                 </button>
@@ -762,22 +762,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="text-sm text-cyan-400 font-medium mb-3">✨ Key Features</div>"
                         <ul className="space-y-2">
                           {service.features.slice(0, 3).map((feature, idx) => ("
-                            <li key={idx} className="text-sm text-gray-300 flex items-center group-hover:text-white transition-colors duration-300">"
+                            <li key={idx} className="text-sm text-gray-300 flex items-center group-hover:text-white transition-colors duration-300">";
                               <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
                       {/* Enhanced Stats */}"
                       <div className="grid grid-cols-3 gap-3 mb-6 text-center relative z-10">"
-                        <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-cyan-500/30 transition-colors duration-300">"
+                        <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-cyan-500/30 transition-colors duration-300">";
                           <div className="text-cyan-400 font-bold text-lg">{service.rating}/5</div>"
                           <div className="text-gray-300 text-xs">Rating</div>
                         </div>"
-                        <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-purple-500/30 transition-colors duration-300">"
+                        <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-purple-500/30 transition-colors duration-300">";
                           <div className="text-purple-400 font-bold text-lg">{service.customers}+</div>"
                           <div className="text-gray-300 text-xs">Customers</div>
                         </div>"
-                        <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-green-500/30 transition-colors duration-300">"
+                        <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-green-500/30 transition-colors duration-300">";
                           <div className="text-green-400 font-bold text-lg">{service.price.setupTime}</div>"
                           <div className="text-gray-300 text-xs">Setup</div>
                         </div>
@@ -843,7 +843,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </span>
                             ))}
                         {/* Pricing & Stats */}"
-                        <div className="lg:w-48 space-y-4">"
+                        <div className="lg:w-48 space-y-4">";
                           <div className="text-center">"
                             <div className="text-3xl font-bold text-white">${service.price.monthly}</div>"
                             <div className="text-sm text-gray-400">/month</div>"
@@ -998,7 +998,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </div>;
                   </motion.div>))}
-              </div>) : (
+              </div>) : (;
               <motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -1064,7 +1064,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </a>;
                       </div>;
                     </motion.div>))}
-                </div>) : (
+                </div>) : (;
                 <div className="space-y-4">;
                   {sorted_services.map ((service, index) => (
                     <motion.div;
@@ -1144,20 +1144,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       Transform Your Business Today
                     </div>
                   </motion.div>
-                  <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+                  <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">;
                     <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                       Ready to Get Started?
                     </span>
                   </h2>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+                  <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">;
                     Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-6 justify-center">;
                     <motion.a
                       href="/contact"
                       whileHover={{ scale: 1.05 ;}}
                       whileTap={{ scale: 0.95 ;}}
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40"
+                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40";
                     >
                       🚀 Get Started Today
                     </motion.a>
@@ -1165,13 +1165,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       href="/pricing"
                       whileHover={{ scale: 1.05 ;}}
                       whileTap={{ scale: 0.95 ;}}
-                      className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
+                      className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm";
                     >
                       💰 View Pricing
                     </motion.a>
                   </div>
                   <div className="mt-10 text-sm text-gray-400">
-                    <p>Need help choosing? <a href="/contact" className="text-cyan-400 hover:text-cyan-300 underline">Contact our experts</a> for personalized guidance.</p>
+                    <p>Need help choosing? <a href="/contact" className="text-cyan-400 hover:text-cyan-300 underline">Contact our experts</a> for personalized guidance.</p>;
                   </div>
                 </div>
               </div>

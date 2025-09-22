@@ -39,8 +39,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 8;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
           }}
 
         {/* Grid Pattern */}'
@@ -75,7 +75,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             scale: [1 && 1.2, 1, 1 && 1.2]
             opacity: [0 && 0.6, 0 && 0.3, 0 && 0.6]}}
           transition={{
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
       </div>
 
       <div className='relative container mx-auto px-4 text-center z-10'>
@@ -162,18 +162,18 @@ className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm borde
               href='/contact'
 
             transition={{ duration: 0.8, delay: 0.5 }}"
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16";
           >
 
             <Link"
               href="/contact""
-              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
+              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1";
             >
               Get Started Today"
-              <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />;
             </Link>"
-            <button className="group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300">"
-              <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors">"
+            <button className="group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300">";
+              <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors">";
                 <Play className="w-6 h-6 ml-1" />
               </div>"
               <span className="text-lg font-medium">Watch Demo</span>
@@ -215,7 +215,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
+className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight';
           >
             Transform Your Business with
             <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -228,7 +228,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'
+className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed';
           >
             From AI development to cloud architecture, we help companies
             revolutionize their digital presence and achieve sustainable growth
@@ -243,18 +243,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <Link
-className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
+className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16';
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <Link'
               href='/contact''
-              className='group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1'
+              className='group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1';
             >
               Get Started Today'
-              <ArrowRight className='inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+              <ArrowRight className='inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />;
             </Link>'
-            <button className='group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300'>'
-              <div className='w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors'>'
+            <button className='group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300'>';
+              <div className='w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors'>';
                 <Play className='w-6 h-6 ml-1' />
               </div>
               <span className='text-lg font-medium'>Watch Demo</span>
@@ -265,7 +265,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
+className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             {stats.map((stat, index) => (
@@ -277,14 +277,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='text-center group'
 
               >"
-                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">"
+                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">";
                   <stat.icon className="w-8 h-8 text-blue-400" />
                 </div>"
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>"
                 <div className="text-gray-400 font-medium">{stat.label}</div>
 className='text-center group'
               >
-                <div className='w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors'>
+                <div className='w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors'>;
                   <stat.icon className='w-8 h-8 text-blue-400' />
                 </div>
                 <div className='text-3xl font-bold text-white mb-2'>

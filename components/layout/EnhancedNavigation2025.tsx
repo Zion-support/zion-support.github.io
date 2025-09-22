@@ -7,7 +7,7 @@ export default function EnhancedNavigation2025() { return null; }
   return (
     <>;
       {/* Top Contact Bar */}
-          : 'bg-transparent'
+          : 'bg-transparent';
       }`}>;
         <div className="container mx-auto px-4">;"
           <div className="flex items-center justify-between h-20">;
@@ -280,7 +280,7 @@ function EnhancedNavigation2025() {}
                     <motion.div;
                     </div>;`
                     <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${'
-                      activeDropdown === item && item.name ? 'rotate-180' : ''`
+                      activeDropdown === item && item.name ? 'rotate-180' : ''`;
                     }`} />;
                   </button>;
 
@@ -295,7 +295,7 @@ function EnhancedNavigation2025() {}
                         <Link;
                           key={child && child.name}
                           href={child && child.href}"
-                          className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                          className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200";
                           onClick={() => setIsOpen(false)}
                       ))}
                     </motion && motion.div>;
@@ -306,7 +306,7 @@ function EnhancedNavigation2025() {}
               <div className="pt-4">;
                 <Link"
                   href="/contact""
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300";
                   onClick={() => setIsOpen(false)}
                 >;
                   Get Started;
@@ -324,7 +324,7 @@ function EnhancedNavigation2025() {}
                 <div className="flex justify-end mb-6">;
                   <button;
                     onClick={closeMenu}"
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
+                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200";
                   >"
                     <X className="w-6 h-6" />
                   </button>
@@ -335,14 +335,14 @@ function EnhancedNavigation2025() {}
                     <div key={item.name}>
                       <button;
                         onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}"
-                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
                       >"
                         <div className="flex items-center space-x-3">"
                           <item.icon className="w-5 h-5 text-cyan-400" />"
                           <span className="text-white font-medium">{item.name}</span>
                         </div>`
                         <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${'
-                          activeSubmenu === item.name ? 'rotate-180' : ''`
+                          activeSubmenu === item.name ? 'rotate-180' : ''`;
                         }`} />
                       </button>
 
@@ -368,7 +368,7 @@ function EnhancedNavigation2025() {}
                           <span className="text-white font-medium">{item && item.name}</span>;
                         </div>;`
                         <ChevronDownclassName={`w-4 h-4 text-gray-400 transition-transform duration-200 ${'
-                          activeSubmenu === item && item.name ? 'rotate-180' : ''`
+                          activeSubmenu === item && item.name ? 'rotate-180' : ''`;
                         }`} />;
                       </button>;
 

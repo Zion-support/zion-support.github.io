@@ -60,7 +60,7 @@ export default function ParticipantTile({
           autoPlay
           muted={isLocal}
         />
-      ) : (
+      ) : (;
         <div className="w-full h-full flex items-center justify-center bg-gray-800">
           <div className="text-center">
             <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-2">

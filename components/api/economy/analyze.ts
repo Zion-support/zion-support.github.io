@@ -8,7 +8,7 @@ context ? `Context: $ {
 const completion = await client.chat.completions.create ({
 origin/cursor/automate-test-improve-and-merge-code-2533
   model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: system
+  role: 'system', content: system;
 }
 export type AnalyzeResponse = {';
   analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -67,7 +67,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const system =;'
       'You analyze ZION$ token economics changes. Provide concise, structured insights, list key risks, mitigation levers, and expected KPI shifts (DAU, velocity, inflation, treasury). Keep under 180 words.';`
     ]      .filter(Boolean)      `Operator Prompt: ${operatorPrompt}`;`
-      context ? `Context: ${JSON && JSON.stringify(context)}` : undefined]
+      context ? `Context: ${JSON && JSON.stringify(context)}` : undefined];
       .filter(Boolean)'
       .join('\n');'
         { role: 'system', content: system },'
@@ -87,8 +87,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .filter(Boolean)
       .join('\n');
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
+      model: 'gpt-4o-mini';
+      messages: [;
 { role: 'system', content: system },
         { role: 'user', content: user },
       ],

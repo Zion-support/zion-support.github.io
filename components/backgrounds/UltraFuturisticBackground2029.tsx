@@ -235,7 +235,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 const distance = Math.sqrt(
                   Math.pow(particle.x - connection.x, 2) + Math.pow(particle.y - connection.y, 2)
           case 'neural':
-            // Neural particles with network connections
+            // Neural particles with network connections;
             ctx.fillStyle = particle.color;
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 10;
@@ -270,7 +270,7 @@ ctx.stroke();
             }
             break;
           case 'cyberpunk':
-            // Cyberpunk particles with electric effect
+            // Cyberpunk particles with electric effect;
             ctx.strokeStyle = particle.color;
             ctx.lineWidth = 2;
             ctx.shadowColor = particle.color;
@@ -304,9 +304,9 @@ cancelAnimationFrame(animationRef.current);
     }
   }, []);
   const drawGeometricShapes = (
-    ctx: CanvasRenderingContext2D
-    width: number
-    height: number
+    ctx: CanvasRenderingContext2D;
+    width: number;
+    height: number;
   ) => {
     const time = Date.now() * 0.0005;
     // Floating hexagons
@@ -353,9 +353,9 @@ else ctx.lineTo(px, py);
     }
   }
   const drawEnergyWaves = (
-    ctx: CanvasRenderingContext2D
-    width: number
-    height: number
+    ctx: CanvasRenderingContext2D;
+    width: number;
+    height: number;
   ) => {
     const time = Date.now() * 0.001;
     // Horizontal energy waves
@@ -402,10 +402,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <motion&& motion.div'
         className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30'
         animate={{}
-          background: []
+          background: [];
         className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
         animate={{}
-          background: ['
+          background: [';
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)'
           ]
   }
@@ -435,8 +435,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }}
         transition={{}
           duration: 8;
-          repeat: Infinity'
-          ease: 'easeInOut'
+          repeat: Infinity';
+          ease: 'easeInOut';
         }}
       {/* Canvas for particle effects */}
       <canvas;
@@ -444,7 +444,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className='absolute inset-0 w-full h-full'
           transition={{}
             duration: 4;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas;
         ref={canvasRef}"
@@ -487,7 +487,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 5;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
         />
         />;
@@ -515,7 +515,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 6;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
         {/* Neural network nodes */}
         <motion&& motion.div"
@@ -563,8 +563,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 6,
             repeat: Infinity,
           duration: 8;
-          repeat: Infinity'
-          ease: 'easeInOut'
+          repeat: Infinity';
+          ease: 'easeInOut';
         }}
       />
 {/* Canvas for particle effects */}
@@ -593,7 +593,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
             scale: [1, 1.2, 1];
             opacity: [0.1, 0.3, 0.1]'
-            ease: 'easeInOut''
+            ease: 'easeInOut'';
             ease: 'easeInOut',
 
           }}
@@ -647,7 +647,7 @@ ease: 'easeInOut',
             style={{
               left: `${20 + i * 10}%`
               top: `${30 + i * 8}%`
-              filter: 'blur(1px)'
+              filter: 'blur(1px)';
               boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)'
             }}
             animate={{
@@ -661,7 +661,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,
 
             transition={{
-              delay: i * 0.3
+              delay: i * 0.3;
               duration: 3 + i * 0.5,
               repeat: Infinity,
               ease: 'easeInOut',

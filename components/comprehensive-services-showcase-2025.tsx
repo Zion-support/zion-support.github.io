@@ -106,7 +106,7 @@ const allServices: Service[] = [;
   launchDate: string;
   badge?: string;
 
-  icon?: React.ReactNode
+  icon?: React.ReactNode;
 }
 
 const allServices: Service[] = [
@@ -206,7 +206,7 @@ filtered = filtered.filter(
         const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
         switch (selectedPriceRange) {
 case 'under-50':
-origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533;
             return price < 50;
           case '50-200':;
             return price >= 50 && price <= 200;
@@ -238,7 +238,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
-return (
+return (;
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
 origin/cursor/automate-test-improve-and-merge-code-2533
           );
@@ -268,7 +268,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     });'
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));'
-        case 'price-high':'
+        case 'price-high':';
           return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
         default: return 0;
       }
@@ -305,7 +305,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const getCategoryColor = (category: string) => {
     switch (category) {
 case 'Micro SAAS':
-origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533;
         return 'from-blue-500 to-cyan-500';
       case 'AI & Consciousness':;
         return 'from-purple-500 to-pink-500';
@@ -325,7 +325,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const getCategoryIcon = (category: string) => {
     switch (category) {
 case 'Micro SAAS':
-origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533;
         return <Rocket className='w-5 h-5' />;
       case 'AI & Consciousness':;
         return <Brain className='w-5 h-5' />;
@@ -379,7 +379,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />
           ))}
         </div>'"
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
     }
   };
 
@@ -470,9 +470,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 y: [0, -100, 0]
                 opacity: [0.2, 0.8, 0.2]
               }}              transition={{
-                duration: 10 + i * 2
-                repeat: Infinity
-                delay: i * 0.5
+                duration: 10 + i * 2;
+                repeat: Infinity;
+                delay: i * 0.5;
               }}
               style={{
                 left: `${Math.random() * 100}%`,
@@ -482,38 +482,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
 
-<div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>
+<div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>;
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>
+<h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
               </span>
               <br />
               <span className='text-white'>Services Showcase</span>
             </h1>
-            <p className='text-xl sm:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>
+            <p className='text-xl sm:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>;
               Discover our complete portfolio of {allServices.length}+
               innovative micro SAAS, AI, IT, and emerging technology services
             </p>
             {/* Stats */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
               {[
                 {
-                  label: 'Total Services'
-                  value: allServices.length
+                  label: 'Total Services';
+                  value: allServices.length;
                   icon: <Globe className='w-8 h-8' />
                 }
                 {
-                  label: 'AI Solutions'
-                  value: innovativeAIServicesEnhanced2025.length
+                  label: 'AI Solutions';
+                  value: innovativeAIServicesEnhanced2025.length;
                   icon: <Brain className='w-8 h-8' />
                 }
                 {
-                  label: 'IT Services'
-                  value: innovativeITServicesEnhanced2025.length
+                  label: 'IT Services';
+                  value: innovativeITServicesEnhanced2025.length;
                   icon: <Shield className='w-8 h-8' />
                 }
                 {
@@ -577,13 +577,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <option key={range && range.value} value={range && range.value} className="bg-gray-900 text-white">;
                     {range && range.label}
                   </option>;"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">"
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">";
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">;
             {/* Category Filters */}"
             <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
                   onChange={e => setSearchTerm(e.target.value)}
-                  className='w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'
+                  className='w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50';
                 />
               </div>
             </div>
@@ -592,8 +592,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
       {/* Filters and Controls */}
 <div className='bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-          <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
+          <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0'>;
             {/* Category Filters */}
             <div className='flex flex-wrap items-center space-x-2'>
               {categories.map(category => (
@@ -629,7 +629,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </select>;
 
                 onChange={e => setSelectedPriceRange(e.target.value)}
-                className='px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50'
+                className='px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50';
               >
                 {priceRanges.map(range => (
                   <option;
@@ -646,7 +646,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <select
                 value={sortBy}
 onChange={e => setSortBy(e.target.value)}
-                className='px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50'
+                className='px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50';
               >
                 {sortOptions.map(option => (
                   <option
@@ -680,7 +680,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`p-2 rounded-md transition-all duration-200 ${
                     viewMode === 'grid'
                       ? 'bg-cyan-500 text-white'
-                      : 'text-gray-400 hover:text-white'
+                      : 'text-gray-400 hover:text-white';
                   }`}
                 >
 <Grid3X3 className='w-4 h-4' />
@@ -691,11 +691,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`p-2 rounded-md transition-all duration-200 ${
                     viewMode === 'list'
                       ? 'bg-cyan-500 text-white'
-                      : 'text-white'
+                      : 'text-white';
                   }`}
         {/* Results Count */}'
         <div className='mb-8'>'"
-          <p className='text-gray-400'>            Showing {filteredServices.length} of {allServices.length} services      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <p className='text-gray-400'>            Showing {filteredServices.length} of {allServices.length} services      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         {/* Results Count */}"
         <div className="mb-8">;"
           <p className="text-gray-400">;
@@ -715,7 +715,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
       {/* Services Grid/List */}
-<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>;
         {/* Results Count */}
         <div className='mb-8'>
           <p className='text-gray-400'>
@@ -723,7 +723,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
         {viewMode === 'grid' ? (
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -733,8 +733,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 transition={{ duration: 0.5, delay: index * 0.1 }}'
                 className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
-
-className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
+;
+className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 {/* Category Badge */}'
@@ -744,7 +744,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='mb-4'>;'
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                    {service && service.icon}              >;
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
-                className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
+                className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300";
               >
                 {/* Category Badge */}
                   </div>
@@ -757,7 +757,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 {/* Service Info */}'
                 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
-
+;
       {/* Services Grid / List */}'
       <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
         {/* Results Count */}
@@ -806,15 +806,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Service Info */}'
                 <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 300 transition - colors duration - 200'>;
 
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">;
 <div className='mb-4'>
-                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>
+                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {service.icon}
                   </div>
                 </div>
                 {/* Service Info */}
-<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.name}
                 </h3>;'
@@ -912,7 +912,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4'>
                   <div className='text-xs text-gray-500 mb-2'>
                     Key Features:
-                  </div>
+                  </div>;
                   <div className='space-y-1'>
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div
@@ -939,13 +939,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
                 {/* CTA Button */}
-<button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>
+<button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>;
                   Learn More
                 </button>
               </motion.div>
             ))}
           </div>
-        ) : (
+        ) : (;
 <div className='space-y-6'>
             {filteredServices.map((service, index) => (
               <motion.div
@@ -955,18 +955,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}'
                 className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
-
+;
               >
                 <div className="flex items-start space-x-6">
                   {/* Service Icon */}"
                   <div className="flex-shrink-0">"
-                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
-className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
+                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">;
+className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300';
               >
                 <div className='flex items-start space-x-6'>
                   {/* Service Icon */}
                   <div className='flex-shrink-0'>
-                    <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>
+                    <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.icon}
                     </div>
@@ -992,7 +992,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex-1 min-w-0'>
                     <div className='flex items-start justify-between mb-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-                        <h3 className='text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
+                        <h3 className='text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>;
                           {service.name}
                         </h3>'
                         <p className='text-lg text-cyan-300 mb-2'>
@@ -1013,7 +1013,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between mb-3">
                       <div>"
-                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
+                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">;
                           {service.name}
                         </h3>"
                         <p className="text-lg text-cyan-300 mb-2">
@@ -1121,7 +1121,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4'>
                       <div className='text-sm text-gray-500 mb-2'>
                         Key Features:
-                      </div>
+                      </div>;
                       <div className='grid grid-cols-2 gap-2'>
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div
@@ -1135,7 +1135,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ))}
                     {/* CTA */}
 <div className='flex items-center justify-between'>
-                      <button className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>
+                      <button className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>;
                         Learn More
                       </button>
                       <div className='text-xs text-gray-500'>
@@ -1350,9 +1350,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }}
 setSelectedPriceRange('all');
               }}
-              className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200'
+              className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200';
               }}
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200";
             >
               Clear All Filters
             </button>
@@ -1362,7 +1362,7 @@ setSelectedPriceRange('all');
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* CTA Section */}
 <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>;
           <motion.div
 
             initial={{ opacity: 0, y: 30 }}
@@ -1385,7 +1385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Our team of experts is ready to help you implement the perfect solution for your needs.
               Get in touch today and discover how our innovative services can drive your success.
             </p>"
-            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">'
+            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">';
                 className='border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200'>              Ready to Transform Your Business?;
             </h2>;"
             <p className="text-xl text-cyan-300 mb-8 max-w-3xl mx-auto">;
@@ -1395,7 +1395,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
               <a"
                 href="/contact"
-case 'price-low': setFilteredServices (filtered)
+case 'price-low': setFilteredServices (filtered);
 }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 }"`
 description"content=" Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs."/> <meta name=" keywords"content=" micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group"/> </Head> left: `$ {}
@@ -1420,13 +1420,13 @@ top: `$ {}
   opacity: 1, y: 0;
 }transition= {}
   {}
-  once: true "
+  once: true ";
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   );
 
   once: true;
 "
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
-
+;
 }
       <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center'>          <motion.div      <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border-cyan-500 / 20">;
@@ -1558,5 +1558,5 @@ top: `$ {
 origin/cursor/automate-test-improve-and-merge-code-2533
   once: true ;
 
-}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)
+}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>);
 '"`

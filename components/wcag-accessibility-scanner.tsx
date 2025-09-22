@@ -4,7 +4,7 @@ export default function WCAGScannerPage() { return null; }
         <title>{service && service.name} - Zion Tech Group</title>;'
         <meta name='description' content={service && service.description} />;
 
-          href='https://ziontechgroup && ziontechgroup.com/wcag-accessibility-scanner'
+          href='https://ziontechgroup && ziontechgroup.com/wcag-accessibility-scanner';
         />;'
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;'
         <div className='max-w-6xl mx-auto'>;'

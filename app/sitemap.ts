@@ -1,20 +1,20 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
+  const baseUrl = 'https://ziontechgroup.com';
   
   // Static routes
   const staticRoutes = [
     '',
     '/about',
     '/contact',
-    '/research',
     '/services',
     '/solutions',
-  ]
+    '/research',
+  ];
 
-  // AI Services routes
-  const aiServices = [
+  // Generate service pages
+  const servicePages = [
     'ai-analytics-dashboard',
     'ai-analytics-platform',
     'ai-chatbot',
@@ -58,10 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ai-social-scheduler',
     'ai-testing-automation',
     'ai-video-generator',
-  ]
-
-  // Other services routes
-  const otherServices = [
     'analytics-dashboard',
     'api-development',
     'api-testing-suite',
@@ -106,8 +102,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'healthtech',
     'helpdesk-platform',
     'industry-solutions',
-    'industry-solutions/finance',
-    'industry-solutions/healthcare',
     'invoice-automation',
     'iot-solutions',
     'it-services',
@@ -133,40 +127,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'web-application-development',
     'web-development',
     'website-analyzer',
-  ]
+  ];
 
-  // Generate sitemap entries
-  const routes: MetadataRoute.Sitemap = []
-
-  // Add static routes
-  staticRoutes.forEach(route => {
-    routes.push({
+  // Generate all routes
+  const routes: MetadataRoute.Sitemap = [
+    ...staticRoutes.map(route => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date(),
-      changeFrequency: route === '' ? 'daily' : 'weekly',
+      changeFrequency: 'monthly' as const,
       priority: route === '' ? 1 : 0.8,
-    })
-  })
-
-  // Add AI services
-  aiServices.forEach(service => {
-    routes.push({
+    })),
+    ...servicePages.map(service => ({
       url: `${baseUrl}/services/${service}`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly' as const,
       priority: 0.7,
-    })
-  })
+    })),
+  ];
 
-  // Add other services
-  otherServices.forEach(service => {
-    routes.push({
-      url: `${baseUrl}/services/${service}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    })
-  })
-
-  return routes
+  return routes;
 }

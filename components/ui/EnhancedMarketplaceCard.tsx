@@ -12,7 +12,7 @@ interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   price?: string;
-  href: string, image?: string
+  href: string, image?: string;
 import React from 'react';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 pr-12243
@@ -41,16 +41,16 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
 }) => {
   return (
     <Link href={href} className="group block">
-      <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+      <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">;
         {/* Image */}
         <div className="relative h-48 bg-gray-200">
           {image ? (
             <img
               src={image}
               alt={title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300";
             />
-          ) : (
+          ) : (;
             <div className="h-full w-full bg-gray-200 flex items-center justify-center">
               <span className="text-gray-400 text-sm">No Image</span>
             </div>
@@ -80,7 +80,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
           )}
 
           {/* Title */}
-          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">;
             {title}
           </h3>
 
@@ -111,7 +111,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
                   <span
                     key={i}
                     className={`text-sm ${
-                      i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300'
+                      i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300';
                     }`}
                   >
                     ★
@@ -131,7 +131,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
                 {price}
               </span>
             )}
-            <span className="text-sm text-blue-600 group-hover:text-blue-800 transition-colors">
+            <span className="text-sm text-blue-600 group-hover:text-blue-800 transition-colors">;
               Learn More →
             </span>
           </div>

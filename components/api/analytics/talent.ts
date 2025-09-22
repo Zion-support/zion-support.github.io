@@ -38,7 +38,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         .map(([label, value]) => ({ label, value }))
     });
   } catch (e) {}
-      topTags: ['
+      topTags: [';
         { label: 'react', value: 2 }'
         { label: 'node', value: 1 }'
         { label: 'ai', value: 1 }

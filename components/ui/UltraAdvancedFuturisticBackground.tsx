@@ -81,9 +81,9 @@ for (let i = 0; i < particleCount; i++) {
         const type =
           Math.random() > 0.7
             ? 'quantum'
-            : Math.random() > 0.5
+            : Math.random() > 0.5;
               ? 'holographic'
-              : Math.random() > 0.3
+              : Math.random() > 0.3;
                 ? 'neon'
                 : 'fusion';
         particles.push({

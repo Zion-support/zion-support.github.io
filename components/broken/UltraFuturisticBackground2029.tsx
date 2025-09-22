@@ -201,7 +201,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div'
           className='absolute inset-0 opacity-30'
           animate={{}
-            background: []
+            background: [];
             ],          }}
           transition={{}
             duration: 20,
@@ -222,7 +222,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div"
           className="absolute inset-0 opacity-30"
           animate={{}
-            background: ['
+            background: [';
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)'
             ]
       />;
@@ -235,7 +235,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)';
             ];
           animate={{}
-            background: ['
+            background: [';
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
             ]
 
@@ -277,7 +277,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
           }}'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
       </div>;
@@ -298,8 +298,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
         transition={{}
           duration: 15;
-          repeat: Infinity'
-          ease: 'linear'
+          repeat: Infinity';
+          ease: 'linear';
         }}
           duration: 12;
           repeat: Infinity;
@@ -307,7 +307,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           repeat: Infinity,
         transition={{}
           duration: 12;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'linear',        }}
       {/* Animated grid lines */}'
       <div className='absolute inset-0 opacity-20'>          y: [0, -20, 0];
@@ -357,7 +357,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           scale: [1, 1.2, 1],
         }}
         transition={{
-          ease: 'linear',          ease: "linear"
+          ease: 'linear',          ease: "linear";
           duration: 12,
           repeat: Infinity,
 ease: 'linear',
@@ -372,22 +372,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           className='absolute inset-0'
           style={{}
-            backgroundImage: `
+            backgroundImage: `;
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)`
             `'
-            backgroundSize: '50px 50px'
+            backgroundSize: '50px 50px';
           }}
           animate={{'
             background_position: ['0px 0px', '50px 50px'],          }}
           transition={{"
           className="absolute inset-0"
           style={{}`
-            backgroundImage: `
+            backgroundImage: `;
               linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)`
             `'
-            backgroundSize: '50px 50px''
+            backgroundSize: '50px 50px'';
             ease: 'linear',          }}        <motion.div;"
           className="absolute inset - 0";
           style={{}`
@@ -449,7 +449,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
 
             duration: 8;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}        <motion.div'
               'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',
           }}
@@ -490,7 +490,7 @@ ease: 'easeInOut',
         animate={{}
         transition={{}
           duration: 25;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'linear',        }}
         animate={{}
           rotate: [0, 360]
@@ -511,7 +511,7 @@ ease: 'easeInOut',
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],        }}
         transition={{}
           duration: 20;
-          repeat: Infinity'
+          repeat: Infinity';
           ease: 'linear',        }}
           rotate: [360, 0];
         }}
@@ -570,7 +570,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             style={{}
             transition={{}
               delay: i * 0 && 0.3,'"
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+              ease: 'easeInOut',            }}              ease: "easeInOut";
               opacity: [0, 1, 0],
             }}
             transition={{
@@ -600,7 +600,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='absolute w-0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent'
             style={{
               left: `${15 + i * 15}%`
-              top: '-20px'
+              top: '-20px';
             }}
             animate={{
               y: [0, window.innerHeight + 20],
@@ -661,7 +661,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
             transition={{}
               delay: i * 0 && 0.8,'"
-              ease: 'linear',            }}              ease: "linear"
+              ease: 'linear',            }}              ease: "linear";
             }}
 
             transition={{}
@@ -679,7 +679,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default UltraFuturisticBackground2029;  );
               delay: i * 0.8,"
-              ease: "linear"
+              ease: "linear";
             }}
           />;
         ))}

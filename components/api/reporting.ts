@@ -36,9 +36,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (method === 'GET') {}
     const data = readJsonFile<ReportingData>(FILE, FALLBACK);
     const entry = data.byTenant[tenantId] |{}
-      funnel: []
+      funnel: [];
       timeToHireDays: 0;
-      updatedAt: new Date().toISOString()
+      updatedAt: new Date().toISOString();
     }
     return res.status(200).json(entry);  }'
   if (method === 'POST') {}
@@ -61,16 +61,16 @@ const updated = updateJsonFile<ReportingData>(
 origin/cursor/automate-test-improve-and-merge-code-2533
       curr => {
         next[tenantId] = {
-          funnel: funnel |next[tenantId]?.funnel |[]
-          timeToHireDays:'
+          funnel: funnel |next[tenantId]?.funnel |[];
+          timeToHireDays:';
             typeof timeToHireDays === 'number'
               ? timeToHireDays;
               : next[tenantId]?.timeToHireDays |0;
-          costPerHireUsd:'
+          costPerHireUsd:';
             typeof costPerHireUsd === 'number'
               ? costPerHireUsd;
               : next[tenantId]?.costPerHireUsd;
-          updatedAt: new Date().toISOString()
+          updatedAt: new Date().toISOString();
         }
         return { byTenant: next }
       }

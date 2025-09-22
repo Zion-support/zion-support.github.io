@@ -2,8 +2,8 @@ import type { NextApiRequest, NextApiResponse } from "next";"
 import { buildIdentityProfile } from "@/utils/offworld/identity";
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
     return res.status(200).json(profile);
 

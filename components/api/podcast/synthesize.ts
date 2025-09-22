@@ -47,10 +47,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         {}
         {'
-          responseType: 'arraybuffer'
+          responseType: 'arraybuffer';
           headers: {}`
             Authorization: `Bearer ${playhtKey}`'
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json';
           }
         }
       );

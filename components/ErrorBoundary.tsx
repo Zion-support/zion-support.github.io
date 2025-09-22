@@ -1,14 +1,13 @@
-'use client'
+'use client';
 
-import React from 'react'
-
+import React from 'react';
 interface ErrorBoundaryState {
-  hasError: boolean
-  error?: Error
+  hasError: boolean;
+  error?: Error;
 }
 
 interface ErrorBoundaryProps {
-  children: React.ReactNode
+  children: React.ReactNode;
   fallback?: React.ComponentType<{ error?: Error; resetError: () => void }>
 }
 
@@ -40,8 +39,8 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     console.groupEnd()
 
     // Send error to analytics service (placeholder)
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: true,
       })

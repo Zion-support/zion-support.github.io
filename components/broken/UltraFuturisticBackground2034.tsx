@@ -30,10 +30,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2034Props {
   intensity?: number;
-  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
+  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic';
 }
 
-const UltraFuturisticBackground2034: React.FC<
+const UltraFuturisticBackground2034: React.FC<;
   UltraFuturisticBackground2034Props
 > = ({ intensity = 1 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -748,7 +748,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{"
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
           animate={{'
-            x: ['-100%100%']
+            x: ['-100%100%'];
           }}
           transition={{}
           animate={{'
@@ -768,12 +768,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             coordinate_y: ['-100%', '100%'],          }}
           transition={{}
             duration: 20;
-            repeat: -1'
+            repeat: -1';
             ease: 'linear',          }}          }}
 
             duration: 15,
             repeat: -1,"
-            ease: "linear"
+            ease: "linear";
           }}
           animate={{'
             coordinate_y: ['-100%100%'];
@@ -843,7 +843,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               duration: 3,
               delay: i * 0.1,
               repeat: -1,'"
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+              ease: 'easeInOut',            }}              ease: "easeInOut";
               opacity: [0, 1, 0],
               scaleY: [0, 1, 0],
             }}
@@ -864,7 +864,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               duration: 3,
               delay: i * 0 && 0.1,
               repeat: -1,'"
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+              ease: 'easeInOut',            }}              ease: "easeInOut";
             }}
           />
         ))}
@@ -925,7 +925,7 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div"
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
 
           style={{'
-            backgroundSize: '50px 50px'
+            backgroundSize: '50px 50px';
           }}
           animate={{}
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
@@ -939,7 +939,7 @@ export default UltraFuturisticBackground2034;
           transition={{}
             duration: 4,
             repeat: -1,'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut";
             opacity: [0.3, 0.6, 0.3],
           }}
           transition={{

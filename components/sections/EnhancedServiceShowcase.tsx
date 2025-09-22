@@ -101,7 +101,7 @@ interface Service {;
   customers: number;
   rating: number;
 
-  reviews: number
+  reviews: number;
 }
 
 interface EnhancedServiceShowcaseProps {
@@ -115,7 +115,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   services = []
   maxServices = 12
   maxServices?: number
-
+;
   maxServices?: number}
 }
 }
@@ -489,7 +489,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'
+className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6';
           >
 origin/cursor/automate-test-improve-and-merge-code-2533
             {title}
@@ -527,7 +527,7 @@ className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto';
           >
             {stats.map((stat, index) => ('
               <div key={index} className='text-center'>
@@ -555,7 +555,7 @@ className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
                 {/* Category Filter */}
                 <div>'
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -569,7 +569,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <select;
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
-                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
                   >
                     {categories.map(category => (
                       <option key={category.id} value={category.id}>
@@ -591,7 +591,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <select;
                     value={selectedPriceRange}
                     onChange={e => setSelectedPriceRange(e.target.value)}'
-                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
                   >
                     {priceRanges.map(range => (
                       <option key={range.id} value={range.id}>
@@ -614,7 +614,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <select;
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}'
-                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
                   >
                     {sortOptions.map(option => (
                       <option key={option.id} value={option.id}>
@@ -667,7 +667,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView={{ opacity: 1, y: 0 }}
 
           transition={{ duration: 0.8, delay: 0.8 }}
-className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <AnimatePresence>
@@ -692,7 +692,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
+                <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>;
                   {/* Popular Badge */}
                   {service.popular && (
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
@@ -726,7 +726,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       </div>
                     </div>'
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
                       {service.name}
                     </h3>'
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
@@ -933,10 +933,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Button
                       href={service.link}
                       variant='primary'
-                      className='w-full group-hover:bg-cyan-500 transition-colors'
+                      className='w-full group-hover:bg-cyan-500 transition-colors';
                     >
                       Get Started
-                      <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />
+                      <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />;
                     </Button>
                   </div>
                   {/* Contact Info */}
@@ -991,7 +991,7 @@ className='text-center mt-16'
               with our cutting-edge AI, quantum, and blockchain solutions. Get
               started today and see the future of business technology.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
                 href='/contact'
@@ -1218,7 +1218,7 @@ export default EnhancedServiceShowcase;
 
 };
 
-                <span className='text-cyan-400'>https://ziontechgroup.com</span>
+                <span className='text-cyan-400'>https://ziontechgroup.com</span>;
               </p>
             </div>
           </div>

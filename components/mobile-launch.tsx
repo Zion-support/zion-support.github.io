@@ -114,7 +114,7 @@ if (isMobile) setVisible(true);
   return (
     <div className='fixed inset-x-0 top-0 z-50'>
       <div className='mx-auto max-w-5xl'>
-        <div className='m-2 rounded-xl bg-white/95 dark:bg-black/80 border border-gray-200 dark:border-gray-800 shadow flex items-center gap-3 px-4 py-3'>
+        <div className='m-2 rounded-xl bg-white/95 dark:bg-black/80 border border-gray-200 dark:border-gray-800 shadow flex items-center gap-3 px-4 py-3'>;
           <div className='h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500' />
           <div className='flex-1'>
             <div className='text-sm font-semibold'>Zion App</div>
@@ -125,7 +125,7 @@ if (isMobile) setVisible(true);
           <div className='flex items-center gap-2'>
             <a
               href={deepLink}
-              className='text-xs px-3 py-1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-500'
+              className='text-xs px-3 py-1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-500';
             >
               Open
             </a>
@@ -160,7 +160,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 
-              className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'
+              className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800';
             >
               ✕
             </button>
@@ -187,14 +187,14 @@ const testimonials = [
     quote: 'We filled a remote role in 48 hours. The app made it effortless.',
   },
   {
-    name: 'Marco V.'
-    role: 'CTO'
-    quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.'
+    name: 'Marco V.';
+    role: 'CTO';
+    quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.';
   }
   {'
-    name: 'Amira H.''
-    role: 'Project Lead'
-    quote:'
+    name: 'Amira H.'';
+    role: 'Project Lead';
+    quote:';
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
@@ -287,7 +287,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <link rel='canonical' href='/download' />;'
         <meta property='og:title' content='Zion Mobile App' />;
         <meta'
-          property='og:description''
+          property='og:description'';
           content='Hire from anywhere. AI-match instantly. Track milestones on the go.'
       <SmartBanner;
         iosUrl={IOS_APP_URL}
@@ -429,7 +429,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
 "
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
-
+;
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
         </form>'"
@@ -441,9 +441,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Helper links */}"
       <section className="mt-10 text-sm opacity-80">"
         <div className="flex flex-wrap items-center gap-4">"
-          <Link href="/open-app"><a className="underline">Deep link: /open-app</a></Link>
+          <Link href="/open-app"><a className="underline">Deep link: /open-app</a></Link>;
           <span>•</span>"
-          <Link href="/download"><a className="underline">Shareable link: /download</a></Link>
+          <Link href="/download"><a className="underline">Shareable link: /download</a></Link>;
         </div>
       </section>
     </EnhancedLayout>
@@ -475,11 +475,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className='mt-10 text-sm opacity-80'>
         <div className='flex flex-wrap items-center gap-4'>
           <Link href='/open-app'>
-            <a className='underline'>Deep link: /open-app</a>
+            <a className='underline'>Deep link: /open-app</a>;
           </Link>
           <span>•</span>
           <Link href='/download'>
-            <a className='underline'>Shareable link: /download</a>
+            <a className='underline'>Shareable link: /download</a>;
           </Link>
         </div>
       </section>
@@ -496,6 +496,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }/>) )
 }<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) )
 }</div> </div> </section> <input type="email" required > {
-  status === 'loading' ? 'Submitting…' : 'Notify me' 
-}</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
+  status === 'loading' ? 'Submitting…' : 'Notify me' ;
+}</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>);
 origin/cursor/automate-test-improve-and-merge-code-2533

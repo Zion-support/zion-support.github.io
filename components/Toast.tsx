@@ -173,7 +173,7 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {}
           messageColor: "text-yellow-700",
         };
       case "info":
-      default:
+      default:;
         return {
           icon: "ℹ",
           bgColor: "bg-blue-50",

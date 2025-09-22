@@ -130,135 +130,135 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const contactInfo = null;
 {
-  name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform'
+  name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform';
 }
 {
-  name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator'
+  name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator';
 }
 {
-  name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager'
+  name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager';
 }]
 }
 {
   title: 'Quantum Technology', icon: Globe, color: 'from-indigo-600 via-blue-600 to-cyan-600', services: [ {
-  name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway'
+  name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway';
 }
 {
-  name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform'
+  name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform';
 }
 {
-  name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform'
+  name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform';
 }
 {
-  name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio'
+  name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio';
 }]
 }
 {
   title: 'Space & Metaverse', icon: Rocket, color: 'from-teal-600 via-emerald-600 to-green-600', services: [ {
-  name: 'Space Mining Automation', href: '/services/space-mining-automation-platform'
+  name: 'Space Mining Automation', href: '/services/space-mining-automation-platform';
 }
 {
-  name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform'
+  name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform';
 }
 {
-  name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics'
+  name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics';
 }
 {
-  name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform'
+  name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform';
 }]
 }
 {
   title: 'Enterprise IT', icon: Cpu, color: 'from-blue-600 via-cyan-600 to-teal-600', services: [ {
-  name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite'
+  name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite';
 }
 {
-  name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization'
+  name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization';
 }
 {
-  name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system'
+  name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system';
 }
 {
-  name: 'Smart Financial Management', href: '/services/smart-financial-management-platform'
+  name: 'Smart Financial Management', href: '/services/smart-financial-management-platform';
 }]
 }];
 const footerSections = [ {
   title: 'Services', links: [ {
-  name: 'AI & Machine Learning', href: '/services/ai-ml'
+  name: 'AI & Machine Learning', href: '/services/ai-ml';
 }
 {
-  name: 'Quantum Computing', href: '/services/quantum-computing'
+  name: 'Quantum Computing', href: '/services/quantum-computing';
 }
 {
-  name: 'Space Technology', href: '/services/space-technology'
+  name: 'Space Technology', href: '/services/space-technology';
 }
 {
-  name: 'Enterprise IT', href: '/services/enterprise-it'
+  name: 'Enterprise IT', href: '/services/enterprise-it';
 }
 {
-  name: 'Micro SAAS', href: '/services/micro-saas'
+  name: 'Micro SAAS', href: '/services/micro-saas';
 }
 {
-  name: 'Cybersecurity', href: '/services/cybersecurity'
+  name: 'Cybersecurity', href: '/services/cybersecurity';
 }]
 }
 {
   title: 'Solutions', links: [ {
-  name: 'AI Consciousness', href: '/solutions/ai-consciousness'
+  name: 'AI Consciousness', href: '/solutions/ai-consciousness';
 }
 {
-  name: 'Quantum Security', href: '/solutions/quantum-security'
+  name: 'Quantum Security', href: '/solutions/quantum-security';
 }
 {
-  name: 'Space Mining', href: '/solutions/space-mining'
+  name: 'Space Mining', href: '/solutions/space-mining';
 }
 {
-  name: 'Metaverse Platform', href: '/solutions/metaverse'
+  name: 'Metaverse Platform', href: '/solutions/metaverse';
 }
 {
-  name: 'Business Intelligence', href: '/solutions/business-intelligence'
+  name: 'Business Intelligence', href: '/solutions/business-intelligence';
 }
 {
-  name: 'Supply Chain AI', href: '/solutions/supply-chain-ai'
+  name: 'Supply Chain AI', href: '/solutions/supply-chain-ai';
 }]
 }
 {
   title: 'Industries', links: [ {
-  name: 'Healthcare', href: '/industries/healthcare'
+  name: 'Healthcare', href: '/industries/healthcare';
 }
 {
-  name: 'Finance', href: '/industries/finance'
+  name: 'Finance', href: '/industries/finance';
 }
 {
-  name: 'Manufacturing', href: '/industries/manufacturing'
+  name: 'Manufacturing', href: '/industries/manufacturing';
 }
 {
-  name: 'Retail', href: '/industries/retail'
+  name: 'Retail', href: '/industries/retail';
 }
 {
-  name: 'Education', href: '/industries/education'
+  name: 'Education', href: '/industries/education';
 }
 {
-  name: 'Government', href: '/industries/government'
+  name: 'Government', href: '/industries/government';
 }]
 }
 {
   title: 'Resources', links: [ {
-  name: 'Documentation', href: '/docs'
+  name: 'Documentation', href: '/docs';
 }
 {
-  name: 'API Reference', href: '/api'
+  name: 'API Reference', href: '/api';
 }
 {
-  name: 'Case Studies', href: '/case-studies'
+  name: 'Case Studies', href: '/case-studies';
 }
 {
-  name: 'White Papers', href: '/white-papers'
+  name: 'White Papers', href: '/white-papers';
 }
 {
-  name: 'Blog', href: '/blog'
+  name: 'Blog', href: '/blog';
 }
 {
-  name: 'Research', href: '/research'
+  name: 'Research', href: '/research';
 }]
 }];
 <motion.div initial= {
@@ -266,7 +266,7 @@ const footerSections = [ {
     title: 'AI & Consciousness',
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
-    services: [
+    services: [;
 {
         name: 'AI Consciousness Evolution',
         href: '/services/ai-consciousness-evolution-platform',
@@ -299,8 +299,8 @@ const mainNavigation = ['
 
 const resources = ['
   { name: 'Support', href: '/support', icon: MessageCircle }, ];  { name: 'Support', href: '/support', icon: MessageCircle }
-        name: 'AI Creativity Orchestrator'
-        href: '/services/ai-creativity-orchestrator'
+        name: 'AI Creativity Orchestrator';
+        href: '/services/ai-creativity-orchestrator';
       }
       {
         name: 'AI Autonomous Business Manager',
@@ -312,18 +312,18 @@ const resources = ['
     title: 'Quantum Technology',
     icon: Globe,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
-    services: [
+    services: [;
 {
         name: 'Quantum Internet Security',
         href: '/services/quantum-internet-security-gateway',
       },
       {
-        name: 'Biotech DNA Computing'
-        href: '/services/biotech-dna-computing-platform'
+        name: 'Biotech DNA Computing';
+        href: '/services/biotech-dna-computing-platform';
       }
       {
-        name: 'Quantum Financial Trading'
-        href: '/services/quantum-financial-trading-platform'
+        name: 'Quantum Financial Trading';
+        href: '/services/quantum-financial-trading-platform';
       }
       {
         name: 'Quantum Creativity Studio',
@@ -335,18 +335,18 @@ const resources = ['
     title: 'Space & Metaverse',
     icon: Rocket,
     color: 'from-teal-600 via-emerald-600 to-green-600',
-    services: [
+    services: [;
 {
         name: 'Space Mining Automation',
         href: '/services/space-mining-automation-platform',
       },
       {
-        name: 'Metaverse Digital Reality'
-        href: '/services/metaverse-digital-reality-platform'
+        name: 'Metaverse Digital Reality';
+        href: '/services/metaverse-digital-reality-platform';
       }
       {
-        name: 'AI Predictive Health'
-        href: '/services/ai-predictive-health-analytics'
+        name: 'AI Predictive Health';
+        href: '/services/ai-predictive-health-analytics';
       }
       {
         name: 'Virtual Event Holograms',
@@ -358,18 +358,18 @@ const resources = ['
     title: 'Enterprise IT',
     icon: Cpu,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
-    services: [
+    services: [;
 {
         name: 'AI Business Intelligence',
         href: '/services/ai-business-intelligence-suite',
       },
       {
-        name: 'Smart Supply Chain'
-        href: '/services/smart-supply-chain-optimization'
+        name: 'Smart Supply Chain';
+        href: '/services/smart-supply-chain-optimization';
       }
       {
-        name: 'Intelligent HR Management'
-        href: '/services/intelligent-hr-management-system'
+        name: 'Intelligent HR Management';
+        href: '/services/intelligent-hr-management-system';
       }
       {
         name: 'Smart Financial Management',
@@ -484,9 +484,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const footerSections = []
   {'
-    title: 'Services'
-    links: []
-    links: ['
+    title: 'Services';
+    links: [];
+    links: [';
       { name: 'Healthcare', href: '/industries/healthcare' }'
       { name: 'Finance', href: '/industries/finance' }'
       { name: 'Manufacturing', href: '/industries/manufacturing' }'
@@ -507,7 +507,7 @@ const footerSections = []
   },
   {
     title: 'Solutions',
-    links: [
+    links: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
       { name: 'AI Consciousness', href: '/solutions/ai-consciousness' },
       { name: 'Quantum Security', href: '/solutions/quantum-security' },
@@ -523,7 +523,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
 origin/cursor/automate-test-improve-and-merge-code-2533
     title: 'Industries',
-    links: ['
+    links: [';
       { name: 'Healthcare', href: '/industries/healthcare' },'
       { name: 'Finance', href: '/industries/finance' },'
       { name: 'Manufacturing', href: '/industries/manufacturing' },'
@@ -555,7 +555,7 @@ function UltraFuturisticFooter2029V2() {}
   },
   {
     title: 'Resources',
-    links: [
+    links: [;
       { name: 'Documentation', href: '/docs' },
       { name: 'API Reference', href: '/api' },
       { name: 'Case Studies', href: '/case-studies' },
@@ -589,10 +589,10 @@ export default function UltraFuturisticFooter2029V2() {}
   return (
 
       {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
+        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12'>;
           {/* Company Info */}
-          <div className='lg:col-span-2 xl:col-span-1'>
+          <div className='lg:col-span-2 xl:col-span-1'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 
@@ -601,7 +601,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <Link href="/" className="flex items-center space-x-3 mb-6 group">"
                 <div className="relative">"
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
                     <Rocket className="w-7 h-7 text-white" />
                   </div>
 
@@ -611,7 +611,7 @@ export default /**;
  */
 function UltraFuturisticFooter2029V2() {}
   return ("
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
                 </div>
                 <div>"
                   <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -646,10 +646,10 @@ function UltraFuturisticFooter2029V2() {}
             >
 <Link href='/' className='flex items-center space-x-3 mb-6 group'>
                 <div className='relative'>
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
                     <Rocket className='w-7 h-7 text-white' />
                   </div>
-                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />
+                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />;
                 </div>
                 <div>
                   <h3 className='text-xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -788,7 +788,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link;
                       href={link.href}
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group' />
-
+;
                       <ArrowRight className='w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
                       {link.name}
 
@@ -811,7 +811,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Featured 2029 Services;
           </h3>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {serviceCategories.map((category, index) => (
               <motion.div;
                     </Link>;
@@ -839,7 +839,7 @@ className='mt-16 pt-12 border-t border-gray-800'
           <h3 className='text-2xl font-bold text-white text-center mb-8' />
             Featured 2029 Services;
           </h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6' />
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6' />;
             {serviceCategories.map((category, index) => (}
               <motion.div;}
 key={category.title}
@@ -867,12 +867,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           href={service.href}"
                           className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
                         >;
-                          className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'
+                          className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block';
                         >
 origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.name}
 
-                          className='text-gray-300 hover: text-cyan-400 transition-colors duration-300 text-xs block'
+                          className='text-gray-300 hover: text-cyan-400 transition-colors duration-300 text-xs block';
                         >
 
                           {service.nam}
@@ -891,8 +891,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;"
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
 <div className='border-t border-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Copyright */}
             <motion&& motion.div;
@@ -912,15 +912,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>{' '}
             >
               © 2025 Zion Tech Group. All rights reserved."
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>"
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
+              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>";
+              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>;
               </Link>            </motion.div>
 
             </motion.div>
 
               <Link
                 href='/terms'
-                className='hover:text-cyan-400 transition-colors duration-300 ml-2'
+                className='hover:text-cyan-400 transition-colors duration-300 ml-2';
               >
                 Terms of Service
               </Link>
@@ -981,7 +981,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
       >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
           <div className='text-center'>
             <h3 className='text-2xl font-bold text-white mb-4'>
               Stay Ahead with Future Tech;
@@ -991,20 +991,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               advances, space technology innovations, and cutting-edge micro;
               SAAS solutions.
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>;
               <input'
                 type='email''
                 placeholder='Enter your email''
-                className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'
+                className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50';
               <input"
                 type="email""
                 placeholder="Enter your email""
-                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";
               />"
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-
+;
               />
-              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105' />
+              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105' />;
                 Subscribe;
 
               </button>

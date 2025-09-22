@@ -76,7 +76,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
 timeToInteractive: 0,
-  timeToInteractive: number
+  timeToInteractive: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 interface PerformanceOptimizerProps {}
@@ -107,9 +107,9 @@ const navigation = performance.getEntriesByType(
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
 origin/cursor/automate-test-improve-and-merge-code-2533
       const newMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart
-        firstContentfulPaint: fcp ? fcp.startTime : 0
-        largestContentfulPaint: lcp ? lcp.startTime : 0
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart;
+        firstContentfulPaint: fcp ? fcp.startTime : 0;
+        largestContentfulPaint: lcp ? lcp.startTime : 0;
         cumulativeLayoutShift: 0, // Would need to be measured with CLS API
         firstInputDelay: 0, // Would need to be measured with FID API
 timeToInteractive:
@@ -179,7 +179,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setIsOptimizing(true);
     setOptimizationStatus('Optimizing fonts...');
     try {
-      // Add font-display: swap to improve font loading
+      // Add font-display: swap to improve font loading;
       const style = document.createElement('style')
       style.textContent = `
         @font-face {
@@ -189,8 +189,8 @@ font-family: 'Inter';
         @font-face {
           font-family: 'JetBrains Mono';        }
         @font-face {
-          font-family: 'JetBrains Mono'
-          font-display: swap
+          font-family: 'JetBrains Mono';
+          font-display: swap;
         }
         @font-face {
           font-family: 'Orbitron';
@@ -258,13 +258,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ];
 ;
       preload_links.for_each (link_attrs => {'
-import React, { useEffect } from 'react;'
+import React, { useEffect } from 'react;';
 import Head from 'next / head;
 interface PerformanceOptimizerProps {preload_images?: string[];
   preload_fonts?: string[];
   criticalCSS?: string;
 }
-    // Performance monitoring;'
+    // Performance monitoring;';
     if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
         for (const entry of list && list.getEntries()) {;'
 if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);'
@@ -406,7 +406,7 @@ return 'F';
         </h3>
         <button
           onClick={() => setShowMetrics(!showMetrics)}
-className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'
+className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           {showMetrics ? 'Hide' : 'Show'} Metrics
@@ -443,7 +443,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, height: 0 }}'
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
+className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6';
         >
 origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
@@ -487,7 +487,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {Math.round(metrics.firstInputDelay)}ms;
             </div>'
             <div className='text-xs text-white/60'>FID</div>          </div>"
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6";
         >"
           <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">"
             <Clock className="w-6 h-6 text-blue-400 mx-auto mb-2" />"
@@ -546,7 +546,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${}
             isOptimizing'
               ? 'bg-gray-600 cursor-not-allowed''
-              : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105'
+              : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105';
       {/* Performance Tips */}'
       <div className='mt-6 pt-4 border-t border-white/10'>;'
         <h4 className='text-sm font-semibold text-white/80 mb-3'>;
@@ -598,7 +598,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin' />
               <span>Optimizing...</span>
             </>
-          ) : (
+          ) : (;
             <>
 <Zap className='w-4 h-4' />
               <span>Run All Optimizations</span>
@@ -684,7 +684,7 @@ if (return 'D') {}
         </h3>;
         <button;
           on_click={() => setShowMetrics (!show_metrics)}'
-          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'        >  return (`
+          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'        >  return (`;
     <div className={`bg - slate - 800 / 50 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 6 ${class_name}`}>;"
       <div className="flex items - center justify - between mb - 6">;"
         <h3 className="text - xl font - bold text - white flex items - center gap - 2">;"
@@ -794,11 +794,11 @@ if (return 'D') {}
           {is_optimizing ? (
             <>;'
               <div className='w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />              <span > Optimizing...</span>;
-            </>) : (
+            </>) : (;
             <>;'"
               <Zap className='w - 4 h - 4' />              <span > Run All Optimizations</span>              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
               <span > Optimizing...</span>;
-            </>) : (
+            </>) : (;
             <>;'"
               <Zap className='w - 4 h - 4' />              <Zap className="w - 4 h - 4" />;
               <span > Run All Optimizations</span>;
@@ -852,7 +852,7 @@ key={`preload - font-${index}`}          rel="preload""          as="style""    
       <meta http_equiv="x - dns - prefetch - control" content="on" />"      "      {/* Service Worker registration */}
       <script;
         dangerouslySetInnerHTML={{}
-          __html:             // Check condition'
+          __html:             // Check condition';
 if ( {'              window.addEventListener ('load', function () {'                navigator.service_worker.register ('/sw.js')'                  .then (function (registration) {'                    console.log ('SW registered: ', registration)) {}
   $2;
 }'

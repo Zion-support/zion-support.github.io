@@ -83,7 +83,7 @@ import {
         keywords={["AI code review", "security scanner", "vulnerability detection", "code quality", "automated code analysis", "security testing", "DevOps security"]}
         <section className='relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />
-          <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>
+          <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>;
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,23 +94,23 @@ className='text-center'
                 <Brain className='w-4 h-4 mr-2' />
                 AI-Powered Development Security
               </div>
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>;
                 AI-Powered Code Review &
                 <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
                   {' '}
                   Security Scanner
                 </span>
               </h1>
-              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
                 Advanced AI-powered platform that automatically reviews code
                 detects security vulnerabilities, suggests improvements, and
                 ensures code quality across multiple programming languages.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>;
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center'
+                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center';
                 >
                   Start Free Trial
                   <ArrowRight className='ml-2 w-5 h-5' />
@@ -118,7 +118,7 @@ className='text-center'
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'
+                  className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300';
                 >
                   Schedule Demo
                 </motion.button>
@@ -147,7 +147,7 @@ className='text-center'
         </section>
         {/* Features Section */}
 <section className='py-20 bg-white/5'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -155,7 +155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.8 }}
 className='text-center mb-16'
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Comprehensive Code Security & Quality;
               </h2>'
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -164,41 +164,41 @@ className='text-center mb-16'
                 applications and improve development efficiency.
               </p>
             </motion.div>'
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {[]
                 {'
                   icon: <Code className='w-8 h-8' />'
-                  title: 'Multi-Language Support'
-                  description:'
+                  title: 'Multi-Language Support';
+                  description:';
                     'Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices.'
                 }
                 {'
                   icon: <Shield className='w-8 h-8' />'
-                  title: 'AI-Powered Vulnerability Detection'
-                  description:'
+                  title: 'AI-Powered Vulnerability Detection';
+                  description:';
                     'Advanced machine learning algorithms that detect security vulnerabilities, code smells, and potential security risks.'
                 }
                 {'
                   icon: <Eye className='w-8 h-8' />'
-                  title: 'Automated Code Review'
-                  description:'
+                  title: 'Automated Code Review';
+                  description:';
                     'Intelligent code analysis with detailed feedback, improvement suggestions, and automated quality checks.'
                 }
                 {'
                   icon: <Lock className='w-8 h-8' />'
-                  title: 'Security Best Practices'
-                  description:'
+                  title: 'Security Best Practices';
+                  description:';
                     'Enforce security standards, compliance requirements, and industry best practices automatically.'
                 }
                 {'
                   icon: <BarChart3 className='w-8 h-8' />'
-                  title: 'Performance Analytics'
-                  description:'
+                  title: 'Performance Analytics';
+                  description:';
                     'Comprehensive metrics and insights to track code quality improvements and security posture over time.'
                 }
                 {'
                   icon: <Globe className='w-8 h-8' />'
-                  title: 'Integration & APIs'
+                  title: 'Integration & APIs';
                   description:
                     'Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access.',
                 },
@@ -208,7 +208,7 @@ className='text-center mb-16'
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300'
+className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300';
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6'>
                     {feature.icon}
@@ -239,9 +239,9 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
 
         {/* Pricing Section */}"
         <section className="py-20">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -249,7 +249,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.8 }}
 className='text-center mb-16'
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Transparent Pricing Plans
               </h2>
@@ -259,14 +259,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
             "
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">;
               {[]
                 {"
                   name: "Starter","
                   price: "$299","
                   period: "/month","
                   description: "Perfect for small development teams and startups",
-                  features: ["
+                  features: [";
                     "Up to 10 developers";"
                     "Basic security scanning";"
                     "GitHub/GitLab integration";"
@@ -292,7 +292,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   price: '$799',
                   period: '/month',
                   description: 'Ideal for growing development teams',
-                  features: [
+                  features: [;
                     'Up to 50 developers',
                     'Advanced security scanning',
                     'Multi-repository support',
@@ -310,7 +310,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   period: '/month',
                   description:
                     'For large organizations with complex security needs',
-                  features: [
+                  features: [;
                     'Unlimited developers'
                     'Enterprise security scanning'
                     'On-premise deployment'
@@ -321,7 +321,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     'Custom integrations'
                     'SLA guarantees'
                   ]
-                  popular: false'
+                  popular: false';
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Transparent Pricing Plans;
               </h2>;'
@@ -420,7 +420,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 plan.popular
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                      : 'border-white/10'
+                      : 'border-white/10';
                     "SLA guarantees";
                   ],
                   popular: false;
@@ -505,8 +505,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     whileTap={{ scale: 0 && 0.95 }}`
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${}
                       plan && plan.popular'
-                        ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700''
-                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                        ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'';
+                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20';
         {/* Benefits Section */}'
         <section className='py-20 bg-white/5'>;'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div;
@@ -546,7 +546,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
 
 <section className='py-20 bg-white/5'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -571,7 +571,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
 className='text-center mb-16'
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Why Choose Our AI Code Security Platform?
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -580,24 +580,24 @@ className='text-center mb-16'
                 reducing costs and risks.
               </p>
             </motion.div>
-            <div className='grid md:grid-cols-2 gap-12'>
+            <div className='grid md:grid-cols-2 gap-12'>;
               <div className='space-y-8'>
                 {[
                   {
                     icon: <Shield className='w-8 h-8' />
-                    title: 'Reduce Security Vulnerabilities by 85%'
+                    title: 'Reduce Security Vulnerabilities by 85%';
                     description:
                       'Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface.'
                   }
                   {
                     icon: <Zap className='w-8 h-8' />
-                    title: 'Speed Up Code Review Process by 70%'
+                    title: 'Speed Up Code Review Process by 70%';
                     description:
-                      'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.'
+                      'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.';
                   }
                   {
                     icon: <TrendingUp className='w-8 h-8' />
-                    title: 'Improve Code Quality & Maintainability'
+                    title: 'Improve Code Quality & Maintainability';
                     description:
                       'AI-powered insights help maintain consistent code standards and improve overall codebase health.',
                   },
@@ -626,19 +626,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {[
                   {
                     icon: <CheckCircle className='w-8 h-8' />
-                    title: 'Ensure Compliance with Security Standards'
+                    title: 'Ensure Compliance with Security Standards';
                     description:
                       'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.'
                   }
                   {
                     icon: <Users className='w-8 h-8' />
-                    title: 'Reduce Technical Debt & Bugs'
+                    title: 'Reduce Technical Debt & Bugs';
                     description:
-                      'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.'
+                      'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.';
                   }
                   {
                     icon: <Star className='w-8 h-8' />
-                    title: 'Enable Faster Development Cycles'
+                    title: 'Enable Faster Development Cycles';
                     description:
                       'Confident code deployment with automated security validation accelerates your development and release processes.',
                   },
@@ -697,9 +697,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Benefits Section */}"
         <section className="py-20 bg-white/5">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -801,7 +801,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {[;
 className='text-center mb-16'
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Trusted by Development Teams Worldwide
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -810,7 +810,7 @@ className='text-center mb-16'
                 and improve code quality.
               </p>
             </motion.div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
               {[
 origin/cursor/automate-test-improve-and-merge-code-2533
                 'Software Development Teams',
@@ -848,7 +848,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300'
+className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300';
                 >
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>
                     <Users className='w-6 h-6' />
@@ -861,7 +861,7 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
         </section>
         {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -879,7 +879,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">"
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
+;
         {/* CTA Section */}'
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>'
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div;
@@ -891,16 +891,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Join thousands of development teams who trust our AI-powered platform to protect their applications;
                 and improve code quality. Start your free trial today.
               </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center";
                 >
                   Start Free Trial"
                   <ArrowRight className="ml-2 w-5 h-5" />
             >
-<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Secure Your Code?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
@@ -908,11 +908,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 platform to protect their applications and improve code quality.
                 Start your free trial today.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'
+                  className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center';
                 >
                   Start Free Trial
                   <ArrowRight className='ml-2 w-5 h-5' />
@@ -921,8 +921,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
-                  className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'
+                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300";
+                  className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Contact Sales;
@@ -944,7 +944,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion&& motion.div;
         {/* Contact Information */}"
         <section className="py-16 bg-white/5">"
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}"
@@ -953,7 +953,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>"
                   <h4 className="text-white font-semibold mb-2">Contact Us</h4>
 <section className='py-16 bg-white/5'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -962,22 +962,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <h3 className='text-2xl font-bold text-white mb-6'>
                 Get in Touch
               </h3>
-              <div className='grid md:grid-cols-3 gap-8 text-gray-300'>
+              <div className='grid md:grid-cols-3 gap-8 text-gray-300'>;
                 <div>
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>
                     <Users className='w-6 h-6' />
                   </div>
                   <h4 className='text-white font-semibold mb-2'>Contact Us</h4>
 origin/cursor/automate-test-improve-and-merge-code-2533
-                  <p>Mobile: +1 302 464 0950</p>
-                  <p>Email: kleber@ziontechgroup.com</p>
+                  <p>Mobile: +1 302 464 0950</p>;
+                  <p>Email: kleber@ziontechgroup.com</p>;
                 </div>
                 <div>"
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">"
                     <Globe className="w-6 h-6" />
                   </div>"
                   <h4 className="text-white font-semibold mb-2">Visit Our Website</h4>
-                  <p>https://ziontechgroup.com</p>
+                  <p>https://ziontechgroup.com</p>;
                 </div>
                 <div>"
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">"
@@ -990,7 +990,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h4 className='text-white font-semibold mb-2'>
                     Visit Our Website
                   </h4>
-                  <p>https://ziontechgroup.com</p>
+                  <p>https://ziontechgroup.com</p>;
                 </div>
                 <div>
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>

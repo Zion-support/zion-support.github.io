@@ -50,7 +50,7 @@ interface ButtonProps {;
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
     return React.cloneElement(children as React.ReactElement, {
-      className: classes
+      className: classes;
       onClick
       disabled
       type
@@ -137,7 +137,7 @@ if ( {) {
   type?: 'button' | 'submit' | 'reset',
   icon?: React.ReactNode;
   iconPosition?: 'left' | 'right',
-  style?: React.CSSProperties
+  style?: React.CSSProperties;
 }
 const Button: React.FC<ButtonProps> = ({
     primary:
@@ -160,17 +160,17 @@ const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} 
     <>
       {/* Shine effect for primary buttons */}
       {variant === 'primary' && (
-        <div className='absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000' />
+        <div className='absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000' />;
       )}
 
       {icon && iconPosition === 'left' && (
-        <span className='mr-2 transition-transform duration-200 group-hover:scale-110'>
+        <span className='mr-2 transition-transform duration-200 group-hover:scale-110'>;
           {icon}
         </span>
       )}
       <span className='relative z-10'>{children}</span>
       {icon && iconPosition === 'right' && (
-        <span className='ml-2 transition-transform duration-200 group-hover:scale-110'>
+        <span className='ml-2 transition-transform duration-200 group-hover:scale-110'>;
           {icon}
         </span>
       )}

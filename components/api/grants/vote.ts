@@ -138,10 +138,10 @@ return;
   const g = readGrant(payload.grantId);
   if (!g) return res.status(404).json({ error: 'Grant not found' });
   const vote = {
-    id: uuidv4()
-    voter: payload.voter
-    choice: payload.choice
-    createdAt: new Date().toISOString()
+    id: uuidv4();
+    voter: payload.voter;
+    choice: payload.choice;
+    createdAt: new Date().toISOString();
   }
   g.votes = [...(g.votes |[]), vote];
   g.updatedAt = new Date().toISOString();

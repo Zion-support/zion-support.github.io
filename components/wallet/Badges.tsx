@@ -87,7 +87,7 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
   );
 }"
               ? "bg-yellow-100 border-yellow-300 text-yellow-800""
-              : "bg-gray-100 border-gray-200 text-gray-500"
+              : "bg-gray-100 border-gray-200 text-gray-500";
   }
   return current;
 }

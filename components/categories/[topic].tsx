@@ -19,7 +19,7 @@ const TopicPage: NextPage<Props> = ({ posts, topic }) => {
       </Head>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">{topic}</h1>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">;
           {posts.map((post) => (
             <div key={post.slug} className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-xl font-semibold mb-2">

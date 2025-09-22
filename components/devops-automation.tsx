@@ -32,18 +32,18 @@ export default function DevOpsAutomationPage() {
   const features = null;
               and intelligent security automation. Deploy faster, safer, and more reliably.
 
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
     }
     {}
       icon: <Zap className="w-6 h-6" />'
-      title: 'Infrastructure as Code''
+      title: 'Infrastructure as Code'';
       description: 'Terraform, CloudFormation, and Kubernetes automation';'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
     }
     {"
       icon: <Shield className="w-6 h-6" />'
-      title: 'Security Automation''
-      description: 'Automated security scanning and compliance checks''
+      title: 'Security Automation'';
+      description: 'Automated security scanning and compliance checks'';
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 
 export default function DevOpsAutomationPage() {}
@@ -91,14 +91,14 @@ export default function DevOpsAutomationPage() { return null; }
       description: 'Automated security scanning and compliance checks',
   ];
       ];
-      popular: false'
-      cta: 'Start Free Trial''
-      color: 'border-gray-600 hover:border-blue-500'
+      popular: false';
+      cta: 'Start Free Trial'';
+      color: 'border-gray-600 hover:border-blue-500';
     }'
-      name: 'Professional''
-      price: '$129''
-      period: '/month''
-      description: 'Ideal for growing development teams'
+      name: 'Professional'';
+      price: '$129'';
+      period: '/month'';
+      description: 'Ideal for growing development teams';
       icon: <BarChart3 className='w-6 h-6' />,
       title: 'Performance Monitoring',
       description: 'Real-time performance insights and optimization',
@@ -107,11 +107,11 @@ export default function DevOpsAutomationPage() { return null; }
   ];
   const pricingPlans = [
     {
-      name: 'Starter'
-      price: '$39'
-      period: '/month'
-      description: 'Perfect for small teams and startups'
-      features: [
+      name: 'Starter';
+      price: '$39';
+      period: '/month';
+      description: 'Perfect for small teams and startups';
+      features: [;
 'Up to 5 repositories',
         'Basic CI/CD pipelines',
         'GitHub integration',
@@ -129,7 +129,7 @@ export default function DevOpsAutomationPage() { return null; }
       period: '/month',
       description: 'Ideal for growing development teams',
 origin/cursor/automate-test-improve-and-merge-code-2533
-      features: [
+      features: [;
 'Up to 25 repositories',
         'Advanced CI/CD workflows',
         'Multi-cloud deployment',
@@ -148,7 +148,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       price: '$399',
       period: '/month',
       description: 'For large-scale development operations',
-      features: [
+      features: [;
 'Unlimited repositories',
         'Enterprise CI/CD',
         'Advanced IaC automation',
@@ -182,13 +182,13 @@ pros: ['Integrated platform', 'Good CI/CD'],
       cons: ['User-based pricing', 'Limited integrations'],
     },
     {
-      competitor: 'Jenkins'
-      pricing: 'Free'
-      repositories: 'Unlimited'
-      rating: '4.2/5'
+      competitor: 'Jenkins';
+      pricing: 'Free';
+      repositories: 'Unlimited';
+      rating: '4.2/5';
       pros: ['Completely free', 'Highly customizable']
       cons: ['Requires maintenance', 'No managed service']
-    },  ];      pros: ['Completely freeHighly customizable']
+    },  ];      pros: ['Completely freeHighly customizable'];
         'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
       ];
       popular: false,'
@@ -325,25 +325,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content='Professional DevOps automation platform with CI/CD, infrastructure as code, and security automation. Plans starting at $39/month.'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='DevOps Automation - Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation.'
         />
         <meta name='twitter:card' content='summary_large_image' />
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
             <div className='mb-8'>
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>
                 <span className='w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse' />
                 DevOps Automation Platform
               </div>
             </div>
-            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
+            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>;
               DevOps Automation
             </h1>
             <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12'>
@@ -362,7 +362,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 processes.;
               </p>;
             </div>;
-                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white';
               >
                 Watch Demo
               </Button>
@@ -371,9 +371,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
         {/* Features Section */}
 <section className='py-24 bg-gray-900'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='text-center mb-20'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
                 Complete DevOps Automation Suite
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -381,11 +381,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 processes.
               </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
               {features.map((feature, index) => (
                 <Card
                   key={index}
-                  className='text-center group hover:scale-105 transition-transform duration-300'
+                  className='text-center group hover:scale-105 transition-transform duration-300';
                 >
                   <div
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}
@@ -411,9 +411,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Automation Examples Section */}
 <section className='py-24 bg-gray-800'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='text-center mb-20'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
                 What You Can Automate;
               </h2>'
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -429,11 +429,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 See how Zion DevOps can transform your development workflow.
               </p>
             </div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {automationExamples.map((example, index) => (
                 <Card;
                   key={index}"
-                  className="text-center group hover:scale-105 transition-transform duration-300"
+                  className="text-center group hover:scale-105 transition-transform duration-300";
                 >
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}>
                     {example.icon}
@@ -509,7 +509,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Card;
                   key={index}`
                   className={`relative p-8 ${plan && plan.color} transition-all duration-300 hover:scale-105 ${'
-                    plan && plan.popular ? 'ring-2 ring-blue-500' : ''`
+                    plan && plan.popular ? 'ring-2 ring-blue-500' : ''`;
                   }`}>;
                   {plan && plan.popular && (;'
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;'
@@ -547,16 +547,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Pricing Section */}
         <section id="pricing" className="py-24 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-
+;
         {/* Pricing Section */}
 <section id='pricing' className='py-24 bg-gray-900'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
+;
                 Simple, Transparent Pricing
               </h2>
 
@@ -564,13 +564,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.
               </p>
             </div>"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 Choose the plan that fits your DevOps needs. All plans include a
                 14-day free trial.
               </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               {pricingPlans.map((plan, index) => (
                 <Card;`
@@ -623,8 +623,8 @@ size='lg'
 origin/cursor/automate-test-improve-and-merge-code-2533
                       className={`w-full ${
                         plan.popular 
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' ;
+                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white';
                     <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
                       <span className='bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium'>                        Most Popular;
                       </span>;
@@ -663,26 +663,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       href={plan.name === 'Enterprise' ? '/contact' : '#signup'}'
                       variant={plan.popular ? 'primary' : 'outline'}
                         plan.popular'
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white';
                         plan.popular '
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-
+;
                         plan.popular '
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' ;
 '
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white';
 '
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-
+;
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-
+;
 origin/cursor/automate-test-improve-and-merge-code-2533
                       }`}
                     >;
                       {plan.cta}
 
                         plan && plan.popular '
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' `
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' `;
                       }`}>;
                       {plan && plan.cta}
                     </Button>;
@@ -695,22 +695,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
+;
         {/* Market Comparison Section */}
         <section className="py-24 bg-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-20">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
                 How We Compare to the Competition;
               </h2>"
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See why Zion DevOps is the smart choice for automation.
               </p>
             </div>"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {marketComparison.map((competitor, index) => ("
                 <Card key={index} className="p-6">
                     </Button>
@@ -722,9 +722,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
         {/* Market Comparison Section */}
 <section className='py-24 bg-gray-800'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='text-center mb-20'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
                     <div className="flex items-center justify-center mb-2">
@@ -779,7 +779,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
                       <p className='text-sm font-medium text-green-400 mb-1'>
                         Pros:
-                      </p>
+                      </p>;
                       <ul className='text-sm text-gray-300 space-y-1'>
                         {competitor.pros.map((pro, proIndex) => (
                           <li key={proIndex} className='flex items-center'>
@@ -793,7 +793,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
 <p className='text-sm font-medium text-red-400 mb-1'>
                         Cons:
-                      </p>'
+                      </p>';
                       <ul className='text-sm text-gray-300 space-y-1'>
                         {competitor.cons.map((con, conIndex) => ('
                           <li key={conIndex} className='flex items-center'>'
@@ -820,13 +820,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Testimonials Section */}
 <section className='py-24 bg-gray-900'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
             <div className='text-center mb-20'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
                 Trusted by DevOps Teams Worldwide;
               </h2>
             </div>'
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
               {testimonials.map((testimonial, index) => ('
                 <Card key={index} className='p-6'>'
                   <div className='flex items-center mb-4'>
@@ -838,7 +838,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
               </h2>
             </div>"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {testimonials.map((testimonial, index) => ("
                 <Card key={index} className="p-6">"
                   <div className="flex items-center mb-4">
@@ -886,14 +886,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* CTA Section */}
         {/* CTA Section */}'
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>'
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>'
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>';
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
             </h2>'
             <p className='text-xl text-blue-100 mb-12'>
               Join thousands of teams who trust Zion for their DevOps automation;
               needs.
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>;'
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;'
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
@@ -916,19 +916,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 size='lg'
         {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
             </h2>'
             <p className='text-xl text-blue-100 mb-12'>
               Join thousands of teams who trust Zion for their DevOps automation;
               needs.
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <Button
                 href='#signup'
                 variant='secondary'
                 size='lg'
-                className='bg-white text-blue-600 hover:bg-gray-100'
+                className='bg-white text-blue-600 hover:bg-gray-100';
               >
                 Start Free Trial
               </Button>
@@ -1123,7 +1123,7 @@ href='/contact'
 ;
               <Button;
     </>);
-                className='border-white text-white hover:bg-white hover:text-blue-600'
+                className='border-white text-white hover:bg-white hover:text-blue-600';
               >
                 Contact Sales
               </Button>

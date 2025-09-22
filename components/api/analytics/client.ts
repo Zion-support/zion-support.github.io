@@ -27,31 +27,31 @@ supabase
         : [];
     const jobsData = jobs.length
       ? jobs
-      : [
+      : [;
           {
-            id: 11
-            client_id: 'c1'
-            status: 'posted'
-            posted_at: '2025-01-01'
+            id: 11;
+            client_id: 'c1';
+            status: 'posted';
+            posted_at: '2025-01-01';
           }
           {
-            id: 12
-            client_id: 'c1'
-            status: 'filled'
-            posted_at: '2025-01-02'
-            hired_at: '2025-01-05'
+            id: 12;
+            client_id: 'c1';
+            status: 'filled';
+            posted_at: '2025-01-02';
+            hired_at: '2025-01-05';
           }
           {
-            id: 13
-            client_id: 'c1'
-            status: 'filled'
-            posted_at: '2025-01-03'
-            hired_at: '2025-01-06'
+            id: 13;
+            client_id: 'c1';
+            status: 'filled';
+            posted_at: '2025-01-03';
+            hired_at: '2025-01-06';
           }
         ];
     const quotesData = quotes.length
       ? quotes
-      : [
+      : [;
           { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' }
           { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }
         ];
@@ -80,7 +80,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       funnel,
     });
   } catch (e) {}
-      funnel: ['
+      funnel: [';
         { label: 'Post', value: 3 }'
         { label: 'Invite', value: 2 }
 '

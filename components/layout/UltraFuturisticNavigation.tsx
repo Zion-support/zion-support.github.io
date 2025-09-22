@@ -60,10 +60,10 @@ interface UltraFuturisticNavigationProps {
 
   const navigationItems = [
     {
-      name: 'Services'
-      href: '/services'
-      hasDropdown: true
-      dropdownItems: [
+      name: 'Services';
+      href: '/services';
+      hasDropdown: true;
+      dropdownItems: [;
 {
           name: 'AI & Machine Learning',
           href: '/services/ai-ml',
@@ -71,22 +71,22 @@ interface UltraFuturisticNavigationProps {
           color: 'from-purple-500 to-pink-600',
         },
         {
-          name: 'Quantum Computing'
-          href: '/services/quantum'
-          icon: Atom'
-          color: 'from-cyan-500 to-blue-600'
+          name: 'Quantum Computing';
+          href: '/services/quantum';
+          icon: Atom';
+          color: 'from-cyan-500 to-blue-600';
         }
         {'
-          name: 'Cybersecurity''
-          href: '/services/cybersecurity'
-          icon: Shield'
-          color: 'from-red-500 to-pink-600'
+          name: 'Cybersecurity'';
+          href: '/services/cybersecurity';
+          icon: Shield';
+          color: 'from-red-500 to-pink-600';
         }
         {'
-          name: 'IT Solutions''
-          href: '/services/it-solutions'
-          icon: Rocket'
-          color: 'from-green-500 to-emerald-600'
+          name: 'IT Solutions'';
+          href: '/services/it-solutions';
+          icon: Rocket';
+          color: 'from-green-500 to-emerald-600';
         }
         {'
     { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },'
@@ -124,7 +124,7 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
 
   
     >
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
 
         <div className='flex items-center justify-between h-20'>
@@ -160,9 +160,9 @@ const contactInfo = {mobile: '+1 302 464 0950';}
     <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${}
       isScrolled '
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' '
-        : 'bg-transparent'`
+        : 'bg-transparent'`;
     } ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
         <div className="flex items-center justify-between h-20">
           <motion.div;
             initial={{ opacity: 0, x: -20 }}
@@ -185,10 +185,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>            </div>
           </motion.div>
           {/* Desktop Navigation */}'
-          <div className='hidden lg:flex items-center space-x-8'>
+          <div className='hidden lg:flex items-center space-x-8'>;
             {navigationItems.map((item, index) => ('
               <div key={item.name} className='relative group'>                {item.hasDropdown ? (          >'
-        : 'bg-transparent'`
+        : 'bg-transparent'`;
     } ${className}`}>;"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
         <div className="flex items-center justify-between h-20">;
@@ -226,7 +226,7 @@ className='flex items-center space-x-3'
                 Revolutionary Technology;
               </div>            </div>;
           </motion && motion.div>;"
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">;
             {navigationItems.map((item, index) => ("
               <div key={item.name} className="relative group">
                 {item.hasDropdown ? (
@@ -238,7 +238,7 @@ className='flex items-center space-x-3'
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />;
                     </button>;
           {/* Desktop Navigation */}
-<div className='hidden lg:flex items-center space-x-8'>
+<div className='hidden lg:flex items-center space-x-8'>;
             {navigationItems.map((item, index) => (
               <div key={item.name} className='relative group'>
                 {item.hasDropdown ? (
@@ -250,7 +250,7 @@ className='flex items-center space-x-3'
 
           {/* Desktop Navigation *}
 }
-<div className='hidden lg:flex items-center space-x-8' />
+<div className='hidden lg:flex items-center space-x-8' />;
             {navigationItems.map((item, index) => (}
               <div key={item.name} className='relative group' />
                 {item.hasDropdown ? (}
@@ -258,9 +258,9 @@ className='flex items-center space-x-3'
 onMouseEnter={() = /> setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-<button className='flex items-center space-x-1 text-gray-300 hover: text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50' />
+<button className='flex items-center space-x-1 text-gray-300 hover: text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50' />;
                       <span />{item.name}</span>
-                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
+                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />;
                     </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* Dropdown Menu */}
@@ -317,7 +317,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
 className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-300 group/item' />
-
+;
                                   <div;
                                     className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item: scale-110 transition-transform duration-300;
 } />
@@ -346,17 +346,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     </AnimatePresence>
                   </div>
-                ) : (
+                ) : (;
                   <Link
                     href={item.href}
-className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     {item.name}
                   </Link>
                   <Link;
 href={item.href}
-className='text-gray-300 hover: text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+className='text-gray-300 hover: text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50';
                    />
 
                     {item.nam}
@@ -366,9 +366,9 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
               </div>;
             ))}href={item.href}"
                     className=\"text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50\">
-
+;
                     href={item.href}"
-                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50";
                   >'
                           className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden';
                         >;'
@@ -415,7 +415,7 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
                           </div>;
                         </motion.div>)}
                     </AnimatePresence>;
-                  </div>) : (
+                  </div>) : (;
                   <Link;
                     href={item.href}'"
                     className='text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                  >                    className="text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
@@ -435,7 +435,7 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
             {/* Contact Info */}
 
 <div className='hidden lg: flex items-center space-x-6' />
-
+;
             {/* Contact Info *}
 }
             <div className='flex items-center space-x-4 text-sm text-gray-300' />;
@@ -450,7 +450,7 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
               <Link;
                 href='/contact';
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30' />
-
+;
                 <Rocket className='w-4 h-4 mr-2' />;
                 Get Started;
               </Link>;
@@ -468,20 +468,20 @@ className='text-gray-300 hover: text-white transition-colors duration-300 py-2 p
 
           {/* Mobile Menu Button */}"
           <div className="lg:hidden">
-
-<div className='lg: hidden' />
+;
+<div className='lg: hidden' />;
             <button;
 onClick={() = /> setIsOpen(!isOpen)}
 
-              className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50'
+              className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50';
             >
               {isOpen ? ('
                 <X className='w-6 h-6' />
-              ) : ('
+              ) : (';
                 <Menu className='w-6 h-6' />
               )}            </button>            <button;
               onClick={() => setIsOpen(!isOpen)}"
-              className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50"
+              className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50";
             >"
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>;
@@ -503,7 +503,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden'
+className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden';
            />
             <div className='px-4 py-6 space-y-4' />
 
@@ -544,7 +544,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <Link;
                               key={dropdownItem.name}
                               href={dropdownItem.href}'
-                              className='flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300'
+                              className='flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300';
                               onClick={() => setIsOpen(false)}
                             >
                               <div;`
@@ -556,7 +556,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <Link;
                               key={dropdownItem && dropdownItem.name}
                               href={dropdownItem && dropdownItem.href}"
-                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300"
+                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300";
                               onClick={() => setIsOpen(false)}
                                 className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}
                               >
@@ -565,7 +565,7 @@ className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items
                                />
                                 <dropdownItem.icon className='w-4 h-4 text-white' />
                               </div>
-                              <span className='text-gray-300 hover: text-white transition-colors' />
+                              <span className='text-gray-300 hover: text-white transition-colors' />;
                                 {dropdownItem.name}
 origin/cursor/automate-test-improve-and-merge-code-2533
                               </span>
@@ -582,7 +582,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
 
                       href={item.href}
-className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'
+className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50';
 origin/cursor/automate-test-improve-and-merge-code-2533
                       onClick={() => setIsOpen(false)}
 
@@ -623,7 +623,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {item && item.name}
                     <Link;
 href={item.href}
-className='block text-gray-300 hover: text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'
+className='block text-gray-300 hover: text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50';
                       onClick={() = /> setIsOpen(false)}
 
                     >
@@ -731,7 +731,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </span>;
                             </Link>))}
                         </motion.div>)}
-                    </div>) : (
+                    </div>) : (;
                     <Link;
                       href={item.href}'"
                       className='block text - gray - 300 hover:text - white transition - colors duration - 300 py - 3 px - 4 rounded - lg hover:bg - gray - 800 / 50'                      on_click={() => setIsOpen (false)}                      className="block text - gray - 300 hover:text - white transition - colors duration - 300 py - 3 px - 4 rounded - lg hover:bg - gray - 800 / 50";

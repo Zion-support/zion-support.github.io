@@ -65,6 +65,7 @@ module.exports = [
         HTMLTextAreaElement: 'readonly',
         React: 'readonly',
         gtag: 'readonly',
+        fetch: 'readonly',
       },
     },
     rules: {
@@ -138,6 +139,7 @@ module.exports = [
         HTMLTextAreaElement: 'readonly',
         React: 'readonly',
         gtag: 'readonly',
+        fetch: 'readonly',
       },
     },
     plugins: {

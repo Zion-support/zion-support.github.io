@@ -251,11 +251,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const contactInfo = null;
 const serviceCategories = [
   {
-    title: '🧠 Revolutionary AI Services'
-    icon: BrainIcon
-    color: 'from-violet-600 via-purple-600 to-indigo-600'
-    description: 'Next-generation AI consciousness and creativity'
-    services: [
+    title: '🧠 Revolutionary AI Services';
+    icon: BrainIcon;
+    color: 'from-violet-600 via-purple-600 to-indigo-600';
+    description: 'Next-generation AI consciousness and creativity';
+    services: [;
 {
         name: 'AI Business Intelligence Pro',
         href: '/ai-business-intelligence-pro',
@@ -332,7 +332,7 @@ const quickLinks = ['
     icon: AtomIcon,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     description: 'Quantum computing and beyond',
-    services: [
+    services: [;
 {
         name: 'Quantum Machine Learning',
         href: '/quantum-machine-learning-platform',
@@ -340,16 +340,16 @@ const quickLinks = ['
         price: '$1,999/month',
       },
       {
-        name: 'Blockchain AI Platform'
-        href: '/blockchain-ai-platform'
-        description: 'Decentralized AI for the future'
-        price: '$899/month'
+        name: 'Blockchain AI Platform';
+        href: '/blockchain-ai-platform';
+        description: 'Decentralized AI for the future';
+        price: '$899/month';
       }
       {
-        name: 'Edge AI Computing'
-        href: '/edge-ai-computing-platform'
-        description: 'AI at the edge for real-time processing'
-        price: '$599/month'
+        name: 'Edge AI Computing';
+        href: '/edge-ai-computing-platform';
+        description: 'AI at the edge for real-time processing';
+        price: '$599/month';
       }
       {
         name: 'AI Climate Modeling',
@@ -364,7 +364,7 @@ const quickLinks = ['
     icon: CpuIcon,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     description: 'Autonomous enterprise infrastructure',
-    services: [
+    services: [;
 {
         name: 'API Security & Monitoring',
         href: '/api-security-monitoring-suite',
@@ -372,16 +372,16 @@ const quickLinks = ['
         price: '$399/month',
       },
       {
-        name: 'Customer Success Automation'
-        href: '/customer-success-automation'
-        description: 'Automate customer success workflows'
-        price: '$199/month'
+        name: 'Customer Success Automation';
+        href: '/customer-success-automation';
+        description: 'Automate customer success workflows';
+        price: '$199/month';
       }
       {
-        name: 'HR Automation Suite'
-        href: '/hr-automation-suite'
-        description: 'Streamline HR processes with AI'
-        price: '$179/month'
+        name: 'HR Automation Suite';
+        href: '/hr-automation-suite';
+        description: 'Streamline HR processes with AI';
+        price: '$179/month';
       }
       {
         name: 'Project Management AI',
@@ -396,7 +396,7 @@ const quickLinks = ['
     icon: ShoppingCart,
     color: 'from-teal-600 via-emerald-600 to-green-600',
     description: 'Streamline business operations',
-    services: [
+    services: [;
 {
         name: 'E-commerce Automation',
         href: '/ecommerce-automation-platform',
@@ -404,16 +404,16 @@ const quickLinks = ['
         price: '$249/month',
       },
       {
-        name: 'Marketing Automation Suite'
-        href: '/marketing-automation-suite'
-        description: 'Automate your entire marketing operation'
-        price: '$279/month'
+        name: 'Marketing Automation Suite';
+        href: '/marketing-automation-suite';
+        description: 'Automate your entire marketing operation';
+        price: '$279/month';
       }
       {
-        name: 'Financial Analytics Platform'
-        href: '/financial-analytics-platform'
-        description: 'Real-time financial insights'
-        price: '$349/month'
+        name: 'Financial Analytics Platform';
+        href: '/financial-analytics-platform';
+        description: 'Real-time financial insights';
+        price: '$349/month';
       }
       {
         name: 'Legal Document Automation',
@@ -428,7 +428,7 @@ const quickLinks = ['
     icon: RocketIcon,
     color: 'from-green-600 via-yellow-600 to-orange-600',
     description: 'Intelligent automation solutions',
-    services: [
+    services: [;
 {
         name: 'Autonomous Robotics Platform',
         href: '/autonomous-robotics-platform',
@@ -436,16 +436,16 @@ const quickLinks = ['
         price: '$2,499/month',
       },
       {
-        name: 'AI Content Generator Elite'
-        href: '/ai-content-generator-elite'
-        description: 'Professional AI content creation'
-        price: '$49/month'
+        name: 'AI Content Generator Elite';
+        href: '/ai-content-generator-elite';
+        description: 'Professional AI content creation';
+        price: '$49/month';
       }
       {
-        name: 'AI Guardrails Suite'
-        href: '/ai-guardrails-suite'
-        description: 'Policy and safety for LLM apps'
-        price: '$199/month'
+        name: 'AI Guardrails Suite';
+        href: '/ai-guardrails-suite';
+        description: 'Policy and safety for LLM apps';
+        price: '$199/month';
       }
       {
         name: 'AI Business Intelligence',
@@ -460,7 +460,7 @@ const quickLinks = ['
     icon: MicroscopeIcon,
     color: 'from-orange-600 via-red-600 to-pink-600',
     description: 'Breakthrough research solutions',
-    services: [
+    services: [;
 {
         name: 'Quantum DNA Computing',
         href: '/quantum-dna-computing-platform',
@@ -468,15 +468,15 @@ const quickLinks = ['
         price: '$35,999/month',
       },
       {
-        name: 'Space Mining Automation'
-        href: '/space-mining-automation-platform'
-        description: 'Automated asteroid mining'
+        name: 'Space Mining Automation';
+        href: '/space-mining-automation-platform';
+        description: 'Automated asteroid mining';
         price: '$45,999/month'
       }
       {
-        name: 'Metaverse AI Development'
-        href: '/metaverse-ai-development-platform'
-        description: 'Build immersive virtual worlds'
+        name: 'Metaverse AI Development';
+        href: '/metaverse-ai-development-platform';
+        description: 'Build immersive virtual worlds';
         price: '$2,999/month'
       }
       {
@@ -555,7 +555,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
   const toggleDropdown = (category: string) => {}
-    setActiveDropdown(activeDropdown === category ? null : category)
+    setActiveDropdown(activeDropdown === category ? null : category);
   }
   const closeDropdown = () => {}
     setActiveDropdown(null)
@@ -640,7 +640,7 @@ setIsScrolled(window.scrollY > 50);
             </motion.div>
             {/* Desktop Navigation */}            >
       }`}>"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.div;
@@ -703,14 +703,14 @@ setIsScrolled(window.scrollY > 50);
               
               {/* Services Dropdown */}"
               <div className="relative group">"
-                <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
+                <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">;
                   <span>Services</span>"
                   <ChevronDown className="w-4 h-4" />
                 </button>"
-                <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">"
+                <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">";
                   <div className="grid grid-cols-2 gap-4">
                     {serviceCategories.slice(0, 4).map((category) => ("
-                      <div key={category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">"
+                      <div key={category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">";
                         <div className="flex items-center space-x-2 mb-2">"
                           <category.icon className="w-5 h-5 text-cyan-400" />'"
                           <h3 className="text-sm font-semibold text-white">{category.title.split(' ')[0]}</h3>
@@ -987,7 +987,7 @@ function UltraFuturisticNavigation2034() {}
                   key={link.name}
                   href={link.href}
                   className='text-gray-300 hover: text-cyan-400 transition-colors duration-200 font-medium' />
-
+;
                   {link.nam,}
 }
                 </Link>;
@@ -1003,7 +1003,7 @@ function UltraFuturisticNavigation2034() {}
                     {serviceCategories.slice(0, 4).map(category => (<div;}
                         key={category.title}
                         className='p-3 rounded-lg hover:bg-cyan-500/10 transition-colors' />
-
+;
                         <div className='flex items-center space-x-2 mb-2' />;
                           <category.icon className='w-5 h-5 text-cyan-400' />;
                           <h3 className='text-sm font-semibold text-white' />;
@@ -1017,11 +1017,11 @@ function UltraFuturisticNavigation2034() {}
                           {category.services.slice(0, 2).map(service => (<Link;}
                               key={service.name}
                               href={service.href}
-                              className='block text-xs text-gray-300 hover:text-cyan-400 transition-colors'
+                              className='block text-xs text-gray-300 hover:text-cyan-400 transition-colors';
                             >
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-                              className='block text-xs text-gray-300 hover: text-cyan-400 transition-colors'
+                              className='block text-xs text-gray-300 hover: text-cyan-400 transition-colors';
                              />
 
                               {service.name}
@@ -1036,12 +1036,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
                       View All Services;'
                       <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link"
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";
                   </div>
 <div className='mt-4 pt-4 border-t border-cyan-500/20' />
                     <Link;
 href='/services'
-                      className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200'
+                      className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200';
                      />
                       View All Services;
                       <ArrowRight className='w-4 h-4 ml-2' />
@@ -1052,7 +1052,7 @@ href='/services'
               {/* Contact Button */}
               <Link;
 href='/contact'
-                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium'
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Started;
@@ -1085,12 +1085,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
             {/* Mobile Menu Button */}
-<div className='lg:hidden' />
+<div className='lg:hidden' />;
               <button;
 onClick={() = /> setIsOpen(!isOpen,}
 }
                 className='text-gray-300 hover:text-cyan-400 transition-colors'>
-
+;
                 {isOpen ? (<X className='w-6 h-6' />;}
                 ) : (<Menu className='w-6 h-6' />;}
                 )}
@@ -1110,7 +1110,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               exit={{ opacity: 0, height: 0 }}
 
               transition={{ duration: 0.3 }}
-className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
+className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20';
              />
               <div className='px-4 py-6 space-y-4' />
                 {quickLinks.map(link => (}
@@ -1119,7 +1119,7 @@ key={link.name}
                     href={link.href}
                     onClick={() = /> setIsOpen(false)}
 className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>
-
+;
                     {link.nam,}
 }
                   </Link>;
@@ -1131,12 +1131,12 @@ className='block text-gray-300 hover:text-cyan-400 transition-colors duration-20
                   >
                     <button
                       onClick={() => toggleDropdown(category.title)}
-                      className='flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'
+                      className='flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium';
                     >
                       <span>{category.title}</span>
                       <ChevronDown
                         className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === category.title ? 'rotate-180' : ''
+                          activeDropdown === category.title ? 'rotate-180' : '';
                         }`}
                       />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1166,7 +1166,7 @@ key={service.name}
                               href={service.href}
                               onClick={() = /> setIsOpen(false)}
 className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'>
-
+;
                               {service.name}
 
                             </Link>
@@ -1183,7 +1183,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <Link
                   href='/contact'
                   onClick={() => setIsOpen(false)}'
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link"
+                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link";
                   href="/contact"
                   onClick={() => setIsOpen(false)}"
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";'
@@ -1237,8 +1237,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'
+                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center';
+                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center';
                 >
                   Get Started;
                 </Link>

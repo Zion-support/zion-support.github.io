@@ -47,7 +47,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       telephone: '+1-555-123-4567',
       contactType: 'customer service',
     },
-    sameAs: [
+    sameAs: [;
       'https://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
     ],
@@ -99,9 +99,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />;
       {/* Structured Data */}
       <script
         type="application/ld+json"

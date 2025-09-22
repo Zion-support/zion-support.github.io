@@ -6,12 +6,12 @@
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
 
-  'Content-Type': 'application/json' 
+  'Content-Type': 'application/json' ;
 };
 
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
-  start: values.timelineStart, end: values.timelineEnd
+  start: values.timelineStart, end: values.timelineEnd;
 }
 budgetRange: values.budgetRange;
 }
@@ -44,9 +44,9 @@ import { marketValidatedServices  } from '../../data/market-validated-services';
 import { moreRealServices2025  } from '../../data/more-real-services-2025';
 import { realOperationalServices } from '../../data/real-operational-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
+import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
-
+;
 const mapLocalToServiceItem = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ServicesIndexPage () {
@@ -77,10 +77,10 @@ budgetRange: values.budgetRange;
 const mapLocalToServiceItem = (item: any): ServiceItem => ({}
   slug: item.slug;
   title: item.name;
-  description: item.description'
-  provider: 'Zion Provider'
+  description: item.description';
+  provider: 'Zion Provider';
   priceRangeUSD: item.priceRangeUSD;
-  categories: [item.category]
+  categories: [item.category];
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10})
 const ServicesPage: NextPage = () => {}
   const [services, setServices] = React.useState<ServiceItem[]>([]);

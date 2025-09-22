@@ -4,7 +4,7 @@ let pool: Pool | null;
     throw err
 origin/cursor/automate-test-improve-and-merge-code-2533
 export async function withUser<T>(
-  userId: string
+  userId: string;
   fn: (client: PoolClient) => Promise<T>
 ): Promise<T> {}
   const client = await getPool().connect();

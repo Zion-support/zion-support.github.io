@@ -1,11 +1,10 @@
 import { Metadata } from 'next'
-
 interface SEOEnhancerProps {
-  title: string
-  description: string
-  keywords?: string[]
-  canonicalUrl?: string
-  ogImage?: string
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
 }
 
 export function generateSEOMetadata({
@@ -15,9 +14,8 @@ export function generateSEOMetadata({
   canonicalUrl,
   ogImage = '/images/og-default.jpg'
 }: SEOEnhancerProps): Metadata {
-  const baseUrl = 'https://ziontechgroup.com'
+  const baseUrl = 'https://ziontechgroup.com';
   const fullUrl = canonicalUrl ? `${baseUrl}${canonicalUrl}` : baseUrl
-
   return {
     title: `${title} | Zion Tech Group`,
     description,
@@ -122,6 +120,6 @@ export function generateStructuredData(type: 'Organization' | 'WebSite' | 'Servi
       }
 
     default:
-      return baseStructuredData
+      return baseStructuredData;
   }
 }

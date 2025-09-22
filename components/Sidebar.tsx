@@ -33,7 +33,7 @@ import {
   Building2,
 } from 'lucide-react';
 const navigation = {
-  'Services': [
+  'Services': [;
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Micro SaaS', href: '/micro-saas' },
@@ -43,13 +43,13 @@ const navigation = {
     { name: 'Blockchain', href: '/blockchain' },
     { name: 'IoT Solutions', href: '/iot-solutions' },
   ],
-  'Solutions': [
+  'Solutions': [;
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Startup Solutions', href: '/solutions/startup' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
     { name: 'Custom Development', href: '/solutions/custom' },
   ],
-  'Industries': [
+  'Industries': [;
     { name: 'Healthcare', href: '/industries/healthcare' },
     { name: 'Finance', href: '/industries/finance' },
     { name: 'Education', href: '/industries/education' },
@@ -59,7 +59,7 @@ const navigation = {
     { name: 'Agriculture', href: '/industries/agriculture' },
     { name: 'Energy', href: '/industries/energy' },
   ],
-  'Resources': [
+  'Resources': [;
     { name: 'Blog', href: '/blog' },
     { name: 'Documentation', href: '/docs' },
     { name: 'API Documentation', href: '/docs/api' },
@@ -69,7 +69,7 @@ const navigation = {
     { name: 'Training', href: '/training' },
     { name: 'FAQ', href: '/faq' },
   ],
-  'Company': [
+  'Company': [;
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
@@ -113,17 +113,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
   const navigation = {
-    'Services': [
+    'Services': [;
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
       { name: 'Micro SaaS', href: '/micro-saas' },
     ],
-    'Solutions': [
+    'Solutions': [;
       { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
       { name: 'Cybersecurity', href: '/solutions/cybersecurity' },
       { name: 'Data Analytics', href: '/solutions/data-analytics' },
     ],
-    'Industries': [
+    'Industries': [;
       { name: 'Healthcare', href: '/industries/healthcare' },
       { name: 'Finance', href: '/industries/finance' },
       { name: 'Manufacturing', href: '/industries/manufacturing' },
@@ -185,7 +185,7 @@ pr-12243
                   onClick={onClose}
 
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
-
+;
 pr-12243
                 >
 
@@ -203,11 +203,11 @@ pr-12243
                     <button;
                       onClick={() => handleDropdownToggle(title)}
 
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
+                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors";
                     >
                       <span>{title}</span>
                       <ChevronDown className={`w-5 h-5 transition-transform ${
-                        activeDropdown === title ? 'rotate-180' : ''
+                        activeDropdown === title ? 'rotate-180' : '';
                       }`} />
                     </button>
                     {activeDropdown === title && (
@@ -221,7 +221,7 @@ pr-12243
                           <Link
                             key={link.name}
                             href={link.href}
-                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1";
                             onClick={onClose}
                           >
                             {link.name}
@@ -229,12 +229,12 @@ pr-12243
                         ))}
                       </motion.div>
                     )}
-                      className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
+                      className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors";
                     >
                       <span className="font-medium">{title}</span>
                       {openDropdowns.includes(title) ? (
                         <ChevronDown className="w-4 h-4" />
-                      ) : (
+                      ) : (;
                         <ChevronRight className="w-4 h-4" />
                       )}
                     </button>
@@ -250,7 +250,7 @@ pr-12243
                             <Link
                               key={link.name}
                               href={link.href}
-                              className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                              className="block text-gray-600 hover:text-blue-600 transition-colors py-1";
                               onClick={onClose}
                             >
                               {link.name}
@@ -273,7 +273,7 @@ pr-12243
                     <Link;
                       key={link.name}
                       href={link.href}"
-                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1";
                       onClick={onClose}
                     >
                       {link.name}
@@ -298,7 +298,7 @@ pr-12243
                     <span>364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
-                <button className="flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                <button className="flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
                   <LogOut className="h-5 w-5" />
                   <span className="font-medium">Sign Out</span>
                 </button>
@@ -339,18 +339,18 @@ import Link from 'next/link';
 } from 'lucide-react';
 
 const navigation = {
-  'Services': [
+  'Services': [;
     { name: 'AI Services';, href: '/ai-services' ;},
     { name: 'IT Services';, href: '/it-services' ;},
     { name: 'Micro SaaS';, href: '/micro-saas' ;},
     { name: 'Consulting';, href: '/consulting' ;}
   ],
-  'Solutions': [
+  'Solutions': [;
     { name: 'Enterprise';, href: '/enterprise' ;},
     { name: 'Startup';, href: '/startup' ;},
     { name: 'Industry';, href: '/industries' ;}
   ],
-  'Company': [
+  'Company': [;
     { name: 'About';, href: '/about' ;},
     { name: 'Team';, href: '/team' ;},
     { name: 'Careers';, href: '/careers' ;},
@@ -392,7 +392,7 @@ interface SidebarProps {
                 <h2 className="text-2xl font-bold text-gray-900">Zion Tech Group</h2>
                 <button
                   onClick={onClose}
-                  className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="p-2 rounded-lg hover:bg-gray-100 transition-colors";
                 >
                   <X className="h-6 w-6 text-gray-600" />
                 </button>
@@ -405,7 +405,7 @@ interface SidebarProps {
                     key={item.name}
                     href={item.href}
                     onClick={handleLinkClick}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors";
                   >
                     {item.name}
                   </Link>
@@ -415,7 +415,7 @@ interface SidebarProps {
                 <div>
                   <button
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors";
                   >
                     <span>Services</span>
                     <motion.div
@@ -439,7 +439,7 @@ interface SidebarProps {
                               key={service.name}
                               href={service.href}
                               onClick={handleLinkClick}
-                              className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+                              className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors";
                             >
                               <service.icon className="h-4 w-4" />
                               <span>{service.name}</span>
@@ -455,7 +455,7 @@ interface SidebarProps {
                 <div>
                   <button
                     onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors";
                   >
                     <span>Solutions</span>
                     <motion.div
@@ -479,7 +479,7 @@ interface SidebarProps {
                               key={solution.name}
                               href={solution.href}
                               onClick={handleLinkClick}
-                              className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+                              className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors";
                             >
                               <solution.icon className="h-4 w-4" />
                               <span>{solution.name}</span>
@@ -495,7 +495,7 @@ interface SidebarProps {
                 <div>
                   <button
                     onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors";
                   >
                     <span>Industries</span>
                     <motion.div
@@ -519,7 +519,7 @@ interface SidebarProps {
                               key={industry.name}
                               href={industry.href}
                               onClick={handleLinkClick}
-                              className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+                              className="flex items-center space-x-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors";
                             >
                               <industry.icon className="h-4 w-4" />
                               <span>{industry.name}</span>

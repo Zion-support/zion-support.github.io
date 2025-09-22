@@ -39,7 +39,7 @@ export type Section = {};
 }
 type DocsContent = {}
   title: string;
-  sections: Section[]
+  sections: Section[];
 }
 type PageProps = {}
   docs: DocsContent;

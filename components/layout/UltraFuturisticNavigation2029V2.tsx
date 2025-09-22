@@ -75,7 +75,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Target,
     color: 'from-green-600 via-yellow-600 to-orange-600','
     description: 'Cutting-edge micro solutions',
-    services: [
+    services: [;
       'Advanced Research Automation',
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
  } from 'lucide-react';
@@ -140,7 +140,7 @@ const contactInfo = null;
   name: 'Intelligent Marketing Automation', href: '/services/intelligent-marketing-automation', description: 'AI-powered marketing optimization', price: '$1, 299/month'
 }
 {
-  name: 'Smart Project Management', href: '/services/smart-project-management', description: 'AI-powered project optimization', price: '$899/month'
+  name: 'Smart Project Management', href: '/services/smart-project-management', description: 'AI-powered project optimization', price: '$899/month';
 }
 {
   name: 'Intelligent Sales Optimization', href: '/services/intelligent-sales-optimization', description: 'AI-powered sales intelligence', price: '$1, 799/month'
@@ -155,7 +155,7 @@ const contactInfo = null;
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
-    services: [
+    services: [;
 {
         name: 'AI Consciousness Evolution Platform',
         href: '/services/ai-consciousness-evolution-platform',
@@ -163,15 +163,15 @@ const contactInfo = null;
         price: '$19,999/month',
       },
       {
-        name: 'AI Emotional Intelligence Platform'
-        href: '/services/ai-emotional-intelligence-platform'
-        description: 'Real-time emotion analysis and response'
+        name: 'AI Emotional Intelligence Platform';
+        href: '/services/ai-emotional-intelligence-platform';
+        description: 'Real-time emotion analysis and response';
         price: '$3,999/month'
       }
       {
-        name: 'AI Creativity Orchestrator'
-        href: '/services/ai-creativity-orchestrator'
-        description: 'Multi-model creativity fusion'
+        name: 'AI Creativity Orchestrator';
+        href: '/services/ai-creativity-orchestrator';
+        description: 'Multi-model creativity fusion';
         price: '$5,999/month'
       }
       {
@@ -187,7 +187,7 @@ const contactInfo = null;
     icon: Globe,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     description: 'Quantum computing and beyond',
-    services: [
+    services: [;
 {
         name: 'Quantum Internet Security Gateway',
         href: '/services/quantum-internet-security-gateway',
@@ -195,15 +195,15 @@ const contactInfo = null;
         price: '$15,999/month',
       },
       {
-        name: 'Biotech DNA Computing Platform'
-        href: '/services/biotech-dna-computing-platform'
-        description: 'DNA-based computation'
+        name: 'Biotech DNA Computing Platform';
+        href: '/services/biotech-dna-computing-platform';
+        description: 'DNA-based computation';
         price: '$25,999/month'
       }
       {
-        name: 'Quantum Financial Trading Platform'
-        href: '/services/quantum-financial-trading-platform'
-        description: 'Quantum-powered trading algorithms'
+        name: 'Quantum Financial Trading Platform';
+        href: '/services/quantum-financial-trading-platform';
+        description: 'Quantum-powered trading algorithms';
         price: '$35,999/month'
       }
       {
@@ -219,7 +219,7 @@ const contactInfo = null;
     icon: Cpu,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     description: 'Autonomous enterprise infrastructure',
-    services: [
+    services: [;
 {
         name: 'AI Business Intelligence Suite',
         href: '/services/ai-business-intelligence-suite',
@@ -227,15 +227,15 @@ const contactInfo = null;
         price: '$2,499/month',
       },
       {
-        name: 'Smart Supply Chain Optimization'
-        href: '/services/smart-supply-chain-optimization'
-        description: 'AI-powered supply chain intelligence'
+        name: 'Smart Supply Chain Optimization';
+        href: '/services/smart-supply-chain-optimization';
+        description: 'AI-powered supply chain intelligence';
         price: '$3,999/month'
       }
       {
-        name: 'Intelligent HR Management System'
-        href: '/services/intelligent-hr-management-system'
-        description: 'AI-powered HR optimization'
+        name: 'Intelligent HR Management System';
+        href: '/services/intelligent-hr-management-system';
+        description: 'AI-powered HR optimization';
         price: '$1,599/month'
       }
       {
@@ -251,7 +251,7 @@ const contactInfo = null;
     icon: Rocket,
     color: 'from-teal-600 via-emerald-600 to-green-600',
     description: 'Space exploration and digital reality',
-    services: [
+    services: [;
 {
         name: 'Space Mining Automation Platform',
         href: '/services/space-mining-automation-platform',
@@ -259,15 +259,15 @@ const contactInfo = null;
         price: '$45,999/month',
       },
       {
-        name: 'Metaverse Digital Reality Platform'
-        href: '/services/metaverse-digital-reality-platform'
-        description: 'Immersive virtual worlds'
+        name: 'Metaverse Digital Reality Platform';
+        href: '/services/metaverse-digital-reality-platform';
+        description: 'Immersive virtual worlds';
         price: '$8,999/month'
       }
       {
-        name: 'AI Predictive Health Analytics'
-        href: '/services/ai-predictive-health-analytics'
-        description: 'Predictive health outcomes'
+        name: 'AI Predictive Health Analytics';
+        href: '/services/ai-predictive-health-analytics';
+        description: 'Predictive health outcomes';
         price: '$7,999/month'
       }
       {
@@ -283,7 +283,7 @@ const contactInfo = null;
     icon: Target,
     color: 'from-green-600 via-yellow-600 to-orange-600',
     description: 'Cutting-edge micro solutions',
-    services: [
+    services: [;
 {
         name: 'Intelligent Customer Experience Platform',
         href: '/services/intelligent-customer-experience-platform',
@@ -291,16 +291,16 @@ const contactInfo = null;
         price: '$1,899/month',
       },
       {
-        name: 'Intelligent Marketing Automation'
-        href: '/services/intelligent-marketing-automation'
-        description: 'AI-powered marketing optimization'
+        name: 'Intelligent Marketing Automation';
+        href: '/services/intelligent-marketing-automation';
+        description: 'AI-powered marketing optimization';
         price: '$1,299/month'
       }
       {
-        name: 'Smart Project Management'
-        href: '/services/smart-project-management'
-        description: 'AI-powered project optimization'
-        price: '$899/month'
+        name: 'Smart Project Management';
+        href: '/services/smart-project-management';
+        description: 'AI-powered project optimization';
+        price: '$899/month';
       }
       {
         name: 'Intelligent Sales Optimization',
@@ -315,7 +315,7 @@ const contactInfo = null;
     icon: Eye,
     color: 'from-orange-600 via-red-600 to-pink-600',
     description: 'Breakthrough research solutions',
-    services: [
+    services: [;
 'Advanced Research Automation',
 origin/cursor/automate-test-improve-and-merge-code-2533
       'Quantum Research Platform',
@@ -396,17 +396,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-
+;
            />
             <Link href='/' className='flex items-center space-x-3 group' />
               <div className='relative' />
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300' />
-
+;
                   <Rocket className='w-7 h-7 text-white' />
                 </div>'
-                <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />
+                <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />;
               </div>'
-              <div className='hidden sm:block'>'
+              <div className='hidden sm:block'>';
                 <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Zion Tech Group;
                 </h1>'
@@ -415,7 +415,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>              </div>          >
     <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
       {/* Main Navigation Bar */}"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div;
@@ -426,12 +426,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >"
             <Link href="/" className="flex items-center space-x-3 group">"
               <div className="relative">"
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
                   <Rocket className="w-7 h-7 text-white" />
                 </div>"
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
               </div>"
-              <div className="hidden sm:block">"
+              <div className="hidden sm:block">";
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Zion Tech Group;
                 </h1>"
@@ -466,7 +466,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0;, y: -20 ;}}
                 animate={{ opacity: 1;, y: 0 ;}}
 
-<div className='hidden lg:flex items-center space-x-8' />
+<div className='hidden lg:flex items-center space-x-8' />;
             {mainNavigation.map(item => (
               <motion.div;}
 key={item.nam}
@@ -483,7 +483,7 @@ transition={{
                 className='relative group'
                 <Link;
 href={item.href}
-                  className='flex items-center space-x-2 px-4 py-2 text-gray-300 hover: text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10'
+                  className='flex items-center space-x-2 px-4 py-2 text-gray-300 hover: text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10';
                  />
                   <item.icon className='w-4 h-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -492,20 +492,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
 
                 {/* Hover effect */}
-                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />
+                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />;
               </motion.div>
             ))}
 
           </div>
           {/* Right side - Contact & Search */}'
           <div className='hidden lg:flex items-center space-x-4'>
-
+;
               </motion.div>
 
             ))}
           </div>
           {/* Right side - Contact & Search */}"
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">;
             {/* Search */}
             ))}
           </div>
@@ -524,7 +524,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
-                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'
+                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64';
               />
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -551,7 +551,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
 
                 onChange={e = /> setSearchQuery(e.target.value)}
-                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'
+                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64';
               />
             </div>
 
@@ -568,7 +568,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link;
 
 href='/contact'
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25';
                />
                 <MessageCircle className='w-4 h-4 mr-2' />
                 Get Started;
@@ -582,7 +582,7 @@ href='/contact'
             <button;
               onClick={toggleMenu}
               className='p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300' />
-
+;
               {isOpen ? (<X className='w-6 h-6' />;}
               ) : (<Menu className='w-6 h-6' />;}
               )}
@@ -601,7 +601,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             exit={{ opacity: 0, height: 0 }}
 
             transition={{ duration: 0.3 }}
-className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
+className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20';
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div className='px-4 py-6 space-y-4'>
@@ -642,7 +642,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       href={item.href}
                       onClick={closeMenu}
 
-className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300';
                     >
                       <item.icon className='w-4 h-4' />
                       <span className='text-sm'>{item.name}</span>
@@ -703,7 +703,7 @@ className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl bord
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
-              <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>;
                 {serviceCategories.map(category => ('
                   <div key={category.title} className='space-y-4'>'
                     <div className='flex items-center space-x-3'>
@@ -713,7 +713,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
            />
             <div className='max-w-7xl mx-auto px-4 py-8' />
-              <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8' />
+              <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8' />;
                 {serviceCategories.map(category => (}
                   <div key={category.title} className='space-y-4' />
                     <div className='flex items-center space-x-3' />
@@ -735,7 +735,7 @@ className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl bord
                         <p className='text - sm text - gray - 400'>;
                           {category.description}"
             <div className="max-w-7xl mx-auto px-4 py-8">"
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
                 {serviceCategories.map((category) => ("
                   <div key={category.title} className="space-y-4">"
                     <div className="flex items-center space-x-3">
@@ -792,7 +792,7 @@ className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl bord
 key={service.name}
                           href={service.href}
 className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group' />
-
+;
                           <div className='flex justify-between items-start' />;
                             <div />;
                               <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors duration-300' />;

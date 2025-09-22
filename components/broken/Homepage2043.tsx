@@ -151,62 +151,62 @@ const Homepage2043: React.FC;
       icon: BrainIcon,
       title: 'AI Consciousness Evolution',
       description:
-        'Next-generation AI consciousness with human-level understanding'
-      href: '/quantum-neural-consciousness-platform'
-      color: 'from-purple-500 to-pink-500'
-      gradient: 'bg-gradient-to-br from-purple-500/20 to-pink-500/20'
+        'Next-generation AI consciousness with human-level understanding';
+      href: '/quantum-neural-consciousness-platform';
+      color: 'from-purple-500 to-pink-500';
+      gradient: 'bg-gradient-to-br from-purple-500/20 to-pink-500/20';
     }
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      icon: AtomIcon
-      title: 'Quantum Computing'
-      description:'
+      icon: AtomIcon;
+      title: 'Quantum Computing';
+      description:';
         'Revolutionary quantum computing with consciousness integration''
-      href: '/quantum-bio-computing-platform''
-      color: 'from-blue-500 to-cyan-500''
-      gradient: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20'
+      href: '/quantum-bio-computing-platform'';
+      color: 'from-blue-500 to-cyan-500'';
+      gradient: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20';
     }
     {}
-      icon: Shield'
-      title: 'Future Cybersecurity'
-      description:'
+      icon: Shield';
+      title: 'Future Cybersecurity';
+      description:';
         'Quantum-resistant security with consciousness-based protection''
-      href: '/quantum-internet-security-gateway''
-      color: 'from-red-500 to-orange-500''
-      gradient: 'bg-gradient-to-br from-red-500/20 to-orange-500/20'
+      href: '/quantum-internet-security-gateway'';
+      color: 'from-red-500 to-orange-500'';
+      gradient: 'bg-gradient-to-br from-red-500/20 to-orange-500/20';
     }
     {}
-      icon: Rocket'
-      title: 'Space Technology'
-      description:'
+      icon: Rocket';
+      title: 'Space Technology';
+      description:';
         'AI-powered space resource intelligence and autonomous mining''
-      href: '/autonomous-space-mining-ai''
-      color: 'from-indigo-500 to-purple-500''
-      gradient: 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20'
+      href: '/autonomous-space-mining-ai'';
+      color: 'from-indigo-500 to-purple-500'';
+      gradient: 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20';
     }
     {}
-      icon: Cpu'
-      title: 'Autonomous Systems''
-      description: 'Fully autonomous AI systems with consciousness''
-      href: '/autonomous-business-ecosystem-ai''
-      color: 'from-emerald-500 to-teal-500''
-      gradient: 'bg-gradient-to-br from-emerald-500/20 to-teal-500/20'
+      icon: Cpu';
+      title: 'Autonomous Systems'';
+      description: 'Fully autonomous AI systems with consciousness'';
+      href: '/autonomous-business-ecosystem-ai'';
+      color: 'from-emerald-500 to-teal-500'';
+      gradient: 'bg-gradient-to-br from-emerald-500/20 to-teal-500/20';
     }
     {}
-      icon: Database'
-      title: 'Business Intelligence'
-      description:'
+      icon: Database';
+      title: 'Business Intelligence';
+      description:';
         'Autonomous business intelligence with consciousness insights''
-      href: '/autonomous-healthcare-ai-ecosystem''
-      color: 'from-yellow-500 to-orange-500''
-      gradient: 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20'
+      href: '/autonomous-healthcare-ai-ecosystem'';
+      color: 'from-yellow-500 to-orange-500'';
+      gradient: 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20';
     {}
       icon: BrainIcon,
       title: "AI Consciousness Evolution","
       description: "Next-generation AI consciousness with human-level understanding","
       href: "/quantum-neural-consciousness-platform","
       color: "from-purple-500 to-pink-500","
-      gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
+      gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20";
     };
     {}
       icon: AtomIcon,
@@ -251,27 +251,27 @@ name: 'Dr. Sarah Chen',
       company: 'QuantumTech Industries',
 origin/cursor/automate-test-improve-and-merge-code-2533
       content:
-        "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods."
-      rating: 5'
-      avatar: '👩‍🔬'
+        "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.";
+      rating: 5';
+      avatar: '👩‍🔬';
     }
     {'
-      name: 'Marcus Rodriguez''
-      role: 'CTO''
-      company: 'SpaceMining Corp'
-      content:'"
+      name: 'Marcus Rodriguez'';
+      role: 'CTO'';
+      company: 'SpaceMining Corp';
+      content:'";
         "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks."
-      rating: 5'
-      avatar: '👨‍🚀'
+      rating: 5';
+      avatar: '👨‍🚀';
     }
     {'
-      name: 'Dr. Emily Watson''
-      role: 'Research Director''
-      company: 'Consciousness Research Institute'
-      content:'"
+      name: 'Dr. Emily Watson'';
+      role: 'Research Director'';
+      company: 'Consciousness Research Institute';
+      content:'";
         "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless."
-      rating: 5'
-      avatar: '👩‍💻'
+      rating: 5';
+      avatar: '👩‍💻';
     }
   ];
 
@@ -290,24 +290,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const prevService = () => {}
     setCurrentServiceIndex(
       prev => (prev - 1 + featuredServices.length) % featuredServices.length;
-    );  };      rating: 5"
-      avatar: "👩‍🔬"
+    );  };      rating: 5";
+      avatar: "👩‍🔬";
     }
     {"
-      name: "Marcus Rodriguez""
-      role: "CTO""
-      company: "SpaceMining Corp"'"
-      content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks."
-      rating: 5"
-      avatar: "👨‍🚀"
+      name: "Marcus Rodriguez"";
+      role: "CTO"";
+      company: "SpaceMining Corp"'";
+      content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.";
+      rating: 5";
+      avatar: "👨‍🚀";
     }
     {"
-      name: "Dr. Emily Watson""
-      role: "Research Director""
-      company: "Consciousness Research Institute"'"
-      content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless."
-      rating: 5"
-      avatar: "👩‍💻"
+      name: "Dr. Emily Watson"";
+      role: "Research Director"";
+      company: "Consciousness Research Institute"'";
+      content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.";
+      rating: 5";
+      avatar: "👩‍💻";
     }
   ];
   const handleGetStarted = useCallback(() => {'
@@ -532,8 +532,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   animate={{}
                     duration: 8 + i * 0.3;
                     repeat: Infinity as any;
-                    delay: i * 0.2'
-                    ease: 'easeInOut'
+                    delay: i * 0.2';
+                    ease: 'easeInOut';
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,'
@@ -593,7 +593,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='text-center max-w-6xl mx-auto relative z-10'>            <motion && motion.div            <div className="absolute inset-0 opacity-20">;"
               <divclassName="absolute inset-0" style={{}`
                 backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0 && 0.15) 1px, transparent 0)`'
-                backgroundSize: '50px 50px'
+                backgroundSize: '50px 50px';
           {/* Hero Content */}'"
           <div className='text-center max-w-6xl mx-auto relative z-10'>          <div className="text-center max-w-6xl mx-auto relative z-10">;
             <motion&& motion.div
@@ -602,7 +602,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='absolute inset-0'
                 style={{
                   backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`
-                  backgroundSize: '50px 50px'
+                  backgroundSize: '50px 50px';
                 }}
               ></div>
             </div>
@@ -622,7 +622,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <h1;
 "
                 id="hero-heading""
-                className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight"
+                className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight";
               >
                 The Future of"
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">"
@@ -661,7 +661,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Main Heading */}
 <h1
                 id='hero-heading'
-                className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight'
+                className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight';
               >
                 The Future of
                 <span className='block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent'>
@@ -670,18 +670,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 is Here
               </h1>
               {/* Enhanced Subtitle */}
-<p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
+<p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>;
                 Experience the world's most advanced AI consciousness platforms,
                 quantum computing solutions, and autonomous systems that
                 redefine what's possible in technology.
               </p>
               {/* Enhanced CTA Buttons */}
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>;
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleGetStarted}
-className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'
+className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl';
                 >
                   Get Started Today
                   <ArrowRight className='w-5 h-5' />
@@ -715,14 +715,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Watch Demo;
                 </motion && motion.button>;
               </div>;
-className='px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'
+className='px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm';
                 >
                   <Play className='w-5 h-5' />
                   Watch Demo
                 </motion.button>
               </div>
               {/* Enhanced Stats */}
-<div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
+<div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>;
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -773,7 +773,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Revolutionary Technology'
                 <span className='block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                   Solutions;
@@ -788,7 +788,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >"
               className="text-center mb-16"
             >"
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Revolutionary Technology"
                 <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Solutions;
@@ -800,8 +800,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+;
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               {features.map((feature, index) => (
                 <motion.div;
@@ -848,7 +848,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
-                  <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300'>
+                  <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300'>;
                     {feature.title}
                   </h3>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -857,10 +857,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                   <a;
                     href={feature.href}'
-                    className='inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300'
+                    className='inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300';
                   >
                     Learn More'
-                    <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />                  </a>                  </div>
+                    <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />                  </a>                  </div>;
                   whileHover={{ y: -10, scale: 1.02 }}`
                   className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
                 >`
@@ -868,7 +868,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   "
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">;
                     {feature.title}
                   </h3>"
                   <p className="text-gray-300 mb-6 leading-relaxed">
@@ -877,11 +877,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   <a;
                     href={feature.href}"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300";
                   >
                     Learn More"
-                    <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300" />
-                    <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />
+                    <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300" />;
+                    <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   </a>
                 </motion.div>
@@ -946,7 +946,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Featured'
                 <span className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Revolutionary Services;
@@ -963,7 +963,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <AnimatePresence mode='wait'>                  <motion.div            >"
               className="text-center mb-16"
             >"
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Featured"
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Revolutionary Services;
@@ -1031,11 +1031,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>;"
                     <div className="text-3xl font-bold text-cyan-400 mb-6">;
                       {featuredServices[currentServiceIndex]?.price}"
-                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
+                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300";
                     >
                       Get Started"
                       <ArrowRight className="w-5 h-5 ml-2" />
-                      className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300'
+                      className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300';
                     >
                       Get Started
                       <ArrowRight className='w-5 h-5 ml-2' />
@@ -1048,15 +1048,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button;
                   onClick={prevService}'
                   className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
-
-className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
+;
+className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <ChevronLeft className='w-6 h-6' />
                 </button>
                 <button;
                   onClick={nextService}'
-                  className='absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
+                  className='absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm';
                 >'
                   <ChevronRight className='w-6 h-6' />
                 </button>
@@ -1065,7 +1065,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
                 <button;
                   onClick={nextService}"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm";
                 >"
                   <ChevronRight className="w-6 h-6" />
                 </button>"
@@ -1099,7 +1099,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
 index === currentServiceIndex
                           ? 'bg-cyan-400 w-8'
-                          : 'bg-white/30 hover:bg-white/50'
+                          : 'bg-white/30 hover:bg-white/50';
 `
                       }`}
                     />;
@@ -1491,7 +1491,7 @@ index === currentServiceIndex
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 What Our'
                 <span className='block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
                   Clients Say;
@@ -1507,7 +1507,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <AnimatePresence mode='wait'>                <motion.div            >"
               className="text-center mb-16"
             >"
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 What Our"
                 <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                   Clients Say;
@@ -1606,7 +1606,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 index === currentTestimonialIndex
                         ? 'bg-emerald-400 w-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                        : 'bg-white/30 hover:bg-white/50'
+                        : 'bg-white/30 hover:bg-white/50';
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${;
                       index === currentTestimonialIndex;'
                         ? 'bg-emerald-400 w-8'                        : 'bg-white/30 hover:bg-white/50'                      index === currentTestimonialIndex ;'
@@ -1647,11 +1647,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Join thousands of organizations already transforming their operations;
                 with our revolutionary AI consciousness and quantum computing platforms.
               </p>"
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Experience the
                 <span className='block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent'>
                   Future of AI?
@@ -1663,13 +1663,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 computing platforms.
               </p>
 
-              <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>
+              <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleGetStarted}
-className='px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'
+className='px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl';
                 >
                   Start Your Journey
                   <ArrowRight className='w-6 h-6' />
@@ -1681,7 +1681,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={handleContact}
                 >"
                   <Phone className="w-6 h-6" />
-className='px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'
+className='px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm';
                 >
                   <Phone className='w-6 h-6' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1705,7 +1705,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>"
                   <p className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
-<div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
+<div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>;
                 <div className='text-center'>
                   <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4'>
                     <Phone className='w-8 h-8 text-white' />

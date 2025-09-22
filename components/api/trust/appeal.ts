@@ -3,7 +3,7 @@ import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 
 export default async function handler(
-  req: NextApiRequest
+  req: NextApiRequest;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');

@@ -156,8 +156,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     {'
-      name: 'LinkedIn''
-      href: 'https://linkedin.com/company/ziontechgroup'
+      name: 'LinkedIn'';
+      href: 'https://linkedin.com/company/ziontechgroup';
       icon: Linkedin;
     }
     {}
@@ -188,7 +188,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex items-center space-x-3 text-white/70'>;'
                 <Mail className='w-4 h-4' />;
                 <a'
-                  href='mailto:kleber@ziontechgroup && ziontechgroup.com''
+                  href='mailto:kleber@ziontechgroup && ziontechgroup.com'';
                   className='hover:text-white transition-colors'>;
                   kleber@ziontechgroup && ziontechgroup.com;
                 </a>;
@@ -196,7 +196,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex items-center space-x-3 text-white/70'>;'
                 <Phone className='w-4 h-4' />;
                 <a'
-                  href='tel:+13024640950''
+                  href='tel:+13024640950'';
 import Link from 'next/link';
 
 import {}
@@ -210,12 +210,12 @@ import {}
                       href={link.href};
                       className="text - white / 70 hover: text - white transition - colors duration - 200";
                     >;
-                  className='hover:text-white transition-colors'
+                  className='hover:text-white transition-colors';
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">;
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2">;
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
@@ -237,8 +237,8 @@ import {}
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone className="w-4 h-4" />
                 <a
-                  href="tel: +13024640950"
-                  className="hover:text-white transition-colors"
+                  href="tel: +13024640950";
+                  className="hover:text-white transition-colors";
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 >
                   +1 (302) 464-0950
@@ -259,7 +259,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className='text-white/70 hover:text-white transition-colors duration-200'
+                      className='text-white/70 hover:text-white transition-colors duration-200';
                     >
 origin/cursor/automate-test-improve-and-merge-code-2533
                       {link.name}
@@ -270,8 +270,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail className="w-4 h-4" />
                 <a
-                  href="mailto: kleber@ziontechgroup.com"
-                  className="hover:text-white transition-colors"
+                  href="mailto: kleber@ziontechgroup.com";
+                  className="hover:text-white transition-colors";
                 >
                   kleber@ziontechgroup.com
                 </a>
@@ -294,7 +294,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
+                    className="text-gray-400 hover: text-white transition-colors text-sm";
                   >
                     {link.name}
                   </Link>
@@ -314,7 +314,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
+                    className="text-gray-400 hover: text-white transition-colors text-sm";
                   >
                     {link.name}
                   </Link>
@@ -334,7 +334,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
+                    className="text-gray-400 hover: text-white transition-colors text-sm";
                   >
                     {link.name}
                   </Link>
@@ -354,7 +354,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
+                    className="text-gray-400 hover: text-white transition-colors text-sm";
                   >
                     {link.name}
                   </Link>
@@ -367,7 +367,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm"
+                    className="text-gray-400 hover: text-white transition-colors text-sm";
                   >
                     {link.name}
                   </Link>
@@ -385,15 +385,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Subscribe to our newsletter for the latest technology insights and
               company updates.
             </p>
-            <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">
+            <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">;
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
               />
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors";
               >
                 Subscribe
               </button>
@@ -420,7 +420,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 };export default EnhancedFooter;  );
 
 <div className='pt-8 border-t border-white/10'>
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             {/* Copyright */}
             <div className='text-white/60 text-sm'>
               © {currentYear} Zion Tech Group. All rights reserved.
@@ -433,7 +433,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   href={social.href}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200'
+                  className='w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200';
                   aria-label={social.name}
                 >
                   <social.icon className='w-5 h-5' />
@@ -448,7 +448,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover: text-white transition-colors"
+                    className="text-gray-400 hover: text-white transition-colors";
                     aria-label={social.name}
                   >
                     <social.icon className="w-5 h-5" />
@@ -588,13 +588,13 @@ digital age.;"
             <div className="space-y-3">";"
               <div className="flex items-center space-x-3 text-gray-400">";"
                 <Phone className="w-4 h-4"  />";"
-                <ahref="tel: +13024640950"
+                <ahref="tel: +13024640950";
                   className="hover:text-white transition-colors">;
                 </a>;"
               </div>";"
               <div className="flex items-center space-x-3 text-gray-400">";"
                 <Mail className="w-4 h-4"  />";"
-                <ahref="mailto: kleber@ziontechgroup && ziontechgroup.com"
+                <ahref="mailto: kleber@ziontechgroup && ziontechgroup.com";
                   className="hover:text-white transition-colors">;
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>;
               </div>;
@@ -721,7 +721,7 @@ company updates.;"
               </div>;"
       {/* comment */}";"
       <buttononClick="{scrollToTop}"
-        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50"
+        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50";
         aria-label="Scroll to top">";"
         <ArrowUp className="w-5 h-5"  />;
 
@@ -766,7 +766,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50"
+        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50";
         aria-label="Scroll to top"
       >
         <ArrowUp className="w-5 h-5" />
