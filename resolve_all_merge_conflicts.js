@@ -1,18 +1,22 @@
 #!/usr/bin/env node
 
-const { execSync, spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync, spawn } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Configuration
 const config = {
   maxRetries: 3,
-  batchSize: 10,
-  delayBetweenBatches: 2000,
-  delayBetweenOperations: 500,
-  maxBranches: 100
+  batchSize: 5,
+  delayBetweenBatches: 3000,
+  delayBetweenOperations: 1000,
+  maxBranches: 50
 };
 
 // Results tracking

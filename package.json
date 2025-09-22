@@ -249,7 +249,13 @@
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
+    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
+    "perf:improve": "node scripts/performance-improvements.js",
+    "perf:analyze": "npm run build && npm run build:analyze",
+    "perf:audit": "npm run security:audit && npm run optimize",
+    "perf:full": "npm run perf:improve && npm run perf:analyze && npm run perf:audit",
+    "perf:optimize": "node scripts/performance-optimizer.js",
+    "perf:build": "npm run build && npm run perf:optimize"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
