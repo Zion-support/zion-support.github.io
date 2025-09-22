@@ -3,6 +3,8 @@ import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target } from 'luc
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
+import AnimatedCounter from './components/AnimatedCounter'
+import ScrollReveal from './components/ScrollReveal'
 
 export default function Home() {
   return (
@@ -40,7 +42,8 @@ export default function Home() {
         {/* Services Grid */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+            <ScrollReveal origin="bottom" delay={100}>
+              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-white" />
               </div>
@@ -51,76 +54,97 @@ export default function Home() {
               <Link href="/services/ai" className="text-blue-400 hover:text-blue-300 text-sm font-medium inline-flex items-center">
                 Learn more <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
-            </div>
-
-            <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                <Cloud className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Scalable cloud infrastructure, migration services, and DevOps automation.
-              </p>
-              <Link href="/services/cloud" className="text-green-400 hover:text-green-300 text-sm font-medium inline-flex items-center">
-                Learn more <ArrowRight className="ml-1 w-4 h-4" />
-              </Link>
-            </div>
+            </ScrollReveal>
 
-            <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-white" />
+            <ScrollReveal origin="bottom" delay={200}>
+              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                  <Cloud className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Scalable cloud infrastructure, migration services, and DevOps automation.
+                </p>
+                <Link href="/services/cloud" className="text-green-400 hover:text-green-300 text-sm font-medium inline-flex items-center">
+                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Advanced security solutions and comprehensive threat protection strategies.
-              </p>
-              <Link href="/services/security" className="text-red-400 hover:text-red-300 text-sm font-medium inline-flex items-center">
-                Learn more <ArrowRight className="ml-1 w-4 h-4" />
-              </Link>
-            </div>
+            </ScrollReveal>
 
-            <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-white" />
+            <ScrollReveal origin="bottom" delay={300}>
+              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Advanced security solutions and comprehensive threat protection strategies.
+                </p>
+                <Link href="/services/security" className="text-red-400 hover:text-red-300 text-sm font-medium inline-flex items-center">
+                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Next-generation technology and digital transformation consulting.
-              </p>
-              <Link href="/services/innovation" className="text-purple-400 hover:text-purple-300 text-sm font-medium inline-flex items-center">
-                Learn more <ArrowRight className="ml-1 w-4 h-4" />
-              </Link>
-            </div>
+            </ScrollReveal>
+
+            <ScrollReveal origin="bottom" delay={400}>
+              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Next-generation technology and digital transformation consulting.
+                </p>
+                <Link href="/services/innovation" className="text-purple-400 hover:text-purple-300 text-sm font-medium inline-flex items-center">
+                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
 
         {/* Stats Section */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">500+</h3>
-              <p className="text-gray-300">Enterprise Clients</p>
+          <ScrollReveal origin="bottom" delay={200}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <ScrollReveal origin="bottom" delay={300}>
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-white mb-2">
+                    <AnimatedCounter end={500} suffix="+" duration={2000} />
+                  </h3>
+                  <p className="text-gray-300">Enterprise Clients</p>
+                </div>
+              </ScrollReveal>
+              
+              <ScrollReveal origin="bottom" delay={400}>
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Globe className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-white mb-2">
+                    <AnimatedCounter end={50} suffix="+" duration={2000} />
+                  </h3>
+                  <p className="text-gray-300">Countries Served</p>
+                </div>
+              </ScrollReveal>
+              
+              <ScrollReveal origin="bottom" delay={500}>
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-white mb-2">
+                    <AnimatedCounter end={99.9} suffix="%" duration={2000} />
+                  </h3>
+                  <p className="text-gray-300">Uptime Guarantee</p>
+                </div>
+              </ScrollReveal>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">50+</h3>
-              <p className="text-gray-300">Countries Served</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">99.9%</h3>
-              <p className="text-gray-300">Uptime Guarantee</p>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Testimonials Section */}
