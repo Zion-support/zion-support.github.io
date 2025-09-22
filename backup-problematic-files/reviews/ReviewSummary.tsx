@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
  </div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
@@ -44,8 +47,12 @@ export default ReviewSummary;      <div>
       </div>
     </div>
 
+<<<<<<< HEAD
+main:components/reviews/ReviewSummary.tsx
+:backup-problematic-files/reviews/ReviewSummary.tsx
+main:components/reviews/ReviewSummary.tsx
+:backup-problematic-files/reviews/ReviewSummary.tsx
+=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewSummary.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

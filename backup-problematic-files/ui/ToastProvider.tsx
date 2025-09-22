@@ -13,6 +13,8 @@ export type Toast = {
   duration_ms?: number;
 }
 
+<<<<<<< HEAD
+=======
 
 ;
 export type ToastContextValue = {;
@@ -20,8 +22,8 @@ export type ToastContextValue = {;
 export type ToastContextValue = {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   addToast: (toast: Omit<Toast, 'id'>) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;
@@ -52,6 +54,8 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
+<<<<<<< HEAD
+=======
 
 export type ToastContextValue = {
   toasts: Toast[];
@@ -78,8 +82,8 @@ if ( {) {
 }
       set_timeout (() => remove_toast (id), item.duration_ms);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     }
     return id;
   }, [remove_toast]);
@@ -93,7 +97,10 @@ if ( {) {
         <AnimatePresence>
           {toasts.map(t => (
             <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               key={t.id}
               initial={{ opacity: 0, coordinate_y: 16, scale: 0.98 }}
               animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
@@ -123,7 +130,8 @@ if ( {) {
               </div>
             </motion.div>
           ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
         </AnimatePresence>;
       </div>;
     </ToastContext.Provider>);
@@ -140,3 +148,4 @@ function use_toast() {
 
   return ctx;
 }
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
