@@ -1,22 +1,24 @@
 import React from 'react';
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Ai Powered Tools - Zion Tech Group',
+  description: 'Professional Ai Powered Tools solutions',
+};
 
-// eslint-disable-next-line react-refresh/only-export-components
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-function AITool({}
-
-function AITechnology({}
-
-function Integration({}
-
-function AIPricingPlan({}
-
-function SuccessStory({}
-
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ai Powered Tools
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional Ai Powered Tools solutions
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,16 +1,24 @@
 import React from 'react';
-
-import Link from "next/link";
-
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'Cloud Security Audit - Zion Tech Group',
+  description: 'Professional Cloud Security Audit solutions',
+};
 
-export default function CloudSecurityAuditPage() {
-
-function FeatureItem({
-
-function PricingCard({
-
-function StepCard({
-
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Cloud Security Audit
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional Cloud Security Audit solutions
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

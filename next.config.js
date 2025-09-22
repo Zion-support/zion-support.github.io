@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -9,11 +8,6 @@ const nextConfig = {
   },
   typescript: { 
     ignoreBuildErrors: true 
-  },
-  experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
-    forceSwcTransforms: false
   },
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
