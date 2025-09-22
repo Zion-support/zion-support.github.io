@@ -1,68 +1,68 @@
-import path from 'path';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
-  trailingSlash: true,
-  
-  // Static export configuration
-  output: 'export',
-  
-  // Image optimization
-  images: {
-    unoptimized: true, // Required for static export
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
-  // Experimental features
-  experimental: {
-    optimizeCss: false,
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'react', 'react-dom'],
-  },
-  
-  // Compiler optimizations
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-    styledComponents: true,
-  },
-  
-  // Performance optimizations
-  poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
   compress: true,
-  generateEtags: true,
-  
-  
-  // Generate unique build ID for better caching
-  generateBuildId: async () => {
-    return 'build-' + Date.now()
+  poweredByHeader: false,
+  eslint: { 
+    ignoreDuringBuilds: true 
   },
-  
-  // Webpack configuration
-  webpack: (config, { isServer }) => {
-    // Fix for CSS processing issues with Node.js compatibility
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-        path: false,
-        crypto: 'crypto-browserify',
-        stream: 'stream-browserify',
-        util: false,
-        buffer: 'buffer',
-        process: 'process/browser',
-      };
-    }
-    
+  typescript: { 
+    ignoreBuildErrors: true 
+  },
+  experimental: {
+    esmExternals: false,
+    newNextLinkBehavior: true,
+    forceSwcTransforms: false
+  },
+  // Ensure standard Next.js page extensions are recognized alongside any custom route files
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    unoptimized: true
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Completely exclude problematic directories from the build
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      exclude: [
+        /node_modules/,
+        /api-backup/,
+        /pages\.disabled/,
+        /backup-pages/,
+        /\.backup/,
+        /\.disabled/,
+        /automation\/backups/,
+        /automation_backup/,
+        /broken_files_backup/,
+        /contracts/,
+        /hardhat/,
+        /^components\//, // Exclude root components directory
+      ]
+    });
+
+    // Add fallback for problematic modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false
+    };
+
     return config;
   },
+  onDemandEntries: {
+    // period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2
+  }
 };
 
 export default nextConfig;
