@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import Card from '../../components/ui/Card';
+import { Card } from '../../components/ui/Card';
 
 export const metadata = {
   title: 'Business Transformation 2026 Ultimate - Revolutionary Business Solutions',
