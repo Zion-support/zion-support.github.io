@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --no-lint",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider next build --no-lint",
     "start": "next start",
     "lint": "next lint",
     "build:analyze": "ANALYZE=true npm run build",
@@ -24,6 +24,8 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.13.3",
+    "@types/react": "^17.0.68",
+    "@types/react-dom": "^17.0.25",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "class-variance-authority": "0.7.0",
@@ -47,9 +49,7 @@
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.0.0",
-    "@types/node": "^20.0.0",
-    "@types/react": "^17.0.88",
-    "@types/react-dom": "^17.0.26",
+    "@types/node": "^16.18.11",
     "critters": "^0.0.23",
     "eslint": "^8.0.0",
     "eslint-config-next": "^14.0.0",
@@ -62,7 +62,7 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-    "typescript": "^4.9.5"
+    "typescript": "4.9.5"
   },
   "packageManager": "npm@11.6.0+sha512.77f3fb0dbbd881835d7bd1217deabdf7ed77fc4ec4f363df64fc3cb986404abf6c437661041080f5c5d225103508e7c9ea30cb2742b7e942675d05a10af2d7b9"
 }
