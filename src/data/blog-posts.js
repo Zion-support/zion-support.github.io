@@ -1,4 +1,4 @@
-export const blogPosts = [
+export const BLOG_POSTS = [
   {
     id: 'ai-2025-enterprise-ai-security-blueprint',
     title: 'Enterprise AI Security Blueprint (2025)',
@@ -23,4 +23,4 @@ export const blogPosts = [
   }
 ];
 
-export default blogPosts;
+export default BLOG_POSTS;
