@@ -32,11 +32,32 @@
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*",
+    "pages/**/*",
+    "components/**/*",
+    "lib/**/*",
+    "__tests__/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "backup",
+    "backups",
+    "backup-merge-conflicts",
+    "backup-problematic-files",
+    "components.disabled",
+    "components-disabled",
+    "pages-disabled",
+    "pages.disabled",
+    "pages.disabled_full",
+    "src.disabled",
+    "src_backup",
+    "src_backup_temp",
+    "temp_exclude",
+    "corrupted_backup",
+    "recovered-branches",
+    "tests"
   ]
 }
