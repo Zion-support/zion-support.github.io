@@ -1,19 +1,21 @@
-name: Marketing Sync
-
-on:
+name: marketing-sync
+'on':
   schedule:
-    - cron: '0 */12 * * *'
-  workflow_dispatch:
-
+    - cron: 0 2 * * *
+  workflow_dispatch: null
 permissions:
-  contents: write
-
+  contents: read
+  actions: read
+concurrency:
+  group: marketing-sync-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  run-marketing-sync:
+  main:
+    name: Main Job
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
