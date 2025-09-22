@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Removed unused Next.js type import for compatibility with Next 12
 
 export function optimizeImages() {
   return {

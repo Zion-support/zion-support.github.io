@@ -1,4 +1,6 @@
 // Analytics and performance monitoring
+// Minimal ambient declarations for GA and PerformanceEntry extensions used below
+declare const gtag: ((...args: any[]) => void) | undefined;
 
 export const trackPageView = (url: string) => {
   if (typeof window === 'undefined') return
@@ -69,9 +71,10 @@ export const trackCoreWebVitals = () => {
   const fidObserver = new PerformanceObserver((list) => {
     const entries = list.getEntries()
     entries.forEach((entry) => {
+      const anyEntry = entry as any
       trackEvent('web_vital', {
         name: 'FID',
-        value: entry.processingStart - entry.startTime,
+        value: (anyEntry.processingStart ?? 0) - entry.startTime,
       })
     })
   })
@@ -82,8 +85,9 @@ export const trackCoreWebVitals = () => {
   const clsObserver = new PerformanceObserver((list) => {
     const entries = list.getEntries()
     entries.forEach((entry) => {
-      if (!entry.hadRecentInput) {
-        clsValue += entry.value
+      const anyEntry = entry as any
+      if (!anyEntry.hadRecentInput) {
+        clsValue += anyEntry.value ?? 0
       }
     })
     trackEvent('web_vital', {

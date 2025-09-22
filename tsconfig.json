@@ -5,7 +5,7 @@
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
+    "allowJs": false,
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
@@ -32,11 +32,42 @@
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "app/**",
+    "**/tests/**",
+    "**/__tests__/**",
+    "**/apps/**",
+    "**/app_backup/**",
+    "**/app-disabled/**",
+    "**/components/**",
+    "**/components-disabled/**",
+    "**/components.disabled/**",
+    "**/components.disabled_full/**",
+    "**/pages.disabled/**",
+    "**/pages_backup/**",
+    "**/pages.bak/**",
+    "**/pages._archive_corrupted/**",
+    "**/src.disabled/**",
+    "**/src-disabled/**",
+    "**/src_backup/**",
+    "**/src_backup_temp/**",
+    "**/src.broken/**",
+    "**/src.corrupted/**",
+    "**/backup-problematic-files/**",
+    "**/ts_files_backup/**",
+    "**/temp_*/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/out/**"
   ]
 }
