@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { generateSEOMetadata } from '../../components/SEOEnhancer';
 import { 
   SparklesIcon, 
   CloudIcon, 
@@ -11,10 +12,13 @@ import {
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateSEOMetadata({
   title: 'Solutions - Zion Tech Group',
   description: 'Comprehensive technology solutions including AI platforms, cloud services, cybersecurity, and digital transformation by Zion Tech Group.',
-};
+  keywords: ['technology solutions', 'AI platforms', 'cloud services', 'cybersecurity', 'digital transformation', 'automation', 'business solutions'],
+  canonicalUrl: '/solutions',
+  ogImage: '/images/og-solutions.jpg'
+});
 
 const solutions = [
   {
