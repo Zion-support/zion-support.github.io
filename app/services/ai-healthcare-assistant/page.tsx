@@ -1,9 +1,4 @@
-export const metadata = {
-  title: 'Ai Healthcare Assistant - Zion Tech Group',
-  description: 'Advanced ai healthcare assistant solutions for modern businesses.',
-};
-    </div>
-  );
-}
-"
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
 
