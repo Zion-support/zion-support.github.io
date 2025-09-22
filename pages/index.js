@@ -10,6 +10,9 @@ import SearchModal from '../components/SearchModal';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
+import ModernErrorBoundary from '../components/ModernErrorBoundary';
+import ModernLoadingSpinner from '../components/ModernLoadingSpinner';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import FAQSection from '../components/FAQSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import PerformanceMonitor from '../components/PerformanceMonitor';
@@ -63,7 +66,7 @@ export default function Home() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <div className="text-center">
-          <LoadingSpinner size="xl" color="gradient" text="Loading Zion Tech Group..." />
+          <ModernLoadingSpinner size="large" text="Loading Zion Tech Group..." />
           <div className="mt-8 space-y-2">
             <div className="text-white text-lg font-semibold">Preparing your experience...</div>
             <div className="text-gray-300 text-sm">Loading cutting-edge technology solutions</div>
@@ -74,8 +77,9 @@ export default function Home() {
   }
 
   return (
-    <ErrorBoundary>
-      <div>
+    <ModernErrorBoundary>
+      <ErrorBoundary>
+        <div>
         <AdvancedSEO 
           title="Zion Tech Group - AI, IT & Micro SaaS Services"
           description="Leading provider of AI solutions, enterprise IT services, and micro SaaS development. 1000% ROI target with proven architectures and 24/7 support."
@@ -357,7 +361,11 @@ export default function Home() {
         
         {/* Accessibility Enhancer */}
         <AccessibilityEnhancer />
+        
+        {/* Performance Optimizer */}
+        <PerformanceOptimizer />
       </div>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </ModernErrorBoundary>
   );
 }
