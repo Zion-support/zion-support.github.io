@@ -21,7 +21,7 @@ class FinalTestFixer {
       }
 
       let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
 
       // Fix the specific syntax issues we're seeing
       // Remove extra semicolons in function parameters
@@ -71,7 +71,7 @@ class FinalTestFixer {
     const testFiles = [];
     
     // Find test files in various directories
-const searchPaths = [;
+    const searchPaths = [
       '__tests__',
       'src_backup',
       'recovered-branches',

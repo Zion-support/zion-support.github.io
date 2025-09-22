@@ -1,7 +1,58 @@
+import React from 'react',
+import ServiceLanding from '../components/sections/ServiceLanding',
+export default function AIEthicsGovernanceFramework() {
+	return (
+		<ServiceLanding
+			title="AI Ethics & Governance Framework"
+			slug="ai-ethics-governance-framework"
+			description="Operationalize responsible AI with policies, risk assessments, model monitoring, and documentation. Align with global standards and regulatory expectations."
+			subtitle="Ship trustworthy AI with auditable controls and continuous oversight."
+			pricePerMonthUSD={1599}
+			implementationWeeks="Implementation: 3–6 weeks"
+			roiNote="Reduce compliance risk and accelerate approvals"
+			features={[
+				"AI risk register and DPIA templates",
+				"Bias/fairness tests, red-teaming workflows",
+				"Model cards, data sheets, and change logs",
+				"Prompt governance and access controls",
+				"Regulatory mapping (EU AI Act, NIST AI RMF)",
+				"Training and incident response runbooks"
+			]}
+			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
+			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework";
+		/>;
+	);
+}
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
+export default function AIEthicsGovernanceFramework() {
+  return (
+    <ServiceLanding
+      title='AI Ethics & Governance Framework'
+      slug='ai-ethics-governance-framework'
+      description='Operationalize responsible AI with policies, risk assessments, model monitoring, and documentation. Align with global standards and regulatory expectations.'
+      subtitle='Ship trustworthy AI with auditable controls and continuous oversight.'
+      pricePerMonthUSD={1599}
+      implementationWeeks='Implementation: 3–6 weeks'
+      roiNote='Reduce compliance risk and accelerate approvals'
+      features={[
+        'AI risk register and DPIA templates',
+        'Bias/fairness tests, red-teaming workflows',
+        'Model cards, data sheets, and change logs',
+        'Prompt governance and access controls',
+        'Regulatory mapping (EU AI Act, NIST AI RMF)',
+        'Training and incident response runbooks',
+      ]}
+      industries={['Finance', 'Healthcare', 'Public Sector', 'SaaS']}
+      canonical='https://ziontechgroup.com/ai-ethics-governance-framework'
+    />
+  );
+}
 const AIEthicsGovernanceFramework: React.FC = () => {
   return (
     <Layout>
@@ -78,5 +129,3 @@ const AIEthicsGovernanceFramework: React.FC = () => {
 };
 
 export default AIEthicsGovernanceFramework;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-ethics-governance-framework.tsx

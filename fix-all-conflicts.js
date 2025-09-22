@@ -1,120 +1,105 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Starting comprehensive merge conflict resolution...');
+console.log('🔧 Starting comprehensive merge conflict resolution...');
 
-// Function to resolve merge conflicts in a file
-function resolveConflicts(filePath) {
+// Function to resolve conflicts in a single file
+function resolveFileConflicts(filePath) {
     try {
-        if (!fs.existsSync(filePath)) return;
-        
         let content = fs.readFileSync(filePath, 'utf8');
-        let hasConflicts = false;
-        
-        // Remove merge conflict markers and keep the latest version (HEAD)
-        if (content.includes('<<<<<<< HEAD')) {
-            hasConflicts = true;
-            content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-            content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-        }
-        
+        if (!content.includes('
         // Remove any remaining conflict markers
-        content = content.replace(/<<<<<<< [^\n]+/g, '');
-        content = content.replace(/=======/g, '');
-        content = content.replace(/>>>>>>> [^\n]+/g, '');
-        
-        // Fix common syntax issues
-        content = content.replace(/;\s*;/g, ';'); // Remove double semicolons
-        content = content.replace(/,\s*;/g, ';'); // Fix comma-semicolon issues
-        content = content.replace(/;\s*,/g, ','); // Fix semicolon-comma issues
-        content = content.replace(/\{\s*;/g, '{'); // Remove semicolons after opening braces
-        content = content.replace(/;\s*\}/g, '}'); // Remove semicolons before closing braces
-        
-        if (hasConflicts) {
-            fs.writeFileSync(filePath, content);
-            console.log(`✅ Resolved conflicts in: ${filePath}`);
-        }
-    } catch (error) {
-        console.log(`❌ Error resolving conflicts in ${filePath}:`, error.message);
-    }
-}
-
-// Function to clean up backup files
-function cleanupBackupFiles() {
-    console.log('🧹 Cleaning up backup files...');
-    const patterns = [
-        '*.backup',
-        '*.bak', 
-        '*.conflicted',
-        '*.cleanup-backup.*'
-    ];
-    
-    patterns.forEach(pattern => {
-        try {
-            const { execSync } = require('child_process');
-            execSync(`find . -name "${pattern}" -type f -delete`, { stdio: 'pipe' });
-        } catch (error) {
-            // Ignore errors for files that don't exist
-        }
-    });
-}
-
-// Function to find and resolve all merge conflicts
-function resolveAllConflicts() {
-    console.log('🔧 Resolving all merge conflicts...');
-    
-    try {
-        const { execSync } = require('child_process');
-        
-        // Find all files with merge conflicts
-        const conflictFiles = execSync('grep -r "<<<<<<< HEAD" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.md" --include="*.css" --include="*.html" -l', { encoding: 'utf8' })
-            .split('\n')
-            .filter(file => file.trim() && fs.existsSync(file.trim()));
-        
-        console.log(`Found ${conflictFiles.length} files with conflicts`);
-        
-        conflictFiles.forEach(file => {
-            resolveConflicts(file.trim());
-        });
-        
-        // Also handle .conflicted files
-        const conflictedFiles = execSync('find . -name "*.conflicted" -type f', { encoding: 'utf8' })
-            .split('\n')
-            .filter(file => file.trim());
-        
-        conflictedFiles.forEach(file => {
-            const newName = file.replace(/\.conflicted$/, '');
-            try {
-                fs.renameSync(file, newName);
-                resolveConflicts(newName);
-                console.log(`✅ Renamed and resolved: ${file} -> ${newName}`);
-            } catch (error) {
-                console.log(`❌ Error renaming ${file}:`, error.message);
+        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
+        content = content.replace(/
+        // Clean up multiple empty lines
+        content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+        // Remove duplicate imports (common issue after merge conflicts)
+        const lines = content.split('\n');
+        const seenImports = new Set();
+        const cleanedLines = [];
+        for (const line of lines) {
+            if (line.trim().startsWith('import ') && line.includes(' from ')) {
+                if (!seenImports.has(line.trim())) {
+                    seenImports.add(line.trim());
+                    cleanedLines.push(line);
+                }
+            } else {
+                cleanedLines.push(line);
             }
-        });
-        
+        }
+        content = cleanedLines.join('\n');
+        fs.writeFileSync(filePath, content);
+        console.log(`✅ Resolved: ${filePath}`);
+        return true;
     } catch (error) {
-        console.log('Error finding conflict files:', error.message);
+        console.error(`❌ Error in ${filePath}:`, error.message);
+        return false;
     }
+}
+
+// Find all files with conflicts
+function findConflictFiles(dir) {
+    const conflictFiles = [];
+    function scanDirectory(currentDir) {
+        try {
+            const files = fs.readdirSync(currentDir);
+            for (const file of files) {
+                const filePath = path.join(currentDir, file);
+                const stat = fs.statSync(filePath);
+                if (stat.isDirectory()) {
+                    // Skip certain directories
+                    if (!['node_modules', '.git', 'dist', 'build', '.next', 'temp_exclude', 'backup-problematic-files'].includes(file)) {
+                        scanDirectory(filePath);
+                    }
+                } else if (stat.isFile()) {
+                    // Check for conflict markers
+                    try {
+                        const content = fs.readFileSync(filePath, 'utf8');
+                        if (content.includes('')) {
+                            conflictFiles.push(filePath);
+                        }
+                    } catch (error) {
+                        // Skip files that can't be read
+                    }
+                }
+            }
+        } catch (error) {
+            // Skip directories that can't be read
+        }
+    }
+    scanDirectory(dir);
+    return conflictFiles;
 }
 
 // Main execution
-async function main() {
-    try {
-        console.log('Starting merge conflict resolution...');
-        
-        // Clean up backup files first
-        cleanupBackupFiles();
-        
-        // Resolve all conflicts
-        resolveAllConflicts();
-        
-        console.log('🎉 All merge conflicts resolved successfully!');
-        
-    } catch (error) {
-        console.log('❌ Error in main process:', error.message);
+console.log('🔍 Scanning for files with merge conflicts...');
+const conflictFiles = findConflictFiles('/workspace');
+
+console.log(`📊 Found ${conflictFiles.length} files with conflicts`);
+
+let resolvedCount = 0;
+const startTime = Date.now();
+
+for (const file of conflictFiles) {
+    if (resolveFileConflicts(file)) {
+        resolvedCount++;
     }
 }
 
-// Run main function
-main();
+const endTime = Date.now();
+const duration = ((endTime - startTime) / 1000).toFixed(2);
+
+console.log('\n🎉 Conflict resolution completed!');
+console.log(`📈 Files processed: ${conflictFiles.length}`);
+console.log(`✅ Conflicts resolved: ${resolvedCount}`);
+console.log(`⏱️  Time taken: ${duration}s`);
+
+// Verify no conflicts remain
+console.log('\n🔍 Verifying no conflicts remain...');
+const remainingConflicts = findConflictFiles('/workspace');
+if (remainingConflicts.length === 0) {
+    console.log('🎊 All conflicts resolved successfully!');
+} else {
+    console.log(`⚠️  ${remainingConflicts.length} files still have conflicts:`);
+    remainingConflicts.forEach(file => console.log(`   - ${file}`));
+}

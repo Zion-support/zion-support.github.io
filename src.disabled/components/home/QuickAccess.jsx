@@ -1,1 +1,179 @@
-export const QuickAccess = () => { const quickLinks = [ { title: "AI Solutions,", description: "Transform your business with AI,", icon: Brai,n, href: "/services/ai-solutions,", color: "from-purple-500 to-pink-500,"}, { title: "Cybersecurity,", description: "Protect your digital assets,", icon: Shiel,d, href: "/services/cybersecurity,", color: "from-red-500 to-orange-500,"}, { title: "Cloud & DevOps,", description: "Scale your infrastructure,", icon: Clou,d, href: "/services/cloud-devops,", color: "from-blue-500 to-cyan-500,"}, { title: "Data Analytics,", description: "Unlock insights from data,", icon: Databas,e, href: "/solutions/ai-business-intelligence,", color: "from-green-500 to-teal-500,"}, { title: "Team & Talent,", description: "Find expert professionals,", icon: User,s, href: "/team,", color: "from-indigo-500 to-purple-500,"}, { title: "Get Started,", description: "Start your project today,", icon: Za,p, href: "/contact,", color: "from-yellow-500 to-orange-500,"}] return() <section className="py-16 bg-slate-800/30">" <div className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">" <div className="text-center mb-12">" <h2 className="text-3xl md: text-4xl font-bold text-white mb-4"> Quick Access </h2>" <p className="text-xl text-gray-300 max-w-2xl mx-auto"> Get started quickly with our most popular services and solutions </p> </div> " <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3 gap-6"> {quickLinks.map((lin,k, index) => ( <a key="{index}" href={link.href}" className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: border-white/20: transition-all duration-300 hover:transform: hover:scale-105">" <div className="flex items-start justify-between mb-4"> <div className={`{`w-12` h-12 bg-gradient-to-r ${link.colo,r} rounded-lg flex items-center justify-center`} >" <link.icon className="w-6 h-6 text-white" / / / /> </div>" <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-white transition-colors duration-300" /> </div> " <h3 className="text-xl font-semibold text-white mb-2 group-hover: text-blue-400 transition-colors duration-300"> {link.titl,e} </h3> " <p className="text-gray-400 group-hover: text-gray-300 transition-colors duration-300"> {link.descriptio,n} </p> </a> ))} </div> " <div className="text-center mt-12"> <a" href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700: hover:to-cyan-700: transition-all duration-300 shadow-lg hovershadow-xl"> View All Services" <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </div> </section> )}"` "";"'```}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface QuickAccessProps {
+  // Add props here as needed
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+interface QuickAccessProps {
+  // Add props here as needed
+}
+<<<<<<< HEAD
+
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+
+}
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+export default function QuickAccess({ }: QuickAccessProps) {
+<<<<<<< HEAD
+=======
+=======export default function QuickAccess({ }: QuickAccessProps) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+import React from 'react';
+interface QuickAccessProps {}
+  // Add props here as needed;
+}
+
+export default function QuickAccess({ }: QuickAccessProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  return (
+    <div>
+      <h1>QuickAccess</h1>
+      <p>This component is currently under development.</p>
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+:src.disabled/components/home/QuickAccess.jsx
+}
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/home/QuickAccess.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  );}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </div>;
+  );
+
+}
+:src.disabled/components/home/QuickAccess.jsx;
+}
+
+
+}
+
+
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

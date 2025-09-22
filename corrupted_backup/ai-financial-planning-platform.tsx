@@ -1,7 +1,60 @@
+import React from 'react',
+import ServiceLanding from '../components/sections/ServiceLanding',
+export default function AiFinancialPlanningPlatform() {
+	return (
+		<ServiceLanding
+			title="AI Financial Planning Platform"
+			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
+			subtitle="Smarter, faster financial decisions"
+			pricePerMonthUSD={349}
+			implementationWeeks="1-2 weeks"
+			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
+			features={[
+				"Driver-based planning and what-if scenarios",
+				"Automated variance analysis and anomaly detection",
+				"Cohort and retention-aware revenue forecasting",
+				"Cash flow projections and runway insights",
+				"Budget vs. actuals with alerting",
+				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake",
+				"Executive dashboards and board-ready reports",
+				"Headcount planning and hiring plans"
+			]}
+			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
+			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/ai-financial-planning-platform";
+		/>;
+	);
+}
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
+export default function AiFinancialPlanningPlatform() {
+  return (
+    <ServiceLanding
+      title='AI Financial Planning Platform'
+      description='Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence.'
+      subtitle='Smarter, faster financial decisions'
+      pricePerMonthUSD={349}
+      implementationWeeks='1-2 weeks'
+      roiNote='Finance teams report 3–6x ROI via faster cycles and improved accuracy'
+      features={[
+        'Driver-based planning and what-if scenarios',
+        'Automated variance analysis and anomaly detection',
+        'Cohort and retention-aware revenue forecasting',
+        'Cash flow projections and runway insights',
+        'Budget vs. actuals with alerting',
+        'Integrations: NetSuite, QuickBooks, Stripe, Snowflake',
+        'Executive dashboards and board-ready reports',
+        'Headcount planning and hiring plans',
+      ]}
+      industries={['SaaS', 'Ecommerce', 'Fintech', 'Professional Services']}
+      canonical='https://ziontechgroup.com/ai-financial-planning-platform'
+    />
+  );
+}
 const AIFinancialPlanningPlatform: React.FC = () => {
   return (
     <Layout>
@@ -78,5 +131,3 @@ const AIFinancialPlanningPlatform: React.FC = () => {
 };
 
 export default AIFinancialPlanningPlatform;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-financial-planning-platform.tsx

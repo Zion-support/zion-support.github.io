@@ -1,166 +1,130 @@
-# GitHub Actions Workflows
+# GitHub Actions Workflows - DEPRECATED
 
-This directory contains all the GitHub Actions workflows for the Zion Tech Group project.
+⚠️ **IMPORTANT: This directory is deprecated. All automation has been migrated to PM2.**
 
-## Workflows Overview
+## Migration Status
 
-### 🚀 CI (Continuous Integration)
-**File:** `ci.yml`  
-**Trigger:** Push to main, Pull requests to main  
-**Purpose:** Main CI pipeline that runs on every PR and push to main
+All GitHub Actions workflows have been replaced with PM2-based automation processes that run continuously on the server. This provides better performance, reliability, and real-time monitoring compared to GitHub Actions.
 
-**Features:**
-- Linting and type checking
-- Building the project
-- Running tests with coverage
-- Cypress end-to-end testing
-- Security scanning
-- Artifact uploads
+## What Was Replaced
 
-### 🧪 Node.js Matrix Testing
-**File:** `node-matrix.yml`  
-**Trigger:** Push to main/develop, Pull requests to main/develop  
-**Purpose:** Ensures compatibility across different Node.js versions
+The following GitHub Actions workflows have been replaced by PM2 processes:
 
-**Node.js Versions:** 18, 20, 21
+### 🔄 CI (Continuous Integration) → PM2: `daily-build-test`
 
-### 🔒 CodeQL Security Analysis
-**File:** `codeql.yml`  
-**Trigger:** Push to main/develop/cursor branches, Pull requests, Weekly schedule  
-**Purpose:** Automated security vulnerability detection
+- **PM2 Process**: Runs every hour
+- **Purpose**: Build verification, linting, and type checking
+- **Status**: ✅ Migrated to PM2
 
-**Schedule:** Every Monday at 1:33 AM UTC
+### 🧪 Test → PM2: `daily-build-test`
 
-### 📦 NPM Package Publishing
-**File:** `npm-publish.yml`  
-**Trigger:** Push to main (excluding markdown files)  
-**Purpose:** Automatically publishes packages to npm registry
+- **PM2 Process**: Runs every hour
+- **Purpose**: Comprehensive testing and build verification
+- **Status**: ✅ Migrated to PM2
 
-**Requirements:** `NPM_TOKEN` secret
+### 🔒 CodeQL Security Analysis → PM2: `security-audit`
 
-### 🔄 Continuous Improvement
-**File:** `continuous-improvement.yml`  
-**Trigger:** Every 4 hours, Manual dispatch  
-**Purpose:** Automated code improvements and diversity checks
+- **PM2 Process**: Runs every 4 hours
+- **Purpose**: Security vulnerability scanning and dependency analysis
+- **Status**: ✅ Migrated to PM2
 
-**Features:**
-- Automated improvement suggestions
-- Diversity analysis
-- Auto-merge pull requests
+### 📦 NPM Package Check → PM2: `dependency-updates`
 
-### 🕷️ Link Crawler Factory
-**File:** `agent-factory.yml`  
-**Trigger:** Every 30 minutes, Manual dispatch  
-**Purpose:** Automated link checking and broken link detection
+- **PM2 Process**: Runs every 6 hours
+- **Purpose**: Package verification and dependency updates
+- **Status**: ✅ Migrated to PM2
 
-**Features:**
-- Parallel link crawling
-- Broken link reporting
-- Queue management
-- Issue creation for broken links
+### 🚀 Deploy to Production → PM2: `zion-app` & `zion-backend`
 
-### 📊 Performance Testing
-**File:** `performance.yml`  
-**Trigger:** Push to main, Pull requests, Weekly schedule  
-**Purpose:** Bundle size analysis and performance monitoring
+- **PM2 Process**: Continuous deployment with auto-restart
+- **Purpose**: Production deployment with build verification
+- **Status**: ✅ Migrated to PM2
 
-**Schedule:** Every Monday at 2:00 AM UTC
+### 🔍 Dependency Review → PM2: `dependency-updates`
 
-### ♿ Accessibility Testing
-**File:** `accessibility.yml`  
-**Trigger:** Push to main/develop, Pull requests, Weekly schedule  
-**Purpose:** Automated accessibility compliance checking
+- **PM2 Process**: Runs every 6 hours
+- **Purpose**: Security vulnerability checking in dependencies
+- **Status**: ✅ Migrated to PM2
 
-**Schedule:** Every Monday at 4:00 AM UTC
+### ✅ Quality Check → PM2: `quality-checks`
 
-### 🔍 Dependency Review
-**File:** `dependency-review.yml`  
-**Trigger:** Pull requests to main/develop  
-**Purpose:** Security and license compliance for dependencies
+- **PM2 Process**: Runs every 3 hours
+- **Purpose**: Code quality, linting, and security audits
+- **Status**: ✅ Migrated to PM2
 
-**Features:**
-- Vulnerability scanning
-- License compliance
-- Dependency updates
+### 🔄 Continuous Improvement → PM2: `continuous-improvement`
 
-### 🚀 Deployment Check
-**File:** `deployment-check.yml`  
-**Trigger:** After successful CI completion  
-**Purpose:** Post-deployment validation and health checks
+- **PM2 Process**: Runs every 2 hours
+- **Purpose**: Automated improvement suggestions and optimization
+- **Status**: ✅ Migrated to PM2
 
-**Features:**
-- Build output validation
-- Bundle size monitoring
-- Security audit
+### 🕷️ Link Crawler Factory → PM2: `link-checker` & `link-integrity`
 
-## Required Secrets
+- **PM2 Process**: Runs every 30 minutes and 2 hours respectively
+- **Purpose**: Automated link checking and broken link detection
+- **Status**: ✅ Migrated to PM2
 
-The following secrets must be configured in your repository:
+## PM2 Automation Benefits
 
-### For CI Workflow:
-- `CODECOV_TOKEN` - Codecov coverage reporting
-- `CYPRESS_TEST_USER_EMAIL` - Cypress test user email
-- `CYPRESS_TEST_USER_PASSWORD` - Cypress test user password
-- `CYPRESS_TEST_USER_DISPLAY_NAME` - Cypress test user display name
-- `VITE_REOWN_PROJECT_ID_CI` - Reown project ID for CI
-- `VITE_SUPABASE_URL_CI` - Supabase URL for CI
-- `VITE_SUPABASE_ANON_KEY_CI` - Supabase anonymous key for CI
-- `NEXT_PUBLIC_API_URL_CI` - API URL for CI
-- `VITE_VAPID_PUBLIC_KEY_CI` - VAPID public key for CI
+### 🚀 Performance Improvements
 
-### For NPM Publishing:
-- `NPM_TOKEN` - NPM authentication token
+- **Real-time execution**: No waiting for GitHub Actions queue
+- **Faster feedback**: Immediate error detection and fixing
+- **Resource optimization**: Better memory and CPU utilization
 
-## Local Development
+### 🔧 Enhanced Monitoring
 
-To test workflows locally, you can use [act](https://github.com/nektos/act):
+- **Live process monitoring**: Real-time status and metrics
+- **Automatic restart**: Self-healing on failures
+- **Memory management**: Automatic restart on memory issues
+
+### 📊 Continuous Operations
+
+- **24/7 automation**: No dependency on external services
+- **Scheduled execution**: Configurable intervals for each task
+- **Parallel processing**: Multiple automation tasks run simultaneously
+
+## Current PM2 Status
+
+All automation processes are running continuously:
 
 ```bash
-# Install act
-brew install act  # macOS
-# or download from GitHub releases
+# Check PM2 status
+pm2 status
 
-# Run a specific workflow
-act -W .github/workflows/ci.yml
+# View logs for specific process
+pm2 logs [process-name]
 
-# Run with specific event
-act push -W .github/workflows/ci.yml
+# Restart all processes
+pm2 restart all
 ```
 
-## Workflow Dependencies
+## Configuration
 
-- **CI** → **Deployment Check** (workflow_run trigger)
-- **CI** → **Performance Testing** (shared artifacts)
-- **CI** → **Accessibility Testing** (shared build)
+PM2 configuration is in `ecosystem.config.cjs` at the project root, which includes:
 
-## Troubleshooting
+- **Main Application**: `zion-app` and `zion-backend`
+- **Automation Processes**: 12 continuous automation tasks
+- **Resource Management**: Memory limits and auto-restart policies
+- **Environment Variables**: Production-optimized settings
 
-### Common Issues:
+## Why This Migration?
 
-1. **Node.js Version Mismatch**: Ensure all workflows use Node.js 20
-2. **Missing Scripts**: Check package.json for required npm scripts
-3. **Secret Configuration**: Verify all required secrets are set
-4. **Permission Issues**: Check workflow permissions for repository access
+1. **Cost Efficiency**: No GitHub Actions minutes consumption
+2. **Performance**: Faster execution and real-time monitoring
+3. **Reliability**: No external service dependencies
+4. **Control**: Full control over execution environment
+5. **Scalability**: Easy to add new automation tasks
 
-### Debugging:
+## Support
 
-- Enable debug logging by setting `ACTIONS_STEP_DEBUG=true` in repository secrets
-- Check workflow run logs for detailed error information
-- Use `continue-on-error: true` for non-critical steps
+For automation issues, check:
 
-## Contributing
+1. PM2 process status: `pm2 status`
+2. Process logs: `pm2 logs [process-name]`
+3. Ecosystem configuration: `ecosystem.config.cjs`
+4. Individual automation scripts in `scripts/automation/`
 
-When adding new workflows:
+---
 
-1. Follow the existing naming convention
-2. Include proper error handling
-3. Add appropriate permissions
-4. Document any new secrets or requirements
-5. Test locally with act before committing
-
-## Performance Considerations
-
-- Use `concurrency` groups to prevent overlapping runs
-- Implement proper caching strategies
-- Use `timeout-minutes` for long-running jobs
-- Consider using `strategy.matrix` for parallel execution
+**Note**: This directory is kept for reference only. All active automation is now handled by PM2 processes running on the server.

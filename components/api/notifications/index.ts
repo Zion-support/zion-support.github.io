@@ -1,18 +1,24 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase } from '../../../utils/supabase/client';
-import { NotificationItem, NotificationType } from '../../../utils/notifications';
+import type { NextApiRequest, NextApiResponse } from 'next';'
+} from '../../../utils/notifications';
+function getUserId(req: NextApiRequest): string {}
+'
+  const cookie = req && req.headers.cookie || '';
 
-function getUserId(req: NextApiRequest): string {
-  const cookie = req.headers.cookie || '';
-  const match = cookie.split(';').map((c) => c.trim()).find((c) => c.startsWith('user_id='));
-  if (match) return decodeURIComponent(match.split('=')[1]);
+  const match = cookie'
+    .split(';')
+    .map(c => c && c.trim())'
+    .find(c => c && c.startsWith('user_id='));'
+  if (match) return decodeURIComponent(match && match.split('=')[1]);'
   return 'demo-user-1';
-}
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const userId = getUserId(req);
-    const { filter = 'all', countOnly, limit = '50', offset = '0' } = req.query as Record<string, string>;
+export default async function handler(
+  req: NextApiRequest;
+  res: NextApiResponse;
+) {
+      filter = 'all',
+      countOnly,
+      limit = '50',
+      offset = '0',
+    } = req.query as Record<string, string>;
 
     // If countOnly, return unread count quickly
     if (countOnly === 'true') {
@@ -21,13 +27,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .select('id', { count: 'exact', head: true })
         .eq('user_id', userId)
         .eq('read_status', false);
-
       if (error) {
         // Fallback to 0 on error (e.g., table missing)
         return res.status(200).json({ count: 0 });
       }
 
-      const count = (data as any)?.length || 0; // when head:true, data is empty; Supabase SDK returns count differently in v2
+const count = (data as any)?.length || 0; // when head:true, data is empty; Supabase SDK returns count differently in v2
       // Prefer count from response (not available via head:true in some envs); do another call without head if needed
       if (!count) {
         const { count: exactCount } = await supabase
@@ -35,28 +40,43 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           .select('id', { count: 'exact' })
           .eq('user_id', userId)
           .eq('read_status', false);
-        return res.status(200).json({ count: exactCount || 0 });
+return res.status(200).json({ count: exactCount || 0 });
       }
-
       return res.status(200).json({ count });
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
-
-    // Build query based on filter
-    let query = supabase.from('notifications').select('*').eq('user_id', userId).order('created_at', { ascending: false });
-
+    // Build query based on filter;
+    let query = supabase'
+      .from('notifications')'
+      .select('*')'
+      .eq('user_id', userId)'
+      .order('created_at', { ascending: false });'
+    if (filter === 'unread') {'
+      query = query && query.eq('read_status', false);'
+    } else if (['system', 'onboarding', 'quote', 'match'].includes(filter)) {'
+      query = query && query.eq('type', filter as NotificationType);
+    }'
+    if (filter === 'unread') {'
+      query = query && query.eq('read_status', false)'
+    } else if (['systemonboardingquotematch'].includes(filter)) {'
+      query = query && query.eq('type', filter as NotificationType);
+    }
     if (filter === 'unread') {
-      query = query.eq('read_status', false);
-    } else if (['system', 'onboarding', 'quote', 'match'].includes(filter)) {
-      query = query.eq('type', filter as NotificationType);
+      query = query && query.eq('read_status', false)
+    } else if (['systemonboardingquotematch'].includes(filter)) {
+      query = query && query.eq('type', filter as NotificationType);
     }
+    const { data, error } = await query.range(
+      parseInt(offset, 10)
+      parseInt(offset, 10) + parseInt(limit, 10) - 1
+    );
 
-    const { data, error } = await query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
-
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (error) {
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [
         {
-          id: 'seed-1',
+id: 'seed-1',
           user_id: userId,
           type: 'onboarding',
           title: 'Welcome to Zion AI Marketplace',
@@ -77,10 +97,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
       ];
       return res.status(200).json({ notifications: fallback });
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
-
-    return res.status(200).json({ notifications: data as NotificationItem[] });
-  } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' });
+  };
+}
+      return res.status (200).json ({ notifications: fallback,}
+});
+    }
+    return res.status (200).json ({ notifications: data as NotificationItem[] });
+  } catch (e) {'
+return res.status (500).json ({ error: 'Unexpected error' });'
+  }    return res.status (500).json ({ error: 'Unexpected error' });'
+return res.status(500).json({ error: 'Unexpected error' });'
+  }    return res.status(500).json({ error: 'Unexpected error' })
   }
 }
+  };
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

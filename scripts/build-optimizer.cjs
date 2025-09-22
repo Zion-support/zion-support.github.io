@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-const { execSync } = require('child_process');
-const fs = require('fs');
-try {
-    // Clean previous builds
-    if (fs.existsSync('.next')) {
-        execSync('rm -rf .next', { "stdio": 'inherit' })}
-    if (fs.existsSync('out')) {
-        execSync('rm -rf out', { "stdio": 'inherit' })}
-    // Run build
-    execSync('npm run build', { "stdio": 'inherit' });
-    } catch (error) {
-    console.error('❌ Build optimization "failed": ', error.message);
-    process.exit(1)}
-const { execSync } = require("child_process");"const fs = require("fs");"console.log(" Build Optimizer Starting.");try { / Clean previous builds" console.log(" Cleaning previous builds.");" if (fs.existsSync(".next")) {" execSync("rm -rf .next", { stdio: "inherit" })}" if (fs.existsSync("out")) {"" execSync("rm -rf out", { stdio: "inherit" })} / Run build" console.log(" Running optimized build.");"" execSync("npm run build", { stdio: "inherit" }); " console.log(" Build optimization completed successfully!")} catch (error) {"" console.error(" Build optimization failed: ", error.message); process.exit(1)}"""
+
 const { execSync } = require('child_process')
 const fs = require('fs')
 // console.log(' Build Optimizer Starting...')
@@ -21,294 +7,196 @@ const fs = require('fs')
         execSync('rm -rf .next', { "stdio"})
         execSync('rm -rf out', { "stdio"})
     execSync('npm run build', { "stdio"})
+
     console.error(' Build optimization "failed")
-=======
-#!/usr/bin/env node;
+
+    console.error(' Build optimization "failed")
+
+    console.error(' Build optimization "failed")
+
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+class BuildOptimizer {
+  constructor() {
+    this.projectRoot = process.cwd();
+  }
+
+  async optimize() {
+    console.log('🔨 Starting build optimization...');
+
+    try {
+      // Clean previous builds
+      this.cleanBuild();
+
+      // Run type checking
+      this.runTypeCheck();
+
+      // Run linting
+      this.runLinting();
+
+      // Build the application
+      this.buildApplication();
+
+      // Analyze bundle
+      this.analyzeBundle();
+
+      console.log('✅ Build optimization completed successfully');
+    } catch (error) {
+      console.error('❌ Build optimization failed:', error.message);
+      process.exit(1);
+    }
+  }
+
+  cleanBuild() {
+    console.log('🧹 Cleaning previous builds...');
+    const buildDirs = ['.next', 'dist', 'build'];
+
+    buildDirs.forEach(dir => {
+      const dirPath = path.join(this.projectRoot, dir);
+      if (fs.existsSync(dirPath)) {
+        fs.rmSync(dirPath, { recursive: true, force: true });
+      }
+    });
+  }
+
+  runTypeCheck() {
+    console.log('🔍 Running TypeScript type check...');
+    execSync('npx tsc --noEmit', { stdio: 'inherit' });
+  }
+
+  runLinting() {
+    console.log('🔧 Running ESLint...');
+    execSync('npx eslint . --ext .ts,.tsx,.js,.jsx --fix', {
+      stdio: 'inherit',
+    });
+  }
+
+  buildApplication() {
+    console.log('🏗️ Building application...');
+    execSync('npm run build', { stdio: 'inherit' });
+  }
+
+  analyzeBundle() {
+    console.log('📊 Analyzing bundle...');
+    try {
+      execSync('npm run analyze', { stdio: 'inherit' });
+    } catch (error) {
+      console.log('Bundle analysis not available');
+    }
+  }
+}
+
+// Run the optimizer
+if (require.main === module) {
+  const optimizer = new BuildOptimizer();
+  optimizer.optimize().catch(console.error);
+}
+
+module.exports = BuildOptimizer;
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+const { execSync } = require('child_process')
+const fs = require('fs')
+// console.log(' Build Optimizer Starting...)
+    console.log('🧹 Cleaning previous builds...)
+    if (fs.existsSync('.next')
+
+#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-class BuildOptimizer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'build-reports');
-    this.ensureDirectories()}
+console.log('🔍 Build Optimizer Starting...');
 
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)}
-
-  analyzeBuildConfig() {
-    this.log('🔍 Analyzing build configuration...');
-
-    try {
-      const configFiles = [;
-        'vite.config.js',;
-        'vite.config.ts',;
-        'next.config.js',;
-        'next.config.ts',;
-        'webpack.config.js',;
-        'webpack.config.ts',;
-        'rollup.config.js',;
-        'rollup.config.ts';
-      ];
-
-      const foundConfigs = [];
-      const configAnalysis = {}
-
-      for (const configFile of configFiles) {
-        const configPath = path.join(this.projectRoot, configFile);
-        if (fs.existsSync(configPath)) {
-          foundConfigs.push(configFile);
-
-          try {
-            const content = fs.readFileSync(configPath, 'utf8');
-            configAnalysis[configFile] = {
-              size: content.length,;
-              hasOptimization: content.includes('optimization') || content.includes('minify'),;
-              hasCompression: content.includes('compression') || content.includes('gzip'),;
-              hasCodeSplitting: content.includes('splitChunks') || content.includes('chunks'),;
-              hasTreeShaking: content.includes('treeshake') || content.includes('treeShaking')}} catch (error) {
-            configAnalysis[configFile] = { error: error.message }}
+const optimizationTasks = [
+  {
+    name: 'Clean Build Directory',
+    task: () => {
+      const buildDir = '.next';
+      if (fs.existsSync(buildDir)) {
+        fs.rmSync(buildDir, { recursive: true, force: true });
+        console.log('🧹 Cleaned build directory');
+      }
+    }
+  },
+  {
+    name: 'Clean Node Modules',
+    task: () => {
+      const nodeModulesDir = 'node_modules';
+      if (fs.existsSync(nodeModulesDir)) {
+        // Only clean if it's very large (over 500MB)
+        const stats = fs.statSync(nodeModulesDir);
+        if (stats.size > 500 * 1024 * 1024) {
+          fs.rmSync(nodeModulesDir, { recursive: true, force: true });
+          console.log('🧹 Cleaned node_modules (was too large)');
         }
       }
-      this.log(`✅ Found ${foundConfigs.length} build configuration files`);
-
-      return {
-        success: true,;
-        foundConfigs,;
-        configAnalysis,;
-        timestamp: new Date().toISOString()}} catch (error) {
-      this.log(`❌ Build config analysis failed: ${error.message}`);
-      return {
-        success: false,;
-        error: error.message,;
-        timestamp: new Date().toISOString()}}
-  }
-
-  runBuild() {
-    this.log('🔨 Running build...');
-
-    try {
-      const startTime = Date.now();
-
-      // Clean previous build;
-      const distPath = path.join(this.projectRoot, 'dist');
-      if (fs.existsSync(distPath)) {
-        execSync('rm -rf dist', { cwd: this.projectRoot });
-        this.log('🧹 Cleaned previous build')}
-      // Run build;
-      execSync('npm run build', { ;
-        stdio: 'pipe', ;
-        cwd: this.projectRoot,;
-        timeout: 300000 // 5 minutes timeout});
-
-      const endTime = Date.now();
-      const buildTime = endTime - startTime;
-
-      this.log(`✅ Build completed in ${buildTime}ms`);
-
-      return {
-        success: true,;
-        buildTime,;
-        timestamp: new Date().toISOString()}} catch (error) {
-      this.log(`❌ Build failed: ${error.message}`);
-      return {
-        success: false,;
-        error: error.message,;
-        timestamp: new Date().toISOString()}}
-  }
-
-  analyzeBuildOutput() {
-    this.log('📊 Analyzing build output...');
-
-    try {
-      const distPath = path.join(this.projectRoot, 'dist');
-
-      if (!fs.existsSync(distPath)) {
-        return {
-          success: false,;
-          error: 'Build output directory not found',;
-          timestamp: new Date().toISOString()}}
-      const getDirectoryStats = (dir) => {
-        let totalSize = 0;
-        let fileCount = 0;
-        const fileTypes = {}
-        const largeFiles = [];
-
-        const scanDirectory = (currentDir) => {
-          const files = fs.readdirSync(currentDir);
-
-          for (const file of files) {
-            const filePath = path.join(currentDir, file);
-            const stat = fs.statSync(filePath);
-
-            if (stat.isDirectory()) {
-              scanDirectory(filePath)} else {
-              totalSize += stat.size;
-              fileCount++;
-
-              const ext = path.extname(file);
-              fileTypes[ext] = (fileTypes[ext] || 0) + 1;
-
-              if (stat.size > 100 * 1024) { // Files larger than 100KB;
-                largeFiles.push({;
-                  file: path.relative(distPath, filePath),;
-                  size: stat.size,;
-                  sizeKB: (stat.size / 1024).toFixed(1)})}
-            }
-          }
-        }
-
-        scanDirectory(dir);
-
-        return {
-          totalSize,;
-          fileCount,;
-          fileTypes,;
-          largeFiles}}
-      const stats = getDirectoryStats(distPath);
-      const totalSizeMB = (stats.totalSize / 1024 / 1024).toFixed(2);
-
-      this.log(`✅ Build output: ${stats.fileCount} files, ${totalSizeMB} MB`);
-      this.log(`📊 Large files (>100KB): ${stats.largeFiles.length}`);
-
-      return {
-        success: true,;
-        totalSize: stats.totalSize,;
-        totalSizeMB: parseFloat(totalSizeMB),;
-        fileCount: stats.fileCount,;
-        fileTypes: stats.fileTypes,;
-        largeFiles: stats.largeFiles,;
-        timestamp: new Date().toISOString()}} catch (error) {
-      this.log(`❌ Build output analysis failed: ${error.message}`);
-      return {
-        success: false,;
-        error: error.message,;
-        timestamp: new Date().toISOString()}}
-  }
-
-  checkBuildPerformance() {
-    this.log('⚡ Checking build performance...');
-
-    try {
-      const performanceChecks = {
-        hasSourceMaps: false,;
-        hasMinification: false,;
-        hasCompression: false,;
-        hasCodeSplitting: false}
-
-      // Check for source maps;
-      const distPath = path.join(this.projectRoot, 'dist');
-      if (fs.existsSync(distPath)) {
-        const findSourceMaps = (dir) => {
-          const files = fs.readdirSync(dir);
-          for (const file of files) {
-            const filePath = path.join(dir, file);
-            const stat = fs.statSync(filePath);
-
-            if (stat.isDirectory()) {
-              findSourceMaps(filePath)} else if (file.endsWith('.map')) {
-              performanceChecks.hasSourceMaps = true}
-          }
-        }
-
-        findSourceMaps(distPath)}
-      // Check for minified files;
-      if (fs.existsSync(distPath)) {
-        const findMinifiedFiles = (dir) => {
-          const files = fs.readdirSync(dir);
-          for (const file of files) {
-            const filePath = path.join(dir, file);
-            const stat = fs.statSync(filePath);
-
-            if (stat.isDirectory()) {
-              findMinifiedFiles(filePath)} else if (file.includes('.min.') || file.includes('.prod.')) {
-              performanceChecks.hasMinification = true}
-          }
-        }
-
-        findMinifiedFiles(distPath)}
-      this.log(`✅ Performance checks completed`);
-
-      return {
-        success: true,;
-        checks: performanceChecks,;
-        timestamp: new Date().toISOString()}} catch (error) {
-      this.log(`❌ Performance check failed: ${error.message}`);
-      return {
-        success: false,;
-        error: error.message,;
-        timestamp: new Date().toISOString()}}
-  }
-
-  generateReport() {
-    this.log('📊 Generating build optimization report...');
-
-    const configAnalysis = this.analyzeBuildConfig();
-    const buildResult = this.runBuild();
-    const outputAnalysis = this.analyzeBuildOutput();
-    const performanceCheck = this.checkBuildPerformance();
-
-    const report = {
-      timestamp: new Date().toISOString(),;
-      configAnalysis,;
-      buildResult,;
-      outputAnalysis,;
-      performanceCheck,;
-      summary: {
-        buildSuccessful: buildResult.success,;
-        buildTime: buildResult.success ? buildResult.buildTime : null,;
-        outputSizeMB: outputAnalysis.success ? outputAnalysis.totalSizeMB : null,;
-        fileCount: outputAnalysis.success ? outputAnalysis.fileCount : null,;
-        largeFiles: outputAnalysis.success ? outputAnalysis.largeFiles.length : null,;
-        hasSourceMaps: performanceCheck.success ? performanceCheck.checks.hasSourceMaps : false,;
-        hasMinification: performanceCheck.success ? performanceCheck.checks.hasMinification : false}
     }
+  },
+  {
+    name: 'Clean Cache Files',
+    task: () => {
+      const cacheFiles = [
+        '.next/cache',
+        'node_modules/.cache',
+        'tsconfig.tsbuildinfo'
+      ];
 
-    const reportFile = path.join(this.reportsDir, `build-optimization-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report saved to: ${reportFile}`);
-
-    // Print summary;
-    console.log('\n🔨 BUILD OPTIMIZER SUMMARY');
-    console.log('=' * 50);
-    console.log(`Build Status: ${report.summary.buildSuccessful ? '✅ Success' : '❌ Failed'}`);
-    if (report.summary.buildSuccessful) {
-      console.log(`Build Time: ${report.summary.buildTime}ms`)}
-    console.log(`Output Size: ${report.summary.outputSizeMB ? `${report.summary.outputSizeMB} MB` : 'N/A'}`);
-    console.log(`File Count: ${report.summary.fileCount || 'N/A'}`);
-    console.log(`Large Files: ${report.summary.largeFiles || 'N/A'}`);
-    console.log(`Source Maps: ${report.summary.hasSourceMaps ? '✅ Enabled' : '❌ Disabled'}`);
-    console.log(`Minification: ${report.summary.hasMinification ? '✅ Enabled' : '❌ Disabled'}`);
-    console.log(`Report: ${reportFile}`);
-
-    return report}
-
-  async run() {
-    try {
-      this.log('🚀 Starting Build Optimizer');
-
-      const report = this.generateReport();
-
-      this.log('✅ Build optimization completed');
-
-      return report} catch (error) {
-      this.log(`💥 Build optimizer error: ${error.message}`);
-      throw error}
+      cacheFiles.forEach(file => {
+        if (fs.existsSync(file)) {
+          fs.rmSync(file, { recursive: true, force: true });
+          console.log(`🧹 Cleaned ${file}`);
+        }
+      });
+    }
+  },
+  {
+    name: 'Reinstall Dependencies',
+    task: () => {
+      console.log('📦 Reinstalling dependencies...');
+      execSync('npm install', { stdio: 'pipe' });
+      console.log('✅ Dependencies reinstalled');
+    }
+  },
+  {
+    name: 'Run Build',
+    task: () => {
+      console.log('🏗️  Running build...');
+      execSync('npm run build', { stdio: 'pipe' });
+      console.log('✅ Build completed');
+    }
   }
-}
+];
 
-// Run the build optimizer;
-if (require.main === module) {
-  const optimizer = new BuildOptimizer()
-  optimizer.run().catch(console.error),
+let completed = 0;
+let failed = 0;
+
+optimizationTasks.forEach(task => {
+  try {
+    console.log(`\n🔄 Running ${task.name}...`);
+    task.task();
+    console.log(`✅ ${task.name} completed`);
+    completed++;
+  } catch (error) {
+    console.log(`❌ ${task.name} failed: ${error.message}`);
+    failed++;
+  }
+});
+
+console.log(`\n📊 Build Optimization Results:`);
+console.log(`✅ Completed: ${completed}`);
+console.log(`❌ Failed: ${failed}`);
+
+if (failed === 0) {
+  console.log('\n🎉 Build optimization completed successfully!');
+  process.exit(0);
+} else {
+  console.log('\n⚠️  Some optimization tasks failed. Please review the issues.');
+  process.exit(1);
 }
-module.exports = BuildOptimizer;
->>>>>>> origin/automation-fixes
