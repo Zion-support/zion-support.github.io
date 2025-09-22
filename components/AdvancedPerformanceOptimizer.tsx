@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
-
-export default function AdvancedPerformanceOptimizer() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Advanced Performance Optimizer</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p>Advanced performance optimization tools and monitoring.</p>
-      </CardContent>
-    </Card>
-=======
 
 interface AdvancedPerformanceOptimizerProps {
   className?: string;
@@ -42,6 +28,5 @@ export default function AdvancedPerformanceOptimizer({
         </div>
       </div>
     </div>
->>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa
   );
 }

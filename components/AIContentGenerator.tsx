@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
-
-export default function AIContentGenerator() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>AI Content Generator</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p>AI-powered content generation tools and utilities.</p>
-      </CardContent>
-    </Card>
-=======
 
 interface AIContentGeneratorProps {
   className?: string;
@@ -42,6 +28,5 @@ export default function AIContentGenerator({
         </div>
       </div>
     </div>
->>>>>>> da3c549c14ad0d2a580007f3c8b06256cb24f4aa
   );
 }
