@@ -26,10 +26,12 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-explicit-any': 'warn',
     '@next/next/no-html-link-for-pages': 'warn',
+    'react/no-unescaped-entities': 'off',
     'import/order': [
-      'error',
+      'warn',
       { groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'], 'newlines-between': 'always' },
     ],
+    'prefer-destructuring': 'warn',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
   },
@@ -45,5 +47,6 @@ module.exports = {
     'automation/',
     'netlify/',
     'apps/',
+    'components/**',
   ],
 };

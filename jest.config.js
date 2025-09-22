@@ -9,10 +9,28 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/backup/.*',
+    '<rootDir>/backups/.*',
+    '<rootDir>/backup-problematic-files/.*',
+    '<rootDir>/backup-merge-conflicts/.*',
+    '<rootDir>/components.disabled/.*',
+    '<rootDir>/components-disabled/.*',
+    '<rootDir>/pages-disabled/.*',
+    '<rootDir>/pages.disabled/.*',
+    '<rootDir>/src.disabled/.*',
+    '<rootDir>/tests.disabled/.*',
+    '<rootDir>/temp_exclude/.*',
+    '<rootDir>/src_backup_temp/.*',
+    '<rootDir>/backup-.*',
+    '<rootDir>/recovered-branches/.*',
+  ],
+  testMatch: ['**/__tests__/**/*.test.(js|jsx|ts|tsx)', '**/tests/**/*.test.(js|jsx|ts|tsx)'],
   collectCoverageFrom: [
     'components/**/*.{js,jsx,ts,tsx}',
     'pages/**/*.{js,jsx,ts,tsx}',
