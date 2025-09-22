@@ -64,7 +64,6 @@ export default function ContentPage() {
             >
               Get Custom Content
             </Link>
-<<<<<<< HEAD
           </h2>
           <p className="text-gray-600 mb-4">
             Adversarial scenarios, attack surfaces, and eval-gated mitigations to harden agents.
@@ -327,10 +326,8 @@ export default function ContentPage() {
           </p>
           <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold">Read Guide →</Link>
         </article>
-=======
           </div>
         </div>
->>>>>>> 8ddf28afb66439b8936ba389e22c7bf9815088b6
       </div>
     </div>
   );

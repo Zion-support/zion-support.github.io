@@ -8,7 +8,6 @@ export const metadata = {
 
 export default function MultimodalAgentsEnterprise2025Page() {
   return (
-<<<<<<< HEAD
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-6 text-sm text-purple-700 font-semibold">Enterprise AI</div>
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Multimodal Agents in the Enterprise (2025)</h1>
@@ -16,16 +15,6 @@ export default function MultimodalAgentsEnterprise2025Page() {
         A practical blueprint for building agents that process text, vision, and audio, integrated with tools and
         workflows to deliver real business outcomes.
       </p>
-=======
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white">
-      <SEO
-        title="Multimodal Agents in the Enterprise (2025)"
-        description="How to deploy multimodal agents (text, vision, audio) for real impact across functions."
-        keywords="multimodal agents, enterprise AI, vision, audio, text, workflows"
-        url="/blog/ai-2025-multimodal-agents-in-the-enterprise"
-      />
->>>>>>> 8ddf28afb66439b8936ba389e22c7bf9815088b6
 
       <div className="prose prose-lg max-w-none">
         <h2>Architecture Overview</h2>
@@ -54,16 +43,4 @@ export default function MultimodalAgentsEnterprise2025Page() {
       </div>
     </main>
   );
-<<<<<<< HEAD
 }
-=======
-}
-=======
-    <div>
-      <h1>Multimodal Agents in the Enterprise (2025)</h1>
-      <p>Design and deploy agents that see, hear, and act to deliver measurable outcomes across the enterprise.</p>
-    </div>
-  );
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5236
->>>>>>> 8ddf28afb66439b8936ba389e22c7bf9815088b6

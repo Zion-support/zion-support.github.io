@@ -8,7 +8,6 @@ export const metadata = {
 
 export default function EnterpriseAISecurityBlueprint2025Page() {
   return (
-<<<<<<< HEAD
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="mb-6 text-sm text-purple-700 font-semibold">Security</div>
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Security Blueprint (2025)</h1>
@@ -52,11 +51,5 @@ export default function EnterpriseAISecurityBlueprint2025Page() {
         <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Explore Resources</Link>
       </div>
     </main>
-=======
-    <div>
-      <h1>Enterprise AI Security Blueprint (2025)</h1>
-      <p>Layered controls for model, data, runtime, and supply chain risk in enterprise AI systems.</p>
-    </div>
->>>>>>> 8ddf28afb66439b8936ba389e22c7bf9815088b6
   );
 }

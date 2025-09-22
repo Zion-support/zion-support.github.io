@@ -4,7 +4,6 @@ import Link from 'next/link';
 const BlogPage = () => {
   const featuredPosts = [
     {
-<<<<<<< HEAD
       title: "AI 2025: Enterprise AI Security Blueprint",
       description: "Layered controls for model, data, runtime, and supply chain risk in enterprise AI systems.",
       slug: "ai-2025-enterprise-ai-security-blueprint",
@@ -14,7 +13,6 @@ const BlogPage = () => {
       image: "/images/enterprise-ai-security-2025.jpg"
     },
     {
-<<<<<<< HEAD
       title: "AI 2026: Agent Observability Blueprint",
       description: "Deep visibility into autonomous agents: traces, evaluations, and safety telemetry across the lifecycle.",
       slug: "ai-2026-agent-observability-blueprint",
@@ -31,7 +29,8 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/autonomous-support-2026.jpg"
-=======
+    },
+    {
       title: "AI 2025: Multimodal Agents in the Enterprise",
       description: "Design and deploy agents that see, hear, and act to deliver measurable outcomes across the enterprise.",
       slug: "ai-2025-multimodal-agents-in-the-enterprise",
@@ -39,14 +38,12 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/multimodal-agents-2025.jpg"
->>>>>>> 8ddf28afb66439b8936ba389e22c7bf9815088b6
     }
   ];
 
   const allPosts = [
     ...featuredPosts,
     {
-<<<<<<< HEAD
       title: "AI 2026: LLM Evals Maturity Model",
       description: "An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
       slug: "ai-2026-llm-evals-maturity-model",
@@ -69,7 +66,8 @@ const BlogPage = () => {
       category: "Security",
       date: "2025-09-15",
       featured: false
-=======
+    },
+    {
       title: "AI 2025: Ultimate Breakthrough Trends That Will Reshape Everything",
       description: "Discover the revolutionary AI trends that will transform 2025",
       slug: "ai-2025-ultimate-breakthrough-trends",
@@ -77,21 +75,18 @@ const BlogPage = () => {
       date: "2025-01-01",
       featured: false,
       image: "/images/ai-trends-2025.jpg"
-=======
+    },
+    {
       title: "Multimodal Agents in the Enterprise",
       category: "Enterprise AI",
       date: "2025-09-15",
       featured: true,
       image: "/images/multimodal-agents-2025.jpg"
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5236
->>>>>>> 8ddf28afb66439b8936ba389e22c7bf9815088b6
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-white">
-<<<<<<< HEAD
       <SEO
         title="AI & Technology Blog - Latest Insights & Breakthroughs"
         description="Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies."
@@ -104,17 +99,14 @@ const BlogPage = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             AI & Technology Blog
           </h1>
-=======
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
->>>>>>> 8ddf28afb66439b8936ba389e22c7bf9815088b6
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Insights, strategies, and practical guides for AI implementation, enterprise automation, and digital transformation.
           </p>
         </div>
 
-<<<<<<< HEAD
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -138,7 +130,6 @@ const BlogPage = () => {
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {post.description}
                   </p>
-=======
         {/* Featured Posts */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Articles</h2>
@@ -160,7 +151,6 @@ const BlogPage = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
                   <p className="text-gray-600 mb-4">{post.description}</p>
->>>>>>> 8ddf28afb66439b8936ba389e22c7bf9815088b6
                   <Link 
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
@@ -176,7 +166,6 @@ const BlogPage = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         <section>
           <h2 className="text-3xl font-bold text-gray-900 mb-8">All Articles</h2>
           <div className="space-y-6">
@@ -210,7 +199,6 @@ const BlogPage = () => {
                       Read More →
                     </Link>
                   </div>
-=======
         {/* All Posts */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-8">All Articles</h2>
@@ -241,11 +229,9 @@ const BlogPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
->>>>>>> 8ddf28afb66439b8936ba389e22c7bf9815088b6
                 </div>
               </article>
             ))}
-=======
     <div>
       <h1>Blog</h1>
       <div className="featured-posts">
@@ -254,7 +240,6 @@ const BlogPage = () => {
             <h2>{post.title}</h2>
             <p>Category: {post.category}</p>
             <p>Date: {post.date}</p>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-5236
           </div>
         ))}
       </div>
