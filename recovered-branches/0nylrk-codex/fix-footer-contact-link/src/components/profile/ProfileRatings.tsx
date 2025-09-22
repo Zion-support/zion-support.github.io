@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -13,7 +6,6 @@ import {ReviewsList} from "@/components/reviews/ReviewsList";
 import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { Star } from "lucide-react",
 import { ReviewStats } from "@/components/reviews/ReviewStats",
@@ -39,7 +31,6 @@ export function ProfileRatings(): any ({ userId, averageRating = 0, ratingCount 
       reviews && reviews.forEach((review) => {;
         if (review && review.rating >= 1 && review && review.rating <= 5) {;
           distribution[review && review.rating] = (distribution[review && review.rating] || 0) + 1;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ProfileRatingsProps {
   userId: string,
   averageRating?: number,
@@ -48,7 +39,6 @@ interface ProfileRatingsProps {
 }
 
 export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
-=======
 import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { ReviewStats } from "@/components/reviews/ReviewStats";
@@ -56,10 +46,7 @@ import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { useReviews } from "@/hooks/useReviews";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface ProfileRatingsProps {
-=======
 
 import {useState, useEffect} from "react";"
 import {Star} from "lucide-react";"
@@ -69,7 +56,6 @@ import {useReviews} from "@/hooks/useReviews";"
 import {Button} from "@/components/ui/button";"
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 interface ProfileRatingsProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   userId: string;
   averageRating?: number;
   ratingCount?: number;
@@ -89,8 +75,6 @@ export function ProfileRatings({}
   useEffect(() => {}
     if (reviews.length > 0) {}
       const distribution: Record<number, number> = {}
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         1: 0,
         2: 0,
         3: 0,
@@ -107,7 +91,6 @@ reviews.forEach((review) => {}
       setRatingDistribution(distribution);
     }
   }, [reviews]);
-<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { Star } from "lucide-react",;
 import { ReviewStats } from "@/components/reviews/ReviewStats",;
@@ -136,9 +119,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       setRatingDistribution(distribution);
     }
   }, [reviews]),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   // Fetch reviews when component mounts
   useEffect(() => {
@@ -151,7 +131,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         <div className="md:w-1/3">
 
           <ReviewStats;
-=======
 
   // Fetch reviews when component mounts
   useEffect(() => {
@@ -162,36 +141,26 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     <div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;
         <div className="md:w-1/3">;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
           />
         </div>
-<<<<<<< HEAD
         <div className="md:w-2/3">
-=======
 
         <div className="md:w-2/3">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
-=======
 "
         <div className="md:w-2/3">"
           <Tabs defaultValue="all">"
             <TabsList className="mb-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <TabsTrigger value="all">
                 All Reviews ({reviews.length})
               </TabsTrigger>"
@@ -204,15 +173,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<< HEAD
               <ReviewsList
-=======
               />
             </TabsContent>
 "
             <TabsContent value="positive">
               <ReviewsList;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
@@ -233,7 +199,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               />
 
 import {useState, useEffect} from "react";""
@@ -348,22 +313,9 @@ export function ProfileRatings({
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 ;
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   // Fetch reviews when component mounts;
   useEffect (() => {
@@ -371,30 +323,24 @@ export function ProfileRatings({
   }, [user_id]);
 ;
   return (
-<<<<<<< HEAD
     <div className="space - y-6">;
       <div className="flex flex - col md:flex - row gap - 6">;
         <div className="md:w - 1/3">;
-=======
     <div className="space-y-6">;
       <div className="flex flex - col md:flex - row gap-6">;
         <div className="md:w-1/3">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ReviewStats;
             average_rating={average_rating}
             total_reviews={rating_count}
             rating_distribution={rating_distribution}
           />;
         </div>;
-<<<<<<< HEAD
         <div className="md:w - 2/3">;
           <Tabs default_value="all">;
             <TabsList className="mb - 4">;
-=======
         <div className="md:w-2/3">;
           <Tabs default_value="all">;
             <TabsList className="mb-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <TabsTrigger value="all">;
                 All Reviews ({reviews.length});
               </TabsTrigger>;
@@ -420,14 +366,11 @@ export function ProfileRatings({
                 reviews={reviews.filter ((r) => r.rating < 4)}
                 is_loading={is_loading}
                 onReportReview={report_review}
-<<<<<<< HEAD
-<<<<<<< HEAD
               />;
             </TabsContent>;
           </Tabs>;
         </div>;
 </div>;
-<<<<<<< HEAD
 
     </div>);
 }
@@ -436,26 +379,18 @@ export function ProfileRatings({
             </TabsContent>;
           </Tabs>;
         </div>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>;    </div>;
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 
     </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),; interface ProfileRatingsProps {
-=======
 
 }
 
     </div>;
   ),; interface ProfileRatingsProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   userId: string;
 averageRating?: number;
 ratingCount?: number;
@@ -514,17 +449,8 @@ reviews.forEach ( (review) => {}
 }
 ;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 import {useState, useEffect} from "react";""
 import {Star} from "lucide-react";""
@@ -622,4 +548,3 @@ const [ratingDistribution, setRatingDistribution] = useState<Record<number numbe
 pr-12325
 }/> </TabsContent> </Tabs> </div> </div> </div>) "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

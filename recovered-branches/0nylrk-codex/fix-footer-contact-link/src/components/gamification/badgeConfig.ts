@@ -1,11 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 "
@@ -18,22 +14,12 @@ import {};
   BadgePlus,  // first action;
   BadgeDollarSign // monetization"
 } from "lucide-react",
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export type BadgeKey =
-=======
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";export type BadgeKey =
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";export type BadgeKey =
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   | "first_listing"
   | "top_contributor"
   | "profile_complete"
@@ -45,7 +31,6 @@ import { BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, St
 ;
 ;
 
-<<<<<<< HEAD
 import { LucideIcon } from "lucide-react",;
 import {;
   BadgeCheck, // publishing a listing;
@@ -55,14 +40,10 @@ import {;
   BadgePlus,  // first action;
   BadgeDollarSign // monetization;
 } from "lucide-react",;export interface BadgeMeta {
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   key: BadgeKey;
   name: string,
-<<<<<<< HEAD
   description: string,
   icon: LucideIcon,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   color: string,
 
   bg: string
@@ -118,7 +99,6 @@ export const badgeList: BadgeMeta[] = [
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key),
-<<<<<<< HEAD
 import { LucideIcon } from "lucide-react",;
 import {;
   BadgeCheck, // publishing a listing;
@@ -131,7 +111,6 @@ import {;
 ;
 ;
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { LucideIcon } from "lucide-react",;
 import {;
@@ -142,32 +121,24 @@ import {;
   BadgePlus,  // first action;
   BadgeDollarSign // monetization;
 } from "lucide-react",;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export type BadgeKey =;
   | "first_listing";
   | "top_contributor";
   | "profile_complete";
   | "featured_creator";
-=======
 
 export type BadgeKey =;"
   | "first_listing";"
   | "top_contributor";"
   | "profile_complete";"
   | "featured_creator";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "first_action";
 
 export interface BadgeMeta {};
   key: BadgeKey;
   name: string;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   key: BadgeKey;
   name: string,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
   icon: LucideIcon;
 
@@ -207,13 +178,9 @@ export interface BadgeMeta {};
     description: "Earned your first AI dollar in the marketplace.";
 
   badgeList && badgeList.find((b) => b && b.key === key),
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green;
-=======
 
   color: string,
   bg: string;
@@ -257,12 +224,9 @@ export const badge_list: BadgeMeta[] = [;
 
     icon: BadgeDollarSign,"
     color: "#22C55E", // Soft Green;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
     icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     bg: "#F2FCE2",    // Soft Green;
   }];
 ;
@@ -327,17 +291,7 @@ export const badgeList: BadgeMeta[] = [;
   }];
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export const badgeList: BadgeMeta[] = []
   {}
 ";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

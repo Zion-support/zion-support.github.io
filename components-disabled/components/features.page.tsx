@@ -1,8 +1,6 @@
 
 export default function FeaturesPage() {;}
 
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 export default function FeaturesPage() {
   return (
@@ -52,7 +50,6 @@ export default function FeaturesPage() {
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
   return (
 
   return (
@@ -147,7 +144,6 @@ export default function FeaturesPage() {
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
-=======
   )import EnhancedLayout from '../components / layout / EnhancedLayout';
 
 export default /**;
@@ -248,7 +244,6 @@ export default function FeaturesPage() {return (<EnhancedLayout />;
           <MonitorSmartphone className=\"h-6 w-6 text-indigo-500\" />
           <div className=\"mt-3 text-lg font-semibold\" />Mobile Milestones</div>
           <p className=\"mt-1 text-sm opacity-80\" />Track deliverables and approvals anywhere.</p>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </div>
 
     </EnhancedLayout>

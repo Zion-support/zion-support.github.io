@@ -19,13 +19,7 @@ import {
   TableCell
   TableHead
   TableHeader
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   TableRow
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 import React from "react";
 import {};
@@ -35,23 +29,16 @@ import {};
   TableHead;
   TableHeader;
   TableRow;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   TableRow
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
 TableRow,;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 TableRow,;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -108,11 +95,9 @@ const activities = [
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
       category: "billing"
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
-=======
 "
 } from "@/components/ui/table";"
 import { Badge } from "@/components/ui/badge";"
@@ -121,7 +106,6 @@ import { CalendarIcon, Search } from "lucide-react";
       id: 6,"
       user: "Jamie Smith","
       action: "Updated budget","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       target: "Monthly spending cap",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),"
       category: "billing",
@@ -200,10 +184,8 @@ export function TeamActivity() {
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
 
-<<<<<<< HEAD
 
     if (diffMins < 60) {
-<<<<<<< HEAD
 export function TeamActivity() {;
   // Mock activity data;
   const activities = [;
@@ -266,8 +248,6 @@ id: 1,;
     const diffDays = Math && Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
     if (diffMins < 60) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return `${diffMins} minutes ago`;
     } else if (diffHrs < 24) {;
       return `${diffHrs} hours ago`;
@@ -296,20 +276,13 @@ export function TeamActivity() { return null; }
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
 
-=======
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 TableRow,;
 
 TableRow,;
@@ -491,12 +464,9 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
 
   const getCategoryBadge = (category: string) => {"
@@ -509,7 +479,6 @@ import { CalendarIcon, Search } from "lucide-react";
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
-<<<<<<< HEAD
   return (  return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -521,9 +490,7 @@ import { CalendarIcon, Search } from "lucide-react";
               type="search"
               placeholder="Search activities..."
 className="w-[200px] md:w-[300px] pl-9"import React from "react",;
-=======
               className="w-[200px] md:w-[300px] pl-9"import React from "react",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Table,;
   TableBody,;
@@ -595,7 +562,6 @@ export function TeamActivity() { return null; }
       candidates: { variant: "outline" },;"
       team: { variant: "secondary" },;"
       billing: { variant: "destructive" }};
-<<<<<<< HEAD
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
 };
   return (;
@@ -707,7 +673,6 @@ export function TeamActivity() { return null; }
     </div>
 )
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   const getCategoryBadge = (category: string) =>: any {
     const category_styles: Record<;
@@ -746,13 +711,10 @@ export function TeamActivity() { return null; }
           </Button>;
         </div>;
 </div>;
-<<<<<<< HEAD
       <div className="rounded-md border">;
-=======
       </div>;"
       <div className="rounded - md border">;"
 </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Table>;
 </Table>
           <TableHeader>;
@@ -776,16 +738,10 @@ export function TeamActivity() { return null; }
 
     </div>);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   {formatDate(activity.timestamp)}
 }                  {formatDate(activity.timestamp)}
                 </TableCell>
@@ -804,7 +760,6 @@ export function TeamActivity() { return null; }
       </div>
     </div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -813,9 +768,6 @@ export function TeamActivity() { return null; }
         </Table>
 </div>
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous;
@@ -825,8 +777,6 @@ export function TeamActivity() { return null; }
         </div>"
         <Button variant="outline" size="sm">
           Next;
-=======
-=======
       </div>}
       id: 1,;"
       user: "Alex Johnson",;""
@@ -1016,7 +966,6 @@ import { Input } from "@/components/ui/input",;"
           </TableBody>
         </Table>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>
 
       <div className="flex items-center justify-between">
@@ -1028,7 +977,6 @@ import { Input } from "@/components/ui/input",;"
         </div>
         <Button variant="outline" size="sm">
           Next
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </Button>
       </div>
     </div>
@@ -1149,32 +1097,18 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 }
 );
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   );
 }
   )
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       </div>}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 } "
 return (<div className="space-y-6" > <div className="flex items-center justify-between" > <h3 className="text-xl font-medium" >Recent Team Activity</h3> <div className="flex items-center gap-2" > <div className="relative" > <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" /> search"placeholder=" Search activities..."className=" w-[200px] md:w-[300px] pl-9"/> </div> <Button variant=" outline"size=" icon"className=" h-10 w-10"> <CalendarIcon className=" h-4 w-4"/>  </div> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>User <TableHead>Activity <TableHead>Target <TableHead>Category <TableHead>Time   <TableBody> {")
   activities.map ( (activity) => (<TableRow key= {
@@ -1185,4 +1119,3 @@ pr-12325
 }> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </div> <div className=" flex items-center justify-between"> <Button variant=" outline"size=" sm"> Previous </Button> <div className=" text-sm text-muted-foreground"> Page 1 of 10 </div> <Button variant=" outline"size=" sm" > Next </Button> </div> </div>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

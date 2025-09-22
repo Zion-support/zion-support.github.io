@@ -9,20 +9,8 @@ import { flagContent } from './flagContent';
 
 export const monitorContent = async (
 export const monitorContent = async (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 export const monitorContent = async (;
 
 // Content monitoring functionality
@@ -35,7 +23,6 @@ import { flagContent } from './flagContent';
 
 export const monitorContent = async (
 export const monitorContent = async (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -52,30 +39,21 @@ if (analysis && analysis.isSuspicious) {
     if (analysis && analysis.reasons.some(r => 
       r && r.includes('payment') || 
       r && r.includes('external') || 
-<<<<<<< HEAD
-<<<<<<< HEAD
       r && r.includes('bypass')
 
     )) {'
       severity = 'dangerous'
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     )) {
       severity = 'dangerous'
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
-=======
 
 // Content monitoring functionality;'
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;'
 import { analyzeContent } from './analyzeContent',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { flagContent } from './flagContent',;
 /**;
  * Create a monitoring system helper to easily monitor any content;
@@ -98,21 +76,13 @@ export const monitorContent = async (;
     )) {;'
       severity = 'dangerous';
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     }
-=======
       r && r.includes('bypass')    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       r && r.includes('bypass')    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       severity = 'dangerous'
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     await flagContent(
       userId;
       userEmail;
@@ -122,17 +92,11 @@ export const monitorContent = async (;
       severity;
       analysis && analysis.reasons.join();
 undefined // IP address would be added in a real implementation
-<<<<<<< HEAD
-<<<<<<< HEAD
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   }
 }
@@ -148,9 +112,7 @@ undefined // IP address would be added in a real implementation
       analysis.reasons.join(),;
       undefined // IP address would be added in a real implementation;
     ),;
-=======
       undefined // IP address would be added in a real implementation'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // If this is a 'dangerous' flag, automatically hide content;
     // This would be implemented in a real system with appropriate flags'
     if (severity === 'dangerous') {'
@@ -159,20 +121,13 @@ undefined // IP address would be added in a real implementation
 }
   }
 };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Content monitoring functionality;
 import {FraudFlag, FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
-=======
 // Content monitoring functionality;'
 import {FraudFlag, FraudSeverity} from '@/types / fraud';'
 import {analyze_content} from './analyze_content';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {flag_content} from './flag_content';
 /**;
 * Create a monitoring system helper to easily monitor any content;
@@ -231,7 +186,6 @@ pr-12325
       content;
       severity;
       analysis.reasons.join ();
-<<<<<<< HEAD
       undefined // IP address would be added in a real implementation);
 }
     await flagContent(
@@ -257,7 +211,6 @@ pr-12325
       analysis.reasons.join ();
       undefined // IP address would be added in a real implementation);
 
-<<<<<<< HEAD
 
 ;'
     // If this is a 'dangerous' flag, automatically hide content;
@@ -273,17 +226,12 @@ if ( {) {}
 if ( {) {
   $2
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.log ('Auto - hiding dangerous content:', content_id);
       // Code to hide content would go here;
     }
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 };
     }
@@ -292,23 +240,12 @@ if ( {) {
     }
   }
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       undefined // IP address would be added in a real implementation);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     // Check condition;
       console.log ('Auto - hiding dangerous content:', content_id);
       // Code to hide content would go here;
 };
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

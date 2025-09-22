@@ -9,13 +9,6 @@ interface ContractBuilderProps {
   onContractGenerated?: (contractContent: string) => void
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -26,7 +19,6 @@ import {ContractForm, ContractFormValues} from "./components/ContractForm";
 import {ContractPreview} from "./components/ContractPreview";
 import {TemplateManager} from "./templates/TemplateManager";
 import {SmartContractBuilder} from "./SmartContractBuilder";
-<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -63,11 +55,6 @@ interface ContractBuilderProps {
 
   onContractGenerated?: (contractContent: string) => void
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 interface ContractBuilderProps {}
   isOpen: boolean;
   onClose: () => void;
@@ -85,8 +72,6 @@ import {ContractPreview} from "./components/ContractPreview";"
 import {TemplateManager} from "./templates/TemplateManager";"
 import {SmartContractBuilder} from "./SmartContractBuilder";
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 }
   isOpen: boolean;,
@@ -113,7 +98,6 @@ pr-12325
 
   onContractGenerated?: (contractContent: string) => void
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -123,10 +107,6 @@ interface ContractBuilderProps {;
 }
 export function ContractBuilder(): any ({;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -143,20 +123,16 @@ interface ContractBuilderProps {
 
 onContractGenerated?: (contractContent: string) => void
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ContractBuilder({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   isOpen;
   onClose;
   talent;
   clientName;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   onContractGenerated;
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
@@ -170,9 +146,7 @@ export function ContractBuilder({
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {;
     setFormValues(templateData);
-=======
 export function ContractBuilder() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   const handleContractGenerated = (contract: string) => {;
@@ -238,14 +212,9 @@ if ( {) {}
 
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-=======
 export function ContractBuilder({;export function ContractBuilder({;
-=======
 export function ContractBuilder({;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isOpen;
   onClose;
   talent;
@@ -392,32 +361,25 @@ export function ContractBuilder({
 export function ContractBuilder({;export function ContractBuilder({;
   isOpen;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function ContractBuilder({;export function ContractBuilder({;
   isOpen;
   onClose;
   talent;
   clientName;}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onContractGenerated
 }: ContractBuilderProps) {
-=======
 
   onContractGenerated;
 }: ContractBuilderProps) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [activeTab, setActiveTab] = useState<string>("form"),
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
 undefined;
   ),
-<<<<<<< HEAD
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
 
-<<<<<<< HEAD
 
           onClose()
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
@@ -425,7 +387,6 @@ undefined;
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
   },
@@ -472,9 +433,6 @@ size="sm"                onClick={() => setTemplateManagerOpen(true)}
                 <Save className="h-4 w-4" />;
                 Templates;
               </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (showSmartContractBuilder) {
     return (
       <SmartContractBuilder
@@ -483,14 +441,7 @@ size="sm"                onClick={() => setTemplateManagerOpen(true)}
           setShowSmartContractBuilder(false);
           onClose()
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",;
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -500,7 +451,6 @@ import { TalentProfile } from "@/types/talent",;
 import { ContractForm, ContractFormValues } from "./components/ContractForm",;
 import { ContractPreview } from "./components/ContractPreview",;
 import { TemplateManager } from "./templates/TemplateManager",;
-=======
 "
 import { useState } from "react",;"
 import { Dialog, DialogContent } from "@/components/ui/dialog",;"
@@ -511,7 +461,6 @@ import { TalentProfile } from "@/types/talent",;"
 import { ContractForm, ContractFormValues } from "./components/ContractForm",;"
 import { ContractPreview } from "./components/ContractPreview",;"
 import { TemplateManager } from "./templates/TemplateManager",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SmartContractBuilder } from "./SmartContractBuilder",;
 interface ContractBuilderProps {;
   isOpen: boolean,;
@@ -537,25 +486,16 @@ export function ContractBuilder() { return null; }
         onClose={() => {;
           setShowSmartContractBuilder(false);
           onClose();
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }}
         talent={talent}
         client_name={client_name}
-<<<<<<< HEAD
         onContractGenerated={onContractGenerated}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
         onContractGenerated={onContractGenerated}
       />
     )
   }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -575,7 +515,6 @@ size="sm"
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <Button
                 variant="secondary"
                 size="sm"
@@ -615,25 +554,14 @@ size="sm"
 
 <ContractForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               talent={talent}
-=======
         onContractGenerated={onContractGenerated}                variant="secondary"
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}              talent={talent}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         onContractGenerated={onContractGenerated}                variant="secondary"
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}              talent={talent}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
         onContractGenerated={onContractGenerated}                variant="secondary"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}              talent={talent}
 
@@ -768,7 +696,6 @@ if ( {) {
 
 <ContractForm
               talent={talent}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
@@ -780,15 +707,11 @@ if ( {) {
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         />;
       </DialogContent>;
     </Dialog>;
   );
-<<<<<<< HEAD
 }
 
             />;
@@ -811,24 +734,15 @@ on_close={on_close}"
         />;
       </DialogContent>;
     </Dialog>);
-<<<<<<< HEAD
   ),; interface ContractBuilderProps {
-=======
 }  ),; interface ContractBuilderProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }  ),; interface ContractBuilderProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   ),; interface ContractBuilderProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 
 ;
   ),; interface ContractBuilderProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isOpen: boolean;
 onClose: () => void;
 talent: TalentProfile;
@@ -889,21 +803,7 @@ return (<SmartContractBuilder isOpen= {
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 </ContractForm>
           </TabsContent>;"
@@ -960,4 +860,3 @@ pr-12325
   );
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

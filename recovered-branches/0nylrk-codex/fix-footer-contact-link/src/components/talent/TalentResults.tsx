@@ -1,39 +1,23 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import {TalentProfile} from "@/types/talent";
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
 import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {TalentProfile} from "@/types/talent";
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
 import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
 import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
-<<<<<<< HEAD
 import { TalentGrid } from "@/components/talent/TalentGrid",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface TalentResultsProps {
-=======
 import React from "react","
 import { TalentProfile } from "@/types/talent","
 import { ActiveFilters } from "@/components/talent/ActiveFilters",";
@@ -41,7 +25,6 @@ import { ResultsHeader } from "@/components/talent/ResultsHeader";"
 import { TalentGrid } from "@/components/talent/TalentGrid";"
 import { ResultsHeader } from "@/components/talent/ResultsHeader","
 import { TalentGrid } from "@/components/talent/TalentGrid",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface TalentResultsProps {}
   filteredTalents: TalentProfile[];
@@ -52,36 +35,24 @@ interface TalentResultsProps {}
 handleToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
   activeFiltersProps: {
-<<<<<<< HEAD
 
 import React from "react";
 import {TalentProfile} from "@/types/talent";
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
 import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
-<<<<<<< HEAD
-=======
   handleToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
   activeFiltersProps: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     selectedSkills: string[],
-=======
 import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     selectedSkills: string[],
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 "
 import {TalentGrid} from "@/components/talent/TalentGrid";"
     selectedSkills: string[],
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
     toggleAvailability: (availability: string) => void,
@@ -91,19 +62,11 @@ pr-12325
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     clearFilters: () => void
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     clearFilters: () => void;
 
@@ -131,22 +94,14 @@ export function TalentResults({}
 
   isAuthenticated,
 
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   activeFiltersProps
 }: TalentResultsProps) {
   return (
     <div className="flex-1">
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",;
 import { TalentProfile } from "@/types/talent",;
 import { ActiveFilters } from "@/components/talent/ActiveFilters",;
@@ -154,8 +109,6 @@ import { ResultsHeader } from "@/components/talent/ResultsHeader",;
 
 import { TalentGrid } from "@/components/talent/TalentGrid",;
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface TalentResultsProps {;
   filteredTalents: TalentProfile[],;
   isLoading: boolean,;
@@ -173,15 +126,11 @@ interface TalentResultsProps {;
     toggleRegion: (region: string) => void,;
 priceRange: [number, number];
 
-=======
     priceRange: [number, number];
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }: TalentResultsProps) {
   return (
     <div className="flex-1">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
@@ -189,8 +138,6 @@ priceRange: [number, number];
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   filteredTalents;
   isLoading;
   viewProfile;
@@ -202,7 +149,6 @@ priceRange: [number, number];
 }: TalentResultsProps) {;
 return ("
     <div className="flex-1">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Active filters */}
 
   activeFiltersProps;)
@@ -225,8 +171,6 @@ return ("
         talents={filteredTalents}
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from './react';
 import { TalentProfile } from '@/types / talent';
 import { ActiveFilters } from '@/components / talent / ActiveFilters';
@@ -273,41 +217,24 @@ function TalentResults() {
         is_loading={is_loading}
         onTalentClick={view_profile}
         view_profile={view_profile}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         handleRequestHire={handleRequestHire}
         savedTalentIds={saved_talents}
         onToggleSave={handleToggleSave}
 
         clearFilters={activeFiltersProps && activeFiltersProps.clearFilters}
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
 
 handleRequestHire={handleRequestHire}
         savedTalentIds={saved_talents}
         onToggleSave={handleToggleSave}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       />;
     </div>;
   );
 }
-<<<<<<< HEAD
 
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 handleRequestHire={handleRequestHire}
         savedTalentIds={savedTalents}
         onToggleSave={handleToggleSave}
@@ -317,7 +244,6 @@ handleRequestHire={handleRequestHire}
     </div>
   )
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         handleRequestHire={handleRequestHire}
         savedTalentIds={saved_talents}
         onToggleSave={handleToggleSave}
@@ -327,38 +253,21 @@ handleRequestHire={handleRequestHire}
 }
 
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;
     </div>);
 }
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 ;
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 ;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
@@ -432,4 +341,3 @@ export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _han
 ;
 
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export type FilterType =
   | "all"
@@ -17,59 +12,39 @@ interface NotificationFilterProps {
   onFilterChange: (filter: FilterType) => void;
 }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
-=======
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 
 interface NotificationFilterProps {
   filter: FilterType,
   onFilterChange: (filter: FilterType) => void
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react',;
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;
 interface NotificationFilterProps {;
   filter: FilterType,;
 onFilterChange: (filter: FilterType) => void;
-<<<<<<< HEAD
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter
   onFilterChange
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 import React from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export type FilterType =
-=======
   onFilterChange: (filter: FilterType) => void;export type FilterType =
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   onFilterChange: (filter: FilterType) => void;export type FilterType =
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   | "all"
   | "unread"
   | "onboarding"
   | "messages"
-=======
 import React from "react";"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -78,7 +53,6 @@ export type FilterType ="
   | "unread""
   | "onboarding""
   | "messages"";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "system";
 
 interface NotificationFilterProps {}
@@ -115,22 +89,14 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
         </TabsList>
       </Tabs>
     </div>
-<<<<<<< HEAD
   );
 }
 
   )
 },
 };
-<<<<<<< HEAD
   )
 },
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 };
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
@@ -180,11 +146,6 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
 };
   )
 },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({}
   filter,
   onFilterChange,
@@ -218,8 +179,5 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({}
 ;
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import React from 'react';
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

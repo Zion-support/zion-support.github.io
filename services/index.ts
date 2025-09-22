@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 // Export all micro SaaS services;
 ;
 // Export service types and interfaces;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type {
 export type {
   // TODO: Implement
@@ -27,16 +17,12 @@ export type {
 ;
 
 export type {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';export type {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export { textAnalysisService } from './textAnalysisService';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ShortUrl;
   UrlAnalytics;
   ClickEvent;
@@ -46,7 +32,6 @@ export type {export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
-=======
 
 ;
 
@@ -56,59 +41,39 @@ export { urlShortenerService } from './urlShortenerService';'
 export { passwordGeneratorService } from './passwordGeneratorService';'
 export { qrCodeService } from './qrCodeService';'
 export { fileConverterService } from './fileConverterService';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export { textAnalysisService } from './textAnalysisService';
 ShortUrl;
   UrlAnalytics;
   ClickEvent;
   CreateShortUrlRequest;'
 } from './urlShortenerService';
-<<<<<<< HEAD
 export type {
 
 export type {;
 export type {
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export type {};
 export type {;
 
 export type {;
 export type {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;'
 } from './passwordGeneratorService';
-<<<<<<< HEAD
 export type {
 
 export type {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 
 export type {};
 export type {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export type {};
 export type {;
 export type {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export type {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate;'
@@ -117,27 +82,16 @@ export type {
 
 export type {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 
 export type {};
 export type {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export type {};
 export type {;
 export type {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export type {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
@@ -147,19 +101,11 @@ export type {
 
 export type {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export type {};
 export type {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Export service types and interfaces
 export type {
   ShortUrl,
@@ -253,15 +199,10 @@ export type {
 
 export type {
 export type {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export type {};
 export type {;
 export type {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 ;
 
@@ -329,7 +270,6 @@ export type {
 
 export type {;
 export type {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -361,14 +301,9 @@ export const SERVICE_CATEGORIES = {}
 } as const;
 ;
 // Service metadata for the application;
-<<<<<<< HEAD
 export const SERVICES_METADATA = {
-<<<<<<< HEAD
   urlShortener: {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export type {;
 
@@ -386,28 +321,19 @@ export type {
 
 export type {;
 export type {  url_shortener: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     name: 'URL Shortener',
 
 ';
     name: 'URL Shortener',;
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     description: 'Create short, trackable URLs with analytics';
-=======
     name: 'URL Shortener',,
   description: 'Create short, trackable URLs with analytics';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: '🔗';
-=======
 
 '
     description: 'Create short, trackable URLs with analytics';'
     icon: '🔗';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     category: 'UTILITIES';
     features: [;'
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation';
@@ -425,8 +351,6 @@ pricing: 'Free',
   }
   text_analysis: {
 } from './textAnalysisService';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Service categories for easy discovery;
   name: 'Utility Tools';
@@ -586,34 +510,24 @@ export const SERVICES_METADATA = {
       'Language detection'
     ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
 // Service availability and status
 export const getServiceStatus = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
 
@@ -626,21 +540,10 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };'
     fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };'
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   return {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
-=======
 export const getServiceStatus = () => {  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 // Service usage statistics
 export const getServiceStats = () => {
@@ -650,14 +553,10 @@ export const getServiceStats = () => {
     totalRequests: 2847500;
     averageResponseTime: 125
     services: {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
-=======
 
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 }
@@ -841,38 +740,28 @@ textAnalysis: {}
 }
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
     pricing: 'Free (Basic) / $19.99 / month (Pro)','
     api_endpoint: '/api / text - analysis';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService',;
 export { passwordGeneratorService } from './passwordGeneratorService',;
 export { qrCodeService } from './qrCodeService',;
 export { fileConverterService } from './fileConverterService',;
-=======
 
 // Export all micro SaaS services;'
 export { urlShortenerService } from './urlShortenerService',;'
 export { passwordGeneratorService } from './passwordGeneratorService',;'
 export { qrCodeService } from './qrCodeService',;'
 export { fileConverterService } from './fileConverterService',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export { textAnalysisService } from './textAnalysisService',;
 // Export service types and interfaces;
 export type {;
@@ -947,37 +836,20 @@ export const getServiceStatus = () =>: any {}
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },;
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },;
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
 
     }
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
 export const getServiceStats = () =>: any {}
   return {};
     total_users: 15420;
     total_requests: 2847500;
-=======
-=======
 export const getServiceStatus = () => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
@@ -986,8 +858,6 @@ export const getServiceStatus = () => {
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
   };
 };
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
@@ -1045,7 +915,6 @@ export const getServiceStats = () => {
   return {
 totalUsers: 15420,
     totalRequests: 2847500,
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     averageResponseTime: 125,
 
     services: {
@@ -1318,31 +1187,15 @@ export const getServiceStats = () => {;
 
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   };
 };
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
   };
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 }
 ;
@@ -1373,4 +1226,3 @@ export const getServiceStats = () =>: any {
   }
 
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

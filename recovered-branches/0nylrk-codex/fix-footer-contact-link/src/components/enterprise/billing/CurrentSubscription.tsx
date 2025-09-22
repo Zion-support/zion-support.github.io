@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function CurrentSubscription() {
   // Mock subscription data
 
@@ -41,10 +39,6 @@ import {Badge} from "@/components/ui/badge";
     plan: "Business","
     status: "active",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const subscription = {
     plan: "Business"
@@ -63,21 +57,10 @@ import {Badge} from "@/components/ui/badge";
     startDate: "May 1, 2025",
     nextBillingDate: "May 1, 2026",
     amount: "$1,999.00",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     teamSeats: {
       used: 32
       total: 50
     }
-<<<<<<< HEAD
 
   return (
     <Card>
@@ -195,28 +178,19 @@ import {Badge} from "@/components/ui/badge";
       </CardFooter>
     </Card>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
   return (
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
   },
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
   },
 
   return (
 
   return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -231,10 +205,8 @@ export function CurrentSubscription() {;
     nextBillingDate: "May 1, 2026",;
     amount: "$1,999.00",;
     teamSeats: {;
-=======
 
     teamSeats: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       used: 32;
 
 import React from "react",""
@@ -468,8 +440,6 @@ function CurrentSubscription() {
             </p>;
           </div>;
         </div>;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="rounded-lg bg-muted p-4 mt-4">;
           <div className="space-y-2">;
             <div className="flex items-center justify-between">;
@@ -483,7 +453,6 @@ function CurrentSubscription() {
 
   return (
 
-=======
         <div className="rounded - lg bg - muted p - 4 mt - 4">;
           <div className="space - y-2">;
             <div className="flex items - center justify - between">;
@@ -494,7 +463,6 @@ function CurrentSubscription() {
               You're saving $4, 797.60 per year with annual billing.;
 You're saving $4,797.60 per year with annual billing.;
               You're saving $4,797.60 per year with annual billing.;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
           </div>;
         </div>;
@@ -507,32 +475,25 @@ You're saving $4,797.60 per year with annual billing.;
 </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <CardFooter className="flex justify-between">;
-=======
 
 }
       <CardFooter className="flex justify - between">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
     </Card>);
 }
 ;    </Card>);
-=======
 </Card>);
         </div>;            </div>;
           </div>;
         </div>;
       </CardContent>;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <CardFooter className="flex justify-between">;
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
-<<<<<<< HEAD
     </Card>);
 }
 ;    </Card>);
@@ -540,7 +501,6 @@ You're saving $4,797.60 per year with annual billing.;
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </Card>
 };
 flex items-center justify-between"> <CardTitle>Current Subscription</CardTitle> <Badge variant=" outline"className=" bg-green-500 text-white">Active</Badge> </div> <CardDescription>Your subscription details and plan information</CardDescription> </CardHeader> </p> </div> </div> <div className=" rounded-lg bg-muted p-4 mt-4"> <div className=" space-y-2"> <div className=" flex items-center justify-between"> <div className=" text-sm font-medium">Annual discount applied</div> <div className=" text-sm font-medium text-green-600">Save 20%</div> </div> <div className=" text-xs text-muted-foreground"> You're saving $4, 797.60 per year with annual billing. </div> </div> </div> </CardContent> <CardFooter className=" flex justify-between"> <Button variant=" outline">Change Plan</Button> <Button variant=" destructive" >Cancel Subscription</Button> </CardFooter> </Card>) 
@@ -549,16 +509,10 @@ flex items-center justify-between"> <CardTitle>Current Subscription</CardTitle> 
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 ;
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import React from "react",""
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",""
 import { Button } from "@/components/ui/button";""
@@ -694,4 +648,3 @@ pr-12325
     </Card>;"
 flex items-center justify-between"> <CardTitle>Current Subscription</CardTitle> <Badge variant=" outline"className=" bg-green-500 text-white">Active</Badge> </div> <CardDescription>Your subscription details and plan information</CardDescription> </CardHeader> </p> </div> </div> <div className=" rounded-lg bg-muted p-4 mt-4"> <div className=" space-y-2"> <div className=" flex items-center justify-between"> <div className=" text-sm font-medium">Annual discount applied</div> <div className=" text-sm font-medium text-green-600">Save 20%</div> </div> <div className=" text-xs text-muted-foreground"> You're saving $4, 797.60 per year with annual billing. </div> </div> </div> </CardContent> <CardFooter className=" flex justify-between"> <Button variant=" outline">Change Plan</Button> <Button variant=" destructive" >Cancel Subscription</Button> </CardFooter> </Card>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

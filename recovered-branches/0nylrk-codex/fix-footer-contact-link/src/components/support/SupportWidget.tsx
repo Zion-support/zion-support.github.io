@@ -1,50 +1,32 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
 import {MessageSquare, Info, X} from "lucide-react";
 import {cn} from "@/lib/utils";
-=======
 import React, { useState } from "react";"
 import {Button} from "@/components/ui/button";"
 import {ChatBotPanel} from "./ChatBotPanel";"
 import {MessageSquare, Info, X} from "lucide-react";"
 import {cn} from "@/lib/utils";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() { return null; }
   const { theme } = useTheme();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
     <>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from "lucide-react",
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
 <Button
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { useTheme } from "@/hooks/useTheme",
 export function SupportWidget() {
@@ -64,30 +46,17 @@ export function SupportWidget() {;
   const { theme } = useTheme();
   return (;
     <>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -96,35 +65,26 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
-<<<<<<< HEAD
 
       {/* Support panel */}
       {isOpen && (;
         <div
           className={cn(
-<<<<<<< HEAD
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
 
 import React, { useState } from "react",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return (
     <>
   return (
 import React, { useState } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from "lucide-react",
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { cn } from "@/lib/utils";
-=======
         <Button;
       {/* Fixed button in the bottom right */}
       {!isOpen && (
@@ -135,7 +95,6 @@ import { Button } from "@/components/ui/button","
 import { ChatBotPanel } from "./ChatBotPanel","
 import { MessageSquare, Info, X } from "lucide-react",";
 import { cn } from "@/lib/utils";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useTheme } from "@/hooks/useTheme";
 export function SupportWidget() {};
   const [isOpen, setIsOpen] = useState(false);
@@ -174,10 +133,6 @@ export function SupportWidget() {};
               </h3>;
             </div>;"
             <div className="flex items-center gap-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false),;
   const { theme } = useTheme();
@@ -201,9 +156,7 @@ export function SupportWidget() {;
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
             theme === "dark"
               ? "bg-zion-blue-dark border border-zion-blue-light"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}
@@ -216,11 +169,6 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Button
                 variant="ghost"
                 size="icon"
@@ -303,12 +251,8 @@ onClick={() => window.location.href = "/help"}
             </div>;
           </div>;
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ChatBotPanel />;
         </div>;
       )}
@@ -319,7 +263,6 @@ const [is_open, setIsOpen] = useState (false);
   const { theme } = use_theme ();
       {!is_open && (
 <Button;
-<<<<<<< HEAD
           on_click={() => setIsOpen (true)}"
           size="icon";"
           className="fixed bottom - 6 right - 6 h - 14 w - 14 rounded - full shadow - lg bg - zion - purple hover:bg - zion - purple - light text - white z - 50";"
@@ -337,13 +280,11 @@ const [is_open, setIsOpen] = useState (false);
               : "bg - white border border - gray - 200")}""
           style={{ height: "600px", max_height: "80vh" }}"
         >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <MessageSquare className="h - 6 w - 6" />;
         </Button>)}
       {/* Support panel */}
       {is_open && (
         <div;
-<<<<<<< HEAD
           className={cn ("
             "fixed bottom - 6 right - 6 w-[380px] rounded - 2xl shadow - xl z - 50 flex flex - col";"
             theme === "dark";"
@@ -384,8 +325,5 @@ const [is_open, setIsOpen] = useState (false);
     </>);
 }
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,23 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const resp = await fetch(;
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 async function getLatest(pkg) {
 
 const resp = await fetch(
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`
 ursor/expand-services-advertise-and-build-project-4b36
-=======
 const resp = await fetch(;
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!resp && resp.ok) return null;
     const json = await resp && resp.json();
     return json && json.version || null;
@@ -59,7 +50,6 @@ try {
         repo,
         path: 'data/reports/deps/weekly-dependencies && dependencies.json',
         content: JSON && JSON.stringify(report, null, 2),
-<<<<<<< HEAD
         message: 'chore(automation): weekly dependency insights',        token,
 const { upsert_file } = require ('./_lib / github');
 const fs = require ('fs');
@@ -123,10 +113,7 @@ if ( {) {}
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         token,
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       });
     }
     return {}
@@ -159,11 +146,8 @@ async function getLatest(pkg) {
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (_) {
-=======
   } catch (_) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return null;
-=======
   } catch (_) {
     return null;
   // TODO: Implement
@@ -197,7 +181,6 @@ if (return null, ) {
   return json.version || null;
   } catch (_) {}
     return null;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 exports.handler = async function () {try {const pkg_path = path.join (process.cwd (), 'package.json'),const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8')),const deps = { ...(pkg.dependencies || {}), ...(pkg.dev_dependencies || {}) },const entries = [],for (const [name, current] of Object.entries (deps)) ;
   const latest = await get_latest (name),// Check condition;
@@ -220,11 +203,8 @@ const report = { updatedAt: Date.now(), entries },
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN);
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
     if (owner && repo && token) {
-=======
     if (owner && repo && token) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies && dependencies.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
       entries.push ({ name, current, latest, outOfDate: current.replace (/^[^0 - 9]*/, '') !== latest })}
 
@@ -235,9 +215,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {}
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 exports.handler = async function () {
   try {
     const pkg_path = path.join (process.cwd (), 'package.json'),
@@ -267,25 +244,12 @@ if ( {) {}
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 exports.handler = async function () {
   try {
     const entries = [];
@@ -407,5 +371,3 @@ const path = require ('path';
     const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8';
       entries.push ({ name, current, latest, outOfDate: current.replace (/^[^0 - 9]*/, '';
       await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights';
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

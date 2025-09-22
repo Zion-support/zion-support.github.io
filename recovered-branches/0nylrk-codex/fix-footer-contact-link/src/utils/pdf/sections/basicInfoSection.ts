@@ -1,21 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addBasicInfoSection(
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
@@ -41,9 +34,6 @@ doc && doc.setFontSize(24);
   // Add summary if available
 yPos += (summaryLines.length * 6) + 10
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   return yPos
 }
@@ -60,9 +50,6 @@ yPos += (summaryLines.length * 6) + 10
   // Add summary if available;
   }
 
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
@@ -78,7 +65,6 @@ export function addBasicInfoSection(;
   colors: PdfThemeColors
 ): number {
 // Add header with name and title  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return yPos
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types / resume';
@@ -97,8 +83,6 @@ export function addBasicInfoSection (;
   // Check condition;
 if ( {) {}
   $2;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   let y_pos = 30;
   // Check condition;
@@ -136,11 +120,6 @@ pr-12325
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 }
 }}
@@ -167,21 +146,11 @@ yPos += 10;
   }
   return yPos
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 // Add summary if available return yPos;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

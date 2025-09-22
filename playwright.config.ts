@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from 'react';
 ;
 interface Playwright.configProps {;
@@ -16,7 +13,6 @@ interface Playwright.configProps {;
 
 import React from 'react';
 interface Playwright.configProps {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Add props here as needed
 
 }
@@ -28,32 +24,15 @@ export default function Playwright.config({ }: Playwright.configProps) {
       <p>This component is currently under development.</p>
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
 }
 
 }
 
 }
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 }
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }}}
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 origin/automation-improvements-final
 }}},
 }
@@ -90,37 +69,17 @@ origin/automation-improvements-final
 }
 }}}
 origin/main
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }}}
 }
 }}}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }}}
 ;
 }
-<<<<<<< HEAD
 }
 }
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 }
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
@@ -162,12 +121,8 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
   },
 });
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 const { defineConfig,devices } from "@playwright/test"; export default defineConfig({ testDir: "./tests/e2e"; fullyParallel: true; forbidOnly: !process.env.CI retries: process.env.C,I ? 2 :,0; workers: process.env.CI ? 1 : undefined; reporter: "html"; use: { baseURL: "http: trace: "on-first-retry"}; projects: [{ name: "chromium"; use: { .devices["Desktop Chrom,e"]}},{ name: "firefox"; use: { .devices["Desktop Firefo,x"]}},{ name: "webkit"; use: { .devices["Desktop Safar,i"]}},{ name: "Mobile Chrome"; use: { .devices["Pixe,l 5"]}},{ name: "Mobile Safari"; use: { .devices["iPhon,e 12"]}}]; webServer: { command: "npm run dev"; url: "http: reuseExistingServer: "!process.env.CI"}});'"'"
 const { defineConfig,devices } from "@playwright/test"; export default defineConfig({ testDir: "./tests/e2e"; fullyParallel: true; forbidOnly: !process.env.CI retries: process.env.C,I ? 2 :,0; workers: process.env.CI ? 1 : undefined; reporter: "html"; use: { baseURL: "http: trace: "on-first-retry"}; projects: [{ name: "chromium"; use: { .devices["Desktop Chrom,e"]}},{ name: "firefox"; use: { .devices["Desktop Firefo,x"]}},{ name: "webkit"; use: { .devices["Desktop Safar,i"]}},{ name: "Mobile Chrome"; use: { .devices["Pixe,l 5"]}},{ name: "Mobile Safari"; use: { .devices["iPhon,e 12"]}}]; webServer: { command: "npm run dev"; url: "http: reuseExistingServer: "!process.env.CI"}});'"'"
@@ -331,4 +286,3 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 }
 }
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,11 +1,8 @@
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-
 export const metadata = {
-  title: 'AI 2026: Operational Excellence Handbook | Zion Tech Group',
-  description: 'Practical handbook to run safe, reliable, and cost‑efficient autonomous agent platforms at scale.',
-  keywords: ['operational excellence', 'agents', 'reliability', 'cost optimization', 'governance'],
-};
+  title: 'AI 2026: Operational Excellence Handbook — Running Agent Platforms',
+  description:
+    'A concise handbook for safe, reliable, and efficient day-2 operations of autonomous agent platforms.',
+}
 
 export default function Page() {
   return (
@@ -38,5 +35,7 @@ export default function Page() {
         </div>
       </section>
     </main>
-  );
+  )
 }
+
+

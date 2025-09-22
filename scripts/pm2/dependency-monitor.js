@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -25,8 +20,6 @@ class DependencyMonitor {,;
     const logMessage = `[${timestamp}] ${message}\n`,;
 ,;
     try {,;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const fs = require('fs');
@@ -58,7 +51,6 @@ class DependencyMonitor {; constructor() {; this.projectRoot = process.cwd(); th
 ; return { exists: true, hooks: activeHooks }} catch (error) {; return { error: error.message }}};
 ; async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {; const report = {; timestamp: new Date().toISOString(), summary: {
       , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     low: 0
     }
     outdatedPackages: Object.keys(outdatedResult).length, packageLockStatus: packageLockInfo.exists ? 'healthy': 'missing', nodeVersion: nodeInfo.nodeVersion
@@ -70,25 +62,14 @@ class DependencyMonitor {; constructor() {; this.projectRoot = process.cwd(); th
 } catch (error) {this.log(`❌ Error running dependency monitor: ${error.message}`); process.exit(1)}}}
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
 monitor.run().catch(error = > {process.exit(1)});
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 monitor.run().catch(error = > {process.exit(1)});
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {,;
       console.error('Error writing to log: file:', error.message);
@@ -348,11 +329,7 @@ const monitor = new DependencyMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 }),;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
     low: 0;
     },
@@ -363,7 +340,6 @@ class DependencyMonitor {;
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json');
     this.startTime = Date.now();
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -1029,7 +1005,6 @@ pr-12325
     } catch (error) {;
       this.log(`❌ Error running dependency monitor: ${error.message}`);
       process.exit(1);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 };
 };
@@ -1063,9 +1038,6 @@ pr-12325
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     outdated_packages: Object.keys (outdated_result).length, packageLockStatus: packageLockInfo.exists ? 'healthy': 'missing', node_version: node_info.node_version,
     npm_version: node_info.npm_version} details: {
@@ -1177,30 +1149,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const monitor = new DependencyMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 monitor.run().catch(error = > {; process.exit(1)});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 `;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

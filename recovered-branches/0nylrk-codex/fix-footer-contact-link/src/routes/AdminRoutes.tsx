@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Admin Pages
 
 import QuoteManager from "@/pages/admin/QuoteManager",
@@ -30,14 +18,9 @@ import PartnerManager from "@/pages/admin/PartnerManager",
 import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 const AdminRoutes = () => {
 import TokenManager from "@/pages/admin/TokenManager",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 
 const AdminRoutes = () => {
@@ -52,11 +35,7 @@ import FraudDetection from "@/pages/admin/FraudDetection";
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 const AdminRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Routes>;
       <Route
         path="/admin/quotes"
@@ -68,14 +47,11 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",;
 ;
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 
-=======
 import QuoteManager from "@/pages/admin/QuoteManager",;
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",;
 import WhitelabelManager from "@/pages/admin/WhitelabelManager",;
@@ -84,7 +60,6 @@ import AppMetadataManager from "@/pages/admin/AppMetadataManager",;
 import SupportRequests from "@/pages/admin/SupportRequests",;
 import FraudDetection from "@/pages/admin/FraudDetection",;
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const AdminRoutes = () => {
 // Admin Pages;
@@ -369,17 +344,14 @@ element={
     </Routes>;
   )
 };
-=======
   )
 };
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default AdminRoutes;
 
 import { Fragment } from './react';'
 import { Route, Routes } from './react-router-dom';'
 import { ProtectedRoute } from '@/components / ProtectedRoute';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -407,15 +379,8 @@ const AdminRoutes = () =>: any {}
 
 export default AdminRoutes;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AdminRoutes;
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 <Routes> <Route path="/admin/quotes" element= {
 
 import { Fragment } from "react";""
@@ -548,23 +513,11 @@ export default AdminRoutes;
   );
 },;
 export default AdminRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 export default AdminRoutes;
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export default AdminRoutes;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </Route>)
 }/> </Routes>) "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

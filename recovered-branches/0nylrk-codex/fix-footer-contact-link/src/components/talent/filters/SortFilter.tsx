@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import {
-=======
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 import {
   // TODO: Implement
 }
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Select,
   SelectContent,
   SelectItem,
@@ -21,23 +12,15 @@ pr-12325
   SelectTrigger,
 SelectValue} from "@/components/ui/select",
 import { SortFilterProps } from "@/types/filters",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   SelectValue,
 } from "@/components/ui/select";
 import { SortFilterProps } from "@/types/filters";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">
         Sort by
-=======
   SelectValue,;
 } from "@/components/ui/select";"
 import { SortFilterProps } from "@/types/filters";
@@ -46,7 +29,6 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {}
     <div className="mb-6">"
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </label>
       <Select value={sortOption} onValueChange={setSortOption}>"
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">"
@@ -61,14 +43,8 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {}
         </SelectContent>
       </Select>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {;
   Select,;
   SelectContent,;
@@ -79,9 +55,6 @@ import { SortFilterProps } from "@/types/filters";
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
   return (;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
@@ -99,13 +72,10 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
 
 }
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import {;
   Select,;
   SelectContent,;
@@ -131,7 +101,6 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
 
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Select,
   SelectContent,
   SelectItem,
@@ -166,12 +135,10 @@ function SortFilter() {
   )
 
           <SelectItem value="price-low">Price:Low to High</SelectItem>;
-=======
 
   )
 "
           <SelectItem value="price-low">Price:Low to High</SelectItem>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <SelectItem value="price-high">Price:High to Low</SelectItem>;
         </SelectContent>;
       </Select>;
@@ -191,10 +158,6 @@ function SortFilter() {
 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         <SelectContent className="bg-zion-blue border-zion-blue-light text-white">"
           <SelectItem value="relevance">Relevance""
@@ -230,16 +193,8 @@ pr-12325
 </SelectTrigger>"
 
 import {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   )
 
 import {}
 '";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

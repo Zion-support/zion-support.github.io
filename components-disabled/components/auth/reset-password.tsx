@@ -16,7 +16,6 @@
       <h1 className="text-2xl font-semibold">Reset Password</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Update your password below.</p>;
     </div>;
-<<<<<<< HEAD
   )}}
 import React from 'react';
 export default function ResetPasswordPage() {return (<div className='container mx-auto px-4 py-10'>;
@@ -29,13 +28,11 @@ export default function ResetPasswordPage() {return (<div className='container m
 import React from 'react';
 export default function ResetPasswordPage() {
   return (
-=======
     <div className="container mx-auto px-4 py-10">;"
 </div>"
       <h1 className="text-2xl font-semibold">Reset Password</h1>;""
       <p className="mt-2 text-gray-600 dark: text-gray-300">Update your password below.</p>;"
     </div>;"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     <div className='container mx-auto px-4 py-10'>
       <h1 className='text-2xl font-semibold'>Reset Password</h1>
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
@@ -68,15 +65,12 @@ function ResetPasswordPage() {
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Update your password below.</p>;
     </div>);
 }
-<<<<<<< HEAD
 
   );
 import React from 'react';
 
   )
-=======
   );
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function ResetPasswordPage() {
   return (
     <div className='container mx-auto px-4 py-10' />
@@ -157,9 +151,7 @@ export default function ResetPasswordPage() {
   );
 }
 }
-=======
 }
 }
       <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Update your password below.</p>
 
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

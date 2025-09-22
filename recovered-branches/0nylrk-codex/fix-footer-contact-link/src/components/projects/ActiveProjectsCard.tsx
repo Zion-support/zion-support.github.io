@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {BriefcaseIcon, Clock} from "lucide-react";
@@ -8,22 +7,14 @@ import {Badge} from "@/components/ui/badge";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
-<<<<<<< HEAD
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const { projects, isLoading } = useProjects();
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useEffect, useState } from "react",
 import { Link } from "react-router-dom",
 import { BriefcaseIcon, Clock } from "lucide-react",
@@ -34,8 +25,6 @@ import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import {useEffect, useState} from "react";"
 import {Link} from "react-router-dom";"
 import {BriefcaseIcon, Clock} from "lucide-react";"
@@ -54,7 +43,6 @@ import { Badge } from "@/components/ui/badge",";
 import { useProjects } from "@/hooks/useProjects";"
 import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { projects, isLoading } = useProjects();
 
 const [activeProjects, setActiveProjects] = useState<Project[]>([]);"
@@ -63,16 +51,8 @@ import { Project } from "@/types/projects",
 export function ActiveProjectsCard() {}
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
@@ -88,12 +68,8 @@ export function ActiveProjectsCard() {}
 
 }, [projects, isLoading]),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (isLoading) {
-=======
   if (isLoading) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
       <Card>
         <CardHeader>"
@@ -107,9 +83,6 @@ export function ActiveProjectsCard() {}
           <div className="space-y-2">
             {[1, 2].map(idx => ("
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
 import { BriefcaseIcon, Clock } from "lucide-react",;
@@ -147,35 +120,22 @@ export function ActiveProjectsCard() { return null; }
           <div className="space-y-2">;
             {[1, 2].map(idx => (;"
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
           </div>;
-=======
   useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects && projects.filter(p => ;
         ['offer_acceptedin_progress'].includes(p && p.status);          </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects && projects.filter(p => ;
         ['offer_acceptedin_progress'].includes(p && p.status);          </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </CardContent>;
       </Card>;
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (activeProjects.length === 0) {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return (
       <Card>
         <CardHeader>
@@ -294,11 +254,6 @@ return (
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 ))}
           </div>
@@ -366,7 +321,6 @@ return (
 
   if (activeProjects.length === 0) {
 
-<<<<<<< HEAD
   if (activeProjects && activeProjects.length === 0) {;
 
     return (
@@ -412,17 +366,9 @@ function ActiveProjectsCard() {}
   const [active_projects, setActiveProjects] = useState < Project[]>([]);
 ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   if (activeProjects && activeProjects.length === 0) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   if (activeProjects && activeProjects.length === 0) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         <CardFooter>;
           <Button variant="ghost" className="w-full" asChild>;
             <Link to="/projects">View All Projects</Link>;
@@ -536,4 +482,3 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
 ;
 return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span>  <CardDescription>Your ongoing work  <CardContent>) )"
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react',;
@@ -71,4 +67,3 @@ function AIEthicsAutomation() {
         </main>;
       </div>;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

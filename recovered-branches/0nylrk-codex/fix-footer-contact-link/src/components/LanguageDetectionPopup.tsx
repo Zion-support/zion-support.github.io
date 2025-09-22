@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -21,18 +18,11 @@ import {
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { useState, useEffect } from "react";"
 import { useTranslation } from "react-i18next";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -40,16 +30,9 @@ import { useTranslation } from "react-i18next";
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 AlertDialogTitle,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from "../components/ui/alert-dialog";
 import {}
   useLanguage,
@@ -58,9 +41,7 @@ import {}
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
 export function LanguageDetectionPopup() {
-=======
 export function LanguageDetectionPopup() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {;
   AlertDialog,;
   AlertDialogAction,;
@@ -72,7 +53,6 @@ import {;
 } from "../context/LanguageContext";
 
 export function LanguageDetectionPopup() {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } =;
@@ -94,10 +74,7 @@ export function LanguageDetectionPopup() {;
       setOpen(true);
     }
   }, []);
-<<<<<<< HEAD
   if (!detectedLanguage) return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const languageName =;
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
@@ -108,18 +85,13 @@ export function LanguageDetectionPopup() {;
   }
 
     await changeLanguage(detectedLanguage);
-=======
   if (!detectedLanguage) return null;    await changeLanguage(detectedLanguage);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   if (!detectedLanguage) return null;
 
     await changeLanguage(detectedLanguage);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setOpen(false);
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -155,7 +127,6 @@ export function LanguageDetectionPopup() { return null; }
   if (!detectedLanguage) return null,
 
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleAccept = async () => {}
     await changeLanguage(detectedLanguage),
@@ -175,7 +146,6 @@ export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false),;
   const { t } = useTranslation(),;
   const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,;
-<<<<<<< HEAD
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;
 
   useEffect(() => {;
@@ -190,8 +160,6 @@ export function LanguageDetectionPopup() {;
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">;
         <AlertDialogHeader>;"
           <AlertDialogTitle className="text-white">;
-<<<<<<< HEAD
-<<<<<<< HEAD
             {t("language && language.switch_to_detected", { language: languageName })}
           </AlertDialogTitle>;
           <AlertDialogDescription className="text-zion-slate-light">;
@@ -208,10 +176,8 @@ export function LanguageDetectionPopup() {;
             onClick={handleAccept}
 
             className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
-=======
 "
             className="bg-zion-purple text-white hover:bg-zion-purple-dark">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {t("general && general.yes")}
 
 );
@@ -224,26 +190,17 @@ className="bg-zion-purple text-white hover:bg-zion-purple-dark"
       </AlertDialogContent>
     </AlertDialog>
 );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {t('general.no')}
-=======
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;            {t('general.no')}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;            {t('general.no')}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </AlertDialogCancel>;
           <AlertDialogAction;
             onClick={handleAccept}"
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >'
             {t('general.yes')}
-<<<<<<< HEAD
           </AlertDialogTitle>;
           <AlertDialogDescription className="text-zion-slate-light">;
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
@@ -323,15 +280,11 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark";"
           >;
             {t('general.yes')}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect  } from './react';
 import { use_translation  } from './react - i18next';
@@ -369,36 +322,24 @@ function LanguageDetectionPopup() {
     // Check condition;
 if (return) {
   $2
-<<<<<<< HEAD
 
   );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
     // Mark as visited;
-=======
   );    // Mark as visited;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
     // Mark as visited;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   );
 }
     // Mark as visited;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     local_storage.set_item ("zion_has_visitedtrue");
-=======
 
   $2;
   );
 }
     // Mark as visited;"
     local_storage.set_item ("zion_has_visitedtrue");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
     // Get browser language;
     const browser_lang = navigator.language.substring (0, 2) as SupportedLanguage;
@@ -467,7 +408,6 @@ if (return null) {}
 }
 }
 
-=======
   useLanguage,;
   SupportedLanguage,;
   LanguageContextType,;"
@@ -566,4 +506,3 @@ pr-12325
     </AlertDialog>);
 }</AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

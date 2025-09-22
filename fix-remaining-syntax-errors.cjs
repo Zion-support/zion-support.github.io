@@ -2,8 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-
 console.log('🔧 Fixing remaining syntax errors...');
 
 // List of files with known syntax errors
@@ -81,4 +79,3 @@ filesToFix.forEach(file => {
 });
 
 module.exports = SyntaxErrorFixer;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

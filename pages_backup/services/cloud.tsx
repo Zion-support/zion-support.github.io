@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const cloudServices = []
   {}
@@ -105,7 +93,6 @@ return (
       title="Cloud Solutions - Zion Tech Group"
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     >
   return (
@@ -114,7 +101,6 @@ return (
         <title>Cloud Services - Zion Tech Group</title>"
         <meta name="description" content="Comprehensive cloud services including migration, infrastructure, database management, and security solutions." />
       </Head>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
@@ -135,11 +121,7 @@ className="text-center""
             </motion.div>;
           </div>;
         </section>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     >      <div className="min-h-screen bg-gray-50">
-=======
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -193,7 +175,6 @@ export default function CloudServicesPage() {
       </Head>
 
       <div className="min-h-screen bg-gray-50">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
@@ -201,7 +182,6 @@ export default function CloudServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -210,7 +190,6 @@ export default function CloudServicesPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Transform your business with our comprehensive cloud solutions.
                 From migration to optimization, we help you leverage the power of the cloud.
-=======
 "
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}"
@@ -226,14 +205,10 @@ export default function CloudServicesPage() {
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Transform your business with our comprehensive cloud solutions designed for scalability, 
                 reliability, and security.
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -318,7 +293,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -379,12 +353,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>
       </div>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
-=======
 }
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Cloud, Cpu, Database, Zap, Shield, Rocket;
@@ -692,10 +663,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 View Case Studies
 origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
-=======
           </div>;
         </section>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </section>
@@ -759,9 +728,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -798,4 +764,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,49 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Progress} from "@/components/ui/progress";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress",
-=======
 
 import React from "react","
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",";
 import { Progress } from "@/components/ui/progress";"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 import { Progress } from "@/components/ui/progress","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function UsageOverview() {
   // Mock usage data
 
@@ -53,13 +28,9 @@ export function UsageOverview() {
       used: 32,
       total: 100,
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       used: 32
       total: 100
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       used: 32,
       total: 100,
       percentage: 32;
@@ -67,18 +38,12 @@ export function UsageOverview() {
 percentage: 32
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     interviews: {
       used: 45
       total: 150
       percentage: 30
 
-=======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     messaging: {
       used: 1250
       total: 5000
@@ -86,9 +51,6 @@ percentage: 32
 
     },
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     storage: {
       used: 2.4
       total: 10
@@ -140,11 +102,7 @@ export function UsageOverview() { return null; }
 
   return (
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       used: 32,
       total: 100,
 
@@ -157,8 +115,6 @@ used: 32
       percentage: 32
     }
 },import React from "react",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     },
 used: 32,
       total: 100,
@@ -275,16 +231,13 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
 }
 import React from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress",;
-=======
 
 "
 import React from "react",;"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
 import { Progress } from "@/components/ui/progress",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 export function UsageOverview() { return null; }
     },;
@@ -392,7 +345,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
           <TabsList className="mb-4">;"
             <TabsTrigger value="current">Current Period</TabsTrigger>;"
             <TabsTrigger value="historical">Historical</TabsTrigger>;
-<<<<<<< HEAD
           </TabsList>;          <TabsContent value="current" className="space-y-6">;
             <div className="space-y-4">;
               <div className="space-y-2">;
@@ -424,10 +376,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 <div className="py-10 text-center text-muted-foreground">;    }
   }
 
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Card>;
       <CardHeader>;
         <CardTitle > Usage Overview</CardTitle>;
@@ -454,7 +403,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
                 <div className="flex items - center justify - between">;
                   <p className="text - sm font - medium">Interviews Conducted</p>;
                   <p className="text - sm text - muted - foreground">;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     {usage.interviews.used} / {usage.interviews.total}
                   </p>
                 </div>
@@ -519,18 +467,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
           </TabsContent>;
           <TabsContent value="historical">;
             <div className="py - 10 text - center text - muted - foreground">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <div className="py-10 text-center text-muted-foreground">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           <TabsContent value="historical">;
             <div className="py-10 text-center text-muted-foreground">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Historical usage data will be available after your first full billing cycle.;
             <div className="pt-4 text-sm text-muted-foreground">;"
 </div>
@@ -580,7 +520,6 @@ pr-12325
       </CardContent>;
 </Card>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 </Card>);
@@ -597,34 +536,15 @@ pr-12325
 }
     </Card>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
     </Card>);
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </Card>);"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

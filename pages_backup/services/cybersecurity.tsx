@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -203,7 +200,6 @@ export default function CybersecurityPage() {
     icon: Shield,"
     features: ["Security training", "Phishing simulations", "Best practices", "Certification"],"
     pricing: "$500 - $2,000/month"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ];
 
@@ -220,7 +216,6 @@ const benefits = [
 export default function CybersecurityServices() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -228,7 +223,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit"
     >
       <div className="min-h-screen bg-white">
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 text-white py-20">"
           <div className="container mx-auto px-4">";
@@ -320,7 +314,6 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -346,7 +339,6 @@ export default function CybersecurityServices() {
       keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -375,7 +367,6 @@ Advanced threat protection, compliance, and 24/7 monitoring.
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Protect your business with our comprehensive cybersecurity solutions designed;
                 to defend against evolving threats.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -398,7 +389,6 @@ Advanced threat protection, compliance, and 24/7 monitoring.
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
         {/* Services Grid */}"
         <section className="py-16 px-4">"
@@ -414,7 +404,6 @@ Advanced threat protection, compliance, and 24/7 monitoring.
                 >"
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
                     <service.icon className="w-6 h-6 text-blue-600" />
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
@@ -440,7 +429,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <feature.icon className="w-6 h-6 text-red-600" />
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -452,11 +440,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <feature.icon className="w-6 h-6 text-red-600" />                  </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-=======
                   </div>"
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>"
                   <p className="text-gray-600 mb-4">{service.description}</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="space-y-2 mb-4">
                     {service.features.map((feature, featureIndex) => ("
                       <div key={featureIndex} className="flex items-center text-sm text-gray-600">"
@@ -474,14 +460,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </motion.div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -517,8 +500,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
@@ -586,11 +567,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>
 </div>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
-=======
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Zap, Cpu, Database;
@@ -1006,8 +984,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -22,9 +22,6 @@ import {format, addDays} from "date-fns";
 import {CalendarIcon, Check, Clock} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {useInterviews} from "@/hooks/useInterviews";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -46,9 +43,6 @@ import { useInterviews } from "@/hooks/useInterviews";
 import { toast } from "@/components/ui/use-toast",
 import { useInterviews } from "@/hooks/useInterviews",
 interface InterviewRequestFormProps {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 interface InterviewRequestFormProps {}
   talent: TalentProfile;
   onClose: () => void;
@@ -72,7 +66,6 @@ import {CalendarIcon, Check, Clock} from "lucide-react";"
 import {toast} from "@/components/ui/use-toast";"
 import {useInterviews} from "@/hooks/useInterviews";
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
@@ -114,39 +107,25 @@ title: "Authentication required",,
 
     }
     setIsSubmitting(true);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 const formSchema = z.object({}
   date: z.date({"
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {"
     message: "Interview date must be in the future"
-<<<<<<< HEAD
-<<<<<<< HEAD
   }),
   time: z.string().min(1, "Please select a time for the interview."),
   duration: z.string().min(1, "Please select the interview duration."),
-=======
 
   }),"
   time: z.string().min(1, "Please select a time for the interview."),"
   duration: z.string().min(1, "Please select the interview duration."),"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),"
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 const formSchema = z.object({
@@ -162,12 +141,9 @@ const formSchema = z.object({
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const form = useForm<z.infer<typeof formSchema>>({
-=======
 
   const form = useForm<z.infer<typeof formSchema>>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(formSchema)
     defaultValues: {}`
       title: `Interview with ${talent.full_name}`"
@@ -183,18 +159,13 @@ const formSchema = z.object({
         variant: "destructive"})
       return;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     try {
       // Combine date and time
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
       const scheduledDate = new Date(dateTimeString);
-<<<<<<< HEAD
       // Calculate end time based on duration
-<<<<<<< HEAD
       const durationMinutes = parseInt(values.duration);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     setIsSubmitting(true),
 
@@ -205,13 +176,10 @@ const formSchema = z.object({
 
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
-=======
 
     try {}
       // Combine date and time;`
@@ -221,7 +189,6 @@ const formSchema = z.object({
       await requestInterview({}
         talent_id: talent.id;
         client_id: userDetails.id;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         scheduled_date: scheduledDate.toISOString()
         duration_minutes: durationMinutes;
         notes: values.notes;
@@ -231,19 +198,11 @@ const formSchema = z.object({
 title: values.title
 }),
 
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast({
-=======
       // Calculate end time based on duration      toast({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       // Calculate end time based on duration      toast({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       toast({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title: "Interview requested"
         description: `Your interview request with ${talent.full_name} has been sent.`})
       onClose()
@@ -254,11 +213,6 @@ title: values.title
         title: "Failed to schedule interview"
         description: "An error occurred while scheduling the interview. Please try again."
         variant: "destructive"})
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components / ui / form';
@@ -276,7 +230,6 @@ import { z } from './zod';
 import { format, add_days } from './date - fns';
 import { CalendarIcon, Check, Clock } from './lucide-react';
 import { toast } from '@/components / ui / use - toast';
-=======
         title: values.title;
       toast({"
         title: "Interview requested"`
@@ -309,7 +262,6 @@ import { z } from './zod';'
 import { format, add_days } from './date - fns';'
 import { CalendarIcon, Check, Clock } from './lucide-react';'
 import { toast } from '@/components / ui / use - toast';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { use_interviews } from '@/hooks / use_interviews';
 interface InterviewRequestFormProps {}
   talent: TalentProfile,
@@ -390,15 +342,10 @@ if ( {) {}
         variant: "destructive"});
     }
     setIsSubmitting(true);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
       setIsSubmitting (false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const timeSlots = [
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30"
@@ -406,9 +353,6 @@ if ( {) {}
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     } finally {}
       setIsSubmitting (false);
     }
@@ -426,7 +370,6 @@ if ( {) {}
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
   return (
@@ -446,15 +389,8 @@ if ( {) {}
           </div>
         </div>
 
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
@@ -478,7 +414,6 @@ if ( {) {}
           </div>
         </div>
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {;
       // Combine date and time;'`
       const dateTimeString = `${format(values && values.date, 'yyyy-MM-dd')}T${values && values.time}:00`;
@@ -532,7 +467,6 @@ title: "Failed to schedule interview",,
             <p className="text-sm text-zion-slate-light">{talent && talent.professional_title}</p>;
           </div>;
         </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <FormField
           control={form && form.control}
           name="title"
@@ -570,7 +504,6 @@ title: "Failed to schedule interview",,
 <FormControl>;
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
-<<<<<<< HEAD
               <FormMessage />;
 
           <FormField;
@@ -583,16 +516,11 @@ title: "Failed to schedule interview",,
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <Button
                         variant="outline"
                         className={cn(
 
                           !field.value && "text-muted-foreground"
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
                           "w-full pl-3 text-left font-normal",
@@ -604,16 +532,10 @@ title: "Failed to schedule interview",,
                         variant="outline"
                         className={cn("
                           !field.value && "text-muted-foreground"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           "w-full pl-3 text-left font-normal"
-=======
               <FormMessage />;                          "w-full pl-3 text-left font-normal"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
                           "w-full pl-3 text-left font-normal""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
                           "w-full pl-3 text-left font-normal",
 
@@ -623,14 +545,12 @@ title: "Failed to schedule interview",,
                         className={cn(
                           !field.value && "text-muted-foreground"
                           "w-full pl-3 text-left font-normal"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           !field && field.value && "text-muted-foreground"
                         )}>;
                         {field && field.value ? (;"
                           format(field && field.value, "PPP");
                         ) : (;
                           <span>Pick a date</span>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         )}
 
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -640,8 +560,6 @@ title: "Failed to schedule interview",,
                   <PopoverContent className="w-auto p-0" align="start">;
 <Calendar
                       mode="single"
-<<<<<<< HEAD
-<<<<<<< HEAD
           control={form.control}
           name="title"
           render={({ field }) => (
@@ -685,7 +603,6 @@ title: "Failed to schedule interview",,
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
                       mode="single"
-=======
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() |date > addDays(new Date(), 90)}
@@ -696,15 +613,8 @@ title: "Failed to schedule interview",,
                 </Popover>
                 <FormMessage />
               </FormItem>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       selected={field && field.value}
                       onSelect={field && field.onChange}
 "
@@ -860,11 +770,8 @@ toast({;
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar"
                       mode="single"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       selected={field.value}
                       onSelect={field.onChange}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       disabled={(date) => date < new Date() |date > addDays(new Date(), 90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
@@ -877,7 +784,6 @@ toast({;
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
 className="p-3 pointer-events-auto";                    <Calendar;
-=======
                       className="p-3 pointer-events-auto";
 </FormItem>)}
         />;
@@ -1102,7 +1008,6 @@ pr-12325
                       initial_focus;
                       className="p - 3 pointer - events - auto";
                     <Calendar;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       mode="single";
                       selected={field.value}
                       onSelect={field.onChange}
@@ -1112,31 +1017,18 @@ pr-12325
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;"
                       className="p-3 pointer-events-auto";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                     <Calendar"
                       mode="single"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
 
 </FormItem>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             )}
           />;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           <FormField;
             control={form && form.control}"
@@ -1146,13 +1038,8 @@ pr-12325
                 <FormLabel>Time</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
 
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </FormItem>;            )}
-=======
 </FormItem>;            )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           />;
 ;
           <FormField;
@@ -1162,17 +1049,7 @@ pr-12325
               <FormItem>;
                 <FormLabel>Time</FormLabel>;
                 <Select onValueChange={field.onChange} defaultValue={field.value}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <FormControl>;
                     <SelectTrigger>;"
                       <SelectValue placeholder="Select time" />;
@@ -1189,9 +1066,7 @@ pr-12325
                 <FormLabel>Duration</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
 <SelectContent className="max-h-[300px]">;
-=======
                   <SelectContent className="max-h-[300px]">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {time_slots.map ((time) => (
                       <SelectItem key={time} value={time}>;
                         {time}
@@ -1293,11 +1168,8 @@ pr-12325
               </FormItem>)}
           />;
 </div>;
-<<<<<<< HEAD
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
-=======
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <FormField;
             control={form.control}"
             name="duration";
@@ -1350,18 +1222,12 @@ name="platform"
             control={form && form.control}"
             name="meetingLink"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
                   <Input;
                     placeholder={`Add your ${form.watch('platform')} link here`}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                   <Input
                     placeholder={`Add your ${form && form.watch('platform')} link here`}
               </FormItem>)}
@@ -1379,7 +1245,6 @@ name="platform"
                     placeholder={`Add your ${form.watch ('platform')} link here`}
 <Input;
                     placeholder={`Add your ${form.watch('platform')} link here`}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     {...field}
                   />;
                 </FormControl>;
@@ -1389,7 +1254,6 @@ name="platform"
             control={form.control}"
           <FormField
             control={form.control}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             name="meetingLink"
             render={({ field }) => (
               <FormItem>
@@ -1406,15 +1270,10 @@ name="platform"
           />
         )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <FormField
           control={form && form.control}
           name="notes"
 
-<<<<<<< HEAD
           control={form.control}
           name="notes"
           render={({ field }) => (
@@ -1425,7 +1284,6 @@ name="platform"
                 <Textarea 
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {...field}
                 />
               </FormControl>
@@ -1453,11 +1311,9 @@ name="platform"
         <FormField;
           control={form && form.control}"
           name="notes"
-=======
         <FormField;
           control={form.control}
           name="notes";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Notes (Optional)</FormLabel>;
@@ -1483,9 +1339,6 @@ name="platform"
 
                   {...field}
                 />;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <Textarea;
                   placeholder="Share what you'd like to discuss in this interview";
                   className="h - 20";
@@ -1494,7 +1347,6 @@ name="platform"
                   className="h-20";
                   {...field}
                 />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </FormControl>;
               <FormMessage />;
 />;
@@ -1515,9 +1367,7 @@ name="platform"
   );
 }
 
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             )}
           />
         )}'"
@@ -1526,11 +1376,8 @@ name="platform"
                   {...field}
 </FormItem>)}
         />;
-<<<<<<< HEAD
         <div className="flex justify - end gap - 4 pt-4">;
-=======
         <div className="flex justify - end gap - 4 pt-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Button variant="outline" on_click={on_close} type="button">;
             Cancel;
           </Button>;"
@@ -1803,29 +1650,13 @@ async function onSubmit (values: z.infer<typeof formSchema>) {}
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
                       mode="single";"
 
@@ -1969,4 +1800,3 @@ pr-12325
 </FormField>
 }/> </Button> </div> </form> </Form>) '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,9 +1,7 @@
 
 import { format } from "date-fns";
-=======
 
 import { format } from "date-fns",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
 import {
@@ -26,16 +24,8 @@ import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { format } from "date-fns",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from "@/components/ui/popover";
 "
 import { Calendar } from "@/components/ui/calendar";"
@@ -85,17 +75,9 @@ pr-12325
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   form: UseFormReturn<ContractFormValues>;
 }
-=======
 
 "
 } from "@/components/ui/form";"
@@ -115,10 +97,7 @@ import { Calendar } from "@/components/ui/calendar";"
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   form: UseFormReturn<ContractFormValues>;
 }
@@ -128,7 +107,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
   form: UseFormReturn<ContractFormValues>;
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>;
       <FormField;
@@ -147,8 +125,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       />;
 
@@ -156,24 +132,15 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
       <FormField
       />;
       <FormField;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 />;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <FormField
-=======
       <FormField
         control={form && form.control}
         name="scopeSummary"      <FormField
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         control={form && form.control}
         name="scopeSummary"      <FormField
         control={form && form.control}
         name="scopeSummary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { format } from "date-fns",;
 import { CalendarIcon } from "lucide-react",;
@@ -201,7 +168,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
   return (;
     <>;
       <FormField;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         control={form.control}
         name="projectName";
         render={({ field }) => (;
@@ -217,10 +183,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
       <FormField;
         control={form.control}
         name="scopeSummary";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             <FormControl>;"
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
@@ -230,9 +192,6 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
         control={form && form.control}"
         name="scopeSummary"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
@@ -258,7 +217,6 @@ className="min-h-[120px]";                {...field}
             <FormDescription>;
               Be specific about what is included and any limitations;
             </FormDescription>;
-<<<<<<< HEAD
             <FormMessage />;
 
 />
@@ -284,21 +242,15 @@ Be specific about what is included and any limitations;
           </FormItem>
         )}
       />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<<<<<<< HEAD
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
-=======
             <FormMessage />;        <FormField
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           control={form && form.control}
           name="startDate"          render={({ field }) => (;
-=======
 
         <FormField;
           control={form && form.control}"
@@ -318,8 +270,6 @@ Be specific about what is included and any limitations;
           name="startDate"
 
           render={({ field }) => (;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       />;
@@ -340,7 +290,6 @@ Be specific about what is included and any limitations;
           control={form && form.control}
           name="startDate"
           render={({ field }) => (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
               <Popover>;
@@ -366,41 +315,23 @@ onSelect={field && field.onChange}                    disabled={(date) => date <
 </FormItem>;
           )}
 
-<<<<<<< HEAD
-=======
         />;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
         <FormField
           control={form && form.control}
 />;
 
         />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <FormField
           control={form && form.control}
 
         />;
         <FormField;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           control={form.control}
 name="endDate"                  <Calendar
-=======
-=======
 control={form.control}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           name="endDate"
           control={form.control}
           name="endDate"
@@ -411,7 +342,6 @@ control={form.control}
           control={form.control}
           name="endDate";
                   <Calendar
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     mode="single"
           control={form.control}
         <FormField;
@@ -431,12 +361,8 @@ render={({ field }) => (;
                   </FormControl>;
                 </PopoverTrigger>;"
                 <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <Calendar
                     mode="single"
-<<<<<<< HEAD
         <FormField
           control={form.control}
           name="startDate"
@@ -513,19 +439,12 @@ render={({ field }) => (;
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Calendar
 mode="single"                  <Calendar
-=======
                     mode="single"
                   <Calendar
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                   <Calendar
                     mode="single"                  <Calendar
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     mode="single"
     </>
         />;
@@ -698,20 +617,14 @@ pr-12325
                     initialFocus;
           </FormItem>)}
 />;
-<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
-=======
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <FormField;
           control={form.control}"
           name="start_date";
 render={({ field }) => (
-<<<<<<< HEAD
             <FormItem className="flex flex-col">;
-=======
             <FormItem className="flex flex-col">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <FormLabel > Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -744,11 +657,8 @@ render={({ field }) => (
           control={form.control}"
           name="end_date";
 render={({ field }) => (
-<<<<<<< HEAD
             <FormItem className="flex flex-col">;
-=======
             <FormItem className="flex flex-col">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <FormLabel > End Date (Optional)</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -771,10 +681,6 @@ render={({ field }) => (
                     on_select={field.on_change}"
                     disabled={(date) => date < form.get_values ("start_date")}
                     initial_focus;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <Calendar;
                     mode="single";
@@ -816,15 +722,12 @@ render={({ field }) => (
         />;
       </div>;
     </>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
             </FormItem>)}
         />;
       </div>;
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
             </FormItem>;
           )}
         />;
@@ -859,16 +762,8 @@ FormMessage interface ProjectDetailsFieldsProps {
     </>;
 );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </FormMessage>
             </FormItem>)}
         <FormField;
@@ -888,4 +783,3 @@ pr-12325
 }
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

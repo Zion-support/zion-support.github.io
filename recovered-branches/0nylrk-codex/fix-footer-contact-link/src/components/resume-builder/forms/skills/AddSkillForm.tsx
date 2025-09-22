@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
-<<<<<<< HEAD
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
@@ -28,18 +16,10 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/c
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface AddSkillFormProps {
-=======
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';interface AddSkillFormProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';interface AddSkillFormProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { useState  } from 'react';'
 import { Button  } from '@/components/ui/button';'
@@ -57,7 +37,6 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/c
 import {Skill} from '@/types/resume';'
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface AddSkillFormProps {}
   resumeId: string;
@@ -66,28 +45,16 @@ interface AddSkillFormProps {}
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [skillName, setSkillName] = useState('');
-=======
 
 '
   const [skillName, setSkillName] = useState('');'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
   const handleSubmit = async (e: React.FormEvent) => {}
@@ -96,10 +63,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     const newSkill: Skill = {}
       name: skillName.trim()'
       category: skillCategory |'Other'
-<<<<<<< HEAD
       proficiency: proficiency}
-<<<<<<< HEAD
-<<<<<<< HEAD
     const success = await onAddSkill(newSkill);
     if (success) {
       setSkillName('');
@@ -110,17 +74,12 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     setSkillCategory(enhancedCategory)
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   }
   const handleEnhanceSkill = (enhancedCategory: string) => {}
     setSkillCategory(enhancedCategory)
   }
   };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -130,7 +89,6 @@ import { Skill } from '@/types/resume',;
 
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
 
-=======
 import React from 'react';
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
@@ -139,7 +97,6 @@ import {Label} from '@/components/ui/label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface AddSkillFormProps {;
   resumeId: string,;
   onAddSkill: (skill: Skill) => Promise<boolean>;
@@ -157,29 +114,20 @@ const newSkill: Skill = {;
       setSkillName('');
       setProficiency(3);
     }
-<<<<<<< HEAD
   },
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleEnhanceSkill = (enhancedCategory: string) => {}
     setSkillCategory(enhancedCategory)
   },
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   },
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   };
   const handleEnhanceSkill = (enhancedCategory: string) => {;
     setSkillCategory(enhancedCategory);
@@ -225,7 +173,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
   },;
   ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
         <div className="flex-1">;
@@ -256,8 +203,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
             value={skillCategory} 
             onValueChange={setSkillCategory}>;"
             <SelectTrigger id="skill-category">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {AIEnhancementButton} from '@/components / resume - builder / forms / AIEnhancementButton';
 interface AddSkillFormProps {}
   resume_id: string,
@@ -327,14 +272,11 @@ if ( {) {}
                 onEnhanced={handleEnhanceSkill}
 "
               <SelectValue placeholder="Select category" />;
-=======
       proficiency: proficiency}  return (  return (
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
         <div className="flex-1">;
           <Label htmlFor="skill-name">Skill Name</Label>;              <SelectValue placeholder="Select category" />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return (
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
@@ -463,7 +405,6 @@ buttonText="Suggest";
                 enhancementType="general";
                 onEnhanced={handleEnhanceSkill}
               <SelectValue placeholder="Select category" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </SelectTrigger>;
             <SelectContent>;"
               <SelectItem value="Programming">Programming</SelectItem>;"
@@ -480,7 +421,6 @@ buttonText="Suggest";
 
 },
 
-<<<<<<< HEAD
 
               min={1}
               max={5}
@@ -494,7 +434,6 @@ buttonText="Suggest";
               onChange={(e) => setProficiency(Number(e.target.value))}
               className="w-20"
             />
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Button type="submit">Add</Button>
           </div>
         </div>
@@ -505,31 +444,19 @@ on_change={(e) => set_proficiency (Number (e.target.value))}"
               className="w - 20";
 
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 },
 };
 },
 on_change={(e) => set_proficiency (Number (e.target.value))}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="w - 20";
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
               className="w - 20";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               className="w-20";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />;
-=======
               on_change={(e) => set_proficiency (Number (e.target.value))}"
               className="w - 20";
 
             />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Button type="submit">Add</Button>;
           </div>;
         </div>;
@@ -537,30 +464,15 @@ on_change={(e) => set_proficiency (Number (e.target.value))}
 
 </form>);}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 },
 };
 },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 },
 };
 },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </form>);
 </form>;
   ),;
@@ -580,4 +492,3 @@ const newSkill: Skill = {
 },
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

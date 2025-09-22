@@ -44,24 +44,17 @@ const content = fs.readFileSync(filePath, 'utf8')
       'import {$1} from "@/components/icons"'
     )
     // Only write if changes were made
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (content !== updatedContent) {
-<<<<<<< HEAD
 
       fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
       console && console.log(`✅ Updated imports in ${filePath}`),
-<<<<<<< HEAD
-=======
 fs.writeFileSync(filePath, updatedContent, 'utf8')
       console.log(`✅ Updated imports in ${filePath}`)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       return true
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
       return true
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
  */
 
 const fs = require('fs')'
@@ -86,7 +79,6 @@ function updateIconImportsInFile(filePath) {}
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
       return true;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**;
  * Helper script to update icon imports across the codebase;
  *;
@@ -107,10 +99,6 @@ function updateIconImportsInFile() { return null; }
       // // // console.log(`✅ Updated imports in ${filePath}`),;
       return true;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
       console && console.log(`✅ Updated imports in ${filePath}`),
 
@@ -120,18 +108,14 @@ fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
       return true
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     return false;
   } catch (err) {}
     return false;
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 const files = glob && glob.sync('src/**/*.{js,jsx,ts,tsx}'),
 let updatedFiles = 0,
 
@@ -150,28 +134,16 @@ files.forEach(file => {}
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`)'`
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
  * updateIconImportsInFile - Function description
-=======
     if (content !== updatedContent) { * updateIconImportsInFile - Function description
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     if (content !== updatedContent) { * updateIconImportsInFile - Function description
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 `
 console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),'`
 console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 
  * updateIconImportsInFile - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
 function updateIconImportsInFile() {}
   try {'
@@ -208,25 +180,12 @@ if (updated_files++) {}
 console.log (`\n🎉 Updated icon imports in ${updated_files} files`),'`
 console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-=======
 
 `
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),'`
@@ -234,7 +193,6 @@ console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support t
 ;
 `
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 
 ;
@@ -303,17 +261,12 @@ console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
 // Find all TypeScript/JavaScript/JSX/TSX files;
-=======
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
 // Find all TypeScript/JavaScript/JSX/TSX files;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const files = glob.sync('src/**/*.{js,jsx,ts,tsx}'),;
 let updatedFiles = 0,;
 files.forEach(file => {;
@@ -323,11 +276,6 @@ files.forEach(file => {;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;'`
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
 files.forEach(file => {;
   const updated = updateIconImportsInFile(file),;
@@ -351,18 +299,6 @@ files.forEach (file => {
   const updated = updateIconImportsInFile (file);
 if (updated) updatedFiles++ 
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

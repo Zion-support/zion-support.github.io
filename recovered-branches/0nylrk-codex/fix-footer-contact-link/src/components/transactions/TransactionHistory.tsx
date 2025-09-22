@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
@@ -13,12 +10,7 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {formatDistanceToNow} from "date-fns";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -83,7 +75,6 @@ export function TransactionHistory() {};
       if (error) throw error;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface Transaction {
   id: string,
   user_id: string,
@@ -114,17 +105,10 @@ import { Badge } from "@/components/ui/badge",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns",;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface Transaction {;
-=======
 import {formatDistanceToNow} from "date-fns";interface Transaction {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 interface Transaction {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string,;
   user_id: string,;
   provider_id: string,;
@@ -140,11 +124,9 @@ interface Transaction {;
   provider?: {;
 display_name?: string
 };  service?: {;
-=======
     display_name?: string;
   };
   service?: {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     title?: string;
   }
 }
@@ -483,8 +465,6 @@ refetch ()
 import React, {_useState} from "react";
 
 interface Transaction {_id: string;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   user_id: string;
   provider_id: string;
   service_id: string;
@@ -496,18 +476,7 @@ interface Transaction {_id: string;
   refunded_at?: string;
   cancelled_at?: string;
 provider?: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
@@ -518,7 +487,6 @@ provider?: {
       toast({
         title: "Error"
         description: error.message |"Failed to update transaction"
-=======
   provider?: {}
       toast({"
         title: "Success""
@@ -531,36 +499,21 @@ provider?: {
       toast({"
         title: "Error""
         description: error.message |"Failed to update transaction""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"})
-<<<<<<< HEAD
     }
 
-<<<<<<< HEAD
-=======
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const getStatusBadge = (status: string, inEscrow: boolean) => {
-=======
     }  const getStatusBadge = (status: string, inEscrow: boolean) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     }  const getStatusBadge = (status: string, inEscrow: boolean) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const getStatusBadge = (status: string, inEscrow: boolean) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     switch(status) {
-=======
 
   const getStatusBadge = (status: string, inEscrow: boolean) => {}
     switch(status) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'pending':
         return inEscrow ? ("
           <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">"
@@ -595,31 +548,21 @@ provider?: {
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown;
           </Badge>
         )
-<<<<<<< HEAD
     }
 
-<<<<<<< HEAD
-=======
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: currency.toUpperCase()
     }).format(amount)
 },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   if (error) {
 });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;
         <div className="text-center text-zion-slate-light">;
@@ -628,8 +571,6 @@ provider?: {
           <p className="mb-4">{error && error.message}</p>;
           <Button onClick={() => refetch()} variant="outline">;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <RefreshCcw className="mr-2 h-4 w-4" />;
             Try Again;
           </Button>;
@@ -649,7 +590,6 @@ const isClient = user?.id === transaction.user_id,
               const counterpartyName = isClient '
                 ? transaction.provider?.display_name || 'Service Provider' '
                 : 'Client',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               return ("
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">"
@@ -665,7 +605,6 @@ const isClient = user?.id === transaction.user_id,
                           ) : ("
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }),;
       if (error) throw error,;
       toast({;"
@@ -677,7 +616,6 @@ const isClient = user?.id === transaction.user_id,
       toast({;"
         title: "Error",;"
         description: error.message || "Failed to update transaction",;"
-=======
               const isClient = user?.id === transaction.user_id,
               const isPending = transaction.status === 'pending',
               const isInEscrow = transaction.in_escrow,
@@ -714,7 +652,6 @@ const isClient = user?.id === transaction.user_id,
       toast({;
         title: "Error",;
         description: error.message || "Failed to update transaction",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant: "destructive"});
     }
   },;
@@ -847,22 +784,11 @@ Array(3).fill(0).map((_, i) => (;"
                           ) : (;"
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           )}
-=======
     }                          )}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     }                          )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           )}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         </CardDescription>
                       </div>
                       {getStatusBadge(transaction.status, transaction.in_escrow)}
@@ -881,21 +807,12 @@ Array(3).fill(0).map((_, i) => (;"
                         {new Date(transaction.created_at).toLocaleDateString()}
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
-<<<<<<< HEAD
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <div className="flex justify-between items-center text-sm mt-1">
-=======
                     </div>                      <div className="flex justify-between items-center text-sm mt-1">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                     </div>                      <div className="flex justify-between items-center text-sm mt-1">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     </div>
 
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
@@ -905,15 +822,12 @@ Array(3).fill(0).map((_, i) => (;"
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
                       <div className="flex justify-between items-center text-sm mt-1">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
-=======
 "
                       <div className="flex justify-between items-center text-sm mt-1">"
                         <span className="text-zion-slate-light">'
                           {transaction.completed_at ? 'Completed:' :'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                            transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
                         </span>"
                         <span className="text-zion-slate-light">
@@ -921,7 +835,6 @@ Array(3).fill(0).map((_, i) => (;"
                             transaction.completed_at |
                             transaction.refunded_at |
                             transaction.cancelled_at!
-<<<<<<< HEAD
                       </div>;
                       {getStatusBadge(transaction && transaction.status, transaction && transaction.in_escrow)}
                     </div>;
@@ -1061,7 +974,6 @@ Array(3).fill(0).map((_, i) => (;"
                           {new Date(                            transaction.completed_at || 
                             transaction.refunded_at || 
                             transaction.cancelled_at!
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                           ).toLocaleDateString()}
                         </span>;
                       </div>;
@@ -1136,40 +1048,26 @@ onClick={() => handleManageTransaction(transaction && transaction.id, 'release')
             <p className="text-zion-slate-light max-w-md mx-auto">;'
               {filter !== 'all' ;'`
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>;
           </div>;
         )}
-<<<<<<< HEAD
             </p>;
           </div>;
         )}
       </div>;
     </div>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 ;
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Check condition
 if (throw error) {
   $2
-=======
 
       // Check condition;
 if (throw error) {}
   $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
       toast ({"
         title: "Success","
@@ -1211,13 +1109,10 @@ return in_escrow ? (
           </Badge>),
       default:;
         return (
-<<<<<<< HEAD
           <Badge variant="outline" className="bg - gray - 500 / 20 text - gray - 500 border - gray-500">;
             <AlertCircle className="w - 3 h - 3 mr-1" /> Unknown;
-=======
           <Badge variant="outline" className="bg - gray - 500 / 20 text - gray - 500 border - gray-500">;
             <AlertCircle className="w - 3 h - 3 mr-1" /> Unknown;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Badge>);
     }
   }
@@ -1240,11 +1135,8 @@ return (
           <h3 className="font - bold text - xl text - white mb-2">Failed to load transactions</h3>;
           <p className="mb-4">{error.message}</p>;
           <Button on_click={() => refetch ()} variant="outline">;
-<<<<<<< HEAD
             <RefreshCcw className="mr - 2 h - 4 w-4" />;
-=======
             <RefreshCcw className="mr - 2 h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Try Again;
           </Button>;
         </div>;
@@ -1333,13 +1225,10 @@ return (
                         </CardTitle>;
                         <CardDescription className="text - zion - slate-light">;
                           {is_client ? (
-<<<<<<< HEAD
                             <span > Payment to <span className="text - zion-purple">{counterparty_name}</span></span>) : (
                             <span > Payment from <span className="text - zion-cyan">Client</span></span>)}
-=======
                             <span > Payment to <span className="text - zion-purple">{counterparty_name}</span></span>) : (
                             <span > Payment from <span className="text - zion-cyan">Client</span></span>)}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         </CardDescription>;
                       </div>;
                       {getStatusBadge (transaction.status, transaction.in_escrow)}
@@ -1352,15 +1241,12 @@ return (
                         {format_currency (transaction.amount, transaction.currency)}
                       </span>;
                     </div>;
-<<<<<<< HEAD
                     <div className="flex justify - between items - center text-sm">;
                       <span className="text - zion - slate-light">Date:</span>;
                       <span className="text - zion - slate-light">;
-=======
                     <div className="flex justify - between items - center text-sm">;
                       <span className="text - zion - slate-light">Date:</span>;
                       <span className="text - zion - slate-light">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         {new Date (transaction.created_at).toLocaleDateString ()}
                         ({formatDistanceToNow (new Date (transaction.created_at), { add_suffix: true })});
                       </span>;
@@ -1371,11 +1257,8 @@ return (
                           {transaction.completed_at ? 'Completed:' :;
                           transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
                         </span>;
-<<<<<<< HEAD
                         <span className="text - zion - slate-light">;
-=======
                         <span className="text - zion - slate-light">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           {new Date (
                             transaction.completed_at ||;
                             transaction.refunded_at ||;
@@ -1408,11 +1291,8 @@ return (
                         variant="outline";
                         className="text - red - 400 border - red - 400 / 30 hover:bg - red-400 / 10";
                       >;
-<<<<<<< HEAD
                         <XCircle className="mr - 1 h - 4 w-4" /> Cancel;
-=======
                         <XCircle className="mr - 1 h - 4 w-4" /> Cancel;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>)}
                   </CardFooter>;
                 </Card>);
@@ -1432,10 +1312,7 @@ return (
           </div>)}
       </div>;
     </div>);
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
                           ).toLocaleDateString()}
                         </span>
                       </div>
@@ -1490,37 +1367,24 @@ return (
             </p>
           </div>
         )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }      </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }      </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       </div>;
     </div>;
   );
@@ -1528,4 +1392,3 @@ return (
 ;
 
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

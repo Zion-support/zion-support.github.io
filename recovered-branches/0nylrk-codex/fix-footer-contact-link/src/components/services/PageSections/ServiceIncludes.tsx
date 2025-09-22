@@ -1,44 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Check } from "lucide-react";
-<<<<<<< HEAD
 import { Check } from "lucide-react",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import { Check } from "lucide-react",
 
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
-<<<<<<< HEAD
       <h2 className="text-2xl font-bold text-white text-center mb-8">
         What's Included in Every Service
       </h2>
 import { Check } from "lucide-react";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
-<<<<<<< HEAD
       <h2 className="text-2xl font-bold text-white text-center mb-8">
         What's Included in Every Service
       </h2>
-<<<<<<< HEAD
 import {Check} from "lucide-react";
 import { Check } from "lucide-react",
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
       <h2 className="text-2xl font-bold text-white text-center mb-8">What's Included in Every Service</h2>
-=======
 import { Check } from "lucide-react";
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
@@ -47,7 +33,6 @@ export function ServiceIncludes() {
       </h2>
 
       <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="mt-1 mr-4">
@@ -236,24 +221,13 @@ export function ServiceIncludes() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {Check} from "lucide-react";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ServiceIncludes() {;
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">;
       <h2 className="text-2xl font-bold text-white text-center mb-8">What's Included in Every Service</h2>;
 <div className="grid grid-cols-1 md: grid-cols-2 gap-6">;
-<<<<<<< HEAD
         <div className="space-y-4">;
           <div className="flex items-start">;
             <div className="mt-1 mr-4">;
@@ -321,12 +295,8 @@ export function ServiceIncludes() {;
       </div>;
 </div>);
 }
-=======
   );
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 )
   )
@@ -399,8 +369,6 @@ export function ServiceIncludes() {;
 }
 ;
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>);
 }
     </div>;
@@ -412,9 +380,6 @@ export function ServiceIncludes() {;
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import { Check } from "lucide-react";"
 export function ServiceIncludes() {
   return ("
@@ -453,4 +418,3 @@ export function ServiceIncludes() {
   return (<div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20" > <h2 className="text-2xl font-bold text-white text-center mb-8" >What's Included in Every Service</h2> text-white font-medium">Transportation to Site</h3> <p className=" text-zion-slate-light">All travel costs to your location are included in the base price.</p> </div> </div> <div className=" flex items-start"> <div className=" mt-1 mr-4"> <Check className=" h-5 w-5 text-zion-cyan"/> </div> <div> <h3 className=" text-white font-medium">First Hour of Service</h3> <p className=" text-zion-slate-light">The first hour of technical work at your site is included.</p> </div> </div> <div className=" flex items-start"> <div className=" mt-1 mr-4"> <Check className=" h-5 w-5 text-zion-cyan"/> </div> <div> <h3 className=" text-white font-medium">Technical Assessment</h3> <p className=" text-zion-slate-light">Comprehensive evaluation of issues and required solutions.</p> </div> </div> </div> <div className=" space-y-4"> <div className=" flex items-start"> <div className=" mt-1 mr-4"> <Check className=" h-5 w-5 text-zion-cyan"/> </div> <div> <h3 className=" text-white font-medium">Basic Hardware Diagnostics</h3> <p className=" text-zion-slate-light">Component testing and hardware issue identification.</p> </div> </div> <div className=" flex items-start"> <div className=" mt-1 mr-4"> <Check className=" h-5 w-5 text-zion-cyan"/> </div> <div> <h3 className=" text-white font-medium">Network Connectivity</h3> <p className=" text-zion-slate-light">Troubleshooting of basic network connectivity problems.</p> </div> </div> <div className=" flex items-start"> <div className=" mt-1 mr-4"> <Check className=" h-5 w-5 text-zion-cyan"/> </div> <div> <h3 className=" text-white font-medium">Service Documentation</h3> <p className=" text-zion-slate-light" >Detailed report of work performed and recommendations.</p> </div> </div> </div> </div> </div>")"
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

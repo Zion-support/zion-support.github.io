@@ -67,9 +67,12 @@ export default defineConfig({
 					if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
 					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
 					if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 					return 'assets/[name]-[hash].[ext]'}
 			}
 		}
@@ -205,6 +208,9 @@ import { defineConfig } from 'vite'; import react from '@vitejs/plugin-react'; i
 }
 }
 }
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

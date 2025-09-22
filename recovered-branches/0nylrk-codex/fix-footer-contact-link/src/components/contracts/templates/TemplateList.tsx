@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
@@ -9,11 +7,7 @@ import {useContractTemplates} from "@/hooks/useContractTemplates";
 import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {useState} from "react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface TemplateListProps {;
   templates: ContractTemplate[],;
   isLoading: boolean,;
@@ -41,7 +35,6 @@ export function TemplateList(): any ({;
     }
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
@@ -56,7 +49,6 @@ AlertDialogHeader;"
   AlertDialogTitle} from "@/components/ui/alert-dialog","
 import { useState } from "react";
 interface TemplateListProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   templates: ContractTemplate[]
   isLoading: boolean;
   onSelect: (template: ContractTemplate) => void;
@@ -95,10 +87,6 @@ import {}
 AlertDialogHeader,"
   AlertDialogTitle} from "@/components/ui/alert-dialog","
 import { useState } from "react",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -107,21 +95,15 @@ interface TemplateListProps {
 const handleSetDefault = async (templateId: string) => {;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (isLoading) {;
-=======
 import {useState} from "react";  if (isLoading) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const handleSetDefault = async (templateId: string) => {;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
   if (isLoading) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
       <div className="flex justify-center items-center py-8">;
-=======
 
 interface TemplateListProps {}
   templates: ContractTemplate[],
@@ -131,7 +113,6 @@ interface TemplateListProps {}
   if (isLoading) {;
     return ("
       <div className="flex justify-center items-center py-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
       </div>;
     );
@@ -149,22 +130,14 @@ interface TemplateListProps {}
   return (
     <div className="space-y-3">;
       {templates && templates.map((template) => (;
-<<<<<<< HEAD
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
 if (!templates && templates.length) {;
     return (
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { ContractTemplate } from "@/types/contracts",;
 import { Button } from "@/components/ui/button",;
@@ -195,7 +168,6 @@ import { Button } from "@/components/ui/button",;"
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",;"
 import { useContractTemplates } from "@/hooks/useContractTemplates",;"
 import { Card, CardContent } from "@/components/ui/card",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Separator } from "@/components/ui/separator",;
 import {;
   AlertDialog,;
@@ -207,7 +179,6 @@ import {;
   AlertDialogHeader,;"
   AlertDialogTitle} from "@/components/ui/alert-dialog",;"
 import { useState } from "react",;
-<<<<<<< HEAD
             <div className="flex items-center justify-between">;
               <div className="space-y-1">;
                 <div className="flex items-center gap-2">;
@@ -221,16 +192,8 @@ interface TemplateListProps {
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleSetDefault = async (templateId: string) => {}
     await setDefaultTemplate.mutateAsync(templateId)
@@ -243,13 +206,11 @@ interface TemplateListProps {
   if (isLoading) {;
     return ("
       <div className="flex justify-center items-center py-8">;"
-=======
   onEdit
 }: TemplateListProps) {
 
     return (
       <div className="flex justify-center items-center py-8">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
       </div>;
     );
@@ -273,9 +234,6 @@ interface TemplateListProps {
                   {template && template.is_default && (;"
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
@@ -300,35 +258,19 @@ interface TemplateListProps {
               </div>
             </div>
             <Separator className="my-3" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
             <Button;
               onClick={() => onSelect(template)} "
               variant="outline" 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className="w-full"
             >
               Use This Template;
@@ -348,11 +290,7 @@ interface TemplateListProps {
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction"
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-<<<<<<< HEAD
               onClick={handleDeleteConfirm}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <p className="text-xs text-muted-foreground">;
                   Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
                 </p>;
@@ -368,9 +306,7 @@ interface TemplateListProps {
                   </Button>;
                 )}
 "
-=======
 <Button variant="ghost" size="icon" onClick={() => handleDeleteClick(template.id)}>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Trash className="h-4 w-4 text-destructive" />;
                 </Button>;
               </div>;
@@ -385,10 +321,7 @@ interface TemplateListProps {
               className="w-full";
 
             >;
-=======
               onClick={handleDeleteConfirm}            >;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             <Separator className="my-3" />;
 
             <Button
@@ -498,7 +431,6 @@ if ( {) {
               variant="outline" ;
               className="w-full";
             >;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Use This Template;
             </Button>;
           </CardContent>;
@@ -523,15 +455,12 @@ if ( {) {
           <AlertDialogFooter>;
 
 Delete;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
 
 </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
     </div>;
@@ -612,27 +541,14 @@ if (isLoading) {"
   () => setTemplateToDelete (null) 
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick= {
   handleDeleteConfirm 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) 
 }
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </div>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

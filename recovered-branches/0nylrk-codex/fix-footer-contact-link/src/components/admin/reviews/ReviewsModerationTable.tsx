@@ -1,8 +1,5 @@
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -10,8 +7,6 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -19,12 +14,7 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -33,14 +23,7 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 import {
 
@@ -59,14 +42,11 @@ import { toast } from "@/hooks/use-toast",""
 import { supabase } from "@/integrations/supabase/client",""
 import { Review, ReviewStatus } from "@/types/reviews","
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
 
-=======
   // TODO: Implement
 }
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Table,
   TableBody,
   TableCell,
@@ -89,34 +69,19 @@ import {}
 DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ReviewsModerationTableProps {
-=======
 import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { Button } from "@/components/ui/button",
 interface ReviewsModerationTableProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   reviews: Review[]
   isLoading: boolean
-=======
   DropdownMenuItem,"
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu","
 import { Badge } from "@/components/ui/badge","
 import { Button } from "@/components/ui/button",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface ReviewsModerationTableProps {}
   reviews: Review[];
@@ -136,11 +101,7 @@ export function ReviewsModerationTable({}
   reviews,
   isLoading,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
 
@@ -154,9 +115,7 @@ export function ReviewsModerationTable({}
       const { error } = await supabase"
         .from("reviews")
         .update({ status })
-<<<<<<< HEAD
 
-<<<<<<< HEAD
         .eq("id", reviewId),
 
       if (error) throw error,
@@ -170,23 +129,13 @@ export function ReviewsModerationTable({}
       setViewDetailsOpen(false)
     },
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
   onRefresh}: ReviewsModerationTableProps) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     onError: (error: Error) => {
       toast({
 
@@ -243,13 +192,11 @@ variant: "destructive"})  },
     updateReviewStatus({ reviewId, status: "approved" })
 
   },
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleReject = (reviewId: string) => {"
     updateReviewStatus({ reviewId, status: "rejected" })
   },
 
-<<<<<<< HEAD
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review)
     setViewDetailsOpen(true)
@@ -264,15 +211,10 @@ variant: "destructive"})  },
             key={star}"`
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                         src={review.reviewer_profile.avatar_url}"
                         alt={review.reviewer_profile.display_name |""}
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -302,13 +244,7 @@ import {;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;"
 import { Badge } from "@/components/ui/badge",;"
 import { Button } from "@/components/ui/button",;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
   isLoading: boolean,;
@@ -372,11 +308,9 @@ export function ReviewsModerationTable(): any ({;
 status} {;
       reviewId:string,;
       status:ReviewStatus;
-=======
       status}: {;
       reviewId: string,;
       status: ReviewStatus;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }) => {;
       const { error } = await supabase;"
         .from("reviews");
@@ -456,8 +390,6 @@ status} {;
     setViewDetailsOpen(true);
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const renderStars = (rating: number) => {;
 
     );
@@ -472,29 +404,20 @@ status} {;
           />;
         ))}
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
 import { useState } from './react';
-=======
   const renderStars = (rating: number) => {;import { useState } from './react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const renderStars = (rating: number) => {;import { useState } from './react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       </div>;
     );
   };
 
 import { useState } from './react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
 import { format } from './date - fns';
 import { toast } from '@/hooks / use - toast';
 import { supabase } from '@/integrations / supabase / client';
-=======
 
 import { useState } from './react';'
 import { use_mutation } from '@tanstack / react - query';'
@@ -502,7 +425,6 @@ import { Check, X, User, Star, MoreHorizontal } from './lucide-react';'
 import { format } from './date - fns';'
 import { toast } from '@/hooks / use - toast';'
 import { supabase } from '@/integrations / supabase / client';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Review, ReviewStatus } from '@/types / reviews';
 ;'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';'
@@ -576,55 +498,34 @@ return (
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
-<<<<<<< HEAD
                     {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                         src={review.reviewer_profile.avatar_url}"
                         alt={review.reviewer_profile.display_name |""}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       />
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name;
                           ? getInitials(review.reviewer_profile.display_name)
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           : <User className="h-4 w-4" />}
-=======
   return (    <>;
       <Table>;
         <TableHeader>;
           <TableRow>;                          : <User className="h-4 w-4" />}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   return (    <>;
       <Table>;
         <TableHeader>;
           <TableRow>;                          : <User className="h-4 w-4" />}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>;
 </Star>
@@ -681,14 +582,12 @@ return (
                         {review.reviewer_profile?.display_name || "User"}
                       </span>;
                           : <User className="h-4 w-4" />}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </AvatarFallback>;
                     )}
 )}
                   </div>;
                 </div>;
               </TableCell>;
-<<<<<<< HEAD
               <TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>;
 </TableCell>
@@ -696,19 +595,16 @@ return (
               <TableCell>;
 <Badge
                   variant="outline"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   className={`${getStatusColor(review && review.status as ReviewStatus)}`}>;
 </Badge>
                 </Badge>;
               </TableCell>;
               <TableCell>;
-<<<<<<< HEAD
                 {review && review.report_count > 0 ? (;"
                   <Badge variant="destructive">{review && review.report_count}</Badge>;
                 ) : (;
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   "None";
                 )}
               </TableCell>;"
@@ -762,7 +658,6 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                         </DropdownMenuItem>;
                       )}
 
-=======
 </DropdownMenu>
                     <DropdownMenuTrigger asChild>;
 </DropdownMenuTrigger>
@@ -786,30 +681,23 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "approved" })}>;"
 </DropdownMenuItem>
                         </DropdownMenuItem>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
             <TableHead > Status</TableHead>;
 <TableHead > Reports</TableHead>;
-<<<<<<< HEAD
             <TableHead className="text-right">Actions</TableHead>;
-=======
             <TableHead className="text-right">Actions</TableHead>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </TableRow>;
         </TableHeader>;
         <TableBody>;
           {reviews.map ((review) => (
             <TableRow key={review.id}>;
 <TableCell>;
-<<<<<<< HEAD
                 <div className="flex items - center gap-2">;
                   <Avatar className="h - 8 w-8">;
-=======
                 <div className="flex items - center gap-2">;
                   <Avatar className="h - 8 w-8">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}"
@@ -823,13 +711,10 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                   </Avatar>;
                   <div>;
                     {review.is_anonymous ? (
-<<<<<<< HEAD
                       <span className="text - sm font-medium">Anonymous</span>) : (
                       <span className="text - sm font-medium">;
-=======
                       <span className="text - sm font-medium">Anonymous</span>) : (
                       <span className="text - sm font-medium">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         {review.reviewer_profile?.display_name || "User"}
             <TableHead > Reports</TableHead>;"
             <TableHead className="text - right">Actions</TableHead>;"
@@ -904,11 +789,8 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                         on_click={() => handle_reject (review.id)}
                         disabled={is_pending}
                       >;
-<<<<<<< HEAD
                         <X className="h - 4 w - 4 text - red-500" />;
-=======
                         <X className="h - 4 w - 4 text - red-500" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>;
                     </>)}
                   <DropdownMenu>;
@@ -918,11 +800,8 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                         size="sm";
                         className="h - 8 w - 8 p-0";
                       >;
-<<<<<<< HEAD
                         <MoreHorizontal className="h - 4 w-4" />;
-=======
                         <MoreHorizontal className="h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>;
                     </DropdownMenuTrigger>;"
                     <DropdownMenuContent align="end">;
@@ -933,10 +812,7 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                         <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "rejected" })}>;
                           Mark as rejected;
 </DropdownMenuItem>)}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       {review.status === "rejected" && (
-<<<<<<< HEAD
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
                       >
@@ -968,7 +844,6 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                           Mark as approved
                         </DropdownMenuItem>
                       )}
-<<<<<<< HEAD
 
 "
                       {review.status === "approved" && (;"
@@ -985,48 +860,33 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                 </div>
               </TableCell>
             </TableRow>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
 
 </TableRow>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ))}
 
-=======
                       {review.status === "rejected" && (                    </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                       {review.status === "rejected" && (                    </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </TableBody>;
       </Table>;
 
-=======
                       {review.status === "rejected" && (                    </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
         </TableBody>;
       </Table>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <AvatarImage
                         src={selectedReview && selectedReview.reviewer_profile.avatar_url}
-=======
 
       {selectedReview && (;
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;"
@@ -1049,7 +909,6 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                     {selectedReview && selectedReview.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
                         src={selectedReview && selectedReview.reviewer_profile.avatar_url}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         alt={selectedReview && selectedReview.reviewer_profile.display_name || ""}
                       />;
                     ) : (;
@@ -1067,17 +926,10 @@ className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 
                   {selectedReview && selectedReview.communication_rating && (;
                     <Badge variant="outline">;
                       Communication: {selectedReview && selectedReview.communication_rating}/5;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                     </Badge>;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   )}
                   {selectedReview && selectedReview.quality_rating && (;"
-=======
                     </Badge>;
-=======
                     </Badge>;}
 ;)
   const get_initials = (name: string) =>: any {
@@ -1103,7 +955,6 @@ if ( {) {
             key={star}
   return (
     <>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       <Table>;
 
@@ -1125,7 +976,6 @@ if ( {) {
                     <div className="font-medium">;
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <Badge variant="outline">;
                       Quality: {selectedReview && selectedReview.quality_rating}/5;
                     </Badge>;
@@ -1141,7 +991,6 @@ if ( {) {
                       className={selectedReview && selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}>;"
                       {selectedReview && selectedReview.would_work_again ? "Would work again" : "Would not work again"}
 "
-=======
 {selectedReview.is_anonymous;
                         ? "Anonymous";
                         :selectedReview.reviewer_profile?.display_name || "User"}
@@ -1190,7 +1039,6 @@ if ( {) {
               {selectedReview.report_count > 0 && (;
                 <div className="bg-red-50 border border-red-200 rounded-md p-3">;
                   <h4 className="text-sm font-medium text-red-800">Reports:{selectedReview.report_count}</h4>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <p className="text-sm text-red-700">;
                     This review has been reported by users and may need investigation.;
                   </p>;
@@ -1225,7 +1073,6 @@ if ( {) {
                   <Button
                     variant="destructive"
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     disabled={isPending}
                   >;
                     Reject;
@@ -1263,10 +1110,7 @@ if ( {) {
         </Dialog>;
       )}
     </>;
-<<<<<<< HEAD
   );
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   );
             </TableRow>))}
         </TableBody>;
@@ -1409,7 +1253,6 @@ src={selected_review.reviewer_profile.avatar_url}"
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
 
                   <Button;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     variant="destructive";
                     on_click={() => handle_reject (selected_review.id)}
 
@@ -1418,7 +1261,6 @@ disabled={is_pending}
                   >;
                     Approve;
                   </Button>;
-<<<<<<< HEAD
                 </>)}"
               {selected_review.status === "approved" && (
                 <Button;"
@@ -1439,9 +1281,6 @@ disabled={is_pending}
           </DialogContent>;
         </Dialog>)}
     </>);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),; import {
   // TODO: Implement
   Table;
@@ -1582,21 +1421,11 @@ pr-12325
         </Dialog>
     </>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-=======
                     </Badge>;}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
 }"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,25 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
-<<<<<<< HEAD
   const { jobId } = useParams() as { jobId?: string }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string }
 
@@ -39,7 +29,6 @@ import {useWhitelabel} from '@/context/WhitelabelContext';
 
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
@@ -52,25 +41,16 @@ import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from 'react',
-=======
   const { jobId } = useParams() as { jobId?: string }import React, { useState, useEffect } from 'react',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const { jobId } = useParams() as { jobId?: string }import React, { useState, useEffect } from 'react',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React, { useState, useEffect } from 'react',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -84,7 +64,6 @@ import { useAuth } from '@/hooks/useAuth',
 import useJobDetails from '@/hooks/useJobDetails',
 import { ApplyToJobModal } from '@/components/messaging/job-application',
 import { SEO } from '@/components/SEO',
-=======
 
 '
 import React, { useState, useEffect } from 'react','
@@ -101,7 +80,6 @@ import { useAuth } from '@/hooks/useAuth','
 import useJobDetails from '@/hooks/useJobDetails','
 import { ApplyToJobModal } from '@/components/messaging/job-application','
 import { SEO } from '@/components/SEO','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useWhitelabel } from '@/context/WhitelabelContext',
 export default function JobDetails() {};
   // Cast to specify the expected route param type since useParams may be untyped;
@@ -202,23 +180,9 @@ if (error || !job) {;
 
   const isOwnJob = user?.id === job.client_id,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <>
       <SEO'
@@ -301,13 +265,11 @@ if (!isAuthenticated) {;"
 
 "
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       toast && toast.error("Only job seekers can apply for jobs");
       return;
     }
   const handleApplySuccess = async (appliedJobId: string) => {;"
     toast && toast.success("Application submitted successfully!"),;
-<<<<<<< HEAD
     setIsApplyModalOpen(false)
 };
   const formatBudget = (budget: any) => {;
@@ -348,8 +310,6 @@ if (!isAuthenticated) {;"
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className="whitespace-pre-wrap">;
 
                   </div>;
@@ -359,8 +319,6 @@ if (!isAuthenticated) {;"
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;"
                   <div className="flex flex-wrap gap-2">;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         {skill}
                       </Badge>;
                     ))}
@@ -403,13 +361,9 @@ if (!isAuthenticated) {;"
                 </div>
                 {!isOwnJob && (
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
                         {skill}
                       </Badge>;
                     ))}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   </div>;
                 </div>;
               </CardContent>;
@@ -428,13 +382,8 @@ if (!isAuthenticated) {;"
                 </div>;
 
                 <div className="flex items-start">;
-=======
                   <div className="whitespace-pre-wrap">;                <div className="flex items-start">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   <div className="whitespace-pre-wrap">;                <div className="flex items-start">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             <Card>;
               <CardContent className="pt-6 space-y-4">;
                 <div className="flex items-start">;
@@ -449,7 +398,6 @@ if (!isAuthenticated) {;"
                 </div>;
 
                 <div className="flex items-start">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
                     <p className="text-sm text-muted-foreground">Deadline</p>;
@@ -472,38 +420,24 @@ if (!isAuthenticated) {;"
                     className="w-full mt-4" 
 
                   <Button 
-<<<<<<< HEAD
                     className="w-full mt-4" 
 
                   <Button "
                     className="w-full mt-4" 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     onClick={handleApply}
                     disabled={isOwnJob}>;
                     Apply Now;
                   </Button>;
                 )}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {isOwnJob && (
-=======
                     className="w-full mt-4"                 {isOwnJob && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                     className="w-full mt-4"                 {isOwnJob && (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 {isOwnJob && (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
-=======
 
                 {isOwnJob && ("
                   <div className="text-center p-2 bg-muted rounded-md mt-4">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>
                 )}
@@ -512,10 +446,7 @@ if (!isAuthenticated) {;"
           </div>
         </div>
       </main>
-<<<<<<< HEAD
       <Footer />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 {isOwnJob && (;"
                   <div className="text-center p-2 bg-muted rounded-md mt-4">;"
@@ -542,7 +473,6 @@ export default /**;
  * JobDetails - Function description;
  */
 function JobDetails() {}
-=======
       <Footer />
 
                 {isOwnJob && (;
@@ -569,7 +499,6 @@ export default /**
  * JobDetails - Function description
  */
 function JobDetails() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Cast to specify the expected route param type since use_params may be untyped;
   const { job_id } = use_params () as { job_id?: string }
   const { job, is_loading, error } = useJobDetails (job_id);
@@ -721,13 +650,11 @@ if (return "Not specified", ) {}
                     disabled={isOwnJob}
                   >;
                     Apply Now;
-<<<<<<< HEAD
                   </Button>)}
                 {isOwnJob && (
                   <div className="text - center p - 2 bg - muted rounded - md mt - 4">;
                     <p className="text - sm text - muted - foreground">This is your job posting</p>;
                   </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </Button>;
                 )}
                 ;
@@ -736,10 +663,6 @@ if (return "Not specified", ) {}
                     <p className="text-sm text-muted-foreground">This is your job posting</p>;
                   </div>;
                 )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </CardContent>;
             </Card>;
           </div>;
@@ -765,16 +688,13 @@ job={{}
             client_id: job.client_id;
           }}
           is_open={isApplyModalOpen}
-=======
 
           }}
           is_open={isApplyModalOpen})
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           on_close={() => setIsApplyModalOpen (false)}
         />)}
     </>);
 }
-<<<<<<< HEAD
   ),;}
  const [isApplyModalOpen, setIsApplyModalOpen] = useState (false);
 if (error || !job) {"
@@ -782,7 +702,6 @@ if (error || !job) {"
 )
 }>View All Jobs </div> <Footer /> </>) 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             client_id: job.client_id
           }}
           isOpen={isApplyModalOpen}
@@ -791,18 +710,8 @@ if (error || !job) {"
     </>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       <Footer />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 "`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

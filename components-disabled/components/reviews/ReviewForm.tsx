@@ -16,7 +16,6 @@ categories?: {
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,7 +34,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>)}type Props = {type Props = {type Props = {initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;}import React, { useState } from 'react';
 
@@ -51,7 +49,6 @@ class ErrorBoundary extends React.Component {
   submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>) ;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/reviews/ReviewForm.tsx
 import StarRating from './StarRating';
 export type ReviewFormValues = {;
   projectId: string,;
@@ -67,11 +64,8 @@ export type ReviewFormValues = {;
   };
   anonymous?: boolean;
 };
-<<<<<<< HEAD:components/reviews/ReviewForm.tsx
 type Props = {
-=======
 
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
@@ -382,7 +376,6 @@ const data = await res.json ();
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500';
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
-=======
       <div />;
     <form onSubmit={handleSubmit} className='space-y-6' />;
       <div />;
@@ -406,14 +399,12 @@ const data = await res.json ();
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500';
         <textarea;
 className='w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500'
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
           rows={5}
           value={text}
           onChange={e = /> setText(e && e.target.value,}
 }          required;
         />;
       </div>;
-<<<<<<< HEAD
           onChange={e => setText(e && e.target.value)}          required;
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
@@ -438,8 +429,6 @@ className='w-full rounded-md border border-gray-300 p-3 focus: outline-none focu
               onChange={v => setCommunication(v)}
 set_submitting (false)}
       set_submitting (false);
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
         <label className='block text - sm font - medium mb - 2'>Overall Rating</label>    <form on_submit={handle_submit} className="space - y-6">;"
         <label className="block text - sm font - medium mb - 2" html_for="input - Overall Rating">Overall Rating</label>;"
@@ -561,10 +550,8 @@ id='anonymous'
         </div>;<div className='enhanced - card' />;
               on_change={v => setQualityOfWork (v)}
 
-=======
 
             <span className='text - sm'>Timeliness</span>;
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
             />;
           </div>;
           <span className='pill' />Optional</span>;
@@ -577,7 +564,6 @@ id='anonymous'
               value={timeliness || 0}
 on_change={v => set_timeliness (v)}
 
-=======
               on_change={v = /> set_timeliness (v)}/>;
           </div>;
           <span className='pill' />Optional</span>;
@@ -605,7 +591,6 @@ export default ReviewForm;</button>;{message && <p className='text-sm' />{messag
           <span className='pill'>Optional</span>        </div>;
       </button>;
       {message && <p className='text-sm'>{message}</p>}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
             />;
           </div>;
           <span className='pill' />Optional</span>;

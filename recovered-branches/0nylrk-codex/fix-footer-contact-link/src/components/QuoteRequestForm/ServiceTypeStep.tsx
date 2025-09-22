@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -16,10 +11,6 @@ import { useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
 import { Card } from "@/components/ui/card",
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
@@ -28,19 +19,14 @@ import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Search } from "lucide-react",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ServiceTypeStepProps {
-=======
 interface ServiceTypeStepProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   {
     id: "service-1"
@@ -99,7 +85,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
 
@@ -143,7 +128,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     title: "Server Rack","
     category: "Equipment",
     image:"
-=======
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
   {
@@ -186,7 +170,6 @@ const SAMPLE_LISTINGS: ListingItem[] = [
     title: "Server Rack",
     category: "Equipment",
     image:
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format",
   },
 ];
@@ -200,7 +183,6 @@ const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item,
       serviceCategory: item.category,
-<<<<<<< HEAD
       serviceType: item.category.toLowerCase() as ServiceType
     })
   },
@@ -211,13 +193,11 @@ const handleItemSelect = (item: ListingItem) => {
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
       if (!categoryMatch) return false
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     if (searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
-<<<<<<< HEAD
 
   return (
     <div className="space - y-6">;
@@ -235,7 +215,6 @@ const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item,
       serviceCategory: item.category,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       serviceType: item.category.toLowerCase() as ServiceType,
     });
   };
@@ -254,9 +233,7 @@ const handleItemSelect = (item: ListingItem) => {
       item.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return ("
     <div className="space-y-6">
@@ -271,10 +248,6 @@ const handleItemSelect = (item: ListingItem) => {
                 ? "bg-zion-purple/20 border-zion-purple"
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             onClick={() => handleTypeSelect("service")}
           >"
             <h4 className="font-medium text-white">Services</h4>"
@@ -282,21 +255,10 @@ const handleItemSelect = (item: ListingItem) => {
               AI solutions, consulting, development;
             </p>
           </Card>
-<<<<<<< HEAD
           <Card 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
           <Card
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             className={`p-4 cursor-pointer border-2 transition-colors ${
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             onClick={() => handleTypeSelect("service")}
           >
             <h4 className="font-medium text-white">Services</h4>
@@ -307,21 +269,16 @@ const handleItemSelect = (item: ListingItem) => {
 
           <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
-=======
           <Card;`
             className={`p-4 cursor-pointer border-2 transition-colors ${"
               formData.serviceType === "talent""
                 ? "bg-zion-purple/20 border-zion-purple""
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"`
             }`}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             onClick={() => handleTypeSelect("talent")}
           >"
             <h4 className="font-medium text-white">Talent</h4>"
@@ -329,19 +286,12 @@ const handleItemSelect = (item: ListingItem) => {
               AI specialists, developers, consultants;
             </p>
           </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Card
           <Card
 
           <Card
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
           <Card
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -356,23 +306,9 @@ const handleItemSelect = (item: ListingItem) => {
           </Card>
         </div>
       </div>
-<<<<<<< HEAD
 
       {formData.serviceType && (
         <div className="space-y-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h3 className="text-xl font-semibold text-white">
-            Select a specific {formData.serviceType}
-          </h3>
-          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
-            <Input
-<<<<<<< HEAD
           <h3 className="text-xl font-semibold text-white">
             Select a specific {formData.serviceType}
           </h3>
@@ -380,7 +316,13 @@ const handleItemSelect = (item: ListingItem) => {
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Input
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -429,7 +371,6 @@ const filteredListings = SAMPLE_LISTINGS && SAMPLE_LISTINGS.filter(item => {;
   });
 
   return (
-<<<<<<< HEAD
     <div className="space-y-6">;
       <div>;
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>;
@@ -477,17 +418,12 @@ const filteredListings = SAMPLE_LISTINGS && SAMPLE_LISTINGS.filter(item => {;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
 
             <Input;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 
 "
           <div className="relative">"
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}"
@@ -529,27 +465,22 @@ const filteredListings = SAMPLE_LISTINGS && SAMPLE_LISTINGS.filter(item => {;
 
   );
 }
-=======
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
           <h3 className="text-xl font-semibold text-white">
             Select a specific {formData.serviceType}
           </h3>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             on_click={() => handleTypeSelect ("service")}
           >;
             <h4 className="font - medium text-white">Services</h4>;
             <p className="text - sm text - zion - slate-light">;
-=======
 
 "
             on_click={() => handleTypeSelect ("service")}
           >;"
             <h4 className="font - medium text - white">Services</h4>;"
             <p className="text - sm text - zion - slate - light">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
       {formData.serviceType && (
         <div className="space-y-4">
@@ -622,7 +553,6 @@ const filteredListings = SAMPLE_LISTINGS && SAMPLE_LISTINGS.filter(item => {;
           >;
 <h4 className="font - medium text - white">Services</h4>;
             <p className="text - sm text - zion - slate - light">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               AI solutions, consulting, development;
             </p>;
           </Card>;
@@ -634,13 +564,10 @@ const filteredListings = SAMPLE_LISTINGS && SAMPLE_LISTINGS.filter(item => {;
             }`}"
             on_click={() => handleTypeSelect ("talent")}
 >;
-<<<<<<< HEAD
             <h4 className="font - medium text-white">Talent</h4>;
             <p className="text - sm text - zion - slate-light">;
-=======
             <h4 className="font - medium text-white">Talent</h4>;
             <p className="text - sm text - zion - slate-light">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               AI specialists, developers, consultants;
             </p>;
           </Card>;
@@ -652,13 +579,10 @@ const filteredListings = SAMPLE_LISTINGS && SAMPLE_LISTINGS.filter(item => {;
             }`}"
             on_click={() => handleTypeSelect ("equipment")}
 >;
-<<<<<<< HEAD
             <h4 className="font - medium text-white">Equipment</h4>;
             <p className="text - sm text - zion - slate-light">;
-=======
             <h4 className="font - medium text-white">Equipment</h4>;
             <p className="text - sm text - zion - slate-light">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Servers, workstations, specialized hardware;
             </p>;
           </Card>;
@@ -831,11 +755,8 @@ interface ServiceTypeStepProps {
               className="pl - 10 bg - zion - blue border border - zion - blue - light focus:border - zion-purple";
             />;
           </div>;
-<<<<<<< HEAD
           <div className="grid grid - cols - 1 gap - 4 mt-4">;
-=======
           <div className="grid grid - cols - 1 gap - 4 mt-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {filtered_listings.length > 0 ? (
               filtered_listings.map ((item) => (
                 <div;
@@ -955,11 +876,7 @@ title={item.title}
                     ai_score={Math.floor (Math.random () * 30) + 70}
                     rating={Math.floor (Math.random () * 2) + 3}
                     review_count={Math.floor (Math.random () * 50) + 10}
-<<<<<<< HEAD
                     image={item.image}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                     description="Sample listing description";
                   />;
                 </div>))) : (
@@ -974,7 +891,6 @@ title={item.title}
 </div>)
               </div>)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
                     description="Sample listing description"
                   />
@@ -995,18 +911,7 @@ pr-12325
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     image={item.image}}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </div>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

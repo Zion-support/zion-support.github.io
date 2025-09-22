@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState  } from 'react';
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
@@ -11,13 +7,8 @@ import { ContractHeader  } from './ContractHeader';
 import { ContractTypeCards  } from './ContractTypeCards';
 import { RecentContractsTable  } from './RecentContractsTable';
 import { TalentProfile  } from '@/types/talent';
-<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { useAuth } from '@/hooks/useAuth';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -30,25 +21,16 @@ import {useAuth} from '@/hooks/useAuth';
 
 export function ContractBuilderContent() {;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-// Mock data for demo purposes
-=======
-import { useAuth } from '@/hooks/useAuth';// Mock data for demo purposes
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-// Mock data for demo purposes
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 // Mock data for demo purposes
 import { useAuth } from '@/hooks/useAuth';// Mock data for demo purposes
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+// Mock data for demo purposes
+// Mock data for demo purposes
+import { useAuth } from '@/hooks/useAuth';// Mock data for demo purposes
 
 const mockTalent: TalentProfile = {
   id: 'talent-123'
   user_id: 'user-abc-123'
   full_name: 'Alex Chen'
-=======
 import { useState  } from 'react';'
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';'
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';'
@@ -72,37 +54,21 @@ const mockTalent: TalentProfile = {'
   id: 'talent-123''
   user_id: 'user-abc-123''
   full_name: 'Alex Chen''
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   professional_title: 'Full Stack Developer'
   hourly_rate: 85'
   profile_picture_url: '''
   skills: ['ReactNode.jsSmart Contracts']}
 export function ContractBuilderContent() {
 export function ContractBuilderContent() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Mock data for demo purposes
 
 export function ContractBuilderContent() {;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export function ContractBuilderContent() {};
 export function ContractBuilderContent() { return null; }
   const { user } = useAuth();'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   const { user } = useAuth();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([]
     {'
@@ -121,16 +87,9 @@ export function ContractBuilderContent() { return null; }
       date: '2025-05-10'
       isSmartContract: false;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   ]);
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
@@ -166,7 +125,6 @@ export function ContractBuilderContent() { return null; }
       title: 'Mobile App Development',;'
       client: 'TechStart Inc',;'
       talent: 'Sarah Williams',;'
-=======
 import { useAuth } from '@/hooks/useAuth',;
 // Mock data for demo purposes;
 const mockTalent: TalentProfile = {;
@@ -194,42 +152,29 @@ export function ContractBuilderContent() {;
       title: 'Mobile App Development',;
       client: 'TechStart Inc',;
       talent: 'Sarah Williams',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       date: '2025-05-10',;
       isSmartContract: false;
     }
   ]),
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleContractGenerated = (content: string) => {'
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleViewContract = (contractId: string) => {
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleViewContract = (contractId: string) => {
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
 
 },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>'
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ]),;
   const handleContractGenerated = (content: string) => {;'
     // // // console.log('Contract generated:', content.substring(0, 100) + '...');
@@ -242,36 +187,24 @@ export function ContractBuilderContent() {;
     <>;'
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />;
       <ContractTypeCards;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       <ContractTypeCards
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   ]);  const handleViewContract = (contractId: string) => {
-=======
 
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
   const handleViewContract = (contractId: string) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   ]);  const handleViewContract = (contractId: string) => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
 
       <ContractTypeCards 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         onStandardClick={() => setShowBuilderType('standard')}
-=======
 '
         onStandardClick={() => setShowBuilderType('standard')}'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         onSmartClick={() => setShowBuilderType('smart')}
       />
       <RecentContractsTable;
@@ -279,13 +212,6 @@ export function ContractBuilderContent() {;
         onViewContract={handleViewContract}
       />'
       {showBuilderType === 'standard' && (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components / contracts / SmartContractBuilder';
 import {ContractBuilder} from '@/components / contracts / ContractBuilder';
@@ -466,7 +392,6 @@ function ContractBuilderContent() {
       title: 'Mobile App Development',
       client: 'TechStart Inc',
       talent: 'Sarah Williams',
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       date: '2025 - 05 - 10',
 ;
 const handleContractGenerated = (content: string) =>: any {'
@@ -486,13 +411,11 @@ const handleContractGenerated = (content: string) =>: any {'
       <ContractHeader onCreateClick={() => setShowBuilderType ('smart')} />;
 
         onStandardClick={() => setShowBuilderType ('standard')}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         onSmartClick={() => setShowBuilderType ('smart')}
       />;
       <RecentContractsTable;
         contracts={recent_contracts}
         onViewContract={handleViewContract}
-<<<<<<< HEAD
       />;'
       {showBuilderType === 'standard' && (
         <ContractBuilder;
@@ -521,11 +444,9 @@ talent={mock_talent}
           is_open={true}
           on_close={() => setShowBuilderType ('none')}
           talent={mock_talent}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           client_name={user?.display_name || 'Client'}
           onContractGenerated={handleContractGenerated}
         />)}
     </>);
 }
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { useParams  } from 'react-router-dom';
@@ -18,13 +14,7 @@ export default function ProjectRoom() {
 
   const { projectId } = useParams() as { projectId: string }
   const { projectId } = useParams() as { projectId: string },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [activeTab, setActiveTab] = useState('chat');
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -33,10 +23,8 @@ import { SEO } from "@/components/SEO";
 
 import { Button } from "@/components/ui/button";
 import {}
-=======
 import { Button } from "@/components/ui/button";
 import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Card,
   CardContent,
   CardDescription,
@@ -58,24 +46,17 @@ import { toast } from "sonner";
 export default function ProjectRoom() {};
   const { projectId } = useParams() as { projectId: string };"
   const [activeTab, setActiveTab] = useState("chat");
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const [isInCall, setIsInCall] = useState(false);
-=======
   const [activeTab, setActiveTab] = useState('chat');  const [isInCall, setIsInCall] = useState(false);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   X,
 } from "lucide-react";
 import { VideoCallRoom } from "@/components/video/VideoCallRoom";
 import { toast } from "sonner";
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function ProjectRoom() {
   const { projectId } = useParams() as { projectId: string };"
   const [activeTab, setActiveTab] = useState("chat");"
   const [isInCall, setIsInCall] = useState(false);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [callParticipants, setCallParticipants] = useState<
     Array<{}
       id: string;
@@ -95,11 +76,7 @@ export default function ProjectRoom() {
       isMuted: false,
     },
   ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {toast} from 'sonner';
@@ -129,19 +106,15 @@ export default function ProjectRoom() { return null; }
     }
   ]),
 const startVideoCall = () => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useParams} from 'react-router-dom';
-=======
 
 const startVideoCall = () => {import {useParams} from 'react-router-dom';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
 import {SEO} from '@/components/SEO';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import {use_params} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -156,17 +129,9 @@ import {toast} from 'sonner';
 
   ]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
-=======
   const startVideoCall = () => {}
 '
 import {useParams} from 'react-router-dom';'
@@ -193,28 +158,21 @@ import {toast} from 'sonner';
   const startVideoCall = () => {}
     setIsInCall(true),"
     toast.success("Video call started", {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "Others can join with the project room link",
     });
     // Switch to video tab if not already there"
     if (activeTab !== "video") {"
       setActiveTab("video");
     }
-<<<<<<< HEAD
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
-<<<<<<< HEAD
 
   ]),;
   const startVideoCall = () => {;
@@ -239,7 +197,6 @@ import {toast} from 'sonner';
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-<<<<<<< HEAD
     ],;
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
     if (!callParticipants.find(p => p.id === randomUser.id)) {;
@@ -248,30 +205,21 @@ import {toast} from 'sonner';
     }
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const endVideoCall = () => {
     setIsInCall(false),
     toast.info("Video call ended", {
 
       description: "Call duration and participants will be logged",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     });
   };
 
 const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
-<<<<<<< HEAD
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
@@ -310,7 +258,6 @@ const simulateUserJoining = () => {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>;
                 </span>;
               )}
-<<<<<<< HEAD
             </TabsTrigger>
             <TabsTrigger value="calendar" className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
@@ -361,8 +308,6 @@ const simulateUserJoining = () => {
                 {isInCall ? (
                   <div className="space-y-4">
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
@@ -409,7 +354,6 @@ const simulateUserJoining = () => {
         isMuted: false,
         isScreenSharing: true,
       },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     ];
 
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
@@ -417,16 +361,12 @@ const simulateUserJoining = () => {
     if (!callParticipants.find((p) => p.id === randomUser.id)) {}
       setCallParticipants((prev) => [...prev, randomUser]);
       toast(`${randomUser.name} joined the call`);
-=======
       description: "Call duration and participants will be logged"
     })
       setCallParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
-=======
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const endVideoCall = () => {
     setIsInCall(false);
@@ -441,7 +381,6 @@ const simulateUserJoining = () => {
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     return (
-=======
   };
 
   const simulateUserJoining = () => {
@@ -472,10 +411,7 @@ const simulateUserJoining = () => {
   };
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       <SEO;`
         title={`Project Room - ${projectId}`}"
@@ -670,12 +606,9 @@ const simulateUserJoining = () => {
       <Footer />
     </>
 )
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <TabsContent value="calendar" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -696,13 +629,10 @@ const simulateUserJoining = () => {
           <h1 className="text - 3xl font-bold">Project Room: {project_id}</h1>;
           <div className="flex gap-2">;
             {isInCall && (
-<<<<<<< HEAD
               <Button variant="destructive" className="flex items - center gap-2">;
                 <X className="h - 4 w-4" />;
-=======
               <Button variant="destructive" className="flex items - center gap-2">;
                 <X className="h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 End Call;
               </Button>)}"
             <Button variant="outline">Invite Team Member</Button>;
@@ -740,11 +670,8 @@ const simulateUserJoining = () => {
               <span className="hidden sm:inline">Settings</span>;
             </TabsTrigger>;
           </TabsList>;
-<<<<<<< HEAD
           <TabsContent value="chat" className="space-y-4">;
-=======
           <TabsContent value="chat" className="space-y-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Card>;
               <CardHeader>;
                 <CardTitle > Project Chat</CardTitle>;
@@ -1012,15 +939,12 @@ pr-12325
               <CardContent className="h-[400px]">;
 <div className="flex items - center justify - center h-full">;
                   <p className="text - muted-foreground">Calendar will be implemented soon</p>;
-=======
                 <div className="flex items - center justify - center h-full">;
                   <p className="text - muted-foreground">Calendar will be implemented soon</p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
               </CardContent>;
             </Card>;
           </TabsContent>;
-<<<<<<< HEAD
           <TabsContent value="team" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -1043,11 +967,9 @@ pr-12325
               <CardContent className="h-[400px]">;
 <div className="flex items - center justify - center h-full">;
                   <p className="text - muted-foreground">Settings will be implemented soon</p>;
-=======
                 <div className="flex items - center justify - center h - full">;
                   <p className="text - muted - foreground">Settings will be implemented soon</p>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>;
               </CardContent>;
             </Card>;
@@ -1057,8 +979,6 @@ pr-12325
       <Footer />;
 
 </>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
     </>;'
@@ -1088,22 +1008,11 @@ return (<> End Call </Button>) "
 }
 ;
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   endVideoCall;"
 }/> Simulate user joining (demo only)  </div> </div>) : (Start Video Call  </div> <div className="text-xs text-muted-foreground mt-4" > <p>Recent calls:</p> <p>No recent calls for this project</p> </div> </div>)""
 }   <TabsContent value="calendar" className="space-y-4" > <Card> <CardHeader> <CardTitle>Project Calendar <CardDescription>Schedule and manage events  <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Calendar will be implemented soon</p> </div>    <TabsContent value="team" className="space-y-4" > <Card> <CardHeader> <CardTitle>Team Members <CardDescription>Manage project participants  <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Team management will be implemented soon</p> </div>    <TabsContent value="settings" className="space-y-4" > <Card> <CardHeader> <CardTitle>Project Settings <CardDescription>Configure project parameters  <CardContent className="h-[400px]" > <div className="flex items-center justify-center h-full" > <p className="text-muted-foreground" >Settings will be implemented soon</p> </div>     </main> <Footer /> </>)"
 "`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

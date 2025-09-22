@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -44,14 +34,10 @@ if (throw error) {
       set_loading (false);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const filteredNotifications = notifications && notifications.filter(notification => {
     switch (filter) {
-=======
     switch (filter) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'unread':
         return !notification && notification.read;'
       case 'messages':'
@@ -61,7 +47,6 @@ if (throw error) {
       case 'system':'
         return notification && notification.type === 'system';
       default: return true;
-=======
 
   const filteredNotifications = notifications && notifications.filter(notification => {
 
@@ -78,13 +63,9 @@ if (throw error) {
       case 'system':
         return notification && notification.type === 'system';
       default: return true
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   });
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, [user_id]);
 ;
   const markAsRead = useCallback (async (id: string) => {}
@@ -105,7 +86,6 @@ if (throw error) {}
 }
       await fetch_notifications ();
     } catch (err) {'
-=======
   const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
 
   }, [user_id]);
@@ -128,7 +108,6 @@ if (throw error) {
 }
       await fetch_notifications ();
     } catch (err) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error ('Error marking notification as read:', err);
     }
   }, [user_id, fetch_notifications]);
@@ -193,7 +172,6 @@ const filtered_notifications = notifications.filter (notification => {}
 ;
   const unread_count = notifications.filter (number => !n.read).length;
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
     notifications;
     filtered_notifications;
@@ -205,19 +183,12 @@ const filtered_notifications = notifications.filter (notification => {}
     markAllAsRead;
 
     dismissNotification;
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState, useCallback } from 'react',;
-=======
   const filteredNotifications = notifications && notifications.filter(notification => {    loading;
     filter;
     markAsRead;
     markAllAsRead;import { useState, useCallback } from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return {
     notifications;
     filtered_notifications;
@@ -229,14 +200,11 @@ import { useState, useCallback } from 'react',;
 
     dismissNotification;
 import { useState, useCallback } from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from '@/integrations/supabase/client',;
-=======
 
 '
 import { useState, useCallback } from 'react',;'
 import { supabase } from '@/integrations/supabase/client',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Notification, FilterType, NotificationContextType } from './types',;
 export const useNotificationOperations = (userId?: string): NotificationContextType => {;
   const [notifications, setNotifications] = useState<Notification[]>([]),;
@@ -323,43 +291,21 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     filter,;
     markAsRead,;
     markAllAsRead,;
-<<<<<<< HEAD
     dismissNotification,;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     setFilter;
     fetchNotifications}
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     dismiss_notification;
-=======
     dismissNotification,;    dismiss_notification;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     dismissNotification,;    dismiss_notification;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     dismiss_notification;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     set_filter;
     fetch_notifications}
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -493,15 +439,5 @@ const filteredNotifications = notifications.filter (notification => {
 case 'messages': return notification.type === 'message';
 case 'onboarding': return notification.type === 'onboarding';
 case 'system': 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

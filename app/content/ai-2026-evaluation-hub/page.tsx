@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Evaluation Hub | Zion Tech Group',
@@ -62,3 +62,5 @@ GET  /api/evals/scorecards?team=...`}
 };
 
 export default EvaluationHub2026;
+
+

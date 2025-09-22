@@ -1,17 +1,7 @@
 :pages_backup/security.tsx
-<<<<<<< HEAD:pages_backup/security.tsx
-<<<<<<< HEAD:pages/security.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/automation-improvements-final
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -118,12 +108,7 @@ export default function Security() {
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-6'>
           <div className='max-w-4xl mx-auto text-center'>
-<<<<<<< HEAD:pages/security.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -151,7 +136,6 @@ keywords="security, data protection, encryption, compliance, cybersecurity"
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-=======
 import Link from 'next/link';'
 import { motion } from 'framer-motion';'
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';'
@@ -176,7 +160,6 @@ export default function SecurityPage() {}
           <div className="absolute inset-0">"
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>"
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>"
           <div className="container mx-auto px-4 relative z-10">
@@ -371,9 +354,6 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
           </div>
 :pages_backup/security.tsx
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/security.tsx
-<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -747,8 +727,6 @@ function SecurityPage() {}
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
 :pages_backup/security.tsx
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx
 
         {/* Security Overview */}
 <section className='py-20 px-6'>
@@ -778,10 +756,8 @@ className='text-center mb-16'
 className='bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
-=======
 
                 >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
@@ -1101,9 +1077,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 :pages_backup/security.tsx
     </Layout>
       </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD:pages/security.tsx
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Compliance Details;
                 </Link>;
@@ -1131,8 +1105,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
   )
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
   );
@@ -1207,34 +1179,20 @@ const Page = () => {}
 
 export default Page;
 :pages_backup/security.tsx
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     </>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     </>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/security.tsx
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/security.tsx
-=======
 
     </>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </Layout>
   );
 }  )
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/security.tsx

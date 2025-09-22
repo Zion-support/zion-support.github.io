@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -34,7 +33,6 @@ const features = [;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import * as React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -63,7 +61,6 @@ import {
 const features = [
   {
     icon: ShoppingCart,
-<<<<<<< HEAD
 
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
@@ -121,7 +118,6 @@ const features = [;
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
-<<<<<<< HEAD
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -298,7 +294,6 @@ const benefits = [
 ];
 export default function RetailSolutions() {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -311,7 +306,6 @@ export default function RetailSolutions() {
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -339,7 +333,6 @@ and customer experience solutions.
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Retail Solutions</h1>"
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
                 Transform your retail business with cutting-edge technology solutions.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -350,7 +343,6 @@ and customer experience solutions.
                 </button>
               </div>
             </div>
-=======
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -359,11 +351,8 @@ and customer experience solutions.
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform your retail business with modern e-commerce, omnichannel,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 and customer experience solutions.              </p>
             </motion.div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         </section>
 
@@ -377,23 +366,19 @@ and customer experience solutions.
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive solutions designed to enhance every aspect of your retail business.
               </p>
-<<<<<<< HEAD
 
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -459,7 +444,6 @@ and customer experience solutions.
                 <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
                   Schedule Demo;
                   <ArrowRight className="w-5 h-5 ml-2" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </button>;
               </div>;
             </div>;
@@ -485,7 +469,6 @@ and customer experience solutions.
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
-<<<<<<< HEAD
                   ))}
                 </ul>
               </div>
@@ -501,12 +484,8 @@ and customer experience solutions.
                 </button>
               </div>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
-=======
                   ))}            </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </div>
         </section>
 
@@ -531,13 +510,9 @@ and customer experience solutions.
           </div>
         </section>
       </div>
-<<<<<<< HEAD
 
     </>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;

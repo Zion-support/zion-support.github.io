@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from './react';
 import { Button  } from '@/components / ui / button';
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
@@ -68,7 +65,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [customFile, setCustomFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -96,18 +92,13 @@ import { ResumeOption, ResumeSelectorProps } from './types',;
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { UploadSection  } from './UploadSection';
 import { SelectResumeSection  } from './SelectResumeSection';
-=======
 
 import { ResumePreviewCard  } from './ResumePreviewCard';'
 import { UploadSection  } from './UploadSection';'
 import { SelectResumeSection  } from './SelectResumeSection';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ResumeOption, ResumeSelectorProps  } from './types';
 
   );
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from './react';
 import { Button  } from '@/components / ui / button';
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
@@ -116,7 +107,6 @@ import { Plus, Loader2  } from './lucide-react';
 import { use_resume  } from '@/hooks / use_resume';
 import { exportResumeToPDF  } from '@/utils / pdf_export';
 import { toast  } from '@/components / ui / use - toast';  );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
 
   const [customFile, setCustomFile] = useState<File | null>(null);
@@ -133,24 +123,15 @@ import { ResumePreviewCard } from "./ResumePreviewCard";
 import { UploadSection } from "./UploadSection";
 import { SelectResumeSection } from "./SelectResumeSection";
 import { ResumeOption, ResumeSelectorProps } from "./types";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
   const [customFile, setCustomFile] = useState<File | null>(null),
   const [isLoading, setIsLoading] = useState(false),
-<<<<<<< HEAD
   const { resume, fetchResume } = useResume(),
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -162,7 +143,6 @@ import { toast } from "@/components/ui/use-toast",
 import { ResumePreviewCard } from './ResumePreviewCard',
 import { UploadSection } from './UploadSection',
 import { SelectResumeSection } from './SelectResumeSection',
-=======
   const { resume, fetchResume } = useResume();
 
 import React, { useState, useEffect } from "react";"
@@ -190,18 +170,12 @@ import { toast } from "@/components/ui/use-toast",'
 import { ResumePreviewCard } from './ResumePreviewCard','
 import { UploadSection } from './UploadSection','
 import { SelectResumeSection } from './SelectResumeSection','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ResumeOption, ResumeSelectorProps } from './types',
 
 export function ResumeSelector() { return null; }
   const { resume, fetchResume } = useResume(),
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   const { resume, fetchResume } = useResume(),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Fetch resume data when component mounts
   useEffect(() => {
 
@@ -211,15 +185,12 @@ export function ResumeSelector() { return null; }
   useEffect(() => {;
     const loadResumes = async () => {;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setIsLoading(true);
       try {;
         await fetchResume();
       } catch (error) {;"
         console && console.error("Error loading resumes:", error);
       } finally {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         setIsLoading(false);
       }
     }
@@ -282,7 +253,6 @@ if ( {) {}
           type: "ai_resume",;
           resume: resume,;
         },;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ];
 
         setSelectedResume(options[0]);
@@ -297,19 +267,14 @@ if ( {) {}
 
     if (value === "recent" && resumeOptions && resumeOptions.length > 0) {;
         setSelectedResume(options[0]);
-=======
           setIsLoading(false);
       }
     }
     loadResumes();
   }, [fetchResume]);        setSelectedResume(options[0]);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 // Fetch resume data when component mounts;
   useEffect(() => {;
     const loadResumes = async () => {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsLoading(true);
       try {;
         await fetchResume();
@@ -487,7 +452,6 @@ if ( {) {
 // Pre-select the most recent resume;
       if (options && options.length > 0 && selectedOption === "recent") {;
         setSelectedResume(options[0]);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         onResumeSelected(options[0]);
 
   // Handle radio option change;"
@@ -506,7 +470,6 @@ pr-12325
 import { ResumePreviewCard } from './ResumePreviewCard',;
 import { UploadSection } from './UploadSection',;
 import { SelectResumeSection } from './SelectResumeSection',;
-=======
 '
 import React, { useState, useEffect } from 'react',;"
 import { Button } from "@/components/ui/button",;"
@@ -519,7 +482,6 @@ import { toast } from "@/components/ui/use-toast",;'
 import { ResumePreviewCard } from './ResumePreviewCard',;'
 import { UploadSection } from './UploadSection',;'
 import { SelectResumeSection } from './SelectResumeSection',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ResumeOption, ResumeSelectorProps } from './types',;
 ;
 export function ResumeSelector() { return null; }
@@ -612,9 +574,6 @@ export function ResumeSelector() { return null; }
       setSelectedResume(customOption),;
       onResumeSelected(customOption),;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       (setSelectedResume(resumeOptions[0]), onResumeSelected(resumeOptions[0]));
     } else if (value === "select") {;
       // Reset selection until user chooses;
@@ -623,9 +582,6 @@ export function ResumeSelector() { return null; }
       setSelectedResume(null);
     }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       (setSelectedResume(resumeOptions[0]), onResumeSelected(resumeOptions[0]));
     } else if (value === "select") {;
       // Reset selection until user chooses;
@@ -634,7 +590,6 @@ export function ResumeSelector() { return null; }
       setSelectedResume(null);
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -642,7 +597,6 @@ export function ResumeSelector() { return null; }
       const file = e.target.files[0]
 };
 
-=======
 
   }
   // Handle custom file upload;
@@ -651,7 +605,6 @@ export function ResumeSelector() { return null; }
       const file = e.target.files[0];
   };
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsLoading(true),
       try {}
         await fetchResume()
@@ -660,9 +613,6 @@ export function ResumeSelector() { return null; }
       } finally {}
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
   // Handle resume selection change
   const handleResumeSelect = (resumeId: string) => {
@@ -683,11 +633,6 @@ setIsLoading(true),
       } catch (error) {
         console.error("Error loading resumes:", error)
       } finally {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 setIsLoading(false);
       }
     }
@@ -736,7 +681,6 @@ setIsLoading(false);
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
   };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         setIsLoading(false)
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -752,7 +696,6 @@ import { SelectResumeSection } from './SelectResumeSection',;
 
 import { ResumeOption, ResumeSelectorProps } from './types',;
 export function ResumeSelector() { return null; }
-=======
 import { ResumeOption, ResumeSelectorProps } from './types',;
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),;
@@ -760,7 +703,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),;
   const [customFile, setCustomFile] = useState<File | null>(null),;
   const [isLoading, setIsLoading] = useState(false),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { resume, fetchResume } = useResume(),;
   // Fetch resume data when component mounts;
   useEffect(() => {;
@@ -815,22 +757,11 @@ const options: ResumeOption[] = [{;'
     }
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
         toast({
@@ -840,20 +771,15 @@ const options: ResumeOption[] = [{;'
           title: "Invalid file type",
           description: "Please upload a PDF file",
           variant: "destructive",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
         toast({
-=======
   // Handle custom file upload;
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {}
     if (e.target.files && e.target.files[0]) {}
       const file = e.target.files[0],
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
       // Check if it's a PDF file"
@@ -880,24 +806,17 @@ const options: ResumeOption[] = [{;'
       // Check if it's a PDF file;"
       if (file && file.type !== "application/pdf") {;
 toast({;
-<<<<<<< HEAD
           title: "Invalid file type",,
   description: "Please upload a PDF file",;
-=======
           title: "Invalid file type",,
   description: "Please upload a PDF file",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           variant: "destructive",;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         });
         return;
 }      setCustomFile(file);
       setSelectedResume(customOption);
       onResumeSelected(customOption);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       setCustomFile(file);
       setSelectedResume(customOption);
@@ -905,7 +824,6 @@ toast({;
     }
 
     try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsLoading(true);
       const pdfBlob = await exportResumeToPDF(selectedResume.resume);
       // Create download link;
@@ -924,7 +842,6 @@ toast({;
       });"
           title: "Invalid file type","
           description: "Please upload a PDF file",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           variant: "destructive"
         }),
         return;
@@ -961,18 +878,11 @@ toast({;
       return;
     }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 "
           title: "Invalid file type","
           description: "Please upload a PDF file",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 try {
       setIsLoading(true),
@@ -989,10 +899,7 @@ try {
       URL.revokeObjectURL(url),
       toast({
         title: "Success!",
-<<<<<<< HEAD
-<<<<<<< HEAD
         description: "Your resume has been downloaded."})
-<<<<<<< HEAD
 
     } catch (error) {
       console.error("Error downloading PDF:", error);
@@ -1008,19 +915,11 @@ try {
         description: "There was an error downloading your resume.","
         variant: "destructive"
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     } finally {
       setIsLoading(false)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   };
 "
@@ -1034,9 +933,7 @@ try {
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
 
       <RadioGroup
-=======
         description: "Your resume has been downloaded."})        title: "Download failed",
-=======
       });
     } catch (error) {;
       console && console.error("Error downloading PDF:", error);
@@ -1060,7 +957,6 @@ try {
         variant: "destructive"
       });
         title: "Download failed",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         description: "There was an error downloading your resume.",
         variant: "destructive"
       })
@@ -1068,15 +964,11 @@ try {
     } finally {
       setIsLoading(false)
 }      <RadioGroup
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     } finally {
       setIsLoading(false)
     }      <RadioGroup
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <RadioGroup;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         value={selectedOption}
         onValueChange={(value) =>;"
           handleOptionChange(value as "recent" | "select" | "upload");
@@ -1115,74 +1007,44 @@ return ("
     <div className="space-y-4">"
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <RadioGroup 
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         className="space-y-3"
       >"
         <div className="flex items-center space-x-2">"
           <RadioGroupItem value="recent" id="recent" />
-<<<<<<< HEAD
           <Label htmlFor="recent" className="text-white">
             Use most recent AI Resume
           </Label>
         </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
-=======
 
 "
         <div className="flex items-center space-x-2">"
           <RadioGroupItem value="select" id="select" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Label htmlFor="select" className="text-white">
             Select from saved versions;
           </Label>
         </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
-=======
         }        className="space-y-3"
       >
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />          <RadioGroupItem value="upload" id="upload" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         }        className="space-y-3"
       >
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />          <RadioGroupItem value="upload" id="upload" />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
         <div className="flex items-center space-x-2">"
           <RadioGroupItem value="upload" id="upload" />"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
@@ -1201,17 +1063,12 @@ return ("
 
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Label htmlFor="upload" className="text-white">
             Upload a custom resume (PDF)
           </Label>
         </div>
-<<<<<<< HEAD
       </RadioGroup>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
           <Label htmlFor="select" className="text-white">Select from saved versions</Label>
@@ -1225,20 +1082,13 @@ return ("
       {/* Resume selection options based on radio selection */}
       {selectedOption === "recent" && resume && (
         <ResumePreviewCard
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
     try {;
       setIsLoading(true),;
       const pdfBlob = await exportResumeToPDF(selectedResume.resume),;
 // Create download link;
-<<<<<<< HEAD
-=======
       // Create download link;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 },;
   ;
   // Handle resume download;
@@ -1253,11 +1103,8 @@ return ("
       ;
       // Create download link;
       </RadioGroup>      // Create download link;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const url = URL.createObjectURL(pdfBlob),;
-=======
       const url = URL.createObjectURL(pdfBlob),;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const link = document.createElement('a'),;
       link.href = url,;'`
       link.download = `${selectedResume.title || 'Resume'}.pdf`,;
@@ -1272,13 +1119,10 @@ toast({;
     } catch (error) {;
       console.error('Error downloading PDF:', error),;
       toast({;
-<<<<<<< HEAD
         title: "Download failed",,
   description: "There was an error downloading your resume.",;
-=======
         title: "Download failed",,
   description: "There was an error downloading your resume.",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: "destructive";
       });
     } finally {;
@@ -1307,20 +1151,11 @@ const handleGenerateResume = () => {;
 
 <div className="flex items-center space-x-2">;
           <RadioGroupItem value="upload" id="upload" />;
-<<<<<<< HEAD
           <Label htmlFor="upload" className="text-white">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Upload a custom resume (PDF);
-=======
           <Label htmlFor="upload" className="text-white">;            Upload a custom resume (PDF);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           <Label htmlFor="upload" className="text-white">;            Upload a custom resume (PDF);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           <Label htmlFor="upload" className="text-white">;
 ;
       setResumeOptions (options);
@@ -1475,16 +1310,12 @@ if ( {) {
           <RadioGroupItem value="upload" id="upload" />;
           <Label html_for="upload" className="text - white">;
             Upload a custom resume (PDF);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </Label>;
         </div>;
       </RadioGroup>;
 {/* Resume selection options based on radio selection */}
 {selectedOption === 'recent' && resume && (;
         <ResumePreviewCard;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),;
 "
@@ -1562,18 +1393,13 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;'
         </div>;
         <ResumePreviewCard;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
         />;
       )}
-<<<<<<< HEAD
       {selectedOption === "select" && (;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <SelectResumeSection;
 "
@@ -1582,19 +1408,7 @@ pr-12325
 ;'
       {selectedOption === 'select' && (;
         <SelectResumeSection;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 {selectedOption === "select" && (;
 
@@ -1619,7 +1433,6 @@ pr-12325
         <SelectResumeSection;
 
 <SelectResumeSection
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
@@ -1627,15 +1440,11 @@ pr-12325
           isLoading={isLoading}
         />;
       )}
-<<<<<<< HEAD
         <UploadSection
-=======
 "
       {selectedOption === "upload" && (;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <UploadSection;
 "
@@ -1644,18 +1453,9 @@ pr-12325
 ;'
       {selectedOption === 'upload' && (;
         <UploadSection;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
           customFile={customFile}
           onFileUpload={handleFileUpload}
 customFile={customFile}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           customFile={customFile}
           onFileUpload={handleFileUpload}
           customFile={customFile}
@@ -1667,13 +1467,11 @@ customFile={customFile}
         <UploadSection
           customFile={customFile}
           onFileUpload={handleFileUpload}
-=======
 
         <UploadSection;
           customFile={customFile}
           onFileUpload={handleFileUpload}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />;
       )}
 {/* Generate Resume Now button */}
@@ -1681,29 +1479,19 @@ customFile={customFile}
 ;
 
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Generate Resume Now button */}
       <div className="flex justify-between items-center pt-2">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Button
-=======
 
       {/* Generate Resume Now button */}"
       <div className="flex justify-between items-center pt-2">;
         <Button"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           variant="outline"
           onClick={handleGenerateResume}
 
       {/* Resume selection options based on radio selection */}"
-=======
-=======
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Generate Resume Now button */}
       <div className="flex justify-between items-center pt-2">;
         <Button
@@ -1727,7 +1515,6 @@ customFile={customFile}
       </div>;
     </div>;
       {/* Resume selection options based on radio selection */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {selected_option === "recent" && resume && (
         <ResumePreviewCard;
           resume={resume}
@@ -1762,26 +1549,12 @@ customFile={customFile}
     </div>);
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 <div className="flex justify-between items-center pt-2">
         <Button 
           variant="outline"
@@ -1799,7 +1572,6 @@ customFile={customFile}
           customFile={customFile}
           onFileUpload={handleFileUpload}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className="text-zion-purple border-zion-purple/20"
         >"
           <Plus className="h-4 w-4 mr-2" />
@@ -1898,16 +1670,10 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 }
 ;
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
       ;'
       {selectedOption === 'upload' && (;'
@@ -1985,4 +1751,3 @@ pr-12325
 }> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now </Button> </div> </div>)"
 </Plus>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

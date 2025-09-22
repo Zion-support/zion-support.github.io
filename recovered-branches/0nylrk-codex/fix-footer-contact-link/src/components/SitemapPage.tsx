@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 import { AppLayout } from "@/layout/AppLayout";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
 import { Link  } from './react-router-dom';
@@ -22,7 +12,6 @@ import { SEO  } from './SEO';
 import { AppLayout  } from '@/layout / AppLayout';
 
 export const SitemapPage: React.FC = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import {Link} from 'react-router-dom';
@@ -36,10 +25,7 @@ import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const SitemapPage: React.FC = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <AppLayout>;
 
@@ -316,18 +302,12 @@ export const SitemapPage: React.FC = () => {
                   </div>;
                 </li>;
               ))}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 import { AppLayout } from "@/layout/AppLayout";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const SitemapPage: React.FC = () => {
   return (
     <AppLayout>
@@ -492,17 +472,11 @@ export const SitemapPage: React.FC = () => {
                   </div>
                 </li>
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </ul>
           </div>
         </div>
       </div>
     </AppLayout>
-<<<<<<< HEAD
   );
 }
 
@@ -526,9 +500,6 @@ export const SitemapPage: React.FC = () => {
                     {path} <span className="ml - 2 text - xs italic">({key})</span>;
                   </div>;
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </ul>;
           </div>;
         </div>;
@@ -536,22 +507,12 @@ export const SitemapPage: React.FC = () => {
 </AppLayout>);
 }
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </ul>;
           </div>;
         </div>;
       </div>;  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
 "
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

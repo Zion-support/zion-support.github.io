@@ -1,23 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {useEffect, useState} from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState  } from 'react';
-=======
 
 import { useEffect, useState  } from 'react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import { useEffect, useState  } from 'react';
 
 import {useEffect, useState} from 'react';
 import { useEffect, useState  } from 'react';
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -28,7 +19,6 @@ import { supabase  } from '@/integrations/supabase/client';
 import { TokenTransaction  } from '@/types/tokens';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
-=======
 '
 import { useEffect, useState  } from 'react';'
 import { Header  } from '@/components/Header';'
@@ -41,7 +31,6 @@ import { supabase  } from '@/integrations/supabase/client';'
 import { TokenTransaction  } from '@/types/tokens';'
 import { ProtectedRoute  } from '@/components/ProtectedRoute';'
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useToast } from '@/hooks/use-toast';
 export default function TokenManager() { return null; }
 import {useEffect, useState} from 'react';'
@@ -56,17 +45,10 @@ import {TokenTransaction} from '@/types/tokens';'
 import {ProtectedRoute} from '@/components/ProtectedRoute';'
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';'
 import {useToast} from '@/hooks/use-toast';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function TokenManager() {;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import {useEffect, useState} from 'react';
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),'
@@ -147,8 +129,6 @@ if ( {) {}
 
 };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -168,14 +148,12 @@ export default function TokenManager() { return null; }
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;'
   const [userId, setUserId] = useState(''),;
   const [amount, setAmount] = useState(0),;'
-=======
 import { useToast } from '@/hooks/use-toast',;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;
   const [userId, setUserId] = useState(''),;
   const [amount, setAmount] = useState(0),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const isAdmin = user?.userType === 'admin',;
 
   useEffect(() => {;
@@ -187,12 +165,7 @@ const fetchTransactions = async () => {;
       .from('token_transactions');'
       .select('*');'
       .order('created_at', { ascending: false });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       .limit(100);
-=======
-=======
 });
       fetch_transactions ();
     } else {
@@ -228,7 +201,6 @@ export default function TokenManager() {;
   useEffect(() => {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]),;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const fetchTransactions = async () => {;
     const { data, error } = await supabase;
       .from('token_transactions');
@@ -242,14 +214,11 @@ export default function TokenManager() {;
     if (!error) setTransactions(data || []);
   },;
       .limit(100);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     if (!error) setTransactions(data || []);
-=======
 
       .limit(100);
     if (!error) setTransactions(data || []);
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const handleIssue = async (type: 'earn' | 'burn') => {;
     if (!userId || amount <= 0) return,;'`
     const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {;'
@@ -264,22 +233,17 @@ if (res && res.ok) {;      toast({;
     } else {;
       const err = await res && res.json();
 toast({;
-<<<<<<< HEAD
         title: 'Error',,
   description: err && err.error || 'Failed',;
         variant: 'destructive';
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
-=======
       fetchTransactions();
     } else {;
       const err = await res && res.json();
         title: 'Error',;
         description: err && err.error || 'Failed',;
         variant: 'destructive';')
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   },
 
@@ -406,17 +370,11 @@ toast({;
         variant: 'destructive';
       });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   }
 ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <ProtectedRoute admin_only>;
       <div>;
@@ -440,9 +398,6 @@ toast({;
             <Tabs default_value="history">;
 
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <TabsList>;
                 <TabsTrigger value="history">Transaction History</TabsTrigger>;
               </TabsList>;
@@ -455,7 +410,6 @@ toast({;
                       <span>{tx.user_id}</span>;
                       <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
 </li>))}}
-=======
 <ul className="space-y-2">;
                   {transactions.map(tx => (;
                     <li key={tx.id} className="flex justify-between border-b py-2 text-white">;
@@ -516,14 +470,11 @@ toast({;
                       <span>{tx.user_id}</span>;"
                       <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
                     </li>))}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </ul>;
         <Footer />;
       </div>;
 
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 </ProtectedRoute>;
   ),; const fetchTransactions = async () => {
   const {
@@ -595,4 +546,3 @@ return (<ProtectedRoute adminOnly> <div> <Header /> <div className="min-h-screen
 
     );`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

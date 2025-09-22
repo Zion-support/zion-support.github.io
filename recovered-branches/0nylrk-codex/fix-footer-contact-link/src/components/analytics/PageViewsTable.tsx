@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -15,18 +8,8 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -44,7 +27,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Skeleton } from "@/components/ui/skeleton","
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select","
 import { useState } from "react",'
-=======
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 ;
 
@@ -54,16 +36,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Skeleton } from "@/components/ui/skeleton",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
@@ -71,7 +46,6 @@ const timeRangeToInterval = {
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
 
-<<<<<<< HEAD
 
   // Format path names for better display
   const formatPathName = (path: string) => {
@@ -118,11 +92,6 @@ const timeRangeToInterval = {
               return (
                 <div key={index} className="flex items-center justify-between">
                   <div className="text-zion-slate-light font-medium">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const timeRangeToInterval = {'
   '1d': { days: 1, interval: 'hour' }'
   '7d': { days: 7, interval: 'day' }'
@@ -130,12 +99,7 @@ const timeRangeToInterval = {'
   '90d': { days: 90, interval: 'week' }'
   '365d': { days: 365, interval: 'month' }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {formatPathName(page.path)}
                   </div>"
                   <div className="flex items-center gap-3">"
@@ -200,11 +164,7 @@ const timeRangeToInterval = {'
               No page view data available for this time period
             </div>
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           )}
-=======
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;
 
 const timeRangeToInterval = {;
@@ -343,7 +303,6 @@ export function PageViewsTable() {;
                         <div;
                           className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
                           style={{ width: `${percentage}%` }}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         />;
                       </div>;"
                       <span className="text-xs text-zion-slate">{percentage}%</span>;
@@ -357,34 +316,20 @@ export function PageViewsTable() {;
               No page view data available for this time period;
             </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>;
       </CardContent>;
     </Card>;
   );
 }
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           )}
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 )}
         </div>;
       </CardContent>;
     </Card>;
           )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;}
 ;
@@ -510,14 +455,11 @@ return (
         <div className="space-y-4">;
           {is_loading ? (
             Array (5).fill (0).map ((_, i) => (
-<<<<<<< HEAD
               <div key={i} className="flex items - center justify-between">;
                 <Skeleton className="h - 4 w - 40 bg - zion - blue-light" />;
                 <div className="flex items - center gap-2">;
                   <Skeleton className="h - 4 w - 10 bg - zion - blue-light" />;
                   <Skeleton className="h - 6 w - 32 bg - zion - blue-light" />;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
               </div>))) : page_views && page_views.length > 0 ? (
             page_views.map ((page, index) => {'
@@ -542,11 +484,8 @@ return (
                   </div>;
                 </div>);
             })) : (
-<<<<<<< HEAD
             <div className="text - center py - 8 text - zion-slate">;
-=======
             <div className="text - center py - 8 text - zion-slate">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               No page view data available for this time period;
             </div>)}
         </div>;
@@ -559,21 +498,11 @@ return data || []
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
           )}
 }
 ;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </Card>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

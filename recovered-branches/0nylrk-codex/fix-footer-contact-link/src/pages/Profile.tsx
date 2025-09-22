@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 import React, { useEffect } from 'react',
 import { Header } from "@/components/Header",
@@ -18,13 +12,6 @@ import { Button } from "@/components/ui/button",
       toast.error("Please log in to view your profile"),
       navigate("/login?redirect=/profile")
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -33,7 +20,6 @@ import {Button} from "@/components/ui/button";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 export default function Profile() {;
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -46,11 +32,8 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",import { useNavigate } from "react-router-dom";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { toast } from "sonner";
 export default function Profile() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 import React, { useEffect } from "react";"
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer";"
@@ -59,7 +42,6 @@ import { Button } from "@/components/ui/button";"
 import { useNavigate } from "react-router-dom";"
 import { toast } from "sonner";
 export default function Profile() {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user, isLoading, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -134,8 +116,6 @@ import { toast } from "sonner",
 export default function Profile() {
   const { user, isLoading, logout } = useAuth(),
   const navigate = useNavigate(),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -146,7 +126,6 @@ export default function Profile() {
   }, [user, isLoading, navigate]);
   }, [user, isLoading, navigate]),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return (
       <>;
         <Header />;
@@ -167,7 +146,6 @@ export default function Profile() {
         </div>;
         <Footer />;
       </>;
-=======
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
             >
               Go to Login
@@ -176,11 +154,9 @@ export default function Profile() {
         </div>
         <Footer />
       </>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     );
   }
   return (
-<<<<<<< HEAD
     <>
       <Header />
       <div className="min-h-screen bg-zion-blue">
@@ -205,32 +181,19 @@ export default function Profile() {
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button
                   onClick={() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     logout();
 
                     logout(),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     navigate("/")
-=======
-                    logout();
-                    navigate("/");
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-                  }}
-=======
-                    navigate("/")                  }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                    navigate("/")                  }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     logout();
                     navigate("/");
                   }}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+                    navigate("/")                  }}
+                    navigate("/")                  }}
+                    logout();
+                    navigate("/");
+                  }}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 >
@@ -243,40 +206,27 @@ export default function Profile() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
                     navigate("/");
                   }}
                   variant="outline";
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
-=======
   );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
       toast.error ("Please log in to view your profile");
       navigate ("/login?redirect=/profile");
 
-<<<<<<< HEAD
 import React, { useEffect } from 'react',;
-=======
   )import React, { useEffect } from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React, { useEffect } from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 }
 import React, { useEffect } from 'react',;
   )import React, { useEffect } from 'react',;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { useNavigate } from "react-router-dom",;
-=======
   useEffect(() => {}
     if (!isLoading && !user) {"
       toast.error("Please log in to view your profile");"
@@ -290,7 +240,6 @@ import { Footer } from "@/components/Footer",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { Button } from "@/components/ui/button",;"
 import { useNavigate } from "react-router-dom",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "sonner",;
 export default function Profile() { return null; }
   const { user, isLoading, logout } = useAuth(),;
@@ -395,11 +344,7 @@ className="bg - gradient - to - r from - zion - purple to - zion - purple - dark
                     navigate ("/");
                   }}
                   variant="outline";
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') :user.email?.charAt(0)}
       </>;
     );
@@ -435,19 +380,9 @@ className="bg - gradient - to - r from - zion - purple to - zion - purple - dark
                   }}
                   variant="outline";
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text-white";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text-white";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 >;
                   Logout;
 </Button>
@@ -462,12 +397,7 @@ className="bg - gradient - to - r from - zion - purple to - zion - purple - dark
 
 </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </>;
   ); export default function Profile () {}
   const {};
@@ -488,15 +418,5 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

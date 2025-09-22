@@ -1,60 +1,33 @@
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
 
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
-=======
-=======import { Link  } from 'react-router-dom';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======import { Link  } from 'react-router-dom';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { Link  } from 'react-router-dom';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {NavLink} from "react-router-dom";
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { NavLink } from './react-router-dom';
 
 '
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";"
 import {NavLink} from "react-router-dom";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface MainNavigationProps {
   className?: string
 }
 export function MainNavigation({ className }: MainNavigationProps) {}
   return (
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface MainNavigationProps {};
   class_name?: string;
@@ -62,10 +35,7 @@ interface MainNavigationProps {};
 
         className={({ isActive }) =>;
 
-=======
 import {NavLink} from "react-router-dom";        className={({ isActive }) =>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 interface MainNavigationProps {
   className?: string
 }
@@ -89,7 +59,6 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
       <NavLink
         to="/"
         className={({ isActive }) =>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           cn(;
             "text-sm font-medium transition-colors hover: text-primary",;
             isActive ? "text-zion-cyan" : "text-muted-foreground";
@@ -97,7 +66,6 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
 
 export /**
  * MainNavigation - Function description
-=======
           cn(;"
             "text-sm font-medium transition-colors hover: text-primary",;"
             isActive ? "text-zion-cyan" : "text-muted-foreground";
@@ -105,7 +73,6 @@ export /**
 
 export /**;
  * MainNavigation - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
 function MainNavigation() {}
   return ("
@@ -192,10 +159,6 @@ isActive ? "text-zion-cyan" : "text-muted-foreground",;            "bg-zion-purp
       </NavLink>;
     </nav>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 "
             "text-sm font-medium transition-colors hover:text-primary",
@@ -210,19 +173,9 @@ isActive ? "text-zion-cyan" : "text-muted-foreground",;            "bg-zion-purp
     </nav>;
   );
 }
-=======
             "text-sm font-medium transition-colors hover:text-primary",
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       <NavLink;
         to="/signup";
         className={({ is_active }) =>;
@@ -250,7 +203,6 @@ isActive ? "text-zion-cyan" : "text-muted-foreground",;            "bg-zion-purp
             "text-sm font-medium transition-colors hover:text-primary",
             "text-sm font-medium transition-colors hover:text-primary",
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -276,12 +228,7 @@ isActive ? "text-zion-cyan" : "text-muted-foreground",;            "bg-zion-purp
         to="/partners"
         className={({ isActive }) =>
           cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -296,14 +243,9 @@ isActive ? "text-zion-cyan" : "text-muted-foreground",;            "bg-zion-purp
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground"
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           cn(;
-=======
 
 "text-sm font-medium transition-colors hover:text-primary",          cn(;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             "text-sm font-medium transition-colors hover:text-primary",
 
             isActive ? "text-zion-cyan" : "text-muted-foreground"
@@ -321,23 +263,18 @@ isActive ? "text-zion-cyan" : "text-muted-foreground",;            "bg-zion-purp
             isActive ? "text-zion-cyan" : "text-muted-foreground"
 
           cn(;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground",
-=======
 
           cn(;"
             "text-sm font-medium transition-colors hover: text-primary";"
             isActive ? "text-zion-cyan" : "text-muted-foreground","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
           )
         }
       >
         Register;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </NavLink>
     </nav>
   )
@@ -420,26 +357,8 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 " bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light") 
 }> Register </NavLink> </nav>) 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import {Link} from 'react-router-dom';
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
@@ -578,4 +497,3 @@ isActive ? \" text-zion-cyan\": \" text-muted-foreground\";
 \" bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light\") 
 } /> Register </NavLink> </nav>) 
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

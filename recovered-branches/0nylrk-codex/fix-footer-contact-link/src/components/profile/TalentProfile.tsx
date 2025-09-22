@@ -7,17 +7,10 @@ interface TalentProfileProps {
   onMessageTalent?: () => void
 }
 
-<<<<<<< HEAD
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -32,15 +25,12 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
-<<<<<<< HEAD
 interface TalentProfileProps {;
   profile: TalentProfileType,;
   onRequestHire: () => void,;
-=======
 interface TalentProfileProps {}
   profile: TalentProfileType;
   onRequestHire: () => void;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onMessageTalent?: () => void;
 import React from "react";"
 import {Handshake, MessageSquare, Star} from "lucide-react";"
@@ -58,7 +48,6 @@ import {useAuth} from "@/hooks/useAuth";"
 import {Availability} from "@/types/profile";
 
 export function TalentProfile(): any ({ ;
-<<<<<<< HEAD
   profile;
   onRequestHire;
   onMessageTalent;
@@ -66,12 +55,6 @@ export function TalentProfile(): any ({ ;
   const { isAuthenticated } = useAuth();
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 
   onRequestHire: () => void;
   onMessageTalent?: () => void;
@@ -96,7 +79,6 @@ interface TalentProfileProps {;
   onMessageTalent?: () => void;}
 }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function TalentProfile(): any ({ ;
 
   profile;
@@ -107,7 +89,6 @@ export function TalentProfile(): any ({ ;
 
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -119,7 +100,6 @@ import { ProfileProjects } from "./ProfileProjects",
 import { ProfileAvailability } from "./ProfileAvailability",
 import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
-=======
 "
 import React from "react","
 import { Handshake, MessageSquare, Star } from "lucide-react","
@@ -132,7 +112,6 @@ import { ProfileProjects } from "./ProfileProjects","
 import { ProfileAvailability } from "./ProfileAvailability","
 import { ProfileContact } from "./ProfileContact","
 import { ProfileRatings } from "./ProfileRatings","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 interface TalentProfileProps {};
   profile: TalentProfileType;
@@ -145,8 +124,6 @@ export function TalentProfile({};
   onMessageTalent;
 }: TalentProfileProps) {}
   const { isAuthenticated } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function TalentProfile({ ;
   profile;
   onRequestHire;
@@ -155,15 +132,9 @@ export function TalentProfile({
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
-<<<<<<< HEAD
   const { isAuthenticated } = useAuth(),
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Create proper availability object from talent profile
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   // Create proper availability object from talent profile;
   const availability: Availability = {}
@@ -171,9 +142,6 @@ export function TalentProfile({
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   const { isAuthenticated } = useAuth();
 
 export function TalentProfile({ ;
@@ -192,12 +160,8 @@ export function TalentProfile({
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
@@ -209,7 +173,6 @@ export function TalentProfile({
     level: 3 // Default level since we don't have this data;
   })) || [],
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`
@@ -221,7 +184,6 @@ export function TalentProfile({
 
   return (
     <div className="container mx-auto px-4 py-8">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Handshake, MessageSquare, Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -235,7 +197,6 @@ import { ProfileContact } from "./ProfileContact",;
 import { ProfileRatings } from "./ProfileRatings",;
 import { TalentProfile as TalentProfileType } from "@/types/talent",;
 import { useAuth } from "@/hooks/useAuth",;
-=======
 
   // Create proper projects array for ProfileProjects component;
   const projectsArray = profile.key_projects?.map((proj, i) => ({}`
@@ -260,7 +221,6 @@ import { ProfileContact } from "./ProfileContact",;"
 import { ProfileRatings } from "./ProfileRatings",;"
 import { TalentProfile as TalentProfileType } from "@/types/talent",;"
 import { useAuth } from "@/hooks/useAuth",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Availability } from "@/types/profile",;
 interface TalentProfileProps {;
   profile: TalentProfileType,;
@@ -290,9 +250,6 @@ export function TalentProfile() { return null; }
   })) || [];
   return (;"
     <div className="container mx-auto px-4 py-8">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return ("
     <div className="container mx-auto px-4 py-8">;
@@ -304,20 +261,13 @@ export function TalentProfile() { return null; }
 
   return ("
     <div className="container mx-auto px-4 py-8">;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Profile Header */}
-=======
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
     level: 3 // Default level since we don't have this data      {/* Profile Header */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 }
   },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
@@ -446,13 +396,10 @@ export function TalentProfile({;
   return (
     <div className="container mx-auto px-4 py-8">;
       {/* Profile Header */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <ProfileHero
-=======
 
       {/* Profile Header */}
       <ProfileHero;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         name={profile && profile.full_name}
         title={profile && profile.professional_title}
         avatarUrl={profile && profile.profile_picture_url}"
@@ -475,7 +422,6 @@ rating={profile && profile.average_rating}
           />;
         </div>;
 
-<<<<<<< HEAD
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">;
 {/* Profile Header */}
@@ -506,24 +452,15 @@ rating={profile && profile.average_rating}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
             <div className="prose prose-invert max-w-none">
-=======
           {/* Bio Section */}"
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">"
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>"
             <div className="prose prose-invert max-w-none">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
             </div>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}"
@@ -540,14 +477,9 @@ rating={profile && profile.average_rating}
           </div>
 
 import React from './react';
-=======
           import React from './react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
           import React from './react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
@@ -566,7 +498,6 @@ import React from './react';
         <div className="lg:col-span-2 space-y-8">;
           {/* Bio Section */}
 import React from './react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
 import { HireNowCTA } from './HireNowCTA';
@@ -579,7 +510,6 @@ import { ProfileContact } from './ProfileContact';
 import { ProfileRatings } from './ProfileRatings';
 import { TalentProfile, as, TalentProfileType } from '@/types / talent';
 import { use_auth } from '@/hooks / use_auth';
-=======
 
 '
 import React from './react';'
@@ -595,7 +525,6 @@ import { ProfileContact } from './ProfileContact';'
 import { ProfileRatings } from './ProfileRatings';'
 import { TalentProfile, as, TalentProfileType } from '@/types / talent';'
 import { use_auth } from '@/hooks / use_auth';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Availability } from '@/types / profile';
 interface TalentProfileProps {}
   profile: TalentProfileType,
@@ -630,11 +559,8 @@ function TalentProfile() {}
   })) || [];
 ;
 return (
-<<<<<<< HEAD
     <div className="container mx - auto px - 4 py-8">;
-=======
     <div className="container mx - auto px - 4 py-8">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
@@ -647,11 +573,8 @@ return (
 {/* Main content area */}
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt-8">;
         {/* Left Column - Skills & Info */}
-<<<<<<< HEAD
         <div className="space-y-8">;
-=======
         <div className="space-y-8">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ProfileSkills skills={skills_array} />;
           <ProfileAvailability availability={availability} />;
           <ProfileContact;
@@ -663,27 +586,21 @@ return (
 {/* Right Column - Bio & Projects */}
         <div className="lg:col - span - 2 space-y-8">;
           {/* Bio Section */}
-<<<<<<< HEAD
           <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p-6">;
             <h2 className="text - xl font - bold text - white mb-4">About {profile.full_name}</h2>;
             <div className="prose prose - invert max-w-none">;
               <p className="text - zion - slate whitespace - pre-wrap">{profile.bio}</p>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
           </div>;
           {/* Projects Section */}
           <ProfileProjects projects={projects_array} />;
 {/* Ratings Section */}
-<<<<<<< HEAD
           <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p-6">;
             <h2 className="text - xl font - bold text - white mb - 4 flex items-center">;
               <Star className="mr - 2 h - 5 w - 5 text - yellow-400" />;
-=======
           <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p-6">;
             <h2 className="text - xl font - bold text - white mb - 4 flex items-center">;
               <Star className="mr - 2 h - 5 w - 5 text - yellow-400" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Reviews & Ratings;
   // TODO: Implement
 }
@@ -840,7 +757,6 @@ pr-12325
               rating_count={profile.rating_count}
             />;
           </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Hire Now CTA */}
 {is_authenticated && (
             <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb-8">;
@@ -900,10 +816,8 @@ pr-12325
                       Message;
                     </Button>;
                   )}
-<<<<<<< HEAD
 
                 </div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>;
             </div>;
           )}
@@ -932,8 +846,5 @@ pr-12325
     </div>);
 }
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     </div>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

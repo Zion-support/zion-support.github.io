@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
@@ -19,14 +11,8 @@ import {cn} from "@/lib/utils";
 import {ForumPost} from "@/types/community";
 import {ProfileBadge} from "@/components/profile/ProfileBadge";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -38,15 +24,8 @@ import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community";
 import { ProfileBadge } from "@/components/profile/ProfileBadge";
 import { ForumPost } from "@/types/community",
-<<<<<<< HEAD
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PostCardProps {
-=======
 
 import { formatDistanceToNow } from "date-fns","
 import { Link } from "react-router-dom","
@@ -60,7 +39,6 @@ import { ForumPost } from "@/types/community";"
 import { ProfileBadge } from "@/components/profile/ProfileBadge";"
 import { ForumPost } from "@/types/community","
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface PostCardProps {};
   post: ForumPost;
@@ -81,24 +59,16 @@ post.isPinned && "border-zion-purple/50",
       post.isPinned && "border-zion-purple/50"
       "transition-shadow hover:shadow-md",
       post.isPinned && "border-zion-purple/50",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       post.isFeatured && "bg-zion-purple/5"
-=======
 import { ProfileBadge } from "@/components/profile/ProfileBadge",      post.isFeatured && "bg-zion-purple/5"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       post.isFeatured && "bg-zion-purple/5"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
-=======
 
 "
       post.isFeatured && "bg-zion-purple/5"
     )}>"
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Avatar className="h-10 w-10">
           <AvatarImage src={post.authorAvatar} />
           <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
@@ -109,10 +79,7 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge",      post.isFe
               {post.title}
             </Link>
 {post.isAnswered && (
-<<<<<<< HEAD
-<<<<<<< HEAD
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
-<<<<<<< HEAD
 
             )};
             {post && post.isPinned && (;"
@@ -167,7 +134,6 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
             {post.isLocked && (;"
               <Lock className="h-4 w-4 text-red-500 ml-2" />;
             )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
             {post.isPinned && ("
               <Pin className="h-4 w-4 text-amber-500 ml-2" />
@@ -182,23 +148,13 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
           <div className="flex flex-wrap gap-2 mt-2">
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
-=======
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />import { Link } from "react-router-dom",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />import { Link } from "react-router-dom",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -206,7 +162,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
 import { cn } from "@/lib/utils",;
 import { ForumPost } from "@/types/community",;
-=======
 "
 import { formatDistanceToNow } from "date-fns",;"
 import { Link } from "react-router-dom",;"
@@ -217,7 +172,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
 import { Button } from "@/components/ui/button",;"
 import { cn } from "@/lib/utils",;"
 import { ForumPost } from "@/types/community",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ProfileBadge } from "@/components/profile/ProfileBadge",;
 interface PostCardProps {;
   post: ForumPost,;
@@ -259,17 +213,9 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             {post.tags?.map(tag => (;"
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 {tag}
               </Badge>
             ))}
@@ -304,18 +250,13 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           </div>
         )}
 
-<<<<<<< HEAD
 export default PostCard;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default PostCard;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             Posted by {post && post.authorName} {timeAgo}
           </div>;
 
           <div className="flex flex-wrap gap-2 mt-2">;
             {post && post.tags?.map(tag => (;
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
                 {tag}
               </Badge>;
@@ -424,10 +365,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {}
 ;
 export default PostCard;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;
 },;
 ;
@@ -492,15 +429,9 @@ export default PostCard;
 export default PostCard;
 
 export default PostCard;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 export default PostCard;
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
       post.isFeatured && "bg-zion-purple/5"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

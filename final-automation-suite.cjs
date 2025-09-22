@@ -1,36 +1,20 @@
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
 const { execSync } = require("child_process");
-
 const fs = require('fs');
 const path = require('path');
+
 class FinalAutomationSuite {
-  // TODO: Implement
-}
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.results = [];
     this.startTime = Date.now();
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
     this.errors = [];
   }
 
   log(message) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const timestamp = new Date().toISOString();
-
-    this.errors = []}
-  log(message) {
-    const timestamp = new Date().toISOString();
-    }
+    console.log(`[${timestamp}] ${message}`);
+  }
 async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
     try {
@@ -48,10 +32,10 @@ const path = require("path")
       this.log(` "Completed"`)
       this.log(` "Failed"`)
     this.log(" Checking git status...")
-      const status = execSync("git status --porcelain")
-        "cwd"
-        "encoding": "utf8"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      const status = execSync("git status --porcelain", {
+        cwd: this.projectRoot,
+        encoding: "utf8"
+      });
 
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description});
@@ -766,9 +750,4 @@ if (require.main === module) {
   const suite = new FinalAutomationSuite();
   suite.runAllAutomations().catch(error => {)"
 
-<<<<<<< HEAD
 module.exports = FinalAutomationSuite;
-=======
-module.exports = FinalAutomationSuite;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

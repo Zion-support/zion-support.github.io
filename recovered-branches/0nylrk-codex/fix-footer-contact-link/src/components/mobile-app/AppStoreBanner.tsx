@@ -4,16 +4,13 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export const AppStoreBanner: React.FC = () => {};
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import {X} from "lucide-react";
 import {useIsMobile} from "@/hooks/use-mobile";
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -21,11 +18,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React, { useState, useEffect } from "react";
 import {X} from "lucide-react";
@@ -33,12 +25,9 @@ import {useIsMobile} from "@/hooks/use-mobile";
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { X } from "lucide-react",
-=======
 "
 import { X } from "lucide-react","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useIsMobile } from "@/hooks/use-mobile",
 export const AppStoreBanner: React.FC = () => {}
   const [isVisible, setIsVisible] = useState(false),
@@ -87,9 +76,6 @@ View
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
 
@@ -149,7 +135,6 @@ const [isVisible, setIsVisible] = useState(false),;
   // Only render on mobile devices;
   if (!isMobile || !isVisible) return null;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;
       <div className="flex items-center">;
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0"></div>;
@@ -172,12 +157,8 @@ const [isVisible, setIsVisible] = useState(false),;
 );
 };
 
-<<<<<<< HEAD
 export default AppStoreBanner;
 import React, { useState, useEffect } from './react';
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 },
 import React, { useState, useEffect } from "react",;
@@ -200,20 +181,15 @@ export const AppStoreBanner: React.FC = () => {;
         </div>;
       </div>;
     </div>;import React, { useState, useEffect } from './react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   );
 };
 
 import React, { useState, useEffect } from './react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { X  } from './lucide-react';
-=======
 
 '
 import React, { useState, useEffect } from './react';'
 import { X  } from './lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useIsMobile  } from '@/hooks / use - mobile';
 export const AppStoreBanner: React.FC = () => {};
   const [is_visible, setIsVisible] = useState (false);
@@ -268,21 +244,10 @@ return (
     </div>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   )
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 
   ),;
@@ -300,6 +265,4 @@ return (<div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-
 
 export default AppStoreBanner;
 
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   id: string,
   name: string,
   description: string,
@@ -15,7 +14,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
 interface EquipmentSpecification {}
 }
 
-<<<<<<< HEAD
 }
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
@@ -26,13 +24,11 @@ interface EquipmentSpecification {;
 }
 
 interface EquipmentDetails {;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string,;
   name: string,;
   description: string,;
   brand: string,;
   category: string,;
-<<<<<<< HEAD
 import { use_params } from './react-router-dom';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -59,12 +55,7 @@ interface EquipmentDetails {}
   currency: string,;
   rating?: number;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 // Sample data - in a real app this would come from an API;
@@ -77,9 +68,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {"
     category: "Equipment","
     subcategory: "Cameras",
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 }
 
@@ -93,7 +81,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     category: "Equipment",
     subcategory: "Cameras",
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
@@ -104,9 +91,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800",
 
-=======
       "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ]
     price: 6999"
     currency: "$"
@@ -205,7 +190,6 @@ specifications: [      "Advanced 8K full-frame sensor";
 
 },
 
-<<<<<<< HEAD
 
   if (!equipment) {}
     return (
@@ -223,13 +207,10 @@ specifications: [      "Advanced 8K full-frame sensor";
       </>
     )
   }
-<<<<<<< HEAD
   const handleAddToCart = () => {
-<<<<<<< HEAD
 
     setIsAdding(true),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -238,21 +219,12 @@ specifications: [      "Advanced 8K full-frame sensor";
         description: `${quantity}x ${equipment.name} added to your cart.`})
     }, 800)
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   const handleBuyNow = () => {}
     setIsAdding(true),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -261,17 +233,10 @@ specifications: [      "Advanced 8K full-frame sensor";
         description: `Preparing your order for ${equipment.name}.`})
     }, 800)
 
-=======
 
   },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -282,9 +247,6 @@ specifications: [      "Advanced 8K full-frame sensor";
 
   },
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
@@ -320,11 +282,7 @@ specifications: [      "Advanced 8K full-frame sensor";
                           className="w-full h-full object-cover"
                         />
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 ;
 // Sample data - in a real app this would come from an API;
@@ -371,10 +329,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;"
       "Anamorphic de-squeeze options",;"
       "Custom 3D LUT support";
     ],;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 ;
 // Sample data - in a real app this would come from an API;
@@ -422,13 +376,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       "Custom 3D LUT support";
     ],;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     warranty: "2 years manufacturer warranty",;
     returnPolicy: "30-day return policy for unused items in original packaging"
 };
   "audio-mixer-pro": {;
     id: "audio-mixer-pro",;
-<<<<<<< HEAD
     name: "AudioMixer Pro Digital Mixing Console",;
     description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";
 "
@@ -449,15 +401,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Dynamics", value: "Compressor/Gate on all channels" },;"
       { name: "Effects", value: "8 stereo effects processors" },;"
       { name: "Recording", value: "64-channel USB interface" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       { name: "Weight", value: "32 lbs" }
 
     ];
 { name: "Weight", value: "32 lbs" }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ];
-=======
     name: "AudioMixer Pro Digital Mixing Console",;
     description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";
 warranty: "2 years manufacturer warranty",;
@@ -500,15 +448,12 @@ warranty: "2 years manufacturer warranty",;
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support";
     ];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     features: [;
       "32-channel digital mixer with 24 premium mic preamps";
       "16 motorized faders with touch-sensitive control";
-=======
     features: [;"
       "32-channel digital mixer with 24 premium mic preamps";"
       "16 motorized faders with touch-sensitive control";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "7-inch high-resolution color touchscreen";
 
       "Comprehensive routing matrix";
@@ -520,7 +465,6 @@ warranty: "2 years manufacturer warranty",;
       "Integrated WiFi for wireless control";
     ],;
     warranty: "3 years manufacturer warranty",;
-=======
     features: [;"
       "32 - channel digital mixer with 24 premium mic preamps";"
       "16 motorized faders with touch - sensitive control";"
@@ -534,7 +478,6 @@ warranty: "2 years manufacturer warranty",;
       "Integrated WiFi for wireless control";
     ],;"
     warranty: "3 years manufacturer warranty",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     returnPolicy: "21-day return policy for items in original condition";
   }
 };
@@ -583,15 +526,12 @@ if ( {) {}
     return (
       <>;
 <Header />;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
           <div className="container mx - auto">;
             <div className="text - center py - 20">;
               <h1 className="text - 3xl font - bold text - white mb - 4">Equipment Not Found</h1>;
 
               <p className="text - zion - slate - light mb - 8">The equipment you're looking for doesn't exist or has been removed.</p>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>;
           </div>;
         </div>;
@@ -766,9 +706,7 @@ export default function EquipmentDetail() {;
             <div className="text - center py-20">;
               <h1 className="text - 3xl font - bold text - white mb-4">Equipment Not Found</h1>;
               <p className="text - zion - slate - light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>;
-=======
               <p className="text - zion - slate - light mb - 8">The equipment you're looking for doesn't exist or has been removed.</p>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             </div>;
           </div>;
         </div>;
@@ -904,14 +842,11 @@ return (
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
-=======
     <>;
       <Header />;"
       <div className="min-h-screen bg-zion-blue py-12 px-4">;"
         <div className="container mx-auto">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-<<<<<<< HEAD
             {/* Left Column - Images */}
 
                       <div;
@@ -930,13 +865,7 @@ return (
                         />;
                       </div>;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     ))}
                   </div>;
                 )}
@@ -965,7 +894,6 @@ return (
                     <TabsTrigger value="specifications" className="py-3 data-[state=active]:bg-zion-purple/10">;
                       Specifications;
                     </TabsTrigger>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <TabsTrigger value="features" className="py-3 data-[state=active]:bg-zion-purple/10">;
                       Features;
                     </TabsTrigger>;
@@ -1003,8 +931,6 @@ return (
                             <span className="text-zion-slate-light">{feature}</span>;
                           </li>;
                         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         {equipment.description}
                       </p>;
                     </div>;
@@ -1046,7 +972,6 @@ return (
                   <img;
                     src={equipment.images[selectedImageIndex]} ;
                     alt={equipment.name} ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     className="w-full h-full object-contain bg-zion-blue-light/10 p-4";
                   />;
                 </div>;
@@ -1146,37 +1071,22 @@ onClick={() => setSelectedImageIndex(index)}`
                 </Tabs>
               </div>
             </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       </ul>;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
               </div>;
             </div>;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
-=======
             {/* Left Column - Images */}            <div className="lg:col-span-1">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             {/* Left Column - Images */}            <div className="lg:col-span-1">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
             {/* Right Column - Purchase Info */}"
             <div className="lg:col-span-1">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
                 {/* Category and Brand */}"
                 <div className="flex flex-wrap gap-2 mb-3">;"
@@ -1194,25 +1104,13 @@ onClick={() => setSelectedImageIndex(index)}`
 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment && equipment.name}</h1>;"
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment && equipment.name}</h1>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <p className="text-zion-cyan mb-4">Brand: {equipment && equipment.brand}</p>;
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -1224,16 +1122,12 @@ onClick={() => setSelectedImageIndex(index)}`
 i < Math && Math.floor(equipment && equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
 
-<<<<<<< HEAD
 
-=======
 i < Math && Math.floor(equipment && equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             i < Math.floor(equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               : "text-zion-slate-light"
                           }`}
 
@@ -1261,12 +1155,10 @@ i < Math && Math.floor(equipment && equipment.rating!)
                 {/* Rating */}
                 {equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
-=======
 
                 {/* Rating */}
                 {equipment && equipment.rating && (;"
                   <div className="flex items-center gap-2 mb-4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="flex items-center">;
                       {[...Array(5)].map((_, i) => (;
                         <Star;
@@ -1278,15 +1170,10 @@ i < Math && Math.floor(equipment && equipment.rating!)
 "
                               : "text-zion-slate-light"`
                           }`}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
                               : "text-zion-slate-light"
                           }`}                              : "text-zion-slate-light"
                           }`}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         />;
                       ))}
                     </div>;"
@@ -1296,22 +1183,15 @@ i < Math && Math.floor(equipment && equipment.rating!)
                   </div>;
                 )}
 
-<<<<<<< HEAD
                 {/* Price */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {/* Price */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="text-3xl font-bold text-white mb-4">;
                   {equipment && equipment.currency}{equipment && equipment.price.toLocaleString()}
                 </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {/* Stock Status */}
-=======
 
                 {/* Stock Status */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="mb-6">;
                   {equipment && equipment.inStock ? (;"
                     <div className="text-emerald-400 flex items-center gap-1">;"
@@ -1329,10 +1209,6 @@ i < Math && Math.floor(equipment && equipment.rating!)
                       <span>Out of Stock</span>;
                     </div>;
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
                 {/* Category and Brand */}
@@ -1399,13 +1275,9 @@ i < Math && Math.floor(equipment && equipment.rating!)
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     <button;
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
                       disabled={quantity <= 1 |!equipment.inStock}
@@ -1419,29 +1291,19 @@ i < Math && Math.floor(equipment && equipment.rating!)
                       readOnly;
                     />
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
                     <button 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
                     <button 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 
                     <button 
 
                     <button
                     <button
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
                       disabled={quantity <= 1 |!equipment.inStock}
@@ -1464,7 +1326,6 @@ i < Math && Math.floor(equipment && equipment.rating!)
 
                     <button 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -1474,15 +1335,10 @@ i < Math && Math.floor(equipment && equipment.rating!)
                   </div>
                 </div>
 {/* Purchase Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="space-y-3 mb-6">
-<<<<<<< HEAD
 
 <Button
                   <Button 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     onClick={handleBuyNow}
                     disabled={isAdding |!equipment.inStock}"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
@@ -1491,13 +1347,7 @@ i < Math && Math.floor(equipment && equipment.rating!)
                   </Button>
 <Button
                   <Button 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   <Button;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}"
                     variant="outline""
@@ -1566,10 +1416,7 @@ i < Math && Math.floor(equipment && equipment.rating!)
 
 ;
 {/* Purchase Buttons */}
-=======
                 {/* Purchase Buttons */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">;
                   <Button
@@ -1586,7 +1433,6 @@ i < Math && Math.floor(equipment && equipment.rating!)
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
                 ;
                 {/* Purchase Buttons */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <div className="space-y-3 mb-6">;
                   <Button ;
                     onClick={handleBuyNow}
@@ -1602,26 +1448,14 @@ i < Math && Math.floor(equipment && equipment.rating!)
                     variant="outline";"
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
                   >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     <ShoppingCart className="h-4 w-4 mr-2" />;
                     Add to Cart;
                   </Button>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                {/* Additional Info */}
-=======
 
                 {/* Additional Info */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+                {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
 
@@ -1634,10 +1468,8 @@ i < Math && Math.floor(equipment && equipment.rating!)
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
                   <div className="flex gap-3 text-zion-slate-light">;
-=======
 "
                   <div className="flex gap-3 text-zion-slate-light">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                     <div>;"
                       <p className="text-white text-sm font-medium">Free Shipping</p>;"
@@ -1689,10 +1521,8 @@ i < Math && Math.floor(equipment && equipment.rating!)
                 {equipment.rating && (
 <div className="flex items - center gap - 2 mb-4">;
                     <div className="flex items-center">;
-=======
                   <div className="flex items - center gap - 2 mb-4">;
                     <div className="flex items-center">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {[...Array (5)].map ((_, i) => (
                         <Star;
                           key={i}`
@@ -1732,11 +1562,8 @@ i < Math && Math.floor(equipment && equipment.rating!)
                   <label className="text - sm text - zion - slate - light block mb-2">Quantity</label>;
                   <div className="flex items - center border border - zion - blue - light rounded - md w-32">;
                     <button;
-<<<<<<< HEAD
                       className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity-50";
-=======
                       className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity-50";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       on_click={() => set_quantity (prev => Math.max (1, prev - 1))}
 </Footer>
     <>;
@@ -2332,11 +2159,8 @@ i < Math && Math.floor(equipment && equipment.rating!)
                       read_only;
                     />;
                     <button;
-<<<<<<< HEAD
                       className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity-50";
-=======
                       className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity-50";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       on_click={() => set_quantity (prev => prev + 1)}
                       disabled={!equipment.in_stock}
                     >;
@@ -2378,13 +2202,10 @@ disabled={is_adding || !equipment.in_stock}
                     <div className="flex gap - 3 text - zion - slate-light">;
                       <Shield className="h - 5 w - 5 text - zion - cyan flex - shrink-0" />;
                       <div>;
-<<<<<<< HEAD
                         <p className="text - white text - sm font-medium">Warranty</p>;
                         <p className="text-xs">{equipment.warranty}</p>;
-=======
                         <p className="text - white text - sm font-medium">Warranty</p>;
                         <p className="text-xs">{equipment.warranty}</p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </div>;
                     </div>)}
                   {/* Return Policy */}
@@ -2420,18 +2241,15 @@ disabled={is_adding || !equipment.in_stock}
                   )}
 </div>;
                     </div>)}
-<<<<<<< HEAD
 
 "
                       </div>;
                     </div>)}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         <p className="text-xs">{equipment.returnPolicy}</p>;
                       </div>;
                     </div>;
                   )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
               </div>
             </div>
@@ -2442,15 +2260,7 @@ disabled={is_adding || !equipment.in_stock}
     </>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>;
               </div>;
             </div>;
@@ -2459,21 +2269,13 @@ disabled={is_adding || !equipment.in_stock}
       </div>;
       <Footer />;
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>;
   ),; interface EquipmentSpecification {}
   name: string;
 value: string;
 }interface EquipmentDetails {}
-=======
     </>);
 }
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Sample data - in a real app this would come from an API;
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
@@ -2970,7 +2772,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;"
   // TODO: Implement
   name: string;,
 }interface EquipmentDetails {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
 name: string;
 description: string;
@@ -3116,13 +2917,11 @@ features: [ "32-channel digital mixer with 24 premium mic preamps";
 "8 DCA groups and 6 mute groups";
 "Integrated WiFi for wireless control" ];
 warranty: "3 years manufacturer warranty";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 returnPolicy: "21-day return policy for items in original condition" 
 }
 ;
 
 };
-<<<<<<< HEAD
 if (!equipment) {'"
   return (<> <Header /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <h1 className="text-3xl font-bold text-white mb-4" >Equipment Not Found</h1> <p className="text-zion-slate-light mb-8" >The equipment you're looking for doesn't exist or has been removed.</p> </div> </div> </div> <Footer /> </> 
 }, 800);
@@ -3170,7 +2969,6 @@ if (!equipment) {'"
 }</p> </div> </div>) 
 }<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {
   equipment.returnPolicy 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</p> </div> </div>) 
 }</div> </div> </div> </div> </div> </div> <Footer /> </>) 
 
@@ -3179,19 +2977,7 @@ if (!equipment) {'"
 pr-12325
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,8 +1,6 @@
 
 import type { GetServerSideProps, NextPage } from 'next';
 
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -231,7 +229,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   return { props: { topic, posts } }
 export default TopicPage;
 
-=======
 
         <title>{topic} - Zion Blog</title>"`;
         <meta name="description" content={`Articles about ${topic}`} />"
@@ -259,7 +256,6 @@ export default TopicPage;      ;"
 
         </div>;"
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</div>;"
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     </div>);
       <div className="mx - auto max - w-6xl">;"
         <h1 className="text - 4xl font - bold mb - 3">{topic}</h1>;""
@@ -676,7 +672,6 @@ export default TopicPage;      </Head>;
             title = {`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https: //zion.app/categories/${encodeURIComponent(topic);}` : window.location.href}
             description={`Articles about ${topic}`}
-<<<<<<< HEAD:components/categories/[topic].tsx
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) = /> {const topic = String(ctx.params?.topic |'');}export const getServerSideProps: GetServerSideProps = async (ctx) => {export const getServerSideProps: GetServerSideProps = async (ctx) => {;}export const getServerSideProps: GetServerSideProps = async (ctx) => {;}export const getServerSideProps: GetServerSideProps  = async (ctx) => {;}export const getServerSideProps: GetServerSideProps = async (ctx) => {const topic = String(ctx && ctx.params?.topic || '')const posts  = listPublishedPosts().filter((p) => p && p.topics.includes(topic))const topic = String(ctx.params?.topic || '')const posts = listPublishedPosts().filter((p) => p.topics.includes(topic))return { props: { topic;, posts } }
 }
@@ -695,7 +690,6 @@ export default TopicPage;return { props: { topic;, posts } }}
 const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/categories/[topic].tsx
 export default TopicPage;
 
 export default TopicPage;

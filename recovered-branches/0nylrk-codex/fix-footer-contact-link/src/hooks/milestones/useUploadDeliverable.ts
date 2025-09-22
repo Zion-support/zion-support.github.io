@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -19,16 +10,7 @@ export const useUploadDeliverable = () => {
   const { recordMilestoneActivity } = useRecordActivity();
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user |!projectId) return null;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import {useState} from 'react';'
 import {supabase} from '@/integrations / supabase / client';'
@@ -36,17 +18,11 @@ import {use_auth} from '@/hooks / use_auth';'
 import {toast} from 'sonner';'
 import {useRecordActivity} from './useRecordActivity';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 '
 import { useState } from 'react','
@@ -62,19 +38,9 @@ export const useUploadDeliverable = () => {}
 const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {}
     if (!user || !projectId) return null,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user || !projectId) return null,
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
       setIsSubmitting(true)
       // Get the current milestone
@@ -82,7 +48,6 @@ const uploadDeliverable = async (milestoneId: string, projectId: string, file: F
         .from('project_milestones')
         .select('*')
         .eq('id', milestoneId)
-<<<<<<< HEAD
 
       // Create activity record
       await recordMilestoneActivity(
@@ -164,7 +129,6 @@ export const useUploadDeliverable = () => {;
 
       const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
 
-<<<<<<< HEAD
 
       const { error } = await supabase'
         .from('project_milestones')
@@ -197,7 +161,6 @@ const { error } = await supabase'
 
       if (error) throw error,
 
-<<<<<<< HEAD
       // Create activity record
       await recordMilestoneActivity(
         milestoneId
@@ -213,11 +176,9 @@ const { error } = await supabase'
       toast.error("Failed to upload deliverable: " + err.message)
       return null
 export const useUploadDeliverable = () =>: any {
-=======
 
       return null;
 export const useUploadDeliverable = () =>: any {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
   const { recordMilestoneActivity } = useRecordActivity ();
@@ -305,7 +266,6 @@ export const useUploadDeliverable = () => {;
 
       return null;
 export const useUploadDeliverable = () =>: any {};
-=======
 
       // Create activity record
       await recordMilestoneActivity(
@@ -326,7 +286,6 @@ export const useUploadDeliverable = () =>: any {};
 
       return null
 export const useUploadDeliverable = () =>: any {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
   const { recordMilestoneActivity } = useRecordActivity ();
@@ -410,8 +369,6 @@ if (throw error) {}
 
   }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
     upload_deliverable;
     is_submitting;
@@ -490,12 +447,9 @@ export const useUploadDeliverable = () => {;
   return {;
     uploadDeliverable,;
     isSubmitting;
-<<<<<<< HEAD
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   },;
 },; try {
   setIsSubmitting (true);
@@ -523,24 +477,14 @@ isSubmitting
 };
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       // Create activity record
       await recordMilestoneActivity(
       return null
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   }
 };
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

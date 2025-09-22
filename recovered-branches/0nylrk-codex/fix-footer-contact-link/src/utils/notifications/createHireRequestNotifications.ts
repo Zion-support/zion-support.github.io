@@ -1,17 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {createNotification} from './createNotification';
-=======
 import { createNotification  } from './createNotification';'
 import { HireRequestNotificationParams } from './types';'
 import { createNotification } from './createNotification','
 import { HireRequestNotificationParams } from './types',
 ';
 import {createNotification} from './createNotification';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {HireRequestNotificationParams} from './types';
 /**
  * Creates a hire request notification for admin and talent;
@@ -20,17 +14,11 @@ export async function createHireRequestNotifications({;
   talentId;
   adminId;
 requesterName;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /**
-=======
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',/**
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { HireRequestNotificationParams } from './types',
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
@@ -45,13 +33,10 @@ import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 
 /**
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   requesterEmail,
   try {
   const projectInfo = projectType
@@ -85,21 +70,13 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
 return {
-<<<<<<< HEAD
 
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
 
       adminNotification
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     return {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   talentId,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   adminId,
   requesterName,
 
@@ -109,18 +86,9 @@ success: talentNotification.success && adminNotification.success;
   talentId,
   adminId,
   requesterName,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   requesterEmail, 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   requesterEmail, 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   projectType,
   projectSummary,
 hireRequestId
@@ -160,17 +128,8 @@ return {
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { createNotification } from './createNotification',;
-=======
 
     return {}
       success: talentNotification.success && adminNotification.success,
@@ -178,9 +137,7 @@ import { createNotification } from './createNotification',;
       adminNotification;
 '
 import { createNotification } from './createNotification',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { HireRequestNotificationParams } from './types',;
-=======
 
 }
       success: talentNotification.success && adminNotification.success,
@@ -190,7 +147,6 @@ import { HireRequestNotificationParams } from './types',;
 import { createNotification } from './createNotification',;''
 import { HireRequestNotificationParams } from './types',;'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * Creates a hire request notification for admin and talent;
  */;
@@ -227,16 +183,12 @@ export async function createHireRequestNotifications() { return null; }`
       success: talentNotification.success && adminNotification.success,;
       talentNotification;
       adminNotification;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }
   return {
     talentNotification
 
 import {HireRequestNotificationParams} from './types';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /**;
 * Creates a hire request notification for admin and talent;
  */;
@@ -333,13 +285,11 @@ if (adminId) {;
 
       talentNotification;
       adminNotification;
-<<<<<<< HEAD
     action_text: 'View Request';
   // Create notification for admin if admin ID is provided;
 // Check condition;
 if ( {) {}
   $2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
     const admin_notification = await create_notification ({}
       user_id: admin_id;`
@@ -363,39 +313,27 @@ if ( {) {
 });
 ;
     return {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       success: talent_notification.success && admin_notification.success;
       talent_notification,
       admin_notification;
     }
   }
-<<<<<<< HEAD
   return {}
     success: talent_notification.success,
     talent_notification;
 
-<<<<<<< HEAD
     talentNotification
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
-=======
 
   }
 }'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   return {
-=======
   // TODO: Implement
       success: talent_notification.success && admin_notification.success;
       talent_notification,
       admin_notification;
   // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     success: talent_notification.success,
     talent_notification;
 }
@@ -410,4 +348,3 @@ pr-12325
     talentNotification
   }
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

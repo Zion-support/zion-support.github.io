@@ -51,7 +51,6 @@ const AiConsultingChat: NextPage = () => {
 
         <title>AiConsultingChat - Zion Tech Solutions</title>;
 <meta name="description" content="AiConsultingChat blog post" />{" "}
-<<<<<<< HEAD
 const AiConsultingChat: NextPage = () => {
   return (
     <div />
@@ -63,7 +62,6 @@ const AiConsultingChat: NextPage = () => {
         <h1>AiConsultingChat</h1>
         <p>Blog content coming soon...</p>
         <a href="/blog">Back to Blog</a>
-=======
       </Head>;
 
 const AiConsultingChat: NextPage = () => {
@@ -71,7 +69,6 @@ const AiConsultingChat: NextPage = () => {
         <h1 />AiConsultingChat</h1>
         <p />Blog content coming soon...</p>
         <a href=\"/blog\" />Back to Blog</a>
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </main>
     </div>
       </Head>;

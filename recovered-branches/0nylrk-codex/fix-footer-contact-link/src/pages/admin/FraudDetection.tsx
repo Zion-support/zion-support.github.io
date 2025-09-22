@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -11,16 +8,8 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {FraudFlag, FraudStats} from "@/types/fraud";
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -32,28 +21,13 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client";
 import { FraudFlag, FraudStats } from "@/types/fraud";
 // Import refactored components
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Import refactored components
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 import { supabase } from "@/integrations/supabase/client",;
 import { FraudFlag, FraudStats } from "@/types/fraud",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Import refactored components
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
-=======
 
 import React, { useState, useEffect } from "react","
 import { AppLayout } from "@/layout/AppLayout","
@@ -73,7 +47,6 @@ import { FraudFlag, FraudStats } from "@/types/fraud",
 ;
 // Import refactored components;
 import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   FraudStatsCards,
   FraudFilters,
   FraudFlagsTable,
@@ -84,9 +57,6 @@ export default function FraudDetection() {}
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
@@ -110,21 +80,12 @@ export default function FraudDetection() {
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
   const [stats, setStats] = useState<FraudStats>({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [stats, setStats] = useState<FraudStats>({
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ;
   const [stats, setStats] = useState<FraudStats>({};
@@ -141,15 +102,9 @@ const fetchFraudFlags = async () => {
     try {
       const { data, error } = await supabase
         .from("fraud_flags")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         .select("*")
-<<<<<<< HEAD
-=======
         .select("*")
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .order("timestamp", { ascending: false }),
 
       if (error) throw error,
@@ -157,9 +112,6 @@ const fetchFraudFlags = async () => {
       setFlags(data || []),
       setFilteredFlags(data || []),
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Calculate stats
       const newStats: FraudStats = {
         total_flags: data?.length |0
@@ -180,7 +132,6 @@ const fetchFraudFlags = async () => {
         variant: "destructive"})
     } finally {}
       setIsLoading(false)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -190,8 +141,6 @@ import { Button } from "@/components/ui/button",;
 import { toast } from "@/hooks/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { FraudFlag, FraudStats } from "@/types/fraud",;
 // Import refactored components;
 import {;
@@ -247,9 +196,6 @@ total_flags: data?.length || 0,;'
           flag.content_excerpt.toLowerCase().includes(query) ||;
           flag.reason.toLowerCase().includes(query);
       );
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     // Apply status filter;
     if (statusFilter) {}
@@ -321,24 +267,15 @@ setFilteredFlags(result)
         .eq("id", flagId),
 
       if (error) throw error,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast({
-=======
         .select("*")      toast({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         .select("*")      toast({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       toast({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         title: "Flag updated"
-=======
 
       toast({"
         title: "Flag updated"'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: `Action '${action}' was applied successfully.`})
       // Refresh the data;
       fetchFraudFlags()
@@ -360,8 +297,6 @@ const resetFilters = () => {
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter),
 
 const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <AppLayout>
       <SEO"
@@ -379,7 +314,6 @@ const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTy
             </p>
           </div>"
           <div className="mt-4 md:mt-0">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     setFilteredFlags(result);
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;'
@@ -388,7 +322,6 @@ const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTy
       const status = action === 'ignore' ? 'ignored' : 'actioned',;'
       const actionTaken = action === 'ignore' ? 'none' : action,;
       const { error } = await supabase;"
-=======
 
   return (
     <AppLayout>
@@ -416,7 +349,6 @@ const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTy
       const status = action === 'ignore' ? 'ignored' : 'actioned',;
       const actionTaken = action === 'ignore' ? 'none' : action,;
       const { error } = await supabase;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .from("fraud_flags");
         .update({;
           status,;
@@ -467,11 +399,7 @@ reviewed_at: new Date().toISOString(),;'
             <Button;
               onClick={fetchFraudFlags} ;"
               className="bg-zion-purple hover:bg-zion-purple-light";
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <SEO;
         title="Fraud Detection | Admin Dashboard";
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace";
@@ -491,27 +419,13 @@ reviewed_at: new Date().toISOString(),;'
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Button 
               onClick={fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               disabled={isLoading}
             >
               Refresh Data;
@@ -526,15 +440,8 @@ reviewed_at: new Date().toISOString(),;'
             <TabsTrigger value="pending">Pending Review</TabsTrigger>"
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>"
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
-<<<<<<< HEAD
           </TabsList>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <TabsContent value="all" className="mt-6">
 
 "
@@ -546,23 +453,17 @@ reviewed_at: new Date().toISOString(),;'
       toast({;"
         title: "Flag updated",;'`
         description: `Action '${action}' was applied successfully.`}),;
-=======
           </TabsList>        title: "Flag updated",,
   description: `Action '${action}' was applied successfully.`}),;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-=======
 <TabsContent value="all" className="mt-6">
 
         .eq("id", flagId);
       if (error) throw error;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <TabsContent value="all" className="mt-6">
       toast({;
         title: "Flag updated",;
         description: `Action '${action}' was applied successfully.`}),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       // Refresh the data;
       fetchFraudFlags();
@@ -570,13 +471,10 @@ reviewed_at: new Date().toISOString(),;'
     } catch (error) {;"
       console && console.error("Error updating fraud flag:", error);
 toast({;
-<<<<<<< HEAD
         title: "Error",,
   description: "Failed to update flag",;
-=======
         title: "Error",,
   description: "Failed to update flag",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: "destructive"});
     }
   };
@@ -597,13 +495,10 @@ toast({;
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace" 
       />;
 
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-8">;
-=======
 
 "
       <div className="container mx-auto px-4 py-8">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
           <div>;"
             <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
@@ -623,9 +518,6 @@ toast({;
         <FraudStatsCards stats={stats} />;
         ;
         <Tabs defaultValue="all" className="mb-8">;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;
             <TabsTrigger value="pending">Pending Review</TabsTrigger>;
@@ -634,13 +526,11 @@ toast({;
             <TabsTrigger value="actioned">Actioned</TabsTrigger>;
           </TabsList>;
 
-=======
             <TabsTrigger value="actioned">Actioned</TabsTrigger>;
           </TabsList>;
 
           <TabsContent value="all" className="mt - 6">;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* Search and Filters */}
 
         <Tabs default_value="all" className="mb - 8">;"
@@ -665,7 +555,6 @@ toast({;
 
 {/* Flags Table */}
 
-=======
             />;
 
             {/* Flags Table */}
@@ -688,31 +577,23 @@ toast({;
             <Card>
               <CardContent className="p-0">
             {/* Flags Table */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <Card>;
               <CardContent className="p-0">;
                 <FraudFlagsTable
 
-=======
 
             <Card>;
               <CardContent className="p-0">;"
 
                 <FraudFlagsTable;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   flags={filteredFlags}
 
                   isLoading={isLoading}
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
                   onAction={handleAction}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
               </CardContent>
             </Card>
           </TabsContent>
@@ -729,21 +610,12 @@ pr-12325
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               reset_filters={reset_filters}
             />;
             {/* Flags Table */}
             <Card>;
 <CardContent className="p-0">;
-=======
               <CardContent className="p-0">;
 
 </FraudFlagsTable>
@@ -752,7 +624,6 @@ pr-12325
               <CardContent className="p - 0">;"
 </CardContent>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <FraudFlagsTable;
                   flags={filtered_flags}
                   is_loading={is_loading}
@@ -760,7 +631,6 @@ pr-12325
                   reset_filters={reset_filters}
                   on_action={handle_action}
 
-=======
 resetFilters={resetFilters}
             />;
             ;
@@ -772,7 +642,6 @@ resetFilters={resetFilters}
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
                   onAction={handleAction}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 />;
               </CardContent>;
             </Card>;
@@ -790,8 +659,6 @@ resetFilters={resetFilters}
         </Tabs>;
       </div>;
     </AppLayout>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
           ;"
@@ -926,25 +793,14 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
   resetFilters 
 }onAction= {
   handleAction 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }/> </CardContent> </Card> </TabsContent> <TabsContent value=" pending"> <FraudTabContent tabValue=" pending"/> </TabsContent> <TabsContent value=" dangerous"> <FraudTabContent tabValue=" dangerous"/> </TabsContent> <TabsContent value=" actioned"> <FraudTabContent tabValue=" actioned" /> </TabsContent> </Tabs> </div> </AppLayout>) 
 }
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   stats;"
 }/> <Tabs defaultValue=" all"className=" mb-8"> <TabsList> <TabsTrigger value=" all">All Flags <TabsTrigger value=" pending">Pending Review <TabsTrigger value=" dangerous">Dangerous <TabsTrigger value=" actioned">Actioned  <FraudFilters searchQuery= {"
 }<Card> <CardContent className=" p-0"> <FraudFlagsTable flags= {"
@@ -954,4 +810,3 @@ pr-12325
 </Card>)"
 }/> </CardContent> </Card> </TabsContent> <TabsContent value=" pending"> <FraudTabContent tabValue=" pending"/> </TabsContent> <TabsContent value=" dangerous"> <FraudTabContent tabValue=" dangerous"/> </TabsContent> <TabsContent value=" actioned"> <FraudTabContent tabValue=" actioned" /> </TabsContent> </Tabs> </div> </AppLayout>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

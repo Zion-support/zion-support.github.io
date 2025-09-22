@@ -1,22 +1,12 @@
 :pages_backup/blog/performance-optimization.tsx
-<<<<<<< HEAD:pages/blog/performance-optimization.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link';
 import React from 'react',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/blog/performance-optimization.tsx
-=======
 import React from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/performance-optimization.tsx
 export default function PerformanceOptimization() {
   return (
     <>
@@ -45,8 +35,6 @@ export default function PerformanceOptimization() {
               <Link
                 href='/blog'
 :pages_backup/blog/performance-optimization.tsx
-<<<<<<< HEAD:pages/blog/performance-optimization.tsx
-<<<<<<< HEAD
 }
 import Head from 'next/head';
 import Link from 'next/link';
@@ -62,8 +50,6 @@ import Link from 'next/link';
 import React from 'react',;
 export default function PerformanceOptimization() {;
 :pages_backup/blog/performance-optimization.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -72,14 +58,12 @@ import Link from 'next / link';
 import React from 'react',;
 export default /**
  * PerformanceOptimization - Function description
-=======
 
 import Head from 'next / head';'
 import Link from 'next / link';'
 import React from 'react',
 export default /**;
  * PerformanceOptimization - Function description;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/performance-optimization.tsx
  */
 function PerformanceOptimization() {}
   return (
@@ -232,7 +216,6 @@ function PerformanceOptimization() {}
                   </li>;
                 </ul>;'
                 <p className='text - white / 90 mb - 4'>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   Autonomous systems often process massive amounts of data.;
                   Optimizing data pipelines is essential for maintaining;
                   performance:;
@@ -598,19 +581,14 @@ export default function PerformanceOptimization(req, res) {
         </main>;
       </div>;
 :pages_backup/blog/performance-optimization.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
     </>);
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/performance-optimization.tsx
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
               >
                 ← Back to Blog
               </Link>
             </nav>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <article className='prose prose-invert prose-lg max-w-none'>
               <header className='mb-12 text-center'>
                 <div className='flex items-center gap-3 justify-center mb-4'>
@@ -838,7 +816,6 @@ export default function PerformanceOptimization(req, res) {
       </div>
     </>
   )
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
 export default function PerformanceOptimization(req, res) {
   try {
@@ -997,7 +974,6 @@ export default function PerformanceOptimization(req, res) {
                   Data Pipeline Optimization;
                 </h2>;
 <p className='text-white/90 mb-4'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Autonomous systems often process massive amounts of data.;
                   Optimizing data pipelines is essential for maintaining;
                   performance:;
@@ -1022,7 +998,6 @@ export default function PerformanceOptimization(req, res) {
                   </li>;
                 </ul>;
 <p className='text-white/90 mb-4'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Our data pipelines achieve 10x performance improvements;
                   through intelligent caching, parallel processing, and;
                   optimized data formats.;
@@ -1074,7 +1049,6 @@ export default function PerformanceOptimization(req, res) {
                   <li>• Provide actionable insights for developers</li>;
                 </ul>;
 <p className='text-white/90 mb-4'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   This proactive approach ensures that performance issues are;
                   identified and resolved before they impact user experience.;
                 </p>;
@@ -1085,7 +1059,6 @@ export default function PerformanceOptimization(req, res) {
                   Optimize Your Autonomous Systems;
                 </h3>;
                 <p className='text-white/80 mb-4'>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Ready to unlock the full potential of your autonomous;
                   technology? Our performance optimization expertise can help;
                   you achieve peak efficiency.;
@@ -1337,7 +1310,6 @@ export default function PerformanceOptimization(req, res) {}
                   you achieve peak efficiency.;
 :pages_backup/blog/performance-optimization.tsx
                 </p>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className='flex flex-wrap gap-4'>;
                   <Link;'
                     href='/contact';'
@@ -1366,24 +1338,10 @@ export default function PerformanceOptimization(req, res) {}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/blog/performance-optimization.tsx
-<<<<<<< HEAD
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
 :pages/blog/performance-optimization.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/blog/performance-optimization.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/blog/performance-optimization.tsx

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
@@ -21,20 +19,13 @@ export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const { ;
     isAuthenticated;
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
-<<<<<<< HEAD
   // Fetch auth status and saved talents
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const {
     isAuthenticated;
 
@@ -61,13 +52,10 @@ export function useTalentDirectory() {
   const { 
     talents, 
     isLoading 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   } = useTalentData(),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useAuthStatus } from './talent / useAuthStatus';
 import { useTalentData } from './talent / useTalentData';
 import { useFilterTalents } from './talent / useFilterTalents';
-=======
 import { useAuthStatus } from "./talent/useAuthStatus","
 import { useTalentData } from "./talent/useTalentData",";
 import { useFilterTalents } from "./talent/useFilterTalents";"
@@ -77,7 +65,6 @@ export function useTalentDirectory() {};
 import { useAuthStatus } from './talent / useAuthStatus';'
 import { useTalentData } from './talent / useTalentData';'
 import { useFilterTalents } from './talent / useFilterTalents';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useUIState } from './talent / useUIState';
 export /**;
  * useTalentDirectory - Function description;
@@ -121,13 +108,10 @@ function useTalentDirectory() {}
     toggleRegion,
     clearFilters
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Manage UI state
   const {
-=======
   // Manage UI state;
   const {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     isMobileFilterOpen,
     setIsMobileFilterOpen,
     isHireModalOpen,
@@ -165,11 +149,8 @@ return {
     isAuthenticated;
     userDetails;
     savedTalents;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } = useUIState(),
-=======
   // Fetch auth status and saved talents  } = useUIState(),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return {}
     // Talents and loading state;
@@ -204,7 +185,6 @@ return {
     userDetails,
     savedTalents,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Actions
 
     // Actions;
@@ -216,17 +196,9 @@ return {
     handleToggleSave
 }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useAuthStatus } from "./talent/useAuthStatus",;
-=======
     expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     expanded_sections;
 expanded_sections;
 
@@ -240,16 +212,13 @@ expanded_sections;
   }
 }
 import { useAuthStatus } from "./talent/useAuthStatus",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
-=======
 
 "
 import { useAuthStatus } from "./talent/useAuthStatus",;"
 import { useTalentData } from "./talent/useTalentData",;"
 import { useFilterTalents } from "./talent/useFilterTalents",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useUIState } from "./talent/useUIState",;
 export function useTalentDirectory() { return null; }
   } = useAuthStatus(),;
@@ -333,46 +302,26 @@ pr-12325
     clearFilters;
     toggleSection;
     handleToggleSave;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 ;
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 ;
-<<<<<<< HEAD
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   }
 }
 ;
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 }
 ;
@@ -381,4 +330,3 @@ pr-12325
 ;
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

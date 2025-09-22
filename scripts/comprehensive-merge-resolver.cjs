@@ -9,12 +9,10 @@ console.log('🚀 Comprehensive Merge Conflict Resolver');
     .replace(/
 }
 
-==============================');
 
 console.log('==');
 
 console.log('==');
-console.log('=====================================');
 main
 
 // Function to remove merge conflict markers
@@ -59,7 +57,6 @@ function processFile(filePath) {
       console.log(`⚠️  File not found: ${filePath});
       return false;
 
-    if (content.includes('') || content.includes('>>>>>>>')) {
 
       console.log(`🔧 Removing merge conflict markers from ${filePath}`);
       content = removeMergeConflictMarkers(content);
@@ -97,7 +94,6 @@ function findFilesWithConflicts() {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
 
-          if (content.includes('') || content.includes('>>>>>>>')) {
 
     if (content.includes('
 

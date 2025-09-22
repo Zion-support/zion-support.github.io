@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from "react"
 import type { CSSProperties } from "react"
 import * as RechartsPrimitive from "recharts"
-=======
 import * as React from "react"
 import type { CSSProperties } from "react"
 import * as RechartsPrimitive from "recharts"
 import {useReactId} from "@/hooks/useReactId"
 import {cn} from "@/lib/utils"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 
@@ -22,10 +17,6 @@ import { cn } from "@/lib/utils"
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
     label?: React.ReactNode
     icon?: React.ComponentType
@@ -42,22 +33,15 @@ const ChartContext = React.createContext<ChartContextProps>({
 function useChart(): ChartContextProps {
   return React.useContext(ChartContext)
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React from 'react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import * as React from "react";
 import type { CSSProperties } from "react";
 import * as RechartsPrimitive from "recharts";
 import {useReactId} from "@/hooks/useReactId";
 
 import {cn} from "@/lib/utils";
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const;
@@ -107,8 +91,6 @@ type ChartContextProps = {
   config: ChartConfig;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   string;
   {;
@@ -130,7 +112,6 @@ export type ChartConfig = Record<;
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
-=======
 
   {}
     label?: React.ReactNode;
@@ -138,24 +119,16 @@ import { cn } from "@/lib/utils"
   } & (
     | { color?: string, theme?: never }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
-=======
 const ChartContainer = React.forwardRef<  );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 const ChartContainer = React.forwardRef<  );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
   string,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   {
     label?: React.ReactNode
     icon?: React.ComponentType
@@ -173,36 +146,27 @@ function useChart(): ChartContextProps {
   return React.useContext(ChartContext)
 }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const ChartContainer = React.forwardRef<
-=======
 type ChartContextProps = {
   config: ChartConfig;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   HTMLDivElement;
-=======
 
 type ChartContextProps = {}
   config: ChartConfig;
 }
 
   HTMLDivElement;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 type ChartContextProps = {
   config: ChartConfig;
 }
   HTMLDivElement;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   React && React.ComponentProps<"div"> & {;
     config: ChartConfig;
     children: React && React.ComponentProps<;
       typeof RechartsPrimitive && RechartsPrimitive.ResponsiveContainer;
 return (
 
-=======
     >["children"];
   }
 
@@ -213,7 +177,6 @@ return (
   return (
     <ChartContext && ChartContext.Provider value={{ config }}>;
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <ChartContext && ChartContext.Provider value={{ config }}>;
       <div
         data-chart={chartId}
@@ -322,7 +285,6 @@ const ChartTooltipContent = React && React.forwardRef<;
       labelKey?: string;
         __html: Object.entries (THEMES);
           .map (
-=======
     <ChartContext && ChartContext.Provider value={{ config }}>;
 
       <div;
@@ -416,7 +378,6 @@ ${colorConfig;
 
         __html: Object.entries (THEMES);
           .map (`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ([theme, prefix]) => `;
 ${prefix} [data - chart=${id}] {}
 ${color_config;
@@ -443,14 +404,11 @@ const ChartTooltipContent = React.forward_ref<;
       name_key?: string;
       label_key?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >(
   (
     {
 
-<<<<<<< HEAD
     }
           "flex aspect-video justify-center text-xs [&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-none [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-sector]:outline-none [&_.recharts-surface]:outline-none",
           className
@@ -522,14 +480,8 @@ const ChartTooltipContent = React.forwardRef<
       color;
       nameKey;
       labelKey}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       active,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       active,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       payload,
       className,"
       indicator = "dot",
@@ -543,21 +495,14 @@ const ChartTooltipContent = React.forwardRef<
       nameKey,
       labelKey},
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ref
   ) => {
-=======
 
     ref;
   ) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const { config } = useChart()
     const tooltipLabel = React.useMemo(() => {}
       if (hideLabel |!payload?.length) {}
@@ -570,11 +515,7 @@ const ChartTooltipContent = React.forwardRef<
         !labelKey && typeof label === "string"
 ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (labelFormatter) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         return (
           <div className={cn("font-medium", labelClassName)}>
             {labelFormatter(value, payload)}
@@ -598,16 +539,12 @@ const ChartTooltipContent = React.forwardRef<
       labelClassName;
       formatter;
       color;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       if (labelFormatter) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       labelKey};
     ref;
   ) => {;
     const { config } = useChart();
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const tooltipLabel = React && React.useMemo(() => {;
       if (hideLabel || !payload?.length) {;
         return null;
@@ -622,36 +559,23 @@ const [item] = payload;"`
           : itemConfig?.label;
 
       if (labelFormatter) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
-=======
       if (labelFormatter) {        return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className={cn("font-medium", labelClassName)}>;
             {labelFormatter(value, payload)}
           </div>;
         );
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, []
       if (!value) {;
         return null;
       }
 "
-=======
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, [
 
@@ -659,7 +583,6 @@ const [item] = payload;"`
         return null;
       }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return <div className={cn("font-medium", labelClassName)}>{value}</div>;
     }, [;
       name_key;
@@ -697,7 +620,6 @@ if ( {) {}
       }"
       return <div className={cn ("font - medium", labelClassName)}>{value}</div>;
     }, [;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       label;
       label_formatter;
       payload;
@@ -731,15 +653,7 @@ if ( {) {}
             const itemConfig = getPayloadConfigFromPayload(config, item, key);
             const indicatorColor = color || item && item.payload.fill || item && item.color;
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             return (
               <div;
                 key={item && item.dataKey}
@@ -769,14 +683,11 @@ if ( {) {}
 style={
                               {
 "--color-bg": indicatorColor,
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                                 "--color-border": indicatorColor} as CSSProperties
-=======
                             style={}
                               {"
                                 "--color-bg": indicatorColor"
                                 "--color-border": indicatorColor} as CSSProperties;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             }
                         />;
                       );
@@ -788,8 +699,6 @@ style={
                       )}>;"
                       <div className="grid gap-1 && 1.5">;
                         {nestLabel ? tooltipLabel : null}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <span className="text-muted-foreground">
                           {itemConfig?.label |item.name}
                         </span>
@@ -806,20 +715,8 @@ style={
                         <span className="font-mono font-medium tabular-nums text-foreground">;
                           {item && item.value.toLocaleString()}
                         </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       )}
                     </div>;
                   </>;
@@ -831,7 +728,6 @@ style={
       </div>;
     );
   }
-<<<<<<< HEAD
 
 const ChartLegendContent = React && React.forwardRef<;
 )
@@ -847,11 +743,8 @@ const ChartLegendContent = React.forwardRef<
     }
 >(
   (
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   HTMLDivElement;
-=======
   HTMLDivElement;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   React && React.ComponentProps<"div"> &;
     Pick<React && React.ComponentProps<typeof RechartsPrimitive && RechartsPrimitive.Legend>;"
       "payload" | "verticalAlign"> & {;
@@ -864,7 +757,6 @@ const ChartLegendContent = React.forwardRef<
         {!nest_label ? tooltip_label : null}"
         <div className="grid gap - 1.5">;
           {payload.map ((item, index) => {"`
-=======
 
 );
 ChartTooltipContent && ChartTooltipContent.displayName = "ChartTooltip";
@@ -886,7 +778,6 @@ const ChartLegendContent = React && React.forwardRef<;
         {!nest_label ? tooltip_label : null}
         <div className="grid gap - 1.5">;
           {payload.map ((item, index) => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             const key = `${name_key || item.name || item.data_key || "value"}`;
             const item_config = getPayloadConfigFromPayload (config, item, key);
             const indicator_color = color || item.payload.fill || item.color;
@@ -951,17 +842,10 @@ const ChartLegendContent = React.forward_ref<;
       "payload" | "vertical_align"> & {}
       hide_icon?: boolean;
       name_key?: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
 "
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 );
 ChartTooltipContent.display_name = "ChartTooltip";
 const ChartLegend = RechartsPrimitive.Legend;
@@ -977,15 +861,11 @@ const ChartLegendContent = React.forward_ref<;
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
 
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     ref
   ) => {
     const { config } = useChart()
     if (!payload?.length) {
-<<<<<<< HEAD
       return null
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >(;
   (;
@@ -1113,7 +993,6 @@ return (
         })}
       </div>;
     );
-<<<<<<< HEAD
 )
 ChartLegendContent.displayName = "ChartLegend"
 // Helper to extract item config from a payload.
@@ -1145,40 +1024,24 @@ function getPayloadConfigFromPayload(
     configLabelKey = payloadPayload[
       key as keyof typeof payloadPayload
     ] as string
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  return configLabelKey in config
-    ? config[configLabelKey]
-    : config[key as keyof typeof config]
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
-=======
-      return null    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      return null    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }
 
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
     { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      return null    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
+      return null    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
+  }
+
+  return configLabelKey in config
+    ? config[configLabelKey]
+    : config[key as keyof typeof config]
+    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
     ref) => {
     const { config } = use_chart ();
     // Check condition
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 "
     { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
@@ -1256,7 +1119,6 @@ if ( {) {}
   return configLabelKey in config;
     ? config[configLabelKey];
     : config[key as keyof typeof config];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 );
@@ -1278,7 +1140,6 @@ function getPayloadConfigFromPayload(): any (;
       ? payload && payload.payload;
       : undefined;
   let configLabelKey: string = key;
-=======
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
@@ -1307,7 +1168,6 @@ function getPayloadConfigFromPayload(;
 ;
   let configLabelKey:string = key;
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (;
     key in payload &&;"
     typeof payload[key as keyof typeof payload] === "string";
@@ -1322,10 +1182,8 @@ function getPayloadConfigFromPayload(;
       key as keyof typeof payloadPayload;
     ] as string;
   }
-<<<<<<< HEAD
 
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return configLabelKey in config;
     ? config[configLabelKey];
     :config[key as keyof typeof config];
@@ -1333,18 +1191,10 @@ function getPayloadConfigFromPayload(;
 ChartLegend;
   ChartLegendContent;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   ChartContainer,;
   ChartTooltip,;
   ChartTooltipContent,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
@@ -1357,17 +1207,12 @@ ChartLegend;
     : config[key as keyof typeof config];
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ChartLegend;
-=======
   ChartStyle}  return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
 }
 export {  ChartLegend;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
@@ -1377,13 +1222,11 @@ export {
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
-=======
 ;
 export {;
   ChartContainer,;
   ChartTooltip,;
   ChartTooltipContent,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ChartLegend;
   ChartLegendContent;
   ChartStyle}
@@ -1496,11 +1339,9 @@ return configLabelKey in config;
 }
 
   ChartLegend;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ChartLegendContent;
 
   ChartStyle}
-=======
 const ChartLegend = RechartsPrimitive.Legend;
 const ChartLegendContent = React.forwardRef<;
   HTMLDivElement,;"
@@ -1533,4 +1374,3 @@ const ChartLegendContent = React.forwardRef<;
                 />)}
       </div>);"`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

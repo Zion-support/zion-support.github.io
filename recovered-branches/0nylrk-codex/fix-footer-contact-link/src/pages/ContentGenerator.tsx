@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
 constructor(props) {
     super(props);
@@ -23,19 +21,8 @@ constructor(props) {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";"
 import {Footer} from "@/components/Footer";"
@@ -54,31 +41,23 @@ import {useAuth} from "@/hooks/useAuth";"
 import {ScrollArea} from "@/components/ui/scroll-area";"
 import {useNavigate} from "react-router-dom";
 export default function ContentGenerator() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user, isLoading } = useAuth();
 
   const navigate = useNavigate();'
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');'
   const [customPrompt, setCustomPrompt] = useState('');'
-=======
 
   const { user, isLoading } = useAuth();
 
   const navigate = useNavigate();
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
   const [customPrompt, setCustomPrompt] = useState('');
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [topic, setTopic] = useState('');
   const [autoPublish, setAutoPublish] = useState(false);
   const [includeImage, setIncludeImage] = useState(true);
   const [isGenerating, setIsGenerating] = useState(false);
 const [previewContent, setPreviewContent] = useState<any>(null);'
   const [testEmail, setTestEmail] = useState('');
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -100,7 +79,6 @@ import { useAuth } from "@/hooks/useAuth",
   const navigate = useNavigate();'
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');'
   const [customPrompt, setCustomPrompt] = useState('');'
-=======
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 export default function ContentGenerator() {
@@ -109,14 +87,12 @@ export default function ContentGenerator() {
   const navigate = useNavigate();
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
   const [customPrompt, setCustomPrompt] = useState('');
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [topic, setTopic] = useState('');
   const [autoPublish, setAutoPublish] = useState(false);
   const [includeImage, setIncludeImage] = useState(true);
   const [isGenerating, setIsGenerating] = useState(false);
 const [previewContent, setPreviewContent] = useState<any>(null);'
   const [testEmail, setTestEmail] = useState('');
-<<<<<<< HEAD
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useNavigate } from "react-router-dom",
 export default function ContentGenerator() {
@@ -130,21 +106,12 @@ export default function ContentGenerator() {
   const [isGenerating, setIsGenerating] = useState(false),
   const [previewContent, setPreviewContent] = useState<any>(null),
   const [testEmail, setTestEmail] = useState(''),
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   }, [user, isLoading, navigate]);
   const generateContent = async () => {
@@ -167,14 +134,8 @@ export default function ContentGenerator() {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page"),
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       navigate("/login?redirect=/content-generator")
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -191,7 +152,6 @@ import { Loader2 } from "lucide-react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
-=======
 '
 import React, { useState } from 'react',;"
 import { Header } from "@/components/Header",;"
@@ -209,7 +169,6 @@ import { Loader2 } from "lucide-react",;"
 import { supabase } from "@/integrations/supabase/client",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { ScrollArea } from "@/components/ui/scroll-area",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useNavigate } from "react-router-dom",;
 export default function ContentGenerator() { return null; }
   const { user, isLoading } = useAuth(),;
@@ -229,16 +188,11 @@ export default function ContentGenerator() { return null; }
       toast && toast.error("You must be logged in to access this page");"
       navigate("/login?redirect=/content-generator");
     }
-<<<<<<< HEAD
   }, [user, isLoading, navigate]);
         body: {;
           contentType,;
           prompt: customPrompt || undefined,;
           topic: topic || undefined,;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           autoPublish;
           includeImage: contentType === 'blog' ? includeImage : false;
         }
@@ -247,13 +201,9 @@ export default function ContentGenerator() { return null; }
           includeImage: contentType === 'blog' ? includeImage : false;
         }
       });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setPreviewContent(data);
-=======
 
       setPreviewContent(data);'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
           autoPublish;
           includeImage: contentType === 'blog' ? includeImage : false;
         }
@@ -267,25 +217,19 @@ export default function ContentGenerator() { return null; }
         }
       });
       setPreviewContent(data);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast && toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
     } catch (error) {;"
       console && console.error("Error generating content:", error);"
       toast && toast.error("Failed to generate content. Please try again.");
     } finally {;
       setIsGenerating(false);
-<<<<<<< HEAD
     }
 
-<<<<<<< HEAD
       }),
-<<<<<<< HEAD
-=======
     }
 
       }),
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       if (error) throw error,
 
@@ -295,9 +239,7 @@ autoPublish,;'
           includeImage: contentType === 'blog' ? includeImage : false;
         }
       }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (error) throw error,
 setPreviewContent(data),
 toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)
@@ -307,7 +249,6 @@ toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated 
     } finally {}
       setIsGenerating(false)
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address");
@@ -316,7 +257,6 @@ toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated 
     if (!previewContent) {"
       toast.error("Generate newsletter content first");
 return
-<<<<<<< HEAD
   };
 
 const sendTestNewsletter = async () => {
@@ -327,7 +267,6 @@ const sendTestNewsletter = async () => {
     if (!previewContent) {
       toast.error("Generate newsletter content first"),
       return
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     try {
       const { data, error } = await supabase.functions.invoke('send-newsletter', {
@@ -340,25 +279,19 @@ const sendTestNewsletter = async () => {
         }
       });
       if (error) throw error;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }),;
       if (error) throw error,;
       setPreviewContent(data),;'`
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
     } catch (error) {;"
       console.error("Error generating content:", error),;"
-=======
       }),;
       if (error) throw error,;
       setPreviewContent(data),;
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
     } catch (error) {;
       console.error("Error generating content:", error),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       toast.error("Failed to generate content. Please try again.");
     } finally {;
       setIsGenerating(false);
@@ -384,22 +317,14 @@ try {;'
           testEmail;
         }
 
-<<<<<<< HEAD
       }),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       if (error) throw error,
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
       }),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       if (error) throw error,
 `
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {"
       console.error("Error sending test newsletter:", error),"
@@ -520,25 +445,16 @@ try {;'
     );
   }
   return (
-<<<<<<< HEAD
                     <Input
-=======
     }                    <Input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     <Input
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       id="topic"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
-=======
 
                     <Input"
                       id="topic"'"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}
                       onChange={(e) => setTopic(e.target.value)}
@@ -568,24 +484,13 @@ try {;'
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch"
                           id="includeImage"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }),;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       }),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       if (error) throw error,;
-=======
 
       }),;
       if (error) throw error,;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       toast.success(`Test newsletter sent to ${testEmail}!`);
     } catch (error) {;"
       console.error("Error sending test newsletter:", error);"
@@ -691,10 +596,8 @@ pr-12325
 ;
   return (;
 
-=======
 ;
   return (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>;
       <Header />;"
       <div className="min-h-screen bg-zion-blue py-12">;"
@@ -703,11 +606,9 @@ pr-12325
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             <div className="lg:col-span-1">;
-=======
 "
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;"
             <div className="lg:col-span-1">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Card className="bg-zion-blue-dark border border-zion-blue-light">;
                 <CardHeader>;"
                   <CardTitle className="text-white">Content Settings</CardTitle>;"
@@ -797,11 +698,8 @@ onChange={(e) => setCustomPrompt(e && e.target.value)}
                       <div className="flex items-center justify-between">;"
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
 <Switch;
-<<<<<<< HEAD
-<<<<<<< HEAD
                           id="includeImage";
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />
@@ -838,25 +736,18 @@ onChange={(e) => setCustomPrompt(e && e.target.value)}
                         />;
                       </div>;
                     </>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       />;
                     </div>;
                   )}
                 </CardContent>;
                 <CardFooter>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <Button
                     onClick={generateContent}
-=======
                           id="includeImage";                    onClick={generateContent}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     disabled={isGenerating}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
                   <Button;
-=======
                   <Button
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     onClick={generateContent}
                     disabled={isGenerating}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
@@ -891,7 +782,6 @@ onChange={(e) => setCustomPrompt(e && e.target.value)}
               </Card>;
             </div>;
             <div className="lg:col-span-2">;
-=======
 
                   <Button;
                     onClick={generateContent}
@@ -910,7 +800,6 @@ onChange={(e) => setCustomPrompt(e && e.target.value)}
             </div>;
 "
             <div className="lg:col-span-2">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Card className="bg-zion-blue-dark border border-zion-blue-light h-full">;
                 <CardHeader>;"
                   <CardTitle className="text-white">Content Preview</CardTitle>;"
@@ -957,7 +846,6 @@ onChange={(e) => setCustomPrompt(e && e.target.value)}
                                       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
                                       .replace(/\*(.+?)\*/g, "<em>$1</em>");
                                       .replace(/^-\s+(.+)$/gm, "<li>$1</li>");
-=======
 '
                     contentType === 'blog' ? (;"
                       <div className="space-y-4">;"
@@ -972,7 +860,6 @@ onChange={(e) => setCustomPrompt(e && e.target.value)}
                                       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");"
                                       .replace(/\*(.+?)\*/g, "<em>$1</em>");"
                                       .replace(/^-\s+(.+)$/gm, "<li>$1</li>");"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                                       .replace(/\n\n/g, "<br><br>");
                                   }}
                                 />;
@@ -1051,7 +938,6 @@ onChange={(e) => setCustomPrompt(e && e.target.value)}
                                 onClick={sendTestNewsletter}
                                 disabled={!testEmail}
 className="bg-zion-blue-light hover:bg-zion-blue text-white">;                                Send Test to {testEmail || "your email"}
-=======
                                 className="bg-zion-blue-light hover:bg-zion-blue text-white">;
 ;
                           <TabsContent value="preview" className="pt-4">;
@@ -1077,7 +963,6 @@ className="bg-zion-blue-light hover:bg-zion-blue text-white">;                  
                                 className="bg-zion-blue-light hover:bg-zion-blue text-white";
                               >;
                                 Send Test to {testEmail || "your email"}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               </Button>;
                             </div>;
                           </TabsContent>;
@@ -1149,7 +1034,6 @@ const generate_content = async () => {}
           prompt: custom_prompt || undefined,
           topic: topic || undefined,
           auto_publish;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           include_image: content_type === 'blog' ? include_image : false;
         })
       });
@@ -1171,12 +1055,10 @@ if (throw error) {
       console.error ("Error generating content:", error);""
       toast.error ("Failed to generate content. Please try again.");"
     } finally {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setIsGenerating (false);
     }
   }
 ;
-<<<<<<< HEAD
   const sendTestNewsletter = async () => {}
     // Check condition;
 if ( {) {}
@@ -1204,7 +1086,6 @@ if ( {) {}
   // TODO: Implement
       const { data, error } = await supabase.functions.invoke ('send - newsletter', {
 body: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           subject: preview_content.subject,
           preview_text: preview_content.preview_text,
           body: preview_content.body,
@@ -1213,7 +1094,6 @@ body: {
 }
       });
 ;
-<<<<<<< HEAD
       // Check condition;
 if (throw error) {}
   $2;
@@ -1465,14 +1345,12 @@ disabled={!test_email}
                           </TabsContent>;
                           <TabsContent value="html" className="pt - 4">;
                             <ScrollArea className="h-[500px]">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               <pre className="bg - zion - blue whitespace - pre - wrap p - 4 rounded - md text - zion - slate - light overflow - auto">;
                                 {preview_content.body}
                               </pre>;
                             </ScrollArea>;
                           </TabsContent>;
                         </Tabs>;
-<<<<<<< HEAD
                       </div>)) : ("
                     <div className="flex flex - col items - center justify - center py - 12 text - center">;"
                       <div className="bg - zion - blue - light / 20 p - 6 rounded - full mb - 4">;
@@ -1555,7 +1433,6 @@ disabled={!test_email}
   )
 }
 </CardContent>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Card>;
             </div>;
           </div>;
@@ -1564,9 +1441,6 @@ disabled={!test_email}
       <Footer />;
 
 </>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
     </>;
@@ -1589,7 +1463,6 @@ const [customPrompt, setCustomPrompt] = useState ('');'
 const navigate = useNavigate ();"
 const [contentType, setContentType] = useState<'blog' | 'newsletter'> ('blog');
 const [customPrompt, setCustomPrompt] = useState ('');
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const [topic, setTopic] = useState ('');
 const [autoPublish, setAutoPublish] = useState (false);
 const [includeImage, setIncludeImage] = useState (true);
@@ -1686,7 +1559,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
   previewContent.imagePrompt && (<div> <h3 className="text-white font-semibold mb-1" >Image Prompt</h3> <p className="text-zion-slate-light" > {
   previewContent.imagePrompt 
 }</p> </div>) 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }</div> </TabsContent> </Tabs> </div>) : (<div className="space-y-4" > <Tabs defaultValue="preview" className="w-full" > <TabsList className="bg-zion-blue-light/30 w-full" > <TabsTrigger value="preview" >Preview</TabsTrigger> <TabsTrigger value="html" >HTML</TabsTrigger> </TabsList> </Button> </div> </div> <div className="mt-4 flex justify-end" > <Button </Button> </div> </TabsContent> </pre> </ScrollArea> </TabsContent> </Tabs> </div>) ) : (<div className="flex flex-col items-center justify-center py-12 text-center" > <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4" > <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-zion-purple" > <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /> <polyline points="14 2 14 8 20 8" /> <path d="M12 18v-6" /> <path d="M8 15h8" /> </svg> </div> <h3 className="text-white font-medium mb-2" >No Content Generated Yet</h3> <p className="text-zion-slate-light max-w-md" > Use the settings panel to configure your content and click "Generate" to create AI-powered content. </p> </div>)
 }</CardContent> </Card> </div> </div> </div> </div> <Footer /> </>) 
 </Footer>
@@ -1694,19 +1566,8 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

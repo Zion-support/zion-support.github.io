@@ -60,7 +60,6 @@ export default function SecurityAudit({ report }: Props) {}
 };
 </pre> </div>) 
 
-<<<<<<< HEAD:components/automation/security.tsx
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -76,7 +75,6 @@ export default function SecurityAudit({ report }: Props) {
 </div>;
 
     </div>;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 );
 }
       <pre className=\"whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto\" />;
@@ -85,7 +83,6 @@ export default function SecurityAudit({ report }: Props) {
     </div>;
 );
 }
-<<<<<<< HEAD
 
   );
 }
@@ -112,7 +109,6 @@ function SecurityAudit() {
 {JSON.stringify (report, null, 2)}
       </pre>;
     </div>);
-<<<<<<< HEAD
 }
 
 interface AuditReport  {generatedAt?: string;
@@ -163,4 +159,3 @@ export default function SecurityAudit({ report }: Props) {
   );
 }
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

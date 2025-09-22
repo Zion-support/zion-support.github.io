@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -44,7 +41,6 @@ export function ProfileContact({
   }
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ProfileContactProps {
   email?: string,
   profileName: string,
@@ -76,13 +72,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Send } from "lucide-react";
 import { useState } from "react";
-=======
 import { Button } from "@/components/ui/button";"
 import { Input } from "@/components/ui/input";"
 import { Textarea } from "@/components/ui/textarea";"
 import { Mail, Send } from "lucide-react";"
 import { useState } from "react";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {}
   email?: string;
@@ -120,7 +114,6 @@ setIsSending(false),
         }));
     }, 1000);
   };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return ("
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">"
@@ -128,7 +121,6 @@ setIsSending(false),
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact;
       </h3>
-<<<<<<< HEAD
       {email && (
         <div className="mb - 4 text - zion - slate-light">;
           <span className="block">Email: </span>;
@@ -186,7 +178,6 @@ className="text-zion-cyan hover:underline truncate block"
           </Link>
         </div>
       )}
-<<<<<<< HEAD
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
@@ -242,7 +233,6 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
         description: `Your message has been sent to ${profileName}.`});
     }, 1000);
   };
-<<<<<<< HEAD
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
@@ -256,10 +246,8 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
           <a
             href={`mailto:${email}`} 
             className="text-zion-cyan hover:underline truncate block">;
-=======
             className="text-zion-cyan hover:underline truncate block"
           >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
             {email}
           </a>;
         </div>;
@@ -268,14 +256,12 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
           <div>;
             <Input;
               placeholder="Subject";
-=======
 
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
             <Input
               placeholder="Subject"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white"
@@ -294,7 +280,6 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
           <Button
             type="submit"
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
-<<<<<<< HEAD
             disabled={isSending}
           >
             <Send className="mr-2 h-4 w-4" />
@@ -306,23 +291,16 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
     </div>
   );
 }
-<<<<<<< HEAD
 ;
             <Textarea;
-=======
             disabled={isSending}>;
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}            <Textarea;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             disabled={isSending}>;
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}            <Textarea;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
             <Textarea;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               placeholder={`Message to ${profile_name}...`}
               value={message}
               on_change={(e) => set_message (e.target.value)}
@@ -336,35 +314,19 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
             disabled={is_sending}
           >;
 <Send className="mr - 2 h - 4 w-4" />;
-=======
             <Send className="mr - 2 h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {is_sending ? "Sending..." : "Send Message"}
           </Button>;
         </div>;
       </form>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   )
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   )
   )
 
-<<<<<<< HEAD
   ),;}
  interface ProfileContactProps {
   email?: string;
@@ -387,8 +349,6 @@ setIsSending (true);
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";""
@@ -499,4 +459,3 @@ export function ProfileContact({
 pr-12325
 }className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

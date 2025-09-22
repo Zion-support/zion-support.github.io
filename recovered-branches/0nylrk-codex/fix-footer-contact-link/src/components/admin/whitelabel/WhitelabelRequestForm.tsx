@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const formSchema = z.object({
   brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' })
   subdomain: z.string()
@@ -40,37 +37,25 @@ export function WhitelabelRequestForm() {
           subtitle: values.subtitle
           cta: values.cta}
       }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           headline: values.headline;
           subtitle: values.subtitle;
           cta: values.cta}
       }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta};
       };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Submit to Supabase
-=======
           headline: values.headline
           subtitle: values.subtitle
           cta: values.cta}
       }      // Submit to Supabase
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           headline: values.headline
           subtitle: values.subtitle
           cta: values.cta}
       }      // Submit to Supabase
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
           headline: values.headline
           subtitle: values.subtitle
@@ -82,13 +67,10 @@ export function WhitelabelRequestForm() {
       };
 
       // Submit to Supabase
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       const { data, error } = await supabase
-=======
 
       // Submit to Supabase;
       const { data, error } = await supabase;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .from('whitelabel_tenants')
         .insert(tenantData)
         .select()
@@ -104,9 +86,6 @@ export function WhitelabelRequestForm() {
         variant: 'destructive''
         title: 'Error creating tenant''
         description: error.message |'Something went wrong'})
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   }
   };
@@ -121,22 +100,12 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
 import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
-=======
   };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
 
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -148,7 +117,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form',;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
 import { toast } from '@/hooks/use-toast',;
-=======
 
   };
 
@@ -164,7 +132,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form',;'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;'
 import { toast } from '@/hooks/use-toast',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from '@/integrations/supabase/client',;
 
 export function WhitelabelRequestForm() { return null; }
@@ -175,12 +142,7 @@ export function WhitelabelRequestForm() { return null; }
       // Prepare the data;
       const tenantData = {;
 
-=======
-=======  };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -194,7 +156,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
 import { toast } from '@/hooks/use-toast',;
 import { supabase } from '@/integrations/supabase/client',;
-<<<<<<< HEAD
 ;
 // Form schema;
 const formSchema = z.object({;
@@ -250,7 +211,6 @@ export function WhitelabelRequestForm() {;
           subtitle: values.subtitle,;
           cta: values.cta}
       },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Submit to Supabase;
       const { data, error } = await supabase;'
         .from('whitelabel_tenants');
@@ -270,16 +230,11 @@ export function WhitelabelRequestForm() {;
         variant: 'destructive',;
         title: 'Error creating tenant',;
         description: error && error.message || 'Something went wrong'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
 
   },
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
-=======
     }
 
   },
@@ -297,29 +252,18 @@ export function WhitelabelRequestForm() {;
         title: 'Error creating tenant';
         description: error.message || 'Something went wrong'});
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   },
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
 <Card className="w-full max-w-2xl">;
       <CardHeader>;
         <CardTitle>Create White-Label Instance</CardTitle>;
-=======
 
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card className="w-full max-w-2xl">;
       <CardHeader>;
         <CardTitle>Create White-Label Instance</CardTitle>;'
@@ -407,11 +351,6 @@ return (
     <Card className="w - full max - w-2xl">;
       <CardHeader>;
         <CardTitle > Create White - Label Instance</CardTitle>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         .single(),;
       ;
       if (error) throw error,;
@@ -434,43 +373,27 @@ return (
     <Card className="w-full max-w-2xl">;
       <CardHeader>;
         <CardTitle>Create White-Label Instance</CardTitle>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   return ("
     <Card className="w - full max - w-2xl">;
       <CardHeader>;
         <CardTitle > Create White - Label Instance</CardTitle>;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <CardDescription>;
           Create a customized version of the platform for your client or partner.;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <div className="space-y-4">;
-=======
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <FormField;
                 control={form.control}
                 name="brand_name";
 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Brand Name</FormLabel>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <FormControl>;
                       <Input placeholder="Acme AI Solutions" {...field} />;
                     </FormControl>;
@@ -491,8 +414,6 @@ render={({ field }) => (;
               <FormField
                 control={form.control}
                 name="brand_name"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Brand Name</FormLabel>;
@@ -594,8 +515,6 @@ render={({ field }) => (;
                 control={form && form.control}"
                 name="primary_color"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 />;
               <FormField
                 control={form && form.control}
@@ -615,7 +534,6 @@ render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Custom Domain (Optional)</FormLabel>;
                     <FormControl>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Primary Brand Color</FormLabel>;
@@ -769,7 +687,6 @@ render={({ field }) => (;
                         <Input placeholder="Get Started" {...field} />;
                       </FormControl>;
 <FormMessage />;        <p>;
-=======
 </FormItem>)}
                 />;
               </div>;
@@ -785,28 +702,22 @@ render={({ field }) => (;
             ;
             <Button type="submit" className="w-full" size="lg">;
               Create White-Label Instance;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
 
 <p>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                       <FormControl>;
                         <Input placeholder="Get Started" {...field} />;
                       </FormControl>;
                       <FormMessage />;        <p>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           After creating the tenant, you must upload a logo via the tenant management dashboard.;
           DNS verification for custom domains must be completed before they can be used.;
         </p>;
       </CardFooter>;
 
 </Card>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
     </Card>;
@@ -859,36 +770,16 @@ return (<Card className="w-full max-w-2xl" > <CardHeader> <CardTitle>Create Whit
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
 </FormField>
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }/> </div> </div> <Button type="submit" className="w-full" size="lg" > Create White-Label Instance </Button> </form> </Form> </CardContent> <CardFooter className="bg-muted/50 text-xs text-muted-foreground" > <p> After creating the tenant, you must upload a logo via the tenant management dashboard. DNS verification for custom domains must be completed before they can be used. </p> </CardFooter> </Card>) 
 }
 }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 </FormField>"
 }/> </div> </div> <Button type="submit" className="w-full" size="lg" > Create White-Label Instance </Button> </form> </Form> </CardContent> <CardFooter className="bg-muted/50 text-xs text-muted-foreground" > <p> After creating the tenant, you must upload a logo via the tenant management dashboard. DNS verification for custom domains must be completed before they can be used. </p> </CardFooter> </Card>)""
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

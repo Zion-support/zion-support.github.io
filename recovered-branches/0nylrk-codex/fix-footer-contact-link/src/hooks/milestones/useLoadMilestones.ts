@@ -1,20 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
 
-=======
 
 import {useState, useEffect} from 'react';'
 import {supabase} from '@/integrations / supabase / client';'
@@ -22,10 +12,8 @@ import {use_auth} from '@/hooks / use_auth';'
 import {toast} from 'sonner';'
 import {Milestone, MilestoneActivity} from './types';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         activitiesMap[milestone && milestone.id] = activitiesData || []
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       }
 
@@ -64,16 +52,13 @@ console.error("Error fetching milestones:", err),
 
   }
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
 
 activitiesMap[milestone.id] = activitiesData || []
 export const useLoadMilestones = (project_id?: string) =>: any {
-=======
 export const useLoadMilestones = (project_id?: string) =>: any {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
   const [activities, set_activities] = useState < Record < string, MilestoneActivity[]>>({});
@@ -90,11 +75,7 @@ if ( {) {}
         activitiesMap[milestone.id] = activitiesData || []
 
 activitiesMap[milestone.id] = activitiesData || []
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const fetch_milestones = async () => {
     // Check condition
 if ( {) {
@@ -104,19 +85,16 @@ if ( {) {
 
         activitiesMap[milestone.id] = activitiesData || []
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { toast } from 'sonner',;
-=======
 
 '
 import { useState, useEffect } from 'react',;'
 import { supabase } from '@/integrations/supabase/client',;'
 import { useAuth } from '@/hooks/useAuth',;'
 import { toast } from 'sonner',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Milestone, MilestoneActivity } from './types',;
 export const useLoadMilestones = (projectId?: string) => {;
   const { user } = useAuth(),;
@@ -127,11 +105,6 @@ export const useLoadMilestones = (projectId?: string) => {;
   const fetchMilestones = async () => {;
     if (!projectId) {;
       setIsLoading(false),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const useLoadMilestones = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
@@ -145,13 +118,7 @@ if ( {) {
   $2
 }
       setIsLoading (false);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       return;
     }
     try {}
@@ -177,26 +144,18 @@ if (throw milestones_error) {}
           .from ('milestone_activities');
           .select (`;
             *;
-<<<<<<< HEAD
             created_by_profile:profiles ! user_id (display_name, avatar_url);
-<<<<<<< HEAD
-<<<<<<< HEAD
           `);
 
           .eq('milestone_id', milestone.id);
           .order('created_at', { ascending: false }),;
         if (activitiesError) throw activitiesError,;
         activitiesMap[milestone.id] = activitiesData || [];
-=======
 
 `
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           `);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             created_by_profile:profiles ! user_id (display_name, avatar_url);
           `);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }
 
       setActivities(activitiesMap),
@@ -255,14 +214,11 @@ refetch: fetchMilestones
     isLoading,;
     error;
     refetch: fetchMilestones;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 
 ;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 ;
   // Fetch milestones when component mounts or project_id changes;
@@ -396,19 +352,9 @@ refetch: fetchMilestones
 };
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
             created_by_profile:profiles ! user_id (display_name, avatar_url);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
 
 ;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,36 +1,20 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast  } from 'sonner';
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo  } from '@/types/smart-contracts';
-=======
 import { useState  } from 'react';'
 import { useAuth  } from '@/hooks/useAuth';'
 import { supabase  } from '@/integrations/supabase/client';'
 import { toast  } from 'sonner';'
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo  } from '@/types/smart-contracts';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { TalentProfile  } from '@/types/talent';
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export function useSmartContracts() {};
   const { user } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 '
 import {useState} from 'react';'
@@ -43,10 +27,8 @@ import {ContractFormValues} from "@/components/contracts/components/ContractForm
 export function useSmartContracts() { return null; }
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
 
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
@@ -61,17 +43,10 @@ export function useSmartContracts() {}
   const [isLoading, setIsLoading] = useState(false),'
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const generateSolidityContract = async (
     values: ContractFormValues
-=======
   const [isLoading, setIsLoading] = useState(false);    values: ContractFormValues
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   const [isLoading, setIsLoading] = useState(false);    values: ContractFormValues
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
 export function useSmartContracts() {
   const { user } = useAuth(),
@@ -80,11 +55,8 @@ export function useSmartContracts() {
 
   const generateSolidityContract = async (
     values: ContractFormValues
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   const [isLoading, setIsLoading] = useState(false);    values: ContractFormValues
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     talent: TalentProfile
     clientName: string
   ): Promise<string> => {
@@ -94,16 +66,12 @@ export function useSmartContracts() {
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
 
         body: {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 setIsLoading(true),
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
         body: {
           talentName: talent && talent.full_name;
           clientName: clientName;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
   const generateSolidityContract = async (;
     values: ContractFormValues;
@@ -111,12 +79,7 @@ setIsLoading(true),
     clientName: string;
   ): Promise<string> => {}
     try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           projectName: values && values.projectName;
           scopeSummary: values && values.scopeSummary;
           startDate: values && values.startDate.toISOString();
@@ -126,14 +89,11 @@ setIsLoading(true),
           additionalClauses: values && values.additionalClauses || []}
 
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (error) throw error;
 
       setIsLoading(true)
       const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
         body: {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           talentName: talent.full_name;
           clientName: clientName;
           projectName: values.projectName;
@@ -145,19 +105,12 @@ setIsLoading(true),
           additionalClauses: values.additionalClauses |[]}
       });
       if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           talentName: talent.full_name,
-=======
       if (error) throw error;          talentName: talent.full_name,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       if (error) throw error;
           talentName: talent.full_name,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
           talentName: talent.full_name,
       if (error) throw error;          talentName: talent.full_name,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           clientName: clientName,
           projectName: values.projectName,
           scopeSummary: values.scopeSummary,
@@ -168,20 +121,10 @@ setIsLoading(true),
           additionalClauses: values.additionalClauses || []}
       }),
       if (error) throw error,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       if (data && data.solidityCode) {
-=======
       if (data && data.solidityCode) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         return data.solidityCode
 import {useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -189,7 +132,6 @@ import {supabase} from '@/integrations / supabase / client';
 import {toast} from 'sonner';
 import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from '@/types / smart - contracts';
 import {TalentProfile} from '@/types / talent';
-=======
 
       if (data && data.solidityCode) {}
         return data.solidityCode'
@@ -199,7 +141,6 @@ import {supabase} from '@/integrations / supabase / client';'
 import {toast} from 'sonner';'
 import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from '@/types / smart - contracts';'
 import {TalentProfile} from '@/types / talent';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ContractFormValues } from '@/components / contracts / components / ContractForm';
 export /**;
  * useSmartContracts - Function description;
@@ -305,16 +246,12 @@ if ( {) {}
       } else {"
         throw new Error ("Failed to generate Solidity contract");
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
     } catch (err: any) {
-<<<<<<< HEAD
 
       console.error ("Error generating Solidity contract:", err);
       toast.error ("Failed to generate smart contract");
       throw err;
 
-<<<<<<< HEAD
     } finally {
       setIsLoading (false);
     }
@@ -327,16 +264,10 @@ if ( {) {}
       setIsLoading(false)
     }
 
-=======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 console.error ("Error generating Solidity contract:", err);
       toast.error ("Failed to generate smart contract");
       throw err;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } finally {
       setIsLoading (false);
     }
@@ -355,10 +286,8 @@ if (data && data.solidityCode) {
       setIsLoading(false)
     }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const deploySmartContract = async (
     contractCode: string;
     options: DeploymentOptions
@@ -366,7 +295,6 @@ if (data && data.solidityCode) {
     if (!user?.id) {
 toast && toast.error("You must be logged in to deploy a contract"),
 
-<<<<<<< HEAD
       return null
     }
     try {
@@ -384,23 +312,15 @@ console.error("Error deploying smart contract:", err),
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000));
       setDeploymentStatus('success');
-<<<<<<< HEAD
       toast.success("Smart contract deployed successfully!");
       return mockSmartContractInfo
-<<<<<<< HEAD
-=======
       toast.success("Smart contract deployed successfully!");
       return mockSmartContractInfo
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     } catch (err: any) {      return mockSmartContractInfo
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (err: any) {
       console.error("Error deploying smart contract:", err);
       toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return null
 import { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -445,7 +365,6 @@ export function useSmartContracts() {;
     } finally {;
       setIsLoading(false);
     }
-=======
   }
   return {
     generateSolidityContract;
@@ -764,15 +683,12 @@ export function useSmartContracts() {;
     } finally {;
       setIsLoading(false);
     }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   },;
   const deploySmartContract = async (;
     contractCode: string,;
-=======
 
   const deploySmartContract = async (
     contractCode: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     options: DeploymentOptions;
   ): Promise<SmartContractInfo | null> => {}
     if (!user?.id) {}
@@ -814,21 +730,16 @@ export function useSmartContracts() {;
     deploySmartContract;
     isLoading;
     deploymentStatus;
-<<<<<<< HEAD
 
   }
 }
 ;
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         networkName: options && options.network;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         blockNumber: Math && Math.floor(Math && Math.random() * 1000000),
         deployedAddress: `0x${Array && Array.from({length: 40}, () => '`
           Math && Math.floor(Math && Math.random() * 16).toString(16)).join('')}`;'
@@ -842,7 +753,6 @@ export function useSmartContracts() {;
       toast && toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
       return null
-<<<<<<< HEAD
     }
 
   }
@@ -939,8 +849,6 @@ deploymentStatus;
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
   }
@@ -998,20 +906,10 @@ deploymentStatus;
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   }
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

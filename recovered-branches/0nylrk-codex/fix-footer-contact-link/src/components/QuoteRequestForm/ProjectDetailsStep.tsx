@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {QuoteFormData} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
@@ -11,8 +9,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -20,22 +16,16 @@ interface ProjectDetailsStepProps {
 export function ProjectDetailsStep({
   formData
   updateFormData
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { QuoteFormData } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-=======
 import { QuoteFormData } from "@/types/quotes";"
 import { Input } from "@/components/ui/input";"
 import { Label } from "@/components/ui/label";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Textarea } from "@/components/ui/textarea";
 interface ProjectDetailsStepProps {}
-=======
 
 interface ProjectDetailsStepProps {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
@@ -47,29 +37,18 @@ export function ProjectDetailsStep({}
   return ("
     <div className="space-y-6">
 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
 <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
         <h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
         <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="space-y-4">
           <div>"
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -153,14 +132,11 @@ interface ProjectDetailsStepProps {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information;
         </h3>
-<<<<<<< HEAD
 
 "
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
@@ -169,24 +145,13 @@ interface ProjectDetailsStepProps {
 <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information;
         </h3>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information;
         </h3>
 <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
 
@@ -199,7 +164,6 @@ interface ProjectDetailsStepProps {
           Contact Information
         </h3>
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>"
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -314,9 +278,6 @@ interface ProjectDetailsStepProps {;
             <Input;"
               id="name";"
               placeholder="Your name";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 value={formData.contactInfo.name}
               onChange={(e) =>
@@ -337,12 +298,7 @@ value={formData.contactInfo.name}
           </div>
 
           <div>
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
               value={formData.contactInfo.name}          <div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
             </Label>
@@ -366,14 +322,6 @@ value={formData.contactInfo.name}
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
             </Label>
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Input
               id="email"
               type="email"
@@ -468,20 +416,10 @@ value={formData.contactInfo.name}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
   )
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
@@ -489,25 +427,17 @@ import { Label  } from '@/components / ui / label';
 import { Textarea  } from '@/components / ui / textarea';
 interface ProjectDetailsStepProps {
   form_data: QuoteFormData;
-<<<<<<< HEAD
   updateFormData: (data: Partial < QuoteFormData>) => void;
 }
-=======
   updateFormData: (data: Partial < QuoteFormData>) => void;}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   updateFormData: (data: Partial < QuoteFormData>) => void;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />;
 
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </div>;
   );
       <div>;
@@ -598,7 +528,6 @@ interface ProjectDetailsStepProps {
 
 </div>);}
 
-<<<<<<< HEAD
 
   )
 
@@ -739,7 +668,6 @@ value={formData.contactInfo.name}
   );
 }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   )
 
     </div>;
@@ -765,29 +693,14 @@ updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   return (<div className="space-y-6" > text-xl font-semibold text-white mb-4">Tell us about your project</h3> <div className=" space-y-4"> <div> <Label htmlFor=" projectName"className=" text-zion-slate-light">Project Name <Input id=" projectName"placeholder=" Enter a name for your project"value= {"
 }/> </div> <div> <Label htmlFor=" projectDescription"className=" text-zion-slate-light">Project Description <Textarea /> </div> </div> </div> <div> <h3 className=" text-xl font-semibold text-white mb-4">Contact Information</h3> <div className=" grid grid-cols-1 md:grid-cols-2 gap-4"> <div> <Label htmlFor=" name"className=" text-zion-slate-light">Name <Input;")
 }) "
@@ -797,4 +710,3 @@ updateFormData: (data: Partial<QuoteFormData>) => void;
 }/> </div> </div> </div> </div>) "
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

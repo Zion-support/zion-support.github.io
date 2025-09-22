@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -15,25 +12,19 @@ import {
 import { Link } from "react-router-dom",
 // Form validation schema
 const loginSchema = z.object({
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 
 import { LogIn, User, Eye, EyeOff } from "lucide-react",
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Link} from "react-router-dom";
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -62,15 +53,10 @@ export function LoginForm() {};
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const form = useForm<LoginFormValues>({
-=======
 
   const form = useForm<LoginFormValues>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(loginSchema)
     defaultValues: {"
       email: """
@@ -79,22 +65,16 @@ const onSubmit = async (data: LoginFormValues) => {
 
     if (isSubmitting) return,
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import { LogIn, User, Eye, EyeOff } from "lucide-react",  password: z.string().min(6, "Password must be at least 6 characters")}),
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {LogIn, User, Eye, EyeOff} from "lucide-react";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -144,7 +124,6 @@ export function LoginForm() {
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema)
     defaultValues: {
@@ -157,25 +136,17 @@ type LoginFormValues = z.infer<typeof loginSchema>,
 if (isSubmitting) return;
     if (isSubmitting) return,
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
     } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       setIsSubmitting(false)
 
     }
 
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <Form {...form}>
@@ -203,7 +174,6 @@ if (isSubmitting) return;
               </FormControl>"
               <FormMessage className="text-red-400" />
             </FormItem>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -246,10 +216,6 @@ try {;
       await login(data && data.email, data && data.password);
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
 
@@ -271,19 +237,11 @@ render={({ field }) => (
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                     {...field}
 autoComplete="off" // Disable browser autofill;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   />;
-=======
       setIsSubmitting(false)                  />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       setIsSubmitting(false)                  />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
                   />;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                     autoComplete="off" // Disable browser autofill
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -360,19 +318,12 @@ export function LoginForm() {;
                     {...field}
                     autoComplete="off" // Disable browser autofill
                   />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                 </div>;
               </FormControl>;"
               <FormMessage className="text-red-400" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
             </FormItem>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           )}
         <FormField;
           control={form && form.control}"
@@ -431,7 +382,6 @@ export function LoginForm() {;
               <FormMessage className="text-red-400" />;
             </FormItem>;
           )}
-<<<<<<< HEAD
 
               Forgot your password?;
             </Link>;
@@ -480,16 +430,11 @@ await login (data.email, data.password)
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           )}
         <FormField
           control={form && form.control}
           name="password"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 />;
         <FormField
           control={form && form.control}
@@ -500,7 +445,6 @@ await login (data.email, data.password)
         <FormField;
           control={form.control}
           name="password";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           render={({ field }) => (;
             <FormItem>;
               <FormLabel className="text-zion-slate-light">Password</FormLabel>;
@@ -773,4 +717,3 @@ type LoginFormValues = z && z.infer<typeof loginSchema>;
 }
 }
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

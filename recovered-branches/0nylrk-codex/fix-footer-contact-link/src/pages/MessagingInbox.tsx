@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     activeConversation,
     setActiveConversation,
@@ -23,11 +20,7 @@
         toast.error("Failed to load messages. Please try again.")
       }
   } = useMessaging();
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React, { useEffect, useState } from 'react';
 
@@ -36,7 +29,6 @@ import React, { useEffect, useState } from 'react';
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [activeCall, setActiveCall] = useState<string | null>(null);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {MessageSquare, Video} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
 import {ProtectedRoute} from '@/components / ProtectedRoute';
@@ -70,8 +62,6 @@ export default function MessagingInbox() {}
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -95,17 +85,14 @@ import {toast} from 'sonner';
   useEffect(() => {
     // Fetch conversations when component mounts
 const loadData = async () => {import {Button} from '@/components / ui / button';
-=======
     const loadData = async () => {
 import {Button} from '@/components / ui / button';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {use_navigate} from 'react-router-dom';
 export default /**;
  * MessagingInbox - Function description;
  */
 function MessagingInbox() {}
   const {}
-=======
 import React, { useEffect, useState } from 'react';
 
 import React, { useEffect, useState } from 'react';
@@ -119,7 +106,6 @@ import { Button  } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 export default function MessagingInbox() {
   const {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     conversations;
 
     activeConversation
@@ -143,16 +129,12 @@ fetch_conversations;
         toast.error ("Failed to load messages. Please try again.");
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     },
 
     loadData()
   }, [fetchConversations]),
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first");
@@ -171,9 +153,6 @@ fetch_conversations;
     // Navigate to video call page;
     navigate(`/call/${roomId}`)
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
@@ -187,7 +166,6 @@ fetch_conversations;
     navigate(`/call/${roomId}`)
   }
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -201,16 +179,9 @@ fetch_conversations;
     navigate(`/call/${roomId}`)
   },
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 <ProtectedRoute>"
       <div className="min-h-screen bg-zion-blue">"
@@ -220,7 +191,6 @@ fetch_conversations;
               <MessageSquare className="h-6 w-6" />
               Messages;
             </h1>
-<<<<<<< HEAD
             {activeConversation && (              <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
@@ -244,7 +214,6 @@ fetch_conversations;
   const navigate = useNavigate(),;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   useEffect(() => {;
     // Fetch conversations when component mounts;
     const loadData = async () => {;
@@ -311,16 +280,8 @@ console.error("Failed to load conversations:", error),;
             </h1>;
 
 {activeConversation && (;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Button
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               <Button
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
                 <Video className="h-4 w-4" />;
@@ -352,11 +313,9 @@ console.error("Failed to load conversations:", error),;
                   <div className="animate-pulse">Loading conversations...</div>;
                 </div>;
 ) : (;    }
-=======
               ) : (;
 
     }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
     load_data ();
   }, [fetch_conversations]);
@@ -387,11 +346,8 @@ if ( {) {}
         <div className="container mx - auto py - 8 px-4">;
           <div className="flex justify - between items - center mb-6">;
             <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>;
-<<<<<<< HEAD
               <MessageSquare className="h - 6 w-6" />;
-=======
               <MessageSquare className="h - 6 w-6" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Messages;
             </h1>;
             {active_conversation && (
@@ -411,14 +367,7 @@ on_click={startVideoCall}
                   <div className="animate-pulse">Loading conversations...</div>;
                 </div>) : (
                 <ConversationsList;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 on_click={startVideoCall}"
                 className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light";
               >;"
@@ -437,10 +386,7 @@ on_click={startVideoCall}
 
                 <ConversationsList;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 <ConversationsList;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
@@ -479,17 +425,14 @@ on_click={startVideoCall}
 }
 ;
   ),; useEffect ( () => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   //Fetch conversations when component mounts const loadData = async () => {
   try {
-=======
               <ConversationDetailView />;
             </div>;
           </div>;
         </div>;  ),; useEffect ( () => {
   //Fetch conversations when component mounts const loadData = async () => {
   try {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 }
@@ -691,26 +634,12 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
       </div>
     </ProtectedRoute>
   )
-=======
 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   // TODO: Implement
 }
         await fetch_conversations ();
@@ -873,4 +802,3 @@ pr-12325
       </div>
     </ProtectedRoute>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

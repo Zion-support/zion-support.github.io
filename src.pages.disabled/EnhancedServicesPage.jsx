@@ -35,12 +35,6 @@ interface EnhancedServicesPageProps {
 
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function EnhancedServicesPage({ }: EnhancedServicesPageProps) {
   return (
     <div>
@@ -48,10 +42,8 @@ export default function EnhancedServicesPage({ }: EnhancedServicesPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
 :src.pages.disabled/EnhancedServicesPage.jsx
 }
 }
@@ -59,24 +51,7 @@ ursor/add-new-services-and-deploy-updates-0462
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-:src.pages.disabled/EnhancedServicesPage.jsx
-}
-}
-}
-}
-}
-:temp_exclude/src.pages.disabled/EnhancedServicesPage.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
 :src.pages.disabled/EnhancedServicesPage.jsx
@@ -85,14 +60,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 :temp_exclude/src.pages.disabled/EnhancedServicesPage.jsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+}
+
+:src.pages.disabled/EnhancedServicesPage.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/EnhancedServicesPage.jsx
 :temp_exclude/src.pages.disabled/EnhancedServicesPage.jsx
     <div>
 </div>
@@ -100,4 +77,3 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <p>This component is currently under development.</p>
     </div>'
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

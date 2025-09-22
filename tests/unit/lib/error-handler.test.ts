@@ -88,10 +88,6 @@ const wrappedFn = asyncHandler(asyncFn);
       expect(asyncFn).toHaveBeenCalledWith(mockReq, mockRes, expect.any(Function));
     });
   });
-<<<<<<< HEAD
 });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/unit/lib/error-handler.test.ts
-=======
 describe('Error Handler', () => {
   let mockReq: Partial<NextApiRequest>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

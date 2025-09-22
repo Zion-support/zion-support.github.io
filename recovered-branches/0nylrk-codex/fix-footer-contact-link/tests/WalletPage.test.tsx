@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { render, screen  } from '@testing-library/react';
 import WalletPage from '@/pages/Wallet';
 import { vi  } from 'vitest';
@@ -20,13 +18,11 @@ describe('WalletPage', () => {
       spendTokens: vi.fn()
     } as any);
 
-<<<<<<< HEAD
     render(<WalletPage />);
     expect(
       screen.getByRole('heading', { name: /balance/i })
     ).toBeInTheDocument();
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { render, screen } from '@testing - library / react';
 import WalletPage from '@/pages / Wallet';
 import { vi } from 'vitest';
@@ -45,14 +41,12 @@ describe ('WalletPage', () => {
     expect (
       screen.getByRole ('heading', { name: /balance / i })).toBeInTheDocument ();
   });
-<<<<<<< HEAD
 });
 
 import { render, screen } from '@testing-library/react',;'
 import WalletPage from '@/pages/Wallet',;'
 import { vi } from 'vitest',;'
 import * as useWalletHook from '@/hooks/useWallet',;
-<<<<<<< HEAD
     ).toBeInTheDocument()
   })
 }),
@@ -72,16 +66,9 @@ describe('WalletPage', () => {;
     ).toBeInTheDocument();
   });
 });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 describe('WalletPage', () => {
-=======
 });describe('WalletPage', () => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 });describe('WalletPage', () => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 });
 
 import { render, screen } from '@testing-library/react',;
@@ -90,19 +77,14 @@ import { vi } from 'vitest',;
 import * as useWalletHook from '@/hooks/useWallet',;
 
 describe('WalletPage', () => {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   it('renders balance heading', () => {
     vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
-=======
 
 '
 describe('WalletPage', () => {'
   it('renders balance heading', () => {'
     vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       wallet: { user_id: '1', balance: 100, updated_at: '' };
       transactions: [];
       loading: false;
@@ -115,24 +97,10 @@ describe('WalletPage', () => {'
       screen.getByRole('heading', { name: /balance/i })
     ).toBeInTheDocument()
   })
-<<<<<<< HEAD
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 });
 });
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

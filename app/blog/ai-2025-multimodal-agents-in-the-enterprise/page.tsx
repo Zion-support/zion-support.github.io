@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 export const metadata = {
   title: 'Multimodal Agents in the Enterprise (2025) | Zion Tech Group',
@@ -44,3 +43,4 @@ export default function MultimodalAgentsEnterprise2025Page() {
     </main>
   );
 }
+

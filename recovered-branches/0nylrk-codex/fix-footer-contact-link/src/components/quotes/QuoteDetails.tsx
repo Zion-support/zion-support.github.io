@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
@@ -17,10 +16,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import { 
   Dialog,
@@ -36,19 +31,10 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 import { format } from "date-fns";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface QuoteDetailsProps {
-=======
 import { format } from "date-fns",interface QuoteDetailsProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 import { format } from "date-fns",interface QuoteDetailsProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   DialogDescription,";
 } from "@/components/ui/dialog";"
 import { Button } from "@/components/ui/button";"
@@ -59,15 +45,11 @@ import { QuoteStatusBadge } from "./QuoteStatusBadge";"
 import type { QuoteRequest } from "@/types/quotes";"
 import { format } from "date-fns";
 interface QuoteDetailsProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
 }
-<<<<<<< HEAD
 import {format} from "date-fns";
 
   const formatDate = (dateString?: string) => {"
@@ -81,7 +63,6 @@ import {format} from "date-fns";
 
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
   const formatDate = (dateString?: string) => {"
@@ -93,7 +74,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     }
   }
 };
-<<<<<<< HEAD
 import {format} from "date-fns";
 
   const formatDate = (dateString?: string) => {"
@@ -104,7 +84,6 @@ import {format} from "date-fns";
       return dateString;
     }
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import {;
   Dialog,;
@@ -164,23 +143,13 @@ if (return "Not specified") {}
       return format (new Date (date_string), "PPP");
 } catch (e) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       return dateString;
     }
 
   },
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     } catch (e) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>"
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -265,15 +234,10 @@ if (return "Not specified") {}
   )
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 },
 };
 },
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return date_string;
     }
   }
@@ -355,7 +319,4 @@ if (return "Not specified") {}
 ;
 
   )
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

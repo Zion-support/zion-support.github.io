@@ -1,32 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function useFetchResume() {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export function useFetchResume() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 import { useState  } from 'react';'
 import { supabase  } from '@/integrations/supabase/client';'
@@ -39,22 +24,13 @@ import {supabase} from '@/integrations/supabase/client';'
 import {Resume} from '@/types/resume';'
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
-=======
 export function useFetchResume() {  const { user } = useAuth();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export function useFetchResume() {  const { user } = useAuth();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   const { user } = useAuth();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 export function useFetchResume() {  const { user } = useAuth();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -105,10 +81,6 @@ const { data: resumeData, error: resumeError } = await resumeQuery && resumeQuer
           setResume(null);
           setIsLoading(false);
           return null
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         }
         throw resumeError
@@ -125,21 +97,15 @@ export function useFetchResume() {;
   const fetchResume = async (resumeId?: string) => {;
     if (!user) {;
       setError('You must be logged in to access resumes'),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from 'react';
-=======
 import {useState} from 'react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 import {useState} from 'react';
       // Otherwise, fetch the user's active resume or most recent resume          // No resume found, this is not a critical error for a new user
           setResume(null);
           setIsLoading(false);
           return null
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
-=======
     try {}
       // If resumeId is provided, fetch that specific resume'
       // Otherwise, fetch the user's active resume or most recent resume;
@@ -165,7 +131,6 @@ import {Resume} from '@/types / resume';
 import {useState} from 'react';'
 import {supabase} from '@/integrations / supabase / client';'
 import {Resume} from '@/types / resume';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {use_auth} from '@/hooks / use_auth';
 export /**;
  * useFetchResume - Function description;
@@ -196,8 +161,6 @@ const fetch_resume = async (resume_id?: string) => {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
       set_error ('You must be logged in to access resumes');
       return null;
     }
@@ -243,20 +206,12 @@ if ( {) {}
           setIsLoading (false);
           return null;
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }
         throw resume_error;
       }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       // Fetch work experience;
       const { data: workData, error: workError } = await supabase'
@@ -286,14 +241,10 @@ if ( {) {}
         .select('*')
 
       if (skillsError) throw skillsError;
-<<<<<<< HEAD
-=======
 
-=======
 }
         throw resumeError
       }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')
@@ -327,7 +278,6 @@ if ( {) {}
         .eq('resume_id', resumeData && resumeData.id);
         .eq('resume_id', resumeData.id);
       if (skillsError) throw skillsError;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Fetch certifications
       const { data: certData, error: certError } = await supabase
         .from('certifications')
@@ -428,7 +378,6 @@ if (throw cert_error) {}
       console.error ('Error fetching resume:', e);
       set_error (e.message);
       return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
       setIsLoading (false);
     }
@@ -438,11 +387,7 @@ if (throw cert_error) {}
     is_loading;
     error;
     resume;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
   return {
     isLoading;
@@ -476,11 +421,7 @@ if (throw cert_error) {}
   }
   return {
     isLoading;
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     error;
     resume;
@@ -628,24 +569,14 @@ certifications: certData || [];
 is active: resumeData.is active 
 };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     error;
     resume;
 
     fetchResume}
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 import * as React from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -30,9 +24,7 @@ import { Heart,
   BarChart3, 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -41,7 +33,6 @@ import * as React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Heart,
   Brain,
   Shield,
@@ -58,7 +49,6 @@ import {
 Camera,
   FileText;
 } from 'lucide-react';
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -68,12 +58,8 @@ import Layout from '../../components/Layout';
 import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
-=======
 import Layout from '../../components/Layout';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const services = [
   {
     title: 'AI-Powered Medical Diagnostics',
@@ -106,7 +92,6 @@ const services = [;
       'Remote patient monitoring',','
       'Digital prescription management',','
       'Integrated health records'';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ];
   },
   {}'
@@ -136,8 +121,6 @@ const services = [;
     ];
   },
 {}
-<<<<<<< HEAD
-<<<<<<< HEAD
     title: 'Patient Management Systems,',
     description: 'Comprehensive patient care coordination and management platforms.,',
     icon: Users,
@@ -155,7 +138,6 @@ const benefits = [;
     title: 'Improved Patient Outcomes,',
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',
     icon: Heart;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ];
 const benefits = []
   {'
@@ -168,7 +150,6 @@ const benefits = []
     title: 'Improved Patient Outcomes,',,
   description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',;
     icon: Heart;  {}
-=======
 ];
 const benefits = [
   {
@@ -177,12 +158,9 @@ const benefits = [
     icon: Heart
   },
   {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Enhanced Efficiency,',
-=======
   {}'
     title: 'Enhanced Efficiency,','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Streamlined workflows and automated processes reduce administrative burden.,',
     icon: Activity;
   },
@@ -202,7 +180,6 @@ const caseStudies = [;
     title: 'AI Diagnostic System Implementation,',
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];
 const caseStudies = []
   {'
@@ -220,7 +197,6 @@ const caseStudies = []
     description: 'Unified health records across 15 healthcare facilities, improving care coordination.',','
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
   }
-<<<<<<< HEAD
 ;];
 export default function HealthcarePage() {
   return (;
@@ -283,7 +259,6 @@ export default function HealthcarePage() {
       keywords="healthcare technology, medical AI, telemedicine, EHR systems, medical imaging, healthcare analytics""
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-red-900 via-pink-900 to-rose-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
@@ -295,7 +270,6 @@ export default function HealthcarePage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >"
@@ -330,7 +304,6 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
 
               className="text-center mb-16""
             >;
@@ -348,11 +321,9 @@ transition={{ duration: 0.8 }}
               className="text-center mb-16"
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto"">;
-=======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto""
             >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex items-center justify-center mb-6">";
                 <Heart className="w-12 h-12 text-red-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -377,13 +348,10 @@ transition={{ duration: 0.8 }}
             </motion.div>;
           </div>;
 </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Healthcare Technology Services;
               </h2>"
@@ -399,10 +367,6 @@ transition={{ duration: 0.8 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">";
@@ -415,7 +379,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >"
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">"
@@ -428,7 +391,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
-=======
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
               {services && services.map((service, index) => (,;
@@ -459,8 +421,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";                        {feature}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
@@ -477,17 +437,14 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -495,7 +452,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -523,16 +479,11 @@ Our healthcare technology solutions deliver measurable improvements in patient c
             </div>;
           </div>;
         </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               className="text-center mb-16"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Healthcare Solutions?
               </h2>"
@@ -545,7 +496,6 @@ Our healthcare technology solutions deliver measurable improvements in patient c
               {benefits.map((benefit, index) => (
                 <motion.div;
                   key={benefit.title}
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
@@ -558,9 +508,7 @@ Our healthcare technology solutions deliver measurable improvements in patient c
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -582,8 +530,6 @@ Our healthcare technology solutions deliver measurable improvements in patient c
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}        {/* Case Studies Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -603,31 +549,22 @@ Our healthcare technology solutions deliver measurable improvements in patient c
           </div>
         </section>
         {/* Case Studies Section */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <section className="py-20 bg-white">"
-=======
         {/* Case Studies Section */}"
         <section className="py-20 bg-white">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Healthcare Success Stories;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Real results from healthcare organizations that have transformed their operations;
                 with our technology solutions.;
-<<<<<<< HEAD
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
@@ -635,18 +572,12 @@ Our healthcare technology solutions deliver measurable improvements in patient c
                 <motion.div}),
 
               className="text-center mb-16"
-=======
               </p>;              className="text-center mb-16"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               className="text-center mb-16"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Healthcare Success Stories;
               </h2>"
@@ -662,10 +593,6 @@ Our healthcare technology solutions deliver measurable improvements in patient c
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300""
                 >;
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
@@ -675,7 +602,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">"
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >"
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
@@ -685,7 +611,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">"
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
                         {result}
-=======
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",;
               {caseStudies && caseStudies.map((study, index) => (,;
@@ -713,8 +638,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                     {study && study.results.map((result, resultIndex) => (,;
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">";
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";                        {result}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   <div className="space-y-2">";
                     {study.results.map((result, resultIndex) => (,
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">"
@@ -728,17 +651,14 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
                         {result}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </div>,
                     ))}
                   </div>,
                 </motion.div>;
               ))}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-red-600 to-pink-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -746,7 +666,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Healthcare?;
@@ -767,13 +686,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
         </section>;
       </div>;
     </Layout>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>,;
           </div>;
         </section>;
@@ -786,11 +699,7 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
             </div>;
           </div>;
         </section>;            >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Start Your Healthcare Project;
@@ -805,7 +714,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
       </div>;
     </Layout>;
             >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?
               </h2>"

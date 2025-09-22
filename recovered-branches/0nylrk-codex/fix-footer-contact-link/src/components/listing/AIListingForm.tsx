@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -14,17 +8,13 @@ interface AIListingFormProps {
     keyFeatures: string
     targetAudience: string
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react";
-=======
 import React, { useState } from "react";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles} from "lucide-react";
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -33,10 +23,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles } from "lucide-react",
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -49,8 +35,6 @@ interface AIListingFormProps {
 
   }) => void,
   isLoading: boolean,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   initialValues?: {
     title?: string,
     category?: string,
@@ -71,9 +55,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   initialValues?: {
     title?: string,
@@ -85,7 +66,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleSubmit = () => {
     if (!title |!category) {
       toast({
@@ -103,14 +83,9 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       targetAudience;
     })
 
-=======
 
   },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         variant: "destructive"
       }),
       return
@@ -123,20 +98,15 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
     })
 
   },
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <div className="space-y-4">
       <div className="space-y-2">
-=======
 
   return ("
     <div className="space-y-4">"
       <div className="space-y-2">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
         <Input"
           id="title"
@@ -177,54 +147,31 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}"
           placeholder="e.g. Developers, Marketers, Startups""
           className="bg-zion-blue border border-zion-blue-light text-white"
-<<<<<<< HEAD
-<<<<<<< HEAD
           disabled={isLoading}
         />
       </div>
-=======
 
       <Button 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
       <Button 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 <Button 
 
           disabled={isLoading}
         />
       </div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
       <Button 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
       <Button 
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 <Button
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
-<<<<<<< HEAD
 import { Sparkles } from "lucide-react",;
 interface AIListingFormProps {;
   onSubmit: (formData: {;
@@ -232,30 +179,18 @@ interface AIListingFormProps {;
     category: string,;
     keyFeatures: string,;
     targetAudience: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }) => void;
-  isLoading: boolean,;
-  initialValues?: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    title?: string;
-    category?: string;
-=======
-import { Sparkles } from "lucide-react",;    category?: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { Sparkles } from "lucide-react",;    category?: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }) => void;
   isLoading: boolean,;
   initialValues?: {;
     title?: string;
     category?: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import { Sparkles } from "lucide-react",;    category?: string;
+import { Sparkles } from "lucide-react",;    category?: string;
+  }) => void;
+  isLoading: boolean,;
+  initialValues?: {;
+    title?: string;
+    category?: string;
     keyFeatures?: string;
 
 interface AIListingFormProps {
@@ -304,7 +239,6 @@ interface AIListingFormProps {
 export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
 const { toast } = useToast();          onChange={(e) => setKeyFeatures(e && e.target.value)}
           placeholder="Briefly describe the main features or benefits";
-=======
   const { toast } = useToast();
 "
   const [title, setTitle] = useState(initialValues && initialValues.title || "");"
@@ -368,7 +302,6 @@ const { toast } = useToast();          onChange={(e) => setKeyFeatures(e && e.ta
 
           onChange={(e) => setKeyFeatures(e && e.target.value)}"
           placeholder="Briefly describe the main features or benefits";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
           disabled={isLoading}
         />;
@@ -384,49 +317,27 @@ id="targetAudience"
 
         />;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Button;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       <Button;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <Button;        <Input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         <Input"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
         <Input
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 <Button;
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
         <Input
       <Button;        <Input
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           id="targetAudience"
           value={targetAudience}
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -437,9 +348,6 @@ id="targetAudience"
             Generate Optimized Content;
           </>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         />;
       </div>;
@@ -450,8 +358,6 @@ id="targetAudience"
         {isLoading ? (;
           <>Generating Optimized Content...</>;
         ) : (;
-<<<<<<< HEAD
-<<<<<<< HEAD
           placeholder=&quot;e.g. Developers, Marketers, Startups&quot;
           className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
           disabled={isLoading}
@@ -465,16 +371,9 @@ id="targetAudience"
         {isLoading ? (;
           <>Generating Optimized Content...</>;
         ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <>;
-=======
 
           <>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Sparkles className="h-4 w-4 mr-2" />;
             Generate Optimized Content;
           </>;
@@ -514,7 +413,6 @@ function AIListingForm() {}
   const [category, set_category] = useState (initial_values.category || "");"
   const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");"
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
-<<<<<<< HEAD
 ;
 
   const handle_submit = () =>: any {
@@ -557,8 +455,6 @@ import { Sparkles } from "lucide-react","
     keyFeatures?: string,
     targetAudience?: string;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       </Button>;
     </div>);
   ),;}export function AIListingForm ({
@@ -582,18 +478,8 @@ import { Sparkles } from "lucide-react","
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
     </div>;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

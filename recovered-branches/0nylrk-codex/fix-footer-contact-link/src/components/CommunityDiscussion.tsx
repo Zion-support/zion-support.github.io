@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,32 +6,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",
 import { MessageCircle } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from './react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 import React, { useState } from './react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { MessageCircle  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
@@ -42,14 +25,8 @@ import { Textarea  } from '@/components / ui / textarea';
 import { Avatar, AvatarFallback  } from '@/components / ui / avatar';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Separator  } from '@/components / ui / separator';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface DiscussionPost {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface DiscussionPost {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 import React, { useState } from "react","
 import { MessageCircle } from "lucide-react","
@@ -67,7 +44,6 @@ import { Avatar, AvatarFallback  } from '@/components / ui / avatar';'
 import { Card, CardContent  } from '@/components / ui / card';'
 import { Separator  } from '@/components / ui / separator';
 interface DiscussionPost {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: number;
   author: string;
   avatar?: string;
@@ -80,16 +56,9 @@ import { Separator } from "@/components/ui/separator",
 import { Card, CardContent } from "@/components/ui/card","
 import { Separator } from "@/components/ui/separator",
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface DiscussionPost {
-=======
 
 interface DiscussionPost {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: number,
   author: string,
   avatar?: string,
@@ -184,8 +153,6 @@ body: "Fill out every profile detail, add strong tags, and post weekly! See resu
             />
 <Textarea
               placeholder="What's on your mind?"
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
 "
 import React, { useState } from "react",;"
@@ -258,7 +225,6 @@ export const CommunityDiscussion: React.FC = () => {;
   const [newTitle, setNewTitle] = useState(""),;
   const [newBody, setNewBody] = useState(""),;
 ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleAddPost = () => {;
     if (!newTitle.trim() || !newBody.trim()) return,;
     setPosts([;
@@ -304,9 +270,6 @@ id:Date.now(),;"
       {showNew && (;"
         <Card className="mb-6 animate-scale-in">;"
           <CardContent className="py-5">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Input
               placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate"
@@ -322,13 +285,7 @@ id:Date.now(),;"
               value={newBody}
               onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
                 setNewBody(e && e.target.value);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
@@ -356,7 +313,6 @@ id:Date.now(),;"
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
       )}
       <div className="flex flex-col gap-6">
         {posts.map((post) => (
@@ -398,30 +354,22 @@ id:Date.now(),;"
         homepage.
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
             <div className="flex gap - 3 justify - end">;
-=======
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
             <div className="flex gap - 3 justify-end">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
             <div className="flex gap - 3 justify-end">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 );
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
             <div className="flex gap - 3 justify - end">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <Button;
                 variant="secondary";
                 size="sm";
                 className="bg - zion - blue text - white hover:bg - zion - blue - dark";
                 on_click={() => setShowNew (false)}
-=======
 
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;"
             <div className="flex gap - 3 justify - end">;
@@ -431,7 +379,6 @@ id:Date.now(),;"
                 className="bg - zion - blue text - white hover:bg - zion - blue - dark";
                 on_click={() => setShowNew (false)}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 Cancel;
               </Button>;
@@ -448,7 +395,6 @@ className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light ho
               max_length={400}
               rows={3}
             />;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Post;
               </Button>;
             </div>;
@@ -482,9 +428,6 @@ className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light ho
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         </Card>)}
       <div className="flex flex - col gap - 6">;
@@ -545,14 +488,9 @@ body: string
 const initial_posts: DiscussionPost[] = [;
   {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   )
 };}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 };
 
@@ -560,11 +498,6 @@ const initial_posts: DiscussionPost[] = [;
 };
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 };
   );
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

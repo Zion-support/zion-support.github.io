@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
-import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Autonomous Customer Support Agents',
@@ -15,47 +13,52 @@ export const metadata = {
   ],
 };
 
-const AutonomousCustomerSupportAgentsPage: React.FC = () => {
+export default function AutonomousCustomerSupportAgentsPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <SEO
-        title="AI 2026: Autonomous Customer Support Agents"
-        description="Blueprint to deploy autonomous support agents with routing, guardrails, evaluations, and observability for higher CSAT and lower costs."
-        keywords="autonomous agents, customer support, guardrails, evaluation harness, observability"
-        url="/blog/ai-2026-autonomous-customer-support-agents"
-      />
+    <main className="min-h-screen bg-white">
+      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 2026: Autonomous Customer Support Agents</h1>
+          <p className="text-lg md:text-xl opacity-90 max-w-3xl">
+            A practical blueprint to deploy autonomous support agents with routing, safeguards, and evaluation gates, improving CSAT while reducing handle time.
+          </p>
+        </div>
+      </section>
 
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <header className="mb-10">
-          <p className="text-sm text-gray-500">Published: 2025-09-15 · Category: Enterprise AI</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">AI 2026: Autonomous Customer Support Agents</h1>
-          <p className="text-lg text-gray-600 mt-4">Blueprint to deploy autonomous support agents with routing, guardrails, evaluations, and observability for higher CSAT and lower costs.</p>
-        </header>
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
+          <h2>Executive Summary</h2>
+          <p>
+            Enterprises can now deploy autonomous agents across Tier 0-2 support with strong guardrails. This guide covers intent detection, tool access, guardrail policies, continuous evaluation, and observability.
+          </p>
 
-        <div className="prose prose-lg max-w-none">
-          <h2>Architecture Overview</h2>
-          <p>Deploy autonomous support agents that can handle complex customer inquiries with proper routing, safety guardrails, and continuous evaluation.</p>
-
-          <h2>Key Components</h2>
+          <h2>Reference Architecture</h2>
           <ul>
-            <li><strong>Intelligent Routing:</strong> Route inquiries to appropriate agents based on complexity and context</li>
-            <li><strong>Safety Guardrails:</strong> Prevent harmful or inappropriate responses</li>
-            <li><strong>Evaluation Framework:</strong> Continuous monitoring and improvement of agent performance</li>
-            <li><strong>Observability:</strong> Comprehensive logging and monitoring for debugging and optimization</li>
+            <li>Multi-channel intake with safety prefilters</li>
+            <li>Policy-as-code to govern actions and data access</li>
+            <li>Tool orchestration for CRM, knowledge, RMA, and billing</li>
+            <li>Closed-loop evaluations and incident response</li>
           </ul>
 
-          <h2>Implementation Strategy</h2>
-          <p>Start with simple use cases and gradually expand agent capabilities. Focus on high-value, low-risk scenarios first.</p>
-        </div>
+          <h2>KPIs</h2>
+          <ul>
+            <li>First-contact resolution rate</li>
+            <li>Average handle time</li>
+            <li>Deflection and containment</li>
+            <li>CSAT and quality score</li>
+          </ul>
 
-        <div className="mt-10 flex flex-wrap gap-4">
-          <Link href="/content/ai-2026-evaluation-harness-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Evaluation Harness →</Link>
-          <Link href="/blog/ai-2026-enterprise-agent-observability-guide" className="text-purple-600 font-semibold hover:text-purple-800">Observability Guide →</Link>
-          <Link href="/contact" className="text-white bg-purple-600 px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Discuss a Pilot</Link>
+          <h2>Next Steps</h2>
+          <p>
+            Ready to pilot? Explore our implementation checklist and schedule a discovery session.
+          </p>
+
+          <div className="mt-8 flex gap-4">
+            <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Talk to an expert</Link>
+            <Link href="/content/ai-2026-evaluation-harness-blueprint" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Evaluation Harness →</Link>
+          </div>
         </div>
-      </article>
-    </div>
+      </section>
+    </main>
   );
-};
-
-export default AutonomousCustomerSupportAgentsPage;
+}

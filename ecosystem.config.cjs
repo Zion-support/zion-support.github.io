@@ -1,34 +1,18 @@
 module.exports = {
   apps: [
     {
-<<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
 
       name: 'continuous-automation',
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       script: 'npm',
       args: 'run build',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
 main
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -68,52 +52,23 @@ main
 
       script: 'npm',
       args: 'run build',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:ecosystem.config.cjs
-=======
 
       script: 'npm',
       args: 'run build',
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       cwd: '/workspace',
       max_memory_restart: '1G',
 env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:ecosystem.config.cjs
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 main
 
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         NODE_ENV: 'production'
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       },
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
@@ -123,9 +78,7 @@ main
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         NODE_ENV: 'production',
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       },
       cron_restart: '0 0 * * *', // Daily restart
       error_file: './logs/ci-cd-error.log',
@@ -133,33 +86,19 @@ main
       log_file: './logs/ci-cd-combined.log',
 time: true,    },
     {
-<<<<<<< HEAD
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
 
-=======
 
       },
       cron_restart: '0 0 * * *', // Daily restart
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       error_file: './logs/ci-cd-error.log',
       out_file: './logs/ci-cd-out.log',
       log_file: './logs/ci-cd-combined.log',
       time: true,    },
 {
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         NODE_ENV: 'production',
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
@@ -249,7 +188,6 @@ NODE_ENV: 'production',
       script: 'node',
       args: 'scripts/automation/comprehensive-continuous-automation.cjs',
       cwd: '/workspace',
-<<<<<<< HEAD
       instances: 1,
       autorestart: true,
       watch: false,
@@ -261,13 +199,11 @@ NODE_ENV: 'production',
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:ecosystem.config.cjs
         NODE_ENV: 'production',      },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/comprehensive-automation-error.log',
@@ -283,24 +219,11 @@ NODE_ENV: 'production',
       name: 'lint-checker',
       args: 'run lint',
 cwd: '/workspace',
-<<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:ecosystem.config.cjs
-=======
-=======
       time: true
     },
     {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -309,8 +232,6 @@ main
     },
     {
       name: 'auto-fix',
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
       script: 'node',
       args: 'scripts/pm2/auto-fix.cjs',
       cron_restart: '0 */6 * * *',
@@ -652,19 +573,11 @@ module.exports = {}
       script: 'npm',
       args: 'audit',
       cwd: '/workspace',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:ecosystem.config.cjs
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         NODE_ENV: 'production',      },
 
       cron_restart: '0 2 * * *', // Daily at 2 AM
@@ -731,8 +644,6 @@ module.exports = {}
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.cjs',
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       instances: 1,
       autorestart: true,
@@ -740,8 +651,6 @@ module.exports = {}
       max_memory_restart: '500M',
       env: {
         NODE_ENV: 'production',      },
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
@@ -755,10 +664,6 @@ module.exports = {}
       args: "start",
       interpreter: "none",
       cwd: __dirname,
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -770,9 +675,6 @@ module.exports = {}
       out_file: 'logs/pm2/code-quality-monitor-out.log',
     }
   ]
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     },
     {
@@ -780,15 +682,9 @@ module.exports = {}
       script: 'scripts/pm2/auto-commit-fixes.js',
       instances: 1,
       autorestart: true,
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       watch: false,
       autorestart: true,
-=======
 
       error_file: './logs/lint-checker-error.log',
       out_file: './logs/lint-checker-out.log',
@@ -800,7 +696,6 @@ module.exports = {}
       interpreter: "none","
       cwd: __dirname,
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       max_restarts: 10,
       exp_backoff_restart_delay: 500,
       env: {,"
@@ -847,8 +742,6 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
     {
       name: "performance-optimizer",
@@ -919,8 +812,6 @@ log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       time: true
     }
   ];};
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       log_file: 'logs/pm2/git-workflow.log',
       error_file: 'logs/pm2/git-workflow-error.log',
@@ -1179,28 +1070,16 @@ module.exports = {}
 
 };
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   ];};
 
   ]
 };
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:ecosystem.config.cjs
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       interpreter: "node","
 
       out_file: "automation/logs/build-monitor-out.log","
@@ -1211,9 +1090,5 @@ module.exports = {
         PORT: 3000
       env_production: {
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

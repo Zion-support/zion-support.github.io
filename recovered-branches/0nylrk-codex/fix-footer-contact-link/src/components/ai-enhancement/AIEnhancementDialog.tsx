@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title: string,
   isOpen: boolean,
   onClose: () => void,
   onApply: (content: string) => void,
   defaultOptions: AIEnhancementOptions,
   initialContent?: string;
-=======
 import React from 'react';
 import { Dialog;
   DialogContent;
@@ -31,7 +18,6 @@ interface AIEnhancementDialogProps {
   initialContent?: string
   initialContent?: string;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export function AIEnhancementDialog({;
@@ -40,28 +26,15 @@ title;
   isOpen;
   onClose;
   onApply;
-<<<<<<< HEAD
-<<<<<<< HEAD
   defaultOptions;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react',;
-=======
   defaultOptions;import React from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   defaultOptions;import React from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   defaultOptions;
 
 import React from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {;
   Dialog,;
   DialogContent,;
@@ -77,12 +50,7 @@ interface AIEnhancementDialogProps {;
   defaultOptions: AIEnhancementOptions,;
   initialContent?: string;
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   title: string;
   isOpen: boolean;
@@ -114,7 +82,6 @@ title;
   onClose;
   onApply;
   defaultOptions;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   initialContent;
 }: AIEnhancementDialogProps) {;
   const handleApply = (content: string) => {;
@@ -128,22 +95,13 @@ const handleApply = (content: string) => {
   }
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
 }: AIEnhancementDialogProps) {;
   const handleApply = (content: string) => {;
     onApply(content),;
     onClose()
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
   title: string
   isOpen: boolean
@@ -154,12 +112,10 @@ const handleApply = (content: string) => {
   initialContent?: string
 }
 export function AIEnhancementDialog({
-=======
   initialContent?: string;
 }
 export function AIEnhancementDialog({;
 import React from 'react';'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title;
   isOpen;
   onClose;
@@ -184,7 +140,6 @@ title,
     onApply(content),;
 onClose()
 };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
 
   return (
@@ -205,8 +160,6 @@ onClose()
       </DialogContent>;
     </Dialog>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 '
@@ -245,9 +198,6 @@ function AIEnhancementDialog() {}
       </DialogContent>;
     </Dialog>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ),;}
 
     );
@@ -268,19 +218,8 @@ pr-12325
     </Dialog>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     </Dialog>"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

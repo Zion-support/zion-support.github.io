@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
@@ -19,32 +12,18 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`,;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const quickStartJs = `import axios from 'axios';export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import React from './react';
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
@@ -58,11 +37,9 @@ function ApiGettingStarted() {
 
   -H "Authorization: Bearer YOUR_API_KEY"`,
   const quickStartJs = `import axios from 'axios',const quickStartJs = `import axios from 'axios';
-=======
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
 const quickStartJs = `import axios from 'axios';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
 
   -H "Authorization: Bearer YOUR_API_KEY"`,
@@ -77,7 +54,6 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
   -H "Authorization: Bearer YOUR_API_KEY"`
 const quickStartJs = `import axios from 'axios';
   -H "Authorization: Bearer YOUR_API_KEY"`,
-=======
 import React from "react";"
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";"
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -98,10 +74,8 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {}
     Authorization: \`Bearer \${API_KEY}\`;
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const quickStartJs = `import axios from 'axios',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
@@ -112,9 +86,6 @@ console.log(response.data),`;
 }),
 `
 // // // console.log(response.data),`,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
 <ApiDocsLayout>"
@@ -129,27 +100,16 @@ talent profiles, quotes, and projects. Our RESTful API lets you'
         </p>
         <h2>Authentication</h2>
         <p>
-<<<<<<< HEAD
-<<<<<<< HEAD
           All API requests must include your API key in the Authorization header. 
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           All API requests must include your API key in the Authorization
           header. You can generate API keys in the{" "}
-=======
           All API requests must include your API key in the Authorization"
           header. You can generate API keys in the{" "}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <a href="/developers/portal" className="text-zion-cyan">
             Developer Portal;
           </a>
           .
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </p>
 "
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
@@ -224,9 +184,7 @@ Download Postman Collection
         </div>
       </div>
     </ApiDocsLayout>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
 
 export default ApiGettingStarted;
 }
@@ -235,9 +193,7 @@ export default ApiGettingStarted;
 
 export default ApiGettingStarted;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 "
 import React from "react";"
@@ -306,15 +262,11 @@ console && console.log(response && response.data),`;
           <li><strong>Projects API</strong> - Manage projects and milestones</li>;
           <li><strong>Webhooks API</strong> - Set up event notifications</li>;
         </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <h2>Postman Collection</h2>;
         <p>;
           Download our Postman collection to quickly test all available endpoints: </p>;"
         <div className="mt-4">;
-<<<<<<< HEAD
           <a
             href="#" 
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors">;
@@ -324,18 +276,11 @@ console && console.log(response && response.data),`;
       </div>;
     </ApiDocsLayout>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
 ;
 
 export default ApiGettingStarted;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
 console.log (response.data), `;
 ;
@@ -396,16 +341,11 @@ console.log (response.data), `;
             href="#" ;
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors";
           >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <a;
             href="#";
-=======
 
           <a;"
             href="#";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors";
           >;
             Download Postman Collection;
@@ -421,13 +361,6 @@ export default ApiGettingStarted;
 }
 
 export default ApiGettingStarted;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

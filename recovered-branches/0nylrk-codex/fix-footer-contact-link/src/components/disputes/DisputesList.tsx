@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -17,8 +10,6 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
@@ -59,12 +50,10 @@ type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
 
-<<<<<<< HEAD
   const filteredDisputes = statusFilter === "all"
     ? disputes
     : disputes.filter(dispute => dispute.status === statusFilter),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 "
 import React, { useState } from "react","
@@ -82,9 +71,6 @@ import { Skeleton } from "@/components/ui/skeleton","
 import { formatDistanceToNow } from "date-fns","
 import { ShieldAlert } from "lucide-react","
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -100,7 +86,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 type DisputesListProps = {
   disputes: Dispute[]
@@ -108,19 +93,12 @@ type DisputesListProps = {
 
 },
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
-<<<<<<< HEAD
       case "under_review":
-=======
 },      case "under_review":
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 },      case "under_review":
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 },
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
@@ -130,17 +108,10 @@ type DisputesListProps = {
     switch (status) {
       case "open": return "default",
       case "under_review":
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export function DisputesList() { return null; }
 export function DisputesList() { return null; }
   const getStatusBadgeVariant = (status: DisputeStatus) => {}
@@ -157,21 +128,14 @@ export function DisputesList() { return null; }
         return "outline", // Changed from "success" to "outline""
       case "closed":
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         return "outline",
       default:"
         return "default"
     }
 
   },
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   if (isLoading) {}
     return ("
@@ -181,7 +145,6 @@ export function DisputesList() { return null; }
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>"
-=======
 
   if (isLoading) {
     return (
@@ -191,10 +154,7 @@ export function DisputesList() { return null; }
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="border rounded-md">
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Table>
 
             <TableHeader>
@@ -218,10 +178,7 @@ export function DisputesList() { return null; }
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>"
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
                 </TableRow>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
 import { Button } from "@/components/ui/button",;
@@ -296,8 +253,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
       case "open": return "default",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 type DisputesListProps = {;
   disputes: Dispute[],;
@@ -314,7 +269,6 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
       case "open": return "default";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       case "under_review":;
         return "secondary",;
       case "resolved":;
@@ -328,7 +282,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Skeleton } from '@/components / ui / skeleton';
 import { formatDistanceToNow } from './date - fns';
 import { ShieldAlert } from './lucide-react';
-=======
 "
       case "under_review":;"
         return "secondary",;"
@@ -344,7 +297,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Skeleton } from '@/components / ui / skeleton';'
 import { formatDistanceToNow } from './date - fns';'
 import { ShieldAlert } from './lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Link } from './react-router-dom';
 type DisputesListProps = {}
   disputes: Dispute[],
@@ -368,12 +320,7 @@ function DisputesList() {
         return "secondary",
       case "resolved":;
         return "outline", // Changed from './success'; to "outline";
-<<<<<<< HEAD
       case "closed":;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 function DisputesList() { return null; }
   const getStatusBadgeVariant = (status: DisputeStatus) =>: any {}
     switch (status) {"
@@ -385,7 +332,6 @@ function DisputesList() { return null; }
       case "closed":;
 
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return "outline";
       default:;"
         return "default";
@@ -421,20 +367,11 @@ function DisputesList() { return null; }
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </TableBody>;
-=======
       case "closed":;            </TableBody>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       case "closed":;            </TableBody>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       case "closed":;
         return "outline";
       default:;
@@ -443,7 +380,6 @@ function DisputesList() { return null; }
 
               ))}
             </TableBody>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </Table>;
         </div>;
       </div>;
@@ -490,7 +426,6 @@ function DisputesList() { return null; }
         >;
           Resolved;
 </Button>;
-<<<<<<< HEAD
           onClick={() => setStatusFilter("closed")}
 
   }
@@ -526,7 +461,6 @@ return (;
         >;
           Resolved;
         </Button>;
-<<<<<<< HEAD
               ))}
             </TableBody>
           </Table>
@@ -631,8 +565,6 @@ return (;
                 </TableCell>
               </TableRow>
             ))}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 ;
   // Check condition
@@ -646,7 +578,6 @@ if ( {) {
           {["All", "Open", "Under Review", "Resolved", "Closed"].map ((status) => ("
             <Skeleton key={status} className="h - 10 w - 24" />))}
         </div>;"
-=======
 }
     return (
       <div className="space - y-4">;
@@ -654,7 +585,6 @@ if ( {) {
           {["All", "Open", "Under Review", "Resolved", "Closed"].map ((status) => (
             <Skeleton key={status} className="h - 10 w - 24" />))}
         </div>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="border rounded - md">;
           <Table>;
             <TableHeader>;
@@ -730,11 +660,9 @@ return ("
           variant={status_filter === "closed" ? "default" : "outline"}"
           on_click={() => setStatusFilter ("closed")}
 "
-=======
 <Button;
           variant={statusFilter === "closed" ? "default" :"outline"}
           onClick={() => setStatusFilter("closed")}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           size="sm";
         >;
           Closed;
@@ -778,18 +706,13 @@ return ("
 {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
                 </TableCell>;
                 <TableCell>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
-=======
 
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                   {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
                 </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     {dispute.status.replace('_ ')}
                   </Badge>;
                 </TableCell>;"
@@ -842,21 +765,7 @@ if (isLoading) {
 }</TableBody> </Table> </div> </div>) 
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   // TODO: Implement
     switch (status) {"
       case "open": return "default";""
@@ -984,4 +893,3 @@ if (isLoading) {
 } <TableCell>   ) ) 
 }  </div> </div>) "`;
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

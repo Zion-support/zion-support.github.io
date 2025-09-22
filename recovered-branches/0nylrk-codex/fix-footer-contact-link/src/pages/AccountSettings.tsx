@@ -1,17 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {useState, useEffect} from 'react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import {useState, useEffect} from 'react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {SEO} from '@/components / SEO';
@@ -23,7 +13,6 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/compo
 import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
-=======
 import {useState, useEffect} from 'react';'
 import {Header} from '@/components / Header';'
 import {Footer} from '@/components / Footer';'
@@ -36,27 +25,15 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/compo
 import {Separator} from '@/components / ui / separator';'
 import {Switch} from '@/components / ui / switch';'
 import {Label} from '@/components / ui / label';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {toast} from 'sonner';
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
 import { SEO  } from '@/components/SEO';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
-=======
 
 '
 import { useState, useEffect  } from 'react';'
@@ -65,7 +42,6 @@ import { Footer  } from '@/components/Footer';'
 import { SEO  } from '@/components/SEO';'
 import { useAuth  } from '@/hooks/useAuth';'
 import { Button  } from '@/components/ui/button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Input  } from '@/components/ui/input';
 import { Wallet, Database, Save } from "lucide-react";'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';'
@@ -74,9 +50,6 @@ import { Switch  } from '@/components/ui/switch';'
 import { Label  } from '@/components/ui/label';'
 import { toast } from 'sonner';
 export default function AccountSettings() {
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -91,19 +64,9 @@ import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
 export default function AccountSettings() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { user } = useAuth();
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const { user } = useAuth();
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
@@ -117,23 +80,14 @@ useEffect(() => {;
         setDisplayWeb3(!!parsed && parsed.displayWeb3);'
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const saved = localStorage.getItem('account_settings');
       if (saved) {
         const parsed = JSON.parse(saved);
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -154,7 +108,6 @@ export default function AccountSettings() {}
   const [didHandle, setDidHandle] = useState(''),
   const [enableBackup, setEnableBackup] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   useEffect(() => {}
     try {};
@@ -166,11 +119,6 @@ export default function AccountSettings() {}
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -183,7 +131,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Separator } from '@/components/ui/separator',;
 import { Switch } from '@/components/ui/switch',;
 import { Label } from '@/components/ui/label',;
-=======
 '
 import { useState, useEffect } from 'react',;'
 import { Header } from '@/components/Header',;'
@@ -197,7 +144,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Separator } from '@/components/ui/separator',;'
 import { Switch } from '@/components/ui/switch',;'
 import { Label } from '@/components/ui/label',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from 'sonner',;
 export default function AccountSettings() { return null; }
   const { user } = useAuth(),;
@@ -214,13 +160,6 @@ export default function AccountSettings() { return null; }
         setDidHandle(parsed.didHandle || ''),;
 setEnableBackup(!!parsed.enableBackup);
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
     } catch (e) {;'
       console && console.error('Error loading account settings', e);
@@ -228,53 +167,32 @@ setEnableBackup(!!parsed.enableBackup);
 }, []);
   const handleSave = () => {
     setIsSubmitting(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }, []),
   }, []),
 
-=======
-=======
         setEnableBackup(!!parsed.enableBackup);    } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         setEnableBackup(!!parsed.enableBackup);    } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleSave = () => {
-=======
   const handleSave = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setIsSubmitting(true);
   }, []),
   }, []),  }, []),
   }, []),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const handleSave = () => {}
     setIsSubmitting(true),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Simulate API call
     setTimeout(() => {
       try {
-=======
 
     // Simulate API call;
     setTimeout(() => {}
       try {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         localStorage.setItem(
 
   const handleSave = () => {;
@@ -285,22 +203,14 @@ setEnableBackup(!!parsed.enableBackup);
       try {;
         localStorage && localStorage.setItem(;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
   const handleSave = () => {
     setIsSubmitting(true),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
   const handleSave = () => {
     setIsSubmitting(true),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           'account_settings';
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
         );'
@@ -318,9 +228,6 @@ setEnableBackup(!!parsed.enableBackup);
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           'account_settings',
           JSON.stringify({ displayWeb3, didHandle, enableBackup })
         ),'
@@ -380,12 +287,6 @@ setEnableBackup(!!parsed.enableBackup);
         if (ensName) {;
           setDidHandle(ensName);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       } catch (error) {;'
         console && console.error('ENS lookup error:', error);
@@ -406,12 +307,9 @@ toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${
     } catch (error: any) {;
       toast && toast.error(error && error.message || 'Failed to connect wallet');
 }
-=======
       toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`);
     } catch (error: any) {;
       toast && toast.error(error && error.message || 'Failed to connect wallet');
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
           'account_settings',
           JSON.stringify({ displayWeb3, didHandle, enableBackup })
@@ -492,7 +390,6 @@ toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${
     } catch (error: any) {;
       toast && toast.error(error && error.message || 'Failed to connect wallet');
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
   },
@@ -500,16 +397,8 @@ toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${
   };
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
-=======
     }
   }
   },
@@ -517,10 +406,7 @@ toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${
   };
   },
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <div className="grid gap-6 md:grid-cols-2">;
           <Card>;
@@ -530,7 +416,6 @@ toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${
             </CardHeader>;
             <CardContent className="space-y-6">;
               <div className="space-y-2">;
-<<<<<<< HEAD
                 <Label htmlFor="email">Email Address</Label>;                    <Wallet className="h-4 w-4" />;
 
   return (
@@ -696,7 +581,6 @@ return (
                     className="flex items-center gap-1";
                   >;
                     <Wallet className="h-4 w-4" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     Connect;
                   </Button>;
                 </div>;"
@@ -738,7 +622,6 @@ return (
                 <Switch;"
                   id="displayWeb3""
                   checked={displayWeb3}
-<<<<<<< HEAD
                   onCheckedChange={setDisplayWeb3}
 "
                   <Label htmlFor="backup" className="flex items-center gap-1">;"
@@ -761,7 +644,6 @@ return (
                 </div>;
               )}
 
-<<<<<<< HEAD
               <Button;
                 onClick={handleSave}
                 disabled={isSubmitting}"
@@ -779,7 +661,6 @@ return (
             </CardContent>;
           </Card>;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Card>;
             <CardHeader>;
               <CardTitle>Web3 Features</CardTitle>;
@@ -799,7 +680,6 @@ return (
                 )}
               </div>;
 
-<<<<<<< HEAD
               <div>;"
                 <h3 className="font-medium mb-2">Backup Status</h3>;"
                 <div className="grid grid-cols-2 gap-2">;"
@@ -853,7 +733,6 @@ return (
                     <p className="text-sm font-medium">Reviews</p>;
                     <p className="text-xs text-gray-500">;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 {enableBackup ? 'Backed up' :'Not backed up'}
                     </p>;
@@ -861,14 +740,12 @@ return (
                 </div>;
               </div>;
 
-<<<<<<< HEAD
               <div>;
                 <h3 className="font-medium mb-2">Recovery Options</h3>;
                 <Button
                   variant="outline" 
                   className="w-full"
                   disabled={!enableBackup}>;
-<<<<<<< HEAD
               </div>
               <div className="space-y-2">
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>
@@ -1023,7 +900,6 @@ return (
                   Restore Profile from Backup
                 </Button>
                 <p className="text-xs text-gray-500 mt-1">
-<<<<<<< HEAD
                   Restore Profile from Backup;
                 </Button>;
                 <p className="text-xs text-gray-500 mt-1">;
@@ -1281,7 +1157,6 @@ if ( {) {
                     ? 'Restore your profile data from decentralized storage';
                     : 'Enable backup first to use this feature'}
                     :'Enable backup first to use this feature'}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   {enableBackup
                     ? 'Restore your profile data from decentralized storage'
                     : 'Enable backup first to use this feature'}
@@ -1308,20 +1183,16 @@ if ( {) {
     </>
 )
 }
-<<<<<<< HEAD
                   Restore Profile from Backup;
                 </Button>;"
                 <p className="text-xs text-gray-500 mt-1">;
                   {enableBackup ;'
                     ? 'Restore your profile data from decentralized storage' ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
 
 : 'Enable backup first to use this feature'}
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     :'Enable backup first to use this feature'}
                   {enableBackup'
                     ? 'Restore your profile data from decentralized storage''
@@ -1339,25 +1210,14 @@ if ( {) {
                   {enableBackup '
                     ? 'Restore your profile data from decentralized storage' '
                     : 'Enable backup first to use this feature'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </p>;
-=======
                   onCheckedChange={setDisplayWeb3}                </p>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   onCheckedChange={setDisplayWeb3}                </p>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
-=======
                   {enableBackup;"
                     ? 'Restore your profile data from decentralized storage
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     : 'Enable backup first to use this feature'}
       </main>;
       <Footer />;
@@ -1366,7 +1226,6 @@ if ( {) {
                     ? 'Restore your profile data from decentralized storage'''
                     : 'Enable backup first to use this feature'}'
                 </p>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               </div>;
             </CardContent>;
           </Card>;
@@ -1375,17 +1234,9 @@ if ( {) {
       <Footer />;
 
 </>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>;
   ),; export default function AccountSettings () {}
   const {};
@@ -1401,7 +1252,6 @@ useEffect ( () => {}
 if (saved) {}
   const parsed = JSON.parse (saved);
 setDisplayWeb3 (!!parsed.displayWeb3);'
-=======
 }
 
 ;
@@ -1420,7 +1270,6 @@ useEffect ( () => {
   const saved = localStorage.getItem ('account settings');
   const parsed = JSON.parse (saved);
 setDisplayWeb3 (!!parsed.displayWeb3);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 setDidHandle (parsed.didHandle || '');
 setEnableBackup (!!parsed.enableBackup) 
 
@@ -1436,9 +1285,7 @@ try {}
   console.error ('Failed to save settings', e);'
 toast.error ('Failed to save settings') 
 }finally {}
-=======
   // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   setIsSubmitting (false) 
 }, 1000) 
 };
@@ -1454,19 +1301,8 @@ try {"
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 '
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

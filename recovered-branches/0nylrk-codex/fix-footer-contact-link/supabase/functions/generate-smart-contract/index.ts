@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
@@ -26,40 +19,23 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-=======
 "
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {'
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
-=======
 
 serve(async (req) => {}
   // Handle CORS preflight requests'
   if (req && req.method === 'OPTIONS') {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return new Response(null, { headers: corsHeaders })
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       additionalClauses} = await req && req.json();
 
     // Create the smart contract prompt for OpenAI
@@ -67,20 +43,16 @@ serve(async (req) => {}
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
 
     if (!apiKey) {
-=======
     if (!apiKey) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       throw new Error('OPENAI_API_KEY is not set')
     };
     // Parse request body;
     const {}
-=======
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
     }
     // Parse request body
     const {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       talentName;
       clientName;
       projectName;
@@ -89,30 +61,21 @@ serve(async (req) => {}
       endDate;
       paymentTerms;
       paymentAmount;
-<<<<<<< HEAD
 
       additionalClauses} = await req.json();
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const corsHeaders = {;
-=======
 "
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;"
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
 serve(async (req) => {;
   // Handle CORS preflight requests;'
@@ -141,34 +104,16 @@ serve(async (req) => {;
     // Create the smart contract prompt for OpenAI;
     let prompt = `;
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Create the smart contract prompt for OpenAI
-=======
     // Create the smart contract prompt for OpenAI
-=======
     // Create the smart contract prompt for OpenAI;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:    // Create the smart contract prompt for OpenAI
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}'`
@@ -191,26 +136,12 @@ ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality fl
       ${additionalClauses && additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
       `
     }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 `
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.`
     `;
@@ -218,15 +149,11 @@ ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality fl
         messages: [
           {
             role: 'system'
-<<<<<<< HEAD
-<<<<<<< HEAD
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}
-<<<<<<< HEAD
     // Check condition
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
             role: 'user'
             content: prompt}];
@@ -239,8 +166,6 @@ if ( {) {
       throw new Error(data && data.error?.message || 'Failed to generate smart contract')
     }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const solidityCode = data && data.choices[0].message && message.content.trim();
 
     return new Response(JSON && JSON.stringify({}
@@ -253,7 +178,6 @@ if ( {) {
 if ( {) {}
   $2;
 }'
-=======
     const solidityCode = data && data.choices[0].message && message.content.trim();
 
     return new Response(JSON && JSON.stringify({ 
@@ -267,7 +191,6 @@ if ( {) {}
 if ( {) {
   $2
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       throw new Error (data.error?.message || 'Failed to generate smart contract');
     }
     const solidity_code = data.choices[0].message.content.trim ();
@@ -290,8 +213,6 @@ return new Response (JSON.stringify ({}
       {}
         status: 500, 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     prompt += `;
     Format the code properly with comments explaining each section. Include a simple deployment script.;`
@@ -331,41 +252,26 @@ if (!response.ok) {;'
       }),;
       {;
         status: 500,;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
-=======
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )
   }
 });
 
 {
         status: 500
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
 
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;"
@@ -376,7 +282,6 @@ const corsHeaders = {;'
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;'
-=======
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -386,7 +291,6 @@ const corsHeaders = {;
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (req.method === 'OPTIONS') {;
     return new Response(null, { headers:corsHeaders }),;
   }
@@ -520,15 +424,8 @@ if (additionalClauses && additionalClauses.length > 0) {}`
 }
 });
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     }), {;
       headers:{ ...corsHeaders, 'Content-Type':'application/json' }}),;
   } catch (error) {;
@@ -575,6 +472,3 @@ if (additionalClauses && additionalClauses.length > 0) {
 }
 });
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

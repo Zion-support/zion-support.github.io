@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -11,7 +10,6 @@ import { EmptyResumeProps } from "./types";
 
 import { FilePlus } from "lucide-react",
 import { EmptyResumeProps } from "./types",
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -28,11 +26,9 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   );
 }
 
-<<<<<<< HEAD
 };
   )
 },"
@@ -41,7 +37,6 @@ import { Button } from "@/components/ui/button",;"
 import { FilePlus } from "lucide-react",;"
 import { EmptyResumeProps } from "./types",;
 };            Create Resume;
-=======
 
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
   return ("
@@ -54,7 +49,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
             onClick={onCreateClick}"
             className="gap-2">;"
             <FilePlus className="h-4 w-4" />;
-=======
 import { Card, CardContent  } from '@/components / ui / card';'
 import { Button  } from '@/components / ui / button';'
 import { FilePlus  } from './lucide-react';'
@@ -70,10 +64,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {}
           </p>;"
           <Button on_click={onCreateClick} className="gap - 2">;"
             <FilePlus className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4;
             Create Resume;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   );
 };
 
@@ -111,7 +102,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {
           <Button on_click={onCreateClick} className="gap - 2">;
             <FilePlus className="h - 4 w - 4" />;
             Create Resume;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </Button>;
         </div>;
       </CardContent>;
@@ -119,23 +109,8 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {
     </Card>);
 }
 ;
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 export default EmptyResumeState;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
 constructor(props) {
     super(props);
@@ -23,16 +21,7 @@ constructor(props) {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -40,7 +29,6 @@ import {useAdminQuotes} from "@/hooks/useAdminQuotes";
 import {useAuth} from "@/hooks/useAuth";
 import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-<<<<<<< HEAD
 import {Navigate} from "react-router-dom";
 
 "
@@ -54,22 +42,15 @@ import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/qu
 export default function QuoteManager() { return null; }
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
 
   const {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
-=======
 import {Navigate} from "react-router-dom";import React, { useState } from "react",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React, { useState } from "react",
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
@@ -93,7 +74,6 @@ const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
     setSearchQuery;
     date_range;
     setDateRange;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -136,7 +116,6 @@ function QuoteManager() {
 import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",
-=======
 "
 import React, { useState } from "react","
 import { Header } from "@/components/Header","
@@ -157,43 +136,27 @@ import type { QuoteRequest } from "@/types/quotes";
 import type { QuoteRequest } from "@/types/quotes","
 import { ProtectedRoute } from "@/components/ProtectedRoute","
 import { QuoteDetails } from "@/components/quotes/QuoteDetails","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ExportToCSV } from "@/components/quotes/ExportToCSV",
 import {}
   QuoteStatusCards,
   QuotesFilter,
   QuotesTable"
 } from "@/components/admin/quotes",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default function QuoteManager() {}
   const { user } = useAuth(),'
-=======
 
 export default function QuoteManager() {
   const { user } = useAuth(),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const isAdmin = user?.userType === 'admin',
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const {
-=======
 
   const {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     quotes,
     isLoading,
     error,
@@ -207,18 +170,11 @@ export default function QuoteManager() {
     setDateRange,
 updateStatus,
     toggleArchive,
-<<<<<<< HEAD
-<<<<<<< HEAD
     deleteQuote
-<<<<<<< HEAD
 
   } = useAdminQuotes(),
 
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -280,7 +236,6 @@ const handleViewDetails = (quote: QuoteRequest) => {
 
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   return (
     <ProtectedRoute adminOnly>
@@ -295,30 +250,18 @@ const handleViewDetails = (quote: QuoteRequest) => {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React, { useState } from "react",;
-=======
-    deleteQuote            
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    deleteQuote            
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React, { useState } from "react",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    deleteQuote            
+    deleteQuote            
+
+import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
 import { useAuth } from "@/hooks/useAuth",;
 import { ;
-=======
 "
 import React, { useState } from "react",;"
 import { Header } from "@/components/Header",;"
@@ -328,7 +271,6 @@ import { useAuth } from "@/hooks/useAuth",;
 
 import { ;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {;
   Card,;
   CardContent;"
@@ -387,7 +329,6 @@ const {;
   },;
 
 ;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Count quotes by status;
   const statusCounts = {;'
     new:quotes.filter(q => q.status === 'new').length,;'
@@ -402,13 +343,11 @@ const {;
     setShowDetails(true);
   },;
 ;
-<<<<<<< HEAD
     return <Navigate to="/unauthorized" replace />;
   }
 ;
   return (;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;"
@@ -422,16 +361,9 @@ const {;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -459,7 +391,6 @@ import type { QuoteRequest } from "@/types / quotes";
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { QuoteDetails } from '@/components / quotes / QuoteDetails';
 import { ExportToCSV } from '@/components / quotes / ExportToCSV';
-=======
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 '
@@ -475,7 +406,6 @@ import type { QuoteRequest } from "@/types / quotes";'
 import { ProtectedRoute } from '@/components / ProtectedRoute';'
 import { QuoteDetails } from '@/components / quotes / QuoteDetails';'
 import { ExportToCSV } from '@/components / quotes / ExportToCSV';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { QuoteStatusCards, QuotesFilter, QuotesTable } from '@/components / admin / quotes';
 ;
 export default /**;
@@ -505,8 +435,6 @@ return (                    isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     onViewDetails={handleViewDetails}
                   />;
                 </Card>;
@@ -528,7 +456,6 @@ return (                    isLoading={isLoading}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
                     quotes={quotes.filter(quote => !quote.is_archived)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -550,8 +477,6 @@ isLoading={isLoading}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                   />;
                 </Card>;
@@ -590,64 +515,38 @@ isLoading={isLoading}
           isOpen={showDetails}
 
           onClose={() => {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   />
                 </Card>
               </TabsContent>
             </Tabs>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Quote Details Modal */}
-=======
                     onViewDetails={handleViewDetails}        {/* Quote Details Modal */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                     onViewDetails={handleViewDetails}        {/* Quote Details Modal */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         {/* Quote Details Modal */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          onClose={() => {;
-            setShowDetails(false);
-            setSelectedQuote(null);
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          onClose={() => {;
+            setShowDetails(false);
+            setSelectedQuote(null);
+
             setSelectedQuote(null)
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }}
         />
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Footer />
 
 </QuoteDetails>
@@ -657,13 +556,7 @@ isLoading={isLoading}
       </div>
 </ProtectedRoute>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
           onClose={() => {;
             setShowDetails(false);
@@ -713,7 +606,6 @@ if ( {) {}
               <ExportToCSV quotes={quotes} filename="zion - quote - requests" />;
             </div>;
             {/* Status Summary Cards */}
-=======
 
     </ProtectedRoute>"
     return <Navigate to="/unauthorized" replace />;"
@@ -727,7 +619,6 @@ if ( {) {}
                 <p className="text - zion - slate - light">Manage and respond to all talent hire requests</p>;"
               <ExportToCSV quotes={quotes} filename="zion - quote - requests" />;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <QuoteStatusCards status_counts={status_counts} />;
 
               search_query={search_query}
@@ -767,9 +658,7 @@ on_close={() => {}
             setSelectedQuote (null);
           }}
         />;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Footer />;
 
     );
@@ -778,19 +667,12 @@ on_close={() => {}
       </div>;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             setShowDetails(false),;
             setSelectedQuote(null),;
           }}
         />;
         ;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Footer />;
 </Footer>
       </div>;
@@ -828,16 +710,5 @@ pr-12325
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
 }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

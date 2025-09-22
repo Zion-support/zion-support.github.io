@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -18,7 +13,6 @@ import { Settings,
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {}
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -27,7 +21,6 @@ import * as React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Settings,
   Brain,
   Shield,
@@ -38,12 +31,9 @@ import {
   Wrench,
   Activity,
   Database,
-<<<<<<< HEAD
   FileText,;
   Users;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -53,12 +43,8 @@ import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
-=======
 import Layout from '../../components/Layout';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const services = [
   {
     title: 'Smart Factory Solutions',
@@ -68,12 +54,10 @@ const services = [
       'Real-time production monitoring,',
       'Automated quality control',',
       'Predictive maintenance',',
-<<<<<<< HEAD
       'Supply chain integration'';
     ];
   },
   {}
-<<<<<<< HEAD
 
     title: 'Predictive Maintenance AI,',;
     description: 'AI-powered systems to predict and prevent equipment failures.,',;
@@ -89,7 +73,6 @@ const services = [
       'Equipment health monitoring,',
       'Failure prediction algorithms',',
       'Maintenance scheduling',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Cost optimization'';
     ];
   },
@@ -104,7 +87,6 @@ title: 'IoT Sensor Networks,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'IoT Sensor Networks,',
     description: 'Connected sensor systems for comprehensive factory monitoring.,',
     icon: Cpu,
@@ -112,14 +94,10 @@ title: 'IoT Sensor Networks,',;
       'Environmental monitoring,',
       'Equipment status tracking',',
       'Data collection systems',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Real-time alerts'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Quality Control Systems,',;
     description: 'Automated quality assurance using computer vision and AI.,',;
@@ -135,7 +113,6 @@ title: 'IoT Sensor Networks,',;
       'Visual inspection systems,',
       'Defect detection algorithms',',
       'Quality metrics tracking',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Automated reporting'';
     ];
   },
@@ -150,7 +127,6 @@ title: 'Supply Chain Optimization,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Supply Chain Optimization,',
     description: 'AI-driven supply chain management for improved efficiency.,',
     icon: BarChart3,
@@ -158,14 +134,10 @@ title: 'Supply Chain Optimization,',;
       'Demand forecasting,',
       'Inventory optimization',',
       'Supplier management',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Logistics coordination'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Digital Twin Technology,',;
     description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
@@ -178,8 +150,6 @@ title: 'Supply Chain Optimization,',;
       'Scenario planning'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
@@ -195,7 +165,6 @@ const benefits = [;
       'Scenario planning'';
     ];
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = []
   {'
@@ -204,7 +173,6 @@ const benefits = []
     icon: Activity;
   },
 {}
-<<<<<<< HEAD
 
     title: 'Reduced Downtime,',;
     description: 'Predictive maintenance prevents unexpected equipment failures.,',;
@@ -221,8 +189,6 @@ const benefits = []
     icon: BarChart3,;
 
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 export default function ManufacturingPage() {
   return (;
@@ -271,7 +237,6 @@ export default function ManufacturingPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
     title: 'Digital Twin Technology,',
     description: 'Virtual replicas of physical manufacturing systems for simulation.,',
     icon: Database,
@@ -296,12 +261,9 @@ const benefits = [
     icon: Activity
   },
   {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Reduced Downtime,',
-=======
   {}'
     title: 'Reduced Downtime,','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Predictive maintenance prevents unexpected equipment failures.,',
     icon: Wrench;
   },
@@ -318,19 +280,16 @@ const benefits = [
 ;];
 export default function ManufacturingPage() {;
   return (
-<<<<<<< HEAD
     <Layout
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
       keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology.""
       keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0""
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
@@ -342,8 +301,6 @@ export default function ManufacturingPage() {;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >"
@@ -378,9 +335,6 @@ export default function ManufacturingPage() {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -397,11 +351,9 @@ transition={{ duration: 0.8 }}
               className="text-center mb-16"
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto"">;
-=======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto""
             >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-12 h-12 text-blue-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -426,13 +378,10 @@ transition={{ duration: 0.8 }}
             </motion.div>;
           </div>;
 </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Manufacturing Technology Services;
               </h2>"
@@ -448,10 +397,6 @@ transition={{ duration: 0.8 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
@@ -462,7 +407,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
-<<<<<<< HEAD
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >"
@@ -474,7 +418,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
-=======
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
@@ -486,7 +429,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
                       </li>,
@@ -494,8 +436,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
@@ -509,9 +449,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -527,18 +464,12 @@ Our manufacturing technology solutions deliver measurable improvements in effici
                 <motion.div}),
 
               className="text-center mb-16"
-=======
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";              className="text-center mb-16"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               className="text-center mb-16"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Manufacturing Solutions?
               </h2>"
@@ -563,8 +494,6 @@ Our manufacturing technology solutions deliver measurable improvements in effici
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
@@ -578,10 +507,6 @@ Our manufacturing technology solutions deliver measurable improvements in effici
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
@@ -633,8 +558,6 @@ Our manufacturing technology solutions deliver measurable improvements in effici
         </section>;
       </div>;
 </Layout>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     </Layout>;
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -659,4 +582,3 @@ Our manufacturing technology solutions deliver measurable improvements in effici
     </Layout>
   );
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

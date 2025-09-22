@@ -35,7 +35,6 @@ function log(message, color = "reset")
     let content = fs.readFileSync(filePath, "utf8")
     // Strategy "1"
       content.includes("      content.includes()
-      content.includes(">>>>>>>")
       content = content.replace(/[\s\S]*/g, )
     // Strategy "2"
       /import\s+[^]*?from\s+[][^"]*["]

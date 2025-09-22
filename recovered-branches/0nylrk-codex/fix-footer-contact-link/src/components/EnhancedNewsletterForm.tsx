@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 import { Button } from "@/components/ui/button";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Input } from "@/components/ui/input";
 "
 import { useState } from "react";"
@@ -16,12 +10,7 @@ import { Mail } from "lucide-react";
 export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false);
-<<<<<<< HEAD
 
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -30,7 +19,6 @@ export function EnhancedNewsletterForm() {;
     // Simulate API call;
     setTimeout(() => {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react";
@@ -46,7 +34,6 @@ const handleSubmit = (e: React && React.FormEvent) => {;
     }, 1000);
   }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -61,7 +48,6 @@ export function EnhancedNewsletterForm() {
     setTimeout(() => {}
       setIsSubmitting(false),
       setIsSubmitted(true),"
-=======
     e.preventDefault(),
     setIsSubmitting(true),
 
@@ -69,16 +55,12 @@ export function EnhancedNewsletterForm() {
     setTimeout(() => {
       setIsSubmitting(false),
       setIsSubmitted(true),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       setEmail("")
     }, 1000)
   },
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
-<<<<<<< HEAD
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
@@ -89,11 +71,7 @@ export function EnhancedNewsletterForm() {
 <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
     e.preventDefault(),
     setIsSubmitting(true),
@@ -105,56 +83,38 @@ export function EnhancedNewsletterForm() {
       setEmail("")
     }, 1000)
   },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return (
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
-=======
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
   const [isSubmitted, setIsSubmitted] = useState(false);        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <p className="text-white font-medium">Thank you for subscribing!</p>
-=======
 
       {isSubmitted ? ("
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">"
           <p className="text-white font-medium">Thank you for subscribing!</p>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <p className="text-zion-slate-light mt-1">
             We'll keep you updated with the latest from Zion.
           </p>
         </div>
       ) : (
 
-<<<<<<< HEAD
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="flex items-center mb-4">;
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;
           <Mail className="h-6 w-6" />;
         </div>;
         <div>;"
           <h4 className="text-lg font-bold text-white">Stay Updated</h4>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <p className="text-zion-slate-light text-sm">;
-<<<<<<< HEAD
 
             Get exclusive offers, trending AI news, and early access to best;
-=======
           <p className="text-zion-slate-light text-sm">;            Get exclusive offers, trending AI news, and early access to best;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           <p className="text-zion-slate-light text-sm">;
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
@@ -189,7 +149,6 @@ function EnhancedNewsletterForm() {
           <h4 className="text - lg font - bold text - white">Stay Updated</h4>;
           <p className="text - zion - slate - light text - sm">;
             Get exclusive offers, trending AI news, and early access to best;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             deals;
           </p>;
         </div>;
@@ -201,19 +160,12 @@ function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
 
-=======
   );}            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 {is_submitted ? (
         <div className="text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40">;
@@ -259,11 +211,8 @@ function EnhancedNewsletterForm() {
     </div>);
 }
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             required
-=======
             required;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           />
           <Button "
             type="submit" 
@@ -273,23 +222,14 @@ function EnhancedNewsletterForm() {
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
-<<<<<<< HEAD
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (
 
             <div
-=======
       )}            <div
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       )}            <div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       )}
 
 }
@@ -297,13 +237,10 @@ function EnhancedNewsletterForm() {
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (
             <div
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               key={i}
-=======
 
             <div;
               key={i}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan"
             >
               {String.fromCharCode(65 + i)}
@@ -391,9 +328,6 @@ setIsSubmitting (true);
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) 
 }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import React from 'react';
 
 import React from 'react';''
@@ -534,4 +468,3 @@ pr-12325
 }</div>) ) 
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) "
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

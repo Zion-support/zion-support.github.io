@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface ResumeBasicInfo {
 
   id?: string;
   title: string;
   headline?: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   summary?: string;
 }
 
@@ -13,17 +10,11 @@ export interface ResumeBasicInfo {
 export interface WorkExperience {
 export interface ResumeBasicInfo {
 export interface ResumeBasicInfo {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string;
 
 }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 export interface WorkExperience {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   company_name: string;
   role_title: string;
@@ -36,15 +27,8 @@ export interface WorkExperience {};
 }
 
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export interface Education {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   company_name: string;
   role_title: string;
@@ -95,20 +79,10 @@ institution_logo_url?: string,
   location?: string;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string;
-=======
 export interface Skill {  id?: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export interface Skill {  id?: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export interface Skill {
 export interface Skill {
   institution_logo_url?: string
@@ -120,7 +94,6 @@ export interface Skill {  id?: string;
 
 export interface Skill {;
   id?: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   name: string;
   proficiency?: number;
 
@@ -128,18 +101,12 @@ category?: string,
   years_experience?: number;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   id?: string;
   name: string;
   proficiency?: number;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string;
   name: string;
   issuing_organization: string;
@@ -150,13 +117,9 @@ category?: string,
 }
 
 }
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export interface PortfolioProject {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string;
   title: string;
   description?: string;
@@ -168,25 +131,17 @@ export interface PortfolioProject {;
 }
 
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export interface Resume {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string;
-=======
 export interface Certification {  id?: string;
   name: string;
   proficiency?: number;
 }  id?: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 export interface Certification {  id?: string;
   name: string;
   proficiency?: number;
 }  id?: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export interface Certification {
 export interface Certification {
   category?: string
@@ -254,7 +209,6 @@ export interface Resume {
 
 export interface Resume {;
   id?: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   user_id?: string;
   basic_info: ResumeBasicInfo;,
   work_experience: WorkExperience[];
@@ -264,12 +218,9 @@ pr-12325
   certifications: Certification[];
 portfolio_projects?: PortfolioProject[];
   is_active: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
   portfolio_projects?: PortfolioProject[]
-=======
 }
   portfolio_projects?: PortfolioProject[]
 
@@ -277,13 +228,10 @@ portfolio_projects?: PortfolioProject[];
 }
 export interface ResumeBasicInfo {;
   id?: string,;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   title: string,;
   headline?: string,;
   summary?: string;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export interface WorkExperience {;
@@ -371,29 +319,16 @@ pr-12325
   skills: Skill[],;
   certifications: Certification[],;
   portfolio_projects?: PortfolioProject[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   portfolio_projects?: PortfolioProject[],
   is_active: boolean;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   is_active: boolean
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
 }
-<<<<<<< HEAD
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   portfolio_projects?: PortfolioProject[],  is_active: boolean;
-=======
   portfolio_projects?: PortfolioProject[],
   is_active: boolean;
 }
@@ -402,12 +337,9 @@ pr-12325
 export interface ResumeBasicInfo {;
 
 is_active: boolean;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 is_active: boolean;
 }
 ;
@@ -419,4 +351,3 @@ is_active: boolean;
   portfolio_projects?: PortfolioProject[],
 
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

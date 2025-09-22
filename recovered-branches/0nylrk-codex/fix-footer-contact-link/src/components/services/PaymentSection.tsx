@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {MapPin} from "lucide-react";
 import {PaymentButton} from "@/components/transactions/PaymentButton";
@@ -13,8 +9,6 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { toast } from "@/hooks/use-toast",
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PaymentSectionProps {
   selected_country: CountryPricing;
 }
@@ -43,30 +37,24 @@ interface PaymentSectionProps {}
         "You'll be redirected to our secure payment portal momentarily.",
     });
   };
-=======
 
 import { MapPin  } from './lucide-react';
 import { PaymentButton  } from '@/components / transactions / PaymentButton';
 import { CountryPricing  } from '@/data / onsiteServicePricing';
 import { toast  } from '@/hooks / use - toast';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { MapPin  } from './lucide-react';
 import { PaymentButton  } from '@/components / transactions / PaymentButton';
 import { CountryPricing  } from '@/data / onsiteServicePricing';
 import { toast  } from '@/hooks / use - toast';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">
-=======
   return ("
     <div className="text-center">"
       <p className="text-zion-slate-light mb-2">Selected Country</p>"
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <MapPin className="mr-2 h-5 w-5 text-zion-purple" />
 
 import { MapPin } from \"lucide-react\";
@@ -98,25 +86,15 @@ return (
 </h4>"
       <p className="text-2xl font-bold text-zion-cyan mb-6">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
-=======
 "
 import { MapPin } from "lucide-react",;"
 import { PaymentButton } from "@/components/transactions/PaymentButton",;"
 import { CountryPricing } from "@/data/onsiteServicePricing",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "@/hooks/use-toast",;
 interface PaymentSectionProps {;
   selectedCountry: CountryPricing;
@@ -137,29 +115,11 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         {selectedCountry.country}
       </h4>;"
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton;
         amount={selectedCountry.pricePerIncident}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 interface PaymentSectionProps {;
   selectedCountry: CountryPricing;
@@ -185,14 +145,8 @@ toast({;"
       </p>;
       <PaymentButton;
         amount={selectedCountry && selectedCountry.pricePerIncident}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
         serviceId="it-onsite-service"
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a"
         serviceId="it-onsite-service""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
     toast({;
       title: "Processing your request",;
       description: "You'll be redirected to our secure payment portal momentarily."});
@@ -211,7 +165,6 @@ toast({;"
       <PaymentButton
         amount={selectedCountry && selectedCountry.pricePerIncident}
         serviceId="it-onsite-service"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         providerId="zion-tech-group"
 buttonText={`Pay for Service in ${selectedCountry && selectedCountry.country}`}"
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6""
@@ -225,15 +178,9 @@ buttonText={`Pay for Service in ${selectedCountry && selectedCountry.country}`}"
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export /**;
  * PaymentSection - Function description;
  */
@@ -243,7 +190,6 @@ function PaymentSection() {}
     toast ({"
       title: "Processing your request",
       description:;'"
-=======
 export /**
  * PaymentSection - Function description
  */
@@ -253,7 +199,6 @@ function PaymentSection() {
     toast ({
       title: "Processing your request",
       description:;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         "You'll be redirected to our secure payment portal momentarily.",
 origin/cursor/automate-test-improve-and-merge-code-382a
 
@@ -273,7 +218,6 @@ interface PaymentSectionProps {
     });
 }
 ;
-<<<<<<< HEAD
 
   return ("
     <div className="text-center">"
@@ -321,12 +265,5 @@ pr-12325
       </p>
     </div>"
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

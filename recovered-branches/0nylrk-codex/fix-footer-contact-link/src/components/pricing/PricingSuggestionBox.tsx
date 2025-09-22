@@ -15,11 +15,7 @@ import { PricingSuggestion } from "@/services/pricingSuggestionService";
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null;
     isLoading: boolean;
@@ -42,9 +38,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps /> = ({;
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
     Medium: "bg-yellow-100 text-yellow-800"
@@ -95,11 +89,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps /> = ({;
     </Card>
   )
 
-=======
 
 };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 },
 ;
 
@@ -143,7 +135,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps /> = ({;
               </TooltipTrigger>;
               <TooltipContent>;
                 <p>Apply this suggestion to your pricing field</p>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
@@ -155,7 +146,3 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps /> = ({;
     </Card>);
 }
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

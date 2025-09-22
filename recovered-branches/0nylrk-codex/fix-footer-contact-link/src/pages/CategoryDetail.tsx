@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useParams, Link} from "react-router-dom";
 import {Header} from "@/components/header/Header";
 import {Footer} from "@/components/Footer";
@@ -25,14 +17,8 @@ export default function CategoryDetail() {
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
 
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -42,7 +28,6 @@ import { useState, useEffect } from "react",
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react",
 import { MARKETPLACE_LISTINGS } from "@/data/listingData",
 import { useNavigate } from "react-router-dom",
-=======
 
 import { useParams, Link } from "react-router-dom","
 import { Header } from "@/components/header/Header","
@@ -53,7 +38,6 @@ import { useState, useEffect } from "react","
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react","
 import { MARKETPLACE_LISTINGS } from "@/data/listingData","
 import { useNavigate } from "react-router-dom",";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "@/hooks/use-toast";
 export default function CategoryDetail() {};
   // Cast to specify the expected route param type since useParams may be untyped;
@@ -67,33 +51,22 @@ export default function CategoryDetail() {};
   const { slug } = useParams() as { slug?: string },
   const navigate = useNavigate(),
   const [isLoading, setIsLoading] = useState(true),
-<<<<<<< HEAD
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
-=======
 
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({"
     title: """
     description: """
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     icon: <Bot className="w-6 h-6" />
 
-=======
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
     icon: <Bot className="w-6 h-6" />
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // Map of category slugs to their display data
   const categoryData = {
     'services': {
@@ -112,9 +85,7 @@ export default function CategoryDetail() {};
       description: "Rent or buy specialized hardware, servers, and devices";"
       icon: <Code className="w-6 h-6" />
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }),
-=======
       icon: <Briefcase className="w-6 h-6" />
     }
     'talents': {
@@ -128,7 +99,6 @@ export default function CategoryDetail() {};
       icon: <Code className="w-6 h-6" />
     }
   }),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   // Map of category slugs to their display data
   const categoryData = {
@@ -147,71 +117,45 @@ export default function CategoryDetail() {};
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
 
-=======
 },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
@@ -219,36 +163,23 @@ export default function CategoryDetail() {};
 
     },
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'business-solutions': {
       title: "Business Solutions"
       description: "Enterprise AI integrations and services"
-=======
 
 '
     'business-solutions': {"
       title: "Business Solutions""
       description: "Enterprise AI integrations and services""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: <Briefcase className="w-6 h-6" />
     }
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
   useEffect(() => {}
     setIsLoading(true),
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -335,7 +266,6 @@ export default function CategoryDetail() {};
 
     },
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     'business-solutions': {
       title: "Business Solutions"
       description: "Enterprise AI integrations and services"
@@ -353,19 +283,16 @@ export default function CategoryDetail() {};
   useEffect(() => {
     setIsLoading(true),
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
       description: "Explore our collection in this category"
-<<<<<<< HEAD
       icon: <Bot className="w-6 h-6" />
 
     // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings :
       Array(4).fill(null).map((_, index) => ({
 
-<<<<<<< HEAD
     // Filter listings by category
     const categoryTitle = currentCategory.title;
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing =>
@@ -379,11 +306,6 @@ export default function CategoryDetail() {};
         currency: "$","`
         tags: [`${slug}`, "ai", "tool"],
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings :
       Array(4).fill(null).map((_, index) => ({
@@ -394,7 +316,6 @@ export default function CategoryDetail() {};
         price: Math.floor(Math.random() * 500) + 50
         currency: "$"
         tags: [`${slug}`, "ai", "tool"];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         id: `${slug}-${index}`,
         title: `${currentCategory.title} Product ${index + 1}`,
         description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
@@ -403,7 +324,6 @@ export default function CategoryDetail() {};
         currency: "$",
         tags: [`${slug}`, "ai", "tool"],
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         author: {
           name: `Provider ${index + 1}`
           id: `author-${index + 1}`
@@ -532,9 +452,7 @@ export default function CategoryDetail() {;
     setIsLoading(false);
   }, [slug]);
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         images: [`/placeholder.svg`]
         createdAt: new Date().toISOString()
         rating: Math.floor(Math.random() * 5) + 1
@@ -543,10 +461,8 @@ export default function CategoryDetail() {;
     setListings(listingsToShow);
     setIsLoading(false)
   }, [slug]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         },
         },
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         images: [`/placeholder.svg`],
         createdAt: new Date().toISOString(),
         rating: Math.floor(Math.random() * 5) + 1,
@@ -556,49 +472,28 @@ export default function CategoryDetail() {;
     setListings(listingsToShow),
     setIsLoading(false)
   }, [slug]),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Handle requesting a quote
-=======
       icon: <Bot className="w-6 h-6" />  // Handle requesting a quote
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       icon: <Bot className="w-6 h-6" />  // Handle requesting a quote
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   // Handle requesting a quote
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId)
     if (listing) {
       toast({
         title: "Quote Requested"
-<<<<<<< HEAD
         description: `Your quote request for ${listing.title} has been sent.`
-=======
         description: `Your quote request for ${listing.title} has been sent.`
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       }),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 });
       }),
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Navigate to the quote request page with the listing information
-=======
         description: `Your quote request for ${listing.title} has been sent.`      // Navigate to the quote request page with the listing information
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
         description: `Your quote request for ${listing.title} has been sent.`      // Navigate to the quote request page with the listing information
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       // Navigate to the quote request page with the listing information
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       navigate("/request-quote", {
         state: {
           serviceType: listing.category
@@ -607,20 +502,10 @@ export default function CategoryDetail() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useParams, Link } from "react-router-dom",;
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import { useParams, Link } from "react-router-dom",;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Header } from "@/components/header/Header",;
 import { Footer } from "@/components/Footer",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -739,7 +624,6 @@ title: `${currentCategory.title} Product ${index + 1}`,,
       })),;
     setListings(listingsToShow),;
     setIsLoading(false);
-<<<<<<< HEAD
   }, [slug]),;
 
   // Handle requesting a quote;
@@ -917,22 +801,14 @@ if ( {) {}
             category: listing.category;
             image: listing.images?.[0];
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         }
       });
     }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   };
   },
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
       });
     }
@@ -941,11 +817,8 @@ if ( {) {}
 
   };
   },
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 }
 ;
@@ -979,12 +852,6 @@ if ( {) {}
   };
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
 ;
@@ -1001,8 +868,6 @@ if ( {) {}
           <div className="text - center mb - 12">;
             <div className="flex justify - center mb - 6">;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
 
   }
@@ -1014,12 +879,8 @@ if ( {) {}
             </GradientHeading>;"
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
-<<<<<<< HEAD
-=======
   return (
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             </div>;
             <GradientHeading className="text - 4xl md:text - 5xl font - bold mb - 4">;
               {category.title}
@@ -1027,19 +888,15 @@ if ( {) {}
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <ProductListingCard 
-=======
 
                 <ProductListingCard;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={listing.id} 
 
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                 />
 {isLoading ? (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="flex justify-center items-center h-64">;
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>;
             <div className=\"flex justify-center items-center h-64\" />;
@@ -1054,10 +911,8 @@ key={listing && listing.id}
 onRequestQuote={handleRequestQuote}                 />;
               ))}
             </div>;
-<<<<<<< HEAD
           )}
 
-<<<<<<< HEAD
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                 />
@@ -1073,8 +928,6 @@ onRequestQuote={handleRequestQuote}                 />;
     </>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                   onRequestQuote={handleRequestQuote} 
 ) :(;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
@@ -1087,7 +940,6 @@ onRequestQuote={handleRequestQuote}                 />;
             </div>;
           )}
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </div>;
       </div>;
       <Footer />;
@@ -1114,29 +966,18 @@ onRequestQuote={handleRequestQuote}                 />;
       </div>;
       <Footer />;
     </>);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; export default function CategoryDetail () {
-=======
           )}  ),; export default function CategoryDetail () {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
           )}  ),; export default function CategoryDetail () {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 
 ;
   ),; export default function CategoryDetail () {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   //Cast to specify the expected route param type since useParams may be untyped const {
   slug 
 }= useParams () as {
   slug?: string 
 
-=======
   //Cast to specify the expected route param type since useParams may be untyped const {}
   slug }
 }= useParams () as {}
@@ -1288,7 +1129,6 @@ import { toast } from "@/hooks/use-toast","
   slug?: string;
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 const navigate = useNavigate ();
 const [isLoading, setIsLoading] = useState (true);
@@ -1409,16 +1249,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div classNam
   );
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 const [category, setCategory] = useState< {}
   title: string, description: string, icon: JSX.Element;
 }> ({}
@@ -1485,10 +1315,6 @@ icon: <Briefcase className="w-6 h-6" />
 }
 
 '"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 const [category, setCategory] = useState< {
   title: string, description: string, icon: JSX.Element;
@@ -1515,4 +1341,3 @@ pr-12325
   );
 }
 ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

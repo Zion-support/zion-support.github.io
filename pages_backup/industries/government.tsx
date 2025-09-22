@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -17,7 +12,6 @@ import { Building,
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {}
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -26,7 +20,6 @@ import * as React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Building,
   Shield,
   Users,
@@ -37,12 +30,9 @@ import {
   FileText,
   Lock,
   Database,
-<<<<<<< HEAD
   Phone,;
   Mail;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
@@ -52,12 +42,8 @@ import Layout from '../../components/Layout';
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';;
 import React from 'react';
 import Link from 'next/link';';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';import Layout from '../../components/Layout';
-=======
 import Layout from '../../components/Layout';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const services = [
   {
     title: 'Citizen Service Portals',
@@ -67,12 +53,10 @@ const services = [
       'Online service applications,',
       'Digital document submission',',
       'Status tracking systems',',
-<<<<<<< HEAD
       'Multi-language support'';
     ];
   },
   {}
-<<<<<<< HEAD
 
     title: 'Secure Data Management,',;
     description: 'Government-grade data security and management systems for sensitive information.,',;
@@ -88,7 +72,6 @@ const services = [
       'Encrypted data storage,',
       'Access control systems',',
       'Audit trail management',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Compliance monitoring'';
     ];
   },
@@ -103,7 +86,6 @@ title: 'Digital Identity Solutions,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Digital Identity Solutions,',
     description: 'Secure digital identity verification and management systems for citizens.,',
     icon: Users,
@@ -111,14 +93,10 @@ title: 'Digital Identity Solutions,',;
       'Biometric authentication,',
       'Digital ID cards',',
       'Identity verification',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Fraud prevention'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Public Safety Systems,',;
     description: 'Advanced systems for emergency response and public safety management.,',;
@@ -134,7 +112,6 @@ title: 'Digital Identity Solutions,',;
       'Emergency dispatch systems,',
       'Real-time monitoring',',
       'Incident management',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Resource coordination'';
     ];
   },
@@ -149,7 +126,6 @@ title: 'Government Analytics,',;
     ];
   },
   {}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     title: 'Government Analytics,',
     description: 'Data analytics platforms for informed policy-making and resource allocation.,',
     icon: BarChart3,
@@ -157,14 +133,10 @@ title: 'Government Analytics,',;
       'Performance metrics,',
       'Trend analysis',',
       'Predictive modeling',',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Resource optimization'';
     ];
   },
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     title: 'Compliance Management,',;
     description: 'Automated systems for regulatory compliance and policy enforcement.,',;
@@ -177,8 +149,6 @@ title: 'Government Analytics,',;
       'Audit automation'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
@@ -194,7 +164,6 @@ const benefits = [;
       'Audit automation'';
     ];
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = []
   {'
@@ -203,7 +172,6 @@ const benefits = []
     icon: Shield;
   },
 {}
-<<<<<<< HEAD
 
     title: 'Improved Efficiency,',;
     description: 'Digital processes streamline government operations and reduce administrative burden.,',;
@@ -220,8 +188,6 @@ const benefits = []
     icon: Globe,;
 
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 export default function GovernmentPage() {
   return (;
@@ -270,7 +236,6 @@ export default function GovernmentPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
     title: 'Compliance Management,',
     description: 'Automated systems for regulatory compliance and policy enforcement.,',
     icon: FileText,
@@ -295,12 +260,9 @@ const benefits = [
     icon: Shield
   },
   {}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Improved Efficiency,',
-=======
   {}'
     title: 'Improved Efficiency,','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Digital processes streamline government operations and reduce administrative burden.,',
     icon: BarChart3;
   },
@@ -317,19 +279,16 @@ const benefits = [
 ;];
 export default function GovernmentPage() {;
   return (
-<<<<<<< HEAD
     <Layout
       title="Government Technology Solutions - Zion Tech Group"
       description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."
       keywords="government technology, citizen services, digital government, public safety, government security, civic tech"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems.""
       keywords="government technology, citizen services, digital government, public safety, government security, civic tech""
     >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
@@ -341,8 +300,6 @@ export default function GovernmentPage() {;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >"
@@ -377,9 +334,6 @@ export default function GovernmentPage() {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -396,11 +350,9 @@ transition={{ duration: 0.8 }}
               className="text-center mb-16"
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto"">;
-=======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto""
             >;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex items-center justify-center mb-6">";
                 <Building className="w-12 h-12 text-indigo-400 mr-4" />";
                 <h1 className="text-5xl md:text-6xl font-bold">";
@@ -425,13 +377,10 @@ transition={{ duration: 0.8 }}
             </motion.div>;
           </div>;
 </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Government Technology Services;
               </h2>"
@@ -447,10 +396,6 @@ transition={{ duration: 0.8 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -474,7 +419,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
-=======
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
               {services && services.map((service, index) => (,;
@@ -505,8 +449,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";                        {feature}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
@@ -523,22 +465,17 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -546,9 +483,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -576,16 +510,11 @@ Our government technology solutions deliver enhanced security, improved efficien
             </div>;
           </div>;
         </section>;              className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
               className="text-center mb-16"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
-=======
               transition={{ duration: 0.8 }}"
               className="text-center mb-16"
             >"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Government Solutions?
               </h2>"
@@ -598,7 +527,6 @@ Our government technology solutions deliver enhanced security, improved efficien
               {benefits.map((benefit, index) => (
                 <motion.div;
                   key={benefit.title}
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
@@ -611,9 +539,6 @@ Our government technology solutions deliver enhanced security, improved efficien
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
@@ -638,31 +563,21 @@ Our government technology solutions deliver enhanced security, improved efficien
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}        {/* CTA Section */}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">"
-=======
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Government?;
-=======
               transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Government?;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              transition={{ duration: 0.8 }}
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Transform Government?;
               </h2>;
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
                 Let our government technology experts help you implement solutions that enhance;
@@ -688,11 +603,8 @@ Our government technology solutions deliver enhanced security, improved efficien
         </section>;
       </div>;
 </Layout>;            >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
     </Layout>;
             >
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Government?
               </h2>"
@@ -714,9 +626,6 @@ Our government technology solutions deliver enhanced security, improved efficien
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Government?;
@@ -740,10 +649,5 @@ Our government technology solutions deliver enhanced security, improved efficien
     </Layout>;
   ),;
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 }'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

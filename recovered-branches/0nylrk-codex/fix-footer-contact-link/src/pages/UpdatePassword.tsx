@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import {};
   Form;
@@ -23,9 +22,6 @@ FormLabel,
 import { toast } from "@/hooks/use-toast",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { cleanupAuthState } from "@/utils/authUtils",
 ;
 // Form validation schema;
@@ -52,8 +48,6 @@ export default function UpdatePassword() {;
   const navigate = useNavigate();
   const location = useLocation();
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -64,28 +58,20 @@ const updatePasswordSchema = z
       .max(64, "Password must be less than 64 characters");
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Initialize react-hook-form
-=======
 import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-form
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export default function UpdatePassword() {
   const [isLoading, setIsLoading] = useState(false),
   const [accessToken, setAccessToken] = useState<string | null>(null),
@@ -95,22 +81,16 @@ export default function UpdatePassword() {
   const location = useLocation(),
 
   // Initialize react-hook-form
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const form = useForm<UpdatePasswordFormValues>({
-=======
 
   // Initialize react-hook-form;
   const form = useForm<UpdatePasswordFormValues>({}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(updatePasswordSchema)
     defaultValues: {"
       password: """
       confirmPassword: ""}})
 useEffect(() => {
     // Extract access token from URL hash
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (token) {
       setAccessToken(token)
     } else {
@@ -126,22 +106,17 @@ useEffect(() => {
   }, [location]);
   }, [location]),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const hashParams = new URLSearchParams(location.hash.substring(1)),
     const token = hashParams.get("access_token"),
 
     if (token) {
       setAccessToken(token)
-=======    } else {
       set_error ("No access token found. Please request a new password reset link.");
     }
-=======
     } else {
       setError("No access token found. Please request a new password reset link.")
     }
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const hashParams = new URLSearchParams(location.hash.substring(1)),
     const token = hashParams.get("access_token"),
 
@@ -204,7 +179,6 @@ if ( {) {
     } else {
       set_error ("No access token found. Please request a new password reset link.");
     }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   }, [location]),
 
@@ -216,7 +190,6 @@ if ( {) {
     if (!accessToken) {
       setError("No access token found. Please request a new password reset link.")
       return
-=======
   useEffect(() => {}
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location.hash.substring(1)),"
@@ -299,7 +272,6 @@ if ( {) {}
     defaultValues: {;"
       password: "",;"
       confirmPassword: ""}}),;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   // Initialize react-hook-form;
   const form = useForm<UpdatePasswordFormValues>({;
@@ -312,9 +284,6 @@ if ( {) {}
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location && location.hash.substring(1));"
     const token = hashParams && hashParams.get("access_token");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     if (token) {;
       setAccessToken(token);
@@ -407,21 +376,14 @@ export default function UpdatePassword() {;
     setIsLoading(true);
 
     setIsLoading(true),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
         access_token: accessToken
-=======
     try {}
       // Set the session with the access token;
       await supabase.auth.setSession({}
         access_token: accessToken'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         refresh_token: ''})
       // Update the password;
       const { error } = await supabase.auth.updateUser({}
@@ -433,7 +395,6 @@ title: "Password update failed",
           variant: "destructive"}),
         setError(error.message),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <>
       <Header />
@@ -472,7 +433,6 @@ title: "Password update failed",
       setError(error.message |"An unexpected error occurred")
     } finally {}
       setIsLoading(false)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from "react",;
 import { useNavigate, useLocation } from "react-router-dom",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -520,33 +480,19 @@ export default function UpdatePassword() { return null; }
     // Clean up auth state to prevent issues;
     cleanupAuthState();
   }, [location]),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Form submission handler;
   const onSubmit = async (data: UpdatePasswordFormValues) => {;
     if (!accessToken) {;"
       setError("No access token found. Please request a new password reset link."),;
       return;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   // Form submission handler;
   const onSubmit = async (data: UpdatePasswordFormValues) => {;
     if (!accessToken) {;
       setError("No access token found. Please request a new password reset link."),;
       return;
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
     }
 
@@ -589,19 +535,14 @@ title: "Password update failed",
       // Update the password;
       const { error } = await supabase && supabase.auth.updateUser({;
         password: data && data.password}),;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       if (error) {;
 toast({;
-<<<<<<< HEAD
           title: "Password update failed",,
   description: error && error.message,;
-=======
           title: "Password update failed",,
   description: error && error.message,;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           variant: "destructive"}),;
         setError(error && error.message);
         return;
@@ -708,8 +649,6 @@ console.error("Password update error:", error),;
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <p className="text-sm">{error}</p>;
 '
                     onClick={() => navigate('/forgot-password')}
@@ -735,9 +674,6 @@ console.error("Password update error:", error),;
                 </div>;
               )}
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -756,7 +692,6 @@ console.error("Password update error:", error),;
                   <p className="mt-2 text-sm text-zion-slate-light">
                     Your password has been successfully updated.
                   </p>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   <p className="mt-2 text-sm text-zion-slate-light">
                     Redirecting you to login...
                   </p>
@@ -778,14 +713,10 @@ console.error("Password update error:", error),;
                     Redirecting you to login...;
                   </p>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               ) : (;
                 <Form {...form}>;
                   <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <FormField
-=======
               ) : (;
                 <Form {...form}>;
                   <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
@@ -799,11 +730,9 @@ console.error("Password update error:", error),;
                       control={form.control}
                       name="password";
                     <FormField
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       control={form && form.control}
                       name="password"
 
-=======
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
@@ -812,14 +741,11 @@ console.error("Password update error:", error),;
                       name="password"                    <FormField
                       control={form && form.control}
                       name="password"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       render={({ field }) => (;
                         <FormItem>;"
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>;
                           <FormControl>;
-<<<<<<< HEAD
                             <Input
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               disabled={isLoading}
@@ -870,8 +796,6 @@ console.error("Password update error:", error),;
                       )}
 
                     />;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <FormField
                       control={form && form.control}
                       name="confirmPassword"
@@ -881,7 +805,6 @@ console.error("Password update error:", error),;
                           <FormControl>;
                             <Input"
                               type="password""
-=======
 
                     <FormField
                       control={form && form.control}
@@ -892,7 +815,6 @@ console.error("Password update error:", error),;
                           <FormControl>;
                             <Input
                               type="password"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               disabled={isLoading}
                               {...field}
@@ -906,7 +828,6 @@ console.error("Password update error:", error),;
                         variant="link""
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0""
                         onClick={() => navigate("/login")}
-<<<<<<< HEAD
                         type="button"
                       >
                         Back to login
@@ -935,14 +856,7 @@ console.error("Password update error:", error),;
     </>
   )
 }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                     />;
 
                     <Button
@@ -975,7 +889,6 @@ console.error("Password update error:", error),;
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
                         onClick={() => navigate("/login")}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
@@ -1071,11 +984,8 @@ if ( {) {}
                   </p>;
                 </div>) : (
                 <Form {...form}>;
-<<<<<<< HEAD
                   <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
-=======
                   <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <FormField;
                       control={form.control}"
                       name="password";
@@ -1085,21 +995,15 @@ if ( {) {}
                           <FormControl>;
                             <Input;
                               type="password";
-<<<<<<< HEAD
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
-=======
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                               placeholder="••••••••";
                               disabled={is_loading}
                               {...field}
                             />;
 </FormControl>;
-<<<<<<< HEAD
                           <FormMessage className="text - red-400" />;
-=======
                           <FormMessage className="text - red-400" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         </FormItem>)}
                     />;
                     <FormField;
@@ -1111,11 +1015,8 @@ if ( {) {}
                           <FormControl>;
                             <Input;
                               type="password";
-<<<<<<< HEAD
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
-=======
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                               placeholder="••••••••";
                               disabled={is_loading}
                               {...field}
@@ -1126,11 +1027,8 @@ if ( {) {}
                     />;
                     <Button;
                       type="submit";
-<<<<<<< HEAD
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white";
-=======
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       disabled={is_loading || !access_token}
                     >;"
                       {is_loading ? "Updating..." : "Update Password"}
@@ -1159,27 +1057,16 @@ className="text - sm font - medium text - zion - cyan hover:text - zion - cyan -
                         Back to login;
                       </Button>;
                     </div>;
-<<<<<<< HEAD
                   </form>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       name="confirmPassword";
-=======
                   </form>;                      name="confirmPassword";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
                   </form>;                      name="confirmPassword";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   </form>;
 
 }
                       name="confirmPassword";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                       render={({ field }) => (;
                         <FormItem>;"
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
@@ -1189,7 +1076,6 @@ className="text - sm font - medium text - zion - cyan hover:text - zion - cyan -
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
                               placeholder="••••••••";
                         onClick={() => navigate("/login")}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         type="button"
                       >
                         Back to login;
@@ -1198,9 +1084,6 @@ className="text - sm font - medium text - zion - cyan hover:text - zion - cyan -
                   </form>
                 </Form>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -1228,24 +1111,16 @@ className="text - sm font - medium text - zion - cyan hover:text - zion - cyan -
           </div>;
         </div>;"
         <div className="hidden lg: block relative w-0 flex-1">;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
             </div>;
           </div>;
         </div>;
         <div className="hidden lg: block relative w-0 flex-1">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
             <div className="flex flex-col justify-center items-center h-full px-8">;
               <div className="max-w-md text-center">;
                 <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
-<<<<<<< HEAD
                 <p className="text-lg text-white/80">;
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>;
           </div>;
         </div>;
@@ -1255,9 +1130,6 @@ className="text - sm font - medium text - zion - cyan hover:text - zion - cyan -
               <div className="max - w-md text - center">;
                 <h3 className="text - 3xl font - bold text - white mb - 4">Password Recovery</h3>;
                 <p className="text - lg text - white / 80">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 "
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;"
             <div className="flex flex-col justify-center items-center h-full px-8">;"
@@ -1265,12 +1137,7 @@ className="text - sm font - medium text - zion - cyan hover:text - zion - cyan -
                 <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;"
                 <p className="text-lg text-white/80">;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
                 <p className="text-lg text-white/80">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -1281,19 +1148,14 @@ className="text - sm font - medium text - zion - cyan hover:text - zion - cyan -
       <Footer />;
 </>;
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
-<<<<<<< HEAD
-=======
     </>);
 }
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </>);
     </>;
   ); import {};
-=======
 </>);
 }
 }
@@ -1635,7 +1497,6 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,;
   // TODO: Implement
 pr-12325
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Form;
 FormControl;
 FormField;
@@ -1660,13 +1521,10 @@ refresh token: ''
 });
 if (error) {
   toast ({
-<<<<<<< HEAD
   title: "Password update failed",
   description: error.message;
-=======
   title: "Password update failed",
   description: error.message;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 setError (error.message);
 return;
   // TODO: Implement
@@ -1728,29 +1586,15 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
 </Footer>
     </>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
 ;
 </>);
 }
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
   // TODO: Implement
   setIsLoading (false) 
 };"
@@ -1765,9 +1609,7 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
 
   );
 pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
     </>);
 }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

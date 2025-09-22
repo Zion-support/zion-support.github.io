@@ -1,34 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 export function QuoteFormSection() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 export function QuoteFormSection() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const [isSubmitted, setIsSubmitted] = useState(false);
-=======
 export function QuoteFormSection() {;  const [isSubmitted, setIsSubmitted] = useState(false);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   const [isSubmitted, setIsSubmitted] = useState(false);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isSubmitting, setIsSubmitting] = useState(false);
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
@@ -41,11 +23,7 @@ import { useState } from "react",
     e && e.preventDefault();
     setIsSubmitting(true);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 const [isSubmitted, setIsSubmitted] = useState(false);
@@ -54,18 +32,11 @@ import { Button } from "./ui/button",
 import { Input } from "./ui/input",
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-<<<<<<< HEAD
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
@@ -78,21 +49,16 @@ setIsSubmitting(false),
     }, 1000)
   },
 
-=======
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Simulate form submission
     setTimeout(() => {
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-=======
     // Simulate form submission;
     setTimeout(() => {}
       (setIsSubmitting(false), setIsSubmitted(true));
@@ -102,7 +68,6 @@ setIsSubmitting(false),
   return ("
     <section className="py-20 bg-zion-blue">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="text-center mb-12">
           <GradientHeading>Get a Quote Now</GradientHeading>"
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
@@ -155,10 +120,7 @@ setIsSubmitting(false),
                   >
                     Name;
                   </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
 import { GradientHeading } from "./GradientHeading",;
@@ -172,7 +134,6 @@ export function QuoteFormSection() {;
     e.preventDefault(),;
     setIsSubmitting(true),;
     ;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Simulate form submission;
     setTimeout(() => {;
       setIsSubmitting(false),;
@@ -197,10 +158,6 @@ export function QuoteFormSection() {;
             Request your instant commercial proposal and discover how Zion can revolutionize your IT operations;
           </p>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 "
         <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">;
@@ -230,16 +187,7 @@ export function QuoteFormSection() {;
                   <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Name;
                   </label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Input
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
           ) : (;
 ) :(;
             <form onSubmit={handleSubmit}>;
@@ -249,7 +197,6 @@ export function QuoteFormSection() {;
                     Name;
                   </label>;
                   <Input
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     id="name"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
@@ -259,7 +206,6 @@ export function QuoteFormSection() {;
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     id="email"
                     type="email"
-=======
 
                   <Input"
                     id="name""
@@ -291,7 +237,6 @@ export function QuoteFormSection() {;
                   <Input"
                     id="email""
                     type="email""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required;
                   />
@@ -307,10 +252,8 @@ export function QuoteFormSection() {;
                     id="phone""
                     type="tel""
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-<<<<<<< HEAD
                 <label
                   htmlFor="interest"
-=======
                   />
                 </div>
               </div>
@@ -318,7 +261,6 @@ export function QuoteFormSection() {;
               <div className="mt-6">
                 <label"
                   htmlFor="interest""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="block text-sm font-medium text-zion-slate-light mb-1"
                 >'
                   I'm interested in (select all that apply)
@@ -338,21 +280,11 @@ export function QuoteFormSection() {;
                         id={`interest-${index}`}"
                         type="checkbox""
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                       />
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <label
                         htmlFor={`interest-${index}`}
                         className="ml-2 text-sm text-zion-slate-light"
                       >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -446,9 +378,6 @@ export function QuoteFormSection() {;
                   />;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className="mt-6">;
                 <label htmlFor="interest" className="block text-sm font-medium text-zion-slate-light mb-1">;
                   I'm interested in (select all that apply);
@@ -456,14 +385,10 @@ export function QuoteFormSection() {;
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">;
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (;
 <div key={index} className="flex items-center">;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
-<<<<<<< HEAD
                       />
 
                       />;
@@ -471,29 +396,19 @@ export function QuoteFormSection() {;
 
                       />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <label
                         htmlFor={`interest-${index}`}
-=======
 
                       />
                       <label;`
                         htmlFor={`interest-${index}`}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         className="ml-2 text-sm text-zion-slate-light"
                       >
                         {item}
 
-=======
                     <div key={index} className="flex items-center">;                        {item}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                         {item}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -594,7 +509,6 @@ export function QuoteFormSection() {;
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">;
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (;
                     <div key={index} className="flex items-center">;                        {item}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </label>;
                     </div>;
                   ))}
@@ -683,12 +597,8 @@ return (
               <h3 className="text - 2xl font - bold text - white mb-4">;
                 Quote Request Sent!;
               </h3>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <p className="text - zion - slate - light mb-6">;
-=======
               <p className="text - zion - slate - light mb-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Thank you for your interest in Zion's services. Our team will;
                 prepare your personalized commercial proposal and contact you;
                 shortly.;
@@ -696,11 +606,8 @@ return (
               <Button;
 on_click={() => setIsSubmitted (false)}
                 variant="outline";
-<<<<<<< HEAD
                 className="border - zion - purple text - zion - cyan hover:bg - zion-purple / 10";
-=======
                 className="border - zion - purple text - zion - cyan hover:bg - zion-purple / 10";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >;
                 Submit Another Request;
               </Button>;
@@ -717,11 +624,8 @@ on_click={() => setIsSubmitted (false)}
                   <Input;
                     id="name";
                     type="text";
-<<<<<<< HEAD
                     className="w - full bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text-white";
-=======
                     className="w - full bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text-white";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     required;
                   />;
                 </div>;
@@ -748,11 +652,8 @@ on_click={() => setIsSubmitted (false)}
                   <Input;
                     id="email";
                     type="email";
-<<<<<<< HEAD
                     className="w - full bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text-white";
-=======
                     className="w - full bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text-white";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     required;
                   />;
                 </div>;
@@ -795,11 +696,8 @@ on_click={() => setIsSubmitted (false)}
                       />;
                       <label;
                         html_for={`interest-${index}`}
-<<<<<<< HEAD
                         className="ml - 2 text - sm text - zion - slate-light";
-=======
                         className="ml - 2 text - sm text - zion - slate-light";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       >;
                         {item}
                       </label>;
@@ -809,11 +707,8 @@ on_click={() => setIsSubmitted (false)}
               <div className="mt-6">;
                 <label;
                   html_for="message";
-<<<<<<< HEAD
                   className="block text - sm font - medium text - zion - slate - light mb-1";
-=======
                   className="block text - sm font - medium text - zion - slate - light mb-1";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   Additional Details;
                 </label>;
@@ -827,11 +722,8 @@ rows={4}
                 <Button;
                   type="submit";
                   disabled={is_submitting}
-<<<<<<< HEAD
                   className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py-3";
-=======
                   className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py-3";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   {is_submitting;"
                     ? "Sending...";"
@@ -843,4 +735,3 @@ rows={4}
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

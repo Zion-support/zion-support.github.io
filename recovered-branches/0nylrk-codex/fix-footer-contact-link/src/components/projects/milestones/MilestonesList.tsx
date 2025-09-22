@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
@@ -16,11 +9,7 @@ import { Card, CardContent  } from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
-<<<<<<< HEAD
 interface MilestonesListProps {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -32,10 +21,8 @@ import {Plus} from '@/components/icons';
 
 import {EmptyState} from '@/components/ui/empty-state';
 interface MilestonesListProps {}
-=======
 import {EmptyState} from '@/components/ui/empty-state';
 interface MilestonesListProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   milestones: Milestone[],
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean,
@@ -59,19 +46,11 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',;
-=======
 interface MilestonesListProps {import React, { useState } from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 interface MilestonesListProps {import React, { useState } from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 import React, { useState } from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MilestoneCard } from './MilestoneCard',;
@@ -80,7 +59,6 @@ import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
 import { Plus } from '@/components/icons',;
-=======
 
 '
 import React, { useState } from 'react',;'
@@ -92,7 +70,6 @@ import { Button } from '@/components/ui/button',;'
 import { Card, CardContent } from '@/components/ui/card',;'
 // lucide-react doesn't export PlusIcon, use our icon wrapper;'
 import { Plus } from '@/components/icons',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { EmptyState } from '@/components/ui/empty-state',;
 interface MilestonesListProps {;
   milestones: Milestone[],;
@@ -107,28 +84,17 @@ interface MilestonesListProps {;
   onApprove?: (id: string) => Promise<void>,;
   onReject?: (id: string) => Promise<void>;
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean;
   isClient: boolean;
-=======
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean
   isClient: boolean
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   onCreateMilestone: (data: any) => Promise<Milestone | null>
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
   onDeleteMilestone: (id: string) => Promise<boolean>
@@ -152,9 +118,7 @@ interface MilestonesListProps {
 
   onReject?: (id: string) => Promise<void>
 }
-<<<<<<< HEAD
 export const MilestonesList: React.FC<MilestonesListProps> = ({
-<<<<<<< HEAD
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -179,8 +143,6 @@ interface MilestonesListProps {;
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({;
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
 import {use_auth} from '@/hooks / use_auth';
 import {MilestoneCard} from './MilestoneCard';
@@ -192,10 +154,8 @@ import {Plus} from '@/components / icons';
 
 import {EmptyState} from '@/components / ui / empty - state';
 interface MilestonesListProps {}
-=======
 import {EmptyState} from '@/components / ui / empty - state';
 interface MilestonesListProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   milestones: Milestone[],
   activities: Record<string MilestoneActivity[]>,;
 </string>)
@@ -225,23 +185,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   on_approve?: (id: string) => Promise < void>,
   on_reject?: (id: string) => Promise < void>;
 }
-<<<<<<< HEAD
 export const MilestonesList: React.FC < MilestonesListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export const MilestonesList: React.FC < MilestonesListProps> = ({};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 export const MilestonesList: React.FC < MilestonesListProps> = ({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 export const MilestonesList: React.FC < MilestonesListProps> = ({
 pr-12325
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   milestones;
   activities;
   is_loading;
@@ -250,7 +200,6 @@ pr-12325
   onCreateMilestone;
   onUpdateStatus;
   onDeleteMilestone;
-<<<<<<< HEAD
   onUploadDeliverable;
   milestones,
   activities,
@@ -267,7 +216,6 @@ onReject;
 }) => {}
   const [showAddForm, setShowAddForm] = useState(false),
 
-<<<<<<< HEAD
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data)
     setShowAddForm(false)
@@ -291,7 +239,6 @@ onReject;
     )
   }
 
-=======
   onReject
 }) => {
   const [showAddForm, setShowAddForm] = useState(false),
@@ -299,7 +246,6 @@ onReject;
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data)
     setShowAddForm(false)
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
 
   if (isLoading) {
@@ -349,22 +295,13 @@ if (isLoading) {;
         ))}
       </div>;
 
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     );
   }
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     );
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (milestones.length === 0 && !showAddForm) {
-=======
   if (milestones.length === 0 && !showAddForm) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
       <EmptyState"
         icon={<span className="text-3xl">📊</span>}"
@@ -387,7 +324,6 @@ if (isLoading) {;
           "No milestones have been created for this project yet."}
         action={isClient ? ;
           {;"
-=======
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -412,7 +348,6 @@ if (isLoading) {;
           "No milestones have been created for this project yet."}
         action={isClient ? ;
           {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             text: "Create First Milestone",;
             onClick: () => setShowAddForm(true);
           } : undefined;
@@ -427,9 +362,6 @@ if (isLoading) {;
     )
   }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
   return (
 ),;
@@ -454,27 +386,16 @@ if (isLoading) {;
   }
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   onUploadDeliverable;  return (  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
   onUploadDeliverable;  return (  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return (
 "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
   onCreateMilestone;
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;  return (  return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="space-y-6">;
       {isClient && !showAddForm && (;"
         <div className="flex justify-end">;
@@ -483,13 +404,8 @@ if (isLoading) {;
             Add Milestone;
           </Button>;
         </div>;
-<<<<<<< HEAD
       )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {showAddForm && (;
         <Card>;"
           <CardContent className="pt-6">;"
@@ -497,19 +413,10 @@ if (isLoading) {;
 
             <AddMilestoneForm;
             <AddMilestoneForm ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               onSubmit={handleSubmit}
-=======
       )}              onSubmit={handleSubmit}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       )}              onSubmit={handleSubmit}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       )}
 
 return (
@@ -540,7 +447,6 @@ return (
 
             <AddMilestoneForm ;
               onSubmit={handleSubmit}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
             />;
@@ -554,9 +460,7 @@ return (
 "
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <MilestoneCard
-<<<<<<< HEAD
             key={milestone && milestone.id}
             id={milestone && milestone.id}
             projectId={milestone && milestone.project_id}
@@ -565,13 +469,6 @@ return (
             amount={parseFloat(milestone && milestone.amount.toString())}
             status={milestone && milestone.status}
             dueDate={milestone && milestone.due_date}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             onApprove={onApprove}
             onReject={onReject}
           />;
@@ -580,11 +477,6 @@ return (
 
   onUploadDeliverable;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ;
       <div className="space-y-4">;
         {milestones.map((milestone) => (;
@@ -611,17 +503,13 @@ return (
             description={milestone.description}
             amount={parseFloat(milestone.amount.toString())}
             status={milestone.status}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       </div>;
     </div>;
   );
 
-<<<<<<< HEAD
 
 };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   is_submitting;
   on_approve,
   on_reject;
@@ -637,7 +525,6 @@ return (
 if ( {) {}
   $2;
 }
-<<<<<<< HEAD
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map ((i) => (
@@ -707,10 +594,6 @@ return (
     </div>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       </div>
     </div>
   )
@@ -803,25 +686,11 @@ if ( {) {
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 '"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 ;
   ),;
 },; <Card key= {
@@ -877,6 +746,3 @@ if ( {) {
     </div>;
   );
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
