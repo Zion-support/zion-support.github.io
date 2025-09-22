@@ -45,7 +45,7 @@ export default function FoundationModelOpsPage() {
   );
 }
 
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 const FoundationModelOps2026 = () => {
   return (

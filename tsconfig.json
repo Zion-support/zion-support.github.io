@@ -37,6 +37,16 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "data_backup",
+    "backup",
+    "backups",
+    "pages_backup_conflict",
+    "apps.backup",
+    "corrupted-files-backup",
+    "lib_backup",
+    "**/*backup*",
+    "**/*conflict*",
+    "**/*temp*"
   ]
 }
