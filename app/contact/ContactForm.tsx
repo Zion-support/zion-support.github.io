@@ -61,7 +61,7 @@ export default function ContactForm() {
       trackEvent('form_submit_attempt', 'Contact Form', 'Contact Page');
       
       // Simulate API call (replace with actual API endpoint)
-      const response = await fetch('/api/contact', {
+      const response = await globalThis.fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export default function ContactForm() {
         throw new Error('Failed to submit form');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      // console.error('Form submission error:', error);
       setSubmitStatus('error');
       
       // Track form submission error

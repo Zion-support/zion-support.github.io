@@ -44,8 +44,10 @@ export const rateLimit = (() => {
     
     if (validRequests.length >= limit) {
       return false;
+    }
     
     validRequests.push(now);
     requests.set(ip, validRequests);
     return true;
+  };
 })();
