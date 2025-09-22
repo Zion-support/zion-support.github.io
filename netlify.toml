@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -35,9 +35,7 @@ Cross-Origin-Resource-Policy = "same-origin"
 X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
 
-## Enable Netlify Next.js runtime plugin
-[[plugins]]
-package = "@netlify/plugin-nextjs"
+## Using Next.js static export; no Netlify Next.js runtime plugin required
 
 # Static redirects for specific routes
 [[redirects]]
