@@ -305,11 +305,11 @@ const mainNavigation = ['
 const contactInfo = null;
 const serviceCategories = [
   {
-    title: '🚀 2030 Ultra-Futuristic AI Services'
-    icon: Brain
-    color: 'from-violet-600 via-purple-600 to-indigo-600'
-    description: 'Next-generation AI consciousness and creativity'
-    services: [
+    title: '🚀 2030 Ultra-Futuristic AI Services';
+    icon: Brain;
+    color: 'from-violet-600 via-purple-600 to-indigo-600';
+    description: 'Next-generation AI consciousness and creativity';
+    services: [;
 {
         name: 'AI Consciousness Evolution Platform',
         href: '/ai-consciousness-evolution-platform',
@@ -317,15 +317,15 @@ const serviceCategories = [
         price: '$19,999/month',
       },
       {
-        name: 'AI Emotional Intelligence Platform'
-        href: '/ai-emotion-intelligence-platform'
-        description: 'Real-time emotion analysis and response'
+        name: 'AI Emotional Intelligence Platform';
+        href: '/ai-emotion-intelligence-platform';
+        description: 'Real-time emotion analysis and response';
         price: '$1,299/month'
       }
       {
-        name: 'AI Creativity Orchestrator'
-        href: '/ai-creativity-orchestrator'
-        description: 'Multi-model creativity fusion'
+        name: 'AI Creativity Orchestrator';
+        href: '/ai-creativity-orchestrator';
+        description: 'Multi-model creativity fusion';
         price: '$1,799/month'
       }
       {
@@ -341,7 +341,7 @@ const serviceCategories = [
     icon: Atom,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     description: 'Quantum computing and beyond',
-    services: [
+    services: [;
 {
         name: 'Quantum Internet Security Gateway',
         href: '/quantum-internet-security-gateway',
@@ -349,15 +349,15 @@ const serviceCategories = [
         price: '$3,999/month',
       },
       {
-        name: 'Quantum Learning Accelerator'
-        href: '/quantum-learning-accelerator'
-        description: 'Quantum-enhanced learning paths'
-        price: '$899/month'
+        name: 'Quantum Learning Accelerator';
+        href: '/quantum-learning-accelerator';
+        description: 'Quantum-enhanced learning paths';
+        price: '$899/month';
       }
       {
-        name: 'Quantum Financial Trading Platform'
-        href: '/quantum-financial-trading-platform'
-        description: 'Quantum-powered trading algorithms'
+        name: 'Quantum Financial Trading Platform';
+        href: '/quantum-financial-trading-platform';
+        description: 'Quantum-powered trading algorithms';
         price: '$4,999/month'
       }
       {
@@ -373,7 +373,7 @@ const serviceCategories = [
     icon: Microscope,
     color: 'from-green-600 via-emerald-600 to-teal-600',
     description: 'Biological computing and genetic engineering',
-    services: [
+    services: [;
 {
         name: 'Biotech DNA Computing Platform',
         href: '/biotech-dna-computing-platform',
@@ -381,15 +381,15 @@ const serviceCategories = [
         price: '$5,999/month',
       },
       {
-        name: 'Biotech Personalized Nutrition'
-        href: '/biotech-personalized-nutrition'
-        description: 'DNA-based nutrition plans'
-        price: '$599/month'
+        name: 'Biotech Personalized Nutrition';
+        href: '/biotech-personalized-nutrition';
+        description: 'DNA-based nutrition plans';
+        price: '$599/month';
       }
       {
-        name: 'AI Predictive Health Analytics'
-        href: '/ai-predictive-health-analytics'
-        description: 'Predictive health outcomes'
+        name: 'AI Predictive Health Analytics';
+        href: '/ai-predictive-health-analytics';
+        description: 'Predictive health outcomes';
         price: '$1,599/month'
       }
       {
@@ -405,7 +405,7 @@ const serviceCategories = [
     icon: Cpu,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     description: 'Autonomous enterprise infrastructure',
-    services: [
+    services: [;
 {
         name: 'Autonomous DevOps Platform',
         href: '/autonomous-devops-platform',
@@ -413,15 +413,15 @@ const serviceCategories = [
         price: '$2,999/month',
       },
       {
-        name: 'Autonomous IT Operations Center'
-        href: '/autonomous-it-operations-center'
-        description: 'Self-managing IT infrastructure'
+        name: 'Autonomous IT Operations Center';
+        href: '/autonomous-it-operations-center';
+        description: 'Self-managing IT infrastructure';
         price: '$6,999/month'
       }
       {
-        name: 'AI-Powered Enterprise Security'
-        href: '/ai-powered-enterprise-security'
-        description: 'AI-driven threat detection'
+        name: 'AI-Powered Enterprise Security';
+        href: '/ai-powered-enterprise-security';
+        description: 'AI-driven threat detection';
         price: '$2,999/month'
       }
       {
@@ -437,7 +437,7 @@ const serviceCategories = [
     icon: Rocket,
     color: 'from-teal-600 via-emerald-600 to-green-600',
     description: 'Space exploration and digital reality',
-    services: [
+    services: [;
 {
         name: 'Space Mining Automation Platform',
         href: '/space-mining-automation-platform',
@@ -445,15 +445,15 @@ const serviceCategories = [
         price: '$8,999/month',
       },
       {
-        name: 'Metaverse Digital Reality Platform'
-        href: '/metaverse-digital-reality-platform'
-        description: 'Immersive virtual worlds'
+        name: 'Metaverse Digital Reality Platform';
+        href: '/metaverse-digital-reality-platform';
+        description: 'Immersive virtual worlds';
         price: '$2,499/month'
       }
       {
-        name: 'Quantum Research Platform'
-        href: '/quantum-research-platform'
-        description: 'Quantum computing research'
+        name: 'Quantum Research Platform';
+        href: '/quantum-research-platform';
+        description: 'Quantum computing research';
         price: '$3,999/month'
       }
       {
@@ -470,7 +470,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Target,'
     color: 'from-green-600 via-yellow-600 to-orange-600','
     description: 'Cutting-edge micro solutions',
-    services: ['
+    services: [';
       { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030', description: 'AI-powered business analytics and insights', price: '$299/month' },'
       { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030', description: 'AI-powered customer experience management', price: '$199/month' },'
       { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030', description: 'Intelligent marketing automation powered by AI', price: '$179/month' },'
@@ -499,16 +499,16 @@ export default function UltraFuturisticNavigation2030() {;
         price: '$299/month',
       },
       {
-        name: 'AI Customer Experience Platform 2030'
-        href: '/ai-customer-experience-platform-2030'
-        description: 'AI-powered customer experience management'
-        price: '$199/month'
+        name: 'AI Customer Experience Platform 2030';
+        href: '/ai-customer-experience-platform-2030';
+        description: 'AI-powered customer experience management';
+        price: '$199/month';
       }
       {
-        name: 'AI Marketing Automation Suite 2030'
-        href: '/ai-marketing-automation-2030'
-        description: 'Intelligent marketing automation powered by AI'
-        price: '$179/month'
+        name: 'AI Marketing Automation Suite 2030';
+        href: '/ai-marketing-automation-2030';
+        description: 'Intelligent marketing automation powered by AI';
+        price: '$179/month';
       }
       {
         name: 'AI HR Management Suite 2030',
@@ -655,7 +655,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
         }`}
       >'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>';
           <div className='flex items-center justify-between h-20'>
 
             {/* Logo */}'
@@ -702,14 +702,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <item && item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />;
                   <span>{item && item.name}</span>;
                 </Link>;"
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-8">;
               {mainNavigation.map((item) => (
                 <Link;
                   key={item.name}
                   href={item.href}"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group";
                 >"
-                  <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
+                  <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />;
                   <span>{item.name}</span>
                 </Link>
               ))}
@@ -735,7 +735,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 key={serviceIndex}
                                 href={service.href}
 className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group' />
-
+;
                                 <div className='flex items-center justify-between' />;
                                   <div />;
                                     <h4 className='text-sm font-medium text-white group-hover:text-purple-400 transition-colors' />;
@@ -926,19 +926,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 
-<div className='hidden lg:flex items-center space-x-4'>
+<div className='hidden lg:flex items-center space-x-4'>;
               <Link
                 href='/contact'
-<div className='hidden lg: flex items-center space-x-4' />
+<div className='hidden lg: flex items-center space-x-4' />;
               <Link;
 href='/contact'
-                className='px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25'
+                className='px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25';
                />
                 Get Started;
               </Link>
               <Link;
 href='/pricing'
-                className='px-6 py-2 border border-purple-500/30 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-200'
+                className='px-6 py-2 border border-purple-500/30 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-200';
                />
                 View Pricing;
               </Link>
@@ -950,7 +950,7 @@ href='/pricing'
               <button;
                 onClick={toggleMenu}
                 className='p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200' />
-
+;
                 {isOpen ? (<X className='w-6 h-6' />;}
                 ) : (<Menu className='w-6 h-6' />;}
                 )}
@@ -983,7 +983,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="space-y-4">;
                   {mainNavigation && mainNavigation.map((item) => (;
 
-className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20'
+className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20';
              />
               <div className='px-4 py-6 space-y-6' />
                 {/* Mobile Navigation Links */}
@@ -1000,7 +1000,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <item && item.icon className="w-5 h-5" />;
                       <span>{item && item.name}</span>;
                     </Link>;
-className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200'
+className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-purple-500/10 transition-colors duration-200';
                      />
                       <item.icon className='w-5 h-5' />
                       <span />{item.name}</span>
@@ -1033,7 +1033,7 @@ key={link.name}
                         className={`p-3 rounded-lg text-center transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
 link.color.includes('from-')
                             ? `bg-gradient-to-r ${link.color} text-white`
-                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
                         }`}
                       >'
                         <link.icon className='w-6 h-6 mx-auto mb-2' />
@@ -1042,7 +1042,7 @@ link.color.includes('from-')
                             ? `bg-gradient-to-r ${link.color} text-white` 
 
 '
-                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
                 {/* Mobile Services */}'
                 <div className='space-y-4'>;'
                   <h3 className='text-lg font-semibold text-white px-3'>;
@@ -1118,7 +1118,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 
-                    className='block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200'
+                    className='block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200';
                    />
                     View Pricing;
                   </Link>

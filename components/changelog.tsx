@@ -14,7 +14,7 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
         <div className="prose max-w-none">
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
-      ) : (
+      ) : (;
         <div className="text-gray-600">
           <p>No changelog available at this time.</p>
         </div>

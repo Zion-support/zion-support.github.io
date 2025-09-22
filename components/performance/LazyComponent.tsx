@@ -2,7 +2,7 @@
 
 pr-12243
 
-import React from 'react'
+import React from 'react';
 }
 import React, { Suspense, lazy } from 'react';
 import React, { Suspense, ReactNode } from 'react';

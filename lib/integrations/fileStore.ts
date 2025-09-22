@@ -15,7 +15,7 @@ function ensureDataDir(): void {
       connections: [],
       logs: [],
       overrides: [],
-      events: []
+      events: [];
     };
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }

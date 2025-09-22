@@ -283,15 +283,15 @@ className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10
             opacity: [0.3, 0.6, 0.3]}}
           transition={{}
             duration: 9;
-            repeat: Infinity"
-            ease: "easeInOut"
+            repeat: Infinity";
+            ease: "easeInOut";
             delay: 1;
           }}
           transition={{}
             duration: 11;
-            repeat: Infinity'
-            ease: 'easeInOut'"
-            delay: 3,            ease: "easeInOut"
+            repeat: Infinity';
+            ease: 'easeInOut'";
+            delay: 3,            ease: "easeInOut";
             delay: 3;
             duration: 11,
             repeat: Infinity,'
@@ -339,8 +339,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 11;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
             delay: 3,          }}
         />
       </div>
@@ -350,22 +350,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className='absolute inset-0'
 origin/cursor/automate-test-improve-and-merge-code-2533
           style={{
-            backgroundImage: `
+            backgroundImage: `;
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
           style={{}`
             backgroundImage: `
-
+;
               linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)`
             `,
 '
             backgroundSize: '50px 50px',          }}          style={{}`
-            backgroundImage: `
+            backgroundImage: `;
               linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)`
             `'
-            backgroundSize: '50px 50px'
+            backgroundSize: '50px 50px';
             `,
             backgroundSize: '50px 50px',
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -439,16 +439,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
 
           transition={{
-            duration: 15
-            repeat: Infinity
+            duration: 15;
+            repeat: Infinity;
             ease: 'easeInOut',          }}
           animate={{}
             rotate: [0, 360]
             scale: [1, 1 && 1.2, 1]}}
           transition={{}
             duration: 15;
-            repeat: Infinity"
-            ease: "easeInOut"
+            repeat: Infinity";
+            ease: "easeInOut";
             rotate: [45, 405],
             opacity: [0.2, 0.6, 0.2],
           }}
@@ -509,8 +509,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 8;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
             delay: 2,          }}
         />
       </div>
@@ -704,8 +704,8 @@ export default UltraFuturisticBackground2043;
             ease: 'easeInOut',
           }}
           transition={{
-            duration: 10
-            repeat: Infinity
+            duration: 10;
+            repeat: Infinity;
             ease: 'easeInOut',          }}
         />
       </div>

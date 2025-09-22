@@ -96,30 +96,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
               </motion.div>'
-              <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
+              <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>;
                 Zion Tech Group;
               </h1>'
-              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed'>
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed'>;
                 Pioneering the future of technology with innovative micro SAAS;
                 services, cutting-edge IT infrastructure, and advanced AI;
                 solutions;
               </p>
               {/* Enhanced CTA Section */}'
-              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>'
+              <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>';
                 <Link href='/comprehensive-2025-services-showcase'>'
-                  <button className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'>'
+                  <button className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'>';
                     <span className='flex items-center gap-2'>
                       Explore Services'
-                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
                     </span>
                   </button>
                 </Link>'
                 <Link href='/services'>'
-                  <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
+                  <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>;
                     All Services;
                   </button>
                 </Link>'
-                <a href='mailto:kleber@ziontechgroup.com'>'
+                <a href='mailto:kleber@ziontechgroup.com'>';
                   <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started;
                   </button>
                 </a>
@@ -128,30 +128,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Star className="w-4 h-4" />
                 <span>Innovation Leader 2026</span>
               </motion.div>"
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
                 Zion Tech Group;
               </h1>"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">;
                 Pioneering the future of technology with innovative micro SAAS services, cutting-edge IT infrastructure, and advanced AI solutions;
               </p>
               {/* Enhanced CTA Section */}"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">";
                 <Link href="/comprehensive-2025-services-showcase">"
-                  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
+                  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">";
                     <span className="flex items-center gap-2">
                       Explore Services"
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
                     </span>
                   </button>
                 </Link>"
                 <Link href="/services">"
-                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
                     All Services;
                   </button>
                 </Link>"
-                <a href="mailto:kleber@ziontechgroup.com">"
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
+                <a href="mailto:kleber@ziontechgroup.com">";
+                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
+                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                     Get Started
                   </button>
@@ -283,7 +283,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 We deliver innovative solutions that drive real business transformation;
               </p>
             </motion.div>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
                 transition={{ duration: 0.8, delay: 0.4 }}
 className='flex items-center justify-center space-x-6 text-sm text-gray-400'
               >
@@ -322,7 +322,7 @@ className='text-center mb-16'
               </p>
             </motion.div>
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -416,7 +416,7 @@ className='text-center mb-16'
               </p>
             </motion.div>
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               {/* AI Automation Services */}
 
@@ -425,8 +425,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}'
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
-
-className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
+;
+className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='text-5xl mb-6'>🤖</div>
@@ -453,7 +453,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>'
                 <Link href='/comprehensive-2025-services-showcase'>'
-                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>                    Learn More              >
+                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>                    Learn More              >;
               <motion&& motion.div;
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}"
@@ -478,8 +478,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>"
                 <Link href="/comprehensive-2025-services-showcase">"
-                  <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>
+                  <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">;
+                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                     Learn More
                   </button>
@@ -682,7 +682,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, x: 0 }}
 
                 transition={{ duration: 0.6, delay: 0.2 }}
-className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
+className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='text-5xl mb-6'>🏗️</div>
@@ -709,7 +709,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>
+                  <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>;
                     Learn More
                   </button>
                 </Link>
@@ -774,7 +774,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, x: 0 }}
 
                 transition={{ duration: 0.6, delay: 0.3 }}
-className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
+className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='text-5xl mb-6'>🚀</div>
@@ -801,7 +801,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors'>
+                  <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors'>;
                     Learn More
                   </button>
                 </Link>
@@ -937,7 +937,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, x: 0 }}
 
                 transition={{ duration: 0.6, delay: 0.4 }}
-className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
+className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='text-5xl mb-6'>🧠</div>
@@ -964,7 +964,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-                  <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>
+                  <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>;
                     Learn More
                   </button>
                 </Link>
@@ -1011,14 +1011,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Mail className="w-5 h-5 text-yellow-400" />
                     <div>"
                       <div className="text-sm text-gray-400">Email</div>"
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">"
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">";
                     <MapPin className="w-5 h-5 text-purple-400" />
                     <div>"
                       <div className="text-sm text-gray-400">Address</div>"
                       <div className="text-white font-medium">
                         364 E Main St STE 1008<br />
-                        href='https://ziontechgroup.com'
-                        className='text-cyan-400 hover:underline font-medium'
+                        href='https://ziontechgroup.com';
+                        className='text-cyan-400 hover:underline font-medium';
                       >
                         ziontechgroup.com
                       </a>
@@ -1029,8 +1029,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
                       <div className='text-sm text-gray-400'>Phone</div>
                       <a
-                        href='tel:+13024640950'
-                        className='text-cyan-400 hover:underline font-medium'
+                        href='tel:+13024640950';
+                        className='text-cyan-400 hover:underline font-medium';
                       >
                         +1 302 464 0950
                       </a>
@@ -1041,8 +1041,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
                       <div className='text-sm text-gray-400'>Email</div>
                       <a
-                        href='mailto:kleber@ziontechgroup.com'
-                        className='text-cyan-400 hover:underline font-medium'
+                        href='mailto:kleber@ziontechgroup.com';
+                        className='text-cyan-400 hover:underline font-medium';
                       >
                         kleber@ziontechgroup.com
                       </a>
@@ -1111,17 +1111,17 @@ export default Homepage2026;  )
 export default Homepage2026;
 
 export default Homepage2026;
-<div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                 <a
-                  href='mailto:kleber@ziontechgroup.com'
-                  className='inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
+                  href='mailto:kleber@ziontechgroup.com';
+                  className='inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105';
                 >
                   <span>Get Started Today</span>
                   <ArrowRight className='w-5 h-5' />
                 </a>
                 <a
-                  href='tel:+13024640950'
-                  className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300'
+                  href='tel:+13024640950';
+                  className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300';
                 >
                   Call Now
                 </a>

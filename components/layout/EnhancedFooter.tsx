@@ -2,9 +2,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   return (    <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
       <div className='container mx-auto px-4 py-12'>
-        <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
+        <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>;
           {/* Company Info */}
-          <div className='lg:col-span-1'>
+          <div className='lg:col-span-1'>;
             <div className='flex items-center space-x-2 mb-4'>
               <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
                 <span className='text-white font-bold text-xl'>Z</span>
@@ -16,16 +16,16 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className='flex space-x-4'>
-              <a href='https: //linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
+              <a href='https: //linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>;
                 <Linkedin className='w-5 h-5' />
               </a>
-              <a href='https://twitter.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
+              <a href='https://twitter.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>;
                 <Twitter className='w-5 h-5' />
               </a>
-              <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
+              <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>;
                 <Github className='w-5 h-5' />
               </a>
-              <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
+              <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>;
                 <Facebook className='w-5 h-5' />
               </a>
             </div>
@@ -35,36 +35,36 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <h3 className='text-lg font-semibold mb-4'>Services</h3>
             <ul className='space-y-2'>
               <li>
-                <Link href='/services/ai-services' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/services/ai-services' className='text-gray-300 hover:text-white transition-colors'>;
                   AI Services
                 </Link>              </li>
               <li>
-                <Link href='/services/it-services' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/services/it-services' className='text-gray-300 hover:text-white transition-colors'>;
                   IT Services
                 </Link>
               </li>
               <li>
-                <Link href='/services/micro-saas' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/services/micro-saas' className='text-gray-300 hover:text-white transition-colors'>;
                   Micro SaaS
                 </Link>
               </li>
               <li>
-                <Link href='/services/ai-ops-copilot' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/services/ai-ops-copilot' className='text-gray-300 hover:text-white transition-colors'>;
                   AI Ops Copilot
                 </Link>
               </li>
               <li>
-                <Link href='/services/security-copilot' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/services/security-copilot' className='text-gray-300 hover:text-white transition-colors'>;
                   Security Copilot
                 </Link>
               </li>
               <li>
-                <Link href='/services/data-platform' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/services/data-platform' className='text-gray-300 hover:text-white transition-colors'>;
                   Data Platform
                 </Link>
               </li>
               <li>
-                <Link href='/services/martech-automation' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/services/martech-automation' className='text-gray-300 hover:text-white transition-colors'>;
                   MarTech Automation
                 </Link>
               </li>
@@ -75,21 +75,21 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <h3 className='text-lg font-semibold mb-4'>Solutions</h3>
             <ul className='space-y-2'>
               <li>
-                <Link href='/solutions/enterprise' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/solutions/enterprise' className='text-gray-300 hover:text-white transition-colors'>;
                   Enterprise Solutions
                 </Link>              </li>
               <li>
-                <Link href='/solutions/small-business' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/solutions/small-business' className='text-gray-300 hover:text-white transition-colors'>;
                   Small Business
                 </Link>
               </li>
               <li>
-                <Link href='/solutions/startups' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/solutions/startups' className='text-gray-300 hover:text-white transition-colors'>;
                   Startups
                 </Link>
               </li>
               <li>
-                <Link href='/solutions' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/solutions' className='text-gray-300 hover:text-white transition-colors'>;
                   Solutions Overview
                 </Link>
               </li>
@@ -100,21 +100,21 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <h3 className='text-lg font-semibold mb-4'>Company</h3>
             <ul className='space-y-2 mb-6'>
               <li>
-                <Link href='/about' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/about' className='text-gray-300 hover:text-white transition-colors'>;
                   About Us
                 </Link>              </li>
               <li>
-                <Link href='/careers' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/careers' className='text-gray-300 hover:text-white transition-colors'>;
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href='/blog' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/blog' className='text-gray-300 hover:text-white transition-colors'>;
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href='/products' className='text-gray-300 hover:text-white transition-colors'>
+                <Link href='/products' className='text-gray-300 hover:text-white transition-colors'>;
                   Products
                 </Link>
               </li>
@@ -123,7 +123,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <div className='space-y-3'>
               <div className='flex items-center space-x-2'>
                 <Mail className='w-4 h-4 text-blue-400' />
-                <a href='mailto:info@ziontechgroup.com' className='text-gray-300 hover:text-white transition-colors'>
+                <a href='mailto:info@ziontechgroup.com' className='text-gray-300 hover:text-white transition-colors'>;
                   info@ziontechgroup.com
                 </a>
               </div>
@@ -148,9 +148,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               <input
                 type='email'
                 placeholder='Enter your email'
-                className='flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500'
+                className='flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500';
               />
-              <button className='bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors'>
+              <button className='bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors'>;
                 Subscribe
               </button>
             </div>          </div>
@@ -159,18 +159,18 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       {/* Bottom Footer */}
       <div className='border-t border-gray-700 py-6'>
         <div className='container mx-auto px-4'>
-          <div className='flex flex-col md:flex-row justify-between items-center'>
+          <div className='flex flex-col md:flex-row justify-between items-center'>;
             <p className='text-gray-300 text-sm'>
               &copy 2024 Zion Tech Group. All rights reserved.
             </p>
-            <div className='flex space-x-6 mt-4 md:mt-0'>
-              <Link href='/privacy' className='text-gray-300 hover:text-white text-sm transition-colors'>
+            <div className='flex space-x-6 mt-4 md:mt-0'>;
+              <Link href='/privacy' className='text-gray-300 hover:text-white text-sm transition-colors'>;
                 Privacy Policy
               </Link>
-              <Link href='/terms' className='text-gray-300 hover:text-white text-sm transition-colors'>
+              <Link href='/terms' className='text-gray-300 hover:text-white text-sm transition-colors'>;
                 Terms of Service
               </Link>
-              <Link href='/sitemap' className='text-gray-300 hover:text-white text-sm transition-colors'>
+              <Link href='/sitemap' className='text-gray-300 hover:text-white text-sm transition-colors'>;
                 Sitemap
               </Link>
             </div>          </div>
@@ -199,15 +199,15 @@ import {};
   Star, Users, TrendingUp, Zap'
 } from 'lucide-react'
 const contactInfo = {'
-  mobile: '+1 302 464 0950''
-  email: 'kleber@ziontechgroup.com''
-  address: '364 E Main St STE 1008 Middletown DE 19709''
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950'';
+  email: 'kleber@ziontechgroup.com'';
+  address: '364 E Main St STE 1008 Middletown DE 19709'';
+  website: 'https://ziontechgroup.com';
 }
 const serviceCategories = []
   {'
-    title: 'Next-Generation AI'
-    services: ['
+    title: 'Next-Generation AI';
+    services: [';
       { name: 'AI Multimodal Fusion', href: '/ai-multimodal-fusion-platform' }'
       { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' }'
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' }'
@@ -260,8 +260,8 @@ const EnhancedFooter: React.FC = () => {}
   return (
 
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {" "}
           {/* Company Info */}"
           <div className="space-y-4">"
@@ -359,21 +359,21 @@ const company_links = [;'
 const support_links = [;
 
 const _serviceCategories = ['
-  {_title: 'Next-Generation AI', _services: ['
+  {_title: 'Next-Generation AI', _services: [';
       { name: 'AI Multimodal Fusion', _href: '/ai-multimodal-fusion-platform'},'
       {_name: 'AI Autonomous Decision Engine', _href: '/ai-autonomous-decision-engine'},'
       {_name: 'AI Emotional Intelligence', _href: '/ai-emotional-intelligence-platform'},'
       {_name: 'AI Quantum Hybrid Computing', _href: '/ai-quantum-hybrid-computing'}
     ]
   },'
-  {_title: 'Cutting-Edge IT', _services: ['
+  {_title: 'Cutting-Edge IT', _services: [';
       { name: 'Zero Trust Architecture', _href: '/zero-trust-network-architecture'},'
       {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},'
       {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},'
       {_name: 'Blockchain Infrastructure', _href: '/blockchain-infrastructure-platform'}
     ]
   },'
-  {_title: 'Innovative SaaS', _services: ['
+  {_title: 'Innovative SaaS', _services: [';
       { name: 'AI Brand Personality', _href: '/ai-brand-personality-generator'},'
       {_name: 'Virtual Event Holograms', _href: '/virtual-event-hologram-platform'},'
       {_name: 'AI Meeting Transcriber', _href: '/ai-meeting-transcriber-pro'},'
@@ -480,8 +480,8 @@ function EnhancedFooter() {}
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <Link href={service.href} className="text-gray-300 hover:text-white transition-colors flex items-center group">
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Link href={service.href} className="text-gray-300 hover:text-white transition-colors flex items-center group">;
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />;
                     {service.name}
                   </Link>
                 </li>
@@ -495,8 +495,8 @@ function EnhancedFooter() {}
             <ul className="space-y-3">
               {solutions.map((solution, index) => (
                 <li key={index}>
-                  <Link href={solution.href} className="text-gray-300 hover:text-white transition-colors flex items-center group">
-                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Link href={solution.href} className="text-gray-300 hover:text-white transition-colors flex items-center group">;
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />;
                     {solution.name}
                   </Link>
                 </li>

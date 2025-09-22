@@ -132,7 +132,7 @@ if (return null) {}
       <button;
         on_click={() = /> setIsVisible (!is_visible)}"
         className=\"bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors\">
-
+;
         📊 Performance;
       </button>;
       {is_visible && (

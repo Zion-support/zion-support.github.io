@@ -189,23 +189,23 @@ export default function UltraFuturisticFooter2034() {;
 const contactInfo = null;
 const serviceCategories = [
   {
-    title: '🧠 Revolutionary AI Services'
-    icon: Brain
-    services: [
+    title: '🧠 Revolutionary AI Services';
+    icon: Brain;
+    services: [;
 {
         name: 'AI Business Intelligence Pro',
         href: '/ai-business-intelligence-pro',
         price: '$299/month',
       },
       {
-        name: 'AI Video Generation Platform'
-        href: '/ai-video-generation-platform'
-        price: '$499/month'
+        name: 'AI Video Generation Platform';
+        href: '/ai-video-generation-platform';
+        price: '$499/month';
       }
       {
-        name: 'AI-Powered Cybersecurity'
-        href: '/ai-cybersecurity-platform'
-        price: '$799/month'
+        name: 'AI-Powered Cybersecurity';
+        href: '/ai-cybersecurity-platform';
+        price: '$799/month';
       }
       {
         name: 'AI Drug Discovery Platform',
@@ -217,21 +217,21 @@ const serviceCategories = [
   {
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
-    services: [
+    services: [;
 {
         name: 'Quantum Machine Learning',
         href: '/quantum-machine-learning-platform',
         price: '$1,999/month',
       },
       {
-        name: 'Blockchain AI Platform'
-        href: '/blockchain-ai-platform'
-        price: '$899/month'
+        name: 'Blockchain AI Platform';
+        href: '/blockchain-ai-platform';
+        price: '$899/month';
       }
       {
-        name: 'Edge AI Computing'
-        href: '/edge-ai-computing-platform'
-        price: '$599/month'
+        name: 'Edge AI Computing';
+        href: '/edge-ai-computing-platform';
+        price: '$599/month';
       }
       {
         name: 'AI Climate Modeling',
@@ -243,21 +243,21 @@ const serviceCategories = [
   {
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
-    services: [
+    services: [;
 {
         name: 'API Security & Monitoring',
         href: '/api-security-monitoring-suite',
         price: '$399/month',
       },
       {
-        name: 'Customer Success Automation'
-        href: '/customer-success-automation'
-        price: '$199/month'
+        name: 'Customer Success Automation';
+        href: '/customer-success-automation';
+        price: '$199/month';
       }
       {
-        name: 'HR Automation Suite'
-        href: '/hr-automation-suite'
-        price: '$179/month'
+        name: 'HR Automation Suite';
+        href: '/hr-automation-suite';
+        price: '$179/month';
       }
       {
         name: 'Project Management AI',
@@ -269,21 +269,21 @@ const serviceCategories = [
   {
     title: '🛒 Business Automation',
     icon: ShoppingCart,
-    services: [
+    services: [;
 {
         name: 'E-commerce Automation',
         href: '/ecommerce-automation-platform',
         price: '$249/month',
       },
       {
-        name: 'Marketing Automation Suite'
-        href: '/marketing-automation-suite'
-        price: '$279/month'
+        name: 'Marketing Automation Suite';
+        href: '/marketing-automation-suite';
+        price: '$279/month';
       }
       {
-        name: 'Financial Analytics Platform'
-        href: '/financial-analytics-platform'
-        price: '$349/month'
+        name: 'Financial Analytics Platform';
+        href: '/financial-analytics-platform';
+        price: '$349/month';
       }
       {
         name: 'Legal Document Automation',
@@ -377,7 +377,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default function UltraFuturisticFooter2034() {}
   return (
 
-            <div className='lg:col-span-1'>
+            <div className='lg:col-span-1'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
@@ -457,11 +457,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Phone className='w-4 h-4' />
                     <span>{contactInfo.mobile}</span>
                   </div>'
-                  <div className='flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors'>'
+                  <div className='flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors'>';
                     <Mail className='w-4 h-4' />
                     <span>{contactInfo.email}</span>
                   </div>'
-                  <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>'
+                  <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>';
                     <MapPin className='w-4 h-4' />'
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>"
                 <div className="grid grid-cols-2 gap-4">
@@ -489,11 +489,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 {/* Contact Info */}
                   </div>"
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">"
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">";
                     <Mail className="w-4 h-4" />
                     <span>{contactInfo.email}</span>
                   </div>"
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">"
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">";
                     <MapPin className="w-4 h-4" />"
                     <span className="text-sm">{contactInfo.address}</span>
                     <span className='text-sm'>{contactInfo.address}</span>
@@ -506,7 +506,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
             {/* Services */}"
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2">;
               <motion.div
 
                 viewport={{ once: true ;}
@@ -525,12 +525,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Link;
                             key={service.name}
                             href={service.href}'
-                            className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200'
+                            className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200';
                           >'
-                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>
+                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>;
                               {service.name}
                             </span>
-                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>
+                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>;
                               {service.price}
                             <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service.price}
 
@@ -588,12 +588,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
 
             {/* Quick Links & Social */}"
-            <div className="lg:col-span-1">
-<div className='lg:col-span-1'>
+            <div className="lg:col-span-1">;
+<div className='lg:col-span-1'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
-<div className='lg: col-span-1' />
+<div className='lg: col-span-1' />;
               <motion.div;
             <div className='lg:col-span-1' />              <motion.div;
               <motion.div;
@@ -620,18 +620,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                         key={link.name}
                         href={link.href}'
-                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
+                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group';
                       >'
-                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />'
+                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />';
                         <span className='text-sm'>{link.name}</span>                      </Link>
 
                         <span className='text-sm'>{link.name}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-                        className='flex items-center space-x-2 text-gray-300 hover: text-cyan-400 transition-colors group'
+                        className='flex items-center space-x-2 text-gray-300 hover: text-cyan-400 transition-colors group';
                        />
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-
+;
                         <span className='text-sm' />{link.name}</span>
                       </Link>
 
@@ -656,7 +656,7 @@ key={social.name}
                         target='_blank'
                         rel='noopener noreferrer'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                        className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
+                        className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110';
                        />
                         <social.icon className='w-5 h-5' />
                       </Link>
@@ -723,7 +723,7 @@ className='mt-16 pt-8 border-t border-white/10'
             <h4 className='text-lg font-semibold text-white mb-6 text-center' />
               Certifications & Compliance;
             </h4>
-            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>
+            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>;
               {certifications.map((cert, index) => (
                 <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -736,7 +736,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 </motion.div>
 
-className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200'
+className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200';
                  />
                   <CheckCircle className='w-4 h-4 text-green-400 mr-2' />
                   <span className='text-xs text-gray-300 text-center' />
@@ -764,8 +764,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Bottom Bar */}
 <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>;
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>'
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>;'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;'
@@ -783,7 +783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link;
 href='/terms'
 
-                  className='hover:text-cyan-400 transition-colors'
+                  className='hover:text-cyan-400 transition-colors';
                  />
                   Terms of Service;
                 </Link>

@@ -197,7 +197,7 @@ return (
             Ship with confidence using automated performance tests and;
             guardrails integrated into your pipeline.
           </p>"
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">;
             {features.map((f) => (
               <div;
                 key={f}"
@@ -258,7 +258,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				<section className="max-w-5xl mx-auto">"
 					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>"
 					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>"
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">
+					<div className="mt-8 grid sm:grid-cols-2 gap-6">;
 						{features.map((f) => ("
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">"
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />"
@@ -268,12 +268,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 						))}
 					</div>"
 					<div className="mt-8 flex flex-wrap items-center gap-4">"
-						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>"
-						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>"
-						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
+						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>";
+						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>";
+						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">";
 							<ExternalLink className="w-4 h-4" /> k6 Docs;
 							</a>"
-<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
+<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">";
 							<ExternalLink className="w-4 h-4" /> Gatling OSS;
 							</a>
 					</div>
@@ -305,7 +305,7 @@ return (
             Ship with confidence using automated performance tests and;
             guardrails integrated into your pipeline.
           </p>"
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">;
             {features.map((f) => (
               <div;
                 key={f}"
@@ -319,30 +319,30 @@ return (
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a"
               href="/contact""
-              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
+              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200";
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Start from $129/mo;
             </a>
             <a
               href='/market-pricing'
-              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'
+              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10';
             >
               Market Pricing;
             </a>
             <a
-              href="https://grafana.com/docs/k6/"
+              href="https://grafana.com/docs/k6/";
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300";
             >
               <ExternalLink className="w-4 h-4" /> k6 Docs
             </a>
             <a
-              href="https://gatling.io/open-source/"
+              href="https://gatling.io/open-source/";
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300";
             >
               <ExternalLink className='w-4 h-4' /> Gatling OSS
             </a>
@@ -366,7 +366,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Ship with confidence using automated performance tests and;
             guardrails integrated into your pipeline.
           </p>"
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">;
             {features.map((f) => (
               <div;
                 key={f}"
@@ -380,29 +380,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a"
               href="/contact""
-              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200"
+              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200";
             >
               Start from $129/mo;
             </a>
             <a"
               href="/market-pricing""
-              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
+              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10";
             >
               Market Pricing;
             </a>
             <a"
-              href="https://grafana.com/docs/k6/""
+              href="https://grafana.com/docs/k6/"";
               target="_blank""
               rel="noreferrer""
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300";
             >"
               <ExternalLink className="w-4 h-4" /> k6 Docs;
             </a>
             <a"
-              href="https://gatling.io/open-source/""
+              href="https://gatling.io/open-source/"";
               target="_blank""
               rel="noreferrer""
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300";
             >"
               <ExternalLink className="w-4 h-4" /> Gatling OSS;
             </a>

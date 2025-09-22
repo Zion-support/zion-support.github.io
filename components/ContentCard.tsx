@@ -22,7 +22,7 @@ import React from 'react';
   glow: string;
   date?: string;
 
-  category?: string
+  category?: string;
 }
 
 const ContentCard: React.FC<ContentCardProps> = ({
@@ -57,7 +57,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>;
         {title}
       {/* Footer */}
-<h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>
+<h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>;
         {title}
       </h3>
 
@@ -68,7 +68,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Footer */}
 <div className='flex items-center justify-between'>
-        <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>
+        <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>;
           Read More;
           </span>
 
@@ -76,7 +76,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </p>
       {/* Footer */}
       <div className="flex items-center justify-between">"
-        <div className="inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">'
+        <div className="inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">';
       <div className='flex items-center justify-between'>;'
         <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>;
           Read More;'
@@ -85,12 +85,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </span>      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">;
         {title}
           Read More"
-          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>;
         </div>
         {date && ('
       <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </Link>;
-          <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>
+          <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>;
             →
           </span>
         </div>
@@ -100,7 +100,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </div>
       {/* Hover Effects */}
-<div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+<div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
   );

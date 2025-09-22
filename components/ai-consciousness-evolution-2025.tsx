@@ -52,10 +52,10 @@
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon;
 const contactInfo = {'
-  mobile: '+1 302 464 0950''
-  email: 'kleber@ziontechgroup.com''
-  address: '364 E Main St STE 1008 Middletown DE 19709''
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950'';
+  email: 'kleber@ziontechgroup.com'';
+  address: '364 E Main St STE 1008 Middletown DE 19709'';
+  website: 'https://ziontechgroup.com';
 }
 const features = ['
   'Emotional intelligence training modules''
@@ -195,13 +195,13 @@ const integrations = [;'
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';'
   'Fitness trackersMeditation apps';
 ];
-    content:'
+    content:';
       "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",
     rating: 5,'
     avatar: '👩‍🔬','
   },];    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',
     rating: 5,'
-    avatar: '👩‍🔬'
+    avatar: '👩‍🔬';
   }
 
 const integrations = [;'
@@ -424,7 +424,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
 
-<div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>
+<div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
@@ -442,14 +442,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Sparkles className='w-4 h-4 mr-2' />
               Revolutionary AI Technology;
             </motion.div>'
-            <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>'
+            <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>';
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent'>
                 AI Consciousness;
               </span>
               <br />'
               <span className='text-white'>Evolution Platform</span>
             </h1>'
-            <p className='text-xl sm:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto leading-relaxed'>
+            <p className='text-xl sm:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto leading-relaxed'>;
               Experience the future of personal development with our;
               revolutionary AI-powered consciousness evolution platform. Enhance;
               your emotional intelligence, expand self-awareness, and unlock;
@@ -505,18 +505,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}'
                   className='text-center'
 
-                  label: 'Success Rate'
-                  value: '94%'
+                  label: 'Success Rate';
+                  value: '94%';
                   icon: <Award className='w-8 h-8' />
                 }
                 {
-                  label: 'Active Users'
-                  value: '12.5K+'
+                  label: 'Active Users';
+                  value: '12.5K+';
                   icon: <Users className='w-8 h-8' />
                 }
                 {
-                  label: 'Improvement'
-                  value: '300%'
+                  label: 'Improvement';
+                  value: '300%';
                   icon: <TrendingUp className='w-8 h-8' />
                 }
                 {
@@ -562,12 +562,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {/* CTA Buttons */}
 
-<div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+<div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'
+className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105';
               >
                 Start Free Trial
               </motion.button>
@@ -599,9 +599,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion&& motion.div;
       {/* Features Section */}"
       <section className="py-20 bg-black">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
                 transition={{ duration: 0.6, delay: 0.8 }}
-className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200'
+className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200';
               >
                 Watch Demo
               </motion.button>
@@ -611,7 +611,7 @@ className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:
       </div>
       {/* Features Section */}
 <section className='py-20 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -639,7 +639,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               the most advanced consciousness development experience ever created.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 Consciousness Evolution
               </span>
             </h2>
@@ -650,7 +650,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {features.map((feature, index) => (
               <motion.div;
@@ -678,13 +678,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
+className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>;
                   <Brain className='w-8 h-8 text-purple-400' />
                 </div>'
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
+                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>;
                   {feature}
                 </h3>'
                 <p className='text-gray-400'>
@@ -709,9 +709,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* How It Works Section */}"
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
@@ -740,7 +740,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               experiences that adapt to your unique journey.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {['"
                 className='border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200'              >                className="border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200";
               >;
@@ -791,7 +791,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                description:'
+                description:';
                   'Our AI analyzes your current consciousness level and creates a personalized development plan.''
                 icon: <Brain className='w-12 h-12' />
               }
@@ -805,7 +805,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             {[
               {
                 step: '01',
@@ -816,23 +816,23 @@ description:
               },
 origin/cursor/automate-test-improve-and-merge-code-2533
               {
-                step: '02'
-                title: 'Personalized Training'
-                description:'
+                step: '02';
+                title: 'Personalized Training';
+                description:';
                   'AI-generated exercises and experiences tailored to your specific needs and goals.''
                 icon: <Target className='w-12 h-12' />
               }
               {'
-                step: '03''
-                title: 'Continuous Evolution'
-                description:'
+                step: '03'';
+                title: 'Continuous Evolution';
+                description:';
                   'Real-time feedback and adaptation ensure continuous growth and development.''
                 icon: <TrendingUp className='w-12 h-12' />
               },            ].map((step, index) => (              {}
               {'
-                step: '03''
-                title: 'Continuous Evolution''
-                description: 'Real-time feedback and adaptation ensure continuous growth and development.'"
+                step: '03'';
+                title: 'Continuous Evolution'';
+                description: 'Real-time feedback and adaptation ensure continuous growth and development.'";
                 icon: <TrendingUp className="w-12 h-12" />
               }
 
@@ -1004,9 +1004,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Use Cases Section */}"
       <section className="py-20 bg-black">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <section className='py-20 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
@@ -1035,7 +1035,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               across multiple domains.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 AI Consciousness
               </span>
             </h2>
@@ -1045,7 +1045,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {useCases.map((useCase, index) => (
               <motion.div;
@@ -1072,13 +1072,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300'
+className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>;
                   <Lightbulb className='w-8 h-8 text-purple-400' />
                 </div>'
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
+                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>;
                   {useCase}
                 </h3>'
                 <p className='text-gray-400'>
@@ -1103,9 +1103,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Technology Section */}"
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
@@ -1134,7 +1134,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               to deliver unprecedented results.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">;
                 Technology
               </span>
             </h2>
@@ -1145,7 +1145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>
+          <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {technology.map((tech, index) => (
               <motion.div;
@@ -1159,7 +1159,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >"
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">"
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">";
                   <Cpu className="w-10 h-10 text-purple-400" />
                 </div>"
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>
@@ -1180,7 +1180,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center group'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
+                <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>;
                   <Cpu className='w-10 h-10 text-purple-400' />
                 </div>
                 <p className='text-sm text-gray-300 font-medium'>{tech}</p>
@@ -1191,9 +1191,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Testimonials Section */}"
       <section className="py-20 bg-black">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <section className='py-20 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1220,7 +1220,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Join thousands of satisfied users who have transformed their lives with our AI consciousness platform.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
                 Say
               </span>
             </h2>
@@ -1230,7 +1230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {testimonials.map((testimonial, index) => (
               <motion.div;
@@ -1312,9 +1312,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Pricing Section */}"
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
@@ -1342,7 +1342,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Flexible pricing options designed to make consciousness evolution accessible to everyone.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {[]
               {}
                 popular: false;
@@ -1391,12 +1391,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 `
                 }`}'
-                    : 'border-purple-500/20'
+                    : 'border-purple-500/20';
               <motion.div;
                 popular: false;
-                description:'
+                description:';
                   'Advanced features for serious consciousness development'
-                features: ['
+                features: [';
                   'Advanced AI assessment''
                   'Unlimited exercises''
                   'Personalized coaching''
@@ -1405,10 +1405,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   'Integration with wearables''
                   'Group sessions'
                 ]
-                popular: true'
+                popular: true';
               },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
                 ];
-                popular: true
+                popular: true;
                 Evolution Path
               </span>
             </h2>
@@ -1418,7 +1418,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             {[
               {
                 name: 'Starter',
@@ -1426,7 +1426,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 period: '/month',
 description:
                   'Perfect for individuals beginning their consciousness journey',
-                features: [
+                features: [;
                   'Basic AI assessment',
                   '10 consciousness exercises',
                   'Progress tracking',
@@ -1441,7 +1441,7 @@ description:
                 period: '/month',
 description:
                   'Advanced features for serious consciousness development',
-                features: [
+                features: [;
                   'Advanced AI assessment',
                   'Unlimited exercises',
                   'Personalized coaching',
@@ -1457,7 +1457,7 @@ description:
                 price: '$799',
                 period: '/month',
                 description: 'Complete solution for organizations and teams',
-                features: [
+                features: [;
 'Everything in Professional',
                   'Team management',
                   'Custom integrations',
@@ -1487,11 +1487,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 plan.popular
                     ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'
 origin/cursor/automate-test-improve-and-merge-code-2533
-                    : 'border-purple-500/20'
+                    : 'border-purple-500/20';
 '
-                    : 'border-purple-500/20'
+                    : 'border-purple-500/20';
 '
-                    : 'border-purple-500/20'`
+                    : 'border-purple-500/20'`;
                 className={`relative bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border rounded - 2xl p - 8 ${}
                   plan.popular;'
                     ? 'border - purple - 500 / 50 shadow - 2xl shadow - purple - 500 / 20'                    : 'border - purple - 500 / 20';`
@@ -1549,12 +1549,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button;`
                   className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${}
                     plan && plan.popular'
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105''
-                      : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'`
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'';
+                      : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'`;
                   }`}>                  Get Started                <buttonclassName={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${}
                   plan && plan.popular'
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105''
-                    : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'`
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'';
+                    : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'`;
                 }`}>;
                 </button>;
               </motion && motion.div>;
@@ -1565,14 +1565,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 `
                 <button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${}
                   plan.popular'
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105''
-                    : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'`
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'';
+                    : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'`;
                 }`}>
 <button
                   className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
-                      : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105';
+                      : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white';
                   }`}
                 >
                   Get Started
@@ -1587,7 +1587,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion&& motion.div
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <motion.div
 
             initial={{ opacity: 0, y: 30 }}
@@ -1601,7 +1601,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">"
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1616,11 +1616,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Join thousands of users who have already transformed their lives with our revolutionary AI platform.
               Start your consciousness evolution journey today.
             </p>"
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">"
-              <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">";
+              <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">;
                 Start Free Trial;
               </button>"
-              <button className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200">
+              <button className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200">;
 <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Evolve Your
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -1633,20 +1633,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               with our revolutionary AI platform. Start your consciousness
               evolution journey today.
             </p>
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
-              <button className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'>
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
+              <button className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'>;
                 Start Free Trial
               </button>
-              <button className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200'>
+              <button className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Schedule Demo
               </button>
             </div>
             {/* Contact Info */}'
                   icon: <MapPin className='w-6 h-6' />'
-                  label: 'Visit Us'
-                  value: contactInfo.address"
-                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                  label: 'Visit Us';
+                  value: contactInfo.address";
+                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">;
               {['"
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }'"
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
@@ -1654,17 +1654,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }'"
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
 
-<div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
+<div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>;
               {[
                 {
                   icon: <Phone className='w-6 h-6' />
-                  label: 'Call Us'
-                  value: contactInfo.mobile
+                  label: 'Call Us';
+                  value: contactInfo.mobile;
                 }
                 {
                   icon: <Mail className='w-6 h-6' />
-                  label: 'Email Us'
-                  value: contactInfo.email
+                  label: 'Email Us';
+                  value: contactInfo.email;
                 }
                 {
                   icon: <MapPin className='w-6 h-6' />,
@@ -1677,7 +1677,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
                   value: contactInfo.address,"
-                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">;
               {['"
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile },'"
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email },'"

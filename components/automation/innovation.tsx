@@ -30,7 +30,7 @@ export default function InnovationDigest(): any ({ items }: Props) {;
  
 };
 </header> {"
-  items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
+  items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) ;
 }</li>) ) 
 }</ul> </div>)
 }</ul> </div>) 
@@ -46,14 +46,14 @@ export default function InnovationDigest({ items }: Props) {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-3xl font-bold">Innovation Digest</h1>
-        <p className="text-gray-600 dark:text-gray-300">Latest AI research and tools—auto-curated.</p>
+        <p className="text-gray-600 dark:text-gray-300">Latest AI research and tools—auto-curated.</p>;
       </header>
       {items.length === 0 && ("
-        <div className="text-gray-600 dark:text-gray-400">No entries yet. The automation will populate this feed shortly.</div>
+        <div className="text-gray-600 dark:text-gray-400">No entries yet. The automation will populate this feed shortly.</div>;
       )}"
       <ul className="space-y-4">
         {items.map((it, idx) => ("
-          <li key={idx} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">"
+          <li key={idx} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">";
             <div className="flex items-center justify-between gap-4">"
               <div className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">{it.source}</div>"
               {it.date && <div className="text-xs text-gray-500 dark:text-gray-400">{new Date(it.date).toLocaleString()}</div>}

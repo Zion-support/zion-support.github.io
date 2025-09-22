@@ -58,9 +58,9 @@ const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories = [
   {
-    title: 'AI & Consciousness'
+    title: 'AI & Consciousness';
     icon: Brain;
-    services: []
+    services: [];
     services: [;
       {'
         name: 'AI Consciousness Evolution','
@@ -154,7 +154,7 @@ const serviceCategories = [
   {
     title: 'Quantum & Emerging Tech',
     icon: Atom,
-    services: [
+    services: [;
       { name: 'Space Mining Platform', href: '/space-mining-platform' },
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
       { name: 'Brain-Computer Interface', href: '/brain-computer-interface' },
@@ -165,7 +165,7 @@ const serviceCategories = [
   {
     title: 'Enterprise IT',
     icon: Shield,
-    services: [
+    services: [;
 {
         name: 'Quantum Cloud Infrastructure',
         href: '/quantum-cloud-infrastructure',
@@ -188,7 +188,7 @@ const serviceCategories = [
   {
     title: 'Micro SAAS',
     icon: Target,
-    services: [
+    services: [;
       { name: 'AI Content Factory Pro', href: '/ai-content-factory' },
       { name: 'Quantum CRM Suite', href: '/quantum-crm' },
       { name: 'CyberShield Pro', href: '/cyber-shield-pro' },
@@ -238,7 +238,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">;
             {/* Company Info */}
-            <div className='lg:col-span-1'>
+            <div className='lg:col-span-1'>;
               <div className='flex items-center space-x-3 mb-6'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>
                   <Star className='w-7 h-7 text-white' />
@@ -263,7 +263,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Phone className='w-4 h-4 text-cyan-400' />
                   <a
                     href={`tel:${contactInfo.mobile}`}
-                    className='hover:text-cyan-400 transition-colors'
+                    className='hover:text-cyan-400 transition-colors';
                   >
                     {contactInfo.mobile}
                   </a>
@@ -272,7 +272,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Mail className='w-4 h-4 text-purple-400' />
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className='hover:text-purple-400 transition-colors'
+                    className='hover:text-purple-400 transition-colors';
                   >
                     {contactInfo.email}
                   </a>
@@ -326,7 +326,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {category && category.title}
                   </h3>;
                 </div>;
-                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'
+                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm';
                     >
 origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.name}
@@ -343,7 +343,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Additional Links */}'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
-
+;
                       key={service.name}
                       href={service.href}"
                       className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm";
@@ -354,7 +354,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           {/* Additional Links */}'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>;
-<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
+<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Company Links */}
             <div>;'
@@ -381,14 +381,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link;
                     key={link.name}
                     href={link.href}"
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm";
                     key={link.name}
                     href={link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
-
+;
                   >
 
                     {link.name}
@@ -430,7 +430,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link
                     key={link.name}
                     href={link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm';
                   >
                     {link.name}
                   </Link>
@@ -492,7 +492,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
         {/* Newsletter Section */}
 <div className='border-t border-gray-800/50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>;
             <div className='text-center'>
               <motion.h3
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -501,7 +501,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
 
-className='text-2xl md:text-3xl font-bold text-white mb-4'
+className='text-2xl md:text-3xl font-bold text-white mb-4';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Stay Ahead of the Future;
@@ -535,19 +535,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
 
-className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
+className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <input'
                   type='email''
                   placeholder='Enter your email''
-                  className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                  className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
                 />;'
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe              >;
                 <input"
                   type="email""
                   placeholder="Enter your email""
-                  className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                 </div>;
               </div>;
             </div>;
@@ -562,7 +562,7 @@ export default EnhancedFooter2025;
 };
 
                 />
-                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
+                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
                   Subscribe
                 </button>
               </motion.div>
@@ -571,8 +571,8 @@ export default EnhancedFooter2025;
         </div>
         {/* Bottom Bar */}
 <div className='border-t border-gray-800/50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>;
               <div className='text-gray-400 text-sm'>
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div>

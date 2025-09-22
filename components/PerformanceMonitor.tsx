@@ -31,14 +31,14 @@ interface PerformanceData {;
     total: number;,;
     limit: number;,;
   } | null;
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
 import React, { useEffect, useState } from 'react' from 'react'';interface PerformanceMetrics {'
-  fcp?: number
-  lcp?: number
-  fid?: number
-  cls?: number
-  ttfb?: number
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
@@ -158,7 +158,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory.usedJSHeapSize;
           total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory.totalJSHeapSize;
           limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory.jsHeapSizeLimit
-        } : null
+        } : null;
       };
 
       const navigationEntries = window.performance.getEntriesByType('navigation');
@@ -166,14 +166,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       const paintEntries = window.performance.getEntriesByType('paint');
       const performanceData = {
         // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;
         // Paint timing
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime |0
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime |0
         // Resource timing
-        resourceCount: window.performance.getEntriesByType('resource').length
+        resourceCount: window.performance.getEntriesByType('resource').length;
 // Memory usage (if available)
 ursor/fix-syntax-push-and-merge-to-main-7db5
         memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
@@ -329,14 +329,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
     })
     // Observe different types of performance entries
     try {
-      observer.observe({ entryTypes: [
+      observer.observe({ entryTypes: [;
         'paint', 'largest-contentful-paint',
         'first-input', 'layout-shift',
         'navigation'
       ] })
     } catch (e) {
       // Fallback for browsers that don&apos;t support all entry types''
-      observer.observe({ entryTypes: [
+      observer.observe({ entryTypes: [;
         'paint', 'largest-contentful-paint'
       ] })
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -404,9 +404,9 @@ case 'paint'
 
     // Observe different types of performance entries
     try {
-observer.observe({ entryTypes: [
+observer.observe({ entryTypes: [;
   'paint,  , largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] })'    } catch (e) {'
-  '      // Fallback for browsers that don&apos;t support all entry types''      observer.observe({ entryTypes: ['
+  '      // Fallback for browsers that don&apos;t support all entry types''      observer.observe({ entryTypes: [';
   'paint, 'largest-contentful-paint'] })'    }
   ''
     // Show metrics after 3 seconds
@@ -436,7 +436,7 @@ observer.observe({ entryTypes: [
       <div className="space-y-2 text-xs">
         {metrics.fcp && (
           <div className="flex justify-between">
-            <span className="text-gray-600">FCP: </span>
+            <span className="text-gray-600">FCP: </span>;
             <span className={getScoreColor(metrics.fcp, { good: 1800;, poor: 3000 ;})}>
               {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800;, poor: 3000 ;})})
             </span>
@@ -444,7 +444,7 @@ observer.observe({ entryTypes: [
         )}
         {metrics.lcp && (
           <div className="flex justify-between">
-            <span className="text-gray-600">LCP: </span>
+            <span className="text-gray-600">LCP: </span>;
             <span className={getScoreColor(metrics.lcp, { good: 2500;, poor: 4000 ;})}>
               {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500;, poor: 4000 ;})})
             </span>
@@ -452,7 +452,7 @@ observer.observe({ entryTypes: [
         )}
         {metrics.fid && (
           <div className="flex justify-between">
-            <span className="text-gray-600">FID: </span>
+            <span className="text-gray-600">FID: </span>;
             <span className={getScoreColor(metrics.fid, { good: 100;, poor: 300 ;})}>
               {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100;, poor: 300 ;})})
             </span>
@@ -460,7 +460,7 @@ observer.observe({ entryTypes: [
         )}
         {metrics.cls && (
           <div className="flex justify-between">
-            <span className="text-gray-600">CLS: </span>
+            <span className="text-gray-600">CLS: </span>;
             <span className={getScoreColor(metrics.cls, { good: 0.1;, poor: 0.25 ;})}>
               {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1;, poor: 0.25 ;})})
             </span>
@@ -468,7 +468,7 @@ observer.observe({ entryTypes: [
         )}
         {metrics.ttfb && (
           <div className="flex justify-between">
-            <span className="text-gray-600">TTFB: </span>
+            <span className="text-gray-600">TTFB: </span>;
             <span className={getScoreColor(metrics.ttfb, { good: 800;, poor: 1800 ;})}>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800;, poor: 1800 ;})})
             </span>
@@ -478,7 +478,7 @@ observer.observe({ entryTypes: [
       <div className="mt-3 pt-2 border-t border-gray-200">
         <button
           onClick={() => setIsVisible(false)}
-          className="text-xs text-gray-500 hover: text-gray-700"
+          className="text-xs text-gray-500 hover: text-gray-700";
         >
           Hide
         </button>
@@ -525,7 +525,7 @@ if (value <= thresholds.good) return 'text-green-600'
         )}
       </div>
 <div className='mt-3 pt-2 border-t border-gray-200'>'        <button'          onClick={() => setIsVisible(false)}
-          className='text-xs text-gray-500 hover: text-gray-700''        >'          Hide</button>
+          className='text-xs text-gray-500 hover: text-gray-700''        >'          Hide</button>;
       </div>
     </div>
   )
@@ -599,7 +599,7 @@ pr-12243
           // gtag('event', 'web_vitals', {
           //   name: 'CLS';,
           //   value: Math.round(clsValue * 1000);,
-          //   event_category: 'Web Vitals'
+          //   event_category: 'Web Vitals';
           // });
         }
       });

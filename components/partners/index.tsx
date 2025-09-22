@@ -15,15 +15,15 @@ export default function Partners() {}
     useCaseType: "Education Partnership"}),
   const [loading, setLoading] = useState(false);
 '
-    name: '''
-    entityType: '''
-    pocName: '''
-    pocEmail: '''
-    useCaseType: 'Education Partnership'"
-  });  const [result, setResult] = useState<any>(null);    name: """
-    entityType: """
-    pocName: """
-    pocEmail: """
+    name: ''';
+    entityType: ''';
+    pocName: ''';
+    pocEmail: ''';
+    useCaseType: 'Education Partnership'";
+  });  const [result, setResult] = useState<any>(null);    name: """;
+    entityType: """;
+    pocName: """;
+    pocEmail: """;
     useCaseType: "Education Partnership"})
     name: "";
     entityType: "";
@@ -187,7 +187,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <button;
               disabled={loading}
               className='bg-black text-white px-4 py-2 rounded disabled: opacity-50' />
-
+;
               {loading ? 'Submitting...' : 'Register}
 }
 
@@ -213,7 +213,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a'
                 className='text-blue-600 underline'"
             <div className="mt-6 text-sm text-gray-600">
-              <p>Badges:</p>"
+              <p>Badges:</p>";
               <div className="flex gap-2 mt-2">"
                 <span className="inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded">Verified Partner</span>"
                 <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded">Government API Active</span>
@@ -243,7 +243,7 @@ className='text-blue-600 underline'
               </a>
             </div>
             <div className='mt-6 text-sm text-gray-600' />
-              <p />Badges: </p>
+              <p />Badges: </p>;
               <div className='flex gap-2 mt-2' />
                 <span className='inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded' />
                   Verified Partner;
@@ -268,7 +268,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <a href={result && result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;"
           <div className="mt-8 bg-white p-6 rounded-lg shadow">"
             <h3 className="text-lg font-medium mb-2">Registration Successful</h3>"
-            <p className="text-sm">Your API Key:</p>"
+            <p className="text-sm">Your API Key:</p>";
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>"
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
 }

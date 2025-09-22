@@ -87,7 +87,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 const allServices = [
@@ -101,42 +101,42 @@ const categories = [
     name: 'All Services',
     icon: <LayoutGrid className="w-6 h-6" />,
     color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of advanced services'
+    description: 'Complete portfolio of advanced services';
   },
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
     icon: <Building className="w-6 h-6" />,
     color: 'from-blue-500 to-purple-500',
-    description: 'Enterprise-grade AI and IT solutions'
+    description: 'Enterprise-grade AI and IT solutions';
   },
   {
     id: 'micro-saas',
     name: 'Micro SAAS',
     icon: <Globe className="w-6 h-6" />,
     color: 'from-green-500 to-emerald-500',
-    description: 'Innovative micro SAAS solutions'
+    description: 'Innovative micro SAAS solutions';
   },
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
     icon: <Shield className="w-6 h-6" />,
     color: 'from-orange-500 to-red-500',
-    description: 'Cutting-edge infrastructure services'
+    description: 'Cutting-edge infrastructure services';
   },
   {
     id: 'ai-ml',
     name: 'AI & Machine Learning',
     icon: <Brain className="w-6 h-6" />,
     color: 'from-purple-500 to-pink-500',
-    description: 'Advanced AI and ML platforms'
+    description: 'Advanced AI and ML platforms';
   },
   {
     id: 'quantum',
     name: 'Quantum Computing',
     icon: <Zap className="w-6 h-6" />,
     color: 'from-violet-500 to-indigo-500',
-    description: 'Quantum computing solutions'
+    description: 'Quantum computing solutions';
   }
 
     id: 'quantum',
@@ -156,53 +156,53 @@ const getServiceCategory = (service: any) => {
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 }
 const allServices = [
   ...advancedEnterpriseServices2025
   ...innovativeMicroSaasExpansion2025
-  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
 }
 const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices
-    description: 'Complete portfolio of advanced services'
+    description: 'Complete portfolio of advanced services';
   }
   {
-    id: 'enterprise'
-    name: 'Enterprise Solutions'
+    id: 'enterprise';
+    name: 'Enterprise Solutions';
     icon: <Building className="w-6 h-6" />
-    color: 'from-blue-500 to-purple-500'
-    description: 'Enterprise-grade AI and IT solutions'
+    color: 'from-blue-500 to-purple-500';
+    description: 'Enterprise-grade AI and IT solutions';
   }
   {
-    id: 'micro-saas'
-    name: 'Micro SAAS'
+    id: 'micro-saas';
+    name: 'Micro SAAS';
     icon: <Globe className="w-6 h-6" />
-    color: 'from-green-500 to-emerald-500'
-    description: 'Innovative micro SAAS solutions'
+    color: 'from-green-500 to-emerald-500';
+    description: 'Innovative micro SAAS solutions';
   }
   {
-    id: 'infrastructure'
-    name: 'IT Infrastructure'
+    id: 'infrastructure';
+    name: 'IT Infrastructure';
     icon: <Shield className="w-6 h-6" />
-    color: 'from-orange-500 to-red-500'
-    description: 'Cutting-edge infrastructure services'
+    color: 'from-orange-500 to-red-500';
+    description: 'Cutting-edge infrastructure services';
   }
   {
-    id: 'ai-ml'
-    name: 'AI & Machine Learning'
+    id: 'ai-ml';
+    name: 'AI & Machine Learning';
     icon: <Brain className="w-6 h-6" />
-    color: 'from-purple-500 to-pink-500'
-    description: 'Advanced AI and ML platforms'
+    color: 'from-purple-500 to-pink-500';
+    description: 'Advanced AI and ML platforms';
   }
   {
-    id: 'quantum'
-    name: 'Quantum Computing'
+    id: 'quantum';
+    name: 'Quantum Computing';
     icon: <Atom className="w-6 h-6" />
-    color: 'from-violet-500 to-indigo-500'
-    description: 'Quantum computing solutions'
+    color: 'from-violet-500 to-indigo-500';
+    description: 'Quantum computing solutions';
   }
 ursor/fix-netlify-build-and-merge-to-main-9571
 main
@@ -289,7 +289,7 @@ pr-12243
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
-        service.popular ? 'ring-2 ring-blue-500' : ''
+        service.popular ? 'ring-2 ring-blue-500' : '';
       }`}
     >
       {service.popular && (
@@ -305,20 +305,20 @@ pr-12243
       
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">;
             {service.name}
           </h3>
         </div>
         
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">;
           {service.tagline}
         </p>
         
         <div className="flex items-center justify-between mb-4">
-          <span className="text-2xl font-bold text-gray-900 dark:text-white">
+          <span className="text-2xl font-bold text-gray-900 dark:text-white">;
             {getServicePricing(service)}
           </span>
-          <span className="text-sm text-gray-500 dark:text-gray-400">
+          <span className="text-sm text-gray-500 dark:text-gray-400">;
             {service.trialDays} day trial
           </span>
         </div>
@@ -326,19 +326,19 @@ pr-12243
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+            <span className="text-sm text-gray-600 dark:text-gray-400">;
               {service.setupTime} setup
             </span>
           </div>
           <div className="flex items-center gap-2">
             <Users className="w-4 h-4 text-blue-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+            <span className="text-sm text-gray-600 dark:text-gray-400">;
               {service.customers ? service.customers.toLocaleString() : '1000'}+ customers
             </span>
           </div>
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+            <span className="text-sm text-gray-600 dark:text-gray-400">;
 <div className='absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1'>
           <Star className='w-4 h-4' />
           Popular
@@ -351,38 +351,38 @@ pr-12243
       </div>
       <div className='p-6'>
         <div className='flex items-start justify-between mb-3'>
-          <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>
+          <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>;
             {service.name}
           </h3>
         </div>
-        <p className='text-gray-600 dark:text-gray-300 mb-4 line-clamp-2'>
+        <p className='text-gray-600 dark:text-gray-300 mb-4 line-clamp-2'>;
           {service.tagline}
         </p>
         <div className='flex items-center justify-between mb-4'>
-          <span className='text-2xl font-bold text-gray-900 dark:text-white'>
+          <span className='text-2xl font-bold text-gray-900 dark:text-white'>;
             {getServicePricing(service)}
           </span>
-          <span className='text-sm text-gray-500 dark:text-gray-400'>
+          <span className='text-sm text-gray-500 dark:text-gray-400'>;
             {service.trialDays} day trial
           </span>
         </div>
         <div className='space-y-3 mb-6'>
           <div className='flex items-center gap-2'>
             <CheckCircle className='w-4 h-4 text-green-500' />
-            <span className='text-sm text-gray-600 dark:text-gray-400'>
+            <span className='text-sm text-gray-600 dark:text-gray-400'>;
               {service.setupTime} setup
             </span>
           </div>
           <div className='flex items-center gap-2'>
             <Users className='w-4 h-4 text-blue-500' />
-            <span className='text-sm text-gray-600 dark:text-gray-400'>
+            <span className='text-sm text-gray-600 dark:text-gray-400'>;
               {service.customers ? service.customers.toLocaleString() : '1000'}+
               customers
             </span>
           </div>
           <div className='flex items-center gap-2'>
             <Star className='w-4 h-4 text-yellow-500' />
-            <span className='text-sm text-gray-600 dark:text-gray-400'>
+            <span className='text-sm text-gray-600 dark:text-gray-400'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
@@ -397,20 +397,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">;
             {service.name}
           </h3>
         </div>
         
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">;
           {service.tagline}
         </p>
         
         <div className="flex items-center justify-between mb-4">
-          <span className="text-2xl font-bold text-gray-900 dark:text-white">
+          <span className="text-2xl font-bold text-gray-900 dark:text-white">;
             {getServicePricing(service)}
           </span>
-          <span className="text-sm text-gray-500 dark:text-gray-400">
+          <span className="text-sm text-gray-500 dark:text-gray-400">;
             {service.trialDays} day trial
           </span>
         </div>
@@ -418,27 +418,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+            <span className="text-sm text-gray-600 dark:text-gray-400">;
               {service.setupTime} setup
             </span>
           </div>
           <div className="flex items-center gap-2">
             <Users className="w-4 h-4 text-blue-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+            <span className="text-sm text-gray-600 dark:text-gray-400">;
               {service.customers ? service.customers.toLocaleString() : '1000'}+ customers
             </span>
           </div>
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-yellow-500" />
             <span className="text-sm text-gray-600 dark:text-gray-400">
-
+;
               {service.rating}/5 ({service.reviews} reviews)
             </span>
           </div>
         </div>
         
         <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
           <div className="space-y-1">
             {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
               <div key={index} className="flex items-center gap-2">
@@ -447,29 +447,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             ))}
             {getServiceFeatures(service).length > 3 && (
-              <span className="text-sm text-gray-500 dark:text-gray-400">
+              <span className="text-sm text-gray-500 dark:text-gray-400">;
 <div className='mb-6'>
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             Key Features:
-          </h4>
+          </h4>;
           <div className='space-y-1'>
             {getServiceFeatures(service)
               .slice(0, 3)
               .map((feature: string, index: number) => (
                 <div key={index} className='flex items-center gap-2'>
                   <Check className='w-3 h-3 text-green-500' />
-                  <span className='text-sm text-gray-600 dark:text-gray-400'>
+                  <span className='text-sm text-gray-600 dark:text-gray-400'>;
                     {feature}
                   </span>
                 </div>
               ))}
             {getServiceFeatures(service).length > 3 && (
-              <span className='text-sm text-gray-500 dark:text-gray-400'>
+              <span className='text-sm text-gray-500 dark:text-gray-400'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
         
         <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
           <div className="space-y-1">
             {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
               <div key={index} className="flex items-center gap-2">
@@ -479,7 +479,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
             {getServiceFeatures(service).length > 3 && (
               <span className="text-sm text-gray-500 dark:text-gray-400">
-
+;
                 +{getServiceFeatures(service).length - 3} more features
               </span>
             )}
@@ -487,13 +487,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         
         <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>;
+          <p className="text-sm text-gray-600 dark:text-gray-400">;
 <div className='mb-6'>
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             ROI & Benefits:
-          </h4>
-          <p className='text-sm text-gray-600 dark:text-gray-400'>
+          </h4>;
+          <p className='text-sm text-gray-600 dark:text-gray-400'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {service.roi}
           </p>
@@ -515,7 +515,7 @@ main
 
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
-
+;
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [searchTerm, setSearchTerm] = useState('');'
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -523,8 +523,8 @@ main
 
         <div className="mb-6">"
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>"
-
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+;
+          <p className="text-sm text-gray-600 dark:text-gray-400">;
             {service.marketPosition}
           </p>
         </div>
@@ -533,7 +533,7 @@ main
         <div className="flex items-center justify-between">
           <a;
             href={service.link}"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
           >
             Learn More"
             <ArrowRight className="w-4 h-4" />
@@ -541,26 +541,26 @@ main
           
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300";
         <div className='mb-6'>
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             Market Position:
-          </h4>
-          <p className='text-sm text-gray-600 dark:text-gray-400'>
+          </h4>;
+          <p className='text-sm text-gray-600 dark:text-gray-400'>;
             {service.marketPosition}
           </p>
         </div>
         <div className='flex items-center justify-between'>
           <a
             href={service.link}
-            className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
+            className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
           >
             Learn More
             <ArrowRight className='w-4 h-4' />
           </a>
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
+            className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
           
@@ -568,7 +568,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
-
+;
           >
             Contact;
           </a>
@@ -583,7 +583,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
-        service.popular ? 'ring-2 ring-blue-500' : ''
+        service.popular ? 'ring-2 ring-blue-500' : '';
       }`}
     >
       <div className="p-6">
@@ -595,7 +595,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex-1">
             <div className="flex items-start justify-between mb-3">
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">;
                   {service.name}
                   {service.popular && (
                     <span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -603,57 +603,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>
                   )}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-3">
+                <p className="text-gray-600 dark:text-gray-300 mb-3">;
                   {service.tagline}
                 </p>
               </div>
               
               <div className="text-right">
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">;
                   {getServicePricing(service)}
                 </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-<p className='text-gray-600 dark:text-gray-300 mb-3'>
+                <div className="text-sm text-gray-500 dark:text-gray-400">;
+<p className='text-gray-600 dark:text-gray-300 mb-3'>;
                   {service.tagline}
                 </p>
               </div>
               <div className='text-right'>
-                <div className='text-2xl font-bold text-gray-900 dark:text-white'>
+                <div className='text-2xl font-bold text-gray-900 dark:text-white'>;
                   {getServicePricing(service)}
                 </div>
-                <div className='text-sm text-gray-500 dark:text-gray-400'>
+                <div className='text-sm text-gray-500 dark:text-gray-400'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.trialDays} day trial
                 </div>
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">;
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
                   {service.setupTime} setup
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-blue-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
                   {service.customers ? service.customers.toLocaleString() : '1000'}+ customers
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-yellow-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
-<div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
+<div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>;
               <div className='flex items-center gap-2'>
                 <CheckCircle className='w-4 h-4 text-green-500' />
-                <span className='text-sm text-gray-600 dark:text-gray-400'>
+                <span className='text-sm text-gray-600 dark:text-gray-400'>;
                   {service.setupTime} setup
                 </span>
               </div>
               <div className='flex items-center gap-2'>
                 <Users className='w-4 h-4 text-blue-500' />
-                <span className='text-sm text-gray-600 dark:text-gray-400'>
+                <span className='text-sm text-gray-600 dark:text-gray-400'>;
                   {service.customers
                     ? service.customers.toLocaleString()
                     : '1000'}
@@ -662,35 +662,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className='flex items-center gap-2'>
                 <Star className='w-4 h-4 text-yellow-500' />
-                <span className='text-sm text-gray-600 dark:text-gray-400'>
+                <span className='text-sm text-gray-600 dark:text-gray-400'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">;
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
                   {service.setupTime} setup
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-blue-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
                   {service.customers ? service.customers.toLocaleString() : '1000'}+ customers
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-yellow-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">
-
+;
                   {service.rating}/5 ({service.reviews} reviews)
                 </span>
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">;
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
                 <div className="space-y-1">
                   {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (
                     <div key={index} className="flex items-center gap-2">
@@ -702,25 +702,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>;
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">;
                   {service.roi}
                 </p>
                 
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-<div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>;
+                <p className="text-sm text-gray-600 dark:text-gray-400">;
+<div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>;
               <div>
-                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
                   Key Features:
-                </h4>
+                </h4>;
                 <div className='space-y-1'>
                   {getServiceFeatures(service)
                     .slice(0, 4)
                     .map((feature: string, index: number) => (
                       <div key={index} className='flex items-center gap-2'>
                         <Check className='w-3 h-3 text-green-500' />
-                        <span className='text-sm text-gray-600 dark:text-gray-400'>
+                        <span className='text-sm text-gray-600 dark:text-gray-400'>;
                           {feature}
                         </span>
                       </div>
@@ -728,22 +728,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
               <div>
-                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
                   ROI & Benefits:
-                </h4>
-                <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
+                </h4>;
+                <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>;
                   {service.roi}
                 </p>
-                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
+                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
                   Market Position:
-                </h4>
-                <p className='text-sm text-gray-600 dark:text-gray-400'>
+                </h4>;
+                <p className='text-sm text-gray-600 dark:text-gray-400'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">;
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
                 <div className="space-y-1">
                   {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (
                     <div key={index} className="flex items-center gap-2">
@@ -755,14 +755,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>;
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">;
                   {service.roi}
                 </p>
                 
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>;
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-
+;
                   {service.marketPosition}
                 </p>
               </div>
@@ -771,7 +771,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex items-center gap-4">
               <a
                 href={service.link}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
               >
                 Learn More
                 <ArrowRight className="w-4 h-4" />
@@ -779,25 +779,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300";
 <div className='flex items-center gap-4'>
               <a
                 href={service.link}
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
               >
                 Learn More
                 <ArrowRight className='w-4 h-4' />
               </a>
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
+                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
             
             <div className="flex items-center gap-4">
               <a
                 href={service.link}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
               >
                 Learn More
                 <ArrowRight className="w-4 h-4" />
@@ -806,7 +806,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
-
+;
               >
                 Contact Sales
               </a>
@@ -819,7 +819,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   )
   return (
-<div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800'>
+<div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800'>;
       <SEO
         title='2025 Advanced Services Showcase - Zion Tech Group'
         description='Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses.'
@@ -836,7 +836,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">;
       <SEO 
         title="2025 Advanced Services Showcase - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
@@ -864,25 +864,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Contact Information Banner */}
 
-<div className='bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-          <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+<div className='bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
+          <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
             <div className='flex items-center gap-6'>
               <div className='flex items-center gap-2'>
                 <Phone className='w-5 h-5 text-blue-600' />
-                <span className='text-gray-700 dark:text-gray-300'>
+                <span className='text-gray-700 dark:text-gray-300'>;
                   {contactInfo.mobile}
                 </span>
               </div>
               <div className='flex items-center gap-2'>
                 <Mail className='w-5 h-5 text-blue-600' />
-                <span className='text-gray-700 dark:text-gray-300'>
+                <span className='text-gray-700 dark:text-gray-300'>;
                   {contactInfo.email}
                 </span>
               </div>
               <div className='flex items-center gap-2'>
                 <MapPin className='w-5 h-5 text-blue-600' />
-                <span className='text-gray-700 dark:text-gray-300'>
+                <span className='text-gray-700 dark:text-gray-300'>;
                   {contactInfo.address}
                 </span>
               </div>
@@ -890,7 +890,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center gap-4'>
               <a
                 href={`mailto: ${contactInfo.email;}?subject=Services Inquiry`}
-                className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300'
+                className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300';
               >
                 Get Quote
                 <ArrowRight className='w-4 h-4' />
@@ -899,20 +899,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href={contactInfo.website}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
+                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
-<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Filters and Search */}
         <div className="mb-8">
-          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
+          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">;
             <div className="flex-1">
               <div className="relative max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -921,7 +921,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent";
                 />
               </div>
             </div>
@@ -931,7 +931,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'grid' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' ;
                       : 'bg-gray-100 dark: bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
                 >
@@ -949,7 +949,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`p-2 rounded-lg transition-all duration-300 ${
 
                     viewMode === 'list' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' ;
                       : 'bg-gray-100 dark: bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
                 >
@@ -1285,7 +1285,7 @@ if ( {) {
     setFilteredServices (filtered);
   }, [selected_category, search_term]);
 ;
-  const ServiceCard = ({ service }: { service: any ;}) =>: any (
+  const ServiceCard = ({ service }: { service: any ;}) =>: any (;
     <motion.div;
       initial={{ opacity: 0;, coordinate_y: 20 ;}}
       animate={{ opacity: 1;, coordinate_y: 0 ;}}
@@ -1571,7 +1571,7 @@ if ( {) {
       animate={{ opacity: 1;, x: 0 ;}}
       transition={{ duration: 0.5 ;}}
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
-        service.popular ? 'ring-2 ring-blue-500' : ''
+        service.popular ? 'ring-2 ring-blue-500' : '';
       }`}
     >
       <div className="p-6">
@@ -1582,7 +1582,7 @@ if ( {) {
           <div className="flex-1">
             <div className="flex items-start justify-between mb-3">
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">;
                   {service.name}
                   {service.popular && (
                     <span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -1590,42 +1590,42 @@ if ( {) {
                     </span>
                   )}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-3">
+                <p className="text-gray-600 dark:text-gray-300 mb-3">;
                   {service.tagline}
                 </p>
               </div>
               <div className="text-right">
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">;
                   {getServicePricing(service)}
                 </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
+                <div className="text-sm text-gray-500 dark:text-gray-400">;
                   {service.trialDays} day trial
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">;
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
                   {service.setupTime} setup
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-blue-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
                   {service.customers ? service.customers.toLocaleString() : '1000'}+ customers
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-yellow-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-400">;
                   {service.rating}/5 ({service.reviews} reviews)
                 </span>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">;
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
                 <div className="space-y-1">
                   {getServiceFeatures(service).slice(0, 4).map((feature: string;, index: number) => (
                     <div key={index} className="flex items-center gap-2">
@@ -1636,12 +1636,12 @@ if ( {) {
                 </div>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>;
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">;
                   {service.roi}
                 </p>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>;
+                <p className="text-sm text-gray-600 dark:text-gray-400">;
                   {service.marketPosition}
                 </p>
               </div>
@@ -1649,14 +1649,14 @@ if ( {) {
             <div className="flex items-center gap-4">
               <a
                 href={service.link}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
               >
                 Learn More
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href={`mailto: ${contactInfo.email;}?subject=Inquiry about ${service.name}`}
-                className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300";
               >
                 Contact Sales
               </a>
@@ -1668,7 +1668,7 @@ if ( {) {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">;
       <SEO 
         title="2025 Advanced Services Showcase - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
@@ -1677,13 +1677,13 @@ if ( {) {
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
           <div className="text-center">
             <motion.h1 
               initial={{ opacity: 0;, y: 20 ;}}
               animate={{ opacity: 1;, y: 0 ;}}
               transition={{ duration: 0.8 ;}}
-              className="text-4xl md:text-6xl font-bold text-white mb-6"
+              className="text-4xl md:text-6xl font-bold text-white mb-6";
             >
               2025 Advanced Services Showcase
             </motion.h1>
@@ -1691,7 +1691,7 @@ if ( {) {
               initial={{ opacity: 0;, y: 20 ;}}
               animate={{ opacity: 1;, y: 0 ;}}
               transition={{ duration: 0.8;, delay: 0.2 ;}}
-              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
+              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto";
             >
               Discover our comprehensive portfolio of real, innovative, and market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
@@ -1700,7 +1700,7 @@ if ( {) {
               initial={{ opacity: 0;, y: 20 ;}}
               animate={{ opacity: 1;, y: 0 ;}}
               transition={{ duration: 0.8;, delay: 0.4 ;}}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center";
             >
               <div className="flex items-center gap-2 text-white">
                 <CheckCircle className="w-5 h-5 text-green-300" />
@@ -1720,9 +1720,9 @@ if ( {) {
       </div>
 
       {/* Contact Information Banner */}
-      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">;
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-blue-600" />
@@ -1743,7 +1743,7 @@ if ( {) {
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'grid' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' ;
                       : 'bg-gray-100 dark: bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
                 >;
@@ -1815,11 +1815,11 @@ pr-12243
         {/* Results Summary */}
 
         <div className="mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">;
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">;
 <div className='mb-8'>
-          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
-            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>
+          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
+            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               <div>
 key={category.id}
@@ -1854,25 +1854,25 @@ ursor/fix-netlify-build-and-merge-to-main-9571
 main
 pr-12243
 
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">;
                   {filteredServices.length} Services Found;
                 </h2>"
-                <p className="text-gray-600 dark:text-gray-400">'`
+                <p className="text-gray-600 dark:text-gray-400">'`;
                   {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}"`
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
               
 
-              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;
                 <div className="flex items-center gap-2">
 
 "
-              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">"
+              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">";
                 <div className="flex items-center gap-2">"
 
                   <TrendingUp className="w-4 h-4 text-green-500" />
-                  <span>Market Growth: 150%+ YoY</span>
+                  <span>Market Growth: 150%+ YoY</span>;
                 </div>"
                 <div className="flex items-center gap-2">"
                   <Award className="w-4 h-4 text-blue-500" />
@@ -1888,24 +1888,24 @@ pr-12243
         <div className="space-y-6">
           {filteredServices.length === 0 ? (
             <div className="text-center py-12">
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>;
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
                 No services found
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-600 dark:text-gray-400">;
                 Try adjusting your search terms or category filters.
               </p>
             </div>
-          ) : (
+          ) : (;
             <AnimatePresence>
               {viewMode === 'grid' ? (
 
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
                   {filteredServices.map(service => (
                     <ServiceCard key={service.id} service={service} />
                   ))}
                 </div>
-              ) : (
+              ) : (;
                 <div className='space-y-6'>
                   {filteredServices.map(service => (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1913,16 +1913,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-
+;
 <div className='mt-16 text-center'>
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
-            <h2 className='text-3xl md:text-4xl font-bold mb-6'>
+            <h2 className='text-3xl md:text-4xl font-bold mb-6'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-
+;
 pr-12243
 
                 </p>;
@@ -2030,23 +2030,23 @@ pr-12243
         <div className="space-y-6">
           {filteredServices.length === 0 ? (
             <div className="text-center py-12">
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>;
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
                 No services found
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-600 dark:text-gray-400">;
                 Try adjusting your search terms or category filters.
               </p>
             </div>
-          ) : (
+          ) : (;
             <AnimatePresence>
               {viewMode === 'grid' ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                           {filteredServices.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
                 </div>
-              ) : (
+              ) : (;
                 <div className="space-y-6">
                   {filteredServices.map((service) => (
                     <ServiceList key={service.id} service={service} />
@@ -2060,7 +2060,7 @@ pr-12243
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -2072,36 +2072,36 @@ pr-12243
 
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
               <a
 
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 href={`mailto: ${contactInfo.email;}?subject=Business Transformation Consultation`}
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105";
               >
                 Start Your Transformation
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href={`tel: ${contactInfo.mobile;}`}
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300";
               >
                 <Phone className="w-5 h-5" />
                 href={`tel:${contactInfo.mobile}`}
-                className='inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300'
+                className='inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300';
               >
                 <Phone className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
 
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105";
               >
                 Start Your Transformation
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300";
               >
                 <Phone className="w-5 h-5" />
 
@@ -2157,14 +2157,14 @@ pr-12243
 ursor/fix-netlify-build-and-merge-to-main-9571
 pr-12243
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105";
               >
                 Start Your Transformation
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href={`tel: ${contactInfo.mobile;}`}
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300";
               >
                 <Phone className="w-5 h-5" />
                 Call Now
@@ -2177,7 +2177,7 @@ pr-12243
   )
 }
 main
-<button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
+<button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">;
             Get Started Today
           </button>
         </motion.div>

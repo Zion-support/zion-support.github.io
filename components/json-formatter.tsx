@@ -127,12 +127,12 @@ name: 'John Doe',
       age: 30,
       email: 'john.doe@example.com',
       address: {
-        street: '123 Main St'
-        city: 'Anytown'
-        state: 'CA'
-        zipCode: '12345'
+        street: '123 Main St';
+        city: 'Anytown';
+        state: 'CA';
+        zipCode: '12345';
       }
-      phoneNumbers: [
+      phoneNumbers: [;
 origin/cursor/automate-test-improve-and-merge-code-2533
         {
           type: 'home',
@@ -222,14 +222,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">";
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-300 text-sm font-medium mb-6">"
               <Code className="w-4 h-4 mr-2" />
               Professional JSON Tools;
             </div>
           </div>"
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">;
             JSON Formatter;
           </h1>"
           <p className="text-xl text-teal-200 max-w-4xl mx-auto leading-relaxed">
@@ -253,20 +253,20 @@ return lines.map((_, index) => index + 1).join('\n');
         />
         <meta property='og:title' content='JSON Formatter - Zion Tech Group' />
         <meta
-          property='og:description'
+          property='og:description';
           content='Professional JSON formatting and validation service.'
         />
       </Head>
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='mb-8'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-300 text-sm font-medium mb-6'>
               <Code className='w-4 h-4 mr-2' />
               Professional JSON Tools
             </div>
           </div>
-          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
+          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>;
             JSON Formatter
           </h1>
           <p className='text-xl text-teal-200 max-w-4xl mx-auto leading-relaxed'>
@@ -278,9 +278,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* JSON Formatter Tool */}"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
           <div className="text-center mb-16">"
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">;
               Format Your JSON Data;
             </h2>"
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -296,7 +296,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex flex-wrap items-center justify-between gap-4">"
               <div className="flex items-center space-x-6">"
                 <div className="flex items-center space-x-2">"
-                  <label className="text-sm text-gray-300" htmlFor="input-Indent:">Indent:</label>
+                  <label className="text-sm text-gray-300" htmlFor="input-Indent:">Indent:</label>;
                   <select;
                     value={indentSize}
                     onChange={e => setIndentSize(Number(e && e.target.value))}'"
@@ -308,9 +308,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <select;
                     value={indentSize}
 <section className='py-20 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
               Format Your JSON Data
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -323,11 +323,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-wrap items-center justify-between gap-4'>
               <div className='flex items-center space-x-6'>
                 <div className='flex items-center space-x-2'>
-                  <label className='text-sm text-gray-300'>Indent:</label>
+                  <label className='text-sm text-gray-300'>Indent:</label>;
                   <select
                     value={indentSize}
                     onChange={e => setIndentSize(Number(e.target.value))}
-                    className='px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500'
+                    className='px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500';
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
                     <option value={2}>2 spaces</option>
@@ -361,7 +361,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       {getLineNumbers(inputJson)}
 '
-                    isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                    isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
                   {showLineNumbers && ('"
                     <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden'>                      {getLineNumbers (input_json)}              <div className="space - y-4">;"
                 <div className="relative">;
@@ -419,7 +419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={validateJSON}
                     disabled={!inputJson && inputJson.trim()}'
                     variant='outline'"
-                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
+                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50";
                   />
                 </div>
                 {!isValid && errorMessage && (
@@ -432,7 +432,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Button
                     onClick={formatJSON}
                     disabled={!inputJson.trim()}
-                    className='flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'
+                    className='flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed';
                   >
                     <Code className='w-5 h-5 mr-2' />
                     Format JSON
@@ -441,7 +441,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={minifyJSON}
                     disabled={!inputJson.trim()}
 variant='outline'
-                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'
+                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50';
                   >
                     Minify
                   </Button>
@@ -449,7 +449,7 @@ variant='outline'
                     onClick={validateJSON}
                     disabled={!inputJson.trim()}
 variant='outline'
-                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'
+                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     Validate;
@@ -485,7 +485,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       onClick={() => copyToClipboard(formattedJson)}
                       variant='outline'
                       size='sm'
-                      className='border-gray-600 text-gray-300 hover:bg-gray-700'
+                      className='border-gray-600 text-gray-300 hover:bg-gray-700';
                     >
                       <Copy className='w-4 h-4 mr-2' />
                       Copy
@@ -496,7 +496,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       }
                       variant='outline'
                       size='sm'
-                      className='border-gray-600 text-gray-300 hover:bg-gray-700'
+                      className='border-gray-600 text-gray-300 hover:bg-gray-700';
                     >
                       <Download className='w-4 h-4 mr-2' />
                       Download
@@ -515,13 +515,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     )}
                     <div
                       className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
-                        showLineNumbers ? 'pl-16' : ''
+                        showLineNumbers ? 'pl-16' : '';
                       }`}
                     >
                       <pre className='whitespace-pre-wrap'>{formattedJson}</pre>
                     </div>
                   </div>
-                ) : (
+                ) : (;
                   <div className='bg-gray-700 p-6 rounded-lg border border-gray-600 text-center'>
                     <div className='text-6xl mb-4'>📄</div>
                     <p className='text-gray-400'>
@@ -548,10 +548,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Features */}
 <section className='py-20 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-
+;
               Professional JSON Formatting Features;
             </h2>'
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -559,7 +559,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               professionally.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>';
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>'
               <div className='text-4xl mb-4'>✨</div>'
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -627,7 +627,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               From development to data analysis, our JSON formatter serves all your formatting needs.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
             <Card className="p-8 bg-gray-700 border border-gray-600">"
               <div className="text-4xl mb-4">👨‍💻</div>"
               <h3 className="text-2xl font-bold text-white mb-4">Developers</h3>"
@@ -637,9 +637,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ul className="space-y-2 text-gray-300">
       {/* Use Cases */}
 <section className='py-20 bg-gray-900'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
               Perfect For Every JSON Need
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -647,7 +647,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               your formatting needs.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>👨‍💻</div>
               <h3 className='text-2xl font-bold text-white mb-4'>Developers</h3>
@@ -843,18 +843,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
           </h2>
           <p className='text-xl text-teal-100 mb-8'>
             Join thousands of developers and professionals who trust our JSON
             formatter for their data needs.
           </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
             <Button
               href='/contact'
               size='lg'
-              className='bg-white text-teal-600 hover:bg-gray-100'
+              className='bg-white text-teal-600 hover:bg-gray-100';
             >
               Get Started Today
               <ArrowRight className='w-5 h-5 ml-2' />
@@ -863,7 +863,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='/pricing'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-teal-600'
+              className='border-white text-white hover:bg-white hover:text-teal-600';
             >
               View Pricing
             </Button>

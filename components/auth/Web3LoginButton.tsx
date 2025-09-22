@@ -179,7 +179,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const base = displayName || `${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
     return ("
       <div className="flex items-center gap-2">"
-        <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>"
+        <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>";
         <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>"
         <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>
         {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
@@ -189,7 +189,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>"
       <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
-
+;
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}'
 import dynamic from 'next / dynamic';
 ;'

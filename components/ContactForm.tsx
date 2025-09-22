@@ -26,7 +26,7 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: '';
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
 
@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const handleChange = (
-    e: React.ChangeEvent<
+    e: React.ChangeEvent<;
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
@@ -85,7 +85,7 @@ const ContactForm: React.FC = () => {
       console.error('Error submitting form: ';, error);
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-    message: ''
+    message: '';
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -95,7 +95,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
 
@@ -114,7 +114,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: '';
       });
     } catch {
       setSubmitStatus('error');
@@ -136,7 +136,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1md:grid-cols-2gap-6">
+        <div className="grid grid-cols-1md:grid-cols-2gap-6">;
           <div>
             <label htmlFor="name" className="block text-sm font-mediumtext-gray-700mb-2">
               Name *
@@ -148,7 +148,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               value={formData.name}
               onChange={handleInputChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent";
             />
           </div>
           
@@ -163,12 +163,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               value={formData.email}
               onChange={handleInputChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent";
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-1md:grid-cols-2gap-6">
+        <div className="grid grid-cols-1md:grid-cols-2gap-6">;
           <div>
             <label htmlFor="company" className="block text-sm font-mediumtext-gray-700mb-2">
               Company
@@ -179,7 +179,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               name="company"
               value={formData.company}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent";
             />
           </div>
           
@@ -193,7 +193,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent";
             />
           </div>
         </div>
@@ -207,7 +207,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             name="service"
             value={formData.service}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent";
           >
             <option value="">Select a service</option>
             <option value="web-development">Web Development</option>
@@ -229,7 +229,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             onChange={handleInputChange}
             required
             rows={5}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent";
             placeholder="Tell us about your project..."
           />
         </div>
@@ -237,14 +237,14 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowedtransition-colorsduration-200"
+          className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowedtransition-colorsduration-200";
         >
           {isSubmitting ? (
             <div className="flexitems-centerjustify-center">
               <LoadingSpinner />
               <span className="ml-2">Sending...</span>
             </div>
-          ) : (
+          ) : (;
             'Send Message'
           )}
         </button>

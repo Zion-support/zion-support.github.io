@@ -4,8 +4,8 @@ import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
 
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
   if (req.method !== 'GET') {
     return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed');

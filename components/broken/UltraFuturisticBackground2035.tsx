@@ -94,7 +94,7 @@ if ( {) {}
       const isSmallScreen = window.innerWidth < 768;
 const particleCount = prefersReducedMotion
         ? 15
-        : isSmallScreen
+        : isSmallScreen;
           ? 60
           : 150;
       for (let i = 0; i < particleCount; i++) {
@@ -190,7 +190,7 @@ if (particle.x < 0)
         // Draw connections with enhanced effects
 const maxDistance = prefersReducedMotion
           ? 0
-          : window.innerWidth < 768
+          : window.innerWidth < 768;
             ? 120
             : 180;
         if (maxDistance > 0) {
@@ -205,13 +205,13 @@ animationFrameId = requestAnimationFrame(updateParticles);
 const drawParticle = (
       ctx: CanvasRenderingContext2D,
       particle: any,
-      opacity: number
+      opacity: number;
     ) => {
       ctx.save();
       ctx.globalAlpha = opacity;
       switch (particle.type) {
         case 'quantum':
-origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533;
           drawQuantumParticle(ctx, particle);
           break;'
         case 'hologram':;
@@ -234,8 +234,8 @@ break;
     }
     // Quantum particle with wave-like effects
     const drawQuantumParticle = (
-      ctx: CanvasRenderingContext2D
-      particle: any
+      ctx: CanvasRenderingContext2D;
+      particle: any;
     ) => {
       const time = Date.now() * 0.001;
       const wave = Math.sin(time + particle.x * 0.01) * 0.5;
@@ -259,8 +259,8 @@ ctx.arc(
     }
     // Hologram particle with transparency and distortion
     const drawHologramParticle = (
-      ctx: CanvasRenderingContext2D
-      particle: any
+      ctx: CanvasRenderingContext2D;
+      particle: any;
     ) => {
       const time = Date.now() * 0.002;
       const distortion = Math.sin(time + particle.y * 0.02) * 2;
@@ -309,8 +309,8 @@ ctx.shadowBlur = 0;
 
     // Energy particle with pulsing effect
     const drawEnergyParticle = (
-      ctx: CanvasRenderingContext2D
-      particle: any
+      ctx: CanvasRenderingContext2D;
+      particle: any;
     ) => {
       const time = Date.now() * 0.003;
       const pulse = Math.sin(time) * 0.3 + 0.7;
@@ -329,11 +329,11 @@ ctx.fill();
 
     // Enhanced connection drawing with different effects
     const drawConnections = (
-      ctx: CanvasRenderingContext2D
-      particles: any[]
-      currentIndex: number
-      maxDistance: number
-      opacity: number
+      ctx: CanvasRenderingContext2D;
+      particles: any[];
+      currentIndex: number;
+      maxDistance: number;
+      opacity: number;
     ) => {
       particles.forEach((otherParticle, otherIndex) => {
         if (currentIndex !== otherIndex) {
@@ -398,7 +398,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           className="absolute inset-0 opacity-30"
           animate={{}
-            background: ['
+            background: [';
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)'
             ]
     <>
@@ -409,7 +409,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
           className='absolute inset-0 opacity-30'
           animate={{
-            background: [
+            background: [;
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)',
               'radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)',
               'radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)',
@@ -419,8 +419,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 8;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
           }}
         {/* Holographic grid effect */}'
         <div className='absolute inset-0 opacity-20'>;
@@ -431,20 +431,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div
             className='h-full w-full'
             style={{}
-              backgroundImage: `
+              backgroundImage: `;
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`
             `'
-              backgroundSize: '50px 50px'
+              backgroundSize: '50px 50px';
             }}
           />        </div>        {/* Holographic grid effect */}"
         <div className="absolute inset-0 opacity-20">;"
           <divclassName="h-full w-full" style={{}`
-            backgroundImage: `
+            backgroundImage: `;
               linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)`
             `'
             backgroundSize: '50px 50px'
-
+;
         {/* Canvas for animated particles */}
         <canvas;
           ref={canvasRef}
@@ -472,8 +472,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             rotate: [0, 180, 360]
           transition={{}
             duration: 6;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
           }}"
           className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
           animate={{}
@@ -485,7 +485,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             duration: 8;
             repeat: Infinity;
 '
-            ease: 'easeInOut',            ease: 'easeInOut'
+            ease: 'easeInOut',            ease: 'easeInOut';
         <motion.div
 className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
           animate={{
@@ -524,7 +524,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               opacity: [0, 0.3, 0],            }}
             transition={{}
               duration: 4;
-              repeat: Infinity'
+              repeat: Infinity';
               ease: 'easeInOut',          <motion.div;
               y: [-100, 100, -100],
               opacity: [0, 0 && 0.3, 0],            }}
@@ -548,14 +548,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               repeat: Infinity,
             transition={{}
               duration: 6;
-              repeat: Infinity'
+              repeat: Infinity';
               ease: 'easeInOut',            }}
             }}
             transition={{}
               duration: 6;
-              repeat: Infinity'
+              repeat: Infinity';
               ease: 'easeInOut',              ease: 'easeInOut'
-
+;
 <div className='absolute inset-0 overflow-hidden'>
           <motion.div
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'

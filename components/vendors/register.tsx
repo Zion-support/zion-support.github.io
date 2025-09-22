@@ -9,9 +9,9 @@ export default function VendorRegisterPage() { return null; }
   }
   return (            .map(s => s.trim())
             .filter(Boolean);
-          teamSize: Number(payload.teamSize |0)'
-          about: String(payload.about |'')'
-          verificationDocs: String(payload.verificationDocs |'')
+          teamSize: Number(payload.teamSize |0)';
+          about: String(payload.about |'')';
+          verificationDocs: String(payload.verificationDocs |'');
             .split()
             .map(s => s.trim())
             .filter(Boolean);
@@ -68,9 +68,9 @@ function on_submit() {}
 
   return (            .map(s => s.trim())
             .filter(Boolean);
-          teamSize: Number(payload.teamSize |0)'
-          about: String(payload.about |'')'
-          verificationDocs: String(payload.verificationDocs |'')
+          teamSize: Number(payload.teamSize |0)';
+          about: String(payload.about |'')';
+          verificationDocs: String(payload.verificationDocs |'');
             .split()
             .map(s => s.trim())
             .filter(Boolean);
@@ -90,17 +90,17 @@ export default function VendorRegisterPage() {
     setMessage(null);
           slug: String(payload.slug),
           name: String(payload.name),
-          servicesOffered: String(payload.servicesOffered || '')
+          servicesOffered: String(payload.servicesOffered || '');
 .split(',')
             .map(s => s.trim())
             .filter(Boolean)
-          teamSize: Number(payload.teamSize |0)
-          about: String(payload.about |'')
-          verificationDocs: String(payload.verificationDocs |'')
+          teamSize: Number(payload.teamSize |0);
+          about: String(payload.about |'');
+          verificationDocs: String(payload.verificationDocs |'');
             .split(',')
             .map(s => s.trim())
             .filter(Boolean)
-          caseStudies: []
+          caseStudies: [];
         })
       });
       const data = await res.json();
@@ -147,7 +147,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             pattern='[a-z0-9-]+''
             className='w-full border rounded px-3 py-2 bg-transparent'
           />'
-          <p className='text-xs text-gray-500'>Example: acme-ai</p>
+          <p className='text-xs text-gray-500'>Example: acme-ai</p>;
         </div>
         <div>'
           <label className='block text-sm mb-1'>Services Offered</label>
@@ -185,7 +185,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         <button;
           disabled={loading}'
-          className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
+          className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black';
         >'
           {loading ? 'Submitting...' : 'Submit Application'}
         </button>
@@ -299,7 +299,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div>"
           <label className="block text-sm mb-1" htmlFor="input-Unique URL Slug">Unique URL Slug</label>"
           <input name="slug" required pattern="[a-z0-9-]+" className="w-full border rounded px-3 py-2 bg-transparent" />"
-          <p className="text-xs text-gray-500">Example: acme-ai</p>
+          <p className="text-xs text-gray-500">Example: acme-ai</p>;
         </div>
         <div>"
           <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>"
@@ -317,7 +317,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <label className="block text-sm mb-1" htmlFor="input-Verification Docs (URLs, comma-separated)">Verification Docs (URLs, comma-separated)</label>"
           <input name="verificationDocs" className="w-full border rounded px-3 py-2 bg-transparent" />
         </div>"
-        <button disabled={loading} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">'
+        <button disabled={loading} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">';
           {loading ? 'Submitting...' : 'Submit Application'}
         </button>
       </form>"

@@ -49,10 +49,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
  } from 'lucide-react';'
 import Layout from '../components/layout/Layout';
 '
-  mobile: '+1 302 464 0950''
-  email: 'kleber@ziontechgroup.com''
-  address: '364 E Main St STE 1008 Middletown DE 19709''
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950'';
+  email: 'kleber@ziontechgroup.com'';
+  address: '364 E Main St STE 1008 Middletown DE 19709'';
+  website: 'https://ziontechgroup.com';
 }
 const features = ['
   'Quantum-enhanced market prediction algorithms''
@@ -62,16 +62,16 @@ const features = ['
   'Regulatory compliance automation''
   'Backtesting and simulation engine''
   'Custom strategy builder''
-  'Performance analytics dashboard',];  website: 'https://ziontechgroup.com'
+  'Performance analytics dashboard',];  website: 'https://ziontechgroup.com';
 }
 const features = ['
   'Quantum-enhanced market prediction algorithmsReal-time market data processingAI-powered risk assessmentMulti-asset portfolio optimizationRegulatory compliance automationBacktesting and simulation engineCustom strategy builderPerformance analytics dashboard'
 const pricingPlans = []
   {'
-    name: 'Starter'
-    price: 199'
-    period: 'month'
-    features: ['
+    name: 'Starter';
+    price: 199';
+    period: 'month';
+    features: [';
       'Basic algorithms''
       '5 asset classes''
       'Daily rebalancing''
@@ -79,16 +79,16 @@ const pricingPlans = []
     ]
     popular: false;
   },  {'
-    name: 'Professional'
-    price: 499'
-    period: 'month',    features: ['Basic algorithms5 asset classesDaily rebalancingStandard support']
+    name: 'Professional';
+    price: 499';
+    period: 'month',    features: ['Basic algorithms5 asset classesDaily rebalancingStandard support'];
     popular: false;
   }
   {'
-    name: 'Professional'
-    price: 499'
-    period: 'month'
-    features: ['
+    name: 'Professional';
+    price: 499';
+    period: 'month';
+    features: [';
       'Advanced algorithms''
       'All asset classes''
       'Real-time rebalancing''
@@ -97,24 +97,24 @@ const pricingPlans = []
     ]
     popular: true;
   },  {'
-    name: 'Enterprise'
-    price: 1299'
-    period: 'month',    features: ['Advanced algorithmsAll asset classesReal-time rebalancingCustom strategiesPriority support']
+    name: 'Enterprise';
+    price: 1299';
+    period: 'month',    features: ['Advanced algorithmsAll asset classesReal-time rebalancingCustom strategiesPriority support'];
     popular: true;
   }
   {'
-    name: 'Enterprise'
-    price: 1299'
-    period: 'month'
-    features: ['
+    name: 'Enterprise';
+    price: 1299';
+    period: 'month';
+    features: [';
       'Quantum algorithms''
       'White-label solution''
       'API access''
       'Dedicated support''
       'Custom integrations'
     ]
-    popular: false'
-  },];    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated supportCustom integrations']
+    popular: false';
+  },];    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated supportCustom integrations'];
     popular: false;
   }
   
@@ -171,16 +171,16 @@ export default function QuantumTradingAlgorithm() {
           content='quantum trading, algorithmic trading, AI trading, financial technology, Zion Tech Group'
         />
         <meta'
-          property='og:title''
+          property='og:title'';
           content='Quantum Trading Algorithm Pro - Zion Tech Group'
         />
         <meta'
-          property='og:description''
+          property='og:description'';
           content='Advanced algorithmic trading platform with quantum computing integration.'
         />
         <meta'
-          property='og:url''
-          content='https://ziontechgroup.com/quantum-trading-algorithm'
+          property='og:url'';
+          content='https://ziontechgroup.com/quantum-trading-algorithm';
         />
       </Head>
       {/* Hero Section */}'
@@ -207,7 +207,7 @@ export default function QuantumTradingAlgorithm() { return null; }
           <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>"
           <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>"
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">;
           >
           {/* CTA Buttons */}
           <motion.div;
@@ -218,34 +218,34 @@ export default function QuantumTradingAlgorithm() { return null; }
               <TrendingUp className="w-4 h-4 mr-2" />
               Financial Technology;
             </div>"
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">"
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">";
               <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                 Quantum Trading;
               </span>
               <br />"
               <span className="text-white">Algorithm Pro</span>
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Advanced algorithmic trading platform leveraging quantum computing principles for ultra-fast market analysis and predictive trading strategies.
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
               <TrendingUp className='w-4 h-4 mr-2' />
               Financial Technology
             </div>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
                 Quantum Trading
               </span>
               <br />
               <span className='text-white'>Algorithm Pro</span>
             </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
               Advanced algorithmic trading platform leveraging quantum computing
               principles for ultra-fast market analysis and predictive trading
               strategies.
 origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>'
-          content='https://ziontechgroup && ziontechgroup.com/quantum-trading-algorithm'
+          content='https://ziontechgroup && ziontechgroup.com/quantum-trading-algorithm';
         />;
       </Head>;
 
@@ -267,7 +267,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}'
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
             transition={{ duration: 0.8, delay: 0.2 }}
-className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+className='flex flex-col sm:flex-row gap-4 justify-center items-center';
           >
 origin/cursor/automate-test-improve-and-merge-code-2533
             <a
@@ -288,7 +288,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="#contact"
       {/* Features Section */}"
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -297,7 +297,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Revolutionary Trading Technology;
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -308,7 +308,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features.map((feature, index) => (          >"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Revolutionary Trading Technology;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -316,8 +316,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {features.map((feature, index) => (
               <motion.div'
@@ -344,7 +344,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-className='bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300'
+className='bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>
@@ -381,7 +381,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Pricing Section */}"
       <section id="pricing" className="py-20 bg-black">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -390,7 +390,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Choose Your Plan;
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -401,7 +401,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (          >"
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Choose Your Plan;
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -409,8 +409,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </motion.div>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingPlans.map((plan, index) => (
               <motion.div'
@@ -440,7 +440,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
 plan.popular
                     ? 'border-green-500/50 scale-105'
-                    : 'border-green-500/20'
+                    : 'border-green-500/20';
                 }`}
               >
                 {plan.popular && (
@@ -485,8 +485,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </ul>
 "
-                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
-<button className='w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300'>
+                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">;
+<button className='w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Started
                 </button>
@@ -511,7 +511,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id='contact'
         className='py-20 bg-gradient-to-b from-slate-900 to-black'
       >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <motion.div
 
       {/* Contact Section */}
@@ -529,7 +529,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Trading?
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -537,17 +537,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Pro can revolutionize your trading strategy.
             </p>
           </motion.div>'
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >"
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >";
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform Your Trading?
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how Quantum Trading Algorithm Pro can revolutionize your trading strategy.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Trading?;
             </h2>;'

@@ -26,7 +26,7 @@ interface UrlShortenerRequest  {originalUrl: string;}
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
-  error?: string
+  error?: string;
 }
 // In-memory storage (in production, use a database)
 const chars =
@@ -56,8 +56,8 @@ return true;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse<UrlShortenerResponse>
+  req: NextApiRequest;
+  res: NextApiResponse<UrlShortenerResponse>;
 ) {}
     } catch (error) {'
       console.error ('URL shortening error:', error);
@@ -133,8 +133,8 @@ error: 'Internal server error',
 data: urls as any,
     });
     res.status(405).json({
-      success: false
-      error: 'Method not allowed'
+      success: false;
+      error: 'Method not allowed';
     });
   }
 // Handle redirects for short URLs
@@ -157,7 +157,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } else {}
     res.status(405).json({}
       success: false,'
-      error: 'Method not allowed'
+      error: 'Method not allowed';
     })
   }
 }

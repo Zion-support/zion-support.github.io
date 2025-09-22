@@ -14,7 +14,7 @@ interface UltraQuantumHolographicBackgroundProps {
 
 export default function UltraQuantumHolographicBackground({children;
   intensity;
-            ease: "easeInOut"
+            ease: "easeInOut";
 origin/cursor/automate-test-improve-and-merge-code-2533
 useEffect ( () => {
   const updateDimensions = () => {
@@ -239,7 +239,7 @@ ctx.strokeRect(
             );
             break;
           case 'energy':
-            // Energy field
+            // Energy field;
 const gradient = ctx.createRadialGradient(
               this.x,
               this.y,
@@ -411,7 +411,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
           className='absolute inset-0'
           animate={{}
-            background: []`
+            background: []`;
               `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)``
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)``
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)``
@@ -420,7 +420,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ],          }}
           transition={{}
             duration: 8;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}`
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`;`
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`;`
@@ -473,12 +473,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 scale_x: [0, 1, 0];'
           className='absolute inset-0'
           animate={{}
-            boxShadow: []`
+            boxShadow: []`;
               `inset 0 0 100px ${colors.primary}20``
               `inset 0 0 200px ${colors.secondary}20``
               `inset 0 0 150px ${colors.tertiary}20``
               `inset 0 0 100px ${colors.primary}20`"
-                ease: "easeInOut"
+                ease: "easeInOut";
               }}
             />;
           ))}
@@ -486,11 +486,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div'
           className='absolute inset-0'
           animate={{}
-            boxShadow: []
+            boxShadow: [];
             ],          }}
           transition={{}
             duration: 6;
-            repeat: Infinity'`
+            repeat: Infinity'`;
             ease: 'easeInOut',          }}              `inset 0 0 100px ${colors.primary}20`;`
               `inset 0 0 200px ${colors.secondary}20`;`
               `inset 0 0 150px ${colors.tertiary}20`;
@@ -507,18 +507,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={i}
                 className='absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent'
                 style={{
-                  top: i * 4
-                  color: colors.primary
+                  top: i * 4;
+                  color: colors.primary;
                 }}
                 animate={{
                   opacity: [0, 1, 0]
                   scaleX: [0, 1, 0]
                 }}
                 transition={{
-                  duration: 2
-                  delay: i * 0.1
-                  repeat: Infinity
-                  ease: 'easeInOut'
+                  duration: 2;
+                  delay: i * 0.1;
+                  repeat: Infinity;
+                  ease: 'easeInOut';
                 }}
               />
             )
@@ -529,7 +529,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
 className='absolute inset-0'
           animate={{
-            boxShadow: [
+            boxShadow: [;
               `inset 0 0 100px ${colors.primary}20`,
               `inset 0 0 200px ${colors.secondary}20`,
               `inset 0 0 150px ${colors.tertiary}20`,
@@ -563,7 +563,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ],          }}
           transition={{}
             duration: 4;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
         />
       </div>
@@ -574,7 +574,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{
 
-            background: [
+            background: [;
               `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
               `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
             ],

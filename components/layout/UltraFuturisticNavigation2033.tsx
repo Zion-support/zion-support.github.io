@@ -48,7 +48,7 @@ import {}
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,'
     color: 'from-indigo-500 to-blue-600',
-    services: []
+    services: [];
       {'
         name: 'Quantum Internet Security','
         href: '/quantum - internet - security - gateway','
@@ -87,7 +87,7 @@ import {}
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,'
     color: 'from-blue-500 to-cyan-600',
-    services: []
+    services: [];
       {'
         name: 'Autonomous DevOps Platform','
         href: '/autonomous - devops - platform','
@@ -116,7 +116,7 @@ import {}
     title: '🌌 Space & Metaverse Tech',
     icon: Rocket,'
     color: 'from-teal-500 to-emerald-600',
-    services: []
+    services: [];
       {'
         name: 'Space Mining Automation','
         href: '/space - mining - automation - platform','
@@ -132,34 +132,34 @@ import {}
       {}
 const quickLinks = []
   {'
-    name: 'Services Overview''
-    href: '/enhanced-services-overview'
-    icon: Globe'
-    color: 'from-cyan-500 to-blue-600'
+    name: 'Services Overview'';
+    href: '/enhanced-services-overview';
+    icon: Globe';
+    color: 'from-cyan-500 to-blue-600';
   }
   {'
-    name: 'AI Services''
-    href: '/ai-services'
-    icon: Brain'
-    color: 'from-violet-500 to-purple-600'
+    name: 'AI Services'';
+    href: '/ai-services';
+    icon: Brain';
+    color: 'from-violet-500 to-purple-600';
   }
   {'
-    name: 'Quantum Tech''
-    href: '/quantum-services'
-    icon: Atom'
-    color: 'from-indigo-500 to-blue-600'
+    name: 'Quantum Tech'';
+    href: '/quantum-services';
+    icon: Atom';
+    color: 'from-indigo-500 to-blue-600';
   }
   {'
-    name: 'Space Tech''
-    href: '/space-technology'
-    icon: Rocket'
-    color: 'from-teal-500 to-emerald-600'
+    name: 'Space Tech'';
+    href: '/space-technology';
+    icon: Rocket';
+    color: 'from-teal-500 to-emerald-600';
   }
   {'
-    name: 'Enterprise IT''
-    href: '/enterprise-it'
-    icon: Cpu'
-    color: 'from-blue-500 to-cyan-600'
+    name: 'Enterprise IT'';
+    href: '/enterprise-it';
+    icon: Cpu';
+    color: 'from-blue-500 to-cyan-600';
   };
 ];
 ;
@@ -263,10 +263,10 @@ import {};
   Menu, X, Search, ChevronDown, Home, Briefcase;
   DollarSign, BookOpen, Users, MessageCircle;
 const contactInfo = {'
-  mobile: '+1 302 464 0950''
-  email: 'kleber@ziontechgroup.com''
-  address: '364 E Main St STE 1008 Middletown DE 19709''
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950'';
+  email: 'kleber@ziontechgroup.com'';
+  address: '364 E Main St STE 1008 Middletown DE 19709'';
+  website: 'https://ziontechgroup.com';
 }
  } from 'lucide-react';
 const contactInfo = null;
@@ -295,7 +295,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1, 299/month'
 }
 {'
-  name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month'
+  name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month';
 }
 {'
   name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1, 199/month'
@@ -339,7 +339,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }) )
 }{}
   /* Contact Button */'
-}<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
+}<motion.div whileHover= {  {  website: 'https://ziontechgroup.com';
 }
 const serviceCategories = []
       {}
@@ -354,7 +354,7 @@ const serviceCategories = []
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,'
     color: 'from-indigo-500 to-blue-600',
-    services: []
+    services: [];
       {}
 '
         name: 'Swarm Robotics Platform','
@@ -367,7 +367,7 @@ const serviceCategories = []
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,'
     color: 'from-blue-500 to-cyan-600',
-    services: []
+    services: [];
       {}
 '
         name: 'AI IT Operations Center','
@@ -380,7 +380,7 @@ const serviceCategories = []
     title: '🌌 Space & Metaverse Tech',
     icon: Rocket,'
     color: 'from-teal-500 to-emerald-600',
-    services: []
+    services: [];
       {}
 '
         name: 'Virtual Event Holograms','
@@ -409,7 +409,7 @@ const serviceCategories = []
     title: '🧠 Revolutionary AI',
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
-    services: [
+    services: [;
 {
         name: 'AI Consciousness Evolution',
         href: '/ai-consciousness-evolution-platform',
@@ -417,15 +417,15 @@ const serviceCategories = []
         price: '$2,999/month',
       },
       {
-        name: 'AI Emotional Intelligence'
-        href: '/ai-emotional-intelligence-platform'
-        description: 'Emotional AI platform'
+        name: 'AI Emotional Intelligence';
+        href: '/ai-emotional-intelligence-platform';
+        description: 'Emotional AI platform';
         price: '$1,999/month'
       }
       {
-        name: 'AI Creativity Orchestrator'
-        href: '/ai-creativity-orchestrator'
-        description: 'Creative AI solutions'
+        name: 'AI Creativity Orchestrator';
+        href: '/ai-creativity-orchestrator';
+        description: 'Creative AI solutions';
         price: '$1,499/month'
       }
       {
@@ -440,7 +440,7 @@ const serviceCategories = []
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
-    services: [
+    services: [;
 {
         name: 'Quantum Internet Security',
         href: '/quantum-internet-security-gateway',
@@ -448,28 +448,28 @@ const serviceCategories = []
         price: '$4,999/month',
       },
       {
-        name: 'Biotech DNA Computing'
-        href: '/biotech-dna-computing-platform'
-        description: 'DNA computing platform'
+        name: 'Biotech DNA Computing';
+        href: '/biotech-dna-computing-platform';
+        description: 'DNA computing platform';
         price: '$3,999/month'
       }
       {
-        name: 'Quantum Financial Trading'
-        href: '/quantum-financial-trading-platform'
-        description: 'Quantum trading'
+        name: 'Quantum Financial Trading';
+        href: '/quantum-financial-trading-platform';
+        description: 'Quantum trading';
         price: '$5,999/month'
       }
       {
-        name: 'DNA Computing Platform'
-        href: '/dna-computing-platform'
-        description: 'Molecular computing'
+        name: 'DNA Computing Platform';
+        href: '/dna-computing-platform';
+        description: 'Molecular computing';
         price: '$1,299/month'
       }
       {
-        name: 'Photonic Computing Infrastructure'
-        href: '/photonic-computing-infrastructure'
-        description: 'Light-speed computing'
-        price: '$699/month'
+        name: 'Photonic Computing Infrastructure';
+        href: '/photonic-computing-infrastructure';
+        description: 'Light-speed computing';
+        price: '$699/month';
       }
       {
         name: 'Swarm Robotics Platform',
@@ -483,7 +483,7 @@ const serviceCategories = []
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-600',
-    services: [
+    services: [;
 {
         name: 'Autonomous DevOps Platform',
         href: '/autonomous-devops-platform',
@@ -491,15 +491,15 @@ const serviceCategories = []
         price: '$2,499/month',
       },
       {
-        name: 'Zero Trust Network Architecture'
-        href: '/zero-trust-network-architecture'
-        description: 'Zero trust security'
+        name: 'Zero Trust Network Architecture';
+        href: '/zero-trust-network-architecture';
+        description: 'Zero trust security';
         price: '$1,999/month'
       }
       {
-        name: 'Edge Computing Orchestration'
-        href: '/edge-computing-orchestration'
-        description: 'Edge computing platform'
+        name: 'Edge Computing Orchestration';
+        href: '/edge-computing-orchestration';
+        description: 'Edge computing platform';
         price: '$1,799/month'
       }
       {
@@ -514,7 +514,7 @@ const serviceCategories = []
     title: '🌌 Space & Metaverse Tech',
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
-    services: [
+    services: [;
 {
         name: 'Space Mining Automation',
         href: '/space-mining-automation-platform',
@@ -522,9 +522,9 @@ const serviceCategories = []
         price: '$9,999/month',
       },
       {
-        name: 'Metaverse Development'
-        href: '/metaverse-development-platform'
-        description: 'Metaverse platform'
+        name: 'Metaverse Development';
+        href: '/metaverse-development-platform';
+        description: 'Metaverse platform';
         price: '$3,999/month'
       }
       {
@@ -629,12 +629,12 @@ if (e.key === 'Escape') closeMenu();
                 <button'
                   onMouseEnter={() => setActiveCategory('services')}
                   onMouseLeave={() => setActiveCategory(null)}'
-                  className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+                  className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50';
                 >
                   <span>Services</span>'
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
-
-                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />
+;
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
             {/* Desktop Navigation *}
@@ -646,11 +646,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onMouseEnter={() = /> setActiveCategory('services')}
                   onMouseLeave={() => setActiveCategory(null)}
 
-                  className='flex items-center space-x-2 text-gray-300 hover: text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+                  className='flex items-center space-x-2 text-gray-300 hover: text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50';
                 >
                   <span />Services</span>
 
-                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />;
                 </button>
 
                 {/* Mega Menu */}
@@ -672,7 +672,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
                     >
-                      <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
+                      <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>;
                         {serviceCategories.map(category => ('
                           <div key={category.title} className='space-y-4'>'
                             <div className='flex items-center space-x-3'>
@@ -692,7 +692,7 @@ className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-b
 "
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
                     >"
-                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">;
                         {serviceCategories.map((category) => ("
                           <div key={category.title} className="space-y-4">"
                             <div className="flex items-center space-x-3">`
@@ -797,9 +797,9 @@ className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-b
                                   href={service.href}
                                   className='block group'
                                 >
-                                  <div className='p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200'>
+                                  <div className='p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200'>;
                                     <div className='flex items-center justify-between mb-2'>
-                                      <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors'>
+                                      <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors'>;
                                         {service.name}
                                       </h4>
                                       <span className='text-sm text-purple-400 font-medium'>
@@ -825,10 +825,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                   key={link && link.name}
                   href={link && link.href}"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50";
               ))}'
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
-
+;
                 >
 
                 </AnimatePresence>
@@ -838,7 +838,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {quickLinks.map(link => (<Link;}
                   key={link.name}
                   href={link.href}
-                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50';
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {link.name}
@@ -851,7 +851,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Link'
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
-
+;
                   {link.nam}
 }
                 </Link>;
@@ -862,7 +862,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 } />;
                 <Link;
                   className='text-gray-300 hover: text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                 />>
-
+;
                   {link.name}
                 </Link>
               ))}
@@ -877,9 +877,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
                   href="/contact"
 "
-                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
+                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg";
 href='/contact'
-                  className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'
+                  className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Get Started;
@@ -888,20 +888,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             {/* Mobile Menu Button */}"
             <div className="lg:hidden">
-
-<div className='lg:hidden'>
+;
+<div className='lg:hidden'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
               <button
                 onClick={toggleMenu}
-                className='text-gray-300 hover:text-white transition-colors duration-200 p-2'
+                className='text-gray-300 hover:text-white transition-colors duration-200 p-2';
               >
                 {isOpen ? ('
                   <X className='w-6 h-6' />
-                ) : ('
+                ) : (';
                   <Menu className='w-6 h-6' />
                 )}              </button>              <button;
                 onClick={toggleMenu}"
-                className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
+                className="text-gray-300 hover:text-white transition-colors duration-200 p-2";
               >"
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>;
@@ -968,7 +968,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link'
                     href='/contact'
                     onClick={closeMenu}'
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200'>                  <Link"
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200'>                  <Link";
                     href="/contact"
                     onClick={closeMenu}"
                     className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200">;
@@ -983,7 +983,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';'
               <div className='px - 4 py - 6 space - y-6'>;
 
-className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
+className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20';
             >
               <div className='px-4 py-6 space-y-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1013,7 +1013,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
                           >;
 
-className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
+className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20';
              />
               <div className='px-4 py-6 space-y-6' />
 
@@ -1033,10 +1033,10 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/
 key={service.name}
                             href={service.href}
                             onClick={closeMenu}
-className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'
+className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors';
                           >
 origin/cursor/automate-test-improve-and-merge-code-2533
-className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'
+className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors';
                            />
 
                             {service.name}
@@ -1078,10 +1078,10 @@ className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'
 key={link.name}
                         href={link.href}
                         onClick={closeMenu}
-className='text-sm text-gray-400 hover:text-cyan-400 transition-colors'
+className='text-sm text-gray-400 hover:text-cyan-400 transition-colors';
                       >
 origin/cursor/automate-test-improve-and-merge-code-2533
-className='text-sm text-gray-400 hover: text-cyan-400 transition-colors'
+className='text-sm text-gray-400 hover: text-cyan-400 transition-colors';
                        />
 
                         {link.name}
@@ -1114,7 +1114,7 @@ className='text-sm text-gray-400 hover: text-cyan-400 transition-colors'
                   <Link
                     href='/contact'
                     onClick={closeMenu}
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200'
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200';
                   >
                     Get Started
                   </Link>

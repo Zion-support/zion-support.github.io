@@ -5,8 +5,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const r = null;
     res.status(200).json({ summary, timestamp: new Date().toISOString() })
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
     const r = await fetch(
       `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`

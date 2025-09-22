@@ -158,16 +158,16 @@ default:
           content='innovative services, micro SAAS, AI services, healthcare technology, fintech, Zion Tech Group'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Innovative Services Showcase 2025 - Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Comprehensive collection of innovative technology services.'
         />
         <meta
-          property='og:url'
-          content='https://ziontechgroup.com/innovative-services-showcase-2025'
+          property='og:url';
+          content='https://ziontechgroup.com/innovative-services-showcase-2025';
         />
       </Head>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -235,7 +235,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
         </div>
 
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>;
           <motion.div
             initial={{ opacity: 0;, y: 30 ;}}
             animate={{ opacity: 1;, y: 0 ;}}
@@ -246,14 +246,14 @@ className='mb-8'
               <Star className='w-4 h-4 mr-2' />
               Innovation Showcase 2025
             </div>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Innovative Services
               </span>
               <br />
               <span className='text-white'>Showcase</span>
             </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
               Discover our comprehensive collection of revolutionary micro SAAS
               AI, healthcare, fintech, and emerging technology services that are
               transforming industries worldwide.
@@ -266,11 +266,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, y: 0 }}
 
             transition={{ duration: 0.8, delay: 0.2 }}
-className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
+className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto';
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div className='text-center'>
-              <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
+              <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>;
                 {serviceCategories.reduce(
                   (total, category) => total + category.services.length;
                   0;
@@ -280,45 +280,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-gray-400'>Services</div>
             </div>'
             <div className='text-center'>'
-              <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>
+              <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>;
                 {serviceCategories.length}
               </div>'
               <div className='text-gray-400'>Categories</div>
             </div>'
             <div className='text-center'>'
-              <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>
+              <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>;
                 24/7;
               </div>'
               <div className='text-gray-400'>Support</div>
             </div>'
             <div className='text-center'>'
-              <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>
+              <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>;
                 99.9%
               </div>'
               <div className='text-gray-400'>Uptime</div>            </div>          >
             transition={{ duration: 0.8, delay: 0.2 }}"
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto";
           >"
             <div className="text-center">"
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">;
                 {serviceCategories.reduce((total, category) => total + category.services.length, 0)}+
               </div>"
               <div className="text-gray-400">Services</div>
             </div>"
             <div className="text-center">"
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">;
                 {serviceCategories.length}
               </div>"
               <div className="text-gray-400">Categories</div>
             </div>"
             <div className="text-center">"
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">;
                 24/7;
               </div>"
               <div className="text-gray-400">Support</div>
             </div>"
             <div className="text-center">"
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">;
                 99.9%
               </div>"
               <div className="text-gray-400">Uptime</div>
@@ -334,12 +334,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50";
       {/* Search and Filter Section */}
 <section className='py-16 bg-gradient-to-b from-black to-slate-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-8'>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
               {/* Search */}
               <div className='relative'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -348,12 +348,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   placeholder='Search services...'
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-                  className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'
+                  className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50';
 origin/cursor/automate-test-improve-and-merge-code-2533
                 />
               </div>'
                   className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'                />
-
+;
                 />
 
               </div>
@@ -366,7 +366,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
 
 onChange={e => setSelectedCategory(e.target.value)}
-                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50'
+                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50';
                 >
                   <option value='all'>All Categories</option>
                   {serviceCategories.map(category => (
@@ -391,7 +391,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 onChange={e => setSortBy(e.target.value)}
-                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50'
+                  className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50';
                 >
                   <option value='name'>Sort by Name</option>
                   <option value='price'>Sort by Price</option>
@@ -404,8 +404,8 @@ onChange={e => setSortBy(e.target.value)}
       </section>
       {/* Services Grid */}
 <section className='py-20 bg-slate-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -415,7 +415,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'
+className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105';
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 {/* Service Header */}'
@@ -434,7 +434,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text-sm text-gray-400'>/month</div>
                     </div>
                   </div>'
-                  <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                  <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
                     {service.name}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}              >'
@@ -452,7 +452,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="text-sm text-gray-400">/month</div>
                   </div>
                   </div>"
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
       {/* Services Grid */}'
       <section className='py - 20 bg - slate - 900'>;'
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;'"
@@ -579,13 +579,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex gap-3'>
                   <a
                     href={service.website}
-                    className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'
+                    className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300';
                   >
                     Learn More
                   </a>
                   <a
                     href={`mailto: ${service.contact.email;}`}
-className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300';
                   >
                     <Mail className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -635,7 +635,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -647,7 +647,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -655,17 +655,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               can revolutionize your operations and drive growth.
             </p>
           </motion.div>'
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >"
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >";
             className="text-center mb-16"
           >"
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform Your Business?
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.
             </p>
           </motion.div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
             </h2>;'

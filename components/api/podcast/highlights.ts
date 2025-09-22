@@ -146,7 +146,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 label: `Highlight ${i + 1}`,
     start: t,
     end:
-      i + 1 < segments.length
+      i + 1 < segments.length;
         ? segments[i + 1]
         : episode?.timeMarkers?.closing || '15:00',
   }));

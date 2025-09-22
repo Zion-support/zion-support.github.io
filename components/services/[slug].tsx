@@ -14,11 +14,11 @@ import Head from 'next/head',
   params: {}
   slug;
 }) );
-fallback: false
+fallback: false;
 }export default function ServiceDetailPage ({
   service
 }: {
-  service: Service
+  service: Service;
 }) {
   return (<Layout> <Head> <title> {
 
@@ -101,7 +101,7 @@ null;
 
 }</p>
 }{
-  service.competitors?.length ? () : null
+  service.competitors?.length ? () : null;
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
 
 pr-12243
@@ -132,9 +132,9 @@ type Service = typeof enhancedRealMicroSaasServices[number];
 
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-
+;
   service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> 
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> ;
 };
 export default ServiceDetail
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -144,7 +144,7 @@ export default ServiceDetail;
 export default ServiceDetail;
 }
   service.name "
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>;
 };
 export default ServiceDetail;
 export default ServiceDetail;
@@ -203,7 +203,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 pr-12243
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-
+;
 }
 
 export default ServiceDetail
@@ -211,9 +211,9 @@ export default ServiceDetail
 export default ServiceDetail
 }
   service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>;
   service.name;"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href = \"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>
+}- Zion Tech Solutions</title> </Head> </Link> <Link href = \"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
 ;
 }
 
@@ -285,7 +285,7 @@ export default ServiceDetail ;
 export default ServiceDetail;
 
 service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>;
 origin/cursor/automate-test-improve-and-merge-code-382a
 pr-12243
 
@@ -296,7 +296,7 @@ pr-12243
 
 export default ServiceDetail;
   service.name "
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>;
 };
 export default ServiceDetail;
 export default ServiceDetail;

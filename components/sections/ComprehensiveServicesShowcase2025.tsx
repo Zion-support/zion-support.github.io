@@ -100,7 +100,7 @@ description: 'Advanced learning and educational technology',
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
-      opacity: 1
+      opacity: 1;
       transition: {
 staggerChildren: 0.1,
       },
@@ -110,8 +110,8 @@ staggerChildren: 0.1,
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0
-      opacity: 1
+      y: 0;
+      opacity: 1;
       transition: {
 duration: 0.5,
       },
@@ -132,14 +132,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>"
         <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>"
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>
         <div className='absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000'></div>
       </div>
 
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
@@ -155,7 +155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
-          <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
+          <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>;
             Revolutionary 2025 Services;
           </h2>'
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
@@ -252,10 +252,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
 
               {/* Services Grid */}'"
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">'
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">';
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
 
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {category.services.map((service, serviceIndex) => (
                   <motion.div;
@@ -290,12 +290,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <p className="text - gray - 400 text - sm leading - relaxed">;
                         {service.description}
 
-className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30'
+className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30';
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     {/* Service Header */}'
                     <div className='mb-4'>'
-                      <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors'>
+                      <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors'>;
                         {service.name}
                       </h4>'
                       <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}
@@ -325,7 +325,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     {/* Features */}"
                     <div className="mb-4">"
-                      <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>"
+                      <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>";
                       <ul className="space-y-1">
                         {service.features?.slice(0, 3).map((feature, featureIndex) => ("
                           <li key={featureIndex} className="flex items-center text-xs text-gray-400">"
@@ -340,7 +340,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
                         Key Features:
-                      </h5>
+                      </h5>;
                       <ul className='space-y-1'>
                         {service.features
                           ?.slice(0, 3)
@@ -368,13 +368,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                         )}"
                       <div className="flex items-center justify-between">"
-                        <span className="text-sm text-gray-400">Starting from:</span>"
+                        <span className="text-sm text-gray-400">Starting from:</span>";
                         <span className="text-lg font-bold text-green-400">
                           {service.price}{service.period}
                         </span>
                       </div>"
                       <div className="text-xs text-gray-500 mt-1">"
-                      <h5 className="text-sm font-medium text-purple-300 mb-2">ROI & Benefits:</h5>"
+                      <h5 className="text-sm font-medium text-purple-300 mb-2">ROI & Benefits:</h5>";
                       <div className="text-xs text-gray-400">"
                         <div className="flex items-center mb-1">"
                           <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
@@ -429,7 +429,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="flex flex-wrap gap-1">;
                         {service && service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (;"
                     <div className="mb-4">"
-                      <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>"
+                      <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>";
                       <div className="flex flex-wrap gap-1">
                         {service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (
                           <span;
@@ -442,7 +442,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='flex items-center justify-between'>
                         <span className='text-sm text-gray-400'>
                           Starting from:
-                        </span>
+                        </span>;
                         <span className='text-lg font-bold text-green-400'>
                           {service.price}
                           {service.period}
@@ -456,7 +456,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
                         ROI & Benefits:
-                      </h5>
+                      </h5>;
                       <div className='text-xs text-gray-400'>
                         <div className='flex items-center mb-1'>
                           <TrendingUp className='w-3 h-3 text-blue-400 mr-2 flex-shrink-0' />
@@ -471,7 +471,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
                         Perfect for:
-                      </h5>
+                      </h5>;
                       <div className='flex flex-wrap gap-1'>
                         {service.useCases
                           ?.slice(0, 3)
@@ -489,7 +489,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mt-6'>
                       <a
                         href={service.link}
-                        className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
+                        className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30';
                       >
                         Learn More
                         <ArrowRight className='w-4 h-4 ml-2' />
@@ -497,7 +497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </a>
                     </div>
                     {/* Hover Effect Overlay */}
-<div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />
+<div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />;
                   </motion.div>
 
                         href={service && service.link}'
@@ -539,24 +539,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Join thousands of businesses already leveraging our cutting-edge;
               solutions to drive innovation, efficiency, and growth.
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <a'
-                href='https://ziontechgroup && ziontechgroup.com/contact''
+                href='https://ziontechgroup && ziontechgroup.com/contact'';
                 className='inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
                 Get Started Today;'
                 <Rocket className='w-5 h-5 ml-2' />;
               </a>;
               <a'
-                href='tel:+13024640950'
+                href='tel:+13024640950';
               <a"
-                href="https://ziontechgroup && ziontechgroup.com/contact""
+                href="https://ziontechgroup && ziontechgroup.com/contact"";
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30">;
                 Get Started Today;"
                 <Rocket className="w-5 h-5 ml-2" />;
               </a>;
               <a"
                 href="tel:+13024640950"
-
+;
 export default ComprehensiveServicesShowcase2025;
                       </p>;
                     </div>;
@@ -753,7 +753,7 @@ export default ComprehensiveServicesShowcase2025;  )
 export default ComprehensiveServicesShowcase2025;
 
 export default ComprehensiveServicesShowcase2025;
-                className='inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600'
+                className='inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600';
               >
                 Call +1 302 464 0950
                 <Phone className='w-5 h-5 ml-2' />

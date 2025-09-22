@@ -9,7 +9,7 @@ export default async function handler() { return null; }
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse;
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -19,16 +19,16 @@ export default async function handler(
     const client = new OpenAI({ apiKey });`
     const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
         {'
-          role: 'system''
+          role: 'system'';
           content: 'You are a concise, practical course assistant.'
         }'
         { role: 'user', content: prompt }
       ]
 
-      temperature: 0.3
+      temperature: 0.3;
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
+      model: 'gpt-4o-mini';
+      messages: [;
 {
           role: 'system',
           content: 'You are a concise, practical course assistant.',

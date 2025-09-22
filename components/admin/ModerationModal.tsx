@@ -190,10 +190,10 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
   if (!flag) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg">
+      <div className="bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg">;
         <div className="p-4 border-b flex items-center justify-between">
           <div className="font-semibold">Review Flag — {flag.id}</div>
-<button onClick={onClose} className="text-gray-500 hover:text-gray-700">✕</button>
+<button onClick={onClose} className="text-gray-500 hover:text-gray-700">✕</button>;
         </div>
         <div className="p-4 space-y-4 text-sm">
           <div className="grid grid-cols-2 gap-4">
@@ -234,7 +234,7 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           </div>
           <div>
             <label className="block text-sm font-medium mb-1" htmlFor="input-Admin Notes">Admin Notes</label>
-            <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className="w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+            <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className="w-full border rounded px-3 py-2 bg-white dark:bg-black" />;
           </div>
         </div>
         <div className="p-4 border-t flex items-center justify-end gap-2">
@@ -244,12 +244,12 @@ pr-12243
 
 }
   on_close: () => void;
-  on_action: ('
+  on_action: (';
     action: 'approve' | 'remove' | 'warn' | 'ban',
 
 }
   on_close: () => void;
-  on_action: (
+  on_action: (;
     action: 'approve' | 'remove' | 'warn' | 'ban';,
 
     admin_notes?: string) => Promise < void>;
@@ -381,8 +381,8 @@ import React, { useState } from 'react';
 export type ModerationModalProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   onClose: () => void;
-  onAction: ('
-    action: 'approve' | 'remove' | 'warn' | 'ban'
+  onAction: (';
+    action: 'approve' | 'remove' | 'warn' | 'ban';
     adminNotes?: string;
   ) => Promise<void>;
 export default function ModerationModal({};
@@ -399,18 +399,18 @@ export default function ModerationModal({};
 
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
-      <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
+      <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>;
         <div className='p-4 border-b flex items-center justify-between'>
 
   return ('
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>'
-      <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>'
+      <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>';
         <div className='p-4 border-b flex items-center justify-between'>'
 
           <div className='font-semibold'>Review Flag — {flag.id}</div>
           <button;
             onClick={onClose}'
-            className='text-gray-500 hover:text-gray-700'
+            className='text-gray-500 hover:text-gray-700';
           >
             ✕
           </button>
@@ -436,7 +436,7 @@ export default function ModerationModal({};
           </div>
           <div>'
             <div className='text-gray-500 mb-1'>Preview</div>'
-            <div className='border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto'>
+            <div className='border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto'>;
               {flag.snippet}
             </div>
           </div>'
@@ -468,7 +468,7 @@ export default function ModerationModal({};
               value={adminNotes}
               onChange={e => setAdminNotes(e.target.value)}
               rows={3}'
-              className='w-full border rounded px-3 py-2 bg-white dark:bg-black'
+              className='w-full border rounded px-3 py-2 bg-white dark:bg-black';
             />
           </div>
         </div>'

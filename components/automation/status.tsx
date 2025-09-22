@@ -86,7 +86,7 @@ function AutomationStatusPage() {}
           <div > Last Run: {new Date (status.run_at || '').toLocaleString () || '—'}</div>;'
           <div > Health: {status.ok ? 'OK' : 'Unknown'}</div>;"
           <div className="mt - 2"><a className="underline" href="/metrics / latest.json">View latest metrics JSON</a></div>;
-        </div>) : ("
+        </div>) : (";
         <div className="text - sm text - gray - 500">No status available yet.</div>)}
     </div>);
 }

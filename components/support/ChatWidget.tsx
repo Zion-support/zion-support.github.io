@@ -1,7 +1,7 @@
 import { X } from 'lucide-react';
 
 type ChatMessage = {'
-  role: 'user' | 'assistant' | 'system'
+  role: 'user' | 'assistant' | 'system';
   content: string;
   timestamp?: number;
 }
@@ -65,12 +65,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }'
-        method: 'POST''
+        method: 'POST'';
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({}
           sessionId: sessionIdRef.current;
           reason'
-          tag: 'escalate'
+          tag: 'escalate';
         })
       });
 '
@@ -120,7 +120,7 @@ const newUserMessage: ChatMessage = {
     await logEvent('message/user', { content: text });
     try {
       const res = await fetch('/api/support/chat', {
-        method: 'POST'
+        method: 'POST';
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
@@ -139,8 +139,8 @@ timestamp: Date.now(),
         };
         setMessages(prev => [...prev, assistantMessage]);
         await logEvent('message/assistant', {
-          content: assistantMessage.content
-          meta: data.meta
+          content: assistantMessage.content;
+          meta: data.meta;
         });
       }
       if (data?.meta?.intentMatched === false) {
@@ -202,10 +202,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setMessages(prev => [
         ...prev
         {
-          role: 'assistant'
+          role: 'assistant';
           content:
             'Sorry, something went wrong. Please try again or contact support.'
-          timestamp: Date.now()
+          timestamp: Date.now();
         }
       ]);
     } finally {
@@ -218,19 +218,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <button
           aria-label='Open support chat'
           onClick={() => setIsOpen(true)}
-          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'
+          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black';
         >
           ?
         </button>
       )}
       {isOpen && (
-<div className='w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col'>
-          <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800'>
+<div className='w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col'>;
+          <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800'>;
             <div className='font-semibold'>Zion Support</div>
             <button
               onClick={() => setIsOpen(false)}
               aria-label='Close'
-              className='p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700'
+              className='p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700';
             >
               <X size={18} />
             </button>
@@ -242,7 +242,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div
                 key={idx}
                 className={'
-                  m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'
+                  m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right';
                 }>;
                 <div;
                   className={'
@@ -252,11 +252,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div
                   className={
                     m && m.role === 'assistant'
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800';
                     m.role === 'assistant'
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800';
 origin/cursor/automate-test-improve-and-merge-code-2533
-                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white';
                   }
                 >
                   {m.content}
@@ -274,14 +274,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <button;
                     key={q}
                     onClick={() => onSend(q)}"
-                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"'
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"';
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
-
+;
                   >
 
             {isLoading && (
 <div className='text-sm'>
-                <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>
+                <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>;
                   Thinking…
                 </div>
               </div>
@@ -295,7 +295,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <button
                     key={q}
                     onClick={() => onSend(q)}
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800';
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {q}
@@ -313,8 +313,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
-
-<div className='border-t border-gray-200 dark:border-gray-800 p-2'>
+;
+<div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -340,41 +340,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <input;
                   value={input}
                   placeholder='Ask a question…'
-                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
+                  className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500';
                       onSend()
                     }
                   }}
                   placeholder="Ask a question…"
-                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500";
 origin/cursor/automate-test-improve-and-merge-code-2533
                   placeholder=\"Ask a question…\"
-                  className=\"flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500\"
+                  className=\"flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500\";
                 />
                 <button;
                   onClick={() => onSend()}
                   disabled={isLoading}
                     }
                   }}
-className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'
+className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50';
                 >
                   Send;
                 </button>
               </div>
-            ) : (
+            ) : (;
 <div className='flex flex-col gap-2 text-sm' />
-                <div className='text-gray-700 dark:text-gray-300' />
+                <div className='text-gray-700 dark:text-gray-300' />;
                   We can escalate this to our team:
-                </div>
+                </div>;
                 <div className='flex gap-2' />
                   <a;
-href='mailto:support@zion.ai'
-                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+href='mailto:support@zion.ai';
+                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800';
                    />
                     Email Support;
                   </a>
                   <a;
 href='/contact'
-                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    className='rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800';
                    />
                     Chat with Live Agent;
                   </a>

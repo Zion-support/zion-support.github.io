@@ -135,7 +135,7 @@ const fadeInUp = {
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.1;
     }
   }
 };
@@ -154,7 +154,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       icon: <Smartphone className="w-8 h-8" />,
       color: 'from-blue-500 to-cyan-500',
       services: advancedMicroSaasExpansion2025V2,
-      description: 'Cutting-edge micro SAAS solutions for modern businesses'
+      description: 'Cutting-edge micro SAAS solutions for modern businesses';
     },
     {
       id: 'it-infrastructure',
@@ -162,7 +162,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       icon: <Cloud className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500',
       services: advancedITServices2025,
-      description: 'Advanced IT infrastructure and security solutions'
+      description: 'Advanced IT infrastructure and security solutions';
     },
     {
       id: 'ai-services',
@@ -170,7 +170,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       icon: <Brain className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500',
       services: advancedAIServices2025,
-      description: 'Intelligent AI solutions for business transformation'
+      description: 'Intelligent AI solutions for business transformation';
     },
     {
       id: 'industry-solutions',
@@ -178,7 +178,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       icon: <Building className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
       services: advancedITServices2025,
-      description: 'Specialized solutions for specific industries'
+      description: 'Specialized solutions for specific industries';
     },
     {
       id: 'emerging-tech',
@@ -186,14 +186,14 @@ export default function ComprehensiveServicesShowcase2025V2() {
       icon: <Zap className="w-8 h-8" />,
       color: 'from-indigo-500 to-purple-500',
       services: advancedAIServices2025,
-      description: 'Breakthrough technologies of the future'
+      description: 'Breakthrough technologies of the future';
     }
   ];
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709';
   };
 
   return (
@@ -209,7 +209,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
 
-            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6";
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -219,7 +219,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Services Showcase;
           </motion.h1>
           <motion.p"
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -228,20 +228,20 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
           </motion.p>
           <motion.div"
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center";
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <a"
               href="#services""
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
             >
               Explore Services;
             </a>
             <a"
               href="#contact""
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200";
             >
               Get Started;
             </a>
@@ -253,7 +253,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section id="contact" className="py-16 px-4 bg-black/20">"
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2"
-            className="text-3xl md:text-4xl font-bold text-white mb-8"
+            className="text-3xl md:text-4xl font-bold text-white mb-8";
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -262,9 +262,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Ready to Transform Your Business?
           </motion.h2>
           <motion.div"
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-3 gap-8";
 <motion.div
-            className='grid md:grid-cols-3 gap-8'
+            className='grid md:grid-cols-3 gap-8';
 origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -317,11 +317,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section id="services" className="py-20 px-4">"
         <div className="max-w-7xl mx-auto">
           <motion.h2"
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-16";
 <section id='services' className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>
           <motion.h2
-            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
 origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -349,7 +349,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     {category.icon}
                   </div>"
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                     {category.name}
                   </h3>"
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -357,11 +357,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </div>
 "
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
                   {category.services.map((service, index) => (
                     <motion.div"
                       key={"id" in service ? service.id : index}"
-                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
+                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105";
                       whileHover={{ y: -5 }}
                     >"
                       <h4 className="text-xl font-semibold text-white mb-3">
@@ -398,7 +398,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       <a"`
                         href={`/services/${(service as any).slug || service.name.toLowerCase().replace(/\s+/g, "-")}`}"
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200";
                       >"
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </p>;
@@ -427,7 +427,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       <a
                         href={`/services/${service.slug}`}
-                        className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200'
+                        className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200';
                       >
                         Learn More <ArrowRight className='w-4 h-4 ml-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -445,11 +445,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className="py-20 px-4 bg-black/20">"
         <div className="max-w-7xl mx-auto">
           <motion.h2"
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-16";
 <section className='py-20 px-4 bg-black/20'>
         <div className='max-w-7xl mx-auto'>
           <motion.h2
-            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
 origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -460,9 +460,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.h2>
 
           <motion.div"
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8";
 <motion.div
-            className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'
+            className='grid md:grid-cols-2 lg:grid-cols-4 gap-8';
 origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -470,48 +470,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.6, delay: 0.2 }}
           >"
             <div className="text-center">"
-              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">;
                 25+
               </div>"
               <div className="text-white text-lg">New Services Added</div>
             </div>"
             <div className="text-center">"
-              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">;
                 $150B+
               </div>"
               <div className="text-white text-lg">Total Addressable Market</div>
             </div>"
             <div className="text-center">"
-              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">;
                 40%+
               </div>"
               <div className="text-white text-lg">Average Annual Growth</div>
             </div>"
             <div className="text-center">"
-              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">;
                 5;
               </div>"
               <div className="text-white text-lg">Service Categories</div>
 <div className='text-center'>
-              <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>
+              <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>;
                 25+
               </div>
               <div className='text-white text-lg'>New Services Added</div>
             </div>
             <div className='text-center'>
-              <div className='text-4xl md:text-5xl font-bold text-blue-400 mb-2'>
+              <div className='text-4xl md:text-5xl font-bold text-blue-400 mb-2'>;
                 $150B+
               </div>
               <div className='text-white text-lg'>Total Addressable Market</div>
             </div>
             <div className='text-center'>
-              <div className='text-4xl md:text-5xl font-bold text-purple-400 mb-2'>
+              <div className='text-4xl md:text-5xl font-bold text-purple-400 mb-2'>;
                 40%+
               </div>
               <div className='text-white text-lg'>Average Annual Growth</div>
             </div>
             <div className='text-center'>
-              <div className='text-4xl md:text-5xl font-bold text-green-400 mb-2'>
+              <div className='text-4xl md:text-5xl font-bold text-green-400 mb-2'>;
                 5
               </div>
               <div className='text-white text-lg'>Service Categories</div>
@@ -525,11 +525,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className="py-20 px-4">"
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2"
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="text-4xl md:text-5xl font-bold text-white mb-6";
 <section className='py-20 px-4'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.h2
-            className='text-4xl md:text-5xl font-bold text-white mb-6'
+            className='text-4xl md:text-5xl font-bold text-white mb-6';
 origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -552,12 +552,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             with our cutting-edge solutions.
           </motion.p>
           <motion.div"
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center";
 Join thousands of businesses already transforming their operations
             with our cutting-edge solutions.
           </motion.p>
           <motion.div
-            className='flex flex-col sm:flex-row gap-4 justify-center'
+            className='flex flex-col sm:flex-row gap-4 justify-center';
 origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -566,22 +566,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <a;`
               href={`mailto:${contactInfo.email}`}"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
             >
               Contact Our Team;
             </a>
             <a"
-              href="https://ziontechgroup.com""
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              href="https://ziontechgroup.com"";
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200";
 <a
               href={`mailto:${contactInfo.email}`}
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg';
             >
               Contact Our Team
             </a>
             <a
-              href='https://ziontechgroup.com'
-              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'
+              href='https://ziontechgroup.com';
+              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200';
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Visit Website;

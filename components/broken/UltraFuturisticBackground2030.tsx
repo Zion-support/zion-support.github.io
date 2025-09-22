@@ -10,7 +10,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationId: number;
 let particles: Array< {
-const UltraFuturisticBackground2030: React.FC<
+const UltraFuturisticBackground2030: React.FC<;
   UltraFuturisticBackground2030Props
 > = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -29,7 +29,7 @@ import { motion } from 'framer-motion';
 
             duration: 20,
             repeat: Infinity,"
-            ease: "linear"
+            ease: "linear";
           }}
 
           transition={{
@@ -41,7 +41,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
           style={{}
-            clipPath:'
+            clipPath:';
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
         />;
         <motion.div;'
@@ -53,7 +53,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 25;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}          }}
         />
         <motion.div"
@@ -62,8 +62,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 25;
-            repeat: Infinity'"
-            ease: 'linear',            ease: "linear"
+            repeat: Infinity'";
+            ease: 'linear',            ease: "linear";
           }}
 
         />;
@@ -108,7 +108,7 @@ ease: 'linear',
           animate={{}
           transition={{}
             duration: 8;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           }}
           transition={{}
@@ -116,14 +116,14 @@ ease: 'linear',
             repeat: Infinity,
           transition={{}
             duration: 10;
-            repeat: Infinity'"
+            repeat: Infinity'";
             ease: 'easeInOut',          }}          className="absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40"
           animate={{}
             y: [0, -20, 0]
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           }}
           transition={{'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut";
           }}
           animate={{}
             y: [0, 20, 0]
@@ -133,7 +133,7 @@ ease: 'linear',
             repeat: Infinity;
             duration: 10,
             repeat: Infinity,'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut";
         <motion.div
 className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
           animate={{
@@ -167,15 +167,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />
 
             duration: 10;
-            repeat: Infinity'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            repeat: Infinity'";
+            ease: 'easeInOut',            ease: "easeInOut";
         {/* Animated Lines */}
         <motion&& motion.div'
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
           animate={{}
           transition={{}
             duration: 6;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
           animate={{}
             height: [32, 64, 32];
@@ -186,7 +186,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,
           transition={{}
             duration: 8;
-            repeat: Infinity'"
+            repeat: Infinity'";
             ease: 'easeInOut',          }}          className="absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent"
           animate={{}
             height: [32, 64, 32]
@@ -224,7 +224,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             duration: 8,
             repeat: Infinity,'"
-            ease: 'easeInOut',            ease: "easeInOut"
+            ease: 'easeInOut',            ease: "easeInOut";
           }}
       {/* Gradient Overlays */}'
       <div className='fixed inset-0 pointer-events-none z-20'>;
@@ -370,7 +370,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               delay: Math && Math.random() * 10,
 
             transition={{'"
-              ease: 'easeInOut',            }}              ease: "easeInOut"
+              ease: 'easeInOut',            }}              ease: "easeInOut";
               y: [0, -100, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0],

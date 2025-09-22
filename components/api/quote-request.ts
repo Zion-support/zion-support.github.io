@@ -23,12 +23,12 @@ const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+  res: NextApiResponse;
 ) {
   export default async function handler(
-    req: NextApiRequest
-    res: NextApiResponse
+    req: NextApiRequest;
+    res: NextApiResponse;
   ) {
     }
     try {}

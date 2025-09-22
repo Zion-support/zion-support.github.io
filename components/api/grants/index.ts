@@ -127,10 +127,10 @@ if ( {) {}
         res.status (400).json ({ error: 'Missing required fields' });
   const files = null;
       return (
-        (status ? g.status === status : true) &&
-        (sector ? g.sector === sector : true) &&
-        (region ? g.region === region : true) &&
-        (program ? g.program === program : true)
+        (status ? g.status === status : true) &&;
+        (sector ? g.sector === sector : true) &&;
+        (region ? g.region === region : true) &&;
+        (program ? g.program === program : true);
 );
     });
     res.status(200).json({ items: list });

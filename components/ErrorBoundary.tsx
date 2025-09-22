@@ -1,14 +1,14 @@
 'use client'
 
 import React from 'react'
-
+;
 interface ErrorBoundaryState {
-  hasError: boolean
-  error?: Error
+  hasError: boolean;
+  error?: Error;
 }
 
 interface ErrorBoundaryProps {
-  children: React.ReactNode
+  children: React.ReactNode;
   fallback?: React.ComponentType<{ error?: Error; resetError: () => void }>
 }
 

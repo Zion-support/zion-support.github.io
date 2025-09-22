@@ -54,7 +54,7 @@ type Experiment = {}
   metric?: string;
   effort?: number;
 
-impact?: number 
+impact?: number ;
 };
 type Props = {;
   updatedAt: string | null;
@@ -65,16 +65,16 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
   hypothesis?: string;
   metric?: string;
   effort?: number;
-  impact?: number
+  impact?: number;
 };
 
 type Props = {;
   updatedAt: string | null,;
-  items: Experiment[]
+  items: Experiment[];
 };
 
   updatedAt: string | null;
-items: Experiment[]
+items: Experiment[];
 };
 
 export default function CurationPage({ updatedAt, items }: Props) {
@@ -84,7 +84,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
         AI Curated Growth Experiments
       </h1>
         <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>
-      ) : (
+      ) : (;
         <p className='mt-2 text-sm text-gray-600'>
           No curated output yet. It will appear here automatically after the
           next run.
@@ -171,7 +171,7 @@ export default function CurationPage({ updatedAt, items }: Props) {}
       <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>
       {updatedAt ? ("
         <p className="mt-2 text-sm text-gray-600">Last updated: {updatedAt}</p>
-      ) : ("
+      ) : (";
         <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>
       )}"
       <div className="mt-6 space-y-4">
@@ -304,7 +304,7 @@ export async function getStaticProps() { return null; }
 };
   }        items: []},;
         updatedAt: null;
-        items: []
+        items: [];
       }
       revalidate: 300;
     }

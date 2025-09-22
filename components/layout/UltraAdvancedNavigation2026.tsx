@@ -31,7 +31,7 @@ const contactInfo = {'
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
   address: '364 E Main St STE 1008 Middletown DE 19709',;'
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com';
 }
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
@@ -42,11 +42,11 @@ const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories = [
   {
-    title: 'AI & Machine Learning 2026'
-    icon: Brain'
-    color: 'from-purple-600 to-pink-600''
-    description: 'Next-generation AI solutions'
-    services: [
+    title: 'AI & Machine Learning 2026';
+    icon: Brain';
+    color: 'from-purple-600 to-pink-600'';
+    description: 'Next-generation AI solutions';
+    services: [;
 {
         name: 'AI Consciousness Simulation',
         href: '/ai-consciousness-simulation-platform',
@@ -54,16 +54,16 @@ const serviceCategories = [
         price: '$4,999/month',
       },
       {
-        name: 'Autonomous AI Agents'
-        href: '/autonomous-ai-agents-platform-2026'
-        description: 'Create autonomous AI agents'
-        price: '$199/month'
+        name: 'Autonomous AI Agents';
+        href: '/autonomous-ai-agents-platform-2026';
+        description: 'Create autonomous AI agents';
+        price: '$199/month';
       }
       {'
-        name: 'AI Healthcare Companion''
-        href: '/ai-healthcare-companion-2026''
-        description: 'Revolutionary healthcare AI''
-        price: '$399/month'
+        name: 'AI Healthcare Companion'';
+        href: '/ai-healthcare-companion-2026'';
+        description: 'Revolutionary healthcare AI'';
+        price: '$399/month';
       }
       {
         name: 'AI Content Creation Revolution',
@@ -78,7 +78,7 @@ const serviceCategories = [
     icon: Atom,
     color: 'from-blue-600 to-cyan-600',
     description: 'Quantum-powered solutions',
-    services: [
+    services: [;
 {
         name: 'Quantum Neural Interface',
         href: '/quantum-neural-interface-platform',
@@ -86,15 +86,15 @@ const serviceCategories = [
         price: '$8,999/month',
       },
       {
-        name: 'Quantum Internet Security'
-        href: '/quantum-internet-security-gateway'
-        description: 'Unbreakable encryption'
+        name: 'Quantum Internet Security';
+        href: '/quantum-internet-security-gateway';
+        description: 'Unbreakable encryption';
         price: '$3,999/month'
       }
       {'
-        name: 'Quantum Financial Trading''
-        href: '/quantum-financial-trading-algorithm-platform''
-        description: 'Quantum trading algorithms''
+        name: 'Quantum Financial Trading'';
+        href: '/quantum-financial-trading-algorithm-platform'';
+        description: 'Quantum trading algorithms'';
         price: '$12,999/month'
       }
       {
@@ -110,7 +110,7 @@ const serviceCategories = [
     icon: Sparkles,
     color: 'from-green-600 to-emerald-600',
     description: 'Cutting-edge innovations',
-    services: [
+    services: [;
 {
         name: 'Holographic Metaverse',
         href: '/holographic-metaverse-development-platform',
@@ -118,15 +118,15 @@ const serviceCategories = [
         price: '$2,999/month',
       },
       {
-        name: 'Space Debris Management'
-        href: '/space-debris-management-ai-platform'
-        description: 'AI space safety'
+        name: 'Space Debris Management';
+        href: '/space-debris-management-ai-platform';
+        description: 'AI space safety';
         price: '$5,999/month'
       }
       {'
-        name: 'AI Climate Prediction''
-        href: '/ai-climate-prediction-platform''
-        description: 'Climate change prediction''
+        name: 'AI Climate Prediction'';
+        href: '/ai-climate-prediction-platform'';
+        description: 'Climate change prediction'';
         price: '$1,999/month'
       }
       {
@@ -142,7 +142,7 @@ const serviceCategories = [
     icon: Shield,
     color: 'from-red-600 to-orange-600',
     description: 'Enterprise-grade solutions',
-    services: [
+    services: [;
 {
         name: 'Zero Trust Architecture',
         href: '/zero-trust-network-architecture-2026',
@@ -150,16 +150,16 @@ const serviceCategories = [
         price: 'Custom pricing',
       },
       {
-        name: 'Edge Computing Orchestration'
-        href: '/edge-computing-orchestration-2026'
-        description: 'Intelligent edge computing'
-        price: 'Custom pricing'
+        name: 'Edge Computing Orchestration';
+        href: '/edge-computing-orchestration-2026';
+        description: 'Intelligent edge computing';
+        price: 'Custom pricing';
       }
       {'
-        name: '5G Private Networks''
-        href: '/5g-private-network-solutions-2026''
-        description: 'Enterprise 5G''
-        price: 'Custom pricing'
+        name: '5G Private Networks'';
+        href: '/5g-private-network-solutions-2026'';
+        description: 'Enterprise 5G'';
+        price: 'Custom pricing';
       }
       {
         name: 'Blockchain Infrastructure',
@@ -174,7 +174,7 @@ const serviceCategories = [
     icon: Microscope,
     color: 'from-teal-600 to-cyan-600',
     description: 'Healthcare innovation',
-    services: [
+    services: [;
 {
         name: 'AI Drug Discovery',
         href: '/ai-drug-discovery-platform',
@@ -182,15 +182,15 @@ const serviceCategories = [
         price: '$4,999/month',
       },
       {
-        name: 'Autonomous Healthcare AI'
-        href: '/autonomous-healthcare-ai-platform'
-        description: 'Self-learning healthcare'
+        name: 'Autonomous Healthcare AI';
+        href: '/autonomous-healthcare-ai-platform';
+        description: 'Self-learning healthcare';
         price: '$2,499/month'
       }
       {'
-        name: 'Quantum Machine Learning''
-        href: '/quantum-machine-learning-platform''
-        description: 'Quantum AI research''
+        name: 'Quantum Machine Learning'';
+        href: '/quantum-machine-learning-platform'';
+        description: 'Quantum AI research'';
         price: '$6,999/month'
       }
       {
@@ -206,7 +206,7 @@ const serviceCategories = [
     icon: DollarSign,
     color: 'from-emerald-600 to-green-600',
     description: 'Fintech solutions',
-    services: [
+    services: [;
 {
         name: 'Autonomous Supply Chain',
         href: '/autonomous-supply-chain-optimization-ai',
@@ -214,15 +214,15 @@ const serviceCategories = [
         price: '$899/month',
       },
       {
-        name: 'Autonomous Marketing AI'
-        href: '/autonomous-marketing-ai-platform'
-        description: 'Self-optimizing marketing'
+        name: 'Autonomous Marketing AI';
+        href: '/autonomous-marketing-ai-platform';
+        description: 'Self-optimizing marketing';
         price: '$1,499/month'
       }
       {'
-        name: 'AI Cybersecurity''
-        href: '/ai-cybersecurity-platform''
-        description: 'Next-gen security''
+        name: 'AI Cybersecurity'';
+        href: '/ai-cybersecurity-platform'';
+        description: 'Next-gen security'';
         price: '$2,999/month'
       }
       {
@@ -279,8 +279,8 @@ const companyLinks = ['
   { name: 'About Us', href: '/about', icon: Users }'
   { name: '2026 Services', href: '/2026-services-showcase', icon: Rocket }
   {'
-    name: 'Innovative 2026''
-    href: '/2026-innovative-services-showcase'
+    name: 'Innovative 2026'';
+    href: '/2026-innovative-services-showcase';
     icon: Zap;
   }
   },
@@ -296,9 +296,9 @@ const companyLinks = [
     icon: Zap,
   },
   {
-    name: 'Ultimate 2026'
-    href: '/ultimate-2026-services-showcase'
-    icon: Sparkles
+    name: 'Ultimate 2026';
+    href: '/ultimate-2026-services-showcase';
+    icon: Sparkles;
   }
   {
     name: '2026 Pricing',
@@ -327,12 +327,12 @@ setIsScrolled(window.scrollY > 20);
 origin/cursor/automate-test-improve-and-merge-code-2533
   const navigationItems = [
     {
-      name: 'AI Services'
+      name: 'AI Services';
       href: '/services?category=ai'
-      icon: Brain'
-      color: 'from-blue-500 to-cyan-500''
-      description: 'Autonomous AI systems and consciousness interfaces'
-      subItems: []
+      icon: Brain';
+      color: 'from-blue-500 to-cyan-500'';
+      description: 'Autonomous AI systems and consciousness interfaces';
+      subItems: [];
 const companyLinks = [;'
   { name: 'Home', href: '/', icon: Home },;'
   { name: 'About Us', href: '/about', icon: Users },;'
@@ -522,9 +522,9 @@ const UltraAdvancedNavigation2026 = () => {;
       ];
     }
   const contactInfo = {'
-    phone: '+1 302 464 0950''
-    email: 'kleber@ziontechgroup.com''
-    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+    phone: '+1 302 464 0950'';
+    email: 'kleber@ziontechgroup.com'';
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
   }
 
   const contactInfo = {;'
@@ -533,9 +533,9 @@ const UltraAdvancedNavigation2026 = () => {;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
 
   const contactInfo = {'
-    phone: '+1 302 464 0950''
-    email: 'kleber@ziontechgroup.com''
-    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+    phone: '+1 302 464 0950'';
+    email: 'kleber@ziontechgroup.com'';
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
   }
 const company_links = [;'
   { name: 'Home', href: '/', icon: Home },'
@@ -688,7 +688,7 @@ const UltraAdvancedNavigation2026 = () =>: any {}
                 <div key={item.name} className='relative group'>            {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">"
               <div className="relative">"
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
                   <Rocket className="w-6 h-6 text-white" />
 {
           name: 'AI Autonomous Agents',
@@ -696,24 +696,24 @@ const UltraAdvancedNavigation2026 = () =>: any {}
           description: 'Fully autonomous AI systems',
         },
         {
-          name: 'AI Consciousness'
+          name: 'AI Consciousness';
           href: '/services?category=ai-consciousness'
-          description: 'Consciousness simulation and interfaces'
+          description: 'Consciousness simulation and interfaces';
         }
         {
-          name: 'AI Healthcare'
+          name: 'AI Healthcare';
           href: '/services?category=ai-healthcare'
-          description: 'Medical AI and diagnostics'
+          description: 'Medical AI and diagnostics';
         }
         {
-          name: 'AI Education'
+          name: 'AI Education';
           href: '/services?category=ai-education'
-          description: 'Educational AI systems'
+          description: 'Educational AI systems';
         }
         {
-          name: 'AI Legal'
+          name: 'AI Legal';
           href: '/services?category=ai-legal'
-          description: 'Legal AI and compliance'
+          description: 'Legal AI and compliance';
         }
         {
           name: 'AI Creative',
@@ -728,21 +728,21 @@ const UltraAdvancedNavigation2026 = () =>: any {}
       icon: Atom,
       color: 'from-purple-500 to-indigo-500',
       description: 'Quantum computing and space technology',
-      subItems: [
+      subItems: [;
 {
           name: 'Quantum Space Tech',
           href: '/services?category=quantum-space',
           description: 'Space exploration and communication',
         },
         {
-          name: 'Quantum Computing'
+          name: 'Quantum Computing';
           href: '/services?category=quantum-computing'
-          description: 'Advanced quantum systems'
+          description: 'Advanced quantum systems';
         }
         {
-          name: 'Quantum AI'
+          name: 'Quantum AI';
           href: '/services?category=quantum-ai'
-          description: 'Quantum-powered AI'
+          description: 'Quantum-powered AI';
         }
         {
           name: 'Quantum Security',
@@ -757,21 +757,21 @@ const UltraAdvancedNavigation2026 = () =>: any {}
       icon: Globe,
       color: 'from-pink-500 to-rose-500',
       description: 'Virtual worlds and digital reality',
-      subItems: [
+      subItems: [;
 {
           name: 'Metaverse Platforms',
           href: '/services?category=metaverse-platforms',
           description: 'Virtual world platforms',
         },
         {
-          name: 'Digital Reality'
+          name: 'Digital Reality';
           href: '/services?category=digital-reality'
-          description: 'Immersive experiences'
+          description: 'Immersive experiences';
         }
         {
-          name: 'Holographic Tech'
+          name: 'Holographic Tech';
           href: '/services?category=holographic'
-          description: '3D holographic systems'
+          description: '3D holographic systems';
         }
         {
           name: 'Consciousness Interface',
@@ -786,21 +786,21 @@ const UltraAdvancedNavigation2026 = () =>: any {}
       icon: Zap,
       color: 'from-green-500 to-emerald-500',
       description: 'Enterprise solutions and infrastructure',
-      subItems: [
+      subItems: [;
 {
           name: 'Cloud Solutions',
           href: '/services?category=cloud',
           description: 'Cloud infrastructure and services',
         },
         {
-          name: 'Cybersecurity'
+          name: 'Cybersecurity';
           href: '/services?category=security'
-          description: 'Advanced security solutions'
+          description: 'Advanced security solutions';
         }
         {
-          name: 'Data Analytics'
+          name: 'Data Analytics';
           href: '/services?category=analytics'
-          description: 'Business intelligence and analytics'
+          description: 'Business intelligence and analytics';
         }
         {
           name: 'DevOps',
@@ -824,20 +824,20 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl'
-            : 'bg-transparent'
+            : 'bg-transparent';
         }`}
       >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex items-center justify-between h-20'>
             {/* Logo */}
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
-                <div className='w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                <div className='w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
                   <Rocket className='w-6 h-6 text-white' />
                 </div>
-                <div className='absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>
+                <div className='absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>;
               </div>
-              <div className='hidden sm:block'>
+              <div className='hidden sm:block'>;
                 <div className='text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
                   Zion Tech Group
                 </div>
@@ -863,21 +863,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>              </div>;
             </Link>;
             {/* Desktop Navigation */}
-<div className='hidden lg:flex items-center space-x-8'>
+<div className='hidden lg:flex items-center space-x-8'>;
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>
                     onClick={() =>
                       setActiveDropdown(
-                        activeDropdown === item.name ? null : item.name
+                        activeDropdown === item.name ? null : item.name;
                       )
                     }
-                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2';
                   >
                     <item.icon className='w-5 h-5' />
                     <span className='font-medium'>{item.name}</span>
                     <ChevronDown
                       className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
+                        activeDropdown === item.name ? 'rotate-180' : '';
                       }`}
                     />
                   </button>
@@ -892,7 +892,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <Link;
                                 key={subItem && subItem.name}
                                 href={subItem && subItem.href}"
-                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
+                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group";
                                 onClick={() => setActiveDropdown(null)}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
@@ -919,13 +919,13 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
                               <Link
                                 key={subItem.name}
                                 href={subItem.href}
-                                className='block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group'
+                                className='block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group';
                                 onClick={() => setActiveDropdown(null)}
                               >
-                                <div className='text-white font-medium group-hover:text-purple-300 transition-colors duration-200'>
+                                <div className='text-white font-medium group-hover:text-purple-300 transition-colors duration-200'>;
                                   {subItem.name}
                                 </div>
-                                <div className='text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200'>
+                                <div className='text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                                   {subItem.description}
                                 </div>
@@ -944,7 +944,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
 <Link
                             href={item.href}
-                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'
+                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200';
                             onClick={() => setActiveDropdown(null)}
                           >
                             View All {item.name}
@@ -960,7 +960,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center space-x-6'>
                 <Link
                   href='/services'
-                  className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+                  className='text-gray-300 hover:text-white transition-colors duration-200 font-medium';
                 >
                   All Services
                 </Link>
@@ -973,11 +973,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link'
                   href='/contact'
                 </Link>"
-                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">;
                   Pricing;
                 </Link>"
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
-                  className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">;
+                  className='text-gray-300 hover:text-white transition-colors duration-200 font-medium';
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Contact
@@ -1073,14 +1073,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
 
             {/* Contact Info - Desktop */}
-<div className='hidden lg:flex items-center space-x-4'>
-              <div className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
+<div className='hidden lg:flex items-center space-x-4'>;
+              <div className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>;
                 <Phone className='w-4 h-4' />
                 <span className='text-sm font-medium'>{contactInfo.phone}</span>
               </div>
               <Link
                 href='/contact'
-                className='px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105'
+                className='px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105';
               >
                 Get Started
               </Link>
@@ -1089,13 +1089,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
+className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
             >
               {isOpen ? ('
                 <X className='w-6 h-6' />
-              ) : ('
+              ) : (';
                 <Menu className='w-6 h-6' />"
-              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200";
             >
             {/* Mobile Menu Button */}
             <button;
@@ -1132,7 +1132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'
+className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden';
 origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() => setIsOpen(false)}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
@@ -1163,7 +1163,7 @@ className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl borde
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className='p-2 text-gray-300 hover:text-white transition-colors duration-200'
+                  className='p-2 text-gray-300 hover:text-white transition-colors duration-200';
                 >
                   <X className='w-6 h-6' />
                 </button>
@@ -1176,7 +1176,7 @@ className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl borde
                     className='border-b border-gray-700/50 pb-4'
                   >
                       href={item.href}
-                      className='flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2'
+                      className='flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2';
                       onClick={() => setIsOpen(false)}
                     >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1193,7 +1193,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'
+                          className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1';
                           onClick={() => setIsOpen(false)}
 origin/cursor/automate-test-improve-and-merge-code-2533
                         >
@@ -1230,14 +1230,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='space-y-3 pt-4'>
                   <Link
                     href='/services'
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium';
                     onClick={() => setIsOpen(false)}
                   >
                     All Services
                   </Link>
                   <Link
 href='/pricing'
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium';
 origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={() => setIsOpen(false)}
                   >;
@@ -1293,7 +1293,7 @@ export default UltraAdvancedNavigation2026;
 ;
 
 href='/contact'
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium';
                     onClick={() => setIsOpen(false)}
                   >
                     Contact
@@ -1318,7 +1318,7 @@ href='/contact'
 <div className='pt-4'>
                   <Link
                     href='/contact'
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200';
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started Today

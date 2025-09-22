@@ -6,43 +6,43 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     id: 'salesforce',
     name: 'Salesforce',
     category: 'crm',
-    description: 'Enterprise CRM'
+    description: 'Enterprise CRM';
   },
   {
     id: 'hubspot',
     name: 'HubSpot',
     category: 'crm',
-    description: 'Marketing & Sales CRM'
+    description: 'Marketing & Sales CRM';
   },
   {
     id: 'pipedrive',
     name: 'PipeDrive',
     category: 'crm',
-    description: 'Sales pipeline CRM'
+    description: 'Sales pipeline CRM';
   },
   {
     id: 'greenhouse',
     name: 'Greenhouse',
     category: 'ats',
-    description: 'ATS & recruiting'
+    description: 'ATS & recruiting';
   },
   {
     id: 'lever',
     name: 'Lever',
     category: 'ats',
-    description: 'ATS & CRM'
+    description: 'ATS & CRM';
   },
   {
     id: 'workable',
     name: 'Workable',
     category: 'ats',
-    description: 'Recruiting software'
+    description: 'Recruiting software';
   },
   {
     id: 'bamboohr',
     name: 'BambooHR',
     category: 'ats',
-    description: 'HRIS & ATS'
+    description: 'HRIS & ATS';
   }
 ];
 

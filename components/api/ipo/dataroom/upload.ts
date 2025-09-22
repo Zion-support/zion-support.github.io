@@ -57,9 +57,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
-      type: 'file_upload'
+      type: 'file_upload';
       section
-      name: path.basename(targetPath)
+      name: path.basename(targetPath);
     });
     res.status(200).json({ ok: true });
   });

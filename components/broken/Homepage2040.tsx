@@ -62,7 +62,7 @@ animationDelay: `$ {}
 }Popular </div>)
 }</div> </span> </div> {}
   /* CTA Button */"
-}<Link > Learn More <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </motion.div>) )
+}<Link > Learn More <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </motion.div>) );
 }</motion.div> {}
   /* View All Services Button */"
 }<motion.div > <Link href="/innovative-2040-futuristic-services-showcase" className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg" > View All 2040 Services <ArrowRight className="w-6 h-6 ml-3" /> </a> </motion.div>) )"
@@ -103,7 +103,7 @@ const Homepage2040: React.FC = () => {}
       opacity: 1;
       y: 0;
       transition: {}
-        duration: 0.6"
+        duration: 0.6";
         ease: "easeOut" as const;
       }
     }
@@ -279,7 +279,7 @@ const Homepage2040: React.FC = () => {}
 
                 variants={itemVariants}
                 id="hero-heading"
-                className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
+                className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight";
               >
                 Zion Tech Group;
               </motion.h1>
@@ -287,7 +287,7 @@ const Homepage2040: React.FC = () => {}
               <motion.p 
 
                 variants={itemVariants}
-                className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
+                className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed";
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide;
               </motion.p>
@@ -295,10 +295,10 @@ const Homepage2040: React.FC = () => {}
               {/* Enhanced CTA Section */}
               <motion.div;
                 variants={itemVariants}"
-                className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
+                className="flex flex-col sm:flex-row gap-6 justify-center mb-12";
               >"
                 <Link href="/get-started" aria-label="Get started with our services">"
-                  <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">"
+                  <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">";
                     <span className="flex items-center gap-3">
                       Get Started"
                       <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" aria-hidden="true" />
@@ -306,12 +306,12 @@ const Homepage2040: React.FC = () => {}
                   </button>
                 </Link>"
                 <Link href="/services" aria-label="Learn more about our services">"
-                  <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
+                  <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">;
                     Explore Services;
                   </button>
                 </Link>"
                 <Link href="/pricing" aria-label="View our pricing">"
-                  <button className="px-10 py-5 border-3 border-purple-400 text-purple-400 font-bold text-lg rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black">
+                  <button className="px-10 py-5 border-3 border-purple-400 text-purple-400 font-bold text-lg rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black">;
                     View Pricing;
                   </button>
                 </Link>
@@ -470,10 +470,10 @@ const Homepage2040: React.FC = () => {}
                       {/* CTA Button */}
                       <Link;
                         href={service.link}"
-                        className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
+                        className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25";
                       >
                         Learn More"
-                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />;
                       </Link>
                     </motion.div>
                   ))}
@@ -519,15 +519,15 @@ const Homepage2040: React.FC = () => {}
               <motion.div 
 
                 variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-6 justify-center"
+                className="flex flex-col sm:flex-row gap-6 justify-center";
               >"
                 <Link href="/contact" aria-label="Contact us">"
-                  <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
+                  <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">;
                     Contact Us Today;
                   </button>
                 </Link>"
                 <Link href="/demo" aria-label="Request a demo">"
-                  <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                  <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
                     Request Demo;
                   </button>
                 </Link>

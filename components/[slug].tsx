@@ -147,7 +147,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (byId) return byId;
   }, [slug]);
           <div className="max-w-3xl mx-auto text-center">"
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>'"
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>'";
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>"
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>
           </div>
@@ -159,9 +159,9 @@ return undefined;
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
-<div className='min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8'>
+<div className='min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-3xl mx-auto text-center'>
-            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
+            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>;
               Service not found
             </h1>
             <p className='text-gray-300 mb-8'>
@@ -185,10 +185,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <title>{service.name} - Zion Tech Group</title>
 <meta name='description' content={service.description} />
         <link rel='canonical' href={canonicalUrl} />
-      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
               <span className='text-5xl' aria-hidden>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {service.icon}
@@ -352,7 +352,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 // Static export support: generate root-level pages for service slugs
-
+;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {}
   return enhancedRealMicroSaasServices.concat(

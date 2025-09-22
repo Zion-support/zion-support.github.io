@@ -62,7 +62,7 @@ import { Rocket;
  } from 'lucide-react';
 export default function StartupToolsPage() {
   const startupTools = null;
-      features: [
+      features: [;
         'CRM system'
         'Email marketing'
         'Lead generation'
@@ -70,16 +70,16 @@ export default function StartupToolsPage() {
         'Marketing automation'
         'Free tier available'
       ]
-      website: 'https://hubspot.com'
+      website: 'https://hubspot.com';
       useCase:
-        'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.'
-      pros: [
+        'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.';
+      pros: [;
         'Free tier'
         'All-in-one solution'
         'Great for beginners'
         'Excellent support'
       ]
-      cons: [
+      cons: [;
         'Can get expensive',
         'Complex for small teams',
         'Limited customization',
@@ -97,7 +97,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       users: '12M+',
       icon: <Mail className='w-8 h-8 text-yellow-400' />,
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
-      features: [
+      features: [;
         'Email templates',
         'Automation workflows',
         'A/B testing',
@@ -172,7 +172,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       users: '10M+',
 icon: <Calendar className='w-8 h-8 text-blue-400' />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-      features: [
+      features: [;
         'Automated scheduling',
         'Calendar integration',
         'Custom booking pages',
@@ -183,13 +183,13 @@ icon: <Calendar className='w-8 h-8 text-blue-400' />,
       website: 'https://calendly.com',
       useCase:
         'Essential for startups that need to schedule sales calls, investor meetings, and team collaborations efficiently.',
-      pros: [
+      pros: [;
         'Free tier',
         'Easy integration',
         'Professional appearance',
         'Time-saving',
       ],
-      cons: [
+      cons: [;
         'Limited free features',
         'Basic customization',
         'Can be expensive',
@@ -206,7 +206,7 @@ icon: <Calendar className='w-8 h-8 text-blue-400' />,
       users: '100M+',
 icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      features: [
+      features: [;
         'Design templates',
         'Stock photos & icons',
         'Brand kit',
@@ -224,17 +224,17 @@ icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
     {
       name: 'Buffer',
       description:
-        'Graphic design platform that makes it easy to create professional designs without design skills.',      category: 'Design'
-      pricing: 'Free - $12.99/month'
-      rating: 4.6
-      users: '100M+'
-      icon: <Lightbulb className='w-8 h-8 text-blue-400' />,      description: 'Graphic design platform that makes it easy to create professional designs without design skills.'
-      category: 'Design'
-      pricing: 'Free - $12.99/month'
-      rating: 4.6
-      users: '100M+'
+        'Graphic design platform that makes it easy to create professional designs without design skills.',      category: 'Design';
+      pricing: 'Free - $12.99/month';
+      rating: 4.6;
+      users: '100M+';
+      icon: <Lightbulb className='w-8 h-8 text-blue-400' />,      description: 'Graphic design platform that makes it easy to create professional designs without design skills.';
+      category: 'Design';
+      pricing: 'Free - $12.99/month';
+      rating: 4.6;
+      users: '100M+';
       icon: <Lightbulb className='w-8 h-8 text-blue-400' />
-      features: [
+      features: [;
         'Design templates'
         'Stock photos & icons'
         'Brand kit'
@@ -242,7 +242,7 @@ icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
         'Social media formats'
         'Free tier available'
       ]
-      website: 'https://canva.com'
+      website: 'https://canva.com';
       useCase:
         'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
       pros: ['Free tier', 'Easy to use', 'Good analytics', 'Affordable'],
@@ -259,7 +259,7 @@ icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
       users: '20M+',
       icon: <Zap className='w-8 h-8 text-gray-400' />,
       color: 'bg-gradient-to-br from-gray-500 to-gray-700',
-      features: [
+      features: [;
         'Note-taking & docs',
         'Project management',
         'Team collaboration',
@@ -270,7 +270,7 @@ icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
       website: 'https://notion.so',
       useCase:
         'Perfect for startup teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
-      pros: [
+      pros: [;
         'Highly flexible',
         'Beautiful interface',
         'Great templates',
@@ -289,7 +289,7 @@ icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
       users: '1M+',
       icon: <DollarSign className='w-8 h-8 text-blue-400' />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-      features: [
+      features: [;
         'Global payment methods',
         'Subscription billing',
         'Fraud protection',
@@ -300,13 +300,13 @@ icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
       website: 'https://stripe.com',
       useCase:
         'Essential for any startup that needs to accept payments, especially SaaS companies and e-commerce businesses.',
-      pros: [
+      pros: [;
         'Developer-friendly',
         'Global reach',
         'Excellent docs',
         'Reliable',
       ],
-      cons: [
+      cons: [;
         'Higher fees than some alternatives',
         'Complex for beginners',
         'Strict requirements',
@@ -323,7 +323,7 @@ icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
       users: '25K+',
 icon: <Users className='w-8 h-8 text-green-400' />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      features: [
+      features: [;
         'Live chat',
         'Customer messaging',
         'Help desk',
@@ -334,7 +334,7 @@ icon: <Users className='w-8 h-8 text-green-400' />,
       website: 'https://intercom.com',
       useCase:
         'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.',
-      pros: [
+      pros: [;
         'Great UX',
         'Powerful features',
         'Good integrations',
@@ -353,7 +353,7 @@ icon: <Users className='w-8 h-8 text-green-400' />,
       users: '26K+',
 icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-      features: [
+      features: [;
         'User behavior tracking'
         'Funnel analysis'
         'A/B testing'
@@ -361,10 +361,10 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
         'Custom events'
         'Mobile analytics'
       ]
-      website: 'https://mixpanel.com'
+      website: 'https://mixpanel.com';
       useCase:
         'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
-      pros: [
+      pros: [;
         'Powerful analytics',
         'Real-time data',
         'Good documentation',
@@ -383,7 +383,7 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
       users: '100K+',
       icon: <Rocket className='w-8 h-8 text-black' />,
       color: 'bg-gradient-to-br from-gray-800 to-black',
-      features: [
+      features: [;
         'Zero-config deployment',
         'Global CDN',
         'Automatic scaling',
@@ -395,7 +395,7 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
       useCase:
         'Ideal for startup development teams that want to deploy modern web applications quickly with excellent performance.',
       pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier'],
-      cons: [
+      cons: [;
         'Limited backend features',
         'Can be expensive for high traffic',
         'Vendor lock-in',
@@ -413,11 +413,11 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
           content='Essential tools and resources for startups and entrepreneurs. Curated selection of SaaS services to help your business grow.'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Startup Tools & Resources - Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Essential tools and resources for startups and entrepreneurs to accelerate growth.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -428,8 +428,8 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]' />
         </div>
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='mb-20 animate-fade-in'>
             <div className='mb-8'>
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6 animate-scale-in'>
@@ -437,19 +437,19 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                 Startup Growth Tools
               </div>
             </div>
-            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
+            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>;
               Startup Tools & Resources
             </h1>
-            <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>
+            <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>;
               Essential tools and resources to help your startup grow faster.
               Expert-curated selection of SaaS services for entrepreneurs and
               growing businesses.
             </p>
-            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               <Button
                 href='#tools'
                 size='lg'
-                className='animate-scale-in shadow-2xl shadow-orange-500/25 hover:shadow-orange-500/40'
+                className='animate-scale-in shadow-2xl shadow-orange-500/25 hover:shadow-orange-500/40';
                 style={{ animationDelay: '0.2s' ;}}
               >
                 Explore Tools
@@ -459,7 +459,7 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                 href='/contact'
                 variant='outline'
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
                 style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -470,47 +470,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-400 text-sm">Essential Tools</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
                 10;
               </div>"
               <div className="text-gray-400 text-sm">Categories</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
                 4.6+
               </div>"
               <div className="text-gray-400 text-sm">Avg Rating</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">;
                 130M+
               </div>"
               <div className="text-gray-400 text-sm">Total Users</div>
           {/* Stats */}
 <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in';
             style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
                 {startupTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Essential Tools</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
                 10
               </div>
               <div className='text-gray-400 text-sm'>Categories</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
                 4.6+
               </div>
               <div className='text-gray-400 text-sm'>Avg Rating</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
                 130M+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>
@@ -525,7 +525,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
               <button
@@ -548,7 +548,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Beyond tools, here are additional resources to help your startup succeed.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
             <Card className="text-center">"
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">"
                 <Users className="w-8 h-8 text-white" />
@@ -627,7 +627,7 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
   () => setSelectedCategory (category) 
 }className= {}`
   `px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 $ {'
-  selectedCategory === category ? 'bg-orange-600 text-white shadow-lg' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white' `
+  selectedCategory === category ? 'bg-orange-600 text-white shadow-lg' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white' `;
 }` 
 }> {}
   category;
@@ -637,26 +637,26 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
 }tools to accelerate your startup's growth.` 
 }</p> </div> </div>) ) "
 }</div> </div> </div> <div className="flex items-center justify-between" > <Button > Visit Website <ExternalLink className="w-4 h-4 ml-2" /> </Button> </div> </div> </div> </div> </Card>) ) "
-}</div> </div> </section> Additional Startup Resources </h2> <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" > Beyond tools, here are additional resources to help your startup succeed. </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600" > <Users className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Startup Communities</h3> <p className="text-gray-400 mb-4" > Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups. </p> <Button href="https://www.startupschool.org" variant="outline" size="sm" > Explore Communities </Button> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600" > <BookOpen className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Educational Resources</h3> <p className="text-gray-400 mb-4" > Access free courses from platforms like Coursera, edX, and startup-specific learning resources. </p> <Button href="https://www.coursera.org" variant="outline" size="sm" > Start Learning </Button> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600" > <TrendingUp className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Growth Strategies</h3> <p className="text-gray-400 mb-4" > Learn proven growth strategies from successful entrepreneurs and growth hackers. </p> <Button href="/resources" variant="outline" size="sm" > View Resources </Button> </Card> </div> </div> </section> Ready to Scale Your Startup? </h2> <p className="text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Our startup experts can help you choose the right tools, implement growth strategies, and accelerate your business growth. </p> <Button href="/contact" variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-gray-100 shadow-2xl" > Get Startup Consultation <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/saas-marketplace" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl" > Explore More Tools </Button> </div> </div> </section> </>) 
+}</div> </div> </section> Additional Startup Resources </h2> <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" > Beyond tools, here are additional resources to help your startup succeed. </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600" > <Users className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Startup Communities</h3> <p className="text-gray-400 mb-4" > Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups. </p> <Button href="https://www.startupschool.org" variant="outline" size="sm" > Explore Communities </Button> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600" > <BookOpen className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Educational Resources</h3> <p className="text-gray-400 mb-4" > Access free courses from platforms like Coursera, edX, and startup-specific learning resources. </p> <Button href="https://www.coursera.org" variant="outline" size="sm" > Start Learning </Button> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600" > <TrendingUp className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Growth Strategies</h3> <p className="text-gray-400 mb-4" > Learn proven growth strategies from successful entrepreneurs and growth hackers. </p> <Button href="/resources" variant="outline" size="sm" > View Resources </Button> </Card> </div> </div> </section> Ready to Scale Your Startup? </h2> <p className="text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Our startup experts can help you choose the right tools, implement growth strategies, and accelerate your business growth. </p> <Button href="/contact" variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-gray-100 shadow-2xl" > Get Startup Consultation <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/saas-marketplace" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl" > Explore More Tools </Button> </div> </div> </section> </>) ;
 }
 }
 
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
           </h2>
           <p className='text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our startup experts can help you choose the right tools, implement
             growth strategies, and accelerate your business growth.
           </p>
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button
               href='/contact'
               variant='secondary'
               size='lg'
-              className='bg-white text-orange-600 hover:bg-gray-100 shadow-2xl'
+              className='bg-white text-orange-600 hover:bg-gray-100 shadow-2xl';
             >
               Get Startup Consultation
               <ArrowRight className='w-5 h-5 ml-2' />
@@ -665,7 +665,7 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
               href='/saas-marketplace'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl'
+              className='border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl';
             >
               Explore More Tools
             </Button>

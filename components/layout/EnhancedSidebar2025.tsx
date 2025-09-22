@@ -5,7 +5,7 @@
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {}
   section.badge;
 }</span>)"
-}</div>) : (<ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />)"
+}</div>) : (<ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />)";
 }</button> <AnimatePresence> > <CloseIcon className="w-5 h-5" /> </button> </div> </div> </a>) )
 }+ {}
   filteredServices.length - 5;
@@ -16,7 +16,7 @@
 }</div> </div> </span> </a>) )
 }</div> </div> </span> </div> <ChevronRight className= {}
   `w-4 h-4 text-gray-400 transition-transform duration-200 $ {}
-  expandedCategory === item.name ? 'rotate-90' : ''`
+  expandedCategory === item.name ? 'rotate-90' : ''`;
 }`
 }/> </button> <AnimatePresence> > {}
   item.children?.map ( (child) => (<Link key= {}
@@ -58,24 +58,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   children?: SidebarItem[];
   badge?: string;
   isNew?: boolean;
-  isHot?: boolean
-import React, { useState, useEffect               } from 'react'
+  isHot?: boolean;
+import React, { useState, useEffect               } from 'react';
   'react.ts'
 import Link from 'next/link' from 'next/link.ts';{ motion, AnimatePresence               } from
-  'framer-motion.ts'
+  'framer-motion.ts';
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star } from'
   'lucide-react.ts'';interface SidebarItem {'
-  name: string
-   href: string
-   icon: React.ReactNode
-   description?: string
-   children?: SidebarItem[]
-   badge?: string
-   color?: string
-   isNew?: boolean
-   isHot?: boolean
-   isPremium?: boolean
-   category?: string
+  name: string;
+   href: string;
+   icon: React.ReactNode;
+   description?: string;
+   children?: SidebarItem[];
+   badge?: string;
+   color?: string;
+   isNew?: boolean;
+   isHot?: boolean;
+   isPremium?: boolean;
+   category?: string;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
@@ -83,17 +83,17 @@ const contactInfo = {'
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
   address: '364 E Main St STE 1008 Middletown DE 19709','
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 };
 
 const sidebarItems: SidebarItem[] = []
   {'
-    name: 'All Services''
-    href: '/comprehensive-services-showcase-2025'"
+    name: 'All Services'';
+    href: '/comprehensive-services-showcase-2025'";
     icon: <Globe className="w-5 h-5" />'
-    description: 'Complete portfolio of all technology services''
-    badge: 'Showcase'
-    children: ['
+    description: 'Complete portfolio of all technology services'';
+    badge: 'Showcase';
+    children: [';
       { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' }'
       { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' }'
       { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' }'
@@ -621,7 +621,7 @@ const sidebar_items: SidebarItem[] = [;
                   </span>)}
               </div>;
               {expanded_sections.has (section.title) ? (
-                <ChevronDown className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition-colors duration-200" />) : (
+                <ChevronDown className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition-colors duration-200" />) : (;
                 <ChevronRight className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition-colors duration-200" />)}
             </button>;
             <AnimatePresence>;
@@ -644,7 +644,7 @@ const supportLinks = ['
     title: 'Comp & Resources, '    icon: Users, color:, from-green-500 to-emerald-600
   ', '    items[
   '      {'
-        name: 'About Us, href: '/about
+        name: 'About Us, href: '/about;
   ', '        icon: Users, description:, Learn about Zion Tech Group', '        subItems['          { name: 'Our Mission, href:, /mission' }, '          { name: 'Leadership Team, href:, /leadership'
   ' },'          { name: 'Comp History, href:, /history' }, '          { name: 'Careers, href:, /careers
   ' }'        ]
@@ -655,7 +655,7 @@ const supportLinks = ['
 
         name: 'Support, , href: '/support, icon: HelpCircle, '        description:, Get help and support', subItems[
   '          { name: 'Contact Support, href:, /contact-support
-  ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'}, '          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href: '
+  ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'}, '          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href: ';
   '/knowledge-base' }'        ]'      }]  }
 ]
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -668,7 +668,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     description: 'Revolutionary AI consciousness and emotional intelligence','
     badge: 'New',
     isNew: true,
-    children: ['
+    children: [';
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025', description: 'Emotional intelligence and self-awareness' },'
       { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', description: 'Hybrid AI-Quantum computing platform' },'
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed AI research' },'
@@ -692,7 +692,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     description: 'Quantum computing and breakthrough technologies','
     badge: 'Hot',
     isHot: true,
-    children: ['
+    children: [';
       { name: 'Space Resource Mining', href: '/space-resource-mining-platform', description: 'Asteroid mining and space resources' },'
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform', description: 'Unbreakable encryption' },'
       { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', description: 'Neural interface technology' },'
@@ -713,7 +713,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/enterprise-it',"
     icon: <Shield className="w-5 h-5" />,'
     color: 'text-blue-400',
-    items: ['
+    items: [';
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', badge: 'New' },'
       { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', badge: 'New' },'
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', badge: 'New' },'
@@ -733,7 +733,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     icon: <Rocket className="w-5 h-5" />,'
     description: 'Innovative business solutions for modern enterprises','
     badge: 'Popular',
-    children: ['
+    children: [';
       { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Data-driven insights' },'
       { name: 'AI Content Generation', href: '/ai-content-generation-platform', description: 'Automated content creation' },'
       { name: 'AI Customer Service', href: '/ai-customer-service-automation', description: 'Intelligent support automation' },'
@@ -751,7 +751,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/creative-services',"
     icon: <Palette className="w-5 h-5" />,'
     description: 'AI-powered creative and design solutions',
-    children: ['
+    children: [';
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },'
       { name: 'Metaverse Development', href: '/metaverse-development-studio', description: '3D world creation' },'
       { name: 'Quantum Metaverse', href: '/quantum-metaverse-platform', description: 'Quantum-enhanced experiences' },'
@@ -765,7 +765,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/research-development',"
     icon: <BookOpen className="w-5 h-5" />,'
     description: 'Cutting-edge research and development services',
-    children: ['
+    children: [';
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed research' },'
       { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' },'
       { name: 'Space Technology Research', href: '/space-technology-research', description: 'Space exploration solutions' },'
@@ -779,7 +779,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/industry-solutions',"
     icon: <Truck className="w-5 h-5" />,'
     description: 'Specialized solutions for specific industries',
-    children: ['
+    children: [';
       { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'Medical AI applications' },'
       { name: 'Financial Services', href: '/financial-ai-solutions', description: 'Fintech AI solutions' },'
       { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions', description: 'Industrial automation' },'
@@ -793,7 +793,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/pricing',"
     icon: <DollarSign className="w-5 h-5" />,'
     description: 'Flexible pricing options for all services',
-    children: ['
+    children: [';
       { name: '2025 Pricing', href: '/pricing-2025', description: 'Current year pricing' },'
       { name: '2026 Pricing', href: '/pricing-2026', description: 'Next year pricing' },'
       { name: 'Enterprise Plans', href: '/enterprise-pricing', description: 'Large organization pricing' },'
@@ -807,7 +807,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/resources',"
     icon: <BookOpen className="w-5 h-5" />,'
     description: 'Educational resources and documentation',
-    children: ['
+    children: [';
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },'
       { name: 'API Reference', href: '/api-docs', description: 'API documentation' },'
       { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' },'
@@ -821,7 +821,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     href: '/support',"
     icon: <Settings className="w-5 h-5" />,'
     description: 'Technical support and customer service',
-    children: ['
+    children: [';
       { name: 'Help Center', href: '/help', description: 'Self-service support' },'
       { name: 'Contact Support', href: '/contact', description: 'Get in touch' },'
       { name: 'Live Chat', href: '/live-chat', description: 'Real-time assistance' },'
@@ -913,13 +913,13 @@ const supportLinks = ['
               <div className="space-y-3">"
                 <div className="flex items-center space-x-3 text-gray-300">"
                   <Phone className="w-4 h-4 text-cyan-400" />"`
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">;
                     {contactInfo.mobile}
                   </a>
                 </div>"
                 <div className="flex items-center space-x-3 text-gray-300">"
                   <Mail className="w-4 h-4 text-cyan-400" />"`
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">;
                     {contactInfo.email}
                   </a>
                 </div>"
@@ -1013,13 +1013,13 @@ const supportLinks = ['
               <div className="space-y-3">"
                 <div className="flex items-center space-x-3 text-gray-300">"
                   <Phone className="w-4 h-4 text-cyan-400" />"`
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">;
                     {contactInfo.mobile}
                   </a>
                 </div>"
                 <div className="flex items-center space-x-3 text-gray-300">"
                   <Mail className="w-4 h-4 text-cyan-400" />"`
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">;
                     {contactInfo.email}
                   </a>
                 </div>"
@@ -1125,12 +1125,12 @@ const supportLinks = ['
                     key={link.name}
                     href={link.href}
                     onClick={onClose}"
-                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
+                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group";
                   >"
-                    <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                    <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">;
                       {link.icon}
                     </div>"
-                    <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                    <span className="text-gray-300 group-hover:text-white transition-colors duration-200">;
                       {link.name}
                     </span>
                   </Link>
@@ -1148,19 +1148,19 @@ const supportLinks = ['
                   <div key={item.name}>
                     <button;
                       onClick={() => toggleCategory(item.name)}"
-                      className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
+                      className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group";
                     >"
                       <div className="flex items-center space-x-3">'`
                         <div className={`w-8 h-8 bg-gradient-to-r ${item.isHot ? 'from-indigo-500 to-purple-600' : 'from-cyan-500 to-blue-600'} rounded-lg flex items-center justify-center`}>
                           {item.icon}
                         </div>"
-                        <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                        <span className="text-gray-300 group-hover:text-white transition-colors duration-200">;
                           {item.name}
                         </span>
                       </div>
                       <ChevronRight;`
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${'
-                          expandedCategory === item && item.name ? 'rotate-90' : ''`
+                          expandedCategory === item && item.name ? 'rotate-90' : ''`;
                         }`} 
                       />;
                     </button>;
@@ -1756,7 +1756,7 @@ className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - 
 className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto}
       <motion.div
 initial={{ x:, -100%
-  ' }}'        animate={{ x: isOpen ? 0 :
+  ' }}'        animate={{ x: isOpen ? 0 :;
   '-100% }}'
 , transition = {''
   { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`'
@@ -1780,7 +1780,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           {sidebarSections && sidebarSections.map((section, sectionIndex) => (;"
             <div key={sectionIndex} className="space-y-3>              <button"                onClick={() => toggleSection(section && section.title)}"`
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"                <div className="flex items-center gap-3>                  <div className={`w-8 h-8 bg-gradient-to-r ${section && section.color} rounded-lg flex items-center justify-center`}>"                    <section && section.icon className="w-4 h-4 text-white />                  </div>"                  <span className="text-white font-semibold>{section && section.title}</span>                </div>"                <ChevronDownclassName={w-4 h-4 text-gray-400 transition-transform duration-300 ${`'
-                    expandedSections && expandedSections.has(section && section.title) ? 'rotate-180' : '`
+                    expandedSections && expandedSections.has(section && section.title) ? 'rotate-180' : '`;
 '                  }`}'                />              </button><AnimatePresence>;'
 initial={{ coordinate_x: '-100%' }}'        animate={{ coordinate_x: is_open ? 0 : '-100%' }}'        transition = {';'
   { type: 'spring','
@@ -2024,16 +2024,16 @@ className="space-y-2 ml-6"                    {section.items.map ((item, item_in
           {/* comment */}
           <div className="p-4" border-t border-gray-200>;
             <div className="flex items-center space-x-4>";
-              <ahref="https: // comment
+              <ahref="https: // comment;
                 target=_blank"
                 rel="noopener" noreferrer">;
           {/* comment */}";
           <div className="p-4 border-t border-gray-200>";
             <div className="flex" items-center justify-center space-x-4">";
-              <ahref="https: // comment
+              <ahref="https: // comment;
 target=_blank
                 rel="noopener noreferrer,"
-className="p-2" text-gray-400 hover: text-blue-600 transition-colors
+className="p-2" text-gray-400 hover: text-blue-600 transition-colors;
                 <Globe className="w-5 h-5       />;
     r: text-gray-600 transition-colors";
                 <Mail className="w-5 h-5"  />";
@@ -2095,7 +2095,7 @@ initial = {}
 , ,,
 }}
 { opacity: 1,'
-  height: 'auto' 
+  height: 'auto' ;
 }}
                                 exit = {}
                             )}

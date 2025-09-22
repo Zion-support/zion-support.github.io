@@ -11,13 +11,13 @@ const handleInputBlur = (name: keyof FormData) => {;
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" > Email Address * </label> <input /> {;
   errors && errors.email && (<motion && motion.p </motion && motion.p>) ;"
 }</div> </div> <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" > Company </label> <input /> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" > Service Interest </label> <select </option>) ) ;'"
-}</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10' 
-}text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20` "
+}</select> </div> </div> <div> <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" > Message * </label> <textareaerrors && errors.message ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10' ;
+}text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20` ";
 }placeholder="Tell us about your project and requirements..." /> {;
   errors && errors.message && (<motion&& motion.p initial= {
 
   {
-  opacity: 0, y: -10
+  opacity: 0, y: -10;
 }animate= {
   {
 import React, { useState } from 'react';
@@ -164,7 +164,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   };
 
   const handleChange = (
-    e: React.ChangeEvent<
+    e: React.ChangeEvent<;
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
@@ -237,7 +237,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 What happens next?
               </h3>
-              <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600">;
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-green-500" />
                   <span>Response within 24h</span>
@@ -307,7 +307,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   name="company"
                   value={formData && formData.company}
                   onChange={handleInputChange}"
-                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300""
+                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300"";
                   placeholder="Enter your company name"
                   Service Interest"
                 ">;
@@ -354,7 +354,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${}
                 isSubmitting'
                   ? 'bg-gray-600 cursor-not-allowed''
-                  : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'`
+                  : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'`;
               } flex items-center justify-center gap-3`}>;
               {isSubmitting ? (;
                 <>;"
@@ -375,7 +375,7 @@ import { FormData, FormErrors } from '../types';
 import { useToast } from './ui/Toast';
 const EnhancedContactForm: React.FC;
 
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-16 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-16 max-w-7xl mx-auto">;
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div>
@@ -399,8 +399,8 @@ const EnhancedContactForm: React.FC;
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
                     <a
-                      href="tel: +13024640950"
-                      className="text-blue-600 hover:text-blue-700 text-lg"
+                      href="tel: +13024640950";
+                      className="text-blue-600 hover:text-blue-700 text-lg";
                     >
                       +1 (302) 464-0950
                     </a>
@@ -417,8 +417,8 @@ const EnhancedContactForm: React.FC;
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
                     <a
-                      href="mailto: kleber@ziontechgroup.com"
-                      className="text-blue-600 hover:text-blue-700 text-lg"
+                      href="mailto: kleber@ziontechgroup.com";
+                      className="text-blue-600 hover:text-blue-700 text-lg";
                     >
                       kleber@ziontechgroup.com
                     </a>
@@ -476,7 +476,7 @@ const EnhancedContactForm: React.FC;
                 onSubmit={handleSubmit}
                 className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8"
               >
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">;
                   {/* Name */}
                   <div>
                     <label
@@ -494,7 +494,7 @@ const EnhancedContactForm: React.FC;
                         value={formData.name}
                         onChange={handleChange}
                         className={`w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
-                          errors.name ? 'border-red-500' : 'border-gray-300'
+                          errors.name ? 'border-red-500' : 'border-gray-300';
                         }`}
                         placeholder="Enter your full name"
                       />
@@ -524,7 +524,7 @@ const EnhancedContactForm: React.FC;
                         value={formData.email}
                         onChange={handleChange}
                         className={`w-full pl-10 pr-4 py-3 border rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
-                          errors.email ? 'border-red-500' : 'border-gray-300'
+                          errors.email ? 'border-red-500' : 'border-gray-300';
                         }`}
                         placeholder="Enter your email"
                       />
@@ -553,7 +553,7 @@ const EnhancedContactForm: React.FC;
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300";
                         placeholder="Enter company name"
                       />
                     </div>
@@ -575,7 +575,7 @@ const EnhancedContactForm: React.FC;
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300";
                         placeholder="Enter phone number"
                       />
                     </div>
@@ -587,7 +587,7 @@ const EnhancedContactForm: React.FC;
                   <label className="block text-sm font-medium text-gray-700 mb-3">
                     Service of Interest *
                   </label>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
                     {services.map(service => (
                       <button
                         key={service.id}
@@ -605,7 +605,7 @@ const EnhancedContactForm: React.FC;
                         className={`p-3 rounded-xl border-2 transition-all duration-300 text-left ${
                           selectedService === service.id
                             ? 'border-blue-500 bg-blue-50 text-blue-700'
-                            : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                            : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50';
                         }`}
                       >
                         <div className="text-sm font-medium">
@@ -623,7 +623,7 @@ const EnhancedContactForm: React.FC;
                 </div>
 
                 {/* Budget and Timeline */}
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">;
                   <div>
                     <label
                       htmlFor="budget"
@@ -636,7 +636,7 @@ const EnhancedContactForm: React.FC;
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300";
                     >
                       <option value="">Select budget range</option>
                       {budgetRanges.map(budget => (
@@ -658,7 +658,7 @@ const EnhancedContactForm: React.FC;
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300";
                     >
                       <option value="">Select timeline</option>
                       {timelineOptions.map(timeline => (
@@ -685,7 +685,7 @@ const EnhancedContactForm: React.FC;
                     value={formData.message}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 border rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
-                      errors.message ? 'border-red-500' : 'border-gray-300'
+                      errors.message ? 'border-red-500' : 'border-gray-300';
                     }`}
                     placeholder="Tell us about your project, requirements, timeline, and budget..."
                   />
@@ -701,14 +701,14 @@ const EnhancedContactForm: React.FC;
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none";
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center gap-3">
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                       Sending Message...
                     </div>
-                  ) : (
+                  ) : (;
                     <div className="flex items-center justify-center gap-3">
                       <Send className="w-5 h-5" />
                       Send Message
@@ -720,7 +720,7 @@ const EnhancedContactForm: React.FC;
                   By submitting this form, you agree to our{' '}
                   <Link
                     href="/privacy"
-                    className="text-blue-600 hover: text-blue-700 underline"
+                    className="text-blue-600 hover: text-blue-700 underline";
                   >
                     Privacy Policy
                   </Link>

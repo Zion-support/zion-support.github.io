@@ -93,8 +93,8 @@ import { Code;
 export default function DeveloperToolsPage() {
   const developerTools = null;
       description:
-        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
-      features: [
+        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.';
+      features: [;
         'Intelligent code completion',
         'Multi-language support',
         'IDE integration',
@@ -115,7 +115,7 @@ category: 'Code Generation',
       title: 'GitHub Pro',
       description:
         'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
-      features: [
+      features: [;
         'Unlimited private repositories',
         'Advanced code review tools',
         'Priority support',
@@ -136,7 +136,7 @@ category: 'Version Control',
       title: 'MongoDB Atlas',
       description:
         'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
-      features: [
+      features: [;
         'Fully managed MongoDB',
         'Auto-scaling & optimization',
         'Global distribution',
@@ -157,7 +157,7 @@ category: 'Database',
       title: 'Vercel Pro',
       description:
         'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
-      features: [
+      features: [;
         'Zero-config deployments',
         'Preview deployments',
         'Advanced analytics',
@@ -178,7 +178,7 @@ category: 'Deployment',
       title: 'Snyk',
       description:
         'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
-      features: [
+      features: [;
         'Vulnerability scanning',
         'Dependency monitoring',
         'Container security',
@@ -199,7 +199,7 @@ category: 'Security',
       title: 'Postman',
       description:
         'Complete API development platform for building, testing, and documenting APIs with team collaboration.',
-      features: [
+      features: [;
         'API design & testing',
         'Team collaboration',
         'API documentation',
@@ -218,8 +218,8 @@ category: 'API Development',
 origin/cursor/automate-test-improve-and-merge-code-2533
   ];
     {'
-      description: 'Average productivity improvement''
-    },  ];      description: 'Global developer tools market size'
+      description: 'Average productivity improvement'';
+    },  ];      description: 'Global developer tools market size';
     }
       title: 'Dev Tools Market',
       value: '$8.2B',
@@ -361,11 +361,11 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           content='Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links.'
         />
         <meta
-          property='og:title'
+          property='og:title';
           content='Developer Tools & Services | Zion Tech Group'
         />
         <meta
-          property='og:description'
+          property='og:description';
           content='Real developer tools with pricing and direct links to boost your development workflow.'
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -405,14 +405,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
             </p>
           </div>"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each tool has been carefully selected based on performance
               reliability, and real-world developer usage.
             </p>
           </div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
             {developerTools.map((tool, index) => (
       {/* Developer Tools Grid */}'
@@ -436,7 +436,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card;
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${'
-                  tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''`
+                  tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''`;
                 }`}
 
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -477,7 +477,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-sm text-gray-500'>
                           Service Price:
-                        </span>
+                        </span>;
                         <span className='text-lg font-semibold text-cursor-blue'>
                           {tool.pricing}
                         </span>
@@ -485,7 +485,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-sm text-gray-500'>
                           Market Average:
-                        </span>
+                        </span>;
                         <span className='text-sm text-gray-400'>
                           {tool.marketPrice}
                         </span>
@@ -509,7 +509,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={tool && tool.website}
                         variant='primary'
                         size='sm'
-                        className='bg-cursor-blue hover:bg-cursor-blue-dark'
+                        className='bg-cursor-blue hover:bg-cursor-blue-dark';
                       >
                         Try Tool
                         <ExternalLink className='w-4 h-4 ml-2' />
@@ -548,7 +548,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               that work together seamlessly.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
             {devWorkflow.map((phase, index) => (
               Build a complete development pipeline with these essential tools;
               that work together seamlessly.;
@@ -559,7 +559,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Build a complete development pipeline with these essential tools that work together seamlessly.
             </p>
           </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {devWorkflow.map((phase, index) => ('
                         className='text-sm text-cursor-blue font-medium'>                        {tool}              Complete Developer Workflow;
             </h2>;"
@@ -610,7 +610,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               build a comprehensive development stack.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {devCategories.map((category, index) => (
           </div>;
         </div>;
@@ -655,7 +655,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               build a comprehensive development stack.
             </p>
           </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {devCategories.map((category, index) => (
               <Card;
                 key={index}'
@@ -710,7 +710,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             is designed to work independently and integrate seamlessly with your;
             existing workflow.
           </p>'
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             <Button'
               href='/ai-tools''
               variant='primary''
@@ -718,7 +718,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
               Explore AI Tools;
             </Button>;
-              className='bg-cursor-blue hover:bg-cursor-blue-dark'
+              className='bg-cursor-blue hover:bg-cursor-blue-dark';
             >
               Explore AI Tools
             </Button>
@@ -735,7 +735,7 @@ href='/contact'
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools""
               variant="primary""
               size="lg""
-              className="bg-cursor-blue hover:bg-cursor-blue-dark"
+              className="bg-cursor-blue hover:bg-cursor-blue-dark";
               Explore AI Tools;
             </Button>
 

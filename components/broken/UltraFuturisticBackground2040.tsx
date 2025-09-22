@@ -141,10 +141,10 @@ const gridSize = 50;
           rotation: time * 0.5,
         },
         {
-          x: canvas.width * 0.8
-          y: canvas.height * 0.7
-          size: 40
-          rotation: time * -0.3
+          x: canvas.width * 0.8;
+          y: canvas.height * 0.7;
+          size: 40;
+          rotation: time * -0.3;
         }
         {
           x: canvas.width * 0.6,
@@ -254,7 +254,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div'
             className='absolute top-0 left-0 w-full h-full'
             style={{}`
-              backgroundImage: ``
+              backgroundImage: ``;
             `,'
               background_size: '50px 50px','
               animation: 'grid_move 20s linear infinite',
@@ -271,7 +271,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Animated Grid Pattern */}"
         <div className="absolute inset-0 opacity-20">;"
           <divclassName="absolute top-0 left-0 w-full h-full" style={{}`
-            backgroundImage: `'
+            backgroundImage: `';
             ease: 'linear',  }, []);
 ;
   return (
@@ -319,8 +319,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple-400 / 20 rounded-full";
           animate={{
           transition={{
-            duration: 12
-            repeat: Infinity
+            duration: 12;
+            repeat: Infinity;
             ease: 'linear',          }}
           />
         </div>
@@ -374,7 +374,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             opacity: [0.15, 0.25, 0.15],          }}
           transition={{}
             duration: 15;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}
         />
         {/* Additional Floating Elements */}
@@ -428,11 +428,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,
           transition={{}
             duration: 18;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'linear',          }}
             duration: 15,
             repeat: Infinity,"
-            ease: "linear"
+            ease: "linear";
           }}
 "
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
@@ -480,7 +480,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
           transition={{}
             duration: 3;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut',          }}
         {/* Particle Effects */}
         <motion&& motion.div"
@@ -490,9 +490,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{}
             duration: 3;
-            repeat: Infinity'
+            repeat: Infinity';
             ease: 'easeInOut'
-
+;
             y: [0, -20, 0],
             opacity: [0.4, 0.8, 0.4],
           }}
@@ -513,14 +513,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           transition={{}
             duration: 4;
-            repeat: Infinity'
-            ease: 'easeInOut'
+            repeat: Infinity';
+            ease: 'easeInOut';
             delay: 1,          }}
           }}
           transition={{}
             duration: 3,
             repeat: Infinity,"
-            ease: "easeInOut"
+            ease: "easeInOut";
           }}"
           className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full"
           animate={{}

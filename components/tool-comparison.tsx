@@ -53,44 +53,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Great support'
       ]'
       cons: ['Can get expensive', 'Limited customization']'
-      website: 'https://zapier.com''
+      website: 'https://zapier.com'';
       icon: <Zap className='w-6 h-6' />'
-      color: 'text-orange-400''
-    },    {      pros: ['Easy to useExtensive integrationsReliableGreat support']'
-      cons: ['Can get expensiveLimited customization']'
-      website: 'https://zapier.com'
+      color: 'text-orange-400'';
+    },    {      pros: ['Easy to useExtensive integrationsReliableGreat support']';
+      cons: ['Can get expensiveLimited customization']';
+      website: 'https://zapier.com';
       icon: <Zap className="w-6 h-6" />'
-      color: 'text-orange-400'
+      color: 'text-orange-400';
     }'
-      name: 'Notion''
-      category: 'Productivity''
-      pricing: 'Free - $8/month'
-      rating: 4.7'
-      users: '20M+''
-      bestFor: 'Teams that need flexible workspace'
-      pros: ['
+      name: 'Notion'';
+      category: 'Productivity'';
+      pricing: 'Free - $8/month';
+      rating: 4.7';
+      users: '20M+'';
+      bestFor: 'Teams that need flexible workspace';
+      pros: [';
         'Highly flexible''
         'Beautiful interface''
         'Great templates''
         'Free tier'
       ]'
       cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming']'
-      website: 'https://notion.so''
+      website: 'https://notion.so'';
       icon: <Globe className='w-6 h-6' />'
-      color: 'text-gray-400''
-    },    {      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier']'
-      cons: ['Learning curveLimited offline accessCan be overwhelming']'
-      website: 'https://notion.so'"
+      color: 'text-gray-400'';
+    },    {      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier']';
+      cons: ['Learning curveLimited offline accessCan be overwhelming']';
+      website: 'https://notion.so'";
       icon: <Globe className="w-6 h-6" />'
-      color: 'text-gray-400'
+      color: 'text-gray-400';
     }'
-      name: 'Stripe''
-      category: 'Payments''
-      pricing: '2.9% + 30¢ per transaction'
-      rating: 4.9'
-      users: '1M+''
+      name: 'Stripe'';
+      category: 'Payments'';
+      pricing: '2.9% + 30¢ per transaction';
+      rating: 4.9';
+      users: '1M+'';
       bestFor: 'Online businesses, SaaS companies, e-commerce'
-      pros: ['
+      pros: [';
         'Developer-friendly''
         'Global reach''
         'Excellent docs''
@@ -102,7 +102,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       rating: 4.8,
       users: '100M+',
       bestFor: 'Content creators, developers, researchers',
-pros: [
+pros: [;
         'Powerful capabilities',
         'Easy to use',
         'Regular updates',
@@ -120,13 +120,13 @@ pros: [
       rating: 4.7,
       users: '1M+',
       bestFor: 'Designers, marketers, content creators',
-pros: [
+pros: [;
         'High-quality output',
         'Creative control',
         'Commercial rights',
         'Active community',
       ],
-      cons: [
+      cons: [;
         'Discord-only interface',
         'Limited customization',
         'Monthly subscription',
@@ -142,7 +142,7 @@ pros: [
       rating: 4.6,
       users: '100K+',
       bestFor: 'Marketing teams, content creators, businesses',
-pros: [
+pros: [;
         'Specialized for marketing',
         'Brand voice training',
         'SEO optimization',
@@ -161,7 +161,7 @@ pros: [
       rating: 4.8,
       users: '2M+',
       bestFor: 'Businesses looking to automate workflows',
-pros: [
+pros: [;
         'Easy to use',
         'Extensive integrations',
         'Reliable',
@@ -179,7 +179,7 @@ pros: [
       rating: 4.7,
       users: '20M+',
       bestFor: 'Teams that need flexible workspace',
-pros: [
+pros: [;
         'Highly flexible',
         'Beautiful interface',
         'Great templates',
@@ -197,14 +197,14 @@ pros: [
       rating: 4.9,
       users: '1M+',
       bestFor: 'Online businesses, SaaS companies, e-commerce',
-pros: [
+pros: [;
         'Developer-friendly',
         'Global reach',
         'Excellent docs',
         'Reliable',
       ],
 origin/cursor/automate-test-improve-and-merge-code-2533
-      cons: [
+      cons: [;
         'Higher fees than some alternatives',
         'Complex for beginners',
         'Strict requirements',
@@ -221,13 +221,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       rating: 4.7,
       users: '135K+',
       bestFor: 'B2B startups, SaaS companies, marketing teams',
-pros: [
+pros: [;
         'Free tier',
         'All-in-one solution',
         'Great for beginners',
         'Excellent support',
       ],
-      cons: [
+      cons: [;
         'Can get expensive',
         'Complex for small teams',
         'Limited customization',
@@ -256,13 +256,13 @@ pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
       rating: 4.8,
       users: '10M+',
       bestFor: 'Sales teams, consultants, remote teams',
-pros: [
+pros: [;
         'Free tier',
         'Easy integration',
         'Professional appearance',
         'Time-saving',
       ],
-      cons: [
+      cons: [;
         'Limited free features'
         'Basic customization'
         'Can be expensive'
@@ -373,7 +373,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'rating':
         return b.rating - a.rating;'
       case 'users':
-
+;
   const allTools = [;
     // AI Tools;
     {;'
@@ -651,12 +651,12 @@ return (
     if (pricing.includes('$')) return 'text-blue-400';
 return 'text-gray-400';
   };
-                className='animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40'
+                className='animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40';
               <Button'
                 href='/contact''
                 variant='outline''
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5';
                 style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -670,46 +670,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
                 9;
               </div>"
               <div className="text-gray-400 text-sm">Categories</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
                 4.7+
               </div>"
               <div className="text-gray-400 text-sm">Avg Rating</div>
             </div>"
             <div className="text-center group">"
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
                 250M+
               </div>"
               <div className="text-gray-400 text-sm">Total Users</div>
 <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in';
             style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
                 9
               </div>
               <div className='text-gray-400 text-sm'>Categories</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
                 4.7+
               </div>
               <div className='text-gray-400 text-sm'>Avg Rating</div>
             </div>
             <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
                 250M+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>
@@ -731,8 +731,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Filters and Search */}
 <section className='py-16 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -741,7 +741,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 placeholder='Search tools, categories, or use cases...'
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
 origin/cursor/automate-test-improve-and-merge-code-2533
               />
             </div>
@@ -786,7 +786,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Actions</th>
                   <tr
                 onChange={e => setSortBy(e.target.value)}
-                className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500'
+                className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500';
               >
                 <option value='rating'>Sort by Rating</option>
                 <option value='users'>Sort by Users</option>
@@ -798,9 +798,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
       {/* Comparison Table */}
 <section id='comparison' className='py-24 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Compare features, pricing, and user ratings to find the perfect
@@ -914,10 +914,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Detailed Comparison Cards */}'
       <section className='py-24 bg-gray-900'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>';
           <div className='text-center mb-20'>'
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
+;
               Detailed Analysis;
             </h2>'
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>'
@@ -925,7 +925,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               best decision for your business.
             </p>
           </div>'
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {sortedTools.slice(0, 6).map((tool, index) => (
               </tbody>;
             </table>;
@@ -985,16 +985,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Detailed Comparison Cards */}
 <section className='py-24 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
             </h2>'
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>'
               Deep dive into each tool's pros, cons, and use cases to make the;
               best decision for your business.
             </p>
           </div>'
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {sortedTools.slice(0, 6).map((tool, index) => (
           )}
         </div>
@@ -1002,7 +1002,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Detailed Comparison Cards */}
               <Card;
                 key={index}'
-                className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`
+                className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`;
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='flex items-start space-x-4 mb-4'>;
                   <div;
@@ -1025,7 +1025,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {tool.icon}
                   </div>
                   <div className='flex-1'>
-                    <h3 className='text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300'>
+                    <h3 className='text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300'>;
                       {tool.name}
                     </h3>
                     <div className='flex items-center space-x-4 text-sm text-gray-400'>
@@ -1043,10 +1043,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='mb-4'>
                   <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                     Best For:
-                  </h4>
+                  </h4>;
                   <p className='text-sm text-gray-400'>{tool.bestFor}</p>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>;
                   <div>
                     <h4 className='text-sm font-semibold text-green-400 mb-2 flex items-center'>
                       <Check className='w-4 h-4 mr-1' />
@@ -1095,7 +1095,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 variant='outline'
                     size='sm'
-                    className='group-hover:border-purple-500 group-hover:text-purple-400'
+                    className='group-hover:border-purple-500 group-hover:text-purple-400';
                   >
                     Visit Website
                     <ExternalLink className='w-4 h-4 ml-2' />
@@ -1113,15 +1113,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
           </h2>'
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the;
             perfect combination of tools to accelerate your growth.
           </p>'
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
             ))}
       {/* CTA Section */}'
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>;'
@@ -1155,7 +1155,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variant="outline""
               size="lg""
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-
+;
             </Button>
           </div>
         </div>

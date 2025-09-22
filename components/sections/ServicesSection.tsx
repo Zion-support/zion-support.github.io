@@ -204,7 +204,7 @@ const ServicesSection: React.FC = () => {;
   };
 description:
         'Custom AI solutions and machine learning models tailored to your business needs.',
-      features: [
+      features: [;
         'Machine Learning Models',
         'Natural Language Processing',
         'Computer Vision',
@@ -218,7 +218,7 @@ description:
       title: 'Cloud Architecture',
       description:
         'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: [
+      features: [;
         'AWS/Azure/GCP',
         'Microservices',
         'Serverless Architecture',
@@ -232,7 +232,7 @@ description:
       title: 'Digital Transformation',
       description:
         'End-to-end digital transformation services to modernize your business.',
-      features: [
+      features: [;
         'Process Automation',
         'Legacy System Migration',
         'Change Management',
@@ -245,7 +245,7 @@ description:
       icon: Wifi,
       title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',
-features: [
+features: [;
         'Sensor Networks',
         'Real-time Monitoring',
         'Data Analytics',
@@ -258,8 +258,8 @@ features: [
       icon: Shield,
       title: 'Blockchain Solutions',
       description:
-        'Scalable cloud solutions and infrastructure design for modern applications.'
-      features: [
+        'Scalable cloud solutions and infrastructure design for modern applications.';
+      features: [;
         'Smart Contracts',
         'DeFi Applications',
         'NFT Platforms',
@@ -272,7 +272,7 @@ features: [
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Advanced analytics and business intelligence solutions.',
-features: [
+features: [;
         'Big Data Processing',
         'Real-time Dashboards',
         'Predictive Modeling',
@@ -286,7 +286,7 @@ features: [
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
-      opacity: 1
+      opacity: 1;
       transition: {
 staggerChildren: 0.1,
       },
@@ -404,7 +404,7 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>'
-          <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+          <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
             Comprehensive Technology'
             <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
               Solutions;
@@ -454,7 +454,7 @@ initial='hidden'
               key={service && service.title}
               variants={cardVariants}
               whileHover={{ y: -10 }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16';
         >
           {services.map((service, index) => (
             <motion.div
@@ -463,7 +463,7 @@ initial='hidden'
               whileHover={{ y: -10 }}
 className='group relative'
             >
-              <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden'>
+              <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden'>;
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Background Gradient */}
                 <div;
@@ -500,7 +500,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span className='font-medium'>Learn More</span>;'
                   <ArrowRight className='w-4 h-4' />;
                 </Link>;
-                <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
+                <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>;
                   {service.title}
                 </h3>
 
@@ -522,13 +522,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* CTA */}
                 <Link
                   href={service.href}
-className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1'
+className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1';
                 >
                   <span className='font-medium'>Learn More</span>
                   <ArrowRight className='w-4 h-4' />
                 </Link>
                 {/* Hover Effect */}
-                <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />
+                <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />;
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </motion.div>
@@ -653,7 +653,7 @@ export default ServicesSection;
 
 };
 
-              className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
+              className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1';
             >
               <span>Get Started Today</span>
               <ArrowRight className='w-5 h-5' />

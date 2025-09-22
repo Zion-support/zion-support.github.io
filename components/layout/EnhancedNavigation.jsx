@@ -110,32 +110,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className=\"text-xl font-bold text-gray-800\" />Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+          <div className="hidden lg:flex items-center space-x-8">;
+            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">;
               Home
             </Link>
-            <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">;
               Services
             </Link>
-            <Link href="/products" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/products" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">;
               Products
             </Link>
-            <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">;
               About
             </Link>
-            <Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">;
               Blog
             </Link>
-            <Link href="/talent" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/talent" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">;
               Careers
             </Link>
-            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">;
               Get Started
             </Link>
           </div>
           {/* Mobile menu button */}
           <button
-className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100';
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg
@@ -157,22 +157,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
               </Link>"
-              <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+              <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">;
                 Services;
               </Link>"
-              <Link href="/products" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+              <Link href="/products" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">;
                 Products;
               </Link>"
-              <Link href="/about" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+              <Link href="/about" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">;
                 About;
               </Link>"
-              <Link href="/blog" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+              <Link href="/blog" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">;
                 Blog;
               </Link>"
-              <Link href="/talent" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+              <Link href="/talent" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">;
                 Careers;
               </Link>"
-              <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+              <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">;
               </Link>
             </div>
           </div>
