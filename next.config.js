@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Optimized for static export and Netlify deployment
-  output: 'export',
+  // For newer Next.js, only "standalone" is valid here. Remove to avoid warning.
+  // Netlify static export uses `next export` via CLI if needed.
+  // output: 'export',
   
   reactStrictMode: true,
   swcMinify: true,
