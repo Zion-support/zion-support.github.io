@@ -11,7 +11,6 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: false },
   typescript: { ignoreBuildErrors: false },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-
   images: {
     domains: [
       'localhost',
