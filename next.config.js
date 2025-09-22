@@ -1,76 +1,68 @@
-const path = require('path');
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   swcMinify: true,
-  trailingSlash: true,
-  distDir: 'out',
-  
-  // Static export configuration
-  output: 'export',
-  skipTrailingSlashRedirect: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-  
-  // Image optimization
-  images: {
-    unoptimized: true, // Required for static export
+  compress: true,
+  poweredByHeader: false,
+  eslint: { 
+    ignoreDuringBuilds: true 
   },
-  typescript: {
-    ignoreBuildErrors: true,
+  typescript: { 
+    ignoreBuildErrors: true 
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
-  // Experimental features
   experimental: {
-    optimizeCss: false, // Disable CSS optimization to avoid critters dependency
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
     esmExternals: false,
-    gzipSize: true,
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+    newNextLinkBehavior: true,
+    forceSwcTransforms: false
   },
-  
-  // Compiler optimizations
+  // Ensure standard Next.js page extensions are recognized alongside any custom route files
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    unoptimized: true
+  },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === 'production'
   },
-  
-  // Generate unique build ID for better caching
-  generateBuildId: async () => {
-    return 'build-' + Date.now()
-  },
-  
-  // Webpack configuration
-  webpack: (config, { isServer, dev }) => {
-    // Fix for CSS processing issues with Node.js compatibility
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-        path: false,
-        crypto: require.resolve('crypto-browserify'),
-        stream: require.resolve('stream-browserify'),
-        util: false,
-        buffer: require.resolve('buffer'),
-        process: require.resolve('process/browser'),
-      };
-    }
-    
+  webpack: (config, { dev, isServer }) => {
+    // Completely exclude problematic directories from the build
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      exclude: [
+        /node_modules/,
+        /api-backup/,
+        /pages\.disabled/,
+        /backup-pages/,
+        /\.backup/,
+        /\.disabled/,
+        /automation\/backups/,
+        /automation_backup/,
+        /broken_files_backup/,
+        /contracts/,
+        /hardhat/,
+        /^components\//, // Exclude root components directory
+      ]
+    });
+
+    // Add fallback for problematic modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+      path: false,
+      crypto: 'crypto-browserify',
+      stream: 'stream-browserify',
+      util: false,
+      buffer: 'buffer',
+      process: 'process/browser',
+    };
+
     // Performance optimizations
-    if (!dev) {
+    if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
@@ -85,6 +77,12 @@ const nextConfig = {
     
     return config;
   },
+  onDemandEntries: {
+    // period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2
+  }
 };
 
-module.exports = nextConfig;
+export default nextConfig;
