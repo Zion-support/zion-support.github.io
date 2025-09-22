@@ -1,90 +1,85 @@
-const path = require('path');
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  // Let Netlify's Next.js runtime handle output; do not force standalone
+  // output: 'standalone',
+
+  reactStrictMode: true,
   swcMinify: true,
-  trailingSlash: true,
-  distDir: 'out',
-  
-  // Static export configuration
-  output: 'export',
-  skipTrailingSlashRedirect: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
-  
-  // Image optimization
+  compress: true,
+  poweredByHeader: false,
+
+  eslint: { ignoreDuringBuilds: false },
+  typescript: { ignoreBuildErrors: false },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
-    unoptimized: true, // Required for static export
+    domains: [
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com'
+    ],
+    formats: ['image/webp', 'image/avif'],
+    // Netlify image CDN can be used; keep unoptimized true to avoid server image optimization
+    unoptimized: true
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
-  // Experimental features
+
+  // Keep default dist directory for Netlify plugin
+  distDir: '.next',
+
+  trailingSlash: false,
+  basePath: '',
+  assetPrefix: '',
+  generateEtags: true,
+
   experimental: {
-    optimizeCss: false, // Disable CSS optimization to avoid critters dependency
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'react-datepicker'],
-    esmExternals: false,
-    gzipSize: true,
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
+    optimizePackageImports: ['lucide-react']
+  },
+
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
       },
-    },
+    ];
   },
-  
-  // Compiler optimizations
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' }
+        ]
+      }
+    ];
   },
-  
-  // Generate unique build ID for better caching
-  generateBuildId: async () => {
-    return 'build-' + Date.now()
-  },
-  
-  // Webpack configuration
-  webpack: (config, { isServer, dev }) => {
-    // Fix for CSS processing issues with Node.js compatibility
+
+  webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
         net: false,
         tls: false,
-        path: false,
-        crypto: require.resolve('crypto-browserify'),
-        stream: require.resolve('stream-browserify'),
-        util: false,
-        buffer: require.resolve('buffer'),
-        process: require.resolve('process/browser'),
+        crypto: false,
+        stream: false,
+        url: false,
+        zlib: false,
+        http: false,
+        https: false,
+        assert: false,
+        os: false,
+        path: false
       };
     }
-    
-    // Performance optimizations
-    if (!dev) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    
     return config;
-  },
+  }
 };
 
 module.exports = nextConfig;
