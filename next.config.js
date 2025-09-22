@@ -30,8 +30,24 @@ const nextConfig = {
   assetPrefix: undefined,
   generateEtags: true,
 
-  // Remove unsupported experimental flags for Next 12 compatibility
-  experimental: {},
+  // Performance optimizations
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
+
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 
   async redirects() {
     return [

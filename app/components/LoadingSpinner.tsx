@@ -1,49 +1,70 @@
+'use client'
+
 import { clsx } from 'clsx'
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+  color?: 'primary' | 'secondary' | 'white' | 'gray'
   className?: string
-  'aria-label'?: string
+  text?: string
+  fullScreen?: boolean
+}
+
+const sizeClasses = {
+  sm: 'w-4 h-4',
+  md: 'w-6 h-6',
+  lg: 'w-8 h-8',
+  xl: 'w-12 h-12'
+}
+
+const colorClasses = {
+  primary: 'text-blue-500',
+  secondary: 'text-purple-500',
+  white: 'text-white',
+  gray: 'text-gray-500'
 }
 
 export default function LoadingSpinner({
   size = 'md',
+  color = 'primary',
   className,
-  'aria-label': ariaLabel = 'Loading...',
+  text,
+  fullScreen = false
 }: LoadingSpinnerProps) {
-  const sizes = {
-    sm: 'h-4 w-4',
-    md: 'h-6 w-6',
-    lg: 'h-8 w-8',
+  const spinner = (
+    <div className={clsx(
+      'animate-spin rounded-full border-2 border-current border-t-transparent',
+      sizeClasses[size],
+      colorClasses[color],
+      className
+    )} />
+  )
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-6 flex flex-col items-center space-y-4 shadow-xl">
+          {spinner}
+          {text && (
+            <p className="text-gray-600 dark:text-gray-300 text-sm font-medium">
+              {text}
+            </p>
+          )}
+        </div>
+      </div>
+    )
   }
 
-  return (
-    <svg 
-      className={clsx(
-        'animate-spin text-blue-500',
-        sizes[size],
-        className
-      )}
-      xmlns="http://www.w3.org/2000/svg" 
-      fill="none" 
-      viewBox="0 0 24 24"
-      aria-label={ariaLabel}
-      role="status"
-      aria-live="polite"
-    >
-      <circle 
-        className="opacity-25" 
-        cx="12" 
-        cy="12" 
-        r="10" 
-        stroke="currentColor" 
-        strokeWidth="4"
-      />
-      <path 
-        className="opacity-75" 
-        fill="currentColor" 
-        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-      />
-    </svg>
-  )
+  if (text) {
+    return (
+      <div className="flex items-center space-x-3">
+        {spinner}
+        <span className="text-gray-600 dark:text-gray-300 text-sm font-medium">
+          {text}
+        </span>
+      </div>
+    )
+  }
+
+  return spinner
 }

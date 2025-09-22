@@ -5,6 +5,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import ScrollToTop from './components/ScrollToTop'
 import { ThemeProvider } from './components/ThemeProvider'
+import { ToastProvider } from './contexts/ToastContext'
 import StructuredData, { organizationSchema, websiteSchema, serviceSchema } from './components/StructuredData'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -52,11 +53,13 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ThemeProvider defaultTheme="dark" storageKey="zion-theme">
-          <ErrorBoundary>
-            {children}
-            <ScrollToTop />
-            <PerformanceMonitor />
-          </ErrorBoundary>
+          <ToastProvider>
+            <ErrorBoundary>
+              {children}
+              <ScrollToTop />
+              <PerformanceMonitor />
+            </ErrorBoundary>
+          </ToastProvider>
         </ThemeProvider>
       </body>
     </html>

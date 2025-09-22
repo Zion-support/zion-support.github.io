@@ -1,8 +1,8 @@
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, CheckCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
-import Button from '../components/Button'
+import ContactForm from '../components/ContactForm'
 
 export default function ContactPage() {
   const contactInfo = [
@@ -89,151 +89,58 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Form Section */}
-        <div className="relative z-10 max-w-4xl mx-auto px-6 pb-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20">
+          <ContactForm />
+        </div>
+
+        {/* Services & Info Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <Card variant="glass" className="p-8 border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="John"
-                    />
+              <h3 className="text-2xl font-bold text-white mb-6">Our Services</h3>
+              <div className="space-y-3">
+                {services.map((service, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{service}</span>
                   </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
-                      Last Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Doe"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="john@company.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your Company"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                    Subject *
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="How can we help you?"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                    placeholder="Tell us about your project and how we can help..."
-                  />
-                </div>
-                
-                <Button size="lg" className="w-full">
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Message
-                </Button>
-              </form>
+                ))}
+              </div>
             </Card>
 
-            {/* Services & Info */}
-            <div className="space-y-8">
-              <Card variant="glass" className="p-8 border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-6">Our Services</h3>
-                <div className="space-y-3">
-                  {services.map((service, index) => (
-                    <div key={index} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{service}</span>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-
-              <Card variant="glass" className="p-8 border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-1">Expert Team</h4>
-                      <p className="text-gray-300 text-sm">Certified professionals with deep industry expertise</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-1">Proven Results</h4>
-                      <p className="text-gray-300 text-sm">Track record of successful implementations</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-1">24/7 Support</h4>
-                      <p className="text-gray-300 text-sm">Round-the-clock technical assistance</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-1">Scalable Solutions</h4>
-                      <p className="text-gray-300 text-sm">Technology that grows with your business</p>
-                    </div>
+            <Card variant="glass" className="p-8 border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-1">Expert Team</h4>
+                    <p className="text-gray-300 text-sm">Certified professionals with deep industry expertise</p>
                   </div>
                 </div>
-              </Card>
-            </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-1">Proven Results</h4>
+                    <p className="text-gray-300 text-sm">Track record of successful implementations</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-1">24/7 Support</h4>
+                    <p className="text-gray-300 text-sm">Round-the-clock technical assistance</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-1">Scalable Solutions</h4>
+                    <p className="text-gray-300 text-sm">Technology that grows with your business</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </main>
