@@ -9,7 +9,7 @@
 
 ## Enable Netlify Next.js runtime
 # For static exports, the Next.js Netlify plugin is not required
-[plugins]
+[[plugins]]
   package = "@netlify/plugin-nextjs"
 
 ## Security and caching headers for static assets
