@@ -31,7 +31,18 @@ const customJestConfig = {
     '<rootDir>/src_backup_temp/',
     '<rootDir>/components.disabled/',
     '<rootDir>/temp_exclude/',
-    '<rootDir>/temp_broken_files/'
+    '<rootDir>/temp_broken_files/',
+    // Additional problematic directories
+    '<rootDir>/e2e/',
+    '<rootDir>/components.disabled_full/',
+    '<rootDir>/recovered-branches/',
+    '<rootDir>/pages.corrupted.*/',
+    '<rootDir>/pages_backup_before_cleanup/',
+    '<rootDir>/pages.disabled_auto/',
+    '<rootDir>/ts_files_backup/',
+    '<rootDir>/pages.broken/',
+    '<rootDir>/pages.disabled_full/',
+    '<rootDir>/corrupted_backup/'
   ],
   maxWorkers: 1,
   testTimeout: 30000,
