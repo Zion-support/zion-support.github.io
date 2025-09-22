@@ -1,53 +1,173 @@
 <<<<<<< HEAD
-import Stripe from 'stripe';
-import { withErrorLogging } from './withErrorLogging.cjs';
-const PROD_DOMAIN = 'app.ziontechgroup.com';
-function isProdDomain() {
-  const url = process.env.URL || '';
-  try {
-    return new URL(url).hostname === PROD_DOMAIN;
-  } catch {
-    return false;
-  }
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}          price: priceId,
+
+
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })};
+  res.status(200).json({ message: 'Checkout session created' });
 }
-async function handler(req, res) {
+export default function handler() { return null; }
+
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}          price: priceId,
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}""
+  res.status(200).json({ message: 'Checkout session created' });
+}
+(req, res) {
+  res.status(200).json({ "message": 'Checkout session created' });
+}
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+=======
+<<<<<<< HEAD
+=======
+
+;
+export default function handler() {res.status(200).json({ message: "Checkout session created" })}ursor/automate-test-improve-and-merge-code-646c;
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+  res.status(200).json({ message: 'Checkout session created' })}
+export default function handler() {res.status(200).json({ "message": 'Checkout session created' })}
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}import Stripe from 'stripe';
+async function handler() {if (req.method !== 'POST') {res.statusCode = 405;
+    res.setHeader('Allow', 'POST')res.end('Method Not Allowed')return;
+  }try {const { priceId, quantity  = 1 } = req.body || {}if (!priceId) {res.statusCode = 400;
+      res.json({ error: 'Price ID is required' })return;
+    }const session = await stripe.checkout.sessions.create({mode: 'subscription',payment_method_types: ['card'],line_items: [;
+        {price: priceId,quantity: quantity;
+        }
+      ],success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,cancel_url: `${req.headers.origin}/cancel`;
+    })ursor/automate-test-improve-and-merge-code-646c;
+    res.statusCode = 200;
+    res.json({success: true,sessionId: session.id,url: session.url;
+    })} catch (err) {// console.error('Checkout session API error:', err)res.statusCode = 500;
+    res.json({ error: err.message || 'Checkout session creation failed' })}
+}export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}ursor/automate-test-improve-and-merge-code-646c;
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}export default function handler() {res.status(200).json({ message: "Checkout session created" })}
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+  res.status(200).json({ message: 'Checkout session created' })}
+export default function handler() {res.status(200).json({ "message": 'Checkout session created' })}url: session.url;
+    })} catch (err) {,// console.error('Checkout session API error:, err),res.statusCode = 500,res.json({ error: err.message || 'Checkout session creation failed' })}}export default withErrorLogging(handler),}export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}ursor/automate-test-improve-and-merge-code-646c;
+}export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+import Stripe from 'stripe';
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: '2023-10-16'
+});
+
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    return res.status(405).json({ message: 'Method not allowed' });
   }
-  const { productId, userId } = req.body || {};
-  if (!productId || !userId) {
-    res.statusCode = 400;
-    res.json({ error: 'Missing productId or userId' });
-    return;
-  }
+
   try {
-    const liveKey = process.env.STRIPE_SECRET_KEY || '';
-    const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
-    if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {
-      throw new Error('Refusing to use live Stripe key on non-production domain');
+    const { amount, currency = 'usd' } = req.body;
+
+    if (!amount) {
+      return res.status(400).json({ message: 'Amount is required' });
     }
-    const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
-      apiVersion: '2023-10-16',
-    });
-    const session = await stripe.checkout.sessions.create({
-      line_items: [{ price: productId, quantity: 1 }],
+
+    const session = stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+<<<<<<< HEAD
+      line_items: []
+        {}
+          price: priceId,
+          quantity: quantity,
+        },]
+=======
+      line_items: [
+        {
+          price_data: {
+            currency,
+            product_data: {
+              name: 'Zion Tech Group Service'
+            },
+            unit_amount: amount * 100, // Convert to cents
+          },
+          quantity: 1
+        }
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+      ],
       mode: 'payment',
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.origin}/cancel`,
-      metadata: { userId, productId },
+      cancel_url: `${req.headers.origin}/cancel`
     });
+
+<<<<<<< HEAD
+
+      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,`;
+      cancel_url: `${req.headers.origin}/cancel`,)
+
     res.statusCode = 200;
-    res.json({ sessionId: session.id });
-  } catch (err) {
-    // Error logged by withErrorLogging wrapper
-    res.statusCode = 500;
-    res.json({ error: err.message });
+    res.json({}
+      success: true, 
+      sessionId: session.id,
+url: session.url;
+    });
+  } catch (err) {'
+    // console.error('Checkout session API error:', err);
+    res.statusCode = 500;'
+    res.json({ error: err.message || 'Checkout session creation failed' });
   }
 }
+
+export default withErrorLogging(handler);      url: session.url
+
+}
+;
 export default withErrorLogging(handler);
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+  res.status(200).json({ message: 'Checkout session created' });
+}
+export default function handler(req, res) {
+  res.status(200).json({ "message": 'Checkout session created' });
+}
+
+      url: session.url
+      url: session.url
+export default withErrorLogging(handler);      url: session.url
+
+export default withErrorLogging(handler);
+
+      url: session.url;
+    })
+  } catch (err) {,
+    // console.error('Checkout session API error:, err),
+    res.statusCode = 500,
+    res.json({ error: err.message || 'Checkout session creation failed' })
+  };
+export default withErrorLogging(handler),
+,
+
+,
+}
+}
+
+export default withErrorLogging(handler);
+
+'"`
+
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}`;
+'
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}''
+
 =======
-import Stripe from stripe';;const PROD_DOMAIN = app.ziontechgroup.com';;  if (context && context !== 'production') {'';  const url = process.env.URL || ;;  if (req.method !== 'POST') {'';    res.setHeader('Allow', POST');;    res.end('Method Not Allowed');;    res.json({ error: Missing cartItems' });;    const liveKey = process.env.STRIPE_SECRET_KEY || ;;      process.env.STRIPE_TEST_MODE === true' ||'';      (!isProdDomain() && liveKey.startsWith('sk_live'));;    if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {'';      throw new Error('Refusing to use live Stripe key on non-production domain');;      apiVersion: 2025-06-30.basil',;          currency: 'usd',;      mode: 'payment',;    const fs = await import('fs');;    const path = await import('path');;    const file = path.join(process.cwd(), data', orders.json');;      orders = JSON.parse(fs.readFileSync(file, 'utf8'));;      // File doesn't exist or is invalid, use empty array'';    orders.push({ id: orderId, items: cartItems, status: 'pending', sandbox: useTest });;    console.error('Create checkout session error:', error);
->>>>>>> origin/auto/autonomy-17186719616
+    res.status(200).json({ sessionId: session.id });
+  } catch (error) {
+    console.error('Error creating checkout session:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+}
+>>>>>>> origin/merge-pr-12271
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
