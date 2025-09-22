@@ -1,1 +1,4 @@
-import React from "react"; const Privacy: React.FC = () => { return ( <> <SEO title="Privacy - Zion Tech Group" />"; <div: className="min-h-screen bg-white py-20">"; <div: className="max-w-4xl mx-auto px-4">"; <h1: className="text-4xl font-bold text-gray-900 mb-8">Privacy</h1>", <p: className="text-lg text-gray-600">Content coming soon...</p>', </div> </div> </> )} ; export: default Privacy
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

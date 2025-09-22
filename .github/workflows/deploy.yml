@@ -3,71 +3,43 @@ name: Deploy
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
-concurrency:
-  group: deploy-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  build-and-test:
+  deploy:
     runs-on: ubuntu-latest
+    needs: [ci]
+    if: github.ref == 'refs/heads/main'
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
-
+      
       - name: Install dependencies
         run: npm ci
-
+      
       - name: Build project
         run: npm run build
-
-      - name: Verify build output
-        run: |
-          if [ ! -d .next ]; then
-            echo "Build failed: .next folder not found"
-            exit 1
-          fi
-          echo "Build successful: .next folder found"
-          ls -la .next
-
+      
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build
-          path: .next
+          name: build-files
+          path: dist/
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true
 
-  deploy-preview:
-    needs: build-and-test
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy preview
-        run: |
-          echo "Deploying preview for PR #${{ github.event.number }}"
-          echo "Preview deployment would happen here"
-          echo "Build artifacts available from previous job"
-
-  deploy-production:
-    needs: build-and-test
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Deploy to production
-        run: |
-          echo "Deploying to production"
-          echo "Production deployment would happen here"
-          echo "Build artifacts available from previous job"

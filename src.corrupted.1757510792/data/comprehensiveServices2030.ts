@@ -1,5 +1,0 @@
-<<<<<<< HEAD
->>>>>>> main
-=======
-import { ProductListing } from "../types/ProductListing"; export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [,","});"})'../types/ProductListing&apos;&apos,  export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [,"export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [,"
->>>>>>> origin/automation-fixes

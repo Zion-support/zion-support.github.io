@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-=======
-import React,{ useState,useMemo } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; import { Link } from \'react-router-dom\'; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from \'lucide-react\'; import { innovativeServices } from \'../data/innovative-services-2025\'; const \"ComprehensivePricing2025\": React.FC = () => {}}
-const React,{ useState,useMemo } from "react"; import { motion,AnimatePresence } from "framer-motion"; import { Link } from "react-router-dom"; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from "lucide-react"; import { innovativeServices } from "./data/innovative-services-2025"; const ComprehensivePricing2025: React.FC = () => {}}'"'"
-import _React,{ useState,useMemo } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { Link } from 'react-router-dom'; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from 'lucide-react'; import { innovativeServices } from '../data/innovative-services-2025'; const "ComprehensivePricing2025": _React.FC = () => {}}
->>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

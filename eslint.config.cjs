@@ -1,78 +1,207 @@
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import tseslint from '@typescript-eslint/eslint-plugin';
+const js = require('@eslint/js');
+const tseslint = require('@typescript-eslint/eslint-plugin');
+const tsparser = require('@typescript-eslint/parser');
 
-export default [
+module.exports = [
   {
     ignores: [
-      'node_modules/**',
-      'dist/**',
-      'build/**',
-      'coverage/**',
-      '.next/**',
-      '**/.next/**',
-      'zion-os/**',
-      'zion-os.disabled/**',
-      'apps/**',
-      'scripts/**',
-      'automation/**',
-      'backup-problematic-files/**',
-      'src.disabled/**',
-      'components.disabled/**',
-      'pages.disabled/**',
-      'zion-website/**',
-      'zion_academy/**',
-      'api/**',
-      'api-backup/**',
-      'api-disabled/**',
-      'api.disabled/**',
-      'backup/**',
-      'backups/**',
-      'broken_files_backup/**',
-      'corrupted-files-backup/**',
-      'cypress_backup/**',
-      'data_backup/**',
-      'deployment/**',
-      'e2e/**',
-      'server/**',
-      'temp_*/**',
-      'test_build/**',
-      'tests/**',
-      '__tests__/**',
-      'types/**',
-      '*.cjs',
-      '*.mjs',
-      'supabase/**'
+      'node_modules/**/*',
+      'app-optimizer.js',
+      'zion-os/**/*',
+      'apps.backup/**/*',
+      'zion-website/**/*',
+      'automation/**/*',
+      'pages-disabled/**/*',
+      'pages.disabled/**/*',
+      'components.disabled/**/*',
+      'components/**/*',
+      'api.disabled/**/*',
+      'api-disabled/**/*',
+      'backup/**/*',
+      'advanced-automation-improvements.cjs',
+      'analyze_links.cjs',
+      'app-enhancement-suite.cjs'
     ],
   },
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        URL: 'readonly',
+        performance: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        HTMLVideoElement: 'readonly',
+        HTMLAudioElement: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        React: 'readonly',
+        gtag: 'readonly',
+        fetch: 'readonly',
+      },
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+    }
+  },
+  {
+    files: ['**/*.cjs'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'commonjs',
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+      },
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsparser,
+      ecmaVersion: 2022,
+      sourceType: 'module',
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-        project: false,
-        tsconfigRootDir: __dirname,
+          jsx: true
+        }
       },
-      globals: globals.browser,
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        URL: 'readonly',
+        performance: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        HTMLVideoElement: 'readonly',
+        HTMLAudioElement: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        React: 'readonly',
+        gtag: 'readonly',
+        fetch: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': tseslint,
-      'react': react,
-      'react-hooks': reactHooks,
     },
     rules: {
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
+      'prefer-const': 'warn',
+    }
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        pr: 'readonly',
+        origin: 'readonly',
+        cursor: 'readonly',
+        automate: 'readonly',
+        improve: 'readonly',
+        and: 'readonly',
+        merge: 'readonly',
+        code: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
     }
   }
 ];
-

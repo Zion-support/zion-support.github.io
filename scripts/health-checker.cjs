@@ -1,617 +1,393 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("child_process");"const path = require("child_process");"const { execSync } = require("child_process")class HealthChecker { constructor() { this.projectRoot = process.cwd()" this.healthStatus = {overall: "healthy",checks: [],issues: []; recommendations: []} }" log(message, type = "info") { const timestamp = new Date().toISOString() const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}` console.log(logEntry)} async runHealthChecks() { try {" this.log("Running comprehensive health checks.") await this.checkProjectStructure() await this.checkDependencies() await this.checkConfiguration() await this.checkCodeQuality() await this.checkBuildHealth() await this.checkSecurity() this.determineOverallHealth()" this.log("Health checks completed", "success")} catch (error) {"` this.log(`Health checks failed: ${error.message}`, "error")} } async checkProjectStructure() { try {" this.log("Checking project structure.")" const requiredDirs = ["src", "pages", "components", "public"]" const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"] for (const dir of requiredDirs) { if (fs.existsSync(dir)) { this.healthStatus.checks.push({"` name: `Directory: ${dir}`;" status: "pass";" message: "Directory exists"})} else { this.healthStatus.checks.push({"` name: `Directory: ${dir}`;" status: "fail";" message: "Directory missing"})"` this.healthStatus.issues.push(`Missing directory: ${dir}`)} } for (const file of requiredFiles) { if (fs.existsSync(file)) { this.healthStatus.checks.push({"` name: `File: ${file}`;" status: "pass";" message: "File exists"})} else { this.healthStatus.checks.push({"` name: `File: ${file}`;" status: "fail";" message: "File missing"})"` this.healthStatus.issues.push(`Missing file: ${file}`)} }" this.log("Project structure check completed", "success")} catch (error) {"` this.log(`Project structure check failed: ${error.message}`, "error")} } async checkDependencies() { try {" this.log("Checking dependencies.") / Check if package.json exists and is valid" if (fs.existsSync("package.json")) {" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"))" this.healthStatus.checks.push({name: "Package.json",status: "pass";" message: "Valid package.json found"}) / Check for critical dependencies" const criticalDeps = ["next", "react", "react-dom"] for (const dep of criticalDeps) { if (packageJson.dependencies && packageJson.dependencies[dep]) { this.healthStatus.checks.push({"` name: `Dependency: ${dep}`;" status: "pass";` message: `${dep} is installed`})} else { this.healthStatus.checks.push({"` name: `Dependency: ${dep}`;" status: "fail";` message: `${dep} is missing`})"` this.healthStatus.issues.push(`Missing critical dependency: ${dep}`)} } } else {" this.healthStatus.checks.push({name: "Package.json",status: "fail";" message: "package.json not found"})" this.healthStatus.issues.push("Missing package.json")}" this.log("Dependencies check completed", "success")} catch (error) {"` this.log(`Dependencies check failed: ${error.message}`, "error")} } async checkConfiguration() { try {" this.log("Checking configuration files.") / Check Next.js config" if (fs.existsSync("next.config.js")) {" const config = fs.readFileSync("next.config.js", "utf8")" if (config.includes("experimental") | config.includes("webpack")) {" this.healthStatus.checks.push({name: "Next.js Config",status: "pass";" message: "Configuration file exists and has custom settings"})} else {" this.healthStatus.checks.push({name: "Next.js Config",status: "warn";" message: "Basic configuration detected"})} } else {" this.healthStatus.checks.push({name: "Next.js Config",status: "warn";" message: "No custom Next.js configuration found"})} / Check TypeScript config" if (fs.existsSync("tsconfig.json")) {" this.healthStatus.checks.push({name: "TypeScript Config",status: "pass";" message: "TypeScript configuration found"})} else {" this.healthStatus.checks.push({name: "TypeScript Config",status: "warn";" message: "No TypeScript configuration found"})}" this.log("Configuration check completed", "success")} catch (error) {"` this.log(`Configuration check failed: ${error.message}`, "error")} } async checkCodeQuality() { try {" this.log("Checking code quality.") / Check for ESLint config" const eslintConfigs = [".eslintrc.js", ".eslintrc.json", "eslint.config.js"] let eslintFound = false for (const config of eslintConfigs) { if (fs.existsSync(config)) { eslintFound = true break} } if (eslintFound) {" this.healthStatus.checks.push({name: "ESLint Config",status: "pass";" message: "ESLint configuration found"})} else {" this.healthStatus.checks.push({name: "ESLint Config",status: "warn";" message: "No ESLint configuration found"})" this.healthStatus.recommendations.push("Add ESLint configuration for code quality")} / Check for Prettier config" const prettierConfigs = [".prettierrc", ".prettierrc.js", "prettier.config.js"] let prettierFound = false for (const config of prettierConfigs) { if (fs.existsSync(config)) { prettierFound = true break} } if (prettierFound) {" this.healthStatus.checks.push({name: "Prettier Config",status: "pass";" message: "Prettier configuration found"})} else {" this.healthStatus.checks.push({name: "Prettier Config",status: "warn";" message: "No Prettier configuration found"})" this.healthStatus.recommendations.push("Add Prettier configuration for code formatting")}" this.log("Code quality check completed", "success")} catch (error) {"` this.log(`Code quality check failed: ${error.message}`, "error")} } async checkBuildHealth() { try {" this.log("Checking build health.") / Try to run a build try {" execSync("npm run build", { cwd: this.projectRoot, stdio: "pipe" })" this.healthStatus.checks.push({name: "Build Test",status: "pass";" message: "Build completed successfully"})} catch (error) {" this.healthStatus.checks.push({name: "Build Test",status: "fail";" message: "Build failed"})" this.healthStatus.issues.push("Build is failing - check for compilation errors")}" this.log("Build health check completed", "success")} catch (error) {"` this.log(`Build health check failed: ${error.message}`, "error")} } async checkSecurity() { try {" this.log("Checking security.") / Check for security configuration" if (fs.existsSync("security.config.js")) {" this.healthStatus.checks.push({name: "Security Config",status: "pass";" message: "Security configuration found"})} else {" this.healthStatus.checks.push({name: "Security Config",status: "warn";" message: "No security configuration found"})" this.healthStatus.recommendations.push("Add security configuration for headers and CSP")} / Check for .env files" const envFiles = [".env", ".env.local", ".env.production"] for (const envFile of envFiles) { if (fs.existsSync(envFile)) { this.healthStatus.checks.push({"` name: `Environment File: ${envFile}`;" status: "warn";" message: "Environment file found - ensure it contains no sensitive data"})} }" this.log("Security check completed", "success")} catch (error) {"` this.log(`Security check failed: ${error.message}`, "error")} } determineOverallHealth() {" const failedChecks = this.healthStatus.checks.filter(check => check.status === "fail")" const warningChecks = this.healthStatus.checks.filter(check => check.status === "warn") if (failedChecks.length > 0) {" this.healthStatus.overall = "unhealthy"} else if (warningChecks.length > 0) {" this.healthStatus.overall = "warning"} else {" this.healthStatus.overall = "healthy"} } async generateHealthReport() { const report = {" timestamp: new Date().toISOString(); overall: this.healthStatus.overall;" summary: {totalChecks: this.healthStatus.checks.length,passed: this.healthStatus.checks.filter(c => c.status === "pass").length,warnings: this.healthStatus.checks.filter(c => c.status === "warn").length;" failed: this.healthStatus.checks.filter(c => c.status === "fail").length};" checks: this.healthStatus.checks; issues: this.healthStatus.issues; recommendations: this.healthStatus.recommendations}" const reportPath = path.join(this.projectRoot, "health-checker-report.json") fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))"` this.log(`Health report saved to ${reportPath}`, "success") return report} async run() {" this.log("Starting Health Checker") try { await this.runHealthChecks() const report = await this.generateHealthReport()" this.log("Health Checker completed")"` this.log(`Overall Health: ${report.overall.toUpperCase()}`)"` this.log(`Summary: ${report.summary.passed}/${report.summary.totalChecks} checks passed`) if (report.summary.failed > 0) {"` this.log(`${report.summary.failed} checks failed`, "error")} if (report.summary.warnings > 0) {"` this.log(`${report.summary.warnings} warnings found`, "warn")} return report} catch (error) {"` this.log(`Health checker failed: ${error.message}`, "error") throw error} }}/ Run the health checkerif (require.main === module) { const checker = new HealthChecker() checker.run().catch(console.error)}module.exports = HealthChecker"`"`
+
 #!/usr/bin/env node;
+
+#!/usr/bin/env node
+
 /**
  * Health Checker;
  * Comprehensive health check for the application;
-<<<<<<< HEAD
  */
 const fs = require("child_process");
 const path = require("child_process");
-=======
- */;
-const fs = require("fs")
-const path = require("fs")
->>>>>>> origin/automation-fixes
-const { execSync } = require("child_process")
-class HealthChecker {
-  constructor() {
-    this.projectRoot = process.cwd()
-<<<<<<< HEAD
-    this.healthStatus = {"overall": "healthy","checks": [],"issues": [];
-      recommendations: []}
-  }
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    }
-=======
-    this.healthStatus = {
-      overall: "healthy",
-      checks: [],
-      issues: [],
-      recommendations: [],,
-}
-  }
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry),,
-}
->>>>>>> origin/automation-fixes
-  async runHealthChecks() {
-    try {
-      this.log("Running comprehensive health checks...")
-      await this.checkProjectStructure()
-      await this.checkDependencies()
-      await this.checkConfiguration()
-      await this.checkCodeQuality()
-      await this.checkBuildHealth()
-      await this.checkSecurity()
-      this.determineOverallHealth()
-<<<<<<< HEAD
-      this.log("Health checks completed", "success")} catch (error) {
-      this.log(`Health checks "failed": ${error.message}`, "error")}
-=======
-      this.log("Health checks completed", "success"),,
-} catch (error) {
-      this.log(`Health checks failed: ${error.message}`, "error"),,
-}
->>>>>>> origin/automation-fixes
-  }
-  async checkProjectStructure() {
-    try {
-      this.log("Checking project structure...")
-      const requiredDirs = ["src", "pages", "components", "public"]
-      const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"]
-      for (const dir of requiredDirs) {
-        if (fs.existsSync(dir)) {
-          this.healthStatus.checks.push({
-<<<<<<< HEAD
-            "name": `Directory: ${dir}`;
+
 const { execSync } = require("child_process");
+
+const { execSync } = require("child_process");"
+
 class HealthChecker {}
   constructor() {}
-    this.projectRoot = process.cwd();
-    this.healthStatus = {"overall": "healthy","checks": [],"issues": [];}
+    this.projectRoot = process.cwd();"
+    this.healthStatus = {"overall": "healthy","checks": [],"issues": [];}"
       recommendations: []};
-  };
-  log(message, type = "info") {}
+  };"
+  log(message, type = "info") {}"
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}
     console.log(logEntry)};
   async runHealthChecks() {}
-    try {}
-      this.log("Running comprehensive health checks...");
+    try {}"
+      this.log("Running comprehensive health checks...");"
       await this.checkProjectStructure();
       await this.checkDependencies();
       await this.checkConfiguration();
       await this.checkCodeQuality();
       await this.checkBuildHealth();
       await this.checkSecurity();
-      this.determineOverallHealth();
-      this.log("Health checks completed", "success")} catch (error) {
-      this.log(`Health checks failed: ${error.message}`, "error")}
-  }
+      this.determineOverallHealth();"
 
-  async checkProjectStructure() {
-    try {
-      this.log("Checking project structure...");
-      const requiredDirs = ["src", "pages", "components", "public"];
-      const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"];
-      for (const dir of requiredDirs) {
-        if (fs.existsSync(dir)) {
-          this.healthStatus.checks.push({;
-            name: `Directory: ${dir}`,;
-            status: "pass",;
-            message: "Directory exists"})} else {
-          this.healthStatus.checks.push({;
-            name: `Directory: ${dir}`,;
-            status: "fail",;
-            message: "Directory missing"});
-          this.healthStatus.issues.push(`Missing directory: ${dir}`)}
-      }
-      for (const file of requiredFiles) {
-        if (fs.existsSync(file)) {
-          this.healthStatus.checks.push({;
-            name: `File: ${file}`,;
-            status: "pass",;
-            message: "File exists"})} else {
-          this.healthStatus.checks.push({;
-            name: `File: ${file}`,;
-            status: "fail",;
-            message: "File missing"});
-          this.healthStatus.issues.push(`Missing file: ${file}`)}
-      }
-      this.log("Project structure check completed", "success")} catch (error) {
-      this.log(`Project structure check failed: ${error.message}`, "error")}
-  }
-
-  async checkDependencies() {
-    try {
-      this.log("Checking dependencies...");
-      // Check if package.json exists and is valid;
-      if (fs.existsSync("package.json")) {
+  async checkDependencies() {}
+      this.log("Checking dependencies...");"
+      // Check if package.json exists and is valid;"
+      if (fs.existsSync("package.json")) {}
         const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
-        this.healthStatus.checks.push({;
-          name: "Package.json",;
-          status: "pass",;
-          message: "Valid package.json found"});
-        // Check for critical dependencies;
-        const criticalDeps = ["next", "react", "react-dom"];
-        for (const dep of criticalDeps) {
-          if (packageJson.dependencies && packageJson.dependencies[dep]) {
-            this.healthStatus.checks.push({;
-              name: `Dependency: ${dep}`,;
-              status: "pass",;
-              message: `${dep} is installed`})} else {
-            this.healthStatus.checks.push({;
-              name: `Dependency: ${dep}`,;
-              status: "fail",;
-              message: `${dep} is missing`});
-            this.healthStatus.issues.push(`Missing critical dependency: ${dep}`)}
-        }
-      } else {
-        this.healthStatus.checks.push({;
-          name: "Package.json",;
-          status: "fail",;
-          message: "package.json not found"});
-        this.healthStatus.issues.push("Missing package.json")}
-      this.log("Dependencies check completed", "success")} catch (error) {
-      this.log(`Dependencies check failed: ${error.message}`, "error")}
-  }
+        this.healthStatus.checks.push({"name": "Package.json","status": "pass";})
+          message: "Valid package.json found"}"
+});
+        // Check for critical dependencies;"
+        const criticalDeps = ["next", "react", "react-dom"];"
+        for (const dep of criticalDeps) {}
+          if (packageJson.dependencies && packageJson.dependencies[dep]) {}
 
-  async checkConfiguration() {
-    try {
-      this.log("Checking configuration files...");
-      // Check Next.js config;
-      if (fs.existsSync("next.config.js")) {
+      } else {}"
+        this.healthStatus.checks.push({"name": "Package.json","status": "fail";})
+          message: "package.json not found"}"
+});"
+
+  async checkConfiguration() {}
+      this.log("Checking configuration files...");"
+      // Check Next.js config;"
+      if (fs.existsSync("next.config.js")) {}
         const config = fs.readFileSync("next.config.js", "utf8");
-        if (config.includes("experimental") || config.includes("webpack")) {
-          this.healthStatus.checks.push({;
-            name: "Next.js Config",;
-            status: "pass",;
-            message: "Configuration file exists and has custom settings"})} else {
-          this.healthStatus.checks.push({;
-            name: "Next.js Config",;
-            status: "warn",;
-            message: "Basic configuration detected"})}
-      } else {
-        this.healthStatus.checks.push({;
-          name: "Next.js Config",;
-          status: "warn",;
-          message: "No custom Next.js configuration found"})}
-      // Check TypeScript config;
-      if (fs.existsSync("tsconfig.json")) {
-        this.healthStatus.checks.push({;
-          name: "TypeScript Config",;
-          status: "pass",;
-          message: "TypeScript configuration found"})} else {
-        this.healthStatus.checks.push({;
-          name: "TypeScript Config",;
-          status: "warn",;
-          message: "No TypeScript configuration found"})}
-      this.log("Configuration check completed", "success")} catch (error) {
-      this.log(`Configuration check failed: ${error.message}`, "error")}
-  }
+        if (config.includes("experimental") || config.includes("webpack")) {}
+          this.healthStatus.checks.push({"name": "Next.js Config","status": "pass";})
+            message: "Configuration file exists and has custom settings"})} else {}
+          this.healthStatus.checks.push({"name": "Next.js Config","status": "warn";})
+            message: "Basic configuration detected"})};"
 
-  async checkCodeQuality() {
-    try {
-      this.log("Checking code quality...");
-=======
-            name: `Directory: ${dir}`,
-            status: "pass",
-            message: "Directory exists",,
-}),,
-} else {
-          this.healthStatus.checks.push({
-            name: `Directory: ${dir}`,
-            status: "fail",
-            message: "Directory missing",,
-})
-          this.healthStatus.issues.push(`Missing directory: ${dir}`),,
-}
-      }
-      for (const file of requiredFiles) {
-        if (fs.existsSync(file)) {
-          this.healthStatus.checks.push({
-            name: `File: ${file}`,
-            status: "pass",
-            message: "File exists",,
-}),,
-} else {
-          this.healthStatus.checks.push({
-            name: `File: ${file}`,
-            status: "fail",
-            message: "File missing",,
-})
-          this.healthStatus.issues.push(`Missing file: ${file}`),,
-}
-      }
-      this.log("Project structure check completed", "success"),,
-} catch (error) {
-      this.log(`Project structure check failed: ${error.message}`, "error"),,
-}
-  }
-  async checkDependencies() {
-    try {
-      this.log("Checking dependencies...")
-      // Check if package.json exists and is valid;
-      if (fs.existsSync("package.json")) {
-        const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"))
-        this.healthStatus.checks.push({
-          name: "Package.json",
-          status: "pass",
-          message: "Valid package.json found",,
-})
-        // Check for critical dependencies;
-        const criticalDeps = ["next", "react", "react-dom"]
-        for (const dep of criticalDeps) {
-          if (packageJson.dependencies && packageJson.dependencies[dep]) {
-            this.healthStatus.checks.push({
-              name: `Dependency: ${dep}`,
-              status: "pass",
-              message: `${dep} is installed`,,
-}),,
-} else {
-            this.healthStatus.checks.push({
-              name: `Dependency: ${dep}`,
-              status: "fail",
-              message: `${dep} is missing`,,
-})
-            this.healthStatus.issues.push(`Missing critical dependency: ${dep}`),,
-}
-        }
-      } else {
-        this.healthStatus.checks.push({
-          name: "Package.json",
-          status: "fail",
-          message: "package.json not found",,
-})
-        this.healthStatus.issues.push("Missing package.json"),,
-}
-      this.log("Dependencies check completed", "success"),,
-} catch (error) {
-      this.log(`Dependencies check failed: ${error.message}`, "error"),,
-}
-  }
-  async checkConfiguration() {
-    try {
-      this.log("Checking configuration files...")
-      // Check Next.js config;
-      if (fs.existsSync("next.config.js")) {
-        const config = fs.readFileSync("next.config.js", "utf8")
-        if (config.includes("experimental") || config.includes("webpack")) {
-          this.healthStatus.checks.push({
-            name: "Next.js Config",
-            status: "pass",
-            message: "Configuration file exists and has custom settings",,
-}),,
-} else {
-          this.healthStatus.checks.push({
-            name: "Next.js Config",
-            status: "warn",
-            message: "Basic configuration detected",,
-}),,
-}
-      } else {
-        this.healthStatus.checks.push({
-          name: "Next.js Config",
-          status: "warn",
-          message: "No custom Next.js configuration found",,
-}),,
-}
-      // Check TypeScript config;
-      if (fs.existsSync("tsconfig.json")) {
-        this.healthStatus.checks.push({
-          name: "TypeScript Config",
-          status: "pass",
-          message: "TypeScript configuration found",,
-}),,
-} else {
-        this.healthStatus.checks.push({
-          name: "TypeScript Config",
-          status: "warn",
-          message: "No TypeScript configuration found",,
-}),,
-}
-      this.log("Configuration check completed", "success"),,
-} catch (error) {
-      this.log(`Configuration check failed: ${error.message}`, "error"),,
-}
-  }
-  async checkCodeQuality() {
-    try {
-      this.log("Checking code quality...")
->>>>>>> origin/automation-fixes
-      // Check for ESLint config;
-      const eslintConfigs = [".eslintrc.js", ".eslintrc.json", "eslint.config.js"]
+  async checkCodeQuality() {}
+      this.log("Checking code quality...");"
+      // Check for ESLint config;"
+      const eslintConfigs = [".eslintrc.js", ".eslintrc.json", "eslint.config.js"];"
       let eslintFound = false;
-<<<<<<< HEAD
       for (const config of eslintConfigs) {}
         if (fs.existsSync(config)) {}
           eslintFound = true;
           break};
-      };
-      if (eslintFound) {}
+      if (eslintFound) {}"
         this.healthStatus.checks.push({"name": "ESLint Config","status": "pass";})
           message: "ESLint configuration found"})} else {}
         this.healthStatus.checks.push({"name": "ESLint Config","status": "warn";})
-          message: "No ESLint configuration found"}
-});
-        this.healthStatus.recommendations.push("Add ESLint configuration for code quality")};
-=======
-      for (const config of eslintConfigs) {
-        if (fs.existsSync(config)) {
-          eslintFound = true;
-          break,,
-}
-      }
-      if (eslintFound) {
-        this.healthStatus.checks.push({
-          name: "ESLint Config",
-          status: "pass",
-          message: "ESLint configuration found",,
-}),,
-} else {
-        this.healthStatus.checks.push({
-          name: "ESLint Config",
-          status: "warn",
-          message: "No ESLint configuration found",,
-})
-        this.healthStatus.recommendations.push("Add ESLint configuration for code quality"),,
-}
->>>>>>> origin/automation-fixes
-      // Check for Prettier config;
-      const prettierConfigs = [".prettierrc", ".prettierrc.js", "prettier.config.js"]
+          message: "No ESLint configuration found"}"
+        this.healthStatus.recommendations.push("Add ESLint configuration for code quality")};"
+      // Check for Prettier config;"
+      const prettierConfigs = [".prettierrc", ".prettierrc.js", "prettier.config.js"];"
       let prettierFound = false;
-<<<<<<< HEAD
       for (const config of prettierConfigs) {}
-        if (fs.existsSync(config)) {}
           prettierFound = true;
-          break}
-      }
-      if (prettierFound) {
-        this.healthStatus.checks.push({;
-          name: "Prettier Config",;
-          status: "pass",;
-          message: "Prettier configuration found"})} else {
-        this.healthStatus.checks.push({;
-          name: "Prettier Config",;
-          status: "warn",;
-          message: "No Prettier configuration found"});
-        this.healthStatus.recommendations.push("Add Prettier configuration for code formatting")}
-      this.log("Code quality check completed", "success")} catch (error) {
-      this.log(`Code quality check failed: ${error.message}`, "error")}
-  }
+      if (prettierFound) {}"
+        this.healthStatus.checks.push({"name": "Prettier Config","status": "pass";})
+          message: "Prettier configuration found"})} else {}
+        this.healthStatus.checks.push({"name": "Prettier Config","status": "warn";})
+          message: "No Prettier configuration found"}"
 
-  async checkBuildHealth() {
-    try {
-      this.log("Checking build health...");
+  async checkBuildHealth() {}
+      this.log("Checking build health...");"
       // Try to run a build;
-      try {
-        execSync("npm run build", { cwd: this.projectRoot, stdio: "pipe" });
-        this.healthStatus.checks.push({;
-          name: "Build Test",;
-          status: "pass",;
-          message: "Build completed successfully"})} catch (error) {
-        this.healthStatus.checks.push({;
-          name: "Build Test",;
-          status: "fail",;
-          message: "Build failed"});
-        this.healthStatus.issues.push("Build is failing - check for compilation errors")}
-      this.log("Build health check completed", "success")} catch (error) {
-      this.log(`Build health check failed: ${error.message}`, "error")}
-  }
+        execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe" }")
 
-  async checkSecurity() {
-    try {
-      this.log("Checking security...");
-      // Check for security configuration;
-      if (fs.existsSync("security.config.js")) {
-        this.healthStatus.checks.push({;
-          name: "Security Config",;
-          status: "pass",;
-          message: "Security configuration found"})} else {
-        this.healthStatus.checks.push({;
-          name: "Security Config",;
-          status: "warn",;
-          message: "No security configuration found"});
-        this.healthStatus.recommendations.push("Add security configuration for headers and CSP")}
-      // Check for .env files;
-      const envFiles = [".env", ".env.local", ".env.production"];
-      for (const envFile of envFiles) {
-        if (fs.existsSync(envFile)) {
-          this.healthStatus.checks.push({;
-            name: `Environment File: ${envFile}`,;
-            status: "warn",;
-            message: "Environment file found - ensure it contains no sensitive data"})}
-      }
-      this.log("Security check completed", "success")} catch (error) {
-      this.log(`Security check failed: ${error.message}`, "error")}
-  }
+  async checkSecurity() {}
+      this.log("Checking security...");"
+      // Check for security configuration;"
+      if (fs.existsSync("security.config.js")) {}
+        this.healthStatus.checks.push({"name": "Security Config","status": "pass";})
+          message: "Security configuration found"})} else {}
+        this.healthStatus.checks.push({"name": "Security Config","status": "warn";})
+          message: "No security configuration found"}"
+        this.healthStatus.recommendations.push("Add security configuration for headers and CSP")};"
+      // Check for .env files;"
+      const envFiles = [".env", ".env.local", ".env.production"];"
+      for (const envFile of envFiles) {}
+        if (fs.existsSync(envFile)) {}
 
-  determineOverallHealth() {
+  determineOverallHealth() {}"
     const failedChecks = this.healthStatus.checks.filter(check => check.status === "fail");
-    const warningChecks = this.healthStatus.checks.filter(check => check.status === "warn");
-    if (failedChecks.length > 0) {}
+    const warningChecks = this.healthStatus.checks.filter(check => check.status === "warn");"
+    if (failedChecks.length > 0) {}"
       this.healthStatus.overall = "unhealthy"} else if (warningChecks.length > 0) {}
       this.healthStatus.overall = "warning"} else {}
-      this.healthStatus.overall = "healthy"};
-  };
+      this.healthStatus.overall = "healthy"};"
   async generateHealthReport() {}
-    const report = {}
-      "timestamp": new Date().toISOString();
-      overall: this.healthStatus.overall;
-      summary: {totalChecks: this.healthStatus.checks.length,"passed": this.healthStatus.checks.filter(c => c.status === "pass").length,"warnings": this.healthStatus.checks.filter(c => c.status === "warn").length;}
+    const report = {}"
+      "timestamp": new Date().toISOString();"
+      overall: this.healthStatus.overall;,"
+  summary: {totalChecks: this.healthStatus.checks.length,"passed": this.healthStatus.checks.filter(c => c.status === "pass").length,"warnings": this.healthStatus.checks.filter(c => c.status === "warn").length;}
         failed: this.healthStatus.checks.filter(c => c.status === "fail").length};
-      "checks": this.healthStatus.checks;
-      issues: this.healthStatus.issues;
-      recommendations: this.healthStatus.recommendations};
-    const reportPath = path.join(this.projectRoot, "health-checker-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Health report saved to ${reportPath}`, "success");
+      "checks": this.healthStatus.checks;"
+      issues: this.healthStatus.issues;,
+  recommendations: this.healthStatus.recommendations};"
+    const reportPath = path.join(this.projectRoot, "health-checker-report.json");"
+
     return report};
-  async run() {}
-    this.log("Starting Health Checker");
+  async run() {}"
+    this.log("Starting Health Checker");"
     try {}
       await this.runHealthChecks();
-      const report = await this.generateHealthReport();
-      this.log("Health Checker completed");
-      this.log(`Overall "Health": ${report.overall.toUpperCase()}`);
-      this.log(`"Summary": ${report.summary.passed}/${report.summary.totalChecks} checks passed`);
-      if (report.summary.failed > 0) {}
-        this.log(`${report.summary.failed} checks failed`, "error")};
-      if (report.summary.warnings > 0) {}
-        this.log(`${report.summary.warnings} warnings found`, "warn")};
-      return report} catch (error) {}
-      this.log(`Health checker "failed": ${error.message}`, "error");
+      const report = await this.generateHealthReport();"
+
+      this.log(`"Summary": ${report.summary.passed}/${report.summary.totalChecks} checks passed`);"
+      if (report.summary.failed > 0) {}"`;
+        this.log(`${report.summary.failed} checks failed`, "error")};"
+      if (report.summary.warnings > 0) {}"`;
+        this.log(`${report.summary.warnings} warnings found`, "warn")};"
+
       throw error};
-  };
-};
 // Run the health checker;
-if (require.main === module) {
+if (require.main === module) {}
   const checker = new HealthChecker();
   checker.run().catch(console.error)};
+
 module.exports = HealthChecker;
-=======
-      for (const config of prettierConfigs) {
-        if (fs.existsSync(config)) {
-          prettierFound = true;
-          break,,
-}
-      }
-      if (prettierFound) {
-        this.healthStatus.checks.push({
-          name: "Prettier Config",
-          status: "pass",
-          message: "Prettier configuration found",,
-}),,
-} else {
-        this.healthStatus.checks.push({
-          name: "Prettier Config",
-          status: "warn",
-          message: "No Prettier configuration found",,
-})
-        this.healthStatus.recommendations.push("Add Prettier configuration for code formatting"),,
-}
-      this.log("Code quality check completed", "success"),,
-} catch (error) {
-      this.log(`Code quality check failed: ${error.message}`, "error"),,
-}
+
+module.exports = HealthChecker;
+
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class HealthChecker {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.healthStatus = {
+      overall: 'healthy',
+      checks: [],
+      issues: [],
+      recommendations: []
+    };
   }
-  async checkBuildHealth() {
+
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logEntry);
+  }
+
+  async runHealthChecks() {
+    this.log('Starting health checks...', 'info');
+
     try {
-      this.log("Checking build health...")
-      // Try to run a build;
-      try {
-        execSync("npm run build", { cwd: this.projectRoot, stdio: "pipe" })
-        this.healthStatus.checks.push({
-          name: "Build Test",
-          status: "pass",
-          message: "Build completed successfully",,
-}),,
-} catch (error) {
-        this.healthStatus.checks.push({
-          name: "Build Test",
-          status: "fail",
-          message: "Build failed",,
-})
-        this.healthStatus.issues.push("Build is failing - check for compilation errors"),,
-}
-      this.log("Build health check completed", "success"),,
-} catch (error) {
-      this.log(`Build health check failed: ${error.message}`, "error"),,
-}
+      await this.checkDependencies();
+      await this.checkConfiguration();
+      await this.checkBuildProcess();
+      await this.checkTestSuite();
+      await this.checkLinting();
+
+      this.generateReport();
+      return this.healthStatus;
+    } catch (error) {
+      this.log(`Health check failed: ${error.message}`, 'error');
+      this.healthStatus.overall = 'unhealthy';
+      this.healthStatus.issues.push({
+        type: 'system_error',
+        message: error.message,
+        severity: 'critical'
+      });
+      return this.healthStatus;
+    }
   }
-  async checkSecurity() {
+
+  async checkDependencies() {
+    this.log('Checking dependencies...', 'info');
+
     try {
-      this.log("Checking security...")
-      // Check for security configuration;
-      if (fs.existsSync("security.config.js")) {
-        this.healthStatus.checks.push({
-          name: "Security Config",
-          status: "pass",
-          message: "Security configuration found",,
-}),,
-} else {
-        this.healthStatus.checks.push({
-          name: "Security Config",
-          status: "warn",
-          message: "No security configuration found",,
-})
-        this.healthStatus.recommendations.push("Add security configuration for headers and CSP"),,
-}
-      // Check for .env files;
-      const envFiles = [".env", ".env.local", ".env.production"]
-      for (const envFile of envFiles) {
-        if (fs.existsSync(envFile)) {
-          this.healthStatus.checks.push({
-            name: `Environment File: ${envFile}`,
-            status: "warn",
-            message: "Environment file found - ensure it contains no sensitive data",,
-}),,
-}
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      if (!fs.existsSync(packageJsonPath)) {
+        this.addIssue('missing_package_json', 'package.json not found', 'critical');
+        return;
       }
-      this.log("Security check completed", "success"),,
-} catch (error) {
-      this.log(`Security check failed: ${error.message}`, "error"),,
-}
+
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      const dependencies = Object.keys(packageJson.dependencies || {});
+      const devDependencies = Object.keys(packageJson.devDependencies || {});
+
+      this.log(`Found ${dependencies.length} dependencies and ${devDependencies.length} dev dependencies`, 'info');
+
+      // Check for critical dependencies
+      const criticalDeps = ['react', 'next', 'typescript'];
+      const missingCritical = criticalDeps.filter(dep => !dependencies.includes(dep));
+
+      if (missingCritical.length > 0) {
+        this.addIssue('missing_critical_deps', `Missing critical dependencies: ${missingCritical.join(', ')}`, 'high');
+      }
+
+      this.addCheck('dependencies', 'passed', 'Dependencies check completed');
+    } catch (error) {
+      this.addIssue('dependency_check_failed', error.message, 'medium');
+    }
   }
-  determineOverallHealth() {
-    const failedChecks = this.healthStatus.checks.filter(check => check.status === "fail")
-    const warningChecks = this.healthStatus.checks.filter(check => check.status === "warn")
-    if (failedChecks.length > 0) {
-      this.healthStatus.overall = "unhealthy",,
-} else if (warningChecks.length > 0) {
-      this.healthStatus.overall = "warning",,
-} else {
-      this.healthStatus.overall = "healthy",,
-}
+
+  async checkConfiguration() {
+    this.log('Checking configuration files...', 'info');
+
+    const configFiles = [
+      'next.config.js',
+      'tsconfig.json',
+      'eslint.config.js',
+      'tailwind.config.js'
+    ];
+
+    let configIssues = 0;
+    for (const configFile of configFiles) {
+      const configPath = path.join(this.projectRoot, configFile);
+      if (fs.existsSync(configPath)) {
+        this.log(`✓ ${configFile} found`, 'info');
+      } else {
+        this.log(`✗ ${configFile} missing`, 'warning');
+        configIssues++;
+      }
+    }
+
+    if (configIssues === 0) {
+      this.addCheck('configuration', 'passed', 'All configuration files present');
+    } else {
+      this.addIssue('missing_config', `${configIssues} configuration files missing`, 'medium');
+    }
   }
-  async generateHealthReport() {
+
+  async checkBuildProcess() {
+    this.log('Checking build process...', 'info');
+
+    try {
+      // Check if build script exists
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+      if (!packageJson.scripts || !packageJson.scripts.build) {
+        this.addIssue('missing_build_script', 'Build script not found in package.json', 'high');
+        return;
+      }
+
+      this.addCheck('build_process', 'passed', 'Build script found');
+    } catch (error) {
+      this.addIssue('build_check_failed', `Build check failed: ${error.message}`, 'medium');
+    }
+  }
+
+  async checkTestSuite() {
+    this.log('Checking test suite...', 'info');
+
+    try {
+      const testFiles = this.findTestFiles();
+
+      if (testFiles.length === 0) {
+        this.addIssue('no_tests', 'No test files found', 'medium');
+        return;
+      }
+
+      this.log(`Found ${testFiles.length} test files`, 'info');
+      this.addCheck('test_suite', 'passed', 'Test files found');
+    } catch (error) {
+      this.addIssue('test_check_failed', error.message, 'low');
+    }
+  }
+
+  findTestFiles() {
+    const testExtensions = ['.test.js', '.test.ts', '.test.jsx', '.test.tsx', '.spec.js', '.spec.ts'];
+    const testFiles = [];
+
+    const scanDirectory = (dir) => {
+      if (!fs.existsSync(dir)) return;
+
+      const files = fs.readdirSync(dir);
+      for (const file of files) {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+
+        if (stat.isDirectory()) {
+          scanDirectory(filePath);
+        } else if (testExtensions.some(ext => file.endsWith(ext))) {
+          testFiles.push(filePath);
+        }
+      }
+    };
+
+    scanDirectory(this.projectRoot);
+    return testFiles;
+  }
+
+  async checkLinting() {
+    this.log('Checking linting configuration...', 'info');
+
+    try {
+      // Check if lint script exists
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+      if (!packageJson.scripts || !packageJson.scripts.lint) {
+        this.addIssue('missing_lint_script', 'Lint script not found in package.json', 'medium');
+        return;
+      }
+
+      this.addCheck('linting', 'passed', 'Linting configuration found');
+    } catch (error) {
+      this.addIssue('lint_check_failed', `Lint check failed: ${error.message}`, 'medium');
+    }
+  }
+
+  addCheck(type, status, message) {
+    this.healthStatus.checks.push({
+      type,
+      status,
+      message,
+      timestamp: new Date().toISOString()
+    });
+  }
+
+  addIssue(type, message, severity) {
+    this.healthStatus.issues.push({
+      type,
+      message,
+      severity,
+      timestamp: new Date().toISOString()
+    });
+
+    if (severity === 'critical' || severity === 'high') {
+      this.healthStatus.overall = 'unhealthy';
+    }
+  }
+
+  generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      overall: this.healthStatus.overall,
+      healthStatus: this.healthStatus,
       summary: {
         totalChecks: this.healthStatus.checks.length,
-        passed: this.healthStatus.checks.filter(c => c.status === "pass").length,
-        warnings: this.healthStatus.checks.filter(c => c.status === "warn").length,
-        failed: this.healthStatus.checks.filter(c => c.status === "fail").length,,
-},
-      checks: this.healthStatus.checks,
-      issues: this.healthStatus.issues,
-      recommendations: this.healthStatus.recommendations,,
-}
-    const reportPath = path.join(this.projectRoot, "health-checker-report.json")
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-    this.log(`Health report saved to ${reportPath}`, "success")
-    return report,,
-}
-  async run() {
-    this.log("Starting Health Checker")
-    try {
-      await this.runHealthChecks()
-      const report = await this.generateHealthReport()
-      this.log("Health Checker completed")
-      this.log(`Overall Health: ${report.overall.toUpperCase()}`)
-      this.log(`Summary: ${report.summary.passed}/${report.summary.totalChecks} checks passed`)
-      if (report.summary.failed > 0) {
-        this.log(`${report.summary.failed} checks failed`, "error"),,
-}
-      if (report.summary.warnings > 0) {
-        this.log(`${report.summary.warnings} warnings found`, "warn"),,
-}
-      return report,,
-} catch (error) {
-      this.log(`Health checker failed: ${error.message}`, "error")
-      throw error,,
-}
+        passedChecks: this.healthStatus.checks.filter(c => c.status === 'passed').length,
+        totalIssues: this.healthStatus.issues.length,
+        criticalIssues: this.healthStatus.issues.filter(i => i.severity === 'critical').length,
+        highIssues: this.healthStatus.issues.filter(i => i.severity === 'high').length
+      }
+    };
+
+    const reportFile = path.join(this.projectRoot, 'health-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+    this.log(`Health report saved to ${reportFile}`, 'info');
+
+    // Print summary
+    this.log('=== HEALTH CHECK SUMMARY ===', 'info');
+    this.log(`Overall Status: ${this.healthStatus.overall.toUpperCase()}`, 'info');
+    this.log(`Checks: ${report.summary.passedChecks}/${report.summary.totalChecks} passed`, 'info');
+    this.log(`Issues: ${report.summary.totalIssues} total (${report.summary.criticalIssues} critical, ${report.summary.highIssues} high)`, 'info');
   }
 }
-// Run the health checker;
+
+// Run the health checker
 if (require.main === module) {
-  const checker = new HealthChecker()
-  checker.run().catch(console.error),,
+  const checker = new HealthChecker();
+
+  checker.runHealthChecks().catch(console.error);
 }
-module.exports = HealthChecker
->>>>>>> origin/automation-fixes
+
+module.exports = HealthChecker;

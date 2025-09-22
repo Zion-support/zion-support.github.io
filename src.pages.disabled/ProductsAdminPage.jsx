@@ -1,1 +1,160 @@
-const initialProducts = [ { id: ,1, name: "Alpha,", category: "Software,", status: "pending"}, { id: ,2, name: "Beta,", category: "Hardware,", status: "approved"}, { id: ,3, name: "Gamma,", category: "Service,", status: "rejected"}] const [search, setSearch] = useState (") const [products, setProducts] = useState (initialProducts) const filtered = products.filter (p => p.name.toLowerCase () .includes (search.toLowerCase () ) ) const toggleApproval = id => { setProducts (prev => prev.map (p => p.id === id ? { ...p, status: p.status === "approved" ? "rejected" : "approved,"} : p) ) } return: (<AdminLayout> <div className="space - y-4"> <div className="flex items - center justify - between"> <h1 className="text - 2xl font - bold">Products</h1> <Input placeholder="Search products..." value="{search}" onChange={e => setSearch (e.target.value) } className="max - w-xs" /> </div> <div className="rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > ID</TableHead> <TableHead > Name</TableHead> <TableHead > Category</TableHead> <TableHead > Status</TableHead> <TableHead className="text - center">Approve</TableHead> </TableRow> </TableHeader> <TableBody> {filtered.map (p => (<TableRow key="{p.id}"> <TableCell>{p.id}</TableCell> <TableCell>{p.name}</TableCell> <TableCell>{p.category}</TableCell> <TableCell>{p.status}</TableCell> <TableCell className="text - center"> <Switch checked={p.status === "approved"} onCheckedChange={ () => toggleApproval (p.id) } /> </TableCell> </TableRow>) ) } </TableBody> </Table> </div> </div> </AdminLayout>) } "";"'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+interface ProductsAdminPageProps {
+  // Add props here as needed
+}
+
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+pr-12325
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
+pr-12325
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface ProductsAdminPageProps {
+  // Add props here as needed
+
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
+  return (
+    <div>
+      <h1>ProductsAdminPage</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+:src.pages.disabled/ProductsAdminPage.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+:src.pages.disabled/ProductsAdminPage.jsx
+}
+}
+}
+}
+}
+<<<<<<< HEAD
+:temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+:temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+}
+
+
+
+
+
+
+:src.pages.disabled/ProductsAdminPage.jsx
+}
+}
+}
+}
+}
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+:temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+:temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
+    <div>
+</div>
+      <h1>ProductsAdminPage</h1>
+      <p>This component is currently under development.</p>
+    </div>'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,12 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+=======
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 '"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import React from 'react';
+=======
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/profile/AvatarUpload.jsx
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 :src.disabled/components/profile/AvatarUpload.jsx
@@ -19,11 +31,25 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 '"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
+'"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 '"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 '"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+import React from 'react';'
+const AvatarUpload = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>AvatarUpload</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>)'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

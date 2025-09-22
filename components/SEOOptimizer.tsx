@@ -1,144 +1,170 @@
-import React from "react";
+'use client';
+
+import { useEffect } from 'react';
+import Head from 'next/head';
+
 interface SEOOptimizerProps {
   title?: string;
-   description?: string;
-   keywords?: string;
-   ogImage?: string;
-   ogType?: string;
-   canonicalUrl?: string;
-   structuredData?: any;
-   noindex?: boolean;
-   nofollow?: boolean}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,";
-title: = "Zion Tech Group - Leading Technology Solutions Provider,", description = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.", keywords = "technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics", ogImage = "/og-image.jpg",";
-  ogType: = "website", canonicalUrl,";
-  structuredData, noindex: = false,
-  nofollow = false}) => {";
-  const fullTitle = title.includes("Zion Tech Group") ? title: "${titl,e} | Zion: Tech Group",";
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + "..." : description,
-const currentUrl = canonicalUrl || (typeof window !== "undefined" ? window.location.href: ""),
-  // comment;
-const defaultStructuredData = {},";
-    "contactPoint": {";
-      "@type": "ContactPoint", "telephone": "+1-XXX-XXX-XXXX",";
-      "contactType": "customer: service", "availableLanguage": "English""},";
-    "sameAs": [";
-      "https: // comment;
-    ], "foundingDate": "2020",";
-    "numberOfEmployees": "50+", "industry": "Technology: Services""}
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-  return: (;
-      <meta: name="keywords" content="{keywords}" />";
-      <meta: name="viewport" content="width="device-width," initial-scale="1," maximum-scale=5" />";
-      <meta: name = "robots" content="{"${noindex" ? "noindex" : "index"}, ${nofollow: ? "nofollow" : "follow"}"} />";
-      <meta: name="author" content="Zion Tech Group" />",";
-      <meta: name="generator" content="Next.js" />" {/* comment */}
-      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}";
- {/* comment */}
-      <meta property="og: title" content="{fullTitl,e}"  />";
-      <meta: property="og: description" content="{fullDescriptio,n}" />";
-      <meta: property = "og: image" content={ogImage.startsWith("http") ? ogImage : "https:// comment;
-      <meta: property="og: type" content="{ogTyp,e}" />";
-      <meta: property="og: url" content="{currentUr,l}" />";
-      <meta: property = "og: site_name" content="Zion: Tech Group" />",";
-      <meta: property="og:locale" content="en_US" />" {/* comment */}";
-      <link rel="icon" href="/favicon.ico"  />";
-      <link: rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />",",
-      <link: rel = "icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />",";
-      <link: rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />",";
-      <link: rel="manifest" href="/site.webmanifest" />" {/* comment */}";
-      <link rel="preconnect" href="https: // comment;
-      <link: rel = "preconnect" href="https:// comment;
-      <link: rel="preconnect" href="https:// comment;
-      <script type="application/ld+json"";";
-        dangerouslySetInnerHTML = "{{";
-          __html: JSON.stringify(finalStructuredDat,a, null, 2)>;
-}}
-
-     />;
-      {/* comment */}";
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />";
-      <link: rel = "preload" href="/images/hero-bg.webp" as="image" />",
-    </Head>;
-  )}
-
-export: default SEOOptimizer,
-,";
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({",
-  title = "Zion Tech Group - Leading Technology Solutions Provider", description = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.", keywords = "technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics", ogImage = "/og-image.jpg",";
-  ogType = "website", canonicalUrl,
-  structuredData, noindex = false,";
-  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
-  const currentUrl = canonicalUrl || (typeof window !== "undefined" ? window.location.href : "");
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
 }
-  // comment;
-const defaultStructuredData = {},";
-    "contactPoint": {;
-      "@type": "ContactPoint", "telephone": "+1-XXX-XXX-XXXX",
-      "contactType": "customer service", "availableLanguage": "English"},
-    "sameAs": [ "https:// comment;
-    ], "foundingDate": "2020",
-    "numberOfEmployees": "50+", "industry": "Technology Services"}
 
-  const finalStructuredData = structuredData || defaultStructuredData,
-return (;
-      <title>{fullTitle}</title>";
-      <meta name = "description" content="{fullDescription}"  />;
-      <meta name="keywords" content="{keywords}"  />;
-      <meta name="viewport" content="width="device-width," initial-scale="1," maximum-scale=5"  />;
-      <meta name="robots" content="{"${noindex" ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}"}       />;
-      <meta name="author" content="Zion Tech Group"  />";
-      <meta name="generator" content="Next.js"  />;
-      {/* comment */}";
-      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
-      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
+export default function SEOOptimizer({
+  title,
+  description,
+  keywords = [],
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+}: SEOOptimizerProps) {
+  useEffect(() => {
+    // Update page title
+    if (title) {
+      document.title = title;
+    }
 
- {/* comment */}
-      <meta property="og:title" content="{fullTitle}"  />;
-      <meta property="og:description" content="{fullDescription}"  />";
-      <meta property="og:image" content={ogImage.startsWith("http") ? ogImage : "http>;
-    s:// comment;
-      <meta property="og:type" content="{ogType}"  />;
-      <meta property="og:url" content="{currentUrl}"  />";
-      <meta property="og: site_name" content="Zion Tech Group"  />",
-      <meta property="o,";
-    g: locale" content="en_US"  />,
-      {/* comment */}";
-      <meta name="twitter: card" content="summary_large_image"  />",
-      <meta name="twitte,
-    r:title" content="{fullTitle}"  />;
-      <meta name="twitter:description" content="{fullDescription}"  />";
-      <meta name="twitter:image" content={ogImage.startsWith("http") ? ogImage : "http,";
-      <meta name="twitter: site" content="@ziontechgroup"  />,";
-r: creator" content="@ziontechgroup" />,
-      {/* comment */}";
-      <meta name="theme-color" content="#1e40af"  />";
-      <meta name="msapplication-TileColor" content="#1e40af"  />";
-      <meta name="apple-mobile-web-app-capable" content="yes"  />";
-      <meta name="apple-mobile-web-app-status-bar-style" content="default"  />";
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />;
-      {/* comment */}";
-      <link rel="icon" href="/favicon.ico"  />";
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />";
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />";
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />";
-      <link rel="manifest" href="/site.webmanifest"  />;
-      {/* comment */}";
-      <link rel="preconnect" href="https: // comment;
-      <link rel="preconnect" href="https:// comment;
-      <link rel="preconnect" href="http,";
-    s: // comment;
-      {/* comment */}";
-      <link rel="dns-prefetch" href="// comment;
-      {/* comment */}";
-      <script;
-        type="application/ld+json">;
-          __html: JSON.stringify(finalStructuredData, null, 2)}}
+    // Update meta description
+    if (description) {
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', description);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = 'description';
+        meta.content = description;
+        document.head.appendChild(meta);
+      }
+    }
 
-     /> {/* comment */}";
-      <link rel = "preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />";
-      <link rel="preload" href="/images/hero-bg.webp" as="image"  />;
-export default SEOOptimizer,
-export default SEOOptimizer;))
+    // Update keywords
+    if (keywords.length > 0) {
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords.join(', '));
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = 'keywords';
+        meta.content = keywords.join(', ');
+        document.head.appendChild(meta);
+      }
+    }
+
+    // Update canonical URL
+    if (canonical) {
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (canonicalLink) {
+        canonicalLink.setAttribute('href', canonical);
+      } else {
+        const link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = canonical;
+        document.head.appendChild(link);
+      }
+    }
+
+    // Update Open Graph tags
+    const updateOGTag = (property: string, content: string) => {
+      const ogTag = document.querySelector(`meta[property="${property}"]`);
+      if (ogTag) {
+        ogTag.setAttribute('content', content);
+      } else {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
+
+    if (title) updateOGTag('og:title', title);
+    if (description) updateOGTag('og:description', description);
+    if (ogImage) updateOGTag('og:image', ogImage);
+    updateOGTag('og:type', ogType);
+
+    // Update Twitter Card tags
+    const updateTwitterTag = (name: string, content: string) => {
+      const twitterTag = document.querySelector(`meta[name="${name}"]`);
+      if (twitterTag) {
+        twitterTag.setAttribute('content', content);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = name;
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
+
+    if (title) updateTwitterTag('twitter:title', title);
+    if (description) updateTwitterTag('twitter:description', description);
+    if (ogImage) updateTwitterTag('twitter:image', ogImage);
+    updateTwitterTag('twitter:card', twitterCard);
+
+    // Add structured data
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+  }, [title, description, keywords, canonical, ogImage, ogType, twitterCard, structuredData]);
+
+  return null;
+}
+
+// Preload critical resources
+export function PreloadResources() {
+  useEffect(() => {
+    const preloadLink = (href: string, as: string) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = href;
+      link.as = as;
+      document.head.appendChild(link);
+    };
+
+    // Preload critical fonts
+    preloadLink('/fonts/inter.woff2', 'font');
+    
+    // Preload critical images
+    preloadLink('/hero-image.jpg', 'image');
+    
+    // Preload critical CSS
+    preloadLink('/styles.css', 'style');
+  }, []);
+
+  return null;
+}
+
+// Generate structured data for services
+export function generateServiceStructuredData(service: {
+  name: string;
+  description: string;
+  price?: string;
+  category: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.name,
+    description: service.description,
+    category: service.category,
+    provider: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+    },
+    ...(service.price && {
+      offers: {
+        '@type': 'Offer',
+        price: service.price,
+        priceCurrency: 'USD',
+      },
+    }),
+  };
+}

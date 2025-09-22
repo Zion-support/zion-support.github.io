@@ -1,38 +1,27 @@
+import React from 'react';
+
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  color?: 'blue' | 'gray' | 'white';
-  text?: string;
   className?: string;
 }
 
-export default function LoadingSpinner({ 
-  size = 'md', 
-  color = 'blue', 
-  text,
-  className = '' 
-}: LoadingSpinnerProps) {
+export default function LoadingSpinner({ size = 'md', className = '' }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+<<<<<<< HEAD
+    lg: 'w-12 h-12';
+  }
+=======
+    lg: 'w-12 h-12',
   };
-
-  const colorClasses = {
-    blue: 'text-blue-600',
-    gray: 'text-gray-600',
-    white: 'text-white'
-  };
+>>>>>>> 2ea512582cbf5ac203ff3dc2f74e41078a1bcb65
 
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}>
-        <span className="sr-only">Loading...</span>
-      </div>
-      {text && (
-        <p className={`mt-2 text-sm ${colorClasses[color]}`}>
-          {text}
-        </p>
-      )}
+    <div className={`flex items-center justify-center ${className}`}>
+      <div
+        className={`${sizeClasses[size]} border-2 border-blue-600 border-t-transparent rounded-full animate-spin`}
+      ></div>
     </div>
   );
 }

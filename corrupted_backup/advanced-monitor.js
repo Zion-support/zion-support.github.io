@@ -1,4 +1,4 @@
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/advanced-monitor.js
+<
 #!/usr/bin/env node
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node;
@@ -29,15 +29,12 @@ class AdvancedMonitor {
       if (err) {"
         console.error("PM2 monitoring "error": ", err)"
         return}
-
       const timestamp = new Date().toISOString()"`;
       const logEntry = `[${timestamp}] PM2 "processes": ${list.length} running\n`"
-
       fs.appendFileSync(this.logPath, logEntry)})}
   checkDiskSpace() {"
     const { execSync } = // // require("child_process")"
     try {
-
   // TODO: Implement
 }"
       const diskUsage = execSync("df -h /", { "encoding": "utf8" })"
@@ -50,14 +47,12 @@ class AdvancedMonitor {
       const logEntry = `[${timestamp}] Memory "usage": ${memoryUsage}\n`"
       console.error("Memory check "error": ", error)}"
 // Start monitoring;
-
 const monitor = new AdvancedMonitor()
 monitor.startMonitoring()
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/advanced-monitor.js
+<
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/advanced-monitor.js
+monitor.startMonitoring()"
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;`;

@@ -1,7 +1,58 @@
+import React from 'react',
+import ServiceLanding from '../components/sections/ServiceLanding',
+export default function AIContentPersonalizationEngine() {
+	return (
+		<ServiceLanding
+			title="AI Content Personalization Engine"
+			slug="ai-content-personalization-engine"
+			description="Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions."
+			subtitle="Boost conversions 10–25% with context-aware personalization."
+			pricePerMonthUSD={1299}
+			implementationWeeks="Implementation: 2–4 weeks"
+			roiNote="Average ROI 3–6x within 90 days"
+			features={[
+				"Segmentation and propensity modeling",
+				"Real-time content and offer selection",
+				"A/B/n and multi-armed bandit experimentation",
+				"Journey orchestration across channels",
+				"Privacy-safe profiling and consent management",
+				"Integrations: CDP, ESP, CMS, Web SDK"
+			]}
+			industries={["E‑commerce", "Media", "SaaS", "Education"]}
+			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/ai-content-personalization-engine";
+		/>;
+	);
+}
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
+export default function AIContentPersonalizationEngine() {
+  return (
+    <ServiceLanding
+      title='AI Content Personalization Engine'
+      slug='ai-content-personalization-engine'
+      description='Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions.'
+      subtitle='Boost conversions 10–25% with context-aware personalization.'
+      pricePerMonthUSD={1299}
+      implementationWeeks='Implementation: 2–4 weeks'
+      roiNote='Average ROI 3–6x within 90 days'
+      features={[
+        'Segmentation and propensity modeling',
+        'Real-time content and offer selection',
+        'A/B/n and multi-armed bandit experimentation',
+        'Journey orchestration across channels',
+        'Privacy-safe profiling and consent management',
+        'Integrations: CDP, ESP, CMS, Web SDK',
+      ]}
+      industries={['E‑commerce', 'Media', 'SaaS', 'Education']}
+      canonical='https://ziontechgroup.com/ai-content-personalization-engine'
+    />
+  );
+}
 const AIContentPersonalizationEngine: React.FC = () => {
   return (
     <Layout>
@@ -78,5 +129,3 @@ const AIContentPersonalizationEngine: React.FC = () => {
 };
 
 export default AIContentPersonalizationEngine;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ai-content-personalization-engine.tsx
