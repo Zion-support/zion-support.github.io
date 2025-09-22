@@ -195,7 +195,7 @@
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
     "perf:monitor": "node scripts/performance-monitor.js",
-    "perf:audit": "npm run build:analyze",
+    "perf:audit": "npm run security:audit && npm run optimize",
     "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
@@ -252,7 +252,6 @@
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "perf:improve": "node scripts/performance-improvements.js",
     "perf:analyze": "npm run build && npm run build:analyze",
-    "perf:audit": "npm run security:audit && npm run optimize",
     "perf:full": "npm run perf:improve && npm run perf:analyze && npm run perf:audit",
     "perf:optimize": "node scripts/performance-optimizer.js",
     "perf:build": "npm run build && npm run perf:optimize"
