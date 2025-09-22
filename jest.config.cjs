@@ -14,6 +14,7 @@ const customJestConfig = {
     '/.next/',
     '/out/',
     '/dist/',
+    '/__tests__/',
     '/recovered-branches/',
     '/src_backup/',
     '/backup/',
@@ -22,6 +23,7 @@ const customJestConfig = {
     '/pages-disabled/',
     '/pages.disabled/',
     '/tests/',
+    '/__tests__/',
     '/temp_exclude/'
   ],
   transform: {
