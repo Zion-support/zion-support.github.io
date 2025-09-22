@@ -17,6 +17,7 @@ components.disabled_full/
 components.disabled_full/**
 components-disabled/**
 components.disabled/**
+components/**
 src-disabled/**
 src.disabled/**
 src.pages.disabled/**

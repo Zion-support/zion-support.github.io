@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Note: `Metadata` import removed because it was unused
 
 export function optimizeImages() {
   return {
