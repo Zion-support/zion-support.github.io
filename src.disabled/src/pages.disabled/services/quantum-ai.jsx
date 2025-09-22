@@ -1,12 +1,24 @@
-import React from 'react';
 
-const quantum-ai: React.FC = () => {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+import React from 'react';
+interface QuantumaiProps {
+  // Add props here as needed
+}
+export default function Quantumai({ }: QuantumaiProps) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">quantum-ai</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div>
+      <h1>Quantumai</h1>
+      <p>This component is currently under development.</p>
     </div>
   );
-};
+}
 
-export default quantum-ai;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }

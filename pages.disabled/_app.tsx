@@ -1,12 +1,13 @@
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
 import React from 'react';
+import type { AppProps } from 'next/app';
+import '../app/globals.css';
 
-const _app: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">_app</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default _app;
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}

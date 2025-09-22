@@ -1,12 +1,22 @@
 import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
 
-const services: React.FC = () => {
+import React from 'react';''
+import MainLayout from '../components/layout/MainLayout';'
+const Page = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">services</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
+    <MainLayout;
+      title="Services - Zion Tech Group"""
+      description="Our services and solutions""
+    >
+"
+      <div className="min-h-screen bg-gray-50">"
+</div>"
+        <div className="container mx-auto px-4 py-16">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Services</h1>""
+          <p className="text-xl text-gray-600">Coming soon...</p>"
+        </div>
+    )"
+      </div>
+    </MainLayout>)"
 
-export default services;

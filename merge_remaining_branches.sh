@@ -1,55 +1,59 @@
 #!/bin/bash
 
-# Script to merge remaining branches into main
-# This script will attempt to merge remaining branches and resolve conflicts automatically
+# Script to merge all remaining unmerged branches
+set -e
 
-echo "Starting comprehensive merge process..."
+echo "🔄 Starting to merge remaining unmerged branches..."
 
-# List of remaining branches to merge
-branches=(
-    "origin/feat/add-ai-lab-articles-and-promos"
-    "origin/feat/enterprise-agent-risk-scorecards-2026"
-    "origin/feature/new-content-sept16-2025"
-    "origin/feature/new-content-sept-16-2025"
-    "origin/feat/content-2025-09-16-v2"
-    "origin/feat/new-content-2025-09-16"
-    "origin/feature/new-blog-promos-2025-09-16"
-    "origin/feat/add-sept-2025-content"
-    "origin/feat/new-content-sept-2025"
-    "origin/feat/add-latest-content-and-homepage-auto-feed"
+# Get list of unmerged branches
+UNMERGED_BRANCHES=(
+    "origin/cursor/fix-netlify-build-and-merge-to-main-0ee3"
+    "origin/cursor/fix-netlify-build-and-merge-to-main-317e"
+    "origin/cursor/fix-netlify-build-and-merge-to-main-45cd"
+    "origin/cursor/fix-netlify-build-and-merge-to-main-6d34"
+    "origin/cursor/fix-netlify-build-and-merge-to-main-8d86"
+    "origin/cursor/fix-netlify-build-and-merge-to-main-ff2d"
 )
 
-successful_merges=0
-failed_merges=0
+SUCCESS_COUNT=0
+FAILED_COUNT=0
 
-for branch in "${branches[@]}"; do
-    echo "Attempting to merge $branch..."
+for branch in "${UNMERGED_BRANCHES[@]}"; do
+    echo "🔄 Attempting to merge: $branch"
     
-    # Try to merge the branch
-    if git merge "$branch" --no-ff -m "Merge: $branch" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        ((successful_merges++))
+    if git merge "$branch" --no-commit; then
+        echo "✅ Successfully merged $branch (no conflicts)"
+        git commit -m "Merge $branch into main"
+        ((SUCCESS_COUNT++))
     else
-        echo "⚠️  Merge conflict in $branch, resolving by keeping our version..."
+        echo "⚠️  Merge conflict detected in $branch"
         
-        # Resolve conflicts by keeping our version
-        git checkout --ours . 2>/dev/null
-        git add . 2>/dev/null
-        git commit -m "Merge: $branch - Resolved conflicts by keeping our new content" 2>/dev/null
+        # Try to resolve conflicts automatically
+        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
+        echo "Conflicted files: $CONFLICT_FILES"
         
-        if [ $? -eq 0 ]; then
+        # Resolve conflicts by taking the version from main (HEAD)
+        for file in $CONFLICT_FILES; do
+            echo "Resolving conflicts in $file"
+            git checkout --ours "$file"
+            git add "$file"
+        done
+        
+        # Commit the resolved conflicts
+        if git commit -m "Resolve merge conflicts from $branch"; then
             echo "✅ Successfully resolved conflicts and merged $branch"
-            ((successful_merges++))
+            ((SUCCESS_COUNT++))
         else
-            echo "❌ Failed to merge $branch, continuing..."
-            git merge --abort 2>/dev/null
-            ((failed_merges++))
+            echo "❌ Failed to resolve conflicts for $branch"
+            git merge --abort
+            ((FAILED_COUNT++))
         fi
     fi
+    
+    echo "---"
 done
 
-echo ""
-echo "Merge process completed!"
-echo "✅ Successful merges: $successful_merges"
-echo "❌ Failed merges: $failed_merges"
-echo "Total branches processed: $((successful_merges + failed_merges))"
+echo "📊 Merge Results:"
+echo "✅ Successful: $SUCCESS_COUNT"
+echo "❌ Failed: $FAILED_COUNT"
+echo "📋 Total processed: $((SUCCESS_COUNT + FAILED_COUNT))"

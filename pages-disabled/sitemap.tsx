@@ -1,12 +1,17 @@
 import React from 'react';
-
-const sitemap: React.FC = () => {
+import MainLayout from '../components/layout/MainLayout';
+export default function SitemapPage() {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">sitemap</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
 
-export default sitemap;
+  return ('
+    <MainLayout title="Sitemap - Zion Tech Group">"
+"
+      <div className="container mx-auto px-4 py-16">"
+</div>"
+        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>""
+        <p className="text-lg text-gray-700">"
+</p>
+      </div>
+    )"
+    </MainLayout>)"
+

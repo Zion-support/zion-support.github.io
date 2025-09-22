@@ -1,12 +1,22 @@
 import React from 'react';
+import { Metadata } from 'next';
 
-const page: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
+export const metadata: Metadata = {
+  title: 'Solutions - Zion Tech Group',
+  description: 'Comprehensive AI and technology solutions for modern businesses',
 };
 
-export default page;
+export default function SolutionsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+          Solutions
+        </h1>
+        <p className="text-center text-gray-600 mb-8">
+          Comprehensive AI and technology solutions for modern businesses
+        </p>
+      </div>
+    </div>
+  );
+}

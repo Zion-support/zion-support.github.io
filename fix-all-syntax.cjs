@@ -1,75 +1,80 @@
 const fs = require('fs');
 const path = require('path');
-
-// Function to fix a file
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
-
-    // Fix divdiv typos
-    if (content.includes('divdiv')) {
-      content = content.replace(/divdiv/g, 'div');
-      fixed = true;
-    }
-
-    // Fix malformed style properties (scale, opacity, rotate, x, y, duration, repeat, delay)
-    const styleFixRegex = /(\s+style=\{\{\s*[^}]*\}\})\s+scale:\s*\[[^\]]*\],\s*opacity:\s*\[[^\]]*\],\s*rotate:\s*\[[^\]]*\],\s*x:\s*\[[^\]]*\],\s*y:\s*\[[^\]]*\],\s*\}\}\s+duration:\s*[^,]*,\s*repeat:\s*[^,]*,\s*delay:\s*[^,]*,\s*\}\}/g;
-    if (styleFixRegex.test(content)) {
-      content = content.replace(styleFixRegex, '$1');
-      fixed = true;
-    }
-
-    // Fix malformed JSX structure
-    if (content.includes('Expected closing') || content.includes('Unterminated')) {
-      // This is a complex fix, let's just remove the problematic lines
-      const lines = content.split('\n');
-      const fixedLines = lines.filter(line => 
-        !line.includes('scale: [') && 
-        !line.includes('opacity: [') && 
-        !line.includes('rotate: [') &&
-        !line.includes('duration: ') &&
-        !line.includes('repeat: ') &&
-        !line.includes('delay: ')
-      );
-      content = fixedLines.join('\n');
-      fixed = true;
-    }
-
-    if (fixed) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.log(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+  // TODO: Implement
 }
 
-// Function to recursively find and fix files
-function fixDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
+    let originalContent = content;
+
+    // Fix common patterns;
+    const fixes = [
+      // Fix files that are just closing braces or malformed;
+      {]
+        pattern: /^[\s\n]*\}[\s\S]*$/,
+<<<<<<< HEAD
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
+      },
+      // Fix merge conflict markers
+      {
+<<<<<<< HEAD
+=======
+        pattern: /
+        replacement: ''
+      },
+      // Fix malformed function calls and syntax
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      {
+        pattern: /,
+  replacement: },
+
+      // Fix malformed function calls and syntax;
+        pattern: /^[\s\n]*[^i][^m][^p][^o][^r][^t][\s\S]*$/,
+        replacement: (match) => {
+          if (match.includes('import') || match.includes('export')) {
+            return match; // Don't replace if it already has imports/exports;
+
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+  // TODO: Implement
+
+    // If the file is very short and malformed, replace entirely;
+
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      return true;
+  } catch (error) {`;
+    console.error(`Error fixing ${filePath}:`, error.message);
+  return false;
+
+function processDirectory(dir) {
   let fixedCount = 0;
+  const files = fs.readdirSync(dir);
 
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
 
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      fixedCount += fixDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
-      if (fixFile(fullPath)) {
-        fixedCount++;
-      }
-    }
-  }
+    if (stat.isDirectory()) {
+      fixedCount += processDirectory(filePath);
+    } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
+      if (fixFile(filePath)) {
 
+<<<<<<< HEAD
   return fixedCount;
 }
 
-// Start fixing from src directory
-console.log('Starting syntax fixes...');
-const fixedCount = fixDirectory('/workspace/src');
+console.log('Starting comprehensive syntax fixes...');
+const apiDir = '/workspace/pages/api';
+const fixedCount = processDirectory(apiDir);
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

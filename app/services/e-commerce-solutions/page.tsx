@@ -1,1 +1,22 @@
-import React from "react"; import { Metadata } from "next"; export const metadata: Metadata = { title: "e-commerce-solutions - Zion Tech Group", description: "Professional e-commerce-solutions solutions for your business needs.", keywords: "e-commerce-solutions, services, business, technology" }; export default function ECommerceSolutionsPage() { return ( <div className="min-h-screen bg-white"> <div className="container mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8"> e-commerce-solutions </h1> <p className="text-lg text-gray-600 mb-8"> Professional e-commerce-solutions solutions for your business needs. </p> <div className="bg-blue-50 p-6 rounded-lg"> <h2 className="text-2xl font-semibold text-blue-900 mb-4">Coming Soon</h2> <p className="text-blue-800"> This service page is under development. Please contact us for more information. </p> </div> </div> </div> ); }
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'E Commerce Solutions - Zion Tech Group',
+  description: 'Professional e commerce solutions services powered by AI and modern technology',
+};
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+          E Commerce Solutions
+        </h1>
+        <p className="text-center text-gray-600 mb-8">
+          Professional e commerce solutions services powered by AI and modern technology
+        </p>
+      </div>
+    </div>
+  );
+}

@@ -1,12 +1,16 @@
-import React from 'react';
 
-const TranslationPreview: React.FC = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">TranslationPreview</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default TranslationPreview;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-semibold">Translation Preview</h2>;
+      <textarea;
+        className="w - full border rounded p-2 h-32";
+        placeholder="Enter text to translate...";
+    <div className="space - y-4">;"
+</div>"
+      <h2 className="text - lg font - semibold">Translation Preview</h2>;"
+      <textarea;"
+        className="w - full border rounded p - 2 h - 32";""
+        placeholder="Enter text to translate...";"
+pr-12325
+        value={text}
+})"

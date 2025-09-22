@@ -1,1 +1,22 @@
-import React from "react"; import { Metadata } from "next"; export const metadata: Metadata = { title: "cloud-migration - Zion Tech Group", description: "Professional cloud-migration solutions for your business needs.", keywords: "cloud-migration, services, business, technology" }; export default function CloudMigrationPage() { return ( <div className="min-h-screen bg-white"> <div className="container mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8"> cloud-migration </h1> <p className="text-lg text-gray-600 mb-8"> Professional cloud-migration solutions for your business needs. </p> <div className="bg-blue-50 p-6 rounded-lg"> <h2 className="text-2xl font-semibold text-blue-900 mb-4">Coming Soon</h2> <p className="text-blue-800"> This service page is under development. Please contact us for more information. </p> </div> </div> </div> ); }
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cloud Migration - Zion Tech Group',
+  description: 'Professional cloud migration services powered by AI and modern technology',
+};
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+          Cloud Migration
+        </h1>
+        <p className="text-center text-gray-600 mb-8">
+          Professional cloud migration services powered by AI and modern technology
+        </p>
+      </div>
+    </div>
+  );
+}

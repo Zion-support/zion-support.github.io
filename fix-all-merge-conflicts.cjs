@@ -1,23 +1,37 @@
 const fs = require('fs');
 const path = require('path');
-
 function fixMergeConflicts(filePath) {
   try {
 <<<<<<< HEAD
-
-=======
+<<<<<<< HEAD
     const content = fs.readFileSync(filePath, 'utf8');
     
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
+ursor/automate-test-improve-and-merge-code-85f4
     // Check if file has merge conflict markers
     if (
-      content.includes('<<<<<<< HEAD') ||
-      content.includes('=======') ||
+      content.includes('
+      content.includes('') ||
       content.includes('>>>>>>>')
+ursor/fix-lint-push-and-merge-to-main-28da
     ) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
 
-      // Remove merge conflict markers and keep the content after =======
+      // Remove merge conflict markers and keep the content after 
+ursor/fix-lint-push-and-merge-to-main-28da
+=======
+
+    // Check if file has merge conflict markers
+    if (
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+    ) {
+
+<<<<<<< HEAD
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
@@ -26,38 +40,43 @@ function fixMergeConflicts(filePath) {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
-        if (line.includes('<<<<<<< HEAD')) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        if (line.includes('
+ursor/fix-lint-push-and-merge-to-main-28da
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           inConflict = true;
           keepContent = false;
           continue;
-        }
 
-        if (line.includes('=======')) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        if (line.includes('')) {
           keepContent = true;
           continue;
         }
 
         if (line.includes('>>>>>>>')) {
+ursor/fix-lint-push-and-merge-to-main-28da
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           inConflict = false;
-          keepContent = false;
-          continue;
-        }
 
         if (!inConflict || keepContent) {
           fixedLines.push(line);
-        }
-      }
 
-      fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
       return true;
-    }
 
     return false;
-  } catch (error) {
+  } catch (error) {`;
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
 
 function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
@@ -69,19 +88,15 @@ function processDirectory(dirPath) {
 
     if (stat.isDirectory()) {
       fixedCount += processDirectory(filePath);
-    } else if (
+    } else if ()
       file.endsWith('.tsx') ||
       file.endsWith('.ts') ||
       file.endsWith('.jsx') ||
       file.endsWith('.js')
-    ) {
+
       if (fixMergeConflicts(filePath)) fixedCount++;
-    }
-  }
 
   return fixedCount;
-}
 
-console.log('Starting comprehensive merge conflict fixes...');
-const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
+`;

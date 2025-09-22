@@ -1,1 +1,22 @@
-import React from "react"; import { Metadata } from "next"; export const metadata: Metadata = { title: "ai-analytics-platform - Zion Tech Group", description: "Professional ai-analytics-platform solutions for your business needs.", keywords: "ai-analytics-platform, services, business, technology" }; export default function AiAnalyticsPlatformPage() { return ( <div className="min-h-screen bg-white"> <div className="container mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8"> ai-analytics-platform </h1> <p className="text-lg text-gray-600 mb-8"> Professional ai-analytics-platform solutions for your business needs. </p> <div className="bg-blue-50 p-6 rounded-lg"> <h2 className="text-2xl font-semibold text-blue-900 mb-4">Coming Soon</h2> <p className="text-blue-800"> This service page is under development. Please contact us for more information. </p> </div> </div> </div> ); }
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Analytics Platform - Zion Tech Group',
+  description: 'Comprehensive AI analytics platform for enterprise data analysis',
+};
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+          AI Analytics Platform
+        </h1>
+        <p className="text-center text-gray-600 mb-8">
+          Comprehensive analytics platform powered by artificial intelligence
+        </p>
+      </div>
+    </div>
+  );
+}

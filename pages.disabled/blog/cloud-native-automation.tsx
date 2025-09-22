@@ -1,12 +1,28 @@
-import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
-const cloud-native-automation: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">cloud-native-automation</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
 
-export default cloud-native-automation;
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+<<<<<<< HEAD
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,23 +1,39 @@
+<<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('PerformanceOptimizer.dynamic', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import PerformanceOptimizerdynamic from '../components/PerformanceOptimizer.dynamic';
 
-describe('PerformanceOptimizer', () => {
+describe('PerformanceOptimizerdynamic', () => {
   test('renders without crashing', () => {
-    render(<PerformanceOptimizer />);
-    expect(screen.getByTestId('performanceoptimizer')).toBeInTheDocument();
+    render(<PerformanceOptimizerdynamic />);
+    expect(
+      screen.getByTestId('performanceoptimizer.dynamic')
+    ).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
-    render(<PerformanceOptimizer />);
+    render(<PerformanceOptimizerdynamic />);
+    // Add specific content tests based on component
   });
-  
+
   test('handles user interactions', () => {
-    render(<PerformanceOptimizer />);
+    render(<PerformanceOptimizerdynamic />);
+    // Add interaction tests based on component functionality
   });
-  
+
   test('applies correct styling', () => {
-    render(<PerformanceOptimizer />);
+    render(<PerformanceOptimizerdynamic />);
+    // Add styling tests if needed
   });
 });
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/main

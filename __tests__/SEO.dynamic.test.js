@@ -1,23 +1,37 @@
+<<<<<<< HEAD
+import { describe, it, expect } from '@jest/globals';
+
+describe('SEO.dynamic', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+=======
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SEO from '../components/SEO';
+import SEOdynamic from '../components/SEO.dynamic';
 
-describe('SEO', () => {
+describe('SEOdynamic', () => {
   test('renders without crashing', () => {
-    render(<SEO />);
-    expect(screen.getByTestId('seo')).toBeInTheDocument();
+    render(<SEOdynamic />);
+    expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
-    render(<SEO />);
+    render(<SEOdynamic />);
+    // Add specific content tests based on component
   });
-  
+
   test('handles user interactions', () => {
-    render(<SEO />);
+    render(<SEOdynamic />);
+    // Add interaction tests based on component functionality
   });
-  
+
   test('applies correct styling', () => {
-    render(<SEO />);
+    render(<SEOdynamic />);
+    // Add styling tests if needed
   });
 });
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/main

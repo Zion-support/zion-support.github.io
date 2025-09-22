@@ -1,12 +1,18 @@
-import React from 'react';
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
 
-const _app: React.FC = () => {
+export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">_app</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div className="min-h-screen flex flex-col">
+      <EnhancedNavigation />
+      <main className="flex-grow">
+        <Component {...pageProps} />
+      </main>
+      <EnhancedFooter />
     </div>
   );
-};
-
-export default _app;
+}
