@@ -19,6 +19,7 @@ module.exports = {
     'no-duplicate-imports': 'error',
     'no-useless-rename': 'error',
     'prefer-destructuring': 'error',
+    'react/no-unescaped-entities': 'off',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'template-curly-spacing': 'error',

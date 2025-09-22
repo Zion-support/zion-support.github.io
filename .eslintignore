@@ -26,7 +26,10 @@ app.backup/**
 api-disabled/**
 api.disabled/**
 pages.disabled/**
+pages-disabled/**
 pages_backup/**
+temp_exclude/**
+corrupted_backup/**
 recovered-branches/**
 **/*.backup.*
 **/*.conflict_backup
