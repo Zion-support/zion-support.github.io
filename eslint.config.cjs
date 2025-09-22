@@ -20,7 +20,16 @@ module.exports = [
       'backup/**/*',
       'advanced-automation-improvements.cjs',
       'analyze_links.cjs',
-      'app-enhancement-suite.cjs'
+      'app-enhancement-suite.cjs',
+      'temp_exclude/**/*',
+      'ts_files_backup/**/*',
+      'backup-problematic-files/**/*',
+      'backup-merge-conflicts/**/*',
+      'recovered-branches/**/*',
+      'test_build/**/*',
+      'tests.disabled/**/*',
+      'tools/**/*',
+      'utils/**/*'
     ],
   },
   js.configs.recommended,

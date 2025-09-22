@@ -1,4 +1,4 @@
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI Agents ROI Playbook 2026 | Zion Tech Group',
