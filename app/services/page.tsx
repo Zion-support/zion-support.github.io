@@ -3,6 +3,13 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
 import Button from '../components/Button'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Our Services - AI, Cloud, and Cybersecurity Solutions',
+  description: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, data analytics, and IoT solutions for enterprise transformation.',
+  keywords: ['AI services', 'cloud computing', 'cybersecurity', 'data analytics', 'IoT solutions', 'enterprise technology'],
+}
 
 export default function ServicesPage() {
   const services = [
