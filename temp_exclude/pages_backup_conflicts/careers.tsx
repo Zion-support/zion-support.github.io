@@ -1,0 +1,33 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+:backup-problematic-files/src.pages.disabled/AIAutonomousVentureCapitalist.jsx
+
+interface CareersProps {;
+  // Add props here as needed;
+}
+export default function Careers(): any ({ }: CareersProps) {;
+  return (
+    <div>;
+      <h1>Careers</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  );
+:backup-problematic-files/src.pages.disabled/AIAutonomousVentureCapitalist.jsx
+
