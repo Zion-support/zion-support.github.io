@@ -1,0 +1,85 @@
+
+import { GradientHeading } from "./GradientHeading",;
+import Link from "next/link",;
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
+import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon;
+import { cn } from "@/lib/utils",;
+import { useTranslation } from "react-i18next",;
+;
+// This is the type definition copied from Categories.tsx for consistency.;
+// Ideally, this would be in a shared types file.;
+interface CategoryType {;
+  id:string,;
+  name:string,;
+  description?:string,;
+  iconName?:string, // Example field if categories have icons;
+  itemCount?:number, // Example field for number of items in a category;
+  // Add a 'link' property if your API provides it, or construct it.;
+  link?:string,;
+}
+;
+// Default static categories with translation keys;
+const getDefaultCategories = (t:any) => [;
+  {;
+    id:"services",;
+    name:t('categories.services'),;
+    description:t('categories.services_desc'),;
+    iconName:"Briefcase", // Corresponds to lucide icon name;
+    link:"/services",;
+    color:"from-purple-500 to-indigo-600", // Keep color for styling;
+  },;
+  {;
+    id:"talents",;
+    name:t('categories.talents'),;
+    description:t('categories.talents_desc'),;
+    iconName:"Users",;
+    link:"/talent",;
+    color:"from-cyan-500 to-blue-600"},;
+  {;
+    id:"equipment",;
+    name:t('categories.equipment'),;
+    description:t('categories.equipment_desc'),;
+    iconName:"HardDrive",;
+    link:"/equipment",;
+    color:"from-amber-500 to-orange-600"},;
+  {;
+    id:"innovation",;
+    name:t('categories.innovation'),;
+    description:t('categories.innovation_desc'),;
+    iconName:"Lightbulb",;
+    link:"/innovation",;
+    color:"from-emerald-500 to-green-600"}],;
+;
+// Helper to get icon component from name;
+const getIcon = (iconName?:string) => {;
+  switch (iconName) {;
+    case "Briefcase":return <Briefcase className="w-10 h-10" />,;
+    case "Users":return <Users className="w-10 h-10" />,;
+    case "HardDrive":return <HardDrive className="w-10 h-10" />,;
+    case "Lightbulb":return <Lightbulb className="w-10 h-10" />,;
+    default:return <HelpCircle className="w-10 h-10" />, // Default icon;
+  }
+},;
+;
+const getSpecialServices = (t:any) => [;
+  {;
+    title:t('categories.it_onsite_services'),;
+    link:"/it-onsite-services";  }
+],;
+;
+interface CategoriesSectionProps {;
+  showTitle?:boolean,;
+  className?:string,;
+  style?:React.CSSProperties,;
+  categories?:CategoryType[], // Accept categories as a prop;
+}
+
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
+      <div className="container mx-auto px-4">;
+        {showTitle && (;
+          <div className="text-center mb-16">;
+
+          </Link>;
+        </div>;
+      </div>;
+    </section>;
