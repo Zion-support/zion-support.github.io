@@ -127,7 +127,7 @@ export default function HomePage() {
               <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
                 <div className="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
                 <p className="text-gray-300 mb-4">
-                  "Zion Tech Group transformed our infrastructure and helped us scale our AI capabilities. Their expertise is unmatched."
+                  &quot;Zion Tech Group transformed our infrastructure and helped us scale our AI capabilities. Their expertise is unmatched.&quot;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -142,7 +142,7 @@ export default function HomePage() {
               <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
                 <div className="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
                 <p className="text-gray-300 mb-4">
-                  "The cloud migration was seamless and our security posture improved dramatically. Highly recommended!"
+                  &quot;The cloud migration was seamless and our security posture improved dramatically. Highly recommended!&quot;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -157,7 +157,7 @@ export default function HomePage() {
               <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
                 <div className="text-yellow-400 text-xl mb-4">⭐⭐⭐⭐⭐</div>
                 <p className="text-gray-300 mb-4">
-                  "Their AI solutions automated our processes and increased efficiency by 300%. Game-changing results!"
+                  &quot;Their AI solutions automated our processes and increased efficiency by 300%. Game-changing results!&quot;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
