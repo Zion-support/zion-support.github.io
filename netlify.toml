@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -9,8 +9,8 @@
 
 ## Enable Netlify Next.js runtime
 # For static exports, the Next.js Netlify plugin is not required
-# [plugins]
-#   package = "@netlify/plugin-nextjs"
+[plugins]
+  package = "@netlify/plugin-nextjs"
 
 ## Security and caching headers for static assets
 [[headers]]
