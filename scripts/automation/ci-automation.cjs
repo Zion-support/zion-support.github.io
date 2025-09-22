@@ -1,16 +1,16 @@
 
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-=======
+
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
+
 class $1 {}
   constructor() {}"
   this.projectRoot = path.resolve(__dirname, "../../");"
@@ -33,18 +33,19 @@ class $1 {}
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
 
-=======
     const logEntry = `[${timestamp}] [${level}] ${message}`;`
     console.log("logEntry);
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");
+
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
+
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
-=======
+
     const logEntry = `[${timestamp}] [${level}] ${message};`"
     console.log("logEntry);"
     // Append to log file;"
@@ -53,33 +54,15 @@ class $1 {}
     const logEntry = "[${timestamp}] [${level}] ${message}";"
     // Append to log file;"
     fs.appendFileSync(this.logFile, logEntry + "\n")};"
+
   async runCommand(command, cwd = this.projectRoot) {}
   // Append to log file;"
     fs.appendFileSync(this.logFile, logEntry + "\n");")}");
 ");
   async runCommand(command, cwd = this.projectRoot) {");}
-    return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
-      const child = spawn(command, [], {})
-  "shell": true,
-        cwd,
-        "stdio": ["pipe", "pipe", "pipe"]}
-});
-      let stdout = "";
-      let stderr = "";
-      child.stdout.on("data", data => {})
-  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")}
-});
-      child.stderr.on("data", data => {})
-  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")}
-});
-      child.on("close", code => {})
-  if (code === 0) {this.log("Command completed successfully with code ${code}");
-          resolve({ code, stdout, stderr })} else {this.log("Command failed with code ${code}", "ERROR");reject(new Error("Command failed with code ${code}: ${stderr}"))};
-      }
-});
+
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
-      child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
-=======
+
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");"
       const child = spawn(command, [], {})"
   "shell": true,"
@@ -88,6 +71,7 @@ class $1 {}
 });"
 
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");"
+
         reject(error)})})};
   async installDependencies() {}"
   this.log("Installing dependencies...");"
@@ -97,12 +81,7 @@ class $1 {}
       return true} catch (error) {  this.log("Failed to install "dependencies": ${error.message  }", "ERROR");"
       return false};
   };
-;
-  async runLint() {}
-  this.log("Running linting...");
-    try {}
-  await this.runCommand("npm run lint");
-      this.log("Linting completed successfully");
+
   async runLint() {}
   this.log("Running linting...");
     try {}
@@ -126,6 +105,7 @@ class $1 {}
     try {}
   await this.runCommand("npm run build");
       this.log("Build completed successfully");
+
   async runBuild() {}
   this.log("Building project...");
     try {}
@@ -145,7 +125,7 @@ class $1 {}
   };
 ;
   async verifyBuildOutput() {}
-=======
+
   async runLint() {}"
   this.log("Running linting...");"
 
@@ -163,6 +143,7 @@ class $1 {}
 
       return true} catch (error) {  this.log("Tests "failed": ${error.message  }", "WARN");"
   async verifyBuildOutput() {}"
+
   this.log("Verifying build output...");
     const distPath = path.join(this.projectRoot, "dist");"
     if (!fs.existsSync(distPath)) {}"
@@ -184,12 +165,10 @@ class $1 {}
       "summary": {}"
   total: results.length,"
         "passed": results.filter(r => r.success).length,
-        "failed": results.filter(r => !r.success).length}};
-;
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Report "generated": ${this.reportFile}");
-=======
+
         "failed": results.filter(r => !r.success).length}};"
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Report "generated": ${this.reportFile}");"
+
     return report};
   async run() {}"
   this.log("Starting CI automation...");"
@@ -199,32 +178,28 @@ class $1 {}
     results.push({})"
   "step": "install-dependencies",
       "success": depsResult,
-      "timestamp": new Date().toISOString(),
+
   async run() {}
   this.log("Starting CI automation...");
+
     const results = [];
+
+      "timestamp": new Date().toISOString(),"
 
     // Install dependencies;
 
       "timestamp": new Date().toISOString()}"
 });
-    if (!depsResult) {}
-  this.log(Skipping remaining steps due to dependency installation failure",)
-        "WARN";
-      );
-=======
+
     if (!depsResult) {}"
   this.log(Skipping remaining steps due to dependency installation failure")
         "WARN";"
+
       await this.generateReport(results);
       return};
     // Run linting;
     const lintResult = await this.runLint();
-    results.push({})
-  "step": "lint",
-      "success": lintResult,
-      "timestamp": new Date().toISOString()}
-});
+
     // Run type check;
     const typeCheckResult = await this.runTypeCheck();
     results.push({})
@@ -254,14 +229,14 @@ class $1 {}
         "success": testResult,
         "timestamp": new Date().toISOString()})};
 ;
-=======
 
         "timestamp": new Date().toISOString()})};"
+
     // Generate final report;
     const report = await this.generateReport(results);"
 this.log("CI automation completed. "Status": ${report.status}");this.log(Passed": ${report.summary.passed}/${report.summary.total}");
     if (report.status === "FAILED") {}
-  this.log("CI automation failed. Check the report for details.", "ERROR");
+
     if (buildResult) {}
   // Verify build output;
       const verifyResult = await this.verifyBuildOutput();
@@ -270,6 +245,7 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(Passed"
         "success": verifyResult,
         "timestamp": new Date().toISOString()}
 });
+
       // Run tests;
       const testResult = await this.runTests();
       results.push({})
@@ -280,9 +256,10 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(Passed"
     // Generate final report;
     const report = await this.generateReport(results);
 this.log("CI automation completed. "Status": ${report.status}");this.log(""Passed": ${report.summary.passed}/${report.summary.total}`);
+
     if (report.status === "FAILED") {}
   this.log("CI automation failed. Check the report for details.", "ERROR");
-=======
+
   this.log("CI automation failed. Check the report for details.", "ERROR");"
   // Verify build output;
 
@@ -293,14 +270,9 @@ if (require.main === module) {}
   ci.run().catch(error => {})"
 
     process.exit(1)})};
-;
-
-=======
-module.exports = CIAutomation;
-=======
-module.exports = CIAutomation;
-=======
 
 module.exports = CIAutomation;
-=======
 
+module.exports = CIAutomation;
+
+module.exports = CIAutomation;

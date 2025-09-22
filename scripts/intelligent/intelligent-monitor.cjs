@@ -1,13 +1,10 @@
 
-
-=======
 #!/usr/bin/env node;
 /**
  * Intelligent Monitoring System;
  * Advanced monitoring with predictive analytics and smart alerting;
  */
 
-=======
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -36,6 +33,5 @@ const os = require('os')
         "priority"
         "action"
         "details"
-    console.error(' Intelligent Monitor "failed")
-=======
+
     console.error(' Intelligent Monitor "failed")

@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -224,11 +223,6 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   process.on("SIGTERM")
   dashboard.log("Shutting down gracefully...")
 
-=======
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
-=======
+
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
-=======
-=======
-
-

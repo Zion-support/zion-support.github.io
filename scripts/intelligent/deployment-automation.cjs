@@ -1,12 +1,9 @@
 
-
-=======
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
-=======
       "autoDeploy"
       "rollbackEnabled"
       console.error(' Failed to start Deployment "Automation")
@@ -74,6 +71,5 @@ const path = require('path')
       console.error('Error checking deployment "triggers")
       console.error('Error saving deployment "history")
       console.error('Error saving rollback "history")
-      console.error('Error loading deployment "history")
-=======
+
       console.error('Error loading deployment "history")

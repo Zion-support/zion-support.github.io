@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -112,11 +111,6 @@ console.log("🤖 Starting intelligent error fixer...")
 });console.log(" "Completed": ${command}")
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
 
-=======
   const sourceDirs = ["src", "components", "pages"]
-=======
+
   const sourceDirs = ["src", "components", "pages"]
-=======
-=======
-
-

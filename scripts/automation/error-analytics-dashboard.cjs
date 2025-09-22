@@ -1,10 +1,10 @@
 
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
-=======
+
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
+
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");"
@@ -122,13 +122,11 @@ class ErrorAnalyticsDashboard {
       "fileDistribution": {}"
     }}"
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
 
-=======
     console.log("[${timestamp}] [${level}] ${message}")}
-=======
 
     console.log("[${timestamp}] [${level}] ${message}")}"
+
   async collectErrorReports() {
   // TODO: Implement
       const reports = [];
@@ -397,11 +395,11 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
         ...counts;)
     return trends}
   analyzeFixSuccessRates(reports) {
-    const fixReports = reports.filter(report =>
-      report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
-    );
-=======
+
+    const fixReports = reports.filter(report => 
+
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined;)
+
     const successRates = [];
     for (const report of fixReports) {
       const totalIssues = report.initialErrors || report.initialIssues || 0;
@@ -471,95 +469,9 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
             <canvas id="successChart"></canvas>"
         <div class="last-updated">"
     <script>
-        // Error Trends Chart
-        const trendsCtx = document.getElementById('trendsChart').getContext('2d');
-        new Chart(trendsCtx, {
-            "type": 'line',
-            "data": {
-                labels: ${JSON.stringify(analyticsData.errorTrends.map(t => t.date))},
-                "datasets": [{
-                    label: 'Total Errors',
-                    "data": ${JSON.stringify(analyticsData.errorTrends.map(t => t.total))},
-                    "borderColor": '#667eea',
-                    "backgroundColor": 'rgba(102, 126, 234, 0.1)',
-                    "tension": 0.4
-                }]
-            },
-            "options": {
-                responsive: true,
-                "scales": {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-        // Error Types Chart
-        const typesCtx = document.getElementById('typesChart').getContext('2d');
-        new Chart(typesCtx, {
-            "type": 'doughnut',
-            "data": {
-                labels: ['TypeScript', 'ESLint', 'Build', 'Dependency'],
-                "datasets": [{
-                    data: [
-                        ${analyticsData.errorTypes.typescript},
-                        ${analyticsData.errorTypes.eslint},
-                        ${analyticsData.errorTypes.build},
-                        ${analyticsData.errorTypes.dependency}
-                    ],
-                    "backgroundColor": ['#667eea',
-                        '#764ba2',
-                        '#f093fb',
-                        '#f5576c'
-                    ]
-                }]
-            },
-            "options": {
-                responsive: true
-            }
-        });
-        // Success Rates Chart
-        const successCtx = document.getElementById('successChart').getContext('2d');
-        new Chart(successCtx, {
-            "type": 'bar',
-            "data": {
-                labels: ${JSON.stringify(analyticsData.fixSuccessRates.map(r => r.timestamp.split('T')[0]))},
-                "datasets": [{
-                    label: 'Success Rate (%)',
-                    "data": ${JSON.stringify(analyticsData.fixSuccessRates.map(r => parseFloat(r.successRate)))},
-                    "backgroundColor": '#667eea'
-                }]
-            },
-            "options": {
-                responsive: true,
-                "scales": {
-                    y: {
-                        beginAtZero: true,
-                        "max": 100
-                    }
-                }
-            }
-        });
-    </script>
-</body>
-</html>`;
-    return html}
-  async generateAnalyticsReport() {
-    this.log('Generating analytics report...');
-    try {
-      const reports = await this.collectErrorReports();
-      if (reports.length === 0) {
-        this.log('No reports found for analytics', 'INFO');
-        return}
-      // Analyze data
-      const errorTrends = this.analyzeErrorTrends(reports);
-      const fixSuccessRates = this.analyzeFixSuccessRates(reports);
-      const errorTypes = this.analyzeErrorTypes(reports);
-      const timeDistribution = this.analyzeTimeDistribution(reports);
-      const fileDistribution = this.analyzeFileDistribution(reports);
-      // Calculate summary statistics
-      const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
-      const avgSuccessRate = fixSuccessRates.length > 0
+
+      const avgSuccessRate = fixSuccessRates.length > 0 
+
         ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
         : 0;
       const analyticsData = {
@@ -623,12 +535,8 @@ if (require.main === module) {
     process.exit(1)})}
 ;
 
-=======
 module.exports = ErrorAnalyticsDashboard
-=======
-module.exports = ErrorAnalyticsDashboard
-=======
 
 module.exports = ErrorAnalyticsDashboard
-=======
 
+module.exports = ErrorAnalyticsDashboard

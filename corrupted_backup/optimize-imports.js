@@ -440,16 +440,12 @@ class ImportOptimizer {;
     // Group Radix UI imports;
     const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[']@radix-ui\/([^']+)['"];?\s*/g    const matches = [...content.matchAll(radixPattern)];"
     if (matches.length > 1) {;
-
       matches.forEach(match => {;)"
-
         const components = match[1].split(', ').map(comp => comp.trim());
         optimizedImports += "import { ${Array.from(components).join(',')
       ')} } from '@radix-ui/${packageName}
-
   ';\n"})"""
       return content.replace(radixPattern, ).replace(/^/, optimizedImports)}
-
         if (!groupedImports.has(packageName)) {;
         components.forEach(comp => groupedImports.get(packageName).add(comp))});
       let optimizedImports = ;      groupedImports.forEach((components, packageName) => {;`;

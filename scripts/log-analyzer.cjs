@@ -14,3 +14,29 @@ const { execSync } = require('child_process')
     this.log(' Analyzing error logs...')
         file.includes('error') || file.includes('stderr') || file.includes('crash')
 
+          const content = fs.readFileSync(logFile, 'utf8')
+          const lines = content.split('\n')
+            if (line.includes('"Error")
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+
+      console.error('\n� Log Analyzer "failed")
+
+      console.error('\n� Log Analyzer "failed")

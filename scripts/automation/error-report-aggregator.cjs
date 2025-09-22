@@ -1,16 +1,16 @@
 
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-=======
+
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
+
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();"
@@ -22,10 +22,10 @@ class $1 {}
   log(message, type = "info") {}"
   const timestamp = new Date().toISOString();
 
-=======
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
-=======
+
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
+
 ;
   async ensureDirectoryExists(dirPath) {}
   if (!fs.existsSync(dirPath)) {}"
@@ -98,10 +98,6 @@ class $1 {}
 // Run the error report aggregator;
 const aggregator = new ErrorReportAggregator();
 
-=======
 aggregator.run().catch(console.error);
-=======
+
 aggregator.run().catch(console.error);
-=======
-
-

@@ -1,110 +1,150 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export {};
+
+=======
+=======
+<<<<<<< HEAD
+export {};
+
+=======
+>>>>>>> main
+=======
+
+export {};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = {};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+module.exports = {};
+
+module.exports = {};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+module.exports = {};
+module.exports = {};
+module.exports = {};
+
+module.exports = {};
+module.exports = {};
+
+module.exports = {};
+module.exports = {};
+
+export {};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+module.exports = {};
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+module.exports = {};
+module.exports = {};
+module.exports = {};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
 module.exports = {};
-module.exports = {};
-module.exports = {};
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = {};
 module.exports = {};
 module.exports = {};
 export {};
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-interface AnalyticsEvent {
-  name: string;
-  category: string;
-  action?: string;
-  label?: string;
-  value?: number;
-  custom_parameters?: Record<string, any>;
-  timestamp: string;
-  session_id: string;
-  user_id: string;
-  page_url: string;
-  user_agent: string}
+=======
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+module.exports = {};
 
 module.exports = {};
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })}
 
 
-    // Validate required fields
-    if (!event.name || !event.category || !event.timestamp) {
-      return res.status(400).json({ error: 'Missing required fields' })}
 
 
-    // In production, you would:
-    // 1. Store in a database (PostgreSQL, MongoDB, etc.)
-    // 2. Send to analytics services (Google Analytics, Mixpanel, etc.)
-    // 3. Process for real-time dashboards
-    // 4. Apply data retention policies
 
-    // Log for debugging (remove in production)
-    console.log('Analytics Event:' {
-      name: event.name,
-      category: event.category,
-      timestamp: event.timestamp,
-      session_id: event.session_id });
 
-    // Send to external analytics services
-    await sendToExternalServices(event);
 
-    res.status(200).json({ success: true })} catch (error) {
-    console.error('Analytics API Error:', error);
-    res.status(500).json({ error: 'Internal server error' })}
-}
+<<<<<<< HEAD
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
 
-async function sendToExternalServices(event: AnalyticsEvent) {
-  try {
-    // Google Analytics 4
-    if (process.env.GA_MEASUREMENT_ID) {
-      await fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret=${process.env.GA_API_SECRET}` {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          client_id: event.user_id,
-          events: [{
-            name: event.name,
-            params: {
-              event_category: event.category,
-              event_label: event.label,
-              value: event.value,
-              ...event.custom_parameters } }] }) })}
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+=======
 
-    // Mixpanel
-    if (process.env.MIXPANEL_TOKEN) {
-      await fetch('https://api.mixpanel.com/track' {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          event: event.name,
-          properties: {
-            distinct_id: event.user_id,
-            category: event.category,
-            action: event.action,
-            label: event.label,
-            value: event.value,
-            ...event.custom_parameters,
-            timestamp: event.timestamp } }) })}
-
-    // Custom webhook
-    if (process.env.ANALYTICS_WEBHOOK_URL) {
-      await fetch(process.env.ANALYTICS_WEBHOOK_URL {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json' },
-        body: JSON.stringify(event) })}
-  } catch (error) {
-    console.error('Failed to send to external services:', error)}
-}
-
-// Get analytics data (for admin dashboard)
-export async function getAnalyticsData() {
-  return analyticsData}
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+module.exports = {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

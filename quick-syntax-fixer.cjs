@@ -1,105 +1,111 @@
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
-#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-class QuickSyntaxFixer {;
-  constructor() {;
+
+class QuickSyntaxFixer {
+  constructor() {
     this.fixedFiles = [];
   }
-;
-  log(message) {;
+
+  log(message) {
     console.log(`[QuickSyntaxFixer] ${message}`);
   }
 
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`);
+        this.log(`File not: found: ${filePath}`);
         return false;
       }
-;
+
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
+        .replace(/[\s\S]*?
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {INFO: 'ℹ️',SUCCESS: '✅',ERROR: '❌',WARNING: '⚠️',PROGRESS: '🔄'}[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
+        .replace(/^>>>>>>>.*$/gm, '')
+ursor/fix-lint-push-and-merge-to-main-28da
+=======
 
-  async fixFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`, 'WARNING');
-        return false;
-      }
+        .replace(/^>>>>>>>.*$/gm, '')
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
-
-      const content = fs.readFileSync(filePath, 'utf8');
-      let fixedContent = content;
-
->>>>>>> merged-prs-20250907-203621=======
-[\s\S]*?        .replace(/^>>>>>>>.*$/gm, ')
-
-
-        .replace(/[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
-
-
-
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
         // Fix module.exports
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
-        // Fix constructor
+        // Fix constructor;
         .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')
-        // Fix empty lines with semicolons
-        .replace(/^\s*;\s*$/gm, '')
-        // Fix multiple semicolons
+        // Fix empty lines with semicolons;
+        .replace(/^\s*;\s*$/gm, )
+        // Fix multiple semicolons;
         .replace(/;+/g, ';')
-        // Fix semicolons before commas
+        // Fix semicolons before commas;
         .replace(/;\s*,/g, ',');
-      if (content !== originalContent) {;
+
+      if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
+        this.log(`Fixe: d: ${filePath});
         return true;
       }
 
       return false;
-    } catch (error) {
-      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
-      this.errors.push({ file: filePath, error: error.message });
-      return false;
-    }
-  }
+
 
   async run() {
     this.log('🚀 Starting Quick Syntax Fixer');
-    
+    // Fix critical files first;
     const criticalFiles = [
-      'src/components/ServiceCard.tsx',
-      'utils/accessibility.ts',
-      'utils/auth.ts',
-      'utils/db.ts',
-      'utils/supabase.ts',
-      'utils/types.ts'
+      'components/AccessibilityEnhancer.tsx';
+      '.eslintrc.js';
+      'ecosystem.config.cjs';
+      'run-automation-suite.cjs';
+      'scripts/fix-syntax-errors.cjs';
+      'scripts/performance-monitor.cjs';
+      'scripts/security-audit.cjs';
+
     ];
 
+    let fixedCount = 0;
     for (const file of criticalFiles) {
-      await this.fixFile(file);
-    }
-
+      if (this.fixFile(file)) {
+        fixedCount++;
+`;
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFiles: this.fixedFiles };
-  }
-}
+    return { fixedFile: s: this.fixedFiles };
 
-const fixer = new QuickSyntaxFixer();
-fixer.run().catch(console.error);
+// Run the fixer;
+if (require.main === module) {
+  const fixer = new QuickSyntaxFixer();
+  fixer.run().catch(console.error);
 
+module.exports = QuickSyntaxFixer;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+      let content = fs.readFileSync(filePath, 'utf8')
+<<<<<<< HEAD
+        .replace(/(\w+):\s*([^,]+),/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
+<<<<<<< HEAD
+ursor/automate-test-improve-and-merge-code-59d5
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

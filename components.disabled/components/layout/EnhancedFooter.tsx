@@ -1,30 +1,44 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/main
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
   status: number;
-  message?: string}
+  message?: string;
+}
 
 interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest'}
+  role: 'admin' | 'user' | 'guest';
+}
 
 interface Service {
   id: string;
   name: string;
   description: string;
   price: number;
-  category: string}
+  category: string;
+}
 
 interface FormData {
-  [key: string]: string | number | boolean | File}
+  [key: string]: string | number | boolean | File;
+}
 
 interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown}
+  [key: string]: unknown;
+}
 
 import Link from 'next/link';
 import {
@@ -37,7 +51,8 @@ import {
   MapPin,
   Phone,
   Twitter,
-  User } from 'lucide-react';
+  User,
+} from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
   return (
@@ -167,8 +182,22 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  )};
-
-export default EnhancedFooter;
   );
 };
+
+export default EnhancedFooter;
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
