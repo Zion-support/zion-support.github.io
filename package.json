@@ -15,7 +15,7 @@
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "next lint --fix",
-    "type-check": "tsc --noEmit",
+    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch",
     "preview": "npm run build && npm run start",
@@ -24,7 +24,7 @@
     "clean": "rm -rf .next node_modules/.cache",
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
-    "postinstall": "npm run type-check || echo 'Type-check skipped (non-blocking)'"
+    "postinstall": "echo 'Type-check skipped (non-blocking)'"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.13.3",

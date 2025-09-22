@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: /publicsitemap.xml
