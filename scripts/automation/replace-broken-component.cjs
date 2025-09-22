@@ -6,40 +6,35 @@ class ComponentReplacer {}
   constructor() {}
     this.projectRoot = process.cwd();
 
-=======
 #!/usr/bin/env node;
-=======
 
 const fs = require('fs');
 const path = require('path');
 class ComponentReplacer {}
   constructor() {}
     this.projectRoot = process.cwd();
-    this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')};
-  log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};
-  replaceComponent() {}
-    this.log('Replacing broken AIChatbotSystem component with working version...');
-    const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { }
-  Bot,
-  User,
-  Send,
-  Paperclip,
-  Mic,
-  MicOff,
-  Settings,
-  X,
-  ThumbsUp,
-  ThumbsDown,
-  Sparkles,
 
-=======
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
+  Bot, 
+  User, 
+  Send, 
+  Paperclip, 
+  Mic, 
+  MicOff, 
+  Settings, 
+  X, 
+  ThumbsUp, 
+  ThumbsDown, 
+  Sparkles, 
+
+  Clock,
+  MessageCircle,
+  HelpCircle,
+  Star;
+} from 'lucide-react';
+
 interface ChatMessage {}
   "id": string;"
   content: string;,"
@@ -53,15 +48,13 @@ interface AIChatbotSystemProps {}
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
-    
-=======
-=======
   autoScroll?: boolean};
 export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
   const [messages, setMessages] = useState<ChatMessage[]>([]);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
   // Sample welcome message;
   useEffect(() => {}
     if (isOpen && messages.length === 0) {}
@@ -81,17 +74,20 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       };
       setMessages([welcomeMessage])};
   }, [isOpen, messages.length]);
+
   // Auto-scroll to bottom;
   useEffect(() => {}
     if (autoScroll && messagesEndRef.current) {}
       messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' })};
   }, [messages, autoScroll]);
+
   // Simulate AI response;
   const simulateAIResponse = useCallback(async ("userInput": string) => {}
     setIsTyping(true);
+
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
+
     const responses = [{}]
         "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
         "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
@@ -108,16 +104,10 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
         "relatedServices": ['Digital Transformation', 'Process Optimization', 'Change Management'];
       };
     ];
+
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
     const "botMessage": ChatMessage = {}
-    const botMessage: ChatMessage = {}
-=======
->>>>>>> merged-prs-20250907-203621
-    const "botMessage": ChatMessage = {}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-=======
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       id: Date.now().toString(),
       "content": randomResponse.content,
       "sender": 'bot',
@@ -131,12 +121,15 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
         "estimatedResponseTime": 1 + Math.random() * 2;
       };
     };
+
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)}, []);
+
   // Handle message submission;
   const handleSubmit = useCallback(async ("e": React.FormEvent) => {}
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
+
     const userMessage: ChatMessage = {}
       id: Date.now().toString(),
       "content": inputValue.trim(),
@@ -145,12 +138,16 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       "type": 'text',
       "status": 'sent'
     };
+
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
+
     await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
+
   // Handle suggestion clicks;
   const handleSuggestionClick = useCallback(("suggestion": string) => {}
     setInputValue(suggestion)}, []);
+
   // Handle file upload;
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}
     const file = e.target.files?.[0];
@@ -165,6 +162,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       };
       setMessages(prev => [...prev, fileMessage])};
   }, []);
+
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
@@ -173,32 +171,23 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 
-=======
-=======
-=======
-
-
   return ()
-=======
+
 "
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
-
 
     <>
       {/* Chat Toggle Button */};
       <button;
         onClick={() => setIsOpen(!isOpen)};
-        className="fixed bottom-6 right-6 w-14 h-14 bg-zion-cyan text-white rounded-full shadow-lg "hover": bg-zion-cyan/80 transition-all duration-300 z-50 flex items-center justify-center"
-        aria-label="Toggle AI Chat"
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};
-      </button>
+
       {/* Chat Interface */};
-=======
+
 </button>"
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};"
 
       </button>
+
       <AnimatePresence>
 
           <motion.div;"
@@ -217,57 +206,12 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
                     </div>
                     <div>
-=======
-                      <h3 className="font-semibold text-white">Zion AI Assistant</h3>
-                      <p className="text-xs text-zinc-400">Powered by AI</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {showSettings && (})
-                      <button;
-                        onClick={() => setShowSettingsPanel(!showSettingsPanel)};
-                        className="p-2 text-zinc-400 "hover": text-white transition-colors"
-                        aria-label="Settings"
-                      >
-                        <Settings className="w-4 h-4" />
-                      </button>
-                    )};
-                    <button;
-                      onClick={() => setIsOpen(false)};
-                      className="p-2 text-zinc-400 "hover": text-white transition-colors"
-                      aria-label="Close chat"
-                    >
-                      <X className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )};
-            {/* Messages */};
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
-              {messages.map((message) => (})
-                <motion.div;
-                  key={message.id};
-                  initial={{ "opacity": 0, "y": 10 }};
-                  animate={{ "opacity": 1, "y": 0 }};
-                  className={\"flex gap-3 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"};
-                >
-                  {/* Avatar */};
-                  <div className={\"w-8 h-8 rounded-full flex items-center justify-center \${message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'}\"}>
-                    {message.sender === 'user' ? (})
-                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
-                        <User className="w-4 h-4 text-zinc-300" />
-                      </div>
-                    ) : ()
-                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
-                        <Bot className="w-4 h-4 text-white" />
-                      </div>
-                    )};
-                  </div>
+
                   {/* Message Content */};
                   <div className={\"max-w-[80%] \${message.sender === 'user' ? 'text-right' : 'text-left'}\"}>
                     <div className={\"p-3 rounded-lg \${message.sender === 'user' ? 'bg-zion-cyan text-white' : 'bg-zinc-800 text-zinc-100'}\"}>
                       <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+
                       {/* Message Metadata */};
                       {message.metadata && (})
                         <div className="mt-2 space-y-2">
@@ -275,7 +219,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                             <div className="flex flex-wrap gap-1">
                               {message.metadata.suggestions.map((suggestion, index) => (})
                                 <button;
-=======
 
                       <p className="text-xs text-zinc-400">Powered by AI</p>"
                   <div className="flex items-center gap-2">"
@@ -295,51 +238,19 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                       <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">"
                         <Bot className="w-4 h-4 text-white" />"
 
-
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-                      {message.sender === bot && (})
-                        <div className="flex items-center gap-1>
-=======
                         <div className="mt-2 space-y-2">"
                             <div className="flex flex-wrap gap-1">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                                   key={index};
                                   onClick={() => handleSuggestionClick(suggestion)};
                                 <span;
-=======
 
-            {/* Input Area */}
-=======
-
-            {/* Input Area */};
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-=======
-                        <div className="mt-2 space-y-2">"
-                            <div className="flex flex-wrap gap-1">"
-                                  key={index};
-                                  onClick={() => handleSuggestionClick(suggestion)};
-                                <span;
-                                  key={index};
-                                  className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
-                                >
-                                  {service};
-                                </span>
-                              ))};
-                            </div>
-                          )};
-                        </div>
-                      )};
-                    </div>
                     {/* Message Actions */};
                     <div className={\"flex items-center gap-2 mt-2 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}>
                       <span className="text-xs text-zinc-500">
                         {message.timestamp.toLocaleTimeString()};
                       </span>
+
                       {message.sender === 'bot' && (})
                         <div className="flex items-center gap-1">
                           <button;
@@ -360,7 +271,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                       )};
                     </div>
                   </div>
-=======
+
                                   key={index};"
 
                       <span className="text-xs text-zinc-500">"
@@ -381,9 +292,8 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>"
               )};
               <div ref={messagesEndRef} />
-            </div>
+
             {/* Input Area */};
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
             <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <div className="flex-1 relative">
@@ -395,20 +305,19 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 "focus": outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
                     disabled={isTyping};
                   />
+
                   {/* File Upload */};
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
                     <input;
                       type="file"
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
                       onChange={handleFileUpload};
-=======
+
             <div className="p-4 border-t border-zinc-700/50">"
               <form onSubmit={handleSubmit} className="flex items-center gap-2">"
 </form>"
                 <div className="flex-1 relative">"
                   <input;"
                     type="text
-=======
                     value={inputValue};
                     onChange={(e) => setInputValue(e.target.value)};
 </input>"
@@ -416,14 +325,12 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 </label>
 
                       onChange={handleFileUpload};"
+
                       className="hidden"
                       accept="image/*,.pdf,.doc,.docx,.txt
                     />
-                    <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />
-                  </label>
-                </div>
+
                 {/* Voice Input */};
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
                 {settings.voiceEnabled && (})
                   <button;
                     type="button"
@@ -444,19 +351,13 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                   <Send className="w-4 h-4" />
                 </button>
               </form>
-              {/* Quick Actions */};
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
-              {/* Quick Actions */}
-=======
-=======
+              {/* Quick Actions */};
               <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-3 h-3" />
-=======
+
                     <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />"
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 
                   <Send className="w-4 h-4" />"
 
@@ -468,17 +369,17 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 
                   <span>24/7 Available</span>
     </>
-  )};
-";
+
     fs.writeFileSync(this.filePath, workingComponent);
     this.log('AIChatbotSystem component replaced successfully!')};
   async run() {}
     this.log('Starting Component Replacer...');
+
     try {}
       this.replaceComponent();
       this.log('Component Replacer completed successfully!')} catch (error) {}
       this.log(`Error in Component "Replacer": ${error.message}`);
-=======
+
   )};"
 ";"
     fs.writeFileSync(this.filePath, workingComponent);"
@@ -489,16 +390,11 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 if (require.main === module) {}
   const automation = new ComponentReplacer();
 
-=======
   automation.run();
     .then(() => {}"
 
       process.exit(1)})};
 
-=======
 module.exports = ComponentReplacer;
-=======
+
 module.exports = ComponentReplacer;
-=======
-
-

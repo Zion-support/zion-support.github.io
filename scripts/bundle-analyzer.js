@@ -1,232 +1,262 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-/**
- * Bundle Analyzer Script
- * Analyzes the built bundle and provides optimization recommendations
- */
 
-const distDir = path.join(__dirname, '../dist/assets');
-const bundleReport = {
-  totalSize: 0,
-  files: [],
-  recommendations: [],
-  analysis: {
-    largeFiles: [],
-    duplicateChunks: [],
-    unusedAssets: [],
-  }
-};
 
-function formatBytes(bytes) {
-  if (bytes === 0) return '0 Bytes';
-  const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+<<<<<<< HEAD
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process.env.ANALYZE === "true") { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle.html" : "client-bundle.html"}) )} if (nextConfig.webpack) { return nextConfig.webpack(config,{ dev,isServer })} return config}} } module.exports = withBundleAnalyzer;'"'"
+import React from 'react';
+interface BundleanalyzerProps {
+  // Add props here as needed
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process.env.ANALYZE === "true") { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle.html" : "client-bundle.html"}) )} if (nextConfig.webpack) { return nextConfig.webpack(config,{ dev,isServer })} return config}} } module.exports = withBundleAnalyzer;'"'"""
+import React from 'react';
+interface BundleanalyzerProps {
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}
+  // Add props here as needed;
+
+
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
 
-function analyzeBundle() {
-  console.log('🔍 Analyzing bundle...\n');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+}
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
-  if (!fs.existsSync(distDir)) {
-    console.error('❌ Dist directory not found. Please run npm run build first.');
-    process.exit(1);
-  }
 
-  const files = fs.readdirSync(distDir);
-  const jsFiles = files.filter(f => f.endsWith('.js'));
-  const cssFiles = files.filter(f => f.endsWith('.css'));
-
-  // Analyze JS files
-  jsFiles.forEach(file => {
-    const filePath = path.join(distDir, file);
-    const stats = fs.statSync(filePath);
-    const size = stats.size;
-    
-    bundleReport.files.push({
-      name: file,
-      size: size,
-      type: 'js',
-      formattedSize: formatBytes(size)
-    });
-    
-    bundleReport.totalSize += size;
-
-    // Identify large files (>100KB)
-    if (size > 100 * 1024) {
-      bundleReport.analysis.largeFiles.push({
-        name: file,
-        size: size,
-        formattedSize: formatBytes(size)
-      });
-    }
-  });
-
-  // Analyze CSS files
-  cssFiles.forEach(file => {
-    const filePath = path.join(distDir, file);
-    const stats = fs.statSync(filePath);
-    const size = stats.size;
-    
-    bundleReport.files.push({
-      name: file,
-      size: size,
-      type: 'css',
-      formattedSize: formatBytes(size)
-    });
-    
-    bundleReport.totalSize += size;
-  });
-
-  // Sort files by size
-  bundleReport.files.sort((a, b) => b.size - a.size);
-
-  // Generate recommendations
-  generateRecommendations();
-
-  // Print report
-  printReport();
 }
 
-function generateRecommendations() {
-  const { totalSize, files, analysis } = bundleReport;
 
-  // Large bundle size
-  if (totalSize > 500 * 1024) { // 500KB
-    bundleReport.recommendations.push({
-      type: 'warning',
-      message: `Bundle size is large (${formatBytes(totalSize)}). Consider code splitting.`,
-      action: 'Implement dynamic imports and route-based code splitting'
-    });
-  }
 
-  // Large individual files
-  if (analysis.largeFiles.length > 0) {
-    bundleReport.recommendations.push({
-      type: 'info',
-      message: `Found ${analysis.largeFiles.length} large files (>100KB)`,
-      action: 'Consider splitting large components or lazy loading'
-    });
-  }
-
-  // Check for potential duplicates
-  const chunkNames = files.map(f => f.name.split('-')[0]);
-  const duplicates = chunkNames.filter((name, index) => chunkNames.indexOf(name) !== index);
-  
-  if (duplicates.length > 0) {
-    bundleReport.recommendations.push({
-      type: 'warning',
-      message: 'Potential duplicate chunks detected',
-      action: 'Review webpack configuration for proper chunk splitting'
-    });
-  }
-
-  // CSS optimization
-  const cssFiles = files.filter(f => f.type === 'css');
-  if (cssFiles.length > 1) {
-    bundleReport.recommendations.push({
-      type: 'info',
-      message: 'Multiple CSS files detected',
-      action: 'Consider CSS bundling or critical CSS extraction'
-    });
-  }
 }
 
-function printReport() {
-  console.log('📊 Bundle Analysis Report');
-  console.log('='.repeat(50));
-  console.log(`📁 Total Bundle Size: ${formatBytes(bundleReport.totalSize)}`);
-  console.log(`📄 Total Files: ${bundleReport.files.length}`);
-  console.log('');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+export default function Bundleanalyzer({ }: BundleanalyzerProps) {
+=======
+export default function Bundleanalyzer({ }: BundleanalyzerProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  return (
+    <div>
+</div>
+      <h1>Bundleanalyzer</h1>
+      <p>This component is currently under development.</p>
+    </div>;
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+}
+=======
+=======
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
-  // Top 10 largest files
-  console.log('🔝 Top 10 Largest Files:');
-  console.log('-'.repeat(50));
-  bundleReport.files.slice(0, 10).forEach((file, index) => {
-    const icon = file.type === 'js' ? '📄' : '🎨';
-    console.log(`${index + 1}. ${icon} ${file.name}: ${file.formattedSize}`);
-  });
-  console.log('');
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+}
+=======
 
-  // Large files warning
-  if (bundleReport.analysis.largeFiles.length > 0) {
-    console.log('⚠️  Large Files (>100KB):');
-    console.log('-'.repeat(50));
-    bundleReport.analysis.largeFiles.forEach(file => {
-      console.log(`📄 ${file.name}: ${file.formattedSize}`);
-    });
-    console.log('');
-  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  // Recommendations
-  if (bundleReport.recommendations.length > 0) {
-    console.log('💡 Optimization Recommendations:');
-    console.log('-'.repeat(50));
-    bundleReport.recommendations.forEach((rec, index) => {
-      const icon = rec.type === 'warning' ? '⚠️' : 'ℹ️';
-      console.log(`${index + 1}. ${icon} ${rec.message}`);
-      console.log(`   Action: ${rec.action}`);
-      console.log('');
-    });
-  }
-
-  // Performance score
-  const score = calculatePerformanceScore();
-  console.log('🎯 Performance Score:');
-  console.log('-'.repeat(50));
-  console.log(`Score: ${score}/100 ${getScoreEmoji(score)}`);
-  console.log(`Status: ${getScoreStatus(score)}`);
-  console.log('');
-
-  // Next steps
-  console.log('🚀 Next Steps:');
-  console.log('-'.repeat(50));
-  console.log('1. Run npm run build:analyze for detailed webpack analysis');
-  console.log('2. Implement code splitting for large components');
-  console.log('3. Use dynamic imports for route-based splitting');
-  console.log('4. Optimize images and assets');
-  console.log('5. Remove unused dependencies');
 }
 
-function calculatePerformanceScore() {
-  const { totalSize, analysis } = bundleReport;
-  let score = 100;
 
-  // Deduct points for large bundle size
-  if (totalSize > 1000 * 1024) score -= 30; // >1MB
-  else if (totalSize > 500 * 1024) score -= 20; // >500KB
-  else if (totalSize > 200 * 1024) score -= 10; // >200KB
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
-  // Deduct points for large files
-  score -= analysis.largeFiles.length * 5;
 
-  // Deduct points for many files
-  if (bundleReport.files.length > 50) score -= 10;
-  else if (bundleReport.files.length > 30) score -= 5;
 
-  return Math.max(0, score);
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}
+}
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+}
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
 
-function getScoreEmoji(score) {
-  if (score >= 90) return '🟢';
-  if (score >= 70) return '🟡';
-  if (score >= 50) return '🟠';
-  return '🔴';
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
 }
 
-function getScoreStatus(score) {
-  if (score >= 90) return 'Excellent';
-  if (score >= 70) return 'Good';
-  if (score >= 50) return 'Fair';
-  return 'Needs Improvement';
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 }
 
-// Run analysis
-analyzeBundle();
+}
+    </div>)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

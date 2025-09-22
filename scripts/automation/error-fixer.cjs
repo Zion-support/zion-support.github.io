@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -105,15 +104,10 @@ const { execSync } = require("child_process")
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
 
-=======
       this.log(")
-=======
+
       this.log(")
-=======
-=======
 
         if (content.includes("<Helmet>") && !content.includes("<>")"
 "
   content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")"
-
-

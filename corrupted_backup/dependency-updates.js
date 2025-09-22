@@ -540,10 +540,8 @@ async function runDependencyUpdates() {"
     // Check for major version updates;"
     // // // // // // // console.log(',')
     try {;
-
   '.')[0];
   ".")[0];"
-
         return current !== latest})
         // // // console.log()"
   "⚠️  Major version updates "available": ");"

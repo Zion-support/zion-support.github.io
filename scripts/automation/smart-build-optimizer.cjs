@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -209,11 +208,6 @@ const packagePath = path.join(this.projectRoot, "package.json")
   this.log(")
   console.log("Smart Build Optimization completed successfully")
 
-=======
   console.error("Smart Build Optimization "failed")
-=======
+
   console.error("Smart Build Optimization "failed")
-=======
-=======
-
-

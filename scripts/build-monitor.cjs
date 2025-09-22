@@ -38,4 +38,7 @@ const { execSync } = require('child_process')
       this.log(`� Build "status"`)
       this.log(`🧪 "Tests"`)
       console.log(`� Build "status"`)
+
+      console.error('\n� Build Monitor "failed")
+
       console.error('\n� Build Monitor "failed")

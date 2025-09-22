@@ -1,5 +1,15 @@
 
-
+import { useState, useEffect } from 'react';''
+import { WifiOff, Wifi } from 'lucide-react''
+      if (!online) {
+        setShowOfflineAlert(true)
+      } else if (showOfflineAlert) {'
+        // Show brief "back online" message then hide;""
+import { useState, useEffect } from 'react';'
+        setTimeout(() => setShowOfflineAlert(false), 3000)'
+import { useState, useEffect } from 'react',;''
+import { WifiOff, Wifi } from 'lucide-react';''
+import { Alert, AlertDescription } from '@/components/ui/ alert';'
 export const OfflineIndicator = () =>: any {
   // TODO: Implement
 }
@@ -28,37 +38,75 @@ import { Alert, AlertDescription } from '@/components/ui/alert';'
 export const OfflineIndicator = () => {;
   const [isOnline, setIsOnline] = useState(true);
   const [showOfflineAlert, setShowOfflineAlert] = useState(false);
+
   useEffect((,) => {;
     const updateOnlineStatus = () => {;
       const online = navigator && navigator.onLine;
       setIsOnline(online);
 
-
-
       if (!online) {;
         setShowOfflineAlert(true);
+      } else if (showOfflineAlert) {;'
+        // Show brief "back online" message then hide;"
+        setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
+        setTimeout(() => setShowOfflineAlert(false), 3000);
 
-      } else if (showOfflineAlert) {;
-        // Show brief "back online" message then hide;
 
+      }
+    };
 
+    // Set initial status;
+    updateOnlineStatus();
 
+    // Listen for online/offline events;"
+    window && window.addEventListener('online', updateOnlineStatus);''
+    window && window.addEventListener('offline', updateOnlineStatus);'
+    }
+  }, [showOfflineAlert]);
+  // Check condition;
+if (return null) {
+  $2;
+}
   return (
-    <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
-      <Alert variant={isOnline ? "default" : "destructive"}>
-        <div className="flex items-center gap-2">
-          {isOnline ? (
-            <Wifi className="h-4 w-4" />
-          ) : (
-            <WifiOff className="h-4 w-4" />
-          )}
 
+
+)
+  if (!showOfflineAlert) return null;
+
+  return ('
+    <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">"
+</div>"
+      <Alert variant={isOnline ? "default" : "destructive"}>"
+</Alert>"
+        <div className="flex items-center gap-2">"
+</div>"
+            <Wifi className="h-4 w-4" />"
+</Wifi>"
+            <WifiOff className="h-4 w-4" />"
+</WifiOff>
+          <AlertDescription>
+</AlertDescription>
+          </AlertDescription>
+        </div>
+      </Alert>
+    </div>
+        </div>;
+      </Alert>;
+    </div>;"
+    <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;'
+</div>'
+      <Alert variant={is_online ? 'default' : 'destructive'}>;'
+</Alert>'
+        <div className='flex items - center gap - 2'>;'
+</div>)'
+            <Wifi className='h - 4 w - 4' />) : ('
+</Wifi>)'
+            <WifiOff className='h - 4 w - 4' />)}'
+</WifiOff>
           <AlertDescription>;
 </AlertDescription>'
               : 'You are offline. Some features may not work.'}          </AlertDescription>            {is_online ? ('
         </div>;
-
-      </Alert>;
-    </div>);
-} }
+      </Alert>;)
+    </div>);'
 

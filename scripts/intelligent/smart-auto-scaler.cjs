@@ -1,13 +1,10 @@
 
-
-=======
 #!/usr/bin/env node;
 /**
  * Smart Auto-Scaler;
  * Intelligent scaling based on load, performance metrics, and predictive analytics;
  */
 
-=======
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -37,6 +34,5 @@ const os = require('os')
       "Memory"
       Response "Time"
       Error "Rate"
-    console.error(' Smart Auto-Scaler "failed")
-=======
+
     console.error(' Smart Auto-Scaler "failed")

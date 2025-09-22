@@ -1,17 +1,17 @@
 
-=======
 #!/usr/bin/env node;
-=======
+
 #!/usr/bin/env node
+
 /**
  * PM2 Sync Automation;
  * Manages PM2 processes and ensures synchronization;
  */
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-=======
 class PM2SyncAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -38,73 +38,43 @@ class PM2SyncAutomation {}
             };);
             const status = JSON.parse(statusResult;);
             this.log(`Found ${status.length} PM2 processes`);
-=======
+
         console.log(message)};
     checkPM2Status() {}"
 
             };);
             const status = JSON.parse(statusResult;);`;
             this.log(`Found ${status.length} PM2 processes`);
-            
-=======
+
             return {;}
 
                 "error": error.message;"
             }};
-    };
-    syncPM2Processes() {}
-        this.log('Syncing PM2 processes...');
+
         try {}
             // Stop all processes;
             execSync('pm2 stop all', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-            // Delete all processes;
-            execSync('pm2 delete all', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-            // Start processes from ecosystem file;
-            execSync('pm2 start ecosystem.config.cjs', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-            }
-            // Delete all processes;
-            execSync('pm2 delete all', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
+
+    syncPM2Processes() {}"
+
             }
-});
-            
-            // Start processes from ecosystem file;
-            execSync('pm2 start ecosystem.config.cjs', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
-            }
-});
-            
-            this.log('PM2 processes synced successfully');
-            return { "status": 'success' }} catch (error) {}
-            this.log(`PM2 sync "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    checkProcessHealth() {}
-        this.log('Checking process health...');
+            // Delete all processes;
+
         try {}
             const statusResult = execSync('pm2 status --json', { })
-                "cwd": this.projectRoot,
+                "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
+
             const processes = JSON.parse(statusResult;);
             const healthyProcesses = processes.filter(p => p.pm2_env?.status === 'online';);
             const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);
+
             this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);
+
             return {;}
                 "status": 'success',
                 "total": processes.length,
@@ -117,16 +87,21 @@ class PM2SyncAutomation {}
     };
     restartUnhealthyProcesses() {}
         this.log('Restarting unhealthy processes...');
+
         try {}
             const healthCheck = this.checkProcessHealth(;);
+
             if ( {})
                 execSync('pm2 restart all', { })
-                    "cwd": this.projectRoot,
+                    "cwd": this.projectRoot, 
+
                     "stdio": 'pipe'
                 })) {}
      {}
                 execSync('pm2 restart all', { })
-                    "cwd": this.projectRoot,
+
+                    "cwd": this.projectRoot, 
+
                     "stdio": 'pipe'
                 })};
                 this.log('Unhealthy processes restarted');
@@ -139,6 +114,7 @@ class PM2SyncAutomation {}
     };
     generateSyncReport() {}
         this.log('Generating PM2 sync report...');
+
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -150,8 +126,10 @@ class PM2SyncAutomation {}
             },
             "recommendations": this.generateSyncRecommendations();
        };
+
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`PM2 sync report saved to ${this.reportFile}`);
+
         return report};
     generateSyncRecommendations() {}
         return [;]
@@ -165,12 +143,12 @@ class PM2SyncAutomation {}
         ]};
     async run() {}
         this.log('PM2 Sync Automation started');
+
         try {}
             const report = this.generateSyncReport(;);
             this.log('PM2 Sync Automation completed successfully');
             return report} catch (error) {}
             this.log(`PM2 Sync Automation "failed": ${error.message}`);
-=======
 
             "pm2": {}"
                 status: this.checkPM2Status(),"
@@ -179,7 +157,6 @@ class PM2SyncAutomation {}
                 "restart": this.restartUnhealthyProcesses();"
             },"
             "recommendations": this.generateSyncRecommendations();"
-
 
         return report};
     generateSyncRecommendations() {}
@@ -191,10 +168,6 @@ class PM2SyncAutomation {}
     const automation = new PM2SyncAutomation}(;);
     automation.run().catch(console.error)};
 
-=======
 module.exports = PM2SyncAutomation;
-=======
+
 module.exports = PM2SyncAutomation;
-=======
-
-

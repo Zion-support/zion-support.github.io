@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/main
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -8,7 +17,8 @@ interface SEOProps {
   url?: string;
   type?: string;
   keywords?: string[];
-  author?: string}
+  author?: string;
+}
 
 const defaultSEO = {
   title: 'Zion Tech Group - Leading Technology Solutions Provider',
@@ -17,9 +27,15 @@ const defaultSEO = {
   image: '/images/og-image.jpg',
   type: 'website',
   keywords: [
-
+    'AI solutions',
+    'quantum computing',
+    'blockchain',
+    'cloud infrastructure',
+    'software development',
+    'technology consulting',
   ],
-  author: 'Zion Tech Group' };
+  author: 'Zion Tech Group',
+};
 
 const EnhancedSEO: React.FC<SEOProps> = ({
   title = defaultSEO.title,
@@ -28,7 +44,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   url,
   type = defaultSEO.type,
   keywords = defaultSEO.keywords,
-  author = defaultSEO.author }) => {
+  author = defaultSEO.author,
+}) => {
   const router = useRouter();
   const currentUrl = url || `https://ziontechgroup.com${router.asPath}`;
   const fullImageUrl = image.startsWith('http')
@@ -39,7 +56,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(,)} />
+      <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
 
       {/* Open Graph */}
@@ -66,7 +83,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org,@type': 'Organization',
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
             name: 'Zion Tech Group',
             description: description,
             url: 'https://ziontechgroup.com',
@@ -76,16 +94,36 @@ const EnhancedSEO: React.FC<SEOProps> = ({
               telephone: '+1-302-464-0950',
               contactType: 'customer service',
               areaServed: 'US',
-              availableLanguage: 'English' },
+              availableLanguage: 'English',
+            },
             address: {
               '@type': 'PostalAddress',
               streetAddress: '364 E Main St STE 1008',
               addressLocality: 'Middletown',
               addressRegion: 'DE',
               postalCode: '19709',
-              addressCountry: 'US' } }) }}
+              addressCountry: 'US',
+            },
+          }),
+        }}
       />
     </Head>
-  )};
+  );
+};
 
 export default EnhancedSEO;
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

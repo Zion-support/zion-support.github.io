@@ -19,15 +19,6 @@ const { execSync } = require('child_process')
       const importIssues = [{ "pattern": /import\s+.*?from\s+['"]([^'"]*?)['"]\s*$/, "message"}
         { "pattern": /import\s+.*?from\s+['"]([^'"]*?)['"]\s*['"]/, "message"}
         content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)['']
-return match.replace(/['"]\s*['"]$/, '');
-        content = content.replace(/className=\{"([^"]*)\$\{([^}]*)\}([^")]
-        content = content.replace(/import\s+.*?from\s+['"]([^'')]
-        content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)['']
-return match.replace(/['"]\s*['"]$/, '');
-      execSync('npm run lint', { "cwd": this.projectRoot, "stdio"})
-      execSync('npm run type-"check": fast', { "cwd": this.projectRoot, "stdio"})
-      execSync('npm run "build": fast', { "cwd": this.projectRoot, "stdio"})
-cursor/fix-lint-push-and-merge-to-main-f3c1;
           return match.replace(/['"]\s*['"]$/, '')
         content = content.replace(/className=\{"([^"]*)\$\{([^}]*)\}([^")]
         content = content.replace(/import\s+.*?from\s+['"]([^'')]
@@ -36,9 +27,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       execSync('npm run lint', { "cwd": this.projectRoot, "stdio"})
       execSync('npm run type-"check": fast', { "cwd": this.projectRoot, "stdio"})
       execSync('npm run "build": fast', { "cwd": this.projectRoot, "stdio"})
+
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-
-

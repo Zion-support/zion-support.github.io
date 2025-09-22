@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -72,11 +71,6 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 
-=======
   console.error(" Failed to start continuous build and "test": ")
-=======
+
   console.error(" Failed to start continuous build and "test": ")
-=======
-=======
-
-

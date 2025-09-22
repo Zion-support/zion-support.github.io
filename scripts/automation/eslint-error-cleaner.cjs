@@ -1,10 +1,10 @@
 
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
-=======
+
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
+
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");"
@@ -364,10 +364,7 @@ this.log("📄 Report "generated": ${reportFile}");"
       await this.generateReport(initialErrors, autoFixed, manuallyFixed)}
     // Set up file watcher;
 
-<<<<<<< HEAD
-=======
       "ignoreInitial": true;")
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
     this.watcher;"
 
     this.isRunning = true;"
@@ -402,14 +399,9 @@ if (require.main === module) {
   cleaner.run().catch(error => {)
 
     process.exit(1)})}
-;
-
-=======
-module.exports = ESLintErrorCleaner
-=======
-module.exports = ESLintErrorCleaner
-=======
 
 module.exports = ESLintErrorCleaner
-=======
 
+module.exports = ESLintErrorCleaner
+
+module.exports = ESLintErrorCleaner

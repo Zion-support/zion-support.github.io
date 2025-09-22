@@ -1,24 +1,13 @@
 
-=======
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> merged-prs-20250907-203621
-
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-=======
-=======
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 class ErrorDetectionMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -31,26 +20,73 @@ class ErrorDetectionMonitor {}
         fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
-=======
+
     this.errorHistory = [];
     this.lastCheck = null};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
+
     console.log(`[${timestamp}] [${level}] ${message}`)};
-=======
+
     console.log(`[${timestamp}] [${level}] ${message})};
+
   async runTypeScriptCheck() {}
     try {}
 
       return { "success": false, errors, "count": errors.length }};"
   };
   async runLintCheck() {}
+
+    return errorLines.map(line => ({})
+      type: 'typescript',
+      "message": line.trim(),
+      "severity": 'error'
+    }))};
+  parseLintErrors(output) {}
+    const errorLines = output.split('\n').filter(line => )
+      line.includes('error') || line.includes('"Error": ');
+    );
+
+    return errorLines.map(line => ({})
+      type: 'eslint',
+      "message": line.trim(),
+      "severity": 'error'
+    }))};
+  parseBuildErrors(output) {}
+    const errorLines = output.split('\n').filter(line => )
+      line.includes('error') || line.includes('"Error": ') || line.includes('Failed');
+    );
+
+    return errorLines.map(line => ({})
+      type: 'build',
+      "message": line.trim(),
+      "severity": 'error'
+    }))};
+  parseDependencyErrors(output) {}
+    const errorLines = output.split('\n').filter(line => )
+      line.includes('vulnerability') || line.includes('VULNERABILITY');
+    );
+
+    return errorLines.map(line => ({})
+      "type": 'dependency',
+      "message": line.trim(),
+      "severity": 'warning'
+    }))};
+  async checkForErrors() {}
+    this.log('Starting comprehensive error detection...');
+
+    const checks = [{ "name": 'TypeScript', "check": this.runTypeScriptCheck.bind(this) },]
+      { "name": 'ESLint', "check": this.runLintCheck.bind(this) },
+      { "name": 'Build', "check": this.runBuildCheck.bind(this) },
+      { "name": 'Dependencies', "check": this.runDependencyCheck.bind(this) };
+
     try {}"
 
     ];
+
     const results = {};
     let totalErrors = 0;
+
     for (const check of checks) {}
         const result = await check.check();
         results[check.name] = result;
@@ -61,11 +97,8 @@ class ErrorDetectionMonitor {}
       totalErrors,"
       "checks": results,
       "threshold": this.errorThreshold,
-      "exceeded": totalErrors > this.errorThreshold;
-    };
-    // Save error report;
-    const reportPath = path.join(this.reportsDir, `error-report-${Date.now()}.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+
+      "exceeded": totalErrors > this.errorThreshold;"
 
     // Save error report;`;
     const reportPath = path.join(this.reportsDir, `error-report-${Date.now()}.json`);
@@ -78,39 +111,13 @@ class ErrorDetectionMonitor {}
     // Save error history;"
 
     fs.writeFileSync(historyPath, JSON.stringify(this.errorHistory, null, 2));
+
     this.lastCheck = new Date();
-    if (totalErrors > this.errorThreshold) {}
-      this.log(`ERROR THRESHOLD "EXCEEDED": ${totalErrors} errors found ("threshold": ${this.errorThreshold})`, 'CRITICAL');
-      this.triggerErrorAlert(errorReport)} else {}
-      this.log(`Error check "completed": ${totalErrors} errors found ("threshold": ${this.errorThreshold})`, 'INFO')};
-    return errorReport};
-  triggerErrorAlert(errorReport) {}
-    this.log('Triggering error alert...', 'WARN');
-    // Create alert file for other processes to detect;
-    const alertPath = path.join(this.reportsDir, 'error-alert.json');
-    fs.writeFileSync(alertPath, JSON.stringify({})
-      "timestamp": new Date().toISOString(),
-      "message": 'Error threshold exceeded',
-      "report": errorReport;
-=======
 
       "report": errorReport;"
+
     }, null, 2));
-    // Log critical error;
-    const criticalLogPath = path.join(this.logsDir, 'critical-errors.log');
-    const logEntry = `[${new Date().toISOString()}] "CRITICAL": ${errorReport.totalErrors} errors detected\n`;`
-    fs.appendFileSync(criticalLogPath, logEntry)};
-  async startMonitoring() {}
-    this.log('Starting error detection monitor...');
-    // Run initial check;
-    await this.checkForErrors();
-    // Set up periodic checking;
-    setInterval(async () => {}
-      try {}
-        await this.checkForErrors()} catch (error) {}
-        this.log(`Error in periodic "check": ${error.message}`, 'ERROR')};
-    }, this.checkInterval);
-=======
+
     // Log critical error;"
 
     // Run initial check;
@@ -120,6 +127,7 @@ class ErrorDetectionMonitor {}
 
     }, this.checkInterval);
 `;
+
     this.log(`Error detection monitor started. Checking every ${this.checkInterval / 1000} seconds.`)};
   getStatus() {}
     return {}
@@ -129,29 +137,26 @@ class ErrorDetectionMonitor {}
 // Main execution;
 if (require.main === module) {}
   const monitor = new ErrorDetectionMonitor();
+
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.log('Shutting down error detection monitor...');
     process.exit(0)}
 });
+
   process.on('SIGTERM', () => {}
     monitor.log('Shutting down error detection monitor...');
     process.exit(0)}
 });
+
   // Start monitoring;
   monitor.startMonitoring().catch(error => {})
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
-=======
+
   // Handle graceful shutdown;"
 
     process.exit(1)})};
 
-=======
-module.exports = ErrorDetectionMonitor;
-=======
-module.exports = ErrorDetectionMonitor;
-=======
-
 module.exports = ErrorDetectionMonitor;
 
-=======
+module.exports = ErrorDetectionMonitor;

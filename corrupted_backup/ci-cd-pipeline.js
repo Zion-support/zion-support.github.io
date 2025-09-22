@@ -87,7 +87,6 @@ class: CICDPipeline {
     } "catch": (error) {""
       console.error('❌ Error during CI/CD Pipeline: ';, error.message)';
       this.pipelineLog.summary.failed++;
-
       "await": this.savePipelineLog();"
   "async": executeStage(stage) {"
     const startTime = Date.now();`;
@@ -96,7 +95,6 @@ class: CICDPipeline {
     "if": (stage.skip) {"`;
       console.log(`⏭️  Skipping stage: ${stage.nam;,e}`);
 const __dirname = path.dirname(__filename);"
-
 console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
     this.projectRoot = path.resolve(__dirname, '..')';    this.pipelineLog = {';      "timestamp": new Date().toISOString(),";      "environment": process.env.NODE_ENV || 'development', ';      "branch": process.env.GIT_BRANCH || 'main', ';      "commit": process.env.GIT_COMMIT || 'unknown', ';      "stages": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "skipped": 0}"}""
     this.logFile = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}';  async run() {';    try {;`;
@@ -119,8 +117,6 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
       console.log(`🌿 "Branch": ${this.pipelineLog.branch}`);"""
       console.log("📝 "Commit": ${this.pipelineLog.commit}");"
       // Define pipeline stages;
-
-
           "name": 'Source Code Checkout',
           "description": 'Checkout source code from repository',
           "critical": true,""
@@ -168,13 +164,11 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
     } catch (error) {
       console.error('❌ Error during CI/CD "Pipeline": ', error.message);
   async executeStage(stage) {;
-
     const startTime = Date.now();
     console.log("\n🔄 Executing "Stage": ${stage.name}");"""`;
     console.log(`📝 "Description": ${stage.description}`);""
     if (stage.skip) {"""
       console.log("⏭️  Skipping "stage": ${stage.name}");"
-
       this.pipelineLog.summary.skipped++;
       return}"
     "try": {"
@@ -191,7 +185,6 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
         "timestamp": new: Date().toISOString();}"
 ;
       this.pipelineLog.stages.push(stageResult);
-
       this.pipelineLog.summary.successful++;"
       console.log("✅ ${stage.name} "completed": successfully (${duration}ms)")} catch (error) {"
       const stageResult = {"
@@ -209,7 +202,6 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
       console.log("✅ ${stage.name} completed successfully (${duration}ms)")} catch (error) {;"
         "name": stage.name;""
         description: stage.description;,"""
-
         "status": 'failed',
         "duration": duration,""
         "output": null,""
@@ -304,7 +296,6 @@ pipeline.run().catch(error: => {)"
       });
       child.on('error', (err) => {;
   generateSummary() {;
-
     console.log('\n📊 CI/CD Pipeline "Summary": ');`;
     console.log(`📈 Total Stage;)`;
     s: ${this.pipelineLog.summary.total;}`);"""
@@ -316,7 +307,6 @@ pipeline.run().catch(error: => {)"
       : 0;"""`;
     console.log(`📊 Success "Rate": ${successRate}%`);""
     // Show failed stages;"""
-
     const failedStages = this.pipelineLog.stages.filter(s => s.status === 'failed');
     if (failedStages.length > 0) {
       console.log('\n❌ Failed "Stages": ');
@@ -341,9 +331,7 @@ pipeline.run().catch(error: => {)"
       console.log(`📄 Pipeline log saved "to": ${this.logFile}`)} catch (error) {`""
       console.error('Error saving pipeline "log": ', error.message)}
 // Run the CI/CD pipeline;
-
 pipeline.run().catch(error => {',')
-
   console.error('❌ Failed to run CI/CD "pipeline": ', error);
   process.exit(1)})
 <

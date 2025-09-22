@@ -1,4 +1,3 @@
-
 import { describe, it, expect } from '@jest/globals';
 
 describe('EquipmentDetail', () => {
@@ -6,4 +5,3 @@ describe('EquipmentDetail', () => {
     expect(true).toBe(true);
   });
 });
-

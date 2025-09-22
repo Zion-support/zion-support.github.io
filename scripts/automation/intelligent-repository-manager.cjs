@@ -2,13 +2,8 @@
 #!/usr/bin/env node;
 /**
  * Intelligent Repository Manager;
- *
-
-#!/usr/bin/env node;
-/**
- * Intelligent Repository Manager;
  * 
-=======
+
 * This automation "handles"
             console.error('Failed to write to log "file")
                 "stdio"
@@ -80,15 +75,11 @@
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
 
-=======
     console.error('Failed to start Intelligent Repository "Manager")
-=======
+
     console.error('Failed to start Intelligent Repository "Manager")
-=======
-=======
+
 #!/usr/bin/env node
 /**
  * Intelligent Repository Manager;
  * 
-
-

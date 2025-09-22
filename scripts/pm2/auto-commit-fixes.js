@@ -1,79 +1,132 @@
-        stdio: 'pipe;
-  '});
-      this.log(`Staged ${files.length} files`)} catch (error) {;
-      this.log(`Error staging files: ${error.message}`);
-  async createCommit(message, files) {;
-    try {;
-      const commitMessage = `🔧 ${message}\n\nFiles changed:\n${files.map(f => `- ${f}`).join('\n;
-  ')}`;
-      execSync(`git commit -m '${commitMessage}'` {;
-        cwd: this.projectRoot,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-        stdio: 'pipe;
-  '});
-      this.commitsMade++;
-      this.log(`✅ Created commit: ${message}`);
+=======
 
-      this.log(`Error creating commit: ${error.message}`);
 
-      return false;
-  async analyzeChanges(files) {;
-    const changes = {;
-      added: [],;
-      modified: [],;
-      deleted: [],;
-      renamed: [],;
-      other: []}
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
-  ') {
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+;
+#!/usr/bin/env node,;
+const fs = require('fs'),;
+const path = require('path'),;
+const { execSync } = require('child_process'),;
+,;
+class AutoCommitFixes {,;
+  constructor() {,;
+    this.projectRoot = process.cwd(),;
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log'),;
+    this.startTime = Date.now(),;
+    this.commitsMade = 0,;
+    this.filesChanged = 0;
+  },;
+<<<<<<< HEAD
+,;
+  log(message) {,;
+    const timestamp = new Date().toISOString(),;
+    const logMessage = `[${timestamp}] ${message}\n`,;
+,;
+=======
+  log(message) {,;
+    const timestamp = new Date().toISOString(),;
+    const logMessage = `[${timestamp}] ${message}\n`,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    try {,;
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {,;
+      console.error('Error writing to log: file:', error.message);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    },;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    },;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-        changes.added.push(fileName)} else if (status === 'M;
-  ') {;
-        changes.modified.push(fileName)} else if (status === 'D;
+#!/usr / bin / env node;
+const fs = require ('fs');
+const path = require ('path');
+const { exec_sync } = require ('child_process');
 
-        changes.deleted.push(fileName)} else if (status === 'R;
-  ') {;
-        changes.renamed.push(fileName)} else {;
-        changes.other.push(fileName)});
+<<<<<<< HEAD
 
-    return changes;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+;
+class AutoCommitFixes { constructor () { this.project_root = process.cwd (); this.log_file = path.join (this.project_root, 'logs / pm2 / auto - commit - fixes.log'); this.start_time = Date.now (); this.commits_made = 0; this.files_changed = 0}
+; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`;
+; try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log file: ', error.message)}
+;
+;
+<<<<<<< HEAD
+=======
+class AutoCommitFixes { constructor () { this.project_root = process.cwd (); this.log_file = path.join (this.project_root, 'logs / pm2 / auto - commit - fixes.log'); this.start_time = Date.now (); this.commits_made = 0; this.files_changed = 0}`;
+; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`;
+; try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log file: ', error.message)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-      const logsDir = path.dirname(this.logFile);
-      if (!fs.existsSync(logsDir)) {
 
-        fs.mkdirSync(logsDir { recursive: true });
-      // Check git status;
-      this.log('📋 Checking git status...;
-  ');
-      const gitStatus = await this.checkGitStatus();
 
-        this.log('✨ No changes to commit;
-  ');
-        return;
-      this.log(`📁 Found ${gitStatus.files.length} changed files`);
-      // Analyze changes;
-      const changes = await this.analyzeChanges(gitStatus.files);`
-      this.log('🔍 Analyzing changes...;
-  ');
 
-      this.log('📦 Staging all changes...;
-  ');
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    },;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 
-      await this.stageFiles(gitStatus.files.map(f => f.file));
-      // Generate commit message;
-      const commitMessage = await this.generateCommitMessage(changes);
-      this.log(`💬 Commit message: ${commitMessage}`);
-      // Create commit;
 
-  ');
-        this.filesChanged = gitStatus.files.length} else {;
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
-        this.log('❌ Failed to create commit;
-  `);
-      const duration = Date.now() - this.startTime;
 
-      this.log(`❌ Error running auto commit fixes: ${error.message}`);
-
-      process.exit(1);
-// Run the auto commit fixes;
-const autoCommit = new AutoCommitFixes();
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
