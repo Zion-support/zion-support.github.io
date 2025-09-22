@@ -1,320 +1,166 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+#!/usr/bin/env node
 
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
+import { execSync } from 'child_process';
+import fs from 'fs';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import { execSync } from "child_process";
-"
-console.log("🔧 Performing selective merge of main source files...");
+console.log('🚀 Starting selective branch merge process...');
 
-<<<<<<< HEAD
-=======
-
-import { execSync } from "child_process";""
-console.log("🔧 Performing selective merge of main source files...");"
-// List of main source directories to merge;
-const mainSourceDirs = [
-
-
-
-console && console.log('🔧 Performing selective merge of main source files...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-// List of main source directories to merge
-<<<<<<< HEAD
-<<<<<<< HEAD
-const mainSourceDirs = [  'pages/',
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-const mainSourceDirs = [
-<<<<<<< HEAD
-=======
-// List of main source directories to merge;
-const mainSourceDirs = []
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-#!/usr / bin / env node;
-#!/usr / bin / env node;"
-import {exec_sync} from 'child_process';
-;'
-console.log ('🔧 Performing selective merge of main source files...');
-// List of main source directories to merge;
-const mainSourceDirs = [;
-<<<<<<< HEAD
-
-
-
-
-
-  'pages/',
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  'components/',
-  'utils/',
-  'types/',
-  'lib/',
-  'hooks/',
-  'context/',
-  'data/',
-  'services/',
-  'store/',
-  'routes/',
-  'layout/',
-  'legal/',
-  'integrations/',
-
-    // First, let's see what files are in the clean-merge-services-improvements branch
-    console && console.log('📋 Checking files in clean-merge-services-improvements branch...');
-    const files = execSync('git ls-tree -r --name-only origin/clean-merge-services-improvements', { encoding: 'utf8' });
-    const fileList = files && files.trim().split('\n');
-    // Filter for main source files
-    const mainFiles = fileList && fileList.filter(file => {
-      return mainSourceDirs && mainSourceDirs.some(dir => file && file.startsWith(dir)) || 
-             mainSourceDirs && mainSourceDirs.includes(file);
-    });
-    console && console.log(`Found ${mainFiles && mainFiles.length} main source files to potentially merge`);
-    // Try to cherry-pick specific commits or files
-    console && console.log('🍒 Attempting to cherry-pick specific changes...');
-    // Get the latest commit from the clean-merge-services-improvements branch
-    const latestCommit = execSync('git rev-parse origin/clean-merge-services-improvements', { encoding: 'utf8' }).trim();
-    console && console.log(`Latest commit: ${latestCommit}`);
-
-    // Try to merge only specific files
-    for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts
-    // Try to merge only specific files;
-    for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts;
-      try {
-<<<<<<< HEAD
-        console && console.log(`Merging file: ${file}`);
-=======
-'
-  'pages/','
-  'components/','
-  'utils/','
-  'types/','
-  'lib/','
-  'hooks/','
-  'context/','
-  'data/','
-  'services/','
-  'store/','
-  'routes/','
-  'layout/','
-  'legal/','
-  'integrations/',
-
-    // Try to merge only specific files;
-    for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts;
-      try {}
-        console && console.log(`Merging file: ${file}`);'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        execSync(`git checkout origin/clean-merge-services-improvements -- "${file}"`, { stdio: 'inherit' });
-      } catch (_error) {}`
-        console && console.log(`Skipping ${file} due to conflicts`);'
-  'middleware.ts','
-  'next.config.js','
-  'tailwind.config.js','
-  'postcss.config.cjs','
-  'tsconfig.json','
-  'package.json','
-  'package - lock.json','
-  'yarn.lock';
-=======
-  // TODO: Implement
-}
-        console && console.log(`Merging file: ${file}`);`;
-        execSync(`git checkout origin/clean-merge-services-improvements -- "${file}"`, { stdio: 'inherit' });
-      } catch (_error) {`;
-        console && console.log(`Skipping ${file} due to conflicts`);
-  'middleware.ts',
-  'next.config.js',
-  'tailwind.config.js',
-  'postcss.config.cjs',
-  'tsconfig.json',
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+// Priority branches to merge first
+const priorityBranches = [
+  'clean-merge-with-main',
+  'clean-merge-with-improvements', 
+  'comprehensive-improvements',
+  'comprehensive-services-clean',
+  'content-update-2025',
+  'content-updates-2025-09-16',
+  'clean-website-enhancement',
+  'clean-services-integration'
 ];
-// Try to merge specific files from the clean - merge - services - improvements branch;
-<<<<<<< HEAD
-const mergeSpecificFiles = () =>: any {}
-  try {'
-    // First, let's see what files are in the clean - merge - services - improvements branch;'
-    console.log ('📋 Checking files in clean - merge - services - improvements branch...');
-;'
-    const files = exec_sync ('git ls - tree -r --name - only origin / clean - merge - services - improvements', { encoding: 'utf8' });'
-=======
-const mergeSpecificFiles = () =>: any {
-  // TODO: Implement
-  // TODO: Implement
-    // First, let's see what files are in the clean - merge - services - improvements branch;
-    console.log ('📋 Checking files in clean - merge - services - improvements branch...');
-    const files = exec_sync ('git ls - tree -r --name - only origin / clean - merge - services - improvements', { encoding: 'utf8' });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const file_list = files.trim ().split ('\n');
-    // Filter for main source files;
-<<<<<<< HEAD
-    const main_files = file_list.filter (file => {}
-=======
-    const main_files = file_list.filter (file => {)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      return mainSourceDirs.some (dir => file.starts_with (dir)) || ;
-            mainSourceDirs.includes (file);
-    });
 
-<<<<<<< HEAD
-    console.log(`
-      `Found ${mainFiles.length} main source files to potentially merge`,
-    );
+// Get all remote branches
+const allBranches = execSync('git branch -r | grep -v "HEAD" | grep -v "main" | sed "s/origin\\///"', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(branch => branch.trim() !== '');
 
-    // Try to cherry-pick specific commits or files"
-    console.log("🍒 Attempting to cherry-pick specific changes...");
+console.log(`📋 Found ${allBranches.length} total branches`);
 
-    // Get the latest commit from the clean-merge-services-improvements branch;
-    const latestCommit = execSync("
-      "git rev-parse origin/clean-merge-services-improvements","
-      { encoding: "utf8" },
-    ).trim();`
-    console.log(`Latest commit: ${latestCommit}`);
+// Filter branches that exist in remote
+const availableBranches = priorityBranches.filter(branch => 
+  allBranches.some(remoteBranch => remoteBranch.trim() === branch)
+);
 
-    // Try to merge only specific files;
-    for (const file of mainFiles.slice(0, 10)) {}
-      // Limit to first 10 files to avoid conflicts;
-      try {}`
-        console.log(`Merging file: ${file}`);
-        execSync("`
-          `git checkout origin/clean-merge-services-improvements -- "${file}"`,"
-          { stdio: "inherit" },
-        );
-      } catch (_error) {}`
-=======
-    console.log(`;
-      `Found ${mainFiles.length} main source files to potentially merge`,)
-    );
+console.log(`🎯 Processing ${availableBranches.length} priority branches:`, availableBranches);
 
-    // Try to cherry-pick specific commits or files;
-    console.log("🍒 Attempting to cherry-pick specific changes...");"
-    // Get the latest commit from the clean-merge-services-improvements branch;
-    const latestCommit = execSync("
-      "git rev-parse origin/clean-merge-services-improvements",""
-      { encoding: "utf8" },")
-    ).trim();`;
-    console.log(`Latest commit: ${latestCommit}`);
+let mergedCount = 0;
+let failedCount = 0;
+let conflictCount = 0;
+const failedBranches = [];
 
-    // Try to merge only specific files;
-    for (const file of mainFiles.slice(0, 10)) {
-      // Limit to first 10 files to avoid conflicts;
-  // TODO: Implement
-}`;
-        console.log(`Merging file: ${file}`);
-        execSync("`;
-          `git checkout origin/clean-merge-services-improvements -- "${file}"`,""
-          { stdio: "inherit" },")
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        console.log (`Skipping ${file} due to conflicts`);
-
-    return true;
-<<<<<<< HEAD
-  } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.error("Error in selective merge:", error.message);    } catch (error) {
-=======
-=======
-    console.error("Error in selective merge:", error.message);
-    console.error("Error in selective merge:", error.message);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    } catch (error) {
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-    } catch (error) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-  if (mergeSpecificFiles()) {
-    console && console.log('✅ Selective merge completed');
-    // Add the merged files
-    try {
-      execSync('git add .', { stdio: 'inherit' });
-      console && console.log('📝 Files added to staging area');
-      // Commit the changes
-      execSync('git commit -m "Selective merge of main source files from clean-merge-services-improvements"', { stdio: 'inherit' });
-      console && console.log('✅ Changes committed');
-    } catch (error) {
-"
-    console.error("Error in selective merge:", error.message);""
-    console.error("Error in selective merge:", error.message);"
-    } catch (error) {"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      console && console.error('Error committing changes:', error && error.message);
-  } else {
-  // TODO: Implement
-    console && console.log('❌ Selective merge failed');
-main();
-    console.error ('Error in selective merge:', error.message);
-<<<<<<< HEAD
-=======
-  } catch (error) {"
-    console.error("Error in selective merge:", error.message);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-    console.error("Error in selective merge:", error.message);
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    return false;
-};
-
-  if (mergeSpecificFiles()) {'
-    console && console.log('✅ Selective merge completed');
-<<<<<<< HEAD
+// Function to merge a single branch
+async function mergeBranch(branchName) {
+  try {
+    console.log(`\n🔄 Processing branch: ${branchName}`);
     
-    // Add the merged files;
-    try {"
-      execSync("git add .", { stdio: "inherit" });"
-      console.log("📝 Files added to staging area");
-
-      // Commit the changes;
-      execSync('"
-        'git commit -m "Selective merge of main source files from clean-merge-services-improvements"',"
-        { stdio: "inherit" },
-      );"
-      console.log("✅ Changes committed");
-    } catch (error) {"
-      console.error("Error committing changes:", error.message);
+    // Fetch the branch if it doesn't exist locally
+    try {
+      execSync(`git show-ref --verify --quiet refs/heads/${branchName}`, { stdio: 'ignore' });
+    } catch {
+      console.log(`📥 Fetching branch ${branchName}...`);
+      execSync(`git fetch origin ${branchName}:${branchName}`, { stdio: 'pipe' });
     }
-  } else {"
-    console.log("❌ Selective merge failed");
+    
+    // Check if branch can be merged
+    try {
+      execSync(`git merge-base main ${branchName}`, { stdio: 'pipe' });
+    } catch {
+      console.log(`⚠️  Branch ${branchName} cannot be merged (no common ancestor)`);
+      failedBranches.push(branchName);
+      failedCount++;
+      return;
+    }
+    
+    // Try to merge
+    try {
+      execSync(`git merge ${branchName} --no-edit --no-ff`, { stdio: 'pipe' });
+      console.log(`✅ Successfully merged ${branchName}`);
+      mergedCount++;
+    } catch (error) {
+      console.log(`❌ Merge conflict in ${branchName}`);
+      conflictCount++;
+      
+      // Try to resolve conflicts automatically
+      console.log(`🔧 Attempting to resolve conflicts...`);
+      
+      try {
+        // Check for conflict files
+        const status = execSync('git status --porcelain', { encoding: 'utf8' });
+        const conflictFiles = status.split('\n')
+          .filter(line => line.match(/^UU|^AA|^DD/))
+          .map(line => line.split(' ').pop());
+        
+        if (conflictFiles.length > 0) {
+          console.log(`🔍 Found conflicts in: ${conflictFiles.join(', ')}`);
+          
+          // Try to resolve conflicts by taking the main branch version
+          for (const file of conflictFiles) {
+            try {
+              execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
+              execSync(`git add "${file}"`, { stdio: 'pipe' });
+              console.log(`✅ Resolved conflict in ${file} using ours`);
+            } catch {
+              try {
+                execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
+                execSync(`git add "${file}"`, { stdio: 'pipe' });
+                console.log(`✅ Resolved conflict in ${file} using theirs`);
+              } catch {
+                console.log(`⚠️  Could not auto-resolve ${file}`);
+              }
+            }
+          }
+          
+          // Try to commit the merge
+          try {
+            execSync('git commit --no-edit', { stdio: 'pipe' });
+            console.log(`✅ Successfully resolved and merged ${branchName}`);
+            mergedCount++;
+            conflictCount--;
+          } catch {
+            console.log(`❌ Could not resolve conflicts in ${branchName}, aborting merge`);
+            execSync('git merge --abort', { stdio: 'pipe' });
+            failedBranches.push(branchName);
+            failedCount++;
+          }
+        } else {
+          console.log(`❌ Could not resolve conflicts in ${branchName}, aborting merge`);
+          execSync('git merge --abort', { stdio: 'pipe' });
+          failedBranches.push(branchName);
+          failedCount++;
+        }
+      } catch (resolveError) {
+        console.log(`❌ Error resolving conflicts in ${branchName}, aborting merge`);
+        execSync('git merge --abort', { stdio: 'pipe' });
+        failedBranches.push(branchName);
+        failedCount++;
+      }
+    }
+  } catch (error) {
+    console.log(`❌ Error processing ${branchName}: ${error.message}`);
+    failedBranches.push(branchName);
+    failedCount++;
   }
-};
+}
+
+// Main execution
+async function main() {
+  try {
+    // Process priority branches first
+    for (const branch of availableBranches) {
+      if (branch.trim()) {
+        await mergeBranch(branch.trim());
+      }
+    }
+    
+    console.log('\n📊 Merge Summary:');
+    console.log(`✅ Successfully merged: ${mergedCount} branches`);
+    console.log(`❌ Failed to merge: ${failedCount} branches`);
+    console.log(`🔧 Resolved conflicts: ${conflictCount} branches`);
+    
+    if (failedBranches.length > 0) {
+      console.log('\n❌ Failed branches:');
+      failedBranches.forEach(branch => console.log(`  - ${branch}`));
+    }
+    
+    // Push all changes
+    console.log('\n🚀 Pushing all changes to origin...');
+    execSync('git push origin main', { stdio: 'inherit' });
+    
+    console.log('🎉 Selective merge process completed!');
+    
+  } catch (error) {
+    console.error('❌ Error during selective merge process:', error.message);
+    process.exit(1);
+  }
+}
 
 main();
-'"`
-=======
-    // Add the merged files;
-  // TODO: Implement
-      execSync("git add .", { stdio: "inherit" });""
-      console.log("📝 Files added to staging area");"
-      // Commit the changes;
-      execSync("
-        'git commit -m "Selective merge of main source files from clean-merge-services-improvements"',
-      );"
-      console.log("✅ Changes committed");"
-      console.error("Error committing changes:", error.message);"
-  // TODO: Implement
-}"
-    console.log("❌ Selective merge failed");"
-
-"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
