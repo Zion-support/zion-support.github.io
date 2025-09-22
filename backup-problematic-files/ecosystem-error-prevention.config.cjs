@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 
@@ -6,6 +8,7 @@
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 module.exports = {}
   "apps": [// Intelligent Error Fixer - Runs every 30 minutes;]
     {}
@@ -119,6 +122,10 @@ module.exports = {}
       'post-deploy': 'yarn install && pm2 reload ecosystem-error-prevention.config.cjs --env production'
     };
   };
+<<<<<<< HEAD
+};
+};
+=======
 
 
 
@@ -127,3 +134,4 @@ module.exports = {}
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

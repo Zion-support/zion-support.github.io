@@ -1,42 +1,50 @@
 
-<<<<<<< HEAD
+import React from "react";
+import { SeverityIndicator } from "@/components/ui/severity-indicator";
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
 
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
+interface SeverityDisplayProps {
+  severity: string;
+}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity,
 
+}) => {
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
+  severity,;
+}) => {;
+  return (
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />);
+}
+;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface SeverityDisplayProps {
   severity: string
 }
-
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
   severity
 }) => {
   return (
 
-
-
-
-
     <SeverityIndicator
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
       showText={true}
-
-
-
-
-
     />
   );
 }
 
-
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
   return (
-
     />;
 );
-
     <SeverityIndicator 
       severity={severity as "safe" | "suspicious" | "dangerous"} 
 import React from "react",;
@@ -54,35 +62,13 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
     />;
   );
 
-
-
-
-
-  return (
-
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"}
-      show_icon={true}
-      show_text={true}
-    />);
-}
-;
-
-
-
-
-
-
-import React from './react';
-import { SeverityIndicator  } from '@/components / ui / severity - indicator';
-interface SeverityDisplayProps {
-  severity: string;
-}
-export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
-  severity,
-
 }) => {
+  return (
 
+}) => {}
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
+  severity,;
+}) => {;
   return (
 
     <SeverityIndicator;
@@ -92,38 +78,57 @@ export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
     />);
 }
 ;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface SeverityDisplayProps {
   severity: string
 }
 
-
-
-
-
-
-
-
 };
-
-=======
-import React from "react";
-import { SeverityIndicator } from "@/components/ui/severity-indicator";
-
-interface SeverityDisplayProps {
+    <SeverityIndicator
+interface SeverityDisplayProps {}
   severity: string;
 }
 
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
-  return (
-    <SeverityIndicator 
-      severity={severity as "safe" | "suspicious" | "dangerous"} 
+    <SeverityIndicator"
+      severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
       showText={true}
-    />
+    <SeverityIndicator "
+      severity={severity as "safe" | "suspicious" | "dangerous"} "
+import React from "react",;"
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+interface SeverityDisplayProps {;
+  severity: string;
+}
+;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator;"
+      severity={severity as "safe" | "suspicious" | "dangerous"} ;
+      showIcon={true}
+      showText={true}
+    />;
   );
+    />
+  )
 };
->>>>>>> origin/auto/autonomy-17186719616
+  ),;
+},; interface SeverityDisplayProps {
+  severity: string 
+}severity 
+}) => {
+
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />);
+}
+;
+
+interface SeverityDisplayProps {
+  severity: string
+}
+
+};
+};
