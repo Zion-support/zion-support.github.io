@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import Card from '../../components/ui/Card';
+import { Card } from '../../components/ui/Card';
 
 export const metadata = {
   title: 'Quantum Computing 2026 Ultimate - The Next Computing Revolution',

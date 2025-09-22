@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Card from '../../components/ui/Card';
+import { Card } from '../../components/ui/Card';
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Users, Award, Lightbulb, Atom, Cpu, Network } from 'lucide-react';
 
 export const metadata: Metadata = {
