@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -11,8 +10,6 @@ const nextConfig = {
     ignoreBuildErrors: true 
   },
   experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
     forceSwcTransforms: false
   },
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
@@ -52,9 +49,29 @@ const nextConfig = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false
+      tls: false,
+      path: false,
+      crypto: 'crypto-browserify',
+      stream: 'stream-browserify',
+      util: false,
+      buffer: 'buffer',
+      process: 'process/browser',
     };
 
+    // Performance optimizations
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    
     return config;
   },
   onDemandEntries: {

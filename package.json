@@ -195,7 +195,7 @@
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
     "perf:monitor": "node scripts/performance-monitor.js",
-    "perf:audit": "npm run build:analyze",
+    "perf:audit": "npm run security:audit && npm run optimize",
     "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
@@ -249,7 +249,12 @@
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
+    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
+    "perf:improve": "node scripts/performance-improvements.js",
+    "perf:analyze": "npm run build && npm run build:analyze",
+    "perf:full": "npm run perf:improve && npm run perf:analyze && npm run perf:audit",
+    "perf:optimize": "node scripts/performance-optimizer.js",
+    "perf:build": "npm run build && npm run perf:optimize"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -257,11 +262,8 @@
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
+    "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.1",
-    "@modelcontextprotocol/sdk": "^1.17.1",
-    "@modelcontextprotocol/server-filesystem": "^2025.7.29",
-    "@modelcontextprotocol/server-memory": "^2025.8.4",
-    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@next/swc-linux-x64-gnu": "^15.5.2",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
