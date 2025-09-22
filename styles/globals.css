@@ -1,13 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-@tailwind utilities;
-@tailwind base; @tailwind components; @tailwind utilities;
-@tailwind base; @tailwind components; @tailwind utilities;
-@tailwind base; @tailwind components; @tailwind utilities;
-
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 html,
 body {
@@ -52,13 +44,6 @@ a {
     }
   }
 }
-@tailwind base; @tailwind components; @tailwind utilities;
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind base; @tailwind components; @tailwind utilities;
 
 @layer utilities {
   .focus-visible:focus {
@@ -69,16 +54,3 @@ a {
     @apply flex flex-col sm:flex-row gap-4 justify-center;
   }
 }
-@tailwind base; @tailwind components; @tailwind utilities;
-
-@layer utilities {
-  .focus-visible:focus {
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
-  }
-}
-}
-origin/cursor/fix-syntax-push-and-merge-to-main-8452
-}
-=======
-@tailwind utilities;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

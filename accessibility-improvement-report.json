@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
 
   "timestamp": "2025-09-06T10:57:00.075Z",
@@ -2748,30 +2747,3 @@ origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 }
 {}
-=======
-{}
-{
-  "timestamp": "2025-09-06T10:57:00.075Z",
-  "totalDuration": 5762,
-  "improvements": [
-    {
-      "type": "accessibility-testing",
-      "status": "configured",
-      "recommendations": [
-        "Run accessibility tests regularly",
-        "Integrate tests into CI/CD pipeline",
-        "Test with actual screen readers"
-      ]
-    },
-    {
-      "type": "accessibility-guidelines",
-      "status": "created",
-      "recommendations": [
-        "Review and implement the accessibility guidelines",
-        "Train team members on accessibility best practices",
-        "Regular accessibility audits and testing"
-      ]
-    }
-  ]
-}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

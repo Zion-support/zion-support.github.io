@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import ErrorBoundary from './components/ErrorBoundary'
+import PerformanceMonitor from './components/PerformanceMonitor'
+import ScrollToTop from './components/ScrollToTop'
+import { ThemeProvider } from './components/ThemeProvider'
+import StructuredData, { organizationSchema, websiteSchema, serviceSchema } from './components/StructuredData'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,7 +45,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <StructuredData data={organizationSchema} />
+        <StructuredData data={websiteSchema} />
+        <StructuredData data={serviceSchema} />
+      </head>
+      <body className={inter.className}>
+        <ThemeProvider defaultTheme="dark" storageKey="zion-theme">
+          <ErrorBoundary>
+            {children}
+            <ScrollToTop />
+            <PerformanceMonitor />
+          </ErrorBoundary>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
