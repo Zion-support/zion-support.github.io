@@ -1,3 +1,5 @@
+# Unified .gitignore
+
 # Dependencies
 node_modules/
 npm-debug.log*
@@ -6,43 +8,34 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Next.js
+# Build outputs
+dist/
+build/
 .next/
 out/
-build/
-dist/
 
-# Production
-/build
-
-# Misc
-.DS_Store
-*.pem
-
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Local env files
-.env*.local
+# Environment variables
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*
 
-# Vercel
-.vercel
-
-# TypeScript
-*.tsbuildinfo
-next-env.d.ts
-
-# IDE
+# IDE and editor files
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# OS
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
 # Logs
@@ -58,12 +51,9 @@ pids
 # Coverage directory used by tools like istanbul
 coverage/
 *.lcov
-
-# nyc test coverage
 .nyc_output
 
 # Dependency directories
-node_modules/
 jspm_packages/
 
 # Optional npm cache directory
@@ -87,26 +77,16 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-.env.test
-.env.production
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
 
 # Next.js build output
 .next
-out
+zion-os/.next
 
 # Nuxt.js build / generate output
 .nuxt
-dist
-
-# Gatsby files
-.cache/
-public
 
 # Storybook build outputs
 .out
@@ -116,34 +96,17 @@ public
 tmp/
 temp/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Backup files
-*.backup.*
-*.bak
-*.tmp
-
-# Disabled files
-*.disabled
-
-# Test files
-coverage/
-.nyc_output/
-
-# Build artifacts
+# TypeScript cache
 *.tsbuildinfo
-next-env.d.ts
+tsconfig.tsbuildinfo
 
-# Netlify
-.netlify/
+# Vite
+.vite/
 
-# Supabase
-.supabase/
+# Core files
+core
+*.core
+
+# Git pack files
+*.pack
+*.pack.gz
