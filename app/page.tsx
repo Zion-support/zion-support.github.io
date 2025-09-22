@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import Testimonials from './components/Testimonials'
 
 export default function Home() {
   return (
@@ -120,6 +121,11 @@ export default function Home() {
               <p className="text-gray-300">Uptime Guarantee</p>
             </div>
           </div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+          <Testimonials />
         </div>
       </main>
       

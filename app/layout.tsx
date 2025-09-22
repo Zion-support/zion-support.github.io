@@ -4,6 +4,7 @@ import './globals.css'
 import ErrorBoundary from './components/ErrorBoundary'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import ScrollToTop from './components/ScrollToTop'
+import { ThemeProvider } from './components/ThemeProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -44,11 +45,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ErrorBoundary>
-          {children}
-          <ScrollToTop />
-          <PerformanceMonitor />
-        </ErrorBoundary>
+        <ThemeProvider defaultTheme="dark" storageKey="zion-theme">
+          <ErrorBoundary>
+            {children}
+            <ScrollToTop />
+            <PerformanceMonitor />
+          </ErrorBoundary>
+        </ThemeProvider>
       </body>
     </html>
   )
