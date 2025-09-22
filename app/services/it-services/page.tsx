@@ -1,48 +1,22 @@
+import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  title: 'It Services - Zion Tech Group',
+  description: 'Professional it services services powered by AI and modern technology',
+};
 
 export default function ServicePage() {
-
-        
-
-          
-
-          
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = { 
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-import React from 'react';
-import Link from 'next/link';
-
-function ITService({ title, description, price, features, benefits, icon, href }: ITServiceProps) {
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = { 
-
-import React from 'react';
-import Link from 'next/link';
-
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-
-export default function ITServicesPage() {
-
-            
-
-            
-
-function ITServiceCard({ title, description, icon, pricing, features }: {
-
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+          It Services
+        </h1>
+        <p className="text-center text-gray-600 mb-8">
+          Professional it services services powered by AI and modern technology
+        </p>
+      </div>
+    </div>
+  );
+}
