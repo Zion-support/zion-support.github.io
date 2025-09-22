@@ -1,43 +1,76 @@
 import React, { useState, useEffect } from 'react';
 
-export const TypewriterEffect = ({
-  texts,
-  speed = 100,
-  deleteSpeed = 50,
+const TypewriterEffect = ({ 
+  texts = [], 
+  speed = 100, 
+  deleteSpeed = 50, 
   pauseTime = 2000,
-  className = ''
+  className = "",
+  loop = true,
+  startDelay = 0
 }) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    const currentString = texts[currentTextIndex];
-    
+    if (texts.length === 0) return;
+
+    const currentFullText = texts[currentTextIndex];
     const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (currentText.length < currentString.length) {
-          setCurrentText(currentString.slice(0, currentText.length + 1));
-        } else {
-          setTimeout(() => setIsDeleting(true), pauseTime);
-        }
+      if (isPaused) {
+        setIsPaused(false);
+        return;
+      }
+
+      if (!isDeleting && currentText === currentFullText) {
+        // Text is complete, pause before deleting
+        setIsPaused(true);
+        setTimeout(() => {
+          setIsDeleting(true);
+          setIsPaused(false);
+        }, pauseTime);
+      } else if (isDeleting && currentText === '') {
+        // Text is deleted, move to next text
+        setIsDeleting(false);
+        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      } else if (isDeleting) {
+        // Delete character
+        setCurrentText(currentFullText.substring(0, currentText.length - 1));
       } else {
-        if (currentText.length > 0) {
-          setCurrentText(currentText.slice(0, currentText.length - 1));
-        } else {
-          setIsDeleting(false);
-          setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        }
+        // Add character
+        setCurrentText(currentFullText.substring(0, currentText.length + 1));
       }
     }, isDeleting ? deleteSpeed : speed);
 
     return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentTextIndex, texts, speed, deleteSpeed, pauseTime]);
+  }, [currentText, isDeleting, isPaused, currentTextIndex, texts, speed, deleteSpeed, pauseTime]);
+
+  // Reset on texts change
+  useEffect(() => {
+    setCurrentTextIndex(0);
+    setCurrentText('');
+    setIsDeleting(false);
+    setIsPaused(false);
+  }, [texts]);
+
+  // Start delay
+  useEffect(() => {
+    if (startDelay > 0) {
+      const delayTimeout = setTimeout(() => {
+        setIsPaused(false);
+      }, startDelay);
+      return () => clearTimeout(delayTimeout);
+    }
+  }, [startDelay]);
 
   return (
-    <span className={`inline-block ${className}`}>
+    <span className={className}>
       {currentText}
       <span className="animate-pulse">|</span>
     </span>
   );
 };
+
+export default TypewriterEffect;
