@@ -23,6 +23,7 @@ const customJestConfig = {
     '/pages.disabled/',
     '/tests/',
     '/temp_exclude/',
+    // Ignore all __tests__ except the smoke folder
     '/__tests__/(?!smoke/)'
   ],
 }
