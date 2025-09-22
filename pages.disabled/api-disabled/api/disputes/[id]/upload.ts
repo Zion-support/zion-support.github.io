@@ -1,0 +1,785 @@
+:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+:pages_backup/api/disputes/[id]/upload.ts
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
+
+:pages_backup/api/disputes/[id]/upload.ts
+import type { NextApiRequest, NextApiResponse } from "next";"
+import path from "path";
+import {
+<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
+import {
+:pages_backup/api/disputes/[id]/upload.ts
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import {
+  ensureDisputeUploadDir;
+  getDisputeById;
+  upsertDispute;
+} from '../../../../utils/fsdb';
+import {
+  parseUserFromRequest;
+  ensureInvolvedOrAdmin;
+} from '../../../../utils/auth';
+
+export const config = null;
+      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
+    })
+  })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+import type { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
+import {
+:pages_backup/api/disputes/[id]/upload.ts
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  ensureDisputeUploadDir
+  getDisputeById
+upsertDispute
+  upsertDispute,;
+} from "../../../../utils/fsdb";
+import {
+
+:pages_backup/api/disputes/[id]/upload.ts
+import type { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
+import {
+
+  ensureDisputeUploadDir
+  getDisputeById
+  upsertDispute,;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+} from "../../../../utils/fsdb";
+import {
+  parseUserFromRequest
+  ensureInvolvedOrAdmin
+} from "../../../../utils/auth";
+export const config = {
+  api: { bodyParser: { sizeLimit: "20mb" } }
+}
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD
+) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
+import {
+  ensureDisputeUploadDir,
+  getDisputeById,;
+  upsertDispute,;"
+} from "../../../../utils/fsdb";
+:pages_backup/api/disputes/[id]/upload.ts
+import {
+ensureDisputeUploadDir,
+  getDisputeById,
+  upsertDispute,;
+} from "../../../../utils/fsdb";
+import {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+export const config = {";
+  api: { bodyParser: { sizeLimit: "20mb" } },;
+};
+
+:pages_backup/api/disputes/[id]/upload.ts
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+const { id } = req.query;
+:pages/api/disputes/[id]/upload.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default async function handler() { return null; }
+  const { id } = req.query;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+
+"
+  if (typeof id !== "string")
+"
+    return res && res.status(400).json({ error: "Invalid id" });
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  if (typeof id !== 'string')
+    return res.status(400).json({ error: 'Invalid id' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  if (typeof id !== 'string')
+    return res.status(400).json({ error: 'Invalid id' });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+  const user = parseUserFromRequest(req);
+"
+  if (req && req.method === "POST") {}
+    const dispute = await getDisputeById(id);
+:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+
+"
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
+
+    }
+    const { files } =
+
+:pages_backup/api/disputes/[id]/upload.ts
+
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+) {;
+  const { id } = req.query;
+
+  if (typeof id !== 'string')
+    return res.status(400).json({ error: 'Invalid id' });
+=======
+) {;
+  const { id } = req.query;
+const { id } = req.query;
+
+  if (typeof id !== "string")
+
+    return res && res.status(400).json({ error: "Invalid id" });
+
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+
+  if (typeof id !== 'string')
+    return res.status(400).json({ error: 'Invalid id' });
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const user = parseUserFromRequest(req);
+
+  if (req && req.method === "POST") {
+    const dispute = await getDisputeById(id);
+:pages_backup/api/disputes/[id]/upload.ts
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import type { NextApiRequest, NextApiResponse } from './next';
+=======
+
+import type { NextApiRequest, NextApiResponse } from './next';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+import path from './path';
+import {}
+  ensureDisputeUploadDir,
+  getDisputeById,
+  upsert_dispute,';
+} from '../../../../utils / fsdb';
+import {}
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,';
+} from '../../../../utils / auth';
+export const config = {"
+  api: { body_parser: { size_limit: "20mb" } },
+};
+;
+export default async /**;
+ * handler - Function description;
+ */
+function handler() {}
+  const { id } = req.query;
+  if ("
+    return res.status (400).json ({ error: "Invalid id" })) {}
+  $2;
+}
+  const user = parseUserFromRequest (req);
+;
+  // Check condition;
+if ( {) {}
+  $2;
+}
+    const dispute = await getDisputeById (id);"
+    if (return res.status (404).json ({ error: "Dispute not found" })) {}
+  $2;
+}
+    try {}
+      ensureInvolvedOrAdmin (user, dispute.clientUserId, dispute.talentUserId);
+    } catch (e: any) {"
+      return res.status (e.status_code || 403).json ({ error: "Forbidden" });
+    }
+    const { files } =;
+      req.body ||;
+:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      ({} as {}
+        files: { file_name: string; mime_type: string; base64: string }[];
+      });
+
+    }
+
+}
+
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {"
+  const fs = await import("fs");
+:pages_backup/api/disputes/[id]/upload.ts
+  await new Promise<void>((resolve, reject) => {
+<<<<<<< HEAD
+    await upsert_dispute (dispute);
+    return res.status (201).json ({ dispute });
+  }
+  res.set_header ("Allow", "POST");
+  return res.status (405).end ("Method Not Allowed");
+}
+async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void> {
+  const fs = await import ("fs");
+  await new Promise < void>((resolve, reject) => {
+    fs.mkdir (
+      require ("path").dirname (file_path),
+:pages_backup/api/disputes/[id]/upload.ts
+      ({} as {
+        files: { file_name: string; mime_type: string; base64: string }[];
+      });
+    if (!dispute) return res.status(404).json({ error: 'Not found' });
+    try {
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
+    } catch (e: any) {
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
+    }
+    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] };
+    if (!Array.isArray(files) || files.length === 0) return res.status(400).json({ error: 'No files' });
+  const { id } = req.query;
+  if (typeof id !== "string")
+    return res.status(400).json({ error: "Invalid id" });
+  const user = parseUserFromRequest(req);
+  if (req.method === "POST") {
+    const dispute = await getDisputeById(id);
+    if (!dispute) return res.status(404).json({ error: "Dispute not found" });
+    try {
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+:pages_backup/api/disputes/[id]/upload.ts
+    } catch (e: any) {
+      return res.status(e.statusCode |403).json({ error: "Forbidden" });
+    }
+    const { files } =
+      req.body |
+      ({} as {
+        files: { fileName: string; mimeType: string; base64: string }[];
+      });
+    if (!Array.isArray(files) |files.length === 0)
+      return res.status(400).json({ error: "No files" });
+
+    const now = new Date().toISOString();
+    const dir = await ensureDisputeUploadDir(dispute.id);
+    for (const f of files) {
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9.-]/g, "_");
+      const filePath = path.join(dir, `${Date.now()}-${safeName}`);
+      const buffer = Buffer.from(f.base64, "base64");
+      await fsPromisesWrite(filePath, buffer);
+      dispute.attachments = dispute.attachments |[];
+      dispute.attachments.push({
+        id: `att-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+        fileName: safeName
+        fileSize: buffer.length
+        mimeType: f.mimeType |"application/octet-stream"
+        path: filePath
+        uploadedAt: now
+        uploadedByUserId: user.id
+      });
+    }
+    dispute.updatedAt = now;
+      req && req.body ||
+      ({} as {
+        files: { fileName: string; mimeType: string; base64: string }[];
+      });
+;
+    if (|| files.length === 0)) {
+  $2
+}
+      return res.status (400).json ({ error: "No files" });
+;
+    const now = new Date ().toISOString ();
+    const dir = await ensureDisputeUploadDir (dispute.id);
+;
+    for (const f of files) {
+      const safe_name = f.file_name.replace (/[^a - z_a - Z0 - 9.-]/g, "_");
+      const file_path = path.join (dir, `${Date.now ()}-${safe_name}`);
+      const buffer = Buffer.from (f.base64, "base64");
+;
+      await fsPromisesWrite (file_path, buffer);
+;
+      dispute.attachments = dispute.attachments || [];
+      dispute.attachments.push ({
+        id: `att-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
+        file_name: safe_name,
+        file_size: buffer.length,
+        mime_type: f.mime_type || "application / octet - stream",
+        path: file_path,
+        uploaded_at: now,
+        uploadedByUserId: user.id,
+      });
+    for (const f of files) {
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
+      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64');
+      const filePath = path.join(dir, safeName);
+      await fsPromisesWrite(filePath, buffer);
+      dispute.attachments.push({
+        id: `${Date.now()}-${safeName}`,
+        fileName: safeName, fileSize: buffer.length,
+        mimeType: f.mimeType || 'application/octet-stream', path: filePath,
+        uploadedAt: now,
+        uploadedByUserId: user.id})
+    }
+    return res.status(201).json({ dispute })
+  }
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+}
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
+  const fs = await import("fs");
+  await new Promise<void>((resolve, reject) => {
+    fs.mkdir(
+      require("path").dirname(filePath),
+
+      { recursive: true },
+:pages_backup/api/disputes/[id]/upload.ts
+=======
+=======
+
+      { recursive: true }
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+
+      { recursive: true }
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      { recursive: true }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
+    if (!dispute) return res.status(404).json({ error: "Dispute not found" });
+    try {
+ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+    } catch (e: any) {
+      return res.status(e.statusCode |403).json({ error: "Forbidden" });
+    }
+    const { files } =
+      req.body |
+      ({} as {
+        files: { fileName: string; mimeType: string; base64: string }[];
+      });
+    if (!Array.isArray(files) |files.length === 0)
+      return res.status(400).json({ error: "No files" });
+
+    const now = new Date().toISOString();
+    const dir = await ensureDisputeUploadDir(dispute.id);
+    for (const f of files) {
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9.-]/g, "_");
+      const filePath = path.join(dir, `${Date.now()}-${safeName}`);
+      const buffer = Buffer.from(f.base64, "base64");
+      await fsPromisesWrite(filePath, buffer);
+      dispute.attachments = dispute.attachments |[];
+      dispute.attachments.push({
+        id: `att-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+        fileName: safeName
+        fileSize: buffer.length
+        mimeType: f.mimeType |"application/octet-stream"
+        path: filePath
+        uploadedAt: now
+        uploadedByUserId: user.id
+      });
+    }
+    dispute.updatedAt = now;
+      req && req.body ||
+      ({} as {
+        files: { fileName: string; mimeType: string; base64: string }[];
+      });
+;
+    if (|| files.length === 0)) {
+  $2
+}
+      return res.status (400).json ({ error: "No files" });
+;
+    const now = new Date ().toISOString ();
+    const dir = await ensureDisputeUploadDir (dispute.id);
+;
+    for (const f of files) {
+      const safe_name = f.file_name.replace (/[^a - z_a - Z0 - 9.-]/g, "_");
+      const file_path = path.join (dir, `${Date.now ()}-${safe_name}`);
+      const buffer = Buffer.from (f.base64, "base64");
+;
+      await fsPromisesWrite (file_path, buffer);
+;
+      dispute.attachments = dispute.attachments || [];
+      dispute.attachments.push ({
+        id: `att-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
+        file_name: safe_name,
+        file_size: buffer.length,
+        mime_type: f.mime_type || "application / octet - stream",
+        path: file_path,
+        uploaded_at: now,
+        uploadedByUserId: user.id,
+      });
+    for (const f of files) {
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
+      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64');
+      const filePath = path.join(dir, safeName);
+      await fsPromisesWrite(filePath, buffer);
+      dispute.attachments.push({
+        id: `${Date.now()}-${safeName}`,
+        fileName: safeName, fileSize: buffer.length,
+        mimeType: f.mimeType || 'application/octet-stream', path: filePath,
+        uploadedAt: now,
+        uploadedByUserId: user.id})
+    }
+    return res.status(201).json({ dispute })
+  }
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+}
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
+  const fs = await import("fs");
+  await new Promise<void>((resolve, reject) => {
+    fs.mkdir(
+      require("path").dirname(filePath),
+    fs.mkdir(
+      require("path").dirname(filePath),
+      { recursive: true },
+
+    if (!Array.isArray(files) || files.length === 0)
+      return res.status(400).json({ error: 'No files' });
+
+    const now = new Date().toISOString();
+    const dir = await ensureDisputeUploadDir(dispute.id);
+
+    for (const f of files) {
+      const buffer = Buffer.from(f.base64, 'base64');
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9.-]/g, '_');
+      const filePath = path.join(dir, `${now}-${safeName}`);
+
+      await fsPromisesWrite(filePath, buffer);
+
+      dispute.uploads = dispute.uploads || [];
+      dispute.uploads.push({
+        fileName: safeName;
+        fileSize: buffer.length;
+        mimeType: f.mimeType || 'application/octet-stream';
+        path: filePath;
+        uploadedAt: now;
+        uploadedByUserId: user.id;
+      });
+    }
+    dispute.updatedAt = now;
+    await upsertDispute(dispute);
+    return res.status(201).json({ dispute });
+  }
+
+  res.setHeader('Allow', 'POST');
+  return res.status(405).end('Method Not Allowed');
+
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
+  const fs = await import("fs");
+  await new Promise<void>((resolve, reject) => {
+fs.mkdir(
+:pages_backup/api/disputes/[id]/upload.ts
+      require('path').dirname(filePath),
+      { recursive: true },
+<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      require('path').dirname(filePath);
+      { recursive: true };
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
+      (err: any) => {
+        if (return reject (err)) {
+  $2
+}
+        fs.write_file (file_path, data, (err2: any) =>;
+:pages_backup/api/disputes/[id]/upload.ts
+          err2 ? reject (err2) : resolve (),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+err2 ? reject (err2) : resolve (),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
+        );
+      }
+    );
+  });
+:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+
+=======
+=======
+
+}
+}
+
+}
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+}
+
+}
+
+}
+'
+    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {}
+      if (err) return reject(err);
+      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
+    })
+  })
+}
+}
+
+}
+
+:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler() { return null; }
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import path from 'path';'
+import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';'
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+export const config = {;'
+  api: { bodyParser: { sizeLimit: '20mb' } }};
+export default async function handler(req, res) {}
+  try {};
+  const { id } = req.query;'
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+    } catch (error) {'
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
+      } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+:pages_backup/api/disputes/[id]/upload.ts
+
+}
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+
+<<<<<<< HEAD
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+:pages/api/disputes/[id]/upload.ts
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+}
+
+}
+
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts
+  } catch (error) {
+    console.error("Error:", error);
+=======
+
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },;'
+    if (!Array.isArray(files) || files.length === 0) return res.status( error: 'No files' ).json({$2});
+    const now = new Date().toISOString();
+    const dir = await ensureDisputeUploadDir(dispute.id);
+    for (const f of files) {;'
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');'
+      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64'),;
+      const filePath = path.join(dir, safeName);
+      await fsPromisesWrite(filePath, buffer);
+      dispute.attachments.push({;
+        id: `${Date.now()}-${safeName}`,;
+        fileName: safeName,;
+        fileSize: buffer.length,;'
+        mimeType: f.mimeType || 'application/octet-stream',;
+        path: filePath,;
+        uploadedAt: now,;
+        uploadedByUserId: user.id});
+      } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    dispute.updatedAt = now;
+    await upsertDispute(dispute);
+    return res.status(201).json({ dispute });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;'
+  res.setHeader('Allow', 'POST');'
+  return res.status(405).end('Method Not Allowed');
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;'
+  const fs = await import('fs');
+  await new Promise<void>((resolve, reject) => {;'
+    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {;'
+      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()));
+    });
+  });
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
+<<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+:pages_backup/api/disputes/[id]/upload.ts
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/disputes/[id]/upload.ts

@@ -1,14 +1,23 @@
-# DevNet Dockerfile
-FROM node:20-alpine
+# Use Node.js 18 as base image
+FROM node:18-alpine
 
+# Set working directory
 WORKDIR /app
+
+# Copy package files
 COPY package*.json ./
-RUN npm ci --prefer-offline --no-audit --no-fund
+
+# Install dependencies
+RUN npm ci --only=production
+
+# Copy source code
 COPY . .
 
-ENV DEVNET=1
-ENV PORT=3000
+# Build the application
+RUN npm run build
+
+# Expose port
 EXPOSE 3000
 
-# For quick iterations we run Next dev; switch to build/start for prod-like
-CMD ["sh", "-c", "npm run dev"]
+# Start the application
+CMD ["npm", "start"]

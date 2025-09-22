@@ -1,77 +1,117 @@
+# Dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# Production builds
 .next/
 out/
-dist/
 build/
-scripts/
+dist/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Automation and scripts
 automation/
-public/reports/
-netlify/
+scripts/
+*.sh
 *.cjs
 *.mjs
-**/.scripts/**
-**/temp_*/**
-**/temp-*/**
-**/temp*/**
-**/broken*/**
-**/corrupted*/**
-**/disabled*/**
-**/backup*/**
-**/exclude*/**
-**/conflicted*/**
-**/working*/**
-**/essential*/**
-**/test_build/**
-**/tests/**
-**/token/**
-**/zion-hire-ai.tsx
-**/terms.tsx
-**/test-utils.jsx
-**/src_backup*/**
-**/supabase/**
-**/stories/**
-**/talent/**
-**/__tests__/**
-**/apps.backup/**
-**/dao/**
-**/deployment/**
-**/deployments/**
-**/ecosystem*.js
-**/fix-*.js
-**/fix_*.js
-**/merge-*.js
-**/resolve-*.js
-**/selective-merge.js
-**/restore-*.js
-**/monitoring-*.js
-**/performance-*.js
-**/maintenance-*.js
-**/comprehensive-*.js
-**/execute-*.js
-**/improve-*.js
-**/mcp*.js
-**/health-endpoint.js
-**/lib.broken/**
-**/offworld/**
-**/pages._archive_corrupted/**
-**/pages.bak/**
-**/remote/**
-**/src-clean/**
-**/zion_academy/**
-**/*.test.js
-**/*.test.ts
-**/*.test.tsx
-**/.storybook/**
-**/advanced-*.js
-**/aggressive-*.js
-**/analyze-*.js
-**/build*.js
-**/bundle-*.js
-**/code-splitting-*.js
-**/config/**
-**/cypress/**
-**/jest*.js
-**/next.config*.js
-**/start-dev.js
-package-lock.json
-yarn.lock
+
+# Reports and documentation
+*.md
+*.txt
+*.report
+
+# YAML files (GitHub Actions workflows)
+*.yml
+*.yaml

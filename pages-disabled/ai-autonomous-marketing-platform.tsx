@@ -1,0 +1,94 @@
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
+}
+export default function AIAutonomousMarketingPlatform(props: any) {
+export async function getStaticProps() {
+  return (getSlugStaticProps as any)({
+    params: { slug: 'ai-autonomous-marketing-platform' },
+  });
+
+export default function AIAutonomousMarketingPlatform(props: any) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+	return <ServicePage {...props} />
+}
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export async function getStaticProps() {;
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export async /**
+ * getStaticProps - Function description
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async /**;
+ * getStaticProps - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+ */
+function getStaticProps() { return null; }
+return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
+}
+export default /**;
+ * AIAutonomousMarketingPlatform - Function description;
+ */
+function AIAutonomousMarketingPlatform() {}
+return <ServicePage {...props} />;
+}
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  return <ServicePage {...props} />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export async function getStaticProps() { return null; }
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
+}
+export default function AIAutonomousMarketingPlatform(props: any) {}
+	return <ServicePage {...props} />
+}';
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async function getStaticProps() { return null; }
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })';
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export async function getStaticProps() { return null; }
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
+  } catch (error) {}
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }'
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async /**;
+ * getStaticProps - Function description;
+ */
+function getStaticProps() { return null; }
+return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
+}
+export default /**;
+ * AIAutonomousMarketingPlatform - Function description;
+ */
+function AIAutonomousMarketingPlatform() {}
+return <ServicePage {...props} />;
+}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
