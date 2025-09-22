@@ -1,8 +1,10 @@
+import React, { create_context, useCallback, useContext, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 export type ToastVariant = 'default' | 'success' | 'error' | 'info';
 
 export type Toast = {
   id: string;
+
   title?: string;
   description?: string;
   variant?: ToastVariant;
@@ -10,31 +12,72 @@ export type Toast = {
   on_action?: () => void;
   duration_ms?: number;
 }
-toasts: Toast[];
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+;
+export type ToastContextValue = {;
+
+export type ToastContextValue = {
+
+
+
   addToast: (toast: Omit<Toast, 'id'>) => string;
-removeToast: (id: string) => void;
+  removeToast: (id: string) => void;
   clearToasts: () => void;
 }
 
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
-
 export function ToastProvider({ children }: { children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([]);
+  const removeToast = useCallback((id: string) => {;
+    setToasts(prev => prev.filter(t => t.id !== id));
+  }, []);
 
-const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
-    setToasts(prev => [...prev, item]);
-    if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
+
+
+const ToastContext = createContext<ToastContextValue | undefined>(undefined)
+
+export function ToastProvider({ children }: { children: React.ReactNode }) {
+  const [toasts, setToasts] = useState<Toast[]>([])
+
+  const removeToast = useCallback((id: string) => {
+    setToasts(prev => prev.filter(t => t.id !== id))
+  }, [])
+
+  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
+    const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
+
 
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+export type ToastContextValue = {
+  toasts: Toast[];
+  add_toast: (toast: Omit < Toast, 'id'>) => string;
+  remove_toast: (id: string) => void;
+  clear_toasts: () => void;
+}
+const ToastContext = create_context < ToastContextValue | undefined>(undefined);
+export /**
+ * ToastProvider - Function description
+ */
+function ToastProvider() {
+  const [toasts, set_toasts] = useState < Toast[]>([]);
+  const remove_toast = useCallback ((id: string) => {
+    set_toasts (prev => prev.filter (t => t.id !== id));
+  }, []);
+  const add_toast = useCallback ((toast: Omit < Toast, 'id'>) => {
+    const id = `${Date.now ()}_${Math.random ().to_string (36).slice (2)}`;
+    const item: Toast = { id, variant: 'default', duration_ms: 4000, ...toast }
+    set_toasts (prev => [...prev, item]);
+    // Check condition
+if ( {) {
+  $2
+}
+      set_timeout (() => remove_toast (id), item.duration_ms);
+
+
     }
     return id;
   }, [remove_toast]);
@@ -43,32 +86,27 @@ const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
   return (
     <ToastContext.Provider value={value}>;
       {children}
-<AnimatePresence>
+
+
+        <AnimatePresence>
           {toasts.map(t => (
             <motion.div
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               key={t.id}
               initial={{ opacity: 0, coordinate_y: 16, scale: 0.98 }}
               animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
               exit={{ opacity: 0, coordinate_y: 8, scale: 0.98 }}
               transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-className={`rounded - md border shadow - lg p - 3 backdrop - blur bg - white / 80 dark:bg - black / 60 ${
+
+              className={`rounded - md border shadow - lg p - 3 backdrop - blur bg - white / 80 dark:bg - black / 60 ${
                 t.variant === 'success' ? 'border - emerald - 400 / 40' : t.variant === 'error' ? 'border - rose - 400 / 40' : t.variant === 'info' ? 'border - sky - 400 / 40' : 'border - gray - 300 / 40 dark:border - gray - 700 / 40';
 
               }`}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-    <ToastContext.Provider value={value}>;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className={`mt-1 h-2 w-2 rounded-full ${
-                  t.variant === 'success' ? 'bg-emerald-400' : t.variant === 'error' ? 'bg-rose-400' : t.variant === 'info' ? 'bg-sky-400' : 'bg-gray-400`;
+                  t.variant === 'success' ? 'bg-emerald-400' : t.variant === 'error' ? 'bg-rose-400' : t.variant === 'info' ? 'bg-sky-400' : 'bg-gray-400'
                 }`} />
-<div className="flex-1">
+                <div className="flex-1">
                   {t.title && <div className="font-medium text-sm">{t.title}</div>}
                   {t.description && <div className="text-xs opacity-80 mt-0.5">{t.description}</div>}
                   {t.actionLabel && t.onAction && (
@@ -76,12 +114,25 @@ className={`rounded - md border shadow - lg p - 3 backdrop - blur bg - white / 8
                       {t.actionLabel}
                     </button>;
                   )}
-</div>
-            </motion.div>
-          ))}
+
+
 
               </div>
             </motion.div>
           ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+        </AnimatePresence>;
+      </div>;
+    </ToastContext.Provider>);
+}
+export /**
+ * use_toast - Function description
+ */
+function use_toast() {
+  const ctx = useContext (ToastContext);
+  if (throw new Error ('use_toast must be used within ToastProvider')) {
+  $2
+}
+
+
+  return ctx;
+}

@@ -1,68 +1,13 @@
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
 #!/usr/bin/env node;
 /**
  * Continuous Integration Automation;
  * Comprehensive CI pipeline with build, test, and quality checks;
  */
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-class ContinuousIntegration {
-  constructor() {
-    this.logDir = 'automation-reports';
-    this.timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    this.ciResults = {
-      "timestamp": this.timestamp,
-      "pipeline": 'continuous-integration',
-      "status": 'running',
-      "stages": [],
-      "summary": {}
-    };
-    this.ensureLogDir()}
-  ensureLogDir() {
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { "recursive": true })}
-  }
-  log(message, level = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    }
-  async runStage(stageName, stageCommand, description) {
-    this.log(`🔄 Running ${description}...`);
-    const stageResult = {
-      "name": stageName,
-      description,
-      "startTime": new Date().toISOString(),
-      "status": 'running',
-      "output": '',
-      "error": '',
-      "duration": 0
-    };
-    try {
-      const startTime = Date.now();
-      const output = execSync(stageCommand, {
-        "encoding": 'utf8',
-        "timeout": 300000 // 5 minutes timeout
-      });
-      const endTime = Date.now();
-      stageResult.duration = endTime - startTime;
-      stageResult.status = 'success';
-      stageResult.output = output;
-      stageResult.endTime = new Date().toISOString();
-      this.log(`✅ ${description} completed in ${stageResult.duration}ms`)} catch (error) {
-      const endTime = Date.now();
-      stageResult.duration = endTime - Date.now();
-      stageResult.status = 'failed';
-      stageResult.error = error.message;
-      stageResult.endTime = new Date().toISOString();
-      this.log(`❌ ${description} "failed": ${error.message}`, 'error')}
-    this.ciResults.stages.push(stageResult);
-    return stageResult}
-  async runCIPipeline() {
-    this.log('🚀 Starting Continuous Integration Pipeline');
-    this.log('');
+
 
     const stages = [{
         "name": 'install-dependencies',
@@ -145,9 +90,15 @@ if (require.main === module) {
       process.exit(1)})}
 module.exports = ContinuousIntegration;
 
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+
+
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -177,15 +128,13 @@ const path = require('path')
         "description"
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.error('Fatal "error")
-      console.error('Fatal "error")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+

@@ -1,17 +1,15 @@
-<
+
 #!/usr/bin/env node const fs = const path = const glob = class ConsoleLogRemover { constructor() { this.projectRoot = process.cwd(); this.srcDir = path.join(this.projectRoot,'src'); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.ensureDirectories()} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); } async removeConsoleLogs() { this.log('🧹 Starting console.log removal from production code'); const files = glob.sync('***.test.*','**node_modulesg,(match,offset,string) => { const beforeMatch = string.substring(0,offset); const afterMatch = string.substring(offset + match.length); if (beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch.includes('process.env.NODE_ENV')) { return match} results.removed++; return ''} ); newContent = newContent.replace( /console\.(warn|error|info)\([^)]*\);?\s*/g,(match,offset,string) => { const beforeMatch = string.substring(0,offset); if (beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch.includes('process.env.NODE_ENV')) { return match} results.removed++; return ''} ); if (newContent !== originalContent) { fs.writeFileSync(filePath,newContent,'utf8'); this.log(`✅ Cleaned console statements from: ${file}`)} results.processed++} catch (error) { results.errors.push({ file,error: error.message }); this.log(`❌ Error processing ${file}: ${error.message}`)} } const report = { timestamp: new Date().toISOString(),summary: { filesProcessed: results.processed,consoleLogsRemoved: results.removed,errors: results.errors.length },details: results }; const reportPath = path.join(this.reportsDir,'console-log-removal-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.log(`📊 Report generated: ${reportPath}`); this.log(`✅ Console log removal completed: ${results.removed} statements removed from ${results.processed} files`); return report} } if (require.main === module) { const remover = new ConsoleLogRemover(); remover.removeConsoleLogs() .then(() => {  process.exit(0)}) .catch((error) => { console.error('❌ Console log removal failed:',error); process.exit(1)})} module.exports = ConsoleLogRemover;
 #!/usr/bin/env node const fs = const path = const glob = class ConsoleLogRemover { constructor() { this && this.projectRoot = process && process.cwd(); this && this.srcDir = path && path.join(this && this.projectRoot,'src'); this && this.reportsDir = path && path.join(this && this.projectRoot,'automation-reports'); this && this.ensureDirectories()} ensureDirectories() { if (!fs && fs.existsSync(this && this.reportsDir)) { fs && fs.mkdirSync(this && this.reportsDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); } async removeConsoleLogs() { this && this.log('🧹 Starting console && console.log removal from production code'); const files = glob && glob.sync('***.test.*','**node_modulesg,(match,offset,string) => { const beforeMatch = string && string.substring(0,offset); const afterMatch = string && string.substring(offset + match && match.length); if (beforeMatch && beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch && beforeMatch.includes('process && process.env.NODE_ENV')) { return match} results && results.removed++; return ''} ); newContent = newContent && newContent.replace( /console\.(warn|error|info)\([^)]*\);?\s*/g,(match,offset,string) => { const beforeMatch = string && string.substring(0,offset); if (beforeMatch && beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch && beforeMatch.includes('process && process.env.NODE_ENV')) { return match} results && results.removed++; return ''} ); if (newContent !== originalContent) { fs && fs.writeFileSync(filePath,newContent,'utf8'); this && this.log(`✅ Cleaned console statements from: ${file}`)} results && results.processed++} catch (error) { results && results.errors.push({ file,error: error && error.message }); this && this.log(`❌ Error processing ${file}: ${error && error.message}`)} } const report = { timestamp: new Date().toISOString(),summary: { filesProcessed: results && results.processed,consoleLogsRemoved: results && results.removed,errors: results && results.errors.length },details: results }; const reportPath = path && path.join(this && this.reportsDir,'console-log-removal-report && report.json'); fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2)); this && this.log(`📊 Report generated: ${reportPath}`); this && this.log(`✅ Console log removal completed: ${results && results.removed} statements removed from ${results && results.processed} files`); return report} } if (require && require.main === module) { const remover = new ConsoleLogRemover(); remover && remover.removeConsoleLogs() .then(() => {  process && process.exit(0)}) .catch((error) => { console && console.error('❌ Console log removal failed:',error); process && process.exit(1)})} module && module.exports = ConsoleLogRemover;
-=======
-<
-#!/usr/bin/env node const fs = const path = const glob = class ConsoleLogRemover { constructor() { this.projectRoot = process.cwd(); this.srcDir = path.join(this.projectRoot,'src'); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.ensureDirectories()} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); } async removeConsoleLogs() { this.log('🧹 Starting console.log removal from production code'); const files = glob.sync('***.test.*','**node_modulesg,(match,offset,string) => { const beforeMatch = string.substring(0,offset); const afterMatch = string.substring(offset + match.length); if (beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch.includes('process.env.NODE_ENV')) { return match} results.removed++; return ''} ); newContent = newContent.replace( /console\.(warn|error|info)\([^)]*\);?\s*/g,(match,offset,string) => { const beforeMatch = string.substring(0,offset); if (beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch.includes('process.env.NODE_ENV')) { return match} results.removed++; return ''} ); if (newContent !== originalContent) { fs.writeFileSync(filePath,newContent,'utf8'); this.log(`✅ Cleaned console statements from: ${file}`)} results.processed++} catch (error) { results.errors.push({ file,error: error.message }); this.log(`❌ Error processing ${file}: ${error.message}`)} } const report = { timestamp: new Date().toISOString(),summary: { filesProcessed: results.processed,consoleLogsRemoved: results.removed,errors: results.errors.length },details: results }; const reportPath = path.join(this.reportsDir,'console-log-removal-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.log(`📊 Report generated: ${reportPath}`); this.log(`✅ Console log removal completed: ${results.removed} statements removed from ${results.processed} files`); return report} } if (require.main === module) { const remover = new ConsoleLogRemover(); remover.removeConsoleLogs() .then(() => {  process.exit(0)}) .catch((error) => { console.error('❌ Console log removal failed:',error); process.exit(1)})} module.exports = ConsoleLogRemover;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 #!/usr/bin/env node
 const fs = // // require('fs');
 const path = // // require('path');
 const glob = // // require('glob');
 class ConsoleLogRemover {
   constructor() {
-this && this.projectRoot = process && process.cwd();
+
+    this && this.projectRoot = process && process.cwd();
     this && this.srcDir = path && path.join(this && this.projectRoot, 'src');
     this && this.reportsDir = path && path.join(this && this.projectRoot, 'automation-reports');
     this && this.ensureDirectories()}
@@ -26,6 +24,7 @@ this && this.projectRoot = process && process.cwd();
     this && this.log('🧹 Starting console && console.log removal from production code');
     const files = glob && glob.sync('**/*.{js,jsx,ts,tsx}', {
       "cwd": this && this.srcDir,
+
       "ignore": ['**/*.test.*', '**/*.spec.*', '**/node_modules/**']
     });
     const results = {
@@ -33,7 +32,8 @@ this && this.projectRoot = process && process.cwd();
       "removed": 0,
       "errors": []
     };
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+
+
             results.removed++;
             results && results.removed++;
             return ''}
@@ -43,7 +43,7 @@ this && this.projectRoot = process && process.cwd();
           /console\.(warn|error|info)\([^)]*\);?\s*/g,
           (match, offset, string) => {
             const beforeMatch = string && string.substring(0, offset);
-            if (beforeMatch && beforeMatch.includes('NODE_ENV === \'development\'') ||
+            if (beforeMatch && beforeMatch.includes('NODE_ENV === \'development\'') || 
                 beforeMatch && beforeMatch.includes('process && process.env.NODE_ENV')) {
               return match}
             results && results.removed++;
@@ -55,12 +55,14 @@ this && this.projectRoot = process && process.cwd();
         results && results.processed++} catch (error) {
         results && results.errors.push({ file, "error": error && error.message });
         this && this.log(`❌ Error processing ${file}: ${error && error.message}`)}
+
     }
     // Generate report
     const report = {
       "timestamp": new Date().toISOString(),
       "summary": {
-filesProcessed: results && results.processed,
+
+        filesProcessed: results && results.processed,
         "consoleLogsRemoved": results && results.removed,
         "errors": results && results.errors.length
       },
@@ -71,20 +73,3 @@ filesProcessed: results && results.processed,
     this && this.log(`📊 Report "generated": ${reportPath}`);
     this && this.log(`✅ Console log removal "completed": ${results && results.removed} statements removed from ${results && results.processed} files`);
     return report}
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-// Run the script
-if (require && require.main === module) {
-  const remover = new ConsoleLogRemover();
-  remover && remover.removeConsoleLogs()
-    .then(() => {
-      console && console.log('🎉 Console log removal completed successfully');
-      process && process.exit(0)})
-    .catch((error) => {
-      console.error('❌ Console log removal "failed": ', error);
-      process.exit(1)})}
-module.exports = ConsoleLogRemover;
-<>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-#!/usr/bin/env node const fs = const path = const glob = class ConsoleLogRemover { constructor() { this.projectRoot = process.cwd(); this.srcDir = path.join(this.projectRoot,'src'); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.ensureDirectories()} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)} async removeConsoleLogs() { this.log('🧹 Starting console.log removal from production code'); const files = glob.sync('***.test.*','**node_modulesg,(match,offset,string) => { const beforeMatch = string.substring(0,offset); const afterMatch = string.substring(offset + match.length); if (beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch.includes('process.env.NODE_ENV')) { return match} results.removed++; return ''} ); newContent = newContent.replace( /console\.(warn|error|info)\([^)]*\);?\s*/g,(match,offset,string) => { const beforeMatch = string.substring(0,offset); if (beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch.includes('process.env.NODE_ENV')) { return match} results.removed++; return ''} ); if (newContent !== originalContent) { fs.writeFileSync(filePath,newContent,'utf8'); this.log(`✅ Cleaned console statements from: ${file}`)} results.processed++} catch (error) { results.errors.push({ file,error: error.message }); this.log(`❌ Error processing ${file}: ${error.message}`)} } const report = { timestamp: new Date().toISOString(),summary: { filesProcessed: results.processed,consoleLogsRemoved: results.removed,errors: results.errors.length },details: results }; const reportPath = path.join(this.reportsDir,'console-log-removal-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.log(`📊 Report generated: ${reportPath}`); this.log(`✅ Console log removal completed: ${results.removed} statements removed from ${results.processed} files`); return report} } if (require.main === module) { const remover = new ConsoleLogRemover(); remover.removeConsoleLogs() .then(() => { console.log('🎉 Console log removal completed successfully'); process.exit(0)}) .catch((error) => { console.error('❌ Console log removal failed:',error); process.exit(1)})} module.exports = ConsoleLogRemover;
-#!/usr/bin/env node const fs = const path = const glob = class ConsoleLogRemover { constructor() { this.projectRoot = process.cwd(); this.srcDir = path.join(this.projectRoot,'src'); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.ensureDirectories()} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)} async removeConsoleLogs() { this.log('🧹 Starting console.log removal from production code'); const files = glob.sync('***.test.*','**node_modulesg,(match,offset,string) => { const beforeMatch = string.substring(0,offset); const afterMatch = string.substring(offset + match.length); if (beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch.includes('process.env.NODE_ENV')) { return match} results.removed++; return ''} ); newContent = newContent.replace( /console\.(warn|error|info)\([^)]*\);?\s*/g,(match,offset,string) => { const beforeMatch = string.substring(0,offset); if (beforeMatch.includes('NODE_ENV === \'development\'') || beforeMatch.includes('process.env.NODE_ENV')) { return match} results.removed++; return ''} ); if (newContent !== originalContent) { fs.writeFileSync(filePath,newContent,'utf8'); this.log(`✅ Cleaned console statements from: ${file}`)} results.processed++} catch (error) { results.errors.push({ file,error: error.message }); this.log(`❌ Error processing ${file}: ${error.message}`)} } const report = { timestamp: new Date().toISOString(),summary: { filesProcessed: results.processed,consoleLogsRemoved: results.removed,errors: results.errors.length },details: results }; const reportPath = path.join(this.reportsDir,'console-log-removal-report.json'); fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); this.log(`📊 Report generated: ${reportPath}`); this.log(`✅ Console log removal completed: ${results.removed} statements removed from ${results.processed} files`); return report} } if (require.main === module) { const remover = new ConsoleLogRemover(); remover.removeConsoleLogs() .then(() => { console.log('🎉 Console log removal completed successfully'); process.exit(0)}) .catch((error) => { console.error('❌ Console log removal failed:',error); process.exit(1)})} module.exports = ConsoleLogRemover;
-<>>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/remove-console-logs-production.js

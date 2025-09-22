@@ -1,20 +1,20 @@
 
-import { useState } from 'react';
 
-export function useLocalStorage<T>(key: string, initialValue: T) {
+
 interface UseLocalStorageProps {
-  // TODO: Implement
+  // Add props here as needed
 }
-  // Add props here as needed;
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
-try {
 
+
+    try {
+:backup-problematic-files/hooks/useLocalStorage.ts
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+
     }
   });
 
@@ -29,15 +29,20 @@ try {
       }
     } catch (error) {
 
+
   };
 
   return [storedValue, setValue] as const;
 }
-console.error(`Error setting localStorage key "${key}":`, error)};
+
+
+      console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
 };
 };
 };
 };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+

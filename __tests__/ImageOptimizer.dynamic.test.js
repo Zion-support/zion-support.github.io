@@ -1,43 +1,30 @@
-import { describe, it, expect } from '@jest/globals';
-
-describe('ImageOptimizer.dynamic', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic';
+import ImageOptimizer from '../components/ImageOptimizer';
 
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-describe('ImageOptimizerdynamic', () => {
+<<<<<<< HEAD
+describe('ImageOptimizer', () => {
   test('renders without crashing', () => {
-    render(<ImageOptimizerdynamic />);
-    expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument();
+    render(<ImageOptimizer />);
+    expect(screen.getByTestId('imageoptimizer')).toBeInTheDocument();
   });
+  
   test('displays correct content', () => {
-    render(<ImageOptimizerdynamic />);
+    render(<ImageOptimizer />);
   });
+  
   test('handles user interactions', () => {
-    render(<ImageOptimizerdynamic />);
+    render(<ImageOptimizer />);
   });
+  
   test('applies correct styling', () => {
-    render(<ImageOptimizerdynamic />);
+    render(<ImageOptimizer />);
   });
 });
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ImageOptimizerdynamic from "./components/ImageOptimizer.dynamic"; describe("ImageOptimizerdynamic",() => { test("renders without crashing",() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId("imageoptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ImageOptimizerdynamic />)}); test("handles user interactions",() => { render(<ImageOptimizerdynamic />)}); test("applies correct styling",() => { render(<ImageOptimizerdynamic />)})});''"
-
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+
+
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -49,27 +36,6 @@ describe('ImageOptimizerdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ImageOptimizerdynamic from "./components/ImageOptimizer.dynamic"; describe('ImageOptimizerdynamic', () => { test("renders without crashing",() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId("imageoptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ImageOptimizerdynamic />)}); test("handles user interactions",() => { render(<ImageOptimizerdynamic />)}); test("applies correct styling"
 
-import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
-
-import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
-main
-
-  test('displays correct content', () => {
-    render(<ImageOptimizerdynamic />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<ImageOptimizerdynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
-    render(<ImageOptimizerdynamic />);
-    // Add styling tests if needed
-  });
-});
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/main
+>>>>>>> origin/merge-pr-12271
