@@ -29,11 +29,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up">
             Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> AI Innovation</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 animate-gradient"> AI Innovation</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200">
             Zion Tech Group delivers cutting-edge AI solutions, automation platforms, and technology services 
             that drive growth, efficiency, and competitive advantage for modern businesses.
           </p>
