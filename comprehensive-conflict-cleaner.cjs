@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-class MergeConflictCleaner {
+class ComprehensiveConflictCleaner {
   constructor() {
     this.filesProcessed = 0;
     this.conflictsResolved = 0;
@@ -16,8 +16,22 @@ class MergeConflictCleaner {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
 
-      if (!content.includes('
-        .replace(/
+      if (!content.includes('<<<<<<< HEAD')) {
+        return false;
+      }
+
+      // Clean merge conflicts - keep the HEAD version by default
+      let cleanedContent = content
+        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
+          // Extract the HEAD version (before =======)
+          const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
+          return headMatch ? headMatch[1].trim() : '';
+        })
+        .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
+          // Extract the HEAD version (before =======)
+          const headMatch = match.match(/<<<<<<< [^\n]+([\s\S]*?)=======/);
+          return headMatch ? headMatch[1].trim() : '';
+        })
         .replace(/^$/gm, '')
         .replace(/^\s*$/gm, '')
         .replace(/\n{3,}/g, '\n\n')
@@ -48,8 +62,8 @@ console.log('Script executed successfully');
     console.log('🔍 Searching for files with merge conflicts...\n');
 
     try {
-      // Find all .cjs files with merge conflicts
-      const result = execSync('find scripts/ -name "*.cjs" -exec grep -l "<<<<<<< HEAD" {} \\;', { encoding: 'utf8' });
+      // Find all files with merge conflicts
+      const result = execSync('find . -type f \\( -name "*.cjs" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" \\) -exec grep -l "<<<<<<< HEAD" {} \\;', { encoding: 'utf8' });
       const files = result.trim().split('\n').filter(file => file.trim());
 
       console.log(`Found ${files.length} files with merge conflicts`);
@@ -62,6 +76,7 @@ console.log('Script executed successfully');
       // Clean each file
       for (const file of files) {
         if (file.trim()) {
+          console.log(`Cleaning: ${file}`);
           this.cleanFile(file.trim());
         }
       }
@@ -90,26 +105,28 @@ console.log('Script executed successfully');
   cleanupCorruptedFiles() {
     try {
       const scriptsDir = 'scripts/';
-      const files = fs.readdirSync(scriptsDir, { recursive: true });
+      if (fs.existsSync(scriptsDir)) {
+        const files = fs.readdirSync(scriptsDir, { recursive: true });
 
-      for (const file of files) {
-        if (typeof file === 'string' && file.endsWith('.cjs')) {
-          const filePath = path.join(scriptsDir, file);
-          try {
-            const content = fs.readFileSync(filePath, 'utf8');
+        for (const file of files) {
+          if (typeof file === 'string' && file.endsWith('.cjs')) {
+            const filePath = path.join(scriptsDir, file);
+            try {
+              const content = fs.readFileSync(filePath, 'utf8');
 
-            // Check if file is severely corrupted
-            if (content.length < 100 && (
-              content.includes('<<<<<<<') || 
-              content.includes('=======') || 
-              content.includes('>>>>>>>') ||
-              content.trim().length === 0
-            )) {
-              console.log(`Removing severely corrupted file: ${filePath}`);
-              fs.unlinkSync(filePath);
+              // Check if file is severely corrupted
+              if (content.length < 100 && (
+                content.includes('<<<<<<<') || 
+                content.includes('=======') || 
+                content.includes('>>>>>>>') ||
+                content.trim().length === 0
+              )) {
+                console.log(`Removing severely corrupted file: ${filePath}`);
+                fs.unlinkSync(filePath);
+              }
+            } catch (e) {
+              // File might be unreadable, skip
             }
-          } catch (e) {
-            // File might be unreadable, skip
           }
         }
       }
@@ -121,11 +138,11 @@ console.log('Script executed successfully');
 
 // Run the cleaner
 if (require.main === module) {
-  const cleaner = new MergeConflictCleaner();
+  const cleaner = new ComprehensiveConflictCleaner();
   cleaner.cleanAllConflicts().catch(error => {
     console.error(`❌ Script failed: ${error.message}`);
     process.exit(1);
   });
 }
 
-module.exports = MergeConflictCleaner;
+module.exports = ComprehensiveConflictCleaner;

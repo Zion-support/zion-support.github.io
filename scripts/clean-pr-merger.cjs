@@ -84,10 +84,24 @@ class PRMerger {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
 
-      if (!content.includes('([\s\S]*?)
-        .replace(/([\s\S]*?)
+      if (!content.includes('<<<<<<< HEAD')) {
+        return false;
+      }
+
+      // Clean merge conflicts - keep the HEAD version by default
+      let resolvedContent = content
+        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
+          // Extract the HEAD version (before =======)
+          const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
+          return headMatch ? headMatch[1].trim() : '';
+        })
+        .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
+          // Extract the HEAD version (before =======)
+          const headMatch = match.match(/<<<<<<< [^\n]+([\s\S]*?)=======/);
+          return headMatch ? headMatch[1].trim() : '';
+        })
         .replace(/^$/gm, '')
-        .replace(/^
+        .replace(/^\s*$/gm, '')
         .replace(/\n{3,}/g, '\n\n'); // Clean up excessive newlines
 
       // Write the resolved content
