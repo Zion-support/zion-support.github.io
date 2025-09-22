@@ -1,6 +1,5 @@
 # Zion Tech Group - Leading-Edge Technology Solutions
 
-<<<<<<< HEAD
 
 A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
 ## 🌟 Overview
@@ -28,10 +27,6 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 
 ## 📦 Installation
 A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
-=======
-A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS, showcasing cutting-edge technology solutions in AI, quantum computing, and cybersecurity.
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-
 ## 🚀 Features
 
 - **Modern Design**: Beautiful, responsive design with gradient backgrounds and glassmorphism effects
@@ -47,7 +42,6 @@ A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS, s
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
-<<<<<<< HEAD
 - **Build Tool**: Vite with ESBuild
 - **Package Manager**: npm
 
@@ -120,16 +114,9 @@ npm start
 
 
 
-=======
-- **Icons**: Lucide React
-- **Build Tool**: Webpack with Babel
-- **Deployment**: Ready for Vercel, Netlify, or any static hosting
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-
 ## 📁 Project Structure
 
 ```
-<<<<<<< HEAD
 
 4. Open your browser and navigate to `http://localhost:3000`
 
@@ -396,32 +383,6 @@ The project uses a consistent design system with:
 - **Internationalization** - Multi-language support ready
 - **Progressive Enhancement** - Works without JavaScript
 - **Accessibility First** - Inclusive design principles
-
-=======
-zion-tech-group/
-├── components/                 # Reusable UI components
-│   ├── EnhancedNavigation.tsx # Main navigation component
-│   ├── EnhancedFooter.tsx     # Footer component
-│   ├── EnhancedServicesShowcase.tsx # Services showcase
-│   └── EnhancedTestimonialsSection.tsx # Testimonials
-├── pages/                     # Next.js pages
-│   ├── index.tsx             # Homepage
-│   ├── about.tsx             # About page
-│   ├── contact.tsx           # Contact page
-│   ├── _app.tsx              # App wrapper
-│   ├── _document.tsx         # Document wrapper
-│   └── 404.tsx               # 404 error page
-├── data/                      # Data files
-│   └── enhanced-micro-saas-services-2025.ts
-├── public/                    # Static assets
-├── styles/                    # Global styles
-├── babel.config.js           # Babel configuration
-├── next.config.js            # Next.js configuration
-├── package.json              # Dependencies and scripts
-└── tailwind.config.js        # Tailwind CSS configuration
-```
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -532,7 +493,6 @@ npm run build
 npm run export
 ```
 
-<<<<<<< HEAD
 The built files will be in the `dist` directory, ready for deployment.
 
 ## 📁 Project Structure
@@ -941,13 +901,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Built with ❤️ by the Zion Tech Group team
-=======
-## 🤝 Contributing
-
-1. Fork the repository
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-2. Create a feature branch
+Built with ❤️ by the Zion Tech Group team2. Create a feature branch
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
@@ -993,7 +947,6 @@ For support or questions:
 
 ---
 
-<<<<<<< HEAD
 Built with ❤️ by the Zion Tech Group team
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
@@ -1417,7 +1370,3 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - Next.js team for the amazing framework
 - Tailwind CSS for the utility-first CSS framework
 - Lucide React for the beautiful icons
-
-=======
-Built with ❤️ by Zion Tech Group
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

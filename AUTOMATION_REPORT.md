@@ -19,7 +19,6 @@
 ### ❌ Errors
 
 - auto-fixer.js failed: Command failed: node scripts/auto-fixer.js
-<<<<<<< HEAD
 # Automation Report
 
 **Timestamp:** 2025-09-07T02:51:20.034Z
@@ -431,55 +430,12 @@ Import trace for requested module:
 
 
 ## Warnings
-=======
-  file:///workspace/scripts/auto-fixer.js:95
-  .replace(/.replace(/// Clean up any remaining artifacts
-  ^^^^^^^^^^^
-
-SyntaxError: Invalid regular expression: /.replace(/: Unterminated group
-at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-at #translate (node:internal/modules/esm/loader:534:12)
-at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-at async ModuleJob.\_link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-### ⚠️ Warnings
-
-- ESLint had issues: Command failed: npm run lint
-  npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-  npm warn config `--include=optional` to include them.
-  npm warn config
-  npm warn config Default value does install optional deps unless otherwise omitted.
-  (node:6135) ESLintIgnoreWarning: The ".eslintignore" file is no longer supported. Switch to using the "ignores" property in "eslint.config.js": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files
-  (Use `node --trace-warnings ...` to show where the warning was created)
-
-- TypeScript had issues: Command failed: npm run type-check
-  npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-  npm warn config `--include=optional` to include them.
-  npm warn config
-  npm warn config Default value does install optional deps unless otherwise omitted.
-
-- Build had issues: Command failed: npm run build
-  npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
-  npm warn config `--include=optional` to include them.
-  npm warn config
-  npm warn config Default value does install optional deps unless otherwise omitted.
-  warn - You have enabled experimental features (esmExternals, newNextLinkBehavior) in next.config.js.
-  warn - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-
 tsconfig.json(119,1): error TS1185: Merge conflict marker encountered.
 
 ## Recommendations
 
 - Address all errors before deployment
-<<<<<<< HEAD
-- Review and address warnings for better code quality
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-- Implement continuous integration for automated testing
+- Review and address warnings for better code quality- Implement continuous integration for automated testing
 - Set up automated deployment pipeline
 - Monitor performance metrics in production
 - Regular security audits and dependency updates

@@ -9,7 +9,6 @@ class AppEnhancementSuite {
   }
   log(message) {
     console.log(message);
-<<<<<<< HEAD
 }
 
   createPerformanceOptimizations() {
@@ -32,11 +31,6 @@ class AppEnhancementSuite {
         'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'"
       },
 
-
-=======
-  }
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
     // Create performance configuration
@@ -60,7 +54,6 @@ class AppEnhancementSuite {
     // Create security headers configuration
     const securityConfig = {
       headers: {
-<<<<<<< HEAD
         'X-Content-Type-Options': 'nosniff';
         'X-Frame-Options': 'DENY';
         'X-XSS-Protection': '1; mode=block';
@@ -81,36 +74,25 @@ class AppEnhancementSuite {
 
     // Create security headers configuration
     const securityConfig = {
-      "headers": {
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-        'X-Content-Type-Options': 'nosniff',
+      "headers": {        'X-Content-Type-Options': 'nosniff',
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
         'Content-Security-Policy':
           "default-src 'self'; script-src 'self' 'unsafe-inline'",
       },
-<<<<<<< HEAD
       "validation": {
         inputSanitization: true,
         "sqlInjectionProtection": true,
         "xssProtection": true}};
 "default-src 'self'; script-src 'self' 'unsafe-inline'";
-      };
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-      validation: {
+      };      validation: {
         inputSanitization: true,
         sqlInjectionProtection: true,
         xssProtection: true,
       },
     };
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-config.json'),
       JSON.stringify(securityConfig, null, 2)
@@ -118,7 +100,6 @@ class AppEnhancementSuite {
 
     this.enhancements.push('Security configuration created');
   }
-<<<<<<< HEAD
 
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
@@ -143,19 +124,10 @@ class AppEnhancementSuite {
         "sqlInjectionProtection": true,
         "xssProtection": true}};"
     fs.writeFileSync()"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-
   createMonitoringScripts() {
     this.log('📊 Creating Monitoring Scripts');
 
-<<<<<<< HEAD
-    const monitoringLines = ['#!/usr/bin/env node',
-=======
-    const monitoringLines = [
-      '#!/usr/bin/env node',
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-      '',
+    const monitoringLines = ['#!/usr/bin/env node',      '',
       "const fs = require('fs');",
       "const path = require('path');",
       '',
@@ -223,7 +195,6 @@ class AppEnhancementSuite {
       'const monitor = new AppMonitor();',
       'monitor.monitorAppHealth().catch(console.error);',
       '',
-<<<<<<< HEAD
 
     const monitoringLines = [
       '#!/usr/bin/env node';
@@ -368,9 +339,6 @@ class AppEnhancementSuite {
     const monitoringLines = [
       '#!/usr/bin/env node';
       ;
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     ];
     const monitoringScript = monitoringLines.join('\n');
 
@@ -389,7 +357,6 @@ class AppEnhancementSuite {
     const report = {
       timestamp: new Date().toISOString(),
       enhancements: this.enhancements,
-<<<<<<< HEAD
       status: 'completed'
     };
     this.log(`Enhancement report: ${JSON.stringify(report, null, 2)}`);
@@ -420,15 +387,10 @@ class AppEnhancementSuite {
 timestamp: new Date().toISOString();
       enhancements: this.enhancements;
       status: 'completed';
-ursor/automate-test-improve-and-merge-code-59d5
-=======
-      status: 'completed',
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-    };
+ursor/automate-test-improve-and-merge-code-59d5    };
 
     // Write enhancement report
     fs.writeFileSync(
-<<<<<<< HEAD
 
     // Write enhancement report;
       path.join(this.projectRoot, 'enhancement-report.json');
@@ -438,20 +400,11 @@ ursor/automate-test-improve-and-merge-code-59d5
     };
     this.log(`Security headers configured: ${Object.keys(securityHeaders).join(', ')}`);
 
-
-=======
-      path.join(this.projectRoot, 'enhancement-report.json'),
-      JSON.stringify(report, null, 2)
-    );
-
-    // Security headers are already configured in createSecurityEnhancements
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     this.enhancements.push('Security headers configuration created');
   }
   createHealthCheck() {
     this.log('🏥 Creating Health Check Endpoint');
     const healthCheckConfig = {
-<<<<<<< HEAD
       "timestamp": new Date().toISOString(),
       "status": "healthy",
       "checks": {
@@ -475,12 +428,7 @@ ursor/automate-test-improve-and-merge-code-59d5
     };
     this.log(`Health check config: ${JSON.stringify(healthCheckConfig, null, 2)}`);
       timestamp: new Date().toISOString();
-      status: 'healthy';
-=======
-      timestamp: new Date().toISOString(),
-      status: 'healthy',
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-      checks: {
+      status: 'healthy';      checks: {
         filesystem: {
           status: 'ok',
           message: 'File system accessible',
@@ -504,7 +452,6 @@ ursor/automate-test-improve-and-merge-code-59d5
     fs.writeFileSync(
       path.join(this.projectRoot, 'health-check-config.json'),
       JSON.stringify(healthCheckConfig, null, 2)
-<<<<<<< HEAD
 );
       "timestamp": new Date().toISOString(),
       "status": "healthy",
@@ -529,10 +476,6 @@ ursor/automate-test-improve-and-merge-code-59d5
     };
     this.log(`Health check config: ${JSON.stringify(healthCheckConfig, null, 2)}`);
 
-
-=======
-    );
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     this.enhancements.push('Health check endpoint created');
   }
 }

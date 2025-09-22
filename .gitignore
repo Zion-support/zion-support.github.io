@@ -110,3 +110,8 @@ core
 # Git pack files
 *.pack
 *.pack.gz
+
+# Ignore auto-merge backups
+*.backup.*
+comprehensive-pr-merge-results.json
+

@@ -1,6 +1,15 @@
 import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
+  screenWidth: number;
+  screenHeight: number;
+  orientation: "landscape" | "portrait";
+  isMobile: boolean;
+  isTablet: boolean;
+  isDesktop: boolean;
+}
+
+interface ResponsiveState {
   isMobile: boolean;
   isTablet: boolean;
   isDesktop: boolean;
@@ -175,11 +184,12 @@ export const useResponsive = (): ResponsiveState => {
     };
 
     updateDimensions();
-    window.addEventListener('resize', updateDimensions);
-    return () => window.removeEventListener('resize', updateDimensions);
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
   return state;
+}
 
 export default useResponsive;
 setState({

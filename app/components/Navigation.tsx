@@ -1,22 +1,38 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X, Zap } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Resources', href: '/content' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   return (
-    <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+    <nav className={`relative z-50 backdrop-blur-md border-b border-white/10 transition-all duration-300 ${
+      isScrolled ? 'bg-black/40 shadow-lg' : 'bg-black/20'
+    }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -38,15 +54,20 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium">
-              Get Started
-            </button>
+            <div className="flex items-center space-x-4">
+              <ThemeToggle />
+              <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium">
+                Get Started
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-1"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -66,9 +87,12 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium w-full">
-                Get Started
-              </button>
+              <div className="flex flex-col gap-3">
+                <ThemeToggle />
+                <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium w-full text-center">
+                  Get Started
+                </Link>
+              </div>
             </div>
           </div>
         )}
