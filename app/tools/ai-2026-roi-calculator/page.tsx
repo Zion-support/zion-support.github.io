@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { Calculator, DollarSign, TrendingUp, ArrowRight, Clock } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 

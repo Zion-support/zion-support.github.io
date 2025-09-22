@@ -198,10 +198,11 @@ export default function AI2025UltimateImplementationMasterGuide() {
               </div>
             </div>
           </div>
+        </div>
         </section>
 
-          {/* Implementation Phases */}
-          <section className="mb-12">
+        {/* Implementation Phases */}
+        <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Phases</h2>
             
             <div className="space-y-8">

@@ -38,23 +38,6 @@ export default function Page() {
   );
 }
 
-import React from 'react';
-import SEO from '../../components/SEO';
-
-export const metadata = {
-  title: 'AI 2026: Agentic Sandbox Patterns (Overview) | Zion Tech Group',
-  description:
-    'Quick overview of sandboxing patterns for safe agent tool use: isolation, least privilege, and runtime guards.',
-  keywords: [
-    'agent sandbox overview',
-    'tool use safety',
-    'policy-as-code',
-    'runtime guards',
-    'least privilege',
-    'eval gates',
-  ],
-};
-
 export default function BlogAgenticSandboxPatterns() {
   return (
     <div className="min-h-screen bg-white">
