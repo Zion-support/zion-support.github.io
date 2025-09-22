@@ -37,6 +37,7 @@
     "next-env.d.ts",
     "pages/**/*",
     "src/**/*",
+    "types/**/*",
     ".next/types/**/*.ts"
   ],
   "exclude": [

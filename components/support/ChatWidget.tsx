@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 
 type ChatMessage = {
@@ -10,7 +10,7 @@ type ChatMessage = {
 };
 
 function generateSessionId(): string {
-  return Math.random().toString(36).substring(2) + Date.now().toString(36);
+  return Math.random().toString(36).slice(2) + Date.now().toString(36);
 }
 
 export default function ChatWidget() {
@@ -29,7 +29,6 @@ export default function ChatWidget() {
 
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
-      // Seed greeting
       setMessages([
         {
           role: 'assistant',
@@ -49,7 +48,7 @@ export default function ChatWidget() {
     []
   );
 
-  async function logEvent(eventType: string, payload: any) {
+  async function logEvent(eventType: string, payload: unknown) {
     try {
       await fetch('/api/support/session', {
         method: 'POST',
@@ -60,7 +59,9 @@ export default function ChatWidget() {
           payload,
         }),
       });
-    } catch {}
+    } catch {
+      // no-op
+    }
   }
 
   async function escalateSupport(reason: string) {
@@ -68,14 +69,12 @@ export default function ChatWidget() {
       await fetch('/api/support/escalate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId: sessionIdRef.current,
-          reason,
-          tag: 'escalate',
-        }),
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' }),
       });
       setShowEscalation(true);
-    } catch {}
+    } catch {
+      // no-op
+    }
   }
 
   async function onSend(messageText?: string) {
@@ -99,10 +98,7 @@ export default function ChatWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({
-            role,
-            content,
-          })),
+          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content })),
         }),
       });
 
@@ -122,7 +118,7 @@ export default function ChatWidget() {
       }
 
       if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
+        setFailedIntents(n => {
           const next = n + 1;
           if (next >= 3) {
             escalateSupport('Failed to match user intent 3+ times');
@@ -132,7 +128,7 @@ export default function ChatWidget() {
       } else if (data?.meta?.intentMatched === true) {
         setFailedIntents(0);
       }
-    } catch (e) {
+    } catch {
       setMessages(prev => [
         ...prev,
         {
@@ -173,13 +169,10 @@ export default function ChatWidget() {
 
           <div className='flex-1 overflow-y-auto p-3 space-y-3'>
             {messages.map((m, idx) => (
-              <div
-                key={idx}
-                className={m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}
-              >
+              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>
                 <div
                   className={
-                    m.role === 'assistant'
+                    m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
                   }
