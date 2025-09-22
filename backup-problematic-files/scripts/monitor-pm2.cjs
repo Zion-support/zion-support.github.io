@@ -1,8 +1,9 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**;
  * PM2 Monitoring Dashboard for Zion Application;
  * Provides real-time monitoring of all PM2 processes;
  */;
+<<<<<<< HEAD
 const { exec } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -78,4 +79,16 @@ const path = require("path")"
     case "help"
     "default"
   process.on("SIGINT")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   process.on(")
+  process.on(")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

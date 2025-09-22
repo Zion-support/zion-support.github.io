@@ -1,44 +1,13 @@
-const fs = require('fs');
-const path = require('path');
-const filesToFix = [
-  '/workspace/pages/about.tsx',
-  '/workspace/pages/ai-services.tsx',
-  '/workspace/pages/index.tsx',
-  '/workspace/pages/it-services.tsx',
-  '/workspace/pages/micro-saas.tsx'
-];
-let totalFixes = 0;
-filesToFix.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    // Fix line breaks in className attributes - more comprehensive approach
-    content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, (match, part1, part2) => {
-      return `className="${part1.trim()} ${part2.trim()}"`;
-    });
-    // Fix missing closing quotes in className
-    content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, (match, part1, part2) => {
-      return `className="${part1.trim()} ${part2.trim()}">`;
-    });
-    // Fix specific patterns that are causing issues
-    content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, (match, part1, part2) => {
-      return `className="${part1.trim()} ${part2.trim()}">`;
-    });
-    // Fix missing closing quotes in h1 tags
-    content = content.replace(/<h1 className="([^"]*)\n\s*([^"]*)\s*>/g, (match, part1, part2) => {
-      return `<h1 className="${part1.trim()} ${part2.trim()}">`;
-    });
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      }`);
-      totalFixes++;
-      modified = true;
-    }
-  }
-});
-const fs = require("fs");"const path = require("path");"console.log(" Fixing line breaks in className attributes.");const filesToFix = [" "/workspace/pages/about.tsx"," "/workspace/pages/ai-services.tsx"," "/workspace/pages/index.tsx"," "/workspace/pages/it-services.tsx"," "/workspace/pages/micro-saas.tsx"];let totalFixes = 0;filesToFix.forEach(filePath => { if (fs.existsSync(filePath)) {" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix line breaks in className attributes - more comprehensive approach content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, (match, part1, part2) => {" return `className="${part1.trim()} ${part2.trim()}"`; }); / Fix missing closing quotes in className" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, (match, part1, part2) => {"` return `className="${part1.trim()} ${part2.trim()}">`; }); / Fix specific patterns that are causing issues" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, (match, part1, part2) => {"` return `className="${part1.trim()} ${part2.trim()}">`; }); / Fix missing closing quotes in h1 tags" content = content.replace(/<h1 className="([^"]*)\n\s*([^"]*)\s*>/g, (match, part1, part2) => {"` return `<h1 className="${part1.trim()} ${part2.trim()}">`; }); " if (content !== fs.readFileSync(filePath, "utf8")) { fs.writeFileSync(filePath, content);"` console.log(` Fixed: ${path.relative("/workspace", filePath)}`); totalFixes++; modified = true; } }});`console.log(`\n Summary:`);`console.log(` Files processed: ${filesToFix.length}`);`console.log(` Files fixed: ${totalFixes}`);"console.log(" Line break fixes completed!");""`"`
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 console.log(' Fixing line breaks in className attributes...')
   '/workspace/pages/about.tsx'
   '/workspace/pages/ai-services.tsx'
@@ -48,4 +17,25 @@ console.log(' Fixing line breaks in className attributes...')
     let content = fs.readFileSync(filePath, 'utf8')
     if (content !== fs.readFileSync(filePath, 'utf8')
 // console.log(` Fixed: ${path.relative('/workspace'`})
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 console.log('✨ Line break fixes completed!')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+console.log('✨ Line break fixes completed!')
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+console.log('✨ Line break fixes completed!')
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

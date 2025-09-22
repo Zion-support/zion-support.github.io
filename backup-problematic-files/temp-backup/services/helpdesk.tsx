@@ -2,14 +2,14 @@ import Head from \'next/head\'; import Link from \'next/link\'; export default f
 import React from 'react';
 
 interface HelpdeskProps {
-  className?: string;
+  // Add props here as needed
 }
 
-const Helpdesk: React.FC<HelpdeskProps> = ({ className }) => {
+export default function Helpdesk({ }: HelpdeskProps) {
   return (
-    <div className={className || ''}>
+    <div>
       <h1>Helpdesk</h1>
-      <p>This component is under development.</p>
+      <p>This component is currently under development.</p>
     </div>
   );
 }

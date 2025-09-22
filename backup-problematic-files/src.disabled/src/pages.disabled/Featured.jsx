@@ -1,24 +1,5 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import { FeaturedListingsSection } from \'@/components/FeaturedListingsSection\';\''\'; import { GradientHeading } from \'@/components/GradientHeading\'; export {}; return null} return (); <> <div className=\"min-h-screen bg-zion-blue\"> <div className=\"container mx-auto px-4 py-12\"> <div className=\"text-center mb-12\">\"; <div>Broken JSX</div> className=\"text-4xl \"md\": text-5xl font-bold mb-4\"> Featured Listings\"; </GradientHeading> <p className=\"text-zion-slate-light text-lg max-w-3xl mx-auto\"> Discover our handpicked selection of premium AI products and; services. These featured listings represent the best that the Zion; Marketplace has to offer.; ></div> ></div> {} <FeaturedListingsSection showTitle={false} /> ></div> ></div> </>)} ; export { Featured }; export { Featured }; export { Featured }; export { Featured }; export { Featured };
-const { FeaturedListingsSection } from "@/components/FeaturedListingsSection";"""; import { GradientHeading } from "@/components/GradientHeading"; export {}; return null} return (); <> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-12"> <div className="text-center mb-12">"; <div>Broken JSX</div> className="text-4xl md: text-5xl font-bold mb-4"> Featured Listings"; </GradientHeading> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Discover our handpicked selection of premium AI products and; services. These featured listings represent the best that the Zion; Marketplace has to offer.; ></div> ></div> {} <FeaturedListingsSection showTitle={false} /> ></div> ></div> </>)} ; export { Featured }; export { Featured }; export { Featured }; export { Featured }; export { Featured };"""
 import React from 'react';
+<<<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/Featured.jsx
 interface FeaturedProps {
   // Add props here as needed
 }
@@ -26,6 +7,15 @@ export default function Featured({ }: FeaturedProps) {
   return (
     <div>
       <h1>Featured</h1>
+========
+interface WithAuthProps {
+  // Add props here as needed
+}
+export default function WithAuth({ }: WithAuthProps) {
+  return (
+    <div>
+      <h1>WithAuth</h1>
+>>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:backup-problematic-files/src.disabled/src/hoc/withAuth.jsx
       <p>This component is currently under development.</p>
     </div>
   );

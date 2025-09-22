@@ -1,44 +1,78 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Content analysis functionality
+<<<<<<< HEAD
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { suspiciousPhrases } from './constants',
-import { AnalysisResult } from './types',
-
-
+=======
+import { suspiciousPhrases } from "./constants";
+=======
+// Content analysis functionality;
+import { suspiciousPhrases } from "./constants";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { AnalysisResult } from "./types";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 /**
- * Analyzes text content for suspicious patterns
+ * Analyzes text content for suspicious patterns;
  */
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+export const analyzeContent = (content: string): AnalysisResult => {
+=======
+export const analyzeContent = (content: string): AnalysisResult => {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  const contentLower = content.toLowerCase();
+<<<<<<< HEAD
+  const reasons: string[] = []
+  const contentLower = content.toLowerCase(),
+<<<<<<< HEAD
+=======
 
-
+<<<<<<< HEAD
   const contentLower = content && content.toLowerCase();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const reasons: string[] = [],
   
-
-    contentLower && contentLower.includes('payment') || 
-    contentLower && contentLower.includes('money') || 
-    contentLower && contentLower.includes('deal')
-  )) {
-    reasons && reasons.push('Contains external payment links')
-  }
-  // Check for excessive capitalization (potential scam)
-
-
-=======// Content analysis functionality
-import { suspiciousPhrases  } from './constants';
-import { AnalysisResult } from './types';
-import { suspiciousPhrases } from './constants',
-import { AnalysisResult } from './types',
-/**
- * Analyzes text content for suspicious patterns
- */
-
-  const contentLower = content && content.toLowerCase();
-  const reasons: string[] = [],
-    // Check for suspicious phrases
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
     if (contentLower.includes(phrase.toLowerCase())) {
       reasons.push(`Contains suspicious phrase: "${phrase}"`)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======// Content analysis functionality;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+    }
+  }
+  // Check for links (simplified check)
+  const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower);
+  if (hasExternalLinks && (
+    contentLower.includes('payment') |
+    contentLower.includes('money') |
+    contentLower.includes('deal')
+  )) {
+    reasons.push('Contains external payment links')
+  }
+  // Check for excessive capitalization (potential scam)
+  const capitalRatio = (content.match(/[A-Z]/g) |[]).length / content.length;
+  if (capitalRatio > 0.3 && content.length > 20) {
+    reasons.push('Excessive capitalization')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Check for suspicious phrases
+  for (const phrase of suspiciousPhrases) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+// Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
 import { AnalysisResult } from './types',;
 /**;
@@ -50,6 +84,11 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   // Check for suspicious phrases;
   for (const phrase of suspiciousPhrases) {;
     if (contentLower.includes(phrase.toLowerCase())) {;
+=======
+  // Check for suspicious phrases;
+  for (const phrase of suspiciousPhrases) {}
+    if (contentLower.includes(phrase.toLowerCase())) {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       reasons.push(`Contains suspicious phrase: "${phrase}"`);
     }
   }
@@ -68,104 +107,124 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
   if (capitalRatio > 0.3 && content.length > 20) {;
     reasons.push('Excessive capitalization');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
-  }
-  // Check for poor grammar with repetitive punctuation
-  if (/[!?]{3}/.test(content)) {
-    reasons && reasons.push('Suspicious punctuation pattern')
-  }
-  return {
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const reasons: string[] = [];
+=======
+export const analyzeContent = (content: string): AnalysisResult => {
+  const contentLower = content.toLowerCase();
+  const reasons: string[] = []
+  const contentLower = content.toLowerCase(),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Content analysis functionality
+import { suspiciousPhrases } from "./constants";
+import { AnalysisResult } from "./types";
+/**
+ * Analyzes text content for suspicious patterns
+ */
+export const analyzeContent = (content: string): AnalysisResult => {
+  const contentLower = content.toLowerCase();
+  const reasons: string[] = [];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-    isSuspicious: reasons && reasons.length > 0,
-// Content analysis functionality;
-import { suspiciousPhrases } from './constants',;
-import { AnalysisResult } from './types',;
-;
-/**;
- * Analyzes text content for suspicious patterns;
- */;
-export const analyzeContent = (content:string):AnalysisResult => {;
-  const contentLower = content.toLowerCase(),;
-  const reasons:string[] = [],;
-  ;
-  // Check for suspicious phrases;
-  for (const phrase of suspiciousPhrases) {;
-    if (contentLower.includes(phrase.toLowerCase())) {;
-      reasons.push(`Contains suspicious phrase:"${phrase}"`),;
+  // Check for suspicious phrases
+  for (const phrase of suspiciousPhrases) {
+    if (contentLower.includes(phrase.toLowerCase())) {
+      reasons.push(`Contains suspicious phrase: "${phrase}"`);
     }
   }
-  ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
+  // Check for links (simplified check)
+=======
+;
   // Check for links (simplified check);
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower),;
   if (hasExternalLinks && (;
-    contentLower.includes('payment') || ;
-    contentLower.includes('money') || ;
+    contentLower.includes('payment') ||;
+    contentLower.includes('money') ||;
     contentLower.includes('deal');
   )) {;
-    reasons.push('Contains external payment links'),;
+    reasons.push('Contains external payment links');
   }
-  ;
+;
   // Check for excessive capitalization (potential scam);
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
   if (capitalRatio > 0.3 && content.length > 20) {;
-    reasons.push('Excessive capitalization'),;
+    reasons.push('Excessive capitalization');
+  // Check for suspicious phrases
+  for (const phrase of suspiciousPhrases) {
+    if (contentLower && contentLower.includes(phrase && phrase.toLowerCase())) {
+      reasons && reasons.push(`Contains suspicious phrase: "${phrase}"`)
+    }
+  }  // Check for links (simplified check)
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  // Check for links (simplified check)
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower);
+  if (
+    hasExternalLinks &&"
+    (contentLower.includes("payment") ||"
+      contentLower.includes("money") ||"
+      contentLower.includes("deal"))
+  ) {"
+    reasons.push("Contains external payment links");
   }
-  ;
+
+  // Check for excessive capitalization (potential scam)
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length;
+  if (capitalRatio > 0.3 && content.length > 20) {"
+    reasons.push("Excessive capitalization");
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length;
+  if (capitalRatio > 0.3 && content.length > 20) {
+    reasons.push("Excessive capitalization");
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  }
+
   // Check for poor grammar with repetitive punctuation;
-  if (/[!?]{3}/.test(content)) {;
-    reasons.push('Suspicious punctuation pattern'),;
+  if (/[!?]{3}/.test(content)) {"
+    reasons.push("Suspicious punctuation pattern");
   }
-  ;
-  return {;
-    isSuspicious:reasons.length > 0,;
-    reasons;
-  },;
-},; // Content analysis functionality // Check for suspicious phrases for (const phrase of suspiciousPhrases) {
-  if (contentLower.includes (phrase.toLowerCase () ) ) {
-  
-}
-
-};
-
-}// Check for links (simplified check) if (hasExternalLinks && (contentLower.includes ('payment') || contentLower.includes ('money') || contentLower.includes ('deal') 
-  }
-  // Check for poor grammar with repetitive punctuation
-  if (/[!?]{3}/.test(content)) {
-    reasons.push('Suspicious punctuation pattern')
-  }
+<<<<<<< HEAD
+<<<<<<< HEAD
   return {
-    isSuspicious: reasons.length > 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    isSuspicious: reasons && reasons.length > 0,
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reasons
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 }
-
-};
-=======
-
-    reasons
-  }
-
-// Content analysis functionality;
-import {suspicious_phrases} from './constants';
-import {AnalysisResult} from './types';
-/**;
-* Analyzes text content for suspicious patterns;
-*/;
-export const analyze_content = (content: string): AnalysisResult => {
-  const content_lower = content.toLowerCase ();
-  const reasons: string[] = [],
-  // Check for suspicious phrases;
-  for (const phrase of suspicious_phrases) {
-    if ()) {) {
-  $2
-=======
-
-    reasons
-  }}
       reasons.push (`Contains suspicious phrase: "${phrase}"`);
     }
   }
@@ -199,9 +258,124 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
+
+=======
+
+=======
+=======
+
+  return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    isSuspicious: reasons.length > 0,
+    reasons,
+  };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  return {
+    isSuspicious: reasons.length > 0,
+    reasons,
+  };
+};
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    reasons
+
+=======
+    reasons;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+// Content analysis functionality;
+import { suspiciousPhrases } from './constants',;'
+import { AnalysisResult } from './types',;
+;
+/**;
+ * Analyzes text content for suspicious patterns;
+ */;
+export const analyzeContent = (content:string):AnalysisResult => {;
+  const contentLower = content.toLowerCase(),;
+  const reasons:string[] = [],;
+  ;
+  // Check for suspicious phrases;
+  for (const phrase of suspiciousPhrases) {;
+    if (contentLower.includes(phrase.toLowerCase())) {;"`
+      reasons.push(`Contains suspicious phrase:"${phrase}"`),;
+    }
+  }
+  ;
+  // Check for links (simplified check);
+  const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower),;
+  if (hasExternalLinks && (;'
+    contentLower.includes('payment') || ;'
+    contentLower.includes('money') || ;'
+    contentLower.includes('deal');
+  )) {;'
+    reasons.push('Contains external payment links'),;
+  }
+  ;
+  // Check for excessive capitalization (potential scam);
+  const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
+  if (capitalRatio > 0.3 && content.length > 20) {;'
+    reasons.push('Excessive capitalization'),;
+  }
+  ;
+  // Check for poor grammar with repetitive punctuation;
+  if (/[!?]{3}/.test(content)) {;'
+    reasons.push('Suspicious punctuation pattern'),;
+  }
+  ;
+  return {;
+    isSuspicious:reasons.length > 0,;
+    reasons;
+  },;
+},; // Content analysis functionality // Check for suspicious phrases for (const phrase of suspiciousPhrases) {}
+  if (contentLower.includes (phrase.toLowerCase () ) ) {}
+}
 
 };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+'
+}// Check for links (simplified check) if (hasExternalLinks && (contentLower.includes ('payment') || contentLower.includes ('money') || contentLower.includes ('deal') 
+  }
+  // Check for poor grammar with repetitive punctuation;
+  if (/[!?]{3}/.test(content)) {'
+    reasons.push('Suspicious punctuation pattern')
+  }
+  return {}
+    isSuspicious: reasons.length > 0;
+    reasons;
+  }
+}
+
 };
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

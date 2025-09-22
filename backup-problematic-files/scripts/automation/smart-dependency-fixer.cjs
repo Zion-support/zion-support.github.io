@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -133,4 +134,20 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(" Missing packages resolved")
   console.log("⚠  Some missing packages remain")
 // console.log(" No missing packages found")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+// Get automation interval from environment variable ("default")"
+  console.log(`� Running smart dependency fixer at ${new Date().toISOString()}`;
+console.log(`� Starting smart dependency fixer automation...``)"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   console.log(" No missing packages found")
+  console.log(" No missing packages found")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

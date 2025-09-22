@@ -1,4 +1,5 @@
 
+=======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -39,6 +40,7 @@ export function Web3Login() {;
       logErrorToProduction('Web3 login error:', { data:error }),;
     } finally {;
       setIsLoading(false),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   },;
 ;
@@ -72,44 +74,5 @@ export function Web3Login() {;
       </>;
     ),;
   }
-;
-  return (;
-    <Button;
-      type="button";
-      variant="outline";
-      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-      onClick={handleWeb3Login}
-      disabled={buttonDisabled}
-      title={buttonTitle || undefined} // Ensure title is not an empty string if not needed;
-    >;
-      {buttonContent}
-    </Button>;
-  ),; export function Web3Login () {;
-  const {;
-  loginWithWeb3 ;
-}= useAuth ();
-const {;
-  isWalletSystemAvailable ;
-}= useAppWallet ();
-const [isLoading, setIsLoading] = useState (false);
-const handleWeb3Login = async () => {;
-  if (!isWalletSystemAvailable) {;
-  return;
-}return;
-}await loginWithWeb3 (), //This is from useAuth, assumed to be a separate flow ;
-}finally {;
-  setIsLoading (false) ;
-}
-};
-const buttonDisabled = isLoading || !isWalletSystemAvailable;
-const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured." : "";";
->Sign in with Web3</span> </> return (<Button type=" button"variant=" outline"className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick={;
-  handleWeb3Login ;
-}disabled= {;
-  buttonDisabled ;
-}title= {;
-  buttonTitle || undefined ;
-}//Ensure title is not an empty string if not needed > {;
-  buttonContent ;
-}</Button>) ;
-}"
+<<<<<<< HEAD
+

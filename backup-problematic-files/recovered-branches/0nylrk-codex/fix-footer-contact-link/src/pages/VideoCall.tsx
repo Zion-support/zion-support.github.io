@@ -1,4 +1,5 @@
 
+=======
 import { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -73,6 +74,7 @@ export default function VideoCall() {;
   },;
 ;
   return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />;
       <Header />;
@@ -80,23 +82,8 @@ export default function VideoCall() {;
         {!hasJoined ? (;
           <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">;
             <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>;
-            <p className="text-zion-slate-light mb-8">Room ID:{roomId}</p>;
-            <Button ;
-              onClick={handleJoinCall} ;
-              disabled={isJoining}
-              size="lg";
-              className="bg-zion-purple hover:bg-zion-purple-light";
-            >;
-              {isJoining ? "Connecting..." :"Join Call"}
-            </Button>;
-          </div>;
-        ) :(;
-          <div className="space-y-4">;
-            <VideoCallRoom ;
-              roomId={roomId || ''} ;              participants={participants}
-              onLeave={handleLeaveCall} ;
-            />;
-            ;
+<<<<<<< HEAD
+
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">;
               <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
@@ -108,39 +95,5 @@ export default function VideoCall() {;
       </main>;
       <Footer />;
     </>;
-  ),; roomId 
-}` 
-}) 
-}, 1500) 
-};
-//Navigate back after a short delay setTimeout ( () => {
-  navigate (-1) 
-}, 1500) 
-};
-const simulateUserJoining = () => {
-  //This is just for demo purposes - in a real app, this would be handled by the video call service const mockUsers = [ {
-  id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false 
-};
-{
-  id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true 
-};
-{
-  id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true 
-}];
-const randomUser = mockUsers[Math.floor (Math.random () * mockUsers.length) ];
-if (!participants.find (p => p.id === randomUser.id) ) {
-  setParticipants (prev => [...prev, randomUser]);
-toast (`$ {
-  randomUser.name 
-}joined the call`) 
-}
-};
-return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom roomId= {
-  roomId || '' 
-}participants= {
-  participants 
-}onLeave= {
-  handleLeaveCall 
-}/> Simulate user joining (demo only) </Button> </div> </div>) 
-}</main> <Footer /> </>) 
+
 }

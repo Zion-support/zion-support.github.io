@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react',;
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant',;
 ;
@@ -83,3 +85,4 @@ useEffect ( () => {
   children 
 }</WhitelabelContext.Provider>) 
 };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

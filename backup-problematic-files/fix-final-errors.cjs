@@ -11,4 +11,4 @@ const path = require('path')
     "replacement"
     "replacement"
     "pattern"
-    "replacement"
+

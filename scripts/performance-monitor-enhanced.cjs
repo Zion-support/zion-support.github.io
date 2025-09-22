@@ -1,32 +1,34 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      "timestamp": new Date().toISOString(),
-      "memory": process.memoryUsage(),
-      "uptime": process.uptime(),
-      "cpu": process.cpuUsage()
-    }}
-  collectMetrics() {
-    this.metrics = {
-      "timestamp": new Date().toISOString(),
-      "memory": process.memoryUsage(),
-      "uptime": process.uptime(),
-      "cpu": process.cpuUsage()
-    };
-    const reportPath = path.join(process.cwd(), 'performance-metrics.json');
-    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
-    }
-}
-if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.collectMetrics()}
-module.exports = PerformanceMonitor;
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class PerformanceMonitor { constructor() { this.metrics = { timestamp: new Date().toISOString()," memory: process.memoryUsage()," uptime: process.uptime()," cpu: process.cpuUsage() }} collectMetrics() { this.metrics = {" timestamp: new Date().toISOString()," memory: process.memoryUsage()," uptime: process.uptime()," cpu: process.cpuUsage() }; " const reportPath = path.join(process.cwd(), "performance-metrics.json"); fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));" console.log(" Performance metrics collected and saved")}}if (require.main === module) { const monitor = new PerformanceMonitor(); monitor.collectMetrics()}module.exports = PerformanceMonitor;"""
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
     const reportPath = path.join(process.cwd(), 'performance-metrics.json'
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
     console.log(' Performance metrics collected and saved')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    console.log(' Performance metrics collected and saved')
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    console.log(' Performance metrics collected and saved')
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

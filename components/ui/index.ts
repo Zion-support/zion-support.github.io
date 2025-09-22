@@ -1,3 +1,20 @@
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+pr-12243
+
+export type { AIAssistantProps } from './AIAssistant';
+
+export type { AIAssistantProps } from \"./AIAssistant\";
+
+export { default as AIAssistant } from './AIAssistant';
+
+export type { AIAssistantProps } from './AIAssistant';
+
+export { default as AIAssistant } from './AIAssistant';
+
+export type { AIAssistantProps } from './AIAssistant';
+"
+export type { AIAssistantProps } from \"./AIAssistant\";
+
+"
+

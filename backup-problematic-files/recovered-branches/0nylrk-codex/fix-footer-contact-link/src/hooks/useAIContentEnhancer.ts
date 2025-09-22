@@ -1,69 +1,69 @@
 
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { toast } from '@/hooks/use-toast',;
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
 ;
 type EnhancementType = ;
   | 'resume-summary' ;
   | 'work-description' ;
   | 'job-post' ;
   | 'proposal' ;
-  | 'general',;
+  | 'general';
 ;
 export interface AIEnhancementOptions {;
-  enhancementType:EnhancementType,;
-  content?:string,;
-  context?:string,;
+  enhancementType:EnhancementType;
+  content?:string;
+  context?:string;
   instructions?:string;}
 ;
 export function useAIContentEnhancer() {;
-  const [isEnhancing, setIsEnhancing] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
+  const [isEnhancing, setIsEnhancing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   ;
   const enhanceContent = async ({;
-    enhancementType,;
-    content = '',;
-    context = '',;
+    enhancementType;
+    content = '';
+    context = '';
     instructions = '';
   } AIEnhancementOptions):Promise<string | null> => {;
-    setIsEnhancing(true),;
-    setError(null),;
+    setIsEnhancing(true);
+    setError(null);
     ;
     try {;
       const { data, error } = await supabase.functions.invoke('ai-content-enhancer', {;
         body:{ ;
-          content,;
-          enhancementType,;
-          context,;
+          content;
+          enhancementType;
+          context;
           instructions;
         }
-      }),;
+      });
       ;
       if (error) {;
-        throw new Error(error.message),;
+        throw new Error(error.message);
       }
       ;
-      return data.enhancedContent,;
+      return data.enhancedContent;
     } catch (err:any) {;
-      const errorMessage = err.message || 'Failed to enhance content',;
-      setError(errorMessage),;
+      const errorMessage = err.message || 'Failed to enhance content';
+      setError(errorMessage);
       toast({;
-        title:"AI Enhancement Failed",;
-        description:errorMessage,;
+        title:"AI Enhancement Failed";
+        description:errorMessage;
         variant:"destructive";
-      }),;
-      console.error('Enhancement error:', err),;
-      return null,;
+      });
+      console.error('Enhancement error:', err);
+      return null;
     } finally {;
-      setIsEnhancing(false),;
+      setIsEnhancing(false);
     }
-  },;
+  };
   ;
   return {;
-    enhanceContent,;
-    isEnhancing,;
+    enhanceContent;
+    isEnhancing;
     error;
-  },; type EnhancementType = | 'resume-summary' | 'work-description' | 'job-post' | 'proposal' | 'general';
+  }; type EnhancementType = | 'resume-summary' | 'work-description' | 'job-post' | 'proposal' | 'general';
 }finally {
   setIsEnhancing (false) 
 }
@@ -73,4 +73,8 @@ return {
 isEnhancing;
 error 
 }
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

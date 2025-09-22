@@ -1,6 +1,8 @@
 
+=======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react';
 import {;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Sidebar,;
   SidebarContent,;
   SidebarGroup,;
@@ -9,16 +11,8 @@ import {;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-} from "@/components/ui/sidebar",;
-;
-export function AppSidebar() {;
-  return (;
-    <Sidebar>;
-      <SidebarContent>;
-        <SidebarGroup title="Dashboard">;
-          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>;
-            <span>Home</span>;
-          </SidebarMenuItem>;
+<<<<<<< HEAD
+
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;
             <span>Messages</span>;
           </SidebarMenuItem>;
@@ -26,7 +20,7 @@ export function AppSidebar() {;
             <span>Notifications</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
-        ;
+
         <SidebarGroup title="Content">;
           <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>;
             <span>My Content</span>;
@@ -35,7 +29,7 @@ export function AppSidebar() {;
             <span>Analytics</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
-        ;
+
         <SidebarGroup title="Settings">;
           <SidebarMenuItem href="/profile" icon={<Users size={16} />}>;
             <span>Profile</span>;
@@ -46,10 +40,4 @@ export function AppSidebar() {;
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>;
-  ),;}
- return (<Sidebar> <SidebarContent> <SidebarGroup title="Dashboard" > <SidebarMenuItem href="/creator-dashboard" icon= {;
-  <Home size= {;
-  16 ;
-}/> ;
-}> <span>Home</span> </SidebarMenuItem> <span>Notifications</span> </SidebarMenuItem> </SidebarGroup> <span>Analytics</span> </SidebarMenuItem> </SidebarGroup> <span>Settings</span> </SidebarMenuItem> </SidebarGroup> </SidebarContent> </Sidebar>) ;
-}"
+

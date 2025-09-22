@@ -1,91 +1,85 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+import React from "react";
+import { format } from "date-fns";
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {format} from "date-fns";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
+=======
+
+import { 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 import React from "react",
 import { format } from "date-fns",
-import React from "react",
-import { format } from "date-fns",
-import React from "react",
-import { format } from "date-fns",
-import React from './react';
-import { format } from './date - fns';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from './lucide-react';
-import type { QuoteRequest } from "@/types / quotes";
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import { 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  Card;
+  CardContent;
+  CardHeader;
+<<<<<<< HEAD
+  CardTitle;
+  CardDescription
+} from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: string, is_archived: boolean) => void;
-}
-;
-export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
-  quote;
-  onViewDetails;
-  onMarkAsResponded,
-  onToggleArchive;
-}) => {
-  // Format date for display;
-  const format_date = (date_string: string) =>: any {
-    try {
-      return format (new Date (date_string), 'PP');
-    } catch (e) {
-type QuoteRequestCardProps = {;
-  quote: QuoteRequest,;
-  onViewDetails: (quote: QuoteRequest) => void,;
-  onMarkAsResponded?: (id: string) => void,;
-  onToggleArchive: (id: string, isArchived: boolean) => void;
-};
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
-  quote;
-  onViewDetails;
-
-import React from "react",;
-import { format } from "date-fns",;
-import { ;
-  Card,;
-  CardContent, ;
-  CardHeader, ;
-  CardTitle, ;
-  CardDescription;
-} from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",;
-import type { QuoteRequest } from "@/types/quotes",;
-;
-type QuoteRequestCardProps = {;
-  quote:QuoteRequest,;
-  onViewDetails:(quote:QuoteRequest) => void,;
-  onMarkAsResponded?:(id:string) => void,;
-  onToggleArchive:(id:string, isArchived:boolean) => void;
-},;
-;
-export const QuoteRequestCard:React.FC<QuoteRequestCardProps> = ({;
-  quote,;
-  onViewDetails,;
-  onMarkAsResponded,;
-  onToggleArchive;
-}) => {;
-  // Format date for display;
-
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
-import type { QuoteRequest } from "@/types/quotes",
-
-type QuoteRequestCardProps = {
-  quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
+<<<<<<< HEAD
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
+  onMarkAsResponded,
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
+  quote;
+  onViewDetails;
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+  quote;
+  onViewDetails;
+  onMarkAsResponded
+  quote,
+  onViewDetails,
+  onMarkAsResponded,
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  onToggleArchive
+}) => {
+  // Format date for display
+  const formatDate = (dateString: string) => {
+    try {
+      return format(new Date(dateString), 'PP')
+    } catch (e) {
+      return dateString
+    }
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  return (
 
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -97,30 +91,11 @@ type QuoteRequestCardProps = {
             </CardDescription>;
           </div>;
           <QuoteStatusBadge status={quote && quote.status} />;
-  return (
-    <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-      <CardHeader className="pb-2">
-        <div className="flex justify-between items-start">
-          <div>
-            <CardTitle className="text-white">{quote.project_name}</CardTitle>
-            <CardDescription className="text-zion-slate-light">
-              {formatDate(quote.created_at)}
-            </CardDescription>
-          </div>
-          <QuoteStatusBadge status={quote.status} />
-        </div>
-      </CardHeader>
-      <CardContent>
-        <div className="text-sm text-zion-slate-light mb-3">
-          <span className="text-white font-medium">From: </span>
-          {quote.requester_name}
-        </div>
-        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
-        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
-          <CalendarIcon className="h-4 w-4" />
-          <span>Timeline: {quote.timeline}</span>
-        </div>
-        <div className="flex justify-between items-center mt-4">
+        </div>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="text-sm text-zion-slate-light mb-3">;
+          <span className="text-white font-medium">From: </span>;
           {quote && quote.requester_name}
         </div>;
 
@@ -133,7 +108,18 @@ type QuoteRequestCardProps = {
 
         <div className="flex justify-between items-center mt-4">;
 
+=======
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => onViewDetails(quote)}
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Button
                 variant="ghost"
                 size="sm"
@@ -154,8 +140,17 @@ type QuoteRequestCardProps = {
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
-
-
+<<<<<<< HEAD
+              )}
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
 
 import React from "react",;
 import { format } from "date-fns",;
@@ -213,16 +208,57 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <CalendarIcon className="h-4 w-4" />;
           <span>Timeline: {quote.timeline}</span>;
         </div>;
+<<<<<<< HEAD
+=======
+          <Button
+            variant="outline"
+            size="sm"
+          <span className="text-white font-medium">From:</span>;
+          {quote.requester_name}
+        </div>;
+        ;
+        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>;
+        ;
+        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
+          <CalendarIcon className="h-4 w-4" />;
+          <span>Timeline:{quote.timeline}</span>;
+        </div>;
+        ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        <div className="flex justify-between items-center mt-4">;
+          <Button;
+            variant="outline";
+            size="sm";
+            onClick={() => onViewDetails(quote)}
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             className="flex items-center gap-1";
           >;
             <Eye className="h-4 w-4" />;
             View Details;
           </Button>;
+<<<<<<< HEAD
+
           <div className="flex items-center">;
-            {quote && quote.status !== 'responded' && onMarkAsResponded && (;              <Button
+            {quote && quote.status !== 'responded' && onMarkAsResponded && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => onMarkAsResponded(quote && quote.id)}
+                className="flex items-center gap-1";
+              >;
+                <MessageSquare className="h-4 w-4" />;
+                Mark Responded;
+              </Button>;
+            )}
+<<<<<<< HEAD
+
 
 
             <Button
@@ -232,50 +268,98 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               className="flex items-center gap-1";
             >;
               {quote && quote.is_archived ? (;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <RefreshCw className="h-4 w-4" />;
               ) : (;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
+<<<<<<< HEAD
 
-
-
-
-};
-    </Card>);
-}
+=======
+      return date_string;
+    }
+  }
 ;
-    </Card>);
-}
-;
-    </Card>;
-  ),;
-},; import {
-  Card;
-CardContent;
-CardHeader;
-CardTitle;
-CardDescription type QuoteRequestCardProps = {
-  quote: QuoteRequest;
-onViewDetails: (quote: QuoteRequest) => void;
-onMarkAsResponded?: (id: string) => void;
-onToggleArchive: (id: string, isArchived: boolean) => void 
-};
-quote, onViewDetails, onMarkAsResponded, onToggleArchive 
-}) => {
-  //Format date for display const formatDate = (dateString: string) => {
-  try {
-  </CardDescription> </div> <QuoteStatusBadge status= {
-  quote.status 
-}/> </div> </CardHeader> <CardContent> </div> <div className="flex justify-between items-center mt-4" > <Button > <Eye className="h-4 w-4" /> View Details </Button> onClick= {
-  () => onMarkAsResponded (quote.id) 
-}className="flex items-center gap-1" > <MessageSquare className="h-4 w-4" /> Mark Responded </Button>) 
-}<Button) : (<ArchiveIcon className="h-4 w-4" />) 
-}</Button> </div> </div> </CardContent> </Card>) 
-};
+  return (
+    <Card key={quote.id} className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
+      <CardHeader className="pb - 2">;
+        <div className="flex justify - between items - start">;
+          <div>;
+            <CardTitle className="text - white">{quote.project_name}</CardTitle>;
+            <CardDescription className="text - zion - slate - light">;
+              {format_date (quote.created_at)}
+            </CardDescription>;
+          </div>;
+          <QuoteStatusBadge status={quote.status} />;
+        </div>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="text - sm text - zion - slate - light mb - 3">;
+          <span className="text - white font - medium">From: </span>;
+          {quote.requester_name}
+        </div>;
+        <p className="text - white line - clamp - 3 mb - 4">{quote.project_summary}</p>;
+        <div className="flex items - center gap - 2 text - sm text - zion - slate - light mb - 3">;
+          <CalendarIcon className="h - 4 w - 4" />;
+          <span > Timeline: {quote.timeline}</span>;
+        </div>;
+        <div className="flex justify - between items - center mt - 4">;
+          <Button;
+            variant="outline";
+            size="sm";
+            on_click={() => onViewDetails (quote)}
+            className="flex items - center gap - 1";
+          >;
+            <Eye className="h - 4 w - 4" />;
+            View Details;
+          </Button>;
+          <div className="flex items - center">;
+            {quote.status !== 'responded' && onMarkAsResponded && (
+              <Button;
+                variant="ghost";
+                size="sm";
+                on_click={() => onMarkAsResponded (quote.id)}
+                className="flex items - center gap - 1";
+              >;
+                <MessageSquare className="h - 4 w - 4" />;
+                Mark Responded;
+              </Button>)}
+            <Button;
+              variant="ghost";
+              size="sm";
+              on_click={() => onToggleArchive (quote.id, !quote.is_archived)}
+              className="flex items - center gap - 1";
+            >;
+              {quote.is_archived ? (
+                <RefreshCw className="h - 4 w - 4" />) : (
+                <ArchiveIcon className="h - 4 w - 4" />)}
+
+            </Button>;
+          </div>;
+        </div>;
+<<<<<<< HEAD
+      </CardContent>;
     </Card>;
   );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+            </Button>;
+          </div>;
+        </div>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+      </CardContent>
 };
     </Card>);
 }
 ;
-};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

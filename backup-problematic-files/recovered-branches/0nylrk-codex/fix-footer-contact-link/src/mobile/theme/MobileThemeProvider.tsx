@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import React from "react",;
 import { useTheme } from "@/hooks/useTheme",;
 ;
@@ -29,3 +31,4 @@ export function MobileThemeProvider({ children } MobileThemeProviderProps) {;
   children 
 }</div>) 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

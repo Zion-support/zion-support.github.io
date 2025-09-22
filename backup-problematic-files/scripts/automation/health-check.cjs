@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Health Check Automation Script;
  * Monitors system health and reports status;
@@ -7,58 +7,51 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class HealthChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'health-check.log');
-        this.reportFile = path.join(this.projectRoot, 'health-check-report.json');
+
         this.ensureLogsDir()};
     ensureLogsDir() {}
         const logsDir = path.dirname(this.logFile);
         if (!fs.existsSync(logsDir)) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString();
         const logMessage = `[${timestamp}] ${message}\n`;`
         console.log(logMessage.trim());
         fs.appendFileSync(this.logFile, logMessage)};
+<<<<<<< HEAD
     async checkSystemHealth() {}
         this.log('Starting health check...');
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const healthReport = {}
             "timestamp": new Date().toISOString(),
             "status": 'healthy',
             "checks": {};
         };
+=======
+    async checkSystemHealth() {}"
+
+            "checks": {};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         try {}
             // Check Node.js version;
             const nodeVersion = process.version;
-            healthReport.checks.nodeVersion = {}
-                "status": 'pass',
-                "value": nodeVersion;
-            };
-            this.log(`Node.js "version": ${nodeVersion}`);
-
-            // Check available memory;
-            const memUsage = process.memoryUsage();
-            healthReport.checks.memory = {}
-                "status": 'pass',
-                "value": {}
-                    rss: Math.round(memUsage.rss / 1024 / 1024) + 'MB',
-                    "heapUsed": Math.round(memUsage.heapUsed / 1024 / 1024) + 'MB',
-                    "heapTotal": Math.round(memUsage.heapTotal / 1024 / 1024) + 'MB'
-                };
-            };
-            this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);
+            healthReport.checks.nodeVersion = {}"
 
             // Check disk space;
-            try {}
-                const diskUsage = execSync('df -h .', { "encoding": 'utf8' }
+            try {}"
+                const diskUsage = execSync('df -h ., { "encoding": utf8})
 });
                 healthReport.checks.diskSpace = {}
+<<<<<<< HEAD
                     "status": 'pass',
                     "value": diskUsage.split('\n')[1] || 'Unknown'
                 };
@@ -116,22 +109,43 @@ class HealthChecker {}
             healthReport.error = error.message};
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         this.log(`Health check completed. "Status": ${healthReport.status}`);
+=======
+
+                    "value": `${onlineProcesses} processes online;"
+                this.log(`PM2 "processes": ${onlineProcesses} online`)} catch (error) {`}"
+                healthReport.checks.pm2Processes = {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         return healthReport};
     async run() {}
-        try {}
             await this.checkSystemHealth();
             // Exit after successful completion;
-            setTimeout(() => {}
-                this.log('Health check completed successfully, exiting...');
-                process.exit(0)}, 1000)} catch (error) {}
-            this.log(`Fatal "error": ${error.message}`);
+            setTimeout(() => {}"
+
             process.exit(1)};
-    };
-};
 // Run if called directly;
 if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
 module.exports = HealthChecker;
+module.exports = HealthChecker;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = HealthChecker;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

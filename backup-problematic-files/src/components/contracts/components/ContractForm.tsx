@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -201,3 +203,4 @@ talent.full name ;
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Contract... </>) : ("Generate Contract") ";
 }</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form </Button> </DialogFooter> </>) ;
 }"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

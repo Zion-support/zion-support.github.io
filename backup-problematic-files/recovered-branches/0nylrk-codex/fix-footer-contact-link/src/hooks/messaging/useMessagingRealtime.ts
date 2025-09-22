@@ -1,22 +1,22 @@
 
-import { useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { UserProfile, UserDetails } from '@/types/auth',;
-import { Message, Conversation } from '@/types/messaging',;
-import { toast } from '@/hooks/use-toast',;
+import { useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { UserProfile, UserDetails } from '@/types/auth';
+import { Message, Conversation } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';
 ;
 // Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null,;
+type UserWithProfile = UserProfile | UserDetails | null;
 ;
 export function useMessagingRealtime(;
-  user:UserWithProfile,;
-  activeConversation:Conversation | null,;
-  setActiveMessages:(updater:(prev:Message[]) => Message[]) => void,;
+  user:UserWithProfile;
+  activeConversation:Conversation | null;
+  setActiveMessages:(updater:(prev:Message[]) => Message[]) => void;
   fetchConversations:() => Promise<void>;
 ) {;
   // Setup real-time subscription when user is logged in;
   useEffect(() => {;
-    if (!user) return,;
+    if (!user) return;
 ;
     // Subscribe to new messages;
     const subscription = supabase;
@@ -32,25 +32,25 @@ export function useMessagingRealtime(;
         (payload) => {;
           // Update messages if the conversation is selected;
           if (activeConversation && payload.new.sender_id === activeConversation.other_user.id) {;
-            setActiveMessages(prev => [...prev, payload.new as Message]),;
+            setActiveMessages(prev => [...prev, payload.new as Message]);
           }
           ;
           // Update conversations;
-          fetchConversations(),;
+          fetchConversations();
           ;
           // Show toast notification for new message;
           toast({;
-            title:`New message from ${payload.new.sender_name || 'Someone'}`,;
+            title:`New message from ${payload.new.sender_name || 'Someone'}`;
             description:payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' :'');
-          }),;
+          });
         }
       );
-      .subscribe(),;
+      .subscribe();
 ;
     return () => {;
-      supabase.removeChannel(subscription),;
-    },;
-  }, [user, activeConversation, fetchConversations, setActiveMessages]),;
+      supabase.removeChannel(subscription);
+    };
+  }, [user, activeConversation, fetchConversations, setActiveMessages]);
 } // Allow either UserProfile or UserDetails type UserWithProfile = UserProfile | UserDetails | null;
 export function useMessagingRealtime (user: UserWithProfile, activeConversation: Conversation | null, setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
 fetchConversations: () => Promise<void> // Subscribe to new messages const subscription = supabase .channel ('messages') .on ('postgres changes', {
@@ -68,3 +68,7 @@ description: payload.new.content.substring (0, 50) + (payload.new.content.length
 }) 
 }) .subscribe ();
 }
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

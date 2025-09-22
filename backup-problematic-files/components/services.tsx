@@ -5,6 +5,77 @@ import {
   Brain, Rocket, Dna, Globe, Shield, Wifi, 
   Package, Bot, Car, Building2, Monitor, Cpu, 
   Zap, Atom, Database, Cloud, Lock, Code
+<<<<<<< HEAD:components/services.tsx.backup.1755992146.backup.1756001157
+} from 'lucide-react';
+import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
+import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { newRealServices } from '../data/new-real-services';
+import { industryRealServices } from '../data/industry-real-services';
+import { professionalServices } from '../data/professional-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { curatedMarketServices } from '../data/curated-market-services';
+import { realMarketServices } from '../data/real-market-services';
+import { new2025Services } from '../data/new-2025-services';
+import { newRealInnovations } from '../data/new-real-innovations';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import { extraServices } from '../data/extra-services';
+import { newlyAddedServices } from '../data/newly-added-services';
+import { moreRealServices2025 } from '../data/more-real-services-2025';
+import { verified2025Additions } from '../data/verified-2025-additions';
+import { realServicesQ12025 } from '../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
+import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services';
+import { emergingTech2026Innovations } from '../data/emerging-tech-2026-innovations';
+import { enterpriseIT2026Comprehensive } from '../data/enterprise-it-2026-comprehensive';
+import { comprehensiveMicroSaas2026 } from '../data/comprehensive-micro-saas-2026';
+
+export default function ServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('name');
+
+  // Combine all services
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    </UltraAdvancedQuantumBackground>
+  ];
+
+  // Get unique services by ID
+  const uniqueServices = allServices.filter((service, index, self) => 
+    index === self.findIndex(s => s.id === service.id)
+  );
+
+  // Get all categories
+  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
+    Array.isArray(s.category) ? s.category[0] : s.category
+  )))];
+
+  // Filter and sort services
+  const filteredServices = uniqueServices
+    .filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'All' || 
+                             (Array.isArray(service.category) ? 
+                               service.category.includes(selectedCategory) : 
+                               service.category === selectedCategory);
+=======
 } from 'lucide-react',
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',
@@ -82,7 +153,7 @@ const serviceCategories: Array<{
 }> = [
   {
     id: 'ai-consciousness',
-    title: '🧠 AI & Consciousness',
+    title: ' AI & Consciousness',
     description: 'Revolutionary AI consciousness and emotional intelligence platforms',
     icon: Brain,
     color: 'from-violet-500 to-purple-500',
@@ -91,7 +162,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'quantum-emerging',
-    title: '⚛️ Quantum & Emerging Tech',
+    title: ' Quantum & Emerging Tech',
     description: 'Quantum computing, DNA computing, and beyond',
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
@@ -100,7 +171,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'enterprise-it',
-    title: '🏙️ Enterprise IT',
+    title: ' Enterprise IT',
     description: 'Autonomous operations and zero-trust security',
     icon: Shield,
     color: 'from-blue-500 to-cyan-500',
@@ -109,7 +180,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'space-metaverse',
-    title: '🌌 Space & Metaverse',
+    title: ' Space & Metaverse',
     description: 'Space mining, metaverse development, and more',
     icon: Rocket,
     color: 'from-teal-500 to-emerald-500',
@@ -118,7 +189,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'micro-saas',
-    title: '🎯 Micro SAAS',
+    title: ' Micro SAAS',
     description: 'Innovative solutions for every business need',
     icon: Target,
     color: 'from-green-500 to-yellow-500',
@@ -127,7 +198,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'financial-technology',
-    title: '💰 Financial Technology',
+    title: ' Financial Technology',
     description: 'Innovative fintech, DeFi, and financial services',
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-500',
@@ -136,7 +207,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'healthcare-biotech',
-    title: '🏥 Healthcare & Biotech',
+    title: ' Healthcare & Biotech',
     description: 'AI-powered healthcare and biotechnology solutions',
     icon: Shield,
     color: 'from-blue-500 to-indigo-500',
@@ -145,7 +216,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'education-technology',
-    title: '🎓 Education Technology',
+    title: ' Education Technology',
     description: 'AI-powered learning and educational innovation',
     icon: Brain,
     color: 'from-purple-500 to-pink-500',
@@ -154,7 +225,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'sustainability-green-tech',
-    title: '🌱 Sustainability & Green Tech',
+    title: ' Sustainability & Green Tech',
     description: 'Environmental technology and sustainability solutions',
     icon: Globe,
     color: 'from-emerald-500 to-teal-500',
@@ -163,7 +234,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'logistics-supply-chain',
-    title: '🚚 Logistics & Supply Chain',
+    title: ' Logistics & Supply Chain',
     description: 'Autonomous logistics and supply chain optimization',
     icon: Rocket,
     color: 'from-orange-500 to-red-500',
@@ -172,7 +243,7 @@ const serviceCategories: Array<{
   },
   {
     id: 'research-development',
-    title: '🔬 Research & Development',
+    title: ' Research & Development',
     description: 'Breakthrough technologies and innovations',
     icon: Microscope,
     color: 'from-red-500 to-pink-500',
@@ -282,6 +353,7 @@ export default function ServicesPage() {;
                              (Array.isArray(service.category) ?;
                                service.category.includes(selectedCategory) :;
                                service.category === selectedCategory),;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/services.tsx
       return matchesSearch && matchesCategory;
     });
     .sort((a, b) => {;
@@ -561,7 +633,7 @@ export default function ServicesPage() {;
                       
                       <div className="mt-6 pt-6 border-t border-gray-700/50">
                         <div className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300">
-                          Click to explore →
+                          Click to explore 
                         </div>
                       </div>
 
@@ -601,7 +673,7 @@ export default function ServicesPage() {;
                           </div>
                           {service.popular && (
                             <span className="px-3 py-1.5 text-sm bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full shadow-lg shadow-pink-500/25">
-                              ⭐ Popular
+                               Popular
                             </span>
                           )}
                         </div>;
@@ -645,7 +717,7 @@ export default function ServicesPage() {;
 
                       {/* Enhanced Features */}
                       <div className="mb-6 relative z-10">
-                        <div className="text-sm text-cyan-400 font-medium mb-3">✨ Key Features</div>
+                        <div className="text-sm text-cyan-400 font-medium mb-3"> Key Features</div>
                         <ul className="space-y-2">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <li key={idx} className="text-sm text-gray-300 flex items-center group-hover:text-white transition-colors duration-300">
@@ -791,7 +863,7 @@ export default function ServicesPage() {;
                       whileTap={{ scale: 0.95 }}
                       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40"
                     >
-                      🚀 Get Started Today
+                       Get Started Today
                     </motion.a>
                     <motion.a
                       href="/pricing"
@@ -799,7 +871,7 @@ export default function ServicesPage() {;
                       whileTap={{ scale: 0.95 }}
                       className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
                     >
-                      💰 View Pricing
+                       View Pricing
                     </motion.a>
                   </div>
                   
@@ -849,7 +921,7 @@ export default function ServicesPage() {;
                       whileTap={{ scale: 0.95 }}
                       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40";
                     >;
-                      🚀 Get Started Today;
+                       Get Started Today;
                     </motion.a>;
                     <motion.a;
                       href="/pricing";
@@ -857,7 +929,7 @@ export default function ServicesPage() {;
                       whileTap={{ scale: 0.95 }}
                       className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm";
                     >;
-                      💰 View Pricing;
+                       View Pricing;
                     </motion.a>;
                   </div>;
                   <div className="mt-10 text-sm text-gray-400">;

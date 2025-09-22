@@ -1,8 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 interface SeparatorProps {
   className?: string;
-  orientation?: 'horizontal' | 'vertical';
+  orientation?: 'horizontal' | 'vertical';}
+}
 }
 
 export function Separator({ className = '', orientation = 'horizontal' }: SeparatorProps) {

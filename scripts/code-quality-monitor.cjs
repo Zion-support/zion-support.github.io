@@ -1,197 +1,40 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"console.log(" Starting code quality monitoring.");const qualityMetrics = { timestamp: new Date().toISOString()," files: {}," summary: { totalFiles: 0," totalLines: 0," averageComplexity: 0," issues: [] }};/ Code quality rulesconst qualityRules = [{"" name: "Function Length"," check: (content) => { const functions = content.match(/function\s+\w+\s*\([^)]*\)\s*\{[\s\S]*?\}/g) | []; const longFunctions = functions.filter(func => {" const lines = func.split("\n").lengt;h; return lines > 50}); return longFunctions.length}," threshold: 0,"" message: "Functions should be under 50 lines" }, {"" name: "File Length"," check: (content) => {" const lines = content.split("\n").lengt;h; return lines > 500 ? 1 : 0}," threshold: 0,"" message: "Files should be under 500 lines" }, {"" name: "Complexity"," check: (content) => { const complexityIndicators = [/if\s*\(/g, /else\s*if\s*\(/g, /for\s*\(/g, /while\s*\(/g, /switch\s*\(/g, /catch\s*\(/g, /\?\s*.*\s*:/g ]; let complexity = 0; complexityIndicators.forEach(pattern => { const matches = content.match(pattern); if (matches) { complexity += matches.length; } }); return complexity}," threshold: 20,"" message: "High complexity detected" }, {"" name: "Duplicate Code"," check: (content) => {" const lines = content.split("\n";); const lineCounts = ;{}; let duplicates = ;0; lines.forEach(line => { const trimmed = line.trim(;); if ( { / Only check substantial lines lineCounts[trimmed] = (lineCounts[trimmed] | 0) + 1) { { / Only check substantial lines lineCounts[trimmed] = (lineCounts[trimmed] | 0) + 1} if (duplicates++} })) { duplicates++} })} return duplicates}," threshold: 5,"" message: "Potential duplicate code detected" }];function analyzeFile(filePath) { if () return nul) { ) return nul}l; try {" const content = fs.readFileSync(filePath, "utf8";);" const lines = content.split("\n").lengt;h; const analysis = {" path: filePath, lines," issues: []," complexity: 0 }; qualityRules.forEach(rule => { const result = rule.check(content;); if ( { analysis.issues.push({" rule: rule.name," value: result," message: rule.message })} " if (rule.name === "Complexity") { analysis.complexity = result} })) { { analysis.issues.push({" rule: rule.name," value: result," message: rule.message })} " if (rule.name === "Complexity") { analysis.complexity = result} })} return analysis} catch (error) { return {;" path: filePath," error: error.message," issues: [] }}}/ Analyze files"const directories = ["components", "pages", "lib", "scripts"];let totalFiles = ;0;let totalLines = ;0;let totalComplexity = ;0;directories.forEach(dir => { if (true) {" const files = fs.readdirSync(dir, { recursive: true })) { ) {" const files = fs.readdirSync(dir, { recursive: true })} files.forEach(file => { if ($/.test(file)) { const filePath = path.join(dir, file) { $/.test(file)) { const filePath = path.join(dir, file}); const analysis = analyzeFile(filePat;h;); if ( { qualityMetrics.files[filePath] = analysis) { { qualityMetrics.files[filePath] = analysis} totalFiles++; totalLines += analysis.lines totalComplexity += analysis.complexity if ( { qualityMetrics.summary.issues.push({" file: filePath," issues: analysis.issues })} } } })}})) { { qualityMetrics.summary.issues.push({" file: filePath," issues: analysis.issues })} } } })}})}/ Calculate summaryqualityMetrics.summary.totalFiles = totalFiles;qualityMetrics.summary.totalLines = totalLines;qualityMetrics.summary.averageComplexity = totalFiles > 0 ? (totalComplexity / totalFiles).toFixed(2) : 0;/ Display results""console.log("\n Code Quality Report: ");console.log(` - Total files analyzed: ${totalFiles}`);"`console.log(` - Total lines of code: ${totalLines.toLocaleString()}`);"`console.log(` - Average complexity: ${qualityMetrics.summary.averageComplexity}`);"`console.log(` - Files with issues: ${qualityMetrics.summary.issues.length}`);if ( {"" console.log("\n Quality Issues: ")) { {" console.log("\n Quality Issues:")} qualityMetrics.summary.issues.forEach(fileIssue => {` console.log(`\n ${fileIssue.file}:`); fileIssue.issues.forEach(issue => {` console.log(` - ${issue.rule}: ${issue.message} (${issue.value});`)})})} else {" console.log("\n No quality issues detected")}/ Generate recommendationsconst recommendations = [];if ( {" recommendations.push("Consider refactoring complex functions")}if (qualityMetrics.summary.issues.length > totalFiles * 0.3) {" recommendations.push("High number of quality issues - consider code review")}if (totalLines > 10000) {" recommendations.push("Large codebase - consider modularization")}if (recommendations.length > 0) {"" console.log("\n Recommendations: ")) { {" recommendations.push("Consider refactoring complex functions")}if (qualityMetrics.summary.issues.length > totalFiles * 0.3) {" recommendations.push("High number of quality issues - consider code review")}if (totalLines > 10000) {" recommendations.push("Large codebase - consider modularization")}if (recommendations.length > 0) {"" console.log("\n Recommendations: ")}` recommendations.forEach(rec => console.log(` - ${rec}`);)}/ Save report"fs.writeFileSync("code-quality-report.json", JSON.stringify(qualityMetrics, null, 2));"console.log("\n Code quality report saved to code-quality-report.json");process.exit(0);'"`'"`
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-const qualityMetrics = {
-  "timestamp": new Date().toISOString(),
-  "files": {},
-  "summary": {
-    totalFiles: 0,
-    "totalLines": 0,
-    "averageComplexity": 0,
-    "issues": []
-  }
-};
-// Code quality rules
-const qualityRules = [{
-    "name": 'Function Length',
-    "check": (content) => {
-      const functions = content.match(/function\s+\w+\s*\([^)]*\)\s*\{[\s\S]*?\}/g) || [];
-      const longFunctions = functions.filter(func => {
-        const lines = func.split('\n').lengt;h;
-        return lines > 50});
-      return longFunctions.length},
-    "threshold": 0,
-    "message": 'Functions should be under 50 lines'
-  },
-  {
-    "name": 'File Length',
-    "check": (content) => {
-      const lines = content.split('\n').lengt;h;
-      return lines > 500 ? 1 : 0},
-    "threshold": 0,
-    "message": 'Files should be under 500 lines'
-  },
-  {
-    "name": 'Complexity',
-    "check": (content) => {
-      const complexityIndicators = [/if\s*\(/g,
-        /else\s*if\s*\(/g,
-        /for\s*\(/g,
-        /while\s*\(/g,
-        /switch\s*\(/g,
-        /catch\s*\(/g,
-        /\?\s*.*\s*:/g
-      ];
-      let complexity = 0;
-      complexityIndicators.forEach(pattern => {
-        const matches = content.match(pattern);
-        if (matches) {
-          complexity += matches.length;
-        }
-      });
-      return complexity},
-    "threshold": 20,
-    "message": 'High complexity detected'
-  },
-  {
-    "name": 'Duplicate Code',
-    "check": (content) => {
-      const lines = content.split('\n';);
-      const lineCounts = ;{};
-      let duplicates = ;0;
-      lines.forEach(line => {
-        const trimmed = line.trim(;);
-        if ( { // Only check substantial lines
-          lineCounts[trimmed] = (lineCounts[trimmed] || 0) + 1) {
-     { // Only check substantial lines
-          lineCounts[trimmed] = (lineCounts[trimmed] || 0) + 1}
-          if (duplicates++}
-      })) {
-    duplicates++}
-      })}
-      return duplicates},
-    "threshold": 5,
-    "message": 'Potential duplicate code detected'
-  }
-];
-function analyzeFile(filePath) {
-  if () return nul) {
-    ) return nul}l;
-  try {
-    const content = fs.readFileSync(filePath, 'utf8';);
-    const lines = content.split('\n').lengt;h;
-    const analysis = {
-      "path": filePath,
-      lines,
-      "issues": [],
-      "complexity": 0
-   };
-    qualityRules.forEach(rule => {
-      const result = rule.check(content;);
-      if ( {
-        analysis.issues.push({
-          "rule": rule.name,
-          "value": result,
-          "message": rule.message
-        })}
-      if (rule.name === 'Complexity') {
-        analysis.complexity = result}
-    })) {
-     {
-        analysis.issues.push({
-          "rule": rule.name,
-          "value": result,
-          "message": rule.message
-        })}
-      if (rule.name === 'Complexity') {
-        analysis.complexity = result}
-    })}
-    return analysis} catch (error) {
-    return {;
-      "path": filePath,
-      "error": error.message,
-      "issues": []
-    }}
-}
-// Analyze files
-const directories = ['components', 'pages', 'lib', 'scripts'];
-let totalFiles = ;0;
-let totalLines = ;0;
-let totalComplexity = ;0;
-directories.forEach(dir => {
-  if () {
-    const files = fs.readdirSync(dir, { "recursive": true })) {
-    ) {
-    const files = fs.readdirSync(dir, { "recursive": true })}
-    files.forEach(file => {
-      if ($/.test(file)) {
-        const filePath = path.join(dir, file) {
-    $/.test(file)) {
-        const filePath = path.join(dir, file});
-        const analysis = analyzeFile(filePat;h;);
-        if ( {
-          qualityMetrics.files[filePath] = analysis) {
-     {
-          qualityMetrics.files[filePath] = analysis}
-          totalFiles++;
-          totalLines += analysis.lines
-          totalComplexity += analysis.complexity
-          if ( {
-            qualityMetrics.summary.issues.push({
-              "file": filePath,
-              "issues": analysis.issues
-            })}
-        }
-      }
-    })}
-})) {
-     {
-            qualityMetrics.summary.issues.push({
-              "file": filePath,
-              "issues": analysis.issues
-            })}
-        }
-      }
-    })}
-})}
-// Calculate summary
-qualityMetrics.summary.totalFiles = totalFiles;
-qualityMetrics.summary.totalLines = totalLines;
-qualityMetrics.summary.averageComplexity = totalFiles > 0 ? (totalComplexity / totalFiles).toFixed(2) : 0;
-// Display results
-}`);
-if ( {
-  ) {
-     {
-  }
-  qualityMetrics.summary.issues.forEach(fileIssue => {
-    fileIssue.issues.forEach(issue => {
-      `)})})} else {
-  }
-// Generate recommendations
-const recommendations = [];
-if ( {
-  recommendations.push('Consider refactoring complex functions')}
-if (qualityMetrics.summary.issues.length > totalFiles * 0.3) {
-  recommendations.push('High number of quality issues - consider code review')}
-if (totalLines > 10000) {
-  recommendations.push('Large codebase - consider modularization')}
-if (recommendations.length > 0) {
-  ) {
-     {
-  recommendations.push('Consider refactoring complex functions')}
-if (qualityMetrics.summary.issues.length > totalFiles * 0.3) {
-  recommendations.push('High number of quality issues - consider code review')}
-if (totalLines > 10000) {
-  recommendations.push('Large codebase - consider modularization')}
-if (recommendations.length > 0) {
-  }
-  recommendations.forEach(rec => )}
-// Save report
-fs.writeFileSync('code-quality-report.json', JSON.stringify(qualityMetrics, null, 2));
-process.exit(0);
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+#!/usr/bin/env node
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔍 Code Quality Monitor Starting...');
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log(' Starting code quality monitoring...')
+<<<<<<< HEAD
     "name"
     "message"
     "name"
@@ -203,4 +46,90 @@ console.log(' Starting code quality monitoring...')
 // console.log('\n Code Quality "Report")
   console.log('\n⚠  Quality "Issues")
 // console.log('\n "Recommendations")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
   console.log('\n "Recommendations")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.log('\n "Recommendations")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.log('\n "Recommendations")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.log('\n "Recommendations")
+=======
+    "name"""
+    "message"""
+// console.log('\n Code Quality "Report")""');
+  console.log('\n⚠  Quality "Issues")""');
+// console.log('\n "Recommendations")""');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+const qualityChecks = [
+  {
+    name: 'ESLint Check',
+    command: 'npm run lint',
+    critical: true
+  },
+  {
+    name: 'TypeScript Check',
+    command: 'npm run type-check',
+    critical: true
+  },
+  {
+    name: 'Build Check',
+    command: 'npm run build',
+    critical: true
+  },
+  {
+    name: 'Test Check',
+    command: 'npm run test:smoke',
+    critical: false
+  }
+];
+
+let passed = 0;
+let failed = 0;
+let criticalFailed = 0;
+
+qualityChecks.forEach(check => {
+  try {
+    console.log(`\n🔄 Running ${check.name}...`);
+    execSync(check.command, { stdio: 'pipe' });
+    console.log(`✅ ${check.name} passed`);
+    passed++;
+  } catch (error) {
+    console.log(`❌ ${check.name} failed`);
+    failed++;
+    if (check.critical) {
+      criticalFailed++;
+    }
+  }
+});
+
+console.log(`\n📊 Code Quality Results:`);
+console.log(`✅ Passed: ${passed}`);
+console.log(`❌ Failed: ${failed}`);
+console.log(`🚨 Critical Failed: ${criticalFailed}`);
+
+if (criticalFailed > 0) {
+  console.log('\n⚠️  Critical quality checks failed. Please fix issues before proceeding.');
+  process.exit(1);
+} else if (failed > 0) {
+  console.log('\n⚠️  Some quality checks failed, but none are critical.');
+  process.exit(0);
+} else {
+  console.log('\n🎉 All code quality checks passed!');
+  process.exit(0);
+}
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

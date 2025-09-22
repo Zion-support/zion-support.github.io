@@ -1,4 +1,5 @@
 
+=======
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -74,35 +75,13 @@ export function MyApplications() {;
             </div>;
             <p className="text-sm text-muted-foreground">;
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix:true })}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </p>;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-3">;
-              {application.cover_letter && (;
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
-                  {application.cover_letter}
-                </p>;
-              )}
-              ;
-              <div className="flex justify-between items-center">;
-                <Button ;
-                  variant="outline" ;
-                  size="sm" ;
-                  className="text-xs";
-                  asChild;
-                >;
-                  <Link href={`/jobs/${application.job_id}`}>;
-                    <ExternalLink className="h-3 w-3 mr-1" /> View Job;
-                  </Link>;
-                </Button>;
-                ;
-                <Button ;
-                  variant="default" ;
-                  size="sm";
-                  className="text-xs";
-                  asChild;
-                >;
-                  <Link href={`/messages?jobId=${application.job_id}`}>;
+<<<<<<< HEAD
+
                     <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
                   </Link>;
                 </Button>;
@@ -112,30 +91,4 @@ export function MyApplications() {;
         </Card>;
       ))}
     </div>;
-  ),; export function MyApplications () {;
-  const {;
-  applications,  isLoading, error ;
-}= useJobApplications ();
-const getStatusBadge = (status: ApplicationStatus) => {;
-  switch (status) {;
-  case "viewed": return <Badge variant="outline">Viewed</Badge>;";
-case "shortlisted": return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>;";
-case "interview": return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>;";
-case "hired": return <Badge className="bg-green-100 text-green-800">Hired</Badge>;";
-case "rejected": return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;";
-default: return <Badge variant="outline"> {;
-  status ;
-}</Badge> ;
-}
-};
-<p> {;
-  error ;
-}</p> </div>) ";
-}You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {;
-  getStatusBadge (application.status) ;
-}</div> {;
-  application.cover letter ;
-}</p>) ";
-}<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
-}</div>) ;
-}'"
+

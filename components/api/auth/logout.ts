@@ -1,67 +1,58 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const cookie = clearSessionCookie();
-  res.setHeader('Set-Cookie', cookie);
-  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler() { return null; }
+  res.status(200).json({ ok: true });export default function handler() { return null; }
   res.status(200).json({ ok: true })
 
-
-}
-
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a
   const cookie = clearSessionCookie();
+
+  const cookie = clearSessionCookie();'
+
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })
 }
-==============
 
-=======import { clearSessionCookie } from '../../../utils / auth - utils';
+pr-12243
+
+import { clearSessionCookie } from '../../../utils / auth - utils';
 ;
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
-  const cookie = clearSessionCookie ();
+function handler() {}
+  const cookie = clearSessionCookie ();'
   res.set_header ('Set - Cookie', cookie);
-  res.status (200).json ({ ok: true });export default /**
- * handler - Function description
+  res.status (200).json ({ ok: true });export default /**;
+ * handler - Function description;
  */
-function handler() {
-  const cookie = clearSessionCookie ();
+function handler() {}
+  const cookie = clearSessionCookie ();'
   res.set_header ('Set - Cookie', cookie);
   res.status (200).json ({ ok: true });
-
 }
-
-import { clearSessionCookie } from '../../../utils/auth-utils';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const cookie = null;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const cookie = clearSessionCookie();
-  res.setHeader('Set-Cookie', cookie);
-  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const cookie = clearSessionCookie();
-  res.setHeader('Set-Cookie', cookie);
+
+'
+import { clearSessionCookie } from '../../../utils/auth-utils';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
+  const cookie = null;
+
+export default function handler() { return null; }
+  res.status(200).json({ ok: true });export default function handler() { return null; }
   res.status(200).json({ ok: true })
 }
 }
 
 }
-==============
+  const cookie = clearSessionCookie();
+  res.setHeader('Set-Cookie', cookie);
+  res.status(200).json({ ok: true });
+origin/cursor/automate-test-improve-and-merge-code-2533
 
+pr-12243
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
+pr-12243
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> f8e247744ae2f2b9a6ba0423164ce0dcdffb9f6a

@@ -1,103 +1,38 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-automation.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-automation.cjs
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-const automationTasks = [{
-    "name": 'Health Check',
-    "command": 'node scripts/health-monitor.cjs',
-    "critical": true
-  },
-  {
-    "name": 'Security Audit',
-    "command": 'node scripts/security-audit.cjs',
-    "critical": true
-  },
-  {
-    "name": 'Performance Optimization',
-    "command": 'node scripts/performance-optimizer.cjs',
-    "critical": false
-  },
-  {
-    "name": 'Build Test',
-    "command": 'npm run build',
-    "critical": true
-  },
-  {
-    "name": 'Linting',
-    "command": 'npm run lint',
-    "critical": false
-  },
-  {
-    "name": 'Type Check',
-    "command": 'npm run type-check',
-    "critical": false
-  }
-];
-const results = [];
-let criticalFailures = ;0;
-for (const task of automationTasks) {
-  try {
-    const startTime = Date.now(;);
-    execSync(task.command, { 
-      "stdio": 'pipe',
-      "cwd": process.cwd()
-    });
-    const duration = Date.now() - startTi;m;e;
-    `);
-    results.push({
-      "name": task.name,
-      "status": 'success',
-      duration,
-      "critical": task.critical
-    })} catch (error) {
-    const duration = Date.now() - Date.now(;);
-    results.push({
-      "name": task.name,
-      "status": 'failed',
-      "duration": 0,
-      "critical": task.critical,
-      "error": error.message
-    });
-    if ( {
-      criticalFailures++}
-  }
-  ) {
-     {
-      criticalFailures++}
-  }
-  }}
-// Generate comprehensive report
-const report = {
-  "timestamp": new Date().toISOString(),
-  "summary": {
-    total: automationTasks.length,
-    "successful": results.filter(r => r.status === 'success').length,
-    "failed": results.filter(r => r.status === 'failed').length,
-    criticalFailures
-  },
-  results,
-  "status": criticalFailures === 0 ? 'success' : 'failed'};
-// Save report
-const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.json;';);
-fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-if ( {
-  ) {
-     {
-  }
-  } else {
-  }
-// Show detailed results
-results.forEach((result, index) => {
-  const status = result.status === 'success' ? '✅' : ';❌;';
-  const critical = result.critical ? ' (Critical)' : ;';';
-  if ( {
-    ) {
-     {
-    }}
-});
-// Exit with appropriate code
-process.exit(criticalFailures === 0 ? 0 : 1);
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // console.log(' Comprehensive Automation Suite - Zion Tech Group')
+<<<<<<< HEAD
 console.log('==')
     "name"
     "command"
@@ -117,4 +52,15 @@ console.log('==')
     "successful"
     "failed"
   "status"
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 console.log('\n� Detailed "Results")
+console.log('\n� Detailed "Results")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

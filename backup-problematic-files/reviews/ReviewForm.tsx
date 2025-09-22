@@ -1,217 +1,198 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
-:backup-problematic-files/reviews/ReviewForm.tsx
-import React, { useState } from 'react',;
-import StarRating from './StarRating',;
-export type ReviewFormValues = {;
-  projectId: string,;
-  fromRole: 'client' | 'talent',;
-  fromId: string,;
-  rating: number,;
-  text: string,;
-  categories?: {;
-    communication?: number,;
-    qualityOfWork?: number,;
-    timeliness?: number,;
-    wouldWorkWithAgain?: boolean;
-  },;
-  anonymous?: boolean;
-},;
-type Props = {;
-  initial: Pick<ReviewFormValues 'projectId' | 'fromRole' | 'fromId'>;
-},;
-const ReviewForm: React.FC<Props> = ({ initial }) => {;
-  const [rating, setRating] = useState(0),;
-  const [text, setText] = useState(''),;
-  const [anonymous, setAnonymous] = useState(false),;
-  const [communication, setCommunication] = useState<number | undefined>(),;
-  const [qualityOfWork, setQualityOfWork] = useState<number | undefined>(),;
-  const [timeliness, setTimeliness] = useState<number | undefined>(),;
-  const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false),;
-  const [submitting, setSubmitting] = useState(false),;
-  const [message, setMessage] = useState<string | null>(null),;
-  async function handleSubmit(e: React.FormEvent) {;
-    e.preventDefault(),;
-    setSubmitting(true),;
-    setMessage(null),;
-    try {;
-      const res = await fetch('/api/reviews/submit', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({;
-          projectId: initial.projectId,;
-          fromRole: initial.fromRole,;
-          fromId: initial.fromId,;
-          rating,;
-          text,;
-          anonymous,;
-          categories: {;
-            communication,;
-            qualityOfWork,;
-            timeliness,;
-            wouldWorkWithAgain}})}),;
-      const data = await res.json(),;
-      if (!res.ok) throw new Error(data.error || 'Failed to submit'),;
-      setMessage('Review submitted! Pending admin approval.');
-    } catch (err: any) {;
-      setMessage(err.message);
-    } finally {;
-      setSubmitting(false);
-:backup-problematic-files/reviews/ReviewForm.tsx
-:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
 }</button> </form>)
 }
 type Props = {
+<<<<<<< HEAD
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+
 import StarRating from './StarRating';
 export type ReviewFormValues = {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  projectId: string,
-  fromRole: 'client' | 'talent',
-  fromId: string,
-  rating: number,
-  text: string,
+
+=======
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+=======
+</div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {""
+  submitting ? 'Submitting...' : 'Submit Review
+}</button> </form>)
+}
+type Props = {
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+};import React, { useState } from 'react';
+import StarRating from './StarRating';
+export type ReviewFormValues = {
+  projectId: string;,
+  fromRole: 'client' | 'talent';,
+  fromId: string;,
+  rating: number;,
+  text: string;,
   categories?: {;
-:components/reviews/ReviewForm.tsx
-        <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    communication?: number;
+    qualityOfWork?: number;
+    timeliness?: number;
+    wouldWorkWithAgain?: boolean
+  }
+  anonymous?: boolean
+}
+type Props = {
+<<<<<<< HEAD
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+const ReviewForm: React.FC<Props> = ({ initial }) => {
+<<<<<<< HEAD
+=======
+    communication?: number;
+    qualityOfWork?: number;
+    timeliness?: number;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+=======
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+
+pr-12325
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>
+
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      return <div>Something went wrong.</div>;
+ </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;""
+  submitting ? 'Submitting...' : 'Submit Review' ;
+}</button> </form>) 
+};
+type Props = {;
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>
+};import React, { useState } from 'react';
+export type ReviewFormValues = {;
+  projectId: string;,;
+  fromRole: 'client' | 'talent';,;
+  fromId: string;,;
+  rating: number;,;
+  text: string;,;
+  categories?: {;
+    communication?: number;
+    qualityOfWork?: number;
+    timeliness?: number;
+    wouldWorkWithAgain?: boolean
+};
+  anonymous?: boolean
+};
+type Props = {;
+<<<<<<< HEAD
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
+const ReviewForm: React.FC<Props> = ({ initial }) => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  const [rating, setRating] = useState(0);
+  const [text, setText] = useState('');
+  const [anonymous, setAnonymous] = useState(false);
+=======
+}</button> </form>) ;
+
+pr-12325
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;
+
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  const [communication, setCommunication] = useState<number | undefined>();
+</number>
+  const [qualityOfWork, setQualityOfWork] = useState<number | undefined>();
+  const [timeliness, setTimeliness] = useState<number | undefined>();
+  const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
+</boolean>
+  const [message, setMessage] = useState<string | null>(null);
+<<<<<<< HEAD
+<<<<<<< HEAD
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSubmitting(true);
+    setMessage(null)
+    try {
+      const res = await fetch('/api/reviews/submit', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          projectId: initial.projectId
+          fromRole: initial.fromRole
+          fromId: initial.fromId
+          rating
+          text
+          anonymous
+          categories: {
+            communication
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            qualityOfWork
+            timeliness
+            wouldWorkWithAgain
+          }
+        })
+      });
+<<<<<<< HEAD
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
+      setMessage('Review submitted! Pending admin approval.');
+    } catch (err: any) {
+      setMessage(err.message);
+    } finally {
+      setSubmitting(false);    }
+  }
+  return (
+
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error |'Failed to submit');
-      setMessage('Review submitted! Pending admin approval.')
+
     } catch (err: any) {
       set_message (err.message);
     } finally {
-      setSubmitting(false)
-        <label className='block text-sm font-medium mb-2'>Your Review</label>
 
-main:components/reviews/ReviewForm.tsx
-:backup-problematic-files/reviews/ReviewForm.tsx
     }
   }
   return (
-:components/reviews/ReviewForm.tsx
+
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
-        <label className='block text-sm font-medium mb-2'>Your Review</label>
 
-main:components/reviews/ReviewForm.tsx
-    }
-  }
-
-  return (
-:backup-problematic-files/reviews/ReviewForm.tsx
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium mb-2">Overall Rating</label>
-
-main:components/reviews/ReviewForm.tsx
-:backup-problematic-files/reviews/ReviewForm.tsx
-:backup-problematic-files/reviews/ReviewForm.tsx
         <StarRating value={rating} onChange={setRating} />
       </div>
       <div>
-:components/reviews/ReviewForm.tsx
-        <label className='block text-sm font-medium mb-2'>Your Review</label>
-        <textarea
-          className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
-          rows={5}
-          value={text}
-          onChange={e => setText(e.target.value)}          required
-        />
-      </div>
-        <textarea
-          className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
+
           rows={5}
           value={text}
           onChange={(e) => setText(e.target.value)}
           required
         />
       </div>
-      <div className='flex items-center gap-3'>
-        <input
-          id='anonymous'
-          type='checkbox'
-          checked={anonymous}
-          onChange={e => setAnonymous(e.target.checked)}
-        />
-        <label htmlFor='anonymous'>Submit anonymously</label>
-      <div className='grid md:grid-cols-2 gap-4'>
-        <div className='enhanced-card'>
-          <div className='flex items-center justify-between mb-2'>
-            <span className='text-sm'>Communication</span>
-            <StarRating
-              value={communication |0}
-              onChange={v => setCommunication(v)}
-            />
-          </div>
-          <span className='pill'>Optional</span>
-        </div>
-        <div className='enhanced-card'>
-          <div className='flex items-center justify-between mb-2'>
-            <span className='text-sm'>Quality of Work</span>
-            <StarRating
-              value={qualityOfWork |0}
-              onChange={v => setQualityOfWork(v)}
-            />
-          </div>
-          <span className='pill'>Optional</span>
-        </div>
-        <div className='enhanced-card'>
-          <div className='flex items-center justify-between mb-2'>
-            <span className='text-sm'>Timeliness</span>
-            <StarRating
-              value={timeliness |0}
-              onChange={v => setTimeliness(v)}
-            />
-          </div>
-          <span className='pill'>Optional</span>
-        </div>
-        <div className='enhanced-card'>
-          <div className='flex items-center justify-between mb-2'>
-            <span className='text-sm'>Would Work With Again</span>
-            <input
-              type='checkbox'
-              checked={wouldWorkWithAgain}
-              onChange={e => setWouldWorkWithAgain(e.target.checked)}
-            />
-          </div>
-          <span className='pill'>Optional</span>        </div>
-      </div>
-      <button
-        type='submit'
-        className='enhanced-button enhanced-button-primary'        disabled={submitting}          <span className="pill">Optional</span>
-        </div>
-      </div>
-      <button
-        type='submit'
-        className='enhanced-button enhanced-button-primary'        type="submit"
-        className="enhanced-button enhanced-button-primary"
-        disabled={submitting}
-:backup-problematic-files/reviews/ReviewForm.tsx
-        <label className="block text-sm font-medium mb-2">Your Review</label>
-        <textarea
-          className="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          rows={5}
-          value={text}
-          onChange={(e) => setText(e.target.value)}
 
-main:components/reviews/ReviewForm.tsx
           required
         />
       </div>
 
+=======
 :backup-problematic-files/reviews/ReviewForm.tsx
       <div className="flex items-center gap-3">
         <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
@@ -247,33 +228,17 @@ main:components/reviews/ReviewForm.tsx
           </div>
           <span className="pill">Optional</span>
 main:components/reviews/ReviewForm.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>
       </div>
 
       <button
-:backup-problematic-files/reviews/ReviewForm.tsx
-        type="submit"
-        className="enhanced-button enhanced-button-primary"
-        disabled={submitting}
-      >;
-        {submitting ? 'Submitting...' : 'Submit Review'}
-      </button>
 
-      {message && <p className="text-sm">{message}</p>}
     </form>
   )
 },
 
-export default ReviewForm,
-
-        disabled={submitting}
-
-:backup-problematic-files/reviews/ReviewForm.tsx
-:backup-problematic-files/reviews/ReviewForm.tsx
-=======
-
-=======
-        <label className='block text-sm font-medium mb-2'>Your Review</label>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   return (
@@ -285,17 +250,32 @@ export default ReviewForm,
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      setSubmitting(false);    }
+  }
+  return (
+=======
+</string>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    <form onSubmit={handleSubmit} className='space-y-6'>
+</form>
+      <div>
+</div>
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
+<<<<<<< HEAD
+      </div>
+      <div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
       {message && <p className='text-sm'>{message}</p>}
-:backup-problematic-files/reviews/ReviewForm.tsx
-:backup-problematic-files/reviews/ReviewForm.tsx
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </form>
   );
 }
@@ -303,15 +283,14 @@ export default ReviewForm;    </form>
   )
 }
 export default ReviewForm;
-main:components/reviews/ReviewForm.tsx
-:backup-problematic-files/reviews/ReviewForm.tsx
-main:components/reviews/ReviewForm.tsx
-:backup-problematic-files/reviews/ReviewForm.tsx
+<<<<<<< HEAD
 =======
-
-=======
-=======
->>>>>>> main:components/reviews/ReviewForm.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </button>
+      {message && <p className='text-sm'>{message}</p>}
+export default ReviewForm;    </form>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

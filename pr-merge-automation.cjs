@@ -66,49 +66,49 @@ class PRMergeAutomation {
     try {
       // Checkout the PR branch
       await this.runCommand(`git checkout ${pr.branch}`, `Checkout PR #${pr.number} branch`);
-      
+
       // Pull latest changes
       await this.runCommand(`git pull origin ${pr.branch}`, `Pull latest changes for PR #${pr.number}`);
-      
+
       // Switch back to main
       await this.runCommand('git checkout main', 'Switch to main branch');
-      
+
       // Pull latest main
       await this.runCommand('git pull origin main', 'Pull latest main');
-      
+
       // Merge the PR branch into main
       await this.runCommand(`git merge ${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`, `Merge PR #${pr.number}`);
-      
+
       // Push the merged changes
       await this.runCommand('git push origin main', `Push merged PR #${pr.number}`);
-      
+
       this.log(`✅ Successfully merged PR #${pr.number}`);
       this.mergedPRs.push(pr);
-      
+
     } catch (error) {
       this.log(`❌ Failed to merge PR #${pr.number}: ${error.message}`);
-      
+
       // Try to resolve conflicts if any
       try {
         this.log(`🔧 Attempting to resolve conflicts for PR #${pr.number}...`);
-        
+
         // Check if there are merge conflicts
         const status = await this.runCommand('git status --porcelain', 'Check git status');
         if (status.includes('UU') || status.includes('AA') || status.includes('DD')) {
           this.log(`🔧 Resolving merge conflicts for PR #${pr.number}...`);
-          
+
           // Use our conflict resolution script
           await this.runCommand('node resolve-all-merge-conflicts-comprehensive.cjs', 'Resolve merge conflicts');
-          
+
           // Add resolved files
           await this.runCommand('git add .', 'Add resolved files');
-          
+
           // Commit the resolution
           await this.runCommand(`git commit -m "Resolve merge conflicts for PR #${pr.number}"`, 'Commit conflict resolution');
-          
+
           // Push the resolved changes
           await this.runCommand('git push origin main', 'Push resolved changes');
-          
+
           this.log(`✅ Successfully resolved conflicts and merged PR #${pr.number}`);
           this.mergedPRs.push(pr);
         }
@@ -136,10 +136,10 @@ class PRMergeAutomation {
     try {
       // Delete local branch
       await this.runCommand(`git branch -D ${pr.branch}`, `Delete local branch ${pr.branch}`);
-      
+
       // Delete remote branch
       await this.runCommand(`git push origin --delete ${pr.branch}`, `Delete remote branch ${pr.branch}`);
-      
+
       this.log(`✅ Successfully deleted branch ${pr.branch}`);
     } catch (error) {
       this.log(`❌ Failed to delete branch ${pr.branch}: ${error.message}`);
@@ -151,10 +151,10 @@ class PRMergeAutomation {
     try {
       // Run the comprehensive automation suite
       await this.runCommand('node comprehensive-automation-suite-clean.cjs', 'Comprehensive Automation Suite');
-      
+
       // Run final improvements
       await this.runCommand('node final-comprehensive-improvements.cjs', 'Final Comprehensive Improvements');
-      
+
       this.log('✅ Comprehensive improvements completed');
     } catch (error) {
       this.log(`❌ Comprehensive improvements failed: ${error.message}`);
@@ -164,33 +164,33 @@ class PRMergeAutomation {
   async run() {
     this.log('🚀 Starting PR Merge Automation...');
     this.log(`📋 Found ${this.prs.length} open Pull Requests to process`);
-    
+
     try {
       // Fetch all branches first
       await this.fetchAllBranches();
-      
+
       // Process each PR
       for (const pr of this.prs) {
         await this.mergePR(pr);
-        
+
         // If successfully merged, close the PR and delete the branch
         if (this.mergedPRs.some(merged => merged.number === pr.number)) {
           await this.closePR(pr);
           await this.deleteBranch(pr);
         }
       }
-      
+
       // Run comprehensive improvements after merging all PRs
       await this.runComprehensiveImprovements();
-      
+
       // Generate final report
       this.log('\n📊 PR MERGE AUTOMATION REPORT');
-      this.log('==============================');
+      this.log('==');
       this.log(`✅ Successfully merged PRs: ${this.mergedPRs.length}`);
       this.mergedPRs.forEach(pr => this.log(`  - PR #${pr.number}: ${pr.title}`));
       this.log(`❌ Failed to merge PRs: ${this.failedPRs.length}`);
       this.failedPRs.forEach(pr => this.log(`  - PR #${pr.number}: ${pr.title}`));
-      
+
       if (this.failedPRs.length === 0) {
         this.log('\n🎉 All Pull Requests have been successfully merged!');
         this.log('The main branch now contains all the latest changes and improvements.');
@@ -198,7 +198,7 @@ class PRMergeAutomation {
         this.log('\n⚠️ Some Pull Requests could not be merged automatically.');
         this.log('Manual intervention may be required for the failed PRs.');
       }
-      
+
     } catch (error) {
       this.log(`🚨 An error occurred during PR merge automation: ${error.message}`);
     }

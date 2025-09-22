@@ -2,14 +2,14 @@ import Link from \'next/link\'; import Head from \'next/head\'; export default f
 import React from 'react';
 
 interface InfrastructureProps {
-  className?: string;
+  // Add props here as needed
 }
 
-const Infrastructure: React.FC<InfrastructureProps> = ({ className }) => {
+export default function Infrastructure({ }: InfrastructureProps) {
   return (
-    <div className={className || ''}>
+    <div>
       <h1>Infrastructure</h1>
-      <p>This component is under development.</p>
+      <p>This component is currently under development.</p>
     </div>
   );
 }

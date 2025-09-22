@@ -1,4 +1,5 @@
 
+=======
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -106,53 +107,20 @@ export function MobileMessages() {;
             id:currentContact?.id || "",;
             name:currentContact?.name || "",;
             status:"Online";
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           }}
           messages={messages}
           onBack={handleBack}
           onSendMessage={handleSendMessage}
-        />;
-      ) :(;
-        <>;
-          <MobileHeader;
-            title="Messages";
-          />;
-          ;
-          <main className="flex-1 overflow-y-auto">;
-            <MobileConversationList;
+<<<<<<< HEAD
+
               conversations={mockConversations}
               onSelectConversation={handleSelectConversation}
             />;
           </main>;
-          ;
+
           <BottomNavigation />;
         </>;
       )}
     </div>;
-  ),;}
-   id: string;
-content: string;
-timestamp: string;
-isMe: boolean;
-export function MobileMessages () {
-  const [activeConversation, setActiveConversation] = useState<string | null> (null);
-const [messages, setMessages] = useState<Message[]> (mockMessages);
-const handleSelectConversation = (id: string) => {
-  setActiveConversation (id) 
-};
-const handleBack = () => {
-  setActiveConversation (null) 
-};
-const newMessage: Message = {
-  id: `$ {
-  Date.now () 
-}`;
-content;
-timestamp: "Just now";
-isMe: true;
-/>) : (<> <MobileHeader title="Messages" /> <main className="flex-1 overflow-y-auto" > <MobileConversationList conversations= {
-  mockConversations 
-}onSelectConversation= {
-  handleSelectConversation 
-}/> </main> <BottomNavigation /> </>) 
-}</div>) 
-}
+

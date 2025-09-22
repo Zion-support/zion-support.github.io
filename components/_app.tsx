@@ -1,12 +1,17 @@
+
+
 import type { AppProps } from 'next / app',
 import '../styles / globals.css',
-/**
- * MyApp - Function description
+/**;
+ * MyApp - Function description;
  */
-function MyApp() {
+function MyApp() {}
   return <Component {...page_props} />;
+
 }
 export default MyApp;
 }
 
 export default MyApp
+pr-12243
+

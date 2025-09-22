@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
@@ -103,3 +105,4 @@ return (<section className= {";
 }className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300" ;
 }</div> </div> </section>) ;
 }'"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

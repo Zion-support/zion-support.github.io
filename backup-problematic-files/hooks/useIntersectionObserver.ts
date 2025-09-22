@@ -1,27 +1,17 @@
+<<<<<<< HEAD
 
-import {useEffect, useRef, useState} from 'react';
 
-:hooks/useIntersectionObserver.ts
-import { useEffect, useRef, useState } from 'react';
-import {useEffect, useRef, useState} from 'react';
-:backup-problematic-files/hooks/useIntersectionObserver.ts
-import { useEffect, useRef, useState } from 'react',
-import {useEffect, useRef, useState} from 'react';
-main:hooks/useIntersectionObserver.ts
-:backup-problematic-files/hooks/useIntersectionObserver.ts
-:backup-problematic-files/hooks/useIntersectionObserver.ts
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-=======
-
-import {useEffect, useRef, useState} from 'react';
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface UseIntersectionObserverProps {
+  // TODO: Implement
+}
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
-export function useIntersectionObserver({;
+<<<<<<< HEAD
+
   threshold = 0;
   root = null;
   rootMargin = '0%';
@@ -33,54 +23,39 @@ export function useIntersectionObserver({;
   const frozen = entry?.isIntersecting && freezeOnceVisible;
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
     setEntry(entry)
-:hooks/useIntersectionObserver.ts
-  }
-  useEffect(() => {
-    const hasIOSupport = !!window.IntersectionObserver;
-    if (!hasIOSupport |frozen |!node) return;
-    const observerParams = { threshold, root, rootMargin }
-main:hooks/useIntersectionObserver.ts
+
   };
   useEffect(() => {
     const hasIOSupport = !!window.IntersectionObserver;
     if (!hasIOSupport || frozen || !node) return;
     const observerParams = { threshold, root, rootMargin };
-:backup-problematic-files/hooks/useIntersectionObserver.ts
-    const currentObserver = new IntersectionObserver(
-      updateEntry,
-      observerParams
-    );
-    observer.current = currentObserver;
-    currentObserver.observe(node);
-    return () => {
-      currentObserver.disconnect();
-    };
-:backup-problematic-files/hooks/useIntersectionObserver.ts
+
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
     observer.current = currentObserver;
     currentObserver.observe(node);
     return () => {
       currentObserver.disconnect()
     }
-main:hooks/useIntersectionObserver.ts
-=======
 
-  freezeOnceVisible?: boolean
-}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
+<<<<<<< HEAD
   useEffect(() => {
     if (prevNode.current) {
-  return [setNode, entry] as const
-}
-  return [setNode, entry] as const
-};
+<<<<<<< HEAD
 =======
 
   return [setNode, entry] as const
 };
 
-=======  return [setNode, entry] as const;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  return [setNode, entry] as const;
 }
 import { useEffect, useRef, useState } from 'react',;
 interface UseIntersectionObserverProps {;
@@ -95,9 +70,15 @@ export function useIntersectionObserver({;
   rootMargin = '0%',;
   freezeOnceVisible = false;
 }: UseIntersectionObserverProps = {}) {;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [entry, setEntry] = useState<IntersectionObserverEntry>(),;
+
   const [node, setNode] = useState<Element | null>(null),;
+
   const observer = useRef<IntersectionObserver | null>(null),;
+<<<<<<< HEAD
   const frozen = entry?.isIntersecting && freezeOnceVisible,;
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {;
     setEntry(entry);
@@ -134,4 +115,7 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,6 +1,6 @@
 
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "sonner",;
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 ;
 export async function createJob(jobData:any) {;
   try {;
@@ -8,13 +8,13 @@ export async function createJob(jobData:any) {;
       .from('jobs');
       .insert([jobData]);
       .select();
-      .single(),;
+      .single();
       ;
-    if (error) throw error,;
-    return data,;
+    if (error) throw error;
+    return data;
   } catch (error:any) {;
-    console.error("Error creating job:", error),;
-    throw new Error(error.message || "Failed to create job"),;
+    console.error("Error creating job:", error);
+    throw new Error(error.message || "Failed to create job");
   }
 }
 ;
@@ -25,13 +25,13 @@ export async function updateJob(jobId:string, jobData:any) {;
       .update(jobData);
       .eq('id', jobId);
       .select();
-      .single(),;
+      .single();
       ;
-    if (error) throw error,;
-    return data,;
+    if (error) throw error;
+    return data;
   } catch (error:any) {;
-    console.error("Error updating job:", error),;
-    throw new Error(error.message || "Failed to update job"),;
+    console.error("Error updating job:", error);
+    throw new Error(error.message || "Failed to update job");
   }
 }
 ;
@@ -41,16 +41,20 @@ export async function getJobById(jobId:string) {;
       .from('jobs');
       .select('*');
       .eq('id', jobId);
-      .single(),;
+      .single();
       ;
-    if (error) throw error,;
-    return data,;
+    if (error) throw error;
+    return data;
   } catch (error:any) {;
-    console.error("Error fetching job:", error),;
-    toast.error("Failed to load job details"),;
-    return null,;
+    console.error("Error fetching job:", error);
+    toast.error("Failed to load job details");
+    return null;
   } export async function createJob (jobData: any) {
   try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
   const {
   data, error 
 }= await supabase 
@@ -67,4 +71,5 @@ export async function getJobById(jobId:string) {;
   data, error 
 }= await supabase .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

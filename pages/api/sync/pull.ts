@@ -1,7 +1,0 @@
-
-
-
-
-    instanceId: state.config.instanceId,
-
-}

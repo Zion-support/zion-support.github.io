@@ -1,101 +1,100 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
 
 import { Badge } from "@/components/ui/badge",
 import { QuoteStatus } from "@/types/quotes",
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
+=======
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
   responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },
   closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+interface QuoteStatusBadgeProps {
 
-  in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" }
-  accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" }
-  responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" }
-  closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" }
+  status: QuoteStatus
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
+
+=======
+  new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },"
+  in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },"
+  accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },"
+  responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },"
+  closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },"
+  archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},
+"
+  new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" }"
+  in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" }"
+  accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" }"
+  responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" }"
+  closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" }"
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }}
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+interface QuoteStatusBadgeProps {}
+  status: QuoteStatus;
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const config = statusConfig[status];
   return (
     <Badge className={config.className}>
       {config.label}
     </Badge>
   )
-import { Badge } from '@/components / ui / badge';
-import { QuoteStatus } from '@/types / quotes';
-const status_config: Record < QuoteStatus, { label: string, class_name: string }> = {
-  new: { label: "New", class_name: "bg - blue - 500 hover:bg - blue - 600" },
-  in_review: { label: "In Review", class_name: "bg - yellow - 500 hover:bg - yellow - 600" },
-  accepted: { label: "Accepted", class_name: "bg - green - 500 hover:bg - green - 600" },
-  responded: { label: "Responded", class_name: "bg - purple - 500 hover:bg - purple - 600" },
-  closed: { label: "Closed", class_name: "bg - gray - 500 hover:bg - gray - 600" },
-  archived: { label: "Archived", class_name: "bg - gray - 400 hover:bg - gray - 500" }},interface QuoteStatusBadgeProps {
 
-  status: QuoteStatus
-interface QuoteStatusBadgeProps {
-  status: QuoteStatus
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 
-
   const config = statusConfig[status];
-import { QuoteStatus } from "@/types/quotes",;
-const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
-
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {};
+  const config = status_config[status];
+;
+  return (
+    <Badge className={config.class_name}>;
+<<<<<<< HEAD
+      {config.label}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Badge } from "@/components/ui/badge",;
+=======
+      {config.label}"
+import { Badge } from "@/components/ui/badge",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { QuoteStatus } from "@/types/quotes",;
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
-const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {;
-
-
-import { Badge } from "@/components/ui/badge",;
-import { QuoteStatus } from "@/types/quotes",;
-const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
-  new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },;
-  in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },;
-  accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },;
-  responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },;
-  closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },;
+"
+  new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },;"
+  in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },;"
+  accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },;"
+  responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },;"
+  closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },;"
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},;
 interface QuoteStatusBadgeProps {;
   status: QuoteStatus;
 }
 
-
-};
-    </Badge>);
-}
-;
-
-import { Badge } from "@/components/ui/badge",;
-import { QuoteStatus } from "@/types/quotes",;
-;
-const statusConfig:Record<QuoteStatus { label:string, className:string }> = {;
-  new:{ label:"New", className:"bg-blue-500 hover:bg-blue-600" },;
-  in_review:{ label:"In Review", className:"bg-yellow-500 hover:bg-yellow-600" },;
-  accepted:{ label:"Accepted", className:"bg-green-500 hover:bg-green-600" },;
-  responded:{ label:"Responded", className:"bg-purple-500 hover:bg-purple-600" },;
-  closed:{ label:"Closed", className:"bg-gray-500 hover:bg-gray-600" },;
-  archived:{ label:"Archived", className:"bg-gray-400 hover:bg-gray-500" }},;
-;
-interface QuoteStatusBadgeProps {;
-  status:QuoteStatus;
-}
-;
-export const QuoteStatusBadge = ({ status } QuoteStatusBadgeProps) => {;
-  const config = statusConfig[status],;
-  ;
-;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
-  const config = statusConfig[status];
-  return (;
-    <Badge className={config.className}>;
-      {config.label}
-    </Badge>;
-  );
-};
   const config = statusConfig[status];
 
   return (
@@ -103,11 +102,27 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
       {config && config.label}
     </Badge>;
   );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 
 
 
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
-    </Badge>);
-}
-;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

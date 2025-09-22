@@ -1,18 +1,23 @@
-
-:backup-problematic-files/utils/email.ts
-import fs from 'fs-extra',;
-import path from 'path',;
-:backup-problematic-files/utils/email.ts
+<<<<<<< HEAD
+<<<<<<< HEAD
+import fs from 'fs-extra';
+import path from 'path';
 export interface WarningEmailPayload {;
 =======
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+import fs from 'fs-extra';
+import path from 'path';
+export interface WarningEmailPayload {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   toUserId: string;
   toAddress?: string | null;
   subject: string;
   body: string;
 }
-export interface EmailOptions {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
   to: string;
   subject: string;
   body: string;
@@ -29,39 +34,20 @@ export async function sendWarningEmail(
 export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails;
   console.log('Email would be sent:', options);
-:backup-problematic-files/utils/email.ts
-import fs from 'fs-extra',;
-import path from 'path',;
-export interface WarningEmailPayload {;
-  toUserId: string,;
-  toAddress?: string | null,;
-  subject: string,;
-  body: string;
-}
-}
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export async function sendWarningEmail(payload: WarningEmailPayload): Promise<void> {;
-  const logDir = path.resolve(process.cwd(), 'data/fraud'),;
-  const logPath = path.join(logDir, 'emails.log'),;
+  const logDir = path.resolve(process.cwd(), 'data/fraud');
+  const logPath = path.join(logDir, 'emails.log');
   await fs.ensureDir(logDir);
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
   await fs.appendFile(logPath, line, 'utf8');
-export async function sendWarningEmail(record: any): Promise<void> {
-  console.log('Sending warning email for fraud record:', record.id);
-  // Implementation would send actual email
-}
-
-export async function sendNotificationEmail(to: string, subject: string, body: string): Promise<void> {
-  console.log('Sending notification email to:', to);
-  // Implementation would send actual email
-main:utils/email.ts
-:backup-problematic-files/utils/email.ts
-}
-}
-:backup-problematic-files/utils/email.ts
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
-
-
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

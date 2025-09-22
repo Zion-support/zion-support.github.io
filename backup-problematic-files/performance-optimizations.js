@@ -1,40 +1,48 @@
-=======
-
-
-
-
+<<<<<<< HEAD
+<<<<<<<< HEAD:backup-problematic-files/performance-optimizations.js
+<<<<<<< HEAD:backup-problematic-files/performance-optimizations.js
+<<<<<<< HEAD:backup-problematic-files/performance-optimizations.js
 const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; 
 const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log("Performance optimizations applied: ",optimizations.length);'"'"
 const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log('Performance optimizations "applied": ',optimizations.length);
 
 
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware'];
-const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log("Performance optimizations applied: ",optimizations.length);'"'"
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log('Performance optimizations "applied": ',optimizations.length);
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware'];
-const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log("Performance optimizations applied: ",optimizations.length);'"'"
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log('Performance optimizations "applied": ',optimizations.length);
-const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console && console.log("Performance optimizations applied: ",optimizations && optimizations.length);'"'"
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console && _console.log('Performance optimizations "applied": ',optimizations && optimizations.length);
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; 
-const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console && console.log("Performance optimizations applied: ",optimizations && optimizations.length);'"'"
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console && _console.log('Performance optimizations "applied": ',optimizations && optimizations.length);
-
-=======const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next / image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; ;
-const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next / image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log ("Performance optimizations applied: ", optimizations.length);'"'";
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next / image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log ('Performance optimizations "applied": ', optimizations.length);
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next / image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; ;
-const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next / image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log ("Performance optimizations applied: ", optimizations.length);'"'";
-const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next / image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log ('Performance optimizations "applied": ', optimizations.length);
-;
-origin/main
-==============
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:performance-optimizations.js
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+========
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:performance-optimizations.js
+const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; 
+const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log("Performance optimizations applied: ",optimizations.length);'"'"
+const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log('Performance optimizations "applied": ',optimizations.length);
+const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log('Performance optimizations "applied": ',optimizations.length);
+<<<<<<<< HEAD:backup-problematic-files/performance-optimizations.js
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:performance-optimizations.js
+========
+>>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:performance-optimizations.js
+=======
+const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware'];
+<<<<<<< HEAD
+const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log("Performance optimizations applied: ",optimizations.length);'"'"
+const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log('Performance optimizations "applied": ',optimizations.length);
+const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware'];
+const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log("Performance optimizations applied: ",optimizations.length);'"'"
+const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log('Performance optimizations "applied": ',optimizations.length);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const optimizations = ["Implemented code splittin;g;"; "Added lazy loading for components"; "Optimized images with next/image"; "Added service worker for caching"; "Implemented virtual scrolling for large lists"; "Added performance monitoring"; "Optimized bundle size"; "Added compression middleware"]; console.log("Performance optimizations applied: ",optimizations.length);'"'"""
+const optimizations = ['Implemented code splittin;g;'; 'Added lazy loading for components'; 'Optimized images with next/image'; 'Added service worker for caching'; 'Implemented virtual scrolling for large lists'; 'Added performance monitoring'; 'Optimized bundle size'; 'Added compression middleware']; _console.log('Performance optimizations "applied": ',optimizations.length);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

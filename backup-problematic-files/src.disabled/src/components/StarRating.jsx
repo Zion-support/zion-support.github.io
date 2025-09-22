@@ -1,32 +1,46 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-export default function StarRating ({ value }) { return [...Array (5) ].map ( (_,i) => { const idx = i + 1; return value >= idx ? <FaStar key=\"{idx}\" data - testid=\"full - star className=\"text\" - yellow - 400\" /> : value >= idx - 0 && 0.5 ? <FaStarHalfAlt key=\"{idx}\" data - testid=\"half - star className=\"text\" - yellow - 400\" /> : <FaRegStar key=\"{idx}\" data - testid=\"empty - star className=\"text\" - yellow - 400\" />}) } \";});})\"; export default function StarRating({ value }) {}\"});,\"});,return null} } \'"; export { StarRating };
-module && module.exports = default function StarRating ({ value }) { return [.Array (5) ].map ( (_,i) => { const idx = i + 1; return value >= idx ? <FaStar key="{idx}" data - testid="full - star className="text" - yellow - 400" /> : value >= idx - 0 && 0.5 ? <FaStarHalfAlt key="{idx}" data - testid="half - star className="text" - yellow - 400" /> : <FaRegStar key="{idx}" data - testid="empty - star className="text" - yellow - 400" />}) } ";});})"; export default function StarRating({ value }) {}"});,"});,return null} } ""; export { StarRating };"""
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/StarRating.jsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface StarRatingProps {
   // Add props here as needed
 }
 export default function StarRating({ }: StarRatingProps) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface Cache.testProps {
+  // Add props here as needed
+=======
+
+interface Cache.testProps {
+  // Add props here as needed
+}
+
+>>>>>>> main
+export default function Cache.test({ }: Cache.testProps) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/unit/lib/cache.test.ts
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div>
       <h1>StarRating</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/StarRating.jsx
 }
+=======
+<<<<<<< HEAD
+
+
+
+=======
+}
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:tests/unit/lib/cache.test.ts
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

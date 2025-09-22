@@ -1,13 +1,27 @@
 #!/bin/bash
 
-# Script to fix merge conflicts by keeping HEAD version
-echo "Fixing merge conflicts..."
+    # Create a temporary file
+    temp_file=$(mktemp)
+    # Process the file to resolve conflicts
+    awk '
+    /^
+    in_other { next }
+    { print }
+    ' "$file" > "$temp_file"
 
-# Find all files with merge conflicts
-    
-    # Clean up any remaining conflict markers
-    
-    echo "Fixed $file"
+    echo "Fixed: $file"
+done
+
+
+    fi
 done
 
 echo "Merge conflicts fixed!"
+
+
+
+
+
+echo "Merge conflicts fixed!"
+
+

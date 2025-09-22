@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -71,3 +73,4 @@ export function MobileProjects() {;
   milestonesData 
 }/> </main> <BottomNavigation /> </div>) 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

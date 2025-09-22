@@ -1,14 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * AI-Enhanced PM2 Orchestrator;
  * Advanced intelligent system for PM2 process management with ML capabilities;
  * Features: Predictive analytics, auto-scaling, intelligent deployment, security monitoring;
  */
-const pm2 = require('pm2')
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 const os = require('os')
+<<<<<<< HEAD
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-enhanced-orchestrator.log')
     this.configFile = path.join(this.projectRoot, 'logs', 'orchestrator-config.json')
     this.metricsFile = path.join(this.projectRoot, 'logs', 'enhanced-metrics.json')
@@ -35,4 +36,16 @@ const os = require('os')
         '1min'
         '5min'
         '15min'
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       const result = execSync('top -bn1 | grep "Cpu(s)"
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

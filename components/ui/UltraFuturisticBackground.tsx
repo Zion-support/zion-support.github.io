@@ -1,107 +1,88 @@
-export default function UltraFuturisticBackground({ children }: { children: React.ReactNode }) {
-	return <div className="min-h-screen bg-gradient-to-br from-slate-950 via-black to-slate-900">{children}</div>
-}
+
+
+pr-12243
 import React from 'react';
 
-interface UltraFuturisticBackgroundProps {
+interface UltraFuturisticBackgroundProps {}
   children: React.ReactNode;
-<<<<<<< HEAD
+
+  variant?: 'quantum' | 'neon' | 'cyber';
+  intensity?: 'low' | 'medium' | 'high';
+
+pr-12243
+  intensity?: 'low' | 'medium' | 'high';
   className?: string;
 }
 
-const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({ 
+export default function UltraFuturisticBackground({ 
   children, 
-  className = '' 
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | null>(null);
+  variant = 'quantum', 
+  intensity = 'medium',
+  className = ''
+}: UltraFuturisticBackgroundProps) {
+  const getBackgroundClasses = () => {
+    const baseClasses = 'min-h-screen relative overflow-hidden';
+    
+    switch (variant) {
+      case 'quantum':
+        return `${baseClasses} bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900`;
+      case 'matrix':
+        return `${baseClasses} bg-gradient-to-br from-green-900 via-gray-900 to-black`;
+      case 'neon':
+        return `${baseClasses} bg-gradient-to-br from-pink-900 via-purple-900 to-cyan-900`;
+      default:
+        return `${baseClasses} bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900`;
+    }
+  };
+  
+  return (
+    <div className={`${getBackgroundClasses()} ${className}`}>
+      {children}
+    </div>
+  );
+}
+  intensity?: 'low' | 'medium' | 'high';
+  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
+  particleCount?: number;
+  animationSpeed?: number;
+  enableHolographic?: boolean;
+  enableQuantumEffects?: boolean;
+  enableNeonEffects?: boolean;
+  enableSpaceTime?: boolean;
+  variant?: 'quantum' | 'neon' | 'cyber';
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+  className?: string;
+}
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let animationFrameId: number;
-    let particles: Particle[] = [];
-    let holographicGrid: GridPoint[] = [];
-    let time = 0;
-
-    // Particle class for floating elements
-    class Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      alpha: number;
-      type: 'energy' | 'data' | 'quantum';
-
-      constructor(x: number, y: number, type: 'energy' | 'data' | 'quantum') {
-        this.x = x;
-        this.y = y;
-        this.vx = (Math.random() - 0.5) * 2;
-        this.vy = (Math.random() - 0.5) * 2;
-        this.size = Math.random() * 3 + 1;
-        this.type = type;
-        this.alpha = Math.random() * 0.8 + 0.2;
-        
-        switch (type) {
-          case 'energy':
-            this.color = `hsl(${200 + Math.random() * 60}, 70%, 60%)`;
-            break;
-          case 'data':
-            this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
-            break;
-          case 'quantum':
-            this.color = `hsl(${120 + Math.random() * 60}, 90%, 60%)`;
-            break;
-        }
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.alpha = 0.2 + 0.8 * Math.sin(time * 0.01 + this.x * 0.01);
-        
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-      }
-
-      draw() {
-        ctx.save();
-        ctx.globalAlpha = this.alpha;
-        ctx.fillStyle = this.color;
-        
-        switch (this.type) {
-          case 'energy':
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fill();
-            // Energy glow
-            ctx.shadowColor = this.color;
-            ctx.shadowBlur = 10;
-            ctx.fill();
-            break;
-          case 'data':
-            ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
-            break;
-          case 'quantum':
-            ctx.beginPath();
-            ctx.moveTo(this.x, this.y - this.size);
-            ctx.lineTo(this.x - this.size, this.y + this.size);
-            ctx.lineTo(this.x + this.size, this.y + this.size);
-            ctx.closePath();
-            ctx.fill();
-            break;
-        }
-        ctx.restore();
-      }
-=======
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
+  variant = 'quantum',
+  intensity = 'medium',
+
+pr-12243
+  className = ''
+}) => {}
+  const getBackgroundClasses = () => {'
+    const baseClasses = 'relative overflow-hidden';
+    
+    switch (variant) {'
+      case 'quantum':
+        return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;'
+      case 'neon':`
+        return `${baseClasses} bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900`;'
+      case 'cyber':
+
+        return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-900`;
+
+pr-12243
+      default:
+
+      default:`
+
+        return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
+    }
+  };
+
   const getIntensityClasses = () => {
     switch (intensity) {
       case 'low':
@@ -112,7 +93,6 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         return 'opacity-90';
       default:
         return 'opacity-60';
->>>>>>> main
     }
   };
 
@@ -128,3 +108,15 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       </div>
       
       {/* Content */}
+pr-12243
+
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  );
+};
+
+export default UltraFuturisticBackground;
+
+pr-12243

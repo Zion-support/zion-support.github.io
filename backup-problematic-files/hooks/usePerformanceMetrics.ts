@@ -1,56 +1,11 @@
+<<<<<<< HEAD
 
 
-:hooks/usePerformanceMetrics.ts
-import { useEffect, useState } from "react";
-import { PerformanceMetrics } from "../types";
-
-export function usePerformanceMetrics() {;
-:backup-problematic-files/hooks/usePerformanceMetrics.ts
-import { useEffect, useState } from 'react';
-import { PerformanceMetrics } from '../types';
-export function usePerformanceMetrics() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isSupported, setIsSupported] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return;
-    }
-    setIsSupported(true);
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      const fcp = paintEntries.find(
-        entry => entry.name === 'first-contentful-paint'
-      );
-      const lcp = performance.getEntriesByType(
-        'largest-contentful-paint'
-      )[0] as PerformanceNavigationTiming;
-      const cls = performance
-        .getEntriesByType('layout-shift')
-        .reduce((acc, entry) => {
-          return acc + (entry as any).value;
-        }, 0);
-      const fid = performance.getEntriesByType(
-        'first-input'
-      )[0] as PerformanceEventTiming;
-import { useEffect, useState } from "react";
-import { PerformanceMetrics } from "../types";
-
-:backup-problematic-files/hooks/usePerformanceMetrics.ts
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
-export function usePerformanceMetrics() {;
-
-=======
-
-import { useEffect, useState } from "react";
-import { PerformanceMetrics } from "../types";
-
-export function usePerformanceMetrics() {
-:backup-problematic-files/hooks/usePerformanceMetrics.ts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+<<<<<<< HEAD
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
     if (typeof window === "undefined" |!("performance" in window)) {
@@ -75,12 +30,17 @@ export function usePerformanceMetrics() {
       }, 0);
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+:hooks/usePerformanceMetrics.ts
+
 main:hooks/usePerformanceMetrics.ts
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -88,21 +48,31 @@ main:hooks/usePerformanceMetrics.ts
         cumulativeLayoutShift: cls
         firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
       });
-    };
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import { useEffect, useState } from 'react',;
+import { PerformanceMetrics } from '../types',;
+export function usePerformanceMetrics() {;
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),;
+  const [isSupported, setIsSupported] = useState(false),;
+  useEffect(() => {;
+    if (typeof window === 'undefined' || !('performance' in window)) {;
+      return;
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     // Wait for all performance entries to be available
     const timer = setTimeout(measurePerformance, 1000);
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
-=======
-    // Wait for all performance entries to be available
-    const timer = setTimeout(measurePerformance, 1000);
+<<<<<<< HEAD
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  return { metrics, isSupported };
 }
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

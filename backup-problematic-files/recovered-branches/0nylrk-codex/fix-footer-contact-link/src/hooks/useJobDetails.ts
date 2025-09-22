@@ -1,49 +1,53 @@
 
-import { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
+import { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 ;
 export function useJobDetails(jobId:string | undefined) {;
-  const [job, setJob] = useState(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState(null),;
+  const [job, setJob] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 ;
   async function loadJobDetails() {;
     if (!jobId) {;
-      setIsLoading(false),;
-      return,;
+      setIsLoading(false);
+      return;
     }
     ;
     try {;
-      setIsLoading(true),;
+      setIsLoading(true);
       const { data, error } = await supabase;
         .from('jobs');
         .select('*');
         .eq('id', jobId);
-        .single(),;
+        .single();
         ;
-      if (error) throw error,;
-      setJob(data),;
-      setError(null),;
+      if (error) throw error;
+      setJob(data);
+      setError(null);
     } catch (err) {;
-      console.error('Error loading job details:', err),;
-      setError(err.message),;
+      console.error('Error loading job details:', err);
+      setError(err.message);
     } finally {;
-      setIsLoading(false),;
+      setIsLoading(false);
     }
   }
 ;
   // Load job details when component mounts or jobId changes;
   useEffect(() => {;
-    loadJobDetails(),;
-  }, [jobId]),;
+    loadJobDetails();
+  }, [jobId]);
 ;
   return {;
-    job,;
-    isLoading,;
-    error,;
+    job;
+    isLoading;
+    error;
     loadJobDetails;
-  },;
+  };
 }
 ;
-export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
+export default useJobDetails; .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
 }export default useJobDetails;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,5 @@
 
+=======
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader", ;
@@ -19,6 +20,7 @@ function HiringTrackerContent() {;
       <SEO ;
         title="Hiring Tracker | Zion AI Marketplace" ;
         description="Manage your candidate pipeline in the Zion AI Marketplace." ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -33,17 +35,14 @@ function HiringTrackerContent() {;
             </p>;
           </div>;
         </div>;
-;
+<<<<<<< HEAD
+
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">;
           <TabsList>;
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
             <TabsTrigger value="analytics">Analytics</TabsTrigger>;
           </TabsList>;
-          ;
-          <TabsContent value="kanban" className="mt-6">;
-            <KanbanBoard jobId={jobId} />;
-          </TabsContent>;
-          ;
+
           <TabsContent value="analytics" className="mt-6">;
             <HiringAnalytics jobId={jobId} />;
           </TabsContent>;
@@ -51,15 +50,4 @@ function HiringTrackerContent() {;
       </main>;
       <Footer />;
     </>;
-  ),;
-}
-;
-export default function HiringTracker() {;
-  return (;
-    <ProtectedRoute>;
-      <HiringTrackerContent />;
-    </ProtectedRoute>;
-  ),;
-} Hiring Tracker | Zion AI Marketplace"description=" Manage your candidate pipeline in the Zion AI Marketplace."/> <AppHeader /> <main className=" container mx-auto px-4 py-8"> <div className=" flex justify-between items-center mb-8"> <div> <h1 className=" text-3xl font-bold flex items-center"> <Briefcase className=" mr-2 h-6 w-6 text-primary"/> Hiring Pipeline </h1> <p className=" text-muted-foreground mt-1"> Track and manage your candidates through the hiring process </p> </div> </div> <TabsList> <TabsTrigger value=" kanban">Kanban Board</TabsTrigger> <TabsTrigger value=" analytics" >Analytics</TabsTrigger> </TabsList> </TabsContent> </Tabs> </main> <Footer /> </>) 
-}export default function HiringTracker () {
-  return (<ProtectedRoute> <HiringTrackerContent /> </ProtectedRoute> 
+

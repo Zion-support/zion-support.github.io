@@ -44,10 +44,10 @@ class ComprehensiveIssuesFixer {
       const indexPath = path.join(this.rootPath, 'index.html');
       if (fs.existsSync(indexPath)) {
         let content = fs.readFileSync(indexPath, 'utf8');
-        
+
         // Fix the main.tsx reference
         content = content.replace('/src/main.tsx', './src/main.tsx');
-        
+
         fs.writeFileSync(indexPath, content, 'utf8');
         this.log('✅ Fixed index.html main.tsx reference');
         this.fixedFiles.push('index.html');
@@ -57,7 +57,7 @@ class ComprehensiveIssuesFixer {
       const viteConfigPath = path.join(this.rootPath, 'vite.config.js');
       if (fs.existsSync(viteConfigPath)) {
         let content = fs.readFileSync(viteConfigPath, 'utf8');
-        
+
         // Ensure proper configuration
         if (!content.includes('root:') && !content.includes('build:')) {
           content = `import { defineConfig } from 'vite';
@@ -75,7 +75,7 @@ export default defineConfig({
     open: true,
   },
 });`;
-          
+
           fs.writeFileSync(viteConfigPath, content, 'utf8');
           this.log('✅ Fixed vite.config.js');
           this.fixedFiles.push('vite.config.js');
@@ -102,7 +102,7 @@ export default defineConfig({
       const eslintConfigPath = path.join(this.rootPath, 'eslint.config.js');
       if (fs.existsSync(eslintConfigPath)) {
         let content = fs.readFileSync(eslintConfigPath, 'utf8');
-        
+
         // Ensure JSX files are properly handled
         if (!content.includes('jsx: true')) {
           content = content.replace(
@@ -110,7 +110,7 @@ export default defineConfig({
             'languageOptions: {\n        ecmaVersion: 2022,\n        sourceType: "module",\n        parserOptions: {\n          ecmaFeatures: {\n            jsx: true\n          }\n        },'
           );
         }
-        
+
         fs.writeFileSync(eslintConfigPath, content, 'utf8');
         this.log('✅ Fixed eslint.config.js for JSX support');
         this.fixedFiles.push('eslint.config.js');
@@ -129,7 +129,7 @@ export default defineConfig({
       if (fs.existsSync(tsconfigPath)) {
         let content = fs.readFileSync(tsconfigPath, 'utf8');
         let config = JSON.parse(content);
-        
+
         // Add memory optimization settings
         config.compilerOptions = {
           ...config.compilerOptions,
@@ -137,7 +137,7 @@ export default defineConfig({
           incremental: true,
           tsBuildInfoFile: '.tsbuildinfo'
         };
-        
+
         // Exclude problematic directories
         config.exclude = [
           ...(config.exclude || []),
@@ -150,7 +150,7 @@ export default defineConfig({
           'src_backup',
           'recovered-branches'
         ];
-        
+
         fs.writeFileSync(tsconfigPath, JSON.stringify(config, null, 2), 'utf8');
         this.log('✅ Fixed tsconfig.json for memory optimization');
         this.fixedFiles.push('tsconfig.json');
@@ -347,7 +347,7 @@ export default App;`;
       await this.runBuild();
 
       this.log('\n📊 COMPREHENSIVE ISSUES FIX REPORT');
-      this.log('=====================================');
+      this.log('==');
       this.log(`✅ Fixed files: ${this.fixedFiles.length}`);
       this.fixedFiles.forEach(file => this.log(`  - ${file}`));
       this.log(`❌ Failed files: ${this.failedFiles.length}`);

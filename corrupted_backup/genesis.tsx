@@ -1,3 +1,5 @@
+export { default } from '../zion/init';
+export { default } from '../zion/init';
 import React from 'react';
 export default function Page() {
   return (

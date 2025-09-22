@@ -1,21 +1,20 @@
-const fs = require("fs");
-const path = require("path");
-class $1 {
-  constructor() {
 
-  this.projectRoot = process.cwd();
-    this.fixedCount = 0;
-    this.errors = [];}
+const fs = require('fs')
+const path = require('path')
+        item.endsWith('.test.tsx')
+        item.endsWith('.test.ts')
+        item.endsWith('.test.jsx')
+        item.endsWith('.test.js')
+    const corruptionPatterns = [/describe\([^)]*\)\s*\{\}\s*
+      /expect\([^)]*\)\s*\.toBeInTheDocument\s*\(\)\s*\}\)\s*
+      /render\(<[^>]*>\s*\)\s*
 
-  log(message) {;
-  console.log(`[${new Date().toISOString()}] ${message}`);,
-}
+  it('renders without crashing')
+    expect(screen.getByRole('main')
+  it('displays expected content')
+      const content = fs.readFileSync(filePath,utf8)
+    this.log(' Starting Test File Fixer')
+    console.log(' Test file fixing completed')
 
-  getAllTestFiles(dir) {;
-  let testFiles = [];    const items = fs.readdirSync(dir);
-    for (const item of items) {
-  const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-    return testFiles;}
 
-  isTestFileCorrupted(content) {
+

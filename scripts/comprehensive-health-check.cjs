@@ -1,42 +1,13 @@
-const fs = require('fs');
-const path = require('path');
-const checks = [{
-        "name": 'Package.json exists',
-        "check": () => fs.existsSync('package.json')
-    },
-    {
-        "name": 'Node modules installed',
-        "check": () => fs.existsSync('node_modules')
-    },
-    {
-        "name": 'Next.js config exists',
-        "check": () => fs.existsSync('next.config.js')
-    },
-    {
-        "name": 'TypeScript config exists',
-        "check": () => fs.existsSync('tsconfig.json')
-    },
-    {
-        "name": 'ESLint config exists',
-        "check": () => fs.existsSync('eslint.config.js')
-    }
-];
-let passed = 0;
-let failed = 0;
-checks.forEach(check => {
-    try {
-        if (check.check()) {
-            passed++} else {
-            failed++}
-    } catch (error) {
-        failed++}
-});
-if (failed === 0) {
-    process.exit(0)} else {
-    process.exit(1)}
-const fs = require("fs");"const path = require("path");"console.log(" Comprehensive Health Check Starting.");const checks = [{" name: "Package.json exists","" check: () => fs.existsSync("package.json") }, {"" name: "Node modules installed","" check: () => fs.existsSync("node_modules") }, {"" name: "Next.js config exists","" check: () => fs.existsSync("next.config.js") }, {"" name: "TypeScript config exists","" check: () => fs.existsSync("tsconfig.json") }, {"" name: "ESLint config exists","" check: () => fs.existsSync("eslint.config.js") }];let passed = 0;let failed = 0;checks.forEach(check => { try { if (check.check()) { console.log(` ${check.name}`); passed++} else {` console.log(` ${check.name}`); failed++} } catch (error) {"` console.log(` ${check.name} - Error: ${error.message}`); failed++}});"`console.log(`\n Health Check Results: ${passed} passed, ${failed} failed`);if (failed === 0) {" console.log(" All health checks passed!"); process.exit(0)} else {" console.log(" Some health checks failed. Please review the issues."); process.exit(1)}'"`'"`
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 console.log(' Comprehensive Health Check Starting...')
         "name"
         "check"
@@ -47,4 +18,25 @@ console.log(' Comprehensive Health Check Starting...')
         "name"
         "check"
         "name"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
         "check"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+        "check"
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+        "check"
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

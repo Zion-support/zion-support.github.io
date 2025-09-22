@@ -1,9 +1,163 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")class TargetedSyntaxFixer { constructor() { this.projectRoot = process.cwd(); this.fixedFiles = []; this.errors = []} log(message) { const timestamp = new Date().toISOString(;); console.log(`[${timestamp}] ${message}`)} fixFile(filePath) { try {" const content = fs.readFileSync(filePath, "utf8";); let fixedContent = conte;n;t; let hasChanges = fal;s;e; / Fix specific syntax errors found in the build / Fix style={{> syntax errors" fixedContent = fixedContent.replace(/style=\{\{>/g, "style={{"); if (hasChanges = true) { hasChanges = true} / Fix function declarations with trailing commas" fixedContent = fixedContent.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{,/g, "const $1: React.FC = () => {"); if (hasChanges = true) { hasChanges = true} / Fix type definitions with trailing commas"" fixedContent = fixedContent.replace(/(\w+):\s*string;/g, "$1: string;");"" fixedContent = fixedContent.replace(/(\w+):\s*any;/g, "$1: any;");"" fixedContent = fixedContent.replace(/(\w+):\s*Array<\{,/g, "$1: Array<{"); if (hasChanges = true) { hasChanges = true} / Fix JSX with trailing commas"" fixedContent = fixedContent.replace(/>";/g, ">");"" fixedContent = fixedContent.replace(/>";/g, ">"); if (hasChanges = true) { hasChanges = true} / Fix standalone semicolons" fixedContent = fixedContent.replace(/^;\s*$/gm, ""); if (hasChanges = true) { hasChanges = true} / Fix malformed object literals" fixedContent = fixedContent.replace(/\{\s*,/g, "{");" fixedContent = fixedContent.replace(/,\s*\}/g, "}"); if (hasChanges = true) { hasChanges = true} / Fix malformed function parameters" fixedContent = fixedContent.replace(/\(\s*,/g, "(");" fixedContent = fixedContent.replace(/,\s*\)/g, ")"); if (hasChanges = true) { hasChanges = true} / Fix malformed array literals" fixedContent = fixedContent.replace(/\[\s*,/g, "[");" fixedContent = fixedContent.replace(/,\s*\]/g, "]"); if (hasChanges = true) { hasChanges = true} / Fix malformed JSX attributes" fixedContent = fixedContent.replace(/=\{\{>/g, "={{");" fixedContent = fixedContent.replace(/=\{\{>/g, "={{"); if (hasChanges = true) { hasChanges = true} / Fix malformed template literals"" fixedContent = fixedContent.replace(/"\s*,/g, """); if (hasChanges = true) { hasChanges = true} / Fix malformed string literals"" fixedContent = fixedContent.replace(/"\s*,/g, """);"" fixedContent = fixedContent.replace(/"\s*,/g, """); if (hasChanges = true) { hasChanges = true} if ( {" fs.writeFileSync(filePath, fixedContent, "utf8")) { {" fs.writeFileSync(filePath, fixedContent, "utf8")} this.fixedFiles.push(filePath);"` this.log(` Fixed: ${filePath}`); return true} return false} catch (error) {" this.errors.push({ file: filePath, error: error.message });` this.log(` Error fixing ${filePath}: ${error.message}`); return false} } scanDirectory(dir) { try { const files = fs.readdirSync(dir;); files.forEach(file => { const filePath = path.join(dir, file;); const stat = fs.statSync(filePath;);" if (&& !file.startsWith(".") && file !== "node_modules") { this.scanDirectory(filePath)} else if (stat.isFile()) { const ext = path.extname(file) {" && !file.startsWith(".") && file !== "node_modules") { this.scanDirectory(filePath)} else if (stat.isFile()) { const ext = path.extname(file}); if (true) { this.fixFile(filePath)} } })} catch (error) {` this.log(` Error scanning directory ${dir}: ${error.message}`)} } async run() {" this.log(" Starting targeted syntax fixing.")) { ) { this.fixFile(filePath)} } })} catch (error) {` this.log(` Error scanning directory ${dir}: ${error.message}`)} } async run() {" this.log(" Starting targeted syntax fixing.")}" / Focus on pages directory first since that"s where the errors are" const scanDirs = ["pages"]; scanDirs.forEach(dir => { if (true) {"` this.log(` Scanning directory: ${dir}`)) { ) {"` this.log(` Scanning directory: ${dir}`)} this.scanDirectory(dir)} });" this.log(" Targeted syntax fixing completed");` this.log(` Fixed ${this.fixedFiles.length} files`);` this.log(` ${this.errors.length} files had errors`); return {;" totalFilesFixed: this.fixedFiles.length," totalErrors: this.errors.length," fixedFiles: this.fixedFiles," errors: this.errors }}}/ Run the targeted syntax fixerconst fixer = new TargetedSyntaxFixer;(;);fixer.run().then(() => {" console.log(" Targeted syntax fixing completed successfully"); process.exit(0)}).catch(error => {" console.error(" Targeted syntax fixing failed: ", error.message); process.exit(1)});'"`'"`
-#!/usr/bin/env node;
-  log(message) {
-    const timestamp = new Date().toISOString();
-    // eslint-disable-next-line no-console, no-undef
-    console.log(`[${timestamp}] ${message}`);
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+class TargetedSyntaxFixer {
+  constructor() {
+    this.fixes = [];
+    this.errors = [];
+  }
+
+  log(message, type = 'info') {
+    const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
+    console.log(`${prefix} ${message}`);
   }
 
   fixFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+      let hasChanges = false;
+
+      // Fix specific syntax issues
+      const fixes = [
+        // Fix unterminated strings with escaped quotes
+        { 
+          pattern: /className="([^"]*\\"[^"]*)"\s*\/>/g, 
+          replacement: (match, className) => {
+            const fixed = className.replace(/\\"/g, '"');
+            return `className="${fixed}" />`;
+          }
+        },
+        // Fix JSX self-closing tags with escaped quotes
+        { 
+          pattern: /<(\w+)\s+className="([^"]*\\"[^"]*)"\s*\/>/g, 
+          replacement: (match, tag, className) => {
+            const fixed = className.replace(/\\"/g, '"');
+            return `<${tag} className="${fixed}" />`;
+          }
+        },
+        // Fix interface syntax errors
+        { 
+          pattern: /interface\s+(\w+)\s*\{\s*\n\s*([^}]+)\s*\}/g, 
+          replacement: (match, name, body) => {
+            const fixedBody = body.replace(/^\s*(\w+):/gm, '  $1:');
+            return `interface ${name} {\n${fixedBody}\n}`;
+          }
+        },
+        // Fix duplicate metadata properties
+        { 
+          pattern: /(title:\s*'[^']*',\s*description:\s*'[^']*',\s*)+/g, 
+          replacement: (match) => {
+            const lines = match.split('\n').filter(line => line.trim());
+            const unique = [];
+            const seen = new Set();
+            
+            for (const line of lines) {
+              const key = line.split(':')[0].trim();
+              if (!seen.has(key)) {
+                seen.add(key);
+                unique.push(line);
+              }
+            }
+            return unique.join('\n') + '\n';
+          }
+        },
+        // Fix import statements in wrong places
+        { 
+          pattern: /export\s+const\s+metadata[^}]*\{\s*import\s+[^}]*\}/g, 
+          replacement: (match) => {
+            const importMatch = match.match(/import\s+[^}]+/);
+            const metadataMatch = match.match(/export\s+const\s+metadata[^}]*\{[^}]*\}/);
+            if (importMatch && metadataMatch) {
+              return importMatch[0] + '\n\n' + metadataMatch[0];
+            }
+            return match;
+          }
+        },
+        // Fix JSX structure issues
+        { 
+          pattern: /<div\s+className="[^"]*"\s*\/>\s*<div\s+className="[^"]*"\s*\/>/g, 
+          replacement: (match) => {
+            return match.replace(/\/>/g, '>').replace(/>\s*<div/g, '>\n      <div');
+          }
+        },
+        // Fix missing closing tags
+        { 
+          pattern: /<(\w+)\s+className="[^"]*"\s*\/>\s*<div\s+className="[^"]*"\s*\/>\s*<div\s+className="[^"]*"\s*\/>\s*}/g, 
+          replacement: (match) => {
+            return match.replace(/\/>/g, '>').replace(/>\s*<div/g, '>\n        <div').replace(/>\s*}/g, '>\n      </div>\n    </div>\n  }');
+          }
+        }
+      ];
+
+      for (const fix of fixes) {
+        if (typeof fix.replacement === 'function') {
+          const newContent = content.replace(fix.pattern, fix.replacement);
+          if (newContent !== content) {
+            content = newContent;
+            hasChanges = true;
+          }
+        } else {
+          const newContent = content.replace(fix.pattern, fix.replacement);
+          if (newContent !== content) {
+            content = newContent;
+            hasChanges = true;
+          }
+        }
+      }
+
+      if (hasChanges) {
+        fs.writeFileSync(filePath, content);
+        this.log(`Fixed syntax in: ${filePath}`, 'success');
+        this.fixes.push({ file: filePath, type: 'syntax' });
+        return true;
+      }
+
+      return false;
+    } catch (error) {
+      this.log(`Error processing ${filePath}: ${error.message}`, 'error');
+      this.errors.push({ file: filePath, error: error.message });
+      return false;
+    }
+  }
+
+  fixSpecificFiles() {
+    const filesToFix = [
+      '/workspace/app/about/page.tsx',
+      '/workspace/app/contact/page.tsx',
+      '/workspace/app/error.tsx',
+      '/workspace/app/layout.tsx',
+      '/workspace/app/loading.tsx'
+    ];
+
+    this.log('🔧 Fixing specific syntax errors...');
+    
+    let fixedCount = 0;
+    for (const file of filesToFix) {
+      if (fs.existsSync(file)) {
+        if (this.fixFile(file)) {
+          fixedCount++;
+        }
+      }
+    }
+
+    this.log(`Fixed ${fixedCount} files`, 'success');
+    return fixedCount;
+  }
+
+  run() {
+    this.log('🚀 Starting Targeted Syntax Fixer...');
+    this.fixSpecificFiles();
+    this.log('✅ Targeted syntax fixer completed!');
+  }
+}
+
+// Run the fixer
+if (require.main === module) {
+  const fixer = new TargetedSyntaxFixer();
+  fixer.run();
+}
+
+module.exports = TargetedSyntaxFixer;

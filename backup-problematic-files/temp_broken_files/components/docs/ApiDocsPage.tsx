@@ -1,22 +1,27 @@
+<<<<<<< HEAD
+=======
 
+import React, { useMemo, useState } from 'react';
+import Sidebar from './Sidebar';
+import EndpointDetail from './EndpointDetail';
+import v1 from '../../data/api-docs/v1';
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
 import React, { useMemo, useState } from 'react',;
 import Sidebar from './Sidebar',;
 import EndpointDetail from './EndpointDetail',;
 import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
 import React, { useMemo, useState } from 'react';
 import Sidebar from './Sidebar';
 import EndpointDetail from './EndpointDetail';
 import v1 from '../../data/api-docs/v1';
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
 =======
-import React, { useMemo, useState } from 'react',;
-import Sidebar from './Sidebar',;
-import EndpointDetail from './EndpointDetail',;
-import v1 from '../../data/api-docs/v1',;
-import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
-;export default function ApiDocsPage() {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
   const [visibility, setVisibility] = useState<Visibility | 'all'>('all')
@@ -34,13 +39,11 @@ import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types
         onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
         visibilityFilter={visibility}
 
-        onChangeVisibility={setVisibility}      />
-      <main className=&quot;p-6 space-y-6&quot;>
-        <header className=&quot;flex items-center justify-between&quot;>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div>
+<<<<<<< HEAD
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
           </div>
@@ -49,21 +52,41 @@ import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/postman" target="_blank" rel="noreferrer">Postman</a>
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
           </div>
+<<<<<<< HEAD
         </header>
+<<<<<<< HEAD:components/docs/ApiDocsPage.tsx
+        {activeEndpoint ? (
+=======
 :components/docs/ApiDocsPage.tsx
         {activeEndpoint ? (
 
-
         {_activeEndpoint ? (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4          <EndpointDetail endpoint={activeEndpoint} />
-        ) : (
-          <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
-        )}
-        <section className="mt-8">
-          <div className="text-lg font-semibold mb-2">Changelog</div>
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+</div>
+            <div className="text-2xl font-bold">Zion OS API Documentation</div>""
+            <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>"
+          </div>"
+          <div className="flex gap-2">"
+            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/openapi" target="_blank" rel="noreferrer">OpenAPI</a>""
+            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/postman" target="_blank" rel="noreferrer">Postman</a>""
+            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          <EndpointDetail endpoint={activeEndpoint} />
+"
+          <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>""
+        <section className="mt-8">"
+</section>"
+          <div className="text-lg font-semibold mb-2">Changelog</div>"
           <ChangelogWidget />
+
         </section>
       </main>
+<<<<<<< HEAD
     </div>
   )
 }
@@ -88,12 +111,18 @@ function ChangelogWidget() {
         <button onClick={load} className="px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">Load</button>
         <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>
         {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
+<<<<<<< HEAD
       </div>
-      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
-  )}
-
-=======  );
-};
-      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
-  )}
-:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className="space-y-2">"
+        <button onClick={load} className="px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">Load</button>""
+        <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>""
+        {message && <span className="text-xs text-high-contrast-muted">{message}</span>}"
+      </div>;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

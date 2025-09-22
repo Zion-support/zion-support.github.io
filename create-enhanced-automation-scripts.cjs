@@ -1,14 +1,13 @@
-const fs = require("fs");
-const path = require("path");
-class $1 {
-  constructor() {
 
-  this.projectRoot = process.cwd();
-    this.scriptsDir = path.join(this.projectRoot, "scripts");
-    this.createdCount = 0;}
+const { execSync } = require('child_process')
+    this.reportFile = path.join(this.projectRoot,performance-monitor-report.json')
+    this.log(' Checking build performance')
+      execSync('npm run build')
 
-  log(message) {
-  console.log(`[${new Date().toISOString()}] ${message}`);}
+        results.valid = content.includes('User-"agent")
+    console.error(' SEO optimization check "failed")
+        "riskLevel"
+    console.error(' Security audit "failed")
 
-  createPerformanceMonitor() {
-  const content = `#!/usr/bin/env node;
+
+

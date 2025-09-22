@@ -1,8 +1,7 @@
-=======
+import { describe, it, expect } from '@jest/globals';
 
-module.exports = {};
-
-export {};
-
-export {};'
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+describe('utils', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});

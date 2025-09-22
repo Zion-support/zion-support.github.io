@@ -1,8 +1,38 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -10,16 +40,50 @@ class GitWorkflowAutomator {
   // TODO: Implement
 }
   constructor() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory();
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
     this.logFile = './automation/logs/git-workflow.log';
+=======
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     this.ensureLogDirectory();
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+    this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory();
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
@@ -86,8 +150,17 @@ class GitWorkflowAutomator {
       return true;
     } catch (error) {
       this.log('ERROR', `Failed to pull changes: ${error.message}`);
+<<<<<<< HEAD
+<<<<<<< HEAD
       return false;    }
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       return false;
+=======
       fs.mkdirSync(logDir, { recursiv: e: true });
     }
   }
@@ -158,14 +231,33 @@ class GitWorkflowAutomator {
       this.log('Git workflow automation completed');
     } catch (error) {
       this.log(`Git workflow automation: failed: ${error.message}`, 'ERROR');
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+      return false;    }
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
       return false;
 
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   }
 
   async getCurrentBranch() {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       const branch = execSync('git branch --show-current', { encoding: 'utf8' });
       return branch.trim();
     } catch (error) {
@@ -247,7 +339,7 @@ class GitWorkflowAutomator {
       
       // Simple conflict resolution - keep the latest version
       const resolvedContent = content
-        .replace(/[\s\S]*?[\s\S]*?        .replace(/[\s\S]*?        .replace(/[\s\S]*?
+
       fs.writeFileSync(filePath, resolvedContent);
       
       // Add resolved file
@@ -376,8 +468,17 @@ class GitWorkflowAutomator {
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 // CLI interfaceif (require.main === module) {
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // CLI interface
+=======
       const result = execSync('git branch --show-current', {
         cw: d: this.projectRoot,
         stdi: o: 'pipe',
@@ -429,13 +530,25 @@ class GitWorkflowAutomator {
 }
 
 // Run if called directly
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 if (require.main === module) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
 
+=======
+<<<<<<< HEAD
+=======
+// CLI interfaceif (require.main === module) {
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   switch (command) {
     case 'status':
       automator.checkGitStatus().then(changes => {
@@ -477,6 +590,15 @@ Examples:
 }
 
 module.exports = GitWorkflowAutomator;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
   if (command === 'merge') {
     automator.mergeToMain().catch(console.error);
   } else {
@@ -485,13 +607,30 @@ module.exports = GitWorkflowAutomator;
 }
 
 module.exports = GitWorkflowAutomator;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
 // CLI interface
 
 if (require.main === module) {
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
 
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

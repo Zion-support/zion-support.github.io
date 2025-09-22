@@ -1,6 +1,36 @@
+import React, { useEffect, useState } from 'react',
+import Head from 'next/head',
+export default function AdminWeb3Page() {
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
+export default function AdminWeb3Page() {
+  const [users, setUsers] = useState<
+    { id: string; enabled: boolean; chain?: string }[]
+  >([]);
+
+  useEffect(() => {
+    const raw =
+      typeof window !== 'undefined'
+        ? window.localStorage.getItem('zion-web3-users')
+        : null;
+    setUsers(raw ? JSON.parse(raw) : []);
+  }, []);
+
+  const save = (list: any) => {
+    if (typeof window !== 'undefined')
+      window.localStorage.setItem('zion-web3-users', JSON.stringify(list));
+    setUsers(list);
+  };
+
+  const metrics = {
+    total: users.length,
+    evm: users.filter(u => u.chain === 'evm').length,
+    sol: users.filter(u => u.chain === 'sol').length,
+    enabled: users.filter(u => u.enabled).length,
+    disabled: users.filter(u => !u.enabled).length,
+  };
 interface Web3Project {
   id: string;
   name: string;
@@ -58,6 +88,77 @@ const AdminWeb3Page: React.FC = () => {
     setUsers(list)
   },
 
+  const metrics = {
+    total: users.length,
+    evm: users.filter(u => u.chain === 'evm').length,
+    sol: users.filter(u => u.chain === 'sol').length,
+    enabled: users.filter(u => u.enabled).length,
+    disabled: users.filter(u => !u.enabled).length},
+
+  return (
+    <>
+      <Head><title>Admin — Web3</title></Head>
+      <div className="max-w-3xl mx-auto space-y-6">
+        <h1 className="text-xl font-semibold">Web3 Admin</h1>
+        <div className="rounded-md border p-4">
+          <div className="font-medium mb-2">Usage Metrics</div>
+          <div className="text-sm text-gray-600">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
+        </div>
+        <div className="rounded-md border p-4">
+          <div className="font-medium mb-2">Users</div>
+          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
+          <ul className="space-y-2">
+            {users.map((u, i) => (
+              <li key={i} className="flex items-center justify-between">
+                <div className="text-sm">{u.id}</div>
+                <label className="inline-flex items-center gap-2 text-sm">
+                  <span>Web3</span>
+                  <input type="checkbox" checked={u.enabled} onChange={(e) => {
+                    const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next)
+                  }} />
+                </label>
+              </li>
+import React, { useEffect, useState } from 'react',;
+import Head from 'next/head',;
+export default function AdminWeb3Page() {;
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),;
+  useEffect(() => {;
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null,;
+    setUsers(raw ? JSON.parse(raw) : []);
+  }, []),;
+  const save = (list: any) => {;
+    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list)),;
+    setUsers(list);
+  },;
+  const metrics = {;
+    total: users.length,;
+    evm: users.filter(u => u.chain === 'evm').length,;
+    sol: users.filter(u => u.chain === 'sol').length,;
+    enabled: users.filter(u => u.enabled).length;
+    disabled: users.filter(u => !u.enabled).length};
+  return (;
+    <>;
+      <Head><title>Admin — Web3</title></Head>;
+      <div className="max-w-3xl mx-auto space-y-6">;
+        <h1 className="text-xl font-semibold">Web3 Admin</h1>;
+        <div className="rounded-md border p-4">;
+          <div className="font-medium mb-2">Usage Metrics</div>;
+          <div className="text-sm text-gray-600">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>;
+        </div>;
+        <div className="rounded-md border p-4">;
+          <div className="font-medium mb-2">Users</div>;
+          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
+          <ul className="space-y-2">;
+            {users.map((u, i) => (;
+              <li key={i} className="flex items-center justify-between">;
+                <div className="text-sm">{u.id}</div>;
+                <label className="inline-flex items-center gap-2 text-sm">;
+                  <span>Web3</span>;
+                  <input type="checkbox" checked={u.enabled} onChange={(e) => {;
+                    const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next);
+                  }} />;
+                </label>;
+              </li>;
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'bg-green-100 text-green-800';
@@ -83,12 +184,45 @@ const AdminWeb3Page: React.FC = () => {
   return (
     <>
       <Head>
+        <title>Admin — Web3</title>
+      </Head>
+      <div className='max-w-3xl mx-auto space-y-6'>
+        <h1 className='text-xl font-semibold'>Web3 Admin</h1>
+        <div className='rounded-md border p-4'>
+          <div className='font-medium mb-2'>Usage Metrics</div>
+          <div className='text-sm text-gray-600'>
+            Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol}{' '}
+            · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}
+          </div>
+        </div>
+        <div className='rounded-md border p-4'>
+          <div className='font-medium mb-2'>Users</div>
+          {users.length === 0 && (
+            <div className='text-sm text-gray-500'>No data yet</div>
+          )}
+          <ul className='space-y-2'>
+            {users.map((u, i) => (
+              <li key={i} className='flex items-center justify-between'>
+                <div className='text-sm'>{u.id}</div>
+                <label className='inline-flex items-center gap-2 text-sm'>
+                  <span>Web3</span>
+                  <input
+                    type='checkbox'
+                    checked={u.enabled}
+                    onChange={e => {
+                      const next = users.slice();
+                      next[i] = { ...u, enabled: e.target.checked };
+                      save(next);
+                    }}
+                  />
+                </label>
+              </li>
         <title>Admin Web3 - Zion Tech Group</title>
         <meta name="description" content="Manage Web3 projects and blockchain integrations" />
       </Head>
       <main className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Web3 Project Management</h1>
-
+        
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
@@ -165,9 +299,9 @@ const AdminWeb3Page: React.FC = () => {
                         {project.blockchain}
                       </span>
                     </div>
-
+                    
                     <p className="text-gray-700 mb-3">{project.description}</p>
-
+                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                       <div>
                         <p><strong>Created:</strong> {new Date(project.createdAt).toLocaleDateString()}</p>
@@ -182,7 +316,7 @@ const AdminWeb3Page: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
+                  
                   <div className="flex gap-2 ml-4">
                     <button className="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700">
                       Deploy
@@ -202,6 +336,8 @@ const AdminWeb3Page: React.FC = () => {
       </div>;
     </>;
   );
+}
+}
 };
 
 export default AdminWeb3Page;

@@ -1,36 +1,76 @@
 #!/bin/bash
 
-# Find all files with conflict markers
-conflict_files=$(find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "^<<<<<<<\|^=======\|^>>>>>>>" 2>/dev/null)
 
-if [ -z "$conflict_files" ]; then
-    echo "No conflict files found"
-    exit 0
-fi
+# Script to automatically resolve merge conflicts by choosing main branch version
+echo "Resolving merge conflicts by choosing main branch version..."
 
-echo "Found conflict files:"
-echo "$conflict_files"
+# Get list of conflicted files
+git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+    echo "Resolving conflict in: $file"
+    # Choose the main branch version (ours)
+    git checkout --ours "$file"
+    git add "$file"
+done
 
-# For each conflict file, resolve by accepting main branch version
-for file in $conflict_files; do
-    echo "Resolving conflicts in: $file"
-# Script to resolve merge conflicts by accepting HEAD version
-echo "Resolving merge conflicts by accepting HEAD version..."
+# Handle modify/delete conflicts by removing the files
+git status --porcelain | grep "^DU" | cut -c4- | while read file; do
+    echo "Removing deleted file: $file"
+    git rm "$file"
+done
 
-# Find all files with merge conflicts
-files_with_conflicts=$(find src/ -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
+echo "Starting conflict resolution..."
 
-if [ -z "$files_with_conflicts" ]; then
-    echo "No files with merge conflicts found."
-    exit 0
-fi
+# First, let's merge main into our branch
+git merge main
 
-echo "Found files with merge conflicts:"
-echo "$files_with_conflicts"
+# For most conflicts, we'll take the main branch version
+# But we want to keep our netlify.toml fix
+git checkout --ours netlify.toml
 
-# Process each file
-for file in $files_with_conflicts; do
-    echo "Processing: $file"    
-    # Create a backup
-    cp "$file" "$file.backup"
-    
+# For other critical files, take main branch version
+git checkout --theirs package.json
+git checkout --theirs vite.config.ts
+git checkout --theirs tsconfig.json
+git checkout --theirs src/App.tsx
+git checkout --theirs src/main.tsx
+git checkout --theirs index.html
+git checkout --theirs src/index.css
+
+# For all other conflicts, take main branch version
+git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+    if [ "$file" != "netlify.toml" ]; then
+        echo "Resolving conflict in $file (taking main branch version)"
+        git checkout --theirs "$file"
+        git add "$file"
+    fi
+done
+
+# Add all resolved files
+git add .
+
+echo "Conflict resolution completed. Checking status..."
+git status
+
+# Script to automatically resolve merge conflicts by choosing main branch version
+echo "Resolving merge conflicts by choosing main branch version..."
+
+# Get list of conflicted files
+git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+    echo "Resolving conflict in: $file"
+    # Choose the main branch version (ours)
+    git checkout --ours "$file"
+    git add "$file"
+done
+
+# Handle modify/delete conflicts by removing the files
+git status --porcelain | grep "^DU" | cut -c4- | while read file; do
+    echo "Removing deleted file: $file"
+    git rm "$file"
+done
+
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
+
+

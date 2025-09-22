@@ -1,4 +1,5 @@
 
+=======
 import React from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -32,13 +33,12 @@ export default function Home() {;
       ;
       <FeatureHighlights />;
       ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <CategoriesSection />;
       <BenefitsSection />;
       <HowItWorksSection />;
       <FeaturedListingsSection />;
       <NewsletterSection />;
       <Footer />;
-    </div>;
-  );
-} export default function Home () {
-  return (<div className="min-h-screen bg-background" > 
+<<<<<<< HEAD
+

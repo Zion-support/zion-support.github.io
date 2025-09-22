@@ -1,77 +1,79 @@
 #!/bin/bash
 
-# Script to merge all branches into main
+# Script to merge all unmerged branches into main and resolve conflicts
 set -e
 
-echo "Starting branch merge process..."
+echo "Starting merge process for all unmerged branches..."
 
-# Get all remote branches
-branches=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -20)
+# Get list of unmerged branches
+UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep -v HEAD | head -20)
 
-echo "Found branches to process:"
-echo "$branches"
+echo "Found unmerged branches:"
+echo "$UNMERGED_BRANCHES"
 
-# Function to merge a branch
-merge_branch() {
+# Function to resolve conflicts
+resolve_conflicts() {
     local branch=$1
-    echo "Processing branch: $branch"
-    
-    # Check if branch exists locally
-    if ! git show-ref --verify --quiet refs/heads/$branch; then
-        echo "Creating local branch $branch from origin/$branch"
-        git checkout -b $branch origin/$branch
-    else
-        echo "Switching to existing branch $branch"
-        git checkout $branch
-        git pull origin $branch
-    fi
-    
-    # Switch back to main
-    git checkout main
+    echo "Attempting to merge branch: $branch"
     
     # Try to merge
-    echo "Attempting to merge $branch into main..."
-    if git merge --no-ff $branch -m "Merge branch $branch into main"; then
-        echo "✅ Successfully merged $branch"
-        # Push the merge
-        git push origin main
-        echo "✅ Pushed merged main to origin"
+    if git merge "$branch" --no-commit; then
+        echo "✅ Successfully merged $branch (no conflicts)"
+        git commit -m "Merge $branch into main"
+        return 0
     else
-        echo "❌ Merge conflict in $branch, resolving..."
+        echo "⚠️  Merge conflict detected in $branch"
         
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "Resolving conflicts in $branch..."
+        # Check for conflict files
+        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
+        echo "Conflicted files: $CONFLICT_FILES"
+        
+        # Resolve conflicts automatically where possible
+        for file in $CONFLICT_FILES; do
+            echo "Resolving conflicts in $file"
             
-            # Auto-resolve simple conflicts
-            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-                echo "Resolving conflict in $file"
-                # Use main version for most conflicts
-                git checkout --ours "$file"
+            # For JavaScript files, try to resolve by taking the newer version
+            if [[ "$file" == *.js ]]; then
+                echo "Resolving JS conflict in $file"
+                # Use git checkout to take the version from the branch being merged
+                git checkout --theirs "$file"
                 git add "$file"
-            done
-            
-            # Commit the resolution
-            git commit -m "Resolve merge conflicts in $branch"
-            echo "✅ Resolved conflicts in $branch"
-            
-            # Push the resolved merge
-            git push origin main
-            echo "✅ Pushed resolved merge to origin"
+            # For JSON files, try to merge
+            elif [[ "$file" == *.json ]]; then
+                echo "Resolving JSON conflict in $file"
+                git checkout --theirs "$file"
+                git add "$file"
+            # For other files, try to resolve
+            else
+                echo "Resolving conflict in $file"
+                git checkout --theirs "$file"
+                git add "$file"
+            fi
+        done
+        
+        # Commit the resolved conflicts
+        if git commit -m "Resolve merge conflicts from $branch"; then
+            echo "✅ Successfully resolved conflicts and merged $branch"
+            return 0
         else
-            echo "No conflicts found, continuing..."
-            git merge --continue
-            git push origin main
+            echo "❌ Failed to resolve conflicts for $branch"
+            git merge --abort
+            return 1
         fi
     fi
-    
-    echo "Completed processing $branch"
-    echo "---"
 }
 
 # Process each branch
-for branch in $branches; do
-    merge_branch "$branch"
+for branch in $UNMERGED_BRANCHES; do
+    echo "Processing branch: $branch"
+    if resolve_conflicts "$branch"; then
+        echo "✅ Successfully processed $branch"
+    else
+        echo "❌ Failed to process $branch"
+    fi
+    echo "---"
 done
 
-echo "All branches processed!"
+echo "Merge process completed!"
+echo "Current status:"
+git status

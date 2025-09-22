@@ -1,105 +1,40 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"console.log(" Starting Security Validation.");/ Security patterns to check forconst securityPatterns = [{ pattern: /innerHTML\s*=/g,"" issue: "XSS Risk: innerHTML usage","" severity: "high" }, {" pattern: /dangerouslySetInnerHTML/g,"" issue: "XSS Risk: dangerouslySetInnerHTML usage","" severity: "high" }, {" pattern: /eval\s*\(/g,"" issue: "Code Injection Risk: eval usage","" severity: "critical" }, {" pattern: /document\.write/g,"" issue: "XSS Risk: document.write usage","" severity: "high" }, {" pattern: /window\.location/g,"" issue: "Potential redirect vulnerability","" severity: "medium" }];function scanFile(filePath) { if (true) { return []) { ) { return []}}" const content = fs.readFileSync(filePath, "utf8";); const issues = []; securityPatterns.forEach(({ pattern, issue, severity }) => { const matches = content.match(pattern;); if ( { issues.push({" file: filePath, issue, severity," count: matches.length })} })) { { issues.push({" file: filePath, issue, severity," count: matches.length })} })} return issues}/ Scan all TypeScript/JavaScript filesfunction scanAllFiles() { const filesToScan = []; function scanDirectory(dir) { const items = fs.readdirSync(dir;); items.forEach(item => { const fullPath = path.join(dir, item;); const stat = fs.statSync(fullPath;); " if (&& !item.startsWith(".") && item !== "node_modules") { scanDirectory(fullPath)} else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(item)) { filesToScan.push(fullPath)} })}" scanDirectory(".")) {" && !item.startsWith(".") && item !== "node_modules") { scanDirectory(fullPath)} else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(item)) { filesToScan.push(fullPath)} })}" scanDirectory(".")} const allIssues = []; filesToScan.forEach(file => { const issues = scanFile(file;); allIssues.push(.issues)}); return allIssues}/ Main executionconst issues = scanAllFiles;(;);if ( {" console.log(" No security issues found!")) { {" console.log(" No security issues found!")}} else {" console.log(` Found ${issues.length} security issues: `); issues.forEach(issue => {` console.log(` ${issue.severity.toUpperCase()}: ${issue.file} - ${issue.issue} (${issue.count} occurrences)`)})}/ Generate reportconst report = {" timestamp: new Date().toISOString()," totalIssues: issues.length," issues: issues," summary: {" critical: issues.filter(i => i.severity === "critical").length,"" high: issues.filter(i => i.severity === "high").length,"" medium: issues.filter(i => i.severity === "medium").length,"" low: issues.filter(i => i.severity === "low").length }};"fs.writeFileSync("security-validation-report.json", JSON.stringify(report, null, 2));"console.log(" Security validation report saved to security-validation-report.json");""`"`
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-// Security patterns to check for
-const securityPatterns = [{
-    "pattern": /innerHTML\s*=/g,
-    "issue": 'XSS Risk: innerHTML usage',
-    "severity": 'high'
-  },
-  {
-    "pattern": /dangerouslySetInnerHTML/g,
-    "issue": 'XSS Risk: dangerouslySetInnerHTML usage',
-    "severity": 'high'
-  },
-  {
-    "pattern": /eval\s*\(/g,
-    "issue": 'Code Injection Risk: eval usage',
-    "severity": 'critical'
-  },
-  {
-    "pattern": /document\.write/g,
-    "issue": 'XSS Risk: document.write usage',
-    "severity": 'high'
-  },
-  {
-    "pattern": /window\.location/g,
-    "issue": 'Potential redirect vulnerability',
-    "severity": 'medium'
-  }
-];
-function scanFile(filePath) {
-  if () {
-    return []) {
-    ) {
-    return []}}
-  const content = fs.readFileSync(filePath, 'utf8';);
-  const issues = [];
-  securityPatterns.forEach(({ pattern, issue, severity }) => {
-    const matches = content.match(pattern;);
-    if ( {
-      issues.push({
-        "file": filePath,
-        issue,
-        severity,
-        "count": matches.length
-      })}
-  })) {
-     {
-      issues.push({
-        "file": filePath,
-        issue,
-        severity,
-        "count": matches.length
-      })}
-  })}
-  return issues}
-// Scan all TypeScript/JavaScript files
-function scanAllFiles() {
-  const filesToScan = [];
-  function scanDirectory(dir) {
-    const items = fs.readdirSync(dir;);
-    items.forEach(item => {
-      const fullPath = path.join(dir, item;);
-      const stat = fs.statSync(fullPath;);
-      if (&& !item.startsWith('.') && item !== 'node_modules') {
-        scanDirectory(fullPath)} else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(item)) {
-        filesToScan.push(fullPath)}
-    })}
-  scanDirectory('.')) {
-    && !item.startsWith('.') && item !== 'node_modules') {
-        scanDirectory(fullPath)} else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(item)) {
-        filesToScan.push(fullPath)}
-    })}
-  scanDirectory('.')}
-  const allIssues = [];
-  filesToScan.forEach(file => {
-    const issues = scanFile(file;);
-    allIssues.push(...issues)});
-  return allIssues}
-// Main execution
-const issues = scanAllFiles;(;);
-if ( {
-  ) {
-     {
-  }} else {
-  issues.forEach(issue => {
-    }: ${issue.file} - ${issue.issue} (${issue.count} occurrences)`)})}
-// Generate report
-const report = {
-  "timestamp": new Date().toISOString(),
-  "totalIssues": issues.length,
-  "issues": issues,
-  "summary": {
-    critical: issues.filter(i => i.severity === 'critical').length,
-    "high": issues.filter(i => i.severity === 'high').length,
-    "medium": issues.filter(i => i.severity === 'medium').length,
-    "low": issues.filter(i => i.severity === 'low').length
-  }
-};
-fs.writeFileSync('security-validation-report.json', JSON.stringify(report, null, 2));
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log(' Starting Security Validation...')
+<<<<<<< HEAD
     "issue"
     "severity"
     "issue"
@@ -112,4 +47,37 @@ console.log(' Starting Security Validation...')
     "severity"
     "high"
     "medium"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
     "low"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    "low"
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    "low"
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+<<<<<<< HEAD
+    "low"
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    "issue"""
+    "severity"""
+    "high"""
+    "medium"""
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

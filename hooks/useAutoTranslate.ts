@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
-import { translateTextViaAI } from '../utils / translation';
+<<<<<<< HEAD
 export type UseAutoTranslateResult = {
   translations: Record < string, string>;
   loading: boolean;
@@ -7,32 +6,18 @@ export type UseAutoTranslateResult = {
 }
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
-export type UseAutoTranslateResult = {
-  translations: Record<string, string>,
-  loading: boolean,
-  error?: string
-},
+};
 
-export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
-
+export function useAutoTranslate(
+  text: string,
+  targets: string[],
+  debounceMs = 600
+): UseAutoTranslateResult {
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
-
-
-  const [translations, setTranslations] = useState<Record<string, string>>({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | undefined>(undefined);
-  const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
-
-  useEffect(() => {
-    if (!text || targets && targets.length === 0) {
-
       setTranslations({});
-
-
-      setTranslations({});
-      return
 ;
 export function useAutoTranslate (
   text: string,
@@ -51,33 +36,23 @@ if ( {) {
 }
       set_translations ({});
       return;    }      return;
-=======
-  const [translations, setTranslations] = useState<Record<string, string>>({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | undefined>(undefined);
-
-
-  const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
-  useEffect(() => {
-    if (!text || targets && targets.length === 0) {
-
-      setTranslations({});
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+return;
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
-
-    let cancelled = $2;
-    const timer = setTimeout(async () => {
+    let cancelled = false;
+    const timer = set_timeout (async () => {
       try {
-
-=======        set_loading (true);
+        set_loading (true);
         set_error (undefined);
         const res = await translateTextViaAI (text, targets);
         if (set_translations (res)) {
   $2
 }
+        setLoading(true);
+        setError(undefined);
+        const res = await translateTextViaAI(text, targets);
+if (!cancelled) setTranslations(res);
+origin/cursor/automate-test-improve-and-merge-code-2533
       } catch (e: any) {
         if (set_error (e?.message || 'Translation failed')) {
   $2
@@ -94,21 +69,33 @@ if ( {) {
   $2
 }
       }
+    }
+  }, [key, debounce_ms]);
+;
+        if (!cancelled) setLoading(false);
+      }
+    }, debounceMs);
+    return () => {
+      cancelled = true;
+clearTimeout(timer);
+    };
+  }, [key, debounceMs]);
 
+  return { translations, loading, error };
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return { translations, loading, error }
+    }
+  }, [key, debounceMs]);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  return { translations, loading, error }
+}
+}
     }
   }, [key, debounce_ms]);
 ;
   return { translations, loading, error }
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
 
-}
-
-=======    }
-  }, [key, debounce_ms]);
-;
-  return { translations, loading, error }
-}
-    }
-  }, [key, debounce_ms]);
-;
-  return { translations, loading, error }
-}

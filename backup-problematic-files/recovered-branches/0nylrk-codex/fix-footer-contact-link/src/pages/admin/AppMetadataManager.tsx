@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import React from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -28,3 +30,4 @@ export default AppMetadataManager,; const AppMetadataManager: React.FC = () => {
 }/> <div className=" container py-8"> <h1 className=" text-3xl font-bold text-zion-cyan mb-8" >App Metadata Manager</h1> <MetadataManager /> </div> </AppLayout>) 
 };
 export default AppMetadataManager;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,71 +1,33 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and merge all open PRs
-set -e
+echo "Starting merge conflict resolution..."
 
-echo "Starting merge conflict resolution for all open PRs..."
-
-# Get all cursor branches
-BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///')
-
-# Create a temporary branch for merging
-git checkout -b temp-merge-branch
-
-# Function to resolve conflicts in a file
+# Function to resolve conflicts in a file by keeping HEAD version
 resolve_conflicts() {
     local file="$1"
-    echo "Resolving conflicts in $file..."
-    
-    # Check if file has merge conflicts
-        
-        echo "Resolved conflicts in $file"
-    fi
+    echo "Resolving conflicts in: $file"
+    # Create a backup
+    cp "$file" "$file.backup"
+    # Use sed to resolve conflicts by keeping HEAD version
+    # Remove conflict markers and keep only the HEAD version
+    sed -i '/^
+    # Remove any remaining conflict markers
+    sed -i '/^<<<<<<< /d; /^
+    echo "Resolved conflicts in: $file"
 }
 
-# Try to merge each branch
-for branch in $BRANCHES; do
-    echo "Attempting to merge $branch..."
-    
-    # Skip if branch doesn't exist
-    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-        echo "Branch $branch doesn't exist, skipping..."
-        continue
-    fi
-    
-    # Try to merge
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        echo "Successfully merged $branch"
-        git commit -m "Merge $branch into main"
-    else
-        echo "Merge conflicts detected in $branch, resolving..."
-        
-        # Get list of conflicted files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-        
-        # Resolve conflicts in each file
-        for file in $CONFLICTED_FILES; do
-            if [ -f "$file" ]; then
-                resolve_conflicts "$file"
-            fi
-        done
-        
-        # Add resolved files
-        git add .
-        
-        # Commit the merge
-        git commit -m "Resolve merge conflicts for $branch"
-        
-        echo "Successfully resolved conflicts and merged $branch"
+# Find all files with merge conflicts
+echo "Finding files with merge conflicts..."
+conflict_files=$(grep -r "" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" -l | head -50)
+
+echo "Found $(echo "$conflict_files" | wc -l) files with conflicts"
+
+# Process each file
+for file in $conflict_files; do
+    if [ -f "$file" ]; then
+        resolve_conflicts "$file"
     fi
 done
 
-echo "All branches merged successfully!"
-
-# Switch back to main and merge the temp branch
-git checkout main
-git merge temp-merge-branch
-
-# Clean up
-git branch -D temp-merge-branch
-
 echo "Merge conflict resolution completed!"
+echo "Files processed: $(echo "$conflict_files" | wc -l)"

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
@@ -17,6 +17,7 @@ const { execSync } = require("child_process")
         analysis.complexFiles.push({"file": path.relative(this.projectRoot, filePath),"complexity"}
     this.log(" Checking code standards...")
     const standards = {"hasESLintConfig": fs.existsSync(".eslintrc.js") || fs.existsSync(".eslintrc.json") || fs.existsSync("eslint.config.js"),"hasPrettierConfig": fs.existsSync(".prettierrc") || fs.existsSync("prettier.config.js"),"hasTypeScriptConfig": fs.existsSync("tsconfig.json"})
+<<<<<<< HEAD
       hasJestConfig: fs.existsSync("jest.config.js") || fs.existsSync("jest.config.cjs")
       hasBabelConfig: fs.existsSync(".babelrc") || fs.existsSync("babel.config.js")
     this.log(" Checking dependencies...")
@@ -54,4 +55,17 @@ const { execSync } = require("child_process")
 // console.log(`� Complex "files"`)
     console.log(` "Recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      hasJestConfig: fs.existsSync("jest.config.js") || fs.existsSync("jest.config.cjs")","
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       console.log("\n� High Priority "Recommendations": ")
+      console.log("\n� High Priority "Recommendations": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
