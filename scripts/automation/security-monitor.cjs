@@ -1,16 +1,16 @@
 
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-=======
+
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
+
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();"
@@ -22,10 +22,10 @@ class $1 {}
   log(message, type = "info") {}"
   const timestamp = new Date().toISOString();
 
-=======
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
-=======
+
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
+
 ;
   async ensureDirectoryExists(dirPath) {}
   if (!fs.existsSync(dirPath)) {}"
@@ -47,11 +47,7 @@ class $1 {}
     const result = await this.runCommand("npm audit --json");"
     if (result.success) {}
   const auditData = JSON.parse(result.output);
-        if (auditData.vulnerabilities) {}
-  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");
-          for (const ["packageName", "vuln"] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`)};
-        } else {}
-  this.log("No security vulnerabilities found", "success");
+
   async runCommand(command, options = {}) {}
   try {}
   const result = execSync(command, {})
@@ -101,12 +97,12 @@ class $1 {}
 ;
   async checkLicenseCompliance() {}
   this.log("Checking license compliance...");
+
   async checkLicenseCompliance() {}
   this.log("Checking license compliance...");
     const result = await this.runCommand("npm ls --json");
     if (result.success) {}
   try {}
-=======
 
         ...options }
   return { "success": false, "output": error.message, "code": error.status };"
@@ -120,6 +116,7 @@ class $1 {}
   this.log("All dependencies are up to date", "success")};"
 
     const result = await this.runCommand("npm ls --json");"
+
   const depsData = JSON.parse(result.output);
         // Check for problematic licenses;"
         const problematicLicenses = ["GPL", "AGPL", "LGPL"];"
@@ -196,21 +193,10 @@ class $1 {}
   await this.fixSecurityIssues()};
 
       await this.generateReport()};
-  };
-};
-;
-// Run the security monitor;
-const monitor = new SecurityMonitor();
 
-=======
-=======
+monitor.run().catch(console.error);
 
 // Run the security monitor;
 const monitor = new SecurityMonitor();
 
 monitor.run().catch(console.error);
-=======
-monitor.run().catch(console.error);
-=======
-=======
-

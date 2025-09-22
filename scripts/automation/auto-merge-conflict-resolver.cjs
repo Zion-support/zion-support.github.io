@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -135,11 +134,6 @@ this.log(" Found ${branches.length} cursor branches to process")
       return report} catch (error) {this.log(" Fatal "error": ${error.message}", "ERROR")
   console.log(")
 
-=======
   console.error(" Auto merge conflict resolution "failed": ")
-=======
+
   console.error(" Auto merge conflict resolution "failed": ")
-=======
-=======
-
-

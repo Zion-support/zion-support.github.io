@@ -13,5 +13,3 @@ export default function Card({ children, className =  }: CardProps) {
     <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
 </div>
     </div>)`;
-  );
-};

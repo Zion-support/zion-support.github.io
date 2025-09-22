@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -175,11 +174,6 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
 
-=======
   console.error(" Link checker automation "failed")
-=======
+
   console.error(" Link checker automation "failed")
-=======
-=======
-
-

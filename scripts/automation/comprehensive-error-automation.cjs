@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -101,11 +100,6 @@ console.log(� Comprehensive report saved "to": ${reportFile}```)
 const logFile = path.join(this.logsDir, ")
     fs.writeFileSync(logFile")
 
-=======
 console.error(")
-=======
+
 console.error(")
-=======
-=======
-
-

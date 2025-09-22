@@ -1,99 +1,92 @@
+const fs = require('fs');
+const path = require('path');
 
-const fixes = [
-  // Fix import statements with comma issues
-  {
-    pattern: /import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g,
-    replacement: "import $1 from '$2'"
-  }, {
-    pattern: /import\s+(\w+)\s+from\s*,\s*([^]+);/g,
-    replacement: "import $1 from $2;"
-  },
-  
-  // Fix missing semicolons in function calls
-  {
-    pattern: /(\w+\([^)]*\))\s*\)\s*}/g,
-    replacement: "$1);"
-  },
-  
-  // Fix unterminated strings
-  {
-    pattern: /(['"`])([^'"`]*)\s*$/gm,
-    replacement: (match, quote, content) => {
-      if (!content.includes(quote)) {
-        return match + quote}
-      return match}
-  },
-  
-  // Fix missing commas in object literals
-  {
-    pattern: /(\w+:\s*[^}]+)\s*(\w+:\s*[^}]+)/g,
-    replacement: "$1,\n    $2"
-  },
-  
-  // Fix missing semicolons after statements
-  {
-
-];
-
-function fixFile(filePath) {
+// Function to fix common syntax errors in service pages
+function fixServicePage(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
+    let modified = false;
 
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false];
+    // Fix missing closing braces in IndustryCard components
+    content = content.replace(
+      /features=\[([^\]]+)\]\s*\/>/g,
+      (match, features) => {
+        // Check if the features array is properly closed
+        if (!features.includes(']')) {
+          return match.replace(']', ']');
+        }
+        return match;
+      }
+    );
 
+    // Fix duplicate metadata exports
+    const metadataRegex = /export const metadata = \{[\s\S]*?\};/g;
+    const metadataMatches = content.match(metadataRegex);
+    if (metadataMatches && metadataMatches.length > 1) {
+      // Keep only the first metadata export
+      content = content.replace(metadataRegex, (match, index) => {
+        return index === 0 ? match : '';
+      });
+      modified = true;
+    }
 
-    // Apply fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement)} else {
-        content = content.replace(fix.pattern, fix.replacement)}
+    // Fix metadata in JSX
+    content = content.replace(
+      /\/\/ eslint-disable-next-line react-refresh\/only-export-components\nexport const metadata = \{[\s\S]*?\};\n/g,
+      ''
+    );
+
+    // Fix missing closing tags
+    content = content.replace(/(<IndustryCard[^>]*>)(?![\s\S]*?<\/IndustryCard>)/g, (match) => {
+      return match + '</IndustryCard>';
     });
 
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    // Fix duplicate description in metadata
+    content = content.replace(
+      /description: '[^']*',\s*description: '[^']*',/g,
+      (match) => {
+        const firstDesc = match.match(/description: '([^']*)'/)[1];
+        return `description: '${firstDesc}',`;
+      }
+    );
 
-      return true}
-    
-    return false} catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false}
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+  return false;
 }
 
+// Find all service page files
+const servicesDir = path.join(__dirname, 'app', 'services');
+const serviceFiles = [];
 
-  const files = fs.readdirSync(dirPath);
-
-  let fixedCount = 0;
-
-function walkDir(dir) {
-  const filesInDir = fs.readdirSync(dir);
-  for (const file of filesInDir) {
+function findServiceFiles(dir) {
+  const files = fs.readdirSync(dir);
+  files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-
-    if (
-      stat.isDirectory() &&
-      !file.startsWith(`.`) &&
-      file !== 'node_modules'
-    ) {
-      fixedCount += fixFilesInDirectory(filePath);
-
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++}
+    if (stat.isDirectory()) {
+      findServiceFiles(filePath);
+    } else if (file === 'page.tsx') {
+      serviceFiles.push(filePath);
     }
+  });
+}
+
+findServiceFiles(servicesDir);
+
+console.log(`Found ${serviceFiles.length} service page files`);
+
+let fixedCount = 0;
+serviceFiles.forEach(file => {
+  if (fixServicePage(file)) {
+    fixedCount++;
   }
-  
-  traverse(dir);
-  return files}
+});
 
-
-console.log('🔧 Starting syntax error fixes...');
-const fixedCount = fixFilesInDirectory('.');
-console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-
-
-
+console.log(`Fixed ${fixedCount} files`);

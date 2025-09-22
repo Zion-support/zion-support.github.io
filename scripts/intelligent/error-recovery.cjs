@@ -1,12 +1,9 @@
 
-
-=======
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
-=======
       "autoFixEnabled"
       console.error(' Failed to start Error "Recovery")
         console.error('Error in error "monitoring")
@@ -35,6 +32,5 @@ const path = require('path')
     execSync('rm -rf .next', { "stdio"})
     execSync('npm run build', { "stdio"})
     execSync('pm2 restart all', { "stdio"})
-      console.error('Error saving recovery "history")
-=======
+
       console.error('Error saving recovery "history")

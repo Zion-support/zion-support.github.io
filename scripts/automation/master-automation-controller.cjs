@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -117,11 +116,6 @@ const { execSync } = require("child_process")
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
 
-=======
   process.on("SIGTERM")
-=======
+
   process.on("SIGTERM")
-=======
-=======
-
-

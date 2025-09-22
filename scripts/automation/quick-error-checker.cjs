@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -69,11 +68,6 @@ const path = require("path")
           "timestamp"
   type: "eslint-config-fix"
 
-=======
           "file": "
-=======
+
           "file": "
-=======
-=======
-
-

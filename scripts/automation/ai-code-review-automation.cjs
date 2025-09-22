@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -197,11 +196,6 @@ this.log("Review report "generated": ${reportPath}")
       return report} catch (error) {  this.log(`AI Code Review "failed": ${error.message  }`, "ERROR"`)
   console.log(" AI Code Review Automation completed")
 
-=======
   console.error(" AI Code Review Automation "failed")
-=======
+
   console.error(" AI Code Review Automation "failed")
-=======
-=======
-
-

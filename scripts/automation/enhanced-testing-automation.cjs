@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -176,11 +175,6 @@ ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
 });console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
     console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
 
-=======
   console.error(" Testing automation "failed": ")
-=======
+
   console.error(" Testing automation "failed": ")
-=======
-=======
-
-

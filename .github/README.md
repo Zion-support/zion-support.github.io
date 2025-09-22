@@ -1,128 +1,130 @@
-# GitHub Actions Workflows
+# GitHub Actions Workflows - DEPRECATED
 
-This directory contains all the GitHub Actions workflows for the Zion Tech Group website.
+⚠️ **IMPORTANT: This directory is deprecated. All automation has been migrated to PM2.**
 
-## Workflows Overview
+## Migration Status
 
-### 1. CI (Continuous Integration)
-**File**: `.github/workflows/ci.yml`
-- **Trigger**: Push to main branch or pull requests
-- **Purpose**: Build, test, and validate code changes
-- **Jobs**:
-  - Build: Install dependencies, lint, type-check, and build the project
-  - Test: Run tests and upload build artifacts
+All GitHub Actions workflows have been replaced with PM2-based automation processes that run continuously on the server. This provides better performance, reliability, and real-time monitoring compared to GitHub Actions.
 
-### 2. Test
-**File**: `.github/workflows/test.yml`
-- **Trigger**: Push to main branch or pull requests
-- **Purpose**: Comprehensive testing and validation
-- **Jobs**:
-  - Main: Build, test, and verify the application
+## What Was Replaced
 
-### 3. Deploy
-**File**: `.github/workflows/deploy.yml`
-- **Trigger**: Push to main branch or manual dispatch
-- **Purpose**: Deploy the application to production
-- **Jobs**:
-  - Deploy: Build and deploy to Netlify/Vercel (if configured)
+The following GitHub Actions workflows have been replaced by PM2 processes:
 
-### 4. Security
-**File**: `.github/workflows/security.yml`
-- **Trigger**: Push to main branch, pull requests, or weekly schedule
-- **Purpose**: Security vulnerability scanning
-- **Jobs**:
-  - Security: Run npm audit and security checks
+### 🔄 CI (Continuous Integration) → PM2: `daily-build-test`
 
-### 5. CodeQL
-**File**: `.github/workflows/codeql.yml`
-- **Trigger**: Push to main/develop branches, pull requests, or weekly schedule
-- **Purpose**: Static code analysis for security vulnerabilities
-- **Jobs**:
-  - Analyze: CodeQL analysis for JavaScript/TypeScript
+- **PM2 Process**: Runs every hour
+- **Purpose**: Build verification, linting, and type checking
+- **Status**: ✅ Migrated to PM2
 
-### 6. Continuous Improvement
-**File**: `.github/workflows/continuous-improvement.yml`
-- **Trigger**: Every 4 hours or manual dispatch
-- **Purpose**: Automated code quality improvements
-- **Jobs**:
-  - Improve: Run linting, type checking, and create improvement PRs
+### 🧪 Test → PM2: `daily-build-test`
 
-### 7. Link Checker
-**File**: `.github/workflows/agent-factory.yml`
-- **Trigger**: Every 6 hours or manual dispatch
-- **Purpose**: Check for broken links on the website
-- **Jobs**:
-  - Check-links: Verify internal and external links
+- **PM2 Process**: Runs every hour
+- **Purpose**: Comprehensive testing and build verification
+- **Status**: ✅ Migrated to PM2
 
-## Required Secrets
+### 🔒 CodeQL Security Analysis → PM2: `security-audit`
 
-### For Deployment
-- `NETLIFY_AUTH_TOKEN`: Netlify authentication token
-- `NETLIFY_SITE_ID`: Netlify site ID
-- `VERCEL_TOKEN`: Vercel authentication token
-- `VERCEL_ORG_ID`: Vercel organization ID
-- `VERCEL_PROJECT_ID`: Vercel project ID
+- **PM2 Process**: Runs every 4 hours
+- **Purpose**: Security vulnerability scanning and dependency analysis
+- **Status**: ✅ Migrated to PM2
 
-### For Testing (Optional)
-- `CODECOV_TOKEN`: Codecov token for test coverage
-- `CYPRESS_TEST_USER_EMAIL`: Test user email for Cypress
-- `CYPRESS_TEST_USER_PASSWORD`: Test user password for Cypress
+### 📦 NPM Package Check → PM2: `dependency-updates`
 
-## Local Development
+- **PM2 Process**: Runs every 6 hours
+- **Purpose**: Package verification and dependency updates
+- **Status**: ✅ Migrated to PM2
 
-To test workflows locally, you can use [act](https://github.com/nektos/act):
+### 🚀 Deploy to Production → PM2: `zion-app` & `zion-backend`
+
+- **PM2 Process**: Continuous deployment with auto-restart
+- **Purpose**: Production deployment with build verification
+- **Status**: ✅ Migrated to PM2
+
+### 🔍 Dependency Review → PM2: `dependency-updates`
+
+- **PM2 Process**: Runs every 6 hours
+- **Purpose**: Security vulnerability checking in dependencies
+- **Status**: ✅ Migrated to PM2
+
+### ✅ Quality Check → PM2: `quality-checks`
+
+- **PM2 Process**: Runs every 3 hours
+- **Purpose**: Code quality, linting, and security audits
+- **Status**: ✅ Migrated to PM2
+
+### 🔄 Continuous Improvement → PM2: `continuous-improvement`
+
+- **PM2 Process**: Runs every 2 hours
+- **Purpose**: Automated improvement suggestions and optimization
+- **Status**: ✅ Migrated to PM2
+
+### 🕷️ Link Crawler Factory → PM2: `link-checker` & `link-integrity`
+
+- **PM2 Process**: Runs every 30 minutes and 2 hours respectively
+- **Purpose**: Automated link checking and broken link detection
+- **Status**: ✅ Migrated to PM2
+
+## PM2 Automation Benefits
+
+### 🚀 Performance Improvements
+
+- **Real-time execution**: No waiting for GitHub Actions queue
+- **Faster feedback**: Immediate error detection and fixing
+- **Resource optimization**: Better memory and CPU utilization
+
+### 🔧 Enhanced Monitoring
+
+- **Live process monitoring**: Real-time status and metrics
+- **Automatic restart**: Self-healing on failures
+- **Memory management**: Automatic restart on memory issues
+
+### 📊 Continuous Operations
+
+- **24/7 automation**: No dependency on external services
+- **Scheduled execution**: Configurable intervals for each task
+- **Parallel processing**: Multiple automation tasks run simultaneously
+
+## Current PM2 Status
+
+All automation processes are running continuously:
 
 ```bash
-# Install act
-brew install act
+# Check PM2 status
+pm2 status
 
-# Run a specific workflow
-act -W .github/workflows/ci.yml
+# View logs for specific process
+pm2 logs [process-name]
 
-# Run with specific event
-act push -W .github/workflows/ci.yml
+# Restart all processes
+pm2 restart all
 ```
 
-## Workflow Dependencies
+## Configuration
 
-The workflows are designed to work together:
-1. **CI** runs on every push/PR
-2. **Test** provides comprehensive testing
-3. **Security** runs security checks
-4. **Deploy** deploys successful builds
-5. **Continuous Improvement** maintains code quality
-6. **Link Checker** ensures website integrity
+PM2 configuration is in `ecosystem.config.cjs` at the project root, which includes:
 
-## Troubleshooting
+- **Main Application**: `zion-app` and `zion-backend`
+- **Automation Processes**: 12 continuous automation tasks
+- **Resource Management**: Memory limits and auto-restart policies
+- **Environment Variables**: Production-optimized settings
 
-### Common Issues
+## Why This Migration?
 
-1. **Build Failures**: Check Node.js version compatibility and dependency issues
-2. **Test Failures**: Ensure all tests pass locally before pushing
-3. **Deployment Issues**: Verify deployment secrets are configured correctly
-4. **Security Alerts**: Review npm audit output and update vulnerable dependencies
+1. **Cost Efficiency**: No GitHub Actions minutes consumption
+2. **Performance**: Faster execution and real-time monitoring
+3. **Reliability**: No external service dependencies
+4. **Control**: Full control over execution environment
+5. **Scalability**: Easy to add new automation tasks
 
-### Debugging
+## Support
 
-- Check workflow logs in the Actions tab
-- Use `act` for local testing
-- Review artifact uploads for debugging information
-- Check issue creation for automated reports
+For automation issues, check:
 
-## Contributing
+1. PM2 process status: `pm2 status`
+2. Process logs: `pm2 logs [process-name]`
+3. Ecosystem configuration: `ecosystem.config.cjs`
+4. Individual automation scripts in `scripts/automation/`
 
-When adding new workflows:
-1. Follow the existing naming conventions
-2. Include proper error handling
-3. Add appropriate permissions
-4. Document the workflow purpose
-5. Test locally with `act`
+---
 
-## Best Practices
-
-- Use Node.js 20 for consistency
-- Cache npm dependencies for faster builds
-- Upload artifacts for debugging
-- Use appropriate permissions (principle of least privilege)
-- Include proper error handling and continue-on-error where appropriate
-- Use concurrency groups to prevent workflow conflicts
+**Note**: This directory is kept for reference only. All active automation is now handled by PM2 processes running on the server.

@@ -48,14 +48,12 @@ class HealthChecker {;
     if (!fs.existsSync(this.logDir)) {;"
       fs.mkdirSync(this.logDir, { "recursive": true })}"
   log(level, message, data = null) {;
-
       timestamp;
       level;
       message;"
       data}"""
     console.log("[${timestamp}] ${level.toUpperCase()}: ${message}");""
     "if": (data) {"
-
       console.log(JSON.stringify(data, null, 2))}
     // Write to log file;
     const logFile = path.join(this.logDir;)"
@@ -84,11 +82,9 @@ class HealthChecker {;
             statusCode: res.statusCode;,
   reason: "HTTP ${res.statusCode;}"")
           })}
-
       });"
       req.on('error', error => {')
         const responseTime = Date.now() - startTime;
-
         this.log('error', 'Application health check failed', {
           "error": error.message;")
         });
@@ -100,9 +96,7 @@ class HealthChecker {;
     const logFile = path.join(this.logDir,
 ,)
         req.destroy();
-
         this.log();  error', ;Application health check timed out')';        resolve({;);          "status": 'unhealthy, ';          responseTime,';          "reason":;"';Timeout'        })})})}';  async checkDiskSpace() {';    try {;
-
       const result = execSync(;)';df -h .', {';        "cwd": this.projectRoot,";        "encoding": ;";  utf8'})';      const lines = result.trim().split(;)';\n')';      const diskInfo = lines[1].split(/\s+/);
       const usage = diskInfo[4];
       const usagePercent = parseInt(usage.replace(';%', ;';))';      const status = usagePercent > 90 ? 'critical';';: usagePercent > 80 ? 'warning';'; : 'healthy';';';      this.log('info, "Disk "usage": ${usage}", { status, usagePercent })';            return {";        status, ';        "usage": usage,";        usagePercent,""
@@ -111,10 +105,8 @@ class HealthChecker {;
   health-checker.log');
     fs.appendFileSync(logFile, JSON.stringify(logEntry) +';\n')}
   async checkApplicationHealth() {;
-
     return new Promise(resolve => {;)
       const req = http.get(this.healthEndpoint, res => {;)
-
         if (res.statusCode === 200) {
           this.log(',')`;
       'info', `Application health check passed (${responseTime}ms)`)          resolve({"""
@@ -128,13 +120,11 @@ class HealthChecker {;
       })
       req.on()"
   'error', (error) => {';
-
         this.log()
   'error', ;"Application": health check failed', { "error": error.message})        resolve({';
           "status": ';unhealthy, ',';
           "reason": error.messag,e})})"
   error', ;"Application": health check timed out')';
-
         resolve({
           status: 'unhealth;,y, ';
           "reason": ';Timeout'       })})})}';
@@ -148,17 +138,16 @@ class HealthChecker {;
       const lines = result.trim().split()
   '\n')';
       const diskInfo = lines[1].split(/\s+/);
-
       const usagePercent = parseInt(usage.replace()
   '%', ;';))';
       const status = usagePercent > 90 ? 'critical';';: "usagePercent": > 80 ? 'warning';'; : 'healthy';';';`;
       this.log('info, ""Disk": usage: ${usag;,e}`, { status, "usagePercent":  })""
-
           "status": ';unhealthy',
           responseTime,
           "reason": error.message})});"
       req.setTimeout(this.maxResponseTime, () => {;
         req.destroy();
+        const responseTime = Date.now() - startTime;
         this.log(,
   error', ';Application health check timed out');
 <

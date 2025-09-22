@@ -3,202 +3,266 @@
 const fs = require('fs');
 const path = require('path');
 
+console.log('🔧 Starting advanced syntax fixing...');
+
 class AdvancedSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-    this.errors = [];
-    this.reportFile = path.join(this.projectRoot, 'advanced-syntax-fix-report.json')}
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
-
-  fixFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      let fixedContent = content;
-      let hasChanges = false;
-
-      // Fix specific patterns found in the linting errors
-      const fixes = [
-        // Fix unterminated string literals - add closing quotes
-        {
-          pattern: /(['"])([^'"]*?)(\n|$)/g,
-          replacement: (match, quote, content, newline) => {
-            if (content.includes('\\' + quote) || content.includes('`')) return match;
-            if (content.trim().length > 0 && !content.endsWith(quote)) {
-              return quote + content + quote + ';' + newline}
-            return match}
-        },
-        // Fix missing semicolons after import statements
-        {
-          pattern: /^import\s+.*from\s+['"][^'"]+['"]\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
-        // Fix missing semicolons after variable declarations
-        {
-          pattern: /(const|let|var)\s+\w+\s*=\s*[^]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
-        // Fix missing commas in object literals
-        {
-          pattern: /(\w+):\s*([^}\n]+)(\n\s*[^}])/g,
-          replacement: '$1: $2,$3'
-        },
-        // Fix missing semicolons after function declarations
-        {
-          pattern: /function\s+\w+\s*\([^)]*\)\s*\{[^}]*\}\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
-        // Fix missing semicolons after arrow functions
-        {
-          pattern: /const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*[^]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
-        // Fix missing semicolons after return statements
-        {
-          pattern: /return\s+[^]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
-        // Fix missing semicolons after export statements
-        {
-          pattern: /export\s+(const|let|var|function|class|default)\s+[^]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
-        // Fix missing semicolons after React component declarations
-        {
-          pattern: /(const|let|var)\s+\w+\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\}\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
-        // Fix missing semicolons after JSX returns
-        {
-          pattern: /return\s*\(\s*<[^>]+>.*<\/[^>]+>\s*\)\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        }
-      ];
-
-      for (const fix of fixes) {
-        const newContent = fixedContent.replace(fix.pattern, fix.replacement);
-        if (newContent !== fixedContent) {
-          fixedContent = newContent;
-          hasChanges = true}
-      }
-
-      // Additional specific fixes for common patterns
-      const specificFixes = [
-        // Fix unterminated template literals
-        {
-          pattern: /`([^`]*?)(\n|$)/g,
-          replacement: (match, content, newline) => {
-            if (!content.includes('`') && content.trim().length > 0) {
-              return '`' + content + '`;' + newline}
-            return match}
-        },
-        // Fix missing semicolons after object destructuring
-        {
-          pattern: /(const|let|var)\s*\{[^}]+\}\s*=\s*[^]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
-        // Fix missing semicolons after array destructuring
-        {
-          pattern: /(const|let|var)\s*\[[^\]]+\]\s*=\s*[^]+$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        }
-      ];
-
-      for (const fix of specificFixes) {
-        const newContent = fixedContent.replace(fix.pattern, fix.replacement);
-        if (newContent !== fixedContent) {
-          fixedContent = newContent;
-          hasChanges = true}
-      }
-
-      if (hasChanges) {
-        fs.writeFileSync(filePath, fixedContent);
-        this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${filePath}`);
-        return true}
-
-      return false} catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false}
+    this.fixesApplied = [];
+    this.filesProcessed = 0;
   }
 
-  getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
-    const files = [];
-    
-    if (!fs.existsSync(dir)) return files;
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${type}] ${message}`;
+    console.log(logMessage);
+  }
 
-    const items = fs.readdirSync(dir);
+  findSourceFiles() {
+    const files = [];
+    const srcDir = path.join(this.projectRoot, 'src');
     
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files.push(...this.getAllFiles(fullPath, extensions))} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath)}
+    function scanDirectory(dir) {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+            scanDirectory(fullPath);
+          } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        // Skip directories that can't be read
+      }
     }
     
-    return files}
+    scanDirectory(srcDir);
+    return files;
+  }
+
+  fixAdvancedSyntaxErrors(content, filePath) {
+    let fixed = content;
+    let changes = 0;
+
+    // Fix unterminated string literals - look for lines ending with single quotes
+    fixed = fixed.replace(/^([^'\n]*'[^'\n]*)$/gm, (match, line) => {
+      if (line.endsWith("'") && !line.endsWith("';") && !line.endsWith("',") && !line.endsWith("')") && !line.endsWith("'}")) {
+        changes++;
+        return line + ';';
+      }
+      return match;
+    });
+
+    // Fix unterminated string literals in import statements
+    fixed = fixed.replace(/^import\s+.*?from\s+['"][^'"]*$/gm, (match) => {
+      if (!match.endsWith(';') && !match.endsWith('"') && !match.endsWith("'")) {
+        changes++;
+        return match + ';';
+      }
+      return match;
+    });
+
+    // Fix unterminated string literals in JSX attributes
+    fixed = fixed.replace(/className\s*=\s*["'][^"']*$/gm, (match) => {
+      if (!match.endsWith('"') && !match.endsWith("'")) {
+        changes++;
+        return match + '"';
+      }
+      return match;
+    });
+
+    // Fix unterminated string literals in console.log statements
+    fixed = fixed.replace(/console\.log\s*\(\s*['"][^'"]*$/gm, (match) => {
+      if (!match.endsWith('"') && !match.endsWith("'")) {
+        changes++;
+        return match + '");';
+      }
+      return match;
+    });
+
+    // Fix unterminated string literals in return statements
+    fixed = fixed.replace(/return\s+['"][^'"]*$/gm, (match) => {
+      if (!match.endsWith('"') && !match.endsWith("'")) {
+        changes++;
+        return match + '";';
+      }
+      return match;
+    });
+
+    // Fix extra quotes at the end of lines
+    fixed = fixed.replace(/;\s*'$/gm, ';');
+    fixed = fixed.replace(/;\s*"$/gm, ';');
+
+    // Fix missing semicolons after variable declarations
+    fixed = fixed.replace(/^(const|let|var)\s+[^=]+=\s*[^;]+$/gm, (match) => {
+      if (!match.endsWith(';') && !match.includes('{') && !match.includes('(') && !match.includes('[')) {
+        changes++;
+        return match + ';';
+      }
+      return match;
+    });
+
+    // Fix missing semicolons after function calls
+    fixed = fixed.replace(/^[a-zA-Z_$][a-zA-Z0-9_$]*\s*\([^)]*\)\s*$/gm, (match) => {
+      if (!match.endsWith(';') && !match.includes('{') && !match.includes('=')) {
+        changes++;
+        return match + ';';
+      }
+      return match;
+    });
+
+    // Fix missing commas in object literals
+    fixed = fixed.replace(/(\w+):\s*[^,}\n]+(\n\s*[a-zA-Z_$])/g, (match, key, rest) => {
+      if (!match.includes(',')) {
+        changes++;
+        return match.replace(/(\n\s*[a-zA-Z_$])/, ',\n$1');
+      }
+      return match;
+    });
+
+    // Fix missing commas in array literals
+    fixed = fixed.replace(/([^,\n]+)(\n\s*[^,\n\]]+)/g, (match, first, second) => {
+      if (match.includes('[') && !match.includes(',') && !second.includes(']')) {
+        changes++;
+        return match.replace(second, ',' + second);
+      }
+      return match;
+    });
+
+    // Fix JSX syntax issues
+    fixed = fixed.replace(/<([A-Z][a-zA-Z0-9]*)\s*([^>]*?)\s*>/g, (match, tag, props) => {
+      if (props && !props.endsWith('/') && !props.includes('>')) {
+        const selfClosingTags = ['img', 'input', 'br', 'hr', 'meta', 'link', 'area', 'base', 'col', 'embed', 'source', 'track', 'wbr'];
+        if (selfClosingTags.includes(tag.toLowerCase())) {
+          changes++;
+          return `<${tag} ${props} />`;
+        }
+      }
+      return match;
+    });
+
+    // Fix missing closing braces
+    const openBraces = (fixed.match(/\{/g) || []).length;
+    const closeBraces = (fixed.match(/\}/g) || []).length;
+    if (openBraces > closeBraces) {
+      const missing = openBraces - closeBraces;
+      fixed += '\n' + '}'.repeat(missing);
+      changes += missing;
+    }
+
+    // Fix missing closing parentheses
+    const openParens = (fixed.match(/\(/g) || []).length;
+    const closeParens = (fixed.match(/\)/g) || []).length;
+    if (openParens > closeParens) {
+      const missing = openParens - closeParens;
+      fixed += ')'.repeat(missing);
+      changes += missing;
+    }
+
+    // Fix missing closing brackets
+    const openBrackets = (fixed.match(/\[/g) || []).length;
+    const closeBrackets = (fixed.match(/\]/g) || []).length;
+    if (openBrackets > closeBrackets) {
+      const missing = openBrackets - closeBrackets;
+      fixed += ']'.repeat(missing);
+      changes += missing;
+    }
+
+    // Fix React import issues
+    fixed = fixed.replace(/^import\s+React\s+from\s+['"]react['"];?\s*$/gm, 'import React from \'react\';');
+    fixed = fixed.replace(/^import\s+ReactDOM\s+from\s+['"]react-dom\/client['"];?\s*$/gm, 'import ReactDOM from \'react-dom/client\';');
+
+    // Fix TypeScript import issues
+    fixed = fixed.replace(/^import\s+.*?\s+from\s+['"][^'"]*;?\s*$/gm, (match) => {
+      if (!match.endsWith(';')) {
+        changes++;
+        return match + ';';
+      }
+      return match;
+    });
+
+    // Clean up extra whitespace and ensure proper line endings
+    fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n');
+    fixed = fixed.replace(/\s+$/gm, ''); // Remove trailing whitespace
+    fixed = fixed.trim() + '\n';
+
+    if (changes > 0) {
+      this.log(`Fixed ${changes} advanced syntax issues in ${path.relative(this.projectRoot, filePath)}`);
+      this.fixesApplied.push(`${changes} fixes in ${path.relative(this.projectRoot, filePath)}`);
+    }
+
+    return fixed;
+  }
+
+  async fixFile(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const fixed = this.fixAdvancedSyntaxErrors(content, filePath);
+      
+      if (fixed !== content) {
+        fs.writeFileSync(filePath, fixed);
+        this.filesProcessed++;
+        return true;
+      }
+      return false;
+    } catch (error) {
+      this.log(`Error processing ${filePath}: ${error.message}`, 'ERROR');
+      return false;
+    }
+  }
 
   async fixAllFiles() {
-    this.log('🔧 Starting advanced syntax fixing...');
-    
-    const srcDir = path.join(this.projectRoot, 'src');
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    
-    const allFiles = [
-      ...this.getAllFiles(srcDir),
-      ...this.getAllFiles(pagesDir)
-    ];
+    this.log('Finding source files...');
+    const files = this.findSourceFiles();
+    this.log(`Found ${files.length} files to process`);
 
-    this.log(`📁 Found ${allFiles.length} files to check`);
+    for (const file of files) {
+      await this.fixFile(file);
+    }
 
-    for (const file of allFiles) {
-      this.fixFile(file)}
+    this.log(`Processed ${this.filesProcessed} files`);
+  }
 
-    this.log(`✅ Fixed ${this.fixedFiles.length} files`);
-    this.log(`❌ ${this.errors.length} files had errors`);
-
-    return {
-      totalFiles: allFiles.length,
-      fixedFiles: this.fixedFiles.length,
-      errors: this.errors.length,
-      fixedFileList: this.fixedFiles,
-      errorList: this.errors
-    }}
-
-  generateReport(results) {
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      summary: results,
-      fixedFiles: this.fixedFiles,
-      errors: this.errors
+      filesProcessed: this.filesProcessed,
+      fixesApplied: this.fixesApplied,
+      summary: {
+        totalFixes: this.fixesApplied.length,
+        success: this.fixesApplied.length > 0
+      }
     };
 
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report generated: ${this.reportFile}`);
-    return report}
+    const reportPath = path.join(this.projectRoot, 'advanced-syntax-fix-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    this.log('\n=== ADVANCED SYNTAX FIX REPORT ===');
+    this.log(`Files processed: ${report.filesProcessed}`);
+    this.log(`Fixes applied: ${report.summary.totalFixes}`);
+    this.log(`Success: ${report.summary.success ? 'YES' : 'NO'}`);
+    this.log(`Report saved to: ${reportPath}`);
+  }
 
   async run() {
+    this.log('Starting advanced syntax fixing...');
+    
     try {
-      const results = await this.fixAllFiles();
-      const report = this.generateReport(results);
-      
-      this.log('🎉 Advanced syntax fixing completed');
-      return report} catch (error) {
-      this.log(`💥 Advanced syntax fixing failed: ${error.message}`);
-      throw error}
+      await this.fixAllFiles();
+      await this.generateReport();
+      this.log('Advanced syntax fixing completed!');
+    } catch (error) {
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+      await this.generateReport();
+      process.exit(1);
+    }
   }
 }
 
-// Run the advanced syntax fixer
+// Run the fixer
 const fixer = new AdvancedSyntaxFixer();
-fixer.run().then(report => {
-  console.log('✅ Advanced syntax fixing completed successfully');
-  process.exit(0)}).catch(error => {
-  console.error('❌ Advanced syntax fixing failed:', error.message);
-  process.exit(1)});
+fixer.run().catch(console.error);

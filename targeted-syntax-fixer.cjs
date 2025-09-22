@@ -5,99 +5,159 @@ const path = require('path');
 
 class TargetedSyntaxFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-    this.errors = []}
+    this.fixes = [];
+    this.errors = [];
+  }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
+  log(message, type = 'info') {
+    const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
+    console.log(`${prefix} ${message}`);
+  }
 
   fixFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      let fixedContent = content;
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
       let hasChanges = false;
 
-      // Fix specific patterns found in the linting errors
+      // Fix specific syntax issues
       const fixes = [
-        // Fix missing semicolons after import statements
-        {
-          pattern: /^import\s+.*from\s+['"][^'"]+['"]\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
+        // Fix unterminated strings with escaped quotes
+        { 
+          pattern: /className="([^"]*\\"[^"]*)"\s*\/>/g, 
+          replacement: (match, className) => {
+            const fixed = className.replace(/\\"/g, '"');
+            return `className="${fixed}" />`;
+          }
         },
-        // Fix missing semicolons after export statements
-        {
-          pattern: /^export\s+.*from\s+['"][^'"]+['"]\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
+        // Fix JSX self-closing tags with escaped quotes
+        { 
+          pattern: /<(\w+)\s+className="([^"]*\\"[^"]*)"\s*\/>/g, 
+          replacement: (match, tag, className) => {
+            const fixed = className.replace(/\\"/g, '"');
+            return `<${tag} className="${fixed}" />`;
+          }
         },
-        // Fix unterminated string literals
-        {
-          pattern: /(['"])([^'"]*?)(\n|$)/g,
-          replacement: (match, quote, content, newline) => {
-            if (content.includes('\\' + quote) || content.includes('`')) return match;
-            return quote + content + quote + ';' + newline}
+        // Fix interface syntax errors
+        { 
+          pattern: /interface\s+(\w+)\s*\{\s*\n\s*([^}]+)\s*\}/g, 
+          replacement: (match, name, body) => {
+            const fixedBody = body.replace(/^\s*(\w+):/gm, '  $1:');
+            return `interface ${name} {\n${fixedBody}\n}`;
+          }
         },
-        // Fix missing commas in object literals
-        {
-          pattern: /(\w+)\s*:\s*([^}]+)(\s*[^}])/g,
-          replacement: (match, key, value, next) => {
-            if (next.includes('}')) return match;
-            return key + ': ' + value + '', + next}
+        // Fix duplicate metadata properties
+        { 
+          pattern: /(title:\s*'[^']*',\s*description:\s*'[^']*',\s*)+/g, 
+          replacement: (match) => {
+            const lines = match.split('\n').filter(line => line.trim());
+            const unique = [];
+            const seen = new Set();
+            
+            for (const line of lines) {
+              const key = line.split(':')[0].trim();
+              if (!seen.has(key)) {
+                seen.add(key);
+                unique.push(line);
+              }
+            }
+            return unique.join('\n') + '\n';
+          }
         },
-        // Fix missing colons in object properties
-        {
-          pattern: /(\w+)\s+([^:]+)(\s*[^:])/g,
-          replacement: (match, key, value, next) => {
-            if (next.includes(':')) return match;
-            return key + ': ' + value + next}
+        // Fix import statements in wrong places
+        { 
+          pattern: /export\s+const\s+metadata[^}]*\{\s*import\s+[^}]*\}/g, 
+          replacement: (match) => {
+            const importMatch = match.match(/import\s+[^}]+/);
+            const metadataMatch = match.match(/export\s+const\s+metadata[^}]*\{[^}]*\}/);
+            if (importMatch && metadataMatch) {
+              return importMatch[0] + '\n\n' + metadataMatch[0];
+            }
+            return match;
+          }
+        },
+        // Fix JSX structure issues
+        { 
+          pattern: /<div\s+className="[^"]*"\s*\/>\s*<div\s+className="[^"]*"\s*\/>/g, 
+          replacement: (match) => {
+            return match.replace(/\/>/g, '>').replace(/>\s*<div/g, '>\n      <div');
+          }
+        },
+        // Fix missing closing tags
+        { 
+          pattern: /<(\w+)\s+className="[^"]*"\s*\/>\s*<div\s+className="[^"]*"\s*\/>\s*<div\s+className="[^"]*"\s*\/>\s*}/g, 
+          replacement: (match) => {
+            return match.replace(/\/>/g, '>').replace(/>\s*<div/g, '>\n        <div').replace(/>\s*}/g, '>\n      </div>\n    </div>\n  }');
+          }
         }
       ];
 
-      fixes.forEach(fix => {
-        const newContent = fixedContent.replace(fix.pattern, fix.replacement);
-        if (newContent !== fixedContent) {
-          fixedContent = newContent;
-          hasChanges = true}
-      });
+      for (const fix of fixes) {
+        if (typeof fix.replacement === 'function') {
+          const newContent = content.replace(fix.pattern, fix.replacement);
+          if (newContent !== content) {
+            content = newContent;
+            hasChanges = true;
+          }
+        } else {
+          const newContent = content.replace(fix.pattern, fix.replacement);
+          if (newContent !== content) {
+            content = newContent;
+            hasChanges = true;
+          }
+        }
+      }
 
       if (hasChanges) {
-        fs.writeFileSync(filePath, fixedContent, 'utf8');
-        this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`)}
+        fs.writeFileSync(filePath, content);
+        this.log(`Fixed syntax in: ${filePath}`, 'success');
+        this.fixes.push({ file: filePath, type: 'syntax' });
+        return true;
+      }
 
+      return false;
     } catch (error) {
+      this.log(`Error processing ${filePath}: ${error.message}`, 'error');
       this.errors.push({ file: filePath, error: error.message });
-      this.log(`Error fixing ${filePath}: ${error.message}`)}
-  }
-
-  async processDirectory(dirPath) {
-    const items = fs.readdirSync(dirPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        await this.processDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-        this.fixFile(fullPath)}
+      return false;
     }
   }
 
-  async run() {
-    this.log('Starting targeted syntax fixing...');
-    await this.processDirectory(this.projectRoot);
+  fixSpecificFiles() {
+    const filesToFix = [
+      '/workspace/app/about/page.tsx',
+      '/workspace/app/contact/page.tsx',
+      '/workspace/app/error.tsx',
+      '/workspace/app/layout.tsx',
+      '/workspace/app/loading.tsx'
+    ];
+
+    this.log('🔧 Fixing specific syntax errors...');
     
-    this.log(`\nTargeted syntax fixing completed!`);
-    this.log(`Fixed files: ${this.fixedFiles.length}`);
-    this.log(`Errors: ${this.errors.length}`);
-    
-    if (this.errors.length > 0) {
-      this.log('\nErrors encountered:');
-      this.errors.forEach(error => {
-        this.log(`  ${error.file}: ${error.error}`)})}
+    let fixedCount = 0;
+    for (const file of filesToFix) {
+      if (fs.existsSync(file)) {
+        if (this.fixFile(file)) {
+          fixedCount++;
+        }
+      }
+    }
+
+    this.log(`Fixed ${fixedCount} files`, 'success');
+    return fixedCount;
+  }
+
+  run() {
+    this.log('🚀 Starting Targeted Syntax Fixer...');
+    this.fixSpecificFiles();
+    this.log('✅ Targeted syntax fixer completed!');
   }
 }
 
-const fixer = new TargetedSyntaxFixer();
-fixer.run().catch(console.error);
+// Run the fixer
+if (require.main === module) {
+  const fixer = new TargetedSyntaxFixer();
+  fixer.run();
+}
+
+module.exports = TargetedSyntaxFixer;

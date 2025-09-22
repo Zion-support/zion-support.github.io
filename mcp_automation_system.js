@@ -1,1 +1,1 @@
-
+// MCP automation system placeholder

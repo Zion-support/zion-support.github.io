@@ -1,48 +1,214 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, Eye } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { additionalServices } from '../data/additional-services';
+import SEO from '../components/SEO';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import React from 'react',;
+import SEO from '../components/SEO',;
+import React from 'react';
+import SEO from '../components/SEO';
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from 'react',;
+import SEO from '../components/SEO',;
+import React from 'react';
+<<<<<<< HEAD
+import SEO from '../components/SEO';
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function AccessibilityScannerPage() {
-  const service = additionalServices.find(s => s.id === 'accessibility-scanner-pro');
-  if (!service) return null;
+=======
 
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
-        <link rel="canonical" href="https://ziontechgroup.com/accessibility-scanner" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent mb-6 flex items-center gap-3"><Eye className="w-10 h-10" />{service.name}</h1>
-          <p className="text-slate-300 text-lg mb-8">{service.tagline}</p>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-amber-500/30 p-6">
-              <p className="text-slate-300 mb-4">{service.description}</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 10).map((feat, i) => (
-                  <li key={i} className="flex items-start gap-2 text-slate-200"><Check className="w-5 h-5 text-amber-400 mt-0.5" />{feat}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6 h-fit">
-              <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-              <div className="text-slate-400 mb-4">{service.trialDays}-day trial • Setup: {service.setupTime}</div>
-              <Button href="/contact" variant="quantum" className="w-full">Start Free Trial</Button>
-              <div className="mt-6 text-sm text-slate-300 space-y-2">
-                <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-cyan-400" />{service.contactInfo.mobile}</div>
-                <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-purple-400" />{service.contactInfo.email}</div>
-                <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  );
+
+
+
+
+export default function AccessibilityScannerPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+	return (
+		<>
+			<SEO title="Accessibility Scanner" description="Automated WCAG scanning and remediation guidance." canonical="/accessibility-scanner" />"
+			<section className="relative pt-28 pb-16 md: pt-36 md:pb-24">"
+				<div className="container mx-auto px-4 max-w-3xl">"
+					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">Accessibility Scanner</h1>"
+					<p className="mt-4 text-gray-300">Continuously scan your sites and apps for accessibility issues and prioritize fixes.</p>"
+					<div className="mt-8 flex gap-3">"
+						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</a>"
+						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a>
+					</div>
+				</div>
+			</section>
+		</>
+	)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
+
+import React from 'react','
+import SEO from '../components / SEO',;
+export default /**;
+ * AccessibilityScannerPage - Function description;
+ */
+function AccessibilityScannerPage() {}
+return (
+  <>;"
+  <SEO title="Accessibility Scanner" description="Automated WCAG scanning and remediation guidance." canonical="/accessibility - scanner" />;"
+  <section className="relative pt - 28 pb - 16 md: pt - 36 md:pb - 24">;"
+    <div className="container mx - auto px - 4 max - w-3xl">;"
+    <h1 className="text - 3xl md:text - 5xl font - extrabold tracking - tight gradient - text - cyan - purple">Accessibility Scanner</h1>;"
+    <p className="mt - 4 text - gray - 300">Continuously scan your sites and apps for accessibility issues and prioritize fixes.</p>;"
+    <div className="mt - 8 flex gap - 3">;"
+      <a href="/services" className="px - 4 py - 2 rounded - lg bg - white text - black font - medium">Explore Services</a>;"
+      <a href="/contact" className="px - 4 py - 2 rounded - lg border border - white / 10 text - gray - 200">Contact Sales</a>;
+    </div>;
+    </div>;
+  </section>;
+  </>);
+}
+
+<<<<<<< HEAD
+}
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+}
+;
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}
+;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+}
+
+
+<<<<<<< HEAD
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+import Head from 'next/head';
+
+export default function AccessibilityScannerPage() {
+  return (
+    <>
+      <SEO
+        title='Accessibility Scanner'
+        description='Automated WCAG scanning and remediation guidance.'
+        canonical='/accessibility-scanner'
+      />
+      <section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>
+        <div className='container mx-auto px-4 max-w-3xl'>
+          <h1 className='text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple'>
+            Accessibility Scanner
+          </h1>
+          <p className='mt-4 text-gray-300'>
+            Continuously scan your sites and apps for accessibility issues and
+            prioritize fixes.
+          </p>
+          <div className='mt-8 flex gap-3'>
+            <a
+              href='/services'
+              className='px-4 py-2 rounded-lg bg-white text-black font-medium'
+            >
+              Explore Services
+            </a>
+            <a
+              href='/contact'
+              className='px-4 py-2 rounded-lg border border-white/10 text-gray-200'
+            >
+              Contact Sales
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -131,11 +130,6 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
 
-=======
   console.log("� Received SIGTERM, shutting down gracefully...")
-=======
+
   console.log("� Received SIGTERM, shutting down gracefully...")
-=======
-=======
-
-

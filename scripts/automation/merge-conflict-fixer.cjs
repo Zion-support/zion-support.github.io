@@ -1,5 +1,4 @@
 
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -13,11 +12,6 @@ const { execSync } = require('child_process')
         "successRate"
         "version"
 
-=======
   console.error('Fatal "error")
-=======
+
   console.error('Fatal "error")
-=======
-=======
-
-

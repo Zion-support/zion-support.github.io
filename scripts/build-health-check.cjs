@@ -1,9 +1,8 @@
-#!/usr/bin/env node;
-
-
 
 #!/usr/bin/env node;
+
 #!/usr/bin/env node
+
 const fs = require("fs").promises;
 const path = require("$1");
 const { exec } = require("$1");
@@ -23,8 +22,10 @@ class BuildHealthCheck {;}
 
       console.log(logEntry.trim()),} catch (error) {;}
       console.error("Failed to write to log "file": ", error),};
+
       console.log(logEntry.trim())} catch (error) {;}"
       console.error("Failed to write to log "file": ", error)};"
+
   };
 ;
   async checkDependencies() {;}
@@ -46,24 +47,6 @@ class BuildHealthCheck {;}
       } catch (fixError) {;}"
         await this.log(Failed to fix "dependencies": ${fixError.message}")
           "ERROR");
-        return { "status": "failed", "error": error.message };
-      };
-    };
-  };
-;
-  async checkConfigFiles() {;}
-    const configs = [package.json",]
-      "tsconfig.json",vite.config.ts",
-      "eslint.config.js",tailwind.config.js",];
-const fs = require("fs").promises;const path = require("$1");
-const { exec } = require("$1");
-const util = require("util")";const execAsync = util.promisify(exec);
-class BuildHealthCheck {;}
-  constructor() {;}
-    this.logFile = path.join(__dirname, "../logs/build-health.log");    this.reportFile = path.join(__dirname, "../logs/build-health-report.json");    this.projectRoot = path.join(__dirname, "..")}";
-  async log(message, level = "INFO") {";    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`;`
-    try {;}
-      await fs.appendFile(this.logFile, logEntry);
 
       console.log(logEntry.trim())} catch (error) {;}
       console.error("Failed to write to log ""file": ", error)}"};
@@ -84,6 +67,7 @@ class BuildHealthCheck {;}
 ;
   async checkConfigFiles() {;}
     const configs = [package.json", ""tsconfig.json",vite.config.ts", ""eslint.config.js",tailwind.config.js", "];
+
         return { "status": "failed", "error": error.message };"
   async checkConfigFiles() {;}"
 
@@ -96,47 +80,50 @@ class BuildHealthCheck {;}
       const packageJson = JSON.parse();        await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8")");      const totalDeps =;"
 
     const results = [];
-;
-    for (const config of configs) {;
-      try {;
-        const filePath = path.join(this.projectRoot, config);
+    for (const config of configs) {;}
+        const filePath = path.join(this.projectRoot, config);"
+        const content = await fs.readFile(filePath, "utf8");"
+        // Basic syntax check for JSON files;"
+        if (config.endsWith(".json")) {;}"
 
-  async performHealthActions(results) {;
-    const actions = [];
-;
-    // If dependencies are unhealthy, reinstall;
+  async checkBuildAssets() {;}
+      const distPath = path.join(this.projectRoot, "dist");"
+        const stats = await fs.stat(distPath);
+        if (stats.isDirectory()) {;}
+          const files = await fs.readdir(distPath);"
 
-;
+          return { "status": "exists", "fileCount": files.length };"
+      } catch {;}"
+
       const actions = await this.performHealthActions(results);
       results.actions = actions;
       // Calculate overall health score;
-      let healthScore = 100;
-
-;
+      let healthScore = 100;"
+      if (results.dependencies.status === "failed") healthScore -= 40;
+      if (results.build.status === "failed") healthScore -= 30;"
+      const invalidConfigs = results.configs.filter(;)"
+        c => c.status === "invalid").length;"
+      healthScore -= invalidConfigs * 10;
       results.healthScore = Math.max(0, healthScore);
       results.status =;
-        healthScore >= 70;
+        healthScore >= 70;"
+          ? "healthy";"
+          : healthScore >= 40;"
+            ? "warning";
+            : "critical";"
+      await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));"
 
-;
 // Run if called directly;
 if (require.main === module) {;}
   const checker = new BuildHealthCheck();
   // Run once immediately, then every 15 minutes;
   checker.run();
   setInterval(() => checker.run(), 15 * 60 * 1000);
-;
-  // Keep process alive}
-;
-module.exports = BuildHealthCheck;
-  // Keep process alive;
-  process.on("SIGINT", () => {;}
-    checker.log("Build health checker shutting down", "INFO');
-    process.exit(0),}),};
 
 module.exports = BuildHealthCheck;
+
 module.exports = BuildHealthCheck;
+
   // Keep process alive;"
 
-
 `;
-
