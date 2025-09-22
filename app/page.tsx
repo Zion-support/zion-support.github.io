@@ -5,10 +5,37 @@ import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 import AnimatedCounter from './components/AnimatedCounter'
 import ScrollReveal from './components/ScrollReveal'
+import SEOOptimizer from './components/SEOOptimizer'
 
 export default function Home() {
+  const pageSEO = {
+    title: 'Zion Tech Group - Advanced AI and Technology Solutions',
+    description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
+    keywords: ['AI solutions', 'cloud services', 'cybersecurity', 'enterprise software', 'digital transformation', 'technology consulting'],
+    canonicalUrl: 'https://zion.app',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description: 'Advanced AI and Technology Solutions',
+      url: 'https://zion.app',
+      logo: 'https://zion.app/logo.png',
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup'
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-123-4567',
+        contactType: 'customer service',
+        email: 'contact@ziontechgroup.com'
+      }
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer {...pageSEO} />
       <Navigation />
 
       {/* Hero Section */}

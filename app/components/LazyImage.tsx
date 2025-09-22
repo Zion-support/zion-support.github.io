@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { clsx } from 'clsx'
+import { cn } from '../lib/utils'
 
 interface LazyImageProps {
   src: string
@@ -9,10 +9,11 @@ interface LazyImageProps {
   width?: number
   height?: number
   className?: string
-  placeholder?: string
+  priority?: boolean
+  placeholder?: 'blur' | 'empty'
+  blurDataURL?: string
   onLoad?: () => void
   onError?: () => void
-  priority?: boolean
 }
 
 export default function LazyImage({
@@ -21,10 +22,11 @@ export default function LazyImage({
   width,
   height,
   className,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
-  onLoad,
-  onError,
   priority = false,
+  placeholder = 'empty',
+  blurDataURL,
+  onLoad,
+  onError
 }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(priority)
@@ -32,7 +34,7 @@ export default function LazyImage({
   const imgRef = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
-    if (priority) return
+    if (priority || !imgRef.current) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -42,14 +44,11 @@ export default function LazyImage({
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px',
+        rootMargin: '50px'
       }
     )
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current)
-    }
+    observer.observe(imgRef.current)
 
     return () => observer.disconnect()
   }, [priority])
@@ -64,46 +63,49 @@ export default function LazyImage({
     onError?.()
   }
 
+  const defaultBlurDataURL = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciPjxzdG9wIHN0b3AtY29sb3I9IiNmM2Y0ZjYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU3ZWIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2cpIi8+PC9zdmc+'
+
   return (
     <div
       ref={imgRef}
-      className={clsx('relative overflow-hidden', className)}
+      className={cn(
+        'relative overflow-hidden bg-gray-100',
+        className
+      )}
       style={{ width, height }}
     >
-      {/* Placeholder */}
-      <img
-        src={placeholder}
-        alt=""
-        className={clsx(
-          'absolute inset-0 w-full h-full object-cover transition-opacity duration-300',
-          isLoaded ? 'opacity-0' : 'opacity-100'
-        )}
-        aria-hidden="true"
-      />
-
-      {/* Main Image */}
-      {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          className={clsx(
-            'w-full h-full object-cover transition-opacity duration-300',
-            isLoaded ? 'opacity-100' : 'opacity-0',
-            hasError && 'opacity-0'
-          )}
-          onLoad={handleLoad}
-          onError={handleError}
-          loading={priority ? 'eager' : 'lazy'}
-        />
-      )}
-
-      {/* Error State */}
-      {hasError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-400">
+      {hasError ? (
+        <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500">
           <span className="text-sm">Failed to load image</span>
         </div>
+      ) : (
+        <>
+          {placeholder === 'blur' && !isLoaded && (
+            <div
+              className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
+              style={{
+                backgroundImage: `url(${blurDataURL || defaultBlurDataURL})`
+              }}
+            />
+          )}
+          
+          {isInView && (
+            <img
+              src={src}
+              alt={alt}
+              width={width}
+              height={height}
+              className={cn(
+                'transition-opacity duration-300',
+                isLoaded ? 'opacity-100' : 'opacity-0'
+              )}
+              onLoad={handleLoad}
+              onError={handleError}
+              loading={priority ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          )}
+        </>
       )}
     </div>
   )
