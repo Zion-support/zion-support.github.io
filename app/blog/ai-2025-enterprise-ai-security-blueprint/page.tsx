@@ -100,5 +100,3 @@ const EnterpriseAISecurityBlueprint2025 = () => {
   );
 };
 
-export default EnterpriseAISecurityBlueprint2025;
-
