@@ -1,19 +1,4 @@
 
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
-              </a>
-            </div>
-          </div>
-        </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

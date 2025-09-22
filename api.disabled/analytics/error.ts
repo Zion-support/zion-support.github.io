@@ -1,62 +1,150 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export {};
+
+=======
+=======
+<<<<<<< HEAD
+export {};
+
+=======
+>>>>>>> main
+=======
+
+export {};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = {};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+module.exports = {};
+
+module.exports = {};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+module.exports = {};
+module.exports = {};
+module.exports = {};
+
+module.exports = {};
+module.exports = {};
+
+module.exports = {};
+module.exports = {};
+
+export {};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+module.exports = {};
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+module.exports = {};
+module.exports = {};
+module.exports = {};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
 module.exports = {};
-module.exports = {};
-module.exports = {};
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = {};
 module.exports = {};
 module.exports = {};
 export {};
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-interface ErrorData {
-  error: {
-    message: string;
-    stack?: string;
-    name: string};
-  errorInfo: {
-    componentStack: string};
-  url: string;
-  timestamp: number;
-  userAgent: string}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })}
-
-module.exports = {};
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
-module.exports = {};
-ursor/add-new-services-and-deploy-updates-0462
+=======
 module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+<<<<<<< HEAD
 
-    // Validate the error data
-    if (!data.error || !data.error.message || !data.url) {
-      return res.status(400).json({ error: 'Invalid error data format' })}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+module.exports = {};
 
-    // Log the error (in production, you might want to send to a monitoring service)
-    console.error('Client Error:' {
-      message: data.error.message,
-      name: data.error.name,
-      url: data.url,
-      timestamp: new Date(data.timestamp).toISOString(),
-      userAgent: data.userAgent,
-      stack: data.error.stack,
-      componentStack: data.errorInfo.componentStack
-    });
+module.exports = {};
 
 
-    // For now, we'll just acknowledge receipt
-    res.status(200).json({ 
-      success: true, 
-      message: 'Error logged successfully',
-      timestamp: Date.now()
-    })} catch (error) {
-    console.error('Error processing error data:', error);
-    res.status(500).json({ error: 'Internal server error' })}
-}
+
+
+
+
+
+
+<<<<<<< HEAD
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+module.exports = {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

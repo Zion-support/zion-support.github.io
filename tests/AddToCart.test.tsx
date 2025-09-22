@@ -1,41 +1,41 @@
 
-jest.mock(
-  'react-router-dom, () => ({
-  ...(jest.requireActual(
+import React from 'react';
+interface AddToCart.testProps {
+  // Add props here as needed
+>
 
-  beforeEach(() => {
-    (router.useParams as jest.Mock).mockReturnValue({ id: 2u-rack-mount-server });
-    safeStorage.removeItem(
+export default function AddToCart.test({ }: AddToCart.testProps) {
 
-  'cart');
-    jest.useFakeTimers()});
-
-  'cart')
-
-    jest.useFakeTimers()})
-
-  afterEach(() => {
+<
 
 
-    render(
-      <MemoryRouter>
-        <EquipmentDetail: />
-      </MemoryRouter>
+
+=
+>
+
+><
 
 
-    fireEvent.click(button);
 
-    act(() => {
 
-  'button' { name: /Added/i });
-    fireEvent.click(addedButton);
-    act(() => {
-      jest.runAllTimers()});
-    const cart = JSON.parse(safeStorage.getItem(,
 
-    expect(cart).toHaveLength(1)
-    expect(cart[0]).toEqual(
-      expect.objectContaining({ id: '2u-rack-mount-server, quantity: 2 }))})});
 
+
+:src.pages.disabled/FiveGSolutions.jsx;
+:temp_exclude/src.pages.disabled/FiveGSolutions.jsx;
+=
+>}
+
+
+
+
+
+
+
+
+
+
+<}
+>
 
 

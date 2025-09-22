@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -173,13 +172,9 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 
-=======
   console.error(" Failed to start smart deployment "optimizer": ")
-=======
+
   console.error(" Failed to start smart deployment "optimizer": ")
-=======
-=======
 
           if (!htmlContent.includes("<title>")"
 </title>"`;
-

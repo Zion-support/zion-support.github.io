@@ -1,10 +1,10 @@
+
 #!/usr/bin/env node;
+
 /**
  * Continuous Integration Automation;
  * Comprehensive CI pipeline with build, test, and quality checks;
  */
-
-
 
     const stages = [{
 
@@ -43,17 +43,11 @@ if (require.main === module) {
   ci.runCIPipeline()
     .then(results => {)
 
-module.exports = ContinuousIntegration;
-
-
-
-main
-
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
     this.logDir = 'automation-reports'
-    this.timestamp = new Date().toISOString().replace(/[:.]/g, '-')
+    this.timestamp = new Date().toISOString().replace(/[:.]/g,-)
       "pipeline"
       "status"
       "status"
@@ -79,9 +73,3 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
       console.error('Fatal "error")
-      console.error('Fatal "error")
-
-      console.error('Fatal "error")
-main
-
-

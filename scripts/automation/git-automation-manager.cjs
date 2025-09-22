@@ -2,13 +2,8 @@
 #!/usr/bin/env node;
 /**
  * Intelligent Git Automation Manager;
- *
-
-#!/usr/bin/env node;
-/**
- * Intelligent Git Automation Manager;
  * 
-=======
+
  * This script automatically manages Git repository operations "including"
       "autoCommit"
       "autoPush"
@@ -28,15 +23,11 @@
       this.log(`Repository health check "failed"`)
         this.log(`Automation cycle "error"`)
 
-=======
     console.error('Fatal "error")
-=======
+
     console.error('Fatal "error")
-=======
-=======
+
 #!/usr/bin/env node
 /**
  * Intelligent Git Automation Manager;
  * 
-
-

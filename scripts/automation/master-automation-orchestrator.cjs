@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -132,11 +131,6 @@ const { execSync, spawn } = require("child_process")
   console.log("\n� Received SIGINT, shutting down gracefully...")
   process.on("SIGTERM")
 
-=======
   console.log(")
-=======
+
   console.log(")
-=======
-=======
-
-

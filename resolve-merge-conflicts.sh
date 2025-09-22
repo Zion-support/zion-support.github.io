@@ -2,53 +2,32 @@
 
 echo "Starting merge conflict resolution..."
 
+# Function to resolve conflicts in a file by keeping HEAD version
+resolve_conflicts() {
+    local file="$1"
+    echo "Resolving conflicts in: $file"
+    # Create a backup
+    cp "$file" "$file.backup"
+    # Use sed to resolve conflicts by keeping HEAD version
+    # Remove conflict markers and keep only the HEAD version
+    sed -i '/^
+    # Remove any remaining conflict markers
+    sed -i '/^<<<<<<< /d; /^
+    echo "Resolved conflicts in: $file"
+}
+
 # Find all files with merge conflicts
-conflict_files=$(find . -name "*.toml" -o -name "*.json" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | xargs grep -l "
+echo "Finding files with merge conflicts..."
+conflict_files=$(grep -r "" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" -l | head -50)
 
-total_files=$(echo "$conflict_files" | wc -l)
-echo "Found $total_files files with merge conflicts"
-
-# Counter for progress
-count=0
+echo "Found $(echo "$conflict_files" | wc -l) files with conflicts"
 
 # Process each file
-echo "$conflict_files" | while read -r file; do
+for file in $conflict_files; do
     if [ -f "$file" ]; then
-        count=$((count + 1))
-        echo "Processing file $count/$total_files: $file"
-        
-        # Create a backup
-        cp "$file" "$file.backup"
-        
-        # Use sed to resolve conflicts by keeping HEAD version
-        # Remove conflict markers and keep content between 
-        sed -i '/
-        
-        # Remove any remaining conflict markers
-        sed -i '/
-        
-        # Check if file is now empty or has issues
-        if [ ! -s "$file" ]; then
-            echo "Warning: File $file is now empty, restoring from backup"
-            mv "$file.backup" "$file"
-        fi
+        resolve_conflicts "$file"
     fi
 done
 
 echo "Merge conflict resolution completed!"
-echo "Checking for remaining conflicts..."
-
-# Check for any remaining conflicts
-remaining_conflicts=$(find . -name "*.toml" -o -name "*.json" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | xargs grep -l "
-
-echo "Remaining conflicts: $remaining_conflicts"
-
-if [ "$remaining_conflicts" -eq 0 ]; then
-    echo "All merge conflicts resolved successfully!"
-else
-    echo "Some conflicts remain, manual review may be needed"
-fi
-<<<<<<< HEAD
-=======
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
+echo "Files processed: $(echo "$conflict_files" | wc -l)"

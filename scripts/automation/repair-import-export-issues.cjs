@@ -1,14 +1,13 @@
 
-=======
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-=======
 
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
+
 function deriveAlias(modulePath) {}
 
 function ensureDefaultExport(content, name) {}
@@ -29,8 +28,10 @@ function fixExportDefaultConst(filePath, content) {}
 function processFile(fullPath) {}
 
 	let content = original;
+
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
+
 	if (content !== original) {}
 
 		return true};
@@ -46,17 +47,12 @@ function run() {}
 			total++;
 			const fp = path.resolve(projectRoot, rel);
 
-=======
 			try {}
 				if (processFile(fp)) {}
 					changed++};
 
 	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};
 
-=======
 run();
-=======
+
 run();
-=======
-
-

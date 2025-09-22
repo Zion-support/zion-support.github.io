@@ -1,4 +1,13 @@
-import React { useState, useEffect } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/main
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -34,7 +43,8 @@ import {
   BookOpen,
   Target,
   TrendingUp,
-  Star } from 'lucide-react';
+  Star,
+} from 'lucide-react';
 
 interface SidebarItem {
   name: string;
@@ -47,7 +57,8 @@ interface SidebarItem {
   isNew?: boolean;
   isHot?: boolean;
   isPremium?: boolean;
-  category?: string}
+  category?: string;
+}
 
 const sidebarSections = [
   {
@@ -63,17 +74,35 @@ const sidebarSections = [
         children: [
           {
             name: 'AI Consciousness Evolution',
-            href: '/ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }, { name: 'AI Creativity Studio', href: '/ai-creativity-studio' }, { name: 'AI Education Platform', href: '/ai-education-platform' }, {
+            href: '/ai-consciousness-evolution',
+          },
+          { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
+          { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
+          { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
+          { name: 'AI Education Platform', href: '/ai-education-platform' },
+          {
             name: 'AI Healthcare Diagnostics',
-            href: '/ai-healthcare-diagnostics' }, {
+            href: '/ai-healthcare-diagnostics',
+          },
+          {
             name: 'AI Financial Intelligence',
-            href: '/ai-financial-intelligence' }, {
+            href: '/ai-financial-intelligence',
+          },
+          {
             name: 'AI Sustainability Platform',
-            href: '/ai-sustainability-platform' }, {
+            href: '/ai-sustainability-platform',
+          },
+          {
             name: 'AI Emotional Intelligence',
-            href: '/ai-emotional-intelligence-platform' }, {
+            href: '/ai-emotional-intelligence-platform',
+          },
+          {
             name: 'AI Legal Contract Analyzer',
-            href: '/ai-legal-contract-analyzer' } ] }, {
+            href: '/ai-legal-contract-analyzer',
+          },
+        ],
+      },
+      {
         name: 'Quantum Computing',
         href: '/quantum-services',
         icon: Atom,
@@ -81,15 +110,30 @@ const sidebarSections = [
         children: [
           {
             name: 'Quantum Cloud Infrastructure',
-            href: '/quantum-cloud-infrastructure' }, { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' }, { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' }, {
+            href: '/quantum-cloud-infrastructure',
+          },
+          { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
+          { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
+          {
             name: 'Quantum Materials Discovery',
-            href: '/quantum-materials-discovery' }, { name: 'Quantum Robotics', href: '/quantum-robotics' }, {
+            href: '/quantum-materials-discovery',
+          },
+          { name: 'Quantum Robotics', href: '/quantum-robotics' },
+          {
             name: 'Quantum Internet Security',
-            href: '/quantum-internet-security' }, {
+            href: '/quantum-internet-security',
+          },
+          {
             name: 'Quantum Logistics',
-            href: '/quantum-logistics-optimization' }, {
+            href: '/quantum-logistics-optimization',
+          },
+          {
             name: 'Quantum Cybersecurity',
-            href: '/quantum-cybersecurity-platform' } ] }, {
+            href: '/quantum-cybersecurity-platform',
+          },
+        ],
+      },
+      {
         name: 'Enterprise IT',
         href: '/enterprise-it',
         icon: Shield,
@@ -97,13 +141,29 @@ const sidebarSections = [
         children: [
           {
             name: 'Edge Computing Orchestrator',
-            href: '/edge-computing-orchestration' }, {
+            href: '/edge-computing-orchestration',
+          },
+          {
             name: 'Zero Trust Security Platform',
-            href: '/zero-trust-network-architecture' }, {
+            href: '/zero-trust-network-architecture',
+          },
+          {
             name: 'Blockchain Enterprise Platform',
-            href: '/blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }, { name: 'Quantum Networking', href: '/quantum-networking' }, {
+            href: '/blockchain-infrastructure-platform',
+          },
+          { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
+          { name: 'Quantum Networking', href: '/quantum-networking' },
+          {
             name: 'Autonomous IT Operations',
-            href: '/autonomous-it-operations' }, { name: 'Quantum Data Center', href: '/quantum-data-center' }, { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' } ] } ] }, {
+            href: '/autonomous-it-operations',
+          },
+          { name: 'Quantum Data Center', href: '/quantum-data-center' },
+          { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' },
+        ],
+      },
+    ],
+  },
+  {
     title: 'Innovation Hub',
     icon: Rocket,
     color: 'from-purple-500 to-pink-600',
@@ -114,17 +174,35 @@ const sidebarSections = [
         icon: Lightbulb,
         description: 'Cutting-edge research and innovation',
         children: [
-          { name: 'AI Research Lab', href: '/ai-research-lab' }, { name: 'Quantum Research Center', href: '/quantum-research-center' }, { name: 'Biotech Innovation Hub', href: '/biotech-innovation-hub' }, { name: 'Space Technology Lab', href: '/space-technology-lab' }, { name: 'Green Technology Center', href: '/green-technology-center' } ] }, {
+          { name: 'AI Research Lab', href: '/ai-research-lab' },
+          { name: 'Quantum Research Center', href: '/quantum-research-center' },
+          { name: 'Biotech Innovation Hub', href: '/biotech-innovation-hub' },
+          { name: 'Space Technology Lab', href: '/space-technology-lab' },
+          { name: 'Green Technology Center', href: '/green-technology-center' },
+        ],
+      },
+      {
         name: 'Future Technologies',
         href: '/future-technologies',
         icon: Sparkles,
         description: 'Emerging technologies and trends',
         children: [
-          { name: 'Metaverse Platform', href: '/metaverse-platform' }, {
+          { name: 'Metaverse Platform', href: '/metaverse-platform' },
+          {
             name: 'Neural Interface Technology',
-            href: '/neural-interface-technology' }, { name: 'Holographic Computing', href: '/holographic-computing' }, { name: 'Time Crystal Computing', href: '/time-crystal-computing' }, {
+            href: '/neural-interface-technology',
+          },
+          { name: 'Holographic Computing', href: '/holographic-computing' },
+          { name: 'Time Crystal Computing', href: '/time-crystal-computing' },
+          {
             name: 'Consciousness Upload Platform',
-            href: '/consciousness-upload-platform' } ] } ] }, {
+            href: '/consciousness-upload-platform',
+          },
+        ],
+      },
+    ],
+  },
+  {
     title: 'Company',
     icon: Globe,
     color: 'from-green-500 to-teal-600',
@@ -133,19 +211,29 @@ const sidebarSections = [
         name: 'About Us',
         href: '/about',
         icon: Users,
-        description: 'Learn about our mission and vision' }, {
+        description: 'Learn about our mission and vision',
+      },
+      {
         name: 'Leadership',
         href: '/leadership',
         icon: Award,
-        description: 'Meet our executive team' }, {
+        description: 'Meet our executive team',
+      },
+      {
         name: 'Careers',
         href: '/careers',
         icon: Target,
-        description: 'Join our innovative team' }, {
+        description: 'Join our innovative team',
+      },
+      {
         name: 'News & Media',
         href: '/news',
         icon: FileText,
-        description: 'Latest news and press releases' } ] }, {
+        description: 'Latest news and press releases',
+      },
+    ],
+  },
+  {
     title: 'Support',
     icon: HelpCircle,
     color: 'from-orange-500 to-red-600',
@@ -154,23 +242,33 @@ const sidebarSections = [
         name: 'Documentation',
         href: '/docs',
         icon: BookOpen,
-        description: 'Technical documentation and guides' }, {
+        description: 'Technical documentation and guides',
+      },
+      {
         name: 'Contact',
         href: '/contact',
         icon: Phone,
-        description: 'Get in touch with our team' }, {
+        description: 'Get in touch with our team',
+      },
+      {
         name: 'Status',
         href: '/status',
         icon: BarChart3,
-        description: 'System status and uptime' } ] } ];
+        description: 'System status and uptime',
+      },
+    ],
+  },
+];
 
 interface EnhancedSidebar2025Props {
   isOpen: boolean;
-  onClose: () => void}
+  onClose: () => void;
+}
 
 const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
   isOpen,
-  onClose }) => {
+  onClose,
+}) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
@@ -180,20 +278,23 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
       prev.includes(sectionTitle)
         ? prev.filter(title => title !== sectionTitle)
         : [...prev, sectionTitle]
-    )};
+    );
+  };
 
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev =>
       prev.includes(itemName)
         ? prev.filter(name => name !== itemName)
         : [...prev, itemName]
-    )};
+    );
+  };
 
   const isActive = (href: string) => router.pathname === href;
 
   return (
     <>
-      {/* Mobile overlay */}, {isOpen && (
+      {/* Mobile overlay */}
+      {isOpen && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -201,7 +302,9 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
-      )}, {/* Sidebar */}
+      )}
+
+      {/* Sidebar */}
       <motion.div
         initial={{ x: '-100%' }}
         animate={{ x: isOpen ? 0 : '-100%' }}
@@ -287,7 +390,8 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
                                 <button
                                   onClick={e => {
                                     e.preventDefault();
-                                    toggleItem(item.name)}}
+                                    toggleItem(item.name);
+                                  }}
                                   className="p-1 hover:bg-gray-200 rounded"
                                 >
                                   {expandedItems.includes(item.name) ? (
@@ -361,6 +465,22 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
         </div>
       </motion.div>
     </>
-  )};
+  );
+};
 
 export default EnhancedSidebar2025;
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

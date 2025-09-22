@@ -1,31 +1,48 @@
-
-import React { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/main
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+'use client';
+'';
+'';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
 
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null}
+  errorInfo: ErrorInfo | null;
+}
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false };
+    hasError: false,
+  };
 
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null }}
+    this.state = { hasError: false, error: null, errorInfo: null };
+  }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
 
     // Log error to monitoring service
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event,exception' {
+      window.gtag('event', 'exception', {
         description: error.message,
-        fatal: false })}
+        fatal: false,
+      });
+    }
   }
 
   render() {
@@ -69,7 +86,24 @@ export class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         )
-      )}
+      );
+    }
 
-    return this.props.children}
+    return this.props.children;
+  }
 }
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

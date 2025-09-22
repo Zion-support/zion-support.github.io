@@ -1,8 +1,8 @@
 
-=======
 #!/""usr/bin/env"" node;
-=======
+
 #!/usr/bin/env node;"
+
 /**;
  * Advanced Performance Monitor - PM2 Automation;
  * Real-time performance monitoring with bottleneck detection and auto-fixing;
@@ -13,9 +13,9 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
-const os = require("os");
-=======
+
 const os = require("os");"
+
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -58,16 +58,15 @@ class $1 {}
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
 
-=======
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async startMonitoring() {}
   this.log("Starting advanced performance monitoring...");
-=======
 
   async startMonitoring() {}"
   this.log("Starting advanced performance monitoring...");"
+
     // Start continuous monitoring;
     this.monitoringInterval = setInterval(async () => {}
   await this.collectMetrics()}, this.monitoringInterval);
@@ -94,20 +93,17 @@ class $1 {}
     // Auto-fix critical issues if enabled;
     if (this.autoFixEnabled) {}
   await this.autoFixCriticalIssues(issues)};
-;
-    // Store metrics in history;
-    this.performanceHistory.push(metrics);
 
     // Store metrics in history;
 
     // Keep only last 100 entries;
     // Analyze metrics for issues;
-    const issues = await this.analyzeMetrics(metrics);
 
     // Generate alerts for critical issues;
     // Auto-fix critical issues if enabled;
     // Save metrics;
     await this.saveMetrics(metrics);
+
     return metrics};
   async collectSystemMetrics() {}
   "cpu": {}"
@@ -132,36 +128,6 @@ class $1 {}
       metrics.memory.usage = (metrics.memory.used / metrics.memory.total) * 100;
       // Disk usage;
       const diskStats = await this.getDiskUsage();
-      metrics.disk = { ...metrics.disk, ...diskStats };
-    } catch (error) {  this.log(`Failed to collect system "metrics": ${error.message  }`, "WARN")};
-;
-    return metrics};
-;
-  async collectApplicationMetrics() {}
-  const metrics = {}
-  "pm2": {}
-  processes: 0,
-        "memory": 0,
-        "cpu": 0,
-        "status": "unknown"},
-      "node": {}
-  version: process.version,
-        "memory": process.memoryUsage(),
-        "uptime": process.uptime()},
-      "build": {}
-  lastBuildTime: 0,
-        "lastBuildSize": 0,
-        "buildCount": 0}};
-    try {}
-  // PM2 metrics;
-      const pm2List = await this.getPM2Status();
-      metrics.pm2 = { ...metrics.pm2, ...pm2List };
-      // Build metrics;
-      const buildMetrics = await this.getBuildMetrics();
-      metrics.build = { ...metrics.build, ...buildMetrics };
-    } catch (error) {}
-  this.log(Failed to collect application "metrics": ${error.message  }",)
-        "WARN`;`
 
   async collectApplicationMetrics() {}
   "pm2": {}"
@@ -204,16 +170,7 @@ class $1 {}
       // Count dependencies;"`;
       metrics.dependencies = await this.countDependencies()} catch (error) {  this.log(`Failed to collect build "metrics": ${error.message  }", "WARN")};"
   async collectNetworkMetrics() {}
-  const metrics = {}
-  "responseTime": 0,
-      "throughput": 0,
-      "connections": 0,
-      "errors": 0};
-    try {}
-  // This would typically involve monitoring actual network requests;
-      // For now, we"ll use placeholder values;
-      metrics.responseTime = Math.random() * 1000; // Simulated response time;
-      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {  this.log(`Failed to collect network "metrics": ${error.message  }`, "WARN");
+
     try {}
   // This would typically involve monitoring actual network requests;
       // For now, we"ll use placeholder values;
@@ -222,7 +179,6 @@ class $1 {}
 ;
     return metrics};
 ;
-=======
 
       "errors": 0};"
   // This would typically involve monitoring actual network requests;"
@@ -235,15 +191,18 @@ class $1 {}
         "encoding": "utf8",
         "stdio": "pipe"}"
 });
+
       const lines = result.split("\n");
       const data = lines[1].split(/\s+/);
+
       return {}
-=======
+
 "
       const lines = result.split("\n");"
       const data = lines[1].split(/\s+/);
 
       return {}"
+
   "total": this.parseSize(data[1]),
         "used": this.parseSize(data[2]),
         "free": this.parseSize(data[3]),
@@ -257,15 +216,6 @@ class $1 {}
   return Math.round(parseFloat(match[1]) * units[match[2]])};
     return 0};
   async getPM2Status() {}
-  try {}
-  const result = execSync("pm2 jlist", {})
-  "cwd": this.projectRoot,
-        "encoding": "utf8",
-        "stdio": "pipe"}
-});
-      const processes = JSON.parse(result);
-      let totalMemory = 0;
-      let totalCPU = 0;
 
       const processes = JSON.parse(result);
       let totalMemory = 0;
@@ -274,7 +224,7 @@ class $1 {}
       processes.forEach(proc => {})
   totalMemory += proc.monit.memory || 0;
         totalCPU += proc.monit.cpu || 0}
-});
+
       return {}
   "processes": processes.length,
         "memory": totalMemory,
@@ -285,49 +235,34 @@ class $1 {}
     };
   };
 ;
-=======
-
 
         "status": "running"};"
   return { "processes": 0, "memory": 0, "cpu": 0, "status": "error"   };"
+
   async getBuildMetrics() {}
   const buildLogPath = path.join(;)"
 
     return { "lastBuildTime": 0, "lastBuildSize": 0, "buildCount": 0 };"
   async checkViteConfig() {}
-  try {}
-  const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");
-      if (fs.existsSync(viteConfigPath)) {}
-  const config = fs.readFileSync(viteConfigPath, "utf8");
-        return {}
-  "treeShaking": config.includes("treeshake"),
-          "codeSplitting": config.includes("manualChunks"),
-          "minification": config.includes("minify")};
-      };
-    } catch (error) {  this.log(`Failed to check Vite "config": ${error.message  }`, "WARN")};
-;
-    return { "treeShaking": false, "codeSplitting": false, "minification": true };
-  };
-;
-  async measureBundleSize() {}
-  try {}
-  const distPath = path.join(this.projectRoot, "dist");
-=======
+
   const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");"
       if (fs.existsSync(viteConfigPath)) {}"
   const config = fs.readFileSync(viteConfigPath, "utf8");"
 
     return { "treeShaking": false, "codeSplitting": false, "minification": true };"
+
   async measureBundleSize() {}
   const distPath = path.join(this.projectRoot, "dist");"
       if (!fs.existsSync(distPath)) return 0;
+
       let totalSize = 0;
       const files = this.getAllFilesRecursive(distPath);
+
       for (const file of files) {}
   const stats = fs.statSync(file);
         totalSize += stats.size};
       return totalSize} catch (error) {}
-=======
+
 } catch (error) {}
   return 0} catch (error) {}
   async countDependencies() {}
@@ -339,14 +274,14 @@ class $1 {}
           Object.keys(pkg.devDependencies || {}).length;
   getAllFilesRecursive(dir, files = []) {}
   const items = fs.readdirSync(dir);
-    for (const item of items) {}
-  const fullPath = path.join(dir, "item);
+
+    for (const item of items) {}"
+  const fullPath = path.join(dir, "item);"
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {}
-  this.getAllFilesRecursive(fullPath", files)} else {}
-=======
+
       if (stat.isDirectory()) {}"
   this.getAllFilesRecursive(fullPath", files)} else {}"
+
   files.push(fullPath)};
     return files};
   async analyzeMetrics(metrics) {}
@@ -369,18 +304,8 @@ class $1 {}
     return issues};
   async generateAlerts(issues) {}
   for (const issue of issues) {}
-  const alert = {}
-  "timestamp": new Date().toISOString(),
-        "type": issue.type,
-        "severity": issue.severity,
-        "description": issue.description,
-        "category": issue.category,
-        "threshold": issue.threshold,
-        "current": issue.current,
-        "recommendations": this.getRecommendations(issue)};
-;
-      this.alertHistory.push(alert);this.log(`"ALERT": ${issue.type} - ${issue.description}`, issue.severity)};
-;
+
+  const alert = {}"
 
     // Save alerts;
     await this.saveAlerts()};
@@ -399,68 +324,20 @@ class $1 {}
         break};
     return recommendations};
   async autoFixCriticalIssues(issues) {}
-  const criticalIssues = issues.filter(;)
-      issue => issue.severity === "CRITICAL";
-    );
+
+  const criticalIssues = issues.filter(;)"
+      issue => issue.severity === "CRITICAL";"
 
     for (const issue of criticalIssues) {}
   const result = await this.applyAutoFix(issue);
-        if (result.success) {}
-  this.log(Auto-fix applied for ${issue.type}: ${result.message}",)
-            "INFO`;`
-          )};
-      } catch (error) {}
-  this.log(Auto-fix failed for ${issue.type  }: ${error.message}`,`)
-          "ERROR";
-        if (result.success) {}
-  this.log(Auto-fix applied for ${issue.type}: ${result.message}",)
-            "INFO";
-          )};
-      } catch (error) {}
-  this.log(Auto-fix failed for ${issue.type}: ${error.message}",)
-          "ERROR";
-        )};
-    };
-  };
-;
-  async applyAutoFix(issue) {}
-  switch (issue.type) {}
-  case "DISK_HIGH":;
-        return await this.fixDiskSpace();
-      case "MEMORY_HIGH":;
-        return await this.fixMemoryUsage();
-      case "CPU_HIGH":;
-        return await this.fixCPUUsage();
-      "default": ;
-        return {}
-  success: false,
-          "message": "No auto-fix available for this issue"};
-    };
-  };
-;
-  async fixDiskSpace() {}
-  try {}
-  // Clean up temporary files;
-      const tempDirs = ["""node_modules/.cache""", "dist", "build", "logs"];
-      for (const dir of tempDirs) {}
-  const fullPath = path.join(this.projectRoot, "dir);
-        if (fs.existsSync(fullPath)) {execSync(`rm -rf ${fullPath}`", {`})
-  "cwd": this.projectRoot,
-            "stdio": "pipe"})};
-      };
-;
-      // Clear npm cache;
-      execSync("npm cache clean --force", {})
-  "cwd": this.projectRoot,
-        "stdio": "pipe"}
-});
+
       return { "success": true, "message": "Disk space cleaned up successfully" };
     } catch (error) {}
   return { "success": false, "message": error.message   };
     };
   };
 ;
-=======
+
         if (result.success) {}"
 
   async applyAutoFix(issue) {}
@@ -481,6 +358,7 @@ class $1 {}
 
       return { "success": true, "message": "Disk space cleaned up successfully" };"
   return { "success": false, "message": error.message   };"
+
   async fixMemoryUsage() {}
   // Force garbage collection if available;
       if (global.gc) {}
@@ -516,13 +394,10 @@ if (metrics.system.cpu.usage > 95) {}"
       this.log("Performance monitoring stopped")};"
   getPerformanceSummary() {}
   const recentMetrics = this.performanceHistory.slice(-10);
-    if (recentMetrics.length === 0) {}
-  return { "message": "No performance data available" };
-    };
-;
-=======
+
     if (recentMetrics.length === 0) {}"
   return { "message": "No performance data available" };"
+
     const avgCPU =;
       recentMetrics.reduce((sum, m) => sum + m.system.cpu.usage, 0) /;
       recentMetrics.length;
@@ -530,16 +405,15 @@ if (metrics.system.cpu.usage > 95) {}"
       recentMetrics.reduce((sum, m) => sum + m.system.memory.usage, 0) /;
     const avgDisk =;
       recentMetrics.reduce((sum, m) => sum + m.system.disk.usage, 0) /;
-      recentMetrics.length;
+
     return {}
   "timestamp": new Date().toISOString(),
       "averages": {}
   cpu: avgCPU.toFixed(1),
-=======
-
 
       "averages": {}"
   cpu: avgCPU.toFixed(1),"
+
         "memory": avgMemory.toFixed(1),
         "disk": avgDisk.toFixed(1)},
       "alerts": this.alertHistory.length,
@@ -556,14 +430,14 @@ if (require.main === module) {}
   monitor;
     .startMonitoring();
 
-=======
     .then(() => {}
   console.log("Advanced Performance Monitor started successfully");
       // Keep the process running;
-=======
+
     .then(() => {}"
   console.log("Advanced Performance Monitor started successfully");"
       // Keep the process running;"
+
       process.on("SIGINT", () => {}
   console.log("Stopping performance monitor...");"
         monitor.stopMonitoring();
@@ -571,14 +445,9 @@ if (require.main === module) {}
     .catch(error => {})"
   console.error("Advanced Performance Monitor "failed": ", error);"
       process.exit(1)})};
-;
-
-=======
-module.exports = AdvancedPerformanceMonitor;
-=======
-module.exports = AdvancedPerformanceMonitor;
-=======
 
 module.exports = AdvancedPerformanceMonitor;
-=======
 
+module.exports = AdvancedPerformanceMonitor;
+
+module.exports = AdvancedPerformanceMonitor;

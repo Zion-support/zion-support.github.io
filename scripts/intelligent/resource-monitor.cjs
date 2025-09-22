@@ -1,6 +1,4 @@
 
-
-=======
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -26,6 +24,5 @@ const os = require('os')
       "severity"
       "severity"
       console.error('Error saving "analysis")
-      console.error('Error saving "alert")
-=======
+
       console.error('Error saving "alert")

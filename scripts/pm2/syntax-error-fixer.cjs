@@ -1,21 +1,15 @@
 
-=======
 #!/usr/bin/env node;
-=======
+
 #!/usr/bin/env node
+
 /**
  * Syntax Error Fixer Service;
  * Automatically fixes common syntax errors in JavaScript/TypeScript files;
  */
+
 const fs = // // require('fs');
 const path = // // require('path');
-const { execSync } = // // require('child_process');
-
-const { execSync } = // // require('child_process');
-
-
-=======
-=======
 
 class SyntaxErrorFixer {}
   constructor() {}
@@ -25,18 +19,11 @@ class SyntaxErrorFixer {}
     this.maxFixesPerRun = parseInt(process.env.MAX_FIXES_PER_RUN) || 100;
     this.skipLargeFiles = process.env.SKIP_LARGE_FILES === 'true';
     this.largeFileThreshold = parseInt(process.env.LARGE_FILE_THRESHOLD) || 10000;
-=======
+
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
     this.fixedFiles = new Set();
-
-=======
-    
-=======
-    
-=======
-
 
     this.syntaxPatterns = {}
       unterminatedStrings: []
@@ -67,15 +54,11 @@ class SyntaxErrorFixer {}
       service: 'syntax-error-fixer
     };
 
-
-
-=======
-
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
       console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {`}
-=======
+
       console.log(`[${timestamp}] DEBUG: ${message}`, data)};
     // Write to log file;
     this.writeToLog(logEntry)};
@@ -87,6 +70,7 @@ class SyntaxErrorFixer {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting Syntax Error Fixer Service...');
+
     try {}
       // Create necessary directories;
       this.ensureDirectories();
@@ -98,26 +82,6 @@ class SyntaxErrorFixer {}
       this.setupSignalHandlers();
       this.log('info', 'Syntax Error Fixer Service started successfully');
 
-=======
-    
-=======
-    try {}
-      // Create necessary directories;
-      this.ensureDirectories();
-      // Initial fix run;
-      await this.performSyntaxFixes();
-      // Start continuous fixing;
-      this.startContinuousFixing();
-      // Listen for signals to trigger fixes;
-      this.setupSignalHandlers();
-      this.log('info', 'Syntax Error Fixer Service started successfully');
-
-      
-=======
-      
-=======
-
-=======
       // Keep the process alive;
       setInterval(async () => {}
         await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {}
@@ -128,15 +92,8 @@ class SyntaxErrorFixer {}
       'logs/pm2',
       'backups',
       'temp',
-      'fixed-files'
-    ];
 
-=======
       'fixed-files
-
-
-
-=======
 
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
@@ -145,53 +102,34 @@ class SyntaxErrorFixer {}
     })};
   async performSyntaxFixes() {}
     this.log('info', 'Starting syntax error fixing process...');
+
     try {}
-=======
+
       // Reset counters;
       this.fixedFiles.clear();
 
       // Find files with syntax issues;
       const filesWithIssues = await this.findFilesWithSyntaxIssues();
 
-
-
-
-      // Find files with syntax issues;
-      const filesWithIssues = await this.findFilesWithSyntaxIssues();
-      
-=======
       if (filesWithIssues.length === 0) {}
         this.log('info', 'No files with syntax issues found');
         return};`;
       this.log('info', `Found ${filesWithIssues.length} files with syntax issues`);
+
       // Process files in batches to avoid overwhelming the system;
       const batchSize = Math.min(10, Math.ceil(filesWithIssues.length / 4));
       for (let i = 0; i < filesWithIssues.length; i += batchSize) {}
         const batch = filesWithIssues.slice(i, i + batchSize);
         await Promise.all(batch.map(file => this.fixFileSyntax(file)));
-
-=======
-
-=======
-      // Process files in batches to avoid overwhelming the system;
-      const batchSize = Math.min(10, Math.ceil(filesWithIssues.length / 4));
-      for (let i = 0; i < filesWithIssues.length; i += batchSize) {}
-        const batch = filesWithIssues.slice(i, i + batchSize);
-        await Promise.all(batch.map(file => this.fixFileSyntax(file)));
-
-        
-=======
-        
-=======
-=======
 
         // Small delay between batches;
         if (i + batchSize < filesWithIssues.length) {}
           await new Promise(resolve => setTimeout(resolve, 1000))};
       // Generate report;
       await this.generateFixReport();
-=======
+
 `;
+
       this.log('info', `Syntax fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`)} catch (error) {`}
       this.log('error', 'Error during syntax fixing process', error)};
   async findFilesWithSyntaxIssues() {}
@@ -199,33 +137,24 @@ class SyntaxErrorFixer {}
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const filesWithIssues = [];
 
-
-
-=======
-
-=======
-
     for (const dir of sourceDirs) {}
       if (fs.existsSync(fullPath)) {}
         const files = this.walkDirectory(fullPath, extensions);
-=======
+
         for (const file of files) {}
           if (await this.hasSyntaxIssues(file)) {}
             filesWithIssues.push(file)};
     return filesWithIssues};
   walkDirectory(dir, extensions) {}
     const files = [];
+
     try {}
+
       const items = fs.readdirSync(dir);
       items.forEach(item => {})
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-      const items = fs.readdirSync(dir);
-      items.forEach(item => {})
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-=======
+
         if (stat.isDirectory()) {}
           files.push(...this.walkDirectory(fullPath, extensions))} else if (stat.isFile()) {}
           const ext = path.extname(item);
@@ -236,7 +165,7 @@ class SyntaxErrorFixer {}
     return files};
   async hasSyntaxIssues(filePath) {}
       const content = fs.readFileSync(filePath, 'utf8');
-=======
+
       // Skip large files if configured;
       if (this.skipLargeFiles && content.length > this.largeFileThreshold) {}
         return false};
@@ -249,19 +178,12 @@ class SyntaxErrorFixer {}
     const doubleQuotes = (content.match(/"/g) || []).length;"`;
     const backticks = (content.match(/`/g) || []).length;
 
-=======
-    
-=======
-    
-=======
-
-
     if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
       return true};
     // Check for unterminated comments;
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
-=======
+
     if (openComments !== closeComments) {}
     // Check for unclosed brackets;
     const openBraces = (content.match(/\{/g) || []).length;}
@@ -271,30 +193,25 @@ class SyntaxErrorFixer {}
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
 
-=======
-    
-=======
-    
-=======
-
-
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {}
     // Check for malformed imports/exports;
     const importLines = content.match(/import\s+[^]+/g) || [];
     const exportLines = content.match(/export\s+[^]+/g) || [];
+
     for (const line of [...importLines, ...exportLines]) {}
-=======
+
     for (const line of [...importLines, ...exportLines]) {}"
+
       if (!line.trim().endsWith(';')) {}
   async fixFileSyntax(filePath) {}
     try {}`;
       this.log('info', `Fixing syntax issues in: ${filePath}`);
-=======
+
       // Create backup if enabled;
       if (this.backupFiles) {}
         await this.createBackup(filePath)};
       // Read file content;
-      const content = fs.readFileSync(filePath, 'utf8');
+
       // Apply fixes;
       const fixedContent = await this.applySyntaxFixes(content, filePath);
       if (fixedContent !== content) {}
@@ -304,24 +221,6 @@ class SyntaxErrorFixer {}
         this.fixedFiles.add(filePath);
         this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
 
-=======
-      
-=======
-      // Apply fixes;
-      const fixedContent = await this.applySyntaxFixes(content, filePath);
-      if (fixedContent !== content) {}
-        // Write fixed content;
-        fs.writeFileSync(filePath, fixedContent, 'utf8');
-        this.fixesApplied++;
-        this.fixedFiles.add(filePath);
-        this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
-
-        
-=======
-        
-=======
-
-=======
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}`;
           this.log('info', `Fix verification passed for: ${filePath}`)} else {`}`;
@@ -339,19 +238,19 @@ class SyntaxErrorFixer {}
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');`;
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
+
       fs.copyFileSync(filePath, backupPath);
 
-=======
-      
-      fs.copyFileSync(filePath, backupPath);
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
-=======
+
       fs.copyFileSync(filePath, backupPath);`;
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}`;
+
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
   async applySyntaxFixes(content, filePath) {}
     let fixedContent = content;
     const fixes = [];
+
     // Fix unterminated strings;
     fixedContent = this.fixUnterminatedStrings(fixedContent, fixes);
     // Fix unterminated comments;
@@ -364,8 +263,7 @@ class SyntaxErrorFixer {}
     fixedContent = this.fixUnclosedBrackets(fixedContent, fixes);
     // Fix common JSX issues;
     fixedContent = this.fixJSXIssues(fixedContent, fixes);
-    
-=======
+
     // Fix common TypeScript issues;
     if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {}
       fixedContent = this.fixTypeScriptIssues(fixedContent, fixes)};
@@ -374,7 +272,7 @@ class SyntaxErrorFixer {}
     return fixedContent};
   fixUnterminatedStrings(content, fixes) {}
     const fixed = content;
-=======
+
     // Fix single quotes;
     const singleQuoteMatches = fixed.match(/'[^']*$/gm);
     if (singleQuoteMatches) {}
@@ -398,19 +296,13 @@ class SyntaxErrorFixer {}
         const fixed = match + '`';
     return fixed};
   fixUnterminatedComments(content, fixes) {}
-    const fixed = content;
+
     // Find lines with unterminated block comments;
     const lines = fixed.split('\n');
     let inComment = false;
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i];
-    // Find lines with unterminated block comments;
-    const lines = fixed.split('\n');
-    let inComment = false;
-    for (let i = 0; i < lines.length; i++) {}
-      const line = lines[i];
-      
-=======
+
       if (line.includes('/*') && !line.includes('*/')) {}
         inComment = true};
       if (inComment && line.includes('*/')) {}
@@ -422,41 +314,12 @@ class SyntaxErrorFixer {}
 });
     return lines.join('\n')};
   fixMissingSemicolons(content, fixes) {}
-    const fixed = content;
-    // Fix missing semicolons after statements;
-    const lines = fixed.split('\n');
-    for (let i = 0; i < lines.length; i++) {}
-      const line = lines[i].trim();
-      if (line && )
-          !line.endsWith(';') &&
-          !line.endsWith('{') && }
-          !line.endsWith('}') &&
-          !line.endsWith('[') && ]
-          !line.endsWith(']') &&
-          !line.endsWith('(') &&
-          !line.endsWith(')') &&
-          !line.startsWith('//') &&
-          !line.startsWith('/*') &&
-          !line.startsWith('*') &&
-          !line.includes('function') &&
-          !line.includes('class') &&
-          !line.includes('const') &&
-          !line.includes('let') &&
-          !line.includes('var') &&
-          !line.includes('import') &&
-          !line.includes('export') &&
-          !line.includes('return') &&
-          !line.includes('if') &&
-          !line.includes('for') &&
-          !line.includes('while') &&
-          !line.includes('switch') &&
-          !line.includes('try') &&
-          !line.includes('catch') &&
+
+          !line.includes('try') && 
+          !line.includes('catch') && 
 
           !line.includes('finally')) {}
-=======
-    
-=======
+
     // Fix missing semicolons after statements;
       const line = lines[i].trim();
       if (line && )
@@ -485,13 +348,12 @@ class SyntaxErrorFixer {}
           !line.includes('try') &&
           !line.includes('catch') &&
           !line.includes('finally')) {}
-        
-=======
+
         lines[i] = lines[i] + ';';
         fixes.push({ type: 'missing_semicolon', line: i + 1, action: 'added_semicolon' })};
   fixMalformedImports(content, fixes) {}
     let fixed = content;
-=======
+
     // Fix imports without semicolons;
     fixed = fixed.replace(/import\s+([^]+?)(?=\n|$)/g, (match, importContent) => {}
       if (!importContent.trim().endsWith(';')) {}
@@ -499,20 +361,19 @@ class SyntaxErrorFixer {}
 });`;
         return `import ${importContent};};
       return match}
-});
-=======
+
     // Fix exports without semicolons;
     fixed = fixed.replace(/export\s+([^]+?)(?=\n|$)/g, (match, exportContent) => {}
       if (!exportContent.trim().endsWith(';')) {}
         fixes.push({ type: 'malformed_export', action: 'added_semicolon' }')
         return `export ${exportContent};};
-      return match}
-});
+
     return fixed};
   fixUnclosedBrackets(content, fixes) {}
     let fixed = content;
-=======
+
   fixUnclosedBrackets(content, fixes) {}
+
     // Count brackets and add missing ones;
     const openBraces = (fixed.match(/\{/g) || []).length;}
     const closeBraces = (fixed.match(/\}/g) || []).length;
@@ -520,13 +381,6 @@ class SyntaxErrorFixer {}
     const closeBrackets = (fixed.match(/\]/g) || []).length;
     const openParens = (fixed.match(/\(/g) || []).length;
     const closeParens = (fixed.match(/\)/g) || []).length;
-
-=======
-    
-=======
-    
-=======
-
 
     // Add missing closing braces;
     if (openBraces > closeBraces) {}
@@ -544,26 +398,23 @@ class SyntaxErrorFixer {}
       fixed += '\n' + ')'.repeat(missing);`;
       fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_parentheses` })};
   fixJSXIssues(content, fixes) {}
-    let fixed = content;
-=======
+
     // Fix JSX self-closing tags;
     fixed = fixed.replace(/(<[^>]+)(?=\n|$)/g, (match, tagStart) => {}
       if (tagStart.includes('=') && !tagStart.endsWith('/>')) {}
         fixes.push({ type: 'jsx_self_closing', action: 'fixed_self_closing_tag' }')
         return tagStart + ' />'};
-      return match}
-});
-=======
+
     // Fix JSX fragment syntax;
     fixed = fixed.replace(/<>([^<]*)<\/>/g, (match, content) => {}
       if (content.trim()) {}
         fixes.push({ type: 'jsx_fragment', action: 'fixed_fragment_syntax' }')
         return `<React.Fragment>${content}</React.Fragment>`};
-      return match}
-});
+
     return fixed};
   fixTypeScriptIssues(content, fixes) {}
     let fixed = content;
+
     // Fix type annotations;
     fixed = fixed.replace(/(\w+):\s*([^,\n]+?)(?=\s*[,\n])/g, (match, varName, typeName) => {}
       if (typeName.includes('any') && typeName !== 'any') {}
@@ -572,6 +423,7 @@ class SyntaxErrorFixer {}
         return `${varName}: any`};
       return match}
 });
+
     // Fix interface declarations;
     fixed = fixed.replace(/interface\s+(\w+)\s*\{/g, (match, interfaceName) => {}
       if (!content.includes(`interface ${interfaceName}`)) {`}
@@ -580,11 +432,13 @@ class SyntaxErrorFixer {}
         return `interface ${interfaceName} {`};
       return match}
 });
+
     return fixed};
   async verifyFix(filePath) {}
     try {}
       // Try to parse the file to verify syntax is correct;
       const content = fs.readFileSync(filePath, 'utf8');
+
       // Basic syntax validation;
       if (this.detectSyntaxIssues(content)) {}
         return false};
@@ -592,8 +446,10 @@ class SyntaxErrorFixer {}
       if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {}
         try {}
           execSync(`npx tsc --noEmit "${filePath}"`, { `})
-            cwd: this.projectRoot,
-            stdio: 'pipe'
+
+            cwd: this.projectRoot, 
+            stdio: 'pipe' 
+
           })} catch (error) {}
           return false};
       };
@@ -609,29 +465,21 @@ class SyntaxErrorFixer {}
         fixesFailed: this.fixesFailed,
         fixesSkipped: this.fixesSkipped,
 
-=======
         successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100;
       },
       fixedFiles: Array.from(this.fixedFiles),
       recommendations: this.generateRecommendations();
     };
-    // Write report to file;
-    const reportPath = path.join(this.projectRoot, 'error-reports', `syntax-fix-report-${Date.now()}.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log('info', `Syntax fix report generated: ${reportPath}`);
 
     return report};
   generateRecommendations() {}
     const recommendations = [];
-=======
 
     // Write report to file;
     const reportPath = path.join(this.projectRoot, 'error-reports', `syntax-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     this.log('info', `Syntax fix report generated: ${reportPath}`);
-
-    
 
     return report};
   generateRecommendations() {}
@@ -658,6 +506,7 @@ class SyntaxErrorFixer {}
     return recommendations};
   startContinuousFixing() {}
     this.log('info', 'Starting continuous syntax fixing...');
+
     // Monitor for new syntax issues every 5 minutes;
     setInterval(async () => {}
       await this.performSyntaxFixes()}, 300000); // 5 minutes;
@@ -670,37 +519,37 @@ class SyntaxErrorFixer {}
 };
 // Start the service;
 const fixer = new SyntaxErrorFixer();
+
 // Handle graceful shutdown;
 process.on('SIGINT', () => {}
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
   process.exit(0)}
 });
+
 process.on('SIGTERM', () => {}
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
   process.exit(0)}
 });
+
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   fixer.log('error', 'Uncaught exception', error);
   process.exit(1)}
 });
+
 process.on('unhandledRejection', (reason, promise) => {}
   fixer.log('error', 'Unhandled rejection', { reason, promise }
 });
   process.exit(1)}
 });
+
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
 
-=======
 });
-=======
-});
-=======
 
 });
-=======
 
-
+});

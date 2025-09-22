@@ -1,83 +1,107 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Search, X } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
-import { SearchSuggestion } from '@/types/search';
-import { useDebounce } from '@/hooks/useDebounce';
-
-interface SearchBarProps {
-  value: string;
-  onChange: (val: string) => void;
-  onSelectSuggestion?: (val: string) => void;
-  placeholder?: string;
-}
-
-export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [focused, setFocused] = useState(false);
-  const debounced = useDebounce(value, 150);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!debounced) {
-      setSuggestions([]);
-      return;
-    }
-    const controller = new AbortController();
-    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
-      .then(res => res.json())
-      .then(data => setSuggestions(data || []))
-      .catch(() => setSuggestions([]));
-    return () => controller.abort();
-  }, [debounced]);
-
-  useEffect(() => {
-    function outside(e: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
-        setFocused(false);
-      }
-    }
-    document.addEventListener('mousedown', outside);
-    return () => document.removeEventListener('mousedown', outside);
-  }, []);
-
-  const handleSelect = (text: string) => {
-    onChange(text);
-    if (onSelectSuggestion) onSelectSuggestion(text);
-    setFocused(false);
-    inputRef.current?.blur();
+import React, { useState, useRef, useEffect } from 'react',;
+import Link from 'next/link',;
+,;
+interface SearchResult {,;
+  title: string,;
+  description: string,;
+  url: string,;
+  type: 'service' | 'page' | 'category',;
+,};
+,;
+const SearchBar: React.FC = () => {,;
+  const [query, setQuery] = useState(''),;
+  const [results, setResults] = useState<SearchResult[]>([]),;
+  const [isOpen, setIsOpen] = useState(false),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const searchRef = useRef<HTMLDivElement>(null),;
+  const inputRef = useRef<HTMLInputElement>(null),;
+,;
+  // Mock search data - in a real app, this would come from an API,;
+  const searchData: SearchResult[] = [,;
+    {,;
+      title: 'Micro SaaS Products',;
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',;
+      url: '/micro-saas',;
+      type: 'category',;
+    ,},;
+    {,;
+      title: 'AI Services',;
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',;
+      url: '/ai-services',;
+      type: 'category',;
+    ,},;
+    {,;
+      title: 'IT Services',;
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',;
+      url: '/it-services',;
+      type: 'category',;
+    ,},;
+    {,;
+      title: 'Cloud Cost Guard',;
+      description: 'FinOps Assistant for anomaly detection and cost optimization',;
+      url: '/services',;
+      type: 'service',;
+    ,},;
+    {,;
+      title: 'Contact Us',;
+      description: 'Get in touch with our experts for consultation and quotes',;
+      url: '/contact',;
+      type: 'page',;
+    ,},;
+    {,;
+      title: 'Pricing',;
+      description: 'View our transparent pricing for all services',;
+      url: '/pricing',;
+      type: 'page',;
+    ,};
+  ],;
+,;
+  const handleSearch = async (searchQuery: string) => {,;
+    if (!searchQuery.trim()) {,;
+      setResults([]),;
+      setIsOpen(false),;
+      return,;
+    ,};
+,;
+    setIsLoading(true),;
+,;
+    // Simulate API delay,;
+    await new Promise(resolve => setTimeout(resolve, 300)),;
+,;
+    const filteredResults = searchData.filter(item =>,;
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,;
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()),;
+    ),;
+,;
+    setResults(filteredResults),;
+    setIsOpen(true),;
+    setIsLoading(false),;
   };
-
-  return (
-    <div className="relative w-full" ref={containerRef}>
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />
-        <Input
-          ref={inputRef}
-          type="text"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onFocus={() => setFocused(true)}
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-        />
-        {value && (
-          <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-            aria-label="Clear search"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-      </div>
-      <AutocompleteSuggestions
-        suggestions={suggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelect}
-        visible={focused}
-      />
-    </div>
-  );
-}
+,;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,;
+    const value = e.target.value,;
+    setQuery(value),;
+    handleSearch(value),;
+  ,};
+,;
+  const handleResultClick = () => {,;
+    setIsOpen(false),;
+    setQuery(''),;
+  };
+,;
+  const handleKeyDown = (e: React.KeyboardEvent) => {,;
+    if (e.key === 'Escape') {,;
+      setIsOpen(false),;
+      inputRef.current?.blur(),;
+    ,};
+  };
+,;
+  useEffect(() => {,;
+    const handleClickOutside = (event: MouseEvent) => {,;
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {,;
+        setIsOpen(false),;
+      ,};
+    };
+};
+,;
+export default SearchBar,;

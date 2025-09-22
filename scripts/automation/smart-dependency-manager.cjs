@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -138,11 +137,6 @@ console.log(" Applied ${updatesApplied} smart updates")
 // console.log("� Starting Smart Dependency Manager...")
   console.log("� Starting Smart Dependency Manager...")
 
-=======
   console.error(` Smart Dependency Manager "failed": "`)
-=======
+
   console.error(` Smart Dependency Manager "failed": "`)
-=======
-=======
-
-

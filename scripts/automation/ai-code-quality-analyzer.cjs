@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 
 #!/usr/bin/env node
 
@@ -21,7 +20,6 @@ class AICodeQualityAnalyzer {
   log(message) {
 
   }
-
 
   async analyzeCodeQuality() {
     this.log('Starting AI-powered code quality analysis...);
@@ -72,9 +70,6 @@ class AICodeQualityAnalyzer {
           severity: error,
           count: errorCount,
 
-main
-=======
-
   async analyzeReactComponents(analysis) {
     this.log('Analyzing React components...);
     const srcDir = path.join(this.workspaceRoot,src');
@@ -92,7 +87,6 @@ main
 
   async analyzePerformancePatterns(analysis) {
     this.log('Analyzing performance patterns...);
-
 
     const jsFiles = this.findFiles(srcDir, [.ts,.tsx,.js,.jsx]);
     let performanceIssues = 0;
@@ -150,10 +144,6 @@ main
   }
 }
 
+// Run the analyzer
 const analyzer = new AICodeQualityAnalyzer();
-analyzer.analyzeCodeQuality();
-
-
-main
-=======
-
+analyzer.run().catch(console.error);
