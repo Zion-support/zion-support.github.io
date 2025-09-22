@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 
 
 export function usePerformanceMetrics() {
 :backup-problematic-files/hooks/usePerformanceMetrics.ts
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -27,9 +30,12 @@ export function usePerformanceMetrics() {
       }, 0);
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -45,6 +51,9 @@ export function usePerformanceMetrics() {
     return () => clearTimeout(timer);
   }, []);
   return { metrics, isSupported }
+<<<<<<< HEAD
+}
+=======
 
 
 
@@ -58,3 +67,4 @@ export function usePerformanceMetrics() {
 
 
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

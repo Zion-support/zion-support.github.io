@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 
@@ -6,6 +8,7 @@
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 module.exports = {}
   "apps": [// Main Application;]
     {}
@@ -395,6 +398,10 @@ module.exports = {}
       "error_file": './logs/daily-build-test-error.log'
     };
   ];
+<<<<<<< HEAD
+};
+};
+=======
 
 
 
@@ -403,3 +410,4 @@ module.exports = {}
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
