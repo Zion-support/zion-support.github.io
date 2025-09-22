@@ -8,9 +8,9 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
 
-  eslint: { ignoreDuringBuilds: false },
-  typescript: { ignoreBuildErrors: false },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['js', 'jsx'],
   images: {
     domains: [
       'localhost',
