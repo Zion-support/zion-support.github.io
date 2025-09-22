@@ -1,2 +1,2 @@
 // Configure React Testing Library jest-dom matchers
-import '@testing-library/jest-dom';
+require('@testing-library/jest-dom');
