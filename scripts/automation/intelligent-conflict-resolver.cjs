@@ -1,10 +1,10 @@
 
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
-=======
+
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
+
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");"
@@ -28,13 +28,12 @@ class $1 {}
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
 
-=======
     const logMessage = `[${timestamp}] [${level}] ${message}`;`
     console.log("logMessage);
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n");
     // Write errors to error file;
-=======
+
     const logMessage = `[${timestamp}] [${level}] ${message};`"
     console.log("logMessage);"
     // Write to log file;"
@@ -43,6 +42,7 @@ class $1 {}
     if (level === "ERROR") {}"
   // Write to log file;"
     // Write errors to error file;"
+
     if (level === "ERROR") {}
   fs.appendFileSync(this.errorFile, logMessage + "\n")};"
   async checkForConflicts() {}"
@@ -294,14 +294,9 @@ if (require.main === module) {}
   // Handle graceful shutdown;"
 
     process.exit(1)})};
-;
-
-=======
-module.exports = IntelligentConflictResolver;
-=======
-module.exports = IntelligentConflictResolver;
-=======
 
 module.exports = IntelligentConflictResolver;
-=======
 
+module.exports = IntelligentConflictResolver;
+
+module.exports = IntelligentConflictResolver;

@@ -1,4 +1,13 @@
-import React { useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/main
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React, { useState } from 'react';
 import Link from 'next/link';
 import {
   Brain,
@@ -10,31 +19,45 @@ import {
   Mail,
   Menu,
   Phone,
-  X } from 'lucide-react';
+  X,
+} from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const services = [
-  {
+    {
       name: 'AI Services',
       href: '/ai-services',
       icon: Brain,
-      description: 'Artificial Intelligence Solutions' }, {
+      description: 'Artificial Intelligence Solutions',
+    },
+    {
       name: 'IT Services',
       href: '/it-services',
       icon: Cloud,
-      description: 'Information Technology Services' }, {
+      description: 'Information Technology Services',
+    },
+    {
       name: 'Micro SaaS',
       href: '/micro-saas',
       icon: Code,
-      description: 'Custom Software Solutions' }, {
+      description: 'Custom Software Solutions',
+    },
+    {
       name: 'All Services',
       href: '/services',
       icon: null,
-      description: 'Complete Service Portfolio' } ];
+      description: 'Complete Service Portfolio',
+    },
+  ];
   const navigation = [
-  { name: 'Home', href: '/' }, { name: 'Services', href: '/services', hasDropdown: true }, { name: 'Pricing', href: '/pricing-guide' }, { name: 'About', href: '/about' }, { name: 'Contact', href: '/contact' } ];
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services', hasDropdown: true },
+    { name: 'Pricing', href: '/pricing-guide' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ];
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,7 +164,8 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}, {isMenuOpen && (
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 py-4">
             <div className="space-y-2">
               {navigation.map(item => (
@@ -161,7 +185,8 @@ const Header: React.FC = () => {
                           >
                             {service.icon && (
                               <service.icon className="h-4 w-4 mr-2 text-blue-600" />
-                            )}, {service.name}
+                            )}
+                            {service.name}
                           </Link>
                         ))}
                       </div>
@@ -206,6 +231,22 @@ const Header: React.FC = () => {
         )}
       </div>
     </header>
-  )};
+  );
+};
 
 export default Header;
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

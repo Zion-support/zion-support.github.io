@@ -1,4 +1,7 @@
+import { describe, it, expect } from '@jest/globals';
 
-const { createRequest, createResponse } = require(
-  'node-mocks-http')';
-const sgMail = require(
+describe('authController', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});

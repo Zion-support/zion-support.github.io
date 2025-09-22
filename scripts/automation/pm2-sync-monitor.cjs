@@ -1,8 +1,8 @@
 
-=======
 #!/""usr/bin/env"" node;
-=======
+
 #!/usr/bin/env node;"
+
 /**;
  * PM2 Sync Monitor System;
  * Health check and status monitoring for the PM2 sync automation system;
@@ -19,24 +19,22 @@
  *;
  * Features:;
  */;
-#!/usr/bin/env node;
 
 /**;
  * Uses remote-first strategy for conflict resolution;
  * - Automated issue resolution with remote-first strategy;
- * - Status dashboard;
- * - Alert system;
- */;
+
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 const http = require("http");
-=======
+
 "
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 const http = require("http");"
+
 class $1 {}
   constructor() {}
   this.config = {}"
@@ -75,13 +73,13 @@ class $1 {}
 
       const logMessage = `[${timestamp}] [${level}] ${message}`;`
       console.log("logMessage);
-=======
+
       const logMessage = `[${timestamp}] [${level}] ${message}`;`
       console.log("logMessage);
 
-=======
       const logMessage = `[${timestamp}] [${level}] ${message};`"
       console.log("logMessage);"
+
       try {}
   console.log(logMessage);
       try {}"
@@ -95,22 +93,6 @@ class $1 {}
       // Start health check server;
       this.startHealthCheckServer();
       // Initial health check;
-      await this.performHealthCheck();
-      this.log("PM2 Sync Monitor System initialized successfully`)} catch (error) {  this.log(Initialization "failed": ${error.message  }, `ERROR"");
-        fs.appendFileSync(this.config.logFile, logMessage + "\n")} catch (error) {}
-  console.error("Failed to write to log "file": ", error.message)};
-    };
-  };
-;
-  async initialize() {}
-  try {}
-  this.log("Initializing PM2 Sync Monitor System...");
-      // Start monitoring loops;
-      this.startMonitoringLoops();
-      // Start health check server;
-      this.startHealthCheckServer();
-      // Initial health check;
-      await this.performHealthCheck();
 
       // Start monitoring loops;
 
@@ -120,22 +102,19 @@ class $1 {}
       await this.performHealthCheck();
       this.log("PM2 Sync Monitor System initialized successfully");"
 
-      this.log("PM2 Sync Monitor System initialized successfully");
-      this.isRunning = true} catch (error) {}
-  this.log(`Initialization "failed": ${error.message}`, "ERROR");
-=======
       this.recordError(error);
       this.restartAfterDelay()};
   startMonitoringLoops() {}
   // Health check loop;
     setInterval(async () => {}
   await this.performHealthCheck()}, this.config.monitorInterval);
+
     // Metrics collection loop;
-    setInterval(async () => {}
   await this.collectMetrics()}, this.config.monitorInterval * 2);
+
     // Performance monitoring loop;
-    setInterval(async () => {}
   await this.monitorPerformance()}, this.config.monitorInterval * 3);
+
     // Cleanup loop;
   await this.cleanupOldData()}, this.config.monitorInterval * 10);
     // Cleanup loop;
@@ -143,15 +122,17 @@ class $1 {}
   await this.cleanup()};
     }, 300000); // 5 minutes};
   async performHealthCheck() {}
-  try {}
-  this.log("Performing health check...");
+
   async performHealthCheck() {}
   try {}
   this.log("Performing health check...");
-=======
+
   this.log("Performing health check...");"
+
       this.metrics.healthChecks++;
+
       const healthStatus = await this.checkSystemHealth();
+
       if (healthStatus.isHealthy) {}
   this.metrics.successfulChecks++;"
         this.metrics.systemStatus = "healthy";
@@ -160,6 +141,7 @@ class $1 {}
         this.metrics.systemStatus = "unhealthy";
         this.log(Health check "failed": ${healthStatus.issues.join(", ")}",WARN";"
         );
+
         // Attempt to fix issues;
         await this.attemptIssueResolution(healthStatus.issues);
       this.metrics.totalChecks++;
@@ -168,14 +150,12 @@ class $1 {}
       this.metrics.failedChecks++};
   async checkSystemHealth() {}
   const issues = [];
-    try {}
-=======
+
   // Check PM2 processes;
       const pm2Status = await this.checkPM2Status();
       if (!pm2Status.isHealthy) {}
   issues.push(...pm2Status.issues);
         isHealthy = false};
-;
 
       // Check file system;
       const fsStatus = await this.checkFileSystem();
@@ -185,8 +165,6 @@ class $1 {}
       const gitStatus = await this.checkGitRepository();
       if (!gitStatus.isHealthy) {}
   issues.push(...gitStatus.issues);
-        isHealthy = false};
-;
 
       // Check build status;
       const buildStatus = await this.checkBuildStatus();
@@ -202,27 +180,18 @@ class $1 {}
   async checkPM2Status() {}
   const output = execSync("pm2 jlist", { "encoding": "utf8" }")
 });
-  async checkPM2Status() {}
-  try {}
-  const output = execSync("pm2 jlist", { "encoding": "utf8" }
-});
-=======
-      const processes = JSON.parse(output);
-      const issues = [];
-      let isHealthy = true;
-      // Check if all required processes are running;
-      const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];
-      // Check if all required processes are running;
-      const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];
 
-=======
+      const processes = JSON.parse(output);
+
+      let isHealthy = true;
+
       // Check if all required processes are running;"
       const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];"
+
       requiredProcesses.forEach(processName => {})
   const process = processes.find(p => p.name === processName);"`;
         if (!process || process.pm2_env.status !== "online") {issues.push(`Process ${processName} is not running`);          isHealthy = false};"
       }
-});
 
       return { isHealthy, issues };
     } catch (error) {}
@@ -240,30 +209,15 @@ class $1 {}
       // Check disk space;
       // Check disk space;
       const diskUsage = await this.getDiskUsage();
-      if (diskUsage.usagePercent > 90) {}
-  issues.push(`Disk usage "high": ${diskUsage.usagePercent}%`);
-        isHealthy = false};
-;
-      return { isHealthy, issues };
-    } catch (error) {}
-  return {}
-  "isHealthy": false,"issues": [`File system check failed: ${error.message  }`]}};
-  };
-;
-  async checkGitRepository() {}
-  try {}
-  const issues = [];
-      let isHealthy = true;
+
       // Check if git repository exists;
-      if (!fs.existsSync(".git")) {}
-  issues.push("Git repository not found");
-      // Check if git repository exists;
-=======
+
       if (diskUsage.usagePercent > 90) {}"`;
   issues.push(`Disk usage "high": ${diskUsage.usagePercent}%`);"
 
   async checkGitRepository() {}
       // Check if git repository exists;"
+
       if (!fs.existsSync(".git")) {}
   issues.push("Git repository not found");"
       // Check if git repository exists;"
@@ -272,8 +226,7 @@ class $1 {}
       // Check git status;"
       const status = execSync("git status --porcelain", {})
   "cwd": this.config.projectRoot,
-        "encoding": "utf8"}
-});
+
       if (status.trim()) {}
   issues.push("Uncommitted changes detected");
         isHealthy = false};
@@ -292,25 +245,18 @@ class $1 {}
   "isHealthy": false,"issues": [`Git repository check failed: ${error.message  }`]}};
   };
 ;
-<<<<<<< HEAD
-      if (status.trim()) {;
-        issues.push('Uncommitted changes detected');
-        isHealthy = false}
-
-
-      }}
-  }
-=======
->>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
   async checkBuildStatus() {}
   try {}
   const issues = [];
       let isHealthy = true;
       // Check if build artifacts exist;
       const buildDirs = [".next", "dist", "build"];
-      // Check if build artifacts exist;
-      const buildDirs = [".next", "dist", "build"];
-      const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
+
+        "encoding": "utf8"}"
+
+      if (status.trim()) {}"
+  issues.push("Uncommitted changes detected");"
+      // Check remote connection;
 
   async checkBuildStatus() {}
       // Check if build artifacts exist;"
@@ -318,46 +264,8 @@ class $1 {}
       // Check if build artifacts exist;"
       const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
 
-      if (!hasBuildArtifacts) {}
-  issues.push("No build artifacts found");
-        isHealthy = false};
-;
-      // Check package.json scripts;
-      const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
-      if (!packageJson.scripts.build) {}
-  issues.push("Build script not found in package.json");
-        isHealthy = false};
-;
-      return { isHealthy, issues };
-    } catch (error) {}
-  return {}
-  "isHealthy": false,"issues": [`Build status check failed: ${error.message}`],`
-      const hasBuild = buildDirs.some(dir => fs.existsSync(dir));
-      if (!hasBuild) {}
-  issues.push("No build artifacts found");
-        isHealthy = false};
-;
-      // Check package.json scripts;
-      const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
-      if (!packageJson.scripts.build) {}
-  issues.push("Build script not found in package.json");
-        isHealthy = false};
-;
-      return { isHealthy, issues };
-    } catch (error) {}
-  return {}
-  "isHealthy": false,"issues": [`Build status check failed: ${error.message  }`]}};
-  };
-;
-  async checkDependencies() {}
-  try {}
-  const issues = [];
-      let isHealthy = true;
       // Check if node_modules exists;
-      if (!fs.existsSync("node_modules")) {}
-  issues.push("Dependencies not installed");
-      // Check if node_modules exists;
-=======
+
       if (!hasBuildArtifacts) {}"
   issues.push("No build artifacts found");"
       // Check package.json scripts;"
@@ -371,6 +279,7 @@ class $1 {}
 
   async checkDependencies() {}
       // Check if node_modules exists;"
+
       if (!fs.existsSync("node_modules")) {}
   issues.push("Dependencies not installed");"
       // Check if node_modules exists;"
@@ -430,15 +339,14 @@ class $1 {}
   async collectMetrics() {}
   // Collect system metrics;
       this.metrics.performance = await this.getSystemPerformance();
+
       // Calculate success rate;
       if (this.metrics.healthChecks > 0) {}
   this.metrics.successRate =;
           (this.metrics.successfulChecks / this.metrics.healthChecks) * 100};
       // Calculate uptime;
       this.metrics.uptime = Date.now() - this.metrics.startTime;
-  async collectMetrics() {}
-  try {}
-=======
+
   // Collect system metrics;
       // Calculate success rate;
       // Calculate uptime;
@@ -450,23 +358,23 @@ class $1 {}
   // Get CPU usage (simplified);
       const cpuUsage = process.cpuUsage();
       const cpuPercent = (cpuUsage.user + cpuUsage.system) / 1000000;
+
       // Get memory usage;
       const memoryUsage = process.memoryUsage();
       const memoryPercent =;
         (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
       // Get disk usage;
-      const diskUsage = await this.getDiskUsage();
+
       return {}
   "cpu": Math.round(cpuPercent * 100) / 100,
         "memory": Math.round(memoryPercent * 100) / 100,
         "disk": diskUsage.usagePercent};
     } catch (error) {}
   return { "cpu": 0, "memory": 0, "disk": 0 };
-=======
-
 
         "disk": diskUsage.usagePercent};"
   return { "cpu": 0, "memory": 0, "disk": 0 };"
+
   async collectPerformanceMetrics() {}
   // Get system performance data;"
       const output = execSync("pm2 monit --no-daemon", {})
@@ -479,23 +387,9 @@ class $1 {}
         "disk": await this.getDiskUsage()}} catch (error) {}
   return { "cpu": 0, "memory": 0, "disk": 0   };"
   async getDiskUsage() {}
-  try {}
-  const output = execSync("df .", { "encoding": "utf8" })} catch (error) {}
-  // Ignore timeout errors from pm2 monit;
-      if (!error.message.includes("timeout")) {}
-  this.log(`Performance monitoring "failed": ${error.message}`, "ERROR")};
-    };
-  };
-;
-  async getDiskUsage() {}
-  try {}
-  const output = execSync("df .", { "encoding": "utf8" }
-});
-      const lines = output.trim().split("\n");
-      const [", "usageLine"] = lines;
-      const [", "used", "available"] = usageLine.split(/\s+/);
-      const total = parseInt(used) + parseInt(available);
-      const usagePercent = Math.round((parseInt(used) / total) * 100);
+
+  const output = execSync("df .", { "encoding": "utf8" })} catch (error) {}"
+  // Ignore timeout errors from pm2 monit;"
 
       const [", "used", "available"] = usageLine.split(/\s+/);"
       const total = parseInt(used) + parseInt(available);
@@ -504,14 +398,7 @@ class $1 {}
       return { usagePercent };
   return { "usagePercent": 0   };"
   async monitorPerformance() {}
-  try {}
-  // Check if any process is using too much memory;
-      const output = execSync("pm2 monit --no-daemon", {})
-  "encoding": "utf8",
-        "timeout": 5000}
-});
-      // Parse memory usage and restart if necessary;
-      if (output.includes("Memory usage high")) {}
+
 } catch (error) {}
   return { "usagePercent": 0 };
     };
@@ -524,6 +411,7 @@ class $1 {}
   "encoding": "utf8",
         "timeout": 5000}
 });
+
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high")) {}
   this.log("High memory usage detected, restarting processes...", "WARN");
@@ -536,7 +424,7 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
     };
   };
 ;
-=======
+
   // Check if any process is using too much memory;"
 
         "timeout": 5000}"
@@ -558,11 +446,10 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
   // Clean up old log files;"
   const filePath = path.join(logDir, "file);"
           const stats = fs.statSync(filePath);
-          if (now - stats.mtime.getTime() > maxAge) {}
-  fs.unlinkSync(filePath);this.log("Cleaned up old log "file": ${file}");
-=======
+
           if (now - stats.mtime.getTime() > maxAge) {}"
   fs.unlinkSync(filePath);this.log("Cleaned up old log "file": ${file}");"
+
       const [, usageLine] = lines;
       const [, used, available] = usageLine.split(/\s+/);
 
@@ -587,19 +474,10 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
             "healthChecks": this.metrics.healthChecks,
             "successRate": this.metrics.successRate || 0,
             "errors": this.metrics.errors.length,
-            "restarts": this.metrics.restarts}
-});
-        )} else if (req.url === "/metrics") {}
-  res.writeHead(200, { "Content-Type": ""application/json"" }
-});
-        res.end(JSON.stringify(this.metrics))} else {}
-  res.writeHead(404);
-        res.end("Not Found")};
-    }
-});
+
     server.listen(this.config.healthCheckPort, () => {}
   this.log(Health check server listening on port ${this.config.healthCheckPort}";)
-=======
+
             "restarts": this.metrics.restarts}"
 
         res.end(JSON.stringify(this.metrics))} else {}
@@ -608,15 +486,15 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
 
     server.listen(this.config.healthCheckPort, () => {}"
   this.log(Health check server listening on port ${this.config.healthCheckPort}";)"
+
       )})};
   recordError(error) {}
   this.metrics.errors.push({})"
   "message": error.message,
       "stack": error.stack,
-      "timestamp": Date.now()}
-});
+
     if (this.metrics.errors.length > this.config.maxErrors) {}
-=======
+
       "timestamp": Date.now()}"
 
   this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors)};
@@ -648,22 +526,10 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
     setTimeout(() => {}
   this.initialize()}, delay)};
   getStatus() {}
-  return {}
-  "isRunning": true,
-      "systemStatus": this.metrics.systemStatus,
-      "healthChecks": this.metrics.healthChecks,
-      "successRate": this.metrics.successRate || 0,
-      "errors": this.metrics.errors.length,
-      "restarts": this.metrics.restarts,
-      "uptime": this.metrics.uptime,
-      "performance": this.metrics.performance}};
-};
-;
-// Handle process signals;
 
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
-=======
+
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
 
@@ -674,13 +540,13 @@ process.on("SIGINT", async () => {}
   await global.pm2SyncMonitor.stop()};
   process.exit(0)}
 });
+
 process.on("SIGTERM", async () => {}
   console.log("\nReceived SIGTERM, shutting down gracefully...");
   if (global.pm2SyncMonitor) {}
   await global.pm2SyncMonitor.stop()};
   process.exit(0)}
 });
-=======
 
       "performance": this.metrics.performance}};"
 // Handle process signals;"
@@ -689,6 +555,7 @@ process.on("SIGINT", async () => {}
 // Handle process signals;"
 
   console.log("\nReceived SIGTERM, shutting down gracefully...");"
+
 // Start the monitor system;
 if (require.main === module) {}
   global.pm2SyncMonitor = new PM2SyncMonitor();
@@ -697,15 +564,9 @@ if (require.main === module) {}
   if (global.pm2SyncMonitor && global.pm2SyncMonitor.isRunning) {}
   // Process is healthy};
   }, 60000)};
-;
-module.exports = PM2SyncMonitor;
-
-=======
-module.exports = PM2SyncMonitor;
-=======
-module.exports = PM2SyncMonitor;
-=======
 
 module.exports = PM2SyncMonitor;
-=======
 
+module.exports = PM2SyncMonitor;
+
+module.exports = PM2SyncMonitor;

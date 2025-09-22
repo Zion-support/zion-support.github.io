@@ -1,12 +1,11 @@
 
 const fs = require('fs');
 const { execSync } = require('child_process');
-console.log('🔧 Ultimate Syntax Fix');
-console.log('=');
 
-:scripts/resolve-final-conflicts.cjs
-console.log('🔧 Resolving Final Conflicts');
-console.log('============================');
+<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
+<<<<<<< HEAD:scripts/resolve-final-conflicts.cjs
+
+=====================');
 
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {
@@ -18,6 +17,7 @@ console.log('🔧 Final Build Fix');
 console.log('====');
 :backup-problematic-files/scripts/final-build-fix.cjs
 :scripts/resolve-final-conflicts.cjs
+
 console.log('🔧 Resolving Final Conflicts');
 console.log('
 }
@@ -71,34 +71,16 @@ function fixAllSyntax(content) {
     // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
+
 console.log('🔧 Resolving Final Conflicts');
 console.log(
+
 }
 
-
-let totalFixed = 0;
-
-console.log('🔍 Resolving merge conflicts and fixing syntax errors...');
-
-for (const file of filesToFix) {
-  try {
-    if (!fs.existsSync(file)) {
-      console.log(`⚠️  File not found: ${file}`);
-      continue;
-    }
-
-    let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
 
     content = fixAllSyntax(content);
 
-    let modified = false;
-
-    // Check for merge conflict markers
-    const originalContent = content;
-    
-    content = fixAllSyntax(content);
-    
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
       console.log(`✅ Fixed ${file}`);
@@ -127,7 +109,9 @@ console.log('\n📝 Committing syntax fixes...');
 try {
   execSync('git add .', { cwd: '/workspace' }
 });
-  execSync('git commit -m "fix: Ultimate syntax fix for all remaining errors"', { cwd: '/workspace' }
+
+  execSync('git commit -m "fix: Final build fix for all remaining syntax errors"', { cwd: '/workspace' }
+
 });
   console.log('✅ Syntax fixes committed');
 } catch (error) {
@@ -143,15 +127,15 @@ try {
 } catch (error) {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
-console.log('\n🎉 Ultimate syntax fix completed!');
 
 console.log('\n🎉 Final build fix completed!');
+
     let modified = false;
 
     // Check for merge conflict markers
+
 :backup-problematic-files/scripts/final-build-fix.cjs
     let modified = false;
 
     // Check for merge conflict markers
 :scripts/resolve-final-conflicts.cjs
-

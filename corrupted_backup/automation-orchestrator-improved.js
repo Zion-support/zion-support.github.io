@@ -129,12 +129,10 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
         "critical": script.critica,l}"
 ;
       this.results.scripts.push(scriptResult);
-
       this.results.summary.successful++;"`;
       console.log(`✅ ${script.name} "completed": successfully (${duration}ms)`)} catch (error) {"
       const scriptResult = {"
         "name": script.nam,e;""
-
         "status": 'failed, ',';
         "output": nul,l;""
         "error": error.messag,e;""
@@ -149,7 +147,6 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
         "critical": script.critical}"
       this.results.summary.successful++;`;
       console.log(`✅ ${script.name} completed successfully (${duration}ms)`)} catch (error) { 
-
         "name": script.name;"
         script: script.script;,
   description: script.description;"
@@ -162,7 +159,6 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
       console.log(`❌ ${script.name} failed (${duration}ms): ${error.message}`);"
       if (script.critical) {"""
         console.log("⚠️  Critical script failed, stopping orchestration");"
-
         throw error}
     this.results.summary.total++}
   executeCommand(command) {
@@ -222,7 +218,6 @@ orchestrator.run().catch(error: => {)"
         reject(err)})})}"
   generateSummary() {
     console.log('\n📊 Automation "Summary": ');
-
     console.log("📈 Total Scripts: ${this.results.summary.total}");""
     console.log("✅ "Successful": ${this.results.summary.successful}");""
     console.log("❌ "Failed": ${this.results.summary.failed}");""
@@ -236,7 +231,6 @@ orchestrator.run().catch(error: => {)"
     if (failedScripts.length > 0) {"
       console.log("\n❌ Failed "Scripts": ");"
       failedScripts.forEach(script => {)`;
-
         console.log(`   - ${script.name}: ${script.error}`)})}
     // Show successful scripts;"
     const successfulScripts = this.results.scripts.filter(s => s.status === "success");"
@@ -265,9 +259,7 @@ orchestrator.run().catch(error: => {)"
       console.error("Error saving "results": ", error.message) }""
       console.error('Error saving "results": ', error.message)}
 // Run the automation orchestrator;
-
 orchestrator.run().catch(error => {',')
-
   console.error('❌ Failed to run automation "orchestrator": ', error);
   process.exit(1)})
 <

@@ -1,98 +1,110 @@
 #!/bin/bash
 
-# Comprehensive merge script for all open PRs and branches
+# Script to merge all remote branches into main
 set -e
 
-echo "🚀 Starting comprehensive merge of all branches..."
+echo "🚀 Starting comprehensive branch merge process..."
 
-# List of recent branches to merge (most recent first)
-BRANCHES=(
-    "origin/cursor/fix-syntax-push-and-merge-to-main-9e90"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-6c6e"
-    "origin/cursor/automate-test-fix-improve-and-merge-code-f0bd"
-    "origin/cursor/analyze-improve-and-deploy-application-1a51"
-    "origin/cursor/add-new-services-and-advertise-them-c570"
-    "origin/cursor/analyze-improve-and-deploy-application-e802"
-    "origin/fix-syntax-errors-20250903-232306"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-f812"
-    "origin/cursor/automate-test-fix-improve-and-merge-code-a7a7"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-fe2a"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-8154"
-    "origin/cursor/analyze-improve-and-deploy-application-d144"
-    "origin/cursor/enhance-pm2-automations-for-development-and-deployment-21ae"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-cfa2"
-    "origin/cursor/migrate-ci-to-pm2-and-clean-up-github-actions-56bd"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-4c0e"
-    "origin/cursor/fix-lint-push-and-merge-to-main-df85"
-    "origin/cursor/fix-syntax-push-and-merge-to-main-67f3"
-)
+# Get all remote branches except main and HEAD
+branches=$(git branch -r | grep -v "HEAD" | grep -v "main" | sed 's/origin\///' | head -50)
 
-# Function to merge a branch with conflict resolution
+echo "📋 Found $(echo "$branches" | wc -l) branches to process"
+
+# Counter for tracking
+merged_count=0
+failed_count=0
+conflict_count=0
+
+# Function to merge a single branch
 merge_branch() {
     local branch=$1
-    echo "📦 Merging branch: $branch"
+    echo ""
+    echo "🔄 Processing branch: $branch"
     
-    # Try to merge the branch
-    if git merge "$branch" --no-edit; then
-        echo "✅ Successfully merged $branch"
-        return 0
-    else
-        echo "⚠️  Merge conflict in $branch, attempting to resolve..."
+    # Check if branch exists locally, if not fetch it
+    if ! git show-ref --verify --quiet refs/heads/$branch; then
+        echo "📥 Fetching branch $branch..."
+        git fetch origin $branch:$branch
+    fi
+    
+    # Check if branch can be merged
+    if git merge-base main $branch > /dev/null 2>&1; then
+        echo "✅ Branch $branch can be merged"
         
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts in $branch..."
-            
-            # Auto-resolve common conflicts
-            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-                echo "  Resolving conflict in: $file"
-                
-                # For package.json conflicts, prefer the newer version
-                if [[ "$file" == *"package.json"* ]]; then
-                    git checkout --theirs "$file"
-                # For dist files, prefer the newer version
-                elif [[ "$file" == *"dist/"* ]]; then
-                    git checkout --theirs "$file"
-                # For config files, prefer the newer version
-                elif [[ "$file" == *".config."* ]] || [[ "$file" == *"netlify.toml"* ]]; then
-                    git checkout --theirs "$file"
-                # For other files, prefer the newer version
-                else
-                    git checkout --theirs "$file"
-                fi
-            done
-            
-            # Add resolved files
-            git add .
-            
-            # Commit the merge
-            git commit -m "Merge $branch - resolved conflicts automatically"
-            echo "✅ Resolved conflicts and merged $branch"
+        # Try to merge
+        if git merge $branch --no-edit --no-ff; then
+            echo "✅ Successfully merged $branch"
+            ((merged_count++))
         else
-            echo "❌ Failed to merge $branch"
-            return 1
+            echo "❌ Merge conflict in $branch"
+            ((conflict_count++))
+            
+            # Try to resolve conflicts automatically
+            echo "🔧 Attempting to resolve conflicts..."
+            
+            # Check for common conflict patterns and resolve them
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "🔍 Found merge conflicts, attempting resolution..."
+                
+                # Try to resolve common conflicts
+                git status --porcelain | while read status file; do
+                    if [[ $status =~ ^UU|^AA|^DD ]]; then
+                        echo "🔧 Resolving conflict in $file"
+                        
+                        # For common files, try to keep both versions or the newer one
+                        if [[ $file == *.tsx || $file == *.ts || $file == *.js || $file == *.jsx ]]; then
+                            # For code files, try to merge intelligently
+                            if git checkout --theirs "$file" 2>/dev/null; then
+                                git add "$file"
+                                echo "✅ Resolved $file using theirs"
+                            elif git checkout --ours "$file" 2>/dev/null; then
+                                git add "$file"
+                                echo "✅ Resolved $file using ours"
+                            else
+                                echo "⚠️  Could not auto-resolve $file"
+                            fi
+                        fi
+                    fi
+                done
+                
+                # Try to commit the merge
+                if git commit --no-edit; then
+                    echo "✅ Successfully resolved and merged $branch"
+                    ((merged_count++))
+                    ((conflict_count--))
+                else
+                    echo "❌ Could not resolve conflicts in $branch, aborting merge"
+                    git merge --abort
+                    ((failed_count++))
+                fi
+            else
+                echo "❌ Could not resolve conflicts in $branch, aborting merge"
+                git merge --abort
+                ((failed_count++))
+            fi
         fi
+    else
+        echo "⚠️  Branch $branch cannot be merged (no common ancestor)"
+        ((failed_count++))
     fi
 }
 
-# Merge all branches
-for branch in "${BRANCHES[@]}"; do
-    if git show-ref --verify --quiet "refs/remotes/$branch"; then
+# Process each branch
+echo "$branches" | while read branch; do
+    if [ -n "$branch" ]; then
         merge_branch "$branch"
-    else
-        echo "⚠️  Branch $branch not found, skipping..."
     fi
 done
 
-echo "🎉 Comprehensive merge completed!"
-echo "📊 Summary of merged branches:"
-git log --oneline -10
+echo ""
+echo "📊 Merge Summary:"
+echo "✅ Successfully merged: $merged_count branches"
+echo "❌ Failed to merge: $failed_count branches"
+echo "🔧 Resolved conflicts: $conflict_count branches"
 
-# Test the build
-echo "🔨 Testing build after merge..."
-if npm run build; then
-    echo "✅ Build successful after merge!"
-else
-    echo "❌ Build failed after merge"
-    exit 1
-fi
+# Push all changes
+echo ""
+echo "🚀 Pushing all changes to origin..."
+git push origin main
+
+echo "🎉 Merge process completed!"

@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -171,7 +170,6 @@ npm run dev\"\"\"
     // Add test utilitiesconst testUtils = "
 import React from "react";
 
-=======
 import { render, RenderOptions  } from "@testing-";library/react""
 import { Provider  } from "react-redux"
 import { store  } from "../store"
@@ -221,12 +219,9 @@ export * from "@testing-"library/react""
   "analyzerMode": "static"
           "openAnalyzer"
 
-=======
     fs.writeFileSync(path.join(this.projectRoot, ")
-=======
+
     fs.writeFileSync(path.join(this.projectRoot, ")
-=======
-=======
 
 </p>"
         <div className="min-h-screen flex items-center justify-center bg-gray-50"
@@ -239,4 +234,3 @@ export * from "@testing-"library/react""
 
 ) => render(ui, { "wrapper"})"
 "`;
-

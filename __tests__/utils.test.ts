@@ -1,12 +1,7 @@
+import { describe, it, expect } from '@jest/globals';
 
-
-
-// Mock test for utils
-describe("Utils", () => {
-  it("should work correctly", () => {
-describe('Utils', () => {
-  test('utility functions work', () => {
-    // Add utility tests here
+describe('utils', () => {
+  it('should work', () => {
     expect(true).toBe(true);
   });
 });

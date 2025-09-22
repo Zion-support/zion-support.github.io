@@ -1,4 +1,8 @@
 
+const fs = require('fs')
+const path = require('path')
+  log(message, type = 'INFO')
+
     const lines = content.split('\n')
       case 'console.log'
         lines[lineIndex] = lines[lineIndex].replace(/console\.log\([^)]*\);?/g, ''
@@ -16,4 +20,7 @@
       this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
+
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)

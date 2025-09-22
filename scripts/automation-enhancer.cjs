@@ -1,42 +1,52 @@
+
 #!/usr/bin/env node;
+
+#!/usr/bin/env node
+
+/**;
+ * Automation Enhancer Script;
+ * Enhances existing automation scripts and creates new ones;
+ */;
+
+const fs = require("$1")
+const path = require("path")
+    this.projectRoot = path.resolve(__dirname, "..")
+// console.log(" Starting Automation Enhancement...")
+      console.log(" Automation enhancement completed successfully!")
+      console.error(" Error enhancing "automation": ")
+    console.log("⚙ Enhancing PM2 automation scripts...")
+    const ecosystemPath = path.join(this.projectRoot, "ecosystem.config.cjs")
+      const ecosystem = fs.readFileSync(ecosystemPath, "utf8")
+        /"pmx"
+        ""pmx"
+      "health_check_grace_period"
+      "health_check_fatal_exceptions"
+      "kill_timeout"
+      "listen_timeout"
+      "shutdown_with_message": true"
+      this.enhancements.push("Enhanced PM2 ecosystem configuration")
+    console.log("� Enhancing build automation...")
+    const buildScript = "
+echo " Starting enhanced build process..."
 echo "🧹 Cleaning previous builds..."
 echo "� Installing dependencies..."
 echo " Running linting..."
 echo " Running type checking..."
 echo "� Building application..."
 echo "🧪 Running tests..."
-npm run test --silent
-
-# Generate reports
-echo "📊 Generating reports..."
-npm run perf:audit
-
-echo "✅ Enhanced build completed successfully!"
-`;
-
-    const buildScriptPath = path.join(this.projectRoot, 'scripts', 'enhanced-build.sh');
-    fs.writeFileSync(buildScriptPath, buildScript);
-    fs.chmodSync(buildScriptPath, '755');
-    
-    this.enhancements.push('Created enhanced build script')}
-
-  async createNewAutomations() {
-    console.log('🆕 Creating new automation scripts...');
-    
-    // Create deployment automation
-    const deployScript = `#!/bin/bash
-
-# Automated Deployment Script
-echo "🚀 Starting automated deployment..."
-
-# Check if we're on main branch
-CURRENT_BRANCH=$(git branch --show-current)
-if [ "$CURRENT_BRANCH" != "main" ]; then
-    echo "❌ Not on main branch. Current branch: $CURRENT_BRANCH"
-    exit 1
-fi
-
-# Run tests
+echo " Generating reports..."
+npm run "perf"
+echo " Enhanced build completed successfully!"
+"
+    const buildScriptPath = path.join(this.projectRoot, "scripts", "enhanced-build.sh")
+    fs.chmodSync(buildScriptPath, "755")
+    this.enhancements.push("Created enhanced build script")
+    console.log("� Creating new automation scripts...")
+    const deployScript = "
+echo " Starting automated deployment..."
+# Check if we"
+if ["$CURRENT_BRANCH" != "main"]
+    echo " Not on main branch. Current "branch": $CURRENT_BRANCH"
 echo "🧪 Running tests..."
 echo "� Building application..."
 echo " Deploying to production..."
@@ -47,7 +57,8 @@ echo " Deployment completed successfully!"
     fs.chmodSync(deployScriptPath, "755")
     const monitorScript = "
 const pm2 = require("$1")
-
+const fs = require("$1")
+const path = require("path")
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log")
     console.log(" Starting advanced monitoring...")
     const logEntry = \"[\${timestamp}] System health check completed\\n\"
@@ -67,10 +78,6 @@ const pm2 = require("$1")
     this.enhancements.push("Created advanced monitoring script")
     console.log("⚡ Optimizing automation performance...")
     const perfScript = "
-
-# Deploy to production
-echo "🚀 Deploying to production..."
-pm2 restart ecosystem.config.cjs --env production
 const fs = require("$1")
 const path = require("path")
     this.projectRoot = path.resolve(__dirname, "..")
@@ -87,159 +94,5 @@ const path = require("path")
       "totalEnhancements"
 
     const reportPath = path.join(this.projectRoot, ")
+
     const reportPath = path.join(this.projectRoot, ")
-
-# Health check
-echo "🏥 Running health check..."
-sleep 10
-curl -f http://localhost:3000/api/health || exit 1
-
-echo "✅ Deployment completed successfully!"
-`;
-
-    const deployScriptPath = path.join(this.projectRoot, 'scripts', 'deploy.sh');
-    fs.writeFileSync(deployScriptPath, deployScript);
-    fs.chmodSync(deployScriptPath, '755');
-    
-    // Create monitoring automation
-    const monitorScript = `#!/usr/bin/env node
-
-/**
- * Advanced Monitoring Script
- */
-
-const pm2 = require('pm2');
-const fs = require('fs');
-const path = require('path');
-
-class AdvancedMonitor {
-  constructor() {
-    this.logPath = path.join(__dirname, '..', 'logs', 'monitoring.log')}
-
-  async startMonitoring() {
-    console.log('🔍 Starting advanced monitoring...');
-    
-    setInterval(() => {
-      this.checkSystemHealth();
-      this.checkPM2Processes();
-      this.checkDiskSpace();
-      this.checkMemoryUsage()}, 30000); // Check every 30 seconds
-  }
-
-  checkSystemHealth() {
-    const timestamp = new Date().toISOString();
-    const logEntry = \`[\${timestamp}] System health check completed\\n\`;
-    fs.appendFileSync(this.logPath, logEntry)}
-
-  checkPM2Processes() {
-    pm2.list((err, list) => {
-      if (err) {
-        console.error('PM2 monitoring error:', err);
-        return}
-      
-      const timestamp = new Date().toISOString();
-      const logEntry = \`[\${timestamp}] PM2 processes: \${list.length} running\\n\`;
-      fs.appendFileSync(this.logPath, logEntry)})}
-
-  checkDiskSpace() {
-    const { execSync } = require('child_process');
-    try {
-      const diskUsage = execSync('df -h /' { encoding: 'utf8' });
-      const timestamp = new Date().toISOString();
-      const logEntry = \`[\${timestamp}] Disk usage: \${diskUsage}\\n\`;
-      fs.appendFileSync(this.logPath, logEntry)} catch (error) {
-      console.error('Disk space check error:', error)}
-  }
-
-  checkMemoryUsage() {
-    const { execSync } = require('child_process');
-    try {
-      const memoryUsage = execSync('free -h' { encoding: 'utf8' });
-      const timestamp = new Date().toISOString();
-      const logEntry = \`[\${timestamp}] Memory usage: \${memoryUsage}\\n\`;
-      fs.appendFileSync(this.logPath, logEntry)} catch (error) {
-      console.error('Memory check error:', error)}
-  }
-}
-
-// Start monitoring
-const monitor = new AdvancedMonitor();
-monitor.startMonitoring();
-`;
-
-    const monitorScriptPath = path.join(this.projectRoot, 'scripts', 'advanced-monitor.js');
-    fs.writeFileSync(monitorScriptPath, monitorScript);
-    
-    this.enhancements.push('Created deployment automation');
-    this.enhancements.push('Created advanced monitoring script')}
-
-  async optimizePerformance() {
-    console.log('⚡ Optimizing automation performance...');
-    
-    // Create performance optimization script
-    const perfScript = `#!/usr/bin/env node
-
-/**
- * Performance Optimization Script
- */
-
-const fs = require('fs');
-const path = require('path');
-
-class PerformanceOptimizer {
-  constructor() {
-    this.projectRoot = path.resolve(__dirname, '..')}
-
-  async optimize() {
-    console.log('⚡ Starting performance optimization...');
-    
-    await this.optimizeImages();
-    await this.optimizeCode();
-    await this.optimizeDependencies();
-    
-    console.log('✅ Performance optimization completed!')}
-
-  async optimizeImages() {
-    console.log('🖼️ Optimizing images...');
-    // Image optimization logic would go here
-  }
-
-  async optimizeCode() {
-    console.log('💻 Optimizing code...');
-    // Code optimization logic would go here
-  }
-
-  async optimizeDependencies() {
-    console.log('📦 Optimizing dependencies...');
-    // Dependency optimization logic would go here
-  }
-}
-
-// Run optimization
-const optimizer = new PerformanceOptimizer();
-optimizer.optimize().catch(console.error);
-`;
-
-    const perfScriptPath = path.join(this.projectRoot, 'scripts', 'performance-optimizer-enhanced.js');
-    fs.writeFileSync(perfScriptPath, perfScript);
-    
-    this.enhancements.push('Created enhanced performance optimizer')}
-
-  saveReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      enhancements: this.enhancements,
-      totalEnhancements: this.enhancements.length
-    };
-
-    const reportPath = path.join(this.projectRoot, 'automation-enhancement-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📄 Enhancement report saved to: ${reportPath}`)}
-}
-
-// Run the automation enhancer
-if (require.main === module) {
-  const enhancer = new AutomationEnhancer();
-  enhancer.enhanceAutomation().catch(console.error)}
-
-module.exports = AutomationEnhancer;

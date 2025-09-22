@@ -1,11 +1,13 @@
-=======>>>>>>> main
-=======
 # Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
+
+# Production builds
+dist/
+build/
+out/
 
 # Environment variables
 .env
@@ -14,39 +16,22 @@ pnpm-debug.log*
 .env.test.local
 .env.production.local
 
-# Build outputs
-dist/
-build/
-out/
-.next/
-.nuxt/
-
-# TypeScript
-*.tsbuildinfo
-tsconfig.tsbuildinfo
-
-# IDE
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
-# OS
+# OS files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
 # Logs
-logs
+logs/
 *.log
 
 # Runtime data
-pids
+pids/
 *.pid
 *.seed
 *.pid.lock
@@ -114,11 +99,90 @@ temp/
 *.sln
 *.sw?
 
-# Core dumps and large files
+# Automation logs and data (continuously changing)
+automation/logs/*.log
+automation/logs/*.runtime.log
+automation/data/*.json
+!automation/data/autonomous-config.json
+
+# Test results
+test-results/
+coverage/
+
+# Generated reports
+automation-reports/
+health-check-report-*.json
+security-scan-report-*.json
+link-reports/
+maintenance-reports/
+deployment-reports/
+ai-optimization-reports/
+ai-analysis-reports/
+test-generation-reports/
+test-reports/
+security-reports/
+documentation-reports/
+orchestrator-reports/
+ci-cd-reports/
+dependency-backups/
+dependency-reports/
+ai-optimization-backups/
+
+# Additional sensitive directories and files
+logs/
+data/
+reports/
+security-reports/
+test-reports/
+temp_working/
+*.backup.*
+*.backup
+link-*.json
+link-*.md
+performance-report.json
+security-audit-report.json
+quality-report.json
+continuous-improvement-report.json
+console-error-fixer-report.json
+
+# PM2 automation files
+setup-pm2-cron.sh
+pm2-*.sh
+pm2-*.js
+ecosystem-pm2-*.config.cjs
+start-pm2-*.sh
+start-*-automation.sh
+monitor-*.sh
+manage-*.sh
+backups/sync-backups/
+tsconfig.tsbuildinfo
+
+# Ignore local backups
+backups/
+
+# PM2 automation reports
+health-check-report.json
+performance-metrics.json
+security-scan-report.json
+
+# Core files
 core
-*.core
-core.*
->>>>>>> origin/main
-=======
+
+# Additional ignores for better project management
+*.log
+*.tmp
+*.temp
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vercel
+.netlify
+coverage/
+.nyc_output/
+dist/
 build/
-dist/>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+.cache/
+.parcel-cache/
+.DS_Store
+Thumbs.db
