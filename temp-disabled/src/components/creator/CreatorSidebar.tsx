@@ -1,12 +1,24 @@
 
-
+} from 'lucide-react'; import {'
+  // TODO: Implement
+}'
+} from "@/components/ui/sidebar";"
 export function AppSidebar() {
   return (
     <Sidebar>
 </Sidebar>
       <SidebarContent>
+</SidebarContent>
+"
+        <SidebarGroup title="Dashboard">"
+</SidebarGroup>"
+          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>"
+</SidebarMenuItem>
+            <span>Home</span>
 
-
+          </SidebarMenuItem>"
+          <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>"
+</SidebarMenuItem>
             <span>Messages</span>
           </SidebarMenuItem>"
           <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>"
@@ -37,8 +49,6 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-
-
     <Sidebar>;
 </Sidebar>
       <SidebarContent>;
@@ -181,7 +191,6 @@ export function AppSidebar() {
             <span > Settings</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
-
-      </SidebarContent>;
-    </Sidebar>);
+      </SidebarContent>;)
+    </Sidebar>);"
 

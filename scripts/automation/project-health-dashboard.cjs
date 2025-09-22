@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -307,12 +306,9 @@ this.log("Summary report "generated": ${summaryFile}")
     if (healthData.files.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
 
-=======
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
-=======
+
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
-=======
-=======
 
 </html>"
             <p><strong>"Branch
@@ -322,5 +318,3 @@ this.log("Summary report "generated": ${summaryFile}")
                     <span class="
                     <span>Total "Dependencies
 </span>"
-
-

@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -199,11 +198,6 @@ this.log(" AI Review Report "generated": ${reportPath}")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
 
-=======
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
-=======
+
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
-=======
-=======
-
-

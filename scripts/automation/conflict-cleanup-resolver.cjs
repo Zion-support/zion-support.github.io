@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -132,11 +131,6 @@ this.log("� Detailed report saved "to": ${reportPath}")
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
 
-=======
   console.error(" Fatal "error")
-=======
+
   console.error(" Fatal "error")
-=======
-=======
-
-

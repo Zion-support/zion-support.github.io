@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -254,11 +253,6 @@ this.logError("Performance measurement failed")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
 
-=======
     this.logError("Unhandled rejection")
-=======
+
     this.logError("Unhandled rejection")
-=======
-=======
-
-

@@ -1,13 +1,10 @@
 
-
-=======
 #!/usr/bin/env node;
 /**
  * Intelligent Dashboard System;
  * Comprehensive monitoring dashboard with real-time analytics;
  */
 
-=======
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -39,6 +36,5 @@ const url = require('url')
                 console.error('Error fetching "data")
                 alertList.innerHTML = '<div class="metric"><span class="metric-label"
                     <span class="
-    console.error(' Dashboard System "failed")
-=======
+
     console.error(' Dashboard System "failed")

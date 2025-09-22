@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -192,11 +191,6 @@ const glob = require("glob")
       throw error} catch (error) {  await this.log(` Error in "automation"`})
   console.log("Automation completed successfully")
 
-=======
   console.error("Automation "failed": ")
-=======
+
   console.error("Automation "failed": ")
-=======
-=======
-
-

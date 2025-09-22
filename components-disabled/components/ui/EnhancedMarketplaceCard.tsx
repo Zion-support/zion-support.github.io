@@ -1,6 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-
+<<<<<<< HEAD
+<<<<<<< HEAD:components/ui/EnhancedMarketplaceCard.tsx
+ursor/automate-test-improve-and-merge-code-646c;
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+=======
+<h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
       <div className="mt-auto flex items-center justify-between">;
@@ -8,7 +14,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 interface EnhancedMarketplaceCardProps  {title: string, description: string;
   price?: string;
+<<<<<<< HEAD
+  href: string, image?: string;
+import { Star, Heart, ShoppingCart  } from 'lucide-react';
+interface MarketplaceCardProps  {title: string;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/ui/EnhancedMarketplaceCard.tsx
 
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 interface EnhancedMarketplaceCardProps {
   // TODO: Implement
 }
@@ -69,7 +83,38 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
                       i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300`;
                     }`}
                   >
+<<<<<<< HEAD
+                    ★
+                  </span>
+                ))}
+              </div>
+              <span className="text-xs text-gray-500 ml-2">
+                {rating} ({reviews} reviews)
+              </span>
+            </div>
+          )}
+          {/* Price */}
+          <div className="mt-4 flex items-center justify-between">
+            {price && (
+              <span className="text-lg font-bold text-blue-600">
+                {price}
+              </span>
+            )}
+            <span className="text-sm text-blue-600 group-hover:text-blue-800 transition-colors">
+              Learn More →
+            </span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+};
 
+export default EnhancedMarketplaceCard;
+
+=======
+  href: string, image?: string
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 interface MarketplaceCardProps {
   title: string;
   description: string;
@@ -78,9 +123,52 @@ interface MarketplaceCardProps {
   image: string;
   onAddToCart?: () => void;
   onFavorite?: () => void;
+<<<<<<< HEAD:components/ui/EnhancedMarketplaceCard.tsx
+<<<<<<< HEAD
+}}
+export default EnhancedMarketplaceCard;const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({title,description,price,rating,image,onAddToCart,onFavorite;
+}) => {return (<div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">;
+      <div className="relative">;
+        <img src={image} alt={title} className="w-full h-48 object-cover" />;
+        <button;
+          onClick={onFavorite}
+          className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100";
+        >;
+          <Heart className="w-4 h-4 text-gray-600" />;
+        </button>;
+      </div>;
+      <div className="p-4">;
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>;
+        <p className="text-gray-600 text-sm mb-3">{description}</p>;
+        <div className="flex items-center justify-between mb-3">;
+          <div className="flex items-center">;
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />;
+            <span className="text-sm text-gray-600 ml-1">{rating}</span>;
+          </div>;
+          <span className="text-lg font-bold text-blue-600">$ + {price}</span>;
+        </div>;
+        <button;
+          onClick={onAddToCart}
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center";
+        >;
+          <ShoppingCart className="w-4 h-4 mr-2" />;
+          Add to Cart;
+        </button>;
+      </div>;
+    </div>;
+  )}export default EnhancedMarketplaceCard;ursor/automate-test-improve-and-merge-code-646c;
+}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/ui/EnhancedMarketplaceCard.tsx
 
 export default EnhancedMarketplaceCard;
-
+=======
+              <span className="text-xs text-gray-500 ml-2">"
+          <div className="mt-4 flex items-center justify-between">"
+              <span className="text-lg font-bold text-blue-600">"
+            <span className="text-sm text-blue-600 group-hover:text-blue-800 transition-colors">"
+    
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">"
       <div className="relative">"

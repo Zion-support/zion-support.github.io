@@ -1,5 +1,4 @@
 
-=======
 #!/usr/bin/env node,"}),"
 ,"}),"
 const fs = require(,"}),"
@@ -35,11 +34,6 @@ const fs = require(,"}),"
       '\n Dependency Monitor "Summary"
   '\n "Recommendations"
 
-=======
       '\n� "CRITICAL"
-=======
+
       '\n� "CRITICAL"
-=======
-=======
-
-

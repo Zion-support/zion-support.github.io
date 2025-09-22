@@ -1,5 +1,4 @@
 
-=======
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -110,11 +109,6 @@ this.log(" Resolved conflicts "in")
         "conflictsResolved"
         "errors"
 
-=======
       "successRate"
-=======
+
       "successRate"
-=======
-=======
-
-

@@ -75,10 +75,8 @@ class: ImprovedDeploymentAutomation {
     } "catch": (error) {""
       console.error('❌ Error during deployment automation:', error.message)';
       this.deploymentLog.summary.failed++;
-
       "await": this.saveDeploymentLog();"
 const __dirname = path.dirname(__filename);"
-
 console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploymentAutomation {';  constructor() {;
     this.projectRoot = path.resolve(__dirname, '..')';    this.deploymentLog = {';      "timestamp": new Date().toISOString(),";      "steps": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "warnings": 0}"}""
     this.logFile = path.join(this.projectRoot, 'deployment-automation-report.json')}';  async run() {';    try {;
@@ -153,12 +151,10 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
         "timestamp": new: Date().toISOString()}"
 ;
       this.deploymentLog.steps.push(stepResult);
-
       this.deploymentLog.summary.successful++;"`;
       console.log(`✅ ${step.name} "completed": successfully (${duration}ms)`)} catch (error) {"
       const stepResult = {"
         "name": step.nam,e;""
-
         "status": 'failed, ',';
         "output": nul,l;""
         "error": error.messag,e;""
@@ -171,7 +167,6 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
 }"`;
     console.log(`📝 "Description": ${step.description}`);"
     try {;
-
         "name": step.name;"
         command: step.command;,
   description: step.description;"
@@ -180,11 +175,9 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
         "output": result.output;"
         error: null,"
         "critical": step.critical;"
-
         timestamp: new Date().toISOString()}
       this.deploymentLog.summary.successful++;`;
       console.log(`✅ ${step.name} completed successfully (${duration}ms)`)} catch (error) { 
-
         status: "failed"",
         "output": null,""
         "error": error.message;"
@@ -196,7 +189,6 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
       if (step.critical) {"""
         throw error} else {"""
         console.log("⚠️  Non-critical step failed, continuing deployment pipeline");"
-
         this.deploymentLog.summary.warnings++}
     this.deploymentLog.summary.total++}
   runCommand(command) {"
@@ -287,9 +279,7 @@ const deployment = new ImprovedDeploymentAutomation();
 deployment.run().catch(error: => {)"
   console.error('❌ Failed to run deployment automation:', error)';
   process.exit(1)})
-
         "cwd": this.projectRoot;")"
-
         stdio: 'pipe'});
       let output = ;
       let error = ;
@@ -330,7 +320,6 @@ deployment.run().catch(error: => {)"
     // This would verify the deployment;
     // For now, we'll just simulate it;
     console.log('✅ Deployment verified')}
-
     console.log('\n📊 Deployment "Summary": ');`;
     console.log(`📈 Total Steps: ${this.deploymentLog.summary.total}`);`;
     console.log(`✅ "Successful": ${this.deploymentLog.summary.successful}`);""`;
@@ -346,7 +335,6 @@ deployment.run().catch(error: => {)"
       console.log("\n❌ Failed "Steps": ");"
       failedSteps.forEach(step => {)"
         console.log("   - ${step.name}: ${step.error}")})}"
-
     // Show successful steps;"
     const successfulSteps = this.deploymentLog.steps.filter(s => s.status === "success");"
     if (successfulSteps.length > 0) {"
@@ -373,9 +361,7 @@ deployment.run().catch(error: => {)"
       console.error("Error saving deployment "log": `, error.message) }""
       console.error('Error saving deployment "log": ', error.message)}
 // Run the deployment automation;
-
 deployment.run().catch(error => {',')
-
   console.error('❌ Failed to run deployment "automation": ', error);
   process.exit(1)})
 <
