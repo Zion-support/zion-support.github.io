@@ -1,85 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zion - The Future of Tech & AI Marketplace</title>
-    <meta name="description" content="The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="description" content="Zion Tech Group - AI, cybersecurity, cloud infrastructure, and digital transformation services." />
+    <meta name="keywords" content="AI services, cybersecurity, cloud infrastructure, digital transformation, machine learning, technology solutions, business automation" />
     <meta name="author" content="Zion Tech Group" />
-    <meta name="keywords" content="AI marketplace, tech services, artificial intelligence, IT services, AI developers, technology marketplace, AI solutions, machine learning, digital transformation" />
-
-    <!-- High tech font -->
+    <meta name="robots" content="index,follow" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="canonical" href="https://ziontechgroup.com/" />
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
-
-    <meta name="theme-color" content="#000000" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    /></noscript>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
     
+    <title>Zion Tech Group - AI, Micro SaaS, and IT Services</title>
+    
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Zion - The Future of Tech & AI Marketplace" />
-    <meta property="og:description" content="The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc" />
-    <meta property="og:url" content="https://app.ziontechgroup.com/" />
-    <meta property="og:site_name" content="Zion Marketplace" />
+    <meta property="og:url" content="https://ziontechgroup.com/" />
+    <meta property="og:title" content="Zion Tech Group - AI, Micro SaaS, and IT Services" />
+    <meta property="og:description" content="Leading provider of AI-powered business solutions, automation tools, and digital transformation services." />
+    <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:title" content="Zion - The Future of Tech & AI Marketplace" />
-    <meta name="twitter:description" content="The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place." />
-    <meta name="twitter:image" content="https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ziontechgroup.com/" />
+    <meta property="twitter:title" content="Zion Tech Group - AI, Micro SaaS, and IT Services" />
+    <meta property="twitter:description" content="Leading provider of AI-powered business solutions, automation tools, and digital transformation services." />
+    <meta property="twitter:image" content="/og-image.svg" />
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://app.ziontechgroup.com/" />
-    
-    <!-- Favicon -->
-    <link rel="icon" href="https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc" />
-    
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc" />
-    
-    <!-- Structured data (JSON-LD) for SEO -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.gpteng.co"
-    />
+    <!-- Structured data -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion",
-        "url": "https://app.ziontechgroup.com",
-        "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
-        "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place.",
-        "sameAs": [
-          "https://twitter.com/lovable_dev",
-          "https://www.facebook.com/zionmarketplace",
-          "https://www.linkedin.com/company/zion-marketplace"
-        ]
-      }
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.svg",
+      "description": "Leading provider of AI-powered business solutions, automation tools, and digital transformation services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "sameAs": [
+        "https://github.com/Zion-Holdings",
+        "https://linkedin.com/company/zion-tech-group"
+      ]
+    }
     </script>
   </head>
-
-  <body>
-    <div id="root"><!--app-html-->
-      <noscript>
-        <style>
-          body {
-            background: #ffffff;
-            color: #000000;
-            font-family: Arial, sans-serif;
-            padding: 1rem;
-          }
-        </style>
-        This application requires JavaScript. Please enable JavaScript and run
-        the development server.
-      </noscript>
-    </div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <!-- <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script> -->
+  <body class="antialiased">
+    <noscript>
+      <div
+        style="
+          padding: 20px;
+          text-align: center;
+          background: #f0f0f0;
+          color: #333;
+        "
+      >
+        <h2>JavaScript Required</h2>
+        <p>You need to enable JavaScript to run this application.</p>
+      </div>
+    </noscript>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
