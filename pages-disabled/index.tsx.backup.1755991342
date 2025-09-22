@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-export default function HomePage() { return null }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
