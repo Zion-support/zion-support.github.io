@@ -2,7 +2,7 @@ import { ReactNode, forwardRef } from 'react'
 import { clsx } from 'clsx'
 import { Loader2 } from 'lucide-react'
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<any> {
   children: ReactNode
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'destructive' | 'success'
   size?: 'sm' | 'md' | 'lg' | 'xl'
@@ -19,7 +19,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   'aria-pressed'?: boolean
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
+const Button = forwardRef<any, ButtonProps>(({
   children,
   variant = 'primary',
   size = 'md',

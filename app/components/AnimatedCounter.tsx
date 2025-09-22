@@ -23,10 +23,10 @@ export default function AnimatedCounter({
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(start)
   const [isVisible, setIsVisible] = useState(false)
-  const counterRef = useRef<HTMLSpanElement>(null)
+  const counterRef = useRef<any>(null)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const observer = new (window as any).IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true)
@@ -62,7 +62,7 @@ export default function AnimatedCounter({
         setCount(Math.floor(currentCount))
 
         if (progress < 1) {
-          requestAnimationFrame(updateCount)
+          (window as any).requestAnimationFrame(updateCount)
         }
       }
 
