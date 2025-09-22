@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 export default function AISEOAuditor() {; return (; <Article; title=\"AI SEO Auditor\"; subtitle=\"Automated technical SEO and content insights with prioritized fixes\"; price=\"from $199/mo\"; bullets={[; \'Crawls site maps and pages; flags Core Web Vitals and indexability issues\',; \'NLP-driven content gap analysis vs. competitors with keyword clusters\',; \'One-click Github PRs for meta,schema,and sitemap fixes\',; \'Weekly executive report and anomaly alerts via Slack/Email\'; ]} links={{; \"website\": \'https: contact: \'mailto:kleber@ziontechgroup.com\';}} /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
 
 module.exports = default function AISEOAuditor() {; return (; <Article; title="AI SEO Auditor"; subtitle="Automated technical SEO and content insights with prioritized fixes"; price="from $199/mo"; bullets={[; "Crawls site maps and pages; flags Core Web Vitals and indexability issues",; "NLP-driven content gap analysis vs. competitors with keyword clusters",; "One-click Github PRs for meta,schema,and sitemap fixes",; "Weekly executive report and anomaly alerts via Slack/Email"; ]} links={{; website: "https: contact: "mailto:kleber@ziontechgroup.com";}} /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
@@ -13,24 +10,6 @@ interface Ai-seo-auditorProps {
 
 const Ai-seo-auditor: React.FC<Ai-seo-auditorProps> = ({ className }) => {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Aiseoauditor</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-export default function AISEOAuditor() {; return (; <Article; title=\"AI SEO Auditor\"; subtitle=\"Automated technical SEO and content insights with prioritized fixes\"; price=\"from $199/mo\"; bullets={[; \'Crawls site maps and pages; flags Core Web Vitals and indexability issues\',; \'NLP-driven content gap analysis vs. competitors with keyword clusters\',; \'One-click Github PRs for meta,schema,and sitemap fixes\',; \'Weekly executive report and anomaly alerts via Slack/Email\'; ]} links={{; \"website\": \'https: contact: \'mailto:kleber@ziontechgroup.com\';}} /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a>  \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"
-"
-module.exports = default function AISEOAuditor() {; return (; <Article; title="AI SEO Auditor"; subtitle="Automated technical SEO and content insights with prioritized fixes"; price="from $199/mo"; bullets={[; "Crawls site maps and pages; flags Core Web Vitals and indexability issues",; "NLP-driven content gap analysis vs. competitors with keyword clusters",; "One-click Github PRs for meta,schema,and sitemap fixes",; "Weekly executive report and anomaly alerts via Slack/Email"; ]} links={{; website: "https: contact: "mailto:kleber@ziontechgroup.com";}} /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;""""
-
-const Ai-seo-auditor: React.FC<Ai-seo-auditorProps> = ({ className }) => {
-    <div className={className || }>
-</div>
-      <h1>Ai-seo-auditor</h1>
-      <p>This component is under development.</p>
-=======
     <div className={className || ''}>
       <h1>Ai-seo-auditor</h1>
       <p>This component is under development.</p>
@@ -38,4 +17,3 @@ const Ai-seo-auditor: React.FC<Ai-seo-auditorProps> = ({ className }) => {
   );
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

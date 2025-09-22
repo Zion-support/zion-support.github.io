@@ -14,11 +14,6 @@ export interface TalentCardProps {;
   talent:TalentProfile,;
   onViewProfile:(id:string) => void,;
   onRequestHire:(talent:TalentProfile) => void,;
-<<<<<<< HEAD
-  isSaved:boolean,;
-  onToggleSave:(id:string, isSaved:boolean) => void,;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   isAuthenticated:boolean;
 }
 ;
@@ -44,30 +39,12 @@ const TalentCardComponent = ({;
     e.stopPropagation(),;
     if (onRequestHire) {;
       onRequestHire(talent);
-<<<<<<< HEAD
-}
-  },;
-;
-  const handleToggleSave = (e:React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (onToggleSave) {;
-      onToggleSave(talent.id, !isSaved),;
     }
   },;
-;
-=======
-    }
-  },;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   // Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice(0, 5) || [],;
 ;
   return (;
-<<<<<<< HEAD
-    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     <Card;
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple";
       onClick={handleViewProfile}
@@ -78,9 +55,6 @@ const TalentCardComponent = ({;
           {/* Avatar */}
           <div className="relative mr-4">;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-<<<<<<< HEAD
-
-=======
               {talent.profile_picture_url ? (;
                 <img;
                   src={talent.profile_picture_url}
@@ -91,7 +65,6 @@ const TalentCardComponent = ({;
               ) :(;
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
                   {talent.full_name?.charAt(0) || "T"}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                 </div>;
               )}
             </div>;
@@ -227,18 +200,5 @@ isAuthenticated ;
 }<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
 };
 "
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/TalentCard.tsx
-ursor/fix-lint-push-and-merge-to-main-e10e: src/components/talent/TalentCard.tsx;
-}</div> </div>) ;"
-}$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire ) ";"}<Button ml-1 h-4 w-4" />  </div> </div> </div> ) ;""
-}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";""
-}</div> <Button size="sm" variant="secondary" onClick={;""
-  handleRequestHire ";""
-}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire ) ";""
-}<Button ml-1 h-4 w-4" />  </div> </div> </div> ) ;""`;
-pr-12325
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

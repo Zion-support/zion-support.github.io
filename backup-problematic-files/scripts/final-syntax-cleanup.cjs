@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-const fs = require('fs');
-
-#!/usr/bin/env node
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -248,12 +240,6 @@ if (require.main === module) {
 }
 
 module.exports = FinalSyntaxCleanup;
-<<<<<<< HEAD
-}
-console.log(`\n✅ Fixed ${totalFixed} files`);
-console.log('🎉 Final syntax cleanup completed!');
-=======
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

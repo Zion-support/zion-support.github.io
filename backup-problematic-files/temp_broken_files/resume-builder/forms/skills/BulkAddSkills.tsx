@@ -1,26 +1,12 @@
 
-<<<<<<< HEAD
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2, Sparkles } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
 import { useResume } from '@/hooks/useResume',;
 import { BulkAddSkillsProps } from './types',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import { Textarea } from '@/components/ui/textarea',;
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Loader2, Sparkles } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-import { useResume } from '@/hooks/useResume';
-import { BulkAddSkillsProps } from './types';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Textarea } from '@/components/ui/textarea';
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
   const [bulkSkills, setBulkSkills] = useState(''),;
@@ -121,9 +107,5 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 }Categorize with AI </Button> <p className="text-xs text-muted-foreground mt-1" > AI will identify skills and categorize them automatically. This may take a moment to process. </p> </div> </div>) ;
 };
 '"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/skills/BulkAddSkills.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

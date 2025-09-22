@@ -7,19 +7,7 @@ interface User {
   email: string;
   name: string;
 }
-<<<<<<< HEAD
-export const useAuth = () => {
 
-export const useAuth = () => {;
-  const [user, setUser] = useState<User | null>(null);
-const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    // Simulate auth check
-    setLoading(false);
-  }, []);
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -44,8 +32,10 @@ export const use_auth = () =>: any {
   useEffect(() => {
     // Simulate auth check
     setLoading(false);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useAuth.ts
   }, []);
 ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return {
     user

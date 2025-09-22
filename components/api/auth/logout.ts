@@ -1,58 +1,50 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
-export default function handler() { return null; }
-  res.status(200).json({ ok: true });export default function handler() { return null; }
-  res.status(200).json({ ok: true })
 
-  const cookie = clearSessionCookie();
 
-  const cookie = clearSessionCookie();'
 
-  res.setHeader('Set-Cookie', cookie);
-  res.status(200).json({ ok: true })
-}
 
-pr-12243
 
-import { clearSessionCookie } from '../../../utils / auth - utils';
-;
-export default /**;
- * handler - Function description;
- */
-function handler() {}
-  const cookie = clearSessionCookie ();'
-  res.set_header ('Set - Cookie', cookie);
-  res.status (200).json ({ ok: true });export default /**;
- * handler - Function description;
- */
-function handler() {}
-  const cookie = clearSessionCookie ();'
-  res.set_header ('Set - Cookie', cookie);
-  res.status (200).json ({ ok: true });
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const cookie = clearSessionCookie();
+  res.setHeader('Set-Cookie', cookie);
+  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const cookie = clearSessionCookie();
+  res.setHeader('Set-Cookie', cookie);
 
-'
-import { clearSessionCookie } from '../../../utils/auth-utils';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {};
-  const cookie = null;
 
-export default function handler() { return null; }
-  res.status(200).json({ ok: true });export default function handler() { return null; }
+
+
+}
+
+
+
+
   res.status(200).json({ ok: true })
 }
-}
 
-}
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+=======
+import { clearSessionCookie } from '../../../utils/auth-utils';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true });
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-pr-12243
-
-pr-12243
-
+}
+>>>>>>> origin/auto/autonomy-17186719616

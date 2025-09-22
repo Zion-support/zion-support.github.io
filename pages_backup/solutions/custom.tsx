@@ -1,43 +1,34 @@
-import * as React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Settings, Code, Zap, Users } from 'lucide-react';
-import Link from 'next/link';';
-import React from 'react';import Link from 'next/link';';
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
-import * as React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import * as React from 'react';'
-import Link from 'next/link';';'
-import { motion } from 'framer-motion';'
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 const features = [;
-  {}'
-    title: 'Tailored Solutions,','
+  {}
+    title: 'Tailored Solutions,',
     description: 'Bespoke software solutions designed specifically for your unique business needs,',
-    icon: Settings,'
+    icon: Settings,
     benefits: ['Custom Architecture, 'Unique Features', 'Business Logic Integration', 'Scalable Design']',
   },
-  {}'
-    title: 'Full Stack Development,','
+  {}
+    title: 'Full Stack Development,',
     description: 'Complete end-to-end development from frontend to backend and everything in between,',
-    icon: Code,'
+    icon: Code,
     benefits: ['Frontend Development, 'Backend APIs', 'Database Design', 'Cloud Integration']',
   },
-  {}'
-    title: 'API Integration,','
+  {}
+    title: 'API Integration,',
     description: 'Seamless integration with existing systems and third-party services,',
-    icon: Zap,'
+    icon: Zap,
     benefits: ['RESTful APIs, 'GraphQL', 'Third-party Integrations', 'Data Synchronization']',
   },
-  {}'
-    title: 'Ongoing Support,','
+  {}
+    title: 'Ongoing Support,',
     description: 'Continuous support and maintenance to ensure your solution remains optimal,',
-    icon: Users,'
+    icon: Users,
     benefits: ['24/7 Support, 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']',
   }
 ;];
@@ -56,12 +47,6 @@ const process = [;
   { step: 'Development, description: 'Agile development with regular feedback and iterations' },',
   { step: 'Testing, description: 'Comprehensive testing and quality assurance' },',
   { step: 'Deployment, description: 'Smooth deployment and go-live support' },',
-const process = [;'
-  { step: 'Discovery, description: 'Understanding your requirements and business goals' },','
-  { step: 'Planning, description: 'Creating detailed project roadmap and architecture' },','
-  { step: 'Development, description: 'Agile development with regular feedback and iterations' },','
-  { step: 'Testing, description: 'Comprehensive testing and quality assurance' },','
-  { step: 'Deployment, description: 'Smooth deployment and go-live support' },','
   { step: 'Maintenance, description: 'Ongoing support and continuous improvement' }',
 ;];
 
@@ -69,26 +54,21 @@ const stats = [;
   { number: '150+, label: 'Custom Projects' },',
   { number: '98%, label: 'Client Satisfaction' },',
   { number: 'On Time, label: 'Delivery Rate' },',
-const stats = [;'
-  { number: '150+, label: 'Custom Projects' },','
-  { number: '98%, label: 'Client Satisfaction' },','
-  { number: 'On Time, label: 'Delivery Rate' },','
   { number: '5+, label: 'Years Experience' }',
 ;];
 
 export default function CustomDevelopmentPage() {
-export default function CustomDevelopmentPage() {};
   return (;
-    <Layout);"
-      title="Custom Development - Zion Tech Group"";"
-      description="Bespoke software solutions designed for your unique needs. Full stack development, API integration, and ongoing support for custom applications."""
+    <Layout);
+      title="Custom Development - Zion Tech Group"";
+      description="Bespoke software solutions designed for your unique needs. Full stack development, API integration, and ongoing support for custom applications.""
       keywords="custom development, bespoke software, full stack development, API integration, custom applications""
-    >;"
+    >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-        {/* Hero Section */}"
-        <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">""
-          <div className="absolute inset-0">";"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";"
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">"
+          <div className="absolute inset-0">";
+            <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
 
@@ -96,43 +76,28 @@ export default function CustomDevelopmentPage() {};
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
+              transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto""
->;
+            >;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-16 h-16 text-purple-400 mr-4" />";
-
-                <h1 className="text-5xl md: text-6xl font-bold">", Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Development</span>",;
-                </h1>;
-              </div>;
-              <p className="text-xl md: text-2xl text-gray-300 mb-8">", Bespoke software solutions designed specifically for your unique business needs and requirements,;
-              </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
-                  href="/contact""
-                  className="px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"",>,;
-                  Start Your Project;
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link
-                  href="/case-studies""
-                  className="px-8 py-4 border border-white text-white hover: bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"",>,;
                 <h1 className="text-5xl md:text-6xl font-bold">";
                   Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Development</span>";
                 </h1>;
-              </div>;"
+              </div>;
               <p className="text-xl md:text-2xl text-gray-300 mb-8">";
                 Bespoke software solutions designed specifically for your unique business needs and requirements;
-              </p>;"
+              </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;"
-                  href="/contact"";"
+                <Link;
+                  href="/contact"";
                   className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
                 >;
-                  Start Your Project;"
+                  Start Your Project;
                   <ArrowRight className="ml-2 w-5 h-5" />";
                 </Link>;
-                <Link;"
-                  href="/case-studies"";"
+                <Link;
+                  href="/case-studies"";
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
                 >;
                   View Portfolio;
@@ -141,24 +106,20 @@ export default function CustomDevelopmentPage() {};
             </motion.div>;
           </div>;
         </section>;
-{/* Stats Section */}
+
+        {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
-<div className="grid grid-cols-2 md: grid-cols-4 gap-8">",;
-              {stats && stats.map((stat, index) => (,;
-                <motion&& motion.div}),
-                  key={stat && stat.label}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
                   initial={{ opacity: 0, y: 30 }}
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}"
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center""
-                >;"
-                  <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat.number}</div>""
+                >;
+                  <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat.number}</div>"
                   <div className="text-gray-600 font-medium">{stat.label}</div>"
                 </motion.div>;
               ))}
@@ -168,20 +129,14 @@ export default function CustomDevelopmentPage() {};
 
         {/* Features Section */}
         <section className="py-20 bg-gray-50">"
-        {/* Features Section */}"
-        <section className="py-20 bg-gray-50">""
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>",;
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
-            >;"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>";
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -195,22 +150,22 @@ export default function CustomDevelopmentPage() {};
                   key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}"
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
                   className="bg-white rounded-2xl shadow-xl p-8""
-                >;"
-                  <div className="flex items-center mb-6">";"
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mr-4">";"
+                >;
+                  <div className="flex items-center mb-6">";
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mr-4">";
                       <feature.icon className="w-8 h-8 text-white" />";
                     </div>;
-                    <div>;"
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>""
+                    <div>;
+                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>"
                       <p className="text-gray-600">{feature.description}</p>"
                     </div>;
                   </div>;
 
                   <ul className="space-y-3">";
-                    {feature.benefits.map((benefit, benefitIndex) => (,"
-                      <li key={benefitIndex} className="flex items-center text-gray-600">""
+                    {feature.benefits.map((benefit, benefitIndex) => (,
+                      <li key={benefitIndex} className="flex items-center text-gray-600">"
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         {benefit}
                       </li>,
@@ -224,22 +179,10 @@ export default function CustomDevelopmentPage() {};
 
         {/* Technologies Section */}
         <section className="py-20 bg-white">"
-        {/* Technologies Section */}"
-        <section className="py-20 bg-white">""
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>",;
-              className="text-center mb-16""
-            >;"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
-                Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>";
-              </h2>;
-              </h2>;"
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
@@ -257,14 +200,14 @@ export default function CustomDevelopmentPage() {};
                   key={category.category}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}"
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6""
-                >;"
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>""
+                >;
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>"
                   <div className="flex flex-wrap gap-2">";
                     {category.techs.map((tech, techIndex) => (,
                       <span}),
-                        key={techIndex}"
+                        key={techIndex}
                         className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm""
                       >;
                         {tech}
@@ -279,20 +222,14 @@ export default function CustomDevelopmentPage() {};
 
         {/* Process Section */}
         <section className="py-20 bg-gray-50">"
-        {/* Process Section */}"
-        <section className="py-20 bg-gray-50">""
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>",;
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
-            >;"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>";
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
@@ -306,19 +243,6 @@ export default function CustomDevelopmentPage() {};
                   key={step.step}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-shadow duration-300"">;
-                  <div className="flex items-center mb-4">";
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">",;
-                      <span className="text-white font-bold text-lg">{index + 1}</span>";
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
-                >;"
-                  <div className="flex items-center mb-4">";"
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">";"
-                      <span className="text-white font-bold text-lg">{index + 1}</span>"
-                    </div>;
-                    </div>;"
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
                 >;
@@ -327,7 +251,7 @@ export default function CustomDevelopmentPage() {};
                       <span className="text-white font-bold text-lg">{index + 1}</span>"
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900">{step.step}</h3>"
-                  </div>;"
+                  </div>;
                   <p className="text-gray-600">{step.description}</p>"
                 </motion.div>;
               ))}
@@ -337,45 +261,18 @@ export default function CustomDevelopmentPage() {};
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">"
-        {/* CTA Section */}"
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">""
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0 && 0.8 }}>,;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Build Something Custom?,;
               transition={{ duration: 0.8 }}
-            >,"
+            >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Build Something Custom?;
               </h2>;
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let's discuss your unique requirements and create a custom solution that perfectly fits your business needs';
               </p>;
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
-                  href="/contact""
-                  className="px-8 py-4 bg-white text-purple-600 hover: bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"",>,;
-                  Start Custom Project;
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link
-                  href="/solutions""
-                  className="px-8 py-4 border border-white text-white hover: bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"",>,;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;"
-                  href="/contact"";"
-                  className="px-8 py-4 bg-white text-purple-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  Start Custom Project;"
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link;"
-                  href="/solutions"";"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"";
-                >;
-                  View All Solutions;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link;
                   href="/contact"";
@@ -397,3 +294,4 @@ transition={{ duration: 0 && 0.8 }}>,;
       </div>;
     </Layout>;
   );
+}

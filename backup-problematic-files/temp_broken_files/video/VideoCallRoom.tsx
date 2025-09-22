@@ -4,20 +4,8 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-<<<<<<< HEAD
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',;
-import './video-call.css',;
-import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";""
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";""
-import { Badge } from "@/components/ui/badge";""
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";""
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
-import './video-call.css';
-=======
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
 import './video-call.css',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface Participant {;
   id:string,;
@@ -144,10 +132,7 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
                     {/* Placeholder for actual video stream */}
                     <Video className="h-12 w-12 opacity-50" />;
                   </div>;
-<<<<<<< HEAD
-=======
                 ) :participant.isScreenSharing ? (;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">;
                     {/* Placeholder for screen share */}
                     <ScreenShare className="h-12 w-12 opacity-50" />;
@@ -296,15 +281,5 @@ if (onToggleVideo) {;
 }</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
 };
 '"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/video/VideoCallRoom.tsx
-ursor/fix-lint-push-and-merge-to-main-e10e: src/components/video/VideoCallRoom.tsx;
-} <Button >{;"  isAudioOnly ? <VolumeX /> : <Volume2 /> ";"} <Button > <Phone className="rotate-135" />  </div>  ) ;"
-} <Button > {;
-  isAudioOnly ? <VolumeX /> : <Volume2 /> ";"
-} <Button > <Phone className="rotate-135" />  </div>  ) ;""`;
-pr-12325
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-=======
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -24,38 +18,25 @@ const filesToFix = [
   'pages/contact.tsx',
   'pages/services.tsx',
   'pages/talent.tsx'
-<<<<<<< HEAD
-
-];
-=======
 ];
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath}`);
       return false;
     }
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove all merge conflict markers
 
 
-<<<<<<< HEAD
-content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
-=======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -63,7 +44,6 @@ content = content.replace(/\n?/g, '');
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
@@ -86,13 +66,6 @@ content = content.replace(/\n?/g, '');
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
-<<<<<<< HEAD
-
-function fixFile(filePath) {
-  try {
-  // TODO: Implement
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 }
 
 
@@ -103,14 +76,8 @@ for (const file of filesToFix) {
     fixedCount++;
   }
 }
-<<<<<<< HEAD
-}
-`;
-console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
-=======
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

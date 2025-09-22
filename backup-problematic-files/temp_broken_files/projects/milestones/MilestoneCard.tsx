@@ -8,18 +8,6 @@ import { Check, ArrowDown, X } from 'lucide-react';
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
-<<<<<<< HEAD
-import React from 'react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
-import { Badge } from "@/components/ui/badge";""
-import { Button } from "@/components/ui/button";""
-import { format } from 'date-fns';
-import { Check, ArrowDown, X } from 'lucide-react';
-import { useDisputeCheck } from '@/hooks/useDisputeCheck';
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface MilestoneCardProps {;
   id:string,;
@@ -68,10 +56,7 @@ export function MilestoneCard({ ;
             <CardTitle className="text-xl">{title}</CardTitle>;
             {dueDate && (;
               <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
-=======
                 Due:{format(new Date(dueDate), 'MMM d, yyyy')}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               </p>;
             )}
           </div>;
@@ -81,27 +66,12 @@ export function MilestoneCard({ ;
             </Badge>;
             ;
             {isUnderDispute && disputeStatus && (;
-<<<<<<< HEAD
-</div>"
-            <CardTitle className="text-xl">{title};""
-              <p className="text-sm text-muted-foreground">;"
-</p>
-              </p>;
-          </div>;"
-          <div className="flex gap-2">;"
-            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;"
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               <DisputeStatusBadge status={disputeStatus} />;
             )}
           </div>;
         </div>;
       </CardHeader>;
-<<<<<<< HEAD
-=======
       ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       <CardContent className="pb-2">;
         {description && (;
           <p className="text-muted-foreground">{description}</p>;
@@ -129,10 +99,7 @@ export function MilestoneCard({ ;
               <X className="h-4 w-4 mr-1" /> Reject;
             </Button>;
           )}
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           {status === 'pending' && onApprove && !isUnderDispute && (;
             <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
               <Check className="h-4 w-4 mr-1" /> Approve;
@@ -203,13 +170,5 @@ case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className
   projectId ;
 }/>) ;
 }</div> Actions frozen due to dispute </Button>) ;
-<<<<<<< HEAD
-:temp_broken_files/projects/milestones/MilestoneCard.tsx
-}</div> </CardFooter> </Card>) ;"}'"
-}</div> </CardFooter> </Card>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestoneCard.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

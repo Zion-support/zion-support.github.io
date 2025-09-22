@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Secure Agent Architecture',
@@ -63,6 +63,19 @@ const SecureAgentArchitecturePage: React.FC = () => {
 };
 
 export default SecureAgentArchitecturePage;
+
+import React from 'react';
+import Link from 'next/link';
+import SEO from '../../components/SEO';
+
+export const metadata = {
+  title: 'AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance',
+  description: 'Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.',
+  keywords: [
+    'AI agents security', 'zero-trust AI', 'guardrails', 'policy engine',
+    'LLM security', 'tooling sandbox', 'observability', 'compliance'
+  ],
+};
 
 const SecureAgentArchitecture2026: React.FC = () => {
   return (
@@ -129,4 +142,5 @@ const SecureAgentArchitecture2026: React.FC = () => {
   );
 };
 
+export default SecureAgentArchitecture2026;
 

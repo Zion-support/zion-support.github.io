@@ -14,10 +14,7 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
           <Loader2 className="h-4 w-4 animate-spin mr-2" />;
           <span>Loading talents...</span>;
         </div>;
-<<<<<<< HEAD
-=======
       ) :(;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         <span>;
           {resultCount === 0 ? (;
             "No talents found. Try adjusting your filters.";
@@ -34,13 +31,5 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
   resultCount !== 1 ? 's' : '' ;
 }`) ;
 }</span>) ;
-<<<<<<< HEAD
-:temp_broken_files/talent/ResultsHeader.tsx
-}</div>) ;"}'"
-}</div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ResultsHeader.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

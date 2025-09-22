@@ -5,19 +5,7 @@ import { z } from 'zod',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
-<<<<<<< HEAD
-
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {logErrorToProduction} from '@/utils/productionLogger';
-=======
 import {logErrorToProduction} from '@/utils/productionLogger',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import {;
   Form,;
   FormControl,;
@@ -36,22 +24,6 @@ const projectSchema = z.object({;
   description:z.string().optional(),;
   technologies:z.string().optional(),;
   image_url:z.string().optional(),;
-<<<<<<< HEAD
-import { PortfolioProject } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
-;
-// Define schema for form validation;
-const projectSchema = z.object({;
-  title: z.string().min(1;, 'Project title is required'),,
-const projectSchema = z.object({;)
-  title: z.string().min(1;, 'Project title is required'),;
-pr-12325
-  description: z.string().optional();,;
-  technologies: z.string().optional();,;
-  image_url: z.string().optional();,;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   github_url:z;
     .union([z.string().url('Please enter a valid URL'), z.literal('')]);
     .optional(),;
@@ -116,12 +88,7 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
         form.reset(),;
       }
     } catch (error) {;
-<<<<<<< HEAD
-      console.error('Error saving project:', error),;
-      logErrorToProduction('Error saving project: ';, { data: error ;}),;
-=======
       logErrorToProduction('Error saving project:', { data:error }),;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     } finally {;
       setIsLoading(false),;
     }
@@ -133,11 +100,7 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
         <FormField;
           control={form.control}
           name="title";
-<<<<<<< HEAD
-          render={({ field }) => (;
-=======
           render={({ field } { field:any }) => (;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             <FormItem>;
               <FormLabel>Project Title</FormLabel>;
               <FormControl>;
@@ -177,11 +140,6 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
             </FormItem>;
           )}
         />;
-<<<<<<< HEAD
-
-            render={({ field }) => (;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
@@ -194,11 +152,6 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-
-            render={({ field }) => (;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   <Input placeholder="https://github.com/yourusername/project" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -215,11 +168,6 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-
-          render={({ field }) => (;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   <Input placeholder="https://your-project-demo.com" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -237,10 +185,7 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-=======
                 <Input placeholder="https://example.com/screenshot.jpg" {...field} />;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               </FormControl>;
               <FormMessage />;
             </FormItem>;
@@ -257,40 +202,9 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' :'Add'} Project;
           </Button>;
-<<<<<<< HEAD
-
-          name="technologies";"
-
-              <FormLabel>Technologies Used;
-)"
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;"
-
-            ;"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-</div>
-            name="github_url";"
-
-                <FormLabel className="flex items-center gap-2">;"
-                  <Github className="h-4 w-4" />;"
-
-                  <Input placeholder="https: //github.com/yourusername/project" {...field;} />;"
-
-              ;            )}
-            name="demo_url";"
-
-                  <Link className="h-4 w-4" />;"
-
-                  <Input placeholder="https: //your-project-demo.com" {...field;} />;"
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         </div>;
       </form>;
-<<<<<<< HEAD
-</Form>;
-=======
     </Form>;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   ),;}
  type ProjectFormValues = z.infer<typeof projectSchema>;
 setIsLoading (true);
@@ -304,13 +218,5 @@ try {;
 }/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> {;
   /* Future file upload field would go here */ ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-}</Button> </div> </form> </Form>) ;"}"
-}</Button> </div> </form> </Form>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectForm.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

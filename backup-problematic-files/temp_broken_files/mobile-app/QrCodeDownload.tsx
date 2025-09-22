@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { QrCode } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { AppStoreButtons } from "./AppStoreButtons",;
 ;
 export const QrCodeDownload:React.FC = () => {;
@@ -61,9 +58,5 @@ export const QrCodeDownload:React.FC = () => {;
 }/> <div className=" flex gap-2 items-center text-sm text-gray-400"> <span className=" block h-1 w-1 rounded-full bg-zion-purple"></span> <span>Compatible with iOS 14+ and Android 8.0+</span> </div> </div> </div> <p className=" text-center text-sm mt-2 text-zion-blue-dark font-medium" > Scan to download </p> </div> </div> </div> </div> </div> </section>) ;
 };
 "
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/QrCodeDownload.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

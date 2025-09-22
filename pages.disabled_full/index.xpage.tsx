@@ -1,25 +1,2 @@
-
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-
-
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

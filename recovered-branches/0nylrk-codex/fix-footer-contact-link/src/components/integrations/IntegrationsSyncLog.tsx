@@ -1,55 +1,46 @@
 
-import {Card} from "@/components/ui/card";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
+<<<<<<< HEAD
 
 import React from "react";
-
-
-
-import {Card} from "@/components/ui/card";"
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";"
-import {Badge} from "@/components/ui/badge";
-
-"
 import { Card } from "@/components/ui/card";
-import {};
+import {
   Table;
   TableBody;
   TableCell;
-
   TableHead;
-TableHeader;
+  TableHeader;
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 
-import {Card} from "@/components/ui/card";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-
-import React from "react",
-import { Card } from "@/components/ui/card",
-import {}
 import React from "react",
 import { Card } from "@/components/ui/card",
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-TableHeader,"
-  TableRow} from "@/components/ui/table","
-import { Badge } from "@/components/ui/badge",
-
-// Sample data for integration sync logs
-import {Badge} from "@/components/ui/badge";// Sample data for integration sync logs
-import {Badge} from "@/components/ui/badge";// Sample data for integration sync logs
-  TableHeader,
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+
+
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 // Sample data for integration sync logs
 
@@ -62,8 +53,9 @@ const syncLogs = [
     timestamp: "2024-05-20T12:30:45Z"
     details: "Successfully synced contact data for Job #1234"
 
-}
+  }
   },
+
   {
     id: "2"
     integration: "Greenhouse"
@@ -71,11 +63,8 @@ const syncLogs = [
     status: "success"
     timestamp: "2024-05-20T10:15:22Z"
     details: "New applicant created in Greenhouse from Zion application"
-}
-  },
-  {
-    details: "Successfully synced contact data for Job #1234"  {
 
+  }
   },
 
   {
@@ -86,8 +75,9 @@ const syncLogs = [
     timestamp: "2024-05-19T16:45:12Z"
     details: "Failed to update deal - API rate limit exceeded"
 
-}
+  }
   },
+
   {
     id: "4"
     integration: "Zoho CRM"
@@ -95,11 +85,8 @@ const syncLogs = [
     status: "warning"
     timestamp: "2024-05-19T14:22:33Z"
     details: "Job synced but some fields were skipped due to mapping issues"
-}
-  },
 
-  },
-
+  }
   },
 
   {
@@ -108,35 +95,19 @@ const syncLogs = [
     event: "candidate_status_changed"
     status: "success"
     timestamp: "2024-05-18T09:10:05Z"
-  {"
-    id: "5""
-    integration: "Lever""
-    event: "candidate_status_changed""
-    status: "success""
-    timestamp: "2024-05-18T09:10:05Z""
     details: "Updated candidate status to 'Interview Scheduled'"
   }
 
+];
+],
+
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
+    switch (status) {;
+      case "success": return <Badge className="bg-green-500">Success</Badge>;
+    switch (status) {
+      case "success": return <Badge className="bg-green-500">Success</Badge>,
 
-import {Card} from "@/components/ui/card";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-
-      case "error":
-        return <Badge variant="destructive">Error</Badge>,
-
-"
-      case "warning":"
-        return <Badge className="bg-amber-500">Warning</Badge>
-      default:"
-        return <Badge variant="outline">Unknown</Badge>
-    }
-
-}
-  return (
-    <Card>"
       case "error":
         return <Badge variant="destructive">Error</Badge>,
       case "warning":
@@ -145,8 +116,83 @@ import {Badge} from "@/components/ui/badge";
         return <Badge variant="outline">Unknown</Badge>
     }
 
-  },
+  }
 
+  },
+  
+
+=======
+import React from "react";
+import { Card } from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+
+// Sample data for integration sync logs
+const syncLogs = [
+  {
+    id: "1",
+    integration: "Salesforce",
+    event: "contact_synced",
+    status: "success",
+    timestamp: "2024-05-20T12:30:45Z",
+    details: "Successfully synced contact data for Job #1234"
+  },
+  {
+    id: "2",
+    integration: "Greenhouse",
+    event: "applicant_created",
+    status: "success", 
+    timestamp: "2024-05-20T10:15:22Z",
+    details: "New applicant created in Greenhouse from Zion application"
+  },
+  {
+    id: "3",
+    integration: "HubSpot",
+    event: "deal_updated",
+    status: "error",
+    timestamp: "2024-05-19T16:45:12Z",
+    details: "Failed to update deal - API rate limit exceeded"
+  },
+  {
+    id: "4",
+    integration: "Zoho CRM",
+    event: "job_synced",
+    status: "warning",
+    timestamp: "2024-05-19T14:22:33Z",
+    details: "Job synced but some fields were skipped due to mapping issues"
+  },
+  {
+    id: "5",
+    integration: "Lever",
+    event: "candidate_status_changed",
+    status: "success",
+    timestamp: "2024-05-18T09:10:05Z",
+    details: "Updated candidate status to 'Interview Scheduled'"
+  }
+];
+
+export function IntegrationsSyncLog() {
+  const getStatusBadge = (status: string) => {
+    switch (status) {
+      case "success":
+        return <Badge className="bg-green-500">Success</Badge>;
+      case "error":
+        return <Badge variant="destructive">Error</Badge>;
+      case "warning":
+        return <Badge className="bg-amber-500">Warning</Badge>;
+      default:
+        return <Badge variant="outline">Unknown</Badge>;
+    }
+  };
+  
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card>
       <div className="p-4">
@@ -156,24 +202,12 @@ import {Badge} from "@/components/ui/badge";
               <TableHead>Integration</TableHead>
               <TableHead>Event</TableHead>
               <TableHead>Status</TableHead>
-<TableHead>Time</TableHead>"
+              <TableHead>Time</TableHead>
               <TableHead className="hidden md:table-cell">Details</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {syncLogs.map((log) => (
-<TableRow key={log.id}>"
-                <TableCell className="font-medium">{log.integration}</TableCell>
-                <TableCell>'
-                  {log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-                </TableCell>
-                <TableCell>{getStatusBadge(log.status)}</TableCell>
-                <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>"
-                <TableCell className="hidden md:table-cell">{log.details}</TableCell>
-              </TableRow>
-            ))}
-  }            ))}
-  }            ))}
               <TableRow key={log.id}>
                 <TableCell className="font-medium">{log.integration}</TableCell>
                 <TableCell>
@@ -183,19 +217,19 @@ import {Badge} from "@/components/ui/badge";
                 <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             ))}
-
           </TableBody>
         </Table>
       </div>
     </Card>
+<<<<<<< HEAD
   )
 }
-import React from "react",;
-"
-import React from "react",;"
-}
+
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -203,19 +237,13 @@ import {;
   TableBody,;
   TableCell,;
   TableHead,;
-TableHeader,;"
-  TableRow} from "@/components/ui/table",;"
-import { Badge } from "@/components/ui/badge",;
-
-// Sample data for integration sync logs;
-}// Sample data for integration sync logs;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 
 // Sample data for integration sync logs;
 const syncLogs = [;
-{;
+  {;
     id: "1",;
     integration: "Salesforce",;
     event: "contact_synced",;
@@ -223,7 +251,6 @@ const syncLogs = [;
     timestamp: "2024-05-20T12:30:45Z",;
     details: "Successfully synced contact data for Job #1234";
   };
-},;
   {;
     id: "2",;
     integration: "Greenhouse",;
@@ -232,10 +259,6 @@ const syncLogs = [;
     timestamp: "2024-05-20T10:15:22Z",;
     details: "New applicant created in Greenhouse from Zion application";
   };
-status: "success",;
-    timestamp: "2024-05-20T10:15:22Z",;
-    details: "New applicant created in Greenhouse from Zion application";
-  },;
   {;
     id: "3",;
     integration: "HubSpot",;
@@ -244,13 +267,7 @@ status: "success",;
     timestamp: "2024-05-19T16:45:12Z",;
     details: "Failed to update deal - API rate limit exceeded";
   };
-},;
   {;
-    details: "Successfully synced contact data for Job #1234"
-};  {;
-    id: "2",;
-    integration: "Greenhouse",;
-    event: "applicant_created",;  {;
     id: "4",;
     integration: "Zoho CRM",;
     event: "job_synced",;
@@ -258,9 +275,7 @@ status: "success",;
     timestamp: "2024-05-19T14:22:33Z",;
     details: "Job synced but some fields were skipped due to mapping issues";
   };
-},;
   {;
-    details: "Job synced but some fields were skipped due to mapping issues";  {;
     id: "5",;
     integration: "Lever",;
     event: "candidate_status_changed",;
@@ -277,80 +292,6 @@ export function IntegrationsSyncLog() {;
       case "error":;
         return <Badge variant="destructive">Error</Badge>;
 
-"
-      case "warning":;"
-        return <Badge className="bg-amber-500">Warning</Badge>,;
-      default:;"
-        return <Badge variant="outline">Unknown</Badge>;
-
-  return (
-
-  }  return (
-      case "success": return <Badge className="bg-green-500">Success</Badge>;
-      case "error":;
-        return <Badge variant="destructive">Error</Badge>;
-
-import React from "react",;
-import { Card } from "@/components/ui/card",;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-;
-// Sample data for integration sync logs;
-const syncLogs = [;
-  {;
-    id:"1",;
-    integration:"Salesforce",;
-    event:"contact_synced",;
-    status:"success",;
-    timestamp:"2024-05-20T12:30:45Z",;
-    details:"Successfully synced contact data for Job #1234";
-  },;
-  {;
-    id:"2",;
-    integration:"Greenhouse",;
-    event:"applicant_created",;
-    status:"success", ;
-    timestamp:"2024-05-20T10:15:22Z",;
-    details:"New applicant created in Greenhouse from Zion application";
-  },;
-  {;
-    id:"3",;
-    integration:"HubSpot",;
-    event:"deal_updated",;
-    status:"error",;
-    timestamp:"2024-05-19T16:45:12Z",;
-    details:"Failed to update deal - API rate limit exceeded";
-  },;
-  {;
-    id:"4",;
-    integration:"Zoho CRM",;
-    event:"job_synced",;
-    status:"warning",;
-    timestamp:"2024-05-19T14:22:33Z",;
-    details:"Job synced but some fields were skipped due to mapping issues";
-  },;
-  {;
-    id:"5",;
-    integration:"Lever",;
-    event:"candidate_status_changed",;
-    status:"success",;
-    timestamp:"2024-05-18T09:10:05Z",;
-    details:"Updated candidate status to 'Interview Scheduled'";
-  }
-],;
-;
-export function IntegrationsSyncLog() {;
-  const getStatusBadge = (status:string) => {;
-    switch (status) {;
-      case "success":return <Badge className="bg-green-500">Success</Badge>,;
-      case "error":;
-        return <Badge variant="destructive">Error</Badge>,;
       case "warning":;
         return <Badge className="bg-amber-500">Warning</Badge>,;
       default:;
@@ -358,9 +299,9 @@ export function IntegrationsSyncLog() {;
     }
   };
 
+
   return (
     <Card>;
-    <Card>;"
       <div className="p-4">;
         <Table>;
           <TableHeader>;
@@ -368,27 +309,41 @@ export function IntegrationsSyncLog() {;
               <TableHead>Integration</TableHead>;
               <TableHead>Event</TableHead>;
               <TableHead>Status</TableHead>;
-              <TableHead>Time</TableHead>;"
+              <TableHead>Time</TableHead>;
               <TableHead className="hidden md:table-cell">Details</TableHead>;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
             {syncLogs && syncLogs.map((log) => (;
-              <TableRow key={log && log.id}>;"
+              <TableRow key={log && log.id}>;
                 <TableCell className="font-medium">{log && log.integration}</TableCell>;
-                <TableCell>;'
+                <TableCell>;
                   {log && log.event.replace(/_/g, ' ').replace(/\b\w/g, l => l && l.toUpperCase())}
                 </TableCell>;
                 <TableCell>{getStatusBadge(log && log.status)}</TableCell>;
-                <TableCell>{new Date(log && log.timestamp).toLocaleString()}</TableCell>;"
+                <TableCell>{new Date(log && log.timestamp).toLocaleString()}</TableCell>;
                 <TableCell className="hidden md:table-cell">{log && log.details}</TableCell>;
               </TableRow>;
 
 
-            ))}
-          </TableBody>;
 
-))}
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+            ))}
+
           </TableBody>;
         </Table>;
       </div>;
@@ -396,329 +351,57 @@ export function IntegrationsSyncLog() {;
   );
 }
 
-
-            ))}
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-
-            ))}
-'
-import React from './react';'
-import { Card } from '@/components / ui / card';'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';'
 import { Badge } from '@/components / ui / badge';
 // Sample data for integration sync logs;
 const sync_logs = [;
-  {"
-    id: "1","
-    integration: "Salesforce","
-    event: "contact_synced","
-    status: "success","
-    timestamp: "2024 - 05 - 20T12:30:45Z","
+  {
+    id: "1",
+    integration: "Salesforce",
+    event: "contact_synced",
+    status: "success",
+    timestamp: "2024 - 05 - 20T12:30:45Z",
     details: "Successfully synced contact data for Job #1234";
   }
-  {"
-    id: "2","
-    integration: "Greenhouse","
-    event: "applicant_created","
-    status: "success","
-    timestamp: "2024 - 05 - 20T10:15:22Z","
+  {
+    id: "2",
+    integration: "Greenhouse",
+    event: "applicant_created",
+    status: "success",
+    timestamp: "2024 - 05 - 20T10:15:22Z",
     details: "New applicant created in Greenhouse from Zion application";
   }
-  {"
-    id: "3","
-    integration: "HubSpot","
-    event: "deal_updated","
-    status: "error","
-    timestamp: "2024 - 05 - 19T16:45:12Z","
+  {
+    id: "3",
+    integration: "HubSpot",
+    event: "deal_updated",
+    status: "error",
+    timestamp: "2024 - 05 - 19T16:45:12Z",
     details: "Failed to update deal - API rate limit exceeded";
   }
-  {"
-    id: "4","
-    integration: "Zoho CRM","
-    event: "job_synced","
-    status: "warning","
-    timestamp: "2024 - 05 - 19T14:22:33Z","
+  {
+    id: "4",
+    integration: "Zoho CRM",
+    event: "job_synced",
+    status: "warning",
+    timestamp: "2024 - 05 - 19T14:22:33Z",
     details: "Job synced but some fields were skipped due to mapping issues";
   }
-  {"
-    id: "5","
-    integration: "Lever","
-    event: "candidate_status_changed","
-    status: "success","
-    timestamp: "2024 - 05 - 18T09:10:05Z",'"
+  {
+    id: "5",
+    integration: "Lever",
+    event: "candidate_status_changed",
+    status: "success",
+    timestamp: "2024 - 05 - 18T09:10:05Z",
     details: "Updated candidate status to 'Interview Scheduled'";
   }
 ];
 ;
-export /**
- * IntegrationsSyncLog - Function description
- */
-function IntegrationsSyncLog() {
-  const getStatusBadge = (status: string) =>: any {
-    switch (status) {
-      case "success": return <Badge className="bg - green-500">Success</Badge>;
-      case "error":;
-        return <Badge variant="destructive">Error</Badge>;
-      case "warning":;
-        return <Badge className="bg - amber-500">Warning</Badge>,
-      default:;
-        return <Badge variant="outline">Unknown</Badge>;
-    }
-  }
-;
-  return (
-    <Card>;
-      <div className="p-4">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead > Integration</TableHead>;
-              <TableHead > Event</TableHead>;
-              <TableHead > Status</TableHead>;
-              <TableHead > Time</TableHead>;
-              <TableHead className="hidden md:table-cell">Details</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {sync_logs.map ((log) => (
-              <TableRow key={log.id}>;
-                <TableCell className="font-medium">{log.integration}</TableCell>;
-                <TableCell>;
-                  {log.event.replace (/_ / g, ' ').replace (/\b\w / g, l => l.toUpperCase ())}
-                </TableCell>;
-                <TableCell>{getStatusBadge (log.status)}</TableCell>;
-                <TableCell>{new Date (log.timestamp).toLocaleString ()}</TableCell>;
-                <TableCell className="hidden md:table-cell">{log.details}</TableCell>;
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
-    </Card>);
-}
-    }
-  },;
-  ;
-],;
-export function IntegrationsSyncLog() {;
-  const getStatusBadge = (status: string) => {;
-    switch (status) {;
-      case "success": return <Badge className="bg-green-500">Success</Badge>,;
-      case "error":;
-        return <Badge variant="destructive">Error</Badge>,;
-      case "warning":;
-        return <Badge className="bg-amber-500">Warning</Badge>;
-      default:;
-        return <Badge variant="outline">Unknown</Badge>;
-    }
-  };
-  return (;
-  TableHeader;"
-  TableRow} from "@/components/ui/table",""
-import { Badge } from "@/components/ui/badge";""
-import React from "react",""
-import { Card } from "@/components/ui/card","
-  // TODO: Implement
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,"
-import { Badge } from "@/components/ui/badge","
-// Sample data for integration sync logs;
-const syncLogs = [
-  {"
-    id: "1"","
-  integration: "Salesforce"""
-    event: "contact_synced"","
-  status: "success"""
-    timestamp: "2024-05-20T12:30:45Z"","
-  details: "Successfully synced contact data for Job #1234""
-  },
 
-    id: "2"","
-  integration: "Greenhouse"""
-    event: "applicant_created"","
-    timestamp: "2024-05-20T10:15:22Z"","
-  details: "New applicant created in Greenhouse from Zion application""
 
-    id: "3"","
-  integration: "HubSpot"""
-    event: "deal_updated"","
-  status: "error"""
-    timestamp: "2024-05-19T16:45:12Z"","
-  details: "Failed to update deal - API rate limit exceeded""
-
-    id: "4"","
-  integration: "Zoho CRM"""
-    event: "job_synced"","
-  status: "warning"""
-    timestamp: "2024-05-19T14:22:33Z"","
-  details: "Job synced but some fields were skipped due to mapping issues""
-
-    id: "5"","
-  integration: "Lever"""
-    event: "candidate_status_changed"","
-    timestamp: "2024-05-18T09:10:05Z"","
-  details: "Updated candidate status to 'Interview Scheduled'""
-"
-      case "error":""
-        return <Badge variant="destructive">Error,""
-        return <Badge className="bg-amber-500">Warning""
-        return <Badge variant="outline">Unknown"
-    <Card>
-      <div className="p-4">"
-</div>
-        <Table>
-
-          <TableHeader>
-
-            <TableRow>
-
-              <TableHead>Integration
-              <TableHead>Event
-              <TableHead>Status
-              <TableHead>Time"
-              <TableHead className="hidden md:table-cell">Details"
-          <TableBody>
-
-              <TableRow key={log.id}>
-                <TableCell className="font-medium">{log.integration}"
-                <TableCell>
-
-                <TableCell>{getStatusBadge(log.status)}
-                <TableCell>{new Date(log.timestamp).toLocaleString()}"
-                <TableCell className="hidden md:table-cell">{log.details}"
-      case "success": return <Badge className="bg-green-500">Success;""
-        return <Badge variant="destructive">Error;""
-        return <Badge className="bg-amber-500">Warning,;""
-        return <Badge variant="outline">Unknown;"
-    <Card>;
-      <div className="p-4">;"
-        <Table>;
-
-          <TableHeader>;
-
-            <TableRow>;
-
-              <TableHead>Integration;
-              <TableHead>Event;
-              <TableHead>Status;
-              <TableHead>Time;"
-              <TableHead className="hidden md:table-cell">Details;"
-            ;
-          <TableBody>;
-
-              <TableRow key={log && log.id}>;
-                <TableCell className="font-medium">{log && log.integration};"
-                <TableCell>;
-
-                <TableCell>{getStatusBadge(log && log.status)};
-                <TableCell>{new Date(log && log.timestamp).toLocaleString()};"
-                <TableCell className="hidden md:table-cell">{log && log.details};"
-      </div>;
-    ;"
-      case "success": return <Badge className="bg - green - 500">Success;""
-        return <Badge className="bg - amber - 500">Warning,""
-      <div className="p - 4">;"
-
-              <TableHead > Integration;
-              <TableHead > Event;
-              <TableHead > Status;
-              <TableHead > Time;"
-              <TableHead className="hidden md:table - cell">Details;"
-
-              <TableRow key={log.id}>;
-                <TableCell className="font - medium">{log.integration};"
-
-                <TableCell>{getStatusBadge (log.status)};
-                <TableCell>{new Date (log.timestamp).toLocaleString ()};"
-                <TableCell className="hidden md:table - cell">{log.details};"
-              ))}
-    );"
-      case "success": return <Badge className="bg-green-500">Success,;""
-        return <Badge variant="destructive">Error,;""
-        return <Badge className="bg-amber-500">Warning;""
-
-                <TableCell className="font-medium">{log.integration};"
-
-                <TableCell>{getStatusBadge(log.status)};
-                <TableCell>{new Date(log.timestamp).toLocaleString()};"
-                <TableCell className="hidden md:table-cell">{log.details};"
-return (<Card> <div className="p-4" > hidden md:table-cell" >Details   <TableBody> {"
-)
-  syncLogs.map ( (log) => (<TableRow key= {
-  log.id;
-}> <TableCell> {
-} ) ) 
-}  </div> ) ]"
-pr-12325
-</TableRow>"
-                <TableCell className="font - medium">{log.integration}</TableCell>;"
-                <TableCell>;
-</TableCell>
-                </TableCell>;
-                <TableCell>{getStatusBadge (log.status)}</TableCell>;
-                <TableCell>{new Date (log.timestamp).toLocaleString ()}</TableCell>;"
-                <TableCell className="hidden md:table - cell">{log.details}</TableCell>;"
-
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
-
-    </Card>);"
-      case "success": return <Badge className="bg-green-500">Success</Badge>,;""
-        return <Badge variant="destructive">Error</Badge>,;""
-        return <Badge className="bg-amber-500">Warning</Badge>;""
-        return <Badge variant="outline">Unknown</Badge>;"
-    <Card>;
-</Card>"
-      <div className="p-4">;"
-</div>
-        <Table>;
-</Table>
-          <TableHeader>;
-</TableHeader>
-            <TableRow>;
-</TableRow>
-              <TableHead>Integration</TableHead>;
-              <TableHead>Event</TableHead>;
-              <TableHead>Status</TableHead>;
-              <TableHead>Time</TableHead>;"
-              <TableHead className="hidden md:table-cell">Details</TableHead>;"
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-</TableBody>
-              <TableRow key={log.id}>;
-</TableRow>"
-                <TableCell className="font-medium">{log.integration}</TableCell>;"
-                <TableCell>;
-</TableCell>
-                </TableCell>;
-                <TableCell>{getStatusBadge(log.status)}</TableCell>;
-                <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>;"
-                <TableCell className="hidden md:table-cell">{log.details}</TableCell>;"
-              </TableRow>;
-          </TableBody>;
-        </Table>;
-      </div>;
-    </Card>;"
-return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead> </TableRow> </TableHeader> <TableBody> {"
-</Card>)
-  syncLogs.map ( (log) => (<TableRow key= {
-  log.id;
-}> <TableCell> {
-</TableRow>)
-}</TableCell> </TableRow>) ) 
-}</TableBody> </Table> </div> </Card>) 
-}
+=======
   );
 }
-;
-
-'"
-}</TableBody> </Table> </div> </Card>) ]"
-
+>>>>>>> origin/auto/autonomy-17186719616

@@ -108,11 +108,8 @@ function fixFile(filePath, description, fixFunction) {
     content = content.replace(/title\s*=\s*['"]\s*;\s*([^'"]*)\s*['"]/g, 'title=\'$1\'');
     return content}
 console.log('🔧 Starting comprehensive syntax error fixing...');
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -121,10 +118,7 @@ function fixSyntaxErrors(filePath) {
     // Fix common syntax errors
     // Fix unnecessary escape characters
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -194,27 +188,16 @@ function fixSyntaxErrors(content, filePath) {
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     // Fix malformed return statements in functions
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
     // Fix missing semicolons
-<<<<<<< HEAD
-// Fix missing semicolons at end of statements
-    // Fix missing semicolons at end of statements
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
-    // Fix missing commas in objects
-    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 
 
@@ -276,14 +259,11 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 }
 
-<<<<<<< HEAD
-=======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -380,11 +360,8 @@ function fixSyntaxErrors(content, filePath) {;
   fixed = fixed.replace(malformedArrayRegex, "$1$2$3,$4");
   return { fixed, changes }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 // Function to process a single file;
 function processFile(filePath) {;
   try {;
@@ -463,14 +440,11 @@ async function main() {
         }
     }
     if (totalFixes > 0) {
-<<<<<<< HEAD
-=======
 
     } else {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
@@ -480,17 +454,6 @@ async function main() {
 
 
 
-<<<<<<< HEAD
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;
-
-    // Fix missing closing brackets;
-    const openBrackets = (content.match(/\[/g) || []).length;
-    const closeBrackets = (content.match(/\]/g) || []).length;
-
-    if (openBrackets > closeBrackets) {
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       const missingBraces = openBraces - closeBraces;
       content += '\n''}'.repeat(missingBraces);
       modified = true;
@@ -527,11 +490,8 @@ async function main() {
       content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
       modified = true;
     }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
     // Fix missing React import;
     if (content.includes('React') && !content.includes('import React')) {;
@@ -666,10 +626,6 @@ console.log(`Fixed ${fixedCount} files`);
     return false;
   }
 }
-<<<<<<< HEAD
-      stat.isDirectory() &&
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 
 
@@ -705,8 +661,6 @@ function processDirectory(dirPath) {
 console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -717,4 +671,3 @@ console.log(`Fixed ${fixedCount} files`);
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

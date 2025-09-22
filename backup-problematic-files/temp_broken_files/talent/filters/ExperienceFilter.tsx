@@ -2,11 +2,6 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
-<<<<<<< HEAD
-import { Slider } from "@/components/ui/slider";""
-import { ExperienceFilterProps } from "@/types/filters";"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen } ExperienceFilterProps) {;
   const handleChange = (values:number[]) => {;
@@ -33,32 +28,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[0]} years</span>;
             <span>{experienceRange[1]} years</span>;
           </div>;
-<<<<<<< HEAD
-min={0}
-            max={15}
-            step={1}
-            onValueChange={handleChange}
-</button>
-        <span>Years of Experience</span>;"
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
-"
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
-
-      </button>;"
-        <div className="mt-6">;"
-</div>"
-          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;"
-            <span>{experienceRange[0]} years</span>;
-            <span>{experienceRange[1]} years</span>;
-          </div>;
-          <Slider;"
-            aria-label="Experience range";            value={[experienceRange[0], experienceRange[1]]}"
-            min={0}
-            max={15}
-            step={1}
-            onValueChange={handleChange}"
-            className="mt-6";"
-=======
           <Slider;
             aria-label="Experience range";            value={[experienceRange[0], experienceRange[1]]}
             min={0}
@@ -66,7 +35,6 @@ min={0}
             step={1}
             onValueChange={handleChange}
             className="mt-6";
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           />;
         </div>;
       )}
@@ -84,13 +52,5 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
 }years</span> <span> {;
   experienceRange[1] ;
 }years</span> </div> <Slider /> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/talent/filters/ExperienceFilter.tsx
-}</div>) ;"}"
-}</div>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/ExperienceFilter.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

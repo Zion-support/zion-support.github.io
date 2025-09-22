@@ -16,11 +16,7 @@ export function SupportWidget() {;
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
-<<<<<<< HEAD
-<Button;
-=======
         <Button;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -68,12 +64,8 @@ export function SupportWidget() {;
                 <X className="h-5 w-5" />;
               </Button>;
             </div>;
-<<<<<<< HEAD
-</div>;
-=======
           </div>;
           ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           <ChatBotPanel />;
         </div>;
       )}
@@ -99,9 +91,5 @@ const router = useRouter ();
   cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" /> </Button> <Button > <X className="h-5 w-5" /> </Button> </div> </div> <ChatBotPanel /> </div>) ;
 }</>) ;
 }"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/SupportWidget.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,10 +1,7 @@
 
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { SearchFilter } from "./filters/SearchFilter",;
 import { SortFilter } from "./filters/SortFilter",;
 import { SkillsFilter } from "./filters/SkillsFilter",;
@@ -13,20 +10,6 @@ import { RegionFilter } from "./filters/RegionFilter",;
 import { ExperienceFilter } from "./filters/ExperienceFilter",;
 import { PriceFilter } from "./filters/PriceFilter",;
 import { FilterSidebarProps } from "@/types/filters",;
-<<<<<<< HEAD
-import React from "react";""
-import { Button } from "@/components/ui/button";""
-import { Filter } from 'lucide-react';
-import { SearchFilter } from "./filters/SearchFilter";""
-import { SortFilter } from "./filters/SortFilter";""
-import { SkillsFilter } from "./filters/SkillsFilter";""
-import { AvailabilityFilter } from "./filters/AvailabilityFilter";""
-import { RegionFilter } from "./filters/RegionFilter";""
-import { ExperienceFilter } from "./filters/ExperienceFilter";""
-import { PriceFilter } from "./filters/PriceFilter";""
-import { FilterSidebarProps } from "@/types/filters";"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 export function FilterSidebar({;
   searchTerm,;
@@ -56,14 +39,11 @@ export function FilterSidebar({;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
           Filters;
         </h3>;
-<<<<<<< HEAD
-=======
         <Button ;
           variant="ghost" ;
           size="sm" ;
           onClick={clearFilters}
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         >;
           Clear All;
         </Button>;
@@ -231,9 +211,5 @@ isMobileFilterOpen ;
 }className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
 }</>) ;
 }'"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/FilterSidebar.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

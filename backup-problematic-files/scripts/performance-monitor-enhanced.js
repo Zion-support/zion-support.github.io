@@ -8,16 +8,6 @@ const performanceChecks = {
   "bundleSize": () => {
     console.log('📦 Checking bundle size...'),
 
-<<<<<<< HEAD
-<
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
-const fs = require('fs');
-const path = require('path');
-console.log('📊 Enhanced Performance Monitor Starting...');
-const performanceChecks = {
-  "bundleSize": () => {
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     // Bundle size analysis would go here
     return true
   },
@@ -46,40 +36,3 @@ Object && Object.entries(performanceChecks).forEach(([name, check]) => {
     console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
   }
 });
-<<<<<<< HEAD
-console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-    console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
-  } catch (error) {
-    console.log(`❌ ${name}: ERROR - ${error.message}`);
-  }
-});
-console.log('🎉 Performance monitoring completed!');
-<
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
-<
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } });
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } });
-const fs = require('fs');
-const path = require('path');
-const performanceChecks = {
-  "bundleSize": () => {"
-    // Bundle size analysis would go here;
-    return true;
-  },"
-  "loadTime": () => {"
-    // Load time analysis would go here;
-  "memoryUsage": () => {"
-    // Memory usage analysis would go here;
-  }
-};
-// Run all performance checks;
-Object && Object.entries(performanceChecks).forEach(([name, check]) => {
-  try {
-  // TODO: Implement
-    const result = check();
-"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

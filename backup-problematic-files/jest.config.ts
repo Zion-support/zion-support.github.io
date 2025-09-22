@@ -1,16 +1,11 @@
 
 
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
-<<<<<<< HEAD
-const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './',
-});
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 import type { Config } from "jest";
 import nextJest from "next/jest ;
@@ -44,9 +39,12 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const createJestConfig = nextJest({
 
   // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type { Config } from './jest';
 import next_jest from "next / jest.js";
@@ -122,6 +120,7 @@ export default createJestConfig(config);
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
 const createJestConfig = nextJest({ dir: "./" });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const config: Config = {
 
   coverageProvider: "v8"
@@ -150,8 +149,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
 }
 export default createJestConfig(config);
-<<<<<<< HEAD
-=======
 
 
 }
@@ -180,5 +177,5 @@ export default createJestConfig (config);
 ;
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

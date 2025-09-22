@@ -112,10 +112,6 @@ function main() {};
       _console.error(`❌ Error fixing ${file}:`, error.message)
 
 };
-<<<<<<< HEAD
-pr-12325
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 };  try {};
     const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),',
     const lines = result.split('\n'),',
@@ -144,13 +140,5 @@ pr-12325
 }
 };
         fixedCount++}
-<<<<<<< HEAD
-} catch (error) {_;
-    _;
-    _,
-        fixedCount++}
-`;
-=======
     } catch (error) {_;
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

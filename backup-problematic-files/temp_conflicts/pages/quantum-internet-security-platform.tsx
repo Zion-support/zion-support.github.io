@@ -41,21 +41,14 @@ import {;
   ArrowRight,
   Shield,
   Star,;
-<<<<<<< HEAD
-=======
 
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-<<<<<<< HEAD
-export default function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find((s) =>
-
-=======
 
 
 export default function QuantumInternetSecurityPage() {;
@@ -64,7 +57,6 @@ export default function QuantumInternetSecurityPage() {;
 
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   );
   if (!service) return null;
 
@@ -191,6 +183,7 @@ if (return null) {
 
 
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 }
   return (
@@ -279,12 +272,8 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-</UltraAdvancedFuturisticBackground>);
-}
-=======
     </UltraAdvancedFuturisticBackground>);
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

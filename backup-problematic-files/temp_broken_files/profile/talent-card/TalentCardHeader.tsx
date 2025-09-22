@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
-import { TalentCardAvatar } from "./TalentCardAvatar",;
-import { TalentCardAvailability } from "./TalentCardAvailability",;
-import React from "react";""
-import { BadgeCheck } from 'lucide-react';
-import { TalentCardAvatar } from "./TalentCardAvatar";""
-import { TalentCardAvailability } from "./TalentCardAvailability";"
-=======
 import React from "react",;
 import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from "./TalentCardAvatar",;
 import { TalentCardAvailability } from "./TalentCardAvailability",;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface TalentCardHeaderProps {;
   fullName:string,;
@@ -31,11 +22,7 @@ export function TalentCardHeader({ ;
   return (;
     <div className="flex items-start gap-4 mb-4">;
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
-<<<<<<< HEAD
-;
-=======
       ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       <div className="flex-1">;
         <div className="flex items-center justify-between">;
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
@@ -45,10 +32,7 @@ export function TalentCardHeader({ ;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
           </h3>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
         ;
@@ -77,13 +61,5 @@ yearsExperience ;
   /* AI score could be used for verification badge */ ;"}{";"  yearsExperience > 5 && (<BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" /> ;
 }</h3> <TalentCardAvailability availabilityType= {;
   availabilityType ;
-<<<<<<< HEAD
-:temp_broken_files/profile/talent-card/TalentCardHeader.tsx
-}/> </div> </div> </div>) ;"}"
-}/> </div> </div> </div>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardHeader.tsx
-=======
 
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
